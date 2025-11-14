@@ -2,24 +2,26 @@ import { fr } from "@codegouvfr/react-dsfr";
 import React, { forwardRef } from "react";
 import { css } from "@styled-system/css";
 import Card from "@codegouvfr/react-dsfr/Card";
-import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
-import { summarize } from "../utils";
+import { getRouteBySource } from "@socialgouv/cdtn-utils";
+import { summarize } from "../../../utils";
 import Button from "@codegouvfr/react-dsfr/Button";
 import Image from "next/image";
+import { SourceKeys } from "@socialgouv/cdtn-utils/src/sources";
 
 const INITIAL_ITEMS_DISPLAY_COUNT = 6;
 
-type ContributionItem = {
+type Item = {
   title: string;
   description: string;
   slug: string;
   source: string;
 };
 
-type ContributionSectionProps = {
+type SectionProps = {
+  source: SourceKeys;
   sectionId: string;
   title: string;
-  items: ContributionItem[];
+  items: Item[];
   isExpanded: boolean;
   onToggle: (sectionId: string) => void;
   firstHiddenItemRef: (sectionId: string, el: HTMLLIElement | null) => void;
@@ -28,12 +30,10 @@ type ContributionSectionProps = {
   className?: string;
 };
 
-export const ContributionSection = forwardRef<
-  HTMLHeadingElement,
-  ContributionSectionProps
->(
+export const Section = forwardRef<HTMLHeadingElement, SectionProps>(
   (
     {
+      source,
       sectionId,
       title,
       items,
@@ -99,7 +99,7 @@ export const ContributionSection = forwardRef<
                 desc={summarize(item.description)}
                 horizontal
                 linkProps={{
-                  href: `/${getRouteBySource(SOURCES.CONTRIBUTIONS)}/${item.slug}`,
+                  href: `/${getRouteBySource(source)}/${item.slug}`,
                 }}
                 size="medium"
                 title={item.title}
@@ -137,7 +137,7 @@ export const ContributionSection = forwardRef<
   }
 );
 
-ContributionSection.displayName = "ContributionSection";
+Section.displayName = "Section";
 
 const li = css({
   listStyle: "none!",

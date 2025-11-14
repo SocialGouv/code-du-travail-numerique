@@ -1,4 +1,4 @@
-import { elasticDocumentsIndex } from "../../api/utils";
+import { elasticDocumentsIndex, elasticsearchClient } from "../../api/utils";
 import { SOURCES } from "@socialgouv/cdtn-utils";
 import {
   DocumentElasticResult,
@@ -10,6 +10,40 @@ import { Infographic } from "./type";
 import { InfographicElasticDocument } from "@socialgouv/cdtn-types";
 import { LinkedContent } from "@socialgouv/cdtn-types/build/elastic/related-items";
 import { getRouteBySource } from "@socialgouv/cdtn-utils/src/sources";
+
+export const fetchInfographics = async <
+  K extends keyof InfographicElasticDocument,
+>(
+  fields: K[],
+  filters?: {
+    cdtnIds?: string[];
+  }
+): Promise<Pick<InfographicElasticDocument, K>[]> => {
+  const baseFilters: Array<any> = [
+    { term: { source: SOURCES.INFOGRAPHICS } },
+    { term: { isPublished: true } },
+  ];
+
+  if (filters?.cdtnIds) {
+    baseFilters.push({ terms: { cdtnId: filters.cdtnIds } });
+  }
+
+  const response = await elasticsearchClient.search<
+    Pick<InfographicElasticDocument, K>
+  >({
+    query: {
+      bool: {
+        filter: baseFilters,
+      },
+    },
+    size: 1000,
+    _source: fields,
+    index: elasticDocumentsIndex,
+  });
+  return response.hits.hits
+    .map(({ _source }) => _source)
+    .filter((model) => model !== undefined);
+};
 
 export const fetchInfographic = async <
   K extends keyof InfographicElasticDocument,

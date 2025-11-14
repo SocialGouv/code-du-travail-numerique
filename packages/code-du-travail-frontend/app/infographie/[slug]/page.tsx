@@ -11,7 +11,9 @@ import {
 } from "src/modules/infographie";
 import { Metadata } from "next";
 
-export async function generateMetadata(props): Promise<Metadata> {
+export async function generateMetadata(
+  props: PageProps<"/infographie/[slug]">
+): Promise<Metadata> {
   const params = await props.params;
   const information = await fetchInfographic(params.slug, [
     "title",
@@ -29,7 +31,7 @@ export async function generateMetadata(props): Promise<Metadata> {
   });
 }
 
-async function InfographiePage(props) {
+async function InfographiePage(props: PageProps<"/infographie/[slug]">) {
   const params = await props.params;
   const infographic = await getInfographic(params.slug);
 
