@@ -1,4 +1,5 @@
 import { Breadcrumb, InfographicElasticDocument } from "@socialgouv/cdtn-types";
+import { RelatedItem } from "../documents";
 
 export type Infographic = Pick<
   InfographicElasticDocument,
@@ -16,4 +17,5 @@ export type Infographic = Pick<
     sizeOctet: string;
   };
   breadcrumbs: Breadcrumb[];
+  relatedItems: { items: RelatedItem[]; title: string }[];
 };

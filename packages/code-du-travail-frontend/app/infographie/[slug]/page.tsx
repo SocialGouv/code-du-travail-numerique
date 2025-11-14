@@ -57,6 +57,7 @@ const getInfographic = async (slug: string): Promise<Infographic> => {
     "transcription",
     "breadcrumbs",
     "references",
+    "linkedContent",
   ]);
 
   if (!infographic) {

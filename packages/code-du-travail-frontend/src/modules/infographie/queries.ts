@@ -1,8 +1,15 @@
 import { elasticDocumentsIndex } from "../../api/utils";
 import { SOURCES } from "@socialgouv/cdtn-utils";
-import { DocumentElasticResult, fetchDocument } from "../documents";
+import {
+  DocumentElasticResult,
+  fetchDocument,
+  RelatedItem,
+  Source,
+} from "../documents";
 import { Infographic } from "./type";
 import { InfographicElasticDocument } from "@socialgouv/cdtn-types";
+import { LinkedContent } from "@socialgouv/cdtn-types/build/elastic/related-items";
+import { getRouteBySource } from "@socialgouv/cdtn-utils/src/sources";
 
 export const fetchInfographic = async <
   K extends keyof InfographicElasticDocument,
@@ -25,7 +32,7 @@ export const fetchInfographic = async <
         ],
       },
     },
-    size: 3000,
+    size: 1,
     _source: fields,
     index: elasticDocumentsIndex,
   });
@@ -43,6 +50,7 @@ export const format = ({
   transcription,
   breadcrumbs,
   references,
+  linkedContent,
 }: Pick<
   InfographicElasticDocument,
   | "breadcrumbs"
@@ -56,18 +64,56 @@ export const format = ({
   | "meta_description"
   | "transcription"
   | "references"
->): Infographic => ({
-  title,
-  meta_title,
-  date,
-  description,
-  meta_description,
-  svgFilename: svgFilename,
-  pdf: {
-    filename: pdfFilename,
-    sizeOctet: pdfFilesizeOctet.toString(),
-  },
-  transcription,
-  breadcrumbs,
-  references,
-});
+  | "linkedContent"
+>): Infographic => {
+  const buildItems = (arr: LinkedContent[]): RelatedItem[] =>
+    arr.map((item) => ({
+      title: item.title,
+      source: item.source as Source,
+      url: `/${getRouteBySource(item.source)}/${item.slug}`,
+    }));
+
+  const categories: Array<{
+    title: string;
+    filter: (i: LinkedContent) => boolean;
+  }> = [
+    {
+      title: "Simulateurs",
+      filter: (i) => i.source === SOURCES.TOOLS,
+    },
+    {
+      title: "Modèles de courriers",
+      filter: (i) => i.source === SOURCES.LETTERS,
+    },
+    {
+      title: "Contenus liés",
+      filter: (i) => i.source !== SOURCES.LETTERS && i.source !== SOURCES.TOOLS,
+    },
+  ];
+
+  const relatedItems = categories
+    .map(({ title, filter }) => {
+      const filtered = linkedContent.filter(filter);
+      return filtered.length
+        ? { title, items: buildItems(filtered) }
+        : undefined;
+    })
+    .filter((x): x is { title: string; items: RelatedItem[] } => Boolean(x));
+
+  return {
+    title,
+    meta_title,
+    date,
+    description,
+    meta_description,
+    svgFilename: svgFilename,
+    pdf: {
+      filename: pdfFilename,
+      sizeOctet: pdfFilesizeOctet.toString(),
+    },
+    transcription,
+    breadcrumbs,
+    references,
+    relatedItems,
+  };
+};

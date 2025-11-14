@@ -4,7 +4,7 @@ import React from "react";
 import { fr } from "@codegouvfr/react-dsfr";
 import { DownloadInfographicTile, InfographicElement } from "./component";
 import DisplayContent from "../common/DisplayContent";
-import { ReferencesAccordion } from "../common";
+import { References } from "../common";
 
 type Params = {
   infographic: Infographic;
@@ -12,7 +12,7 @@ type Params = {
 export const Infographie = ({ infographic }: Params) => {
   return (
     <ContainerSimulatorLight
-      relatedItems={[]}
+      relatedItems={infographic.relatedItems}
       title={infographic.title}
       description={infographic.description}
       segments={infographic.breadcrumbs.map(({ label, slug }) => ({
@@ -43,7 +43,7 @@ export const Infographie = ({ infographic }: Params) => {
       />
 
       {infographic.references && infographic.references.length > 0 && (
-        <ReferencesAccordion
+        <References
           label="Références juridiques"
           links={infographic.references}
         />
