@@ -37,9 +37,9 @@ describe("Indemnité licenciement - CC 44", () => {
     userAction.click(ui.next.get());
   });
 
-  test(`Vérifier l'enchainement de question à l'étape information`, () => {
+  test(`Vérifier l'enchainement de question à l'étape information`, async () => {
     userAction.setInput(ui.information.agreement44.ruptureAge.get(), "60");
-    userAction.changeInputList(
+    await userAction.changeInputList(
       ui.information.agreement44.proCategory.get(),
       "'Ouvriers et collaborateurs (Groupes I à III)'"
     );

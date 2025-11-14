@@ -37,11 +37,12 @@ describe("Indemnité licenciement - CC 2216", () => {
     userAction.click(ui.next.get());
   });
 
-  test(`Vérifier l'enchainement de question à l'étape information`, () => {
-    userAction.changeInputList(
+  test(`Vérifier l'enchainement de question à l'étape information`, async () => {
+    await userAction.changeInputList(
       ui.information.agreement2216.proCategory.get(),
       "'Cadres'"
     );
+
     userAction.setInput(ui.information.agreement2216.ruptureAge.get(), "65");
     userAction.click(ui.next.get());
 

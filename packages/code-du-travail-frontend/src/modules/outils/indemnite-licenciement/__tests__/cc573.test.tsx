@@ -34,12 +34,12 @@ describe("Indemnité licenciement - CC 573", () => {
       .click(ui.next.get())
       .click(ui.next.get());
   });
-  test(`Cas nominal`, () => {
+  test(`Cas nominal`, async () => {
+    await userAction.changeInputList(
+      ui.information.agreement573.proCategory.get(),
+      "Agents de maîtrise, techniciens et assimilés"
+    );
     userAction
-      .changeInputList(
-        ui.information.agreement573.proCategory.get(),
-        "Agents de maîtrise, techniciens et assimilés"
-      )
       .click(ui.information.agreement573.eco.oui.get())
       .setInput(ui.information.agreement573.age.get(), "57")
       .click(ui.next.get())

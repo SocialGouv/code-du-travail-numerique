@@ -35,13 +35,13 @@ describe("Indemnité licenciement - CC 3248", () => {
         .click(ui.next.get());
     });
 
-    test(`valider les questions`, () => {
+    test(`valider les questions`, async () => {
       // vérification que l'on demande si le salaire a eu des primes pour un cadre
+      await userAction.changeInputList(
+        ui.information.agreement3248.proCategory.get(),
+        "'A, B, C, D ou E'"
+      );
       userAction
-        .changeInputList(
-          ui.information.agreement3248.proCategory.get(),
-          "'A, B, C, D ou E'"
-        )
         .click(ui.information.agreement3248.dayContract.oui.get())
         .click(ui.information.agreement3248.alwaysDayContract.non.get())
         .setInput(
@@ -62,13 +62,13 @@ describe("Indemnité licenciement - CC 3248", () => {
       expect(ui.activeStep.query()).toHaveTextContent("Salaires");
     });
 
-    test(`scénario complet`, () => {
+    test(`scénario complet`, async () => {
       // vérification que l'on demande si le salaire a eu des primes pour un cadre
+      await userAction.changeInputList(
+        ui.information.agreement3248.proCategory.get(),
+        "'A, B, C, D ou E'"
+      );
       userAction
-        .changeInputList(
-          ui.information.agreement3248.proCategory.get(),
-          "'A, B, C, D ou E'"
-        )
         .click(ui.information.agreement3248.dayContract.oui.get())
         .click(ui.information.agreement3248.alwaysDayContract.oui.get())
         .click(ui.information.agreement3248.hasBeenCadre.non.get())

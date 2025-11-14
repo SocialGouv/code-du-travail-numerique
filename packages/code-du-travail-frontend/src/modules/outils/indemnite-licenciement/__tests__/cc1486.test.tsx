@@ -1,5 +1,5 @@
 import { render } from "@testing-library/react";
-import React from "react";
+import React, { use } from "react";
 import { UserAction } from "../../common/utils/UserAction";
 import { CalculateurIndemniteLicenciement } from "../IndemniteLicenciementSimulator";
 import { ui } from "../../indemnite-depart/__tests__/ui";
@@ -33,23 +33,25 @@ describe("Indemnité licenciement - CC 1486", () => {
       .click(ui.next.get())
       .click(ui.next.get());
   });
-  test(`Cas nominal`, () => {
+  test(`Cas nominal`, async () => {
+    await userAction.changeInputList(
+      ui.information.agreement1486.proCategory.get(),
+      "Chargés d'enquête intermittents"
+    );
     userAction
-      .changeInputList(
-        ui.information.agreement1486.proCategory.get(),
-        "Chargés d'enquête intermittents"
-      )
       .click(ui.information.agreement1486.refus.non.get())
       .click(ui.next.get())
 
       .setInput(ui.seniority.startDate.get(), "01/01/2004")
       .setInput(ui.seniority.notificationDate.get(), "01/01/2024")
       .setInput(ui.seniority.endDate.get(), "01/01/2024")
-      .click(ui.seniority.hasAbsence.oui.get())
-      .changeInputList(
-        ui.seniority.absences.motif(0).get(),
-        "Absence pour maladie non professionnelle"
-      )
+      .click(ui.seniority.hasAbsence.oui.get());
+
+    await userAction.changeInputList(
+      ui.seniority.absences.motif(0).get(),
+      "Absence pour maladie non professionnelle"
+    );
+    userAction
       .setInput(ui.seniority.absences.duration(0).get(), "3")
       .click(ui.next.get())
       .click(ui.salary.hasPartialTime.non.get())

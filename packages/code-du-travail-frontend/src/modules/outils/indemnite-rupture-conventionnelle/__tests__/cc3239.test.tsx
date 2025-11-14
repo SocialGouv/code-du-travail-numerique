@@ -37,8 +37,8 @@ describe("Indemnité licenciement - CC 3239", () => {
     userAction.click(ui.next.get());
   });
 
-  test(`Vérifier l'enchainement de question à l'étape information`, () => {
-    userAction.changeInputList(
+  test(`Vérifier l'enchainement de question à l'étape information`, async () => {
+    await userAction.changeInputList(
       ui.information.agreement3239.proCategory.get(),
       "'Salarié du particulier employeur'"
     );
@@ -55,8 +55,8 @@ describe("Indemnité licenciement - CC 3239", () => {
     expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
   });
 
-  test(`Vérifier l'inéligibilité des assistant maternel`, () => {
-    userAction.changeInputList(
+  test(`Vérifier l'inéligibilité des assistant maternel`, async () => {
+    await userAction.changeInputList(
       ui.information.agreement3239.proCategory.get(),
       "'Assistant maternel'"
     );

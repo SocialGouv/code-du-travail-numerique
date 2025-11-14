@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { BUCKET_URL } from "./src/config";
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   // Handle CORS for API routes
   if (request.nextUrl.pathname.startsWith("/api")) {
     const response = NextResponse.next();

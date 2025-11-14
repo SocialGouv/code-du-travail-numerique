@@ -22,7 +22,7 @@ describe("Indemnité licenciement - CC 16", () => {
   describe("parcours avec la convention collective pour valider ses spécificités", () => {
     let rendering: RenderResult;
     let userAction: UserAction;
-    beforeEach(() => {
+    beforeEach(async () => {
       rendering = render(<CalculateurIndemniteLicenciement title={""} />);
       userAction = new UserAction();
       userAction
@@ -32,11 +32,12 @@ describe("Indemnité licenciement - CC 16", () => {
         .click(ui.contract.inaptitude.non.get())
         .click(ui.contract.arretTravail.non.get())
         .click(ui.next.get())
-        .click(ui.next.get())
-        .changeInputList(
-          ui.information.agreement16.proCategory.get(),
-          "Ingénieurs et cadres"
-        )
+        .click(ui.next.get());
+      await userAction.changeInputList(
+        ui.information.agreement16.proCategory.get(),
+        "Ingénieurs et cadres"
+      );
+      userAction
         .click(ui.information.agreement16.proCategoryHasChanged.oui.get())
         .setInput(
           ui.information.agreement16.dateProCategoryChanged.get(),
@@ -70,7 +71,7 @@ describe("Indemnité licenciement - CC 16", () => {
      - vérification que l'on demande si le salaire a eu des primes pour un TAM
      - vérification que l'on ne demande pas si le salaire a eu des primes pour un employé
      - vérification que l'on ne demande pas si le salaire a eu des primes pour un ouvrier
-    `, () => {
+    `, async () => {
       // vérification que l'on demande si le salaire a eu des primes pour un cadre
       userAction
         .click(ui.salary.hasPartialTime.non.get())
@@ -116,11 +117,12 @@ describe("Indemnité licenciement - CC 16", () => {
       userAction
         .click(ui.previous.get())
         .click(ui.previous.get())
-        .click(ui.previous.get())
-        .changeInputList(
-          ui.information.agreement16.proCategory.get(),
-          "Technicien et agents de maîtrise (TAM)"
-        )
+        .click(ui.previous.get());
+      await userAction.changeInputList(
+        ui.information.agreement16.proCategory.get(),
+        "Technicien et agents de maîtrise (TAM)"
+      );
+      userAction
         .setInput(ui.information.agreement16.agentAge.get(), "36")
         .click(ui.next.get())
         .click(ui.next.get())
@@ -155,11 +157,12 @@ describe("Indemnité licenciement - CC 16", () => {
       userAction
         .click(ui.previous.get())
         .click(ui.previous.get())
-        .click(ui.previous.get())
-        .changeInputList(
-          ui.information.agreement16.proCategory.get(),
-          "Employés"
-        )
+        .click(ui.previous.get());
+      await userAction.changeInputList(
+        ui.information.agreement16.proCategory.get(),
+        "Employés"
+      );
+      userAction
         .setInput(ui.information.agreement16.employeeAge.get(), "36")
         .click(ui.next.get())
         .click(ui.next.get())
@@ -193,11 +196,12 @@ describe("Indemnité licenciement - CC 16", () => {
       userAction
         .click(ui.previous.get())
         .click(ui.previous.get())
-        .click(ui.previous.get())
-        .changeInputList(
-          ui.information.agreement16.proCategory.get(),
-          "Ouvriers"
-        )
+        .click(ui.previous.get());
+      await userAction.changeInputList(
+        ui.information.agreement16.proCategory.get(),
+        "Ouvriers"
+      );
+      userAction
         .click(ui.information.agreement16.driveInability.non.get())
         .setInput(ui.information.agreement16.workerAge.get(), "36")
         .click(ui.next.get())

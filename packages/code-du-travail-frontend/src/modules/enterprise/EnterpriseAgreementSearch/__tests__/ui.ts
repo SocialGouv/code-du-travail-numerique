@@ -36,9 +36,9 @@ export const ui = {
           name: "BNP PARIBAS (HELLO BANK!)",
         }),
         ccList: {
-          idcc2120: byLabelText("Banque IDCC 2120"),
-          idcc9999: byLabelText("___Sans convention collective___ IDCC 9999"),
-          idcc2931: byLabelText("Activités de marchés financiers IDCC 2931"),
+          idcc2120: byText("Banque IDCC 2120"),
+          idcc9999: byText("___Sans convention collective___ IDCC 9999"),
+          idcc2931: byText("Activités de marchés financiers IDCC 2931"),
         },
       },
     },

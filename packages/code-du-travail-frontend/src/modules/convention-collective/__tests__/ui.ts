@@ -38,10 +38,7 @@ export const ui = {
     }),
   },
   searchByName: {
-    input: byLabelText(
-      /Nom de la convention collective ou son numéro d’identification IDCC \(4 chiffres\)/,
-      { selector: "input" }
-    ),
+    input: byTestId("AgreementSearchAutocomplete"),
     inputCloseBtn: byTestId("AgreementSearchAutocomplete-autocomplete-close"),
     buttonPrevious: byRole("link", {
       name: "Précédent",

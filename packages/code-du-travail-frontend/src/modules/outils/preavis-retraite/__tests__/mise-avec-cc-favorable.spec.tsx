@@ -34,7 +34,7 @@ test(`Mise à la retraite avec une CC plus favorable
   expect(
     ui.information.agreement16.categoryQuestion.query()
   ).toBeInTheDocument();
-  userAction.changeInputList(
+  await userAction.changeInputList(
     ui.information.agreement16.categoryAnswers.get(),
     "Ouvriers"
   );

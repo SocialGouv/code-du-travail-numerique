@@ -1,5 +1,4 @@
 import { render, waitFor } from "@testing-library/react";
-import React from "react";
 import { UserAction } from "../../common/utils/UserAction";
 import IndemniteLicenciementSimulator from "../IndemniteLicenciementSimulator";
 import { ui } from "../../indemnite-depart/__tests__/ui";
@@ -13,8 +12,12 @@ jest.mock("uuid", () => ({
   v4: jest.fn(() => "test-uuid"),
 }));
 
-jest.mock("../../../convention-collective/search");
-jest.mock("../../../enterprise/queries");
+jest.mock(
+  "../../../enterprise/EnterpriseAgreementSearch/EnterpriseAgreementSearchInput"
+);
+jest.mock(
+  "../../../convention-collective/AgreementSearch/AgreementSearchInput"
+);
 
 describe("Indemnité licenciement - Tracking", () => {
   beforeEach(() => {
@@ -28,7 +31,7 @@ describe("Indemnité licenciement - Tracking", () => {
   });
   const userAction = new UserAction();
 
-  test("vérifier le tracking sur la navigation", () => {
+  test("vérifier le tracking sur la navigation", async () => {
     jest.spyOn(Storage.prototype, "setItem");
     Storage.prototype.getItem = jest.fn(
       () =>
@@ -59,7 +62,7 @@ describe("Indemnité licenciement - Tracking", () => {
       `view_step_Indemnité de licenciement`,
       "infos",
     ]);
-    userAction.changeInputList(
+    await userAction.changeInputList(
       ui.information.agreement16.proCategory.get(),
       "Ingénieurs et cadres"
     );

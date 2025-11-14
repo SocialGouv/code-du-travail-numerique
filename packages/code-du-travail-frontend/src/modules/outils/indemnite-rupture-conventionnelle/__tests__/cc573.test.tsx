@@ -38,12 +38,12 @@ describe("Indemnité licenciement - CC 573", () => {
       .click(ui.next.get());
   });
 
-  test(`Cas multi type de rupture`, () => {
+  test(`Cas multi type de rupture`, async () => {
+    await userAction.changeInputList(
+      ui.information.agreement573.proCategory.get(),
+      "Agents de maîtrise, techniciens et assimilés"
+    );
     userAction
-      .changeInputList(
-        ui.information.agreement573.proCategory.get(),
-        "Agents de maîtrise, techniciens et assimilés"
-      )
       .setInput(ui.information.agreement573.ageRupture.get(), "56")
       .click(ui.next.get())
 

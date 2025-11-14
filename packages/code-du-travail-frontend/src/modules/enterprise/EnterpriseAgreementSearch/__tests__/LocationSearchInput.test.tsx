@@ -1,19 +1,17 @@
-import { render, RenderResult, waitFor } from "@testing-library/react";
+import { render, waitFor } from "@testing-library/react";
 import { searchCities } from "../searchCities";
 import { ui } from "./ui";
 import { LocationSearchInput } from "../LocationSearchInput";
-import { UserAction } from "src/modules/outils/common/utils/UserAction";
+import userEvent from "@testing-library/user-event";
 
 jest.mock("../searchCities", () => ({
   searchCities: jest.fn(),
 }));
 
 describe("LocationSearchInput", () => {
-  let rendering: RenderResult;
-  let userAction: UserAction;
   beforeEach(() => {
     jest.resetAllMocks();
-    rendering = render(<LocationSearchInput />);
+    render(<LocationSearchInput />);
   });
   it("Vérifier le déroulement de la liste de ville et sa fermeture", async () => {
     (searchCities as jest.Mock).mockImplementation(() =>
@@ -50,14 +48,44 @@ describe("LocationSearchInput", () => {
         },
       ])
     );
-    userAction = new UserAction();
-    userAction.setInput(ui.input.get(), "paris");
+
+    const user = userEvent.setup();
+    const input = ui.input.get();
+
+    // Focus and type in the input
+    await user.click(input);
+    await user.type(input, "paris");
+
+    // Wait for the autocomplete suggestions to appear
     await waitFor(() => {
       expect(ui.AutocompleteItemParis.query()).toBeInTheDocument();
-      expect(ui.input.get()).toHaveValue("paris");
-      userAction.click(ui.inputCloseBtn.get());
-      expect(ui.input.get()).toHaveValue("");
-      expect(ui.AutocompleteItemParis.query()).not.toBeInTheDocument();
     });
+
+    expect(input).toHaveValue("paris");
+
+    // Select the Paris suggestion
+    await user.click(ui.AutocompleteItemParis.get());
+
+    // After selection, verify the input is updated
+    await waitFor(() => {
+      expect(input).toHaveValue("Paris (75)");
+    });
+
+    // Now wait for and click the close button
+    await waitFor(
+      () => {
+        expect(ui.inputCloseBtn.query()).toBeInTheDocument();
+      },
+      { timeout: 3000 }
+    );
+
+    await user.click(ui.inputCloseBtn.get());
+
+    expect(ui.input.get()).toHaveValue("");
+
+    expect(ui.AutocompleteItemParis.query()).not.toBeInTheDocument();
+
+    // Verify the input is cleared
+    expect(input).toHaveValue("");
   });
 });

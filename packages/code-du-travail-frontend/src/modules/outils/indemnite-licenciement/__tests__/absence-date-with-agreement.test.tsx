@@ -22,7 +22,7 @@ describe("Indemnité licenciement", () => {
   describe("parcours avec la convention collective 16 pour tester la date de l'absence", () => {
     let rendering: RenderResult;
     let userAction: UserAction;
-    beforeEach(() => {
+    beforeEach(async () => {
       rendering = render(<CalculateurIndemniteLicenciement title={""} />);
       userAction = new UserAction();
       userAction
@@ -32,11 +32,12 @@ describe("Indemnité licenciement", () => {
         .click(ui.contract.inaptitude.non.get())
         .click(ui.contract.arretTravail.non.get())
         .click(ui.next.get())
-        .click(ui.next.get())
-        .changeInputList(
-          ui.information.agreement16.proCategory.get(),
-          "Ingénieurs et cadres"
-        )
+        .click(ui.next.get());
+      await userAction.changeInputList(
+        ui.information.agreement16.proCategory.get(),
+        "Ingénieurs et cadres"
+      );
+      userAction
         .click(ui.information.agreement16.proCategoryHasChanged.oui.get())
         .setInput(
           ui.information.agreement16.dateProCategoryChanged.get(),
@@ -52,17 +53,18 @@ describe("Indemnité licenciement", () => {
     On doit demander la date de l'absence puis ne plus la demander quand on change les informations sur le salarié
      - vérification que la date de l'absence est présente sur la page information
      - vérification que la date de l'absence n'est plus présente après avoir changé les informations du salarié
-    `, () => {
+    `, async () => {
       // vérification que la date de l'absence est présente sur la page information
       userAction
         .setInput(ui.seniority.startDate.get(), "01/01/2000")
         .setInput(ui.seniority.notificationDate.get(), "01/01/2022")
         .setInput(ui.seniority.endDate.get(), "01/03/2022")
-        .click(ui.seniority.hasAbsence.oui.get())
-        .changeInputList(
-          ui.seniority.absences.motif(0).get(),
-          "Congés sans solde"
-        )
+        .click(ui.seniority.hasAbsence.oui.get());
+      await userAction.changeInputList(
+        ui.seniority.absences.motif(0).get(),
+        "Congés sans solde"
+      );
+      userAction
         .setInput(ui.seniority.absences.duration(0).get(), "6")
         .setInput(ui.seniority.absences.date(0).get(), "01/01/2015")
         .click(ui.next.get())

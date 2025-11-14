@@ -8,11 +8,11 @@ exports[`<ContributionsList /> affiche la liste des fiches pratiques 1`] = `
     <nav
       aria-label="vous êtes ici :"
       class="fr-breadcrumb fr-mb-2v"
-      id="fr-breadcrumb-:r0:"
+      id="fr-breadcrumb-_r_0_"
       role="navigation"
     >
       <button
-        aria-controls="breadcrumb-:r1:"
+        aria-controls="breadcrumb-_r_1_"
         aria-expanded="false"
         class="fr-breadcrumb__button"
       >
@@ -20,7 +20,7 @@ exports[`<ContributionsList /> affiche la liste des fiches pratiques 1`] = `
       </button>
       <div
         class="fr-collapse"
-        id="breadcrumb-:r1:"
+        id="breadcrumb-_r_1_"
       >
         <ol
           class="fr-breadcrumb__list"
@@ -160,7 +160,7 @@ exports[`<ContributionsList /> affiche la liste des fiches pratiques 1`] = `
               >
                 <div
                   class="fr-card fr-enlarge-link fr-card--horizontal"
-                  id="fr-card-:r2:"
+                  id="fr-card-_r_2_"
                 >
                   <div
                     class="fr-card__body"
@@ -198,7 +198,7 @@ exports[`<ContributionsList /> affiche la liste des fiches pratiques 1`] = `
               >
                 <div
                   class="fr-card fr-enlarge-link fr-card--horizontal"
-                  id="fr-card-:r3:"
+                  id="fr-card-_r_3_"
                 >
                   <div
                     class="fr-card__body"
@@ -253,7 +253,7 @@ exports[`<ContributionsList /> affiche la liste des fiches pratiques 1`] = `
               >
                 <div
                   class="fr-card fr-enlarge-link fr-card--horizontal"
-                  id="fr-card-:r4:"
+                  id="fr-card-_r_4_"
                 >
                   <div
                     class="fr-card__body"

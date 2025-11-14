@@ -28,7 +28,7 @@ describe("Indemnité licenciement - Validation du comportement avec l'absence de
       expect(ui.activeStep.query()).toHaveTextContent("Ancienneté");
     });
 
-    test("On ne doit pas demander la date de l'absence", () => {
+    test("On ne doit pas demander la date de l'absence", async () => {
       // On renseigne la page ancienneté avec une absence avec une date
       userAction
         .setInput(ui.seniority.startDate.get(), "01/01/2000")
@@ -41,11 +41,11 @@ describe("Indemnité licenciement - Validation du comportement avec l'absence de
         rendering.queryByText("Date de début de l'absence")
       ).not.toBeInTheDocument();
 
+      await userAction.changeInputList(
+        ui.seniority.absences.motif(0).get(),
+        "Congés sans solde"
+      );
       userAction
-        .changeInputList(
-          ui.seniority.absences.motif(0).get(),
-          "Congés sans solde"
-        )
         .setInput(ui.seniority.absences.duration(0).get(), "6")
         .click(ui.next.get());
 

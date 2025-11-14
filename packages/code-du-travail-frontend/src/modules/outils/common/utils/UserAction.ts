@@ -7,8 +7,11 @@ export class UserAction {
     return this;
   }
 
-  changeInputList(element: HTMLElement, value: string): UserAction {
-    userEvent.selectOptions(element, value);
+  async changeInputList(
+    element: HTMLElement,
+    value: string
+  ): Promise<UserAction> {
+    await userEvent.selectOptions(element, value);
     return this;
   }
 

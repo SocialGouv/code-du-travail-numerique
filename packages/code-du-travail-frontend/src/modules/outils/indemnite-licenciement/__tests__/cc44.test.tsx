@@ -1,5 +1,4 @@
 import { render, screen } from "@testing-library/react";
-import React from "react";
 import { UserAction } from "../../common/utils/UserAction";
 import { CalculateurIndemniteLicenciement } from "../IndemniteLicenciementSimulator";
 import { ui } from "../../indemnite-depart/__tests__/ui";
@@ -19,7 +18,7 @@ Storage.prototype.getItem = jest.fn(
 describe("Indemnité licenciement - CC 44", () => {
   let userAction: UserAction;
   describe("parcours avec la convention collective pour valider ses spécificités AVEC PREAVIS", () => {
-    beforeEach(() => {
+    beforeEach(async () => {
       render(<CalculateurIndemniteLicenciement title={""} />);
       userAction = new UserAction();
       userAction.click(ui.introduction.startButton.get());
@@ -29,7 +28,7 @@ describe("Indemnité licenciement - CC 44", () => {
       userAction.click(ui.contract.arretTravail.non.get());
       userAction.click(ui.next.get());
       userAction.click(ui.next.get());
-      userAction.changeInputList(
+      await userAction.changeInputList(
         ui.information.agreement44.proCategory.get(),
         "Ouvriers et collaborateurs (Groupes I à III)"
       );
@@ -48,7 +47,7 @@ describe("Indemnité licenciement - CC 44", () => {
       - vérification que l'on demande si le salaire a eu des primes pour un Ouvriers et collaborateurs (Groupes I à III)
       - vérification que l'on demande si le salaire a eu des primes pour un Agents de maîtrise et techniciens (Groupe IV)
       - vérification que l'on ne demande pas si le salaire a eu des primes pour un Ingénieurs et cadres (Groupe V)
-    `, () => {
+    `, async () => {
       // vérification que l'on demande si le salaire a eu des primes pour un Ouvriers et collaborateurs (Groupes I à III)
       userAction.click(ui.salary.hasPartialTime.non.get());
       userAction.click(ui.salary.hasSameSalary.oui.get());
@@ -67,7 +66,7 @@ describe("Indemnité licenciement - CC 44", () => {
       // vérification que l'on demande si le salaire a eu des primes pour un Agents de maîtrise et techniciens (Groupe IV)
       userAction.click(ui.previous.get());
       userAction.click(ui.previous.get());
-      userAction.changeInputList(
+      await userAction.changeInputList(
         ui.information.agreement44.proCategory.get(),
         "Agents de maîtrise et techniciens (Groupe IV)"
       );
@@ -90,7 +89,7 @@ describe("Indemnité licenciement - CC 44", () => {
       // vérification que l'on demande si le salaire a eu des primes pour un Ingénieurs et cadres (Groupe V)
       userAction.click(ui.previous.get());
       userAction.click(ui.previous.get());
-      userAction.changeInputList(
+      await userAction.changeInputList(
         ui.information.agreement44.proCategory.get(),
         "Ingénieurs et cadres (Groupe V)"
       );
@@ -133,7 +132,7 @@ describe("Indemnité licenciement - CC 44", () => {
   });
 
   describe("parcours avec la convention collective pour valider ses spécificités SANS PREAVIS", () => {
-    beforeEach(() => {
+    beforeEach(async () => {
       render(<CalculateurIndemniteLicenciement title={""} />);
       userAction = new UserAction();
       userAction.click(ui.introduction.startButton.get());
@@ -143,7 +142,7 @@ describe("Indemnité licenciement - CC 44", () => {
       userAction.click(ui.contract.arretTravail.non.get());
       userAction.click(ui.next.get());
       userAction.click(ui.next.get());
-      userAction.changeInputList(
+      await userAction.changeInputList(
         ui.information.agreement44.proCategory.get(),
         "Ouvriers et collaborateurs (Groupes I à III)"
       );
@@ -186,7 +185,7 @@ describe("Indemnité licenciement - CC 44", () => {
       userAction = new UserAction();
     });
 
-    test(`ne doit pas afficher la question sur le salaire pour le dernier mois`, () => {
+    test(`ne doit pas afficher la question sur le salaire pour le dernier mois`, async () => {
       userAction.click(ui.introduction.startButton.get());
       userAction.click(ui.contract.type.cdi.get());
       userAction.click(ui.contract.fauteGrave.non.get());
@@ -195,7 +194,7 @@ describe("Indemnité licenciement - CC 44", () => {
       userAction.setInput(ui.contract.dateArretTravail.get(), "01/09/2022");
       userAction.click(ui.next.get());
       userAction.click(ui.next.get());
-      userAction.changeInputList(
+      await userAction.changeInputList(
         ui.information.agreement44.proCategory.get(),
         "Ouvriers et collaborateurs (Groupes I à III)"
       );
@@ -217,7 +216,7 @@ describe("Indemnité licenciement - CC 44", () => {
     });
   });
 
-  test("parcours avec la convention collective pour valider le résultat", () => {
+  test("parcours avec la convention collective pour valider le résultat", async () => {
     render(<CalculateurIndemniteLicenciement title={""} />);
     const userAction = new UserAction();
     userAction
@@ -227,11 +226,13 @@ describe("Indemnité licenciement - CC 44", () => {
       .click(ui.contract.inaptitude.non.get())
       .click(ui.contract.arretTravail.non.get())
       .click(ui.next.get())
-      .click(ui.next.get())
-      .changeInputList(
-        ui.information.agreement44.proCategory.get(),
-        "Ouvriers et collaborateurs (Groupes I à III)"
-      )
+      .click(ui.next.get());
+
+    await userAction.changeInputList(
+      ui.information.agreement44.proCategory.get(),
+      "Ouvriers et collaborateurs (Groupes I à III)"
+    );
+    userAction
       .setInput(ui.information.agreement44.age.get(), "57")
       .click(ui.next.get())
       .setInput(ui.seniority.startDate.get(), "01/01/2019")
