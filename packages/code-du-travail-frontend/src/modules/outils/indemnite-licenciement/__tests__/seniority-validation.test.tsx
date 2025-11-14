@@ -22,7 +22,7 @@ describe("Indemnité licenciement - Validation des erreurs sur l'étape ancienne
   describe("parcours avec la convention collective 16 pour valider les erreurs", () => {
     let rendering: RenderResult;
     let userAction: UserAction;
-    beforeEach(() => {
+    beforeEach(async () => {
       rendering = render(<CalculateurIndemniteLicenciement title={""} />);
       userAction = new UserAction();
       userAction
@@ -32,11 +32,12 @@ describe("Indemnité licenciement - Validation des erreurs sur l'étape ancienne
         .click(ui.contract.inaptitude.non.get())
         .click(ui.contract.arretTravail.non.get())
         .click(ui.next.get())
-        .click(ui.next.get())
-        .changeInputList(
-          ui.information.agreement16.proCategory.get(),
-          "Ingénieurs et cadres"
-        )
+        .click(ui.next.get());
+      await userAction.changeInputList(
+        ui.information.agreement16.proCategory.get(),
+        "Ingénieurs et cadres"
+      );
+      userAction
         .click(ui.information.agreement16.proCategoryHasChanged.oui.get())
         .setInput(
           ui.information.agreement16.dateProCategoryChanged.get(),
@@ -63,7 +64,7 @@ describe("Indemnité licenciement - Validation des erreurs sur l'étape ancienne
        - validation de l'erreur quand on a une date d'absence en dehors de la période de présence dans l'entreprise
        - validation de l'erreur quand on a une absence qui réduit la période de présence de l'entreprise à moins de 8 mois
        - validation de la disparition des erreurs quand on a tout renseigné
-    `, () => {
+    `, async () => {
       // validation des erreurs sur les champs vides
       userAction.click(ui.next.get());
       expect(
@@ -136,7 +137,7 @@ describe("Indemnité licenciement - Validation des erreurs sur l'étape ancienne
       ).toBeInTheDocument();
 
       // validation de l'erreur quand on a des périodes d'absence mais que l'on a pas saisi la durée et la date de l'absence
-      userAction.changeInputList(
+      await userAction.changeInputList(
         ui.seniority.absences.motif(0).get(),
         "Congés sans solde"
       );

@@ -1,6 +1,5 @@
-import { render, within } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import { ContributionsList } from "../ContributionsList";
-import userEvent from "@testing-library/user-event";
 
 const contribs = {
   "Congés et repos": [

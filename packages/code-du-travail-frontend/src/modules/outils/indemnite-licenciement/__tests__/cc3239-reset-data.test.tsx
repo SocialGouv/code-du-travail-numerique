@@ -40,7 +40,7 @@ describe("Indemnité licenciement - CC 3239 - changement de convention collectiv
     userAction.setInput(ui.seniority.notificationDate.get(), "15/09/2022");
     userAction.setInput(ui.seniority.endDate.get(), "15/09/2022");
     userAction.click(ui.seniority.hasAbsence.oui.get());
-    userEvent.selectOptions(
+    await userEvent.selectOptions(
       ui.seniority.absences.motif(0).get(),
       "Congé pour convenance personnelle"
     );

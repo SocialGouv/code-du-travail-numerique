@@ -4,7 +4,7 @@ exports[`<StatsDisplay /> should match snapshot 1`] = `
 <div>
   <div
     class="fr-callout h_100%"
-    id="fr-callout-:r0:"
+    id="fr-callout-_r_0_"
   >
     <p
       class="fr-callout__text"

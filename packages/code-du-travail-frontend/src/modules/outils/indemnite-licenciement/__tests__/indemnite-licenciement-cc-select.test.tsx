@@ -1,11 +1,14 @@
 import { render, fireEvent, waitFor } from "@testing-library/react";
-import React from "react";
 import { UserAction } from "../../common/utils/UserAction";
 import { CalculateurIndemniteLicenciement } from "../IndemniteLicenciementSimulator";
 import { ui } from "../../indemnite-depart/__tests__/ui";
 
-jest.mock("../../../convention-collective/search");
-jest.mock("../../../enterprise/queries");
+jest.mock(
+  "../../../convention-collective/AgreementSearch/AgreementSearchInput"
+);
+jest.mock(
+  "../../../enterprise/EnterpriseAgreementSearch/EnterpriseAgreementSearchInput"
+);
 
 describe("Indemnité licenciement - Sélection de CC", () => {
   beforeEach(() => {

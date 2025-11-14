@@ -33,7 +33,7 @@ test(`Mise à la retraite pour la CC 3239 impossible`, async () => {
   expect(
     ui.information.agreement3239.categoryQuestion.query()
   ).toBeInTheDocument();
-  userAction.changeInputList(
+  await userAction.changeInputList(
     ui.information.agreement3239.categoryAnswers.get(),
     "Assistants maternels du particulier employeur"
   );

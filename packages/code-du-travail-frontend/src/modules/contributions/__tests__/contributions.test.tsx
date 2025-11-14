@@ -1,10 +1,4 @@
-import {
-  act,
-  fireEvent,
-  render,
-  RenderResult,
-  waitFor,
-} from "@testing-library/react";
+import { act, fireEvent, render, RenderResult } from "@testing-library/react";
 import React from "react";
 import userEvent from "@testing-library/user-event";
 
@@ -147,8 +141,6 @@ describe("<ContributionLayout />", () => {
       await userEvent.click(ccUi.searchByName.input.get());
       await userEvent.type(ccUi.searchByName.input.get(), "16");
 
-      await waitFor(() => {});
-
       fireEvent.click(ccUi.searchByName.autocompleteLines.IDCC16.name.get());
 
       expect(ui.generic.linkDisplayInfo.query()).not.toBeInTheDocument();
@@ -236,7 +228,6 @@ describe("<ContributionLayout />", () => {
       expect(ccUi.buttonDisplayInfo.query()).not.toBeInTheDocument();
       await userEvent.click(ccUi.searchByName.input.get());
       await userEvent.type(ccUi.searchByName.input.get(), "16");
-      await waitFor(() => {});
       fireEvent.click(ccUi.searchByName.autocompleteLines.IDCC16.name.get());
 
       fireEvent.click(ccUi.buttonDisplayInfo.get());
@@ -271,7 +262,6 @@ describe("<ContributionLayout />", () => {
       fireEvent.click(ccUi.radio.agreementSearchOption.get());
       await userEvent.click(ccUi.searchByName.input.get());
       await userEvent.type(ccUi.searchByName.input.get(), "1388");
-      await waitFor(() => {});
       fireEvent.click(ccUi.searchByName.autocompleteLines.IDCC1388.name.get());
       expect(ui.generic.linkDisplayInfo.query()).not.toBeInTheDocument();
       expect(ccUi.buttonDisplayInfo.query()).not.toBeInTheDocument();
@@ -308,7 +298,6 @@ describe("<ContributionLayout />", () => {
       fireEvent.click(ccUi.radio.agreementSearchOption.get());
       await userEvent.click(ccUi.searchByName.input.get());
       await userEvent.type(ccUi.searchByName.input.get(), "29");
-      await waitFor(() => {});
       fireEvent.click(ccUi.searchByName.autocompleteLines.IDCC29.name.get());
       expect(ui.generic.linkDisplayInfo.query()).not.toBeInTheDocument();
       expect(ccUi.buttonDisplayInfo.query()).not.toBeInTheDocument();

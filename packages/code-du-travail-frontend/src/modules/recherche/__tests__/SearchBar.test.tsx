@@ -3,6 +3,7 @@ import { render, screen, fireEvent, waitFor } from "@testing-library/react";
 import { SearchBar } from "../SearchBar";
 import { useSearchTracking } from "../tracking";
 import { fetchSuggestResults } from "../../layout/header/fetchSuggestResults";
+import * as Sentry from "@sentry/nextjs";
 
 // Mock the useRouter hook
 jest.mock("next/navigation", () => ({
@@ -125,22 +126,18 @@ describe("SearchBar", () => {
       new Error("API error")
     );
 
-    // Spy on console.error
-    const consoleErrorSpy = jest.spyOn(console, "error").mockImplementation();
-
     render(<SearchBar />);
 
     // Click the button to simulate getting suggestions
     const getSuggestionsButton = screen.getByTestId("get-suggestions");
     fireEvent.click(getSuggestionsButton);
 
-    // Check that the error was logged
+    // Check that Sentry.captureMessage was called with the error
     await waitFor(() => {
-      expect(consoleErrorSpy).toHaveBeenCalled();
+      expect(Sentry.captureMessage).toHaveBeenCalledWith(
+        expect.stringContaining("Échec lors de la récupération des suggestions")
+      );
     });
-
-    // Restore console.error
-    consoleErrorSpy.mockRestore();
   });
 
   it("should initialize with the provided initial value", () => {

@@ -34,10 +34,12 @@ describe("Indemnité licenciement - CC 2596", () => {
       .click(ui.next.get())
       .click(ui.next.get());
   });
-  test(`Cadres`, () => {
-    userAction
-      .changeInputList(ui.information.agreement2596.proCategory.get(), "Cadres")
-      .click(ui.next.get());
+  test(`Cadres`, async () => {
+    await userAction.changeInputList(
+      ui.information.agreement2596.proCategory.get(),
+      "Cadres"
+    );
+    userAction.click(ui.next.get());
 
     userAction.setInput(ui.seniority.startDate.get(), "01/01/2018");
     userAction.setInput(ui.seniority.notificationDate.get(), "01/01/2022");
@@ -109,10 +111,12 @@ describe("Indemnité licenciement - CC 2596", () => {
     expect(ui.result.resultat.get()).toHaveTextContent("2 760,42 €");
     expect(ui.result.resultTableRows.queryAll().length).toBe(0);
   });
-  test(`Cadres moins de 8 mois d'ancienneté`, () => {
-    userAction
-      .changeInputList(ui.information.agreement2596.proCategory.get(), "Cadres")
-      .click(ui.next.get());
+  test(`Cadres moins de 8 mois d'ancienneté`, async () => {
+    await userAction.changeInputList(
+      ui.information.agreement2596.proCategory.get(),
+      "Cadres"
+    );
+    userAction.click(ui.next.get());
 
     userAction.setInput(ui.seniority.startDate.get(), "01/01/2022");
     userAction.setInput(ui.seniority.notificationDate.get(), "01/03/2022");
@@ -131,18 +135,19 @@ describe("Indemnité licenciement - CC 2596", () => {
     expect(ui.result.resultat.get()).toHaveTextContent("104,17 €");
     expect(ui.result.resultatLegal.get()).toHaveTextContent("0 €");
   });
-  test(`Cadres avec arret de travail`, () => {
+  test(`Cadres avec arret de travail`, async () => {
     userAction
       .click(ui.previous.get())
       .click(ui.previous.get())
       .click(ui.contract.arretTravail.oui.get());
 
     userAction.setInput(ui.contract.dateArretTravail.get(), "01/01/2022");
-    userAction
-      .click(ui.next.get())
-      .click(ui.next.get())
-      .changeInputList(ui.information.agreement2596.proCategory.get(), "Cadres")
-      .click(ui.next.get());
+    userAction.click(ui.next.get()).click(ui.next.get());
+    await userAction.changeInputList(
+      ui.information.agreement2596.proCategory.get(),
+      "Cadres"
+    );
+    userAction.click(ui.next.get());
 
     userAction.setInput(ui.seniority.startDate.get(), "01/01/2018");
     userAction.setInput(ui.seniority.notificationDate.get(), "01/01/2022");
@@ -160,13 +165,12 @@ describe("Indemnité licenciement - CC 2596", () => {
       )
     ).not.toBeInTheDocument();
   });
-  test(`Non-cadres`, () => {
-    userAction
-      .changeInputList(
-        ui.information.agreement2596.proCategory.get(),
-        "Emplois techniques et de coiffeurs"
-      )
-      .click(ui.next.get());
+  test(`Non-cadres`, async () => {
+    await userAction.changeInputList(
+      ui.information.agreement2596.proCategory.get(),
+      "Emplois techniques et de coiffeurs"
+    );
+    userAction.click(ui.next.get());
 
     userAction.setInput(ui.seniority.startDate.get(), "01/01/2000");
     userAction.setInput(ui.seniority.notificationDate.get(), "01/01/2022");
@@ -194,13 +198,12 @@ describe("Indemnité licenciement - CC 2596", () => {
     expect(ui.result.resultat.get()).toHaveTextContent("16 388,89 €");
   });
 
-  test(`Emplois de l'esthétique-cosmétique avec moins de 8 moins d'ancienneté`, () => {
-    userAction
-      .changeInputList(
-        ui.information.agreement2596.proCategory.get(),
-        "Emplois de l'esthétique-cosmétique"
-      )
-      .click(ui.next.get());
+  test(`Emplois de l'esthétique-cosmétique avec moins de 8 moins d'ancienneté`, async () => {
+    await userAction.changeInputList(
+      ui.information.agreement2596.proCategory.get(),
+      "Emplois de l'esthétique-cosmétique"
+    );
+    userAction.click(ui.next.get());
 
     userAction.setInput(ui.seniority.startDate.get(), "01/01/2020");
     userAction.setInput(ui.seniority.notificationDate.get(), "01/03/2024");
@@ -228,13 +231,12 @@ describe("Indemnité licenciement - CC 2596", () => {
     expect(ui.result.resultat.get()).toHaveTextContent("2 604,17 €");
   });
 
-  test(`Emplois de l'esthétique-cosmétique`, () => {
-    userAction
-      .changeInputList(
-        ui.information.agreement2596.proCategory.get(),
-        "Emplois de l'esthétique-cosmétique"
-      )
-      .click(ui.next.get());
+  test(`Emplois de l'esthétique-cosmétique`, async () => {
+    await userAction.changeInputList(
+      ui.information.agreement2596.proCategory.get(),
+      "Emplois de l'esthétique-cosmétique"
+    );
+    userAction.click(ui.next.get());
 
     userAction.setInput(ui.seniority.startDate.get(), "01/09/2023");
     userAction.setInput(ui.seniority.notificationDate.get(), "01/03/2024");
