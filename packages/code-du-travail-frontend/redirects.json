@@ -395,11 +395,6 @@
     "permanent": true
   },
   {
-    "source": "/convention-collective/bijouterie-joaillerie-orfevrerie-horlogerie-bjoh",
-    "destination": "/convention-collective/3251-bijouterie-joaillerie-orfevrerie-horlogerie-bjoh",
-    "permanent": true
-  },
-  {
     "source": "/convention-collective/1044(-[a-z0-9-]+)?",
     "destination": "/convention-collective/3251-bijouterie-joaillerie-orfevrerie-horlogerie-bjoh",
     "permanent": true
@@ -422,11 +417,6 @@
   {
     "source": "/convention-collective/7509(-[a-z0-9-]+)?",
     "destination": "/convention-collective/7520-convention-collective-nationale-de-lenseignement-agricole-prive-cneap",
-    "permanent": true
-  },
-  {
-    "source": "/convention-collective/1850(-[a-z0-9-]+)?",
-    "destination": "/convention-collective/1000-avocats-personnel-des-cabinets",
     "permanent": true
   },
   {
@@ -522,6 +512,36 @@
   {
     "source": "/convention-collective/2397(-[a-z0-9-]+)?",
     "destination": "/convention-collective/3252-entreprises-au-service-de-la-creation-et-de-levenement",
+    "permanent": true
+  },
+  {
+    "source": "/convention-collective/2707(-[a-z0-9-]+)?",
+    "destination": "/convention-collective/2609",
+    "permanent": true
+  },
+  {
+    "source": "/convention-collective/1504(-[a-z0-9-]+)?",
+    "destination": "/convention-collective/3254",
+    "permanent": true
+  },
+  {
+    "source": "/convention-collective/1588(-[a-z0-9-]+)?",
+    "destination": "/convention-collective/3220",
+    "permanent": true
+  },
+  {
+    "source": "/convention-collective/2230(-[a-z0-9-]+)?",
+    "destination": "/convention-collective/1486",
+    "permanent": true
+  },
+  {
+    "source": "/convention-collective/(0438|438(?:-[a-z0-9-]+)?)",
+    "destination": "/convention-collective/653",
+    "permanent": true
+  },
+  {
+    "source": "/convention-collective/1850(-[a-z0-9-]+)?",
+    "destination": "/convention-collective/3253",
     "permanent": true
   }
 ]
