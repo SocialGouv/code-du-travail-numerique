@@ -525,6 +525,11 @@
     "permanent": true
   },
   {
+    "source": "/convention-collective/(0992|992(?:-[a-z0-9-]+)?)",
+    "destination": "/convention-collective/3254",
+    "permanent": true
+  },
+  {
     "source": "/convention-collective/1588(-[a-z0-9-]+)?",
     "destination": "/convention-collective/3220",
     "permanent": true
@@ -537,6 +542,11 @@
   {
     "source": "/convention-collective/(0438|438(?:-[a-z0-9-]+)?)",
     "destination": "/convention-collective/653",
+    "permanent": true
+  },
+  {
+    "source": "/convention-collective/1000(-[a-z0-9-]+)?",
+    "destination": "/convention-collective/3253",
     "permanent": true
   },
   {
