@@ -13,7 +13,7 @@ export const metadata: Metadata = generateDefaultMetadata({
 });
 
 async function Index() {
-  const { documents } = await getContributions();
+  const documents = await getContributions();
 
   return (
     <DsfrLayout>

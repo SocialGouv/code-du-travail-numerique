@@ -1,35 +1,29 @@
 import { DocumentElastic } from "@socialgouv/cdtn-types/build/elastic/common";
-
-type Props = {
-  breadcrumbs: DocumentElastic["breadcrumbs"];
-};
+import { Breadcrumb } from "@socialgouv/cdtn-types";
 
 export const groupByThemes = <
   T extends { breadcrumbs: DocumentElastic["breadcrumbs"] },
 >(
   items: T[]
-): {
-  themes: string[];
-  documents: Record<string, T[]>;
-} => {
-  const documents = items.reduce(groupByTheme<T>, {} as Record<string, T[]>);
-
-  const themes = Object.keys(documents);
-
-  return { themes, documents };
+): { theme: Breadcrumb; documents: T[] }[] => {
+  const docs = items.reduce(
+    groupByTheme<T>,
+    {} as Record<string, { theme: Breadcrumb; documents: T[] }>
+  );
+  return Object.values(docs);
 };
 
 const groupByTheme = <
   T extends { breadcrumbs: DocumentElastic["breadcrumbs"] },
 >(
-  acc: Record<string, T[]>,
+  acc: Record<string, { theme: Breadcrumb; documents: T[] }>,
   item: T
 ) => {
-  const theme = item.breadcrumbs?.[0]?.label;
+  const theme = item.breadcrumbs?.[0];
   if (!theme) {
     return acc;
   }
-  if (theme in acc) acc[theme].push(item);
-  else acc[theme] = [item];
+  if (theme.label in acc) acc[theme.label].documents.push(item);
+  else acc[theme.label] = { theme, documents: [item] };
   return acc;
 };
