@@ -12,6 +12,7 @@ import { Section } from "./component/Section";
 import { cleanHash } from "../../utils";
 import { fr } from "@codegouvfr/react-dsfr";
 import { SourceKeys } from "@socialgouv/cdtn-utils";
+import { Breadcrumb } from "@socialgouv/cdtn-types";
 
 type Item = {
   title: string;
@@ -21,8 +22,9 @@ type Item = {
 };
 
 type Data = {
-  [theme: string]: Item[];
-};
+  theme: Breadcrumb;
+  documents: Item[];
+}[];
 
 type Props = {
   title: string;
@@ -50,12 +52,14 @@ export const ListLayout = ({
   const sectionRefs = useRef<{ [key: string]: HTMLHeadingElement | null }>({});
   const buttonRefs = useRef<{ [key: string]: HTMLButtonElement | null }>({});
 
-  const documents = useMemo(() => initialData, [initialData]);
+  const documents = initialData.toSorted(
+    (a, b) => a.theme.position - b.theme.position
+  );
 
   const popularItems = useMemo(() => {
     const allItems: Item[] = [];
     Object.values(initialData).forEach((theme) => {
-      allItems.push(...theme);
+      allItems.push(...theme.documents);
     });
 
     return popularSlugs
@@ -136,9 +140,9 @@ export const ListLayout = ({
   const sidebarSections = useMemo(() => {
     return [
       { id: "contenus-populaires", label: "Contenus populaires" },
-      ...Object.keys(documents).map((theme) => ({
-        id: cleanHash(theme),
-        label: theme,
+      ...documents.map(({ theme }) => ({
+        id: cleanHash(theme.label),
+        label: theme.label,
       })),
     ];
   }, [documents]);
@@ -165,8 +169,8 @@ export const ListLayout = ({
         icon="/static/assets/img/star.svg"
       />
 
-      {Object.keys(documents).map((theme) => {
-        const sectionId = cleanHash(theme);
+      {documents.map(({ theme, documents }) => {
+        const sectionId = cleanHash(theme.label);
         return (
           <Section
             source={source}
@@ -175,8 +179,8 @@ export const ListLayout = ({
               sectionRefs.current[sectionId] = el;
             }}
             sectionId={sectionId}
-            title={theme}
-            items={documents[theme]}
+            title={theme.label}
+            items={documents}
             isExpanded={expandedSections.has(sectionId)}
             onToggle={toggleSection}
             firstHiddenItemRef={handleFirstHiddenItemRef}

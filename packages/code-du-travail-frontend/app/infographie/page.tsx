@@ -13,7 +13,7 @@ export const metadata: Metadata = generateDefaultMetadata({
 });
 
 async function Index() {
-  const { documents } = await getInfographics();
+  const documents = await getInfographics();
 
   return (
     <DsfrLayout>

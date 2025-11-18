@@ -2,39 +2,53 @@ import { render } from "@testing-library/react";
 import { ListLayout } from "../ListLayout";
 import { SOURCES } from "@socialgouv/cdtn-utils";
 
-const contribs = {
-  "Congés et repos": [
-    {
-      title: "Congés payés",
-      slug: "conges-payes",
-      description: "Tout savoir sur les congés payés",
-      source: "contributions",
-      breadcrumbs: [{ label: "Congés et repos" }],
-      theme: "Congés et repos",
-      idcc: "0000",
+const contribs = [
+  {
+    theme: {
+      label: "Congés et repos",
+      position: 0,
+      slug: "conges-et-repos",
     },
-    {
-      title: "Jours fériés",
-      slug: "jours-feries",
-      description: "Informations sur les jours fériés",
-      source: "contributions",
-      breadcrumbs: [{ label: "Congés et repos" }],
-      theme: "Congés et repos",
-      idcc: "0000",
+    documents: [
+      {
+        title: "Congés payés",
+        slug: "conges-payes",
+        description: "Tout savoir sur les congés payés",
+        source: "contributions",
+        breadcrumbs: [{ label: "Congés et repos" }],
+        theme: "Congés et repos",
+        idcc: "0000",
+      },
+      {
+        title: "Jours fériés",
+        slug: "jours-feries",
+        description: "Informations sur les jours fériés",
+        source: "contributions",
+        breadcrumbs: [{ label: "Congés et repos" }],
+        theme: "Congés et repos",
+        idcc: "0000",
+      },
+    ],
+  },
+  {
+    theme: {
+      label: "Embauche et contrat",
+      position: 1,
+      slug: "embauche-et-contrat",
     },
-  ],
-  "Embauche et contrat": [
-    {
-      title: "Période d'essai",
-      slug: "periode-essai",
-      description: "Tout savoir sur la période d'essai",
-      source: "contributions",
-      breadcrumbs: [{ label: "Embauche et contrat" }],
-      theme: "Embauche et contrat",
-      idcc: "0000",
-    },
-  ],
-};
+    documents: [
+      {
+        title: "Période d'essai",
+        slug: "periode-essai",
+        description: "Tout savoir sur la période d'essai",
+        source: "contributions",
+        breadcrumbs: [{ label: "Embauche et contrat" }],
+        theme: "Embauche et contrat",
+        idcc: "0000",
+      },
+    ],
+  },
+];
 
 describe("<ListLayout />", () => {
   it("affiche la liste des contenus", () => {
