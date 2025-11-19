@@ -19,6 +19,7 @@ type Item = {
   description: string;
   slug: string;
   source: string;
+  pictureUrl?: string;
 };
 
 type Data = {

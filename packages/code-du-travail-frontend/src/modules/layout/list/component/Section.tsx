@@ -15,6 +15,7 @@ type Item = {
   description: string;
   slug: string;
   source: string;
+  pictureUrl?: string;
 };
 
 type SectionProps = {
@@ -94,21 +95,44 @@ export const Section = forwardRef<HTMLHeadingElement, SectionProps>(
                 "fr-col-lg-6"
               )} ${li}`}
             >
-              <Card
-                border
-                desc={summarize(item.description)}
-                horizontal
-                linkProps={{
-                  href: `/${getRouteBySource(source)}/${item.slug}`,
-                }}
-                size="medium"
-                title={item.title}
-                titleAs="h3"
-                enlargeLink
-                classes={{
-                  start: fr.cx("fr-hidden"),
-                }}
-              />
+              {item.pictureUrl ? (
+                <Card
+                  border
+                  desc={summarize(item.description)}
+                  horizontal
+                  linkProps={{
+                    href: `/${getRouteBySource(source)}/${item.slug}`,
+                  }}
+                  size="medium"
+                  title={item.title}
+                  imageUrl={item.pictureUrl}
+                  imageAlt={item.title}
+                  titleAs="h3"
+                  ratio="33/66"
+                  enlargeLink
+                  classes={{
+                    start: fr.cx("fr-hidden"),
+                    title: fr.cx("fr-text--lg")
+
+                  }}
+                />
+              ) : (
+                <Card
+                  border
+                  desc={summarize(item.description)}
+                  horizontal
+                  linkProps={{
+                    href: `/${getRouteBySource(source)}/${item.slug}`,
+                  }}
+                  size="medium"
+                  title={item.title}
+                  titleAs="h3"
+                  enlargeLink
+                  classes={{
+                    start: fr.cx("fr-hidden"),
+                  }}
+                />
+              )}
             </li>
           ))}
         </ul>

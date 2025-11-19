@@ -1,7 +1,7 @@
 import { DsfrLayout, ListLayout } from "../../src/modules/layout";
 import { generateDefaultMetadata } from "../../src/modules/common/metas";
 import { fetchInfographics } from "../../src/modules/infographie";
-import { groupByThemes } from "../../src/modules/utils";
+import { groupByThemes, toUrl } from "../../src/modules/utils";
 import { SOURCES } from "@socialgouv/cdtn-utils";
 import { Metadata } from "next";
 
@@ -15,6 +15,7 @@ export const metadata: Metadata = generateDefaultMetadata({
 async function Index() {
   const documents = await getInfographics();
 
+  console.log(JSON.stringify(documents));
   return (
     <DsfrLayout>
       <ListLayout
@@ -42,11 +43,13 @@ const getInfographics = async () => {
     "meta_description",
     "slug",
     "breadcrumbs",
+    "svgFilename",
   ]);
   return groupByThemes(
     data.map((item) => ({
       ...item,
       description: item.meta_description,
+      pictureUrl: toUrl(item.svgFilename),
     }))
   );
 };
