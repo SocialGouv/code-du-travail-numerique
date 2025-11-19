@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.199.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.198.0...v4.199.0) (2025-11-19)
+
+
+### Features
+
+* **heatmap:** activation de la carte de chaleur sur la page d'accueil ([01bb41c](https://github.com/SocialGouv/code-du-travail-numerique/commit/01bb41c0ffd7119be75f7169eeb247ee3f5761e7))
+
+
+
+
+
 # [4.198.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.197.0...v4.198.0) (2025-11-17)
 
 
