@@ -1,8 +1,9 @@
 import { DsfrLayout } from "../../src/modules/layout";
 import { PrivacyPolicy } from "../../src/modules/privacy-policy";
 import { generateDefaultMetadata } from "../../src/modules/common/metas";
+import { Metadata } from "next";
 
-export const metadata = generateDefaultMetadata({
+export const metadata: Metadata = generateDefaultMetadata({
   title: "Politique de confidentialité",
   description: "Politique de confidentialité du Code du travail numérique",
   path: "/politique-confidentialite",
