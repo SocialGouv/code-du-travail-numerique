@@ -11,7 +11,7 @@ describe("Pages infographies", () => {
     cy.canonicalUrlEqual("/infographie");
     cy.titleAndMetaDescriptionEqual(
       "Infographies - Code du travail numérique",
-      "Découvrez toutes les infographies du Code du travail numérique : des visuels clairs pour comprendre vos droits, obligations et démarches en un coup d'oeil."
+      "Découvrez toutes nos infographies : des visuels clairs pour comprendre vos droits, obligations et démarches en un coup d'oeil."
     );
     cy.get("h1").should("have.text", "Infographies");
     cy.get("body").should(
@@ -25,7 +25,7 @@ describe("Pages infographies", () => {
       .should("contain", "Contenus populaires");
     cy.findAllByRole("heading", { level: 2 })
       .eq(2)
-      .should("contain", "Départ de l’entreprise");
+      .should("contain", "Embauche et contrat de travail");
     cy.findAllByRole("heading", { level: 3 }).should("have.length.at.least", 1);
     cy.findAllByRole("heading", { level: 3 }).first().click();
     cy.urlEqual("/infographie/licenciement-pour-inaptitude-medicale");
