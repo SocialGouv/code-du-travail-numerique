@@ -1,5 +1,7 @@
 // Consent management service for tracking tools
 
+import { safeGetItem, safeSetItem } from "./storage";
+
 // Consent types
 export type ConsentType = {
   matomo: boolean;
@@ -21,39 +23,30 @@ export const DEFAULT_CONSENT: ConsentType = {
 export const getStoredConsent = (): ConsentType => {
   if (typeof window === "undefined") return DEFAULT_CONSENT;
 
-  try {
-    const storedConsent = localStorage.getItem(CONSENT_STORAGE_KEY);
-    // Check if user has explicitly consented
-    const hasConsented = localStorage.getItem("cdtn-cookie-consent-given");
+  // Check if user has explicitly consented
+  const hasConsented = safeGetItem("cdtn-cookie-consent-given");
 
-    if (!hasConsented) {
-      return {
-        ...DEFAULT_CONSENT,
-        matomo: true,
-        sea: false,
-        matomoHeatmap: false,
-      };
-    }
-
-    return storedConsent ? JSON.parse(storedConsent) : DEFAULT_CONSENT;
-  } catch (e) {
-    console.error("Error reading consent from localStorage:", e);
-    return DEFAULT_CONSENT;
+  if (!hasConsented) {
+    return {
+      ...DEFAULT_CONSENT,
+      matomo: true,
+      sea: false,
+      matomoHeatmap: false,
+    };
   }
+
+  const storedConsent = safeGetItem(CONSENT_STORAGE_KEY);
+  return storedConsent ? JSON.parse(storedConsent) : DEFAULT_CONSENT;
 };
 
 // Save consent to local storage
 export const saveConsent = (consent: ConsentType): void => {
   if (typeof window === "undefined") return;
 
-  try {
-    // Ensure Matomo is always enabled (mandatory), but respect user choice for matomoHeatmap
-    const finalConsent = { ...consent, matomo: true };
-    localStorage.setItem(CONSENT_STORAGE_KEY, JSON.stringify(finalConsent));
-    applyConsent(finalConsent);
-  } catch (e) {
-    console.error("Error saving consent to localStorage:", e);
-  }
+  // Ensure Matomo is always enabled (mandatory), but respect user choice for matomoHeatmap
+  const finalConsent = { ...consent, matomo: true };
+  safeSetItem(CONSENT_STORAGE_KEY, JSON.stringify(finalConsent));
+  applyConsent(finalConsent);
 };
 
 // Apply consent settings to tracking tools

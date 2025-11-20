@@ -9,7 +9,11 @@ import { StartDsfrLight } from "./StartDsfrLight";
 import { ENV } from "../../config";
 import { SentryTest } from "../sentry";
 import { ConsentManager } from "../cookie-consent";
-import { shouldShowCookieBanner } from "../cookie-consent/config";
+import {
+  isAdsEnabled,
+  isHeatmapEnabled,
+  shouldShowCookieBanner,
+} from "../analytics";
 import { usePathname } from "next/navigation";
 import { MatomoAnalytics } from "./MatomoAnalytics";
 
@@ -32,6 +36,7 @@ export default function DefaultLayout({
   const lang = "fr";
   const pathname = usePathname() || "";
   const showCookieBanner = shouldShowCookieBanner(pathname);
+  const heatMapEnabled = isHeatmapEnabled(pathname);
 
   return (
     <html {...getHtmlAttributes({ lang })}>
@@ -61,9 +66,14 @@ export default function DefaultLayout({
           defaultColorScheme={defaultColorScheme}
         >
           {children}
-          {showCookieBanner && <ConsentManager />}
+          {showCookieBanner && (
+            <ConsentManager
+              adsEnabled={isAdsEnabled()}
+              heatmapEnabled={isHeatmapEnabled()}
+            />
+          )}
         </DsfrProvider>
-        <MatomoAnalytics hasCookieBannerEnabled={showCookieBanner} />
+        <MatomoAnalytics heatmapEnabled={heatMapEnabled} />
         {ENV === "development" && <SentryTest />}
       </body>
     </html>
