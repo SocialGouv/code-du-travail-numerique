@@ -3,6 +3,11 @@ import type { MainNavigationProps } from "@codegouvfr/react-dsfr/MainNavigation/
 import { HeaderBrand } from "./HeaderBrand";
 import { HeaderSearch } from "./HeaderSearch";
 import { HeaderNavigation } from "./HeaderNavigation";
+import { useFeatureFlag } from "src/modules/utils/useFeatureFlag";
+import { HeaderSearchV2 } from "./HeaderSearchV2";
+import { useState } from "react";
+import { SearchModal } from "src/modules/recherche/modal/SearchModal";
+import { mockSearchResults } from "src/modules/recherche/modal/mockData";
 
 export type NavigationLink = MainNavigationProps.Item.Link;
 
@@ -38,17 +43,35 @@ export const HeaderDsfr = ({
   onSearchSubmit,
   currentPath,
 }: Props) => {
+  const useV2Search = useFeatureFlag("search_v2");
+  const [hasSearchV2Click, setHasSearchV2Click] = useState(false);
   return (
     <header role="banner" id="fr-header" className={fr.cx("fr-header")}>
       <div className={fr.cx("fr-header__body")}>
         <div className={fr.cx("fr-container")}>
           <div className={fr.cx("fr-header__body-row")}>
             <HeaderBrand />
-            <HeaderSearch onSearchSubmit={onSearchSubmit} />
+            {useV2Search ? (
+              <HeaderSearchV2
+                onSearchClick={() => setHasSearchV2Click(!hasSearchV2Click)}
+              />
+            ) : (
+              <HeaderSearch onSearchSubmit={onSearchSubmit} />
+            )}
           </div>
         </div>
       </div>
       <HeaderNavigation navigation={navigation} currentPath={currentPath} />
+      {hasSearchV2Click && (
+        <SearchModal
+          isOpen={hasSearchV2Click}
+          onClearSearch={() => {}}
+          onClose={() => {}}
+          onSearchChange={() => {}}
+          results={mockSearchResults}
+          searchQuery="sqsqqs"
+        />
+      )}
     </header>
   );
 };

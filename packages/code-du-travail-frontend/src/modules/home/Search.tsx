@@ -1,10 +1,13 @@
 import { fr } from "@codegouvfr/react-dsfr";
 import { css } from "@styled-system/css";
 import Image from "next/image";
-import { HomeSearch } from "./Components";
+import { HomeSearch, HomeSearchV2 } from "./Components";
 import IllustrationHomePrincipal from "./picto/IllustrationHomePrincipal.svg";
+import { useFeatureFlag } from "../utils/useFeatureFlag";
 
 export const Search = () => {
+  const useV2Search = useFeatureFlag("search_v2");
+
   return (
     <div className={mainContainer}>
       <div className={fr.cx("fr-container", "fr-py-6w")}>
@@ -27,7 +30,7 @@ export const Search = () => {
             <h2 className={fr.cx("fr-text--lead", "fr-text--bold", "fr-mb-6w")}>
               Obtenez les réponses à vos questions sur le droit du travail.
             </h2>
-            <HomeSearch />
+            {useV2Search ? <HomeSearchV2 /> : <HomeSearch />}
           </div>
           <div
             className={fr.cx(
