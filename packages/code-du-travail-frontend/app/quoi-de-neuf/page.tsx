@@ -1,0 +1,15 @@
+import { redirect } from "next/navigation";
+import { getMostRecentPeriod } from "../../src/modules/whatIsNew";
+import { generateDefaultMetadata } from "../../src/modules/common/metas";
+
+export const metadata = generateDefaultMetadata({
+    title: "Quoi de neuf",
+    description:
+        "Consultez les dernières évolutions et mises à jour du Code du travail numérique.",
+    path: "/quoi-de-neuf",
+});
+
+export default function Index() {
+    const period = getMostRecentPeriod();
+    redirect(`/quoi-de-neuf/${period}`);
+}
