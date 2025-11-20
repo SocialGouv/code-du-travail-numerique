@@ -1,7 +1,7 @@
 import Accordion from "@codegouvfr/react-dsfr/Accordion";
 import { fr } from "@codegouvfr/react-dsfr";
-import { ListWithArrow } from "../../common/ListWithArrow";
-import Link from "../../common/Link";
+import { ListWithArrow } from "./ListWithArrow";
+import Link from "./Link";
 import React from "react";
 
 export type Props = {

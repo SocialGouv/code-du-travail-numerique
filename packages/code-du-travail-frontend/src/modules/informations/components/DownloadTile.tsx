@@ -1,5 +1,6 @@
 import { Tile } from "@codegouvfr/react-dsfr/Tile";
 import { toUrl } from "src/modules/utils/url";
+import { formatFileSize } from "../../utils";
 
 export const DownloadTile = ({
   filename,
@@ -18,7 +19,7 @@ export const DownloadTile = ({
       imageUrl={`/static/assets/img/modeles-de-courriers-download.svg`}
       title={`Télécharger l'infographie`}
       titleAs={titleAs}
-      detail={<p>Format PDF - {filesize}</p>}
+      detail={<p>Format PDF - {formatFileSize(filesize)}</p>}
       imageAlt={""}
       linkProps={{
         href: toUrl(filename),

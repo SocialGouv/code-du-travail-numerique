@@ -3,18 +3,10 @@
 import {
   getAllContributionsGroupByQuestion,
   getByIdsContributions,
-  getGenericContributionsGroupByThemes,
 } from "../service";
 import { getAllAgreements } from "../../agreements";
 
 describe("Contributions", () => {
-  it("getGenericContributions", async () => {
-    const result = await getGenericContributionsGroupByThemes();
-    expect(result).toHaveProperty("themes");
-    expect(result).toHaveProperty("documents");
-    expect(result).toMatchSnapshot();
-  });
-
   it("getByIdsContributions", async () => {
     const result = await getByIdsContributions(["eba7a4592f"]);
     expect(result).toMatchSnapshot();

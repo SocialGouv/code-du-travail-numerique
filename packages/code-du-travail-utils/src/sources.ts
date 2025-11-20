@@ -35,7 +35,7 @@ export const routeBySource = {
   [SOURCES.TOOLS]: "outils",
   [SOURCES.HIGHLIGHTS]: "highlights",
   [SOURCES.PREQUALIFIED]: "prequalified",
-  [SOURCES.INFOGRAPHICS]: "infographies",
+  [SOURCES.INFOGRAPHICS]: "infographie",
 } as const;
 
 export const labelBySource = {

@@ -1,35 +1,8 @@
 import { elasticDocumentsIndex, elasticsearchClient } from "../../utils";
-import { getAllGenericsContributions, getContributionsByIds } from "./queries";
+import { getContributionsByIds } from "./queries";
 import { fetchAllContributions } from "./fetch";
 import { ElasticSearchItem } from "../../types";
 import { ElasticAgreement } from "@socialgouv/cdtn-types";
-
-export const getGenericContributionsGroupByThemes = async (
-  selectedTheme: string = ""
-) => {
-  const body = getAllGenericsContributions();
-
-  const response = await elasticsearchClient.search({
-    body,
-    index: elasticDocumentsIndex,
-  });
-
-  const contribs = response.hits.hits
-    .map(({ _source }) => _source)
-    .map((contrib: any) => {
-      contrib.theme = contrib.breadcrumbs[0].label;
-      return contrib;
-    })
-    .reduce(groupByThemes, {});
-
-  const themes = Object.keys(contribs);
-  const documents =
-    selectedTheme === ""
-      ? contribs
-      : { [selectedTheme]: contribs[selectedTheme] };
-
-  return { themes, documents };
-};
 
 const isGeneric = (contrib) => contrib.idcc === "0000";
 
@@ -77,10 +50,4 @@ export const getByIdsContributions = async (
   return response.hits.hits.length > 0
     ? response.hits.hits.map(({ _source }) => _source)
     : [];
-};
-
-const groupByThemes = (acc, item) => {
-  if (item.theme in acc) acc[item.theme].push(item);
-  else acc[item.theme] = [item];
-  return acc;
 };

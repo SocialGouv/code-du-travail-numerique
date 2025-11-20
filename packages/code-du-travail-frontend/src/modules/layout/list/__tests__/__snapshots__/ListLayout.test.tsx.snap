@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
-exports[`<ContributionsList /> affiche la liste des fiches pratiques 1`] = `
+exports[`<ListLayout /> affiche la liste des contenus 1`] = `
 <div>
   <div
     class="fr-grid-row fr-mb-12w"
@@ -37,9 +37,7 @@ exports[`<ContributionsList /> affiche la liste des fiches pratiques 1`] = `
             <a
               aria-current="page"
               class="fr-breadcrumb__link"
-            >
-              Fiches pratiques
-            </a>
+            />
           </li>
         </ol>
       </div>
@@ -53,14 +51,10 @@ exports[`<ContributionsList /> affiche la liste des fiches pratiques 1`] = `
         <h1
           class="fr-mt-0 fr-mb-3w"
           id="main-content"
-        >
-          Fiches pratiques
-        </h1>
+        />
         <p
           class="fr-text--lead fr-mb-3w"
-        >
-          Obtenez une réponse personnalisée selon votre convention collective
-        </p>
+        />
       </div>
       <div
         class="fr-grid-row fr-grid-row--gutters"
