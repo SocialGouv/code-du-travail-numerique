@@ -3,6 +3,63 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.201.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.200.0...v4.201.0) (2025-11-20)
+
+
+### Features
+
+* **redirection:** ajout des redirections suite à la mise à jour de la DARES ([#6932](https://github.com/SocialGouv/code-du-travail-numerique/issues/6932)) ([88b3055](https://github.com/SocialGouv/code-du-travail-numerique/commit/88b3055cc5f414348be2551149516cea82b139e6))
+
+
+
+
+
+# [4.200.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.199.0...v4.200.0) (2025-11-20)
+
+
+### Bug Fixes
+
+* sentry localstorage error not available ([#6923](https://github.com/SocialGouv/code-du-travail-numerique/issues/6923)) ([f4c6949](https://github.com/SocialGouv/code-du-travail-numerique/commit/f4c69492416ed2a2ce8f13dce7eefe0d1e2896ec))
+
+
+### Features
+
+* **analytics:** improve cookie banner configuration ([#6937](https://github.com/SocialGouv/code-du-travail-numerique/issues/6937)) ([54b8b0c](https://github.com/SocialGouv/code-du-travail-numerique/commit/54b8b0c788e3b68c591774943d157afd6355b63d))
+* print error message ([#6928](https://github.com/SocialGouv/code-du-travail-numerique/issues/6928)) ([67b3d6c](https://github.com/SocialGouv/code-du-travail-numerique/commit/67b3d6c01cce8c0ec24629d36335e4c5130e670d))
+
+
+
+
+
+# [4.199.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.198.0...v4.199.0) (2025-11-19)
+
+
+### Features
+
+* **heatmap:** activation de la carte de chaleur sur la page d'accueil ([01bb41c](https://github.com/SocialGouv/code-du-travail-numerique/commit/01bb41c0ffd7119be75f7169eeb247ee3f5761e7))
+
+
+
+
+
+# [4.198.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.197.0...v4.198.0) (2025-11-17)
+
+
+### Bug Fixes
+
+* **information:** correction du `hn` au niveau des références ([#6918](https://github.com/SocialGouv/code-du-travail-numerique/issues/6918)) ([070f08a](https://github.com/SocialGouv/code-du-travail-numerique/commit/070f08aab3e62ab97e01ec72233f91689c795333))
+
+
+### Features
+
+* **contributions:** ajout de la nouvelle page avec le nouveau layout ([#6913](https://github.com/SocialGouv/code-du-travail-numerique/issues/6913)) ([7ad21d7](https://github.com/SocialGouv/code-du-travail-numerique/commit/7ad21d7b7c81c630b7f5d890d15ba51a4a670ceb))
+* **home:** ajout de la section "Comprendre le droit du travail"  ([#6924](https://github.com/SocialGouv/code-du-travail-numerique/issues/6924)) ([37d6795](https://github.com/SocialGouv/code-du-travail-numerique/commit/37d6795425683c6e531441c4b0a09c33ce23e239))
+* **next:** upgrade en version 16 + upgrade en version 19 de react ([#6921](https://github.com/SocialGouv/code-du-travail-numerique/issues/6921)) ([6710acd](https://github.com/SocialGouv/code-du-travail-numerique/commit/6710acdc3ca6b5812be87b3f7b5d143ce55f2b3b))
+
+
+
+
+
 # [4.197.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.196.1...v4.197.0) (2025-10-30)
 
 
