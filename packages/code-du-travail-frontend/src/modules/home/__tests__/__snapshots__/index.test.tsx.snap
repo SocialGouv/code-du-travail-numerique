@@ -120,9 +120,7 @@ exports[`<Home /> should match snapshot 1`] = `
                 data-nimg="1"
                 decoding="async"
                 height="331"
-                sizes="(max-width: 768px) 378px, 486px"
-                src="/_next/image?url=%2Fimg.jpg&w=3840&q=75"
-                srcset="/_next/image?url=%2Fimg.jpg&w=32&q=75 32w, /_next/image?url=%2Fimg.jpg&w=48&q=75 48w, /_next/image?url=%2Fimg.jpg&w=64&q=75 64w, /_next/image?url=%2Fimg.jpg&w=96&q=75 96w, /_next/image?url=%2Fimg.jpg&w=128&q=75 128w, /_next/image?url=%2Fimg.jpg&w=256&q=75 256w, /_next/image?url=%2Fimg.jpg&w=384&q=75 384w, /_next/image?url=%2Fimg.jpg&w=640&q=75 640w, /_next/image?url=%2Fimg.jpg&w=750&q=75 750w, /_next/image?url=%2Fimg.jpg&w=828&q=75 828w, /_next/image?url=%2Fimg.jpg&w=1080&q=75 1080w, /_next/image?url=%2Fimg.jpg&w=1200&q=75 1200w, /_next/image?url=%2Fimg.jpg&w=1920&q=75 1920w, /_next/image?url=%2Fimg.jpg&w=2048&q=75 2048w, /_next/image?url=%2Fimg.jpg&w=3840&q=75 3840w"
+                src="/static/assets/icons/home/illustration-principale.svg"
                 style="color: transparent; width: 100%; height: auto;"
                 width="486"
               />
@@ -540,11 +538,365 @@ exports[`<Home /> should match snapshot 1`] = `
         </div>
       </div>
       <div
-        class="bg_var(--background-alt-blue-cumulus)"
+        class="bg_var(--background-alt-blue-cumulus) fr-py-8w"
+        id="home-de-la-question-a-laction"
+      >
+        <div
+          class="fr-container pos_relative"
+        >
+          <h2>
+            De la question à l'action
+          </h2>
+          <div
+            class="pos_relative d_flex flex-d_column"
+          >
+            <div
+              class="fr-grid-row fr-grid-row-md--gutters fr-mb-3w"
+            >
+              <div
+                class="fr-col-12 fr-col-md-6"
+              >
+                <div
+                  class="pos_relative w_100%"
+                >
+                  <img
+                    alt=""
+                    aria-hidden="true"
+                    class="pos_absolute top_0 left_0 w_100% h_100% z_0"
+                    data-nimg="fill"
+                    decoding="async"
+                    loading="lazy"
+                    src="/static/assets/icons/home/bubble.svg"
+                    style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+                  />
+                  <div
+                    class="pos_relative z_1 pt_1.7rem pl_2rem pr_2rem pb_3.5rem"
+                  >
+                    <p
+                      class="c_var(--text-default-grey) mb_0px! fr-text--md fr-text--bold"
+                    >
+                      Je souhaite demander une rupture conventionnelle. Qu'est ce que je dois savoir ? Comment je dois procéder ?
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="fr-col-12 fr-col-md-6"
+              >
+                <div>
+                  <h3
+                    class="fr-text--lg"
+                  >
+                    Les réponses à votre question
+                  </h3>
+                  <div
+                    class="d_flex flex-d_column gap_1.5rem"
+                  >
+                    <div
+                      class="d_flex ai_center"
+                    >
+                      <div
+                        class="d_flex ai_center jc_center fr-mr-2w"
+                      >
+                        <img
+                          alt=""
+                          data-nimg="1"
+                          decoding="async"
+                          height="56"
+                          loading="lazy"
+                          src="/static/assets/icons/home/step.svg"
+                          style="color: transparent;"
+                          width="56"
+                        />
+                      </div>
+                      <p
+                        class="fr-mb-0"
+                      >
+                        Découvrez
+                         
+                        <a
+                          href="/information/rupture-conventionnelle-individuelle-la-procedure-en-details"
+                        >
+                          les étapes de la procédure
+                        </a>
+                      </p>
+                    </div>
+                    <div
+                      class="d_flex ai_center"
+                    >
+                      <div
+                        class="d_flex ai_center jc_center fr-mr-2w"
+                      >
+                        <img
+                          alt=""
+                          data-nimg="1"
+                          decoding="async"
+                          height="56"
+                          loading="lazy"
+                          src="/static/assets/icons/home/infographie.svg"
+                          style="color: transparent;"
+                          width="56"
+                        />
+                      </div>
+                      <p
+                        class="fr-mb-0"
+                      >
+                        La synthèse dans
+                         
+                        <a
+                          href="/information/rupture-conventionnelle-individuelle-la-procedure-en-details"
+                        >
+                          cette infographie
+                        </a>
+                      </p>
+                    </div>
+                    <div
+                      class="d_flex ai_center"
+                    >
+                      <div
+                        class="d_flex ai_center jc_center fr-mr-2w"
+                      >
+                        <img
+                          alt=""
+                          data-nimg="1"
+                          decoding="async"
+                          height="56"
+                          loading="lazy"
+                          src="/static/assets/icons/home/simulator.svg"
+                          style="color: transparent;"
+                          width="56"
+                        />
+                      </div>
+                      <p
+                        class="fr-mb-0"
+                      >
+                        Simulez votre
+                         
+                        <a
+                          href="outils/indemnite-rupture-conventionnelle"
+                        >
+                          indemnité de rupture conventionnelle
+                        </a>
+                      </p>
+                    </div>
+                    <div
+                      class="d_flex ai_center"
+                    >
+                      <div
+                        class="d_flex ai_center jc_center fr-mr-2w"
+                      >
+                        <img
+                          alt=""
+                          data-nimg="1"
+                          decoding="async"
+                          height="56"
+                          loading="lazy"
+                          src="/static/assets/icons/home/letter.svg"
+                          style="color: transparent;"
+                          width="56"
+                        />
+                      </div>
+                      <p
+                        class="fr-mb-0"
+                      >
+                        Retrouvez
+                         
+                        <a
+                          href="/modeles-de-courriers/demande-de-rendez-vous-en-vue-dune-rupture-conventionnelle"
+                        >
+                          le modèle de courrier
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="d_flex jc_center ai_center md:pos_absolute md:left_22% md:top_32% md:trf_translate(-50%,_-50%) md:m_0 md:z_1 fr-mb-3w fr-hidden fr-unhidden-md"
+            >
+              <img
+                alt=""
+                class="w_100% h_auto md:w_280px lg:w_320px"
+                data-nimg="1"
+                decoding="async"
+                height="250"
+                loading="lazy"
+                src="/static/assets/icons/home/illustration-questions.svg"
+                style="color: transparent;"
+                width="350"
+              />
+            </div>
+            <div
+              class="fr-grid-row fr-grid-row-md--gutters fr-mb-3w"
+            >
+              <div
+                class="fr-col-12 fr-col-md-6"
+              >
+                <div
+                  class="pos_relative w_100%"
+                >
+                  <img
+                    alt=""
+                    aria-hidden="true"
+                    class="pos_absolute top_0 left_0 w_100% h_100% z_0"
+                    data-nimg="fill"
+                    decoding="async"
+                    loading="lazy"
+                    src="/static/assets/icons/home/bubble.svg"
+                    style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+                  />
+                  <div
+                    class="pos_relative z_1 pt_1.7rem pl_2rem pr_2rem pb_3.5rem"
+                  >
+                    <p
+                      class="c_var(--text-default-grey) mb_0px! fr-text--md fr-text--bold"
+                    >
+                      Je souhaite embaucher mon premier salarié en CDI. Quelles sont les formalités obligatoires ? Comment écrire le contrat de travail ?
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="fr-col-12 fr-col-md-6"
+              >
+                <div>
+                  <h3
+                    class="fr-text--lg"
+                  >
+                    Les réponses à votre question
+                  </h3>
+                  <div
+                    class="d_flex flex-d_column gap_1.5rem"
+                  >
+                    <div
+                      class="d_flex ai_center"
+                    >
+                      <div
+                        class="d_flex ai_center jc_center fr-mr-2w"
+                      >
+                        <img
+                          alt=""
+                          data-nimg="1"
+                          decoding="async"
+                          height="56"
+                          loading="lazy"
+                          src="/static/assets/icons/home/step.svg"
+                          style="color: transparent;"
+                          width="56"
+                        />
+                      </div>
+                      <p
+                        class="fr-mb-0"
+                      >
+                        Découvrez
+                         
+                        <a
+                          href="/fiche-service-public/procedure-et-formalites-dembauche-dun-salarie-du-secteur-prive"
+                        >
+                          les principales obligations et formalités
+                        </a>
+                      </p>
+                    </div>
+                    <div
+                      class="d_flex ai_center"
+                    >
+                      <div
+                        class="d_flex ai_center jc_center fr-mr-2w"
+                      >
+                        <img
+                          alt=""
+                          data-nimg="1"
+                          decoding="async"
+                          height="56"
+                          loading="lazy"
+                          src="/static/assets/icons/home/simulator.svg"
+                          style="color: transparent;"
+                          width="56"
+                        />
+                      </div>
+                      <p
+                        class="fr-mb-0"
+                      >
+                        Simulez
+                         
+                        <a
+                          href="/outils/simulateur-embauche"
+                        >
+                          le coût de l'embauche
+                        </a>
+                      </p>
+                    </div>
+                    <div
+                      class="d_flex ai_center"
+                    >
+                      <div
+                        class="d_flex ai_center jc_center fr-mr-2w"
+                      >
+                        <img
+                          alt=""
+                          data-nimg="1"
+                          decoding="async"
+                          height="56"
+                          loading="lazy"
+                          src="/static/assets/icons/home/letter.svg"
+                          style="color: transparent;"
+                          width="56"
+                        />
+                      </div>
+                      <p
+                        class="fr-mb-0"
+                      >
+                        Retrouvez la
+                         
+                        <a
+                          href="/modeles-de-courriers/promesse-dembauche"
+                        >
+                          promesse d'embauche
+                        </a>
+                      </p>
+                    </div>
+                    <div
+                      class="d_flex ai_center"
+                    >
+                      <div
+                        class="d_flex ai_center jc_center fr-mr-2w"
+                      >
+                        <img
+                          alt=""
+                          data-nimg="1"
+                          decoding="async"
+                          height="56"
+                          loading="lazy"
+                          src="/static/assets/icons/home/step.svg"
+                          style="color: transparent;"
+                          width="56"
+                        />
+                      </div>
+                      <p
+                        class="fr-mb-0"
+                      >
+                        Vérifiez également
+                         
+                        <a
+                          href="/contribution/quelle-est-la-duree-maximale-de-la-periode-dessai-sans-et-avec-renouvellement"
+                        >
+                          la durée de la période d'essai
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
         id="home-outils"
       >
         <div
-          class="fr-my-8w fr-container fr-py-6w"
+          class="fr-my-8w fr-container"
         >
           <h2>
             Boîte à outils
@@ -622,10 +974,11 @@ exports[`<Home /> should match snapshot 1`] = `
         </div>
       </div>
       <div
+        class="bg_var(--background-alt-blue-cumulus)"
         id="home-modeles-de-courriers"
       >
         <div
-          class="fr-my-8w fr-container"
+          class="fr-my-8w fr-container fr-py-6w"
         >
           <h2>
             Modèles de documents
@@ -891,8 +1244,7 @@ exports[`<Home /> should match snapshot 1`] = `
                 decoding="async"
                 height="233"
                 loading="lazy"
-                src="/_next/image?url=%2Fimg.jpg&w=828&q=75"
-                srcset="/_next/image?url=%2Fimg.jpg&w=384&q=75 1x, /_next/image?url=%2Fimg.jpg&w=828&q=75 2x"
+                src="/static/assets/icons/home/themes.svg"
                 style="color: transparent;"
                 width="384"
               />

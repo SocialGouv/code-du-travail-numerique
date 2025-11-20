@@ -2,7 +2,6 @@ import { fr } from "@codegouvfr/react-dsfr";
 import { css } from "@styled-system/css";
 import Image from "next/image";
 import { HomeSearch } from "./Components";
-import IllustrationHomePrincipal from "./picto/IllustrationHomePrincipal.svg";
 
 export const Search = () => {
   return (
@@ -38,7 +37,7 @@ export const Search = () => {
             )}
           >
             <Image
-              src={IllustrationHomePrincipal}
+              src={"/static/assets/icons/home/illustration-principale.svg"}
               alt=""
               priority
               fill={false}

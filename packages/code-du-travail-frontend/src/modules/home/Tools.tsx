@@ -13,7 +13,6 @@ export const Tools = (props: Props) => {
   return (
     <SectionContainer
       sectionId="home-outils"
-      isTint
       title="Boîte à outils"
       subtitle="Trouvez des réponses personnalisées selon votre situation"
       footerNode={

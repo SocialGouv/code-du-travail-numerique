@@ -11,6 +11,8 @@ export enum MatomoHomeEvent {
   CLICK_VOIR_TOUTES_LES_CONVENTIONS_COLLECTIVES = "click_voir_toutes_les_conventions_collectives",
   CLICK_VOIR_TOUTES_LES_THEMES = "click_voir_tous_les_themes",
   CLICK_COMPRENDRE_DROIT_DU_TRAVAIL = "click_comprendre_le_droit_du_travail",
+  CLICK_PARCOURIR_LES_QUESTIONS = "click_parcourir_les_questions",
+  CLICK_DE_LA_QUESTION_A_LACTION = "click_question_action",
 }
 
 export const useHomeTracking = () => {
@@ -21,7 +23,16 @@ export const useHomeTracking = () => {
     });
   };
 
+  const emitQuestionActionEvent = (slug: string) => {
+    sendEvent({
+      category: MatomoHomeCategory.PAGE_HOME,
+      action: MatomoHomeEvent.CLICK_DE_LA_QUESTION_A_LACTION,
+      name: slug,
+    });
+  };
+
   return {
     emitHomeClickButtonEvent,
+    emitQuestionActionEvent,
   };
 };
