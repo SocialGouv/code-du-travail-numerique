@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.201.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.200.0...v4.201.0) (2025-11-20)
+
+
+### Features
+
+* **redirection:** ajout des redirections suite à la mise à jour de la DARES ([#6932](https://github.com/SocialGouv/code-du-travail-numerique/issues/6932)) ([88b3055](https://github.com/SocialGouv/code-du-travail-numerique/commit/88b3055cc5f414348be2551149516cea82b139e6))
+
+
+
+
+
 # [4.200.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.199.0...v4.200.0) (2025-11-20)
 
 
