@@ -132,11 +132,7 @@ export const SimulatorLayout = ({
       setPrintError(false);
     } catch (e) {
       console.error(e);
-      if (e.message?.includes("webkit.messageHandlers.print")) {
-        setPrintError(true);
-      } else {
-        Sentry.captureException(e);
-      }
+      setPrintError(true);
     }
   };
 
