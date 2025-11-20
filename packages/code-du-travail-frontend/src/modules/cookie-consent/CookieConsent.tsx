@@ -1,16 +1,15 @@
 "use client";
 
 import { fr } from "@codegouvfr/react-dsfr";
-import { useEffect, useState, useRef } from "react";
-import { usePathname } from "next/navigation";
+import { useEffect, useRef, useState } from "react";
 import Button from "@codegouvfr/react-dsfr/Button";
 import { css } from "@styled-system/css";
 import {
   ConsentType,
   DEFAULT_CONSENT,
   getStoredConsent,
-  saveConsent,
   initConsent,
+  saveConsent,
 } from "../utils/consent";
 import Link from "../common/Link";
 
@@ -60,20 +59,21 @@ const responsiveButton = css({
   },
 });
 
-export const CookieConsentDSFR = () => {
+type Props = {
+  heatmapEnabled: boolean;
+  adsEnabled: boolean;
+};
+
+export const CookieConsentDSFR = ({ heatmapEnabled, adsEnabled }: Props) => {
   const [consent, setConsent] = useState<ConsentType>(DEFAULT_CONSENT);
   const [showBanner, setShowBanner] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const pathname = usePathname();
 
   // Refs for focus management
   const closeButtonRef = useRef<HTMLButtonElement>(null);
   const triggerElementRef = useRef<HTMLElement | null>(null);
   const personalizeButtonRef = useRef<HTMLButtonElement>(null);
   const manageButtonRef = useRef<HTMLButtonElement>(null);
-
-  // Don't show cookie consent on widget pages
-  const isWidgetPage = pathname?.startsWith("/widgets");
 
   // Open modal
   const openModal = () => {
@@ -122,7 +122,11 @@ export const CookieConsentDSFR = () => {
 
   // Handle accepting all cookies
   const handleAcceptAll = () => {
-    const newConsent = { matomo: true, sea: true, matomoHeatmap: true };
+    const newConsent = {
+      matomo: true,
+      sea: adsEnabled,
+      matomoHeatmap: heatmapEnabled,
+    };
     setConsent(newConsent);
     saveConsent(newConsent);
     setShowBanner(false);
@@ -163,10 +167,48 @@ export const CookieConsentDSFR = () => {
     }));
   };
 
+  const buildIntro = () => {
+    if (heatmapEnabled && adsEnabled) {
+      return (
+        <>
+          Nous utilisons des cookies pour mesurer l&apos;audience,
+          l&apos;interaction des utilisateurs avec notre site et pour le suivi
+          des campagnes publicitaires. Les cookies de mesure d&apos;audience
+          sont nécessaires au bon fonctionnement du site. Vous pouvez choisir
+          d&apos;accepter ou de refuser les cookies de suivi des interactions
+          des utilisateurs et des campagnes publicitaires.
+        </>
+      );
+    }
+    if (heatmapEnabled) {
+      return (
+        <>
+          Nous utilisons des cookies pour mesurer l&apos;audience et
+          l&apos;interaction des utilisateurs avec notre site. Les cookies de
+          mesure d&apos;audience sont nécessaires au bon fonctionnement du site.
+          Vous pouvez choisir d&apos;accepter ou de refuser les cookies de suivi
+          des interactions des utilisateurs.
+        </>
+      );
+    }
+    if (adsEnabled) {
+      return (
+        <>
+          Nous utilisons des cookies pour mesurer l&apos;audience et pour le
+          suivi des campagnes publicitaires. Les cookies de mesure
+          d&apos;audience sont nécessaires au bon fonctionnement du site. Vous
+          pouvez choisir d&apos;accepter ou de refuser les cookies de suivi des
+          campagnes publicitaires.
+        </>
+      );
+    }
+    return undefined;
+  };
+
   return (
     <>
       {/* Cookie Consent Banner */}
-      {!isWidgetPage && showBanner && (
+      {showBanner && (
         <div
           className={`${fr.cx(
             "fr-container",
@@ -179,13 +221,7 @@ export const CookieConsentDSFR = () => {
           <div className={fr.cx("fr-grid-row")}>
             <div className={fr.cx("fr-col-12")}>
               <h2 className={fr.cx("fr-mb-1w")}>Ce site utilise des cookies</h2>
-              <p className={fr.cx("fr-mb-3w")}>
-                Nous utilisons des cookies pour mesurer l&apos;audience et pour
-                le suivi des campagnes publicitaires. Les cookies de mesure
-                d&apos;audience sont nécessaires au bon fonctionnement du site.
-                Vous pouvez choisir d&apos;accepter ou de refuser les cookies de
-                suivi des campagnes publicitaires.
-              </p>
+              <p className={fr.cx("fr-mb-3w")}>{buildIntro()}</p>
             </div>
           </div>
           <div className={fr.cx("fr-grid-row")}>
@@ -276,11 +312,8 @@ export const CookieConsentDSFR = () => {
                   </div>
 
                   <p className={fr.cx("fr-mt-2w")}>
-                    Les cookies de mesure d&apos;audience sont nécessaires au
-                    bon fonctionnement du site. Vous pouvez choisir
-                    d&apos;accepter ou de refuser les cookies de suivi des
-                    campagnes publicitaires. Pour plus d&apos;informations, vous
-                    pouvez consulter notre{" "}
+                    {buildIntro()} Pour plus d&apos;informations, vous pouvez
+                    consulter notre{" "}
                     <Link
                       href="/politique-confidentialite"
                       className={fr.cx("fr-link")}
@@ -329,84 +362,88 @@ export const CookieConsentDSFR = () => {
                     </fieldset>
                   </div>
 
-                  <div className={fr.cx("fr-mt-2w")}>
-                    <fieldset
-                      className={fr.cx("fr-fieldset")}
-                      id="cookie-sea-fieldset"
-                    >
-                      <legend className={fr.cx("fr-fieldset__legend")}>
-                        Cookies de suivi publicitaire
-                      </legend>
-                      <div className="fr-form-group">
-                        <div className={fr.cx("fr-toggle")}>
-                          <input
-                            type="checkbox"
-                            className={fr.cx("fr-toggle__input")}
-                            id="toggle-sea"
-                            name="toggle-sea"
-                            checked={consent.sea}
-                            onChange={() => handleConsentChange("sea")}
-                            aria-labelledby="toggle-sea-label"
-                          />
-                          <label
-                            className={fr.cx("fr-toggle__label")}
-                            htmlFor="toggle-sea"
-                            id="toggle-sea-label"
-                            data-fr-checked-label="Activé"
-                            data-fr-unchecked-label="Désactivé"
-                          >
-                            Suivi des campagnes publicitaires
-                          </label>
-                          <p className={fr.cx("fr-info-text")}>
-                            Ces cookies nous permettent de suivre
-                            l&apos;efficacité de nos campagnes publicitaires sur
-                            les moteurs de recherche.
-                          </p>
+                  {adsEnabled && (
+                    <div className={fr.cx("fr-mt-2w")}>
+                      <fieldset
+                        className={fr.cx("fr-fieldset")}
+                        id="cookie-sea-fieldset"
+                      >
+                        <legend className={fr.cx("fr-fieldset__legend")}>
+                          Cookies de suivi publicitaire
+                        </legend>
+                        <div className="fr-form-group">
+                          <div className={fr.cx("fr-toggle")}>
+                            <input
+                              type="checkbox"
+                              className={fr.cx("fr-toggle__input")}
+                              id="toggle-sea"
+                              name="toggle-sea"
+                              checked={consent.sea}
+                              onChange={() => handleConsentChange("sea")}
+                              aria-labelledby="toggle-sea-label"
+                            />
+                            <label
+                              className={fr.cx("fr-toggle__label")}
+                              htmlFor="toggle-sea"
+                              id="toggle-sea-label"
+                              data-fr-checked-label="Activé"
+                              data-fr-unchecked-label="Désactivé"
+                            >
+                              Suivi des campagnes publicitaires
+                            </label>
+                            <p className={fr.cx("fr-info-text")}>
+                              Ces cookies nous permettent de suivre
+                              l&apos;efficacité de nos campagnes publicitaires
+                              sur les moteurs de recherche.
+                            </p>
+                          </div>
                         </div>
-                      </div>
-                    </fieldset>
-                  </div>
+                      </fieldset>
+                    </div>
+                  )}
 
-                  <div className={fr.cx("fr-mt-2w")}>
-                    <fieldset
-                      className={fr.cx("fr-fieldset")}
-                      id="cookie-heatmap-fieldset"
-                    >
-                      <legend className={fr.cx("fr-fieldset__legend")}>
-                        Carte des chaleurs Matomo
-                      </legend>
-                      <div className="fr-form-group">
-                        <div className={fr.cx("fr-toggle")}>
-                          <input
-                            type="checkbox"
-                            className={fr.cx("fr-toggle__input")}
-                            id="toggle-heatmap"
-                            name="toggle-heatmap"
-                            checked={consent.matomoHeatmap}
-                            onChange={() =>
-                              handleConsentChange("matomoHeatmap")
-                            }
-                            aria-labelledby="toggle-heatmap-label"
-                          />
-                          <label
-                            className={fr.cx("fr-toggle__label")}
-                            htmlFor="toggle-heatmap"
-                            id="toggle-heatmap-label"
-                            data-fr-checked-label="Activé"
-                            data-fr-unchecked-label="Désactivé"
-                          >
-                            Carte des chaleurs
-                          </label>
-                          <p className={fr.cx("fr-info-text")}>
-                            Cette fonctionnalité nous permet de visualiser
-                            comment les utilisateurs interagissent avec notre
-                            site (clics, mouvements de souris) pour améliorer
-                            l&apos;expérience utilisateur.
-                          </p>
+                  {heatmapEnabled && (
+                    <div className={fr.cx("fr-mt-2w")}>
+                      <fieldset
+                        className={fr.cx("fr-fieldset")}
+                        id="cookie-heatmap-fieldset"
+                      >
+                        <legend className={fr.cx("fr-fieldset__legend")}>
+                          Carte des chaleurs Matomo
+                        </legend>
+                        <div className="fr-form-group">
+                          <div className={fr.cx("fr-toggle")}>
+                            <input
+                              type="checkbox"
+                              className={fr.cx("fr-toggle__input")}
+                              id="toggle-heatmap"
+                              name="toggle-heatmap"
+                              checked={consent.matomoHeatmap}
+                              onChange={() =>
+                                handleConsentChange("matomoHeatmap")
+                              }
+                              aria-labelledby="toggle-heatmap-label"
+                            />
+                            <label
+                              className={fr.cx("fr-toggle__label")}
+                              htmlFor="toggle-heatmap"
+                              id="toggle-heatmap-label"
+                              data-fr-checked-label="Activé"
+                              data-fr-unchecked-label="Désactivé"
+                            >
+                              Carte des chaleurs
+                            </label>
+                            <p className={fr.cx("fr-info-text")}>
+                              Cette fonctionnalité nous permet de visualiser
+                              comment les utilisateurs interagissent avec notre
+                              site (clics, mouvements de souris) pour améliorer
+                              l&apos;expérience utilisateur.
+                            </p>
+                          </div>
                         </div>
-                      </div>
-                    </fieldset>
-                  </div>
+                      </fieldset>
+                    </div>
+                  )}
                 </div>
                 <div className={`${fr.cx("fr-modal__footer")} ${modalFooter}`}>
                   <div className={responsiveButtonsContainer}>
@@ -449,7 +486,7 @@ export const CookieConsentDSFR = () => {
       </div>
 
       {/* Manage Cookies Button (fixed at the bottom) */}
-      {!isWidgetPage && !showBanner && (
+      {!showBanner && (
         <div className={manageButton}>
           <Button
             ref={manageButtonRef}

@@ -1,7 +1,11 @@
 "use client";
 
-import { useEffect, lazy, Suspense } from "react";
+import { lazy, Suspense, useEffect } from "react";
 import { initConsent } from "../utils/consent";
+
+type CookieConsentProps = React.ComponentProps<
+  typeof import("./CookieConsent").CookieConsentDSFR
+>;
 
 const CookieConsentDSFR = lazy(
   () =>
@@ -14,14 +18,14 @@ const CookieConsentDSFR = lazy(
     )
 );
 
-export const ConsentManager = () => {
+export const ConsentManager = (props: CookieConsentProps) => {
   useEffect(() => {
     initConsent();
   }, []);
 
   return (
     <Suspense fallback={null}>
-      <CookieConsentDSFR />
+      <CookieConsentDSFR {...props} />
     </Suspense>
   );
 };

@@ -4,17 +4,13 @@ import { usePathname, useSearchParams } from "next/navigation";
 import { Suspense, useEffect } from "react";
 import { PIWIK_SITE_ID, PIWIK_URL, WIDGETS_PATH } from "../../config";
 import { getStoredConsent } from "../utils/consent";
-import { trackAppRouter, push } from "@socialgouv/matomo-next";
+import { push, trackAppRouter } from "@socialgouv/matomo-next";
 
 type MatomoComponentProps = {
-  hasMatomoHeatmapEnabled: boolean;
-  hasHeartBeatTimerEnabled: boolean;
+  heatmapEnabled: boolean;
 };
 
-function MatomoComponent({
-  hasMatomoHeatmapEnabled,
-  hasHeartBeatTimerEnabled,
-}: MatomoComponentProps) {
+function MatomoComponent({ heatmapEnabled }: MatomoComponentProps) {
   const searchParams = useSearchParams();
   const pathname = usePathname();
 
@@ -27,9 +23,8 @@ function MatomoComponent({
       pathname,
       searchParams,
       excludeUrlsPatterns: [WIDGETS_PATH],
-      enableHeatmapSessionRecording:
-        consent.matomoHeatmap && hasMatomoHeatmapEnabled,
-      enableHeartBeatTimer: consent.matomo && hasHeartBeatTimerEnabled,
+      enableHeatmapSessionRecording: heatmapEnabled && consent.matomoHeatmap,
+      enableHeartBeatTimer: heatmapEnabled && consent.matomo,
       heatmapConfig: {
         captureKeystrokes: false,
         captureVisibleContentOnly: false,
@@ -45,27 +40,13 @@ function MatomoComponent({
         }
       },
     });
-  }, [
-    pathname,
-    searchParams,
-    hasMatomoHeatmapEnabled,
-    hasHeartBeatTimerEnabled,
-  ]);
+  }, [pathname, searchParams, heatmapEnabled]);
 
   return null;
 }
 
-type MatomoAnalyticsProps = {
-  hasCookieBannerEnabled: boolean;
-};
-
-export const MatomoAnalytics = ({
-  hasCookieBannerEnabled,
-}: MatomoAnalyticsProps) => (
+export const MatomoAnalytics = (props: MatomoComponentProps) => (
   <Suspense fallback={null}>
-    <MatomoComponent
-      hasHeartBeatTimerEnabled={hasCookieBannerEnabled}
-      hasMatomoHeatmapEnabled={hasCookieBannerEnabled}
-    />
+    <MatomoComponent {...props} />
   </Suspense>
 );

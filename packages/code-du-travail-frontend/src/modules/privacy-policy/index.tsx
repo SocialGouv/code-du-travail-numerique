@@ -1,6 +1,7 @@
 import { fr } from "@codegouvfr/react-dsfr";
 import { TrackApproval } from "./TrackApproval";
 import Link from "../common/Link";
+import { isAdsEnabled, isHeatmapEnabled } from "../analytics";
 
 export const PrivacyPolicy = () => {
   return (
@@ -79,62 +80,71 @@ export const PrivacyPolicy = () => {
           </li>
         </ul>
 
-        <h3 className={fr.cx("fr-h5", "fr-mb-2w")}>
-          Carte des chaleurs Matomo
-        </h3>
-        <ul className={fr.cx("fr-mb-3w")}>
-          <li>
-            <strong>Pays destinataires :</strong> France (Auto-hébergèrent)
-          </li>
-          <li>
-            <strong>Base juridique :</strong> Consentement
-          </li>
-          <li>
-            <strong>Finalités :</strong> Visualisation des interactions
-            utilisateurs (clics, mouvements de souris) pour améliorer
-            l&apos;expérience utilisateur
-          </li>
-          <li>
-            <strong>Durée :</strong> 13 mois
-          </li>
-          <li>
-            <strong>Garanties :</strong>{" "}
-            <Link
-              href="https://fr.matomo.org/privacy-policy/"
-              target="_blank"
-              title="la politique de confidentialité de Matomo"
-            >
-              https://fr.matomo.org/privacy-policy/
-            </Link>
-          </li>
-        </ul>
+        {isHeatmapEnabled() && (
+          <>
+            <h3 className={fr.cx("fr-h5", "fr-mb-2w")}>
+              Carte des chaleurs Matomo
+            </h3>
+            <ul className={fr.cx("fr-mb-3w")}>
+              <li>
+                <strong>Pays destinataires :</strong> France (Auto-hébergèrent)
+              </li>
+              <li>
+                <strong>Base juridique :</strong> Consentement
+              </li>
+              <li>
+                <strong>Finalités :</strong> Visualisation des interactions
+                utilisateurs (clics, mouvements de souris) pour améliorer
+                l&apos;expérience utilisateur
+              </li>
+              <li>
+                <strong>Durée :</strong> 13 mois
+              </li>
+              <li>
+                <strong>Garanties :</strong>{" "}
+                <Link
+                  href="https://fr.matomo.org/privacy-policy/"
+                  target="_blank"
+                  title="la politique de confidentialité de Matomo"
+                >
+                  https://fr.matomo.org/privacy-policy/
+                </Link>
+              </li>
+            </ul>
+          </>
+        )}
 
-        <h3 className={fr.cx("fr-h5", "fr-mb-2w")}>Google Tag Manager</h3>
-        <ul className={fr.cx("fr-mb-4w")}>
-          <li>
-            <strong>Pays destinataires :</strong> Etats-Unis
-          </li>
-          <li>
-            <strong>Base juridique :</strong> Consentement
-          </li>
-          <li>
-            <strong>Finalités :</strong> Gestion de balises, publicité et suivi
-            d&apos;interface utilisateur
-          </li>
-          <li>
-            <strong>Durée :</strong> 13 mois
-          </li>
-          <li>
-            <strong>Garanties :</strong>{" "}
-            <Link
-              href="https://policies.google.com/privacy?hl=fr"
-              target="_blank"
-              title="la politique de confidentialité de Google"
-            >
-              https://policies.google.com/privacy?hl=fr
-            </Link>
-          </li>
-        </ul>
+        {isAdsEnabled() && (
+          <>
+            <h3 className={fr.cx("fr-h5", "fr-mb-2w")}>Google Tag Manager</h3>
+            <ul className={fr.cx("fr-mb-4w")}>
+              <li>
+                <strong>Pays destinataires :</strong> Etats-Unis
+              </li>
+              <li>
+                <strong>Base juridique :</strong> Consentement
+              </li>
+              <li>
+                <strong>Finalités :</strong> Gestion de balises, publicité et
+                suivi d&apos;interface utilisateur
+              </li>
+              <li>
+                <strong>Durée :</strong> 13 mois
+              </li>
+              <li>
+                <strong>Garanties :</strong>{" "}
+                <Link
+                  href="https://policies.google.com/privacy?hl=fr"
+                  target="_blank"
+                  title="la politique de confidentialité de Google"
+                >
+                  https://policies.google.com/privacy?hl=fr
+                </Link>
+              </li>
+            </ul>
+          </>
+        )}
+
         <p>
           Un cookie est un fichier déposé sur votre terminal lors de la visite
           d&apos;un site. Il a pour but de collecter des informations relatives
