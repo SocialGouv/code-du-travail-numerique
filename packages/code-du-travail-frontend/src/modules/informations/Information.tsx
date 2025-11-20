@@ -4,7 +4,7 @@ import {
 } from "@socialgouv/cdtn-types";
 import { fr } from "@codegouvfr/react-dsfr";
 import { AccordionWithAnchor } from "../common/AccordionWithAnchor";
-import { ContentPart, References } from "./content";
+import { ContentPart } from "./content";
 import React from "react";
 import { RelatedItem } from "../documents";
 import {
@@ -17,6 +17,7 @@ import DisplayContent from "../common/DisplayContent";
 import { QuestionnaireWrapper } from "../outils/dismissal-process/questionnaire/QuestionnaireWrapper";
 import { BlueBlock } from "../common/BlueBlock";
 import DismissalProcessIcon from "../outils/dismissal-process/component/DismissalProcessIcon.svg";
+import { References } from "../common";
 
 type Props = {
   date: string;

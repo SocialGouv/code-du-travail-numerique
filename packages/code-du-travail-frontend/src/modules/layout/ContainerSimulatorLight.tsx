@@ -29,7 +29,7 @@ export const ContainerSimulatorLight = ({
           href: "/",
         }}
         segments={segments}
-        className={fr.cx("fr-mb-2v")}
+        className={fr.cx("fr-mb-9v")}
       />
       <div className={fr.cx("fr-col-12")}>{children}</div>
       <div className={fr.cx("fr-col-12", "fr-col-md-7", "fr-my-12v")}>
