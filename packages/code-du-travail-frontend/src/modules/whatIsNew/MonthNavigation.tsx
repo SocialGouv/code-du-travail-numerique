@@ -25,7 +25,7 @@ const navBar = css({
     fontSize: "0.875rem",
 });
 
-
+// Transforme les periods en objets affichables
 const getMonthNav = () => {
     const periods = getPeriods();
 
@@ -40,10 +40,69 @@ const getMonthNav = () => {
     });
 };
 
+/**
+ * Pagination "effet loupe"
+ * - 7 éléments minimum dans la fenêtre centrale
+ * - centrée autour du mois sélectionné
+ * - ellipses + mois extrêmes si hors fenêtre
+ */
+export function computeVisiblePeriods(MONTH_NAV: any[], currentIndex: number) {
+    const total = MONTH_NAV.length;
+    const lastIndex = total - 1;
+    const WINDOW_SIZE = 7;
+
+    // Si la liste contient moins de 7 mois → tout afficher
+    if (total <= WINDOW_SIZE) return MONTH_NAV;
+
+    // Calcul initial de la fenêtre centrée
+    let start = currentIndex - 3;
+    let end = currentIndex + 3;
+
+    // Ajustement si dépassements
+    if (start < 0) {
+        end += -start;
+        start = 0;
+    }
+    if (end > lastIndex) {
+        const overshoot = end - lastIndex;
+        start = Math.max(0, start - overshoot);
+        end = lastIndex;
+    }
+
+    // S'assurer qu'on a bien 7 éléments
+    if (end - start + 1 < WINDOW_SIZE) {
+        const missing = WINDOW_SIZE - (end - start + 1);
+        start = Math.max(0, start - missing);
+    }
+
+    const windowItems = MONTH_NAV.slice(start, start + WINDOW_SIZE);
+
+    const result: any[] = [];
+    const mostRecent = MONTH_NAV[0];
+    const oldest = MONTH_NAV[lastIndex];
+
+    // ---- Gauche ----
+    if (!windowItems.find((m) => m.period === mostRecent.period)) {
+        result.push(mostRecent);
+        result.push({ separator: true });
+    }
+
+    // ---- Fenêtre ----
+    windowItems.forEach((m) => result.push(m));
+
+    // ---- Droite ----
+    if (!windowItems.find((m) => m.period === oldest.period)) {
+        result.push({ separator: true });
+        result.push(oldest);
+    }
+
+    return result;
+}
+
 export const MonthNavigation = ({ currentPeriod, position }: Props) => {
     const MONTH_NAV = getMonthNav();
-    const mostRecent = MONTH_NAV[0].period;
-    const oldest = MONTH_NAV[MONTH_NAV.length - 1].period;
+    const mostRecent = MONTH_NAV[0];
+    const oldest = MONTH_NAV[MONTH_NAV.length - 1];
 
     const currentIndex = MONTH_NAV.findIndex(
         (m) => m.period === currentPeriod
@@ -52,12 +111,15 @@ export const MonthNavigation = ({ currentPeriod, position }: Props) => {
     const prev = MONTH_NAV[currentIndex - 1];
     const next = MONTH_NAV[currentIndex + 1];
 
+    const visibleItems = computeVisiblePeriods(MONTH_NAV, currentIndex);
+
     return (
         <nav aria-label="Navigation entre les mois" className={wrapper(position)}>
             <div className={navBar}>
-                {currentPeriod !== mostRecent ? (
+                {/* Plus récent */}
+                {currentPeriod !== mostRecent.period ? (
                     <Link
-                        href={`/quoi-de-neuf/${mostRecent}`}
+                        href={`/quoi-de-neuf/${mostRecent.period}`}
                         className={fr.cx("fr-link")}
                     >
                         Plus récent
@@ -65,6 +127,8 @@ export const MonthNavigation = ({ currentPeriod, position }: Props) => {
                 ) : (
                     <span>Plus récent</span>
                 )}
+
+                {/* Flèche gauche */}
                 {prev ? (
                     <Link
                         href={`/quoi-de-neuf/${prev.period}`}
@@ -74,25 +138,39 @@ export const MonthNavigation = ({ currentPeriod, position }: Props) => {
                         ‹
                     </Link>
                 ) : (
-                    <span>‹</span>
+                    <span aria-hidden="true">‹</span>
                 )}
-                {MONTH_NAV.map((m) => {
-                    const active = m.period === currentPeriod;
+
+                {/* Pills dynamiques + ellipses */}
+                {visibleItems.map((item, index) => {
+                    if (item.separator) {
+                        return (
+                            <span key={`sep-${index}`} aria-hidden="true">
+                                …
+                            </span>
+                        );
+                    }
+
+                    const active = item.period === currentPeriod;
+
                     return (
                         <Link
-                            key={m.period}
-                            href={`/quoi-de-neuf/${m.period}`}
-                            aria-label={`Aller aux nouveautés de ${m.accessibleLabel}`}
+                            key={item.period}
+                            href={`/quoi-de-neuf/${item.period}`}
+                            aria-label={`Aller aux nouveautés de ${item.accessibleLabel}`}
                             data-active={active}
                             className={fr.cx(
                                 "fr-btn",
+                                "fr-btn--sm",
                                 !active ? "fr-btn--tertiary-no-outline" : undefined
                             )}
                         >
-                            {m.label}
+                            {item.label}
                         </Link>
                     );
                 })}
+
+                {/* Flèche droite */}
                 {next ? (
                     <Link
                         href={`/quoi-de-neuf/${next.period}`}
@@ -102,10 +180,12 @@ export const MonthNavigation = ({ currentPeriod, position }: Props) => {
                         ›
                     </Link>
                 ) : (
-                    <span>›</span>
+                    <span aria-hidden="true">›</span>
                 )}
-                {currentPeriod !== oldest ? (
-                    <Link href={`/quoi-de-neuf/${oldest}`} className={fr.cx("fr-link")}>
+
+                {/* Plus ancien */}
+                {currentPeriod !== oldest.period ? (
+                    <Link href={`/quoi-de-neuf/${oldest.period}`} className={fr.cx("fr-link")}>
                         Plus ancien
                     </Link>
                 ) : (

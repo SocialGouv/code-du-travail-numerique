@@ -1,3 +1,5 @@
+import { format, subMonths } from "date-fns";
+
 export type WhatIsNewKind = "evolution-juridique" | "mise-a-jour-fonctionnelle";
 
 export type WhatIsNewItem = {

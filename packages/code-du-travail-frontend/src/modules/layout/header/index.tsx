@@ -22,8 +22,15 @@ export const Header = () => {
           text: "Code du travail",
           isActive:
             currentPath.startsWith("/droit-du-travail") ||
-            currentPath.startsWith("/glossaire"),
+            currentPath.startsWith("/glossaire") ||
+            currentPath.startsWith("/quoi-de-neuf"),
           menuLinks: [
+            {
+              text: "Quoi de neuf sur le code du travail ?",
+              linkProps: {
+                href: "/quoi-de-neuf",
+              },
+            },
             {
               text: "Comprendre le droit du travail",
               linkProps: {
