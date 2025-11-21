@@ -52,14 +52,14 @@ export const WHAT_IS_NEW_MONTHS: WhatIsNewMonth[] = [
                             {
                                 title:
                                     "IDCC 1501 Question/Réponse : Durée de la période d’essai",
-                                href: "https://code.travail.gouv.fr/contribution/1501-quelle-est-la-duree-maximale-de-la-periode-dessai-sans-et-avec-renouvellement",
+                                href: "/contribution/1501-quelle-est-la-duree-maximale-de-la-periode-dessai-sans-et-avec-renouvellement",
                                 description:
                                     "Modification de la durée initiale de la période d’essai et retrait de la mention « 1 mois pour les ouvriers ».",
                             },
                             {
                                 title:
                                     "IDCC 1501 Question/Réponse : Renouvellement de la période d’essai",
-                                href: "https://code.travail.gouv.fr/contribution/1501-la-periode-dessai-peut-elle-etre-renouvelee",
+                                href: "/contribution/1501-la-periode-dessai-peut-elle-etre-renouvelee",
                                 description:
                                     "Précision sur le renouvellement de la période d’essai pour les cadres et retrait de la mention « les ouvriers ».",
                             },
@@ -78,26 +78,26 @@ export const WHAT_IS_NEW_MONTHS: WhatIsNewMonth[] = [
                         items: [
                             {
                                 title: "IDCC 1480 Question/Réponse : Salaire minimum",
-                                href: "https://code.travail.gouv.fr/contribution/1480-quel-est-le-salaire-minimum",
+                                href: "/contribution/1480-quel-est-le-salaire-minimum",
                                 description:
                                     "Modification du salaire minimum hiérarchique pour les radios, agences de presse et piges agences de presse.",
                             },
                             {
                                 title: "IDCC 3248 Question/Réponse : Prime d’ancienneté",
-                                href: "https://code.travail.gouv.fr/contribution/3248-quand-le-salarie-a-t-il-droit-a-une-prime-danciennete-quel-est-son-montant",
+                                href: "/contribution/3248-quand-le-salarie-a-t-il-droit-a-une-prime-danciennete-quel-est-son-montant",
                                 description:
                                     "Ajout de la valeur de point pour l’Indre-et-Loire et le Loiret.",
                             },
                             {
                                 title: "Nouveau modèle : Mise en demeure pour abandon de poste",
-                                href: "https://code.travail.gouv.fr/modeles-de-courriers/modele-de-mise-en-demeure-pour-abandon-de-poste",
+                                href: "/modeles-de-courriers/modele-de-mise-en-demeure-pour-abandon-de-poste",
                                 description:
                                     "Modèle de lettre pour mettre en demeure un salarié ayant abandonné volontairement son poste de justifier son absence et de reprendre son poste.",
                             },
                             {
                                 title:
                                     "Nouveau modèle : Convocation à un entretien préalable au licenciement du salarié particulier employeur",
-                                href: "https://code.travail.gouv.fr/modeles-de-courriers/convocation-a-un-entretien-prealable-au-licenciement-du-salarie-du-particulier-employeur",
+                                href: "/modeles-de-courriers/convocation-a-un-entretien-prealable-au-licenciement-du-salarie-du-particulier-employeur",
                                 description:
                                     "Modèle permettant de convoquer le salarié du particulier employeur à un entretien préalable au licenciement.",
                             },
@@ -116,14 +116,14 @@ export const WHAT_IS_NEW_MONTHS: WhatIsNewMonth[] = [
                         items: [
                             {
                                 title: "IDCC 3248 Question/Réponse : Prime d’ancienneté",
-                                href: "https://code.travail.gouv.fr/contribution/3248-quand-le-salarie-a-t-il-droit-a-une-prime-danciennete-quel-est-son-montant",
+                                href: "/contribution/3248-quand-le-salarie-a-t-il-droit-a-une-prime-danciennete-quel-est-son-montant",
                                 description:
                                     "Ajout de la valeur de point pour la Flandre Douaisis, le Pas-de-Calais, Rouen et Dieppe.",
                             },
                             {
                                 title:
                                     "Modification de la Question/Réponse : Arrêt maladie pendant les congés payés",
-                                href: "https://code.travail.gouv.fr/contribution/si-le-salarie-est-malade-pendant-ses-conges-quelles-en-sont-les-consequences",
+                                href: "/contribution/si-le-salarie-est-malade-pendant-ses-conges-quelles-en-sont-les-consequences",
                             },
                         ],
                     },
@@ -151,19 +151,19 @@ export const WHAT_IS_NEW_MONTHS: WhatIsNewMonth[] = [
                         items: [
                             {
                                 title: "IDCC 3248 Question/Réponse : Prime d’ancienneté",
-                                href: "https://code.travail.gouv.fr/contribution/3248-quand-le-salarie-a-t-il-droit-a-une-prime-danciennete-quel-est-son-montant",
+                                href: "/contribution/3248-quand-le-salarie-a-t-il-droit-a-une-prime-danciennete-quel-est-son-montant",
                                 description:
                                     "Ajout de la valeur de point pour la Gironde, les Landes, l’Aisne, la Charente-Maritime, l’Oise et la Haute-Marne.",
                             },
                             {
                                 title: "IDCC 275 Question/Réponse : Salaire minimum",
-                                href: "https://code.travail.gouv.fr/contribution/275-quel-est-le-salaire-minimum",
+                                href: "/contribution/275-quel-est-le-salaire-minimum",
                                 description:
                                     "Mise à jour des salaires minima en vigueur au 1er septembre.",
                             },
                             {
                                 title: "IDCC 3248 Question/Réponse : Primes",
-                                href: "https://code.travail.gouv.fr/contribution/3248-quelles-sont-les-primes-prevues-par-la-convention-collective",
+                                href: "/contribution/3248-quelles-sont-les-primes-prevues-par-la-convention-collective",
                                 description:
                                     "Modification de la prime de vacances pour l’Aisne.",
                             },
@@ -194,13 +194,13 @@ export const WHAT_IS_NEW_MONTHS: WhatIsNewMonth[] = [
                             {
                                 title:
                                     "Nouveau modèle : Lettre de licenciement pour faute simple ou grave du salarié du particulier employeur",
-                                href: "https://code.travail.gouv.fr/modeles-de-courriers/lettre-de-licenciement-pour-faute-simple-ou-grave-du-salarie-du-particulier-employeur",
+                                href: "/modeles-de-courriers/lettre-de-licenciement-pour-faute-simple-ou-grave-du-salarie-du-particulier-employeur",
                                 description:
                                     "Modèle permettant de notifier le licenciement pour faute simple ou grave d’un salarié du particulier employeur.",
                             },
                             {
                                 title: "IDCC 3248 Question/Réponse : Prime d’ancienneté",
-                                href: "https://code.travail.gouv.fr/contribution/3248-quand-le-salarie-a-t-il-droit-a-une-prime-danciennete-quel-est-son-montant",
+                                href: "/contribution/3248-quand-le-salarie-a-t-il-droit-a-une-prime-danciennete-quel-est-son-montant",
                                 description:
                                     "Ajout de la valeur de point pour l’Aube, les Pyrénées-Atlantiques et Seignanx.",
                             },
@@ -213,18 +213,18 @@ export const WHAT_IS_NEW_MONTHS: WhatIsNewMonth[] = [
                             {
                                 title:
                                     "Mise à jour de la page déclaration d’accessibilité : totalement conforme",
-                                href: "https://code.travail.gouv.fr/accessibilite",
+                                href: "/accessibilite",
                                 description:
                                     "Suite à un audit puis un contre-audit en octobre 2025, 100 % des critères RGAA sont respectés sur le site.",
                             },
                             {
                                 title: "Ajout dans la page outil de services externes",
-                                href: "https://code.travail.gouv.fr/outils",
+                                href: "/outils",
                             },
                             {
                                 title:
                                     "Ajout d’un nouvel onglet « Code du travail » sur la page d’accueil",
-                                href: "https://code.travail.gouv.fr/",
+                                href: "/",
                                 description:
                                     "Accès direct à la page « Comprendre le droit du travail » et au glossaire depuis le haut du site.",
                             },
@@ -248,25 +248,25 @@ export const WHAT_IS_NEW_MONTHS: WhatIsNewMonth[] = [
                         items: [
                             {
                                 title: "IDCC 0016 Question/Réponse : Salaire minimum",
-                                href: "https://code.travail.gouv.fr/contribution/16-quel-est-le-salaire-minimum",
+                                href: "/contribution/16-quel-est-le-salaire-minimum",
                                 description:
                                     "Intégration du secteur des transports de fonds et valeurs aux transports routiers et activités auxiliaires.",
                             },
                             {
                                 title: "IDCC 0016 Question/Réponse : Primes",
-                                href: "https://code.travail.gouv.fr/contribution/16-quelles-sont-les-primes-prevues-par-la-convention-collective",
+                                href: "/contribution/16-quelles-sont-les-primes-prevues-par-la-convention-collective",
                                 description:
                                     "Intégration du secteur des transports de fonds et valeurs aux transports routiers et activités auxiliaires.",
                             },
                             {
                                 title: "IDCC 0016 Question/Réponse : Jours fériés",
-                                href: "https://code.travail.gouv.fr/contribution/16-jours-feries-et-ponts-dans-le-secteur-prive",
+                                href: "/contribution/16-jours-feries-et-ponts-dans-le-secteur-prive",
                                 description:
                                     "Intégration du secteur des transports de fonds et valeurs aux transports routiers et activités auxiliaires.",
                             },
                             {
                                 title: "IDCC 0016 Question/Réponse : Travail du dimanche",
-                                href: "https://code.travail.gouv.fr/contribution/travail-du-dimanche-quelle-contrepartie",
+                                href: "/contribution/travail-du-dimanche-quelle-contrepartie",
                                 description:
                                     "Intégration du secteur des transports de fonds et valeurs aux transports routiers et activités auxiliaires.",
                             },
@@ -285,20 +285,20 @@ export const WHAT_IS_NEW_MONTHS: WhatIsNewMonth[] = [
                         items: [
                             {
                                 title: "IDCC 1480 Question/Réponse : Salaire minimum",
-                                href: "https://code.travail.gouv.fr/contribution/1480-quel-est-le-salaire-minimum",
+                                href: "/contribution/1480-quel-est-le-salaire-minimum",
                                 description:
                                     "Ajout du salaire minimum pour la presse quotidienne nationale.",
                             },
                             {
                                 title: "IDCC 3248 Question/Réponse : Prime d’ancienneté",
-                                href: "https://code.travail.gouv.fr/contribution/3248-quand-le-salarie-a-t-il-droit-a-une-prime-danciennete-quel-est-son-montant",
+                                href: "/contribution/3248-quand-le-salarie-a-t-il-droit-a-une-prime-danciennete-quel-est-son-montant",
                                 description:
                                     "Ajout de la valeur de point pour l’arrondissement d’Avesnes (Maubeuge).",
                             },
                             {
                                 title:
                                     "Nouveau modèle : Demande de prise de congé de paternité et de l’accueil de l’enfant",
-                                href: "https://code.travail.gouv.fr/modeles-de-courriers/modele-de-lettre-de-prise-de-conge-paternite-et-daccueil",
+                                href: "/modeles-de-courriers/modele-de-lettre-de-prise-de-conge-paternite-et-daccueil",
                                 description:
                                     "Modèle permettant au / à la salarié(e) de prendre des jours de congé de paternité et d’accueil de l’enfant.",
                             },
@@ -322,32 +322,32 @@ export const WHAT_IS_NEW_MONTHS: WhatIsNewMonth[] = [
                         items: [
                             {
                                 title: "IDCC 1090 Question/Réponse : Salaire minimum",
-                                href: "https://code.travail.gouv.fr/contribution/1090-quel-est-le-salaire-minimum",
+                                href: "/contribution/1090-quel-est-le-salaire-minimum",
                                 description: "Modification du salaire conventionnel.",
                             },
                             {
                                 title: "IDCC 1090 Question/Réponse : Prime",
-                                href: "https://code.travail.gouv.fr/contribution/1090-quelles-sont-les-primes-prevues-par-la-convention-collective",
+                                href: "/contribution/1090-quelles-sont-les-primes-prevues-par-la-convention-collective",
                                 description: "Modification de l’indemnité de panier.",
                             },
                             {
                                 title:
                                     "IDCC 2098 Question/Réponse : Congé pour évènements familiaux",
-                                href: "https://code.travail.gouv.fr/contribution/2098-les-conges-pour-evenements-familiaux",
+                                href: "/contribution/2098-les-conges-pour-evenements-familiaux",
                                 description:
                                     "Modification du congé pour annonce d’une maladie ou d’un handicap pour un enfant.",
                             },
                             {
                                 title:
                                     "Modification page : Arrêt maladie « L’employeur peut-il organiser un contrôle »",
-                                href: "https://code.travail.gouv.fr/information/arret-maladie-lemployeur-peut-il-organiser-un-controle",
+                                href: "/information/arret-maladie-lemployeur-peut-il-organiser-un-controle",
                                 description:
                                     "Ajout d’une précision sur la visite de pré-reprise.",
                             },
                             {
                                 title:
                                     "Modification de la page : Le suivi médical des salariés",
-                                href: "https://code.travail.gouv.fr/information/suivi-medical-et-accompagnement-de-certains-salaries",
+                                href: "/information/suivi-medical-et-accompagnement-de-certains-salaries",
                                 description:
                                     "Décret instaurant un examen périodique pour certains salariés et précision sur la visite de pré-reprise.",
                             },
@@ -406,17 +406,17 @@ export const WHAT_IS_NEW_MONTHS: WhatIsNewMonth[] = [
                         items: [
                             {
                                 title: "IDCC 3248 Question/Réponse : Primes",
-                                href: "https://code.travail.gouv.fr/contribution/3248-quelles-sont-les-primes-prevues-par-la-convention-collective",
+                                href: "/contribution/3248-quelles-sont-les-primes-prevues-par-la-convention-collective",
                                 description: "Ajout de la VP Maine-et-Loire.",
                             },
                             {
                                 title: "IDCC 2098 Question/Réponse : Salaire minimum",
-                                href: "https://code.travail.gouv.fr/contribution/2098-quel-est-le-salaire-minimum",
+                                href: "/contribution/2098-quel-est-le-salaire-minimum",
                                 description: "Réévaluation du salaire minimum.",
                             },
                             {
                                 title: "IDCC 275 Question/Réponse : Salaire minimum",
-                                href: "https://code.travail.gouv.fr/contribution/275-quel-est-le-salaire-minimum",
+                                href: "/contribution/275-quel-est-le-salaire-minimum",
                                 description: "Réévaluation du salaire minimum.",
                             },
                         ],
