@@ -178,6 +178,7 @@ contrat salarié . indemnité de licenciement . résultat conventionnel identiqu
     toutes ces conditions:
       - ancienneté conventionnelle en année <= 10 an
       - résultat conventionnel identique au légal
+      - inaptitude suite à un accident ou maladie professionnelle = non
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   valeur: indemnité de licenciement . facteur dix ans ou moins cc
   arrondi: 2 décimales
@@ -189,11 +190,29 @@ contrat salarié . indemnité de licenciement . résultat conventionnel identiqu
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
       formula: 1/4 * Sref * A
 
+contrat salarié . indemnité de licenciement . résultat conventionnel identique au légal moins de 10ans formule inaptitude:
+  applicable si:
+    toutes ces conditions:
+      - ancienneté conventionnelle en année <= 10 an
+      - résultat conventionnel identique au légal
+      - inaptitude suite à un accident ou maladie professionnelle = oui
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  valeur: indemnité de licenciement . facteur dix ans ou moins cc * 2
+  arrondi: 2 décimales
+  unité: €
+  cdtn:
+    formule:
+      explanations:
+        - "A : Ancienneté totale": contrat salarié . indemnité de licenciement . jusqu'à dix ans ou moins cc
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+      formula: (1/4 * Sref * A) * 2
+
 contrat salarié . indemnité de licenciement . résultat conventionnel identique au légal au dela de 10 ans:
   applicable si:
     toutes ces conditions:
       - ancienneté conventionnelle en année > 10 an
       - résultat conventionnel identique au légal
+      - inaptitude suite à un accident ou maladie professionnelle = non
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   somme:
     - indemnité de licenciement . facteur dix ans ou moins cc
@@ -207,6 +226,26 @@ contrat salarié . indemnité de licenciement . résultat conventionnel identiqu
         - "A2 : Ancienneté au-delà de 10 ans": contrat salarié . indemnité de licenciement . au dela de dix ans cc
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
       formula: (1/4 * Sref * A1) + (1/3 * Sref * A2)
+
+contrat salarié . indemnité de licenciement . résultat conventionnel identique au légal au dela de 10 ans inaptitude:
+  applicable si:
+    toutes ces conditions:
+      - ancienneté conventionnelle en année > 10 an
+      - résultat conventionnel identique au légal
+      - inaptitude suite à un accident ou maladie professionnelle = oui
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  somme:
+    - indemnité de licenciement . facteur dix ans ou moins cc * 2
+    - indemnité de licenciement . facteur plus de dix ans cc * 2
+  arrondi: 2 décimales
+  unité: €
+  cdtn:
+    formule:
+      explanations:
+        - "A1 : Ancienneté de 10 ans ou moins": contrat salarié . indemnité de licenciement . jusqu'à dix ans ou moins cc
+        - "A2 : Ancienneté au-delà de 10 ans": contrat salarié . indemnité de licenciement . au dela de dix ans cc
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+      formula: ((1/4 * Sref * A1) + (1/3 * Sref * A2)) * 2
 
 contrat salarié . indemnité de licenciement . résultat conventionnel:
   valeur: 0
