@@ -55,47 +55,54 @@ export const MonthContent = ({ month }: Props) => (
         </h2>
 
         {month.weeks.map((week) => (
-            <article key={week.id} className={weekCard}>
+            <div key={week.id}>
+                {/* ✅ Le titre de la semaine sort du bloc gris */}
                 <h3 className={`${fr.cx("fr-h5")} ${weekTitle}`}>{week.label}</h3>
 
-                {week.hasUpdates && week.categories && week.categories.length > 0 ? (
-                    <>
-                        <div className={badgesGroup}>
-                            {week.categories.map((category) => (
-                                <Badge
-                                    key={category.kind}
-                                    severity={getBadgeSeverity(category.kind)}
-                                    small
-                                    as="span"
-                                >
-                                    {category.label}
-                                </Badge>
-                            ))}
-                        </div>
-
-                        {week.categories.map((category) => (
-                            <div key={category.kind}>
-                                <ul className={itemList}>
-                                    {category.items.map((item) => (
-                                        <li key={item.title}>
-                                            {item.href ? (
-                                                <Link href={item.href} className={fr.cx("fr-link")}>
-                                                    <strong>{item.title}</strong>
-                                                </Link>
-                                            ) : (
-                                                <strong>{item.title}</strong>
-                                            )}
-                                            {item.description && <div>{item.description}</div>}
-                                        </li>
-                                    ))}
-                                </ul>
+                {/* Bloc gris */}
+                <article className={weekCard}>
+                    {week.hasUpdates && week.categories && week.categories.length > 0 ? (
+                        <>
+                            <div className={badgesGroup}>
+                                {week.categories.map((category) => (
+                                    <Badge
+                                        key={category.kind}
+                                        severity={getBadgeSeverity(category.kind)}
+                                        small
+                                        as="span"
+                                    >
+                                        {category.label}
+                                    </Badge>
+                                ))}
                             </div>
-                        ))}
-                    </>
-                ) : (
-                    <p className={noUpdateText}>Aucune nouveauté cette semaine.</p>
-                )}
-            </article>
+
+                            {week.categories.map((category) => (
+                                <div key={category.kind}>
+                                    <ul className={itemList}>
+                                        {category.items.map((item) => (
+                                            <li key={item.title}>
+                                                {item.href ? (
+                                                    <Link
+                                                        href={item.href}
+                                                        className={fr.cx("fr-link")}
+                                                    >
+                                                        <strong>{item.title}</strong>
+                                                    </Link>
+                                                ) : (
+                                                    <strong>{item.title}</strong>
+                                                )}
+                                                {item.description && <div>{item.description}</div>}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            ))}
+                        </>
+                    ) : (
+                        <p className={noUpdateText}>Aucune nouveauté cette semaine.</p>
+                    )}
+                </article>
+            </div>
         ))}
     </section>
 );

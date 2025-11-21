@@ -1,3 +1,6 @@
+"use client";
+
+import { useEffect, useRef } from "react";
 import Link from "next/link";
 import { fr } from "@codegouvfr/react-dsfr";
 import { css } from "@styled-system/css";
@@ -100,6 +103,7 @@ export function computeVisiblePeriods(MONTH_NAV: any[], currentIndex: number) {
 }
 
 export const MonthNavigation = ({ currentPeriod, position }: Props) => {
+
     const MONTH_NAV = getMonthNav();
     const mostRecent = MONTH_NAV[0];
     const oldest = MONTH_NAV[MONTH_NAV.length - 1];
@@ -112,6 +116,13 @@ export const MonthNavigation = ({ currentPeriod, position }: Props) => {
     const next = MONTH_NAV[currentIndex + 1];
 
     const visibleItems = computeVisiblePeriods(MONTH_NAV, currentIndex);
+
+    const activeMonthRef = useRef<HTMLAnchorElement | null>(null);
+    useEffect(() => {
+        if (position === "top" && activeMonthRef.current) {
+            activeMonthRef.current.focus();
+        }
+    }, [currentPeriod]);
 
     return (
         <nav aria-label="Navigation entre les mois" className={wrapper(position)}>
@@ -164,6 +175,7 @@ export const MonthNavigation = ({ currentPeriod, position }: Props) => {
                                 "fr-btn--sm",
                                 !active ? "fr-btn--tertiary-no-outline" : undefined
                             )}
+                            ref={active && position === "top" ? activeMonthRef : null}
                         >
                             {item.label}
                         </Link>
