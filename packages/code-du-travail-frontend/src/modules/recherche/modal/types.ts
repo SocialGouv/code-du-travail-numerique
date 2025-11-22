@@ -5,14 +5,15 @@ export type DocumentType =
   | "CONVENTION COLLECTIVE"
   | "CONTENU";
 
-export interface SearchResult {
+export type SearchResult = {
   id: string;
   type: DocumentType;
   title: string;
-  slug?: string;
-}
+  slug: string;
+};
 
-export interface SearchResultsByCategory {
-  actualites: SearchResult[];
-  suggestions: SearchResult[];
-}
+export type ModalLink = {
+  id: string;
+  title: string;
+  slug: string;
+};

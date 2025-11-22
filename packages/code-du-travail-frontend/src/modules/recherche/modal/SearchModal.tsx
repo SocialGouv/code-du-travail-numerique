@@ -1,244 +1,186 @@
 "use client";
 
-import { createModal } from "@codegouvfr/react-dsfr/Modal";
 import { fr } from "@codegouvfr/react-dsfr";
-import { css } from "@styled-system/css";
 import { Button } from "@codegouvfr/react-dsfr/Button";
-import Input from "@codegouvfr/react-dsfr/Input";
-import { SearchResultsByCategory } from "./types";
-import { SearchResultCard } from "./SearchResultCard";
+import { css } from "@styled-system/css";
+import { SearchResult } from "./types";
+import { ModalSearch, ModalSearchHandle } from "./ModalSearch";
+import { SearchResults } from "./SearchResults";
+import { useEffect, useRef, useState } from "react";
+import { HintList } from "./HintList";
 
 interface SearchModalProps {
   isOpen: boolean;
   onClose: () => void;
-  searchQuery: string;
-  results: SearchResultsByCategory;
-  onSearchChange: (value: string) => void;
-  onClearSearch: () => void;
 }
 
-const modal = createModal({
-  id: "search-modal-v2",
-  isOpenedByDefault: false,
-});
+export const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
+  const modalSearchRef = useRef<ModalSearchHandle>(null);
+  const closeButtonRef = useRef<HTMLButtonElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
+  const [shouldRender, setShouldRender] = useState(false);
+  const [results, setResults] = useState<SearchResult[]>([]);
 
-export const SearchModal = ({
-  isOpen,
-  onClose,
-  searchQuery,
-  results,
-  onSearchChange,
-  onClearSearch,
-}: SearchModalProps) => {
+  useEffect(() => {
+    if (isOpen) {
+      setShouldRender(true);
+      // Petit délai pour permettre au DOM de se rendre avant d'appliquer l'animation
+      const timer = setTimeout(() => {
+        setIsVisible(true);
+      }, 10);
+
+      // Focus sur l'input après l'animation
+      const focusTimer = setTimeout(() => {
+        modalSearchRef.current?.focusInput();
+      }, 350);
+
+      return () => {
+        clearTimeout(timer);
+        clearTimeout(focusTimer);
+      };
+    } else if (shouldRender) {
+      setIsVisible(false);
+
+      // Démontage après l'animation de fermeture
+      const unmountTimer = setTimeout(() => {
+        setShouldRender(false);
+
+        // Focus sur le bouton rechercher après la fermeture (desktop ou mobile)
+        const searchButtonDesktop = document.getElementById(
+          "fr-header-search-button-desktop"
+        ) as HTMLButtonElement;
+        const searchButtonMobile = document.getElementById(
+          "fr-header-search-button"
+        ) as HTMLButtonElement;
+
+        if (searchButtonDesktop) {
+          searchButtonDesktop.focus();
+        }
+        if (searchButtonMobile) {
+          searchButtonMobile.focus();
+        }
+      }, 300);
+
+      return () => {
+        clearTimeout(unmountTimer);
+      };
+    }
+  }, [isOpen, shouldRender]);
+
+  const handleClose = () => {
+    onClose();
+  };
+
+  if (!shouldRender) return null;
+
   return (
-    <modal.Component
-      title=""
-      size="large"
-      className={modalCustom}
-      concealingBackdrop={false}
-    >
-      <div className={modalContent}>
-        {/* Search input section */}
-        <div className={searchSection}>
-          <div className={fr.cx("fr-container")}>
-            <h2 className={fr.cx("fr-text--md", "fr-mb-2w")}>
-              Que souhaitez-vous savoir ?
-            </h2>
-            <p className={fr.cx("fr-text--sm", "fr-mb-2w", "fr-text--regular")}>
-              par exemple : Comment sont comptés les congés pendant les arrêts
-              maladies ?
-            </p>
-            <div className={inputContainer}>
-              <div className={inputWrapper}>
-                <Input
-                  label=""
-                  hideLabel
-                  nativeInputProps={{
-                    type: "text",
-                    value: searchQuery,
-                    onChange: (e) => onSearchChange(e.target.value),
-                    placeholder: "Prendre un congé paternité",
-                  }}
-                  className={fr.cx("fr-mb-0")}
-                />
-                {searchQuery && (
-                  <button
-                    className={clearButton}
-                    onClick={onClearSearch}
-                    type="button"
-                    aria-label="Effacer"
-                  >
-                    <span
-                      className={fr.cx("fr-icon-close-circle-fill")}
-                      aria-hidden="true"
-                    />
-                  </button>
-                )}
-              </div>
-              <Button
-                iconId="fr-icon-search-line"
-                iconPosition="right"
-                priority="primary"
-                className={searchButton}
-              >
-                Voir tous les résultats
-              </Button>
-            </div>
-          </div>
+    <div className={`${overlayContainer} ${isVisible ? overlayVisible : ""}`}>
+      <div className={fr.cx("fr-container", "fr-pb-8w", "fr-pt-4w")}>
+        <div className={closeButtonContainer}>
+          <Button
+            iconId="fr-icon-close-line"
+            iconPosition="right"
+            title="Fermer"
+            onClick={handleClose}
+            priority="tertiary no outline"
+            className={closeButton}
+            ref={closeButtonRef}
+          >
+            Fermer
+          </Button>
         </div>
 
-        {/* Hint text */}
-        <div className={fr.cx("fr-container", "fr-mt-4w")}>
-          <p className={hintText}>
-            Tapez 3 caractères ou plus pour lancer une recherche
-          </p>
-        </div>
+        <ModalSearch ref={modalSearchRef} onClose={handleClose} />
 
-        {/* Results sections */}
-        <div className={fr.cx("fr-container", "fr-mt-4w", "fr-pb-6w")}>
-          {/* Actualité section */}
-          {results.actualites.length > 0 && (
-            <div className={fr.cx("fr-mb-6w")}>
-              <div className={sectionHeader}>
-                <span
-                  className={fr.cx("fr-icon-newspaper-line")}
-                  aria-hidden="true"
-                />
-                <h3
-                  className={fr.cx("fr-text--md", "fr-mb-0", "fr-text--bold")}
-                >
-                  ACTUALITÉ
-                </h3>
-              </div>
-              <div
-                className={fr.cx(
-                  "fr-grid-row",
-                  "fr-grid-row--gutters",
-                  "fr-mt-3w"
-                )}
-              >
-                {results.actualites.map((result) => (
-                  <div
-                    key={result.id}
-                    className={fr.cx("fr-col-12", "fr-col-sm-6", "fr-col-lg-3")}
-                  >
-                    <SearchResultCard result={result} onClick={onClose} />
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
+        {results.length === 0 && (
+          <HintList
+            actualites={[
+              {
+                id: "1",
+                title: "Rupture du contrat en période d'essai par le salarié",
+                slug: "/code-du-travail/rupture-contrat-periode-essai",
+              },
+              {
+                id: "2",
+                title: "Mise en demeure pour abandon de poste",
+                slug: "/themes/mise-en-demeure-abandon-poste",
+              },
+              {
+                id: "3",
+                title:
+                  "Convocation à un entretien préalable au licenciement pour...",
+                slug: "/modeles/convocation-entretien-prealable",
+              },
+              {
+                id: "4",
 
-          {/* Suggestions section */}
-          {results.suggestions.length > 0 && (
-            <div className={fr.cx("fr-mb-6w")}>
-              <div className={sectionHeader}>
-                <span
-                  className={fr.cx("fr-icon-lightbulb-line")}
-                  aria-hidden="true"
-                />
-                <h3
-                  className={fr.cx("fr-text--md", "fr-mb-0", "fr-text--bold")}
-                >
-                  SUGGESTIONS
-                </h3>
-              </div>
-              <div
-                className={fr.cx(
-                  "fr-grid-row",
-                  "fr-grid-row--gutters",
-                  "fr-mt-3w"
-                )}
-              >
-                {results.suggestions.map((result) => (
-                  <div
-                    key={result.id}
-                    className={fr.cx("fr-col-12", "fr-col-sm-6", "fr-col-lg-3")}
-                  >
-                    <SearchResultCard result={result} onClick={onClose} />
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-        </div>
+                title: "Lettre de démission",
+                slug: "/modeles/lettre-demission",
+              },
+            ]}
+            suggestions={[
+              {
+                id: "5",
+                title: "Thématique : Congés",
+                slug: "/themes/conges",
+              },
+              {
+                id: "6",
+                title: "Convention collective : Métallurgie",
+                slug: "/convention-collective/metallurgie",
+              },
+              {
+                id: "7",
+                title:
+                  "Outils : Simuler mon indemnité de rupture conventionnelle",
+                slug: "/outils/simulateur-indemnite-rupture",
+              },
+              {
+                id: "8",
+                title: "Modèle de lettre de démission",
+                slug: "/modeles/lettre-demission-2",
+              },
+            ]}
+          />
+        )}
+
+        {results.length > 0 && <SearchResults results={results} />}
       </div>
-    </modal.Component>
+    </div>
   );
 };
 
-// Export modal control methods
-export const openSearchModal = () => modal.open();
-export const closeSearchModal = () => modal.close();
-
-const modalCustom = css({
-  "& .fr-modal__body": {
-    maxHeight: "90vh",
-    overflowY: "auto",
-  },
-});
-
-const modalContent = css({
-  width: "100%",
-});
-
-const searchSection = css({
-  paddingTop: "2rem",
-  paddingBottom: "2rem",
-  backgroundColor: "var(--background-alt-grey)",
-});
-
-const inputContainer = css({
-  display: "flex",
-  gap: "1rem",
-  alignItems: "flex-start",
-  mdDown: {
-    flexDirection: "column",
-  },
-});
-
-const inputWrapper = css({
-  position: "relative",
-  flex: 1,
-  width: "100%",
-});
-
-const clearButton = css({
+const overlayContainer = css({
   position: "absolute",
-  right: "0.75rem",
-  top: "50%",
-  transform: "translateY(-50%)",
-  backgroundColor: "transparent",
-  border: "none",
-  cursor: "pointer",
-  padding: "0.5rem",
-  display: "flex",
-  alignItems: "center",
-  color: "var(--text-default-grey)",
-  fontSize: "1.25rem",
-  zIndex: 1,
-  _hover: {
-    color: "var(--text-action-high-blue-france)",
-  },
+  backgroundColor: "var(--background-default-grey)",
+  width: "100%",
+  minHeight: "calc(100vh - var(--header-height))",
+  zIndex: 100,
+  overflow: "hidden",
+  boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+  opacity: 0,
+  transition: "opacity 0.3s ease, transform 0.3s ease",
 });
 
-const searchButton = css({
-  whiteSpace: "nowrap",
-  mdDown: {
-    width: "100%!",
+const overlayVisible = css({
+  opacity: 1,
+  transform: "translateY(0)",
+});
+
+const closeButtonContainer = css({
+  position: "absolute",
+  top: "1rem",
+  right: "1rem",
+  zIndex: 10,
+});
+
+const closeButton = css({
+  _hover: {
+    backgroundColor: "var(--background-default-grey-hover)!",
   },
 });
 
 const hintText = css({
-  fontSize: "0.875rem",
   color: "var(--text-mention-grey)",
   textAlign: "center",
-  margin: "0",
-});
-
-const sectionHeader = css({
-  display: "flex",
-  alignItems: "center",
-  gap: "0.5rem",
-  color: "var(--text-action-high-blue-france)",
 });

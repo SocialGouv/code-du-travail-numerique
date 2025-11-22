@@ -1,58 +1,48 @@
 import { fr } from "@codegouvfr/react-dsfr";
 import { css } from "@styled-system/css";
-import Link from "next/link";
 import { SearchResult } from "./types";
+import Link from "src/modules/common/Link";
 
-interface SearchResultCardProps {
+type Props = {
   result: SearchResult;
-  onClick?: () => void;
-}
+};
 
-export const SearchResultCard = ({
-  result,
-  onClick,
-}: SearchResultCardProps) => {
+export const SearchResultCard = ({ result }: Props) => {
   const getBadgeColor = (type: SearchResult["type"]) => {
     switch (type) {
       case "MODELE DE DOCUMENT":
-        return "pink-tuile";
+        return "background-alt-pink-macaron";
       case "THEME":
-        return "blue-ecume";
+        return "background-alt-blue-cumulus";
       case "ARTICLE DU DROIT DU TRAVAIL":
-        return "yellow-tournesol";
+        return "background-alt-yellow-tournesol";
       case "CONVENTION COLLECTIVE":
-        return "green-tilleul-verveine";
+        return "background-alt-green-tilleul-verveine";
       case "CONTENU":
-        return "blue-ecume";
+        return "background-alt-red-marianne";
       default:
-        return "blue-ecume";
+        return "background-alt-blue-cumulus";
     }
   };
 
-  const content = (
-    <div className={cardContainer}>
-      <div className={fr.cx("fr-mb-1w")}>
-        <span
-          className={`${fr.cx("fr-badge")} ${badgeStyle(getBadgeColor(result.type))}`}
+  return (
+    <Link href={result.slug} className={linkStyle}>
+      <div className={cardContainer}>
+        <div className={fr.cx("fr-mb-1w")}>
+          <span
+            className={`${fr.cx("fr-badge")} ${badgeStyle(getBadgeColor(result.type))}`}
+          >
+            {result.type}
+          </span>
+        </div>
+        <h3
+          className={`${fr.cx("fr-text--md", "fr-mb-0", "fr-text--bold")} ${titleStyle}`}
         >
-          {result.type}
-        </span>
+          {result.title}
+        </h3>
       </div>
-      <h3 className={fr.cx("fr-text--md", "fr-mb-0", "fr-text--bold")}>
-        {result.title}
-      </h3>
-    </div>
+    </Link>
   );
-
-  if (result.slug) {
-    return (
-      <Link href={result.slug} className={linkStyle} onClick={onClick}>
-        {content}
-      </Link>
-    );
-  }
-
-  return <div onClick={onClick}>{content}</div>;
 };
 
 const cardContainer = css({
@@ -84,9 +74,13 @@ const linkStyle = css({
 const badgeStyle = (color: string) =>
   css({
     backgroundColor: `var(--${color})!`,
-    color: "var(--text-default-grey)!",
-    fontSize: "0.75rem!",
+    color: `var(--${color}-active)!`,
+    fontSize: "0.6rem!",
     fontWeight: "bold!",
     textTransform: "uppercase",
     padding: "0.25rem 0.5rem!",
   });
+
+const titleStyle = css({
+  color: "var(--text-action-high-blue-france)!",
+});

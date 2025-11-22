@@ -4,10 +4,10 @@ import { HeaderBrand } from "./HeaderBrand";
 import { HeaderSearch } from "./HeaderSearch";
 import { HeaderNavigation } from "./HeaderNavigation";
 import { useFeatureFlag } from "src/modules/utils/useFeatureFlag";
+import { ABTesting, ABTestVariant } from "src/modules/config/initABTesting";
 import { HeaderSearchV2 } from "./HeaderSearchV2";
 import { useState } from "react";
 import { SearchModal } from "src/modules/recherche/modal/SearchModal";
-import { mockSearchResults } from "src/modules/recherche/modal/mockData";
 
 export type NavigationLink = MainNavigationProps.Item.Link;
 
@@ -43,18 +43,27 @@ export const HeaderDsfr = ({
   onSearchSubmit,
   currentPath,
 }: Props) => {
-  const useV2Search = useFeatureFlag("search_v2");
+  const variant = useFeatureFlag(ABTesting.SEARCH);
   const [hasSearchV2Click, setHasSearchV2Click] = useState(false);
+
+  const handleSearchToggle = () => {
+    setHasSearchV2Click(!hasSearchV2Click);
+  };
+
   return (
     <header role="banner" id="fr-header" className={fr.cx("fr-header")}>
       <div className={fr.cx("fr-header__body")}>
         <div className={fr.cx("fr-container")}>
           <div className={fr.cx("fr-header__body-row")}>
-            <HeaderBrand />
-            {useV2Search ? (
-              <HeaderSearchV2
-                onSearchClick={() => setHasSearchV2Click(!hasSearchV2Click)}
-              />
+            <HeaderBrand
+              onSearchClick={
+                variant === ABTestVariant.SEARCH_V2
+                  ? handleSearchToggle
+                  : undefined
+              }
+            />
+            {variant === ABTestVariant.SEARCH_V2 ? (
+              <HeaderSearchV2 onSearchClick={handleSearchToggle} />
             ) : (
               <HeaderSearch onSearchSubmit={onSearchSubmit} />
             )}
@@ -62,16 +71,10 @@ export const HeaderDsfr = ({
         </div>
       </div>
       <HeaderNavigation navigation={navigation} currentPath={currentPath} />
-      {hasSearchV2Click && (
-        <SearchModal
-          isOpen={hasSearchV2Click}
-          onClearSearch={() => {}}
-          onClose={() => {}}
-          onSearchChange={() => {}}
-          results={mockSearchResults}
-          searchQuery="sqsqqs"
-        />
-      )}
+      <SearchModal
+        isOpen={hasSearchV2Click}
+        onClose={() => setHasSearchV2Click(false)}
+      />
     </header>
   );
 };

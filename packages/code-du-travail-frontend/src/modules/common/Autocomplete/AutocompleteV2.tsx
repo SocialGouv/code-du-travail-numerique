@@ -31,7 +31,13 @@ export const AutocompleteV2 = <K,>({
   placeholder,
   id,
   inputRef: externalInputRef,
-}: AutocompleteProps<K>) => {
+  renderSuggestion,
+  defaultHighlightedIndex,
+  hideLabel,
+}: AutocompleteProps<K> & {
+  renderSuggestion?: (item: K) => React.ReactNode;
+  defaultHighlightedIndex?: number;
+}) => {
   const [loading, setLoading] = useState(false);
   const [inputRef, setInputRef] = useState<HTMLInputElement | null>(null);
   const [suggestions, setSuggestions] = useState<K[]>([]);
@@ -59,6 +65,7 @@ export const AutocompleteV2 = <K,>({
   return (
     <Downshift<K>
       initialSelectedItem={defaultValue}
+      defaultHighlightedIndex={defaultHighlightedIndex}
       getA11yStatusMessage={({
         highlightedIndex,
         inputValue,
@@ -161,10 +168,13 @@ export const AutocompleteV2 = <K,>({
         };
 
         return (
-          <div className={`${searchContainer}`}>
+          <div
+            className={`${searchContainer}`}
+            {...getRootProps({ refKey: "ref" }, { suppressRefError: true })}
+          >
             <Input
               nativeLabelProps={labelProps}
-              hideLabel={isSearch}
+              hideLabel={hideLabel}
               addon={
                 <>
                   <div className={addonBlock}>
@@ -217,8 +227,6 @@ export const AutocompleteV2 = <K,>({
                     ).current = el;
                   }
                 },
-                role: getRootProps().role,
-                "aria-expanded": getRootProps()["aria-expanded"],
                 ...inputProps,
                 "aria-labelledby": undefined,
               }}
@@ -230,6 +238,7 @@ export const AutocompleteV2 = <K,>({
               classes={{
                 wrap: isSearch ? inputSearchNoMarginTop : undefined,
                 root: rootInputCss,
+                nativeInputOrTextArea: inputStyle,
               }}
             />
             {statusMessage && (
@@ -258,10 +267,16 @@ export const AutocompleteV2 = <K,>({
                     >
                       {lineAsLink ? (
                         <Link href={lineAsLink(item)} className={link}>
-                          {displayLabel(item)}
+                          {renderSuggestion
+                            ? renderSuggestion(item)
+                            : displayLabel(item)}
                         </Link>
                       ) : (
-                        <>{displayLabel(item)}</>
+                        <>
+                          {renderSuggestion
+                            ? renderSuggestion(item)
+                            : displayLabel(item)}
+                        </>
                       )}
                     </li>
                   ))
@@ -313,11 +328,31 @@ const autocompleteListContainer = css({
 
 const rootInputCss = css({
   width: "100%",
+  height: "100%",
+});
+
+const inputStyle = css({
+  height: "76px!",
+  padding: "0.75rem 3rem 0.75rem 1rem!",
+  width: "100%!",
+  boxSizing: "border-box!",
+  fontSize: "1rem!",
+  lineHeight: "1.5!",
+  marginBottom: "0!",
+  borderColor: "var(--border-default-grey)!",
 });
 
 const suggestion = css({
   cursor: "pointer",
-  color: "var(--text-action-high-blue-france)",
+  color: "var(--text-default-grey)",
+  transition: "background-color 0.2s ease",
+  borderBottom: "1px solid var(--border-default-grey)",
+  _last: {
+    borderBottom: "none",
+  },
+  _hover: {
+    bg: "var(--background-default-grey-hover)",
+  },
 });
 
 const addonBlock = css({
@@ -332,14 +367,11 @@ const buttonClose = css({
     width: "18px!",
     height: "18px!",
   },
-  _hover: {
-    backgroundColor: "unset!",
-  },
+  color: "var(--text-default-grey)!",
 });
 
 const isHighlighted = css({
   bg: "var(--background-default-grey-hover)",
-  fontWeight: "bold",
 });
 
 const link = css({
@@ -353,72 +385,4 @@ const inputSearchNoMarginTop = css({
 const listSearch = css({
   marginTop: "0!",
   textAlign: "left",
-});
-
-const inputStyle = css({
-  width: "100%",
-  padding: "0.75rem 3rem 0.75rem 1rem",
-  border: "1px solid var(--border-default-grey)",
-  borderBottom: "2px solid var(--border-default-grey)",
-  fontSize: "1rem",
-  outline: "none",
-  backgroundColor: "white",
-  _focus: {
-    borderColor: "var(--border-active-blue-france)",
-    borderBottomColor: "var(--border-active-blue-france)",
-  },
-});
-
-const clearButtonStyle = css({
-  position: "absolute",
-  right: "0.5rem",
-  top: "50%",
-  transform: "translateY(-50%)",
-  backgroundColor: "transparent",
-  border: "none",
-  cursor: "pointer",
-  padding: "0.25rem",
-  display: "flex",
-  alignItems: "center",
-  color: "var(--text-default-grey)",
-  fontSize: "1.25rem",
-  _hover: {
-    color: "var(--text-action-high-blue-france)",
-  },
-});
-
-const suggestionsListStyle = css({
-  position: "absolute",
-  top: "100%",
-  left: 0,
-  right: 0,
-  zIndex: 1000,
-  backgroundColor: "white",
-  border: "1px solid var(--border-default-grey)",
-  borderTop: "none",
-  listStyleType: "none",
-  margin: 0,
-  padding: 0,
-  maxHeight: "300px",
-  overflowY: "auto",
-  boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-});
-
-const suggestionItemStyle = css({
-  padding: "0.75rem 1rem",
-  cursor: "pointer",
-  borderBottom: "1px solid var(--border-default-grey)",
-  fontSize: "1rem",
-  color: "var(--text-default-grey)",
-  _last: {
-    borderBottom: "none",
-  },
-  _hover: {
-    backgroundColor: "var(--background-default-grey-hover)",
-  },
-});
-
-const highlightedStyle = css({
-  backgroundColor: "var(--background-default-grey-hover)",
-  fontWeight: "500",
 });

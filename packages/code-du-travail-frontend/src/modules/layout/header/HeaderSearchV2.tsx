@@ -8,8 +8,9 @@ type HeaderSearchProps = {
 
 export const HeaderSearchV2 = ({ onSearchClick }: HeaderSearchProps) => {
   return (
-    <div className={fr.cx("fr-header__tools")}>
+    <div className={fr.cx("fr-header__tools", "fr-hidden", "fr-unhidden-lg")}>
       <Button
+        id="fr-header-search-button-desktop"
         title="Rechercher"
         onClick={onSearchClick}
         iconId="fr-icon-search-line"
@@ -23,5 +24,5 @@ export const HeaderSearchV2 = ({ onSearchClick }: HeaderSearchProps) => {
 };
 
 const buttonStyle = css({
-  height: "60px",
+  height: "48px",
 });

@@ -4,9 +4,10 @@ import Image from "next/image";
 import { HomeSearch, HomeSearchV2 } from "./Components";
 import IllustrationHomePrincipal from "./picto/IllustrationHomePrincipal.svg";
 import { useFeatureFlag } from "../utils/useFeatureFlag";
+import { ABTesting, ABTestVariant } from "../config/initABTesting";
 
 export const Search = () => {
-  const useV2Search = useFeatureFlag("search_v2");
+  const variant = useFeatureFlag(ABTesting.SEARCH);
 
   return (
     <div className={mainContainer}>
@@ -30,7 +31,11 @@ export const Search = () => {
             <h2 className={fr.cx("fr-text--lead", "fr-text--bold", "fr-mb-6w")}>
               Obtenez les réponses à vos questions sur le droit du travail.
             </h2>
-            {useV2Search ? <HomeSearchV2 /> : <HomeSearch />}
+            {variant === ABTestVariant.SEARCH_V2 ? (
+              <HomeSearchV2 />
+            ) : (
+              <HomeSearch />
+            )}
           </div>
           <div
             className={fr.cx(
