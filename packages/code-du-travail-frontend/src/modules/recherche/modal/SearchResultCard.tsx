@@ -12,27 +12,27 @@ export const SearchResultCard = ({ result, onClick }: Props) => {
   const getBadgeColor = (type: SearchResult["type"]) => {
     switch (type) {
       case "MODELE DE DOCUMENT":
-        return "background-alt-pink-macaron";
+        return "pink-macaron";
       case "THEME":
-        return "background-alt-blue-cumulus";
+        return "blue-cumulus";
       case "ARTICLE DU DROIT DU TRAVAIL":
-        return "background-alt-yellow-tournesol";
+        return "yellow-tournesol";
       case "CONVENTION COLLECTIVE":
-        return "background-alt-green-tilleul-verveine";
+        return "green-tilleul-verveine";
       case "CONTENU":
-        return "background-alt-red-marianne";
+        return "red-marianne";
       default:
-        return "background-alt-blue-cumulus";
+        return "blue-cumulus";
     }
   };
+
+  const badgeColor = getBadgeColor(result.type);
 
   return (
     <Link href={result.slug} className={linkStyle} onClick={onClick}>
       <div className={cardContainer}>
         <div className={fr.cx("fr-mb-1w")}>
-          <span
-            className={`${fr.cx("fr-badge")} ${badgeStyle(getBadgeColor(result.type))}`}
-          >
+          <span className={`${badgeBase} ${badgeColorClasses[badgeColor]}`}>
             {result.type}
           </span>
         </div>
@@ -56,7 +56,7 @@ const cardContainer = css({
   height: "100%",
   display: "flex",
   flexDirection: "column",
-  _hover: {
+  "&:hover": {
     boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
   },
 });
@@ -66,22 +66,45 @@ const linkStyle = css({
   color: "inherit",
   display: "block",
   height: "100%",
-  backgroundImage: "none!",
-  _hover: {
-    backgroundImage: "none!",
+  backgroundImage: "none !important",
+  "&:hover": {
+    backgroundImage: "none !important",
   },
 });
 
-const badgeStyle = (color: string) =>
-  css({
-    backgroundColor: `var(--${color})!`,
-    color: `var(--${color}-active)!`,
-    fontSize: "0.6rem!",
-    fontWeight: "bold!",
-    textTransform: "uppercase",
-    padding: "0.25rem 0.5rem!",
-  });
+const badgeBase = css({
+  display: "inline-block",
+  borderRadius: "0.25rem",
+  fontSize: "0.6rem !important",
+  fontWeight: "bold !important",
+  textTransform: "uppercase",
+  padding: "0.25rem 0.5rem !important",
+  lineHeight: 1,
+});
+
+const badgeColorClasses: Record<string, string> = {
+  "pink-macaron": css({
+    backgroundColor: "var(--background-alt-pink-macaron) !important",
+    color: "var(--background-alt-pink-macaron-active) !important",
+  }),
+  "blue-cumulus": css({
+    backgroundColor: "var(--background-alt-blue-cumulus) !important",
+    color: "var(--background-alt-blue-cumulus-active) !important",
+  }),
+  "yellow-tournesol": css({
+    backgroundColor: "var(--background-alt-yellow-tournesol) !important",
+    color: "var(--background-alt-yellow-tournesol-active) !important",
+  }),
+  "green-tilleul-verveine": css({
+    backgroundColor: "var(--background-alt-green-tilleul-verveine) !important",
+    color: "var(--background-alt-green-tilleul-verveine-active) !important",
+  }),
+  "red-marianne": css({
+    backgroundColor: "var(--background-alt-red-marianne) !important",
+    color: "var(--background-alt-red-marianne-active) !important",
+  }),
+};
 
 const titleStyle = css({
-  color: "var(--text-action-high-blue-france)!",
+  color: "var(--text-action-high-blue-france) !important",
 });

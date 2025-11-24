@@ -1,6 +1,6 @@
 import { fr } from "@codegouvfr/react-dsfr";
 import Link from "src/modules/common/Link";
-import { ModalLink, SearchResult } from "./types";
+import { ModalLink } from "./types";
 
 type Props = {
   actualites: ModalLink[];

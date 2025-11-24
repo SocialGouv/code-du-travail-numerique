@@ -52,9 +52,6 @@ export const AutocompleteV2 = <K,>({
   hideLabel,
 }: AutocompleteProps<K>) => {
   const [loading, setLoading] = useState(false);
-  // Use a mutable ref instead of state for the native input element.
-  // Calling setState from a ref callback (during render) can cause nested
-  // updates / infinite render loops — storing the element in a ref avoids that.
   const internalInputRef = useRef<HTMLInputElement | null>(null);
   const [suggestions, setSuggestions] = useState<K[]>([]);
   const isFocusedRef = useRef(false);
@@ -69,7 +66,11 @@ export const AutocompleteV2 = <K,>({
     state: DownshiftState<K>,
     changes: StateChangeOptions<K>
   ) => {
-    if (changes.type === Downshift.stateChangeTypes.blurInput) {
+    if (
+      changes.type === Downshift.stateChangeTypes.blurInput ||
+      changes.type === Downshift.stateChangeTypes.mouseUp ||
+      changes.type === Downshift.stateChangeTypes.touchEnd
+    ) {
       return {
         ...changes,
         inputValue: state.inputValue,
@@ -86,7 +87,6 @@ export const AutocompleteV2 = <K,>({
     const lowerLabel = label.toLowerCase();
     const index = lowerLabel.indexOf(lowerQuery);
 
-    // If query is not found in the label, just return the label as-is
     if (index === -1) return label;
 
     const beforeMatch = label.substring(0, index);
@@ -148,8 +148,6 @@ export const AutocompleteV2 = <K,>({
           return;
         }
 
-        // Ne pas déclencher de recherche si l'utilisateur vient de sélectionner un item
-        // (la valeur sera la même que le selectedItem)
         if (
           stateAndHelpers.selectedItem &&
           displayLabel(stateAndHelpers.selectedItem) === value
@@ -201,8 +199,13 @@ export const AutocompleteV2 = <K,>({
         }
 
         const inputProps = getInputProps({
-          onFocus: (_e: React.FocusEvent<HTMLInputElement>) => {
+          onFocus: (e: React.FocusEvent<HTMLInputElement>) => {
             isFocusedRef.current = true;
+            const input = e.target;
+            const length = input.value.length;
+            setTimeout(() => {
+              input.setSelectionRange(length, length);
+            }, 0);
           },
           onBlur: (_e: React.FocusEvent<HTMLInputElement>) => {
             isFocusedRef.current = false;
@@ -411,11 +414,11 @@ const addonBlock = css({
 });
 
 const buttonClose = css({
-  _before: {
-    width: "18px!",
-    height: "18px!",
-  },
+  height: "100%!",
   color: "var(--text-default-grey)!",
+  _hover: {
+    backgroundColor: "transparent!",
+  },
 });
 
 const isHighlighted = css({

@@ -64,12 +64,9 @@ export const ModalSearch = forwardRef<ModalSearchHandle, ModalSearchProps>(
     const handleButtonClick = () => {
       if (!query.trim()) return;
 
-      // Si on clique sur le bouton avec la même query ET que les résultats ont été affichés
-      // Alors naviguer vers la page de recherche complète
       if (hasSearched && displayedResultsQuery === query.trim()) {
         handleSearch(query);
       } else {
-        // Sinon, afficher les résultats d'abord et mémoriser la query
         setDisplayedResultsQuery(query.trim());
         onSearchTriggered?.();
       }
@@ -77,8 +74,6 @@ export const ModalSearch = forwardRef<ModalSearchHandle, ModalSearchProps>(
 
     const onSubmit = (e?: React.FormEvent) => {
       e?.preventDefault();
-      // Lors de la soumission du formulaire (Entrée), toujours afficher les résultats
-      // Ne pas naviguer même si hasSearched est true
       if (!query.trim()) return;
       setDisplayedResultsQuery(query.trim());
       onSearchTriggered?.();
