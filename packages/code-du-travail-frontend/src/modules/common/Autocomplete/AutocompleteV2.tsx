@@ -10,7 +10,24 @@ import Spinner from "../Spinner.svg";
 import { css } from "@styled-system/css";
 import Link from "../Link";
 import { redirect } from "next/navigation";
-import { AutocompleteProps } from "./Autocomplete";
+
+type AutocompleteProps<K> = InputProps & {
+  onChange?: (value: K | undefined, suggestions?: K[]) => void;
+  onError?: (value: string) => void;
+  onSearch?: (query: string, results: K[]) => void;
+  displayLabel: (item: K | null) => string;
+  search: (search: string) => Promise<K[]>;
+  dataTestId?: string;
+  lineAsLink?: (value: K) => string;
+  displayNoResult?: boolean;
+  defaultValue?: K;
+  onInputValueChange?: (value: string) => void;
+  isSearch?: boolean;
+  placeholder?: string;
+  inputRef?: Ref<HTMLInputElement>;
+  id?: string;
+  highlightQuery?: boolean;
+};
 
 export const AutocompleteV2 = <K,>({
   onChange,
@@ -31,15 +48,14 @@ export const AutocompleteV2 = <K,>({
   placeholder,
   id,
   inputRef: externalInputRef,
-  renderSuggestion,
-  defaultHighlightedIndex,
+  highlightQuery = false,
   hideLabel,
-}: AutocompleteProps<K> & {
-  renderSuggestion?: (item: K) => React.ReactNode;
-  defaultHighlightedIndex?: number;
-}) => {
+}: AutocompleteProps<K>) => {
   const [loading, setLoading] = useState(false);
-  const [inputRef, setInputRef] = useState<HTMLInputElement | null>(null);
+  // Use a mutable ref instead of state for the native input element.
+  // Calling setState from a ref callback (during render) can cause nested
+  // updates / infinite render loops — storing the element in a ref avoids that.
+  const internalInputRef = useRef<HTMLInputElement | null>(null);
   const [suggestions, setSuggestions] = useState<K[]>([]);
   const isFocusedRef = useRef(false);
 
@@ -61,11 +77,35 @@ export const AutocompleteV2 = <K,>({
     }
     return changes;
   };
+  const renderHighlightedLabel = (item: K, query: string): React.ReactNode => {
+    const label = displayLabel(item);
+
+    if (!query || !label) return label;
+
+    const lowerQuery = query.toLowerCase();
+    const lowerLabel = label.toLowerCase();
+    const index = lowerLabel.indexOf(lowerQuery);
+
+    // If query is not found in the label, just return the label as-is
+    if (index === -1) return label;
+
+    const beforeMatch = label.substring(0, index);
+    const match = label.substring(index, index + query.length);
+    const afterMatch = label.substring(index + query.length);
+
+    return (
+      <>
+        {beforeMatch}
+        {match}
+        <strong>{afterMatch}</strong>
+      </>
+    );
+  };
 
   return (
     <Downshift<K>
       initialSelectedItem={defaultValue}
-      defaultHighlightedIndex={defaultHighlightedIndex}
+      defaultHighlightedIndex={0}
       getA11yStatusMessage={({
         highlightedIndex,
         inputValue,
@@ -100,25 +140,33 @@ export const AutocompleteV2 = <K,>({
       onInputValueChange={async (value, stateAndHelpers) => {
         if (!isFocusedRef.current) return;
 
-        if (!stateAndHelpers.selectedItem) {
-          onInputValueChange?.(value);
+        onInputValueChange?.(value);
 
-          if (!value) {
-            onSearch?.(value, []);
-            return;
-          }
+        if (!value) {
+          onSearch?.(value, []);
+          setSuggestions([]);
+          return;
+        }
 
-          try {
-            setLoading(true);
-            const results = await search(value);
-            onSearch?.(value, results);
-            setSuggestions(results);
-          } catch (error) {
-            onError?.(error);
-            setSuggestions([]);
-          } finally {
-            setLoading(false);
-          }
+        // Ne pas déclencher de recherche si l'utilisateur vient de sélectionner un item
+        // (la valeur sera la même que le selectedItem)
+        if (
+          stateAndHelpers.selectedItem &&
+          displayLabel(stateAndHelpers.selectedItem) === value
+        ) {
+          return;
+        }
+
+        try {
+          setLoading(true);
+          const results = await search(value);
+          onSearch?.(value, results);
+          setSuggestions(results);
+        } catch (error) {
+          onError?.(error);
+          setSuggestions([]);
+        } finally {
+          setLoading(false);
         }
       }}
       onChange={(item) => {
@@ -188,7 +236,7 @@ export const AutocompleteV2 = <K,>({
                           if (onChange) onChange(undefined, []);
                           if (onSearch) onSearch("", []);
                           setSuggestions([]);
-                          inputRef?.focus();
+                          internalInputRef.current?.focus();
                         }}
                         priority="tertiary no outline"
                         title="Effacer la sélection"
@@ -216,7 +264,7 @@ export const AutocompleteV2 = <K,>({
                 "data-testid": dataTestId,
                 placeholder,
                 ref: (el: HTMLInputElement | null) => {
-                  setInputRef(el);
+                  internalInputRef.current = el;
                   if (
                     externalInputRef &&
                     typeof externalInputRef === "object" &&
@@ -267,14 +315,14 @@ export const AutocompleteV2 = <K,>({
                     >
                       {lineAsLink ? (
                         <Link href={lineAsLink(item)} className={link}>
-                          {renderSuggestion
-                            ? renderSuggestion(item)
+                          {highlightQuery
+                            ? renderHighlightedLabel(item, inputValue || "")
                             : displayLabel(item)}
                         </Link>
                       ) : (
                         <>
-                          {renderSuggestion
-                            ? renderSuggestion(item)
+                          {highlightQuery
+                            ? renderHighlightedLabel(item, inputValue || "")
                             : displayLabel(item)}
                         </>
                       )}

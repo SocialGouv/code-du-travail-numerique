@@ -5,9 +5,10 @@ import Link from "src/modules/common/Link";
 
 type Props = {
   result: SearchResult;
+  onClick?: () => void;
 };
 
-export const SearchResultCard = ({ result }: Props) => {
+export const SearchResultCard = ({ result, onClick }: Props) => {
   const getBadgeColor = (type: SearchResult["type"]) => {
     switch (type) {
       case "MODELE DE DOCUMENT":
@@ -26,7 +27,7 @@ export const SearchResultCard = ({ result }: Props) => {
   };
 
   return (
-    <Link href={result.slug} className={linkStyle}>
+    <Link href={result.slug} className={linkStyle} onClick={onClick}>
       <div className={cardContainer}>
         <div className={fr.cx("fr-mb-1w")}>
           <span
