@@ -9,30 +9,11 @@ type Props = {
 };
 
 export const SearchResultCard = ({ result, onClick }: Props) => {
-  const getBadgeColor = (type: SearchResult["type"]) => {
-    switch (type) {
-      case "MODELE DE DOCUMENT":
-        return "pink-macaron";
-      case "THEME":
-        return "blue-cumulus";
-      case "ARTICLE DU DROIT DU TRAVAIL":
-        return "yellow-tournesol";
-      case "CONVENTION COLLECTIVE":
-        return "green-tilleul-verveine";
-      case "CONTENU":
-        return "red-marianne";
-      default:
-        return "blue-cumulus";
-    }
-  };
-
-  const badgeColor = getBadgeColor(result.type);
-
   return (
     <Link href={result.slug} className={linkStyle} onClick={onClick}>
       <div className={cardContainer}>
         <div className={fr.cx("fr-mb-1w")}>
-          <span className={`${badgeBase} ${badgeColorClasses[badgeColor]}`}>
+          <span className={`${badgeBase} ${badgeColorClasses[result.type]}`}>
             {result.type}
           </span>
         </div>
@@ -82,24 +63,24 @@ const badgeBase = css({
   lineHeight: 1,
 });
 
-const badgeColorClasses: Record<string, string> = {
-  "pink-macaron": css({
+const badgeColorClasses: Record<SearchResult["type"], string> = {
+  "MODELE DE DOCUMENT": css({
     backgroundColor: "var(--background-alt-pink-macaron) !important",
     color: "var(--background-alt-pink-macaron-active) !important",
   }),
-  "blue-cumulus": css({
+  THEME: css({
     backgroundColor: "var(--background-alt-blue-cumulus) !important",
     color: "var(--background-alt-blue-cumulus-active) !important",
   }),
-  "yellow-tournesol": css({
+  "ARTICLE DU DROIT DU TRAVAIL": css({
     backgroundColor: "var(--background-alt-yellow-tournesol) !important",
     color: "var(--background-alt-yellow-tournesol-active) !important",
   }),
-  "green-tilleul-verveine": css({
+  "CONVENTION COLLECTIVE": css({
     backgroundColor: "var(--background-alt-green-tilleul-verveine) !important",
     color: "var(--background-alt-green-tilleul-verveine-active) !important",
   }),
-  "red-marianne": css({
+  CONTENU: css({
     backgroundColor: "var(--background-alt-red-marianne) !important",
     color: "var(--background-alt-red-marianne-active) !important",
   }),
