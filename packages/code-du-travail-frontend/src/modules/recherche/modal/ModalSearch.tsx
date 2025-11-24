@@ -193,6 +193,7 @@ const searchButton = css({
   flexShrink: 0,
   mdDown: {
     width: "100%!",
+    justifyContent: "center!",
   },
 });
 

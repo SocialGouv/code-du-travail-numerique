@@ -1,13 +1,25 @@
 import { fr } from "@codegouvfr/react-dsfr";
+import { css } from "@styled-system/css";
 import Link from "src/modules/common/Link";
+import { LoadingSpinner } from "./LoadingSpinner";
 import { ModalLink } from "./types";
 
 type Props = {
   actualites: ModalLink[];
   suggestions: ModalLink[];
+  isLoading?: boolean;
 };
 
-export const HintList = ({ actualites, suggestions }: Props) => {
+export const HintList = ({ actualites, suggestions, isLoading }: Props) => {
+  if (isLoading) {
+    return (
+      <div className={loadingContainer}>
+        <LoadingSpinner size={48} />
+        <p className={fr.cx("fr-mt-2w")}>Chargement des suggestions...</p>
+      </div>
+    );
+  }
+
   return (
     <div className={fr.cx("fr-mt-6w")}>
       <div className={fr.cx("fr-grid-row", "fr-grid-row--gutters")}>
@@ -46,3 +58,12 @@ export const HintList = ({ actualites, suggestions }: Props) => {
     </div>
   );
 };
+
+const loadingContainer = css({
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  justifyContent: "center",
+  padding: "3rem",
+  minHeight: "300px",
+});

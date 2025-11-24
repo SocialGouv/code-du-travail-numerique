@@ -29,3 +29,4 @@ export const SUGGEST_MAX_RESULTS = 5;
 export const WIDGETS_PATH = /\/widgets\/.*/;
 export const MAX_RELATED_ITEMS_MODELS_AND_TOOLS = 2;
 export const MAX_RELATED_ITEMS_ARTICLES = 4;
+export const REVALIDATE_CACHING_TIME = 3600;

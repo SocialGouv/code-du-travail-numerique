@@ -17,25 +17,33 @@ export const SearchResultsPreview = ({
   }
 
   return (
-    <div className={previewContainer}>
-      <div className={fr.cx("fr-grid-row", "fr-grid-row--gutters")}>
-        {results.map((result) => (
-          <div
-            key={result.id}
-            className={fr.cx("fr-col-12", "fr-col-sm-6", "fr-col-lg-3")}
-          >
-            <SearchResultCard
-              result={result}
-              onClick={() => onResultClick?.(result)}
-            />
-          </div>
-        ))}
-      </div>
-    </div>
+    <ul className={previewContainer}>
+      {results.map((result) => (
+        <li key={result.id} className={resultItem}>
+          <SearchResultCard
+            result={result}
+            onClick={() => onResultClick?.(result)}
+          />
+        </li>
+      ))}
+    </ul>
   );
 };
 
 const previewContainer = css({
   marginTop: "2rem",
   width: "100%",
+  listStyle: "none",
+  padding: 0,
+  display: "grid",
+  gridTemplateColumns: {
+    base: "1fr",
+    sm: "repeat(2, 1fr)",
+    lg: "repeat(4, 1fr)",
+  },
+  gap: "1rem",
+});
+
+const resultItem = css({
+  display: "flex",
 });

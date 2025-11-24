@@ -8,6 +8,7 @@ import { SearchResults } from "./SearchResults";
 import { useEffect, useRef, useState } from "react";
 import { HintList } from "./HintList";
 import { useSearchResults } from "../hooks/useSearchResults";
+import { useHints } from "../hooks/useHints";
 
 interface SearchModalProps {
   isOpen: boolean;
@@ -23,16 +24,27 @@ export const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
   const { results, isLoading, hasSearched, triggerSearch, resetSearch } =
     useSearchResults();
 
+  const {
+    actualites,
+    suggestions,
+    fetchHintsData,
+    isLoading: isHintsLoading,
+  } = useHints();
+
+  useEffect(() => {
+    if (isOpen) {
+      fetchHintsData();
+    }
+  }, [isOpen, fetchHintsData]);
+
   useEffect(() => {
     if (isOpen) {
       setShouldRender(true);
       resetSearch();
-      // Petit délai pour permettre au DOM de se rendre avant d'appliquer l'animation
       const timer = setTimeout(() => {
         setIsVisible(true);
       }, 10);
 
-      // Focus sur l'input après l'animation
       const focusTimer = setTimeout(() => {
         modalSearchRef.current?.focusInput();
       }, 350);
@@ -44,11 +56,8 @@ export const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
     } else if (shouldRender) {
       setIsVisible(false);
 
-      // Démontage après l'animation de fermeture
       const unmountTimer = setTimeout(() => {
         setShouldRender(false);
-
-        // Focus sur le bouton rechercher après la fermeture (desktop ou mobile)
         const searchButtonDesktop = document.getElementById(
           "fr-header-search-button-desktop"
         ) as HTMLButtonElement;
@@ -111,53 +120,9 @@ export const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
 
             {!hasSearched && (
               <HintList
-                actualites={[
-                  {
-                    id: "1",
-                    title:
-                      "Rupture du contrat en période d'essai par le salarié",
-                    slug: "/code-du-travail/rupture-contrat-periode-essai",
-                  },
-                  {
-                    id: "2",
-                    title: "Mise en demeure pour abandon de poste",
-                    slug: "/themes/mise-en-demeure-abandon-poste",
-                  },
-                  {
-                    id: "3",
-                    title:
-                      "Convocation à un entretien préalable au licenciement",
-                    slug: "/modeles/convocation-entretien-prealable",
-                  },
-                  {
-                    id: "4",
-                    title: "Lettre de démission",
-                    slug: "/modeles/lettre-demission",
-                  },
-                ]}
-                suggestions={[
-                  {
-                    id: "5",
-                    title: "Thématique : Congés",
-                    slug: "/themes/conges",
-                  },
-                  {
-                    id: "6",
-                    title: "Convention collective : Métallurgie",
-                    slug: "/convention-collective/metallurgie",
-                  },
-                  {
-                    id: "7",
-                    title:
-                      "Outils : Simuler mon indemnité de rupture conventionnelle",
-                    slug: "/outils/simulateur-indemnite-rupture",
-                  },
-                  {
-                    id: "8",
-                    title: "Modèle de lettre de démission",
-                    slug: "/modeles/lettre-demission-2",
-                  },
-                ]}
+                actualites={actualites}
+                suggestions={suggestions}
+                isLoading={isHintsLoading}
               />
             )}
 
@@ -220,9 +185,4 @@ const closeButton = css({
   _hover: {
     backgroundColor: "var(--background-default-grey-hover)!",
   },
-});
-
-const hintText = css({
-  color: "var(--text-mention-grey)",
-  textAlign: "center",
 });
