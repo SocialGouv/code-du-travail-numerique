@@ -1,6 +1,7 @@
 import { fr } from "@codegouvfr/react-dsfr";
 import { css } from "@styled-system/css";
 import { LoadingSpinner } from "./LoadingSpinner";
+import { MinSearchLengthHint } from "./MinSearchLengthHint";
 
 interface SearchFeedbackProps {
   isSearching: boolean;
@@ -33,11 +34,11 @@ export const SearchFeedback = ({
           </div>
         )}
 
-        {!isSearching && query.length < minSearchLength && (
-          <p className={hintTextStyle}>
-            Tapez {minSearchLength} caractères ou plus pour lancer une recherche
-          </p>
-        )}
+        <MinSearchLengthHint
+          isVisible={!isSearching && query.length < minSearchLength}
+          minSearchLength={minSearchLength}
+          variant="desktop"
+        />
       </div>
     </>
   );

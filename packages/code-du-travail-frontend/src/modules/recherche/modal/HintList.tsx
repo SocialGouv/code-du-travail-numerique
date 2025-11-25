@@ -39,7 +39,14 @@ export const HintList = ({ actualites, suggestions, isLoading }: Props) => {
           </ul>
         </div>
 
-        <div className={fr.cx("fr-col-12", "fr-col-md-6")}>
+        <div
+          className={fr.cx(
+            "fr-col-12",
+            "fr-col-md-6",
+            "fr-mt-3w",
+            "fr-mt-md-0"
+          )}
+        >
           <p className={fr.cx("fr-badge", "fr-badge--info")}>SUGGESTIONS</p>
           <ul>
             {suggestions.map((result) => (

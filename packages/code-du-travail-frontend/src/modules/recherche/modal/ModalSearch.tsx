@@ -10,6 +10,7 @@ import { useRouter } from "next/navigation";
 import { useSearchTracking } from "../tracking";
 import { SearchFeedback } from "./SearchFeedback";
 import { useSuggestions } from "../hooks/useSuggestions";
+import { MinSearchLengthHint } from "./MinSearchLengthHint";
 
 interface ModalSearchProps {
   onClose?: () => void;
@@ -40,9 +41,6 @@ export const ModalSearch = forwardRef<ModalSearchHandle, ModalSearchProps>(
   ) => {
     const inputRef = useRef<HTMLInputElement>(null);
     const [query, setQuery] = useState(initialQuery || "");
-    const [displayedResultsQuery, setDisplayedResultsQuery] = useState<
-      string | null
-    >(null);
     const router = useRouter();
     const { emitSearchEvent, emitSuggestionSelectionEvent } =
       useSearchTracking();
@@ -55,27 +53,15 @@ export const ModalSearch = forwardRef<ModalSearchHandle, ModalSearchProps>(
       },
     }));
 
-    const handleSearch = (searchTerm: string) => {
-      emitSearchEvent(searchTerm.trim());
-      router.push(`/recherche?query=${encodeURIComponent(searchTerm.trim())}`);
+    const handleSearch = () => {
+      emitSearchEvent(query.trim());
+      router.push(`/recherche?query=${encodeURIComponent(query.trim())}`);
       onClose?.();
-    };
-
-    const handleButtonClick = () => {
-      if (!query.trim()) return;
-
-      if (hasSearched && displayedResultsQuery === query.trim()) {
-        handleSearch(query);
-      } else {
-        setDisplayedResultsQuery(query.trim());
-        onSearchTriggered?.();
-      }
     };
 
     const onSubmit = (e?: React.FormEvent) => {
       e?.preventDefault();
       if (!query.trim()) return;
-      setDisplayedResultsQuery(query.trim());
       onSearchTriggered?.();
     };
 
@@ -97,11 +83,9 @@ export const ModalSearch = forwardRef<ModalSearchHandle, ModalSearchProps>(
         emitSuggestionSelectionEvent(query, value, suggestions);
 
         setQuery(value);
-        setDisplayedResultsQuery(value);
         onSearchTriggered?.();
       } else {
         setQuery("");
-        setDisplayedResultsQuery(null);
         onQueryClear?.();
       }
     };
@@ -130,7 +114,6 @@ export const ModalSearch = forwardRef<ModalSearchHandle, ModalSearchProps>(
                 onInputValueChange={(value) => {
                   setQuery(value || "");
                   if (!value || value.trim() === "") {
-                    setDisplayedResultsQuery(null);
                     onQueryClear?.();
                   }
                 }}
@@ -139,12 +122,17 @@ export const ModalSearch = forwardRef<ModalSearchHandle, ModalSearchProps>(
                 dataTestId="modal-search-input"
               />
             </div>
+            <MinSearchLengthHint
+              isVisible={!isLoadingResults && query.length < MIN_SEARCH_LENGTH}
+              minSearchLength={MIN_SEARCH_LENGTH}
+              variant="mobile"
+            />
             <Button
               iconId="fr-icon-search-line"
               iconPosition="right"
               priority="primary"
               type="button"
-              onClick={handleButtonClick}
+              onClick={handleSearch}
               className={searchButton}
             >
               Voir tous les résultats

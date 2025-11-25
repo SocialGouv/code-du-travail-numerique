@@ -167,6 +167,7 @@ const modalContent = css({
   minHeight: "400px",
   boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
   pointerEvents: "auto",
+  marginTop: "1px",
 });
 
 const overlayVisible = css({

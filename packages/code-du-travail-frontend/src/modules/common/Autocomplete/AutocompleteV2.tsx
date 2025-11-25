@@ -105,7 +105,6 @@ export const AutocompleteV2 = <K,>({
   return (
     <Downshift<K>
       initialSelectedItem={defaultValue}
-      defaultHighlightedIndex={0}
       getA11yStatusMessage={({
         highlightedIndex,
         inputValue,
