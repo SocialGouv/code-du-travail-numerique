@@ -167,17 +167,21 @@ const autocompleteWrapper = css({
     width: "100%!",
   },
   "& input.fr-input": {
-    height: "76px!",
+    minHeight: {
+      md: "76px!",
+      base: "40px!",
+    },
     padding: "0.75rem 3rem 0.75rem 1rem!",
     width: "100%!",
     boxSizing: "border-box!",
-    minHeight: "76px!",
-    maxHeight: "76px!",
   },
 });
 
 const searchButton = css({
-  height: "76px",
+  minHeight: {
+    md: "76px!",
+    base: "40px!",
+  },
   flexShrink: 0,
   mdDown: {
     width: "100%!",

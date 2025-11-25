@@ -382,7 +382,6 @@ const rootInputCss = css({
 });
 
 const inputStyle = css({
-  height: "76px!",
   padding: "0.75rem 3rem 0.75rem 1rem!",
   width: "100%!",
   boxSizing: "border-box!",

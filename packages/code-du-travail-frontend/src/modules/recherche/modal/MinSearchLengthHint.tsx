@@ -18,7 +18,7 @@ export const MinSearchLengthHint = ({
     <div
       className={
         variant === "mobile"
-          ? fr.cx("fr-unhidden", "fr-hidden-md", "fr-my-2w")
+          ? fr.cx("fr-unhidden", "fr-hidden-md", "fr-my-1w")
           : fr.cx("fr-hidden", "fr-unhidden-md")
       }
     >
