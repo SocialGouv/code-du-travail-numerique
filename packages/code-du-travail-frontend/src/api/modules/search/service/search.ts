@@ -7,7 +7,7 @@ import {
 } from "../queries";
 import { removeDuplicate } from "../utils";
 import { getPrequalifiedResults } from "./prequalified";
-import { parseQuery } from "./parser";
+import { buildHints } from "./hints";
 
 const MAX_RESULTS = 100;
 const DEFAULT_RESULTS_NUMBER = 25;
@@ -115,10 +115,7 @@ export const searchWithQuery = async (
   }));
 
   return {
-    structured_query: await parseQuery(
-      query,
-      themes.map((t) => t._source.title)
-    ).then((r) => r.results),
+    structured_query: await buildHints(query, themes),
     articles: articles.map(({ _score, _source }) => ({
       _score: _score ?? null,
       ..._source,

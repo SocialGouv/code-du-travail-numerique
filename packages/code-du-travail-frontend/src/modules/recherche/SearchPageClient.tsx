@@ -11,6 +11,7 @@ import { ContainerWithBreadcrumbs } from "../layout/ContainerWithBreadcrumbs";
 import { useSearchTracking } from "./tracking";
 import { generateSearchLink } from "./utils";
 import { SEARCH_VISIBLE_ITEMS } from "./constants";
+import { SearchResult } from "src/api/modules/search/service/hints";
 
 type SearchPageClientProps = {
   query: string;
@@ -18,7 +19,7 @@ type SearchPageClientProps = {
     documents: any[];
     themes: any[];
     articles: any[];
-    structured_query: { label: string; details: string }[];
+    structured_query: SearchResult[];
   };
 };
 
@@ -105,15 +106,18 @@ export const SearchPageClient: React.FC<SearchPageClientProps> = ({
               🔍 🔍 🔍 🔍
             </h2>
             <ul className={fr.cx("fr-mt-3w", "fr-raw-list")}>
-              {structured_query.map(({ label, details }, index) => (
-                <SearchCard
-                  id={index.toString()}
-                  title={details}
-                  description={""}
-                  category={label}
-                  link={""}
-                />
-              ))}
+              {structured_query.map(
+                ({ cdtnId, title, type, source, slug }, index) => (
+                  <SearchCard
+                    key={index}
+                    id={cdtnId}
+                    title={title}
+                    description={""}
+                    category={type}
+                    link={generateSearchLink(source, slug)}
+                  />
+                )
+              )}
             </ul>
           </section>
 
