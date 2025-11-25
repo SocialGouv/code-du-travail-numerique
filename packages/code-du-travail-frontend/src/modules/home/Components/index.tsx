@@ -2,4 +2,5 @@ export * from "./HomeCard";
 export * from "./HomeButton";
 export * from "./HomeSearch";
 export * from "./SectionContainer";
-export * from "./HomeSearchV2";
+export * from "./QuestionAnswers";
+export * from "./QuestionBubble";

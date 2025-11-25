@@ -2,7 +2,6 @@ import { fr } from "@codegouvfr/react-dsfr";
 import { css } from "@styled-system/css";
 import Image from "next/image";
 import { HomeSearch, HomeSearchV2 } from "./Components";
-import IllustrationHomePrincipal from "./picto/IllustrationHomePrincipal.svg";
 import { useFeatureFlag } from "../utils/useFeatureFlag";
 import { ABTesting, ABTestVariant } from "../config/initABTesting";
 
@@ -46,7 +45,7 @@ export const Search = () => {
             )}
           >
             <Image
-              src={IllustrationHomePrincipal}
+              src={"/static/assets/icons/home/illustration-principale.svg"}
               alt=""
               priority
               fill={false}
