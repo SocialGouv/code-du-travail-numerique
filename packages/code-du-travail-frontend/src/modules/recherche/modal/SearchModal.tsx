@@ -69,7 +69,7 @@ export const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
       } else if (searchButtonMobile) {
         searchButtonMobile.focus();
       }
-    }, 50);
+    }, 100);
   };
 
   if (!isOpen) return null;

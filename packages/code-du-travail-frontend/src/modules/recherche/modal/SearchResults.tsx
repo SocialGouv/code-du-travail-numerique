@@ -2,6 +2,7 @@ import { fr } from "@codegouvfr/react-dsfr";
 import { css } from "@styled-system/css";
 import { SearchResult } from "./types";
 import { SearchResultCard } from "./SearchResultCard";
+import { useRef, useEffect } from "react";
 
 interface Props {
   results: SearchResult[];
@@ -9,12 +10,25 @@ interface Props {
 }
 
 export const SearchResults = ({ results, onResultClick }: Props) => {
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      const firstLink = containerRef.current?.querySelector("a");
+      if (firstLink) {
+        firstLink.focus();
+      }
+    }, 100);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   if (results.length === 0) {
     return null;
   }
 
   return (
-    <div className={fr.cx("fr-mt-3w")}>
+    <div className={fr.cx("fr-mt-3w")} ref={containerRef}>
       <div className={`${titleDivStyle} ${fr.cx("fr-p-1w")}`}>
         <h2 className={fr.cx("fr-h3")}>Cela pourrait vous intéresser ?</h2>
       </div>
