@@ -54,6 +54,7 @@ export const SearchInput = forwardRef<ModalSearchHandle, ModalSearchProps>(
     }));
 
     const handleSearch = () => {
+      if (!query.trim()) return;
       emitSearchEvent(query.trim());
       router.push(`/recherche?query=${encodeURIComponent(query.trim())}`);
       onClose?.();
@@ -62,6 +63,11 @@ export const SearchInput = forwardRef<ModalSearchHandle, ModalSearchProps>(
     const onSubmit = (e?: React.FormEvent) => {
       e?.preventDefault();
       if (!query.trim()) return;
+      clearSuggestions();
+      inputRef.current?.blur();
+      setTimeout(() => {
+        inputRef.current?.focus();
+      }, 0);
       onSearchTriggered?.();
     };
 

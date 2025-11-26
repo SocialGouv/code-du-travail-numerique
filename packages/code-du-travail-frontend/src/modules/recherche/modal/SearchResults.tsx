@@ -5,9 +5,10 @@ import { SearchResultCard } from "./SearchResultCard";
 
 interface Props {
   results: SearchResult[];
+  onResultClick?: () => void;
 }
 
-export const SearchResults = ({ results }: Props) => {
+export const SearchResults = ({ results, onResultClick }: Props) => {
   if (results.length === 0) {
     return null;
   }
@@ -30,7 +31,7 @@ export const SearchResults = ({ results }: Props) => {
               "fr-col-lg-3"
             )}
           >
-            <SearchResultCard result={result} />
+            <SearchResultCard result={result} onClick={onResultClick} />
           </li>
         ))}
       </ul>

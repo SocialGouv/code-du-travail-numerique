@@ -5,10 +5,11 @@ import { Button } from "@codegouvfr/react-dsfr/Button";
 import { css } from "@styled-system/css";
 import { SearchInput, ModalSearchHandle } from "./SearchInput";
 import { SearchResults } from "./SearchResults";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { HintList } from "./HintList";
 import { useSearchResults } from "../hooks/useSearchResults";
 import { useHints } from "../hooks/useHints";
+import useScrollBlock from "../../utils/useScrollBlock";
 
 interface SearchModalProps {
   isOpen: boolean;
@@ -18,8 +19,7 @@ interface SearchModalProps {
 export const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
   const modalSearchRef = useRef<ModalSearchHandle>(null);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
-  const [isVisible, setIsVisible] = useState(false);
-  const [shouldRender, setShouldRender] = useState(false);
+  const [blockScroll, allowScroll] = useScrollBlock();
 
   const { results, isLoading, hasSearched, triggerSearch, resetSearch } =
     useSearchResults();
@@ -34,60 +34,49 @@ export const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
   useEffect(() => {
     if (isOpen) {
       fetchHintsData();
+      blockScroll();
+    } else {
+      allowScroll();
     }
-  }, [isOpen, fetchHintsData]);
+  }, [isOpen, fetchHintsData, blockScroll, allowScroll]);
 
   useEffect(() => {
     if (isOpen) {
-      setShouldRender(true);
       resetSearch();
-      const timer = setTimeout(() => {
-        setIsVisible(true);
-      }, 10);
-
       const focusTimer = setTimeout(() => {
         modalSearchRef.current?.focusInput();
-      }, 350);
+      }, 100);
 
       return () => {
-        clearTimeout(timer);
         clearTimeout(focusTimer);
       };
-    } else if (shouldRender) {
-      setIsVisible(false);
-
-      const unmountTimer = setTimeout(() => {
-        setShouldRender(false);
-        const searchButtonDesktop = document.getElementById(
-          "fr-header-search-button-desktop"
-        ) as HTMLButtonElement;
-        const searchButtonMobile = document.getElementById(
-          "fr-header-search-button"
-        ) as HTMLButtonElement;
-
-        if (searchButtonDesktop) {
-          searchButtonDesktop.focus();
-        }
-        if (searchButtonMobile) {
-          searchButtonMobile.focus();
-        }
-      }, 300);
-
-      return () => {
-        clearTimeout(unmountTimer);
-      };
     }
-  }, [isOpen, resetSearch, shouldRender]);
+  }, [isOpen]);
 
   const handleClose = () => {
     onClose();
+
+    setTimeout(() => {
+      const searchButtonDesktop = document.getElementById(
+        "fr-header-search-button-desktop"
+      ) as HTMLButtonElement;
+      const searchButtonMobile = document.getElementById(
+        "fr-header-search-button"
+      ) as HTMLButtonElement;
+
+      if (searchButtonDesktop) {
+        searchButtonDesktop.focus();
+      } else if (searchButtonMobile) {
+        searchButtonMobile.focus();
+      }
+    }, 50);
   };
 
-  if (!shouldRender) return null;
+  if (!isOpen) return null;
 
   return (
-    <div className={`${overlayContainer} ${isVisible ? overlayVisible : ""}`}>
-      <div className={modalContent} onClick={(e) => e.stopPropagation()}>
+    <div className={overlayContainer}>
+      <div className={modalContent}>
         <div className={fr.cx("fr-container", "fr-pb-8w", "fr-pt-4w")}>
           <div className={closeButtonContainer}>
             <Button
@@ -120,7 +109,9 @@ export const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
             />
           )}
 
-          {hasSearched && <SearchResults results={results} />}
+          {hasSearched && !isLoading && (
+            <SearchResults results={results} onResultClick={handleClose} />
+          )}
         </div>
       </div>
     </div>
@@ -128,33 +119,31 @@ export const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
 };
 
 const overlayContainer = css({
-  position: "absolute",
+  position: "fixed",
+  left: 0,
+  right: 0,
   width: "100%",
-  minHeight: "calc(100vh - var(--header-height))",
+  maxHeight: {
+    md: "calc(100vh - 116.5px - 56px)",
+    base: "calc(100vh - 92.5px)",
+  },
   zIndex: 100,
-  opacity: 0,
-  transition: "opacity 0.3s ease, transform 0.3s ease",
-  pointerEvents: "none",
+  pointerEvents: "auto",
+  overflowY: "auto",
 });
 
 const modalContent = css({
   backgroundColor: "var(--background-default-grey)",
-  minHeight: "400px",
   boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-  pointerEvents: "auto",
-  marginTop: "1px",
-});
-
-const overlayVisible = css({
-  opacity: 1,
-  transform: "translateY(0)",
+  marginTop: "0.4px",
+  overflowY: "auto",
+  height: "100%",
 });
 
 const closeButtonContainer = css({
   position: "absolute",
   top: "1rem",
   right: "1rem",
-  zIndex: 10,
 });
 
 const closeButton = css({
