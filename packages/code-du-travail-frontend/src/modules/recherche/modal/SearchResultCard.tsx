@@ -1,6 +1,6 @@
 import { fr } from "@codegouvfr/react-dsfr";
 import { css } from "@styled-system/css";
-import { SearchResult } from "./types";
+import { SearchResult } from "src/api/modules/search/service/presearch";
 import Link from "src/modules/common/Link";
 
 type Props = {
@@ -13,8 +13,8 @@ export const SearchResultCard = ({ result, onClick }: Props) => {
     <Link href={result.slug} className={linkStyle} onClick={onClick}>
       <div className={cardContainer}>
         <div className={fr.cx("fr-mb-1w")}>
-          <span className={`${badgeBase} ${badgeColorClasses[result.type]}`}>
-            {result.type}
+          <span className={`${badgeBase} ${badgeColorClasses[result.source]}`}>
+            {result.source}
           </span>
         </div>
         <h3
@@ -63,27 +63,38 @@ const badgeBase = css({
   lineHeight: 1,
 });
 
-const badgeColorClasses: Record<SearchResult["type"], string> = {
-  "MODELE DE DOCUMENT": css({
+const badgeColorClasses: Record<SearchResult["source"], string> = {
+  outils: css({
     backgroundColor: "var(--background-alt-pink-macaron) !important",
     color: "var(--background-alt-pink-macaron-active) !important",
   }),
-  THEME: css({
+  themes: css({
     backgroundColor: "var(--background-alt-blue-cumulus) !important",
     color: "var(--background-alt-blue-cumulus-active) !important",
   }),
-  "ARTICLE DU DROIT DU TRAVAIL": css({
+  code_du_travail: css({
     backgroundColor: "var(--background-alt-yellow-tournesol) !important",
     color: "var(--background-alt-yellow-tournesol-active) !important",
   }),
-  "CONVENTION COLLECTIVE": css({
+  conventions_collectives: css({
     backgroundColor: "var(--background-alt-green-tilleul-verveine) !important",
     color: "var(--background-alt-green-tilleul-verveine-active) !important",
   }),
-  CONTENU: css({
+  fiches_service_public: css({
     backgroundColor: "var(--background-alt-red-marianne) !important",
     color: "var(--background-alt-red-marianne-active) !important",
   }),
+  contributions: "",
+  information: "",
+  external: "",
+  glossary: "",
+  droit_du_travail: "",
+  modeles_de_courriers: "",
+  fiches_ministere_travail: "",
+  page_fiche_ministere_travail: "",
+  dossiers: "",
+  highlights: "",
+  prequalified: "",
 };
 
 const titleStyle = css({

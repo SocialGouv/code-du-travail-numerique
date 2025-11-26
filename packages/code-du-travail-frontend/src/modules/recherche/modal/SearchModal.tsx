@@ -21,8 +21,14 @@ export const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
   const [isVisible, setIsVisible] = useState(false);
   const [shouldRender, setShouldRender] = useState(false);
 
-  const { results, isLoading, hasSearched, triggerSearch, resetSearch } =
-    useSearchResults();
+  const {
+    results,
+    isLoading,
+    hasSearched,
+    triggerSearch,
+    resetSearch,
+    setQuery,
+  } = useSearchResults();
 
   const {
     actualites,
@@ -116,6 +122,7 @@ export const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
               onQueryClear={resetSearch}
               isLoadingResults={isLoading}
               hasSearched={hasSearched}
+              setQuery={setQuery}
             />
 
             {!hasSearched && (

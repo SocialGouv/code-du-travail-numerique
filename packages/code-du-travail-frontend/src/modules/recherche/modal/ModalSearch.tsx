@@ -19,6 +19,7 @@ interface ModalSearchProps {
   onQueryClear?: () => void;
   isLoadingResults?: boolean;
   hasSearched?: boolean;
+  setQuery: (s: string) => void;
 }
 
 export interface ModalSearchHandle {
@@ -36,11 +37,12 @@ export const ModalSearch = forwardRef<ModalSearchHandle, ModalSearchProps>(
       onQueryClear,
       isLoadingResults = false,
       hasSearched = false,
+      setQuery,
     },
     ref
   ) => {
     const inputRef = useRef<HTMLInputElement>(null);
-    const [query, setQuery] = useState(initialQuery || "");
+    const [query, setQueryLocal] = useState(initialQuery || "");
     const router = useRouter();
     const { emitSearchEvent, emitSuggestionSelectionEvent } =
       useSearchTracking();
@@ -83,9 +85,11 @@ export const ModalSearch = forwardRef<ModalSearchHandle, ModalSearchProps>(
         emitSuggestionSelectionEvent(query, value, suggestions);
 
         setQuery(value);
+        setQueryLocal(value);
         onSearchTriggered?.();
       } else {
         setQuery("");
+        setQueryLocal("");
         onQueryClear?.();
       }
     };

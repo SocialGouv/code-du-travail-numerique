@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import { SearchResult } from "../modal/types";
 import { fetchSearchResults } from "../api/fetchSearchResults";
+import { SearchResult } from "src/api/modules/search/service/presearch";
 
 interface UseSearchResultsReturn {
   results: SearchResult[];
@@ -8,19 +8,22 @@ interface UseSearchResultsReturn {
   hasSearched: boolean;
   triggerSearch: () => Promise<void>;
   resetSearch: () => void;
+  query: string;
+  setQuery: (s: string) => void;
 }
 
 export const useSearchResults = (): UseSearchResultsReturn => {
   const [results, setResults] = useState<SearchResult[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [hasSearched, setHasSearched] = useState(false);
+  const [query, setQuery] = useState("");
 
   const triggerSearch = async () => {
     setIsLoading(true);
     setHasSearched(true);
 
     try {
-      const mockResults = await fetchSearchResults();
+      const mockResults = await fetchSearchResults(query);
       setResults(mockResults);
     } catch (error) {
       console.error("Error fetching search results:", error);
@@ -49,5 +52,7 @@ export const useSearchResults = (): UseSearchResultsReturn => {
     hasSearched,
     triggerSearch,
     resetSearch,
+    query,
+    setQuery,
   };
 };

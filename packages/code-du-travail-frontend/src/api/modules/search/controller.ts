@@ -1,6 +1,13 @@
-import { DEFAULT_ERROR_500_MESSAGE, NotFoundError } from "../../utils";
-import { searchWithQuery } from "./service";
+import {
+  DEFAULT_ERROR_500_MESSAGE,
+  elasticDocumentsIndex,
+  elasticsearchClient,
+  NotFoundError,
+} from "../../utils";
+import { extractHits, searchWithQuery } from "./service";
 import { NextResponse } from "next/server";
+import { getRelatedThemesBody } from "./queries";
+import { presearch } from "./service/presearch";
 
 export class SearchController {
   private searchParams: URLSearchParams;
@@ -49,5 +56,26 @@ export class SearchController {
         );
       }
     }
+  }
+
+  public async presearch() {
+    const query = this.searchParams.get("q");
+    const themeNumber = 5;
+
+    const esReq = getRelatedThemesBody(query, themeNumber);
+    const themes = await elasticsearchClient
+      .search<any>({
+        body: esReq,
+        index: elasticDocumentsIndex,
+      })
+      .then((r) => extractHits(r));
+
+    const parsed = await presearch(query as string, themes);
+    return NextResponse.json(parsed, {
+      status: 200,
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
   }
 }
