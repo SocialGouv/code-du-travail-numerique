@@ -7,9 +7,14 @@ import { useRef, useEffect } from "react";
 interface Props {
   results: SearchResult[];
   onResultClick?: () => void;
+  hideTitle?: boolean;
 }
 
-export const SearchResults = ({ results, onResultClick }: Props) => {
+export const SearchResults = ({
+  results,
+  onResultClick,
+  hideTitle = false,
+}: Props) => {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -29,9 +34,11 @@ export const SearchResults = ({ results, onResultClick }: Props) => {
 
   return (
     <div className={fr.cx("fr-mt-3w")} ref={containerRef}>
-      <div className={`${titleDivStyle} ${fr.cx("fr-p-1w")}`}>
-        <h2 className={fr.cx("fr-h3")}>Cela pourrait vous intéresser ?</h2>
-      </div>
+      {!hideTitle && (
+        <div className={`${titleDivStyle} ${fr.cx("fr-p-1w")}`}>
+          <h2 className={fr.cx("fr-h3")}>Cela pourrait vous intéresser ?</h2>
+        </div>
+      )}
       <ul
         className={`${resultListStyle} ${fr.cx("fr-grid-row", "fr-grid-row--gutters", "fr-mt-3w")}`}
       >
@@ -58,7 +65,7 @@ const titleDivStyle = css({
 });
 
 const resultListStyle = css({
-  listStyle: "none",
+  listStyle: "none!",
   padding: 0,
   margin: 0,
 });

@@ -75,7 +75,14 @@ export const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
   if (!isOpen) return null;
 
   return (
-    <div className={overlayContainer}>
+    <div
+      className={overlayContainer}
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="search-modal-title"
+      hidden={!isOpen}
+      inert={!isOpen}
+    >
       <div className={modalContent}>
         <div className={fr.cx("fr-container", "fr-pb-8w", "fr-pt-4w")}>
           <div className={closeButtonContainer}>

@@ -1,107 +1,36 @@
 "use client";
 
-import React, { useState } from "react";
-import * as Sentry from "@sentry/nextjs";
-import { fr } from "@codegouvfr/react-dsfr";
-import { Button } from "@codegouvfr/react-dsfr/Button";
+import React, { useRef } from "react";
 import { css } from "@styled-system/css";
-import { fetchSuggestResults } from "../../layout/header/fetchSuggestResults";
-import { AutocompleteV2 } from "../../common/Autocomplete";
-import { SUGGEST_MAX_RESULTS } from "../../../config";
-import { useRouter } from "next/navigation";
-import { useSearchTracking } from "src/modules/recherche/tracking";
+import {
+  SearchInput,
+  ModalSearchHandle,
+} from "../../recherche/modal/SearchInput";
+import { SearchResults } from "../../recherche/modal/SearchResults";
+import { useSearchResults } from "../../recherche/hooks/useSearchResults";
 
 export const HomeSearchV2 = () => {
-  const [query, setQuery] = useState("");
-  const [suggestions, setSuggestions] = useState<string[]>([]);
-  const router = useRouter();
-  const { emitSearchEvent, emitSuggestionSelectionEvent } = useSearchTracking();
-
-  const handleSearch = (searchTerm: string) => {
-    emitSearchEvent(searchTerm.trim());
-    router.push(`/recherche?query=${encodeURIComponent(searchTerm.trim())}`);
-  };
-
-  const onSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    handleSearch(query);
-  };
-
-  const search = async (inputValue: string) => {
-    const results = await fetchSuggestResults(inputValue).then((items) =>
-      items.slice(0, SUGGEST_MAX_RESULTS)
-    );
-    setSuggestions(results);
-    return results;
-  };
-
-  const onError = (error: string) => {
-    Sentry.captureMessage(
-      "Échec lors de la récupération des suggestions - " + error
-    );
-  };
-
-  const onSelectedItemChange = (value: string | undefined) => {
-    if (value) {
-      emitSuggestionSelectionEvent(query, value, suggestions);
-      handleSearch(value);
-    }
-  };
+  const searchRef = useRef<ModalSearchHandle>(null);
+  const { results, isLoading, hasSearched, triggerSearch, resetSearch } =
+    useSearchResults();
 
   return (
-    <form
-      className={fr.cx(
-        "fr-grid-row",
-        "fr-grid-row--gutters",
-        "fr-grid-row--bottom"
+    <div className={containerStyle}>
+      <SearchInput
+        ref={searchRef}
+        onSearchTriggered={triggerSearch}
+        onQueryClear={resetSearch}
+        isLoadingResults={isLoading}
+        hasSearched={hasSearched}
+      />
+
+      {hasSearched && !isLoading && (
+        <SearchResults results={results} hideTitle={true} />
       )}
-      role="search"
-      onSubmit={onSubmit}
-    >
-      <div className={fr.cx("fr-col-12", "fr-col-md-8")}>
-        <AutocompleteV2<string>
-          hintText="par exemple : congés payés, durée de préavis"
-          label={
-            <>
-              Recherchez par mots-clés
-              <span className={fr.cx("fr-sr-only")}>
-                , la sélection d&apos;une option charge une nouvelle page
-              </span>
-            </>
-          }
-          displayLabel={(item) => item ?? ""}
-          onInputValueChange={(value) => {
-            if (value) {
-              setQuery(value);
-            }
-          }}
-          onChange={onSelectedItemChange}
-          search={search}
-          onError={onError}
-          dataTestId={"search-input"}
-        />
-      </div>
-      <div className={fr.cx("fr-col-12", "fr-col-md-4")}>
-        <Button
-          iconId="fr-icon-search-line"
-          iconPosition="right"
-          priority="primary"
-          nativeButtonProps={{
-            "aria-label": "Lancer la recherche",
-          }}
-          className={buttonStyle}
-          type="submit"
-        >
-          Rechercher
-        </Button>
-      </div>
-    </form>
+    </div>
   );
 };
 
-const buttonStyle = css({
-  mdDown: {
-    width: "100%!",
-    justifyContent: "center!",
-  },
+const containerStyle = css({
+  width: "100%",
 });

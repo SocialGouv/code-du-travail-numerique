@@ -7,9 +7,13 @@ import { FooterTop } from "./FooterTop";
 import { FooterContent } from "./FooterContent";
 import { FooterBottom } from "./FooterBottom";
 
-export const Footer = () => {
+type Props = {
+  inert?: boolean;
+};
+
+export const Footer = ({ inert }: Props) => {
   return (
-    <footer className={footerStyle} role="contentinfo">
+    <footer className={footerStyle} role="contentinfo" inert={inert}>
       <NeedMoreInfo />
       <div className={fr.cx("fr-footer")}>
         <FooterTop />

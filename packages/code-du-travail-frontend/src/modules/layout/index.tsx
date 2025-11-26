@@ -19,9 +19,16 @@ export const DsfrLayout = ({ children, container = "fr-container" }: Props) => {
   return (
     <>
       <PolyfillComponent />
-      <SkipLinks />
+      <div inert={isOpen}>
+        <SkipLinks />
+      </div>
       <Header />
-      <main className={`${container} ${printStyle}`} id="main" role="main">
+      <main
+        className={`${container} ${printStyle}`}
+        id="main"
+        role="main"
+        inert={isOpen}
+      >
         {isOpen && (
           <div
             className={overlayStyle}
@@ -31,7 +38,7 @@ export const DsfrLayout = ({ children, container = "fr-container" }: Props) => {
         )}
         {children}
       </main>
-      <Footer />
+      <Footer inert={isOpen} />
     </>
   );
 };

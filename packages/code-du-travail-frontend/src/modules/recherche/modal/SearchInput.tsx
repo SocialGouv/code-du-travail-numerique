@@ -98,7 +98,10 @@ export const SearchInput = forwardRef<ModalSearchHandle, ModalSearchProps>(
 
     return (
       <div className={fr.cx("fr-mt-2w")}>
-        <h1 className={fr.cx("fr-text--md", "fr-mb-1w")}>
+        <h1
+          className={fr.cx("fr-text--md", "fr-mb-1w")}
+          id="search-modal-title"
+        >
           Que souhaitez-vous savoir ?
         </h1>
         <p className={fr.cx("fr-text--sm", "fr-mb-2w", "fr-hint-text")}>
