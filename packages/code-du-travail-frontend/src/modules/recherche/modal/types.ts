@@ -1,9 +1,11 @@
 export type DocumentType =
-  | "MODELE DE DOCUMENT"
-  | "THEME"
-  | "ARTICLE DU DROIT DU TRAVAIL"
+  | "THÉMATIQUE"
+  | "DROIT DU TRAVAIL"
   | "CONVENTION COLLECTIVE"
-  | "CONTENU";
+  | "MODÈLE DE DOCUMENT"
+  | "SIMULATEUR"
+  | "INFOGRAPHIE"
+  | "FICHE PRATIQUE";
 
 export type SearchResult = {
   id: string;

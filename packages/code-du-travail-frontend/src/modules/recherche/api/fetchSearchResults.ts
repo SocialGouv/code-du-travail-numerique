@@ -2,34 +2,52 @@ import { SearchResult } from "../modal/types";
 
 export const mockSearchResults: SearchResult[] = [
   {
-    id: "1",
-    type: "MODELE DE DOCUMENT",
-    title: "Modèle de lettre de démission",
-    slug: "/modeles/lettre-demission",
-  },
-  {
-    id: "2",
-    type: "THEME",
-    title: "Thématique : Congés payés",
-    slug: "/themes/conges-payes",
-  },
-  {
     id: "3",
-    type: "ARTICLE DU DROIT DU TRAVAIL",
+    type: "CONVENTION COLLECTIVE",
     title: "Article L1234-9 du Code du travail",
     slug: "/code-du-travail/article-l1234-9",
   },
   {
     id: "4",
-    type: "CONVENTION COLLECTIVE",
+    type: "DROIT DU TRAVAIL",
     title: "Convention collective nationale de la métallurgie",
     slug: "/convention-collective/metallurgie",
   },
   {
     id: "5",
-    type: "CONTENU",
+    type: "FICHE PRATIQUE",
     title: "Rupture du contrat en période d'essai par le salarié",
     slug: "/code-du-travail/rupture-contrat-periode-essai",
+  },
+  {
+    id: "6",
+    type: "INFOGRAPHIE",
+    title: "Modèle de lettre de démission",
+    slug: "/modeles/lettre-demission",
+  },
+  {
+    id: "7",
+    type: "INFOGRAPHIE",
+    title: "Modèle de lettre de démission",
+    slug: "/modeles/lettre-demission",
+  },
+  {
+    id: "8",
+    type: "MODÈLE DE DOCUMENT",
+    title: "Modèle de lettre de démission",
+    slug: "/modeles/lettre-demission",
+  },
+  {
+    id: "9",
+    type: "SIMULATEUR",
+    title: "Modèle de lettre de démission",
+    slug: "/modeles/lettre-demission",
+  },
+  {
+    id: "10",
+    type: "THÉMATIQUE",
+    title: "Modèle de lettre de démission",
+    slug: "/modeles/lettre-demission",
   },
 ];
 
