@@ -27,7 +27,7 @@ export interface ModalSearchHandle {
 
 const MIN_SEARCH_LENGTH = 3;
 
-export const ModalSearch = forwardRef<ModalSearchHandle, ModalSearchProps>(
+export const SearchInput = forwardRef<ModalSearchHandle, ModalSearchProps>(
   (
     {
       onClose,
@@ -150,7 +150,7 @@ export const ModalSearch = forwardRef<ModalSearchHandle, ModalSearchProps>(
   }
 );
 
-ModalSearch.displayName = "ModalSearch";
+SearchInput.displayName = "ModalSearch";
 
 const autocompleteWrapper = css({
   flex: 1,

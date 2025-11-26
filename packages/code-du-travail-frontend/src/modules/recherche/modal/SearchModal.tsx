@@ -3,7 +3,7 @@
 import { fr } from "@codegouvfr/react-dsfr";
 import { Button } from "@codegouvfr/react-dsfr/Button";
 import { css } from "@styled-system/css";
-import { ModalSearch, ModalSearchHandle } from "./ModalSearch";
+import { SearchInput, ModalSearchHandle } from "./SearchInput";
 import { SearchResults } from "./SearchResults";
 import { useEffect, useRef, useState } from "react";
 import { HintList } from "./HintList";
@@ -77,7 +77,7 @@ export const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
         clearTimeout(unmountTimer);
       };
     }
-  }, [isOpen, shouldRender]);
+  }, [isOpen, resetSearch, shouldRender]);
 
   const handleClose = () => {
     onClose();
@@ -86,71 +86,46 @@ export const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
   if (!shouldRender) return null;
 
   return (
-    <>
-      <div
-        className={`${backdropOverlay} ${isVisible ? backdropVisible : ""}`}
-        onClick={handleClose}
-        aria-hidden="true"
-      />
-      <div className={`${overlayContainer} ${isVisible ? overlayVisible : ""}`}>
-        <div className={modalContent} onClick={(e) => e.stopPropagation()}>
-          <div className={fr.cx("fr-container", "fr-pb-8w", "fr-pt-4w")}>
-            <div className={closeButtonContainer}>
-              <Button
-                iconId="fr-icon-close-line"
-                iconPosition="right"
-                title="Fermer"
-                onClick={handleClose}
-                priority="tertiary no outline"
-                className={closeButton}
-                ref={closeButtonRef}
-              >
-                Fermer
-              </Button>
-            </div>
-
-            <ModalSearch
-              ref={modalSearchRef}
-              onClose={handleClose}
-              onSearchTriggered={triggerSearch}
-              onQueryClear={resetSearch}
-              isLoadingResults={isLoading}
-              hasSearched={hasSearched}
-            />
-
-            {!hasSearched && (
-              <HintList
-                actualites={actualites}
-                suggestions={suggestions}
-                isLoading={isHintsLoading}
-              />
-            )}
-
-            {hasSearched && <SearchResults results={results} />}
+    <div className={`${overlayContainer} ${isVisible ? overlayVisible : ""}`}>
+      <div className={modalContent} onClick={(e) => e.stopPropagation()}>
+        <div className={fr.cx("fr-container", "fr-pb-8w", "fr-pt-4w")}>
+          <div className={closeButtonContainer}>
+            <Button
+              iconId="fr-icon-close-line"
+              iconPosition="right"
+              title="Fermer"
+              onClick={handleClose}
+              priority="tertiary no outline"
+              className={closeButton}
+              ref={closeButtonRef}
+            >
+              Fermer
+            </Button>
           </div>
+
+          <SearchInput
+            ref={modalSearchRef}
+            onClose={handleClose}
+            onSearchTriggered={triggerSearch}
+            onQueryClear={resetSearch}
+            isLoadingResults={isLoading}
+            hasSearched={hasSearched}
+          />
+
+          {!hasSearched && (
+            <HintList
+              actualites={actualites}
+              suggestions={suggestions}
+              isLoading={isHintsLoading}
+            />
+          )}
+
+          {hasSearched && <SearchResults results={results} />}
         </div>
       </div>
-    </>
+    </div>
   );
 };
-
-const backdropOverlay = css({
-  position: "fixed",
-  top: "var(--header-height)",
-  left: 0,
-  right: 0,
-  bottom: 0,
-  backgroundColor: "rgba(0, 0, 0, 0.5)",
-  zIndex: 99,
-  opacity: 0,
-  transition: "opacity 0.3s ease",
-  pointerEvents: "none",
-});
-
-const backdropVisible = css({
-  opacity: 1,
-  pointerEvents: "auto",
-});
 
 const overlayContainer = css({
   position: "absolute",
