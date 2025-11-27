@@ -63,45 +63,44 @@ const badgeBase = css({
   lineHeight: 1,
 });
 
-const badgeColorClasses: Record<SearchResult["type"], string> = {
-  THÉMATIQUE: css({
+const badgeColorClasses: Record<SearchResult["source"], string> = {
+  themes: css({
     backgroundColor: "var(--background-contrast-info) !important", // light decision background background contrast info
     color: "var(--text-default-info) !important", // light decision text default info
   }),
-  "DROIT DU TRAVAIL": css({
+  code_du_travail: css({
     backgroundColor: "var(--background-alt-yellow-tournesol) !important", // light option illustration color 950 default yellow tournesol
     color: "var(--text-action-high-yellow-tournesol) !important", // light option illustration color sun default yellow tournesol
   }),
-  "CONVENTION COLLECTIVE": css({
+  conventions_collectives: css({
     backgroundColor: "var(--background-contrast-success) !important", // light decision background background contrast success
     color: "var(--text-default-success) !important", // light decision text default success
   }),
-  "MODÈLE DE DOCUMENT": css({
+  modeles_de_courriers: css({
     backgroundColor: "var(--background-alt-purple-glycine) !important", // light option illustration color 950 default purple glycine
     color: "var(--text-action-high-purple-glycine) !important", // light option illustration color sun default purple glycine
   }),
-  SIMULATEUR: css({
+  outils: css({
     backgroundColor: "var(--background-contrast-warning) !important", // light decision background background contrast warning
     color: "var(--text-default-warning) !important", // light decision text default warning
   }),
-  INFOGRAPHIE: css({
+  infographies: css({
     backgroundColor: "var(--background-alt-brown-cafe-creme) !important", // light option illustration color 975 default brown cafe creme
     color: "var(--text-action-high-purple-glycine) !important", // light option illustration color sun default purple glycine
   }),
-  "FICHE PRATIQUE": css({
+  contributions: css({
     backgroundColor: "var(--background-alt-green-archipel) !important", // light option illustration color 975 default green archipel
     color: "var(--text-action-high-green-archipel) !important", // light option illustration color sun default green archipel
   }),
-  contributions: "",
-  information: "",
-  external: "",
-  glossary: "",
-  droit_du_travail: "",
-  modeles_de_courriers: "",
-  fiches_ministere_travail: "",
-  page_fiche_ministere_travail: "",
   dossiers: "",
+  droit_du_travail: "",
+  external: "",
+  fiches_ministere_travail: "",
+  fiches_service_public: "",
+  glossary: "",
   highlights: "",
+  information: "",
+  page_fiche_ministere_travail: "",
   prequalified: "",
 };
 
