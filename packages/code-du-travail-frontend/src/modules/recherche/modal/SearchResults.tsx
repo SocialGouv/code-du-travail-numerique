@@ -1,8 +1,8 @@
 import { fr } from "@codegouvfr/react-dsfr";
 import { css } from "@styled-system/css";
-import { SearchResult } from "./types";
 import { SearchResultCard } from "./SearchResultCard";
 import { useRef, useEffect } from "react";
+import { SearchResult } from "src/api/modules/search/service/presearch";
 
 interface Props {
   results: SearchResult[];
@@ -44,7 +44,7 @@ export const SearchResults = ({
       >
         {results.map((result) => (
           <li
-            key={result.id}
+            key={result.cdtnId}
             className={fr.cx(
               "fr-col-12",
               "fr-col-sm-6",

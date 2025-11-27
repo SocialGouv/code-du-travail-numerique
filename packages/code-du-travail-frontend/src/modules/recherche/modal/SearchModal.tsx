@@ -21,8 +21,14 @@ export const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
   const closeButtonRef = useRef<HTMLButtonElement>(null);
   const [blockScroll, allowScroll] = useScrollBlock();
 
-  const { results, isLoading, hasSearched, triggerSearch, resetSearch } =
-    useSearchResults();
+  const {
+    results,
+    isLoading,
+    hasSearched,
+    triggerSearch,
+    resetSearch,
+    setQuery,
+  } = useSearchResults();
 
   const {
     actualites,
@@ -105,7 +111,7 @@ export const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
             onSearchTriggered={triggerSearch}
             onQueryClear={resetSearch}
             isLoadingResults={isLoading}
-            hasSearched={hasSearched}
+            onChangeQuery={setQuery}
           />
 
           {!hasSearched && (

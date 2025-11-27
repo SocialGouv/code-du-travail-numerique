@@ -1,7 +1,6 @@
-import { fr } from "@codegouvfr/react-dsfr";
 import { css } from "@styled-system/css";
-import { SearchResult } from "./types";
 import { SearchResultCard } from "./SearchResultCard";
+import { SearchResult } from "src/api/modules/search/service/presearch";
 
 interface SearchResultsPreviewProps {
   results: SearchResult[];
@@ -19,7 +18,7 @@ export const SearchResultsPreview = ({
   return (
     <ul className={previewContainer}>
       {results.map((result) => (
-        <li key={result.id} className={resultItem}>
+        <li key={result.cdtnId} className={resultItem}>
           <SearchResultCard
             result={result}
             onClick={() => onResultClick?.(result)}

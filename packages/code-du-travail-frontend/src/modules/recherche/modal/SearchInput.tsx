@@ -18,7 +18,7 @@ interface ModalSearchProps {
   onSearchTriggered?: () => void;
   onQueryClear?: () => void;
   isLoadingResults?: boolean;
-  hasSearched?: boolean;
+  onChangeQuery: (s: string) => void;
 }
 
 export interface ModalSearchHandle {
@@ -35,7 +35,7 @@ export const SearchInput = forwardRef<ModalSearchHandle, ModalSearchProps>(
       onSearchTriggered,
       onQueryClear,
       isLoadingResults = false,
-      hasSearched = false,
+      onChangeQuery,
     },
     ref
   ) => {
@@ -88,9 +88,11 @@ export const SearchInput = forwardRef<ModalSearchHandle, ModalSearchProps>(
       if (value) {
         emitSuggestionSelectionEvent(query, value, suggestions);
 
+        onChangeQuery(value);
         setQuery(value);
         onSearchTriggered?.();
       } else {
+        onChangeQuery("");
         setQuery("");
         onQueryClear?.();
       }
@@ -121,7 +123,7 @@ export const SearchInput = forwardRef<ModalSearchHandle, ModalSearchProps>(
                 displayNoResult={false}
                 inputRef={inputRef}
                 onInputValueChange={(value) => {
-                  setQuery(value || "");
+                  onChangeQuery(value || "");
                   if (!value || value.trim() === "") {
                     onQueryClear?.();
                   }
