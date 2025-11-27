@@ -60,9 +60,20 @@ export class SearchController {
 
   public async presearch() {
     const query = this.searchParams.get("q");
-    const themeNumber = 5;
 
-    const esReq = getRelatedThemesBody(query, themeNumber);
+    if (!query) {
+      return NextResponse.json(
+        { message: "Query parameter 'q' is required." },
+        {
+          status: 400,
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+    }
+
+    const esReq = getRelatedThemesBody(query);
     const themes = await elasticsearchClient
       .search<any>({
         body: esReq,
@@ -70,7 +81,7 @@ export class SearchController {
       })
       .then((r) => extractHits(r));
 
-    const parsed = await presearch(query as string, themes);
+    const parsed = await presearch(query, themes);
     return NextResponse.json(parsed, {
       status: 200,
       headers: {
