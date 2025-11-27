@@ -2,7 +2,6 @@ import { SourceKeys, SOURCES } from "@socialgouv/cdtn-utils";
 import { elasticDocumentsIndex, elasticsearchClient } from "../../utils";
 import { getIdccBody } from "./queries";
 
-// TODO replace by isIdccToken above below ?
 export const parseIdcc = (query) =>
   /^\d+$/.test(query) ? parseInt(query, 10) : undefined;
 
@@ -32,7 +31,6 @@ const idccs: Set<number> = await elasticsearchClient
           filter: [
             { term: { source: SOURCES.CCN } },
             { term: { isPublished: true } },
-            //{ "term": { "contributions": True } },
           ],
         },
       },

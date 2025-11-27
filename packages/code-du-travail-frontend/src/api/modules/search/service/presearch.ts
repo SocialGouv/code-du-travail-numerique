@@ -15,14 +15,25 @@ type ESHit = {
     title: string;
     slug: string;
     cdtnId: string;
+    // todo fixme
     source: SourceKeys;
   };
 };
+
+export enum DocumentType {
+  MODELE_DE_DOCUMENT = "MODELE DE DOCUMENT",
+  THEME = "THEME",
+  ARTICLE_DU_DROIT_DU_TRAVAIL = "ARTICLE DU DROIT DU TRAVAIL",
+  CONVENTION_COLLECTIVE = "CONVENTION COLLECTIVE",
+  CONTENU = "CONTENU",
+  OUTILS = "outils",
+}
 
 export type SearchResult = {
   cdtnId: string;
   title: string;
   slug: string;
+  // todo fixme
   source: SourceKeys;
 };
 

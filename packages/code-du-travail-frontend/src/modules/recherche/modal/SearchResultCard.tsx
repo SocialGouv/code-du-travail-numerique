@@ -1,4 +1,5 @@
 import { fr } from "@codegouvfr/react-dsfr";
+import { getLabelBySource } from "@socialgouv/cdtn-utils";
 import { css } from "@styled-system/css";
 import { SearchResult } from "src/api/modules/search/service/presearch";
 import Link from "src/modules/common/Link";
@@ -14,7 +15,7 @@ export const SearchResultCard = ({ result, onClick }: Props) => {
       <div className={cardContainer}>
         <div className={fr.cx("fr-mb-1w")}>
           <span className={`${badgeBase} ${badgeColorClasses[result.source]}`}>
-            {result.source}
+            {String(getLabelBySource(result.source)).toUpperCase()}
           </span>
         </div>
         <h3
