@@ -6,8 +6,8 @@ import { HeaderNavigation } from "./HeaderNavigation";
 import { useFeatureFlag } from "src/modules/utils/useFeatureFlag";
 import { ABTesting, ABTestVariant } from "src/modules/config/initABTesting";
 import { HeaderSearchV2 } from "./HeaderSearchV2";
-import { useState } from "react";
 import { SearchModal } from "src/modules/recherche/modal/SearchModal";
+import { useSearchModal } from "src/modules/recherche/modal/SearchModalContext";
 
 export type NavigationLink = MainNavigationProps.Item.Link;
 
@@ -44,10 +44,14 @@ export const HeaderDsfr = ({
   currentPath,
 }: Props) => {
   const variant = useFeatureFlag(ABTesting.SEARCH);
-  const [hasSearchV2Click, setHasSearchV2Click] = useState(false);
+  const { isOpen, openModal, closeModal } = useSearchModal();
 
   const handleSearchToggle = () => {
-    setHasSearchV2Click(!hasSearchV2Click);
+    if (isOpen) {
+      closeModal();
+    } else {
+      openModal();
+    }
   };
 
   return (
@@ -71,10 +75,7 @@ export const HeaderDsfr = ({
         </div>
       </div>
       <HeaderNavigation navigation={navigation} currentPath={currentPath} />
-      <SearchModal
-        isOpen={hasSearchV2Click}
-        onClose={() => setHasSearchV2Click(false)}
-      />
+      <SearchModal isOpen={isOpen} onClose={closeModal} />
     </header>
   );
 };

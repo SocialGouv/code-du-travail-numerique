@@ -1,22 +1,43 @@
 import { fr } from "@codegouvfr/react-dsfr";
 import { css } from "@styled-system/css";
 import { SearchResultCard } from "./SearchResultCard";
-import { SearchResult } from "src/api/modules/search/service/presearch";
+import { useRef, useEffect } from "react";
 
 interface Props {
   results: SearchResult[];
+  onResultClick?: () => void;
+  hideTitle?: boolean;
 }
 
-export const SearchResults = ({ results }: Props) => {
+export const SearchResults = ({
+  results,
+  onResultClick,
+  hideTitle = false,
+}: Props) => {
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      const firstLink = containerRef.current?.querySelector("a");
+      if (firstLink) {
+        firstLink.focus();
+      }
+    }, 100);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   if (results.length === 0) {
     return null;
   }
 
   return (
-    <div className={fr.cx("fr-mt-3w")}>
-      <div className={`${titleDivStyle} ${fr.cx("fr-p-1w")}`}>
-        <h2 className={fr.cx("fr-h3")}>Cela pourrait vous intéresser ?</h2>
-      </div>
+    <div className={fr.cx("fr-mt-3w")} ref={containerRef}>
+      {!hideTitle && (
+        <div className={`${titleDivStyle} ${fr.cx("fr-p-1w")}`}>
+          <h2 className={fr.cx("fr-h3")}>Cela pourrait vous intéresser ?</h2>
+        </div>
+      )}
       <ul
         className={`${resultListStyle} ${fr.cx("fr-grid-row", "fr-grid-row--gutters", "fr-mt-3w")}`}
       >
@@ -30,7 +51,7 @@ export const SearchResults = ({ results }: Props) => {
               "fr-col-lg-3"
             )}
           >
-            <SearchResultCard result={result} />
+            <SearchResultCard result={result} onClick={onResultClick} />
           </li>
         ))}
       </ul>
@@ -43,7 +64,7 @@ const titleDivStyle = css({
 });
 
 const resultListStyle = css({
-  listStyle: "none",
+  listStyle: "none!",
   padding: 0,
   margin: 0,
 });

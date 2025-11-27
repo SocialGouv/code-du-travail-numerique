@@ -28,7 +28,7 @@ export interface ModalSearchHandle {
 
 const MIN_SEARCH_LENGTH = 3;
 
-export const ModalSearch = forwardRef<ModalSearchHandle, ModalSearchProps>(
+export const SearchInput = forwardRef<ModalSearchHandle, ModalSearchProps>(
   (
     {
       onClose,
@@ -56,6 +56,7 @@ export const ModalSearch = forwardRef<ModalSearchHandle, ModalSearchProps>(
     }));
 
     const handleSearch = () => {
+      if (!query.trim()) return;
       emitSearchEvent(query.trim());
       router.push(`/recherche?query=${encodeURIComponent(query.trim())}`);
       onClose?.();
@@ -64,6 +65,11 @@ export const ModalSearch = forwardRef<ModalSearchHandle, ModalSearchProps>(
     const onSubmit = (e?: React.FormEvent) => {
       e?.preventDefault();
       if (!query.trim()) return;
+      clearSuggestions();
+      inputRef.current?.blur();
+      setTimeout(() => {
+        inputRef.current?.focus();
+      }, 0);
       onSearchTriggered?.();
     };
 
@@ -96,7 +102,10 @@ export const ModalSearch = forwardRef<ModalSearchHandle, ModalSearchProps>(
 
     return (
       <div className={fr.cx("fr-mt-2w")}>
-        <h1 className={fr.cx("fr-text--md", "fr-mb-1w")}>
+        <h1
+          className={fr.cx("fr-text--md", "fr-mb-1w")}
+          id="search-modal-title"
+        >
           Que souhaitez-vous savoir ?
         </h1>
         <p className={fr.cx("fr-text--sm", "fr-mb-2w", "fr-hint-text")}>
@@ -154,7 +163,7 @@ export const ModalSearch = forwardRef<ModalSearchHandle, ModalSearchProps>(
   }
 );
 
-ModalSearch.displayName = "ModalSearch";
+SearchInput.displayName = "ModalSearch";
 
 const autocompleteWrapper = css({
   flex: 1,

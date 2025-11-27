@@ -1,11 +1,10 @@
 import { cache } from "react";
 import { HintsData } from "../modal/types";
-import { REVALIDATE_CACHING_TIME } from "src/config";
 
 const fetchHintsInternal = async (): Promise<HintsData> => {
   const response = await fetch("/api/hints", {
     next: {
-      revalidate: REVALIDATE_CACHING_TIME,
+      revalidate: 3600,
     },
   });
 

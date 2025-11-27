@@ -1,9 +1,11 @@
-import { DsfrLayout } from "../../src/modules/layout";
+import { DsfrLayout, ListLayout } from "../../src/modules/layout";
 import { generateDefaultMetadata } from "../../src/modules/common/metas";
-import { ContributionsList } from "../../src/modules/contributions";
-import { getGenericContributionsGroupByThemes } from "../../src/api";
+import { fetchContributions } from "../../src/modules/contributions";
+import { groupByThemes } from "../../src/modules/utils";
+import { SOURCES } from "@socialgouv/cdtn-utils";
+import { Metadata } from "next";
 
-export const metadata = generateDefaultMetadata({
+export const metadata: Metadata = generateDefaultMetadata({
   title: "Fiches pratiques",
   description:
     "Obtenez une réponse personnalisée selon votre convention collective",
@@ -11,13 +13,16 @@ export const metadata = generateDefaultMetadata({
 });
 
 async function Index() {
-  const { documents } = await getContributions();
+  const documents = await getContributions();
 
   return (
     <DsfrLayout>
-      <ContributionsList
-        contributions={documents}
-        popularContributionSlugs={[
+      <ListLayout
+        title="Fiches pratiques"
+        description="Obtenez une réponse personnalisée selon votre convention collective"
+        source={SOURCES.CONTRIBUTIONS}
+        data={documents}
+        popularSlugs={[
           "en-cas-darret-maladie-du-salarie-lemployeur-doit-il-assurer-le-maintien-de-salaire",
           "les-conges-pour-evenements-familiaux",
           "a-quelles-indemnites-peut-pretendre-un-salarie-qui-part-a-la-retraite",
@@ -31,8 +36,11 @@ async function Index() {
 }
 
 const getContributions = async () => {
-  const data = await getGenericContributionsGroupByThemes();
-  return data;
+  const data = await fetchContributions(
+    ["title", "source", "description", "slug", "breadcrumbs"],
+    { generic: true }
+  );
+  return groupByThemes(data);
 };
 
 export default Index;

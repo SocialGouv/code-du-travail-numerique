@@ -63,26 +63,34 @@ const badgeBase = css({
   lineHeight: 1,
 });
 
-const badgeColorClasses: Record<SearchResult["source"], string> = {
-  outils: css({
-    backgroundColor: "var(--background-alt-pink-macaron) !important",
-    color: "var(--background-alt-pink-macaron-active) !important",
+const badgeColorClasses: Record<SearchResult["type"], string> = {
+  THÉMATIQUE: css({
+    backgroundColor: "var(--background-contrast-info) !important", // light decision background background contrast info
+    color: "var(--text-default-info) !important", // light decision text default info
   }),
-  themes: css({
-    backgroundColor: "var(--background-alt-blue-cumulus) !important",
-    color: "var(--background-alt-blue-cumulus-active) !important",
+  "DROIT DU TRAVAIL": css({
+    backgroundColor: "var(--background-alt-yellow-tournesol) !important", // light option illustration color 950 default yellow tournesol
+    color: "var(--text-action-high-yellow-tournesol) !important", // light option illustration color sun default yellow tournesol
   }),
-  code_du_travail: css({
-    backgroundColor: "var(--background-alt-yellow-tournesol) !important",
-    color: "var(--background-alt-yellow-tournesol-active) !important",
+  "CONVENTION COLLECTIVE": css({
+    backgroundColor: "var(--background-contrast-success) !important", // light decision background background contrast success
+    color: "var(--text-default-success) !important", // light decision text default success
   }),
-  conventions_collectives: css({
-    backgroundColor: "var(--background-alt-green-tilleul-verveine) !important",
-    color: "var(--background-alt-green-tilleul-verveine-active) !important",
+  "MODÈLE DE DOCUMENT": css({
+    backgroundColor: "var(--background-alt-purple-glycine) !important", // light option illustration color 950 default purple glycine
+    color: "var(--text-action-high-purple-glycine) !important", // light option illustration color sun default purple glycine
   }),
-  fiches_service_public: css({
-    backgroundColor: "var(--background-alt-red-marianne) !important",
-    color: "var(--background-alt-red-marianne-active) !important",
+  SIMULATEUR: css({
+    backgroundColor: "var(--background-contrast-warning) !important", // light decision background background contrast warning
+    color: "var(--text-default-warning) !important", // light decision text default warning
+  }),
+  INFOGRAPHIE: css({
+    backgroundColor: "var(--background-alt-brown-cafe-creme) !important", // light option illustration color 975 default brown cafe creme
+    color: "var(--text-action-high-purple-glycine) !important", // light option illustration color sun default purple glycine
+  }),
+  "FICHE PRATIQUE": css({
+    backgroundColor: "var(--background-alt-green-archipel) !important", // light option illustration color 975 default green archipel
+    color: "var(--text-action-high-green-archipel) !important", // light option illustration color sun default green archipel
   }),
   contributions: "",
   information: "",

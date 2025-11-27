@@ -54,6 +54,6 @@ const loadingContainer = css({
 const hintTextStyle = css({
   color: "var(--text-mention-grey)",
   fontSize: "0.875rem",
-  margin: 0,
+  marginBottom: "0!",
   textAlign: "center",
 });

@@ -1,11 +1,10 @@
 import { getRouteBySource } from "@socialgouv/cdtn-utils";
 import { NextResponse } from "next/server";
-import { REVALIDATE_CACHING_TIME } from "src/config";
 import { fetchHighLights } from "src/modules/highlights";
 import { HintsData } from "src/modules/recherche/modal/types";
 
 export const dynamic = "force-static";
-export const revalidate = REVALIDATE_CACHING_TIME;
+export const revalidate = 3600;
 
 export async function GET() {
   try {
