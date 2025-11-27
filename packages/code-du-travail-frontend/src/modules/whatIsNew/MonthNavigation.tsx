@@ -2,8 +2,8 @@
 
 import { useEffect, useRef } from "react";
 import Link from "next/link";
-import { fr } from "@codegouvfr/react-dsfr";
 import { css } from "@styled-system/css";
+import { fr } from "@codegouvfr/react-dsfr";
 import { getPeriods } from "./queries";
 import { parse, format } from "date-fns";
 import { fr as frLocale } from "date-fns/locale";
@@ -21,19 +21,11 @@ const wrapper = (position?: "top" | "bottom") =>
         justifyContent: "center",
     });
 
-const navBar = css({
-    display: "flex",
-    alignItems: "center",
-    gap: "1rem",
-    fontSize: "0.875rem",
-});
-
 const getMonthNav = () => {
     const periods = getPeriods();
 
     return periods.map((period) => {
         const date = parse(period, "MM-yyyy", new Date());
-
         return {
             period,
             label: format(date, "MM/yy"),
@@ -69,9 +61,10 @@ export function computeVisiblePeriods(MONTH_NAV: any[], currentIndex: number) {
 
     const windowItems = MONTH_NAV.slice(start, start + WINDOW_SIZE);
 
-    const result: any[] = [];
     const mostRecent = MONTH_NAV[0];
     const oldest = MONTH_NAV[lastIndex];
+
+    const result: any[] = [];
 
     if (!windowItems.find((m) => m.period === mostRecent.period)) {
         result.push(mostRecent);
@@ -89,102 +82,176 @@ export function computeVisiblePeriods(MONTH_NAV: any[], currentIndex: number) {
 }
 
 export const MonthNavigation = ({ currentPeriod, position }: Props) => {
-
     const MONTH_NAV = getMonthNav();
+    const currentIndex = MONTH_NAV.findIndex((m) => m.period === currentPeriod);
+
     const mostRecent = MONTH_NAV[0];
     const oldest = MONTH_NAV[MONTH_NAV.length - 1];
-
-    const currentIndex = MONTH_NAV.findIndex(
-        (m) => m.period === currentPeriod
-    );
-
-    const prev = MONTH_NAV[currentIndex - 1];
-    const next = MONTH_NAV[currentIndex + 1];
 
     const visibleItems = computeVisiblePeriods(MONTH_NAV, currentIndex);
 
     const activeMonthRef = useRef<HTMLAnchorElement | null>(null);
+
     useEffect(() => {
         if (position === "top" && activeMonthRef.current) {
             activeMonthRef.current.focus();
         }
-    }, [currentPeriod]);
+    }, [currentPeriod, position]);
 
     return (
-        <nav aria-label="Navigation entre les mois" className={wrapper(position)}>
-            <div className={navBar}>
-                {currentPeriod !== mostRecent.period ? (
-                    <Link
-                        href={`/quoi-de-neuf/${mostRecent.period}`}
-                        className={fr.cx("fr-link")}
-                    >
-                        Plus récent
-                    </Link>
-                ) : (
-                    <span>Plus récent</span>
-                )}
+        <nav
+            aria-label="Navigation entre les mois"
+            className={`${fr.cx("fr-pagination")} ${wrapper(position)}`}
+            role="navigation"
+        >
+            <ul className={fr.cx("fr-pagination__list")}>
 
-                {prev ? (
-                    <Link
-                        href={`/quoi-de-neuf/${prev.period}`}
-                        aria-label={`Aller à ${prev.accessibleLabel}`}
-                        className={fr.cx("fr-link")}
-                    >
-                        ‹
-                    </Link>
-                ) : (
-                    <span aria-hidden="true">‹</span>
-                )}
+                {/* PLUS RÉCENT */}
+                <li>
+                    {currentPeriod !== mostRecent.period ? (
+                        <Link
+                            href={`/quoi-de-neuf/${mostRecent.period}`}
+                            className={fr.cx("fr-pagination__link", "fr-pagination__link--first")}
+                            title="Plus récent"
+                        >
+                            Plus récent
+                        </Link>
+                    ) : (
+                        <span
+                            aria-disabled="true"
+                            className={fr.cx(
+                                "fr-pagination__link",
+                                "fr-pagination__link--first",
+                                "fr-label--disabled"
+                            )}
+                        >
+                            Plus récent
+                        </span>
+                    )}
+                </li>
 
-                {visibleItems.map((item, index) => {
+                {/* MOIS PRÉCÉDENT */}
+                <li>
+                    {currentIndex > 0 ? (
+                        <Link
+                            href={`/quoi-de-neuf/${MONTH_NAV[currentIndex - 1].period}`}
+                            className={fr.cx(
+                                "fr-pagination__link",
+                                "fr-pagination__link--prev",
+                                "fr-pagination__link--lg-label"
+                            )}
+                            title="Mois précédent"
+                        >
+                            <span className={fr.cx("fr-hidden", "fr-unhidden-lg")}>
+                                Mois précédent
+                            </span>
+                        </Link>
+                    ) : (
+                        <span
+                            aria-disabled="true"
+                            className={fr.cx(
+                                "fr-pagination__link",
+                                "fr-pagination__link--prev",
+                                "fr-pagination__link--lg-label",
+                                "fr-label--disabled"
+                            )}
+                        >
+                            <span className={fr.cx("fr-hidden", "fr-unhidden-lg")}>
+                                Mois précédent
+                            </span>
+                        </span>
+                    )}
+                </li>
+
+                {/* MOIS + ELLIPSES */}
+                {visibleItems.map((item, idx) => {
                     if (item.separator) {
                         return (
-                            <span key={`sep-${index}`} aria-hidden="true">
-                                …
-                            </span>
+                            <li key={`sep-${idx}`}>
+                                <span
+                                    aria-hidden="true"
+                                    className={fr.cx("fr-pagination__link", "fr-hidden", "fr-unhidden-lg")}
+                                >
+                                    …
+                                </span>
+                            </li>
                         );
                     }
 
-                    const active = item.period === currentPeriod;
+                    const isActive = item.period === currentPeriod;
 
                     return (
-                        <Link
-                            key={item.period}
-                            href={`/quoi-de-neuf/${item.period}`}
-                            aria-label={`Aller aux nouveautés de ${item.accessibleLabel}`}
-                            data-active={active}
-                            className={fr.cx(
-                                "fr-btn",
-                                "fr-btn--sm",
-                                !active ? "fr-btn--tertiary-no-outline" : undefined
-                            )}
-                            ref={active && position === "top" ? activeMonthRef : null}
-                        >
-                            {item.label}
-                        </Link>
+                        <li key={item.period}>
+                            <Link
+                                href={`/quoi-de-neuf/${item.period}`}
+                                title={`Aller à ${item.accessibleLabel}`}
+                                aria-current={isActive ? "page" : undefined}
+                                className={fr.cx("fr-pagination__link")}
+                                ref={isActive && position === "top" ? activeMonthRef : null}
+                            >
+                                {item.label}
+                            </Link>
+                        </li>
                     );
                 })}
 
-                {next ? (
-                    <Link
-                        href={`/quoi-de-neuf/${next.period}`}
-                        aria-label={`Aller à ${next.accessibleLabel}`}
-                        className={fr.cx("fr-link")}
-                    >
-                        ›
-                    </Link>
-                ) : (
-                    <span aria-hidden="true">›</span>
-                )}
+                {/* MOIS SUIVANT */}
+                <li>
+                    {currentIndex < MONTH_NAV.length - 1 ? (
+                        <Link
+                            href={`/quoi-de-neuf/${MONTH_NAV[currentIndex + 1].period}`}
+                            className={fr.cx(
+                                "fr-pagination__link",
+                                "fr-pagination__link--next",
+                                "fr-pagination__link--lg-label"
+                            )}
+                            title="Mois suivant"
+                        >
+                            <span className={fr.cx("fr-hidden", "fr-unhidden-lg")}>
+                                Mois suivant
+                            </span>
+                        </Link>
+                    ) : (
+                        <span
+                            aria-disabled="true"
+                            className={fr.cx(
+                                "fr-pagination__link",
+                                "fr-pagination__link--next",
+                                "fr-pagination__link--lg-label",
+                                "fr-label--disabled"
+                            )}
+                        >
+                            <span className={fr.cx("fr-hidden", "fr-unhidden-lg")}>
+                                Mois suivant
+                            </span>
+                        </span>
+                    )}
+                </li>
 
-                {currentPeriod !== oldest.period ? (
-                    <Link href={`/quoi-de-neuf/${oldest.period}`} className={fr.cx("fr-link")}>
-                        Plus ancien
-                    </Link>
-                ) : (
-                    <span>Plus ancien</span>
-                )}
-            </div>
+                {/* PLUS ANCIEN */}
+                <li>
+                    {currentPeriod !== oldest.period ? (
+                        <Link
+                            href={`/quoi-de-neuf/${oldest.period}`}
+                            className={fr.cx("fr-pagination__link", "fr-pagination__link--last")}
+                            title="Plus ancien"
+                        >
+                            Plus ancien
+                        </Link>
+                    ) : (
+                        <span
+                            aria-disabled="true"
+                            className={fr.cx(
+                                "fr-pagination__link",
+                                "fr-pagination__link--last",
+                                "fr-label--disabled"
+                            )}
+                        >
+                            Plus ancien
+                        </span>
+                    )}
+                </li>
+            </ul>
         </nav>
     );
 };

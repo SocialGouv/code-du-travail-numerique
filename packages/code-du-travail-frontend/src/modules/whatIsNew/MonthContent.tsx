@@ -2,17 +2,18 @@ import Link from "next/link";
 import { fr } from "@codegouvfr/react-dsfr";
 import Badge from "@codegouvfr/react-dsfr/Badge";
 import { css } from "@styled-system/css";
-import { WhatIsNewMonth } from "./queries";
+import { WhatIsNewMonth, WhatIsNewCategory } from "./queries";
 
 type Props = {
     month: WhatIsNewMonth;
 };
 
+// Styles
 const weekCard = css({
     backgroundColor: "#f6f6f6",
     borderRadius: "0.5rem",
     padding: "1.5rem",
-    marginBottom: "1.5rem",
+    marginBottom: "2rem",
 });
 
 const badgesGroup = css({
@@ -45,62 +46,65 @@ const getBadgeSeverity = (kind: string) => {
     }
 };
 
+// --- NEW: helper to render ONE category block ---
+const CategoryBlock = ({ category }: { category: WhatIsNewCategory }) => (
+    <article className={weekCard}>
+        <div className={badgesGroup}>
+            <Badge
+                severity={getBadgeSeverity(category.kind)}
+                small
+                as="span"
+            >
+                {category.label}
+            </Badge>
+        </div>
+
+        <ul className={itemList}>
+            {category.items.map((item) => (
+                <li key={item.title}>
+                    {item.href ? (
+                        <Link href={item.href} className={fr.cx("fr-link")}>
+                            <strong>{item.title}</strong>
+                        </Link>
+                    ) : (
+                        <strong>{item.title}</strong>
+                    )}
+                    {item.description && <div>{item.description}</div>}
+                </li>
+            ))}
+        </ul>
+    </article>
+);
+
 export const MonthContent = ({ month }: Props) => (
     <section aria-labelledby="quoi-de-neuf-month-title">
-        <h2
-            id="quoi-de-neuf-month-title"
-            className={fr.cx("fr-h3", "fr-mb-4w")}
-        >
+        <h2 id="quoi-de-neuf-month-title" className={fr.cx("fr-h3", "fr-mb-4w")}>
             {month.label}
         </h2>
 
-        {month.weeks.map((week) => (
-            <div key={week.id}>
-                <h3 className={`${fr.cx("fr-h5")} ${weekTitle}`}>{week.label}</h3>
+        {month.weeks.map((week) => {
+            const categories = week.categories || [];
 
-                <article className={weekCard}>
-                    {week.hasUpdates && week.categories && week.categories.length > 0 ? (
-                        <>
-                            <div className={badgesGroup}>
-                                {week.categories.map((category) => (
-                                    <Badge
-                                        key={category.kind}
-                                        severity={getBadgeSeverity(category.kind)}
-                                        small
-                                        as="span"
-                                    >
-                                        {category.label}
-                                    </Badge>
-                                ))}
-                            </div>
+            // NEW: split by kind
+            const functional = categories.find(c => c.kind === "mise-a-jour-fonctionnelle");
+            const legal = categories.find(c => c.kind === "evolution-juridique");
 
-                            {week.categories.map((category) => (
-                                <div key={category.kind}>
-                                    <ul className={itemList}>
-                                        {category.items.map((item) => (
-                                            <li key={item.title}>
-                                                {item.href ? (
-                                                    <Link
-                                                        href={item.href}
-                                                        className={fr.cx("fr-link")}
-                                                    >
-                                                        <strong>{item.title}</strong>
-                                                    </Link>
-                                                ) : (
-                                                    <strong>{item.title}</strong>
-                                                )}
-                                                {item.description && <div>{item.description}</div>}
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </div>
-                            ))}
-                        </>
-                    ) : (
+            return (
+                <div key={week.id}>
+                    <h3 className={`${fr.cx("fr-h5")} ${weekTitle}`}>
+                        {week.label}
+                    </h3>
+
+                    {!week.hasUpdates ? (
                         <p className={noUpdateText}>Aucune nouveauté cette semaine.</p>
+                    ) : (
+                        <>
+                            {functional && <CategoryBlock category={functional} />}
+                            {legal && <CategoryBlock category={legal} />}
+                        </>
                     )}
-                </article>
-            </div>
-        ))}
+                </div>
+            );
+        })}
     </section>
 );
