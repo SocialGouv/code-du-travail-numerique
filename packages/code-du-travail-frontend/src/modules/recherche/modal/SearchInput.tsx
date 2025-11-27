@@ -18,7 +18,6 @@ interface ModalSearchProps {
   onSearchTriggered?: () => void;
   onQueryClear?: () => void;
   isLoadingResults?: boolean;
-  hasSearched?: boolean;
   onChangeQuery: (s: string) => void;
 }
 
@@ -36,7 +35,6 @@ export const SearchInput = forwardRef<ModalSearchHandle, ModalSearchProps>(
       onSearchTriggered,
       onQueryClear,
       isLoadingResults = false,
-      hasSearched = false,
       onChangeQuery,
     },
     ref

@@ -11,8 +11,14 @@ import { useSearchResults } from "../../recherche/hooks/useSearchResults";
 
 export const HomeSearchV2 = () => {
   const searchRef = useRef<ModalSearchHandle>(null);
-  const { results, isLoading, hasSearched, triggerSearch, resetSearch } =
-    useSearchResults();
+  const {
+    results,
+    isLoading,
+    hasSearched,
+    triggerSearch,
+    resetSearch,
+    setQuery,
+  } = useSearchResults();
 
   return (
     <div className={containerStyle}>
@@ -21,7 +27,7 @@ export const HomeSearchV2 = () => {
         onSearchTriggered={triggerSearch}
         onQueryClear={resetSearch}
         isLoadingResults={isLoading}
-        hasSearched={hasSearched}
+        onChangeQuery={setQuery}
       />
 
       {hasSearched && !isLoading && (

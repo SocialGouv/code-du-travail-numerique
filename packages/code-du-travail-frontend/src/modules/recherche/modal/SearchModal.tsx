@@ -111,7 +111,6 @@ export const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
             onSearchTriggered={triggerSearch}
             onQueryClear={resetSearch}
             isLoadingResults={isLoading}
-            hasSearched={hasSearched}
             onChangeQuery={setQuery}
           />
 
