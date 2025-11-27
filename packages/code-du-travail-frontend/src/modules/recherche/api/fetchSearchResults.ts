@@ -6,7 +6,7 @@ export const fetchSearchResults = async (
   const response = await fetch(`/api/presearch?q=${encodeURIComponent(query)}`);
 
   if (!response.ok) {
-    throw new Error("Failed to fetch hints");
+    throw new Error("Failed to fetch presearch results");
   }
 
   return response.json();

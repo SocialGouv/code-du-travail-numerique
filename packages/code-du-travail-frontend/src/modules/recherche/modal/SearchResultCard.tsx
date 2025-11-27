@@ -64,7 +64,7 @@ const badgeBase = css({
   lineHeight: 1,
 });
 
-const badgeColorClasses: Record<SearchResult["source"], string> = {
+const badgeColorClasses: Partial<Record<SearchResult["source"], string>> = {
   themes: css({
     backgroundColor: "var(--background-contrast-info) !important", // light decision background background contrast info
     color: "var(--text-default-info) !important", // light decision text default info
@@ -93,16 +93,15 @@ const badgeColorClasses: Record<SearchResult["source"], string> = {
     backgroundColor: "var(--background-alt-green-archipel) !important", // light option illustration color 975 default green archipel
     color: "var(--text-action-high-green-archipel) !important", // light option illustration color sun default green archipel
   }),
-  dossiers: "",
-  droit_du_travail: "",
-  external: "",
+  external: css({
+    backgroundColor: "var(--background-contrast-warning) !important", // light decision background background contrast warning
+    color: "var(--text-default-warning) !important", // light decision text default warning
+  }),
   fiches_ministere_travail: "",
   fiches_service_public: "",
   glossary: "",
-  highlights: "",
   information: "",
   page_fiche_ministere_travail: "",
-  prequalified: "",
 };
 
 const titleStyle = css({

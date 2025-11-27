@@ -15,4 +15,4 @@ src/styled-system
 src/styled-system-studio
 
 *.tsbuildinfo
-next-env.d.ts
+
