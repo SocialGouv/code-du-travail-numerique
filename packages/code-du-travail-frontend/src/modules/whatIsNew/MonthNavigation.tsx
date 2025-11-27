@@ -22,7 +22,7 @@ const wrapper = (position?: "top" | "bottom") =>
   });
 
 const getMonthNav = () => {
-  const periods = getPeriods();
+  const periods = getPeriods().slice().reverse(); // 👈 ici
 
   return periods.map((period) => {
     const date = parse(period, "MM-yyyy", new Date());
@@ -140,10 +140,10 @@ export const MonthNavigation = ({ currentPeriod, position }: Props) => {
                 "fr-pagination__link--prev",
                 "fr-pagination__link--lg-label"
               )}
-              title="Mois précédent"
+              title="Mois suivant"
             >
               <span className={fr.cx("fr-hidden", "fr-unhidden-lg")}>
-                Mois précédent
+                Mois suivant
               </span>
             </Link>
           ) : (
@@ -157,7 +157,7 @@ export const MonthNavigation = ({ currentPeriod, position }: Props) => {
               )}
             >
               <span className={fr.cx("fr-hidden", "fr-unhidden-lg")}>
-                Mois précédent
+                Mois suivant
               </span>
             </span>
           )}
@@ -207,10 +207,10 @@ export const MonthNavigation = ({ currentPeriod, position }: Props) => {
                 "fr-pagination__link--next",
                 "fr-pagination__link--lg-label"
               )}
-              title="Mois suivant"
+              title="Mois précédent"
             >
               <span className={fr.cx("fr-hidden", "fr-unhidden-lg")}>
-                Mois suivant
+                Mois précédent
               </span>
             </Link>
           ) : (
@@ -224,7 +224,7 @@ export const MonthNavigation = ({ currentPeriod, position }: Props) => {
               )}
             >
               <span className={fr.cx("fr-hidden", "fr-unhidden-lg")}>
-                Mois suivant
+                Mois précédent
               </span>
             </span>
           )}
