@@ -22,6 +22,9 @@ export const DsfrLayout = ({ children, container = "fr-container" }: Props) => {
       <div inert={isOpen}>
         <SkipLinks />
       </div>
+      {isOpen && (
+        <div className={overlayStyle} aria-hidden="true" onClick={closeModal} />
+      )}
       <Header />
       <main
         className={`${container} ${printStyle}`}
@@ -29,13 +32,6 @@ export const DsfrLayout = ({ children, container = "fr-container" }: Props) => {
         role="main"
         inert={isOpen}
       >
-        {isOpen && (
-          <div
-            className={overlayStyle}
-            aria-hidden="true"
-            onClick={closeModal}
-          />
-        )}
         {children}
       </main>
       <Footer inert={isOpen} />

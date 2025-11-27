@@ -62,7 +62,7 @@ export const SearchInput = forwardRef<ModalSearchHandle, ModalSearchProps>(
 
     const onSubmit = (e?: React.FormEvent) => {
       e?.preventDefault();
-      if (!query.trim()) return;
+      if (!query.trim() || query.trim().length < MIN_SEARCH_LENGTH) return;
       clearSuggestions();
       inputRef.current?.blur();
       setTimeout(() => {
@@ -123,6 +123,7 @@ export const SearchInput = forwardRef<ModalSearchHandle, ModalSearchProps>(
                 displayNoResult={false}
                 inputRef={inputRef}
                 onInputValueChange={(value) => {
+                  setQuery(value || "");
                   onChangeQuery(value || "");
                   if (!value || value.trim() === "") {
                     onQueryClear?.();

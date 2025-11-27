@@ -54,7 +54,11 @@ const MATCHING_CC_TOKENS = [
   "ccn",
 ];
 
-const prepro = (token: string): string[] => fingerprint(token).map(complex);
+const prepro = (token: string | undefined): string[] => {
+  if (!token) return [];
+  const tokens = fingerprint(token);
+  return tokens ? tokens.map(complex) : [];
+};
 
 const isCC = async (query: string): Promise<SearchResult[]> => {
   const tokens: string[] = fingerprint(query);
