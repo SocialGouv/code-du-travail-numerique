@@ -56,10 +56,8 @@ export const MonthContent = ({ month }: Props) => (
 
         {month.weeks.map((week) => (
             <div key={week.id}>
-                {/* ✅ Le titre de la semaine sort du bloc gris */}
                 <h3 className={`${fr.cx("fr-h5")} ${weekTitle}`}>{week.label}</h3>
 
-                {/* Bloc gris */}
                 <article className={weekCard}>
                     {week.hasUpdates && week.categories && week.categories.length > 0 ? (
                         <>
