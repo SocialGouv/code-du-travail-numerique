@@ -23,8 +23,8 @@ export const useSearchResults = (): UseSearchResultsReturn => {
     setHasSearched(true);
 
     try {
-      const mockResults = await fetchSearchResults(query);
-      setResults(mockResults);
+      const results = await fetchSearchResults(query);
+      setResults(results);
     } catch (error) {
       console.error("Error fetching search results:", error);
       setResults([]);

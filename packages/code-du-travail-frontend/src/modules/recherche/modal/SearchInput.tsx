@@ -42,7 +42,7 @@ export const SearchInput = forwardRef<ModalSearchHandle, ModalSearchProps>(
     ref
   ) => {
     const inputRef = useRef<HTMLInputElement>(null);
-    const [query, setQueryLocal] = useState(initialQuery || "");
+    const [query, setQuery] = useState(initialQuery || "");
     const router = useRouter();
     const { emitSearchEvent, emitSuggestionSelectionEvent } =
       useSearchTracking();
@@ -91,11 +91,11 @@ export const SearchInput = forwardRef<ModalSearchHandle, ModalSearchProps>(
         emitSuggestionSelectionEvent(query, value, suggestions);
 
         onChangeQuery(value);
-        setQueryLocal(value);
+        setQuery(value);
         onSearchTriggered?.();
       } else {
         onChangeQuery("");
-        setQueryLocal("");
+        setQuery("");
         onQueryClear?.();
       }
     };

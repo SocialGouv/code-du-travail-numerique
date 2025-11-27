@@ -20,10 +20,7 @@ export const merge = (res1, res2, max_result) => {
 export const predicateFn = ({ _source: { source, slug } }) =>
   `${getRouteBySource(source) || source}/${slug}`;
 
-export const removeDuplicate = (
-  arr,
-  predicate: (e: any) => any = predicateFn
-) =>
+export const removeDuplicate = (arr, predicate = predicateFn) =>
   arr.flatMap((a, index) => {
     if (arr.find((item, i) => predicate(item) === predicate(a) && i < index)) {
       return [];
