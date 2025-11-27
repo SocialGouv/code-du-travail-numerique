@@ -1,6 +1,7 @@
 import { SourceKeys, SOURCES } from "@socialgouv/cdtn-utils";
 import { elasticDocumentsIndex, elasticsearchClient } from "../../utils";
 import { getIdccBody } from "./queries";
+import { extractHits } from "../search";
 
 export const parseIdcc = (query) =>
   /^\d+$/.test(query) ? parseInt(query, 10) : undefined;
@@ -17,9 +18,6 @@ export const getIdccByQuery = async (query: string, size?: number) => {
   const { took, ...rest } = response;
   return { ...rest };
 };
-
-const extractHits = (response) =>
-  response?.hits?.hits ? response.hits.hits : [];
 
 const idccs: Set<number> = await elasticsearchClient
   .search<any>({

@@ -9,31 +9,11 @@ import { extractHits } from "./search";
 import { removeDuplicate } from "../utils";
 import { articleMatcher, extractReferences } from "./referenceExtractor";
 
-type ESHit = {
-  _source: {
-    shortTitle?: string;
-    title: string;
-    slug: string;
-    cdtnId: string;
-    // todo fixme
-    source: SourceKeys;
-  };
-};
-
-export enum DocumentType {
-  MODELE_DE_DOCUMENT = "MODELE DE DOCUMENT",
-  THEME = "THEME",
-  ARTICLE_DU_DROIT_DU_TRAVAIL = "ARTICLE DU DROIT DU TRAVAIL",
-  CONVENTION_COLLECTIVE = "CONVENTION COLLECTIVE",
-  CONTENU = "CONTENU",
-  OUTILS = "outils",
-}
-
 export type SearchResult = {
   cdtnId: string;
+  shortTitle?: string;
   title: string;
   slug: string;
-  // todo fixme
   source: SourceKeys;
 };
 
@@ -115,11 +95,11 @@ const isCC = async (query: string): Promise<SearchResult[]> => {
 
 const getThemes = (
   pQuery: string[],
-  themes: ESHit[]
+  themes: SearchResult[]
 ): SearchResult | undefined => {
   const pThemes = themes.map((theme) => ({
     theme,
-    pTheme: prepro(theme._source.title),
+    pTheme: prepro(theme.title),
   }));
 
   let match = pThemes.find((th) => th.pTheme == pQuery);
@@ -131,10 +111,10 @@ const getThemes = (
 
   return match
     ? {
-        title: match.theme._source.title,
-        slug: match.theme._source.slug,
-        cdtnId: match.theme._source.cdtnId,
-        source: match.theme._source.source,
+        title: match.theme.title,
+        slug: match.theme.slug,
+        cdtnId: match.theme.cdtnId,
+        source: match.theme.source,
       }
     : undefined;
 };
@@ -162,7 +142,7 @@ const fillup = async (
     (results) => (results ? results.slice(0, n) : [])
   );
 
-  let documents: ESHit["_source"][] = matches;
+  let documents: SearchResult[] = matches;
 
   if (prequalifiedResults) {
     prequalifiedResults.forEach(
@@ -228,7 +208,6 @@ const getArticles = async (query): Promise<SearchResult | undefined> => {
 
     return extractHits(hits).map((h) => ({
       ...h._source,
-      type: DocumentType.ARTICLE_DU_DROIT_DU_TRAVAIL,
     }));
   } else {
     return undefined;
@@ -259,7 +238,7 @@ const isNatural = (query: string) => {
 
 export const presearch = async (
   query: string,
-  themes: ESHit[]
+  themes: SearchResult[]
 ): Promise<SearchResult[]> => {
   // const results: StructuredQueryLabel[] = [];
   const results: SearchResult[] = [];
