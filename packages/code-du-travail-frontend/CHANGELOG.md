@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.202.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.201.0...v4.202.0) (2025-11-27)
+
+
+### Features
+
+* **home:** ajout de la section `De la question à l'action` ([#6927](https://github.com/SocialGouv/code-du-travail-numerique/issues/6927)) ([d137fa3](https://github.com/SocialGouv/code-du-travail-numerique/commit/d137fa352dd977fc18110fcb6ec685b6762fc81b))
+* **infographics:** ajout des infographies sur le front ([#6911](https://github.com/SocialGouv/code-du-travail-numerique/issues/6911)) ([10abd21](https://github.com/SocialGouv/code-du-travail-numerique/commit/10abd218351bc2aac34e6360831648893ee94870))
+
+
+
+
+
 # [4.201.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.200.0...v4.201.0) (2025-11-20)
 
 
