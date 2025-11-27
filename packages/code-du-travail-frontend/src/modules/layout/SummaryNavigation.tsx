@@ -1,4 +1,5 @@
 import { fr } from "@codegouvfr/react-dsfr";
+import Link from "../common/Link";
 
 type SummarySection = {
   id: string;
@@ -23,9 +24,9 @@ export const SummaryNavigation = ({ sections, title = "Résumé" }: Props) => {
       <ol>
         {sections.map((section) => (
           <li key={section.id}>
-            <a href={`#${section.id}`} className={fr.cx("fr-summary__link")}>
+            <Link href={`#${section.id}`} className={fr.cx("fr-summary__link")}>
               {section.label}
-            </a>
+            </Link>
           </li>
         ))}
       </ol>

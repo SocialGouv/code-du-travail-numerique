@@ -14,6 +14,7 @@ export const sources = [
   SOURCES.EXTERNALS,
   SOURCES.LABOUR_LAW,
   SOURCES.SHEET_MT_PAGE,
+  SOURCES.INFOGRAPHICS,
 ] as const;
 
 export type Source = (typeof sources)[number];
