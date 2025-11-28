@@ -46,7 +46,7 @@ const getBadgeSeverity = (kind: string) => {
 };
 
 const CategoryBlock = ({ category }: { category: WhatIsNewCategory }) => (
-  <article className={weekCard}>
+  <article className={`${fr.cx("fr-mb-2w")} ${weekCard}`}>
     <div className={badgesGroup}>
       <Badge severity={getBadgeSeverity(category.kind)} small as="span">
         {category.label}
@@ -72,7 +72,7 @@ const CategoryBlock = ({ category }: { category: WhatIsNewCategory }) => (
 
 export const MonthContent = ({ month }: Props) => (
   <section aria-labelledby="quoi-de-neuf-month-title">
-    <h2 id="quoi-de-neuf-month-title" className={fr.cx("fr-h3", "fr-mb-4w")}>
+    <h2 id="quoi-de-neuf-month-title" className={fr.cx("fr-h3", "fr-mb-2w")}>
       {month.label}
     </h2>
 
@@ -86,7 +86,7 @@ export const MonthContent = ({ month }: Props) => (
 
       return (
         <div key={week.id}>
-          <h3 className={`${fr.cx("fr-h5")} ${weekTitle}`}>{week.label}</h3>
+          <h3 className={`${fr.cx("fr-h5", "fr-mb-2w")} ${weekTitle}`}>{week.label}</h3>
 
           {!week.hasUpdates ? (
             <p className={noUpdateText}>Aucune nouveauté cette semaine.</p>

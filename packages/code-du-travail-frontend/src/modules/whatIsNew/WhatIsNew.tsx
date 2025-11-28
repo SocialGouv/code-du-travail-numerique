@@ -18,10 +18,7 @@ export const WhatIsNew = ({ month }: Props) => {
             Quoi de neuf sur le code du travail&nbsp;?
           </h1>
           <p className={fr.cx("fr-text--md")}>
-            Sont listés ici les principaux changements du Code du travail
-            numérique : nouvelles pages, modifications dans les simulateurs et
-            mises à jour importantes du contenu liées aux évolutions
-            législatives.
+            Sont listé ici les principaux changements sur le code du travail numérique. Ces changements concernent les modifications importantes du site avec par exemple la création de nouvelles pages, des modifications dans les simulateurs et les modifications significatives du contenu en fonction évolutions législatives.
           </p>
         </div>
 
