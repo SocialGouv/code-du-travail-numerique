@@ -13,6 +13,14 @@ type Props = {
   position?: "top" | "bottom";
 };
 
+type MonthNavItem = {
+  period: string;
+  label: string;
+  accessibleLabel: string;
+};
+
+type VisibleItem = MonthNavItem | { separator: true };
+
 const wrapper = (position?: "top" | "bottom") =>
   css({
     marginBottom: position === "top" ? "2.5rem" : undefined,
@@ -21,7 +29,7 @@ const wrapper = (position?: "top" | "bottom") =>
     justifyContent: "center",
   });
 
-const getMonthNav = () => {
+const getMonthNav = (): MonthNavItem[] => {
   const periods = getPeriods().slice().reverse();
 
   return periods.map((period) => {
@@ -34,7 +42,7 @@ const getMonthNav = () => {
   });
 };
 
-export function computeVisiblePeriods(MONTH_NAV: any[], currentIndex: number) {
+export function computeVisiblePeriods(MONTH_NAV: MonthNavItem[], currentIndex: number): VisibleItem[] {
   const total = MONTH_NAV.length;
   const lastIndex = total - 1;
   const WINDOW_SIZE = 7;
@@ -64,7 +72,7 @@ export function computeVisiblePeriods(MONTH_NAV: any[], currentIndex: number) {
   const mostRecent = MONTH_NAV[0];
   const oldest = MONTH_NAV[lastIndex];
 
-  const result: any[] = [];
+  const result: VisibleItem[] = [];
 
   if (!windowItems.find((m) => m.period === mostRecent.period)) {
     result.push(mostRecent);
@@ -164,7 +172,7 @@ export const MonthNavigation = ({ currentPeriod, position }: Props) => {
         </li>
 
         {visibleItems.map((item, idx) => {
-          if (item.separator) {
+          if ('separator' in item) {
             return (
               <li key={`sep-${idx}`}>
                 <span
