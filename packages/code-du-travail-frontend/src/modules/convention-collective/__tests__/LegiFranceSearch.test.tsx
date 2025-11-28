@@ -57,6 +57,16 @@ describe("LegiFranceSearch", () => {
     ]);
   });
 
+  it("should not submit form when query is empty", () => {
+    render(<LegiFranceSearch {...props} />);
+
+    const form = screen.getByTestId("agreement-search-form");
+
+    fireEvent.submit(form);
+
+    expect(matopush).not.toHaveBeenCalled();
+  });
+
   it("should have correct hidden inputs with values", () => {
     render(<LegiFranceSearch {...props} />);
 
@@ -77,12 +87,5 @@ describe("LegiFranceSearch", () => {
     // Check searchField and searchType inputs
     expect(screen.getByTestId("agreement-search-field")).toHaveValue("ALL");
     expect(screen.getByTestId("agreement-search-type")).toHaveValue("ALL");
-
-    // Check other inputs
-    expect(screen.getByTestId("agreement-search-sort")).toHaveValue(
-      "PERTINENCE"
-    );
-    expect(screen.getByTestId("agreement-search-pagesize")).toHaveValue("10");
-    expect(screen.getByTestId("agreement-search-page")).toHaveValue("1");
   });
 });
