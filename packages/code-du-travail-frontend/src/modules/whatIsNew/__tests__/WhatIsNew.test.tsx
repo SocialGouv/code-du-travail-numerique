@@ -45,8 +45,6 @@ const mockMonth: WhatIsNewMonth = {
 
 jest.mock("../queries", () => ({
     getPeriods: jest.fn(() => ["09-2025", "10-2025", "11-2025"]),
-    getMostRecentPeriod: jest.fn(() => "11-2025"),
-    getOldestPeriod: jest.fn(() => "09-2025"),
     fetchWhatIsNewMonth: jest.fn(async (_period: string) => mockMonth),
 }));
 

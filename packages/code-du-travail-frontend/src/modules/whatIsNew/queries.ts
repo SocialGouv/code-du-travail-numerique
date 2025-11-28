@@ -429,29 +429,14 @@ export const WHAT_IS_NEW_MONTHS: WhatIsNewMonth[] = [
   },
 ];
 
-export const getAllMonths = (): WhatIsNewMonth[] => WHAT_IS_NEW_MONTHS;
-
 export const getMonthByPeriod = (period: string): WhatIsNewMonth | undefined =>
   WHAT_IS_NEW_MONTHS.find((month) => month.period === period);
 
 export const getPeriods = (): string[] =>
   WHAT_IS_NEW_MONTHS.map((month) => month.period);
 
-export const getMostRecentMonth = (): WhatIsNewMonth =>
-  WHAT_IS_NEW_MONTHS[WHAT_IS_NEW_MONTHS.length - 1];
-
-export const getMostRecentPeriod = (): string => getMostRecentMonth().period;
-
-export const getOldestMonth = (): WhatIsNewMonth => WHAT_IS_NEW_MONTHS[0];
-
-export const getOldestPeriod = (): string => getOldestMonth().period;
-
 export const fetchWhatIsNewMonth = async (
   period: string
 ): Promise<WhatIsNewMonth | undefined> => {
   return getMonthByPeriod(period);
-};
-
-export const fetchAllWhatIsNewMonths = async (): Promise<WhatIsNewMonth[]> => {
-  return getAllMonths();
 };
