@@ -317,6 +317,15 @@ exports[`<Accessibilite /> should match snapshot 1`] = `
           Page outil :
            
           <a
+            href="https://code.travail.gouv.fr/outils/indemnite-licenciement"
+          >
+            https://code.travail.gouv.fr/outils/indemnite-licenciement
+          </a>
+        </li>
+        <li>
+          Page outil :
+           
+          <a
             href="https://code.travail.gouv.fr/outils/indemnite-rupture-conventionnelle"
           >
             https://code.travail.gouv.fr/outils/indemnite-rupture-conventionnelle

@@ -206,6 +206,12 @@ export const Accessibilite = () => {
         </li>
         <li>
           Page outil :{" "}
+          <Link href="https://code.travail.gouv.fr/outils/indemnite-licenciement">
+            https://code.travail.gouv.fr/outils/indemnite-licenciement
+          </Link>
+        </li>
+        <li>
+          Page outil :{" "}
           <Link href="https://code.travail.gouv.fr/outils/indemnite-rupture-conventionnelle">
             https://code.travail.gouv.fr/outils/indemnite-rupture-conventionnelle
           </Link>
