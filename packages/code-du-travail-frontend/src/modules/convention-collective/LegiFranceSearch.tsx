@@ -112,4 +112,3 @@ export function LegiFranceSearch({ idcc, shortTitle }: Props) {
 const inputStyle = css({
   width: "100%!",
 });
-
