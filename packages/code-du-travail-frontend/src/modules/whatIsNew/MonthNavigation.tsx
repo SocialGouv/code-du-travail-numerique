@@ -22,7 +22,7 @@ const wrapper = (position?: "top" | "bottom") =>
   });
 
 const getMonthNav = () => {
-  const periods = getPeriods().slice().reverse(); // 👈 ici
+  const periods = getPeriods().slice().reverse();
 
   return periods.map((period) => {
     const date = parse(period, "MM-yyyy", new Date());

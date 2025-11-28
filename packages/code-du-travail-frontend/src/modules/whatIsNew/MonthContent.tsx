@@ -8,7 +8,6 @@ type Props = {
   month: WhatIsNewMonth;
 };
 
-// Styles
 const weekCard = css({
   backgroundColor: "#f6f6f6",
   borderRadius: "0.5rem",
@@ -46,7 +45,6 @@ const getBadgeSeverity = (kind: string) => {
   }
 };
 
-// --- NEW: helper to render ONE category block ---
 const CategoryBlock = ({ category }: { category: WhatIsNewCategory }) => (
   <article className={weekCard}>
     <div className={badgesGroup}>
@@ -81,7 +79,6 @@ export const MonthContent = ({ month }: Props) => (
     {month.weeks.map((week) => {
       const categories = week.categories || [];
 
-      // NEW: split by kind
       const functional = categories.find(
         (c) => c.kind === "mise-a-jour-fonctionnelle"
       );
