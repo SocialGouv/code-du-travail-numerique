@@ -86,7 +86,9 @@ export const MonthContent = ({ month }: Props) => (
 
       return (
         <div key={week.id}>
-          <h3 className={`${fr.cx("fr-h5", "fr-mb-2w")} ${weekTitle}`}>{week.label}</h3>
+          <h3 className={`${fr.cx("fr-h5", "fr-mb-2w")} ${weekTitle}`}>
+            {week.label}
+          </h3>
 
           {!week.hasUpdates ? (
             <p className={noUpdateText}>Aucune nouveauté cette semaine.</p>
