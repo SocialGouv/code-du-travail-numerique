@@ -18,7 +18,7 @@ const StepIntro = () => (
       <Link
         href={`/contribution/le-salarie-peut-il-sabsenter-pour-rechercher-un-emploi-pendant-son-preavis`}
       >
-        notre fiche sur les heures d&apos;absence autorisée pour rechercher un
+        notre fiche sur les heures d&apos;absence autorisées pour rechercher un
         emploi
       </Link>{" "}
       pendant le préavis.
