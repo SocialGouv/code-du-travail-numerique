@@ -23,6 +23,7 @@
     "@swc/jest": "^0.2.36",
     "@types/fs-extra": "^9.0.12",
     "@types/jest": "^29.5.12",
+    "@types/react": "^19.0.0",
     "eslint": "^9.34.0",
     "globals": "^15.9.0",
     "jest": "^29.7.0",
@@ -39,8 +40,8 @@
     "lint": "eslint \"./src/**/*.{js,ts}\"",
     "dev": "nodemon --exec 'npm run build:dev' --watch 'src/**' --ext 'ts,yaml'",
     "test:watch": "nodemon --exec 'jest' --watch 'src/**' --ext 'ts,yaml'",
-    "build": "yarn prebuild && yarn postbuild",
-    "build:dev": "yarn build:swc && yarn postbuild",
+    "build": "pnpm prebuild && pnpm postbuild",
+    "build:dev": "pnpm build:swc && pnpm postbuild",
     "build:swc": "swc ./src --out-dir bin --copy-files --strip-leading-paths",
     "postbuild": "node bin/internal/build.js",
     "clean": "rimraf bin lib",
@@ -57,10 +58,10 @@
   },
   "lint-staged": {
     "*.{ts,js}": [
-      "yarn lint --fix --quiet"
+      "pnpm lint --fix --quiet"
     ],
     "*.{ts,js,yaml,yml,json}": [
-      "yarn format"
+      "pnpm format"
     ]
   }
 }

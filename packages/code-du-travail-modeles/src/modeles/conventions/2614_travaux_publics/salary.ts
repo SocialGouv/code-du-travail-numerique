@@ -11,9 +11,7 @@ export type CC2614ReferenceSalaryProps = {
   hasVariablePay: boolean;
 };
 
-export class ReferenceSalary2614
-  implements IReferenceSalary<SupportedCc.IDCC2614>
-{
+export class ReferenceSalary2614 implements IReferenceSalary<SupportedCc.IDCC2614> {
   mapSituation(
     args: Record<string, string | undefined>
   ): ReferenceSalaryProps<SupportedCc.IDCC2614> {

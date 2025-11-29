@@ -34,8 +34,8 @@
   },
   "lint-staged": {
     "*.ts": [
-      "yarn lint --fix --quiet",
-      "yarn format"
+      "pnpm lint --fix --quiet",
+      "pnpm format"
     ]
   }
 }

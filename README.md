@@ -16,16 +16,16 @@
 
 ```sh
 # Install all the packages
-yarn
-yarn build
+pnpm install
+pnpm build
 ```
 
 ### Tests
 
 ```sh
-yarn test:frontend # To run frontend tests
-TEST_MODE=heavy-and-light yarn test:e2e # To run e2e test without any UI
-TEST_MODE=heavy-and-light yarn test:e2e:ui # To run e2e test with Cypress UI
+pnpm test:frontend # To run frontend tests
+TEST_MODE=heavy-and-light pnpm test:e2e # To run e2e test without any UI
+TEST_MODE=heavy-and-light pnpm test:e2e:ui # To run e2e test with Cypress UI
 # TEST_MODE can be : light, heavy, heavy-and-light or html-validation
 ```
 
@@ -42,10 +42,10 @@ TEST_MODE=heavy-and-light yarn test:e2e:ui # To run e2e test with Cypress UI
 ```sh
 # Pour lancer l'application en se basant sur l'API de pre-production :
 cp packages/code-du-travail-frontend/.env.sample packages/code-du-travail-frontend/.env # Setter les bonnes variables
-yarn dev:frontend
+pnpm dev:frontend
 
 # Pour lancer l'application en se basant sur un container docker en local
-NEXT_PUBLIC_ES_INDEX_PREFIX=cdtn ELASTICSEARCH_URL=http://localhost:9200 yarn workspace @cdt/frontend dev
+NEXT_PUBLIC_ES_INDEX_PREFIX=cdtn ELASTICSEARCH_URL=http://localhost:9200 pnpm --filter @cdt/frontend dev
 ```
 
 ### code-du-travail-modeles

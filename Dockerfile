@@ -2,16 +2,19 @@ ARG NODE_VERSION=24.10.0-alpine
 # dist
 FROM node:$NODE_VERSION AS dist
 
+# Install pnpm
+RUN corepack enable && corepack prepare pnpm@10.0.0 --activate
+
 WORKDIR /dep
 
 # Copy lockfile
-COPY ./yarn.lock ./.yarnrc.yml ./
-COPY .yarn .yarn
+COPY ./pnpm-lock.yaml ./pnpm-workspace.yaml ./package.json ./
 
 # Install packages
-RUN yarn fetch --immutable
+RUN pnpm fetch
 
 COPY . ./
+RUN pnpm install --offline
 
 ENV NEXT_PUBLIC_APP_ENV=production
 # Add build-arg from github actions
@@ -60,9 +63,9 @@ RUN --mount=type=secret,id=SENTRY_AUTH_TOKEN,env=SENTRY_AUTH_TOKEN \
   --mount=type=secret,id=ELASTICSEARCH_TOKEN_API,env=ELASTICSEARCH_TOKEN_API \
   --mount=type=secret,id=ELASTICSEARCH_URL,env=ELASTICSEARCH_URL \
   export GENERATE_SOURCEMAP=true && \
-  yarn build && \
-  yarn workspaces focus --production --all && \
-  yarn cache clean
+  pnpm build && \
+  pnpm prune --prod && \
+  pnpm store prune
 
 # app
 FROM node:$NODE_VERSION

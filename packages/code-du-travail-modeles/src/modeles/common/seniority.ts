@@ -22,9 +22,9 @@ export type DefaultSeniorityRequiredProps = DefaultSeniorityProps & {
   dateNotification: string;
 };
 
-export abstract class SeniorityDefault<T extends SupportedCc>
-  implements ISeniority<T>
-{
+export abstract class SeniorityDefault<
+  T extends SupportedCc,
+> implements ISeniority<T> {
   mapSituation(args: Record<string, string | undefined>): SeniorityProps<T> {
     const absencePeriods: Absence[] = args.absencePeriods
       ? JSON.parse(args.absencePeriods)

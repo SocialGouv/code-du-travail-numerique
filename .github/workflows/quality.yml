@@ -23,13 +23,16 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version-file: .node-version
-          cache: "yarn"
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          run_install: false
       - name: Install dependencies
         run: |
-          yarn install --immutable
+          pnpm install --frozen-lockfile
       - name: Build code
         run: |
-          yarn build
+          pnpm build
         env:
           NEXT_PUBLIC_ES_INDEX_PREFIX: ${{ secrets.NEXT_PUBLIC_ES_INDEX_PREFIX }}
           ELASTICSEARCH_TOKEN_API: ${{ secrets.ELASTICSEARCH_TOKEN_API }}
@@ -61,7 +64,7 @@ jobs:
           key: ${{ github.sha }}
       - name: Lint ${{ matrix.repositories }}
         run: |
-          yarn workspace ${{ matrix.repositories }} lint --quiet
+          pnpm --filter ${{ matrix.repositories }} lint --quiet
 
   format:
     name: Code formatter checker
@@ -84,7 +87,7 @@ jobs:
           key: ${{ github.sha }}
       - name: Code formatter checker for ${{ matrix.repositories }}
         run: |
-          yarn workspace ${{ matrix.repositories }} format:check
+          pnpm --filter ${{ matrix.repositories }} format:check
 
   type-check:
     name: Check typescript types
@@ -107,7 +110,7 @@ jobs:
           key: ${{ github.sha }}
       - name: Type-check ${{ matrix.repositories }}
         run: |
-          yarn workspace ${{ matrix.repositories }} type-check
+          pnpm --filter ${{ matrix.repositories }} type-check
 
   test:
     name: Test
@@ -141,9 +144,12 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version-file: .node-version
-          cache: "yarn"
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          run_install: false
       - name: Test ${{ matrix.repositories }}
         run: |
-          yarn workspace ${{ matrix.repositories }} test
+          pnpm --filter ${{ matrix.repositories }} test
         env:
           ELASTICSEARCH_URL: http://localhost:9200

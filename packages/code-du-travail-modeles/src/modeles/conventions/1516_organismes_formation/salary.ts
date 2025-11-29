@@ -11,9 +11,7 @@ export type CC1516ReferenceSalaryProps = {
   salairesPendantPreavis: SalaryPeriods[];
 };
 
-export class ReferenceSalary1516
-  implements IReferenceSalary<SupportedCc.IDCC1516>
-{
+export class ReferenceSalary1516 implements IReferenceSalary<SupportedCc.IDCC1516> {
   mapSituation(
     args: Record<string, string | undefined>
   ): ReferenceSalaryProps<SupportedCc.IDCC1516> {
