@@ -1,6 +1,6 @@
 import { complex } from "talisman/stemmers/french/unine";
 import fingerprint from "talisman/tokenizers/fingerprint";
-import { ccSearch, isIdccToken } from "../../idcc";
+import { ccSearch, ensureIdccsInstantiated, isIdccToken } from "../../idcc";
 import { SourceKeys, SOURCES } from "@socialgouv/cdtn-utils";
 import { getPrequalifiedResults } from "./prequalified";
 import { getSearchBody, getRelatedArticlesBody } from "../queries";
@@ -54,14 +54,21 @@ const MATCHING_CC_TOKENS = [
   "ccn",
 ];
 
-const prepro = (token: string | undefined): string[] => {
-  if (!token) return [];
-  const tokens = fingerprint(token);
+const tokenize = (content: string): string[] => {
+  const cleaned = content.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, " ");
+  return fingerprint(cleaned);
+};
+
+const prepro = (content: string | undefined): string[] => {
+  if (!content) return [];
+  const tokens = tokenize(content);
   return tokens ? tokens.map(complex) : [];
 };
 
 const isCC = async (query: string): Promise<SearchResult[]> => {
-  const tokens: string[] = fingerprint(query);
+  await ensureIdccsInstantiated();
+
+  const tokens: string[] = tokenize(query);
 
   if (
     MATCHING_CC_TOKENS.find((t) => tokens.includes(t))?.length ||
@@ -81,6 +88,7 @@ const isCC = async (query: string): Promise<SearchResult[]> => {
     // or only select tokens that appear in all conventions titles
 
     const found = await ccSearch(searchTokens.join(" "), CC_SCORE_THRESHOLD);
+
     if (found) {
       return [found];
     } else {
@@ -278,6 +286,8 @@ export const presearch = async (
   //     details: query,
   //   });
   // }
+
+  // console.log(JSON.stringify({ idccResult, article, matchingTheme }, null, 2));
 
   if (results.length < 4) {
     const filled = await fillup(query, 4, results);
