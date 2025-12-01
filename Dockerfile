@@ -1,110 +1,124 @@
 ARG NODE_VERSION=24.10.0-alpine
-# dist
-FROM node:$NODE_VERSION AS dist
 
-# Install pnpm
-RUN corepack enable && corepack prepare pnpm@10.0.0 --activate
+# Base stage with pnpm setup
+FROM node:$NODE_VERSION AS base
+RUN corepack enable && corepack prepare pnpm@10.24.0 --activate
 
-WORKDIR /dep
+# Dependencies stage - fetch and install dependencies
+FROM base AS dependencies
+WORKDIR /app
 
-# Copy lockfile
-COPY ./pnpm-lock.yaml ./pnpm-workspace.yaml ./
+# Copy only package manifests for better layer caching
+COPY pnpm-lock.yaml pnpm-workspace.yaml package.json ./
+COPY packages/code-du-travail-frontend/package.json ./packages/code-du-travail-frontend/
+COPY packages/code-du-travail-modeles/package.json ./packages/code-du-travail-modeles/
+COPY packages/code-du-travail-utils/package.json ./packages/code-du-travail-utils/
 
-# Fetch dependencies
-RUN pnpm fetch
+# Fetch dependencies to pnpm store with cache mount
+RUN --mount=type=cache,id=pnpm,target=/root/.local/share/pnpm/store \
+  pnpm fetch --frozen-lockfile
 
-# Copy source files to workspace (.dockerignore will exclude unnecessary files)
-COPY . ./
+# Install all dependencies (including dev) with cache mount
+RUN --mount=type=cache,id=pnpm,target=/root/.local/share/pnpm/store \
+  pnpm install --frozen-lockfile --offline
 
-# Install dependencies
-RUN pnpm install --frozen-lockfile --prefer-offline --ignore-scripts
+# Build stage
+FROM dependencies AS builder
+WORKDIR /app
 
-ENV NEXT_PUBLIC_APP_ENV=production
-# Add build-arg from github actions
+# Copy source code
+COPY . .
+
+# Set build environment variables
+ENV NEXT_PUBLIC_APP_ENV=production \
+  GENERATE_SOURCEMAP=true \
+  NODE_ENV=production
+
+# Build arguments
 ARG NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT
-ENV NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT=$NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT
 ARG NEXT_PUBLIC_IS_PREPRODUCTION_DEPLOYMENT
-ENV NEXT_PUBLIC_IS_PREPRODUCTION_DEPLOYMENT=$NEXT_PUBLIC_IS_PREPRODUCTION_DEPLOYMENT
 ARG NEXT_PUBLIC_BUCKET_FOLDER
-ENV NEXT_PUBLIC_BUCKET_FOLDER=$NEXT_PUBLIC_BUCKET_FOLDER
 ARG NEXT_PUBLIC_BUCKET_SITEMAP_FOLDER
-ENV NEXT_PUBLIC_BUCKET_SITEMAP_FOLDER=$NEXT_PUBLIC_BUCKET_SITEMAP_FOLDER
 ARG NEXT_PUBLIC_BUCKET_URL
-ENV NEXT_PUBLIC_BUCKET_URL=$NEXT_PUBLIC_BUCKET_URL
 ARG NEXT_PUBLIC_PIWIK_SITE_ID
-ENV NEXT_PUBLIC_PIWIK_SITE_ID=$NEXT_PUBLIC_PIWIK_SITE_ID
 ARG NEXT_PUBLIC_PIWIK_URL
-ENV NEXT_PUBLIC_PIWIK_URL=$NEXT_PUBLIC_PIWIK_URL
 ARG NEXT_PUBLIC_COMMIT
-ENV NEXT_PUBLIC_COMMIT=$NEXT_PUBLIC_COMMIT
 ARG NEXT_PUBLIC_SITE_URL
-ENV NEXT_PUBLIC_SITE_URL=$NEXT_PUBLIC_SITE_URL
-
 ARG NEXT_PUBLIC_SENTRY_ENV
-ENV NEXT_PUBLIC_SENTRY_ENV=$NEXT_PUBLIC_SENTRY_ENV
 ARG NEXT_PUBLIC_SENTRY_URL
 ARG NEXT_PUBLIC_SENTRY_ORG
 ARG NEXT_PUBLIC_SENTRY_PROJECT
 ARG NEXT_PUBLIC_SENTRY_RELEASE
 ARG NEXT_PUBLIC_SENTRY_DSN
-ENV NEXT_PUBLIC_SENTRY_URL=$NEXT_PUBLIC_SENTRY_URL
-ENV NEXT_PUBLIC_SENTRY_ORG=$NEXT_PUBLIC_SENTRY_ORG
-ENV NEXT_PUBLIC_SENTRY_PROJECT=$NEXT_PUBLIC_SENTRY_PROJECT
-ENV NEXT_PUBLIC_SENTRY_DSN=$NEXT_PUBLIC_SENTRY_DSN
-ENV NEXT_PUBLIC_SENTRY_RELEASE=$NEXT_PUBLIC_SENTRY_RELEASE
-
 ARG NEXT_PUBLIC_ES_INDEX_PREFIX
-ENV NEXT_PUBLIC_ES_INDEX_PREFIX=$NEXT_PUBLIC_ES_INDEX_PREFIX
 ARG NEXT_PUBLIC_BRANCH_NAME_SLUG
-ENV NEXT_PUBLIC_BRANCH_NAME_SLUG=$NEXT_PUBLIC_BRANCH_NAME_SLUG
 
-# Enable source map generation during build
-ENV GENERATE_SOURCEMAP=true \
-  NODE_ENV=production
+# Export environment variables
+ENV NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT=$NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT \
+  NEXT_PUBLIC_IS_PREPRODUCTION_DEPLOYMENT=$NEXT_PUBLIC_IS_PREPRODUCTION_DEPLOYMENT \
+  NEXT_PUBLIC_BUCKET_FOLDER=$NEXT_PUBLIC_BUCKET_FOLDER \
+  NEXT_PUBLIC_BUCKET_SITEMAP_FOLDER=$NEXT_PUBLIC_BUCKET_SITEMAP_FOLDER \
+  NEXT_PUBLIC_BUCKET_URL=$NEXT_PUBLIC_BUCKET_URL \
+  NEXT_PUBLIC_PIWIK_SITE_ID=$NEXT_PUBLIC_PIWIK_SITE_ID \
+  NEXT_PUBLIC_PIWIK_URL=$NEXT_PUBLIC_PIWIK_URL \
+  NEXT_PUBLIC_COMMIT=$NEXT_PUBLIC_COMMIT \
+  NEXT_PUBLIC_SITE_URL=$NEXT_PUBLIC_SITE_URL \
+  NEXT_PUBLIC_SENTRY_ENV=$NEXT_PUBLIC_SENTRY_ENV \
+  NEXT_PUBLIC_SENTRY_URL=$NEXT_PUBLIC_SENTRY_URL \
+  NEXT_PUBLIC_SENTRY_ORG=$NEXT_PUBLIC_SENTRY_ORG \
+  NEXT_PUBLIC_SENTRY_PROJECT=$NEXT_PUBLIC_SENTRY_PROJECT \
+  NEXT_PUBLIC_SENTRY_DSN=$NEXT_PUBLIC_SENTRY_DSN \
+  NEXT_PUBLIC_SENTRY_RELEASE=$NEXT_PUBLIC_SENTRY_RELEASE \
+  NEXT_PUBLIC_ES_INDEX_PREFIX=$NEXT_PUBLIC_ES_INDEX_PREFIX \
+  NEXT_PUBLIC_BRANCH_NAME_SLUG=$NEXT_PUBLIC_BRANCH_NAME_SLUG
 
+# Build with secrets and cache mount
 RUN --mount=type=secret,id=SENTRY_AUTH_TOKEN,env=SENTRY_AUTH_TOKEN \
   --mount=type=secret,id=ELASTICSEARCH_TOKEN_API,env=ELASTICSEARCH_TOKEN_API \
   --mount=type=secret,id=ELASTICSEARCH_URL,env=ELASTICSEARCH_URL \
-  export GENERATE_SOURCEMAP=true && \
-  pnpm build && \
-  pnpm prune --prod && \
+  --mount=type=cache,id=pnpm,target=/root/.local/share/pnpm/store \
+  pnpm build
+
+# Deploy stage - create production-ready deployment
+FROM base AS deploy
+WORKDIR /app
+
+COPY --from=builder /app /app
+
+# Create optimized production deployment using pnpm deploy
+RUN --mount=type=cache,id=pnpm,target=/root/.local/share/pnpm/store \
+  pnpm deploy --filter=@cdt/frontend --prod /prod/app && \
   pnpm store prune
 
-# app
+# Runtime stage - minimal production image
 FROM node:$NODE_VERSION
 
 RUN apk --update --no-cache add ca-certificates && apk upgrade
 
-ENV NEXT_PUBLIC_APP_ENV=production
+ENV NEXT_PUBLIC_APP_ENV=production \
+  NODE_ENV=production
 
 WORKDIR /app
 
-USER 1000
+# Copy the optimized deployment from deploy stage
+COPY --from=deploy --chown=1000:1000 /prod/app /app
 
-COPY --from=dist --chown=1000:1000 /dep/packages/code-du-travail-frontend/.next /app/packages/code-du-travail-frontend/.next
-COPY --from=dist --chown=1000:1000 /dep/packages/code-du-travail-frontend/package.json /app/packages/code-du-travail-frontend/package.json
-COPY --from=dist --chown=1000:1000 /dep/packages/code-du-travail-frontend/public /app/packages/code-du-travail-frontend/public
-COPY --from=dist --chown=1000:1000 /dep/packages/code-du-travail-frontend/next.config.mjs /app/packages/code-du-travail-frontend/next.config.mjs
-COPY --from=dist --chown=1000:1000 /dep/packages/code-du-travail-frontend/instrumentation.ts /app/packages/code-du-travail-frontend/instrumentation.ts
-COPY --from=dist --chown=1000:1000 /dep/packages/code-du-travail-frontend/instrumentation-client.ts /app/packages/code-du-travail-frontend/instrumentation-client.ts
-COPY --from=dist --chown=1000:1000 /dep/packages/code-du-travail-frontend/sentry.server.config.ts /app/packages/code-du-travail-frontend/sentry.server.config.ts
-COPY --from=dist --chown=1000:1000 /dep/packages/code-du-travail-frontend/sentry.edge.config.ts /app/packages/code-du-travail-frontend/sentry.edge.config.ts
-COPY --from=dist --chown=1000:1000 /dep/packages/code-du-travail-frontend/redirects.json /app/packages/code-du-travail-frontend/redirects.json
-COPY --from=dist --chown=1000:1000 /dep/packages/code-du-travail-frontend/scripts /app/packages/code-du-travail-frontend/scripts
-COPY --from=dist --chown=1000:1000 /dep/package.json /app/package.json
-COPY --from=dist --chown=1000:1000 /dep/node_modules /app/node_modules
-
-RUN mkdir -p /app/packages/code-du-travail-frontend/.next/cache/images && chown -R 1000:1000 /app/packages/code-du-travail-frontend/.next
-
-CMD [ "npm", "run", "start:production"]
-
+# Runtime environment variables
 ARG NEXT_PUBLIC_SENTRY_URL
 ARG NEXT_PUBLIC_SENTRY_ORG
 ARG NEXT_PUBLIC_SENTRY_PROJECT
 ARG NEXT_PUBLIC_SENTRY_RELEASE
 ARG NEXT_PUBLIC_SENTRY_DSN
-ENV NEXT_PUBLIC_SENTRY_URL=$NEXT_PUBLIC_SENTRY_URL
-ENV NEXT_PUBLIC_SENTRY_ORG=$NEXT_PUBLIC_SENTRY_ORG
-ENV NEXT_PUBLIC_SENTRY_PROJECT=$NEXT_PUBLIC_SENTRY_PROJECT
-ENV NEXT_PUBLIC_SENTRY_DSN=$NEXT_PUBLIC_SENTRY_DSN
-ENV NEXT_PUBLIC_SENTRY_RELEASE=$NEXT_PUBLIC_SENTRY_RELEASE
+ENV NEXT_PUBLIC_SENTRY_URL=$NEXT_PUBLIC_SENTRY_URL \
+  NEXT_PUBLIC_SENTRY_ORG=$NEXT_PUBLIC_SENTRY_ORG \
+  NEXT_PUBLIC_SENTRY_PROJECT=$NEXT_PUBLIC_SENTRY_PROJECT \
+  NEXT_PUBLIC_SENTRY_DSN=$NEXT_PUBLIC_SENTRY_DSN \
+  NEXT_PUBLIC_SENTRY_RELEASE=$NEXT_PUBLIC_SENTRY_RELEASE
+
+# Create cache directory with proper permissions
+RUN mkdir -p /app/.next/cache/images && \
+  chown -R 1000:1000 /app
+
+USER 1000
+
+CMD ["node_modules/.bin/next", "start"]
