@@ -10,11 +10,9 @@ WORKDIR /dep
 # Copy lockfile
 COPY ./pnpm-lock.yaml ./pnpm-workspace.yaml ./
 
-# Install packages
-RUN pnpm fetch
-
 COPY . ./
-RUN pnpm install --offline
+
+RUN pnpm install --offline --frozen-lockfile
 
 ENV NEXT_PUBLIC_APP_ENV=production
 # Add build-arg from github actions
