@@ -8,7 +8,7 @@ RUN corepack enable && corepack prepare pnpm@10.0.0 --activate
 WORKDIR /dep
 
 # Copy lockfile
-COPY ./pnpm-lock.yaml ./pnpm-workspace.yaml ./package.json ./
+COPY ./pnpm-lock.yaml ./pnpm-workspace.yaml ./
 
 # Install packages
 RUN pnpm fetch
