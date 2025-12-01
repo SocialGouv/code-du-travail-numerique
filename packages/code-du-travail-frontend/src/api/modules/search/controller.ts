@@ -79,7 +79,7 @@ export class SearchController {
         body: esReq,
         index: elasticDocumentsIndex,
       })
-      .then((r) => extractHits(r));
+      .then((r) => extractHits(r).map((t) => t._source));
 
     const parsed = await presearch(query, themes);
     return NextResponse.json(parsed, {

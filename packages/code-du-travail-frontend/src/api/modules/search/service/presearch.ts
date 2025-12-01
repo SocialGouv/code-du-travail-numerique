@@ -170,10 +170,14 @@ const fillup = async (
       sources
     );
     docSearch.size = 10;
-    const ftRes = await elasticsearchClient.search({ body: docSearch as any });
+    const ftRes = await elasticsearchClient.search({
+      index: elasticDocumentsIndex,
+      body: docSearch as any,
+    });
 
     const results = extractHits(ftRes).map((d) => d._source);
     documents.push(...results);
+    // console.log(JSON.stringify(results, null, 2));
 
     if (documents.length > 0) {
       documents = removeDuplicate(documents, ({ cdtnId }) => cdtnId);
