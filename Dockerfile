@@ -10,9 +10,14 @@ WORKDIR /dep
 # Copy lockfile
 COPY ./pnpm-lock.yaml ./pnpm-workspace.yaml ./
 
+# Fetch dependencies
+RUN pnpm fetch
+
+# Copy source files to workspace (.dockerignore will exclude unnecessary files)
 COPY . ./
 
-RUN pnpm install --offline --frozen-lockfile
+# Install dependencies
+RUN pnpm install --frozen-lockfile --prefer-offline --ignore-scripts
 
 ENV NEXT_PUBLIC_APP_ENV=production
 # Add build-arg from github actions
