@@ -1,5 +1,5 @@
 import { fr } from "@codegouvfr/react-dsfr";
-import { getLabelBySource } from "@socialgouv/cdtn-utils";
+import { getLabelBySource, getRouteBySource } from "@socialgouv/cdtn-utils";
 import { css } from "@styled-system/css";
 import { SearchResult } from "src/api/modules/search/service/presearch";
 import Link from "src/modules/common/Link";
@@ -11,7 +11,11 @@ type Props = {
 
 export const SearchResultCard = ({ result, onClick }: Props) => {
   return (
-    <Link href={result.slug} className={linkStyle} onClick={onClick}>
+    <Link
+      href={`${getRouteBySource(result.source)}/${result.slug}`}
+      className={linkStyle}
+      onClick={onClick}
+    >
       <div className={cardContainer}>
         <div className={fr.cx("fr-mb-1w")}>
           <span className={`${badgeBase} ${badgeColorClasses[result.source]}`}>
