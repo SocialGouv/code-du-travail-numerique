@@ -38,7 +38,7 @@
     "prebuild": "tsc -p tsconfig.build.json",
     "test": "jest --silent=true",
     "lint": "eslint \"./src/**/*.{js,ts}\"",
-    "dev": "nodemon --exec 'npm run build:dev' --watch 'src/**' --ext 'ts,yaml'",
+    "dev": "nodemon --exec 'pnpm run build:dev' --watch 'src/**' --ext 'ts,yaml'",
     "test:watch": "nodemon --exec 'jest' --watch 'src/**' --ext 'ts,yaml'",
     "build": "pnpm prebuild && pnpm postbuild",
     "build:dev": "pnpm build:swc && pnpm postbuild",
@@ -46,7 +46,7 @@
     "postbuild": "node bin/internal/build.js",
     "clean": "rimraf bin lib",
     "type-check": "tsc --noEmit",
-    "type-check:watch": "npm run type-check -- --watch",
+    "type-check:watch": "pnpm run type-check -- --watch",
     "format": "prettier --write \"./src/**/*.{js,ts,yaml,yml,json}\"",
     "format:check": "prettier --check \"./src/**/*.{js,ts,yaml,yml,json}\""
   },
