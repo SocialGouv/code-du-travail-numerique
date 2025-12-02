@@ -8,7 +8,7 @@ export enum ABTesting {
 }
 
 export function initABTesting() {
-  if (typeof window === "undefined" || !window._paq) return;
+  if (typeof window === "undefined" || !window || !window._paq) return;
 
   // Initialize default state
   window.__MATOMO_AB_TEST__ = {

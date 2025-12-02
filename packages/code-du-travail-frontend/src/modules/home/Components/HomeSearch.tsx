@@ -60,6 +60,7 @@ export const HomeSearch = () => {
     >
       <div className={fr.cx("fr-col-12", "fr-col-md-8")}>
         <Autocomplete<string>
+          id="home-search-autocomplete"
           hintText="par exemple : congés payés, durée de préavis"
           label={
             <>

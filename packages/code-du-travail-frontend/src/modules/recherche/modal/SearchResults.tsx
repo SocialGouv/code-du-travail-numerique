@@ -42,9 +42,9 @@ export const SearchResults = ({
       <ul
         className={`${resultListStyle} ${fr.cx("fr-grid-row", "fr-grid-row--gutters", "fr-mt-3w")}`}
       >
-        {results.map((result) => (
+        {results.map((result, index) => (
           <li
-            key={result.cdtnId}
+            key={result.cdtnId || `result-${index}`}
             className={fr.cx(
               "fr-col-12",
               "fr-col-sm-6",

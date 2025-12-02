@@ -20,16 +20,6 @@ export const SearchFeedback = ({
 }: SearchFeedbackProps) => {
   return (
     <>
-      <style jsx>{`
-        @keyframes spin {
-          from {
-            transform: rotate(0deg);
-          }
-          to {
-            transform: rotate(360deg);
-          }
-        }
-      `}</style>
       <div className={fr.cx("fr-mt-6w")}>
         {isSearching && query.length >= minSearchLength && (
           <div className={loadingContainer}>

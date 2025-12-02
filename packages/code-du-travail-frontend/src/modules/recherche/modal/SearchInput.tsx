@@ -118,6 +118,7 @@ export const SearchInput = forwardRef<ModalSearchHandle, ModalSearchProps>(
           <div className={searchContainerStyle}>
             <div className={autocompleteWrapper}>
               <AutocompleteV2<string>
+                id="modal-search-autocomplete"
                 search={search}
                 displayLabel={(item: string | null) => item ?? ""}
                 highlightQuery={true}
