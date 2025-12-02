@@ -8,26 +8,23 @@ RUN corepack enable && corepack prepare pnpm@10.24.0 --activate
 FROM base AS dependencies
 WORKDIR /app
 
-# Copy only package manifests for better layer caching
-COPY pnpm-lock.yaml pnpm-workspace.yaml package.json ./
-COPY packages/code-du-travail-frontend/package.json ./packages/code-du-travail-frontend/
-COPY packages/code-du-travail-modeles/package.json ./packages/code-du-travail-modeles/
-COPY packages/code-du-travail-utils/package.json ./packages/code-du-travail-utils/
+# Copy lockfiles first for optimal caching of fetch step
+COPY pnpm-lock.yaml pnpm-workspace.yaml ./
 
 # Fetch dependencies to pnpm store with cache mount
 RUN --mount=type=cache,id=pnpm,target=/root/.local/share/pnpm/store \
   pnpm fetch --frozen-lockfile
 
-# Install all dependencies (including dev) with cache mount
+# Copy all source files for workspace setup (.dockerignore will exclude unnecessary files)
+COPY . ./
+
+# Install all dependencies (including dev) with cache mount and workspace links
 RUN --mount=type=cache,id=pnpm,target=/root/.local/share/pnpm/store \
   pnpm install --frozen-lockfile --offline
 
 # Build stage
 FROM dependencies AS builder
 WORKDIR /app
-
-# Copy source code
-COPY . .
 
 # Set build environment variables
 ENV NEXT_PUBLIC_APP_ENV=production \
@@ -79,15 +76,13 @@ RUN --mount=type=secret,id=SENTRY_AUTH_TOKEN,env=SENTRY_AUTH_TOKEN \
   --mount=type=cache,id=pnpm,target=/root/.local/share/pnpm/store \
   pnpm build
 
-# Deploy stage - create production-ready deployment
-FROM base AS deploy
+# Production dependencies stage
+FROM dependencies AS production-deps
 WORKDIR /app
 
-COPY --from=builder /app /app
-
-# Create optimized production deployment using pnpm deploy
+# Remove dev dependencies and keep only production dependencies
 RUN --mount=type=cache,id=pnpm,target=/root/.local/share/pnpm/store \
-  pnpm deploy --filter=@cdt/frontend --prod /prod/app && \
+  pnpm prune --prod && \
   pnpm store prune
 
 # Runtime stage - minimal production image
@@ -100,8 +95,20 @@ ENV NEXT_PUBLIC_APP_ENV=production \
 
 WORKDIR /app
 
-# Copy the optimized deployment from deploy stage
-COPY --from=deploy --chown=1000:1000 /prod/app /app
+# Copy built application and production dependencies
+COPY --from=builder --chown=1000:1000 /app/packages/code-du-travail-frontend/.next /app/packages/code-du-travail-frontend/.next
+COPY --from=builder --chown=1000:1000 /app/packages/code-du-travail-frontend/public /app/packages/code-du-travail-frontend/public
+COPY --from=builder --chown=1000:1000 /app/packages/code-du-travail-frontend/package.json /app/packages/code-du-travail-frontend/package.json
+COPY --from=builder --chown=1000:1000 /app/packages/code-du-travail-frontend/next.config.mjs /app/packages/code-du-travail-frontend/next.config.mjs
+COPY --from=builder --chown=1000:1000 /app/packages/code-du-travail-frontend/instrumentation.ts /app/packages/code-du-travail-frontend/instrumentation.ts
+COPY --from=builder --chown=1000:1000 /app/packages/code-du-travail-frontend/instrumentation-client.ts /app/packages/code-du-travail-frontend/instrumentation-client.ts
+COPY --from=builder --chown=1000:1000 /app/packages/code-du-travail-frontend/sentry.server.config.ts /app/packages/code-du-travail-frontend/sentry.server.config.ts
+COPY --from=builder --chown=1000:1000 /app/packages/code-du-travail-frontend/sentry.edge.config.ts /app/packages/code-du-travail-frontend/sentry.edge.config.ts
+COPY --from=builder --chown=1000:1000 /app/packages/code-du-travail-frontend/redirects.json /app/packages/code-du-travail-frontend/redirects.json
+COPY --from=builder --chown=1000:1000 /app/packages/code-du-travail-frontend/scripts /app/packages/code-du-travail-frontend/scripts
+COPY --from=production-deps --chown=1000:1000 /app/node_modules /app/node_modules
+COPY --from=builder --chown=1000:1000 /app/package.json /app/package.json
+COPY --from=builder --chown=1000:1000 /app/pnpm-workspace.yaml /app/pnpm-workspace.yaml
 
 # Runtime environment variables
 ARG NEXT_PUBLIC_SENTRY_URL
@@ -116,9 +123,11 @@ ENV NEXT_PUBLIC_SENTRY_URL=$NEXT_PUBLIC_SENTRY_URL \
   NEXT_PUBLIC_SENTRY_RELEASE=$NEXT_PUBLIC_SENTRY_RELEASE
 
 # Create cache directory with proper permissions
-RUN mkdir -p /app/.next/cache/images && \
+RUN mkdir -p /app/packages/code-du-travail-frontend/.next/cache/images && \
   chown -R 1000:1000 /app
 
 USER 1000
 
-CMD ["node_modules/.bin/next", "start"]
+WORKDIR /app/packages/code-du-travail-frontend
+
+CMD ["pnpm", "run", "start"]
