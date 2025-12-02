@@ -36,10 +36,10 @@ export const LaQuestionAction = () => {
         <p className={fr.cx("fr-mb-0")}>
           La synthèse dans{" "}
           <Link
-            href="/information/rupture-conventionnelle-individuelle-la-procedure-en-details"
+            href="/infographie/rupture-conventionnelle-les-etapes-de-la-procedure-et-les-delais"
             onClick={() =>
               emitQuestionActionEvent(
-                "/information/rupture-conventionnelle-individuelle-la-procedure-en-details"
+                "/infographie/rupture-conventionnelle-les-etapes-de-la-procedure-et-les-delais"
               )
             }
           >
