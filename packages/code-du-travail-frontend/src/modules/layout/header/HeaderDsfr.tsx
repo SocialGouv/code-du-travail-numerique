@@ -3,7 +3,7 @@ import type { MainNavigationProps } from "@codegouvfr/react-dsfr/MainNavigation/
 import { HeaderBrand } from "./HeaderBrand";
 import { HeaderSearch } from "./HeaderSearch";
 import { HeaderNavigation } from "./HeaderNavigation";
-import { useFeatureFlag } from "src/modules/utils/useFeatureFlag";
+import { useABTestVariant } from "src/modules/utils/useABTestVariant";
 import { ABTesting, ABTestVariant } from "src/modules/config/initABTesting";
 import { HeaderSearchV2 } from "./HeaderSearchV2";
 import { SearchModal } from "src/modules/recherche/modal/SearchModal";
@@ -43,7 +43,7 @@ export const HeaderDsfr = ({
   onSearchSubmit,
   currentPath,
 }: Props) => {
-  const variant = useFeatureFlag(ABTesting.SEARCH);
+  const variant = useABTestVariant(ABTesting.SEARCH);
   const { isOpen, openModal, closeModal } = useSearchModal();
 
   const handleSearchToggle = () => {

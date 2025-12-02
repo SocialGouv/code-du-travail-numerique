@@ -2,11 +2,11 @@ import { fr } from "@codegouvfr/react-dsfr";
 import { css } from "@styled-system/css";
 import Image from "next/image";
 import { HomeSearch, HomeSearchV2 } from "./Components";
-import { useFeatureFlag } from "../utils/useFeatureFlag";
+import { useABTestVariant } from "../utils/useABTestVariant";
 import { ABTesting, ABTestVariant } from "../config/initABTesting";
 
 export const Search = () => {
-  const variant = useFeatureFlag(ABTesting.SEARCH);
+  const variant = useABTestVariant(ABTesting.SEARCH);
   const isSearchV2 = variant === ABTestVariant.SEARCH_V2;
 
   return (

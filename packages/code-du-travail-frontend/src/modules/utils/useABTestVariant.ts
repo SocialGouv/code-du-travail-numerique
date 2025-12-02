@@ -3,7 +3,9 @@
 import { useEffect, useState } from "react";
 import { ABTesting, ABTestVariant } from "../config/initABTesting";
 
-export const useFeatureFlag = (abTestName: ABTesting): ABTestVariant | null => {
+export const useABTestVariant = (
+  abTestName: ABTesting
+): ABTestVariant | null => {
   const [variant, setVariant] = useState<ABTestVariant | null>(null);
 
   useEffect(() => {
@@ -45,6 +47,5 @@ export const useFeatureFlag = (abTestName: ABTesting): ABTestVariant | null => {
     };
   }, [abTestName]);
 
-  // return variant;
-  return ABTestVariant.SEARCH_V2;
+  return variant;
 };

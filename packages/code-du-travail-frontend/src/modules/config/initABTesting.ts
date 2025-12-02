@@ -1,7 +1,5 @@
-import { SITE_URL } from "src/config";
-
 export enum ABTestVariant {
-  SEARCH_V1 = "search_v1",
+  SEARCH_V1 = "original",
   SEARCH_V2 = "search_v2",
 }
 
@@ -32,12 +30,7 @@ export function initABTesting() {
     name: ABTesting.SEARCH,
     percentage: 100,
     includedTargets: [
-      {
-        attribute: "url",
-        inverted: "0",
-        type: "equals_exactly",
-        value: SITE_URL,
-      },
+      { attribute: "url", inverted: "0", type: "any", value: "" },
     ],
     excludedTargets: [],
     variations: [
