@@ -438,3 +438,6 @@ export const fetchWhatIsNewMonth = async (
 ): Promise<WhatIsNewMonth | undefined> => {
   return getMonthByPeriod(period);
 };
+
+export const getMostRecentPeriod = (): string =>
+  WHAT_IS_NEW_MONTHS[WHAT_IS_NEW_MONTHS.length - 1].period;
