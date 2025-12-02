@@ -185,7 +185,6 @@ const fillup = async (
 
     const results = extractHits(ftRes).map((d) => d._source);
     documents.push(...results);
-    // console.log(JSON.stringify(results, null, 2));
   }
 
   // Always deduplicate to avoid duplicate sources
@@ -287,8 +286,6 @@ export const presearch = async (
   //     details: query,
   //   });
   // }
-
-  // console.log(JSON.stringify({ idccResult, article, matchingTheme }, null, 2));
 
   if (results.length < 4) {
     const filled = await fillup(query, 4, results);

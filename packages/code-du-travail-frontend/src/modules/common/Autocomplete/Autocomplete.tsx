@@ -49,7 +49,6 @@ export const Autocomplete = <K,>({
   inputRef: externalInputRef,
 }: AutocompleteProps<K>) => {
   const [loading, setLoading] = useState(false);
-  // avoid setState in ref callback; use a mutable ref for the native input
   const internalInputRef = useRef<HTMLInputElement | null>(null);
   const [suggestions, setSuggestions] = useState<K[]>([]);
   const isFocusedRef = useRef(false);

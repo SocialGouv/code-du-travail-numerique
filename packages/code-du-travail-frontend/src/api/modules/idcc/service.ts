@@ -69,8 +69,6 @@ export const ccSearch = async (
 > => {
   const idccResults = await getIdccByQuery(query, 1);
 
-  // console.log(JSON.stringify({ idccResults, query }, null, 2));
-
   const hits = extractHits(idccResults);
 
   if (hits.length > 0 && (hits[0]["_score"] || 0) > threshold) {
