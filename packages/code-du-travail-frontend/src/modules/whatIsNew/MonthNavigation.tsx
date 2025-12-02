@@ -42,7 +42,10 @@ const getMonthNav = (): MonthNavItem[] => {
   });
 };
 
-export function computeVisiblePeriods(MONTH_NAV: MonthNavItem[], currentIndex: number): VisibleItem[] {
+export function computeVisiblePeriods(
+  MONTH_NAV: MonthNavItem[],
+  currentIndex: number
+): VisibleItem[] {
   const total = MONTH_NAV.length;
   const lastIndex = total - 1;
   const WINDOW_SIZE = 7;
@@ -172,7 +175,7 @@ export const MonthNavigation = ({ currentPeriod, position }: Props) => {
         </li>
 
         {visibleItems.map((item, idx) => {
-          if ('separator' in item) {
+          if ("separator" in item) {
             return (
               <li key={`sep-${idx}`}>
                 <span
