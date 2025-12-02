@@ -33,6 +33,8 @@ export function initABTesting() {
       { attribute: "url", inverted: "0", type: "any", value: "" },
     ],
     excludedTargets: [],
+    startDateTime: "2025/12/02 00:00:00 UTC",
+    endDateTime: "2026/02/28 23:59:59 UTC",
     variations: [
       {
         name: ABTestVariant.SEARCH_V1,

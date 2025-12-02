@@ -186,10 +186,11 @@ const fillup = async (
     const results = extractHits(ftRes).map((d) => d._source);
     documents.push(...results);
     // console.log(JSON.stringify(results, null, 2));
+  }
 
-    if (documents.length > 0) {
-      documents = removeDuplicate(documents, ({ cdtnId }) => cdtnId);
-    }
+  // Always deduplicate to avoid duplicate sources
+  if (documents.length > 0) {
+    documents = removeDuplicate(documents, ({ cdtnId }) => cdtnId);
   }
 
   return documents
