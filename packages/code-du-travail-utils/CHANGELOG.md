@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.203.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.202.0...v4.203.0) (2025-12-02)
+
+
+### Features
+
+* **theme:** partage des icones des thèmes avec l'admin ([#6953](https://github.com/SocialGouv/code-du-travail-numerique/issues/6953)) ([757f9cd](https://github.com/SocialGouv/code-du-travail-numerique/commit/757f9cdf76bd765f7cf7dfa8735d63009590222a))
+
+
+
+
+
 # [4.202.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.201.0...v4.202.0) (2025-11-27)
 
 
