@@ -101,11 +101,22 @@ const badgeColorClasses: Partial<Record<SearchResult["source"], string>> = {
     backgroundColor: "var(--background-contrast-warning) !important", // light decision background background contrast warning
     color: "var(--text-default-warning) !important", // light decision text default warning
   }),
-  fiches_ministere_travail: "",
-  fiches_service_public: "",
-  glossary: "",
-  information: "",
-  page_fiche_ministere_travail: "",
+  fiches_ministere_travail: css({
+    backgroundColor: "var(--background-alt-green-archipel) !important", // light option illustration color 975 default green archipel
+    color: "var(--text-action-high-green-archipel) !important", // light option illustration color sun default green archipel
+  }),
+  fiches_service_public: css({
+    backgroundColor: "var(--background-alt-green-archipel) !important", // light option illustration color 975 default green archipel
+    color: "var(--text-action-high-green-archipel) !important", // light option illustration color sun default green archipel
+  }),
+  information: css({
+    backgroundColor: "var(--background-alt-brown-cafe-creme) !important", // light option illustration color 975 default brown cafe creme
+    color: "var(--text-action-high-purple-glycine) !important", // light option illustration color sun default purple glycine
+  }),
+  page_fiche_ministere_travail: css({
+    backgroundColor: "var(--background-alt-green-archipel) !important", // light option illustration color 975 default green archipel
+    color: "var(--text-action-high-green-archipel) !important", // light option illustration color sun default green archipel
+  }),
 };
 
 const titleStyle = css({

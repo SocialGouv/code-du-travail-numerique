@@ -1,5 +1,5 @@
 import { fr } from "@codegouvfr/react-dsfr";
-import { css } from "@styled-system/css";
+import { hintTextStyle } from "./SearchFeedback";
 
 interface MinSearchLengthHintProps {
   isVisible: boolean;
@@ -28,11 +28,3 @@ export const MinSearchLengthHint = ({
     </div>
   );
 };
-
-const hintTextStyle = css({
-  color: "var(--text-mention-grey)",
-  fontSize: "0.875rem",
-  margin: 0,
-  textAlign: "center",
-  width: "100%",
-});

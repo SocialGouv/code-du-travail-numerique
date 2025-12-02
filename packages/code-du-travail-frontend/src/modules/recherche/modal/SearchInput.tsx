@@ -19,6 +19,8 @@ interface ModalSearchProps {
   onQueryClear?: () => void;
   isLoadingResults?: boolean;
   onChangeQuery: (s: string) => void;
+  hasSearched: boolean;
+  resultsCount: number;
 }
 
 export interface ModalSearchHandle {
@@ -36,6 +38,8 @@ export const SearchInput = forwardRef<ModalSearchHandle, ModalSearchProps>(
       onQueryClear,
       isLoadingResults = false,
       onChangeQuery,
+      hasSearched = false,
+      resultsCount = 0,
     },
     ref
   ) => {
@@ -156,6 +160,8 @@ export const SearchInput = forwardRef<ModalSearchHandle, ModalSearchProps>(
           isSearching={isLoadingResults}
           query={query}
           minSearchLength={MIN_SEARCH_LENGTH}
+          hasSearched={hasSearched}
+          resultsCount={resultsCount}
         />
       </div>
     );

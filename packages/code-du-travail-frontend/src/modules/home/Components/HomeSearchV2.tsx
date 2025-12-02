@@ -28,6 +28,8 @@ export const HomeSearchV2 = () => {
         onQueryClear={resetSearch}
         isLoadingResults={isLoading}
         onChangeQuery={setQuery}
+        hasSearched={hasSearched}
+        resultsCount={results.length}
       />
 
       {hasSearched && !isLoading && (

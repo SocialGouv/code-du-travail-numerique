@@ -7,12 +7,16 @@ interface SearchFeedbackProps {
   isSearching: boolean;
   query: string;
   minSearchLength: number;
+  hasSearched: boolean;
+  resultsCount: number;
 }
 
 export const SearchFeedback = ({
   isSearching,
   query,
   minSearchLength,
+  hasSearched = false,
+  resultsCount = 0,
 }: SearchFeedbackProps) => {
   return (
     <>
@@ -34,6 +38,17 @@ export const SearchFeedback = ({
           </div>
         )}
 
+        {hasSearched &&
+          !isSearching &&
+          resultsCount === 0 &&
+          query.length >= minSearchLength && (
+            <div className={loadingContainer}>
+              <p className={hintTextStyle}>
+                Précisez votre saisie, aucun résultat disponible.
+              </p>
+            </div>
+          )}
+
         <MinSearchLengthHint
           isVisible={!isSearching && query.length < minSearchLength}
           minSearchLength={minSearchLength}
@@ -51,9 +66,8 @@ const loadingContainer = css({
   gap: "12px",
 });
 
-const hintTextStyle = css({
+export const hintTextStyle = css({
   color: "var(--text-mention-grey)",
-  fontSize: "0.875rem",
   marginBottom: "0!",
   textAlign: "center",
 });
