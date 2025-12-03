@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.203.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.202.0...v4.203.0) (2025-12-02)
+
+
+### Bug Fixes
+
+* **home:** correction du lien sur l'infographie ([#6950](https://github.com/SocialGouv/code-du-travail-numerique/issues/6950)) ([832b289](https://github.com/SocialGouv/code-du-travail-numerique/commit/832b289cb74a483147874b2a47847877f0af51b2))
+
+
+### Features
+
+* **accessibility:** ajout d'un outil dans les pages auditées ([#6945](https://github.com/SocialGouv/code-du-travail-numerique/issues/6945)) ([3c7e3d0](https://github.com/SocialGouv/code-du-travail-numerique/commit/3c7e3d0f87194d8748592ddb4ac1a845ba45b7ba))
+* **heatmap:** ajout des pages d'infographie à la heatmap ([#6957](https://github.com/SocialGouv/code-du-travail-numerique/issues/6957)) ([deb80d7](https://github.com/SocialGouv/code-du-travail-numerique/commit/deb80d74496e861dadcd255bb819cf40dd7afa10))
+* **theme:** partage des icones des thèmes avec l'admin ([#6953](https://github.com/SocialGouv/code-du-travail-numerique/issues/6953)) ([757f9cd](https://github.com/SocialGouv/code-du-travail-numerique/commit/757f9cdf76bd765f7cf7dfa8735d63009590222a))
+
+
+
+
+
 # [4.202.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.201.0...v4.202.0) (2025-11-27)
 
 
