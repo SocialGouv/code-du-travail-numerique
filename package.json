@@ -51,14 +51,14 @@
   "packageManager": "pnpm@10.24.0",
   "pnpm": {
     "onlyBuiltDependencies": [
-      "@sentry/cli",
       "@parcel/watcher",
-      "sharp",
+      "@sentry/cli",
       "@swc/core",
-      "esbuild",
       "cypress",
       "es5-ext",
+      "esbuild",
       "nx",
+      "sharp",
       "unrs-resolver"
     ]
   }
