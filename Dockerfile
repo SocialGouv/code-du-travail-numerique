@@ -62,7 +62,7 @@ RUN --mount=type=secret,id=SENTRY_AUTH_TOKEN,env=SENTRY_AUTH_TOKEN \
   export NEXT_PUBLIC_APP_ENV=production && \
   export NODE_ENV=production && \
   pnpm build && \
-  pnpm prune --prod && \
+  pnpm prune --prod --ignore-scripts && \
   pnpm store prune
 
 # app
