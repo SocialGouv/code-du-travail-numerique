@@ -17,11 +17,6 @@ COPY . ./
 
 RUN pnpm install --frozen-lockfile --offline
 
-ENV NEXT_PUBLIC_APP_ENV=production
-ENV GENERATE_SOURCEMAP=true
-ENV NODE_ENV=production
-ENV CI=true
-ENV HUSKY=0
 # Add build-arg from github actions
 ARG NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT
 ENV NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT=$NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT
@@ -61,6 +56,11 @@ ENV NEXT_PUBLIC_BRANCH_NAME_SLUG=$NEXT_PUBLIC_BRANCH_NAME_SLUG
 RUN --mount=type=secret,id=SENTRY_AUTH_TOKEN,env=SENTRY_AUTH_TOKEN \
   --mount=type=secret,id=ELASTICSEARCH_TOKEN_API,env=ELASTICSEARCH_TOKEN_API \
   --mount=type=secret,id=ELASTICSEARCH_URL,env=ELASTICSEARCH_URL \
+  export CI=true && \
+  export HUSKY=0 && \
+  export GENERATE_SOURCEMAP=true && \
+  export NEXT_PUBLIC_APP_ENV=production && \
+  export NODE_ENV=production && \
   pnpm build && \
   pnpm prune --prod && \
   pnpm store prune
