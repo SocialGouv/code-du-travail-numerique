@@ -12,7 +12,7 @@ type Props = {
 export const SearchResultCard = ({ result, onClick }: Props) => {
   return (
     <Link
-      href={`${getRouteBySource(result.source)}/${result.slug}`}
+      href={`/${getRouteBySource(result.source)}/${result.slug}`}
       className={linkStyle}
       onClick={onClick}
     >
