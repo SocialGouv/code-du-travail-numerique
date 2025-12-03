@@ -55,15 +55,17 @@ jest.mock("../../layout/ContainerList", () => ({
 }));
 
 jest.mock("../../layout/feedback", () => ({
-  Feedback: () => <div data-testid="feedback" />,
+  Feedback: () => <div data-testid="feedback" ></div>,
 }));
 
 jest.mock("next/link", () => {
-  return ({ href, children, ...props }: any) => (
+  const Link = ({ href, children, ...props }: any) => (
     <a href={href} {...props}>
       {children}
     </a>
   );
+  Link.displayName = "Link";
+  return Link;
 });
 
 import { fetchWhatIsNewMonth } from "../queries";
