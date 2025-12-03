@@ -7,8 +7,8 @@ RUN corepack enable && corepack prepare pnpm@10.0.0 --activate
 
 WORKDIR /dep
 
-# Copy lockfile
-COPY ./pnpm-lock.yaml ./pnpm-workspace.yaml ./
+# Copy lockfile and npmrc
+COPY ./pnpm-lock.yaml ./pnpm-workspace.yaml ./.npmrc ./
 
 # Fetch packages
 RUN pnpm fetch --frozen-lockfile
@@ -57,9 +57,15 @@ ENV NEXT_PUBLIC_ES_INDEX_PREFIX=$NEXT_PUBLIC_ES_INDEX_PREFIX
 ARG NEXT_PUBLIC_BRANCH_NAME_SLUG
 ENV NEXT_PUBLIC_BRANCH_NAME_SLUG=$NEXT_PUBLIC_BRANCH_NAME_SLUG
 
-RUN --mount=type=secret,id=SENTRY_AUTH_TOKEN,env=SENTRY_AUTH_TOKEN \
-  --mount=type=secret,id=ELASTICSEARCH_TOKEN_API,env=ELASTICSEARCH_TOKEN_API \
-  --mount=type=secret,id=ELASTICSEARCH_URL,env=ELASTICSEARCH_URL \
+RUN --mount=type=secret,id=sentry_auth_token \
+  --mount=type=secret,id=elasticsearch_token_api \
+  --mount=type=secret,id=elasticsearch_url \
+  export CI=true && \
+  export HUSKY=0 && \
+  export GENERATE_SOURCEMAP=true && \
+  export SENTRY_AUTH_TOKEN=$(cat /run/secrets/sentry_auth_token) && \
+  export ELASTICSEARCH_TOKEN_API=$(cat /run/secrets/elasticsearch_token_api) && \
+  export ELASTICSEARCH_URL=$(cat /run/secrets/elasticsearch_url) && \
   pnpm build && \
   pnpm prune --prod && \
   pnpm store prune
