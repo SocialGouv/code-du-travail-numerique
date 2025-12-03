@@ -58,12 +58,12 @@ ENV NEXT_PUBLIC_BRANCH_NAME_SLUG=$NEXT_PUBLIC_BRANCH_NAME_SLUG
 
 # Enable source map generation during build
 ENV GENERATE_SOURCEMAP=true \
-  NODE_ENV=production
+  NODE_ENV=production \
+  CI=true
 
 RUN --mount=type=secret,id=SENTRY_AUTH_TOKEN,env=SENTRY_AUTH_TOKEN \
   --mount=type=secret,id=ELASTICSEARCH_TOKEN_API,env=ELASTICSEARCH_TOKEN_API \
   --mount=type=secret,id=ELASTICSEARCH_URL,env=ELASTICSEARCH_URL \
-  export GENERATE_SOURCEMAP=true && \
   pnpm build && \
   pnpm prune --prod && \
   pnpm store prune
