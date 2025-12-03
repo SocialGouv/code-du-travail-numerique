@@ -55,7 +55,7 @@ jest.mock("../../layout/ContainerList", () => ({
 }));
 
 jest.mock("../../layout/feedback", () => ({
-  Feedback: () => <div data-testid="feedback" ></div>,
+  Feedback: () => <div data-testid="feedback"></div>,
 }));
 
 jest.mock("next/link", () => {
