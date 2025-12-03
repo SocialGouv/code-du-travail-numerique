@@ -48,5 +48,18 @@
     "pnpm": ">= 10"
   },
   "version": "0.0.0",
-  "packageManager": "pnpm@10.24.0"
+  "packageManager": "pnpm@10.24.0",
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@sentry/cli",
+      "@parcel/watcher",
+      "sharp",
+      "@swc/core",
+      "esbuild",
+      "cypress",
+      "es5-ext",
+      "nx",
+      "unrs-resolver"
+    ]
+  }
 }
