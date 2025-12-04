@@ -87,11 +87,9 @@ COPY --from=dist --chown=1000:1000 /dep/packages/code-du-travail-frontend/sentry
 COPY --from=dist --chown=1000:1000 /dep/packages/code-du-travail-frontend/sentry.edge.config.ts /app/packages/code-du-travail-frontend/sentry.edge.config.ts
 COPY --from=dist --chown=1000:1000 /dep/packages/code-du-travail-frontend/redirects.json /app/packages/code-du-travail-frontend/redirects.json
 COPY --from=dist --chown=1000:1000 /dep/packages/code-du-travail-frontend/scripts /app/packages/code-du-travail-frontend/scripts
-COPY --from=dist --chown=1000:1000 /dep/packages/code-du-travail-frontend/node_modules /app/packages/code-du-travail-frontend/node_modules
+COPY --from=dist --chown=1000:1000 /dep/node_modules /app/node_modules
 
 RUN mkdir -p /app/packages/code-du-travail-frontend/.next/cache/images && chown -R 1000:1000 /app/packages/code-du-travail-frontend/.next
-
-WORKDIR /app/packages/code-du-travail-frontend
 
 CMD ["node", "./node_modules/.bin/next", "start"]
 
