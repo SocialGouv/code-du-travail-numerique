@@ -8,7 +8,7 @@
     "prepare": "husky",
     "build": "lerna run build --scope=@socialgouv/cdtn-utils --scope=@socialgouv/modeles-social --scope=@cdt/frontend --stream",
     "build:npm": "lerna run build --scope=@socialgouv/cdtn-utils --scope=@socialgouv/modeles-social --stream",
-    "clean": "lerna clean",
+    "clean": "lerna clean && rm -rf node_modules",
     "dev": "lerna run dev --parallel",
     "type-check": "lerna run type-check --stream",
     "dev:frontend": "lerna run dev --parallel --scope=@cdt/frontend --scope=@socialgouv/modeles-social --stream",
