@@ -78,9 +78,7 @@ ENV NEXT_PUBLIC_BRANCH_NAME_SLUG=$NEXT_PUBLIC_BRANCH_NAME_SLUG
 RUN --mount=type=secret,id=SENTRY_AUTH_TOKEN,env=SENTRY_AUTH_TOKEN \
   --mount=type=secret,id=ELASTICSEARCH_TOKEN_API,env=ELASTICSEARCH_TOKEN_API \
   --mount=type=secret,id=ELASTICSEARCH_URL,env=ELASTICSEARCH_URL \
-  pnpm build && \
-  pnpm prune --prod --ignore-scripts && \
-  pnpm store prune
+  pnpm build
 
 # runner stage: no corepack/pnpm, just Node runtime
 FROM node:$NODE_VERSION AS runner
