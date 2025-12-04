@@ -46,47 +46,49 @@ export function computeVisiblePeriods(
   MONTH_NAV: MonthNavItem[],
   currentIndex: number
 ): VisibleItem[] {
-  const total = MONTH_NAV.length;
-  const lastIndex = total - 1;
   const WINDOW_SIZE = 7;
+  const total = MONTH_NAV.length;
 
-  if (total <= WINDOW_SIZE) return MONTH_NAV;
+  if (total <= WINDOW_SIZE) {
+    return MONTH_NAV;
+  }
 
-  let start = currentIndex - 3;
-  let end = currentIndex + 3;
+  // 1) Calculer une fenêtre centrée autour du moi actif
+  const half = Math.floor(WINDOW_SIZE / 2);
 
+  let start = currentIndex - half;
+  let end = currentIndex + half;
+
+  // 2) Clamp si on dépasse le début
   if (start < 0) {
     end += -start;
     start = 0;
   }
-  if (end > lastIndex) {
-    const overshoot = end - lastIndex;
-    start = Math.max(0, start - overshoot);
-    end = lastIndex;
+
+  // 3) Clamp si on dépasse la fin
+  if (end >= total) {
+    const diff = end - (total - 1);
+    start = Math.max(0, start - diff);
+    end = total - 1;
   }
 
-  if (end - start + 1 < WINDOW_SIZE) {
-    const missing = WINDOW_SIZE - (end - start + 1);
-    start = Math.max(0, start - missing);
-  }
-
-  const windowItems = MONTH_NAV.slice(start, start + WINDOW_SIZE);
-
-  const mostRecent = MONTH_NAV[0];
-  const oldest = MONTH_NAV[lastIndex];
+  const windowItems = MONTH_NAV.slice(start, end + 1);
 
   const result: VisibleItem[] = [];
 
-  if (!windowItems.find((m) => m.period === mostRecent.period)) {
-    result.push(mostRecent);
+  // 4) Ajouter le plus récent si la fenêtre ne le contient pas
+  if (start > 0) {
+    result.push(MONTH_NAV[0]);
     result.push({ separator: true });
   }
 
-  windowItems.forEach((m) => result.push(m));
+  // 5) Ajouter la fenêtre
+  windowItems.forEach(item => result.push(item));
 
-  if (!windowItems.find((m) => m.period === oldest.period)) {
+  // 6) Ajouter le plus ancien si la fenêtre ne le contient pas
+  if (end < total - 1) {
     result.push({ separator: true });
-    result.push(oldest);
+    result.push(MONTH_NAV[total - 1]);
   }
 
   return result;
@@ -168,7 +170,8 @@ export const MonthNavigation = ({ currentPeriod, position }: Props) => {
               className={fr.cx(
                 "fr-pagination__link",
                 "fr-pagination__link--prev",
-                "fr-pagination__link--lg-label"
+                "fr-pagination__link--lg-label",
+                "fr-mx-0"
               )}
             >
               <span className={fr.cx("fr-hidden", "fr-unhidden-lg")}>Mois suivant</span>
@@ -180,7 +183,8 @@ export const MonthNavigation = ({ currentPeriod, position }: Props) => {
                 "fr-pagination__link",
                 "fr-pagination__link--prev",
                 "fr-pagination__link--lg-label",
-                "fr-label--disabled"
+                "fr-label--disabled",
+                "fr-mx-0"
               )}
             >
               <span className={fr.cx("fr-hidden", "fr-unhidden-lg")}>Mois suivant</span>
@@ -203,11 +207,11 @@ export const MonthNavigation = ({ currentPeriod, position }: Props) => {
           const isActive = item.period === currentPeriod;
           if (mobileItems.find(i => i.period === item.period)) {
             return (
-              <li key={`mob-${item.period}`} className={fr.cx("fr-unhidden", "fr-hidden-lg")}>
+              <li key={`mob-${item.period}`}>
                 <Link
                   href={`/quoi-de-neuf/${item.period}`}
                   aria-current={isActive ? "page" : undefined}
-                  className={fr.cx("fr-pagination__link", "fr-py-0", "fr-px-1v")}
+                  className={fr.cx("fr-pagination__link", "fr-px-1v")}
                   ref={isActive && position === "top" ? activeMonthRef : null}
                 >
                   {item.label}
@@ -237,7 +241,8 @@ export const MonthNavigation = ({ currentPeriod, position }: Props) => {
               className={fr.cx(
                 "fr-pagination__link",
                 "fr-pagination__link--next",
-                "fr-pagination__link--lg-label"
+                "fr-pagination__link--lg-label",
+                "fr-mx-0"
               )}
             >
               <span className={fr.cx("fr-hidden", "fr-unhidden-lg")}>Mois précédent</span>
@@ -249,7 +254,8 @@ export const MonthNavigation = ({ currentPeriod, position }: Props) => {
                 "fr-pagination__link",
                 "fr-pagination__link--next",
                 "fr-pagination__link--lg-label",
-                "fr-label--disabled"
+                "fr-label--disabled",
+                "fr-mx-0"
               )}
             >
               <span className={fr.cx("fr-hidden", "fr-unhidden-lg")}>Mois précédent</span>
