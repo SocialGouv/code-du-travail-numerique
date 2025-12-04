@@ -145,6 +145,7 @@ export const MonthNavigation = ({ currentPeriod, position }: Props) => {
           {currentPeriod !== mostRecent.period ? (
             <Link
               href={`/quoi-de-neuf/${mostRecent.period}`}
+              title={`Aller à ${mostRecent.accessibleLabel}`}
               className={fr.cx("fr-pagination__link", "fr-pagination__link--first", "fr-mx-0")}
             >
               Plus récent
@@ -167,6 +168,7 @@ export const MonthNavigation = ({ currentPeriod, position }: Props) => {
           {currentIndex > 0 ? (
             <Link
               href={`/quoi-de-neuf/${MONTH_NAV[currentIndex - 1].period}`}
+              title={`Aller à ${MONTH_NAV[currentIndex - 1].accessibleLabel}`}
               className={fr.cx(
                 "fr-pagination__link",
                 "fr-pagination__link--prev",
@@ -210,6 +212,7 @@ export const MonthNavigation = ({ currentPeriod, position }: Props) => {
               <li key={`mob-${item.period}`}>
                 <Link
                   href={`/quoi-de-neuf/${item.period}`}
+                  title={`Aller à ${item.accessibleLabel}`}
                   aria-current={isActive ? "page" : undefined}
                   className={fr.cx("fr-pagination__link", "fr-px-1v")}
                   ref={isActive && position === "top" ? activeMonthRef : null}
@@ -224,6 +227,7 @@ export const MonthNavigation = ({ currentPeriod, position }: Props) => {
             <li key={`desk-${item.period}`} className={fr.cx("fr-hidden", "fr-unhidden-lg")}>
               <Link
                 href={`/quoi-de-neuf/${item.period}`}
+                title={`Aller à ${item.accessibleLabel}`}
                 aria-current={isActive ? "page" : undefined}
                 className={fr.cx("fr-pagination__link")}
                 ref={isActive && position === "top" ? activeMonthRef : null}
@@ -238,6 +242,7 @@ export const MonthNavigation = ({ currentPeriod, position }: Props) => {
           {currentIndex < MONTH_NAV.length - 1 ? (
             <Link
               href={`/quoi-de-neuf/${MONTH_NAV[currentIndex + 1].period}`}
+              title={`Aller à ${MONTH_NAV[currentIndex + 1].accessibleLabel}`}
               className={fr.cx(
                 "fr-pagination__link",
                 "fr-pagination__link--next",
@@ -267,6 +272,7 @@ export const MonthNavigation = ({ currentPeriod, position }: Props) => {
           {currentPeriod !== oldest.period ? (
             <Link
               href={`/quoi-de-neuf/${oldest.period}`}
+              title={`Aller à ${oldest.accessibleLabel}`}
               className={fr.cx("fr-pagination__link", "fr-pagination__link--last", "fr-mx-0")}
             >
               Plus ancien
