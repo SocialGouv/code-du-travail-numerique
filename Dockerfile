@@ -92,7 +92,9 @@ COPY --from=dist --chown=1000:1000 /dep/node_modules /app/node_modules
 
 RUN mkdir -p /app/packages/code-du-travail-frontend/.next/cache/images && chown -R 1000:1000 /app/packages/code-du-travail-frontend/.next
 
-CMD [ "npm", "run", "start:production"]
+WORKDIR /app/packages/code-du-travail-frontend
+
+CMD ["node", "node_modules/next/dist/bin/next", "start"]
 
 ARG NEXT_PUBLIC_SENTRY_URL
 ARG NEXT_PUBLIC_SENTRY_ORG
