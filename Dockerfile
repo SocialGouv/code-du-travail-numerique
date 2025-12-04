@@ -73,8 +73,7 @@ RUN --mount=type=secret,id=SENTRY_AUTH_TOKEN,env=SENTRY_AUTH_TOKEN \
   pnpm build
 
 # Deploy with legacy flag (disable minimum-release-age check for old packages)
-RUN pnpm config set minimum-release-age 0 && \
-  pnpm --filter @cdt/frontend deploy --prod --ignore-scripts --legacy /app/deploy && \
+RUN pnpm --filter @cdt/frontend deploy --prod --ignore-scripts --legacy /app/deploy && \
   rm -rf /app/deploy/.pnpm /app/deploy/.modules.yaml /app/deploy/.cache
 
 # runner stage: no corepack/pnpm, just Node runtime
@@ -86,8 +85,6 @@ ENV NEXT_PUBLIC_APP_ENV=production
 ENV NODE_ENV=production
 
 WORKDIR /app
-
-USER 1000
 
 # Copy deployed standalone files (with real node_modules, not symlinks)
 COPY --from=builder --chown=1000:1000 /app/deploy /app
@@ -101,18 +98,7 @@ RUN rm -rf /app/.next/cache/webpack && \
   mkdir -p /app/.next/cache/images && \
   chown -R 1000:1000 /app
 
-WORKDIR /app
+USER 1000
 
 CMD ["node", "node_modules/next/dist/bin/next", "start"]
-
-ARG NEXT_PUBLIC_SENTRY_URL
-ARG NEXT_PUBLIC_SENTRY_ORG
-ARG NEXT_PUBLIC_SENTRY_PROJECT
-ARG NEXT_PUBLIC_SENTRY_RELEASE
-ARG NEXT_PUBLIC_SENTRY_DSN
-ENV NEXT_PUBLIC_SENTRY_URL=$NEXT_PUBLIC_SENTRY_URL
-ENV NEXT_PUBLIC_SENTRY_ORG=$NEXT_PUBLIC_SENTRY_ORG
-ENV NEXT_PUBLIC_SENTRY_PROJECT=$NEXT_PUBLIC_SENTRY_PROJECT
-ENV NEXT_PUBLIC_SENTRY_DSN=$NEXT_PUBLIC_SENTRY_DSN
-ENV NEXT_PUBLIC_SENTRY_RELEASE=$NEXT_PUBLIC_SENTRY_RELEASE
 
