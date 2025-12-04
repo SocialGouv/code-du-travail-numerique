@@ -1,35 +1,16 @@
 ARG NODE_VERSION=24.10.0-alpine
 
-# deps stage: cacheable, depends only on lockfiles
-FROM node:$NODE_VERSION AS deps
-
-WORKDIR /app
-
-RUN corepack enable && corepack prepare pnpm@10.0.0 --activate
-
-# Copy lockfile and npmrc
-COPY ./pnpm-lock.yaml ./pnpm-workspace.yaml ./.npmrc ./
-
-# Fetch packages
-RUN pnpm fetch --frozen-lockfile
-
-# builder stage: installs dependencies offline from pre-fetched store and builds
+# builder stage: install dependencies and build
 FROM node:$NODE_VERSION AS builder
 
 WORKDIR /app
 
 RUN corepack enable && corepack prepare pnpm@10.0.0 --activate
 
-# Copy lockfiles and package.json first
-COPY ./pnpm-lock.yaml ./pnpm-workspace.yaml ./.npmrc ./
-
-# Copy pnpm store from deps stage
-COPY --from=deps /root/.local/share/pnpm /root/.local/share/pnpm
-
-# Copy source code before install (needed for workspace packages)
+# Copy lockfiles and source code
 COPY . ./
 
-# Install dependencies (using the fetched store)
+# Install dependencies
 RUN pnpm install --frozen-lockfile
 
 ENV CI=true
@@ -104,13 +85,13 @@ COPY --from=builder --chown=1000:1000 /app/packages/code-du-travail-frontend/sen
 COPY --from=builder --chown=1000:1000 /app/packages/code-du-travail-frontend/sentry.edge.config.ts /app/packages/code-du-travail-frontend/sentry.edge.config.ts
 COPY --from=builder --chown=1000:1000 /app/packages/code-du-travail-frontend/redirects.json /app/packages/code-du-travail-frontend/redirects.json
 COPY --from=builder --chown=1000:1000 /app/packages/code-du-travail-frontend/scripts /app/packages/code-du-travail-frontend/scripts
-COPY --from=builder --chown=1000:1000 /app/node_modules /app/node_modules
+COPY --from=builder --chown=1000:1000 /app/packages/code-du-travail-frontend/node_modules /app/packages/code-du-travail-frontend/node_modules
 
 RUN mkdir -p /app/packages/code-du-travail-frontend/.next/cache/images && chown -R 1000:1000 /app/packages/code-du-travail-frontend/.next
 
 WORKDIR /app/packages/code-du-travail-frontend
 
-CMD ["node", "../../node_modules/next/dist/bin/next", "start"]
+CMD ["node", "node_modules/next/dist/bin/next", "start"]
 
 ARG NEXT_PUBLIC_SENTRY_URL
 ARG NEXT_PUBLIC_SENTRY_ORG
