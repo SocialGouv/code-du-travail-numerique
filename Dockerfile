@@ -13,7 +13,6 @@ COPY . ./
 # Install dependencies
 RUN pnpm install --frozen-lockfile
 
-ENV CI=true
 ENV HUSKY=0
 ENV GENERATE_SOURCEMAP=true
 ENV NEXT_PUBLIC_APP_ENV=production
