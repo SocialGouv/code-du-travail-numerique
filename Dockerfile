@@ -13,11 +13,16 @@ COPY pnpm-lock.yaml pnpm-workspace.yaml package.json lerna.json .npmrc ./
 # Fetch dependencies (frozen-lockfile contains all package info)
 RUN pnpm fetch --frozen-lockfile
 
-# Copy source code
-COPY . ./
+# Copy package.json files (needed for workspace structure)
+COPY packages/code-du-travail-frontend/package.json ./packages/code-du-travail-frontend/
+COPY packages/code-du-travail-modeles/package.json ./packages/code-du-travail-modeles/
+COPY packages/code-du-travail-utils/package.json ./packages/code-du-travail-utils/
 
-# Install dependencies (faster, uses fetched packages)
+# Install dependencies (uses fetched packages, cached if package.json unchanged)
 RUN pnpm install --frozen-lockfile --offline
+
+# Copy source code (after install to maximize cache efficiency)
+COPY . ./
 
 ENV HUSKY=0
 ENV GENERATE_SOURCEMAP=true
@@ -66,7 +71,8 @@ RUN --mount=type=secret,id=SENTRY_AUTH_TOKEN,env=SENTRY_AUTH_TOKEN \
   --mount=type=secret,id=ELASTICSEARCH_TOKEN_API,env=ELASTICSEARCH_TOKEN_API \
   --mount=type=secret,id=ELASTICSEARCH_URL,env=ELASTICSEARCH_URL \
   pnpm build && \
-  pnpm --filter @cdt/frontend deploy --prod /app/deploy
+  pnpm --filter @cdt/frontend deploy --prod --ignore-scripts /app/deploy && \
+  rm -rf /app/deploy/.pnpm /app/deploy/.modules.yaml /app/deploy/.cache
 
 # runner stage: no corepack/pnpm, just Node runtime
 FROM node:$NODE_VERSION AS runner
@@ -87,7 +93,10 @@ COPY --from=builder --chown=1000:1000 /app/deploy /app
 COPY --from=builder --chown=1000:1000 /app/packages/code-du-travail-frontend/.next /app/.next
 COPY --from=builder --chown=1000:1000 /app/packages/code-du-travail-frontend/scripts /app/scripts
 
-RUN mkdir -p /app/packages/code-du-travail-frontend/.next/cache/images && chown -R 1000:1000 /app/packages/code-du-travail-frontend/.next
+# Clean up unnecessary files to reduce image size
+RUN rm -rf /app/.next/cache/webpack && \
+  mkdir -p /app/.next/cache/images && \
+  chown -R 1000:1000 /app/.next
 
 WORKDIR /app
 
