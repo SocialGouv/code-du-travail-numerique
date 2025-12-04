@@ -66,11 +66,14 @@ ENV NEXT_PUBLIC_ES_INDEX_PREFIX=$NEXT_PUBLIC_ES_INDEX_PREFIX
 ARG NEXT_PUBLIC_BRANCH_NAME_SLUG
 ENV NEXT_PUBLIC_BRANCH_NAME_SLUG=$NEXT_PUBLIC_BRANCH_NAME_SLUG
 
-# Build and deploy standalone node_modules
+# Build
 RUN --mount=type=secret,id=SENTRY_AUTH_TOKEN,env=SENTRY_AUTH_TOKEN \
   --mount=type=secret,id=ELASTICSEARCH_TOKEN_API,env=ELASTICSEARCH_TOKEN_API \
   --mount=type=secret,id=ELASTICSEARCH_URL,env=ELASTICSEARCH_URL \
-  pnpm build && \
+  pnpm build
+
+# Deploy with legacy flag (disable minimum-release-age check for old packages)
+RUN pnpm config set minimum-release-age 0 && \
   pnpm --filter @cdt/frontend deploy --prod --ignore-scripts --legacy /app/deploy && \
   rm -rf /app/deploy/.pnpm /app/deploy/.modules.yaml /app/deploy/.cache
 
@@ -96,7 +99,7 @@ COPY --from=builder --chown=1000:1000 /app/packages/code-du-travail-frontend/scr
 # Clean up unnecessary files to reduce image size
 RUN rm -rf /app/.next/cache/webpack && \
   mkdir -p /app/.next/cache/images && \
-  chown -R 1000:1000 /app/.next
+  chown -R 1000:1000 /app
 
 WORKDIR /app
 
