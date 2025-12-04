@@ -1,11 +1,11 @@
 ARG NODE_VERSION=24.10.0-alpine
-# dist
-FROM node:$NODE_VERSION AS dist
 
-# Install pnpm
+# deps stage: cacheable, depends only on lockfiles
+FROM node:$NODE_VERSION AS deps
+
+WORKDIR /app
+
 RUN corepack enable && corepack prepare pnpm@10.0.0 --activate
-
-WORKDIR /dep
 
 # Copy lockfile and npmrc
 COPY ./pnpm-lock.yaml ./pnpm-workspace.yaml ./.npmrc ./
@@ -13,9 +13,24 @@ COPY ./pnpm-lock.yaml ./pnpm-workspace.yaml ./.npmrc ./
 # Fetch packages
 RUN pnpm fetch --frozen-lockfile
 
-COPY . ./
+# builder stage: installs dependencies offline from pre-fetched store and builds
+FROM node:$NODE_VERSION AS builder
 
+WORKDIR /app
+
+RUN corepack enable && corepack prepare pnpm@10.0.0 --activate
+
+# Copy lockfiles
+COPY ./pnpm-lock.yaml ./pnpm-workspace.yaml ./.npmrc ./
+
+# Copy pnpm store from deps stage
+COPY --from=deps /root/.local/share/pnpm /root/.local/share/pnpm
+
+# Install dependencies offline
 RUN pnpm install --frozen-lockfile --offline
+
+# Copy source code
+COPY . ./
 
 ENV CI=true
 ENV HUSKY=0
@@ -59,6 +74,7 @@ ENV NEXT_PUBLIC_ES_INDEX_PREFIX=$NEXT_PUBLIC_ES_INDEX_PREFIX
 ARG NEXT_PUBLIC_BRANCH_NAME_SLUG
 ENV NEXT_PUBLIC_BRANCH_NAME_SLUG=$NEXT_PUBLIC_BRANCH_NAME_SLUG
 
+# Build and prune
 RUN --mount=type=secret,id=SENTRY_AUTH_TOKEN,env=SENTRY_AUTH_TOKEN \
   --mount=type=secret,id=ELASTICSEARCH_TOKEN_API,env=ELASTICSEARCH_TOKEN_API \
   --mount=type=secret,id=ELASTICSEARCH_URL,env=ELASTICSEARCH_URL \
@@ -66,34 +82,35 @@ RUN --mount=type=secret,id=SENTRY_AUTH_TOKEN,env=SENTRY_AUTH_TOKEN \
   pnpm prune --prod --ignore-scripts && \
   pnpm store prune
 
-# app
-FROM node:$NODE_VERSION
+# runner stage: no corepack/pnpm, just Node runtime
+FROM node:$NODE_VERSION AS runner
 
 RUN apk --update --no-cache add ca-certificates && apk upgrade
 
 ENV NEXT_PUBLIC_APP_ENV=production
+ENV NODE_ENV=production
 
 WORKDIR /app
 
 USER 1000
 
-COPY --from=dist --chown=1000:1000 /dep/packages/code-du-travail-frontend/.next /app/packages/code-du-travail-frontend/.next
-COPY --from=dist --chown=1000:1000 /dep/packages/code-du-travail-frontend/package.json /app/packages/code-du-travail-frontend/package.json
-COPY --from=dist --chown=1000:1000 /dep/packages/code-du-travail-frontend/public /app/packages/code-du-travail-frontend/public
-COPY --from=dist --chown=1000:1000 /dep/packages/code-du-travail-frontend/next.config.mjs /app/packages/code-du-travail-frontend/next.config.mjs
-COPY --from=dist --chown=1000:1000 /dep/packages/code-du-travail-frontend/instrumentation.ts /app/packages/code-du-travail-frontend/instrumentation.ts
-COPY --from=dist --chown=1000:1000 /dep/packages/code-du-travail-frontend/instrumentation-client.ts /app/packages/code-du-travail-frontend/instrumentation-client.ts
-COPY --from=dist --chown=1000:1000 /dep/packages/code-du-travail-frontend/sentry.server.config.ts /app/packages/code-du-travail-frontend/sentry.server.config.ts
-COPY --from=dist --chown=1000:1000 /dep/packages/code-du-travail-frontend/sentry.edge.config.ts /app/packages/code-du-travail-frontend/sentry.edge.config.ts
-COPY --from=dist --chown=1000:1000 /dep/packages/code-du-travail-frontend/redirects.json /app/packages/code-du-travail-frontend/redirects.json
-COPY --from=dist --chown=1000:1000 /dep/packages/code-du-travail-frontend/scripts /app/packages/code-du-travail-frontend/scripts
-COPY --from=dist --chown=1000:1000 /dep/node_modules /app/node_modules
+COPY --from=builder --chown=1000:1000 /app/packages/code-du-travail-frontend/.next /app/packages/code-du-travail-frontend/.next
+COPY --from=builder --chown=1000:1000 /app/packages/code-du-travail-frontend/package.json /app/packages/code-du-travail-frontend/package.json
+COPY --from=builder --chown=1000:1000 /app/packages/code-du-travail-frontend/public /app/packages/code-du-travail-frontend/public
+COPY --from=builder --chown=1000:1000 /app/packages/code-du-travail-frontend/next.config.mjs /app/packages/code-du-travail-frontend/next.config.mjs
+COPY --from=builder --chown=1000:1000 /app/packages/code-du-travail-frontend/instrumentation.ts /app/packages/code-du-travail-frontend/instrumentation.ts
+COPY --from=builder --chown=1000:1000 /app/packages/code-du-travail-frontend/instrumentation-client.ts /app/packages/code-du-travail-frontend/instrumentation-client.ts
+COPY --from=builder --chown=1000:1000 /app/packages/code-du-travail-frontend/sentry.server.config.ts /app/packages/code-du-travail-frontend/sentry.server.config.ts
+COPY --from=builder --chown=1000:1000 /app/packages/code-du-travail-frontend/sentry.edge.config.ts /app/packages/code-du-travail-frontend/sentry.edge.config.ts
+COPY --from=builder --chown=1000:1000 /app/packages/code-du-travail-frontend/redirects.json /app/packages/code-du-travail-frontend/redirects.json
+COPY --from=builder --chown=1000:1000 /app/packages/code-du-travail-frontend/scripts /app/packages/code-du-travail-frontend/scripts
+COPY --from=builder --chown=1000:1000 /app/node_modules /app/node_modules
 
 RUN mkdir -p /app/packages/code-du-travail-frontend/.next/cache/images && chown -R 1000:1000 /app/packages/code-du-travail-frontend/.next
 
 WORKDIR /app/packages/code-du-travail-frontend
 
-CMD ["node", "../../node_modules/.bin/next", "start"]
+CMD ["node", "../../node_modules/next/dist/bin/next", "start"]
 
 ARG NEXT_PUBLIC_SENTRY_URL
 ARG NEXT_PUBLIC_SENTRY_ORG
