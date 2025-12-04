@@ -94,7 +94,7 @@ RUN mkdir -p /app/packages/code-du-travail-frontend/.next/cache/images && chown 
 
 WORKDIR /app/packages/code-du-travail-frontend
 
-CMD ["node", "node_modules/next/dist/bin/next", "start"]
+CMD ["node", "/app/node_modules/next/dist/bin/next", "start"]
 
 ARG NEXT_PUBLIC_SENTRY_URL
 ARG NEXT_PUBLIC_SENTRY_ORG
