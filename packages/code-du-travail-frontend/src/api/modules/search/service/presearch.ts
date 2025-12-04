@@ -9,12 +9,114 @@ import { extractHits } from "./search";
 import { removeDuplicate } from "../utils";
 import { articleMatcher, extractReferences } from "./referenceExtractor";
 
+const keyword_std = [
+  "a conservatoir mise pied",
+  "a convoc disciplinair entretien prealabl sanction une",
+  "a de depart indemnit la retrait",
+  "a de depart la prim retrait",
+  "a lamiabl ruptur",
+  "a mise pied",
+  "acident de trajet",
+  "acord dentrepris",
+  "acquis aret cong malad paye pendant",
+  "acquis cong paye",
+  "afichag obligatoir",
+  "alait",
+  "alternanc contrat daprentisag et",
+  "amenag de du post travail",
+  "ancienet",
+  "aprentisag",
+  "aret de maintien malad salair",
+  "aret de travail",
+  "aret malad",
+  "atest de travail",
+  "au avenant contrat de travail",
+  "au harcel moral travail",
+  "au inaptitud travail",
+  "averti",
+  "calcul compt de sold tout",
+  "carenc cdd de delai",
+  "cdd contrat",
+  "cdd renouvel",
+  "cdi convention ruptur",
+  "cdi demision",
+  "cdi preavi",
+  "certificat de travail",
+  "claus concurenc de non",
+  "compens repo",
+  "complementair heur",
+  "compt de sold tout",
+  "cong dancienet",
+  "cong dece",
+  "cong dece grand parent pour",
+  "cong enfant malad",
+  "cong et fraction paye",
+  "cong et malad paye",
+  "cong et mi paye temp therapeut",
+  "cong even familial les pour",
+  "cong exception",
+  "cong parental",
+  "cong paternit",
+  "cong san sold",
+  "contrat de delai document fin",
+  "cse",
+  "cse entrepris",
+  "csp",
+  "dan du le paie retard salair",
+  "dancienet prim",
+  "de delai desai et period prevenanc ruptur",
+  "de delai desai period prevenanc",
+  "de deleg heur",
+  "de demision du dure preavi",
+  "de demision letr",
+  "de deplac domicil frai trajet travail",
+  "de et maintien malad salair",
+  "de fich paie",
+  "de frai indemnit repa",
+  "de gril salair",
+  "de indemnit licenc",
+  "de letr licenc model type",
+  "de paus temp",
+  "dece employeu",
+  "demenag",
+  "dimanch le travail",
+  "disciplinair pouvoi",
+  "du dure preavi",
+  "enfant malad",
+  "et mutuel retrait",
+  "faut licenc pour",
+  "fer jour travail",
+  "harcel moral",
+  "heur non paye suplementair",
+  "impay salair",
+  "indemnit licenc",
+  "indemnit repa",
+  "medical travail visit",
+  "minimum salair",
+  "mitemp therapeut",
+  "preavi",
+  "prevoyanc",
+  "retard",
+];
+
+export enum PresearchClass {
+  CC = "cc",
+  CC_FOUND = "cc_found",
+  KEYWORD = "keyword",
+  KEYWORD_STD = "keyword_standard",
+  ARTICLE = "article",
+  THEME = "theme",
+  NATURAL = "natural",
+  UNKNOWN = "unknown",
+}
+
 export type SearchResult = {
   cdtnId: string;
   shortTitle?: string;
   title: string;
   slug: string;
   source: SourceKeys;
+  presearch: PresearchClass;
 };
 
 // temporary
@@ -24,18 +126,21 @@ const defaultIdccResults: SearchResult[] = [
     slug: "convention-collective",
     title: "Trouver sa convention collective",
     source: SOURCES.TOOLS,
+    presearch: PresearchClass.CC_FOUND,
   },
   {
     cdtnId: "b1041bd7ca",
     slug: "convention-collective",
     title: "Convention collective",
     source: SOURCES.SHEET_SP,
+    presearch: PresearchClass.CC_FOUND,
   },
   {
     cdtnId: "825821a69e",
     slug: "comment-consulter-une-convention-collective",
     title: "Comment consulter une convention collective ?",
     source: SOURCES.SHEET_SP,
+    presearch: PresearchClass.CC_FOUND,
   },
 ];
 
@@ -87,10 +192,13 @@ const isCC = async (query: string): Promise<SearchResult[]> => {
     // TODO remove "theme"-like tokens when performing CC search
     // or only select tokens that appear in all conventions titles
 
-    const found = await ccSearch(searchTokens.join(" "), CC_SCORE_THRESHOLD);
+    const found = await ccSearch(
+      searchTokens.join(" "),
+      CC_SCORE_THRESHOLD - 10
+    );
 
     if (found) {
-      return [found];
+      return [{ ...found, presearch: PresearchClass.CC }];
     } else {
       // case where CC related content but no match
       return defaultIdccResults;
@@ -98,7 +206,7 @@ const isCC = async (query: string): Promise<SearchResult[]> => {
   } else {
     const foundNoCC = await ccSearch(query, CC_SCORE_THRESHOLD);
     if (foundNoCC) {
-      return [foundNoCC];
+      return [{ ...foundNoCC, presearch: PresearchClass.CC }];
     } else {
       return [];
     }
@@ -127,6 +235,7 @@ const getThemes = (
         slug: match.theme.slug,
         cdtnId: match.theme.cdtnId,
         source: match.theme.source,
+        presearch: PresearchClass.THEME,
       }
     : undefined;
 };
@@ -171,7 +280,7 @@ const fillup = async (
   }
 
   // if not enough prequalified results, we also trigger ES search
-  if (!prequalifiedResults || prequalifiedResults.length + matches.length < n) {
+  if (documents.length < n) {
     const docSearch = getSearchBody(
       query,
       n - prequalifiedResults.length,
@@ -201,7 +310,7 @@ const fillup = async (
     .slice(0, n);
 };
 
-const getArticles = async (query): Promise<SearchResult | undefined> => {
+const getArticles = async (query): Promise<SearchResult[]> => {
   // proper references
   let refs: { text: string }[] = extractReferences(query);
 
@@ -214,7 +323,7 @@ const getArticles = async (query): Promise<SearchResult | undefined> => {
   }
 
   // only retrieve the first matching
-  if (refs.length > 0) {
+  if (refs.length > 0 && refs[0].text.length > 4) {
     const match = refs[0];
 
     const hits = await elasticsearchClient.search({
@@ -224,11 +333,15 @@ const getArticles = async (query): Promise<SearchResult | undefined> => {
 
     return extractHits(hits).map((h) => ({
       ...h._source,
+      presearch: PresearchClass.ARTICLE,
     }));
   } else {
-    return undefined;
+    return [];
   }
 };
+
+const isStandardKeyword = (pQuery: string[]) =>
+  keyword_std.includes(pQuery.join(" "));
 
 const isNatural = (query: string) => {
   const tokens = fingerprint(query);
@@ -254,8 +367,9 @@ const isNatural = (query: string) => {
 
 export const presearch = async (
   query: string,
-  themes: SearchResult[]
-): Promise<SearchResult[]> => {
+  themes: SearchResult[],
+  allClasses: Boolean
+): Promise<{ results: SearchResult[]; classes: PresearchClass[] }> => {
   // const results: StructuredQueryLabel[] = [];
   const results: SearchResult[] = [];
 
@@ -264,9 +378,9 @@ export const presearch = async (
   const idccResult = await isCC(query);
   results.push(...idccResult);
 
-  const article = await getArticles(query);
-  if (article) {
-    results.push(article);
+  const articles = await getArticles(query);
+  if (articles) {
+    results.push(...articles);
   }
 
   const matchingTheme = getThemes(pQuery, themes);
@@ -274,23 +388,27 @@ export const presearch = async (
     results.push(matchingTheme);
   }
 
-  // const matchingStd = getStandardKeyword(pQuery);
-  // if (matchingStd) {
-  //   results.push(matchingStd);
-  // }
+  const classes = results.map((r) => r.presearch);
 
-  // if (results.length == 0) {
-  //   const natural = isNatural(query);
-  //   results.push({
-  //     label: natural ? LabelEnum.NATURAL : LabelEnum.KEYWORD,
-  //     details: query,
-  //   });
-  // }
+  if (allClasses) {
+    const matchingStd = isStandardKeyword(pQuery);
+    if (matchingStd && classes.length == 0) {
+      classes.push(PresearchClass.KEYWORD_STD);
+    }
+
+    if (isNatural(query)) {
+      classes.push(PresearchClass.NATURAL);
+    }
+  }
+
+  if (classes.length < 1) {
+    classes.push(PresearchClass.UNKNOWN);
+  }
 
   if (results.length < 4) {
     const filled = await fillup(query, 4, results);
-    return filled;
+    return { results: filled, classes };
   } else {
-    return results;
+    return { results, classes };
   }
 };

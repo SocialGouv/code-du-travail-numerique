@@ -9,5 +9,5 @@ export const fetchSearchResults = async (
     throw new Error("Failed to fetch presearch results");
   }
 
-  return response.json();
+  return response.json().then((r) => r.results);
 };

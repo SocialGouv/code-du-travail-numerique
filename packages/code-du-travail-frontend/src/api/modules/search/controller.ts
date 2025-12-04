@@ -60,6 +60,7 @@ export class SearchController {
 
   public async presearch() {
     const query = this.searchParams.get("q");
+    const allClasses = this.searchParams.get("ac") == "true";
 
     if (!query) {
       return NextResponse.json(
@@ -81,7 +82,7 @@ export class SearchController {
       })
       .then((r) => extractHits(r).map((t) => t._source));
 
-    const parsed = await presearch(query, themes);
+    const parsed = await presearch(query, themes, allClasses);
     return NextResponse.json(parsed, {
       status: 200,
       headers: {
