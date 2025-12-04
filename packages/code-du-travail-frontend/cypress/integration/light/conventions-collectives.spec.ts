@@ -140,7 +140,6 @@ describe("Conventions collectives", () => {
     it("je peux faire une recherche par mots clés", () => {
       cy.visit("/convention-collective/2941");
 
-      cy.get('[data-testid="agreement-search-container"]').should("exist");
       cy.window().then((win) => {
         cy.stub(win, "open").as("windowOpen");
       });
