@@ -20,17 +20,17 @@ WORKDIR /app
 
 RUN corepack enable && corepack prepare pnpm@10.0.0 --activate
 
-# Copy lockfiles
+# Copy lockfiles and package.json first
 COPY ./pnpm-lock.yaml ./pnpm-workspace.yaml ./.npmrc ./
 
 # Copy pnpm store from deps stage
 COPY --from=deps /root/.local/share/pnpm /root/.local/share/pnpm
 
-# Install dependencies offline
-RUN pnpm install --frozen-lockfile --offline
-
-# Copy source code
+# Copy source code before install (needed for workspace packages)
 COPY . ./
+
+# Install dependencies (using the fetched store)
+RUN pnpm install --frozen-lockfile
 
 ENV CI=true
 ENV HUSKY=0
