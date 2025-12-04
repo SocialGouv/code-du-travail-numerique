@@ -74,11 +74,12 @@ ENV NEXT_PUBLIC_ES_INDEX_PREFIX=$NEXT_PUBLIC_ES_INDEX_PREFIX
 ARG NEXT_PUBLIC_BRANCH_NAME_SLUG
 ENV NEXT_PUBLIC_BRANCH_NAME_SLUG=$NEXT_PUBLIC_BRANCH_NAME_SLUG
 
-# Build and prune
+# Build and deploy
 RUN --mount=type=secret,id=SENTRY_AUTH_TOKEN,env=SENTRY_AUTH_TOKEN \
   --mount=type=secret,id=ELASTICSEARCH_TOKEN_API,env=ELASTICSEARCH_TOKEN_API \
   --mount=type=secret,id=ELASTICSEARCH_URL,env=ELASTICSEARCH_URL \
-  pnpm build
+  pnpm build && \
+  pnpm deploy --filter=@cdt/frontend --prod /prod/app
 
 # runner stage: no corepack/pnpm, just Node runtime
 FROM node:$NODE_VERSION AS runner
@@ -92,23 +93,13 @@ WORKDIR /app
 
 USER 1000
 
-COPY --from=builder --chown=1000:1000 /app/packages/code-du-travail-frontend/.next /app/packages/code-du-travail-frontend/.next
-COPY --from=builder --chown=1000:1000 /app/packages/code-du-travail-frontend/package.json /app/packages/code-du-travail-frontend/package.json
-COPY --from=builder --chown=1000:1000 /app/packages/code-du-travail-frontend/public /app/packages/code-du-travail-frontend/public
-COPY --from=builder --chown=1000:1000 /app/packages/code-du-travail-frontend/next.config.mjs /app/packages/code-du-travail-frontend/next.config.mjs
-COPY --from=builder --chown=1000:1000 /app/packages/code-du-travail-frontend/instrumentation.ts /app/packages/code-du-travail-frontend/instrumentation.ts
-COPY --from=builder --chown=1000:1000 /app/packages/code-du-travail-frontend/instrumentation-client.ts /app/packages/code-du-travail-frontend/instrumentation-client.ts
-COPY --from=builder --chown=1000:1000 /app/packages/code-du-travail-frontend/sentry.server.config.ts /app/packages/code-du-travail-frontend/sentry.server.config.ts
-COPY --from=builder --chown=1000:1000 /app/packages/code-du-travail-frontend/sentry.edge.config.ts /app/packages/code-du-travail-frontend/sentry.edge.config.ts
-COPY --from=builder --chown=1000:1000 /app/packages/code-du-travail-frontend/redirects.json /app/packages/code-du-travail-frontend/redirects.json
-COPY --from=builder --chown=1000:1000 /app/packages/code-du-travail-frontend/scripts /app/packages/code-du-travail-frontend/scripts
-COPY --from=builder --chown=1000:1000 /app/node_modules /app/node_modules
+COPY --from=builder --chown=1000:1000 /prod/app /app
 
-RUN mkdir -p /app/packages/code-du-travail-frontend/.next/cache/images && chown -R 1000:1000 /app/packages/code-du-travail-frontend/.next
+RUN mkdir -p /app/.next/cache/images && chown -R 1000:1000 /app/.next
 
-WORKDIR /app/packages/code-du-travail-frontend
+WORKDIR /app
 
-CMD ["node", "../../node_modules/next/dist/bin/next", "start"]
+CMD ["node", "node_modules/next/dist/bin/next", "start"]
 
 ARG NEXT_PUBLIC_SENTRY_URL
 ARG NEXT_PUBLIC_SENTRY_ORG
