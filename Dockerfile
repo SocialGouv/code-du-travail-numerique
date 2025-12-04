@@ -71,7 +71,7 @@ RUN --mount=type=secret,id=SENTRY_AUTH_TOKEN,env=SENTRY_AUTH_TOKEN \
   --mount=type=secret,id=ELASTICSEARCH_TOKEN_API,env=ELASTICSEARCH_TOKEN_API \
   --mount=type=secret,id=ELASTICSEARCH_URL,env=ELASTICSEARCH_URL \
   pnpm build && \
-  pnpm --filter @cdt/frontend deploy --prod --ignore-scripts /app/deploy && \
+  pnpm --filter @cdt/frontend deploy --prod --ignore-scripts --legacy /app/deploy && \
   rm -rf /app/deploy/.pnpm /app/deploy/.modules.yaml /app/deploy/.cache
 
 # runner stage: no corepack/pnpm, just Node runtime
