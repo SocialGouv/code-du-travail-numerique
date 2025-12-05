@@ -11,7 +11,7 @@ import { css } from "@styled-system/css";
 import Link from "../Link";
 import { redirect } from "next/navigation";
 
-export type AutocompleteProps<K> = InputProps & {
+type AutocompleteProps<K> = InputProps & {
   onChange?: (value: K | undefined, suggestions?: K[]) => void;
   onError?: (value: string) => void;
   onSearch?: (query: string, results: K[]) => void;
@@ -26,9 +26,10 @@ export type AutocompleteProps<K> = InputProps & {
   placeholder?: string;
   inputRef?: Ref<HTMLInputElement>;
   id?: string;
+  highlightQuery?: boolean;
 };
 
-export const Autocomplete = <K,>({
+export const AutocompleteV2 = <K,>({
   onChange,
   onSearch,
   onError,
@@ -47,6 +48,8 @@ export const Autocomplete = <K,>({
   placeholder,
   id,
   inputRef: externalInputRef,
+  highlightQuery = false,
+  hideLabel,
 }: AutocompleteProps<K>) => {
   const [loading, setLoading] = useState(false);
   const internalInputRef = useRef<HTMLInputElement | null>(null);
@@ -63,13 +66,40 @@ export const Autocomplete = <K,>({
     state: DownshiftState<K>,
     changes: StateChangeOptions<K>
   ) => {
-    if (changes.type === Downshift.stateChangeTypes.blurInput) {
+    if (
+      changes.type === Downshift.stateChangeTypes.blurInput ||
+      changes.type === Downshift.stateChangeTypes.mouseUp ||
+      changes.type === Downshift.stateChangeTypes.touchEnd
+    ) {
       return {
         ...changes,
         inputValue: state.inputValue,
       };
     }
     return changes;
+  };
+  const renderHighlightedLabel = (item: K, query: string): React.ReactNode => {
+    const label = displayLabel(item);
+
+    if (!query || !label) return label;
+
+    const lowerQuery = query.toLowerCase();
+    const lowerLabel = label.toLowerCase();
+    const index = lowerLabel.indexOf(lowerQuery);
+
+    if (index === -1) return label;
+
+    const beforeMatch = label.substring(0, index);
+    const match = label.substring(index, index + query.length);
+    const afterMatch = label.substring(index + query.length);
+
+    return (
+      <>
+        {beforeMatch}
+        {match}
+        <strong>{afterMatch}</strong>
+      </>
+    );
   };
 
   return (
@@ -110,25 +140,31 @@ export const Autocomplete = <K,>({
       onInputValueChange={async (value, stateAndHelpers) => {
         if (!isFocusedRef.current) return;
 
-        if (!stateAndHelpers.selectedItem) {
-          onInputValueChange?.(value);
+        onInputValueChange?.(value);
 
-          if (!value) {
-            onSearch?.(value, []);
-            return;
-          }
+        if (!value) {
+          onSearch?.(value, []);
+          setSuggestions([]);
+          return;
+        }
 
-          try {
-            setLoading(true);
-            const results = await search(value);
-            onSearch?.(value, results);
-            setSuggestions(results);
-          } catch (error) {
-            onError?.(error);
-            setSuggestions([]);
-          } finally {
-            setLoading(false);
-          }
+        if (
+          stateAndHelpers.selectedItem &&
+          displayLabel(stateAndHelpers.selectedItem) === value
+        ) {
+          return;
+        }
+
+        try {
+          setLoading(true);
+          const results = await search(value);
+          onSearch?.(value, results);
+          setSuggestions(results);
+        } catch (error) {
+          onError?.(error);
+          setSuggestions([]);
+        } finally {
+          setLoading(false);
         }
       }}
       onChange={(item) => {
@@ -163,8 +199,13 @@ export const Autocomplete = <K,>({
         }
 
         const inputProps = getInputProps({
-          onFocus: (_e: React.FocusEvent<HTMLInputElement>) => {
+          onFocus: (e: React.FocusEvent<HTMLInputElement>) => {
             isFocusedRef.current = true;
+            const input = e.target;
+            const length = input.value.length;
+            setTimeout(() => {
+              input.setSelectionRange(length, length);
+            }, 0);
           },
           onBlur: (_e: React.FocusEvent<HTMLInputElement>) => {
             isFocusedRef.current = false;
@@ -178,10 +219,13 @@ export const Autocomplete = <K,>({
         };
 
         return (
-          <div className={`${searchContainer}`}>
+          <div
+            className={`${searchContainer}`}
+            {...getRootProps({ refKey: "ref" }, { suppressRefError: true })}
+          >
             <Input
               nativeLabelProps={labelProps}
-              hideLabel={isSearch}
+              hideLabel={hideLabel}
               addon={
                 <>
                   <div className={addonBlock}>
@@ -234,8 +278,6 @@ export const Autocomplete = <K,>({
                     ).current = el;
                   }
                 },
-                role: getRootProps().role,
-                "aria-expanded": getRootProps()["aria-expanded"],
                 ...inputProps,
                 "aria-labelledby": undefined,
               }}
@@ -247,6 +289,7 @@ export const Autocomplete = <K,>({
               classes={{
                 wrap: isSearch ? inputSearchNoMarginTop : undefined,
                 root: rootInputCss,
+                nativeInputOrTextArea: inputStyle,
               }}
             />
             {statusMessage && (
@@ -275,10 +318,16 @@ export const Autocomplete = <K,>({
                     >
                       {lineAsLink ? (
                         <Link href={lineAsLink(item)} className={link}>
-                          {displayLabel(item)}
+                          {highlightQuery
+                            ? renderHighlightedLabel(item, inputValue || "")
+                            : displayLabel(item)}
                         </Link>
                       ) : (
-                        <>{displayLabel(item)}</>
+                        <>
+                          {highlightQuery
+                            ? renderHighlightedLabel(item, inputValue || "")
+                            : displayLabel(item)}
+                        </>
                       )}
                     </li>
                   ))
@@ -330,11 +379,30 @@ const autocompleteListContainer = css({
 
 const rootInputCss = css({
   width: "100%",
+  height: "100%",
 });
 
-export const suggestion = css({
+const inputStyle = css({
+  padding: "0.75rem 3rem 0.75rem 1rem!",
+  width: "100%!",
+  boxSizing: "border-box!",
+  fontSize: "1rem!",
+  lineHeight: "1.5!",
+  marginBottom: "0!",
+  borderColor: "var(--border-default-grey)!",
+});
+
+const suggestion = css({
   cursor: "pointer",
-  color: "var(--text-action-high-blue-france)",
+  color: "var(--text-default-grey)",
+  transition: "background-color 0.2s ease",
+  borderBottom: "1px solid var(--border-default-grey)",
+  _last: {
+    borderBottom: "none",
+  },
+  _hover: {
+    bg: "var(--background-default-grey-hover)",
+  },
 });
 
 const addonBlock = css({
@@ -345,18 +413,15 @@ const addonBlock = css({
 });
 
 const buttonClose = css({
-  _before: {
-    width: "18px!",
-    height: "18px!",
-  },
+  height: "100%!",
+  color: "var(--text-default-grey)!",
   _hover: {
-    backgroundColor: "unset!",
+    backgroundColor: "transparent!",
   },
 });
 
 const isHighlighted = css({
   bg: "var(--background-default-grey-hover)",
-  fontWeight: "bold",
 });
 
 const link = css({

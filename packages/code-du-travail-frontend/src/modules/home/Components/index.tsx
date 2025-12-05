@@ -4,3 +4,4 @@ export * from "./HomeSearch";
 export * from "./SectionContainer";
 export * from "./QuestionAnswers";
 export * from "./QuestionBubble";
+export * from "./HomeSearchV2";

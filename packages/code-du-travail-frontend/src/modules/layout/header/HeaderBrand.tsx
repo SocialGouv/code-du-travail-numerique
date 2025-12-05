@@ -3,7 +3,11 @@ import { fr } from "@codegouvfr/react-dsfr";
 import Image from "next/image";
 import Link from "src/modules/common/Link";
 
-export const HeaderBrand = () => {
+type HeaderBrandProps = {
+  onSearchClick?: () => void;
+};
+
+export const HeaderBrand = ({ onSearchClick }: HeaderBrandProps) => {
   return (
     <div className={fr.cx("fr-header__brand", "fr-enlarge-link")}>
       <div className={fr.cx("fr-header__brand-top")}>
@@ -35,6 +39,7 @@ export const HeaderBrand = () => {
             aria-controls="fr-header-search-modal"
             title="Rechercher"
             data-fr-js-modal-button="true"
+            onClick={onSearchClick}
           >
             Rechercher
           </button>

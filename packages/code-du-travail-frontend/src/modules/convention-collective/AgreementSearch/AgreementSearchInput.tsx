@@ -80,6 +80,7 @@ export const AgreementSearchInput = ({
       <div className={fr.cx("fr-mt-2w")}>
         <div className={fr.cx("fr-col-12")}>
           <Autocomplete<Agreement>
+            id="agreement-search-autocomplete"
             defaultValue={selectedAgreement}
             dataTestId="AgreementSearchAutocomplete"
             hintText="Ex : transport routier ou 1486"

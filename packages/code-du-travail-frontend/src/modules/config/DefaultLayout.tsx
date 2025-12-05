@@ -16,6 +16,7 @@ import {
 } from "../analytics";
 import { usePathname } from "next/navigation";
 import { MatomoAnalytics } from "./MatomoAnalytics";
+import { SearchModalProvider } from "../recherche/modal/SearchModalContext";
 
 type Props = {
   children: React.ReactNode;
@@ -65,13 +66,15 @@ export default function DefaultLayout({
           Link={Link}
           defaultColorScheme={defaultColorScheme}
         >
-          {children}
-          {showCookieBanner && (
-            <ConsentManager
-              adsEnabled={isAdsEnabled()}
-              heatmapEnabled={isHeatmapEnabled()}
-            />
-          )}
+          <SearchModalProvider>
+            {children}
+            {showCookieBanner && (
+              <ConsentManager
+                adsEnabled={isAdsEnabled()}
+                heatmapEnabled={isHeatmapEnabled()}
+              />
+            )}
+          </SearchModalProvider>
         </DsfrProvider>
         <MatomoAnalytics heatmapEnabled={heatMapEnabled} />
         {ENV === "development" && <SentryTest />}

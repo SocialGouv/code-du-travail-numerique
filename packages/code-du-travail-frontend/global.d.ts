@@ -1,6 +1,11 @@
 // / <reference types="next" />
 // / <reference types="next/types/global" />
 
+declare module "*.svg" {
+  const content: any;
+  export default content;
+}
+
 interface Dimensions {
   dimension1?: string;
   dimension2?: string;
