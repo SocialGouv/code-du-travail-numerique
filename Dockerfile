@@ -72,8 +72,8 @@ RUN --mount=type=secret,id=SENTRY_AUTH_TOKEN,env=SENTRY_AUTH_TOKEN \
   --mount=type=secret,id=ELASTICSEARCH_URL,env=ELASTICSEARCH_URL \
   pnpm build
 
-# Deploy with legacy flag (disable minimum-release-age check for old packages)
-RUN pnpm --filter @cdt/frontend deploy --prod --ignore-scripts --legacy /app/deploy && \
+# Deploy (reads .npmrc for minimum-release-age-exclude configuration)
+RUN pnpm --filter @cdt/frontend deploy --prod --ignore-scripts /app/deploy && \
   rm -rf /app/deploy/.pnpm /app/deploy/.modules.yaml /app/deploy/.cache
 
 # runner stage: no corepack/pnpm, just Node runtime
