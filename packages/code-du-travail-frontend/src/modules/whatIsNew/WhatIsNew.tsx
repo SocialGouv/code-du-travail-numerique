@@ -15,7 +15,7 @@ export const WhatIsNew = ({ month }: Props) => {
       <div className={fr.cx("fr-mb-5w")}>
         <div className={fr.cx("fr-mb-5w", "fr-mt-3w")}>
           <h1 id="quoi-de-neuf-title" className={fr.cx("fr-h2", "fr-mb-3w")}>
-            Quoi de neuf sur le code du travail&nbsp;?
+            Quoi de neuf sur le code du travail numérique&nbsp;?
           </h1>
           <p className={fr.cx("fr-text--md")}>
             Sont listé ici les principaux changements sur le code du travail

@@ -11,7 +11,9 @@ describe("Pages quoi de neuf ?", () => {
       .invoke("text")
       .then((text) => {
         const normalized = text.replace(/\u00A0/g, " ");
-        expect(normalized).to.eq("Quoi de neuf sur le code du travail ?");
+        expect(normalized).to.eq(
+          "Quoi de neuf sur le code du travail numérique ?"
+        );
       });
   });
 });

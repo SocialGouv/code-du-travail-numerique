@@ -82,7 +82,7 @@ describe("WhatIsNew – intégration complète avec fetchWhatIsNewMonth mocké",
 
     expect(
       screen.getByRole("heading", {
-        name: /Quoi de neuf sur le code du travail/i,
+        name: /Quoi de neuf sur le code du travail numérique/i,
       })
     ).toBeInTheDocument();
 

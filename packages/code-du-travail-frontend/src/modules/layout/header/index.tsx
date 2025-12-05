@@ -26,7 +26,7 @@ export const Header = () => {
             currentPath.startsWith("/quoi-de-neuf"),
           menuLinks: [
             {
-              text: "Quoi de neuf sur le code du travail ?",
+              text: "Quoi de neuf sur le code du travail numérique ?",
               linkProps: {
                 href: "/quoi-de-neuf",
               },
