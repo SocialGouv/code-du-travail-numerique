@@ -91,10 +91,10 @@ export const CookieConsentDSFR = ({ heatmapEnabled, adsEnabled }: Props) => {
                 Ce site utilise des cookies
               </p>
               <p className="fr-consent-banner__desc">
-                Nous utilisons des cookies pour mesurer l'audience et
-                l'interaction des utilisateurs avec notre site. Les cookies de
-                mesure d'audience sont nécessaires au bon fonctionnement du
-                site. Vous pouvez choisir d'accepter ou de refuser les cookies
+                Nous utilisons des cookies pour mesurer l'&apos;'audience et
+                l&apos;interaction des utilisateurs avec notre site. Les cookies de
+                mesure d&apos;audience sont nécessaires au bon fonctionnement du
+                site. Vous pouvez choisir d&apos;accepter ou de refuser les cookies
                 de suivi des interactions des utilisateurs.
               </p>
             </div>
@@ -162,12 +162,12 @@ export const CookieConsentDSFR = ({ heatmapEnabled, adsEnabled }: Props) => {
                   Paramètres des cookies
                 </h1>
                 <p>
-                  Nous utilisons des cookies pour mesurer l'audience et
-                  l'interaction des utilisateurs avec notre site. Les cookies de
-                  mesure d'audience sont nécessaires au bon fonctionnement du
-                  site. Vous pouvez choisir d'accepter ou de refuser les cookies
+                  Nous utilisons des cookies pour mesurer l&apos;audience et
+                  l&apos;interaction des utilisateurs avec notre site. Les cookies de
+                  mesure d&apos;audience sont nécessaires au bon fonctionnement du
+                  site. Vous pouvez choisir d&apos;accepter ou de refuser les cookies
                   de suivi des interactions des utilisateurs. Pour plus
-                  d'informations, vous pouvez consulter notre{" "}
+                  d&apos;informations, vous pouvez consulter notre{" "}
                   <Link href="/politique-confidentialite">
                     politique de confidentialité
                   </Link>
@@ -176,18 +176,18 @@ export const CookieConsentDSFR = ({ heatmapEnabled, adsEnabled }: Props) => {
 
                 <fieldset className={fr.cx("fr-fieldset")}>
                   <legend className={fr.cx("fr-fieldset__legend")}>
-                    Cookies de mesure d'audience
+                    Cookies de mesure d&apos;audience
                   </legend>
                   <ToggleSwitch
                     label="Mesure d'audience - Obligatoire"
                     checked={consent.matomo}
-                    onChange={() => {}}
+                    onChange={() => { }}
                     disabled
                     style={{ width: "100%" }}
                   />
                   <p className={fr.cx("fr-info-text")}>
-                    Ces cookies nous permettent d'établir des statistiques de
-                    fréquentation de notre site et d'améliorer ses performances.
+                    Ces cookies nous permettent d&apos;établir des statistiques de
+                    fréquentation de notre site et d&apos;améliorer ses performances.
                   </p>
                 </fieldset>
 
@@ -202,7 +202,7 @@ export const CookieConsentDSFR = ({ heatmapEnabled, adsEnabled }: Props) => {
                       onChange={() => handleConsentChange("sea")}
                     />
                     <p className={fr.cx("fr-info-text")}>
-                      Ces cookies nous permettent de suivre l'efficacité de nos
+                      Ces cookies nous permettent de suivre l&apos;efficacité de nos
                       campagnes publicitaires sur les moteurs de recherche.
                     </p>
                   </fieldset>
@@ -222,7 +222,7 @@ export const CookieConsentDSFR = ({ heatmapEnabled, adsEnabled }: Props) => {
                     <p className={fr.cx("fr-info-text")}>
                       Cette fonctionnalité nous permet de visualiser comment les
                       utilisateurs interagissent avec notre site (clics,
-                      mouvements de souris) pour améliorer l'expérience
+                      mouvements de souris) pour améliorer l&apos;expérience
                       utilisateur.
                     </p>
                   </fieldset>
@@ -293,7 +293,6 @@ export const CookieConsentDSFR = ({ heatmapEnabled, adsEnabled }: Props) => {
   );
 };
 
-// CSS variables
 const modalBackdrop = css({
   position: "fixed",
   top: 0,
