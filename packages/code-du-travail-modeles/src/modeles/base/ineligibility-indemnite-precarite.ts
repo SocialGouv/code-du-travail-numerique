@@ -1,8 +1,6 @@
 import type { IIndemnitePrecariteIneligibility } from "../common/types/ineligibility";
 
-export class IneligibilityLegalIndemnitePrecarite
-  implements IIndemnitePrecariteIneligibility
-{
+export class IneligibilityLegalIndemnitePrecarite implements IIndemnitePrecariteIneligibility {
   getCDDIneligibility(
     args: Record<string, string | undefined>
   ): string | undefined {

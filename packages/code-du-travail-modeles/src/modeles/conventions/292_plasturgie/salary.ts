@@ -6,9 +6,7 @@ import type {
 } from "../../common";
 import { nonNullable, rankByMonthArrayDescFrench, sum } from "../../common";
 
-export class ReferenceSalary292
-  implements IReferenceSalary<SupportedCc.IDCC0292>
-{
+export class ReferenceSalary292 implements IReferenceSalary<SupportedCc.IDCC0292> {
   /**
    * "- soit S/12
    * S : total des salaires perçus lors des 12 derniers mois précédant le jour de l'envoi de la lettre de licenciement (brut)

@@ -23,9 +23,7 @@ export type CC573ReferenceSalaryProps = {
   licenciementEco: QuestionOuiNonWithQuote;
 };
 
-export class ReferenceSalary573
-  implements IReferenceSalary<SupportedCc.IDCC0573>
-{
+export class ReferenceSalary573 implements IReferenceSalary<SupportedCc.IDCC0573> {
   mapSituation(
     args: Record<string, string | undefined>
   ): ReferenceSalaryProps<SupportedCc.IDCC0573> {

@@ -1,8 +1,6 @@
 import type { IIndemniteDepartIneligibility } from "../common/types/ineligibility";
 
-export class IneligibilityRuptureConventionnelle
-  implements IIndemniteDepartIneligibility
-{
+export class IneligibilityRuptureConventionnelle implements IIndemniteDepartIneligibility {
   getContractIneligibility(
     args: Record<string, string | undefined>
   ): string | undefined {

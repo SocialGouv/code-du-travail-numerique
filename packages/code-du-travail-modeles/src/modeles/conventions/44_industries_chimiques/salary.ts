@@ -19,9 +19,7 @@ export type CC44ReferenceSalaryProps = {
   lastMonthSalary?: SalaryPeriods;
 };
 
-export class ReferenceSalary44
-  implements IReferenceSalary<SupportedCc.IDCC0044>
-{
+export class ReferenceSalary44 implements IReferenceSalary<SupportedCc.IDCC0044> {
   mapSituation(
     args: Record<string, string | undefined>
   ): ReferenceSalaryProps<SupportedCc.IDCC0044> {

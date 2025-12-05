@@ -10,9 +10,7 @@ export type LegalReferenceSalaryProps = {
   salaires: SalaryPeriods[];
 };
 
-export class ReferenceSalaryLegal
-  implements IReferenceSalary<SupportedCc.default>
-{
+export class ReferenceSalaryLegal implements IReferenceSalary<SupportedCc.default> {
   /**
    * Règle :
    * - soit 1/12*S1

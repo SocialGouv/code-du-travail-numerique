@@ -1,19 +1,35 @@
 ARG NODE_VERSION=24.10.0-alpine
-# dist
-FROM node:$NODE_VERSION AS dist
 
-WORKDIR /dep
+# builder stage: install dependencies and build
+FROM node:$NODE_VERSION AS builder
 
-# Copy lockfile
-COPY ./yarn.lock ./.yarnrc.yml ./
-COPY .yarn .yarn
+WORKDIR /app
 
-# Install packages
-RUN yarn fetch --immutable
+RUN corepack enable && corepack prepare pnpm@10.0.0 --activate
 
+# Copy lockfiles and config for better layer caching
+COPY pnpm-lock.yaml pnpm-workspace.yaml package.json lerna.json .npmrc ./
+
+# Fetch dependencies (frozen-lockfile contains all package info)
+RUN pnpm fetch --frozen-lockfile
+
+# Copy package.json files (needed for workspace structure)
+COPY packages/code-du-travail-frontend/package.json ./packages/code-du-travail-frontend/
+COPY packages/code-du-travail-modeles/package.json ./packages/code-du-travail-modeles/
+COPY packages/code-du-travail-utils/package.json ./packages/code-du-travail-utils/
+
+# Install dependencies (uses fetched packages, cached if package.json unchanged)
+RUN pnpm install --frozen-lockfile --offline
+
+# Copy source code (after install to maximize cache efficiency)
 COPY . ./
 
+ENV HUSKY=0
+ENV GENERATE_SOURCEMAP=true
 ENV NEXT_PUBLIC_APP_ENV=production
+ENV NODE_ENV=production
+ENV NEXT_TELEMETRY_DISABLED=1
+
 # Add build-arg from github actions
 ARG NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT
 ENV NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT=$NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT
@@ -33,7 +49,6 @@ ARG NEXT_PUBLIC_COMMIT
 ENV NEXT_PUBLIC_COMMIT=$NEXT_PUBLIC_COMMIT
 ARG NEXT_PUBLIC_SITE_URL
 ENV NEXT_PUBLIC_SITE_URL=$NEXT_PUBLIC_SITE_URL
-
 ARG NEXT_PUBLIC_SENTRY_ENV
 ENV NEXT_PUBLIC_SENTRY_ENV=$NEXT_PUBLIC_SENTRY_ENV
 ARG NEXT_PUBLIC_SENTRY_URL
@@ -46,59 +61,44 @@ ENV NEXT_PUBLIC_SENTRY_ORG=$NEXT_PUBLIC_SENTRY_ORG
 ENV NEXT_PUBLIC_SENTRY_PROJECT=$NEXT_PUBLIC_SENTRY_PROJECT
 ENV NEXT_PUBLIC_SENTRY_DSN=$NEXT_PUBLIC_SENTRY_DSN
 ENV NEXT_PUBLIC_SENTRY_RELEASE=$NEXT_PUBLIC_SENTRY_RELEASE
-
 ARG NEXT_PUBLIC_ES_INDEX_PREFIX
 ENV NEXT_PUBLIC_ES_INDEX_PREFIX=$NEXT_PUBLIC_ES_INDEX_PREFIX
 ARG NEXT_PUBLIC_BRANCH_NAME_SLUG
 ENV NEXT_PUBLIC_BRANCH_NAME_SLUG=$NEXT_PUBLIC_BRANCH_NAME_SLUG
 
-# Enable source map generation during build
-ENV GENERATE_SOURCEMAP=true \
-  NODE_ENV=production
-
+# Build
 RUN --mount=type=secret,id=SENTRY_AUTH_TOKEN,env=SENTRY_AUTH_TOKEN \
   --mount=type=secret,id=ELASTICSEARCH_TOKEN_API,env=ELASTICSEARCH_TOKEN_API \
   --mount=type=secret,id=ELASTICSEARCH_URL,env=ELASTICSEARCH_URL \
-  export GENERATE_SOURCEMAP=true && \
-  yarn build && \
-  yarn workspaces focus --production --all && \
-  yarn cache clean
+  pnpm build
 
-# app
-FROM node:$NODE_VERSION
+# Deploy (reads .npmrc for minimum-release-age-exclude configuration)
+RUN pnpm --filter @cdt/frontend deploy --prod --ignore-scripts /app/deploy && \
+  rm -rf /app/deploy/.pnpm /app/deploy/.modules.yaml /app/deploy/.cache
+
+# runner stage: no corepack/pnpm, just Node runtime
+FROM node:$NODE_VERSION AS runner
 
 RUN apk --update --no-cache add ca-certificates && apk upgrade
 
 ENV NEXT_PUBLIC_APP_ENV=production
+ENV NODE_ENV=production
 
 WORKDIR /app
 
+# Copy deployed standalone files (with real node_modules, not symlinks)
+COPY --from=builder --chown=1000:1000 /app/deploy /app
+
+# Copy built artifacts from original location
+COPY --from=builder --chown=1000:1000 /app/packages/code-du-travail-frontend/.next /app/.next
+COPY --from=builder --chown=1000:1000 /app/packages/code-du-travail-frontend/scripts /app/scripts
+
+# Clean up unnecessary files to reduce image size
+RUN rm -rf /app/.next/cache/webpack && \
+  mkdir -p /app/.next/cache/images && \
+  chown -R 1000:1000 /app
+
 USER 1000
 
-COPY --from=dist --chown=1000:1000 /dep/packages/code-du-travail-frontend/.next /app/packages/code-du-travail-frontend/.next
-COPY --from=dist --chown=1000:1000 /dep/packages/code-du-travail-frontend/package.json /app/packages/code-du-travail-frontend/package.json
-COPY --from=dist --chown=1000:1000 /dep/packages/code-du-travail-frontend/public /app/packages/code-du-travail-frontend/public
-COPY --from=dist --chown=1000:1000 /dep/packages/code-du-travail-frontend/next.config.mjs /app/packages/code-du-travail-frontend/next.config.mjs
-COPY --from=dist --chown=1000:1000 /dep/packages/code-du-travail-frontend/instrumentation.ts /app/packages/code-du-travail-frontend/instrumentation.ts
-COPY --from=dist --chown=1000:1000 /dep/packages/code-du-travail-frontend/instrumentation-client.ts /app/packages/code-du-travail-frontend/instrumentation-client.ts
-COPY --from=dist --chown=1000:1000 /dep/packages/code-du-travail-frontend/sentry.server.config.ts /app/packages/code-du-travail-frontend/sentry.server.config.ts
-COPY --from=dist --chown=1000:1000 /dep/packages/code-du-travail-frontend/sentry.edge.config.ts /app/packages/code-du-travail-frontend/sentry.edge.config.ts
-COPY --from=dist --chown=1000:1000 /dep/packages/code-du-travail-frontend/redirects.json /app/packages/code-du-travail-frontend/redirects.json
-COPY --from=dist --chown=1000:1000 /dep/packages/code-du-travail-frontend/scripts /app/packages/code-du-travail-frontend/scripts
-COPY --from=dist --chown=1000:1000 /dep/package.json /app/package.json
-COPY --from=dist --chown=1000:1000 /dep/node_modules /app/node_modules
+CMD ["node", "node_modules/next/dist/bin/next", "start"]
 
-RUN mkdir -p /app/packages/code-du-travail-frontend/.next/cache/images && chown -R 1000:1000 /app/packages/code-du-travail-frontend/.next
-
-CMD [ "npm", "run", "start:production"]
-
-ARG NEXT_PUBLIC_SENTRY_URL
-ARG NEXT_PUBLIC_SENTRY_ORG
-ARG NEXT_PUBLIC_SENTRY_PROJECT
-ARG NEXT_PUBLIC_SENTRY_RELEASE
-ARG NEXT_PUBLIC_SENTRY_DSN
-ENV NEXT_PUBLIC_SENTRY_URL=$NEXT_PUBLIC_SENTRY_URL
-ENV NEXT_PUBLIC_SENTRY_ORG=$NEXT_PUBLIC_SENTRY_ORG
-ENV NEXT_PUBLIC_SENTRY_PROJECT=$NEXT_PUBLIC_SENTRY_PROJECT
-ENV NEXT_PUBLIC_SENTRY_DSN=$NEXT_PUBLIC_SENTRY_DSN
-ENV NEXT_PUBLIC_SENTRY_RELEASE=$NEXT_PUBLIC_SENTRY_RELEASE

@@ -17,9 +17,7 @@ export type CC2120ReferenceSalaryProps = {
   isLicenciementDisciplinaire: QuestionOuiNonWithQuote;
 };
 
-export class ReferenceSalary2120
-  implements IReferenceSalary<SupportedCc.IDCC2120>
-{
+export class ReferenceSalary2120 implements IReferenceSalary<SupportedCc.IDCC2120> {
   mapSituation(
     args: Record<string, string | undefined>
   ): ReferenceSalaryProps<SupportedCc.IDCC2120> {
