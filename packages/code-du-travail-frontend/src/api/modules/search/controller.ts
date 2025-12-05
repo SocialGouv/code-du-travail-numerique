@@ -75,6 +75,7 @@ export class SearchController {
     }
 
     const esReq = getRelatedThemesBody(query);
+    esReq._source.push("breadcrumbs");
     const themes = await elasticsearchClient
       .search<any>({
         body: esReq,

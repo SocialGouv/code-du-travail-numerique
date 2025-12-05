@@ -47,5 +47,6 @@ export const useABTestVariant = (
     };
   }, [abTestName]);
 
-  return variant;
+  return ABTestVariant.SEARCH_V2;
+  // return variant;
 };

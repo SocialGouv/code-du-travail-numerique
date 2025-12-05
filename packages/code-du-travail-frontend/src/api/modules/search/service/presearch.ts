@@ -116,8 +116,11 @@ export type SearchResult = {
   title: string;
   slug: string;
   source: SourceKeys;
-  presearch: PresearchClass;
+  class: PresearchClass;
+  algo: "presearch";
 };
+
+export type ThemeSearchResult = SearchResult & { breadcrumbs: unknown[] };
 
 // temporary
 const defaultIdccResults: SearchResult[] = [
@@ -126,21 +129,24 @@ const defaultIdccResults: SearchResult[] = [
     slug: "convention-collective",
     title: "Trouver sa convention collective",
     source: SOURCES.TOOLS,
-    presearch: PresearchClass.CC_FOUND,
+    class: PresearchClass.CC_FOUND,
+    algo: "presearch",
   },
   {
     cdtnId: "b1041bd7ca",
     slug: "convention-collective",
     title: "Convention collective",
     source: SOURCES.SHEET_SP,
-    presearch: PresearchClass.CC_FOUND,
+    class: PresearchClass.CC_FOUND,
+    algo: "presearch",
   },
   {
     cdtnId: "825821a69e",
     slug: "comment-consulter-une-convention-collective",
     title: "Comment consulter une convention collective ?",
     source: SOURCES.SHEET_SP,
-    presearch: PresearchClass.CC_FOUND,
+    class: PresearchClass.CC_FOUND,
+    algo: "presearch",
   },
 ];
 
@@ -198,7 +204,7 @@ const isCC = async (query: string): Promise<SearchResult[]> => {
     );
 
     if (found) {
-      return [{ ...found, presearch: PresearchClass.CC }];
+      return [{ ...found, class: PresearchClass.CC, algo: "presearch" }];
     } else {
       // case where CC related content but no match
       return defaultIdccResults;
@@ -206,7 +212,7 @@ const isCC = async (query: string): Promise<SearchResult[]> => {
   } else {
     const foundNoCC = await ccSearch(query, CC_SCORE_THRESHOLD);
     if (foundNoCC) {
-      return [{ ...foundNoCC, presearch: PresearchClass.CC }];
+      return [{ ...foundNoCC, class: PresearchClass.CC, algo: "presearch" }];
     } else {
       return [];
     }
@@ -215,17 +221,20 @@ const isCC = async (query: string): Promise<SearchResult[]> => {
 
 const getThemes = (
   pQuery: string[],
-  themes: SearchResult[]
+  themes: ThemeSearchResult[]
 ): SearchResult | undefined => {
-  const pThemes = themes.map((theme) => ({
-    theme,
-    pTheme: prepro(theme.title),
-  }));
+  // sort by breadcrumbs
+  const pThemes = themes
+    .sort((a, b) => a.breadcrumbs.length - b.breadcrumbs.length)
+    .map((theme) => ({
+      theme,
+      pTheme: prepro(theme.title),
+    }));
 
   let match = pThemes.find((th) => th.pTheme == pQuery);
 
   if (!match) {
-    // in this case, we should select the highest one in the hierarchy
+    // in this case, we select the highest one in the hierarchy (thanks to breadcrumbs length sort above)
     match = pThemes.find((th) => pQuery.every((to) => th.pTheme.includes(to)));
   }
 
@@ -235,7 +244,8 @@ const getThemes = (
         slug: match.theme.slug,
         cdtnId: match.theme.cdtnId,
         source: match.theme.source,
-        presearch: PresearchClass.THEME,
+        class: PresearchClass.THEME,
+        algo: "presearch",
       }
     : undefined;
 };
@@ -367,7 +377,7 @@ const isNatural = (query: string) => {
 
 export const presearch = async (
   query: string,
-  themes: SearchResult[],
+  themes: ThemeSearchResult[],
   allClasses: Boolean
 ): Promise<{ results: SearchResult[]; classes: PresearchClass[] }> => {
   // const results: StructuredQueryLabel[] = [];
@@ -388,7 +398,7 @@ export const presearch = async (
     results.push(matchingTheme);
   }
 
-  const classes = results.map((r) => r.presearch);
+  const classes = results.map((r) => r.class);
 
   if (allClasses) {
     const matchingStd = isStandardKeyword(pQuery);
