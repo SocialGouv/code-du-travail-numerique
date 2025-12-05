@@ -13,6 +13,7 @@ import { safeGetItem, safeSetItem } from "../utils/storage";
 import { Button } from "@codegouvfr/react-dsfr/Button";
 import { ToggleSwitch } from "@codegouvfr/react-dsfr/ToggleSwitch";
 import { fr } from "@codegouvfr/react-dsfr";
+import Link from "../common/Link";
 
 type Props = {
   heatmapEnabled: boolean;
@@ -95,28 +96,33 @@ export const CookieConsentDSFR = ({ heatmapEnabled, adsEnabled }: Props) => {
                 Vous pouvez choisir d'accepter ou de refuser les cookies de suivi des interactions des utilisateurs.
               </p>
             </div>
-            <div className={bannerButtonsContainer}>
-              <Button
-                onClick={handleAcceptAll}
-                aria-label="Accepter tous les cookies"
-              >
-                Tout accepter
-              </Button>
-              <Button
-                onClick={handleRefuseAll}
-                priority="secondary"
-                aria-label="Refuser les cookies de suivi"
-              >
-                Tout refuser
-              </Button>
-              <Button
-                onClick={handleCustomize}
-                priority="tertiary"
-                aria-label="Personnaliser les cookies"
-              >
-                Personnaliser
-              </Button>
-            </div>
+            <ul className={fr.cx("fr-btns-group", "fr-btns-group--inline-md", "fr-btns-group--right", "fr-mx-1w")}>
+              <li>
+                <Button
+                  onClick={handleAcceptAll}
+                  aria-label="Accepter tous les cookies"
+                >
+                  Tout accepter
+                </Button>
+              </li>
+              <li>
+                <Button
+                  onClick={handleRefuseAll}
+                  aria-label="Refuser les cookies de suivi"
+                >
+                  Tout refuser
+                </Button>
+              </li>
+              <li>
+                <Button
+                  onClick={handleCustomize}
+                  priority="tertiary"
+                  aria-label="Personnaliser les cookies"
+                >
+                  Personnaliser
+                </Button>
+              </li>
+            </ul>
           </div>
         </section>
       )}
@@ -139,13 +145,13 @@ export const CookieConsentDSFR = ({ heatmapEnabled, adsEnabled }: Props) => {
                   Fermer
                 </button>
               </div>
-              <div className={fr.cx("fr-modal__content")}>
+              <div className={fr.cx("fr-modal__content", "fr-mb-2w")}>
                 <h1 id="fr-consent-modal-title" className={fr.cx("fr-modal__title")}>
                   Paramètres des cookies
                 </h1>
                 <p>
                   Nous utilisons des cookies pour mesurer l'audience et l'interaction des utilisateurs avec notre site. Les cookies de mesure d'audience sont nécessaires au bon fonctionnement du site. Vous pouvez choisir d'accepter ou de refuser les cookies de suivi des interactions des utilisateurs. Pour plus d'informations, vous pouvez consulter notre{" "}
-                  <a href="/politique-confidentialite">politique de confidentialité</a>.
+                  <Link href="/politique-confidentialite">politique de confidentialité</Link>.
                 </p>
 
                 <fieldset className={fr.cx("fr-fieldset")}>
@@ -191,39 +197,37 @@ export const CookieConsentDSFR = ({ heatmapEnabled, adsEnabled }: Props) => {
                   </fieldset>
                 )}
               </div>
-              <div>
-                <ul className={fr.cx("fr-btns-group", "fr-mx-1w")}>
-                  <li>
-                    <Button
-                      title="Tout refuser"
-                      onClick={handleRefuseAll}
-                      priority="secondary"
-                      className={fr.cx("fr-my-1v")}
-                    >
-                      Tout refuser
-                    </Button>
-                  </li>
-                  <li>
-                    <Button
-                      title="Tout accepter"
-                      onClick={handleAcceptAll}
-                      priority="secondary"
-                      className={fr.cx("fr-my-1v")}
-                    >
-                      Tout accepter
-                    </Button>
-                  </li>
-                  <li>
-                    <Button
-                      title="Enregistrer"
-                      onClick={handleSavePreferences}
-                      className={fr.cx("fr-my-1v")}
-                    >
-                      Enregistrer
-                    </Button>
-                  </li>
-                </ul>
-              </div>
+              <ul className={fr.cx("fr-btns-group", "fr-btns-group--inline-md", "fr-btns-group--right", "fr-mx-1w", "fr-mb-2w")} style={{ borderTop: "1px solid #e5e5e5", paddingTop: "1rem" }}>
+                <li>
+                  <Button
+                    title="Tout refuser"
+                    onClick={handleRefuseAll}
+                    priority="secondary"
+                    className={fr.cx("fr-my-1v")}
+                  >
+                    Tout refuser
+                  </Button>
+                </li>
+                <li>
+                  <Button
+                    title="Tout accepter"
+                    onClick={handleAcceptAll}
+                    priority="secondary"
+                    className={fr.cx("fr-my-1v")}
+                  >
+                    Tout accepter
+                  </Button>
+                </li>
+                <li>
+                  <Button
+                    title="Enregistrer"
+                    onClick={handleSavePreferences}
+                    className={fr.cx("fr-my-1v")}
+                  >
+                    Enregistrer
+                  </Button>
+                </li>
+              </ul>
             </div>
           </div>
         </>
@@ -247,12 +251,6 @@ export const CookieConsentDSFR = ({ heatmapEnabled, adsEnabled }: Props) => {
 };
 
 // CSS variables
-const bannerButtonsContainer = css({
-  display: "flex",
-  justifyContent: "flex-end",
-  gap: "1rem",
-});
-
 const modalBackdrop = css({
   position: "fixed",
   top: 0,
