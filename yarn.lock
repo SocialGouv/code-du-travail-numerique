@@ -515,7 +515,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@cdt/frontend@workspace:packages/code-du-travail-frontend"
   dependencies:
-    "@codegouvfr/react-dsfr": ^1.26.0
+    "@codegouvfr/react-dsfr": ^1.29.0
     "@elastic/elasticsearch": ^8.19.0
     "@eslint/eslintrc": ^3.3.1
     "@eslint/js": ^9.34.0
@@ -606,9 +606,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@codegouvfr/react-dsfr@npm:^1.26.0":
-  version: 1.26.0
-  resolution: "@codegouvfr/react-dsfr@npm:1.26.0"
+"@codegouvfr/react-dsfr@npm:^1.29.0":
+  version: 1.29.0
+  resolution: "@codegouvfr/react-dsfr@npm:1.29.0"
   dependencies:
     tsafe: ^1.8.5
     yargs-parser: ^21.1.1
@@ -621,7 +621,7 @@ __metadata:
     copy-dsfr-to-public: bin/copy-dsfr-to-public.js
     only-include-used-icons: bin/only-include-used-icons.js
     react-dsfr: bin/react-dsfr.js
-  checksum: 654fa809497bb76888485722df5a75279be1583af7afa44781f2073db1ee6d2eece072ce90459b15aee2cca0fb81f473629da727fc46a50a37bb20b819479bfa
+  checksum: 266ae2ffe02eaec95ad353141e32528f2acf1c6b7b47d2c619cba5d99293f97fab231bd840bf3aa3b4148bd44d540611de8d1ce5faee889f93f00083cc1a45f7
   languageName: node
   linkType: hard
 
