@@ -14,14 +14,14 @@ const StepIntro = () => (
       utiles pour réaliser cette simulation.
     </p>
     <p>
-      Vous pouvez trouver plus d&apos;informations sur les heures d&apos;absence
-      autorisée pour rechercher un emploi pendant le préavis sur{" "}
+      Retrouvez plus d&apos;informations dans{" "}
       <Link
         href={`/contribution/le-salarie-peut-il-sabsenter-pour-rechercher-un-emploi-pendant-son-preavis`}
       >
-        cette fiche
-      </Link>
-      .
+        notre fiche sur les heures d&apos;absence autorisées pour rechercher un
+        emploi
+      </Link>{" "}
+      pendant le préavis.
     </p>
     <p>
       La saisie des champs est obligatoire sur l&apos;ensemble des étapes sauf
