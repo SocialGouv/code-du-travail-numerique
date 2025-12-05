@@ -1,12 +1,18 @@
 "use client";
 
-import React from "react";
 import { useEffect, useState } from "react";
 import { css } from "@styled-system/css";
-import { initConsent, getStoredConsent, saveConsent } from "../utils/consent";
-import { safeGetItem } from "../utils/storage";
+import {
+  ConsentType,
+  DEFAULT_CONSENT,
+  getStoredConsent,
+  initConsent,
+  saveConsent,
+} from "../utils/consent";
+import { safeGetItem, safeSetItem } from "../utils/storage";
 import { Button } from "@codegouvfr/react-dsfr/Button";
 import { ToggleSwitch } from "@codegouvfr/react-dsfr/ToggleSwitch";
+import { fr } from "@codegouvfr/react-dsfr";
 
 type Props = {
   heatmapEnabled: boolean;
@@ -14,25 +20,19 @@ type Props = {
 };
 
 export const CookieConsentDSFR = ({ heatmapEnabled, adsEnabled }: Props) => {
-  const [showBanner, setShowBanner] = useState(true);
+  const [consent, setConsent] = useState<ConsentType>(DEFAULT_CONSENT);
+  const [showBanner, setShowBanner] = useState(false);
   const [showModal, setShowModal] = useState(false);
-  const [showManageButton, setShowManageButton] = useState(false);
-  const [consent, setConsent] = useState({
-    matomo: true, // Always mandatory
-    sea: false,
-    matomoHeatmap: false,
-  });
 
-  // Initialize consent on mount
   useEffect(() => {
-    initConsent();
+    const storedConsent = getStoredConsent();
+    setConsent(storedConsent);
 
     const hasConsented = safeGetItem("cdtn-cookie-consent-given");
-    if (hasConsented) {
-      setShowBanner(false);
-      setShowManageButton(true);
-      const existingConsent = getStoredConsent();
-      setConsent(existingConsent);
+    if (!hasConsented) {
+      setShowBanner(true);
+    } else {
+      initConsent();
     }
   }, []);
 
@@ -46,20 +46,20 @@ export const CookieConsentDSFR = ({ heatmapEnabled, adsEnabled }: Props) => {
     saveConsent(newConsent);
     setShowBanner(false);
     setShowModal(false);
-    setShowManageButton(true);
+    safeSetItem("cdtn-cookie-consent-given", "true");
+
+    initConsent();
   };
 
   const handleRefuseAll = () => {
-    const newConsent = {
-      matomo: true, // Matomo is mandatory
-      sea: false,
-      matomoHeatmap: false,
-    };
+    const newConsent = { matomo: true, sea: false, matomoHeatmap: false };
     setConsent(newConsent);
     saveConsent(newConsent);
     setShowBanner(false);
     setShowModal(false);
-    setShowManageButton(true);
+    safeSetItem("cdtn-cookie-consent-given", "true");
+
+    initConsent();
   };
 
   const handleCustomize = () => {
@@ -68,21 +68,23 @@ export const CookieConsentDSFR = ({ heatmapEnabled, adsEnabled }: Props) => {
 
   const handleSavePreferences = () => {
     saveConsent(consent);
-    setShowModal(false);
     setShowBanner(false);
-    setShowManageButton(true);
+    setShowModal(false);
+    safeSetItem("cdtn-cookie-consent-given", "true");
   };
 
-  const toggleConsent = (key: keyof typeof consent) => {
-    if (key === 'matomo') return; // Matomo is always mandatory
-    setConsent(prev => ({ ...prev, [key]: !prev[key] }));
+  const handleConsentChange = (type: keyof ConsentType) => {
+    setConsent((prev) => ({
+      ...prev,
+      [type]: !prev[type],
+    }));
   };
 
   return (
     <>
       {showBanner && !showModal && (
         <section className="fr-consent-banner" id="fr-consent-banner">
-          <div className="fr-container">
+          <div className={fr.cx("fr-container")}>
             <div className="fr-consent-banner__content">
               <p className="fr-consent-banner__title">
                 Ce site utilise des cookies
@@ -91,36 +93,29 @@ export const CookieConsentDSFR = ({ heatmapEnabled, adsEnabled }: Props) => {
                 Nous utilisons des cookies pour mesurer l'audience et l'interaction des utilisateurs avec notre site.
                 Les cookies de mesure d'audience sont nécessaires au bon fonctionnement du site.
                 Vous pouvez choisir d'accepter ou de refuser les cookies de suivi des interactions des utilisateurs.
-                Pour plus d'informations, vous pouvez consulter notre{" "}
-                <a href="/politique-confidentialite">politique de confidentialité</a>.
               </p>
             </div>
-            <div className={css({
-              display: "flex",
-              justifyContent: "flex-end",
-              gap: "1rem",
-            })}>
-              <button
-                className="fr-btn"
-                id="fr-consent-banner-button-accept"
+            <div className={bannerButtonsContainer}>
+              <Button
                 onClick={handleAcceptAll}
+                aria-label="Accepter tous les cookies"
               >
                 Tout accepter
-              </button>
-              <button
-                className="fr-btn fr-btn--secondary"
-                id="fr-consent-banner-button-refuse"
+              </Button>
+              <Button
                 onClick={handleRefuseAll}
+                priority="secondary"
+                aria-label="Refuser les cookies de suivi"
               >
                 Tout refuser
-              </button>
-              <button
-                className="fr-btn fr-btn--secondary"
-                id="fr-consent-banner-button-customize"
+              </Button>
+              <Button
                 onClick={handleCustomize}
+                priority="tertiary"
+                aria-label="Personnaliser les cookies"
               >
                 Personnaliser
-              </button>
+              </Button>
             </div>
           </div>
         </section>
@@ -129,37 +124,14 @@ export const CookieConsentDSFR = ({ heatmapEnabled, adsEnabled }: Props) => {
       {showModal && (
         <>
           <div
-            className={css({
-              position: "fixed",
-              top: 0,
-              left: 0,
-              width: "100%",
-              height: "100%",
-              backgroundColor: "rgba(0, 0, 0, 0.5)",
-              zIndex: 1040,
-            })}
+            className={modalBackdrop}
             onClick={() => setShowModal(false)}
           ></div>
-          <div
-            className={css({
-              position: "fixed",
-              top: "50%",
-              left: "50%",
-              transform: "translate(-50%, -50%)",
-              zIndex: 1050,
-              width: "90%",
-              maxWidth: "600px",
-              maxHeight: "90vh",
-              backgroundColor: "white",
-              borderRadius: "0.5rem",
-              boxShadow: "0 10px 25px rgba(0, 0, 0, 0.2)",
-              overflow: "auto",
-            })}
-          >
-            <div className="fr-modal__body">
-              <div className="fr-modal__header">
+          <div className={modalContainer}>
+            <div className={fr.cx("fr-modal__body")}>
+              <div className={fr.cx("fr-modal__header")}>
                 <button
-                  className="fr-btn--close fr-btn"
+                  className={fr.cx("fr-btn--close", "fr-btn")}
                   title="Fermer la fenêtre modale"
                   aria-controls="fr-consent-modal"
                   onClick={() => setShowModal(false)}
@@ -167,8 +139,8 @@ export const CookieConsentDSFR = ({ heatmapEnabled, adsEnabled }: Props) => {
                   Fermer
                 </button>
               </div>
-              <div className="fr-modal__content">
-                <h1 id="fr-consent-modal-title" className="fr-modal__title">
+              <div className={fr.cx("fr-modal__content")}>
+                <h1 id="fr-consent-modal-title" className={fr.cx("fr-modal__title")}>
                   Paramètres des cookies
                 </h1>
                 <p>
@@ -176,8 +148,8 @@ export const CookieConsentDSFR = ({ heatmapEnabled, adsEnabled }: Props) => {
                   <a href="/politique-confidentialite">politique de confidentialité</a>.
                 </p>
 
-                <fieldset className="fr-fieldset">
-                  <legend className="fr-fieldset__legend">Cookies de mesure d'audience</legend>
+                <fieldset className={fr.cx("fr-fieldset")}>
+                  <legend className={fr.cx("fr-fieldset__legend")}>Cookies de mesure d'audience</legend>
                   <ToggleSwitch
                     label="Mesure d'audience - Obligatoire"
                     checked={consent.matomo}
@@ -185,47 +157,48 @@ export const CookieConsentDSFR = ({ heatmapEnabled, adsEnabled }: Props) => {
                     disabled
                     style={{ width: "100%" }}
                   />
-                  <p className="fr-info-text">
+                  <p className={fr.cx("fr-info-text")}>
                     Ces cookies nous permettent d'établir des statistiques de fréquentation de notre site et d'améliorer ses performances.
                   </p>
                 </fieldset>
 
                 {adsEnabled && (
-                  <fieldset className="fr-fieldset">
-                    <legend className="fr-fieldset__legend">Suivi des campagnes publicitaires</legend>
+                  <fieldset className={fr.cx("fr-fieldset")}>
+                    <legend className={fr.cx("fr-fieldset__legend")}>Suivi des campagnes publicitaires</legend>
                     <ToggleSwitch
                       label="Suivi des campagnes publicitaires"
                       checked={consent.sea}
-                      onChange={() => toggleConsent('sea')}
+                      onChange={() => handleConsentChange("sea")}
                     />
-                    <p className="fr-info-text">
+                    <p className={fr.cx("fr-info-text")}>
                       Ces cookies nous permettent de suivre l'efficacité de nos campagnes publicitaires sur les moteurs de recherche.
                     </p>
                   </fieldset>
                 )}
 
                 {heatmapEnabled && (
-                  <fieldset className="fr-fieldset">
-                    <legend className="fr-fieldset__legend">Carte des chaleurs Matomo</legend>
+                  <fieldset className={fr.cx("fr-fieldset")}>
+                    <legend className={fr.cx("fr-fieldset__legend")}>Carte des chaleurs Matomo</legend>
                     <ToggleSwitch
                       label="Carte des chaleurs Matomo"
                       checked={consent.matomoHeatmap}
-                      onChange={() => toggleConsent('matomoHeatmap')}
+                      onChange={() => handleConsentChange("matomoHeatmap")}
                       style={{ width: "100%" }}
                     />
-                    <p className="fr-info-text">
+                    <p className={fr.cx("fr-info-text")}>
                       Cette fonctionnalité nous permet de visualiser comment les utilisateurs interagissent avec notre site (clics, mouvements de souris) pour améliorer l'expérience utilisateur.
                     </p>
                   </fieldset>
                 )}
               </div>
-              <div className="fr-modal__footer">
-                <ul className="fr-btns-group">
+              <div>
+                <ul className={fr.cx("fr-btns-group", "fr-mx-1w")}>
                   <li>
                     <Button
                       title="Tout refuser"
                       onClick={handleRefuseAll}
                       priority="secondary"
+                      className={fr.cx("fr-my-1v")}
                     >
                       Tout refuser
                     </Button>
@@ -235,6 +208,7 @@ export const CookieConsentDSFR = ({ heatmapEnabled, adsEnabled }: Props) => {
                       title="Tout accepter"
                       onClick={handleAcceptAll}
                       priority="secondary"
+                      className={fr.cx("fr-my-1v")}
                     >
                       Tout accepter
                     </Button>
@@ -243,6 +217,7 @@ export const CookieConsentDSFR = ({ heatmapEnabled, adsEnabled }: Props) => {
                     <Button
                       title="Enregistrer"
                       onClick={handleSavePreferences}
+                      className={fr.cx("fr-my-1v")}
                     >
                       Enregistrer
                     </Button>
@@ -254,24 +229,58 @@ export const CookieConsentDSFR = ({ heatmapEnabled, adsEnabled }: Props) => {
         </>
       )}
 
-      {showManageButton && (
-        <div className={css({
-          position: "fixed",
-          bottom: "1rem",
-          right: "1rem",
-          zIndex: 1000,
-        })}>
+      {!showBanner && (
+        <div className={manageButton}>
           <button
-            className="fr-btn fr-btn--secondary fr-btn--sm"
+            className={fr.cx("fr-btn", "fr-btn--secondary", "fr-btn--sm")}
             onClick={() => setShowModal(true)}
             title="Gérer les cookies"
             aria-label="Gérer les cookies"
           >
-            <span className="fr-sr-only">Gérer les cookies</span>
-            <span className="fr-icon-settings-5-line" aria-hidden="true"></span>
+            <span className={fr.cx("fr-sr-only")}>Gérer les cookies</span>
+            <span className={fr.cx("fr-icon-settings-5-line")} aria-hidden="true"></span>
           </button>
         </div>
       )}
     </>
   );
 };
+
+// CSS variables
+const bannerButtonsContainer = css({
+  display: "flex",
+  justifyContent: "flex-end",
+  gap: "1rem",
+});
+
+const modalBackdrop = css({
+  position: "fixed",
+  top: 0,
+  left: 0,
+  width: "100%",
+  height: "100%",
+  backgroundColor: "rgba(0, 0, 0, 0.5)",
+  zIndex: 1040,
+});
+
+const modalContainer = css({
+  position: "fixed",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  zIndex: 1050,
+  width: "90%",
+  maxWidth: "600px",
+  maxHeight: "90vh",
+  backgroundColor: "white",
+  borderRadius: "0.5rem",
+  boxShadow: "0 10px 25px rgba(0, 0, 0, 0.2)",
+  overflow: "auto",
+});
+
+const manageButton = css({
+  position: "fixed",
+  bottom: "1rem",
+  right: "1rem",
+  zIndex: 1000,
+});
