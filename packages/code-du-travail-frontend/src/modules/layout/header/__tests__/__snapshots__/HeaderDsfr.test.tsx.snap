@@ -228,7 +228,7 @@ exports[`<Header /> should match snapshot 1`] = `
                       class="fr-nav__link"
                       href="/quoi-de-neuf"
                     >
-                      Quoi de neuf sur le code du travail ?
+                      Quoi de neuf sur le code du travail numérique ?
                     </a>
                   </li>
                   <li>
