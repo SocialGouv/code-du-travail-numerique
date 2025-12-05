@@ -91,11 +91,11 @@ export const CookieConsentDSFR = ({ heatmapEnabled, adsEnabled }: Props) => {
                 Ce site utilise des cookies
               </p>
               <p className="fr-consent-banner__desc">
-                Nous utilisons des cookies pour mesurer l'&apos;'audience et
-                l&apos;interaction des utilisateurs avec notre site. Les cookies de
-                mesure d&apos;audience sont nécessaires au bon fonctionnement du
-                site. Vous pouvez choisir d&apos;accepter ou de refuser les cookies
-                de suivi des interactions des utilisateurs.
+                Nous utilisons des cookies pour mesurer l&apos;audience et
+                l&apos;interaction des utilisateurs avec notre site. Les cookies
+                de mesure d&apos;audience sont nécessaires au bon fonctionnement
+                du site. Vous pouvez choisir d&apos;accepter ou de refuser les
+                cookies de suivi des interactions des utilisateurs.
               </p>
             </div>
             <ul
@@ -163,11 +163,12 @@ export const CookieConsentDSFR = ({ heatmapEnabled, adsEnabled }: Props) => {
                 </h1>
                 <p>
                   Nous utilisons des cookies pour mesurer l&apos;audience et
-                  l&apos;interaction des utilisateurs avec notre site. Les cookies de
-                  mesure d&apos;audience sont nécessaires au bon fonctionnement du
-                  site. Vous pouvez choisir d&apos;accepter ou de refuser les cookies
-                  de suivi des interactions des utilisateurs. Pour plus
-                  d&apos;informations, vous pouvez consulter notre{" "}
+                  l&apos;interaction des utilisateurs avec notre site. Les
+                  cookies de mesure d&apos;audience sont nécessaires au bon
+                  fonctionnement du site. Vous pouvez choisir d&apos;accepter ou
+                  de refuser les cookies de suivi des interactions des
+                  utilisateurs. Pour plus d&apos;informations, vous pouvez
+                  consulter notre{" "}
                   <Link href="/politique-confidentialite">
                     politique de confidentialité
                   </Link>
@@ -181,13 +182,14 @@ export const CookieConsentDSFR = ({ heatmapEnabled, adsEnabled }: Props) => {
                   <ToggleSwitch
                     label="Mesure d'audience - Obligatoire"
                     checked={consent.matomo}
-                    onChange={() => { }}
+                    onChange={() => {}}
                     disabled
                     style={{ width: "100%" }}
                   />
                   <p className={fr.cx("fr-info-text")}>
-                    Ces cookies nous permettent d&apos;établir des statistiques de
-                    fréquentation de notre site et d&apos;améliorer ses performances.
+                    Ces cookies nous permettent d&apos;établir des statistiques
+                    de fréquentation de notre site et d&apos;améliorer ses
+                    performances.
                   </p>
                 </fieldset>
 
@@ -202,8 +204,8 @@ export const CookieConsentDSFR = ({ heatmapEnabled, adsEnabled }: Props) => {
                       onChange={() => handleConsentChange("sea")}
                     />
                     <p className={fr.cx("fr-info-text")}>
-                      Ces cookies nous permettent de suivre l&apos;efficacité de nos
-                      campagnes publicitaires sur les moteurs de recherche.
+                      Ces cookies nous permettent de suivre l&apos;efficacité de
+                      nos campagnes publicitaires sur les moteurs de recherche.
                     </p>
                   </fieldset>
                 )}
