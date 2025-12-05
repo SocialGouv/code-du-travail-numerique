@@ -154,13 +154,9 @@ const CC_SCORE_THRESHOLD = 20;
 
 const MATCHING_CC_TOKENS = [
   "convention",
-  "collective",
-  "conventions",
-  "collectives",
-  "collectif",
+  "colectif",
   "national",
-  "branche",
-  "branches",
+  "branch",
   "idcc",
   "ccn",
 ];
@@ -182,11 +178,11 @@ const isCC = async (query: string): Promise<SearchResult[]> => {
   const tokens: string[] = tokenize(query);
 
   if (
-    MATCHING_CC_TOKENS.find((t) => tokens.includes(t))?.length ||
+    tokens.find((t) => MATCHING_CC_TOKENS.includes(complex(t)))?.length ||
     tokens.find(isIdccToken)
   ) {
     const remainingTokens = Array.from([
-      ...tokens.filter((t) => !MATCHING_CC_TOKENS.includes(t)),
+      ...tokens.filter((t) => !MATCHING_CC_TOKENS.includes(complex(t))),
     ]);
 
     // in case we find a number, we assume idcc search and remove other tokens to avoid noise
@@ -289,27 +285,44 @@ const fillup = async (
     );
   }
 
+  // deduplicate presearch and prequalified
+  documents = removeDuplicate(
+    documents.map((d) => ({
+      _source: d,
+    }))
+  ).map((d: { _source: SearchResult }) => d._source);
+
   // if not enough prequalified results, we also trigger ES search
   if (documents.length < n) {
-    const docSearch = getSearchBody(
-      query,
-      n - prequalifiedResults.length,
-      sources
-    );
-    docSearch.size = 10;
+    const size = 10;
+    const docSearch = getSearchBody(query, size, sources);
     const ftRes = await elasticsearchClient.search({
       index: elasticDocumentsIndex,
       body: docSearch as any,
     });
 
     const results = extractHits(ftRes).map((d) => d._source);
+
     documents.push(...results);
+
+    // deduplicate a second time after ES search
+    documents = removeDuplicate(
+      documents.map((d) => ({
+        _source: d,
+      }))
+    ).map((d: { _source: SearchResult }) => d._source);
   }
 
-  // Always deduplicate to avoid duplicate sources
-  if (documents.length > 0) {
-    documents = removeDuplicate(documents, ({ cdtnId }) => cdtnId);
-  }
+  /*
+  console.log(
+    JSON.stringify(
+      documents.map((d) => [d.slug, d.source, d.cdtnId]),
+      null,
+      2
+    )
+  );
+  console.log(documents.length);
+  */
 
   return documents
     .map((res) => ({
@@ -417,7 +430,7 @@ export const presearch = async (
 
   if (results.length < 4) {
     const filled = await fillup(query, 4, results);
-    return { results: filled, classes };
+    return { results: filled, classes: [...new Set(classes)] };
   } else {
     return { results, classes };
   }
