@@ -91,12 +91,21 @@ export const CookieConsentDSFR = ({ heatmapEnabled, adsEnabled }: Props) => {
                 Ce site utilise des cookies
               </p>
               <p className="fr-consent-banner__desc">
-                Nous utilisons des cookies pour mesurer l'audience et l'interaction des utilisateurs avec notre site.
-                Les cookies de mesure d'audience sont nécessaires au bon fonctionnement du site.
-                Vous pouvez choisir d'accepter ou de refuser les cookies de suivi des interactions des utilisateurs.
+                Nous utilisons des cookies pour mesurer l'audience et
+                l'interaction des utilisateurs avec notre site. Les cookies de
+                mesure d'audience sont nécessaires au bon fonctionnement du
+                site. Vous pouvez choisir d'accepter ou de refuser les cookies
+                de suivi des interactions des utilisateurs.
               </p>
             </div>
-            <ul className={fr.cx("fr-btns-group", "fr-btns-group--inline-md", "fr-btns-group--right", "fr-mx-1w")}>
+            <ul
+              className={fr.cx(
+                "fr-btns-group",
+                "fr-btns-group--inline-md",
+                "fr-btns-group--right",
+                "fr-mx-1w"
+              )}
+            >
               <li>
                 <Button
                   onClick={handleAcceptAll}
@@ -146,45 +155,64 @@ export const CookieConsentDSFR = ({ heatmapEnabled, adsEnabled }: Props) => {
                 </button>
               </div>
               <div className={fr.cx("fr-modal__content", "fr-mb-2w")}>
-                <h1 id="fr-consent-modal-title" className={fr.cx("fr-modal__title")}>
+                <h1
+                  id="fr-consent-modal-title"
+                  className={fr.cx("fr-modal__title")}
+                >
                   Paramètres des cookies
                 </h1>
                 <p>
-                  Nous utilisons des cookies pour mesurer l'audience et l'interaction des utilisateurs avec notre site. Les cookies de mesure d'audience sont nécessaires au bon fonctionnement du site. Vous pouvez choisir d'accepter ou de refuser les cookies de suivi des interactions des utilisateurs. Pour plus d'informations, vous pouvez consulter notre{" "}
-                  <Link href="/politique-confidentialite">politique de confidentialité</Link>.
+                  Nous utilisons des cookies pour mesurer l'audience et
+                  l'interaction des utilisateurs avec notre site. Les cookies de
+                  mesure d'audience sont nécessaires au bon fonctionnement du
+                  site. Vous pouvez choisir d'accepter ou de refuser les cookies
+                  de suivi des interactions des utilisateurs. Pour plus
+                  d'informations, vous pouvez consulter notre{" "}
+                  <Link href="/politique-confidentialite">
+                    politique de confidentialité
+                  </Link>
+                  .
                 </p>
 
                 <fieldset className={fr.cx("fr-fieldset")}>
-                  <legend className={fr.cx("fr-fieldset__legend")}>Cookies de mesure d'audience</legend>
+                  <legend className={fr.cx("fr-fieldset__legend")}>
+                    Cookies de mesure d'audience
+                  </legend>
                   <ToggleSwitch
                     label="Mesure d'audience - Obligatoire"
                     checked={consent.matomo}
-                    onChange={() => { }}
+                    onChange={() => {}}
                     disabled
                     style={{ width: "100%" }}
                   />
                   <p className={fr.cx("fr-info-text")}>
-                    Ces cookies nous permettent d'établir des statistiques de fréquentation de notre site et d'améliorer ses performances.
+                    Ces cookies nous permettent d'établir des statistiques de
+                    fréquentation de notre site et d'améliorer ses performances.
                   </p>
                 </fieldset>
 
                 {adsEnabled && (
                   <fieldset className={fr.cx("fr-fieldset")}>
-                    <legend className={fr.cx("fr-fieldset__legend")}>Suivi des campagnes publicitaires</legend>
+                    <legend className={fr.cx("fr-fieldset__legend")}>
+                      Suivi des campagnes publicitaires
+                    </legend>
                     <ToggleSwitch
                       label="Suivi des campagnes publicitaires"
                       checked={consent.sea}
                       onChange={() => handleConsentChange("sea")}
                     />
                     <p className={fr.cx("fr-info-text")}>
-                      Ces cookies nous permettent de suivre l'efficacité de nos campagnes publicitaires sur les moteurs de recherche.
+                      Ces cookies nous permettent de suivre l'efficacité de nos
+                      campagnes publicitaires sur les moteurs de recherche.
                     </p>
                   </fieldset>
                 )}
 
                 {heatmapEnabled && (
                   <fieldset className={fr.cx("fr-fieldset")}>
-                    <legend className={fr.cx("fr-fieldset__legend")}>Carte des chaleurs Matomo</legend>
+                    <legend className={fr.cx("fr-fieldset__legend")}>
+                      Carte des chaleurs Matomo
+                    </legend>
                     <ToggleSwitch
                       label="Carte des chaleurs Matomo"
                       checked={consent.matomoHeatmap}
@@ -192,12 +220,24 @@ export const CookieConsentDSFR = ({ heatmapEnabled, adsEnabled }: Props) => {
                       style={{ width: "100%" }}
                     />
                     <p className={fr.cx("fr-info-text")}>
-                      Cette fonctionnalité nous permet de visualiser comment les utilisateurs interagissent avec notre site (clics, mouvements de souris) pour améliorer l'expérience utilisateur.
+                      Cette fonctionnalité nous permet de visualiser comment les
+                      utilisateurs interagissent avec notre site (clics,
+                      mouvements de souris) pour améliorer l'expérience
+                      utilisateur.
                     </p>
                   </fieldset>
                 )}
               </div>
-              <ul className={fr.cx("fr-btns-group", "fr-btns-group--inline-md", "fr-btns-group--right", "fr-mx-1w", "fr-mb-2w")} style={{ borderTop: "1px solid #e5e5e5", paddingTop: "1rem" }}>
+              <ul
+                className={fr.cx(
+                  "fr-btns-group",
+                  "fr-btns-group--inline-md",
+                  "fr-btns-group--right",
+                  "fr-mx-1w",
+                  "fr-mb-2w"
+                )}
+                style={{ borderTop: "1px solid #e5e5e5", paddingTop: "1rem" }}
+              >
                 <li>
                   <Button
                     title="Tout refuser"
@@ -242,7 +282,10 @@ export const CookieConsentDSFR = ({ heatmapEnabled, adsEnabled }: Props) => {
             aria-label="Gérer les cookies"
           >
             <span className={fr.cx("fr-sr-only")}>Gérer les cookies</span>
-            <span className={fr.cx("fr-icon-settings-5-line")} aria-hidden="true"></span>
+            <span
+              className={fr.cx("fr-icon-settings-5-line")}
+              aria-hidden="true"
+            ></span>
           </button>
         </div>
       )}

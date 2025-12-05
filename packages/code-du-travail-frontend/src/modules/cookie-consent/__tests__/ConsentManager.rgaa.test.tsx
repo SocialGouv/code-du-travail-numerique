@@ -56,13 +56,7 @@ describe("ConsentManager with manage cookies button", () => {
     const button = screen.getByRole("button", {
       name: /Gérer les cookies/i,
     });
-    expect(button).toHaveAttribute(
-      "title",
-      "Gérer les cookies"
-    );
-    expect(button).toHaveAttribute(
-      "aria-label",
-      "Gérer les cookies"
-    );
+    expect(button).toHaveAttribute("title", "Gérer les cookies");
+    expect(button).toHaveAttribute("aria-label", "Gérer les cookies");
   });
 });
