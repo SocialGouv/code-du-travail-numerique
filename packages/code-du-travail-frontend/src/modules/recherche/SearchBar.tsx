@@ -71,10 +71,10 @@ export const SearchBar = ({ initialValue = "" }: SearchBarProps) => {
             setQuery(value);
           }
         }}
-        onChange={(value, suggestions) => {
+        onChange={(value) => {
           setQuery(value ?? "");
           if (value) {
-            emitSuggestionSelectionEvent(query, value, suggestions ?? []);
+            emitSuggestionSelectionEvent(query, value);
             handleSearch(value);
           }
         }}

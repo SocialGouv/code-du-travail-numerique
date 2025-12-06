@@ -90,7 +90,7 @@ export const SearchInput = forwardRef<ModalSearchHandle, ModalSearchProps>(
 
     const onSelectedItemChange = async (value: string | undefined) => {
       if (value) {
-        emitSuggestionSelectionEvent(query, value, suggestions);
+        emitSuggestionSelectionEvent(query, value);
 
         onChangeQuery(value);
         setQuery(value);
@@ -110,13 +110,22 @@ export const SearchInput = forwardRef<ModalSearchHandle, ModalSearchProps>(
         >
           Que souhaitez-vous savoir ?
         </h1>
-        <p className={fr.cx("fr-text--sm", "fr-mb-2w", "fr-hint-text")}>
+        <p
+          className={fr.cx("fr-text--sm", "fr-mb-2w", "fr-hint-text")}
+          id="search-modal-description"
+        >
           par exemple : Comment sont comptés les congés pendant les arrêts
           maladies ?
         </p>
-        <form onSubmit={onSubmit}>
+        <form onSubmit={onSubmit} role="search" aria-label="Recherche">
           <div className={searchContainerStyle}>
             <div className={autocompleteWrapper}>
+              <label
+                htmlFor="modal-search-autocomplete"
+                className={fr.cx("fr-label", "fr-sr-only")}
+              >
+                Recherche
+              </label>
               <AutocompleteV2<string>
                 id="modal-search-autocomplete"
                 search={search}
@@ -151,6 +160,9 @@ export const SearchInput = forwardRef<ModalSearchHandle, ModalSearchProps>(
               type="button"
               onClick={handleSearch}
               className={searchButton}
+              disabled={
+                !query.trim() || query.trim().length < MIN_SEARCH_LENGTH
+              }
             >
               Voir tous les résultats
             </Button>

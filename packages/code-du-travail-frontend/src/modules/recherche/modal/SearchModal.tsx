@@ -5,7 +5,7 @@ import { Button } from "@codegouvfr/react-dsfr/Button";
 import { css } from "@styled-system/css";
 import { SearchInput, ModalSearchHandle } from "./SearchInput";
 import { SearchResults } from "./SearchResults";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useCallback } from "react";
 import { HintList } from "./HintList";
 import { useSearchResults } from "../hooks/useSearchResults";
 import { useHints } from "../hooks/useHints";
@@ -19,6 +19,7 @@ interface SearchModalProps {
 export const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
   const modalSearchRef = useRef<ModalSearchHandle>(null);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
+  const modalRef = useRef<HTMLDivElement>(null);
   const [blockScroll, allowScroll] = useScrollBlock();
 
   const {
@@ -36,6 +37,25 @@ export const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
     fetchHintsData,
     isLoading: isHintsLoading,
   } = useHints();
+
+  const handleClose = useCallback(() => {
+    onClose();
+
+    setTimeout(() => {
+      const searchButtonDesktop = document.getElementById(
+        "fr-header-search-button-desktop"
+      ) as HTMLButtonElement;
+      const searchButtonMobile = document.getElementById(
+        "fr-header-search-button"
+      ) as HTMLButtonElement;
+
+      if (searchButtonDesktop) {
+        searchButtonDesktop.focus();
+      } else if (searchButtonMobile) {
+        searchButtonMobile.focus();
+      }
+    }, 100);
+  }, [onClose]);
 
   useEffect(() => {
     if (isOpen) {
@@ -57,37 +77,82 @@ export const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
         clearTimeout(focusTimer);
       };
     }
-  }, [isOpen]);
+  }, [isOpen, resetSearch]);
 
-  const handleClose = () => {
-    onClose();
+  // Handle Escape key
+  useEffect(() => {
+    if (!isOpen) return;
 
-    setTimeout(() => {
-      const searchButtonDesktop = document.getElementById(
-        "fr-header-search-button-desktop"
-      ) as HTMLButtonElement;
-      const searchButtonMobile = document.getElementById(
-        "fr-header-search-button"
-      ) as HTMLButtonElement;
-
-      if (searchButtonDesktop) {
-        searchButtonDesktop.focus();
-      } else if (searchButtonMobile) {
-        searchButtonMobile.focus();
+    const handleEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        handleClose();
       }
-    }, 100);
-  };
+    };
+
+    document.addEventListener("keydown", handleEscape);
+    return () => document.removeEventListener("keydown", handleEscape);
+  }, [isOpen, handleClose]);
+
+  // Implement focus trap
+  useEffect(() => {
+    if (!isOpen || !modalRef.current) return;
+
+    const modal = modalRef.current;
+    const focusableElements = modal.querySelectorAll<HTMLElement>(
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    );
+    const firstFocusable = focusableElements[0];
+    const lastFocusable = focusableElements[focusableElements.length - 1];
+
+    const handleTab = (event: KeyboardEvent) => {
+      if (event.key !== "Tab") return;
+
+      if (event.shiftKey) {
+        if (document.activeElement === firstFocusable) {
+          event.preventDefault();
+          lastFocusable?.focus();
+        }
+      } else {
+        if (document.activeElement === lastFocusable) {
+          event.preventDefault();
+          firstFocusable?.focus();
+        }
+      }
+    };
+
+    document.addEventListener("keydown", handleTab);
+    return () => document.removeEventListener("keydown", handleTab);
+  }, [isOpen, hasSearched, results.length]);
+
+  // Set aria-hidden on main content when modal is open
+  useEffect(() => {
+    if (!isOpen) return;
+
+    const mainContent = document.querySelector("main");
+    const header = document.querySelector("header");
+    const footer = document.querySelector("footer");
+
+    if (mainContent) mainContent.setAttribute("aria-hidden", "true");
+    if (header) header.setAttribute("aria-hidden", "true");
+    if (footer) footer.setAttribute("aria-hidden", "true");
+
+    return () => {
+      if (mainContent) mainContent.removeAttribute("aria-hidden");
+      if (header) header.removeAttribute("aria-hidden");
+      if (footer) footer.removeAttribute("aria-hidden");
+    };
+  }, [isOpen]);
 
   if (!isOpen) return null;
 
   return (
     <div
+      ref={modalRef}
       className={overlayContainer}
       role="dialog"
       aria-modal="true"
       aria-labelledby="search-modal-title"
       hidden={!isOpen}
-      inert={!isOpen}
     >
       <div className={modalContent}>
         <div className={fr.cx("fr-container", "fr-pb-8w", "fr-pt-4w")}>
@@ -100,6 +165,7 @@ export const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
               priority="tertiary no outline"
               className={closeButton}
               ref={closeButtonRef}
+              type="button"
             >
               Fermer
             </Button>

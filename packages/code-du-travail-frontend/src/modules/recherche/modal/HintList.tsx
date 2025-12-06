@@ -13,7 +13,7 @@ type Props = {
 export const HintList = ({ actualites, suggestions, isLoading }: Props) => {
   if (isLoading) {
     return (
-      <div className={loadingContainer}>
+      <div className={loadingContainer} aria-live="polite">
         <LoadingSpinner size={48} />
         <p className={fr.cx("fr-mt-2w")}>Chargement des suggestions...</p>
       </div>
@@ -23,8 +23,16 @@ export const HintList = ({ actualites, suggestions, isLoading }: Props) => {
   return (
     <div className={fr.cx("fr-mt-6w")}>
       <div className={fr.cx("fr-grid-row", "fr-grid-row--gutters")}>
-        <div className={fr.cx("fr-col-12", "fr-col-md-6")}>
-          <p className={fr.cx("fr-badge", "fr-badge--info")}>ACTUALITÉ</p>
+        <section
+          className={fr.cx("fr-col-12", "fr-col-md-6")}
+          aria-labelledby="actualites-heading"
+        >
+          <h2
+            id="actualites-heading"
+            className={fr.cx("fr-badge", "fr-badge--info")}
+          >
+            ACTUALITÉ
+          </h2>
           <ul>
             {actualites.map((result) => (
               <li key={result.id} className={fr.cx("fr-mt-3w")}>
@@ -37,17 +45,23 @@ export const HintList = ({ actualites, suggestions, isLoading }: Props) => {
               </li>
             ))}
           </ul>
-        </div>
+        </section>
 
-        <div
+        <section
           className={fr.cx(
             "fr-col-12",
             "fr-col-md-6",
             "fr-mt-3w",
             "fr-mt-md-0"
           )}
+          aria-labelledby="suggestions-heading"
         >
-          <p className={fr.cx("fr-badge", "fr-badge--info")}>SUGGESTIONS</p>
+          <h2
+            id="suggestions-heading"
+            className={fr.cx("fr-badge", "fr-badge--info")}
+          >
+            SUGGESTIONS
+          </h2>
           <ul>
             {suggestions.map((result) => (
               <li key={result.id} className={fr.cx("fr-mt-3w")}>
@@ -60,7 +74,7 @@ export const HintList = ({ actualites, suggestions, isLoading }: Props) => {
               </li>
             ))}
           </ul>
-        </div>
+        </section>
       </div>
     </div>
   );

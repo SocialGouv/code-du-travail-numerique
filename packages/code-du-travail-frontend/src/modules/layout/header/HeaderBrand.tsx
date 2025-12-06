@@ -34,6 +34,7 @@ export const HeaderBrand = ({ onSearchClick }: HeaderBrandProps) => {
         <div className={fr.cx("fr-header__navbar")}>
           <button
             id="fr-header-search-button"
+            type="button"
             className={fr.cx("fr-btn--search", "fr-btn")}
             data-fr-opened="false"
             aria-controls="fr-header-search-modal"
@@ -44,6 +45,7 @@ export const HeaderBrand = ({ onSearchClick }: HeaderBrandProps) => {
             Rechercher
           </button>
           <button
+            type="button"
             className={fr.cx("fr-btn--menu", "fr-btn")}
             data-fr-opened="false"
             aria-controls="header-menu-modal-fr-header"

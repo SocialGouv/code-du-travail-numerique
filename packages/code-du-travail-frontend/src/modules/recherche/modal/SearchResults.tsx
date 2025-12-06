@@ -3,6 +3,7 @@ import { css } from "@styled-system/css";
 import { SearchResultCard } from "./SearchResultCard";
 import { useRef, useEffect } from "react";
 import { SearchResult } from "src/api/modules/search/service/presearch";
+import { useSearchTracking } from "../tracking";
 
 interface Props {
   results: SearchResult[];
@@ -16,6 +17,7 @@ export const SearchResults = ({
   hideTitle = false,
 }: Props) => {
   const containerRef = useRef<HTMLDivElement>(null);
+  const { emitSelectPresearchResultEvent } = useSearchTracking();
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -32,19 +34,33 @@ export const SearchResults = ({
     return null;
   }
 
+  const handleResultClick = (result: SearchResult) => {
+    emitSelectPresearchResultEvent(result);
+    if (onResultClick) {
+      onResultClick();
+    }
+  };
+
   return (
-    <div className={fr.cx("fr-mt-3w")} ref={containerRef}>
+    <section
+      className={fr.cx("fr-mt-3w")}
+      ref={containerRef}
+      aria-labelledby={hideTitle ? undefined : "search-results-heading"}
+    >
       {!hideTitle && (
         <div className={`${titleDivStyle} ${fr.cx("fr-p-1w")}`}>
-          <h2 className={fr.cx("fr-h3")}>Cela pourrait vous intéresser ?</h2>
+          <h2 id="search-results-heading" className={fr.cx("fr-h3")}>
+            Cela pourrait vous intéresser ?
+          </h2>
         </div>
       )}
       <ul
         className={`${resultListStyle} ${fr.cx("fr-grid-row", "fr-grid-row--gutters", "fr-mt-3w")}`}
+        role="list"
       >
         {results.map((result, index) => (
           <li
-            key={result.cdtnId || `result-${index}`}
+            key={result.cdtnId || `modal-result-${index}`}
             className={fr.cx(
               "fr-col-12",
               "fr-col-sm-6",
@@ -52,11 +68,15 @@ export const SearchResults = ({
               "fr-col-lg-3"
             )}
           >
-            <SearchResultCard result={result} onClick={onResultClick} />
+            <SearchResultCard
+              result={result}
+              onClick={() => handleResultClick(result)}
+              headingLevel={hideTitle ? "h2" : "h3"}
+            />
           </li>
         ))}
       </ul>
-    </div>
+    </section>
   );
 };
 

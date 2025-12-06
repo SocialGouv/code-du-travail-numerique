@@ -1,15 +1,23 @@
 import { fr } from "@codegouvfr/react-dsfr";
-import { getLabelBySource, getRouteBySource } from "@socialgouv/cdtn-utils";
+import { getRouteBySource } from "@socialgouv/cdtn-utils";
 import { css } from "@styled-system/css";
 import { SearchResult } from "src/api/modules/search/service/presearch";
 import Link from "src/modules/common/Link";
+import { getSourceLabel } from "../utils";
 
 type Props = {
   result: SearchResult;
   onClick?: () => void;
+  headingLevel?: "h2" | "h3";
 };
 
-export const SearchResultCard = ({ result, onClick }: Props) => {
+export const SearchResultCard = ({
+  result,
+  onClick,
+  headingLevel = "h3",
+}: Props) => {
+  const HeadingTag = headingLevel;
+
   return (
     <Link
       href={`/${getRouteBySource(result.source)}/${result.slug}`}
@@ -19,14 +27,14 @@ export const SearchResultCard = ({ result, onClick }: Props) => {
       <div className={cardContainer}>
         <div className={fr.cx("fr-mb-1w")}>
           <span className={`${badgeBase} ${badgeColorClasses[result.source]}`}>
-            {String(getLabelBySource(result.source)).toUpperCase()}
+            {getSourceLabel(result.source).toUpperCase()}
           </span>
         </div>
-        <h3
+        <HeadingTag
           className={`${fr.cx("fr-text--md", "fr-mb-0", "fr-text--bold")} ${titleStyle}`}
         >
           {result.title}
-        </h3>
+        </HeadingTag>
       </div>
     </Link>
   );
@@ -89,6 +97,10 @@ const badgeColorClasses: Partial<Record<SearchResult["source"], string>> = {
     backgroundColor: "var(--background-contrast-warning) !important", // light decision background background contrast warning
     color: "var(--text-default-warning) !important", // light decision text default warning
   }),
+  external: css({
+    backgroundColor: "var(--background-contrast-warning) !important", // light decision background background contrast warning
+    color: "var(--text-default-warning) !important", // light decision text default warning
+  }),
   infographies: css({
     backgroundColor: "var(--background-alt-brown-cafe-creme) !important", // light option illustration color 975 default brown cafe creme
     color: "var(--text-action-high-purple-glycine) !important", // light option illustration color sun default purple glycine
@@ -96,10 +108,6 @@ const badgeColorClasses: Partial<Record<SearchResult["source"], string>> = {
   contributions: css({
     backgroundColor: "var(--background-alt-green-archipel) !important", // light option illustration color 975 default green archipel
     color: "var(--text-action-high-green-archipel) !important", // light option illustration color sun default green archipel
-  }),
-  external: css({
-    backgroundColor: "var(--background-contrast-warning) !important", // light decision background background contrast warning
-    color: "var(--text-default-warning) !important", // light decision text default warning
   }),
   fiches_ministere_travail: css({
     backgroundColor: "var(--background-alt-green-archipel) !important", // light option illustration color 975 default green archipel
@@ -110,8 +118,8 @@ const badgeColorClasses: Partial<Record<SearchResult["source"], string>> = {
     color: "var(--text-action-high-green-archipel) !important", // light option illustration color sun default green archipel
   }),
   information: css({
-    backgroundColor: "var(--background-alt-brown-cafe-creme) !important", // light option illustration color 975 default brown cafe creme
-    color: "var(--text-action-high-purple-glycine) !important", // light option illustration color sun default purple glycine
+    backgroundColor: "var(--background-alt-green-archipel) !important", // light option illustration color 975 default green archipel
+    color: "var(--text-action-high-green-archipel) !important", // light option illustration color sun default green archipel
   }),
   page_fiche_ministere_travail: css({
     backgroundColor: "var(--background-alt-green-archipel) !important", // light option illustration color 975 default green archipel

@@ -16,6 +16,7 @@ export const HeaderSearchV2 = ({ onSearchClick }: HeaderSearchProps) => {
         iconId="fr-icon-search-line"
         iconPosition="right"
         className={buttonStyle}
+        type="button"
       >
         Rechercher
       </Button>

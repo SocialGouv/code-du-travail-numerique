@@ -20,7 +20,12 @@ export const SearchFeedback = ({
 }: SearchFeedbackProps) => {
   return (
     <>
-      <div className={fr.cx("fr-mt-6w")}>
+      <div
+        className={fr.cx("fr-mt-6w")}
+        role="status"
+        aria-live="polite"
+        aria-atomic="true"
+      >
         {isSearching && query.length >= minSearchLength && (
           <div className={loadingContainer}>
             <LoadingSpinner />

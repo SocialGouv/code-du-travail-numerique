@@ -43,7 +43,7 @@ export const HomeSearch = () => {
 
   const onSelectedItemChange = (value: string | undefined) => {
     if (value) {
-      emitSuggestionSelectionEvent(query, value, suggestions);
+      emitSuggestionSelectionEvent(query, value);
       handleSearch(value);
     }
   };

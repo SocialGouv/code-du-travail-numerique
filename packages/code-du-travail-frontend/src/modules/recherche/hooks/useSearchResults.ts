@@ -1,6 +1,10 @@
 import { useState, useEffect } from "react";
 import { fetchSearchResults } from "../api/fetchSearchResults";
-import { SearchResult } from "src/api/modules/search/service/presearch";
+import {
+  SearchResult,
+  PresearchClass,
+} from "src/api/modules/search/service/presearch";
+import { useSearchTracking } from "../tracking";
 
 interface UseSearchResultsReturn {
   results: SearchResult[];
@@ -18,13 +22,20 @@ export const useSearchResults = (): UseSearchResultsReturn => {
   const [hasSearched, setHasSearched] = useState(false);
   const [query, setQuery] = useState("");
 
+  const { emitPresearchEvent, emitSearchEvent } = useSearchTracking();
+
   const triggerSearch = async () => {
     setIsLoading(true);
     setHasSearched(true);
 
     try {
-      const results = await fetchSearchResults(query);
+      const { results, classes } = await fetchSearchResults(query);
       setResults(results);
+
+      emitPresearchEvent(query, classes);
+
+      const resultClasses = results.map((r) => r.class);
+      emitSearchEvent(query, resultClasses);
     } catch (error) {
       console.error("Error fetching search results:", error);
       setResults([]);
