@@ -20,6 +20,7 @@ export const fetchRootThemes = async <K extends keyof ThemeElasticDocument>(
       },
     },
     sort: [{ position: { order: "asc" } }],
+    size: 100,
     _source: fields,
     index: elasticDocumentsIndex,
   });
