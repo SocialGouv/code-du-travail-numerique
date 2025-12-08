@@ -17,6 +17,13 @@ import "./commands";
 import "./errors";
 import "cypress-real-events";
 
+// Hide cookie consent banner in tests
+beforeEach(() => {
+  cy.window().then((win) => {
+    win.localStorage.setItem("cdtn-cookie-consent-given", "true");
+  });
+});
+
 // in cypress/support/index.ts
 // load type definitions that come with Cypress module
 /// <reference types="cypress" />
