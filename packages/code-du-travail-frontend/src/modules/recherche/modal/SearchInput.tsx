@@ -21,6 +21,7 @@ interface ModalSearchProps {
   onChangeQuery: (s: string) => void;
   hasSearched: boolean;
   resultsCount: number;
+  contextType: "modal" | "home";
 }
 
 export interface ModalSearchHandle {
@@ -40,6 +41,7 @@ export const SearchInput = forwardRef<ModalSearchHandle, ModalSearchProps>(
       onChangeQuery,
       hasSearched = false,
       resultsCount = 0,
+      contextType,
     },
     ref
   ) => {
@@ -106,13 +108,13 @@ export const SearchInput = forwardRef<ModalSearchHandle, ModalSearchProps>(
       <div className={fr.cx("fr-mt-2w")}>
         <h1
           className={fr.cx("fr-text--md", "fr-mb-1w")}
-          id="search-modal-title"
+          id={`search-${contextType}-title`}
         >
           Que souhaitez-vous savoir ?
         </h1>
         <p
           className={fr.cx("fr-text--sm", "fr-mb-2w", "fr-hint-text")}
-          id="search-modal-description"
+          id={`search-${contextType}-description`}
         >
           par exemple : Comment sont comptés les congés pendant les arrêts
           maladies ?
@@ -121,13 +123,13 @@ export const SearchInput = forwardRef<ModalSearchHandle, ModalSearchProps>(
           <div className={searchContainerStyle}>
             <div className={autocompleteWrapper}>
               <label
-                htmlFor="modal-search-autocomplete"
+                htmlFor={`search-${contextType}-autocomplete`}
                 className={fr.cx("fr-label", "fr-sr-only")}
               >
                 Recherche
               </label>
               <AutocompleteV2<string>
-                id="modal-search-autocomplete"
+                id={`search-${contextType}-autocomplete`}
                 search={search}
                 displayLabel={(item: string | null) => item ?? ""}
                 highlightQuery={true}
@@ -145,7 +147,7 @@ export const SearchInput = forwardRef<ModalSearchHandle, ModalSearchProps>(
                 }}
                 onChange={onSelectedItemChange}
                 onError={onError}
-                dataTestId="modal-search-input"
+                dataTestId={`search-${contextType}-input`}
               />
             </div>
             <MinSearchLengthHint
@@ -157,12 +159,9 @@ export const SearchInput = forwardRef<ModalSearchHandle, ModalSearchProps>(
               iconId="fr-icon-search-line"
               iconPosition="right"
               priority="primary"
-              type="button"
+              type="submit"
               onClick={handleSearch}
               className={searchButton}
-              disabled={
-                !query.trim() || query.trim().length < MIN_SEARCH_LENGTH
-              }
             >
               Voir tous les résultats
             </Button>

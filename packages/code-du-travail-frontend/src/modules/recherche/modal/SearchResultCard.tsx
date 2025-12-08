@@ -25,16 +25,16 @@ export const SearchResultCard = ({
       onClick={onClick}
     >
       <div className={cardContainer}>
-        <div className={fr.cx("fr-mb-1w")}>
-          <span className={`${badgeBase} ${badgeColorClasses[result.source]}`}>
-            {getSourceLabel(result.source).toUpperCase()}
-          </span>
-        </div>
         <HeadingTag
           className={`${fr.cx("fr-text--md", "fr-mb-0", "fr-text--bold")} ${titleStyle}`}
         >
           {result.title}
         </HeadingTag>
+        <div className={`${fr.cx("fr-mb-1w")} ${badgeContainer}`}>
+          <span className={`${badgeBase} ${badgeColorClasses[result.source]}`}>
+            {getSourceLabel(result.source).toUpperCase()}
+          </span>
+        </div>
       </div>
     </Link>
   );
@@ -74,6 +74,11 @@ const badgeBase = css({
   textTransform: "uppercase",
   padding: "0.25rem 0.5rem !important",
   lineHeight: 1,
+});
+
+const badgeContainer = css({
+  order: -1,
+  display: "block",
 });
 
 const badgeColorClasses: Partial<Record<SearchResult["source"], string>> = {

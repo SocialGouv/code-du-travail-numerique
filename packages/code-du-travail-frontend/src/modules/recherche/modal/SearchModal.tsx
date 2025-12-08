@@ -10,6 +10,7 @@ import { HintList } from "./HintList";
 import { useSearchResults } from "../hooks/useSearchResults";
 import { useHints } from "../hooks/useHints";
 import useScrollBlock from "../../utils/useScrollBlock";
+import { useBreakpoints } from "src/modules/common/useBreakpoints";
 
 interface SearchModalProps {
   isOpen: boolean;
@@ -21,6 +22,7 @@ export const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
   const closeButtonRef = useRef<HTMLButtonElement>(null);
   const modalRef = useRef<HTMLDivElement>(null);
   const [blockScroll, allowScroll] = useScrollBlock();
+  const { isBelow } = useBreakpoints();
 
   const {
     results,
@@ -42,20 +44,17 @@ export const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
     onClose();
 
     setTimeout(() => {
-      const searchButtonDesktop = document.getElementById(
-        "fr-header-search-button-desktop"
-      ) as HTMLButtonElement;
-      const searchButtonMobile = document.getElementById(
-        "fr-header-search-button"
+      const searchButton = document.getElementById(
+        isBelow("lg")
+          ? "fr-header-search-button"
+          : "fr-header-search-button-desktop"
       ) as HTMLButtonElement;
 
-      if (searchButtonDesktop) {
-        searchButtonDesktop.focus();
-      } else if (searchButtonMobile) {
-        searchButtonMobile.focus();
+      if (searchButton) {
+        searchButton.focus();
       }
     }, 100);
-  }, [onClose]);
+  }, [isBelow, onClose]);
 
   useEffect(() => {
     if (isOpen) {
@@ -98,14 +97,16 @@ export const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
     if (!isOpen || !modalRef.current) return;
 
     const modal = modalRef.current;
-    const focusableElements = modal.querySelectorAll<HTMLElement>(
-      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-    );
-    const firstFocusable = focusableElements[0];
-    const lastFocusable = focusableElements[focusableElements.length - 1];
 
     const handleTab = (event: KeyboardEvent) => {
       if (event.key !== "Tab") return;
+
+      const focusableElements = modal.querySelectorAll<HTMLElement>(
+        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+      );
+
+      const firstFocusable = focusableElements[0];
+      const lastFocusable = focusableElements[focusableElements.length - 1];
 
       if (event.shiftKey) {
         if (document.activeElement === firstFocusable) {
@@ -123,25 +124,6 @@ export const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
     document.addEventListener("keydown", handleTab);
     return () => document.removeEventListener("keydown", handleTab);
   }, [isOpen, hasSearched, results.length]);
-
-  // Set aria-hidden on main content when modal is open
-  useEffect(() => {
-    if (!isOpen) return;
-
-    const mainContent = document.querySelector("main");
-    const header = document.querySelector("header");
-    const footer = document.querySelector("footer");
-
-    if (mainContent) mainContent.setAttribute("aria-hidden", "true");
-    if (header) header.setAttribute("aria-hidden", "true");
-    if (footer) footer.setAttribute("aria-hidden", "true");
-
-    return () => {
-      if (mainContent) mainContent.removeAttribute("aria-hidden");
-      if (header) header.removeAttribute("aria-hidden");
-      if (footer) footer.removeAttribute("aria-hidden");
-    };
-  }, [isOpen]);
 
   if (!isOpen) return null;
 
@@ -180,6 +162,7 @@ export const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
             onChangeQuery={setQuery}
             hasSearched={hasSearched}
             resultsCount={results.length}
+            contextType="modal"
           />
 
           {!hasSearched && (
@@ -191,7 +174,11 @@ export const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
           )}
 
           {hasSearched && !isLoading && (
-            <SearchResults results={results} onResultClick={handleClose} />
+            <SearchResults
+              results={results}
+              onResultClick={handleClose}
+              contextType="modal"
+            />
           )}
         </div>
       </div>
@@ -216,7 +203,7 @@ const overlayContainer = css({
 const modalContent = css({
   backgroundColor: "var(--background-default-grey)",
   boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-  marginTop: "0.4px",
+  marginTop: "1px",
   overflowY: "auto",
   height: "100%",
 });

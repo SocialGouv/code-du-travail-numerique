@@ -39,7 +39,6 @@ const manageButton = css({
   bottom: "1rem",
   right: "1rem",
   zIndex: 1000,
-  backgroundColor: "var(--background-default-grey)",
 });
 
 // Style responsive pour les boutons

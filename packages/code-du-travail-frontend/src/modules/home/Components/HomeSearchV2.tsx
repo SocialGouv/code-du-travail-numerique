@@ -30,10 +30,11 @@ export const HomeSearchV2 = () => {
         onChangeQuery={setQuery}
         hasSearched={hasSearched}
         resultsCount={results.length}
+        contextType="home"
       />
 
       {hasSearched && !isLoading && (
-        <SearchResults results={results} hideTitle={true} />
+        <SearchResults results={results} hideTitle={true} contextType="home" />
       )}
     </div>
   );

@@ -16,10 +16,8 @@ type Props = {
 export const DsfrLayout = ({ children, container = "fr-container" }: Props) => {
   const { isOpen, closeModal, openModal } = useSearchModal();
 
-  // Add keyboard shortcut (Cmd+K / Ctrl+K) to open search modal
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
-      // Check for Cmd+K (Mac) or Ctrl+K (Windows/Linux)
       if ((event.metaKey || event.ctrlKey) && event.key === "k") {
         event.preventDefault();
         if (!isOpen) {

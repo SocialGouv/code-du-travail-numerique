@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { fetchSearchResults } from "../api/fetchSearchResults";
 import {
   SearchResult,
@@ -24,7 +24,7 @@ export const useSearchResults = (): UseSearchResultsReturn => {
 
   const { emitPresearchEvent, emitSearchEvent } = useSearchTracking();
 
-  const triggerSearch = async () => {
+  const triggerSearch = useCallback(async () => {
     setIsLoading(true);
     setHasSearched(true);
 
@@ -42,20 +42,20 @@ export const useSearchResults = (): UseSearchResultsReturn => {
     } finally {
       setIsLoading(false);
     }
-  };
+  }, [query, emitPresearchEvent, emitSearchEvent]);
 
-  const resetSearch = () => {
+  const resetSearch = useCallback(() => {
     setResults([]);
     setHasSearched(false);
     setIsLoading(false);
-  };
+  }, []);
 
   // Cleanup on unmount
   useEffect(() => {
     return () => {
       resetSearch();
     };
-  }, []);
+  }, [resetSearch]);
 
   return {
     results,
@@ -67,3 +67,6 @@ export const useSearchResults = (): UseSearchResultsReturn => {
     setQuery,
   };
 };
+
+// keep hooks stable reference types
+useSearchResults.displayName = "useSearchResults";

@@ -9,12 +9,14 @@ interface Props {
   results: SearchResult[];
   onResultClick?: () => void;
   hideTitle?: boolean;
+  contextType: "home" | "modal";
 }
 
 export const SearchResults = ({
   results,
   onResultClick,
   hideTitle = false,
+  contextType,
 }: Props) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const { emitSelectPresearchResultEvent } = useSearchTracking();
@@ -45,11 +47,16 @@ export const SearchResults = ({
     <section
       className={fr.cx("fr-mt-3w")}
       ref={containerRef}
-      aria-labelledby={hideTitle ? undefined : "search-results-heading"}
+      aria-labelledby={
+        hideTitle ? undefined : `search-results-heading-${contextType}`
+      }
     >
       {!hideTitle && (
         <div className={`${titleDivStyle} ${fr.cx("fr-p-1w")}`}>
-          <h2 id="search-results-heading" className={fr.cx("fr-h3")}>
+          <h2
+            id={`search-results-heading-${contextType}`}
+            className={fr.cx("fr-h3")}
+          >
             Cela pourrait vous intéresser ?
           </h2>
         </div>
@@ -60,7 +67,7 @@ export const SearchResults = ({
       >
         {results.map((result, index) => (
           <li
-            key={result.cdtnId || `modal-result-${index}`}
+            key={result.cdtnId || `modal-result-${index}-${contextType}`}
             className={fr.cx(
               "fr-col-12",
               "fr-col-sm-6",
