@@ -10,6 +10,7 @@ interface Props {
   onResultClick?: () => void;
   hideTitle?: boolean;
   contextType: "home" | "modal";
+  titleRef?: React.RefObject<HTMLHeadingElement | null>;
 }
 
 export const SearchResults = ({
@@ -17,19 +18,14 @@ export const SearchResults = ({
   onResultClick,
   hideTitle = false,
   contextType,
+  titleRef,
 }: Props) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const { emitSelectPresearchResultEvent } = useSearchTracking();
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      const firstLink = containerRef.current?.querySelector("a");
-      if (firstLink) {
-        firstLink.focus();
-      }
-    }, 100);
-
-    return () => clearTimeout(timer);
+    // Focus is now managed by the parent component via titleRef
+    // Remove auto-focus on first link
   }, []);
 
   if (results.length === 0) {
@@ -56,6 +52,8 @@ export const SearchResults = ({
           <h2
             id={`search-results-heading-${contextType}`}
             className={fr.cx("fr-h3")}
+            ref={titleRef}
+            tabIndex={-1}
           >
             Cela pourrait vous intéresser ?
           </h2>

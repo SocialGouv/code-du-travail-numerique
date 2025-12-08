@@ -4,6 +4,7 @@ import { LoadingSpinner } from "./LoadingSpinner";
 import { MinSearchLengthHint } from "./MinSearchLengthHint";
 
 interface SearchFeedbackProps {
+  id?: string;
   isSearching: boolean;
   query: string;
   minSearchLength: number;
@@ -12,19 +13,44 @@ interface SearchFeedbackProps {
 }
 
 export const SearchFeedback = ({
+  id,
   isSearching,
   query,
   minSearchLength,
   hasSearched = false,
   resultsCount = 0,
 }: SearchFeedbackProps) => {
+  let feedbackMessage = "";
+
+  if (isSearching && query.length >= minSearchLength) {
+    feedbackMessage = "Nous recherchons les bons résultats";
+  } else if (
+    hasSearched &&
+    !isSearching &&
+    resultsCount === 0 &&
+    query.length >= minSearchLength
+  ) {
+    feedbackMessage = "Précisez votre saisie, aucun résultat disponible.";
+  } else if (
+    !isSearching &&
+    query.length < minSearchLength &&
+    query.length > 0
+  ) {
+    feedbackMessage = `Tapez ${minSearchLength} caractères ou plus pour lancer une recherche`;
+  }
+
   return (
     <>
-      <div className={fr.cx("fr-mt-6w")} aria-live="polite">
+      <div
+        id={id}
+        className={fr.cx("fr-mt-6w")}
+        aria-live="polite"
+        aria-atomic="true"
+      >
         {isSearching && query.length >= minSearchLength && (
           <div className={loadingContainer}>
             <LoadingSpinner />
-            <p className={hintTextStyle}>Nous recherchons les bons résultats</p>
+            <p className={hintTextStyle}>{feedbackMessage}</p>
           </div>
         )}
 
@@ -33,9 +59,7 @@ export const SearchFeedback = ({
           resultsCount === 0 &&
           query.length >= minSearchLength && (
             <div className={loadingContainer}>
-              <p className={hintTextStyle}>
-                Précisez votre saisie, aucun résultat disponible.
-              </p>
+              <p className={hintTextStyle}>{feedbackMessage}</p>
             </div>
           )}
 

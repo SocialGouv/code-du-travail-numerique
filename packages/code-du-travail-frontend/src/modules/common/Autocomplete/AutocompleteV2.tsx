@@ -27,6 +27,7 @@ type AutocompleteProps<K> = InputProps & {
   inputRef?: Ref<HTMLInputElement>;
   id?: string;
   highlightQuery?: boolean;
+  ariaDescribedby?: string;
 };
 
 export const AutocompleteV2 = <K,>({
@@ -50,6 +51,7 @@ export const AutocompleteV2 = <K,>({
   inputRef: externalInputRef,
   highlightQuery = false,
   hideLabel,
+  ariaDescribedby,
 }: AutocompleteProps<K>) => {
   const [loading, setLoading] = useState(false);
   const internalInputRef = useRef<HTMLInputElement | null>(null);
@@ -198,6 +200,8 @@ export const AutocompleteV2 = <K,>({
           }
         }
 
+        const listboxId = id ? `${id}-listbox` : undefined;
+
         const inputProps = getInputProps({
           onFocus: (e: React.FocusEvent<HTMLInputElement>) => {
             isFocusedRef.current = true;
@@ -280,6 +284,14 @@ export const AutocompleteV2 = <K,>({
                 },
                 ...inputProps,
                 "aria-labelledby": undefined,
+                role: "combobox",
+                "aria-expanded": isOpen,
+                "aria-controls": listboxId,
+                "aria-haspopup": "listbox",
+                "aria-autocomplete": "list" as const,
+                ...(ariaDescribedby
+                  ? { "aria-describedby": ariaDescribedby }
+                  : {}),
               }}
               className={`${fr.cx("fr-mb-0")}`}
               hintText={hintText}
@@ -303,7 +315,10 @@ export const AutocompleteV2 = <K,>({
               </div>
             )}
             <ul
-              {...getMenuProps()}
+              {...getMenuProps({}, { suppressRefError: true })}
+              id={listboxId}
+              role="listbox"
+              aria-labelledby={id ? `${id}-label` : undefined}
               className={`${fr.cx("fr-p-0", "fr-m-0")} ${autocompleteListContainer} ${isSearch ? listSearch : ""}`}
             >
               {isOpen && suggestions.length
@@ -314,6 +329,8 @@ export const AutocompleteV2 = <K,>({
                         index,
                       })}
                       key={`${displayLabel(item)}${index}`}
+                      role="option"
+                      aria-selected={highlightedIndex === index}
                       className={`${fr.cx("fr-p-3v")} ${suggestion} ${highlightedIndex === index ? isHighlighted : ""}`}
                     >
                       {lineAsLink ? (
@@ -395,7 +412,7 @@ const inputStyle = css({
 const suggestion = css({
   cursor: "pointer",
   color: "var(--text-default-grey)",
-  transition: "background-color 0.2s ease",
+  transition: "all 0.2s ease",
   borderBottom: "1px solid var(--border-default-grey)",
   _last: {
     borderBottom: "none",
@@ -422,6 +439,9 @@ const buttonClose = css({
 
 const isHighlighted = css({
   bg: "var(--background-default-grey-hover)",
+  outline: "2px solid var(--border-plain-blue-france)",
+  outlineOffset: "-2px",
+  fontWeight: "bold",
 });
 
 const link = css({

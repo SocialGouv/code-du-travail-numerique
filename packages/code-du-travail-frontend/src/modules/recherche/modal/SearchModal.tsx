@@ -21,6 +21,7 @@ export const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
   const modalSearchRef = useRef<ModalSearchHandle>(null);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
   const modalRef = useRef<HTMLDivElement>(null);
+  const resultsTitleRef = useRef<HTMLHeadingElement>(null);
   const [blockScroll, allowScroll] = useScrollBlock();
   const { isBelow } = useBreakpoints();
 
@@ -39,6 +40,20 @@ export const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
     fetchHintsData,
     isLoading: isHintsLoading,
   } = useHints();
+
+  const handleSearchSubmit = (hasResults: boolean) => {
+    if (hasResults) {
+      // Focus on results title if there are results
+      setTimeout(() => {
+        resultsTitleRef.current?.focus();
+      }, 100);
+    } else {
+      // Keep focus on input if no results
+      setTimeout(() => {
+        modalSearchRef.current?.focusInput();
+      }, 100);
+    }
+  };
 
   const handleClose = useCallback(() => {
     onClose();
@@ -163,6 +178,7 @@ export const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
             hasSearched={hasSearched}
             resultsCount={results.length}
             contextType="modal"
+            onSearchSubmit={handleSearchSubmit}
           />
 
           {!hasSearched && (
@@ -178,6 +194,7 @@ export const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
               results={results}
               onResultClick={handleClose}
               contextType="modal"
+              titleRef={resultsTitleRef}
             />
           )}
         </div>

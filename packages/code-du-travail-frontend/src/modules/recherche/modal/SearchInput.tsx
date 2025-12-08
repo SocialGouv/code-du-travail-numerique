@@ -22,6 +22,7 @@ interface ModalSearchProps {
   hasSearched: boolean;
   resultsCount: number;
   contextType: "modal" | "home";
+  onSearchSubmit?: (hasResults: boolean) => void;
 }
 
 export interface ModalSearchHandle {
@@ -42,6 +43,7 @@ export const SearchInput = forwardRef<ModalSearchHandle, ModalSearchProps>(
       hasSearched = false,
       resultsCount = 0,
       contextType,
+      onSearchSubmit,
     },
     ref
   ) => {
@@ -71,10 +73,13 @@ export const SearchInput = forwardRef<ModalSearchHandle, ModalSearchProps>(
       if (!query.trim() || query.trim().length < MIN_SEARCH_LENGTH) return;
       clearSuggestions();
       inputRef.current?.blur();
-      setTimeout(() => {
-        inputRef.current?.focus();
-      }, 0);
       onSearchTriggered?.();
+
+      // Focus management after search
+      setTimeout(() => {
+        const hasResults = resultsCount > 0;
+        onSearchSubmit?.(hasResults);
+      }, 100);
     };
 
     const search = async (inputValue: string) => {
@@ -104,32 +109,30 @@ export const SearchInput = forwardRef<ModalSearchHandle, ModalSearchProps>(
       }
     };
 
+    const inputId = `${contextType}-search-autocomplete`;
+    const labelId = `${contextType}-search-label`;
+    const feedbackId = `${contextType}-search-feedback`;
+
     return (
       <div className={fr.cx("fr-mt-2w")}>
-        <h1
-          className={fr.cx("fr-text--md", "fr-mb-1w")}
-          id={`search-${contextType}-title`}
-        >
-          Que souhaitez-vous savoir ?
-        </h1>
-        <p
-          className={fr.cx("fr-text--sm", "fr-mb-2w", "fr-hint-text")}
-          id={`search-${contextType}-description`}
-        >
-          par exemple : Comment sont comptés les congés pendant les arrêts
-          maladies ?
-        </p>
         <form onSubmit={onSubmit} role="search" aria-label="Recherche">
           <div className={searchContainerStyle}>
             <div className={autocompleteWrapper}>
               <label
-                htmlFor={`search-${contextType}-autocomplete`}
-                className={fr.cx("fr-label", "fr-sr-only")}
+                htmlFor={inputId}
+                id={labelId}
+                className={fr.cx("fr-label")}
               >
-                Recherche
+                <h1 className={fr.cx("fr-text--md", "fr-mb-1w")}>
+                  Que souhaitez-vous savoir ?
+                </h1>
+                <p className={fr.cx("fr-text--sm", "fr-mb-2w", "fr-hint-text")}>
+                  par exemple : Comment sont comptés les congés pendant les
+                  arrêts maladies ?
+                </p>
               </label>
               <AutocompleteV2<string>
-                id={`search-${contextType}-autocomplete`}
+                id={inputId}
                 search={search}
                 displayLabel={(item: string | null) => item ?? ""}
                 highlightQuery={true}
@@ -138,6 +141,7 @@ export const SearchInput = forwardRef<ModalSearchHandle, ModalSearchProps>(
                 isSearch={false}
                 displayNoResult={false}
                 inputRef={inputRef}
+                ariaDescribedby={feedbackId}
                 onInputValueChange={(value) => {
                   setQuery(value || "");
                   onChangeQuery(value || "");
@@ -169,6 +173,7 @@ export const SearchInput = forwardRef<ModalSearchHandle, ModalSearchProps>(
         </form>
 
         <SearchFeedback
+          id={feedbackId}
           isSearching={isLoadingResults}
           query={query}
           minSearchLength={MIN_SEARCH_LENGTH}
