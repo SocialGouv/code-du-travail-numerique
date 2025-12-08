@@ -22,14 +22,14 @@ describe("Pages infographies", () => {
       "contain",
       "Découvrez toutes nos infographies : des visuels clairs pour comprendre vos droits, obligations et démarches en un coup d'oeil."
     );
-    cy.findAllByRole("heading", { level: 2 }).should("have.length", 9);
+    cy.findAllByRole("heading", { level: 2 }).should("have.length", 10);
     cy.findAllByRole("heading", { level: 2 }).eq(0).should("contain", "Résumé");
     cy.findAllByRole("heading", { level: 2 })
       .eq(1)
       .should("contain", "Contenus populaires");
     cy.findAllByRole("heading", { level: 2 })
       .eq(2)
-      .should("contain", "Embauche");
+      .should("contain", "Contrat de travail");
     cy.findAllByRole("heading", { level: 3 }).should("have.length.at.least", 1);
     cy.findAllByRole("heading", { level: 3 }).first().click();
     cy.urlEqual("/infographie/licenciement-pour-inaptitude-medicale");
@@ -50,6 +50,7 @@ describe("Pages infographies", () => {
       "have.text",
       "Que se passe-t-il en cas d'abandon de poste ?"
     );
+    cy.get("a").should("contain", "Abandon de poste");
     cy.get("body").should(
       "contain",
       "Cette infographie détaille la marche à suivre pour l’employeur en cas d’abandon de poste d’un salarié."
