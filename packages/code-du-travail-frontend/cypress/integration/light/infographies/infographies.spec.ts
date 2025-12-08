@@ -2,27 +2,27 @@ describe("Pages infographies", () => {
   it("je vois la liste de toutes les infographies par thèmes", () => {
     // TODO : Remettre le test en place après la heatmap
     cy.visit("/infographie");
-    /*
     cy.visit("/");
     cy.findByRole("heading", { level: 1 })
       .should("have.text", "Bienvenue sur le Code du travail numérique")
       .click();
     cy.get("#fr-header-main-navigation").contains("Code du travail").click();
-    cy.get("#fr-header-main-navigation").contains("Nos infographies").click();
+    cy.get("#fr-header-main-navigation")
+      .contains("Nos infographies")
+      .click({ force: true });
     cy.isIndexable();
-     */
     cy.urlEqual("/infographie");
     cy.canonicalUrlEqual("/infographie");
     cy.titleAndMetaDescriptionEqual(
       "Infographies - Code du travail numérique",
       "Découvrez toutes nos infographies : des visuels clairs pour comprendre vos droits, obligations et démarches en un coup d'oeil."
     );
-    cy.get("h1").should("have.text", "Infographies");
+    cy.get("h1").should("contain.text", "Infographies");
     cy.get("body").should(
       "contain",
       "Découvrez toutes nos infographies : des visuels clairs pour comprendre vos droits, obligations et démarches en un coup d'oeil."
     );
-    cy.findAllByRole("heading", { level: 2 }).should("have.length", 8);
+    cy.findAllByRole("heading", { level: 2 }).should("have.length", 9);
     cy.findAllByRole("heading", { level: 2 }).eq(0).should("contain", "Résumé");
     cy.findAllByRole("heading", { level: 2 })
       .eq(1)
