@@ -445,175 +445,175 @@ export const WHAT_IS_NEW_MONTHS: WhatIsNewMonth[] = [
               {
                 title:
                   "Question/Réponse : Heures supplémentaires : contreparties",
-                href: "/contribution/heures-supplementaires-contreparties",
+                href: "/contribution/heures-supplementaires",
                 description:
                   "Création de la page détaillant les contreparties (majoration et/ou repos compensateur) en cas d’heures supplémentaires.",
               },
               {
                 title:
                   "IDCC 292 Question/Réponse : Heures supplémentaires : contreparties",
-                href: "/contribution/292-heures-supplementaires-contreparties",
+                href: "/contribution/292-heures-supplementaires",
                 description:
                   "Création de la page détaillant les contreparties (majoration et/ou repos compensateur) en cas d’heures supplémentaires dans la branche de la plasturgie.",
               },
               {
                 title:
                   "IDCC 1090 Question/Réponse : Heures supplémentaires : contreparties",
-                href: "/contribution/1090-heures-supplementaires-contreparties",
+                href: "/contribution/1090-heures-supplementaires",
                 description:
                   "Création de la page détaillant les contreparties (majoration et/ou repos compensateur) en cas d’heures supplémentaires dans la branche de l’automobile.",
               },
               {
                 title:
                   "IDCC 1147 Question/Réponse : Heures supplémentaires : contreparties",
-                href: "/contribution/1147-heures-supplementaires-contreparties",
+                href: "/contribution/1147-heures-supplementaires",
                 description:
                   "Création de la page détaillant les contreparties (majoration et/ou repos compensateur) en cas d’heures supplémentaires dans la branche du personnel des cabinets médicaux.",
               },
               {
                 title:
                   "IDCC 1996 Question/Réponse : Heures supplémentaires : contreparties",
-                href: "/contribution/1996-heures-supplementaires-contreparties",
+                href: "/contribution/1996-heures-supplementaires",
                 description:
                   "Création de la page détaillant les contreparties (majoration et/ou repos compensateur) en cas d’heures supplémentaires dans la branche de la pharmacie d'officine.",
               },
               {
                 title:
                   "IDCC 1606 Question/Réponse : Heures supplémentaires : contreparties",
-                href: "/contribution/1606-heures-supplementaires-contreparties",
+                href: "/contribution/1606-heures-supplementaires",
                 description:
                   "Création de la page détaillant les contreparties (majoration et/ou repos compensateur) en cas d’heures supplémentaires dans la branche du bricolage.",
               },
               {
                 title:
                   "IDCC 573 Question/Réponse : Heures supplémentaires : contreparties",
-                href: "/contribution/573-heures-supplementaires-contreparties",
+                href: "/contribution/573-heures-supplementaires",
                 description:
                   "Création de la page détaillant les contreparties (majoration et/ou repos compensateur) en cas d’heures supplémentaires dans la branche des commerces de gros.",
               },
               {
                 title:
                   "IDCC 3248 Question/Réponse : Heures supplémentaires : contreparties",
-                href: "/contribution/3248-heures-supplementaires-contreparties",
+                href: "/contribution/3248-heures-supplementaires",
                 description:
                   "Création de la page détaillant les contreparties (majoration et/ou repos compensateur) en cas d’heures supplémentaires dans la branche de la métallurgie.",
               },
               {
                 title:
                   "IDCC 1486 Question/Réponse : Heures supplémentaires : contreparties",
-                href: "/contribution/1486-heures-supplementaires-contreparties",
+                href: "/contribution/1486-heures-supplementaires",
                 description:
                   "Création de la page détaillant les contreparties (majoration et/ou repos compensateur) en cas d’heures supplémentaires dans la branche des bureaux d'études techniques.",
               },
               {
                 title:
                   "IDCC 1979 Question/Réponse : Heures supplémentaires : contreparties",
-                href: "/contribution/1979-heures-supplementaires-contreparties",
+                href: "/contribution/1979-heures-supplementaires",
                 description:
                   "Création de la page détaillant les contreparties (majoration et/ou repos compensateur) en cas d’heures supplémentaires dans la branche des hôtels, cafés, restaurants.",
               },
               {
                 title:
                   "IDCC 44 Question/Réponse : Heures supplémentaires : contreparties",
-                href: "/contribution/44-heures-supplementaires-contreparties",
+                href: "/contribution/44-heures-supplementaires",
                 description:
                   "Création de la page détaillant les contreparties (majoration et/ou repos compensateur) en cas d’heures supplémentaires dans la branche des industries chimiques et connexes.",
               },
               {
                 title:
                   "IDCC 1351 Question/Réponse : Heures supplémentaires : contreparties",
-                href: "/contribution/1351-heures-supplementaires-contreparties",
+                href: "/contribution/1351-heures-supplementaires",
                 description:
                   "Création de la page détaillant les contreparties (majoration et/ou repos compensateur) en cas d’heures supplémentaires dans la branche des entreprises de prévention et de sécurité.",
               },
               {
                 title:
                   "IDCC 1516 Question/Réponse : Heures supplémentaires : contreparties",
-                href: "/contribution/1516-heures-supplementaires-contreparties",
+                href: "/contribution/1516-heures-supplementaires",
                 description:
                   "Création de la page détaillant les contreparties (majoration et/ou repos compensateur) en cas d’heures supplémentaires dans la branche des organismes de formation.",
               },
               {
                 title:
                   "IDCC 1517 Question/Réponse : Heures supplémentaires : contreparties",
-                href: "/contribution/1517-heures-supplementaires-contreparties",
+                href: "/contribution/1517-heures-supplementaires",
                 description:
                   "Création de la page détaillant les contreparties (majoration et/ou repos compensateur) en cas d’heures supplémentaires dans la branche des commerces de détail non alimentaires.",
               },
               {
                 title:
                   "IDCC 843 Question/Réponse : Heures supplémentaires : contreparties",
-                href: "/contribution/843-heures-supplementaires-contreparties",
+                href: "/contribution/843-heures-supplementaires",
                 description:
                   "Création de la page détaillant les contreparties (majoration et/ou repos compensateur) en cas d’heures supplémentaires dans la branche des boulangerie-pâtisserie.",
               },
               {
                 title:
                   "IDCC 3127 Question/Réponse : Heures supplémentaires : contreparties",
-                href: "/contribution/3127-heures-supplementaires-contreparties",
+                href: "/contribution/3127-heures-supplementaires",
                 description:
                   "Création de la page détaillant les contreparties (majoration et/ou repos compensateur) en cas d’heures supplémentaires dans la branche des entreprises de services à la personne.",
               },
               {
                 title:
                   "IDCC 3043 Question/Réponse : Heures supplémentaires : contreparties",
-                href: "/contribution/3043-heures-supplementaires-contreparties",
+                href: "/contribution/3043-heures-supplementaires",
                 description:
                   "Création de la page détaillant les contreparties (majoration et/ou repos compensateur) en cas d’heures supplémentaires dans la branche des entreprises de propreté et services associés.",
               },
               {
                 title:
                   "IDCC 1527 Question/Réponse : Heures supplémentaires : contreparties",
-                href: "/contribution/1527-heures-supplementaires-contreparties",
+                href: "/contribution/1527-heures-supplementaires",
                 description:
                   "Création de la page détaillant les contreparties (majoration et/ou repos compensateur) en cas d’heures supplémentaires dans la branche de l’immobilier.",
               },
               {
                 title:
                   "IDCC 1501 Question/Réponse : Heures supplémentaires : contreparties",
-                href: "/contribution/1501-heures-supplementaires-contreparties",
+                href: "/contribution/1501-heures-supplementaires",
                 description:
                   "Création de la page détaillant les contreparties (majoration et/ou repos compensateur) en cas d’heures supplémentaires dans la branche de la restauration rapide.",
               },
               {
                 title:
                   "IDCC 1505 Question/Réponse : Heures supplémentaires : contreparties",
-                href: "/contribution/1505-heures-supplementaires-contreparties",
+                href: "/contribution/1505-heures-supplementaires",
                 description:
                   "Création de la page détaillant les contreparties (majoration et/ou repos compensateur) en cas d’heures supplémentaires dans la branche des commerces de détail alimentaire non spécialisé.",
               },
               {
                 title:
                   "IDCC 86 Question/Réponse : Heures supplémentaires : contreparties",
-                href: "/contribution/86-heures-supplementaires-contreparties",
+                href: "/contribution/86-heures-supplementaires",
                 description:
                   "Création de la page détaillant les contreparties (majoration et/ou repos compensateur) en cas d’heures supplémentaires dans la branche des entreprises de la publicité.",
               },
               {
                 title:
                   "IDCC 2511 Question/Réponse : Heures supplémentaires : contreparties",
-                href: "/contribution/2511-heures-supplementaires-contreparties",
+                href: "/contribution/2511-heures-supplementaires",
                 description:
                   "Création de la page détaillant les contreparties (majoration et/ou repos compensateur) en cas d’heures supplémentaires dans la branche du sport.",
               },
               {
                 title:
                   "IDCC 2596 Question/Réponse : Heures supplémentaires : contreparties",
-                href: "/contribution/2596-heures-supplementaires-contreparties",
+                href: "/contribution/2596-heures-supplementaires",
                 description:
                   "Création de la page détaillant les contreparties (majoration et/ou repos compensateur) en cas d’heures supplémentaires dans la branche de la coiffure.",
               },
               {
                 title:
                   "IDCC 2216 Question/Réponse : Heures supplémentaires : contreparties",
-                href: "/contribution/2216-heures-supplementaires-contreparties",
+                href: "/contribution/2216-heures-supplementaires",
                 description:
                   "Création de la page détaillant les contreparties (majoration et/ou repos compensateur) en cas d’heures supplémentaires dans la branche du commerce de détail et de gros à prédominance alimentaire.",
               },
               {
                 title:
                   "IDCC 2120 Question/Réponse : Heures supplémentaires : contreparties",
-                href: "/contribution/2120-heures-supplementaires-contreparties",
+                href: "/contribution/2120-heures-supplementaires",
                 description:
                   "Création de la page détaillant les contreparties (majoration et/ou repos compensateur) en cas d’heures supplémentaires dans la branche de la banque.",
               },
