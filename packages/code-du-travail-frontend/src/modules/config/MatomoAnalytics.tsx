@@ -27,7 +27,6 @@ function MatomoComponent({ heatmapEnabled }: MatomoComponentProps) {
       enableHeartBeatTimer: heatmapEnabled && consent.matomo,
       heatmapConfig: {
         captureKeystrokes: false,
-        captureVisibleContentOnly: false,
       },
       searchKeyword: "query",
       onInitialization: () => {
