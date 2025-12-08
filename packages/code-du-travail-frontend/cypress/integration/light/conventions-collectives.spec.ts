@@ -43,17 +43,20 @@ describe("Conventions collectives", () => {
         "Questions-réponses fréquentes"
       );
 
-      cy.get("#frequent-questions .fr-accordion__btn").should("have.length", 6);
+      cy.get("#frequent-questions .fr-accordion__btn").should(
+        "have.length",
+        10
+      );
 
       cy.get("#frequent-questions .fr-accordion__btn")
         .first()
-        .should("contain", "Congés et repos");
+        .should("contain", "Congés");
 
       cy.get("#frequent-questions .fr-accordion__btn").first().click();
 
       cy.get("#frequent-questions-list-0").should("exist");
 
-      cy.get("#frequent-questions-list-0 li").should("have.length", 6);
+      cy.get("#frequent-questions-list-0 li").should("have.length", 2);
 
       cy.get("#agreement-articles").should("exist");
 
@@ -75,9 +78,7 @@ describe("Conventions collectives", () => {
 
       cy.get("#frequent-questions-list-0 a").first().click();
 
-      cy.urlEqual(
-        "/contribution/2941-quelles-sont-les-conditions-dindemnisation-pendant-le-conge-de-maternite"
-      );
+      cy.urlEqual("/contribution/2941-les-conges-pour-evenements-familiaux");
     });
   });
 

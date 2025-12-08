@@ -20,7 +20,7 @@ describe("Contributions", () => {
       "contain",
       "Obtenez une réponse personnalisée selon votre convention collective"
     );
-    cy.findAllByRole("heading", { level: 2 }).should("have.length", 9);
+    cy.findAllByRole("heading", { level: 2 }).should("have.length", 13);
     cy.findAllByRole("heading", { level: 2 }).eq(0).should("contain", "Résumé");
     cy.findAllByRole("heading", { level: 2 })
       .eq(1)
