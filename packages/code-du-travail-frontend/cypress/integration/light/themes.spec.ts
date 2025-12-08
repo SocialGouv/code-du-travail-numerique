@@ -11,37 +11,24 @@ describe("Navigation par thème", () => {
     );
   });
 
-  it('redirige vers la page "/themes/embauche-et-contrat-de-travail" lorsque je clique sur "Embauche et contrat de travail" puis sur "/themes/embauche" lorsque je clique sur "Embauche"', () => {
-    cy.get("#main a[href]").contains("Embauche et contrat de travail").click();
-    cy.urlEqual("/themes/embauche-et-contrat-de-travail");
-    cy.findByRole("heading", { level: 1 }).should(
-      "have.text",
-      "Embauche et contrat de travail"
-    );
-    cy.get("#main a[href]").should("contain", "Embauche");
-    cy.get("#main a[href]").should("contain", "Contrat de travail");
-    cy.get("#main a[href]").should("not.contain", "Méthodes de recrutement");
-
+  it('redirige vers la page "/themes/embauche" lorsque je clique sur "Embauche"', () => {
     cy.get("#main a[href]").contains("Embauche").click();
     cy.urlEqual("/themes/embauche");
     cy.findByRole("heading", { level: 1 }).should("have.text", "Embauche");
-    cy.get("#main a[href]").should("contain", "Méthodes de recrutement");
-    cy.get("#main a[href]").should("contain", "Période d’essai");
+    cy.get("body").should("contain", "Méthodes de recrutement");
+    cy.get("body").should("contain", "Formalités d'embauche");
+    cy.get("body").should("contain", "Période d'essai");
   });
 
-  it('redirige vers la page "/themes/embauche-et-contrat-de-travail" et vérifie les liens', () => {
-    cy.get("#main a").contains("Embauche et contrat de travail").click();
-    cy.urlEqual("/themes/embauche-et-contrat-de-travail");
+  it('redirige vers la page "/themes/contrat-de-travail" lorsque je clique sur "Contrat de travail"', () => {
+    cy.get("#main a").contains("Contrat de travail").click();
+    cy.urlEqual("/themes/contrat-de-travail");
     cy.findByRole("heading", { level: 1 }).should(
       "have.text",
-      "Embauche et contrat de travail"
+      "Contrat de travail"
     );
-    cy.get("#main a[href]").should(
-      "not.contain",
-      "Embauche et contrat de travail"
-    );
-    cy.get("#main a[href]").should("contain", "Embauche");
-    cy.get("#main a[href]").should("contain", "Contrat de travail");
-    cy.get("#main a[href]").should("not.contain", "Méthodes de recrutement");
+    cy.get("body").should("contain", "Principales caractéristiques");
+    cy.get("body").should("contain", "CDI");
+    cy.get("body").should("contain", "CDD");
   });
 });
