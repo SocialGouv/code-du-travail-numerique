@@ -29,7 +29,7 @@ describe("Pages infographies", () => {
       .should("contain", "Contenus populaires");
     cy.findAllByRole("heading", { level: 2 })
       .eq(2)
-      .should("contain", "Embauche et contrat de travail");
+      .should("contain", "Embauche");
     cy.findAllByRole("heading", { level: 3 }).should("have.length.at.least", 1);
     cy.findAllByRole("heading", { level: 3 }).first().click();
     cy.urlEqual("/infographie/licenciement-pour-inaptitude-medicale");
