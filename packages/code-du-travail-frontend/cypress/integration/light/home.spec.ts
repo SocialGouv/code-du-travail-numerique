@@ -54,15 +54,15 @@ describe("Page d’accueil", () => {
 
     cy.contains("Voir tous les thèmes").should("have.attr", "href", "/themes");
     cy.contains("Thèmes");
-    cy.contains("Embauche et contrat de travail");
-    cy.contains("Salaire et Rémunération");
+    cy.contains("Embauche");
+    cy.contains("Contrat de travail");
+    cy.contains("Rémunération");
     cy.contains("Temps de travail");
-    cy.contains("Congés et repos");
-    cy.contains("Emploi et formation professionnelle");
-    cy.contains("Santé, sécurité et conditions de travail");
+    cy.contains("Congés");
+    cy.contains("Formation");
+    cy.contains("Hygiène, sécurité et conditions de travail");
     cy.contains("Représentation du personnel et négociation collective");
-    cy.contains("Départ de l’entreprise");
-    cy.contains("Conflits au travail et contrôle de la réglementation");
+    cy.contains("Fin et rupture du contrat");
   });
 
   it("Devrait afficher les suggestions quand on cherche un mot", () => {
