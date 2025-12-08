@@ -220,12 +220,12 @@ const getThemes = (
   themes: ThemeSearchResult[]
 ): SearchResult | undefined => {
   // sort by breadcrumbs
-  const pThemes = themes
-    .sort((a, b) => a.breadcrumbs.length - b.breadcrumbs.length)
-    .map((theme) => ({
-      theme,
-      pTheme: prepro(theme.title),
-    }));
+  themes.sort((a, b) => a.breadcrumbs.length - b.breadcrumbs.length);
+
+  const pThemes = themes.map((theme) => ({
+    theme,
+    pTheme: prepro(theme.title),
+  }));
 
   let match = pThemes.find((th) => th.pTheme == pQuery);
 
@@ -313,17 +313,6 @@ const fillup = async (
     ).map((d: { _source: SearchResult }) => d._source);
   }
 
-  /*
-  console.log(
-    JSON.stringify(
-      documents.map((d) => [d.slug, d.source, d.cdtnId]),
-      null,
-      2
-    )
-  );
-  console.log(documents.length);
-  */
-
   return documents
     .map((res) => ({
       type: res.source as any as DocumentType,
@@ -356,7 +345,7 @@ const getArticles = async (query): Promise<SearchResult[]> => {
 
     return extractHits(hits).map((h) => ({
       ...h._source,
-      presearch: PresearchClass.ARTICLE,
+      class: PresearchClass.ARTICLE,
     }));
   } else {
     return [];
@@ -391,9 +380,8 @@ const isNatural = (query: string) => {
 export const presearch = async (
   query: string,
   themes: ThemeSearchResult[],
-  allClasses: Boolean
+  allClasses: boolean
 ): Promise<{ results: SearchResult[]; classes: PresearchClass[] }> => {
-  // const results: StructuredQueryLabel[] = [];
   const results: SearchResult[] = [];
 
   const pQuery = prepro(query);

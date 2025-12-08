@@ -2,7 +2,6 @@ import { SourceKeys, SOURCES } from "@socialgouv/cdtn-utils";
 import { elasticDocumentsIndex, elasticsearchClient } from "../../utils";
 import { getIdccBody } from "./queries";
 import { extractHits } from "../search";
-import { consoleLoggingIntegration } from "@sentry/nextjs";
 
 export const parseIdcc = (query) =>
   /^\d+$/.test(query) ? parseInt(query, 10) : undefined;
