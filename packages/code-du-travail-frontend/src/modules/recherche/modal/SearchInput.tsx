@@ -11,11 +11,12 @@ import { SearchFeedback } from "./SearchFeedback";
 import { useSuggestions } from "../hooks/useSuggestions";
 import { MinSearchLengthHint } from "./MinSearchLengthHint";
 import { HomemadeAutocomplete } from "src/modules/common/Autocomplete";
+import { PresearchClass } from "src/api/modules/search/service/presearch";
 
 interface ModalSearchProps {
   onClose?: () => void;
   initialQuery?: string;
-  onSearchTriggered?: () => void;
+  onSearchTriggered?: (searchQuery?: string) => void;
   onQueryClear?: () => void;
   isLoadingResults?: boolean;
   onChangeQuery: (s: string) => void;
@@ -25,6 +26,7 @@ interface ModalSearchProps {
   onSearchSubmit?: (hasResults: boolean) => void;
   onFocusRequest?: () => void;
   noResultMessageRef?: React.RefObject<HTMLParagraphElement | null>;
+  classes?: PresearchClass[];
 }
 
 export interface ModalSearchHandle {
@@ -49,6 +51,7 @@ export const SearchInput = forwardRef<ModalSearchHandle, ModalSearchProps>(
       onSearchSubmit,
       onFocusRequest,
       noResultMessageRef,
+      classes = [],
     },
     ref
   ) => {
@@ -56,7 +59,7 @@ export const SearchInput = forwardRef<ModalSearchHandle, ModalSearchProps>(
     const [query, setQuery] = useState(initialQuery || "");
     const [isAutocompleteOpen, setIsAutocompleteOpen] = useState(false);
     const router = useRouter();
-    const { emitSearchEvent, emitSuggestionSelectionEvent } =
+    const { emitClickSeeAllResultsEvent, emitSuggestionSelectionEvent } =
       useSearchTracking();
     const { suggestions, fetchSuggestions, clearSuggestions } =
       useSuggestions();
@@ -68,9 +71,9 @@ export const SearchInput = forwardRef<ModalSearchHandle, ModalSearchProps>(
       isAutocompleteOpen: () => isAutocompleteOpen,
     }));
 
-    const handleSearch = (e) => {
+    const handleSearch = () => {
       if (!query.trim()) return;
-      emitSearchEvent(query.trim());
+      emitClickSeeAllResultsEvent(query.trim(), classes);
       router.push(`/recherche?query=${encodeURIComponent(query.trim())}`);
       onClose?.();
     };
@@ -80,14 +83,14 @@ export const SearchInput = forwardRef<ModalSearchHandle, ModalSearchProps>(
       if (!query.trim() || query.trim().length < MIN_SEARCH_LENGTH) return;
       clearSuggestions();
       inputRef.current?.blur();
-      onSearchTriggered?.();
+      onSearchTriggered?.(query.trim());
       onFocusRequest?.();
     };
 
     const handleEnterPress = () => {
       if (!query.trim() || query.trim().length < MIN_SEARCH_LENGTH) return;
       clearSuggestions();
-      onSearchTriggered?.();
+      onSearchTriggered?.(query.trim());
       onFocusRequest?.();
     };
 
@@ -110,7 +113,7 @@ export const SearchInput = forwardRef<ModalSearchHandle, ModalSearchProps>(
 
         onChangeQuery(value);
         setQuery(value);
-        onSearchTriggered?.();
+        onSearchTriggered?.(value);
         onFocusRequest?.();
       } else {
         onChangeQuery("");

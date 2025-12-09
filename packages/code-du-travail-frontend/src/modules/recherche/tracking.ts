@@ -18,11 +18,12 @@ enum MatomoSearchCategory {
   SELECTED_SUGGESTION = "selectedSuggestion",
   NEXT_RESULT_PAGE = "nextResultPage",
   SELECT_RESULT = "selectResult",
-  SELECT_PRESEARCH_RESULT = "selectPresearchResult",
 }
 
 enum MatomoSearchAction {
   PRESEARCH = "presearch",
+  CLIK_SEE_ALL_RESULTS = "clickSeeAllResults",
+  SELECT_PRESEARCH_RESULT = "selectPresearchResult",
 }
 
 export enum MatomoWidgetEvent {
@@ -54,27 +55,14 @@ export const useSearchTracking = () => {
     []
   );
 
-  const emitSearchEvent = useCallback(
-    (searchTerm: string, classes?: string[]) => {
-      if (searchTerm?.trim()) {
-        if (classes && classes.length > 0) {
-          // For v2 with classes
-          sendEvent({
-            category: MatomoSearchCategory.CANDIDATE_RESULTS,
-            action: searchTerm.trim(),
-            name: JSON.stringify(classes),
-          });
-        } else {
-          // For v1 without classes
-          sendEvent({
-            category: MatomoSearchCategory.CANDIDATE_RESULTS,
-            action: searchTerm.trim(),
-          });
-        }
-      }
-    },
-    []
-  );
+  const emitSearchEvent = useCallback((searchTerm: string) => {
+    if (searchTerm?.trim()) {
+      sendEvent({
+        category: MatomoSearchCategory.CANDIDATE_RESULTS,
+        action: searchTerm.trim(),
+      });
+    }
+  }, []);
 
   const emitNextPageEvent = useCallback((query: string) => {
     sendEvent({
@@ -102,38 +90,41 @@ export const useSearchTracking = () => {
     ]);
   }, []);
 
-  // V2 specific events
   const emitPresearchEvent = useCallback(
     (query: string, classes: PresearchClass[]) => {
-      if (query?.trim() && classes.length > 0) {
-        sendEvent({
-          category: MatomoSearchCategory.SEARCH,
-          action: MatomoSearchAction.PRESEARCH,
-          name: JSON.stringify(classes),
-          value: query.trim(),
-        });
-      }
+      sendEvent({
+        category: MatomoSearchCategory.SEARCH,
+        action: MatomoSearchAction.PRESEARCH,
+        name: JSON.stringify(classes),
+        value: query.trim(),
+      });
+    },
+    []
+  );
+
+  const emitClickSeeAllResultsEvent = useCallback(
+    (query: string, classes?: PresearchClass[]) => {
+      sendEvent({
+        category: MatomoSearchCategory.SEARCH,
+        action: MatomoSearchAction.CLIK_SEE_ALL_RESULTS,
+        name: classes && classes.length > 0 ? JSON.stringify(classes) : "[]",
+        value: query.trim(),
+      });
     },
     []
   );
 
   const emitSelectPresearchResultEvent = useCallback((result: SearchResult) => {
-    const source = result.source as keyof typeof routeBySource | "external";
-
-    const url =
-      source === SOURCES.EXTERNALS && result.slug
-        ? result.slug
-        : `/${getRouteBySource(source as keyof typeof routeBySource)}/${result.slug}`;
-
-    const action = JSON.stringify({
+    const name = JSON.stringify({
       algo: result.algo || "presearch",
       classe: result.class,
-      url,
+      url: `/${getRouteBySource(result.source)}/${result.slug}`,
     });
 
     sendEvent({
-      category: MatomoSearchCategory.SELECT_PRESEARCH_RESULT,
-      action,
+      category: MatomoSearchCategory.SEARCH,
+      action: MatomoSearchAction.SELECT_PRESEARCH_RESULT,
+      name,
     });
   }, []);
 
@@ -145,5 +136,6 @@ export const useSearchTracking = () => {
     emitWidgetEvent,
     emitPresearchEvent,
     emitSelectPresearchResultEvent,
+    emitClickSeeAllResultsEvent,
   };
 };

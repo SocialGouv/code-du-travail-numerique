@@ -8,9 +8,10 @@ import { useSearchTracking } from "../tracking";
 
 interface UseSearchResultsReturn {
   results: SearchResult[];
+  classes: PresearchClass[];
   isLoading: boolean;
   hasSearched: boolean;
-  triggerSearch: () => Promise<void>;
+  triggerSearch: (searchQuery?: string) => Promise<void>;
   resetSearch: () => void;
   query: string;
   setQuery: (s: string) => void;
@@ -18,34 +19,39 @@ interface UseSearchResultsReturn {
 
 export const useSearchResults = (): UseSearchResultsReturn => {
   const [results, setResults] = useState<SearchResult[]>([]);
+  const [classes, setClasses] = useState<PresearchClass[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [hasSearched, setHasSearched] = useState(false);
   const [query, setQuery] = useState("");
 
-  const { emitPresearchEvent, emitSearchEvent } = useSearchTracking();
+  const { emitPresearchEvent } = useSearchTracking();
 
-  const triggerSearch = useCallback(async () => {
-    setIsLoading(true);
-    setHasSearched(true);
+  const triggerSearch = useCallback(
+    async (searchQuery?: string) => {
+      const queryToUse = searchQuery ?? query;
+      setIsLoading(true);
+      setHasSearched(true);
 
-    try {
-      const { results, classes } = await fetchSearchResults(query);
-      setResults(results);
-
-      emitPresearchEvent(query, classes);
-
-      const resultClasses = results.map((r) => r.class);
-      emitSearchEvent(query, resultClasses);
-    } catch (error) {
-      console.error("Error fetching search results:", error);
-      setResults([]);
-    } finally {
-      setIsLoading(false);
-    }
-  }, [query, emitPresearchEvent, emitSearchEvent]);
+      try {
+        const { results: fetchedResults, classes: fetchedClasses } =
+          await fetchSearchResults(queryToUse);
+        setResults(fetchedResults);
+        setClasses(fetchedClasses);
+        emitPresearchEvent(queryToUse, fetchedClasses);
+      } catch (error) {
+        console.error("Error fetching search results:", error);
+        setResults([]);
+        setClasses([]);
+      } finally {
+        setIsLoading(false);
+      }
+    },
+    [emitPresearchEvent, query]
+  );
 
   const resetSearch = useCallback(() => {
     setResults([]);
+    setClasses([]);
     setHasSearched(false);
     setIsLoading(false);
   }, []);
@@ -59,6 +65,7 @@ export const useSearchResults = (): UseSearchResultsReturn => {
 
   return {
     results,
+    classes,
     isLoading,
     hasSearched,
     triggerSearch,
