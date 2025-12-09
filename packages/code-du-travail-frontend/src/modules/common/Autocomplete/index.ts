@@ -1,2 +1,2 @@
 export * from "./Autocomplete";
-export * from "./AutocompleteV2";
+export * from "./HomemadeAutocomplete";

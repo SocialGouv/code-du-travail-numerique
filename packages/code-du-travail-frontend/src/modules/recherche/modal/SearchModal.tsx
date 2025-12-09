@@ -5,7 +5,7 @@ import { Button } from "@codegouvfr/react-dsfr/Button";
 import { css } from "@styled-system/css";
 import { SearchInput, ModalSearchHandle } from "./SearchInput";
 import { SearchResults } from "./SearchResults";
-import { useEffect, useRef, useCallback } from "react";
+import { useEffect, useRef, useCallback, useState } from "react";
 import { HintList } from "./HintList";
 import { useSearchResults } from "../hooks/useSearchResults";
 import { useHints } from "../hooks/useHints";
@@ -22,8 +22,10 @@ export const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
   const closeButtonRef = useRef<HTMLButtonElement>(null);
   const modalRef = useRef<HTMLDivElement>(null);
   const resultsTitleRef = useRef<HTMLHeadingElement>(null);
+  const noResultMessageRef = useRef<HTMLParagraphElement>(null);
   const [blockScroll, allowScroll] = useScrollBlock();
   const { isBelow } = useBreakpoints();
+  const [pendingFocus, setPendingFocus] = useState(false);
 
   const {
     results,
@@ -41,19 +43,31 @@ export const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
     isLoading: isHintsLoading,
   } = useHints();
 
-  const handleSearchSubmit = (hasResults: boolean) => {
-    if (hasResults) {
-      // Focus on results title if there are results
-      setTimeout(() => {
-        resultsTitleRef.current?.focus();
-      }, 100);
-    } else {
-      // Keep focus on input if no results
-      setTimeout(() => {
-        modalSearchRef.current?.focusInput();
-      }, 100);
-    }
+  const handleFocusRequest = () => {
+    setPendingFocus(true);
   };
+
+  // Handle focus after search completes
+  useEffect(() => {
+    if (pendingFocus && hasSearched && !isLoading) {
+      setPendingFocus(false);
+      if (results.length > 0) {
+        // Focus on results title if there are results
+        setTimeout(() => {
+          resultsTitleRef.current?.focus();
+        }, 100);
+      } else {
+        // Focus on "no results" message if displayed, otherwise keep on input
+        setTimeout(() => {
+          if (noResultMessageRef.current) {
+            noResultMessageRef.current.focus();
+          } else {
+            modalSearchRef.current?.focusInput();
+          }
+        }, 100);
+      }
+    }
+  }, [pendingFocus, hasSearched, isLoading, results.length]);
 
   const handleClose = useCallback(() => {
     onClose();
@@ -93,12 +107,17 @@ export const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
     }
   }, [isOpen, resetSearch]);
 
-  // Handle Escape key
+  // Handle Escape key - only close modal if autocomplete dropdown is not open
   useEffect(() => {
     if (!isOpen) return;
 
     const handleEscape = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
+        // Check if autocomplete dropdown is open
+        if (modalSearchRef.current?.isAutocompleteOpen()) {
+          // Let the autocomplete handle this escape first
+          return;
+        }
         handleClose();
       }
     };
@@ -178,7 +197,8 @@ export const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
             hasSearched={hasSearched}
             resultsCount={results.length}
             contextType="modal"
-            onSearchSubmit={handleSearchSubmit}
+            onFocusRequest={handleFocusRequest}
+            noResultMessageRef={noResultMessageRef}
           />
 
           {!hasSearched && (

@@ -10,6 +10,8 @@ interface SearchFeedbackProps {
   minSearchLength: number;
   hasSearched: boolean;
   resultsCount: number;
+  noResultMessageRef?: React.RefObject<HTMLParagraphElement | null>;
+  noResultParagraphId?: string;
 }
 
 export const SearchFeedback = ({
@@ -19,6 +21,8 @@ export const SearchFeedback = ({
   minSearchLength,
   hasSearched = false,
   resultsCount = 0,
+  noResultMessageRef,
+  noResultParagraphId,
 }: SearchFeedbackProps) => {
   let feedbackMessage = "";
 
@@ -59,7 +63,14 @@ export const SearchFeedback = ({
           resultsCount === 0 &&
           query.length >= minSearchLength && (
             <div className={loadingContainer}>
-              <p className={hintTextStyle}>{feedbackMessage}</p>
+              <p
+                id={noResultParagraphId}
+                className={hintTextStyle}
+                ref={noResultMessageRef}
+                tabIndex={-1}
+              >
+                {feedbackMessage}
+              </p>
             </div>
           )}
 
@@ -67,6 +78,7 @@ export const SearchFeedback = ({
           isVisible={!isSearching && query.length < minSearchLength}
           minSearchLength={minSearchLength}
           variant="desktop"
+          paragraphId={`${id}-min-search-hint`}
         />
       </div>
     </>

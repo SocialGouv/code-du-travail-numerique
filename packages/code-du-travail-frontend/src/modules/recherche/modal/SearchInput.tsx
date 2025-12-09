@@ -2,7 +2,6 @@
 
 import { fr } from "@codegouvfr/react-dsfr";
 import { Button } from "@codegouvfr/react-dsfr/Button";
-import { AutocompleteV2 } from "../../common/Autocomplete/AutocompleteV2";
 import { css } from "@styled-system/css";
 import { useRef, forwardRef, useImperativeHandle, useState } from "react";
 import { SUGGEST_MAX_RESULTS } from "../../../config";
@@ -11,6 +10,7 @@ import { useSearchTracking } from "../tracking";
 import { SearchFeedback } from "./SearchFeedback";
 import { useSuggestions } from "../hooks/useSuggestions";
 import { MinSearchLengthHint } from "./MinSearchLengthHint";
+import { HomemadeAutocomplete } from "src/modules/common/Autocomplete";
 
 interface ModalSearchProps {
   onClose?: () => void;
@@ -23,10 +23,13 @@ interface ModalSearchProps {
   resultsCount: number;
   contextType: "modal" | "home";
   onSearchSubmit?: (hasResults: boolean) => void;
+  onFocusRequest?: () => void;
+  noResultMessageRef?: React.RefObject<HTMLParagraphElement | null>;
 }
 
 export interface ModalSearchHandle {
   focusInput: () => void;
+  isAutocompleteOpen: () => boolean;
 }
 
 const MIN_SEARCH_LENGTH = 3;
@@ -44,11 +47,14 @@ export const SearchInput = forwardRef<ModalSearchHandle, ModalSearchProps>(
       resultsCount = 0,
       contextType,
       onSearchSubmit,
+      onFocusRequest,
+      noResultMessageRef,
     },
     ref
   ) => {
     const inputRef = useRef<HTMLInputElement>(null);
     const [query, setQuery] = useState(initialQuery || "");
+    const [isAutocompleteOpen, setIsAutocompleteOpen] = useState(false);
     const router = useRouter();
     const { emitSearchEvent, emitSuggestionSelectionEvent } =
       useSearchTracking();
@@ -59,9 +65,10 @@ export const SearchInput = forwardRef<ModalSearchHandle, ModalSearchProps>(
       focusInput: () => {
         inputRef.current?.focus();
       },
+      isAutocompleteOpen: () => isAutocompleteOpen,
     }));
 
-    const handleSearch = () => {
+    const handleSearch = (e) => {
       if (!query.trim()) return;
       emitSearchEvent(query.trim());
       router.push(`/recherche?query=${encodeURIComponent(query.trim())}`);
@@ -74,12 +81,14 @@ export const SearchInput = forwardRef<ModalSearchHandle, ModalSearchProps>(
       clearSuggestions();
       inputRef.current?.blur();
       onSearchTriggered?.();
+      onFocusRequest?.();
+    };
 
-      // Focus management after search
-      setTimeout(() => {
-        const hasResults = resultsCount > 0;
-        onSearchSubmit?.(hasResults);
-      }, 100);
+    const handleEnterPress = () => {
+      if (!query.trim() || query.trim().length < MIN_SEARCH_LENGTH) return;
+      clearSuggestions();
+      onSearchTriggered?.();
+      onFocusRequest?.();
     };
 
     const search = async (inputValue: string) => {
@@ -102,6 +111,7 @@ export const SearchInput = forwardRef<ModalSearchHandle, ModalSearchProps>(
         onChangeQuery(value);
         setQuery(value);
         onSearchTriggered?.();
+        onFocusRequest?.();
       } else {
         onChangeQuery("");
         setQuery("");
@@ -112,6 +122,9 @@ export const SearchInput = forwardRef<ModalSearchHandle, ModalSearchProps>(
     const inputId = `${contextType}-search-autocomplete`;
     const labelId = `${contextType}-search-label`;
     const feedbackId = `${contextType}-search-feedback`;
+    const minSearchHintId = `${contextType}-min-search-length-hint`;
+    const noResultParagraphId = `${contextType}-no-result-message`;
+    const ariaDescribedbyIds = `${minSearchHintId} ${noResultParagraphId}`;
 
     return (
       <div className={fr.cx("fr-mt-2w")}>
@@ -131,7 +144,7 @@ export const SearchInput = forwardRef<ModalSearchHandle, ModalSearchProps>(
                   arrêts maladies ?
                 </p>
               </label>
-              <AutocompleteV2<string>
+              <HomemadeAutocomplete<string>
                 id={inputId}
                 search={search}
                 displayLabel={(item: string | null) => item ?? ""}
@@ -141,7 +154,7 @@ export const SearchInput = forwardRef<ModalSearchHandle, ModalSearchProps>(
                 isSearch={false}
                 displayNoResult={false}
                 inputRef={inputRef}
-                ariaDescribedby={feedbackId}
+                ariaDescribedby={ariaDescribedbyIds}
                 onInputValueChange={(value) => {
                   setQuery(value || "");
                   onChangeQuery(value || "");
@@ -152,9 +165,12 @@ export const SearchInput = forwardRef<ModalSearchHandle, ModalSearchProps>(
                 onChange={onSelectedItemChange}
                 onError={onError}
                 dataTestId={`search-${contextType}-input`}
+                onDropdownOpenChange={setIsAutocompleteOpen}
+                onEnterPress={handleEnterPress}
               />
             </div>
             <MinSearchLengthHint
+              paragraphId={minSearchHintId}
               isVisible={!isLoadingResults && query.length < MIN_SEARCH_LENGTH}
               minSearchLength={MIN_SEARCH_LENGTH}
               variant="mobile"
@@ -163,7 +179,7 @@ export const SearchInput = forwardRef<ModalSearchHandle, ModalSearchProps>(
               iconId="fr-icon-search-line"
               iconPosition="right"
               priority="primary"
-              type="submit"
+              type="button"
               onClick={handleSearch}
               className={searchButton}
             >
@@ -179,6 +195,8 @@ export const SearchInput = forwardRef<ModalSearchHandle, ModalSearchProps>(
           minSearchLength={MIN_SEARCH_LENGTH}
           hasSearched={hasSearched}
           resultsCount={resultsCount}
+          noResultMessageRef={noResultMessageRef}
+          noResultParagraphId={noResultParagraphId}
         />
       </div>
     );
@@ -190,26 +208,6 @@ SearchInput.displayName = "ModalSearch";
 const autocompleteWrapper = css({
   flex: 1,
   width: "100%",
-  "& .fr-input-group": {
-    marginBottom: "0!",
-    width: "100%!",
-  },
-  "& .fr-label": {
-    display: "none!",
-  },
-  "& .fr-input-wrap": {
-    marginTop: "0!",
-    width: "100%!",
-  },
-  "& input.fr-input": {
-    minHeight: {
-      md: "76px!",
-      base: "40px!",
-    },
-    padding: "0.75rem 3rem 0.75rem 1rem!",
-    width: "100%!",
-    boxSizing: "border-box!",
-  },
 });
 
 const searchButton = css({
@@ -218,6 +216,9 @@ const searchButton = css({
     base: "40px!",
   },
   flexShrink: 0,
+  alignSelf: {
+    md: "flex-end",
+  },
   mdDown: {
     width: "100%!",
     justifyContent: "center!",
