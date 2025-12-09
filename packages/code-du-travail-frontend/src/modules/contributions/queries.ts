@@ -14,6 +14,7 @@ export const fetchContributions = async <
   fields: K[],
   filters?: {
     cdtnIds?: string[];
+    generic?: boolean;
   }
 ): Promise<Pick<ContributionElasticDocument, K>[]> => {
   const baseFilters: Array<any> = [
@@ -23,6 +24,10 @@ export const fetchContributions = async <
 
   if (filters?.cdtnIds) {
     baseFilters.push({ terms: { cdtnId: filters.cdtnIds } });
+  }
+
+  if (filters?.generic) {
+    baseFilters.push({ term: { idcc: "0000" } });
   }
 
   const result = await elasticsearchClient.search<

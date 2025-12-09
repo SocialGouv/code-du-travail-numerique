@@ -3,7 +3,6 @@ import { HomeButton, SectionContainer } from "./Components";
 import { fr } from "@codegouvfr/react-dsfr";
 import { MatomoHomeEvent, useHomeTracking } from "./tracking";
 import { HomeTileItem } from "./queries";
-import IllustrationTheme from "./picto/themes.svg";
 import { css } from "@styled-system/css";
 import { HomeThemeTile } from "../themes/HomeThemeTile";
 
@@ -35,7 +34,12 @@ export const Themes = (props: Props) => {
         <li
           className={`${fr.cx("fr-col-4", "fr-hidden", "fr-unhidden-lg")} ${li}`}
         >
-          <Image src={IllustrationTheme} alt="" width="384" height="233" />
+          <Image
+            src={"/static/assets/icons/home/themes.svg"}
+            alt=""
+            width="384"
+            height="233"
+          />
         </li>
         {props.items.map((item, index) => (
           <li

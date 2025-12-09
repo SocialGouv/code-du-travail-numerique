@@ -46,7 +46,7 @@ const mockData: HomePageProps = {
   ],
   themes: [
     {
-      iconName: "theme-icon",
+      iconName: "Depart",
       link: "https://example.com/theme",
       title: "Theme Title",
       description: "Theme description",

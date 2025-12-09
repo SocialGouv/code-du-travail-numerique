@@ -3,6 +3,41 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.203.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.202.0...v4.203.0) (2025-12-02)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
+
+
+
+
+# [4.202.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.201.0...v4.202.0) (2025-11-27)
+
+
+### Bug Fixes
+
+* **indemnite-licenciement:** gestion de l'inaptitude pour la CC particulier employeur ([#6940](https://github.com/SocialGouv/code-du-travail-numerique/issues/6940)) ([26ced5f](https://github.com/SocialGouv/code-du-travail-numerique/commit/26ced5f8ab15c7e2c0d37618473e47da7dc91eb9))
+
+
+
+
+
+# [4.201.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.200.0...v4.201.0) (2025-11-20)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
+
+
+
+
+# [4.200.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.199.0...v4.200.0) (2025-11-20)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
+
+
+
+
 # [4.199.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.198.0...v4.199.0) (2025-11-19)
 
 **Note:** Version bump only for package @socialgouv/modeles-social

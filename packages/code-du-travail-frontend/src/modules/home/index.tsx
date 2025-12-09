@@ -9,6 +9,7 @@ import { Contributions } from "./Contributions";
 import { Agreements } from "./Agreements";
 import { Themes } from "./Themes";
 import { ComprendreLeDroitDuTravail } from "./ComprendreLeDroitDuTravail";
+import { LaQuestionAction } from "./LaQuestionAction";
 
 export const Home = (props: HomePageProps) => {
   return (
@@ -16,6 +17,7 @@ export const Home = (props: HomePageProps) => {
       <div className={fr.cx("fr-col-12")}>
         <Search />
         <ComprendreLeDroitDuTravail />
+        <LaQuestionAction />
         <Tools items={props.tools} />
         <Models items={props.modeles} />
         <Contributions items={props.contributions} />

@@ -1,8 +1,6 @@
 "use client";
 
-import { fr } from "@codegouvfr/react-dsfr";
-import { useEffect, useRef, useState } from "react";
-import Button from "@codegouvfr/react-dsfr/Button";
+import { useEffect, useState } from "react";
 import { css } from "@styled-system/css";
 import {
   ConsentType,
@@ -12,53 +10,10 @@ import {
   saveConsent,
 } from "../utils/consent";
 import { safeGetItem, safeSetItem } from "../utils/storage";
+import { Button } from "@codegouvfr/react-dsfr/Button";
+import { ToggleSwitch } from "@codegouvfr/react-dsfr/ToggleSwitch";
+import { fr } from "@codegouvfr/react-dsfr";
 import Link from "../common/Link";
-
-const modalFooter = css({
-  position: "sticky",
-  bottom: 0,
-  backgroundColor: "var(--background-default-grey)",
-  paddingTop: "1rem",
-  zIndex: 1,
-  width: "100%",
-  overflow: "hidden",
-});
-
-const cookieBanner = css({
-  position: "fixed",
-  bottom: 0,
-  left: 0,
-  right: 0,
-  zIndex: 1000,
-  backgroundColor: "var(--background-default-grey)",
-  boxShadow: "0 -2px 4px rgba(0, 0, 0, 0.1)",
-});
-
-const manageButton = css({
-  position: "fixed",
-  bottom: "1rem",
-  right: "1rem",
-  zIndex: 1000,
-});
-
-// Style responsive pour les boutons
-const responsiveButtonsContainer = css({
-  display: "flex",
-  flexDirection: "row",
-  justifyContent: "flex-end",
-  gap: "1rem",
-  width: "100%",
-  "@media (max-width: 768px)": {
-    flexDirection: "column",
-    gap: "0.5rem",
-  },
-});
-
-const responsiveButton = css({
-  "@media (max-width: 768px)": {
-    width: "100% !important",
-  },
-});
 
 type Props = {
   heatmapEnabled: boolean;
@@ -68,60 +23,20 @@ type Props = {
 export const CookieConsentDSFR = ({ heatmapEnabled, adsEnabled }: Props) => {
   const [consent, setConsent] = useState<ConsentType>(DEFAULT_CONSENT);
   const [showBanner, setShowBanner] = useState(false);
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
-  // Refs for focus management
-  const closeButtonRef = useRef<HTMLButtonElement>(null);
-  const triggerElementRef = useRef<HTMLElement | null>(null);
-  const personalizeButtonRef = useRef<HTMLButtonElement>(null);
-  const manageButtonRef = useRef<HTMLButtonElement>(null);
-
-  // Open modal
-  const openModal = () => {
-    // Store the current active element (the one that triggered the modal)
-    triggerElementRef.current = document.activeElement as HTMLElement;
-    setIsModalOpen(true);
-  };
-
-  // Close modal
-  const closeModal = () => {
-    setIsModalOpen(false);
-  };
-
-  // Initialize consent state from local storage
   useEffect(() => {
     const storedConsent = getStoredConsent();
     setConsent(storedConsent);
 
-    // Show banner if no consent has been given yet
     const hasConsented = safeGetItem("cdtn-cookie-consent-given");
     if (!hasConsented) {
       setShowBanner(true);
-      // Don't initialize cookies until user has consented
     } else {
-      // User has already made a choice, initialize consent
       initConsent();
     }
   }, []);
 
-  // Focus management when modal opens/closes
-  useEffect(() => {
-    if (isModalOpen) {
-      // When modal opens, focus the close button
-      setTimeout(() => {
-        closeButtonRef.current?.focus();
-      }, 100); // Small delay to ensure modal is rendered
-    } else {
-      // When modal closes, return focus to the trigger element
-      if (triggerElementRef.current) {
-        setTimeout(() => {
-          triggerElementRef.current?.focus();
-        }, 100); // Small delay to ensure modal transition is complete
-      }
-    }
-  }, [isModalOpen]);
-
-  // Handle accepting all cookies
   const handleAcceptAll = () => {
     const newConsent = {
       matomo: true,
@@ -131,36 +46,34 @@ export const CookieConsentDSFR = ({ heatmapEnabled, adsEnabled }: Props) => {
     setConsent(newConsent);
     saveConsent(newConsent);
     setShowBanner(false);
-    closeModal();
+    setShowModal(false);
     safeSetItem("cdtn-cookie-consent-given", "true");
 
-    // Initialize consent after user has made a choice
     initConsent();
   };
 
-  // Handle rejecting all cookies
-  const handleRejectAll = () => {
-    // Matomo is mandatory, so it's always true
+  const handleRefuseAll = () => {
     const newConsent = { matomo: true, sea: false, matomoHeatmap: false };
     setConsent(newConsent);
     saveConsent(newConsent);
     setShowBanner(false);
-    closeModal();
+    setShowModal(false);
     safeSetItem("cdtn-cookie-consent-given", "true");
 
-    // Initialize consent after user has made a choice
     initConsent();
   };
 
-  // Handle saving custom settings
-  const handleSaveSettings = () => {
+  const handleCustomize = () => {
+    setShowModal(true);
+  };
+
+  const handleSavePreferences = () => {
     saveConsent(consent);
     setShowBanner(false);
-    closeModal();
+    setShowModal(false);
     safeSetItem("cdtn-cookie-consent-given", "true");
   };
 
-  // Handle checkbox changes
   const handleConsentChange = (type: keyof ConsentType) => {
     setConsent((prev) => ({
       ...prev,
@@ -168,342 +81,248 @@ export const CookieConsentDSFR = ({ heatmapEnabled, adsEnabled }: Props) => {
     }));
   };
 
-  const buildIntro = () => {
-    if (heatmapEnabled && adsEnabled) {
-      return (
-        <>
-          Nous utilisons des cookies pour mesurer l&apos;audience,
-          l&apos;interaction des utilisateurs avec notre site et pour le suivi
-          des campagnes publicitaires. Les cookies de mesure d&apos;audience
-          sont nécessaires au bon fonctionnement du site. Vous pouvez choisir
-          d&apos;accepter ou de refuser les cookies de suivi des interactions
-          des utilisateurs et des campagnes publicitaires.
-        </>
-      );
-    }
-    if (heatmapEnabled) {
-      return (
-        <>
-          Nous utilisons des cookies pour mesurer l&apos;audience et
-          l&apos;interaction des utilisateurs avec notre site. Les cookies de
-          mesure d&apos;audience sont nécessaires au bon fonctionnement du site.
-          Vous pouvez choisir d&apos;accepter ou de refuser les cookies de suivi
-          des interactions des utilisateurs.
-        </>
-      );
-    }
-    if (adsEnabled) {
-      return (
-        <>
-          Nous utilisons des cookies pour mesurer l&apos;audience et pour le
-          suivi des campagnes publicitaires. Les cookies de mesure
-          d&apos;audience sont nécessaires au bon fonctionnement du site. Vous
-          pouvez choisir d&apos;accepter ou de refuser les cookies de suivi des
-          campagnes publicitaires.
-        </>
-      );
-    }
-    return undefined;
-  };
-
   return (
     <>
-      {/* Cookie Consent Banner */}
-      {showBanner && (
-        <div
-          className={`${fr.cx(
-            "fr-container",
-            "fr-py-2w",
-            "fr-px-2w",
-            "fr-mb-0",
-            "fr-mt-0"
-          )} ${cookieBanner}`}
-        >
-          <div className={fr.cx("fr-grid-row")}>
-            <div className={fr.cx("fr-col-12")}>
-              <h2 className={fr.cx("fr-mb-1w")}>Ce site utilise des cookies</h2>
-              <p className={fr.cx("fr-mb-3w")}>{buildIntro()}</p>
+      {showBanner && !showModal && (
+        <section className="fr-consent-banner" id="fr-consent-banner">
+          <div className={fr.cx("fr-container")}>
+            <div className="fr-consent-banner__content">
+              <p className="fr-consent-banner__title">
+                Ce site utilise des cookies
+              </p>
+              <p className="fr-consent-banner__desc">
+                Nous utilisons des cookies pour mesurer l&apos;audience et
+                l&apos;interaction des utilisateurs avec notre site. Les cookies
+                de mesure d&apos;audience sont nécessaires au bon fonctionnement
+                du site. Vous pouvez choisir d&apos;accepter ou de refuser les
+                cookies de suivi des interactions des utilisateurs.
+              </p>
             </div>
-          </div>
-          <div className={fr.cx("fr-grid-row")}>
-            <div
+            <ul
               className={fr.cx(
-                "fr-col-12",
-                "fr-col-offset-md-6",
-                "fr-col-md-6"
+                "fr-btns-group",
+                "fr-btns-group--inline-md",
+                "fr-btns-group--right",
+                "fr-mx-1w"
               )}
             >
-              <div
-                className={fr.cx(
-                  "fr-btns-group",
-                  "fr-btns-group--right",
-                  "fr-btns-group--inline",
-                  "fr-btns-group--inline-reverse",
-                  "fr-grid-row",
-                  "fr-grid-row--right"
-                )}
-              >
+              <li>
                 <Button
-                  ref={personalizeButtonRef}
-                  onClick={openModal}
+                  onClick={handleAcceptAll}
+                  aria-label="Accepter tous les cookies"
+                >
+                  Tout accepter
+                </Button>
+              </li>
+              <li>
+                <Button
+                  onClick={handleRefuseAll}
+                  aria-label="Refuser les cookies de suivi"
+                >
+                  Tout refuser
+                </Button>
+              </li>
+              <li>
+                <Button
+                  onClick={handleCustomize}
                   priority="tertiary"
                   aria-label="Personnaliser les cookies"
                 >
                   Personnaliser
                 </Button>
-                <Button
-                  onClick={handleRejectAll}
-                  aria-label="Refuser les cookies"
-                >
-                  Tout refuser
-                </Button>
-                <Button
-                  onClick={handleAcceptAll}
-                  aria-label="Accepter les cookies"
-                >
-                  Tout accepter
-                </Button>
-              </div>
-            </div>
+              </li>
+            </ul>
           </div>
-        </div>
+        </section>
       )}
 
-      {/* Cookie Settings Modal */}
-      <div
-        className={`fr-modal ${isModalOpen ? "fr-modal--opened" : ""}`}
-        id="cookie-settings-modal"
-        aria-labelledby="cookie-settings-modal-title"
-        role="dialog"
-        aria-modal={isModalOpen ? "true" : "false"}
-        style={{ overflow: "visible" }}
-      >
-        {isModalOpen && (
-          <div className="fr-modal__backdrop" onClick={closeModal}></div>
-        )}
-        <div
-          className={fr.cx(
-            "fr-container",
-            "fr-container--fluid",
-            "fr-container-md"
-          )}
-        >
-          <div className={fr.cx("fr-grid-row", "fr-grid-row--center")}>
-            <div className={fr.cx("fr-col-12", "fr-col-md-10", "fr-col-lg-8")}>
-              <div className={`${fr.cx("fr-modal__body")}`}>
-                <div className={fr.cx("fr-modal__header")}>
-                  <button
-                    ref={closeButtonRef}
-                    className={fr.cx("fr-btn--close", "fr-btn")}
-                    title="Fermer la fenêtre modale"
-                    aria-controls="cookie-settings-modal"
-                    onClick={closeModal}
-                  >
-                    Fermer
-                  </button>
-                </div>
-                <div className={`${fr.cx("fr-modal__content")}`}>
-                  <div className={fr.cx("fr-modal__title")}>
-                    <h1
-                      className={fr.cx("fr-h3")}
-                      id="cookie-settings-modal-title"
-                    >
-                      Paramètres des cookies
-                    </h1>
-                  </div>
-
-                  <p className={fr.cx("fr-mt-2w")}>
-                    {buildIntro()} Pour plus d&apos;informations, vous pouvez
-                    consulter notre{" "}
-                    <Link
-                      href="/politique-confidentialite"
-                      className={fr.cx("fr-link")}
-                    >
-                      politique de confidentialité
-                    </Link>
-                    .
-                  </p>
-
-                  <div className={fr.cx("fr-mt-2w")}>
-                    <fieldset
-                      className={fr.cx("fr-fieldset")}
-                      id="cookie-audience-fieldset"
-                    >
-                      <legend className={fr.cx("fr-fieldset__legend")}>
-                        Cookies de mesure d&apos;audience
-                      </legend>
-                      <div className="fr-form-group">
-                        <div className={fr.cx("fr-toggle")}>
-                          <input
-                            type="checkbox"
-                            className={fr.cx("fr-toggle__input")}
-                            id="toggle-audience"
-                            name="toggle-audience"
-                            checked={true}
-                            disabled={true}
-                            onChange={() => {}}
-                            aria-labelledby="toggle-audience-label"
-                          />
-                          <label
-                            className={fr.cx("fr-toggle__label")}
-                            htmlFor="toggle-audience"
-                            id="toggle-audience-label"
-                            data-fr-checked-label="Activé"
-                            data-fr-unchecked-label="Désactivé"
-                          >
-                            Mesure d&apos;audience - Obligatoire
-                          </label>
-                          <p className={fr.cx("fr-info-text")}>
-                            Ces cookies nous permettent d&apos;établir des
-                            statistiques de fréquentation de notre site et
-                            d&apos;améliorer ses performances.
-                          </p>
-                        </div>
-                      </div>
-                    </fieldset>
-                  </div>
-
-                  {adsEnabled && (
-                    <div className={fr.cx("fr-mt-2w")}>
-                      <fieldset
-                        className={fr.cx("fr-fieldset")}
-                        id="cookie-sea-fieldset"
-                      >
-                        <legend className={fr.cx("fr-fieldset__legend")}>
-                          Cookies de suivi publicitaire
-                        </legend>
-                        <div className="fr-form-group">
-                          <div className={fr.cx("fr-toggle")}>
-                            <input
-                              type="checkbox"
-                              className={fr.cx("fr-toggle__input")}
-                              id="toggle-sea"
-                              name="toggle-sea"
-                              checked={consent.sea}
-                              onChange={() => handleConsentChange("sea")}
-                              aria-labelledby="toggle-sea-label"
-                            />
-                            <label
-                              className={fr.cx("fr-toggle__label")}
-                              htmlFor="toggle-sea"
-                              id="toggle-sea-label"
-                              data-fr-checked-label="Activé"
-                              data-fr-unchecked-label="Désactivé"
-                            >
-                              Suivi des campagnes publicitaires
-                            </label>
-                            <p className={fr.cx("fr-info-text")}>
-                              Ces cookies nous permettent de suivre
-                              l&apos;efficacité de nos campagnes publicitaires
-                              sur les moteurs de recherche.
-                            </p>
-                          </div>
-                        </div>
-                      </fieldset>
-                    </div>
-                  )}
-
-                  {heatmapEnabled && (
-                    <div className={fr.cx("fr-mt-2w")}>
-                      <fieldset
-                        className={fr.cx("fr-fieldset")}
-                        id="cookie-heatmap-fieldset"
-                      >
-                        <legend className={fr.cx("fr-fieldset__legend")}>
-                          Carte des chaleurs Matomo
-                        </legend>
-                        <div className="fr-form-group">
-                          <div className={fr.cx("fr-toggle")}>
-                            <input
-                              type="checkbox"
-                              className={fr.cx("fr-toggle__input")}
-                              id="toggle-heatmap"
-                              name="toggle-heatmap"
-                              checked={consent.matomoHeatmap}
-                              onChange={() =>
-                                handleConsentChange("matomoHeatmap")
-                              }
-                              aria-labelledby="toggle-heatmap-label"
-                            />
-                            <label
-                              className={fr.cx("fr-toggle__label")}
-                              htmlFor="toggle-heatmap"
-                              id="toggle-heatmap-label"
-                              data-fr-checked-label="Activé"
-                              data-fr-unchecked-label="Désactivé"
-                            >
-                              Carte des chaleurs
-                            </label>
-                            <p className={fr.cx("fr-info-text")}>
-                              Cette fonctionnalité nous permet de visualiser
-                              comment les utilisateurs interagissent avec notre
-                              site (clics, mouvements de souris) pour améliorer
-                              l&apos;expérience utilisateur.
-                            </p>
-                          </div>
-                        </div>
-                      </fieldset>
-                    </div>
-                  )}
-                </div>
-                <div className={`${fr.cx("fr-modal__footer")} ${modalFooter}`}>
-                  <div className={responsiveButtonsContainer}>
-                    <div className={responsiveButton}>
-                      <Button
-                        onClick={handleRejectAll}
-                        priority="tertiary"
-                        className={responsiveButton}
-                        aria-label="Refuser tous les cookies"
-                      >
-                        Tout refuser
-                      </Button>
-                    </div>
-                    <div className={responsiveButton}>
-                      <Button
-                        onClick={handleAcceptAll}
-                        priority="secondary"
-                        className={responsiveButton}
-                        aria-label="Accepter tous les cookies"
-                      >
-                        Tout accepter
-                      </Button>
-                    </div>
-                    <div className={responsiveButton}>
-                      <Button
-                        onClick={handleSaveSettings}
-                        priority="primary"
-                        className={responsiveButton}
-                        aria-label="Enregistrer les paramètres des cookies"
-                      >
-                        Enregistrer
-                      </Button>
-                    </div>
-                  </div>
-                </div>
+      {showModal && (
+        <>
+          <div
+            className={modalBackdrop}
+            onClick={() => setShowModal(false)}
+          ></div>
+          <div className={modalContainer}>
+            <div className={fr.cx("fr-modal__body")}>
+              <div className={fr.cx("fr-modal__header")}>
+                <button
+                  className={fr.cx("fr-btn--close", "fr-btn")}
+                  title="Fermer la fenêtre modale"
+                  aria-controls="fr-consent-modal"
+                  onClick={() => setShowModal(false)}
+                >
+                  Fermer
+                </button>
               </div>
+              <div className={fr.cx("fr-modal__content", "fr-mb-2w")}>
+                <h1
+                  id="fr-consent-modal-title"
+                  className={fr.cx("fr-modal__title")}
+                >
+                  Paramètres des cookies
+                </h1>
+                <p>
+                  Nous utilisons des cookies pour mesurer l&apos;audience et
+                  l&apos;interaction des utilisateurs avec notre site. Les
+                  cookies de mesure d&apos;audience sont nécessaires au bon
+                  fonctionnement du site. Vous pouvez choisir d&apos;accepter ou
+                  de refuser les cookies de suivi des interactions des
+                  utilisateurs. Pour plus d&apos;informations, vous pouvez
+                  consulter notre{" "}
+                  <Link href="/politique-confidentialite">
+                    politique de confidentialité
+                  </Link>
+                  .
+                </p>
+
+                <fieldset className={fr.cx("fr-fieldset")}>
+                  <legend className={fr.cx("fr-fieldset__legend")}>
+                    Cookies de mesure d&apos;audience
+                  </legend>
+                  <ToggleSwitch
+                    label="Mesure d'audience - Obligatoire"
+                    checked={consent.matomo}
+                    onChange={() => {}}
+                    disabled
+                    style={{ width: "100%" }}
+                  />
+                  <p className={fr.cx("fr-info-text")}>
+                    Ces cookies nous permettent d&apos;établir des statistiques
+                    de fréquentation de notre site et d&apos;améliorer ses
+                    performances.
+                  </p>
+                </fieldset>
+
+                {adsEnabled && (
+                  <fieldset className={fr.cx("fr-fieldset")}>
+                    <legend className={fr.cx("fr-fieldset__legend")}>
+                      Suivi des campagnes publicitaires
+                    </legend>
+                    <ToggleSwitch
+                      label="Suivi des campagnes publicitaires"
+                      checked={consent.sea}
+                      onChange={() => handleConsentChange("sea")}
+                    />
+                    <p className={fr.cx("fr-info-text")}>
+                      Ces cookies nous permettent de suivre l&apos;efficacité de
+                      nos campagnes publicitaires sur les moteurs de recherche.
+                    </p>
+                  </fieldset>
+                )}
+
+                {heatmapEnabled && (
+                  <fieldset className={fr.cx("fr-fieldset")}>
+                    <legend className={fr.cx("fr-fieldset__legend")}>
+                      Carte des chaleurs Matomo
+                    </legend>
+                    <ToggleSwitch
+                      label="Carte des chaleurs Matomo"
+                      checked={consent.matomoHeatmap}
+                      onChange={() => handleConsentChange("matomoHeatmap")}
+                      style={{ width: "100%" }}
+                    />
+                    <p className={fr.cx("fr-info-text")}>
+                      Cette fonctionnalité nous permet de visualiser comment les
+                      utilisateurs interagissent avec notre site (clics,
+                      mouvements de souris) pour améliorer l&apos;expérience
+                      utilisateur.
+                    </p>
+                  </fieldset>
+                )}
+              </div>
+              <ul
+                className={fr.cx(
+                  "fr-btns-group",
+                  "fr-btns-group--inline-md",
+                  "fr-btns-group--right",
+                  "fr-mx-1w",
+                  "fr-mb-2w"
+                )}
+                style={{ borderTop: "1px solid #e5e5e5", paddingTop: "1rem" }}
+              >
+                <li>
+                  <Button
+                    title="Tout refuser"
+                    onClick={handleRefuseAll}
+                    priority="secondary"
+                    className={fr.cx("fr-my-1v")}
+                  >
+                    Tout refuser
+                  </Button>
+                </li>
+                <li>
+                  <Button
+                    title="Tout accepter"
+                    onClick={handleAcceptAll}
+                    priority="secondary"
+                    className={fr.cx("fr-my-1v")}
+                  >
+                    Tout accepter
+                  </Button>
+                </li>
+                <li>
+                  <Button
+                    title="Enregistrer"
+                    onClick={handleSavePreferences}
+                    className={fr.cx("fr-my-1v")}
+                  >
+                    Enregistrer
+                  </Button>
+                </li>
+              </ul>
             </div>
           </div>
-        </div>
-      </div>
+        </>
+      )}
 
-      {/* Manage Cookies Button (fixed at the bottom) */}
       {!showBanner && (
         <div className={manageButton}>
-          <Button
-            ref={manageButtonRef}
-            size="small"
-            priority="tertiary"
-            onClick={openModal}
-            iconId="fr-icon-settings-5-line"
-            nativeButtonProps={{
-              title: "Ouvrir les paramètres des cookies",
-              "aria-label": "Ouvrir les paramètres des cookies",
-            }}
+          <button
+            className={fr.cx("fr-btn", "fr-btn--secondary", "fr-btn--sm")}
+            onClick={() => setShowModal(true)}
+            title="Gérer les cookies"
+            aria-label="Gérer les cookies"
           >
             <span className={fr.cx("fr-sr-only")}>Gérer les cookies</span>
-          </Button>
+            <span
+              className={fr.cx("fr-icon-settings-5-line")}
+              aria-hidden="true"
+            ></span>
+          </button>
         </div>
       )}
     </>
   );
 };
+
+const modalBackdrop = css({
+  position: "fixed",
+  top: 0,
+  left: 0,
+  width: "100%",
+  height: "100%",
+  backgroundColor: "rgba(0, 0, 0, 0.5)",
+  zIndex: 1040,
+});
+
+const modalContainer = css({
+  position: "fixed",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  zIndex: 1050,
+  width: "90%",
+  maxWidth: "600px",
+  maxHeight: "90vh",
+  backgroundColor: "white",
+  borderRadius: "0.5rem",
+  boxShadow: "0 10px 25px rgba(0, 0, 0, 0.2)",
+  overflow: "auto",
+});
+
+const manageButton = css({
+  position: "fixed",
+  bottom: "1rem",
+  right: "1rem",
+  zIndex: 1000,
+});

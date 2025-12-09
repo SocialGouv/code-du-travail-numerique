@@ -38,6 +38,12 @@ export const Header = () => {
               },
             },
             {
+              text: "Nos infographies",
+              linkProps: {
+                href: "/infographie",
+              },
+            },
+            {
               text: "Glossaire",
               linkProps: {
                 href: "/glossaire",

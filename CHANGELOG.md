@@ -3,6 +3,69 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.203.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.202.0...v4.203.0) (2025-12-02)
+
+
+### Bug Fixes
+
+* **home:** correction du lien sur l'infographie ([#6950](https://github.com/SocialGouv/code-du-travail-numerique/issues/6950)) ([832b289](https://github.com/SocialGouv/code-du-travail-numerique/commit/832b289cb74a483147874b2a47847877f0af51b2))
+
+
+### Features
+
+* **accessibility:** ajout d'un outil dans les pages auditées ([#6945](https://github.com/SocialGouv/code-du-travail-numerique/issues/6945)) ([3c7e3d0](https://github.com/SocialGouv/code-du-travail-numerique/commit/3c7e3d0f87194d8748592ddb4ac1a845ba45b7ba))
+* **heatmap:** ajout des pages d'infographie à la heatmap ([#6957](https://github.com/SocialGouv/code-du-travail-numerique/issues/6957)) ([deb80d7](https://github.com/SocialGouv/code-du-travail-numerique/commit/deb80d74496e861dadcd255bb819cf40dd7afa10))
+* **theme:** partage des icones des thèmes avec l'admin ([#6953](https://github.com/SocialGouv/code-du-travail-numerique/issues/6953)) ([757f9cd](https://github.com/SocialGouv/code-du-travail-numerique/commit/757f9cdf76bd765f7cf7dfa8735d63009590222a))
+
+
+
+
+
+# [4.202.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.201.0...v4.202.0) (2025-11-27)
+
+
+### Bug Fixes
+
+* **indemnite-licenciement:** gestion de l'inaptitude pour la CC particulier employeur ([#6940](https://github.com/SocialGouv/code-du-travail-numerique/issues/6940)) ([26ced5f](https://github.com/SocialGouv/code-du-travail-numerique/commit/26ced5f8ab15c7e2c0d37618473e47da7dc91eb9))
+
+
+### Features
+
+* **home:** ajout de la section `De la question à l'action` ([#6927](https://github.com/SocialGouv/code-du-travail-numerique/issues/6927)) ([d137fa3](https://github.com/SocialGouv/code-du-travail-numerique/commit/d137fa352dd977fc18110fcb6ec685b6762fc81b))
+* **infographics:** ajout des infographies sur le front ([#6911](https://github.com/SocialGouv/code-du-travail-numerique/issues/6911)) ([10abd21](https://github.com/SocialGouv/code-du-travail-numerique/commit/10abd218351bc2aac34e6360831648893ee94870))
+
+
+
+
+
+# [4.201.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.200.0...v4.201.0) (2025-11-20)
+
+
+### Features
+
+* **redirection:** ajout des redirections suite à la mise à jour de la DARES ([#6932](https://github.com/SocialGouv/code-du-travail-numerique/issues/6932)) ([88b3055](https://github.com/SocialGouv/code-du-travail-numerique/commit/88b3055cc5f414348be2551149516cea82b139e6))
+
+
+
+
+
+# [4.200.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.199.0...v4.200.0) (2025-11-20)
+
+
+### Bug Fixes
+
+* sentry localstorage error not available ([#6923](https://github.com/SocialGouv/code-du-travail-numerique/issues/6923)) ([f4c6949](https://github.com/SocialGouv/code-du-travail-numerique/commit/f4c69492416ed2a2ce8f13dce7eefe0d1e2896ec))
+
+
+### Features
+
+* **analytics:** improve cookie banner configuration ([#6937](https://github.com/SocialGouv/code-du-travail-numerique/issues/6937)) ([54b8b0c](https://github.com/SocialGouv/code-du-travail-numerique/commit/54b8b0c788e3b68c591774943d157afd6355b63d))
+* print error message ([#6928](https://github.com/SocialGouv/code-du-travail-numerique/issues/6928)) ([67b3d6c](https://github.com/SocialGouv/code-du-travail-numerique/commit/67b3d6c01cce8c0ec24629d36335e4c5130e670d))
+
+
+
+
+
 # [4.199.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.198.0...v4.199.0) (2025-11-19)
 
 

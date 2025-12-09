@@ -8,7 +8,7 @@ afterEach(() => {
 const dataThemes = [
   {
     title: "Theme 1",
-    icon: "",
+    icon: "Depart",
     slug: "theme1",
     children: [
       {
@@ -23,7 +23,7 @@ const dataThemes = [
   },
   {
     title: "Theme 2",
-    icon: "",
+    icon: "Depart",
     slug: "theme2",
     children: [
       {
