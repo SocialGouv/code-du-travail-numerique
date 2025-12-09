@@ -66,7 +66,7 @@ export const Search = () => {
           )}
         </div>
       </div>
-      {isSearchV2 && (
+      {!isSearchV2 && (
         <div className={backgroundImageContainer}>
           <Image
             src={"/static/assets/icons/home/illustration-principale.svg"}
