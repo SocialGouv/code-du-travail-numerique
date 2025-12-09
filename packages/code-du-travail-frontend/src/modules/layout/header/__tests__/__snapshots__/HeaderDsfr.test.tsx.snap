@@ -466,17 +466,25 @@ exports[`<Header /> should match snapshot 1`] = `
                   <li>
                     <a
                       class="fr-nav__link"
-                      href="/themes/embauche-et-contrat-de-travail"
+                      href="/themes/embauche"
                     >
-                      Embauche et contrat de travail
+                      Embauche
                     </a>
                   </li>
                   <li>
                     <a
                       class="fr-nav__link"
-                      href="/themes/salaire-et-remuneration"
+                      href="/themes/contrat-de-travail"
                     >
-                      Salaire et Rémunération
+                      Contrat de travail
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="fr-nav__link"
+                      href="/themes/remuneration"
+                    >
+                      Rémunération
                     </a>
                   </li>
                   <li>
@@ -490,49 +498,41 @@ exports[`<Header /> should match snapshot 1`] = `
                   <li>
                     <a
                       class="fr-nav__link"
-                      href="/themes/conges-et-repos"
+                      href="/themes/conges"
                     >
-                      Congés et repos
+                      Congés
                     </a>
                   </li>
                   <li>
                     <a
                       class="fr-nav__link"
-                      href="/themes/emploi-et-formation-professionnelle"
+                      href="/themes/sante-au-travail"
                     >
-                      Emploi et formation professionnelle
+                      Santé au travail
                     </a>
                   </li>
                   <li>
                     <a
                       class="fr-nav__link"
-                      href="/themes/sante-securite-et-conditions-de-travail"
+                      href="/themes/fin-et-rupture-du-contrat"
                     >
-                      Santé, sécurité et conditions de travail
+                      Fin et rupture du contrat
                     </a>
                   </li>
                   <li>
                     <a
                       class="fr-nav__link"
-                      href="/themes/representation-du-personnel-et-negociation-collective"
+                      href="/themes/retraite"
                     >
-                      Représentation du personnel et négociation collective
+                      Retraite
                     </a>
                   </li>
                   <li>
                     <a
                       class="fr-nav__link"
-                      href="/themes/depart-de-lentreprise"
+                      href="/themes/particulier-employeur"
                     >
-                      Départ de l'entreprise
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      class="fr-nav__link"
-                      href="/themes/conflits-au-travail-et-controle-de-la-reglementation"
-                    >
-                      Conflits au travail et contrôle de la réglementation
+                      Particuliers employeurs
                     </a>
                   </li>
                 </ul>
