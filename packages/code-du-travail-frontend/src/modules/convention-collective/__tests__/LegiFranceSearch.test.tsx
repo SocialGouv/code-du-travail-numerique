@@ -57,32 +57,13 @@ describe("LegiFranceSearch", () => {
     ]);
   });
 
-  it("should have correct hidden inputs with values", () => {
+  it("should not submit form when query is empty", () => {
     render(<LegiFranceSearch {...props} />);
 
-    // Check the idcc input
-    expect(screen.getByTestId("agreement-search-idcc")).toHaveAttribute(
-      "name",
-      "idcc"
-    );
-    expect(screen.getByTestId("agreement-search-idcc")).toHaveAttribute(
-      "type",
-      "hidden"
-    );
-    expect(screen.getByTestId("agreement-search-idcc")).toHaveValue(props.idcc);
+    const form = screen.getByTestId("agreement-search-form");
 
-    // Check tab_selection input
-    expect(screen.getByTestId("agreement-search-tab")).toHaveValue("kali");
+    fireEvent.submit(form);
 
-    // Check searchField and searchType inputs
-    expect(screen.getByTestId("agreement-search-field")).toHaveValue("ALL");
-    expect(screen.getByTestId("agreement-search-type")).toHaveValue("ALL");
-
-    // Check other inputs
-    expect(screen.getByTestId("agreement-search-sort")).toHaveValue(
-      "PERTINENCE"
-    );
-    expect(screen.getByTestId("agreement-search-pagesize")).toHaveValue("10");
-    expect(screen.getByTestId("agreement-search-page")).toHaveValue("1");
+    expect(matopush).not.toHaveBeenCalled();
   });
 });
