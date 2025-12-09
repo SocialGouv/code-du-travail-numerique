@@ -2,7 +2,7 @@ import React, { useCallback, useState } from "react";
 import { fr } from "@codegouvfr/react-dsfr";
 import Input from "@codegouvfr/react-dsfr/Input";
 import Button from "@codegouvfr/react-dsfr/Button";
-import { push as matopush } from "@socialgouv/matomo-next";
+import { sendEvent } from "../utils";
 import { css } from "@styled-system/css";
 import { AccessibleAlert } from "../outils/common/components/AccessibleAlert";
 
@@ -21,7 +21,7 @@ export function LegiFranceSearch({ idcc, shortTitle }: Props) {
       const q = query.trim();
       if (!q) return;
 
-      matopush(["trackEvent", "pagecc_searchcc", shortTitle, q]);
+      sendEvent({ category: "pagecc_searchcc", action: shortTitle, name: q });
 
       const params = new URLSearchParams({
         rawQuery: q,
