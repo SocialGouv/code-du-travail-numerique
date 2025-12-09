@@ -34,7 +34,7 @@ export const HomeSearchV2 = () => {
       />
 
       {hasSearched && !isLoading && (
-        <SearchResults results={results} hideTitle={true} contextType="home" />
+        <SearchResults results={results} contextType="home" />
       )}
     </div>
   );

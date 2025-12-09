@@ -8,7 +8,6 @@ import { useSearchTracking } from "../tracking";
 interface Props {
   results: SearchResult[];
   onResultClick?: () => void;
-  hideTitle?: boolean;
   contextType: "home" | "modal";
   titleRef?: React.RefObject<HTMLHeadingElement | null>;
 }
@@ -16,7 +15,6 @@ interface Props {
 export const SearchResults = ({
   results,
   onResultClick,
-  hideTitle = false,
   contextType,
   titleRef,
 }: Props) => {
@@ -43,22 +41,19 @@ export const SearchResults = ({
     <section
       className={fr.cx("fr-mt-3w")}
       ref={containerRef}
-      aria-labelledby={
-        hideTitle ? undefined : `search-results-heading-${contextType}`
-      }
+      aria-labelledby={`search-results-heading-${contextType}`}
     >
-      {!hideTitle && (
-        <div className={`${titleDivStyle} ${fr.cx("fr-p-1w")}`}>
-          <h2
-            id={`search-results-heading-${contextType}`}
-            className={fr.cx("fr-h3")}
-            ref={titleRef}
-            tabIndex={-1}
-          >
-            Cela pourrait vous intéresser ?
-          </h2>
-        </div>
-      )}
+      <div className={`${titleDivStyle} ${fr.cx("fr-p-1w")}`}>
+        <h2
+          id={`search-results-heading-${contextType}`}
+          className={fr.cx("fr-h3")}
+          ref={titleRef}
+          tabIndex={-1}
+        >
+          Cela pourrait vous intéresser ?
+        </h2>
+      </div>
+
       <ul
         className={`${resultListStyle} ${fr.cx("fr-grid-row", "fr-grid-row--gutters", "fr-mt-3w")}`}
         role="list"
@@ -76,7 +71,7 @@ export const SearchResults = ({
             <SearchResultCard
               result={result}
               onClick={() => handleResultClick(result)}
-              headingLevel={hideTitle ? "h2" : "h3"}
+              headingLevel={"h3"}
             />
           </li>
         ))}
