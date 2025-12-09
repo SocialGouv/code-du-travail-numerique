@@ -11,7 +11,7 @@ type Props = {
 
 export const WhatIsNew = ({ month }: Props) => {
   return (
-    <ContainerList title="Quoi de neuf sur le code du travail numérique ?">
+    <ContainerList title="Quoi de neuf sur le Code du travail numérique ?">
       <div className={fr.cx("fr-mb-5w")}>
         <div className={fr.cx("fr-mb-5w", "fr-mt-3w")}>
           <h1 id="quoi-de-neuf-title" className={fr.cx("fr-h2", "fr-mb-3w")}>
