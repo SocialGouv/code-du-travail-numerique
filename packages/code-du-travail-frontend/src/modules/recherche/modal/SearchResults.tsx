@@ -21,11 +21,6 @@ export const SearchResults = ({
   const containerRef = useRef<HTMLDivElement>(null);
   const { emitSelectPresearchResultEvent } = useSearchTracking();
 
-  useEffect(() => {
-    // Focus is now managed by the parent component via titleRef
-    // Remove auto-focus on first link
-  }, []);
-
   if (results.length === 0) {
     return null;
   }
