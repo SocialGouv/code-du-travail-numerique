@@ -170,15 +170,21 @@ export const Header = () => {
               },
             },
             {
-              text: "Embauche et contrat de travail",
+              text: "Embauche",
               linkProps: {
-                href: "/themes/embauche-et-contrat-de-travail",
+                href: "/themes/embauche",
               },
             },
             {
-              text: "Salaire et Rémunération",
+              text: "Contrat de travail",
               linkProps: {
-                href: "/themes/salaire-et-remuneration",
+                href: "/themes/contrat-de-travail",
+              },
+            },
+            {
+              text: "Rémunération",
+              linkProps: {
+                href: "/themes/remuneration",
               },
             },
             {
@@ -188,39 +194,33 @@ export const Header = () => {
               },
             },
             {
-              text: "Congés et repos",
+              text: "Congés",
               linkProps: {
-                href: "/themes/conges-et-repos",
+                href: "/themes/conges",
               },
             },
             {
-              text: "Emploi et formation professionnelle",
+              text: "Santé au travail",
               linkProps: {
-                href: "/themes/emploi-et-formation-professionnelle",
+                href: "/themes/sante-au-travail",
               },
             },
             {
-              text: "Santé, sécurité et conditions de travail",
+              text: "Fin et rupture du contrat",
               linkProps: {
-                href: "/themes/sante-securite-et-conditions-de-travail",
+                href: "/themes/fin-et-rupture-du-contrat",
               },
             },
             {
-              text: "Représentation du personnel et négociation collective",
+              text: "Retraite",
               linkProps: {
-                href: "/themes/representation-du-personnel-et-negociation-collective",
+                href: "/themes/retraite",
               },
             },
             {
-              text: "Départ de l'entreprise",
+              text: "Particuliers employeurs",
               linkProps: {
-                href: "/themes/depart-de-lentreprise",
-              },
-            },
-            {
-              text: "Conflits au travail et contrôle de la réglementation",
-              linkProps: {
-                href: "/themes/conflits-au-travail-et-controle-de-la-reglementation",
+                href: "/themes/particulier-employeur",
               },
             },
           ],
