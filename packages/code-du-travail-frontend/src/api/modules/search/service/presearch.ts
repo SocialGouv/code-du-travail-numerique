@@ -252,6 +252,11 @@ const fillup = async (
   n: number,
   matches: SearchResult[]
 ): Promise<SearchResult[]> => {
+  // do not complete in case of article query
+  if (matches.length > 0 && matches[0].class == PresearchClass.ARTICLE) {
+    return matches;
+  }
+
   const sources = [
     SOURCES.SHEET_MT,
     SOURCES.SHEET_SP,
@@ -301,7 +306,10 @@ const fillup = async (
       body: docSearch as any,
     });
 
-    const results = extractHits(ftRes).map((d) => d._source);
+    const results = extractHits(ftRes).map((d) => ({
+      ...d._source,
+      algo: "fulltext",
+    }));
 
     documents.push(...results);
 
@@ -346,6 +354,7 @@ const getArticles = async (query): Promise<SearchResult[]> => {
     return extractHits(hits).map((h) => ({
       ...h._source,
       class: PresearchClass.ARTICLE,
+      algo: "presearch",
     }));
   } else {
     return [];
