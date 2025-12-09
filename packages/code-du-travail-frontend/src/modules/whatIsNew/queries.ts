@@ -367,6 +367,11 @@ export const WHAT_IS_NEW_MONTHS: WhatIsNewMonth[] = [
     shortLabel: "11/25",
     weeks: [
       {
+        id: "2025-11-24_2025-11-30",
+        label: "Semaine du 24 au 30 novembre",
+        hasUpdates: false,
+      },
+      {
         id: "2025-11-17_2025-11-23",
         label: "Semaine du 17 au 23 novembre",
         hasUpdates: false,
