@@ -136,9 +136,15 @@ export const SearchInput = forwardRef<ModalSearchHandle, ModalSearchProps>(
                 id={labelId}
                 className={fr.cx("fr-label")}
               >
-                <h1 className={fr.cx("fr-text--md", "fr-mb-1w")}>
-                  Que souhaitez-vous savoir ?
-                </h1>
+                {contextType === "home" ? (
+                  <h2 className={fr.cx("fr-text--md", "fr-mb-1w")}>
+                    Que souhaitez-vous savoir ?
+                  </h2>
+                ) : (
+                  <h1 className={fr.cx("fr-text--md", "fr-mb-1w")}>
+                    Que souhaitez-vous savoir ?
+                  </h1>
+                )}
                 <p className={fr.cx("fr-text--sm", "fr-mb-2w", "fr-hint-text")}>
                   par exemple : Comment sont comptés les congés pendant les
                   arrêts maladies ?

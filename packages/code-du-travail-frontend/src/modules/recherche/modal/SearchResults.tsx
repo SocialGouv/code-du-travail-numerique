@@ -39,19 +39,33 @@ export const SearchResults = ({
 
   return (
     <section
-      className={fr.cx("fr-mt-3w")}
       ref={containerRef}
       aria-labelledby={`search-results-heading-${contextType}`}
     >
-      <div className={`${titleDivStyle} ${fr.cx("fr-p-1w")}`}>
-        <h2
-          id={`search-results-heading-${contextType}`}
-          className={fr.cx("fr-h3")}
-          ref={titleRef}
-          tabIndex={-1}
-        >
-          Cela pourrait vous intéresser ?
-        </h2>
+      <div
+        className={`${contextType === "modal" ? titleDivStyle : ""} ${fr.cx(
+          "fr-p-1w"
+        )}`}
+      >
+        {contextType === "home" ? (
+          <h3
+            id={`search-results-heading-${contextType}`}
+            className={fr.cx("fr-h3", "fr-m-0")}
+            ref={titleRef}
+            tabIndex={-1}
+          >
+            Cela pourrait vous intéresser ?
+          </h3>
+        ) : (
+          <h2
+            id={`search-results-heading-${contextType}`}
+            className={fr.cx("fr-h3", "fr-m-0")}
+            ref={titleRef}
+            tabIndex={-1}
+          >
+            Cela pourrait vous intéresser ?
+          </h2>
+        )}
       </div>
 
       <ul
@@ -71,7 +85,7 @@ export const SearchResults = ({
             <SearchResultCard
               result={result}
               onClick={() => handleResultClick(result)}
-              headingLevel={"h3"}
+              headingLevel={contextType === "home" ? "h4" : "h3"}
             />
           </li>
         ))}

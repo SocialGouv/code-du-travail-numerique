@@ -8,7 +8,7 @@ import { getSourceLabel } from "../utils";
 type Props = {
   result: SearchResult;
   onClick?: () => void;
-  headingLevel?: "h2" | "h3";
+  headingLevel?: "h2" | "h3" | "h4";
 };
 
 export const SearchResultCard = ({
