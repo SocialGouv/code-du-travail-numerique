@@ -48,7 +48,7 @@ jobs:
       - name: Build for npm
         run: yarn build:npm
       - name: Versionning code
-        run: GH_TOKEN=${GITHUB_TOKEN} yarn lerna version --force-publish --yes --conventional-commits --create-release github
+        run: GH_TOKEN=${GITHUB_TOKEN} npx lerna version --force-publish --yes --conventional-commits --create-release github
         env:
           GITHUB_TOKEN: ${{ steps.token.outputs.token }}
       - name: Rebase master to dev
@@ -67,4 +67,4 @@ jobs:
       - name: Use latest npm version
         run: npm install -g npm@latest
       - name: Deploy to npm
-        run: yarn lerna publish from-package --yes
+        run: npx lerna publish from-package --yes
