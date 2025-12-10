@@ -64,5 +64,7 @@ jobs:
           GITHUB_TOKEN: ${{ steps.token.outputs.token }}
           NAME: ${{ secrets.SOCIALGROOVYBOT_NAME }}
           EMAIL: ${{ secrets.SOCIALGROOVYBOT_EMAIL }}
+      - name: Use latest npm version
+        run: npm install -g npm@latest
       - name: Deploy to npm
         run: yarn lerna publish from-package --yes
