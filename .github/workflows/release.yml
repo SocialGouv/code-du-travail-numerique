@@ -66,5 +66,7 @@ jobs:
           EMAIL: ${{ secrets.SOCIALGROOVYBOT_EMAIL }}
       - name: Use latest npm version
         run: npm install -g npm@latest
+      - name: Display npm version
+        run: npm --version
       - name: Deploy to npm
         run: npx lerna publish from-package --yes
