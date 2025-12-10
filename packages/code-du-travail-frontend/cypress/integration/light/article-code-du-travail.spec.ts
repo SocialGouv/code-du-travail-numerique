@@ -4,7 +4,7 @@ describe("Article code du travail", () => {
     cy.title().should("eq", "L2312-1 - Code du travail numérique");
     cy.findByRole("heading", { level: 1 }).should("have.text", "L2312-1");
     cy.get("a")
-      .contains("Code du travail")
+      .contains(/^Code du travail$/)
       .should(
         "have.attr",
         "href",

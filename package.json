@@ -30,7 +30,8 @@
     "lint:quiet": "lerna run lint -- --quiet",
     "format": "lerna run format --stream",
     "format:check": "lerna run format:check --stream",
-    "precommit": "lerna run precommit --stream"
+    "precommit": "lerna run precommit --stream",
+    "repair": "lerna repair"
   },
   "repository": {
     "type": "git",
@@ -41,7 +42,7 @@
   },
   "devDependencies": {
     "husky": "^9.1.7",
-    "lerna": "8.2.3"
+    "lerna": "9.0.3"
   },
   "engines": {
     "node": ">= 24",

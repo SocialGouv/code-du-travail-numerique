@@ -3,6 +3,81 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.204.6](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.204.5...v4.204.6) (2025-12-10)
+
+**Note:** Version bump only for package @cdt/frontend
+
+
+
+
+
+## [4.204.5](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.204.4...v4.204.5) (2025-12-10)
+
+**Note:** Version bump only for package @cdt/frontend
+
+
+
+
+
+## [4.204.4](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.204.3...v4.204.4) (2025-12-10)
+
+**Note:** Version bump only for package @cdt/frontend
+
+
+
+
+
+## [4.204.3](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.204.2...v4.204.3) (2025-12-10)
+
+**Note:** Version bump only for package @cdt/frontend
+
+
+
+
+
+## [4.204.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.204.1...v4.204.2) (2025-12-10)
+
+**Note:** Version bump only for package @cdt/frontend
+
+
+
+
+
+## [4.204.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.204.0...v4.204.1) (2025-12-10)
+
+
+### Bug Fixes
+
+* **article-code-du-travail:** correction du test e2e ([#6994](https://github.com/SocialGouv/code-du-travail-numerique/issues/6994)) ([8452a50](https://github.com/SocialGouv/code-du-travail-numerique/commit/8452a5053142d14ca6d85854a72cadbafc9b6af1))
+
+
+
+
+
+# [4.204.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.203.0...v4.204.0) (2025-12-09)
+
+
+### Bug Fixes
+
+* bug recherche CC vers legi ([#6952](https://github.com/SocialGouv/code-du-travail-numerique/issues/6952)) ([b49f313](https://github.com/SocialGouv/code-du-travail-numerique/commit/b49f313a7a6c91384fc215f464dc5ee52ec536fb))
+* **infographie:** correction des tests e2e ([#6959](https://github.com/SocialGouv/code-du-travail-numerique/issues/6959)) ([13f301e](https://github.com/SocialGouv/code-du-travail-numerique/commit/13f301e3424e3d889cec195547a256290fc8f13e))
+* **quoi-de-neuf:** correction d'un test e2e ([d346c0d](https://github.com/SocialGouv/code-du-travail-numerique/commit/d346c0d3bbb829d98945f943388772a1166cd036))
+* **quoi-de-neuf:** correction d'un typo + manque une semaine ([#6992](https://github.com/SocialGouv/code-du-travail-numerique/issues/6992)) ([3d7b593](https://github.com/SocialGouv/code-du-travail-numerique/commit/3d7b59303a9daac52f48d07322fbb39783f2e090))
+* **quoi-de-neuf:** correction de typo sur le Code du travail ([#6993](https://github.com/SocialGouv/code-du-travail-numerique/issues/6993)) ([0a3b626](https://github.com/SocialGouv/code-du-travail-numerique/commit/0a3b6269aa04e007462057fb52c76876a9767c52))
+* **simulateurs:** modification des liens dans la page d'introduction ([#6951](https://github.com/SocialGouv/code-du-travail-numerique/issues/6951)) ([5632212](https://github.com/SocialGouv/code-du-travail-numerique/commit/56322123dd2078f77ccdb743d349a6b488c478da))
+* **themes:** ajout des thèmes principaux éléments manquants ([#6984](https://github.com/SocialGouv/code-du-travail-numerique/issues/6984)) ([f683d94](https://github.com/SocialGouv/code-du-travail-numerique/commit/f683d94838250c7f4dce2858433e332b63515f1b))
+* **themes:** changement des sous-liens du menu suite à la MAJ des themes ([#6990](https://github.com/SocialGouv/code-du-travail-numerique/issues/6990)) ([6bfa983](https://github.com/SocialGouv/code-du-travail-numerique/commit/6bfa98379bf75f28cfebf13c7db884e8180da1c7))
+
+
+### Features
+
+* 6914 quoi de neuf sur le cdtn ([#6946](https://github.com/SocialGouv/code-du-travail-numerique/issues/6946)) ([a40c2d4](https://github.com/SocialGouv/code-du-travail-numerique/commit/a40c2d4f6dda3376da6171e87bcfe1af419bc56e))
+* 6960 modification bandeau cookies ([#6973](https://github.com/SocialGouv/code-du-travail-numerique/issues/6973)) ([c0d66b0](https://github.com/SocialGouv/code-du-travail-numerique/commit/c0d66b09d698983982eec956b2d1a8679ceb97ec))
+
+
+
+
+
 # [4.203.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.202.0...v4.203.0) (2025-12-02)
 
 

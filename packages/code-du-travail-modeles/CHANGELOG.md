@@ -3,6 +3,62 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.204.6](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.204.5...v4.204.6) (2025-12-10)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
+
+
+
+
+## [4.204.5](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.204.4...v4.204.5) (2025-12-10)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
+
+
+
+
+## [4.204.4](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.204.3...v4.204.4) (2025-12-10)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
+
+
+
+
+## [4.204.3](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.204.2...v4.204.3) (2025-12-10)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
+
+
+
+
+## [4.204.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.204.1...v4.204.2) (2025-12-10)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
+
+
+
+
+## [4.204.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.204.0...v4.204.1) (2025-12-10)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
+
+
+
+
+# [4.204.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.203.0...v4.204.0) (2025-12-09)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
+
+
+
+
 # [4.203.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.202.0...v4.203.0) (2025-12-02)
 
 **Note:** Version bump only for package @socialgouv/modeles-social

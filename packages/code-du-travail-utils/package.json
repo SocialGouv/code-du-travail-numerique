@@ -4,13 +4,18 @@
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
-  "version": "4.203.0",
+  "version": "4.204.6",
   "main": "build/index.js",
   "module": "build/index.js",
   "types": "build/index.d.ts",
   "files": [
     "build"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SocialGouv/code-du-travail-numerique.git",
+    "directory": "packages/code-du-travail-utils"
+  },
   "scripts": {
     "build": "tsc",
     "build:watch": "tsc -w",

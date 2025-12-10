@@ -2,7 +2,7 @@ import React, { useCallback, useState } from "react";
 import { fr } from "@codegouvfr/react-dsfr";
 import Input from "@codegouvfr/react-dsfr/Input";
 import Button from "@codegouvfr/react-dsfr/Button";
-import { push as matopush } from "@socialgouv/matomo-next";
+import { sendEvent } from "../utils";
 import { css } from "@styled-system/css";
 import { AccessibleAlert } from "../outils/common/components/AccessibleAlert";
 
@@ -14,9 +14,34 @@ type Props = {
 export function LegiFranceSearch({ idcc, shortTitle }: Props) {
   const [query, setQuery] = useState("");
 
-  const trackSearch = useCallback(() => {
-    matopush(["trackEvent", "pagecc_searchcc", shortTitle, query]);
-  }, [query, shortTitle]);
+  const handleSubmit = useCallback(
+    (e: React.FormEvent<HTMLFormElement>) => {
+      e.preventDefault();
+
+      const q = query.trim();
+      if (!q) return;
+
+      sendEvent({ category: "pagecc_searchcc", action: shortTitle, name: q });
+
+      const params = new URLSearchParams({
+        rawQuery: q,
+        idcc,
+        tab_selection: "kali",
+        searchField: "ALL",
+        query: q,
+        searchType: "ALL",
+        typePagination: "DEFAUT",
+        sortValue: "PERTINENCE",
+        pageSize: "10",
+        page: "1",
+      });
+
+      const url = `https://www.legifrance.gouv.fr/search/kali?${params.toString()}`;
+
+      window.open(url, "_blank", "noopener,noreferrer");
+    },
+    [query, idcc, shortTitle]
+  );
 
   return (
     <div
@@ -34,85 +59,28 @@ export function LegiFranceSearch({ idcc, shortTitle }: Props) {
       </div>
 
       <form
-        action="https://www.legifrance.gouv.fr/search/kali"
-        onSubmit={trackSearch}
+        onSubmit={handleSubmit}
         role="search"
         className={fr.cx("fr-mb-3w")}
-        target="_blank"
         data-testid="agreement-search-form"
       >
         <div className={fr.cx("fr-search-bar", "fr-col-md-8", "fr-col-12")}>
           <Input
             label="Recherchez dans la convention collective sur Légifrance"
             hideLabel
-            nativeInputProps={
-              {
-                onChange: (e) => setQuery(e.target.value),
-                id: "search-agreement",
-                type: "search",
-                autoComplete: "off",
-                name: "rawQuery",
-                value: query,
-                placeholder: "Rechercher sur Légifrance",
-                "data-testid": "agreement-search-input",
-                "aria-describedby": "search-description",
-              } as any
-            }
+            nativeInputProps={{
+              onChange: (e) => setQuery(e.target.value),
+              value: query,
+              placeholder: "Rechercher sur Légifrance",
+              type: "search",
+              autoComplete: "off",
+              name: "rawQuery",
+              id: "search-agreement",
+              // @ts-ignore
+              "data-testid": "agreement-search-input",
+              "aria-describedby": "search-description",
+            }}
             className={`${fr.cx("fr-mb-0")} ${inputStyle}`}
-          />
-          <input
-            type="hidden"
-            name="idcc"
-            value={idcc}
-            data-testid="agreement-search-idcc"
-          />
-          <input
-            type="hidden"
-            name="tab_selection"
-            value="kali"
-            data-testid="agreement-search-tab"
-          />
-          <input
-            type="hidden"
-            name="searchField"
-            value="ALL"
-            data-testid="agreement-search-field"
-          />
-          <input
-            type="hidden"
-            name="query"
-            value={encodeURIComponent(query)}
-            data-testid="agreement-search-query"
-          />
-          <input
-            type="hidden"
-            name="searchType"
-            value="ALL"
-            data-testid="agreement-search-type"
-          />
-          <input
-            type="hidden"
-            name="typePagination"
-            value="DEFAUT"
-            data-testid="agreement-search-pagination-type"
-          />
-          <input
-            type="hidden"
-            name="sortValue"
-            value="PERTINENCE"
-            data-testid="agreement-search-sort"
-          />
-          <input
-            type="hidden"
-            name="pageSize"
-            value="10"
-            data-testid="agreement-search-pagesize"
-          />
-          <input
-            type="hidden"
-            name="page"
-            value="1"
-            data-testid="agreement-search-page"
           />
 
           <Button

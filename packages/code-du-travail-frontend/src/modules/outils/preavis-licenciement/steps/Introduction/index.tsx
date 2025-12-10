@@ -13,10 +13,9 @@ const StepIntroduction = () => (
       utiles pour réaliser cette simulation.
     </p>
     <p>
-      Vous pouvez trouver plus d&apos;informations sur le préavis de
-      licenciement sur{" "}
+      Retrouvez plus d&apos;informations dans{" "}
       <Link href={`/fiche-service-public/preavis-de-licenciement`}>
-        cette fiche
+        notre fiche sur le préavis de licenciement
       </Link>
       .
     </p>

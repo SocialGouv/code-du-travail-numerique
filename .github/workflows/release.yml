@@ -7,7 +7,10 @@ concurrency:
   group: release-${{ github.ref }}
 
 permissions:
-  id-token: write # Required for OIDC token generation
+  contents: write
+  issues: write
+  pull-requests: write
+  id-token: write
 
 jobs:
   release:
@@ -64,12 +67,5 @@ jobs:
           GITHUB_TOKEN: ${{ steps.token.outputs.token }}
           NAME: ${{ secrets.SOCIALGROOVYBOT_NAME }}
           EMAIL: ${{ secrets.SOCIALGROOVYBOT_EMAIL }}
-      - name: Setup token
-        run: echo //registry.npmjs.org/:_authToken=${NPM_TOKEN} > .npmrc
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: Deploy to npm
         run: pnpm lerna publish from-package --yes
-      - name: Remove .npmrc
-        if: always()
-        run: rm .npmrc
