@@ -30,7 +30,8 @@
     "lint:quiet": "lerna run lint -- --quiet",
     "format": "lerna run format --stream",
     "format:check": "lerna run format:check --stream",
-    "precommit": "lerna run precommit --stream"
+    "precommit": "lerna run precommit --stream",
+    "repair": "lerna repair"
   },
   "repository": {
     "type": "git",
@@ -41,7 +42,7 @@
   },
   "devDependencies": {
     "husky": "^9.1.7",
-    "lerna": "8.2.3"
+    "lerna": "9.0.3"
   },
   "workspaces": [
     "packages/*"
@@ -50,5 +51,5 @@
     "node": ">= v24"
   },
   "version": "0.0.0",
-  "packageManager": "yarn@3.8.7"
+  "packageManager": "yarn@4.12.0"
 }

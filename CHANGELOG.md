@@ -3,6 +3,53 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.204.4](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.204.3...v4.204.4) (2025-12-10)
+
+
+### Bug Fixes
+
+* **ci:** use npx for running lerna ([fe4fdfa](https://github.com/SocialGouv/code-du-travail-numerique/commit/fe4fdfa259955bfe1ed065167b60a3436d49c5f7))
+* **ci:** use npx for running lerna ([455590f](https://github.com/SocialGouv/code-du-travail-numerique/commit/455590f3163c249d36c9e482cec1251fb384dd4e))
+
+
+
+
+
+## [4.204.3](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.204.2...v4.204.3) (2025-12-10)
+
+
+### Bug Fixes
+
+* **actions:** use latest npm for pushing oidc ([25ae944](https://github.com/SocialGouv/code-du-travail-numerique/commit/25ae944f70d65a518a394c73487f2d260eaae345))
+* **yarn:** upgrade to v4 ([#6998](https://github.com/SocialGouv/code-du-travail-numerique/issues/6998)) ([93f19b7](https://github.com/SocialGouv/code-du-travail-numerique/commit/93f19b742008166d991b89dac57185c9433ab6ee))
+
+
+
+
+
+## [4.204.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.204.1...v4.204.2) (2025-12-10)
+
+
+### Bug Fixes
+
+* **ci:** Update permissions in release.yml ([98d86c8](https://github.com/SocialGouv/code-du-travail-numerique/commit/98d86c8e6be1f945cb461177a435702aecd4de81))
+
+
+
+
+
+## [4.204.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.204.0...v4.204.1) (2025-12-10)
+
+
+### Bug Fixes
+
+* **article-code-du-travail:** correction du test e2e ([#6994](https://github.com/SocialGouv/code-du-travail-numerique/issues/6994)) ([8452a50](https://github.com/SocialGouv/code-du-travail-numerique/commit/8452a5053142d14ca6d85854a72cadbafc9b6af1))
+* **lerna:** upgrade to v9 for OIDC npm publishing ([#6996](https://github.com/SocialGouv/code-du-travail-numerique/issues/6996)) ([ac41db9](https://github.com/SocialGouv/code-du-travail-numerique/commit/ac41db95ceea500fa150709324f04bd5d4001554))
+
+
+
+
+
 # [4.204.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.203.0...v4.204.0) (2025-12-09)
 
 

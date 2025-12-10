@@ -7,7 +7,10 @@ concurrency:
   group: release-${{ github.ref }}
 
 permissions:
-  id-token: write # Required for OIDC token generation
+  contents: write
+  issues: write
+  pull-requests: write
+  id-token: write
 
 jobs:
   release:
@@ -45,7 +48,7 @@ jobs:
       - name: Build for npm
         run: yarn build:npm
       - name: Versionning code
-        run: GH_TOKEN=${GITHUB_TOKEN} yarn lerna version --force-publish --yes --conventional-commits --create-release github
+        run: GH_TOKEN=${GITHUB_TOKEN} npx lerna version --force-publish --yes --conventional-commits --create-release github
         env:
           GITHUB_TOKEN: ${{ steps.token.outputs.token }}
       - name: Rebase master to dev
@@ -61,12 +64,9 @@ jobs:
           GITHUB_TOKEN: ${{ steps.token.outputs.token }}
           NAME: ${{ secrets.SOCIALGROOVYBOT_NAME }}
           EMAIL: ${{ secrets.SOCIALGROOVYBOT_EMAIL }}
-      - name: Setup token
-        run: echo //registry.npmjs.org/:_authToken=${NPM_TOKEN} > .npmrc
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Use latest npm version
+        run: npm install -g npm@latest
+      - name: Display npm version
+        run: npm --version
       - name: Deploy to npm
-        run: yarn lerna publish from-package --yes
-      - name: Remove .npmrc
-        if: always()
-        run: rm .npmrc
+        run: npx lerna publish from-package --yes
