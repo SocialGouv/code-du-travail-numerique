@@ -5,7 +5,7 @@ FROM node:$NODE_VERSION AS builder
 
 WORKDIR /app
 
-RUN corepack enable && corepack prepare pnpm@10.0.0 --activate
+RUN corepack enable && corepack prepare pnpm@10.24.0 --activate
 
 # Copy lockfiles and config for better layer caching
 COPY pnpm-lock.yaml pnpm-workspace.yaml lerna.json .npmrc ./
@@ -73,10 +73,30 @@ RUN --mount=type=secret,id=SENTRY_AUTH_TOKEN,env=SENTRY_AUTH_TOKEN \
   --mount=type=secret,id=ELASTICSEARCH_URL,env=ELASTICSEARCH_URL \
   pnpm build
 
-# Deploy (reads .npmrc for minimum-release-age-exclude configuration)
-RUN pnpm --filter @cdt/frontend deploy builder --prod --ignore-scripts
+# pruner stage: install production dependencies only
+FROM node:$NODE_VERSION AS pruner
 
-# runner stage: no corepack/pnpm, just Node runtime
+WORKDIR /app
+
+RUN corepack enable && corepack prepare pnpm@10.24.0 --activate
+
+# Copy workspace configuration
+COPY pnpm-lock.yaml pnpm-workspace.yaml lerna.json .npmrc ./
+COPY package.json ./package.json
+
+# Copy package.json files for all workspace packages
+COPY packages/code-du-travail-frontend/package.json ./packages/code-du-travail-frontend/
+COPY packages/code-du-travail-modeles/package.json ./packages/code-du-travail-modeles/
+COPY packages/code-du-travail-utils/package.json ./packages/code-du-travail-utils/
+
+# Install production dependencies only for frontend and its local workspace dependencies
+RUN pnpm install --filter @cdt/frontend --prod --frozen-lockfile
+
+# Copy built packages from builder
+COPY --from=builder /app/packages/code-du-travail-utils/dist ./packages/code-du-travail-utils/dist
+COPY --from=builder /app/packages/code-du-travail-modeles/dist ./packages/code-du-travail-modeles/dist
+
+# runner stage: minimal runtime image
 FROM node:$NODE_VERSION AS runner
 
 RUN apk --update --no-cache add ca-certificates && apk upgrade
@@ -86,16 +106,27 @@ ENV NODE_ENV=production
 
 WORKDIR /app
 
-# Copy deployed standalone files (with real node_modules, not symlinks)
-COPY --from=builder --chown=1000:1000 /app/builder /app
-COPY --from=builder --chown=1000:1000 /app/builder/.next /app/.next
+# Copy production node_modules and workspace packages
+COPY --from=pruner --chown=1000:1000 /app/node_modules ./node_modules
+COPY --from=pruner --chown=1000:1000 /app/packages ./packages
+
+# Copy built frontend application
+COPY --from=builder --chown=1000:1000 /app/packages/code-du-travail-frontend/.next ./packages/code-du-travail-frontend/.next
+COPY --from=builder --chown=1000:1000 /app/packages/code-du-travail-frontend/public ./packages/code-du-travail-frontend/public
+COPY --from=builder --chown=1000:1000 /app/packages/code-du-travail-frontend/next.config.js ./packages/code-du-travail-frontend/next.config.js
+COPY --from=builder --chown=1000:1000 /app/packages/code-du-travail-frontend/package.json ./packages/code-du-travail-frontend/package.json
+
+# Copy root package.json for workspace resolution
+COPY --from=builder --chown=1000:1000 /app/package.json ./package.json
 
 # Clean up unnecessary files to reduce image size
-RUN rm -rf /app/.next/cache/webpack && \
-  mkdir -p /app/.next/cache/images && \
+RUN rm -rf /app/packages/code-du-travail-frontend/.next/cache/webpack && \
+  mkdir -p /app/packages/code-du-travail-frontend/.next/cache/images && \
   chown -R 1000:1000 /app
 
 USER 1000
 
-CMD ["node", "node_modules/next/dist/bin/next", "start"]
+WORKDIR /app/packages/code-du-travail-frontend
+
+CMD ["node", "../../node_modules/next/dist/bin/next", "start"]
 
