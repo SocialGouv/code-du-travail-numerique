@@ -8,7 +8,7 @@ WORKDIR /app
 RUN corepack enable && corepack prepare pnpm@10.0.0 --activate
 
 # Copy lockfiles and config for better layer caching
-COPY pnpm-lock.yaml pnpm-workspace.yaml package.json lerna.json .npmrc ./
+COPY pnpm-lock.yaml pnpm-workspace.yaml lerna.json .npmrc ./
 
 # Fetch dependencies (frozen-lockfile contains all package info)
 RUN pnpm fetch --frozen-lockfile
@@ -73,8 +73,7 @@ RUN --mount=type=secret,id=SENTRY_AUTH_TOKEN,env=SENTRY_AUTH_TOKEN \
   pnpm build
 
 # Deploy (reads .npmrc for minimum-release-age-exclude configuration)
-RUN pnpm --filter @cdt/frontend deploy --prod --ignore-scripts /app/deploy && \
-  rm -rf /app/deploy/.pnpm /app/deploy/.modules.yaml /app/deploy/.cache
+RUN pnpm --filter @cdt/frontend deploy builder --prod --ignore-scripts
 
 # runner stage: no corepack/pnpm, just Node runtime
 FROM node:$NODE_VERSION AS runner
@@ -87,11 +86,8 @@ ENV NODE_ENV=production
 WORKDIR /app
 
 # Copy deployed standalone files (with real node_modules, not symlinks)
-COPY --from=builder --chown=1000:1000 /app/deploy /app
-
-# Copy built artifacts from original location
-COPY --from=builder --chown=1000:1000 /app/packages/code-du-travail-frontend/.next /app/.next
-COPY --from=builder --chown=1000:1000 /app/packages/code-du-travail-frontend/scripts /app/scripts
+COPY --from=builder --chown=1000:1000 /app/builder /app
+COPY --from=builder --chown=1000:1000 /app/builder/.next /app/.next
 
 # Clean up unnecessary files to reduce image size
 RUN rm -rf /app/.next/cache/webpack && \
