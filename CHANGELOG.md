@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.204.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.204.1...v4.204.2) (2025-12-10)
+
+
+### Bug Fixes
+
+* **ci:** Update permissions in release.yml ([98d86c8](https://github.com/SocialGouv/code-du-travail-numerique/commit/98d86c8e6be1f945cb461177a435702aecd4de81))
+
+
+
+
+
 ## [4.204.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.204.0...v4.204.1) (2025-12-10)
 
 
