@@ -17,6 +17,7 @@ RUN pnpm fetch --frozen-lockfile
 COPY packages/code-du-travail-frontend/package.json ./packages/code-du-travail-frontend/
 COPY packages/code-du-travail-modeles/package.json ./packages/code-du-travail-modeles/
 COPY packages/code-du-travail-utils/package.json ./packages/code-du-travail-utils/
+COPY package.json ./package.json
 
 # Install dependencies (uses fetched packages, cached if package.json unchanged)
 RUN pnpm install --frozen-lockfile --offline
