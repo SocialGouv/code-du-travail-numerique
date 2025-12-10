@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.204.4](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.204.3...v4.204.4) (2025-12-10)
+
+
+### Bug Fixes
+
+* **ci:** use npx for running lerna ([fe4fdfa](https://github.com/SocialGouv/code-du-travail-numerique/commit/fe4fdfa259955bfe1ed065167b60a3436d49c5f7))
+* **ci:** use npx for running lerna ([455590f](https://github.com/SocialGouv/code-du-travail-numerique/commit/455590f3163c249d36c9e482cec1251fb384dd4e))
+
+
+
+
+
 ## [4.204.3](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.204.2...v4.204.3) (2025-12-10)
 
 
