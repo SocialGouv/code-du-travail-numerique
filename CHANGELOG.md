@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.204.3](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.204.2...v4.204.3) (2025-12-10)
+
+
+### Bug Fixes
+
+* **actions:** use latest npm for pushing oidc ([25ae944](https://github.com/SocialGouv/code-du-travail-numerique/commit/25ae944f70d65a518a394c73487f2d260eaae345))
+* **yarn:** upgrade to v4 ([#6998](https://github.com/SocialGouv/code-du-travail-numerique/issues/6998)) ([93f19b7](https://github.com/SocialGouv/code-du-travail-numerique/commit/93f19b742008166d991b89dac57185c9433ab6ee))
+
+
+
+
+
 ## [4.204.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.204.1...v4.204.2) (2025-12-10)
 
 
