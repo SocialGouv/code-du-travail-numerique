@@ -49,8 +49,8 @@ importers:
         specifier: workspace:^
         version: link:../code-du-travail-utils
       '@socialgouv/matomo-next':
-        specifier: 1.10.0
-        version: 1.10.0(next@16.0.7(@babel/core@7.28.5)(@opentelemetry/api@1.9.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(sass@1.94.2))
+        specifier: 1.11.0
+        version: 1.11.0(next@16.0.7(@babel/core@7.28.5)(@opentelemetry/api@1.9.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(sass@1.94.2))
       '@socialgouv/modeles-social':
         specifier: workspace:^
         version: link:../code-du-travail-modeles
@@ -2672,8 +2672,8 @@ packages:
   '@socialgouv/cdtn-types@2.61.0':
     resolution: {integrity: sha512-bgcXw4eCO36ATP2/3FsOW0eEZVlFpmW+P0llms2sdWtxYGscvqjA0e7VXIdF9JS1pc4mv2PuNVo/3A9kUN64rw==}
 
-  '@socialgouv/matomo-next@1.10.0':
-    resolution: {integrity: sha512-Cp4EMnpzPO2JAinW56QrT6t+AJnM7pxUS3RUmfBWs9SIxHsqxivdmb+wSS8bUd/lkUXtLgBVw9dGOaK0EMwSEg==}
+  '@socialgouv/matomo-next@1.11.0':
+    resolution: {integrity: sha512-48XLGnq4LzwOHf2wgm76UXFnGGKOKeOal4+QHeewQH+VY/gxJiIZ1k0o8LuUvKOHThW5Mqco8yAGNe25f7s28g==}
     peerDependencies:
       next: '>= 9.5.5'
 
@@ -10889,7 +10889,7 @@ snapshots:
 
   '@socialgouv/cdtn-types@2.61.0': {}
 
-  '@socialgouv/matomo-next@1.10.0(next@16.0.7(@babel/core@7.28.5)(@opentelemetry/api@1.9.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(sass@1.94.2))':
+  '@socialgouv/matomo-next@1.11.0(next@16.0.7(@babel/core@7.28.5)(@opentelemetry/api@1.9.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(sass@1.94.2))':
     dependencies:
       next: 16.0.7(@babel/core@7.28.5)(@opentelemetry/api@1.9.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(sass@1.94.2)
 
