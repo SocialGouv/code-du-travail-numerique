@@ -72,10 +72,8 @@ export const Autocomplete = <K,>({
     return changes;
   };
 
-  const DownshiftComponent = Downshift as unknown as React.ComponentType<any>;
-
   return (
-    <DownshiftComponent<K>
+    <Downshift<K>
       id={id}
       initialSelectedItem={defaultValue}
       getA11yStatusMessage={({
@@ -304,7 +302,7 @@ export const Autocomplete = <K,>({
           </div>
         );
       }}
-    </DownshiftComponent>
+    </Downshift>
   );
 };
 

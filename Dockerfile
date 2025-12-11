@@ -5,19 +5,22 @@ FROM node:$NODE_VERSION AS builder
 
 WORKDIR /app
 
-RUN corepack enable && corepack prepare pnpm@10.0.0 --activate
+RUN corepack enable && corepack prepare pnpm@10.24.0 --activate
 
 # Copy lockfiles and config for better layer caching
 COPY pnpm-lock.yaml pnpm-workspace.yaml lerna.json .npmrc ./
 
-# Copy package.json files for all packages
+# Fetch dependencies (frozen-lockfile contains all package info)
+RUN pnpm fetch --frozen-lockfile
+
+# Copy package.json files (needed for workspace structure)
 COPY package.json ./
 COPY packages/code-du-travail-frontend/package.json ./packages/code-du-travail-frontend/
 COPY packages/code-du-travail-modeles/package.json ./packages/code-du-travail-modeles/
 COPY packages/code-du-travail-utils/package.json ./packages/code-du-travail-utils/
 
-# Install dependencies (uses fetched packages, cached if package.json unchanged)
-RUN pnpm install --frozen-lockfile
+# Install dependencies (uses fetched packages, cached if package.json not changed, offline to avoid network calls, frozen-lockfile to ensure consistency)
+RUN pnpm install -r --frozen-lockfile --offline
 
 # Copy source code (after install to maximize cache efficiency)
 COPY . ./
