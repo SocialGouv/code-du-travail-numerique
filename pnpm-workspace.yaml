@@ -1,2 +1,16 @@
 packages:
-  - "packages/*"
+  - packages/*
+
+onlyBuiltDependencies:
+  - "@parcel/watcher"
+  - "@sentry/cli"
+  - "@swc/core"
+  - cypress
+  - es5-ext
+  - esbuild
+  - nx
+  - sharp
+  - unrs-resolver
+
+overrides:
+  nx: 22.2.1
