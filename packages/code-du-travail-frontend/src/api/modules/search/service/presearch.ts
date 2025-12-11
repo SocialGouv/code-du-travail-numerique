@@ -161,6 +161,8 @@ const MATCHING_CC_TOKENS = [
   "ccn",
 ];
 
+const NO_CC_TOKENS = ["ruptur"];
+
 const tokenize = (content: string): string[] => {
   const cleaned = content.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, " ");
   return fingerprint(cleaned);
@@ -178,8 +180,12 @@ const isCC = async (query: string): Promise<SearchResult[]> => {
   const tokens: string[] = tokenize(query);
 
   if (
-    tokens.find((t) => MATCHING_CC_TOKENS.includes(complex(t)))?.length ||
-    tokens.find(isIdccToken)
+    // if query includes a CC related token
+    (tokens.find((t) => MATCHING_CC_TOKENS.includes(complex(t)))?.length ||
+      // or an IDCC
+      tokens.find(isIdccToken)) &&
+    // and none of the excluded token
+    !tokens.find((t) => NO_CC_TOKENS.includes(complex(t)))?.length
   ) {
     const remainingTokens = Array.from([
       ...tokens.filter((t) => !MATCHING_CC_TOKENS.includes(complex(t))),
