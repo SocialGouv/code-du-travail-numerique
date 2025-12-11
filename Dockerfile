@@ -17,7 +17,7 @@ COPY packages/code-du-travail-modeles/package.json ./packages/code-du-travail-mo
 COPY packages/code-du-travail-utils/package.json ./packages/code-du-travail-utils/
 
 # Install dependencies (uses fetched packages, cached if package.json unchanged)
-RUN pnpm install --frozen-lockfile --offline
+RUN pnpm install --frozen-lockfile
 
 # Copy source code (after install to maximize cache efficiency)
 COPY . ./
