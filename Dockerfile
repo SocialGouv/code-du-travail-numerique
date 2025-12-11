@@ -20,8 +20,10 @@ COPY packages/code-du-travail-modeles/package.json ./packages/code-du-travail-mo
 COPY packages/code-du-travail-utils/package.json ./packages/code-du-travail-utils/
 
 # Install dependencies (uses fetched packages, cached if package.json not changed, offline to avoid network calls, frozen-lockfile to ensure consistency)
-# allow-scripts is configured in .npmrc based on onlyBuiltDependencies from package.json
-RUN pnpm install -r --frozen-lockfile --offline
+# Disable trust-policy temporarily in Docker for build scripts
+RUN pnpm config set trust-policy false && \
+  pnpm install --recursive --frozen-lockfile --offline && \
+  pnpm config set trust-policy strict
 
 # Copy source code (after install to maximize cache efficiency)
 COPY . ./
@@ -74,8 +76,7 @@ RUN --mount=type=secret,id=SENTRY_AUTH_TOKEN,env=SENTRY_AUTH_TOKEN \
   --mount=type=secret,id=ELASTICSEARCH_URL,env=ELASTICSEARCH_URL \
   pnpm build
 
-# Deploy (reads .npmrc for minimum-release-age-exclude configuration)
-# Don't use --ignore-scripts to ensure native dependencies are properly built
+# Deploy (creates a production-ready deployment without dev dependencies)
 RUN pnpm --filter @cdt/frontend deploy --prod /app/deploy && \
   rm -rf /app/deploy/.pnpm /app/deploy/.modules.yaml /app/deploy/.cache
 
