@@ -40,6 +40,9 @@ jobs:
       - name: Install dependencies
         run: |
           pnpm install --frozen-lockfile
+      - name: Install Cypress binary
+        run: |
+          pnpm --filter @cdt/frontend exec cypress install
       - name: Run test e2e
         run: |
           TEST_BASEURL=https://code-du-travail-numerique-preprod.ovh.fabrique.social.gouv.fr TEST_MODE=heavy-and-light pnpm test:e2e
