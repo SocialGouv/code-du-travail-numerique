@@ -35,8 +35,7 @@ function MatomoComponent({ heatmapEnabled }: MatomoComponentProps) {
       searchKeyword: "query",
 
       onInitialization: () => {
-        const referrerUrl =
-          document?.referrer || searchParams.get("src_url");
+        const referrerUrl = document?.referrer || searchParams.get("src_url");
 
         if (referrerUrl) {
           push(["setReferrerUrl", referrerUrl]);
