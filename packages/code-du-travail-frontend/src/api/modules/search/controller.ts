@@ -1,6 +1,13 @@
-import { DEFAULT_ERROR_500_MESSAGE, NotFoundError } from "../../utils";
-import { searchWithQuery } from "./service";
+import {
+  DEFAULT_ERROR_500_MESSAGE,
+  elasticDocumentsIndex,
+  elasticsearchClient,
+  NotFoundError,
+} from "../../utils";
+import { extractHits, searchWithQuery } from "./service";
 import { NextResponse } from "next/server";
+import { getRelatedThemesBody } from "./queries";
+import { presearch } from "./service/presearch";
 
 export class SearchController {
   private searchParams: URLSearchParams;
@@ -49,5 +56,39 @@ export class SearchController {
         );
       }
     }
+  }
+
+  public async presearch() {
+    const query = this.searchParams.get("q");
+    const allClasses = this.searchParams.get("ac") == "true";
+
+    if (!query) {
+      return NextResponse.json(
+        { message: "Query parameter 'q' is required." },
+        {
+          status: 400,
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+    }
+
+    const esReq = getRelatedThemesBody(query);
+    esReq._source.push("breadcrumbs");
+    const themes = await elasticsearchClient
+      .search<any>({
+        body: esReq,
+        index: elasticDocumentsIndex,
+      })
+      .then((r) => extractHits(r).map((t) => t._source));
+
+    const parsed = await presearch(query, themes, allClasses);
+    return NextResponse.json(parsed, {
+      status: 200,
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
   }
 }

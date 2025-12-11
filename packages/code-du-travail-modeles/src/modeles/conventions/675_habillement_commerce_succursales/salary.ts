@@ -11,9 +11,7 @@ export type CC675ReferenceSalaryProps = {
   isAgentMaitriseOrCadre: boolean;
 };
 
-export class ReferenceSalary675
-  implements IReferenceSalary<SupportedCc.IDCC0675>
-{
+export class ReferenceSalary675 implements IReferenceSalary<SupportedCc.IDCC0675> {
   mapSituation(
     args: Record<string, string | undefined>
   ): ReferenceSalaryProps<SupportedCc.IDCC0675> {

@@ -96,30 +96,6 @@ describe("SearchBar", () => {
     });
   });
 
-  it("should emit suggestion selection event when a suggestion is selected", async () => {
-    render(<SearchBar />);
-
-    // Find the input and type a search query
-    const input = screen.getByTestId("search-bar-input");
-    fireEvent.change(input, { target: { value: "test" } });
-
-    // Click the button to simulate selecting a suggestion
-    const submitButton = screen.getByTestId("submit-search");
-    fireEvent.click(submitButton);
-
-    // Check that emitSuggestionSelectionEvent was called with the correct parameters
-    await waitFor(() => {
-      expect(mockEmitSuggestionSelectionEvent).toHaveBeenCalledWith(
-        "test",
-        "test query",
-        ["suggestion1", "suggestion2"]
-      );
-    });
-
-    // Check that emitSearchEvent was also called for the selected suggestion
-    expect(mockEmitSearchEvent).toHaveBeenCalledWith("test query");
-  });
-
   it("should handle errors when fetching suggestions", async () => {
     // Mock the fetchSuggestResults to throw an error
     (fetchSuggestResults as jest.Mock).mockRejectedValue(

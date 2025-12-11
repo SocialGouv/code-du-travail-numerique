@@ -60,8 +60,9 @@ export type NotificationAffichage =
   | "légal et conventionnel"
   | "légal";
 
-export interface NotificationRuleNode<Name extends string = string>
-  extends PubliRuleNode<Name> {
+export interface NotificationRuleNode<
+  Name extends string = string,
+> extends PubliRuleNode<Name> {
   rawNode: PubliRule & {
     cdtn?: {
       bloquante?: "non" | "oui";

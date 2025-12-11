@@ -2,9 +2,10 @@
 
 import { usePathname, useSearchParams } from "next/navigation";
 import { Suspense, useEffect } from "react";
-import { PIWIK_SITE_ID, PIWIK_URL, WIDGETS_PATH } from "../../config";
+import { PIWIK_SITE_ID, PIWIK_URL, WIDGETS_PATH, SITE_URL } from "../../config";
 import { getStoredConsent } from "../utils/consent";
 import { push, trackAppRouter } from "@socialgouv/matomo-next";
+import { initABTesting } from "./initABTesting";
 
 type MatomoComponentProps = {
   heatmapEnabled: boolean;
@@ -37,6 +38,8 @@ function MatomoComponent({ heatmapEnabled }: MatomoComponentProps) {
         if (pathname && pathname.match(WIDGETS_PATH)) {
           push(["setCookieSameSite", "None"]);
         }
+
+        initABTesting();
       },
     });
   }, [pathname, searchParams, heatmapEnabled]);

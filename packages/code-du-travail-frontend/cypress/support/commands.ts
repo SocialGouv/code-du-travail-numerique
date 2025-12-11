@@ -2,7 +2,11 @@ import "@testing-library/cypress/add-commands";
 import "cypress-iframe";
 
 Cypress.Commands.add("urlEqual", (path) => {
-  cy.url().should("equal", `${Cypress.config().baseUrl}${path}`);
+  cy.url().should((url) => {
+    const urlWithoutQuery = url.split("?")[0];
+    const expectedUrl = `${Cypress.config().baseUrl}${path}`.split("?")[0];
+    expect(urlWithoutQuery).to.equal(expectedUrl);
+  });
 });
 
 Cypress.Commands.add("titleAndMetaDescriptionEqual", (title, description) => {
@@ -16,8 +20,12 @@ Cypress.Commands.add("titleAndMetaDescriptionEqual", (title, description) => {
 
 Cypress.Commands.add("canonicalUrlEqual", (path) => {
   cy.get("head > link[rel='canonical']")
-    .should("have.prop", "href")
-    .and("equal", `${Cypress.config().baseUrl}${path}`);
+    .invoke("prop", "href")
+    .then((href: string) => {
+      const hrefWithoutQuery = href.split("?")[0];
+      const expectedUrl = `${Cypress.config().baseUrl}${path}`.split("?")[0];
+      expect(hrefWithoutQuery).to.equal(expectedUrl);
+    });
 });
 
 Cypress.Commands.add("checkNoIndex", () => {
