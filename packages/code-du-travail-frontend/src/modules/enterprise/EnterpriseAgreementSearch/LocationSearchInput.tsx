@@ -29,6 +29,7 @@ export const LocationSearchInput = ({
 
   return (
     <Autocomplete<ApiGeoResult>
+      id="location-search-autocomplete"
       onChange={(value) => {
         if (onLocationChange) onLocationChange(value);
       }}

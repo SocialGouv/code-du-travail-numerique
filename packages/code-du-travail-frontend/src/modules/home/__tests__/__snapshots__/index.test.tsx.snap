@@ -9,7 +9,7 @@ exports[`<Home /> should match snapshot 1`] = `
       class="fr-col-12"
     >
       <div
-        class="bg_var(--blue-cumulus-925-125)"
+        class="bg_var(--blue-cumulus-925-125) pos_relative"
       >
         <div
           class="fr-container fr-py-6w"
@@ -51,8 +51,8 @@ exports[`<Home /> should match snapshot 1`] = `
                     >
                       <label
                         class="fr-label"
-                        for="downshift-0-input"
-                        id="downshift-0-label"
+                        for="home-search-autocomplete"
+                        id="home-search-autocomplete-label"
                       >
                         Recherchez par mots-clés
                         <span
@@ -75,7 +75,7 @@ exports[`<Home /> should match snapshot 1`] = `
                           autocomplete="off"
                           class="fr-input"
                           data-testid="search-input"
-                          id="downshift-0-input"
+                          id="home-search-autocomplete"
                           role="combobox"
                           type="text"
                           value=""
@@ -87,13 +87,13 @@ exports[`<Home /> should match snapshot 1`] = `
                       <div
                         aria-live="polite"
                         class="fr-messages-group"
-                        id="downshift-0-input-messages-group"
+                        id="home-search-autocomplete-messages-group"
                       />
                     </div>
                     <ul
-                      aria-labelledby="downshift-0-label"
+                      aria-labelledby="home-search-autocomplete-label"
                       class="fr-p-0 fr-m-0 pos_absolute top_100% left_0 w_100% z_1000 bg_var(--background-default-grey) li-t_none! bd-t_none bx-sh_0_4px_8px_rgba(0,_0,_0,_0.1) max-h_300px ov-y_auto "
-                      id="downshift-0-menu"
+                      id="home-search-autocomplete-menu"
                       role="listbox"
                     />
                   </div>
@@ -126,6 +126,20 @@ exports[`<Home /> should match snapshot 1`] = `
               />
             </div>
           </div>
+        </div>
+        <div
+          class="pos_absolute bottom_0 right_0 w_50% h_100% pointer-events_none d_none md:d_block ov_hidden"
+        >
+          <img
+            alt=""
+            class="pos_absolute! bottom_0! right_0! w_auto! h_80%! op_0.3 obj-f_contain!"
+            data-nimg="1"
+            decoding="async"
+            height="331"
+            src="/static/assets/icons/home/illustration-principale.svg"
+            style="color: transparent;"
+            width="486"
+          />
         </div>
       </div>
       <div

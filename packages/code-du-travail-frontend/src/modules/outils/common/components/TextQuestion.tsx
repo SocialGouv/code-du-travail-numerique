@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Html from "src/modules/common/Html";
 import { Input } from "@codegouvfr/react-dsfr/Input";
 import { InputUnit } from "../../indemnite-depart/steps/Informations/components/PubliQuestion";
@@ -40,7 +40,7 @@ export function TextQuestion({
   autoFocus = false,
   ariaLive = "polite",
 }: Props) {
-  const [inputRef, setInputRef] = useState<HTMLInputElement>();
+  const inputRef = useRef<HTMLInputElement | null>(null);
   const [localValue, setLocalValue] = useState(value || "");
 
   useEffect(() => {
@@ -48,20 +48,20 @@ export function TextQuestion({
   }, [value]);
 
   useEffect(() => {
-    if (inputRef && error) {
-      inputRef?.focus();
-      inputRef?.scrollIntoView({
+    if (inputRef.current && error) {
+      inputRef.current?.focus();
+      inputRef.current?.scrollIntoView({
         behavior: "smooth",
         block: "center",
       });
     }
-  }, [inputRef, error]);
+  }, [error]);
 
   useEffect(() => {
-    if (inputRef && autoFocus) {
-      inputRef?.focus();
+    if (inputRef.current && autoFocus) {
+      inputRef.current?.focus();
     }
-  }, [inputRef, autoFocus]);
+  }, [autoFocus]);
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const newValue = event.target.value;
@@ -120,7 +120,7 @@ export function TextQuestion({
           autoFocus,
           title,
           required: true,
-          ref: (ref: HTMLInputElement) => setInputRef(ref),
+          ref: inputRef,
           "data-testid": dataTestId,
           onWheel: preventScroll,
           "aria-invalid": error ? "true" : undefined,
