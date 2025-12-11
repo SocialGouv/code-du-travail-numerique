@@ -23,8 +23,6 @@ function MatomoComponent({ heatmapEnabled }: MatomoComponentProps) {
       pathname,
       searchParams,
       excludeUrlsPatterns: [WIDGETS_PATH],
-
-      // 👉 On se base sur le consentement pour configurer Matomo
       enableHeatmapSessionRecording: heatmapEnabled && consent.matomoHeatmap,
       enableHeartBeatTimer: heatmapEnabled && consent.matomo,
 
@@ -49,10 +47,8 @@ function MatomoComponent({ heatmapEnabled }: MatomoComponentProps) {
   };
 
   useEffect(() => {
-    // Initialisation à l’arrivée sur la page
     initializeMatomo();
 
-    // Réinitialisation Matomo lorsque le consentement change
     const onConsentUpdated = () => {
       initializeMatomo();
     };
