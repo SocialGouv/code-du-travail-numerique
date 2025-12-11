@@ -11,9 +11,7 @@ export type CC1527ReferenceSalaryProps = {
   hasCommission: boolean;
 };
 
-export class ReferenceSalary1527
-  implements IReferenceSalary<SupportedCc.IDCC1527>
-{
+export class ReferenceSalary1527 implements IReferenceSalary<SupportedCc.IDCC1527> {
   mapSituation(
     args: Record<string, string | undefined>
   ): ReferenceSalaryProps<SupportedCc.IDCC1527> {

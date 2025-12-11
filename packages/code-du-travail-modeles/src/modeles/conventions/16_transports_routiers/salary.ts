@@ -20,9 +20,7 @@ export type CategoryPro16 =
   | "'Ouvriers'"
   | "'TAM'";
 
-export class ReferenceSalary16
-  implements IReferenceSalary<SupportedCc.IDCC0016>
-{
+export class ReferenceSalary16 implements IReferenceSalary<SupportedCc.IDCC0016> {
   mapSituation(
     args: Record<string, string | undefined>
   ): ReferenceSalaryProps<SupportedCc.IDCC0016> {

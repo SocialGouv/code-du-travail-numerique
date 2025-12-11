@@ -30,8 +30,10 @@ export type Integration = {
   [slug: string]: Widget;
 };
 
-export interface IntegrationDetailContentProps
-  extends Omit<Widget, "shortDescription" | "metaTitle" | "metaDescription"> {
+export interface IntegrationDetailContentProps extends Omit<
+  Widget,
+  "shortDescription" | "metaTitle" | "metaDescription"
+> {
   host: string;
   selectOptions?: SelectItem[] | null;
 }
