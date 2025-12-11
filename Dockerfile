@@ -20,10 +20,7 @@ COPY packages/code-du-travail-modeles/package.json ./packages/code-du-travail-mo
 COPY packages/code-du-travail-utils/package.json ./packages/code-du-travail-utils/
 
 # Install dependencies (uses fetched packages, cached if package.json not changed, offline to avoid network calls, frozen-lockfile to ensure consistency)
-# Disable trust-policy temporarily in Docker for build scripts
-RUN pnpm config set trust-policy false && \
-  pnpm install --recursive --frozen-lockfile --offline && \
-  pnpm config set trust-policy strict
+RUN pnpm install --recursive --frozen-lockfile --offline
 
 # Copy source code (after install to maximize cache efficiency)
 COPY . ./
@@ -92,10 +89,7 @@ WORKDIR /app
 
 # Copy deployed standalone files (with real node_modules, not symlinks)
 COPY --from=builder --chown=1000:1000 /app/deploy /app
-
-# Copy built artifacts from original location
 COPY --from=builder --chown=1000:1000 /app/packages/code-du-travail-frontend/.next /app/.next
-COPY --from=builder --chown=1000:1000 /app/packages/code-du-travail-frontend/scripts /app/scripts
 
 # Clean up unnecessary files to reduce image size
 RUN rm -rf /app/.next/cache/webpack && \

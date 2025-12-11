@@ -99,7 +99,6 @@
     "postcss": "^8.4.44",
     "prettier": "^3.3.3",
     "sass": "^1.77.8",
-    "supertest": "^6.3.3",
     "testing-library-selector": "0.3.1",
     "tsup": "^8.3.5",
     "typescript": "^5.9.3",
