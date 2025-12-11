@@ -8,12 +8,10 @@ WORKDIR /app
 RUN corepack enable && corepack prepare pnpm@10.0.0 --activate
 
 # Copy lockfiles and config for better layer caching
-COPY pnpm-lock.yaml pnpm-workspace.yaml package.json lerna.json .npmrc ./
+COPY pnpm-lock.yaml pnpm-workspace.yaml lerna.json .npmrc ./
 
-# Fetch dependencies (frozen-lockfile contains all package info)
-RUN pnpm install --frozen-lockfile --offline
-
-# Copy package.json files (needed for workspace structure)
+# Copy package.json files for all packages
+COPY package.json ./
 COPY packages/code-du-travail-frontend/package.json ./packages/code-du-travail-frontend/
 COPY packages/code-du-travail-modeles/package.json ./packages/code-du-travail-modeles/
 COPY packages/code-du-travail-utils/package.json ./packages/code-du-travail-utils/
