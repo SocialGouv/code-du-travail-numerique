@@ -32,7 +32,14 @@ export const WhatIsNew = ({ month }: Props) => {
 
         <MonthNavigation currentPeriod={month.period} position="bottom" />
       </div>
-      <Feedback />
+      <div
+        className={fr.cx(
+          "fr-col-12",
+          "fr-col-md-8",
+        )}
+      >
+        <Feedback />
+      </div>
     </ContainerList>
   );
 };
