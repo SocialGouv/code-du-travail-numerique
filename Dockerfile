@@ -75,7 +75,8 @@ RUN --mount=type=secret,id=SENTRY_AUTH_TOKEN,env=SENTRY_AUTH_TOKEN \
 
 # Deploy (creates a production-ready deployment without dev dependencies)
 RUN pnpm --filter @cdt/frontend deploy --prod /app/deploy && \
-  rm -rf /app/deploy/.pnpm /app/deploy/.modules.yaml /app/deploy/.cache
+  rm -rf /app/deploy/.pnpm /app/deploy/.modules.yaml /app/deploy/.cache && \
+  cp -r /app/packages/code-du-travail-frontend/.next /app/deploy/.next
 
 # runner stage: no corepack/pnpm, just Node runtime
 FROM node:$NODE_VERSION AS runner
@@ -89,7 +90,6 @@ WORKDIR /app
 
 # Copy deployed standalone files (with real node_modules, not symlinks)
 COPY --from=builder --chown=1000:1000 /app/deploy /app
-COPY --from=builder --chown=1000:1000 /app/packages/code-du-travail-frontend/.next /app/.next
 
 # Clean up unnecessary files to reduce image size
 RUN rm -rf /app/.next/cache/webpack && \
