@@ -547,10 +547,7 @@ const buttonClose = css({
 
 const isHighlightedStyle = css({
   bg: "var(--background-contrast-grey)",
-  outline: "3px solid var(--border-plain-blue-france)",
-  outlineOffset: "-3px",
   fontWeight: "bold",
-  boxShadow: "inset 0 0 0 1px var(--border-plain-blue-france)",
 });
 
 const link = css({
