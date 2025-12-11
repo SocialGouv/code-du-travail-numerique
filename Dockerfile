@@ -20,6 +20,7 @@ COPY packages/code-du-travail-modeles/package.json ./packages/code-du-travail-mo
 COPY packages/code-du-travail-utils/package.json ./packages/code-du-travail-utils/
 
 # Install dependencies (uses fetched packages, cached if package.json not changed, offline to avoid network calls, frozen-lockfile to ensure consistency)
+# allow-scripts is configured in .npmrc based on onlyBuiltDependencies from package.json
 RUN pnpm install -r --frozen-lockfile --offline
 
 # Copy source code (after install to maximize cache efficiency)
@@ -74,7 +75,8 @@ RUN --mount=type=secret,id=SENTRY_AUTH_TOKEN,env=SENTRY_AUTH_TOKEN \
   pnpm build
 
 # Deploy (reads .npmrc for minimum-release-age-exclude configuration)
-RUN pnpm --filter @cdt/frontend deploy --prod --ignore-scripts /app/deploy && \
+# Don't use --ignore-scripts to ensure native dependencies are properly built
+RUN pnpm --filter @cdt/frontend deploy --prod /app/deploy && \
   rm -rf /app/deploy/.pnpm /app/deploy/.modules.yaml /app/deploy/.cache
 
 # runner stage: no corepack/pnpm, just Node runtime
