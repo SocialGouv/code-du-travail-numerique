@@ -11,6 +11,3 @@ onlyBuiltDependencies:
   - nx
   - sharp
   - unrs-resolver
-
-overrides:
-  nx: 22.2.1
