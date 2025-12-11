@@ -27,9 +27,8 @@ COPY . ./
 
 ENV HUSKY=0
 ENV GENERATE_SOURCEMAP=true
-ENV NEXT_PUBLIC_APP_ENV=production
 ENV NODE_ENV=production
-ENV NEXT_TELEMETRY_DISABLED=1
+ENV NEXT_PUBLIC_APP_ENV=production
 
 # Add build-arg from github actions
 ARG NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT
@@ -75,7 +74,6 @@ RUN --mount=type=secret,id=SENTRY_AUTH_TOKEN,env=SENTRY_AUTH_TOKEN \
 
 # Deploy (creates a production-ready deployment without dev dependencies)
 RUN pnpm --filter @cdt/frontend deploy --prod /app/deploy && \
-  rm -rf /app/deploy/.pnpm /app/deploy/.modules.yaml /app/deploy/.cache && \
   cp -r /app/packages/code-du-travail-frontend/.next /app/deploy/.next
 
 # runner stage: no corepack/pnpm, just Node runtime
@@ -83,17 +81,16 @@ FROM node:$NODE_VERSION AS runner
 
 RUN apk --update --no-cache add ca-certificates && apk upgrade
 
-ENV NEXT_PUBLIC_APP_ENV=production
 ENV NODE_ENV=production
+ENV NEXT_TELEMETRY_DISABLED=1
 
 WORKDIR /app
 
 # Copy deployed standalone files (with real node_modules, not symlinks)
 COPY --from=builder --chown=1000:1000 /app/deploy /app
 
-# Clean up unnecessary files to reduce image size
-RUN rm -rf /app/.next/cache/webpack && \
-  mkdir -p /app/.next/cache/images && \
+# Ensure necessary directories exist and have correct permissions
+RUN mkdir -p /app/.next/cache/images && \
   chown -R 1000:1000 /app
 
 USER 1000
