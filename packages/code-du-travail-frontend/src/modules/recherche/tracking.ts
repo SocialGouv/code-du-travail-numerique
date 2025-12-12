@@ -92,11 +92,14 @@ export const useSearchTracking = () => {
 
   const emitPresearchEvent = useCallback(
     (query: string, classes: PresearchClass[]) => {
+      const name = JSON.stringify({
+        query: query.trim(),
+        classes,
+      });
       sendEvent({
         category: MatomoSearchCategory.SEARCH,
         action: MatomoSearchAction.PRESEARCH,
-        name: JSON.stringify(classes),
-        value: query.trim(),
+        name
       });
     },
     []
@@ -104,11 +107,14 @@ export const useSearchTracking = () => {
 
   const emitClickSeeAllResultsEvent = useCallback(
     (query: string, classes?: PresearchClass[]) => {
+      const name = JSON.stringify({
+        query: query.trim(),
+        classes,
+      });
       sendEvent({
         category: MatomoSearchCategory.SEARCH,
         action: MatomoSearchAction.CLIK_SEE_ALL_RESULTS,
-        name: classes && classes.length > 0 ? JSON.stringify(classes) : "[]",
-        value: query.trim(),
+        name,
       });
     },
     []
