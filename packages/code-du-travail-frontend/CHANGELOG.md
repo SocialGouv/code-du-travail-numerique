@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.205.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.205.0...v4.205.1) (2025-12-12)
+
+
+### Bug Fixes
+
+* bug heatmap not loading immediately on consent approval ([#7003](https://github.com/SocialGouv/code-du-travail-numerique/issues/7003)) ([26b891a](https://github.com/SocialGouv/code-du-travail-numerique/commit/26b891a7a76df8127e08ca6508b2e7c87c64d82f))
+* **tracking:** add data in name instead of value which is a Number ([fccf3f1](https://github.com/SocialGouv/code-du-travail-numerique/commit/fccf3f1b8679ec00b5658290713a05756948e267))
+
+
+
+
+
 # [4.205.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.204.6...v4.205.0) (2025-12-11)
 
 
