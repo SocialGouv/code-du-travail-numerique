@@ -74,7 +74,8 @@ RUN --mount=type=secret,id=SENTRY_AUTH_TOKEN,env=SENTRY_AUTH_TOKEN \
 
 # Deploy (creates a production-ready deployment without dev dependencies)
 RUN pnpm --filter @cdt/frontend deploy --prod /app/deploy && \
-  cp -r /app/packages/code-du-travail-frontend/.next /app/deploy/.next
+  cp -r /app/packages/code-du-travail-frontend/.next /app/deploy/.next && \
+  cp /app/packages/code-du-travail-frontend/public/* /app/deploy/public/
 
 # runner stage: no corepack/pnpm, just Node runtime
 FROM node:$NODE_VERSION AS runner
