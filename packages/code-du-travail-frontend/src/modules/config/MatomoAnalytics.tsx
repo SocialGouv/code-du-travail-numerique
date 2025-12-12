@@ -15,7 +15,7 @@ function MatomoComponent({ heatmapEnabled }: MatomoComponentProps) {
   const searchParams = useSearchParams();
   const pathname = usePathname();
 
-  useEffect(() => {
+  const initializeMatomo = () => {
     const consent = getStoredConsent();
 
     trackAppRouter({
@@ -26,15 +26,20 @@ function MatomoComponent({ heatmapEnabled }: MatomoComponentProps) {
       excludeUrlsPatterns: [WIDGETS_PATH],
       enableHeatmapSessionRecording: heatmapEnabled && consent.matomoHeatmap,
       enableHeartBeatTimer: heatmapEnabled && consent.matomo,
+
       heatmapConfig: {
         captureKeystrokes: false,
       },
+
       searchKeyword: "query",
+
       onInitialization: () => {
         const referrerUrl = document?.referrer || searchParams.get("src_url");
+
         if (referrerUrl) {
           push(["setReferrerUrl", referrerUrl]);
         }
+
         if (pathname && pathname.match(WIDGETS_PATH)) {
           push(["setCookieSameSite", "None"]);
         }
@@ -42,6 +47,20 @@ function MatomoComponent({ heatmapEnabled }: MatomoComponentProps) {
         initABTesting();
       },
     });
+  };
+
+  useEffect(() => {
+    initializeMatomo();
+
+    const onConsentUpdated = () => {
+      initializeMatomo();
+    };
+
+    window.addEventListener("cdtn:consent-updated", onConsentUpdated);
+
+    return () => {
+      window.removeEventListener("cdtn:consent-updated", onConsentUpdated);
+    };
   }, [pathname, searchParams, heatmapEnabled]);
 
   return null;

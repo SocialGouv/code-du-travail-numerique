@@ -47,13 +47,13 @@ export const saveConsent = (consent: ConsentType): void => {
   const finalConsent = { ...consent, matomo: true };
   safeSetItem(CONSENT_STORAGE_KEY, JSON.stringify(finalConsent));
   applyConsent(finalConsent);
+
+  window.dispatchEvent(new Event("cdtn:consent-updated"));
 };
 
 // Apply consent settings to tracking tools
 export const applyConsent = (consent: ConsentType): void => {
-  // Matomo is always enabled (mandatory)
   applyMatomoConsent(true);
-  // Matomo Heatmap requires explicit consent
   applyMatomoHeatmapConsent(consent.matomoHeatmap);
   applySeaConsent(consent.sea);
 };
@@ -63,12 +63,12 @@ const applyMatomoHeatmapConsent = (isConsented: boolean): void => {
   if (typeof window === "undefined") return;
 
   try {
+    window._paq = window._paq || [];
+
     if (isConsented) {
-      window._paq = window._paq || [];
-      window._paq.push(["HeatmapSessionRecording.enable"]);
+      window._paq.push(["HeatmapSessionRecording::enable"]);
     } else {
-      window._paq = window._paq || [];
-      window._paq.push(["HeatmapSessionRecording.disable"]);
+      window._paq.push(["HeatmapSessionRecording::disable"]);
     }
   } catch (e) {
     console.error("Error applying Matomo Heatmap consent:", e);
@@ -80,12 +80,12 @@ const applyMatomoConsent = (isConsented: boolean): void => {
   if (typeof window === "undefined") return;
 
   try {
+    window._paq = window._paq || [];
+
     if (isConsented) {
-      window._paq = window._paq || [];
       window._paq.push(["forgetUserOptOut"]);
       window._paq.push(["rememberCookieConsentGiven"]);
     } else {
-      window._paq = window._paq || [];
       window._paq.push(["optUserOut"]);
       window._paq.push(["forgetCookieConsentGiven"]);
     }
@@ -236,7 +236,6 @@ const setupRouteChangeListener = (): void => {
       currentPath = window.location.pathname;
       // Reapply consent based on the new path
       const consent = getStoredConsent();
-      // No need to force matomo: true as getStoredConsent now always returns matomo: true
       applyConsent(consent);
     }
   };
