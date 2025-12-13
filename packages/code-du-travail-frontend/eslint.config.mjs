@@ -4,10 +4,11 @@ import js from "@eslint/js";
 import tsParser from "@typescript-eslint/parser";
 import gitignore from "eslint-config-flat-gitignore";
 import { FlatCompat } from "@eslint/eslintrc";
-import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { dirname } from "node:path";
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 const compat = new FlatCompat({
   baseDirectory: __dirname,
@@ -27,7 +28,6 @@ export default defineConfig([
 
     languageOptions: {
       sourceType: "module",
-
       parserOptions: {
         project: "tsconfig.json",
         tsconfigRootDir: __dirname,

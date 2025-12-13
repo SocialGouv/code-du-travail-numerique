@@ -99,7 +99,7 @@ export const useSearchTracking = () => {
       sendEvent({
         category: MatomoSearchCategory.SEARCH,
         action: MatomoSearchAction.PRESEARCH,
-        name
+        name,
       });
     },
     []

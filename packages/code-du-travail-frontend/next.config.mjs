@@ -72,9 +72,6 @@ const nextConfig = {
         : false,
   },
   reactCompiler: true,
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
   staticPageGenerationTimeout: 60 * 5, // 5 minutes
   webpack: (config, { dev, isServer }) => {
     config.module.rules.push({

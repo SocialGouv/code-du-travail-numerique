@@ -96,10 +96,16 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version-file: .node-version
-          cache: "yarn"
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          run_install: false
       - name: Install dependencies
         run: |
-          yarn install --immutable
+          pnpm install --frozen-lockfile
+      - name: Install Cypress binary
+        run: |
+          pnpm --filter @cdt/frontend exec cypress install
       - name: Env
         id: env
         uses: socialgouv/kontinuous/.github/actions/env@v1
@@ -110,7 +116,7 @@ jobs:
         env:
           CYPRESS: "true"
         run: |
-          TEST_BASEURL=${{ env.SITE_URL }} TEST_MODE=light yarn test:e2e
+          TEST_BASEURL=${{ env.SITE_URL }} TEST_MODE=light pnpm test:e2e
       - name: Archive generated screenshots
         if: failure()
         uses: actions/upload-artifact@v4

@@ -24,7 +24,7 @@
     "paths": {
       "@styled-system/*": ["./src/styled-system/*"]
     },
-    "target": "ES2017"
+    "target": "es2024"
   },
   "include": [
     "next-env.d.ts",

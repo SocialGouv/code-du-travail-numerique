@@ -33,9 +33,12 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version-file: .node-version
-          cache: "yarn"
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          run_install: false
       - name: Install dependencies
-        run: yarn install --immutable
+        run: pnpm install --frozen-lockfile
       - name: Set git
         run: |
           git config --global user.name "${NAME}"
@@ -46,9 +49,9 @@ jobs:
           NAME: ${{ secrets.SOCIALGROOVYBOT_NAME }}
           EMAIL: ${{ secrets.SOCIALGROOVYBOT_EMAIL }}
       - name: Build for npm
-        run: yarn build:npm
+        run: pnpm build:npm
       - name: Versionning code
-        run: GH_TOKEN=${GITHUB_TOKEN} npx lerna version --force-publish --yes --conventional-commits --create-release github
+        run: GH_TOKEN=${GITHUB_TOKEN} pnpm lerna version --force-publish --yes --conventional-commits --create-release github
         env:
           GITHUB_TOKEN: ${{ steps.token.outputs.token }}
       - name: Rebase master to dev
@@ -64,9 +67,5 @@ jobs:
           GITHUB_TOKEN: ${{ steps.token.outputs.token }}
           NAME: ${{ secrets.SOCIALGROOVYBOT_NAME }}
           EMAIL: ${{ secrets.SOCIALGROOVYBOT_EMAIL }}
-      - name: Use latest npm version
-        run: npm install -g npm@latest
-      - name: Display npm version
-        run: npm --version
       - name: Deploy to npm
-        run: npx lerna publish from-package --yes
+        run: pnpm lerna publish from-package --yes
