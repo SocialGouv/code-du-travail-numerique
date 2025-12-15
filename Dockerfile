@@ -78,10 +78,15 @@ ENV NEXT_PUBLIC_BRANCH_NAME_SLUG=$NEXT_PUBLIC_BRANCH_NAME_SLUG
 # Build
 # Cache Next.js build cache across builds to speed up next build
 RUN --mount=type=cache,id=next-cache,target=/app/packages/code-du-travail-frontend/.next/cache \
-  --mount=type=secret,id=SENTRY_AUTH_TOKEN,env=SENTRY_AUTH_TOKEN \
-  --mount=type=secret,id=ELASTICSEARCH_TOKEN_API,env=ELASTICSEARCH_TOKEN_API \
-  --mount=type=secret,id=ELASTICSEARCH_URL,env=ELASTICSEARCH_URL \
-  pnpm build
+  --mount=type=secret,id=SENTRY_AUTH_TOKEN \
+  --mount=type=secret,id=ELASTICSEARCH_TOKEN_API \
+  --mount=type=secret,id=ELASTICSEARCH_URL \
+  sh -ce ' \
+  if [ -f /run/secrets/SENTRY_AUTH_TOKEN ]; then export SENTRY_AUTH_TOKEN="$(cat /run/secrets/SENTRY_AUTH_TOKEN)"; fi; \
+  if [ -f /run/secrets/ELASTICSEARCH_TOKEN_API ]; then export ELASTICSEARCH_TOKEN_API="$(cat /run/secrets/ELASTICSEARCH_TOKEN_API)"; fi; \
+  if [ -f /run/secrets/ELASTICSEARCH_URL ]; then export ELASTICSEARCH_URL="$(cat /run/secrets/ELASTICSEARCH_URL)"; fi; \
+  pnpm build \
+  '
 
 # Deploy (creates a production-ready deployment without dev dependencies)
 RUN pnpm --filter @cdt/frontend deploy --prod /app/deploy && \
