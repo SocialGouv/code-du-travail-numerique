@@ -1,3 +1,4 @@
+# syntax=docker/dockerfile:1.7
 ARG NODE_VERSION=24.10.0-alpine
 
 # builder stage: install dependencies and build
@@ -5,13 +6,19 @@ FROM node:$NODE_VERSION AS builder
 
 WORKDIR /app
 
+# Enable pnpm via corepack, and configure a stable location for caches
+ENV PNPM_HOME=/pnpm
+ENV PATH=$PNPM_HOME:$PATH
+
 RUN corepack enable && corepack prepare pnpm@10.24.0 --activate
 
 # Copy lockfiles and config for better layer caching
 COPY pnpm-lock.yaml pnpm-workspace.yaml lerna.json .npmrc ./
 
 # Fetch dependencies (frozen-lockfile contains all package info)
-RUN pnpm fetch --frozen-lockfile
+# Cache pnpm store across builds for faster installs
+RUN --mount=type=cache,id=pnpm-store,target=/pnpm/store \
+  pnpm fetch --frozen-lockfile --store-dir=/pnpm/store
 
 # Copy package.json files (needed for workspace structure)
 COPY package.json ./
@@ -20,7 +27,9 @@ COPY packages/code-du-travail-modeles/package.json ./packages/code-du-travail-mo
 COPY packages/code-du-travail-utils/package.json ./packages/code-du-travail-utils/
 
 # Install dependencies (uses fetched packages, cached if package.json not changed, offline to avoid network calls, frozen-lockfile to ensure consistency)
-RUN pnpm install --recursive --frozen-lockfile --offline
+# Cache pnpm store across builds for faster installs
+RUN --mount=type=cache,id=pnpm-store,target=/pnpm/store \
+  pnpm install --recursive --frozen-lockfile --offline --store-dir=/pnpm/store
 
 # Copy source code (after install to maximize cache efficiency)
 COPY . ./
@@ -67,7 +76,9 @@ ARG NEXT_PUBLIC_BRANCH_NAME_SLUG
 ENV NEXT_PUBLIC_BRANCH_NAME_SLUG=$NEXT_PUBLIC_BRANCH_NAME_SLUG
 
 # Build
-RUN --mount=type=secret,id=SENTRY_AUTH_TOKEN,env=SENTRY_AUTH_TOKEN \
+# Cache Next.js build cache across builds to speed up next build
+RUN --mount=type=cache,id=next-cache,target=/app/packages/code-du-travail-frontend/.next/cache \
+  --mount=type=secret,id=SENTRY_AUTH_TOKEN,env=SENTRY_AUTH_TOKEN \
   --mount=type=secret,id=ELASTICSEARCH_TOKEN_API,env=ELASTICSEARCH_TOKEN_API \
   --mount=type=secret,id=ELASTICSEARCH_URL,env=ELASTICSEARCH_URL \
   pnpm build
@@ -90,9 +101,12 @@ WORKDIR /app
 # Copy deployed standalone files (with real node_modules, not symlinks)
 COPY --from=builder --chown=1000:1000 /app/deploy /app
 
-# Ensure necessary directories exist and have correct permissions
-RUN mkdir -p /app/.next/cache/images && \
-  chown -R 1000:1000 /app
+# Make the copied tree read-only (no write permissions for any user).
+# Then re-enable write access only where the runtime needs it (Next.js cache).
+RUN chmod -R a-w /app && \
+  mkdir -p /app/.next/cache/images && \
+  chown -R 1000:1000 /app/.next/cache && \
+  chmod -R u+rwX,go+rX /app/.next/cache
 
 USER 1000
 
