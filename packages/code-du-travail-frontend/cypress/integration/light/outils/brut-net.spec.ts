@@ -3,6 +3,8 @@ import "cypress-iframe";
 describe("Outil - Salaire brut/net", () => {
   it("Valider que le simulateur s'affiche correctement dans l'iframe", () => {
     const IFRAME_SELECTOR = "iframe#simulateurEmbauche";
+    const SALAIRE_INPUT_SELECTOR =
+      'input[id="salarié___coût_total_employeur-input"]';
     const IFRAME_LOAD_TIMEOUT = 60_000;
 
     cy.visit("/outils/simulateur-embauche");
@@ -16,8 +18,6 @@ describe("Outil - Salaire brut/net", () => {
       "Calculer le salaire brut/net"
     );
 
-    // Le simulateur est injecté via un script externe (mon-entreprise.urssaf.fr),
-    // donc l'iframe peut apparaître + se charger de façon asynchrone.
     cy.get(IFRAME_SELECTOR, { timeout: IFRAME_LOAD_TIMEOUT }).should(
       "be.visible"
     );
@@ -28,13 +28,18 @@ describe("Outil - Salaire brut/net", () => {
       .should("be.visible");
 
     cy.iframe(IFRAME_SELECTOR)
-      .find("#salarié___coût_total_employeur-input", {
-        timeout: IFRAME_LOAD_TIMEOUT,
-      })
+      .find(SALAIRE_INPUT_SELECTOR, { timeout: IFRAME_LOAD_TIMEOUT })
       .should("be.visible")
-      .as("salaireInput");
+      .scrollIntoView()
+      .click({ force: true });
 
-    cy.get("@salaireInput").clear().type("1000", { delay: 0 });
+    cy.iframe(IFRAME_SELECTOR)
+      .find(SALAIRE_INPUT_SELECTOR, { timeout: IFRAME_LOAD_TIMEOUT })
+      .clear({ force: true });
+
+    cy.iframe(IFRAME_SELECTOR)
+      .find(SALAIRE_INPUT_SELECTOR, { timeout: IFRAME_LOAD_TIMEOUT })
+      .type("1000", { delay: 0, force: true });
 
     cy.iframe(IFRAME_SELECTOR)
       .contains("De quel type de contrat s'agit-il ?", {
