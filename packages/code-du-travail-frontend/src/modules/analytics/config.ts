@@ -7,12 +7,6 @@ type CookieConfig = {
 export const COOKIE_CONFIG: CookieConfig = {
   heatmap: true,
   ads: false,
-  paths: [
-    "/",
-    "/infographie",
-    "/infographie/licenciement-pour-inaptitude-medicale",
-    "/infographie/rupture-conventionnelle-les-etapes-de-la-procedure-et-les-delais",
-  ],
 };
 
 export const shouldShowCookieBanner = (pathname: string): boolean => {
@@ -36,12 +30,24 @@ export const isAdsEnabled = (pathname?: string): boolean => {
   return COOKIE_CONFIG.ads;
 };
 
+const normalizePathname = (pathname: string): string => {
+  // Drop query/hash defensively (usePathname() should already do it, but keep it safe)
+  const withoutQueryOrHash = pathname.split(/[?#]/)[0];
+
+  // Remove trailing slashes except for the root path
+  const trimmed = withoutQueryOrHash.replace(/\/+$/, "");
+
+  return trimmed === "" ? "/" : trimmed;
+};
+
 const isEnabledForPath = (pathname: string, config: CookieConfig): boolean => {
   if (typeof pathname !== "string" || pathname.length > 2048) {
     return false;
   }
 
-  if (pathname.startsWith("/widgets")) {
+  const normalizedPathname = normalizePathname(pathname);
+
+  if (normalizedPathname.startsWith("/widgets")) {
     return false;
   }
 
@@ -49,5 +55,7 @@ const isEnabledForPath = (pathname: string, config: CookieConfig): boolean => {
     return true;
   }
 
-  return config.paths.some((path) => path === pathname);
+  return config.paths.some(
+    (path) => normalizePathname(path) === normalizedPathname
+  );
 };
