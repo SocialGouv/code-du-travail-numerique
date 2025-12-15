@@ -20,14 +20,14 @@ describe("Contributions", () => {
       "contain",
       "Obtenez une réponse personnalisée selon votre convention collective"
     );
-    cy.findAllByRole("heading", { level: 2 }).should("have.length", 9);
+    cy.findAllByRole("heading", { level: 2 }).should("have.length", 13);
     cy.findAllByRole("heading", { level: 2 }).eq(0).should("contain", "Résumé");
     cy.findAllByRole("heading", { level: 2 })
       .eq(1)
       .should("contain", "Contenus populaires");
     cy.findAllByRole("heading", { level: 2 })
       .eq(2)
-      .should("contain", "Embauche et contrat de travail");
+      .should("contain", "Embauche");
     cy.findAllByRole("heading", { level: 3 }).should("have.length.at.least", 1);
     cy.findAllByRole("heading", { level: 3 }).first().click();
     cy.urlEqual(

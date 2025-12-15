@@ -49,7 +49,7 @@ export const Autocomplete = <K,>({
   inputRef: externalInputRef,
 }: AutocompleteProps<K>) => {
   const [loading, setLoading] = useState(false);
-  const [inputRef, setInputRef] = useState<HTMLInputElement | null>(null);
+  const internalInputRef = useRef<HTMLInputElement | null>(null);
   const [suggestions, setSuggestions] = useState<K[]>([]);
   const isFocusedRef = useRef(false);
 
@@ -74,6 +74,7 @@ export const Autocomplete = <K,>({
 
   return (
     <Downshift<K>
+      id={id}
       initialSelectedItem={defaultValue}
       getA11yStatusMessage={({
         highlightedIndex,
@@ -194,7 +195,7 @@ export const Autocomplete = <K,>({
                           if (onChange) onChange(undefined, []);
                           if (onSearch) onSearch("", []);
                           setSuggestions([]);
-                          inputRef?.focus();
+                          internalInputRef.current?.focus();
                         }}
                         priority="tertiary no outline"
                         title="Effacer la sélection"
@@ -222,7 +223,7 @@ export const Autocomplete = <K,>({
                 "data-testid": dataTestId,
                 placeholder,
                 ref: (el: HTMLInputElement | null) => {
-                  setInputRef(el);
+                  internalInputRef.current = el;
                   if (
                     externalInputRef &&
                     typeof externalInputRef === "object" &&

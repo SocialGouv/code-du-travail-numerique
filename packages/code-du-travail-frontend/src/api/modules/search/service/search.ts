@@ -130,7 +130,7 @@ export const searchWithQuery = async (
   };
 };
 
-function extractHits(response) {
+export function extractHits(response) {
   if (response && response.hits) {
     return response.hits.hits;
   }

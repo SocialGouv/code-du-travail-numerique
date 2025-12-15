@@ -51,7 +51,7 @@ app:
   volumeMounts:
     - mountPath: /tmp
       name: tmp
-    - mountPath: /app/packages/code-du-travail-frontend/.next
+    - mountPath: /app/.next
       name: next
   initContainers:
     - name: copy-next
@@ -60,7 +60,7 @@ app:
         .Values.global.imageRepository }}/app:{{ .Values.global.imageTag }}"
       command: ["/bin/sh", "-c"]
       args:
-        - cp -r /app/packages/code-du-travail-frontend/.next/* /mnt/next;
+        - cp -r /app/.next/* /mnt/next;
       volumeMounts:
         - name: next
           mountPath: /mnt/next

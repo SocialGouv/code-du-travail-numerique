@@ -7,13 +7,23 @@ import {
 import { useCallback } from "react";
 import { push as matopush } from "@socialgouv/matomo-next";
 import { MatomoBaseEvent } from "../analytics/types";
+import {
+  SearchResult,
+  PresearchClass,
+} from "src/api/modules/search/service/presearch";
 
 enum MatomoSearchCategory {
+  SEARCH = "search",
   CANDIDATE_RESULTS = "candidateResults",
-  CANDIDATE_SUGGESTIONS = "candidateSuggestions",
   SELECTED_SUGGESTION = "selectedSuggestion",
   NEXT_RESULT_PAGE = "nextResultPage",
   SELECT_RESULT = "selectResult",
+}
+
+enum MatomoSearchAction {
+  PRESEARCH = "presearch",
+  CLIK_SEE_ALL_RESULTS = "clickSeeAllResults",
+  SELECT_PRESEARCH_RESULT = "selectPresearchResult",
 }
 
 export enum MatomoWidgetEvent {
@@ -62,15 +72,11 @@ export const useSearchTracking = () => {
   }, []);
 
   const emitSuggestionSelectionEvent = useCallback(
-    (query: string, suggestion: string, suggestions: string[]) => {
+    (query: string, suggestion: string) => {
       sendEvent({
         category: MatomoSearchCategory.SELECTED_SUGGESTION,
         action: query,
         name: suggestion,
-      });
-      sendEvent({
-        category: MatomoSearchCategory.CANDIDATE_SUGGESTIONS,
-        action: suggestions.join("###"),
       });
     },
     []
@@ -84,11 +90,58 @@ export const useSearchTracking = () => {
     ]);
   }, []);
 
+  const emitPresearchEvent = useCallback(
+    (query: string, classes: PresearchClass[]) => {
+      const name = JSON.stringify({
+        query: query.trim(),
+        classes,
+      });
+      sendEvent({
+        category: MatomoSearchCategory.SEARCH,
+        action: MatomoSearchAction.PRESEARCH,
+        name,
+      });
+    },
+    []
+  );
+
+  const emitClickSeeAllResultsEvent = useCallback(
+    (query: string, classes?: PresearchClass[]) => {
+      const name = JSON.stringify({
+        query: query.trim(),
+        classes,
+      });
+      sendEvent({
+        category: MatomoSearchCategory.SEARCH,
+        action: MatomoSearchAction.CLIK_SEE_ALL_RESULTS,
+        name,
+      });
+    },
+    []
+  );
+
+  const emitSelectPresearchResultEvent = useCallback((result: SearchResult) => {
+    const name = JSON.stringify({
+      algo: result.algo || "presearch",
+      classe: result.class,
+      url: `/${getRouteBySource(result.source)}/${result.slug}`,
+    });
+
+    sendEvent({
+      category: MatomoSearchCategory.SEARCH,
+      action: MatomoSearchAction.SELECT_PRESEARCH_RESULT,
+      name,
+    });
+  }, []);
+
   return {
     emitResultSelectionEvent,
     emitSearchEvent,
     emitNextPageEvent,
     emitSuggestionSelectionEvent,
     emitWidgetEvent,
+    emitPresearchEvent,
+    emitSelectPresearchResultEvent,
+    emitClickSeeAllResultsEvent,
   };
 };

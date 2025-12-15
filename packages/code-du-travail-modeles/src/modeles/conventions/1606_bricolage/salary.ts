@@ -6,9 +6,7 @@ import type {
 } from "../../common";
 import { nonNullable, sum } from "../../common";
 
-export class ReferenceSalary1606
-  implements IReferenceSalary<SupportedCc.IDCC1606>
-{
+export class ReferenceSalary1606 implements IReferenceSalary<SupportedCc.IDCC1606> {
   /**
    * Règle :
    * S

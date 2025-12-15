@@ -65,11 +65,10 @@ const StepStatus = () => {
           description={
             <p>
               Dans le cas d&apos;un licenciement pour faute grave ou lourde, il
-              n&apos;y a pas d&apos;obligation de respecter un préavis. Vous
-              pouvez trouver plus d&apos;informations sur le préavis de
-              licenciement sur{" "}
+              n&apos;y a pas d&apos;obligation de respecter un préavis.
+              Retrouvez plus d&apos;informations dans{" "}
               <Link href={`/fiche-service-public/preavis-de-licenciement`}>
-                cette fiche
+                notre fiche sur le préavis de licenciement
               </Link>
               .
             </p>

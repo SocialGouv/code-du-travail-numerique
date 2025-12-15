@@ -3,7 +3,11 @@ import { fr } from "@codegouvfr/react-dsfr";
 import Image from "next/image";
 import Link from "src/modules/common/Link";
 
-export const HeaderBrand = () => {
+type HeaderBrandProps = {
+  onSearchClick?: () => void;
+};
+
+export const HeaderBrand = ({ onSearchClick }: HeaderBrandProps) => {
   return (
     <div className={fr.cx("fr-header__brand", "fr-enlarge-link")}>
       <div className={fr.cx("fr-header__brand-top")}>
@@ -30,15 +34,18 @@ export const HeaderBrand = () => {
         <div className={fr.cx("fr-header__navbar")}>
           <button
             id="fr-header-search-button"
+            type="button"
             className={fr.cx("fr-btn--search", "fr-btn")}
             data-fr-opened="false"
             aria-controls="fr-header-search-modal"
             title="Rechercher"
             data-fr-js-modal-button="true"
+            onClick={onSearchClick}
           >
             Rechercher
           </button>
           <button
+            type="button"
             className={fr.cx("fr-btn--menu", "fr-btn")}
             data-fr-opened="false"
             aria-controls="header-menu-modal-fr-header"

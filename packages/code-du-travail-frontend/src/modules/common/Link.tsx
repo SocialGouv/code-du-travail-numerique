@@ -1,4 +1,4 @@
-import React, { ReactNode, Ref } from "react";
+import React, { ReactNode, ForwardedRef } from "react";
 import BaseLink, { LinkProps } from "next/link";
 
 type Props = LinkProps & {
@@ -7,15 +7,22 @@ type Props = LinkProps & {
   target?: string;
   className?: string;
   rel?: string;
-  ref?: Ref<HTMLAnchorElement>;
 };
 
-const Link = ({ ...props }: Props) => {
-  if (props.target === "_blank" && props.children) {
-    props.title = `${props.title || props.children.toString()} - nouvelle fenêtre`;
+const Link = React.forwardRef<HTMLAnchorElement, Props>(
+  (props, ref: ForwardedRef<HTMLAnchorElement>) => {
+    const newProps = { ...props };
+
+    if (newProps.target === "_blank" && newProps.children) {
+      newProps.title = `${
+        newProps.title || newProps.children.toString()
+      } - nouvelle fenêtre`;
+    }
+
+    return <BaseLink ref={ref} {...newProps} />;
   }
+);
 
-  return <BaseLink {...props} />;
-};
+Link.displayName = "Link";
 
 export default Link;

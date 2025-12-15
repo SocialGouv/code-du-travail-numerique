@@ -24,9 +24,7 @@ export type CC1486ReferenceSalaryProps = {
   catPro: CatPro1486;
 };
 
-export class ReferenceSalary1486
-  implements IReferenceSalary<SupportedCc.IDCC1486>
-{
+export class ReferenceSalary1486 implements IReferenceSalary<SupportedCc.IDCC1486> {
   mapSituation(
     args: Record<string, string | undefined>
   ): ReferenceSalaryProps<SupportedCc.IDCC1486> {

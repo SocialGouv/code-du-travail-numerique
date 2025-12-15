@@ -17,6 +17,22 @@ import "./commands";
 import "./errors";
 import "cypress-real-events";
 
+// Hide cookie consent banner in tests
+beforeEach(() => {
+  cy.window().then((win) => {
+    win.localStorage.setItem("cdtn-cookie-consent-given", "true");
+  });
+});
+
+// FIXME Preserve pk_ab_test query parameter across all navigations
+Cypress.on("window:before:load", (win) => {
+  const url = new URL(win.location.href);
+  if (!url.searchParams.has("pk_ab_test")) {
+    url.searchParams.set("pk_ab_test", "original");
+    win.history.replaceState({}, "", url.toString());
+  }
+});
+
 // in cypress/support/index.ts
 // load type definitions that come with Cypress module
 /// <reference types="cypress" />

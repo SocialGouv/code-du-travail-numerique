@@ -44,7 +44,7 @@ describe("ConsentManager with manage cookies button", () => {
     await waitFor(() => {
       expect(
         screen.getByRole("button", {
-          name: /Ouvrir les paramètres des cookies/i,
+          name: /Gérer les cookies/i,
         })
       ).toBeInTheDocument();
     });
@@ -54,15 +54,9 @@ describe("ConsentManager with manage cookies button", () => {
     expect(hiddenText.tagName).toBe("SPAN");
 
     const button = screen.getByRole("button", {
-      name: /Ouvrir les paramètres des cookies/i,
+      name: /Gérer les cookies/i,
     });
-    expect(button).toHaveAttribute(
-      "title",
-      "Ouvrir les paramètres des cookies"
-    );
-    expect(button).toHaveAttribute(
-      "aria-label",
-      "Ouvrir les paramètres des cookies"
-    );
+    expect(button).toHaveAttribute("title", "Gérer les cookies");
+    expect(button).toHaveAttribute("aria-label", "Gérer les cookies");
   });
 });

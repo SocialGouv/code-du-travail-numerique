@@ -17,6 +17,11 @@ const modal4Matieres = createModal({
   isOpenedByDefault: false,
 });
 
+const Modal13Matieres =
+  modal13Matieres.Component as unknown as React.ComponentType<any>;
+const Modal4Matieres =
+  modal4Matieres.Component as unknown as React.ComponentType<any>;
+
 const Hierarchy = () => {
   const ref13Matieres = React.useRef<HTMLButtonElement | null>(null);
   const ref4Matieres = React.useRef<HTMLButtonElement | null>(null);
@@ -332,7 +337,7 @@ const Hierarchy = () => {
         </div>
       </div>
 
-      <modal13Matieres.Component
+      <Modal13Matieres
         title="13 matières où la loi reconnaît la primauté à la convention collective de branche"
         titleAs="div"
         titleProps={{ role: "heading", "aria-level": 1 }}
@@ -375,9 +380,9 @@ const Hierarchy = () => {
             </ul>
           </div>
         </div>
-      </modal13Matieres.Component>
+      </Modal13Matieres>
 
-      <modal4Matieres.Component
+      <Modal4Matieres
         title="4 matières où la branche peut reconnaître sa primauté"
         titleAs="div"
         titleProps={{ role: "heading", "aria-level": 1 }}
@@ -402,7 +407,7 @@ const Hierarchy = () => {
             </ul>
           </div>
         </div>
-      </modal4Matieres.Component>
+      </Modal4Matieres>
     </div>
   );
 };
