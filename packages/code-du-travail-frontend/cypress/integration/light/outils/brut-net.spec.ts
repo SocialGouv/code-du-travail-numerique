@@ -41,8 +41,26 @@ describe("Outil - Salaire brut/net", () => {
       .find(SALAIRE_INPUT_SELECTOR, { timeout: IFRAME_LOAD_TIMEOUT })
       .type("1000", { delay: 0, force: true });
 
+    // Le simulateur dans l'iframe peut déclencher des re-renders et/ou ne mettre à jour
+    // certains écrans qu'après blur. On re-query puis on blur pour stabiliser.
+    //
+    // Attention: la valeur est formatée (espaces insécables / espace fine insécable),
+    // donc on normalise avant d'asserter.
     cy.iframe(IFRAME_SELECTOR)
-      .contains("De quel type de contrat s'agit-il ?", {
+      .find(SALAIRE_INPUT_SELECTOR, { timeout: IFRAME_LOAD_TIMEOUT })
+      .invoke("val")
+      .should((value) => {
+        const normalized = String(value).replace(/[\s\u00a0\u202f]/g, "");
+        expect(normalized).to.eq("1000€");
+      });
+
+    cy.iframe(IFRAME_SELECTOR)
+      .find(SALAIRE_INPUT_SELECTOR, { timeout: IFRAME_LOAD_TIMEOUT })
+      .blur({ force: true });
+
+    // Texte potentiellement variable (apostrophe typographique ’ vs ') => regex plus robuste
+    cy.iframe(IFRAME_SELECTOR)
+      .contains(/De quel type de contrat s(?:'|’)agit-il\s*\?/, {
         timeout: IFRAME_LOAD_TIMEOUT,
       })
       .should("be.visible");
