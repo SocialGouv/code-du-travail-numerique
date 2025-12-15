@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.206.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.205.1...v4.206.0) (2025-12-15)
+
+
+### Features
+
+* **package-manager:** remplacement de `yarn` par `pnpm` ([#6955](https://github.com/SocialGouv/code-du-travail-numerique/issues/6955)) ([8c794f3](https://github.com/SocialGouv/code-du-travail-numerique/commit/8c794f3ecd36449c61eb5b06f8a2d256991711c5))
+
+
+
+
+
 ## [4.205.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.205.0...v4.205.1) (2025-12-12)
 
 **Note:** Version bump only for package @socialgouv/cdtn-utils
