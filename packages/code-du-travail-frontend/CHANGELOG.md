@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.206.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.206.0...v4.206.1) (2025-12-15)
+
+
+### Bug Fixes
+
+* **cookie:** utilisation du bandeau sur l'ensemble du site ([#7017](https://github.com/SocialGouv/code-du-travail-numerique/issues/7017)) ([fc58bee](https://github.com/SocialGouv/code-du-travail-numerique/commit/fc58bee7ac618f15642c74d8a649b88cdd084c75))
+
+
+
+
+
 # [4.206.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.205.1...v4.206.0) (2025-12-15)
 
 
