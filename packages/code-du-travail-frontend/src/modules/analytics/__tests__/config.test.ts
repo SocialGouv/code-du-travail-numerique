@@ -1,13 +1,35 @@
 import { COOKIE_CONFIG, shouldShowCookieBanner } from "../config";
 
+type CookieConfigSnapshot = {
+  heatmap: boolean;
+  ads: boolean;
+  paths?: string[];
+};
+
+const snapshotCookieConfig = (): CookieConfigSnapshot => ({
+  heatmap: COOKIE_CONFIG.heatmap,
+  ads: COOKIE_CONFIG.ads,
+  paths: COOKIE_CONFIG.paths ? [...COOKIE_CONFIG.paths] : undefined,
+});
+
+const restoreCookieConfig = (snapshot: CookieConfigSnapshot) => {
+  COOKIE_CONFIG.heatmap = snapshot.heatmap;
+  COOKIE_CONFIG.ads = snapshot.ads;
+
+  if (snapshot.paths === undefined) {
+    delete (COOKIE_CONFIG as any).paths;
+  } else {
+    COOKIE_CONFIG.paths = [...snapshot.paths];
+  }
+};
+
 describe("analytics cookie config", () => {
-  const originalPaths = COOKIE_CONFIG.paths
-    ? [...COOKIE_CONFIG.paths]
-    : undefined;
-  const originalHeatmap = COOKIE_CONFIG.heatmap;
-  const originalAds = COOKIE_CONFIG.ads;
+  let originalConfig: CookieConfigSnapshot;
 
   beforeEach(() => {
+    // Snapshot current module state to avoid leaking changes to/from other tests
+    originalConfig = snapshotCookieConfig();
+
     // Ensure banner is eligible to be shown
     COOKIE_CONFIG.heatmap = true;
     COOKIE_CONFIG.ads = false;
@@ -15,22 +37,20 @@ describe("analytics cookie config", () => {
   });
 
   afterEach(() => {
-    COOKIE_CONFIG.paths = originalPaths;
-    COOKIE_CONFIG.heatmap = originalHeatmap;
-    COOKIE_CONFIG.ads = originalAds;
+    restoreCookieConfig(originalConfig);
   });
 
   it("shows the banner for exact matching path", () => {
     expect(shouldShowCookieBanner("/infographie")).toBe(true);
   });
 
-  it("shows the banner when pathname has a trailing slash", () => {
-    expect(shouldShowCookieBanner("/infographie/")).toBe(true);
+  it("does not show the banner when pathname has a trailing slash", () => {
+    expect(shouldShowCookieBanner("/infographie/")).toBe(false);
   });
 
-  it("shows the banner when pathname contains query/hash (defensive)", () => {
-    expect(shouldShowCookieBanner("/infographie?x=1")).toBe(true);
-    expect(shouldShowCookieBanner("/infographie#section")).toBe(true);
+  it("does not show the banner when pathname contains query/hash", () => {
+    expect(shouldShowCookieBanner("/infographie?x=1")).toBe(false);
+    expect(shouldShowCookieBanner("/infographie#section")).toBe(false);
   });
 
   it("does not show the banner on widgets paths", () => {

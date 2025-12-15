@@ -30,24 +30,12 @@ export const isAdsEnabled = (pathname?: string): boolean => {
   return COOKIE_CONFIG.ads;
 };
 
-const normalizePathname = (pathname: string): string => {
-  // Drop query/hash defensively (usePathname() should already do it, but keep it safe)
-  const withoutQueryOrHash = pathname.split(/[?#]/)[0];
-
-  // Remove trailing slashes except for the root path
-  const trimmed = withoutQueryOrHash.replace(/\/+$/, "");
-
-  return trimmed === "" ? "/" : trimmed;
-};
-
 const isEnabledForPath = (pathname: string, config: CookieConfig): boolean => {
   if (typeof pathname !== "string" || pathname.length > 2048) {
     return false;
   }
 
-  const normalizedPathname = normalizePathname(pathname);
-
-  if (normalizedPathname.startsWith("/widgets")) {
+  if (pathname.startsWith("/widgets")) {
     return false;
   }
 
@@ -55,7 +43,5 @@ const isEnabledForPath = (pathname: string, config: CookieConfig): boolean => {
     return true;
   }
 
-  return config.paths.some(
-    (path) => normalizePathname(path) === normalizedPathname
-  );
+  return config.paths.some((path) => path === pathname);
 };
