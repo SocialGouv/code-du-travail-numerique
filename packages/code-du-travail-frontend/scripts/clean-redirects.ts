@@ -6,7 +6,7 @@
  * To avoid freeze, split by days and download a file for each day.
  * Then copy all files in the logs folder.
  *
- * Now, you can run this script : yarn clean:redirect
+ * Now, you can run this script : pnpm clean:redirects
  * It will update the redirects.json file by removing outdated redirections
  */
 

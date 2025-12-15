@@ -3,9 +3,9 @@
     /* Visit https://aka.ms/tsconfig.json to read more about this file */
 
     /* Basic Options */
-    "target": "es5",
+    "target": "es2024",
     "module": "commonjs",
-    "lib": ["es2019"],
+    "lib": ["es2024"],
     "outDir": "./bin",
     "rootDir": "src",
     "declaration": true,

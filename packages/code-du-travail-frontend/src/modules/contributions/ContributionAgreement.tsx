@@ -1,6 +1,5 @@
 "use client";
-import React from "react";
-import { css } from "@styled-system/css";
+
 import { fr } from "@codegouvfr/react-dsfr";
 import { ContributionAgreementContent } from "./ContributionAgreementContent";
 import { Contribution } from "./type";
@@ -53,7 +52,3 @@ export function ContributionAgreement({ contribution }: Props) {
     </>
   );
 }
-
-const cardTitle = css({
-  fontWeight: "normal!",
-});
