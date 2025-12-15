@@ -27,10 +27,8 @@ describe("analytics cookie config", () => {
   let originalConfig: CookieConfigSnapshot;
 
   beforeEach(() => {
-    // Snapshot current module state to avoid leaking changes to/from other tests
     originalConfig = snapshotCookieConfig();
 
-    // Ensure banner is eligible to be shown
     COOKIE_CONFIG.heatmap = true;
     COOKIE_CONFIG.ads = false;
     COOKIE_CONFIG.paths = ["/", "/infographie"];
