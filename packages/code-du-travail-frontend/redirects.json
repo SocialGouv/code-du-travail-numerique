@@ -371,7 +371,12 @@
   },
   {
     "source": "/convention-collective/2075(-[a-z0-9-]+)?",
-    "destination": "/convention-collective/1747-activites-industrielles-de-boulangerie-et-patisserie",
+    "destination": "/convention-collective/3255-activites-industrielles-de-boulangerie-et-patisserie",
+    "permanent": true
+  },
+  {
+    "source": "/convention-collective/1747(-[a-z0-9-]+)?",
+    "destination": "/convention-collective/3255-activites-industrielles-de-boulangerie-et-patisserie",
     "permanent": true
   },
   {
