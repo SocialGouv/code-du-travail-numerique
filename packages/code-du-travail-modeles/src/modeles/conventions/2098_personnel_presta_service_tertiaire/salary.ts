@@ -15,9 +15,7 @@ export type CC2098ReferenceSalaryProps = {
   inabilityNonProfessional: boolean;
 };
 
-export class ReferenceSalary2098
-  implements IReferenceSalary<SupportedCc.IDCC2098>
-{
+export class ReferenceSalary2098 implements IReferenceSalary<SupportedCc.IDCC2098> {
   mapSituation(
     args: Record<string, string | undefined>
   ): ReferenceSalaryProps<SupportedCc.IDCC2098> {

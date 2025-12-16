@@ -7,12 +7,6 @@ type CookieConfig = {
 export const COOKIE_CONFIG: CookieConfig = {
   heatmap: true,
   ads: false,
-  paths: [
-    "/",
-    "/infographie",
-    "/infographie/licenciement-pour-inaptitude-medicale",
-    "/infographie/rupture-conventionnelle-les-etapes-de-la-procedure-et-les-delais",
-  ],
 };
 
 export const shouldShowCookieBanner = (pathname: string): boolean => {

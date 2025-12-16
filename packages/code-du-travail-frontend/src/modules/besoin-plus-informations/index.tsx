@@ -2,7 +2,7 @@
 
 import { fr } from "@codegouvfr/react-dsfr";
 import { Container } from "../layout/Container";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { useNeedMoreInfoEvents } from "../layout/footer/infos/tracking";
 import Image from "next/image";
 import { Input } from "@codegouvfr/react-dsfr/Input";
@@ -19,8 +19,8 @@ export const BesoinPlusInformations = () => {
   const [department, setDepartment] = useState<string>("");
   const [hasSearched, setHasSearched] = useState<boolean>(false);
   const [hasError, setHasError] = useState<boolean>(false);
-  const [inputRef, setInputRef] = useState<HTMLInputElement | null>();
-  const [linkRef, setLinkRef] = useState<HTMLAnchorElement | null>();
+  const inputRef = useRef<HTMLInputElement | null>(null);
+  const linkRef = useRef<HTMLAnchorElement | null>(null);
   const [result, setResult] = useState<undefined | ServiceRenseignement>(
     undefined
   );
@@ -40,13 +40,13 @@ export const BesoinPlusInformations = () => {
   useEffect(() => {
     setHasError(hasSearched && !result);
     if (hasError) {
-      inputRef?.focus();
+      inputRef.current?.focus();
     }
-  }, [hasSearched, result]);
+  }, [hasSearched, result, hasError]);
 
   useEffect(() => {
-    linkRef?.focus();
-  }, [linkRef]);
+    linkRef.current?.focus();
+  }, [linkRef.current]);
   return (
     <Container>
       <h1 id="mentions-legales" className={fr.cx("fr-mt-0")}>
@@ -97,7 +97,7 @@ export const BesoinPlusInformations = () => {
               }
             },
             "aria-invalid": hasError ? true : undefined,
-            ref: setInputRef,
+            ref: inputRef,
           }}
           addon={
             <Button
@@ -117,7 +117,7 @@ export const BesoinPlusInformations = () => {
             href={result.url}
             target="_blank"
             data-testid="result-search-service"
-            ref={setLinkRef}
+            ref={linkRef}
             title="Consulter le site des renseignements du département indiqué"
           >
             {result.url}

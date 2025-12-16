@@ -73,24 +73,31 @@ describe("Page d’accueil", () => {
 
     cy.selectByLabel("Recherchez par mots-clés").type("congés");
 
-    cy.get('ul[role="listbox"]').should("be.visible");
-    cy.get('ul[role="listbox"] li').should("have.length", 5);
-    cy.contains("congés payés et fractionnement").should("be.visible");
-    cy.contains("congés sans solde").should("be.visible");
-    cy.contains("congés payés acquisition").should("be.visible");
-    cy.contains("congés payés").should("be.visible");
-    cy.contains("congés payés et maladie").should("be.visible");
+    cy.get('ul[role="listbox"]:visible')
+      .should("have.length", 1)
+      .as("suggestions");
 
-    cy.get("button").contains("Rechercher");
+    cy.get("@suggestions").find("li").its("length").should("be.gte", 1);
 
-    cy.contains("congés sans solde").click();
+    cy.get("@suggestions").within(() => {
+      cy.contains("li", "Congés sans solde").should("be.visible").click();
+    });
 
-    cy.findAllByRole("heading", { level: 3 }).should("have.length", 18);
-    cy.contains('de recherche pour "congés sans solde"');
-    cy.contains("Articles du code du travail");
-    cy.contains("Les thèmes suivants peuvent vous intéresser");
+    cy.contains('de recherche pour "Congés sans solde"').should("be.visible");
+    cy.contains("Articles du code du travail").should("be.visible");
+    cy.contains("Les thèmes suivants peuvent vous intéresser").should(
+      "be.visible"
+    );
 
-    cy.get("button").contains("Plus de résultats").click();
-    cy.findAllByRole("heading", { level: 3 }).should("have.length", 26);
+    // "Plus de résultats" doit augmenter le nombre de résultats affichés
+    cy.findAllByRole("heading", { level: 3 }).then(($h3) => {
+      const initialCount = $h3.length;
+      expect(initialCount).to.be.greaterThan(0);
+
+      cy.get("button").contains("Plus de résultats").click();
+      cy.findAllByRole("heading", { level: 3 })
+        .its("length")
+        .should("be.gt", initialCount);
+    });
   });
 });

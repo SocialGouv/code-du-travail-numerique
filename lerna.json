@@ -6,7 +6,7 @@
       "message": "chore(release): version %v"
     }
   },
-  "npmClient": "yarn",
-  "version": "4.204.6",
+  "npmClient": "pnpm",
+  "version": "4.206.1",
   "$schema": "node_modules/lerna/schemas/lerna-schema.json"
 }

@@ -8,14 +8,14 @@
     "prepare": "husky",
     "build": "lerna run build --scope=@socialgouv/cdtn-utils --scope=@socialgouv/modeles-social --scope=@cdt/frontend --stream",
     "build:npm": "lerna run build --scope=@socialgouv/cdtn-utils --scope=@socialgouv/modeles-social --stream",
-    "clean": "lerna clean",
+    "clean": "lerna clean && rm -rf node_modules",
     "dev": "lerna run dev --parallel",
     "type-check": "lerna run type-check --stream",
     "dev:frontend": "lerna run dev --parallel --scope=@cdt/frontend --scope=@socialgouv/modeles-social --stream",
-    "dev:simulate-deployment": "NEXT_PUBLIC_SITE_URL=https://code-du-travail-numerique-preprod.ovh.fabrique.social.gouv.fr yarn workspace @cdt/frontend build && yarn workspace @cdt/frontend start",
+    "dev:simulate-deployment": "NEXT_PUBLIC_SITE_URL=https://code-du-travail-numerique-preprod.ovh.fabrique.social.gouv.fr pnpm --filter @cdt/frontend build && pnpm --filter @cdt/frontend start",
     "start": "lerna run start --scope=@cdt/frontend --stream",
-    "start:production": "cd packages/code-du-travail-frontend && npm run start",
-    "test": "npm run test:frontend && npm run test:modeles && npm run test:utils",
+    "start:production": "cd packages/code-du-travail-frontend && pnpm run start",
+    "test": "pnpm run test:frontend && pnpm run test:modeles && pnpm run test:utils",
     "test:modeles": "lerna run test --scope=@socialgouv/modeles-social --stream",
     "test:frontend": "lerna run test:frontend --scope=@cdt/frontend --stream",
     "test:utils": "lerna run test --scope=@socialgouv/cdtn-utils --stream",
@@ -41,15 +41,13 @@
     "url": "https://github.com/SocialGouv/code-du-travail-numerique/issues"
   },
   "devDependencies": {
-    "husky": "^9.1.7",
-    "lerna": "9.0.3"
+    "husky": "~9.1.7",
+    "lerna": "~9.0.3"
   },
-  "workspaces": [
-    "packages/*"
-  ],
   "engines": {
-    "node": ">= v24"
+    "node": ">= 24",
+    "pnpm": ">= 10"
   },
   "version": "0.0.0",
-  "packageManager": "yarn@4.12.0"
+  "packageManager": "pnpm@10.24.0"
 }

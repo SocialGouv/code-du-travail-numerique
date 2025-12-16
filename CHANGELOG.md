@@ -3,6 +3,62 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.206.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.206.0...v4.206.1) (2025-12-15)
+
+
+### Bug Fixes
+
+* **cookie:** utilisation du bandeau sur l'ensemble du site ([#7017](https://github.com/SocialGouv/code-du-travail-numerique/issues/7017)) ([fc58bee](https://github.com/SocialGouv/code-du-travail-numerique/commit/fc58bee7ac618f15642c74d8a649b88cdd084c75))
+* **docker:** try to optimize build time and caching ([#7015](https://github.com/SocialGouv/code-du-travail-numerique/issues/7015)) ([9b8db9c](https://github.com/SocialGouv/code-du-travail-numerique/commit/9b8db9c9d236b4a5ff208f54830e2c2410422d89))
+
+
+
+
+
+# [4.206.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.205.1...v4.206.0) (2025-12-15)
+
+
+### Bug Fixes
+
+* **search:** enable all presearch classes by default ([#7014](https://github.com/SocialGouv/code-du-travail-numerique/issues/7014)) ([f0f8edb](https://github.com/SocialGouv/code-du-travail-numerique/commit/f0f8edbe3499267abde6e1891972731657ee6088))
+
+
+### Features
+
+* **package-manager:** remplacement de `yarn` par `pnpm` ([#6955](https://github.com/SocialGouv/code-du-travail-numerique/issues/6955)) ([8c794f3](https://github.com/SocialGouv/code-du-travail-numerique/commit/8c794f3ecd36449c61eb5b06f8a2d256991711c5))
+
+
+
+
+
+## [4.205.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.205.0...v4.205.1) (2025-12-12)
+
+
+### Bug Fixes
+
+* bug heatmap not loading immediately on consent approval ([#7003](https://github.com/SocialGouv/code-du-travail-numerique/issues/7003)) ([26b891a](https://github.com/SocialGouv/code-du-travail-numerique/commit/26b891a7a76df8127e08ca6508b2e7c87c64d82f))
+* **tracking:** add data in name instead of value which is a Number ([fccf3f1](https://github.com/SocialGouv/code-du-travail-numerique/commit/fccf3f1b8679ec00b5658290713a05756948e267))
+
+
+
+
+
+# [4.205.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.204.6...v4.205.0) (2025-12-11)
+
+
+### Bug Fixes
+
+* **presearch:** fix issue with rupture co ([#7002](https://github.com/SocialGouv/code-du-travail-numerique/issues/7002)) ([7c09d28](https://github.com/SocialGouv/code-du-travail-numerique/commit/7c09d28ac03a63b7475605d2a1764ab12e3d8186))
+
+
+### Features
+
+* **recherche:** ajout du nouveau parcours de recherche ([#6954](https://github.com/SocialGouv/code-du-travail-numerique/issues/6954)) ([73a2942](https://github.com/SocialGouv/code-du-travail-numerique/commit/73a2942a4b38f6d59048509cc90c1662fd546f80))
+
+
+
+
+
 ## [4.204.6](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.204.5...v4.204.6) (2025-12-10)
 
 
