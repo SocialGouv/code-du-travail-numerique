@@ -44,7 +44,7 @@ function MatomoComponent({ heatmapEnabled }: MatomoComponentProps) {
           push(["setCookieSameSite", "None"]);
         }
 
-        initABTesting();
+        initABTesting(pathname, [WIDGETS_PATH]);
       },
     });
   };
