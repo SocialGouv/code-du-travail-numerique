@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.206.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.206.1...v4.206.2) (2025-12-16)
+
+
+### Bug Fixes
+
+* **ab-testing:** do not send event when we load a widget ([#7020](https://github.com/SocialGouv/code-du-travail-numerique/issues/7020)) ([aee9492](https://github.com/SocialGouv/code-du-travail-numerique/commit/aee9492617c66830013173c7379b72e70b9343ab))
+* quoi de neuf design ([#7001](https://github.com/SocialGouv/code-du-travail-numerique/issues/7001)) ([a5f4149](https://github.com/SocialGouv/code-du-travail-numerique/commit/a5f41498914d10da5d250de3a3444284fc7e2b97))
+
+
+
+
+
 ## [4.206.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.206.0...v4.206.1) (2025-12-15)
 
 
