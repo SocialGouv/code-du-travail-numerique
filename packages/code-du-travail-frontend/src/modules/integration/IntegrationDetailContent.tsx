@@ -2,8 +2,7 @@
 
 import { fr } from "@codegouvfr/react-dsfr";
 import { Select } from "@codegouvfr/react-dsfr/Select";
-import { css } from "@styled-system/css";
-import React, { useEffect, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { IntegrationInstructions } from "./IntegrationInstructions";
 import { IntegrationTracking } from "./IntegrationTracking";
 import { IntegrationDetailContentProps } from "./types";
@@ -19,16 +18,7 @@ export const IntegrationDetailContent = ({
   id,
   selectOptions,
 }: IntegrationDetailContentProps) => {
-  const escape = (url: string) => {
-    return url
-      .replace(/&/g, "&amp;")
-      .replace(/</g, "&lt;")
-      .replace(/>/g, "&gt;")
-      .replace(/"/g, "&quot;")
-      .replace(/'/g, "&#39;");
-  };
-
-  const [message, setMessage] = useState<any>("");
+  const [message, setMessage] = useState<any>(null);
   const [selectValue, setSelectValue] = useState(selectOptions?.[0]?.value);
   const [parsedUrl, setParsedUrl] = useState(
     url.replace("[value]", selectValue ?? "")
@@ -39,28 +29,42 @@ export const IntegrationDetailContent = ({
     setParsedUrl(url.replace("[value]", selectValue));
   }, [selectValue, url]);
 
+  const iframeSrc = useMemo(() => `${host}${parsedUrl}`, [host, parsedUrl]);
+  const iframeDomId = useMemo(() => `cdtn-iframe-${id}`, [id]);
+  const iframeRef = useRef<HTMLIFrameElement | null>(null);
+  const [iframeHeight, setIframeHeight] = useState<number>(200);
+
   useEffect(() => {
-    const script = document.createElement("script");
+    const HEADER_MENU_HEIGHT = 50;
 
     const handleMessage = ({ data, source }: MessageEvent) => {
-      const iframe = document.getElementById(
-        `cdtn-iframe-${id}`
-      ) as HTMLIFrameElement;
-      if (source === iframe?.contentWindow && data.kind === "click") {
+      const iframe = iframeRef.current;
+      if (!iframe) return;
+      if (source !== iframe.contentWindow) return;
+
+      if (data?.kind === "resize-height" && typeof data?.value === "number") {
+        setIframeHeight(data.value + 16);
+      }
+
+      if (data?.kind === "scroll-to-top") {
+        const bodyPosition = document.body.getBoundingClientRect();
+        const iframePosition = iframe.getBoundingClientRect();
+        window.scrollTo(
+          0,
+          iframePosition.top - bodyPosition.top - HEADER_MENU_HEIGHT
+        );
+      }
+
+      if (data?.kind === "click") {
         setMessage(data);
       }
     };
 
-    window?.addEventListener("message", handleMessage, false);
-    script.src = "/widget.js";
-    script.async = true;
-    document.body.appendChild(script);
-
+    window.addEventListener("message", handleMessage, false);
     return () => {
-      document.body.removeChild(script);
-      window?.removeEventListener("message", handleMessage);
+      window.removeEventListener("message", handleMessage);
     };
-  }, [id]);
+  }, []);
 
   return (
     <>
@@ -109,7 +113,24 @@ export const IntegrationDetailContent = ({
         className={fr.cx("fr-mb-4w")}
         data-testid="integration-detail-preview"
       >
-        <Link href={escape(`${host}${parsedUrl}`)}>{shortTitle}</Link>
+        <iframe
+          key={iframeSrc}
+          ref={iframeRef}
+          id={iframeDomId}
+          title={shortTitle}
+          src={iframeSrc}
+          style={{
+            width: "100%",
+            border: "none",
+            minHeight: 200,
+            height: iframeHeight,
+          }}
+        />
+        <p className={fr.cx("fr-mt-2w", "fr-mb-0")}>
+          <Link href={iframeSrc} target="_blank" rel="noopener noreferrer">
+            Ouvrir le widget dans un nouvel onglet
+          </Link>
+        </p>
       </div>
 
       <hr className={fr.cx("fr-hr", "fr-my-4w")} />

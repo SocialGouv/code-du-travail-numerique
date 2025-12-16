@@ -40,7 +40,12 @@ function MatomoComponent({ heatmapEnabled }: MatomoComponentProps) {
           push(["setReferrerUrl", referrerUrl]);
         }
 
-        if (pathname && pathname.match(WIDGETS_PATH)) {
+        const isHttps =
+          typeof window !== "undefined" &&
+          window.location.protocol === "https:";
+
+        if (pathname && pathname.match(WIDGETS_PATH) && isHttps) {
+          push(["setSecureCookie", "true"]);
           push(["setCookieSameSite", "None"]);
         }
 
