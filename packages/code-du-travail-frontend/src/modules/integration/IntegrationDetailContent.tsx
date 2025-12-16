@@ -2,11 +2,17 @@
 
 import { fr } from "@codegouvfr/react-dsfr";
 import { Select } from "@codegouvfr/react-dsfr/Select";
-import { useEffect, useMemo, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { IntegrationInstructions } from "./IntegrationInstructions";
 import { IntegrationTracking } from "./IntegrationTracking";
 import { IntegrationDetailContentProps } from "./types";
 import Link from "../common/Link";
+
+declare global {
+  interface Window {
+    cdtnLoadWidgets?: () => void;
+  }
+}
 
 export const IntegrationDetailContent = ({
   description,
@@ -24,38 +30,24 @@ export const IntegrationDetailContent = ({
     url.replace("[value]", selectValue ?? "")
   );
 
+  const previewContainerId = `integration-widget-preview-${id}`;
+  const widgetHref = `${host}${parsedUrl}`;
+
   useEffect(() => {
     if (!selectValue) return;
     setParsedUrl(url.replace("[value]", selectValue));
   }, [selectValue, url]);
 
-  const iframeSrc = useMemo(() => `${host}${parsedUrl}`, [host, parsedUrl]);
-  const iframeDomId = useMemo(() => `cdtn-iframe-${id}`, [id]);
-  const iframeRef = useRef<HTMLIFrameElement | null>(null);
-  const [iframeHeight, setIframeHeight] = useState<number>(200);
-
   useEffect(() => {
-    const HEADER_MENU_HEIGHT = 50;
-
     const handleMessage = ({ data, source }: MessageEvent) => {
-      const iframe = iframeRef.current;
-      if (!iframe) return;
-      if (source !== iframe.contentWindow) return;
+      if (!data || data.kind !== "click") return;
 
-      if (data?.kind === "resize-height" && typeof data?.value === "number") {
-        setIframeHeight(data.value + 16);
-      }
+      const container = document.getElementById(previewContainerId);
+      const iframe = container?.querySelector(
+        "iframe"
+      ) as HTMLIFrameElement | null;
 
-      if (data?.kind === "scroll-to-top") {
-        const bodyPosition = document.body.getBoundingClientRect();
-        const iframePosition = iframe.getBoundingClientRect();
-        window.scrollTo(
-          0,
-          iframePosition.top - bodyPosition.top - HEADER_MENU_HEIGHT
-        );
-      }
-
-      if (data?.kind === "click") {
+      if (iframe && source === iframe.contentWindow) {
         setMessage(data);
       }
     };
@@ -64,7 +56,45 @@ export const IntegrationDetailContent = ({
     return () => {
       window.removeEventListener("message", handleMessage);
     };
+  }, [previewContainerId]);
+
+  useEffect(() => {
+    const existingScript =
+      document.querySelector('script[data-cdtn-widget="true"]') ??
+      document.querySelector('script[src="/widget.js"]') ??
+      document.querySelector('script[src$="/widget.js"]');
+
+    if (existingScript) {
+      window.cdtnLoadWidgets?.();
+      return;
+    }
+
+    const script = document.createElement("script");
+    script.dataset.cdtnWidget = "true";
+    script.src = "/widget.js";
+    script.async = true;
+    script.onload = () => {
+      window.cdtnLoadWidgets?.();
+    };
+    document.body.appendChild(script);
+
+    return () => {
+      script.remove();
+    };
   }, []);
+
+  useEffect(() => {
+    // Reset message display when switching the preview
+    setMessage(null);
+
+    // widget.js mutates the DOM (replaces the link with an iframe).
+    // Before reloading, remove any previous iframe to avoid duplicates.
+    const container = document.getElementById(previewContainerId);
+    const existingIframe = container?.querySelector("iframe");
+    existingIframe?.remove();
+
+    window.cdtnLoadWidgets?.();
+  }, [previewContainerId, widgetHref]);
 
   return (
     <>
@@ -112,25 +142,10 @@ export const IntegrationDetailContent = ({
       <div
         className={fr.cx("fr-mb-4w")}
         data-testid="integration-detail-preview"
+        id={previewContainerId}
       >
-        <iframe
-          key={iframeSrc}
-          ref={iframeRef}
-          id={iframeDomId}
-          title={shortTitle}
-          src={iframeSrc}
-          style={{
-            width: "100%",
-            border: "none",
-            minHeight: 200,
-            height: iframeHeight,
-          }}
-        />
-        <p className={fr.cx("fr-mt-2w", "fr-mb-0")}>
-          <Link href={iframeSrc} target="_blank" rel="noopener noreferrer">
-            Ouvrir le widget dans un nouvel onglet
-          </Link>
-        </p>
+        {/* Replaced by widget.js into an iframe */}
+        <a href={widgetHref}>{shortTitle}</a>
       </div>
 
       <hr className={fr.cx("fr-hr", "fr-my-4w")} />
@@ -150,8 +165,8 @@ export const IntegrationDetailContent = ({
       {messages && <IntegrationTracking messages={messages} id={id} />}
 
       <p className={fr.cx("fr-mb-0")}>
-        En cas de difficulté, nous vous invitons à nous contacter à
-        l&apos;adresse suivante&nbsp;:{" "}
+        En cas de difficulté, nous vous invitons à nous contacter à l’adresse
+        suivante&nbsp;:{" "}
         <Link href="mailto:codedutravailnumerique@travail.gouv.fr">
           codedutravailnumerique@travail.gouv.fr
         </Link>
