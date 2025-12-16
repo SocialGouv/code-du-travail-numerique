@@ -5,13 +5,9 @@ describe("Outil - Salaire brut/net", () => {
     const IFRAME_SELECTOR = "iframe#simulateurEmbauche";
     const SALAIRE_INPUT_SELECTOR =
       'input[id="salarié___coût_total_employeur-input"]';
+    const IFRAME_LOAD_TIMEOUT = 60_000;
 
-    const PAGE_LOAD_TIMEOUT = 120_000;
-    const IFRAME_LOAD_TIMEOUT = 120_000;
-
-    Cypress.config("pageLoadTimeout", PAGE_LOAD_TIMEOUT);
-    cy.visit("/outils/simulateur-embauche", { timeout: PAGE_LOAD_TIMEOUT });
-
+    cy.visit("/outils/simulateur-embauche");
     cy.titleAndMetaDescriptionEqual(
       "Simulateur - Calcul du salaire brut/net - Code du travail numérique",
       "Réalisez vos conversions et calculs de salaire (brut en net, net en brut, net après impôt, heures supplémentaires et coût total employeur) avec notre simulateur."
@@ -45,6 +41,11 @@ describe("Outil - Salaire brut/net", () => {
       .find(SALAIRE_INPUT_SELECTOR, { timeout: IFRAME_LOAD_TIMEOUT })
       .type("1000", { delay: 0, force: true });
 
+    // Le simulateur dans l'iframe peut déclencher des re-renders et/ou ne mettre à jour
+    // certains écrans qu'après blur. On re-query puis on blur pour stabiliser.
+    //
+    // Attention: la valeur est formatée (espaces insécables / espace fine insécable),
+    // donc on normalise avant d'asserter.
     cy.iframe(IFRAME_SELECTOR)
       .find(SALAIRE_INPUT_SELECTOR, { timeout: IFRAME_LOAD_TIMEOUT })
       .invoke("val")
@@ -57,6 +58,7 @@ describe("Outil - Salaire brut/net", () => {
       .find(SALAIRE_INPUT_SELECTOR, { timeout: IFRAME_LOAD_TIMEOUT })
       .blur({ force: true });
 
+    // Texte potentiellement variable (apostrophe typographique ’ vs ') => regex plus robuste
     cy.iframe(IFRAME_SELECTOR)
       .contains(/De quel type de contrat s(?:'|’)agit-il\s*\?/, {
         timeout: IFRAME_LOAD_TIMEOUT,
