@@ -39,6 +39,9 @@
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.42.0"
   },
+  "peerDependencies": {
+    "react": ">=19"
+  },
   "lint-staged": {
     "*.ts": [
       "pnpm lint --fix --quiet",
