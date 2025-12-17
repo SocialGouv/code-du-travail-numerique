@@ -1,5 +1,5 @@
 import { push as matopush } from "@socialgouv/matomo-next";
-import { fireEvent, render } from "@testing-library/react";
+import { fireEvent, render, waitFor } from "@testing-library/react";
 import { LetterModel } from "../LetterModel";
 
 jest.mock("@socialgouv/matomo-next", () => {
@@ -14,8 +14,18 @@ Object.assign(navigator, {
   },
 });
 
+// Legacy clipboard fallback uses document.execCommand("copy")
+Object.assign(document, {
+  execCommand: jest.fn(() => true),
+});
+
 afterEach(() => {
   jest.resetAllMocks();
+});
+
+beforeEach(() => {
+  (document.execCommand as jest.Mock).mockReturnValue(true);
+  (navigator.clipboard.writeText as jest.Mock).mockResolvedValue(undefined);
 });
 
 describe("<LetterModel />", () => {
@@ -111,13 +121,49 @@ describe("<LetterModel />", () => {
 
     getAllByTestId("copy-button")[0].click();
 
-    expect(matopush).toHaveBeenCalledWith([
-      "trackEvent",
-      "page_modeles_de_documents",
-      "type_CTRL_C",
-      "mon-modele",
-    ]);
-    expect(navigator.clipboard.writeText).toHaveBeenCalled();
+    await waitFor(() => {
+      expect(matopush).toHaveBeenCalledWith([
+        "trackEvent",
+        "page_modeles_de_documents",
+        "type_CTRL_C",
+        "mon-modele",
+      ]);
+      expect(navigator.clipboard.writeText).toHaveBeenCalled();
+    });
+  });
+
+  it("doit fallback sur execCommand('copy') quand clipboard.writeText échoue", async () => {
+    (navigator.clipboard.writeText as jest.Mock).mockRejectedValueOnce(
+      new Error("permission denied")
+    );
+
+    const { getAllByTestId } = render(
+      <LetterModel
+        breadcrumbs={[]}
+        title="Mon modele"
+        slug={"mon-modele"}
+        date={""}
+        intro={""}
+        relatedItems={[]}
+        metaDescription={""}
+        filesize={10}
+        filename={""}
+        extension={""}
+        html="<p>Hello</p>"
+      />
+    );
+
+    getAllByTestId("copy-button")[0].click();
+
+    await waitFor(() => {
+      expect(matopush).toHaveBeenCalledWith([
+        "trackEvent",
+        "page_modeles_de_documents",
+        "type_CTRL_C",
+        "mon-modele",
+      ]);
+      expect(document.execCommand).toHaveBeenCalledWith("copy");
+    });
   });
 
   it("n'envoi pas d'event si on tape d'autres touches", () => {

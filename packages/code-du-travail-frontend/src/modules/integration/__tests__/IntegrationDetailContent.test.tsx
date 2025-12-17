@@ -51,4 +51,31 @@ describe("IntegrationDetailContent", () => {
       expect((window as any).cdtnLoadWidgets).toHaveBeenCalledTimes(2);
     });
   });
+
+  it("widget.js injects an iframe with clipboard-write permission (regression)", () => {
+    // Minimal DOM setup (no React render needed): widget.js should replace a /widgets link by an iframe.
+    document.head.innerHTML = "";
+    document.body.innerHTML = "";
+
+    // Make host detection work (widget.js reads its own <script src=".../widget.js"> origin).
+    const script = document.createElement("script");
+    script.src = "https://code.travail.gouv.fr/widget.js";
+    document.head.appendChild(script);
+
+    const link = document.createElement("a");
+    link.href =
+      "https://code.travail.gouv.fr/widgets/modeles-de-courriers/id-1";
+    link.textContent = "Modèles de documents";
+    document.body.appendChild(link);
+
+    // widget.js is an IIFE; isolateModules ensures it runs for this test even if required elsewhere.
+    jest.isolateModules(() => {
+      // eslint-disable-next-line @typescript-eslint/no-require-imports
+      require("../../../../public/widget.js");
+    });
+
+    const iframe = document.querySelector("iframe") as HTMLIFrameElement | null;
+    expect(iframe).not.toBeNull();
+    expect(iframe?.allow).toContain("clipboard-write");
+  });
 });

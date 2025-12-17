@@ -11,13 +11,50 @@ export const CopyButton = ({ slug }: { slug: string }) => {
   const trackCopy = useModeleEvents(slug);
   const modelCopiedRef = useRef<HTMLParagraphElement>(null);
 
-  const copyContent = () => {
-    const elementsByClassName = document?.getElementById("content-to-copy");
-    if (elementsByClassName) {
-      navigator?.clipboard?.writeText(elementsByClassName.innerText);
+  const copyToClipboard = (text: string): boolean => {
+    try {
+      const textarea = document.createElement("textarea");
+      textarea.value = text;
+      textarea.setAttribute("readonly", "");
+      textarea.style.position = "fixed";
+      textarea.style.top = "-9999px";
+      textarea.style.left = "-9999px";
+      document.body.appendChild(textarea);
+      textarea.select();
+      const ok = document.execCommand("copy");
+      document.body.removeChild(textarea);
+      return ok;
+    } catch {
+      return false;
+    }
+  };
+
+  const copyContent = async () => {
+    const container = document?.getElementById("content-to-copy");
+    if (!container) return;
+
+    const text = container.innerText || container.textContent || "";
+    if (!text) return;
+
+    try {
+      // Prefer modern clipboard API (requires user gesture + permissions).
+      if (navigator?.clipboard?.writeText) {
+        await navigator.clipboard.writeText(text);
+        setCopied(true);
+        trackCopy();
+        setTimeout(() => {
+          modelCopiedRef.current?.focus();
+        }, 100);
+        return;
+      }
+    } catch {
+      // fallthrough to legacy
+    }
+
+    const ok = copyToClipboard(text);
+    if (ok) {
       setCopied(true);
       trackCopy();
-      // Focus the "Modèle copié" message for screen readers
       setTimeout(() => {
         modelCopiedRef.current?.focus();
       }, 100);

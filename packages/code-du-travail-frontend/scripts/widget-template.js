@@ -32,6 +32,7 @@
 
     iframe.id = id;
     iframe.width = "100%";
+    iframe.allow = "clipboard-write";
     iframe.style = "border:none;min-height:200px;";
 
     const HEADER_MENU_HEIGHT = 50;
