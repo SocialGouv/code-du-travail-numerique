@@ -9,25 +9,24 @@ import React, { ElementType, JSX } from "react";
 import { AccordionWithAnchor } from "./AccordionWithAnchor";
 import { v4 as generateUUID } from "uuid";
 import { fr } from "@codegouvfr/react-dsfr";
-import { Tile } from "@codegouvfr/react-dsfr/Tile";
 import Link from "./Link";
 import { slugify } from "@socialgouv/cdtn-utils";
 import { captureException } from "@sentry/nextjs";
-import { toUrl } from "../utils/url";
+import { formatFileSize, toUrl } from "../utils";
 import { xssWrapper } from "../utils/xss";
 import { AccessibleAlert } from "../outils/common/components/AccessibleAlert";
+import { css } from "@styled-system/css";
+import Image from "next/image";
+import { ContributionInfographicFull } from "@socialgouv/cdtn-types/build/elastic/contributions";
+import { Qahiri } from "next/dist/compiled/@next/font/dist/google";
 
 export type numberLevel = 2 | 3 | 4 | 5 | 6;
 
-const mapItem = (
-  titleLevel: numberLevel,
-  domNode: Element,
-  summary: Element
-) => ({
+const mapItem = (params: Options, domNode: Element, summary: Element) => ({
   content: renderChildren(
     domNode,
     true,
-    options((titleLevel + 1) as numberLevel)
+    options({ ...params, titleLevel: (params.titleLevel + 1) as numberLevel })
   ),
   title: domToReact(summary.children as DOMNode[], {
     transform: (reactNode, domNode) => {
@@ -187,11 +186,10 @@ const mapTbody = (tbody: Element) => {
   );
 };
 
-function getItem(domNode: Element, titleLevel: numberLevel) {
+function getItem(domNode: Element, params: Options) {
   const summary = getFirstElementChild(domNode);
   if (summary && summary.name === "summary") {
-    const mapI = mapItem(titleLevel, domNode, summary);
-    return mapI;
+    return mapItem(params, domNode, summary);
   }
 }
 
@@ -213,20 +211,26 @@ function render(domNode, trim: boolean, option: HTMLReactParserOptions) {
   });
 }
 
-const getHeadingElement = (titleLevel: numberLevel, domNode) => {
+const getHeadingElement = (params: Options, domNode) => {
+  const titleLevel = params.titleLevel;
   const Tag = ("h" + titleLevel) as ElementType;
   return titleLevel <= 6 ? (
     <Tag className={fr.cx("fr-mt-2w")}>
-      {renderChildren(domNode, false, options(titleLevel))}
+      {renderChildren(domNode, false, options(params))}
     </Tag>
   ) : (
     <strong className={fr.cx("fr-mt-2w")}>
-      {renderChildren(domNode, false, options(titleLevel))}
+      {renderChildren(domNode, false, options(params))}
     </strong>
   );
 };
 
-const options = (titleLevel: numberLevel): HTMLReactParserOptions => {
+type Options = {
+  titleLevel: numberLevel;
+  infographics: ContributionInfographicFull[];
+};
+const options = (params: Options): HTMLReactParserOptions => {
+  const { titleLevel } = params;
   let accordionTitleLevel = titleLevel;
   let headingTitleLevel = titleLevel;
 
@@ -236,23 +240,32 @@ const options = (titleLevel: numberLevel): HTMLReactParserOptions => {
         if (domNode.name === "span" && domNode.attribs.class === "title") {
           accordionTitleLevel = titleLevel + 1;
           headingTitleLevel = titleLevel + 1;
-          return getHeadingElement(titleLevel, domNode);
+          return getHeadingElement(params, domNode);
         }
         if (domNode.name === "span" && domNode.attribs.class === "sub-title") {
           accordionTitleLevel = titleLevel + 1;
-          return getHeadingElement(headingTitleLevel, domNode);
+          return getHeadingElement(
+            { ...params, titleLevel: headingTitleLevel },
+            domNode
+          );
         }
         if (domNode.name === "details") {
           const items: any[] = [];
           let id = 0;
-          const item = getItem(domNode, accordionTitleLevel);
+          const item = getItem(domNode, {
+            ...params,
+            titleLevel: accordionTitleLevel,
+          });
           if (item) {
             items.push({ ...item, id });
           }
           let next = getNextFirstElement(domNode);
           while (next && next.name === "details") {
             id = id + 1;
-            const item = getItem(next, accordionTitleLevel);
+            const item = getItem(next, {
+              ...params,
+              titleLevel: accordionTitleLevel,
+            });
             if (item) {
               items.push({ ...item, id });
             }
@@ -282,71 +295,98 @@ const options = (titleLevel: numberLevel): HTMLReactParserOptions => {
             <AccessibleAlert
               severity="info"
               small
-              description={renderChildren(domNode, true, options(titleLevel))}
+              description={renderChildren(domNode, true, options(params))}
               className={["fr-mt-2w", "fr-pb-2w"]}
             />
           );
         }
         if (domNode.name === "div" && domNode.attribs.class === "infographic") {
-          const pdfName = domNode.attribs["data-pdf"];
-          const pdfSize = domNode.attribs["data-pdf-size"];
-          const pictoName = domNode.attribs["data-infographic"];
-          const pictoAlt = domNode.attribs["data-infographic-title"];
-          // Remove the img tag. It contains an absolute path. We need to build our own path.
-          const firstChild =
-            domNode.children.length > 0 ? domNode.children[0] : undefined;
-          if (
-            firstChild &&
-            firstChild.type === "tag" &&
-            firstChild.name === "img"
-          ) {
-            domNode.children.shift();
+          console.log(
+            "MMA - Rendering infographic: ",
+            domNode.attribs["data-infographic-id"] ?? "no id",
+            domNode.attribs
+          );
+          const infoId = domNode.attribs["data-infographic-id"];
+          const infographic = params.infographics.find(
+            (info) => info.infographicId === infoId
+          );
+          if (!infographic) {
+            console.warn("Missing infography details. Skipping infographic.");
+            return <></>;
           }
 
+          const Title = "h2";
           return (
-            <div>
+            <div className={fr.cx("fr-mb-8w")}>
               <img
-                src={toUrl(pictoName)}
-                alt={`infographie ${pictoAlt ?? ""}. Description détaillée ci-après.`}
-                aria-hidden="true"
+                src={toUrl(infographic.svgFilename)}
+                alt={`infographie ${infographic.title}. Description détaillée ci-après.`}
+                className={`${fr.cx("fr-mb-3w")} ${infographieImage}`}
               />
-              {renderChildren(
-                domNode,
-                true,
-                options(titleLevel as numberLevel)
-              )}
-              <Tile
-                downloadButton
-                enlargeLinkOrButton
-                imageSvg={false}
-                imageUrl={`/static/assets/img/modeles-de-courriers-download.svg`}
-                title={`Télécharger l'infographie`}
+              <AccordionWithAnchor
+                className={fr.cx("fr-mb-5w")}
                 titleAs={`h${titleLevel}`}
-                detail={<p>Format PDF - {pdfSize}Ko</p>}
-                imageAlt={""}
-                linkProps={{
-                  href: toUrl(pdfName),
-                }}
+                items={[
+                  {
+                    id: `infographic-description-${Math.random().toString(36).substring(2, 15)}`,
+                    title: "Lire la description",
+                    content: (
+                      <>
+                        {parse(
+                          xssWrapper(infographic.transcription),
+                          options({
+                            titleLevel,
+                            infographics: params.infographics,
+                          })
+                        )}
+                      </>
+                    ),
+                  },
+                ]}
               />
+              <div className="fr-tile fr-tile--download fr-enlarge-link fr-p-3w">
+                <div className="fr-tile__body">
+                  <div className="fr-tile__content">
+                    <Title className="fr-tile__title fr-text--xl fr-mb-0">
+                      <a download href={toUrl(infographic.pdfFilename)}>
+                        Télécharger l&apos;infographie
+                      </a>
+                    </Title>
+                    <p className="fr-tile__detail fr-mt-3v">
+                      Format PDF -{" "}
+                      {formatFileSize(infographic.pdfFilesizeOctet)}
+                    </p>
+                  </div>
+                </div>
+                <div className="fr-tile__header">
+                  <div className="">
+                    <Image
+                      className="fr-responsive-img"
+                      src="/static/assets/img/infographies-download.svg"
+                      alt="Télécharger l'infographie"
+                      width={40}
+                      height={40}
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
           );
         }
         if (domNode.name === "strong") {
           return (
-            <strong>
-              {renderChildren(domNode, false, options(titleLevel))}
-            </strong>
+            <strong>{renderChildren(domNode, false, options(params))}</strong>
           );
         }
         if (domNode.name === "ul") {
           return (
             <ul className={fr.cx("fr-pl-5v")}>
-              {renderChildren(domNode, false, options(titleLevel))}
+              {renderChildren(domNode, false, options(params))}
             </ul>
           );
         }
         if (domNode.name === "em") {
-          return <em>{renderChildren(domNode, false, options(titleLevel))}</em>;
+          return <em>{renderChildren(domNode, false, options(params))}</em>;
         }
         if (domNode.name === "p") {
           if (domNode.children && !domNode.children.length) {
@@ -360,14 +400,14 @@ const options = (titleLevel: numberLevel): HTMLReactParserOptions => {
                   : fr.cx("fr-mt-2w")
               }
             >
-              {renderChildren(domNode, false, options(titleLevel))}
+              {renderChildren(domNode, false, options(params))}
             </p>
           );
         }
         if (domNode.name === "a") {
           return (
             <Link href={domNode.attribs.href} {...domNode.attribs}>
-              {renderChildren(domNode, true, options(titleLevel))}
+              {renderChildren(domNode, true, options(params))}
             </Link>
           );
         }
@@ -377,17 +417,29 @@ const options = (titleLevel: numberLevel): HTMLReactParserOptions => {
   };
 };
 
+const infographieImage = css({
+  display: "block",
+  marginInline: "auto",
+});
+
 type Props = {
   content: string;
   titleLevel: numberLevel;
+  extra?: {
+    infographics: ContributionInfographicFull[];
+  };
 };
 
 const DisplayContent = ({
   content,
   titleLevel,
+  extra,
 }: Props): string | JSX.Element | JSX.Element[] => {
   try {
-    return parse(xssWrapper(content), options(titleLevel));
+    return parse(
+      xssWrapper(content),
+      options({ titleLevel, infographics: extra?.infographics ?? [] })
+    );
   } catch (error) {
     console.error("Error parsing HTML content:", error);
     captureException(error);

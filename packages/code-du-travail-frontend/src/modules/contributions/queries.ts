@@ -92,6 +92,7 @@ export const fetchContributionBySlug = async (
       "content",
       "url",
       "messageBlockGenericNoCDT",
+      "infographics",
     ],
     {
       index: elasticDocumentsIndex,
