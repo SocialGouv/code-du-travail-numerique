@@ -7,6 +7,8 @@ function addWidget({ target, id, url }) {
   iframe.width = "100%";
   iframe.style = "border:none;min-height:200px;";
 
+  iframe.setAttribute("allow", "clipboard-write");
+
   const HEADER_MENU_HEIGHT = 50;
   window.addEventListener("message", function (evt) {
     if (

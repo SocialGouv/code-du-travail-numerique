@@ -30,6 +30,8 @@ export const DownloadTile = ({
       imageAlt={""}
       linkProps={{
         href: toUrl(filename),
+        target: "_blank",
+        rel: "noopener noreferrer",
       }}
     />
   );
