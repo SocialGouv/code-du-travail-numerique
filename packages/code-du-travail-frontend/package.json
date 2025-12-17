@@ -30,7 +30,7 @@
     "clean:redirects": "pnpm tsup && node dist/clean-redirects.js"
   },
   "dependencies": {
-    "@codegouvfr/react-dsfr": "^1.26.0",
+    "@codegouvfr/react-dsfr": "^1.30.2",
     "@elastic/elasticsearch": "^8.19.0",
     "@matejmazur/react-katex": "^3.1.3",
     "@opentelemetry/instrumentation-generic-pool": "^0.47.0",

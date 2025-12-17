@@ -1147,12 +1147,14 @@ exports[`<DroitDuTravailWrapper /> renders correctly 1`] = `
                     <div
                       class="fr-modal__content"
                     >
-                      <h1
+                      <div
+                        aria-level="1"
                         class="fr-modal__title"
                         id="fr-modal-title-modal-13-matieres"
+                        role="heading"
                       >
                         13 matières où la loi reconnaît la primauté à la convention collective de branche
-                      </h1>
+                      </div>
                       <div
                         class="fr-grid-row fr-grid-row--gutters"
                       >
@@ -1255,12 +1257,14 @@ exports[`<DroitDuTravailWrapper /> renders correctly 1`] = `
                     <div
                       class="fr-modal__content"
                     >
-                      <h1
+                      <div
+                        aria-level="1"
                         class="fr-modal__title"
                         id="fr-modal-title-modal-4-matieres"
+                        role="heading"
                       >
                         4 matières où la branche peut reconnaître sa primauté
-                      </h1>
+                      </div>
                       <div
                         class="fr-grid-row fr-grid-row--gutters"
                       >

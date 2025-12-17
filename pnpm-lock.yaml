@@ -19,8 +19,8 @@ importers:
   packages/code-du-travail-frontend:
     dependencies:
       '@codegouvfr/react-dsfr':
-        specifier: ^1.26.0
-        version: 1.29.0
+        specifier: ^1.30.2
+        version: 1.30.2
       '@elastic/elasticsearch':
         specifier: ^8.19.0
         version: 8.19.1
@@ -501,8 +501,8 @@ packages:
   '@clack/prompts@0.11.0':
     resolution: {integrity: sha512-pMN5FcrEw9hUkZA4f+zLlzivQSeQf5dRGJjSUbvVYDLvpKCdQx5OaknvKzgbtXOizhP+SJJJjqEbOe55uKKfAw==}
 
-  '@codegouvfr/react-dsfr@1.29.0':
-    resolution: {integrity: sha512-3kK6W8tOxkUN+2yufEgikg6HNXQkF1YSJNB2imBCyDo8Z/N7zK38XAygXXmeY3+0d8x3JZ/Q+wzv73pG1k3cbA==}
+  '@codegouvfr/react-dsfr@1.30.2':
+    resolution: {integrity: sha512-3NZ3Ma0D1DjgEv/2uXhg2Jm5E6ruObg8de9D9OCgoEhEwB+vnyYIN2iQw2XJdKcivjj7LF3LbmDax56EyoYevA==}
     hasBin: true
     peerDependencies:
       '@gouvfr/dsfr-chart': ^1.0.0
@@ -8488,7 +8488,7 @@ snapshots:
       picocolors: 1.1.1
       sisteransi: 1.0.5
 
-  '@codegouvfr/react-dsfr@1.29.0':
+  '@codegouvfr/react-dsfr@1.30.2':
     dependencies:
       tsafe: 1.8.12
       yargs-parser: 21.1.1

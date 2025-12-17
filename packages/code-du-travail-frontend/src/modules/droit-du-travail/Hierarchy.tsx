@@ -339,6 +339,8 @@ const Hierarchy = () => {
 
       <Modal13Matieres
         title="13 matières où la loi reconnaît la primauté à la convention collective de branche"
+        titleAs="div"
+        titleProps={{ role: "heading", "aria-level": 1 }}
         size="large"
       >
         <div className={fr.cx("fr-grid-row", "fr-grid-row--gutters")}>
@@ -382,6 +384,8 @@ const Hierarchy = () => {
 
       <Modal4Matieres
         title="4 matières où la branche peut reconnaître sa primauté"
+        titleAs="div"
+        titleProps={{ role: "heading", "aria-level": 1 }}
         size="large"
       >
         <div className={fr.cx("fr-grid-row", "fr-grid-row--gutters")}>
