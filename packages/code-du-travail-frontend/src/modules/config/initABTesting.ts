@@ -7,7 +7,10 @@ export enum ABTesting {
   SEARCH = "search_ab_test",
 }
 
-export function initABTesting() {
+export function initABTesting(
+  pathname: string,
+  excludeUrlsPatterns?: RegExp[]
+) {
   if (typeof window === "undefined" || !window || !window._paq) return;
 
   // Initialize default state
@@ -16,6 +19,15 @@ export function initABTesting() {
     variant: ABTestVariant.SEARCH_V2,
     isReady: false,
   };
+
+  const isExcludedUrl = (path: string): boolean => {
+    if (!excludeUrlsPatterns || excludeUrlsPatterns.length === 0) return false;
+    return excludeUrlsPatterns.some((pattern) => pattern.test(path));
+  };
+
+  if (!pathname || isExcludedUrl(pathname)) {
+    return;
+  }
 
   const onVariantActivated = (test: ABTesting, variant: ABTestVariant) => {
     window.__MATOMO_AB_TEST__ = {
