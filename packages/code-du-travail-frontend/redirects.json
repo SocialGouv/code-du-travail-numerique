@@ -371,12 +371,12 @@
   },
   {
     "source": "/convention-collective/2075(-[a-z0-9-]+)?",
-    "destination": "/convention-collective/3255-activites-industrielles-de-boulangerie-et-patisserie",
+    "destination": "/convention-collective/3255-activites-industrielles-de-boulangerie-et-patisserie-et-des-professionnels-de-loeuf",
     "permanent": true
   },
   {
     "source": "/convention-collective/1747(-[a-z0-9-]+)?",
-    "destination": "/convention-collective/3255-activites-industrielles-de-boulangerie-et-patisserie",
+    "destination": "/convention-collective/3255-activites-industrielles-de-boulangerie-et-patisserie-et-des-professionnels-de-loeuf",
     "permanent": true
   },
   {
