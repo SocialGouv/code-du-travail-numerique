@@ -61,21 +61,17 @@ export const LetterModelContent = ({
         severity="info"
         small
       />
-      {!widgetMode && (
-        <>
-          <div className={button}>
-            <CopyButton slug={slug} />
-          </div>
-          <div className={fr.cx("fr-mb-6w")}>
-            <DownloadTile
-              filename={filename}
-              filesize={filesize}
-              title={title}
-              extension={extension}
-            />
-          </div>
-        </>
-      )}
+      <div className={button}>
+        <CopyButton slug={slug} />
+      </div>
+      <div className={fr.cx("fr-mb-6w")}>
+        <DownloadTile
+          filename={filename}
+          filesize={filesize}
+          title={title}
+          extension={extension}
+        />
+      </div>
     </>
   );
 };
