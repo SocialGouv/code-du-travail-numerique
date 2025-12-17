@@ -39,7 +39,7 @@ async function WidgetModel(props) {
   const titleFormatted = getTitle(params.slug, title);
   return (
     <WidgetWithIframeResizer title={titleFormatted}>
-      <LetterModelContent title={titleFormatted} {...model} />
+      <LetterModelContent title={titleFormatted} widgetMode {...model} />
     </WidgetWithIframeResizer>
   );
 }

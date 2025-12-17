@@ -14,6 +14,7 @@ export type LetterModelContentProps = Pick<
   "date" | "intro" | "title" | "filesize" | "filename" | "html" | "slug"
 > & {
   extension: string;
+  widgetMode?: boolean;
 };
 
 export const LetterModelContent = ({
@@ -25,6 +26,7 @@ export const LetterModelContent = ({
   title,
   intro,
   date,
+  widgetMode = false,
 }: LetterModelContentProps) => {
   return (
     <>
@@ -34,17 +36,19 @@ export const LetterModelContent = ({
           <DisplayContent content={intro} titleLevel={2} />
         </p>
       )}
-      <div className={fr.cx("fr-hidden-md")}>
-        <div className={fr.cx("fr-mb-6w")}>
-          <DownloadTile
-            filename={filename}
-            filesize={filesize}
-            extension={extension}
-            title={title}
-          />
+      {!widgetMode && (
+        <div className={fr.cx("fr-hidden-md")}>
+          <div className={fr.cx("fr-mb-6w")}>
+            <DownloadTile
+              filename={filename}
+              filesize={filesize}
+              extension={extension}
+              title={title}
+            />
+          </div>
+          <CopyButton slug={slug} />
         </div>
-        <CopyButton slug={slug} />
-      </div>
+      )}
       <div
         className={`${fr.cx("fr-p-2w", "fr-pt-4w", "fr-mb-6w")} ${border}`}
         id="content-to-copy"
@@ -57,17 +61,21 @@ export const LetterModelContent = ({
         severity="info"
         small
       />
-      <div className={button}>
-        <CopyButton slug={slug} />
-      </div>
-      <div className={fr.cx("fr-mb-6w")}>
-        <DownloadTile
-          filename={filename}
-          filesize={filesize}
-          title={title}
-          extension={extension}
-        />
-      </div>
+      {!widgetMode && (
+        <>
+          <div className={button}>
+            <CopyButton slug={slug} />
+          </div>
+          <div className={fr.cx("fr-mb-6w")}>
+            <DownloadTile
+              filename={filename}
+              filesize={filesize}
+              title={title}
+              extension={extension}
+            />
+          </div>
+        </>
+      )}
     </>
   );
 };
