@@ -53,10 +53,11 @@ export const Section = forwardRef<HTMLHeadingElement, SectionProps>(
         : items;
 
     return (
-      <section id={sectionId} className={className}>
+      <section className={className}>
         <h2
-          ref={ref}
+          id={sectionId}
           tabIndex={-1}
+          ref={ref}
           className={`${fr.cx("fr-h3", "fr-mb-3w")} ${titleWithIcon} ${focusableTitle}`}
         >
           {icon && (
