@@ -145,7 +145,7 @@ export const IntegrationDetailContent = ({
         id={previewContainerId}
       >
         {/* Replaced by widget.js into an iframe */}
-        <a href={widgetHref}>{shortTitle}</a>
+        <Link href={widgetHref}>{shortTitle}</Link>
       </div>
 
       <hr className={fr.cx("fr-hr", "fr-my-4w")} />
