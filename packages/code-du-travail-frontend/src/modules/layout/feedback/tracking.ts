@@ -1,7 +1,7 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import { sendEvent } from "../../utils/events";
+import { sendEvent } from "@socialgouv/matomo-next";
 
 enum FeedbackCategoryEvent {
   FEEDBACK = "feedback",

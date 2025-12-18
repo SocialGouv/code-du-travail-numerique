@@ -1,5 +1,5 @@
 import { v4 as generateUUID } from "uuid";
-import { sendEvent } from "../utils";
+import { sendEvent } from "@socialgouv/matomo-next";
 
 export enum TrackingAgreementSearchCategory {
   CC_SEARCH = "cc_search",

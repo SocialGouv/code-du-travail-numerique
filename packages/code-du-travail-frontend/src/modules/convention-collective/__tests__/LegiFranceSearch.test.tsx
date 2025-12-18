@@ -1,10 +1,10 @@
 import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
 import { LegiFranceSearch } from "../LegiFranceSearch";
-import { push as matopush } from "@socialgouv/matomo-next";
+import { sendEvent } from "@socialgouv/matomo-next";
 
 jest.mock("@socialgouv/matomo-next", () => ({
-  push: jest.fn(),
+  sendEvent: jest.fn(),
 }));
 
 describe("LegiFranceSearch", () => {
@@ -49,12 +49,11 @@ describe("LegiFranceSearch", () => {
     fireEvent.change(input, { target: { value: "test query" } });
     fireEvent.submit(form);
 
-    expect(matopush).toHaveBeenCalledWith([
-      "trackEvent",
-      "pagecc_searchcc",
-      "Test Convention",
-      "test query",
-    ]);
+    expect(sendEvent).toHaveBeenCalledWith({
+      category: "pagecc_searchcc",
+      action: "Test Convention",
+      name: "test query",
+    });
   });
 
   it("should not submit form when query is empty", () => {
@@ -64,6 +63,6 @@ describe("LegiFranceSearch", () => {
 
     fireEvent.submit(form);
 
-    expect(matopush).not.toHaveBeenCalled();
+    expect(sendEvent).not.toHaveBeenCalled();
   });
 });

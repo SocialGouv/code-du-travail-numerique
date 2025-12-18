@@ -3,7 +3,7 @@ import "@testing-library/jest-dom";
 import React from "react";
 import { AgreementSearch } from "../AgreementSearch";
 import { ui } from "./ui";
-import { sendEvent } from "../../utils";
+import { sendEvent } from "@socialgouv/matomo-next";
 import { byText } from "testing-library-selector";
 import { UserAction } from "src/modules/outils/common/utils/UserAction";
 import { Agreement } from "src/modules/outils/indemnite-depart/types";

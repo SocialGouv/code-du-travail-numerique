@@ -2,7 +2,7 @@ import React, { useCallback, useState } from "react";
 import { fr } from "@codegouvfr/react-dsfr";
 import Input from "@codegouvfr/react-dsfr/Input";
 import Button from "@codegouvfr/react-dsfr/Button";
-import { sendEvent } from "../utils";
+import { sendEvent } from "@socialgouv/matomo-next";
 import { css } from "@styled-system/css";
 import { AccessibleAlert } from "../outils/common/components/AccessibleAlert";
 

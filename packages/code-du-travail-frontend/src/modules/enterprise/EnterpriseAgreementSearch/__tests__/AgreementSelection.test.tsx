@@ -2,7 +2,7 @@ import { render } from "@testing-library/react";
 import React from "react";
 import { EnterpriseAgreementSelectionLink } from "../EnterpriseAgreementSelectionLink";
 import { ui } from "./ui";
-import { sendEvent } from "../../../utils";
+import { sendEvent } from "@socialgouv/matomo-next";
 import { UserAction } from "src/modules/outils/common/utils/UserAction";
 
 jest.mock("../../../utils", () => ({

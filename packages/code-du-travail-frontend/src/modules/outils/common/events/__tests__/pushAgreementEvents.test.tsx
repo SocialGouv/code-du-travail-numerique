@@ -1,4 +1,4 @@
-import { push as matopush } from "@socialgouv/matomo-next";
+import { sendEvent } from "@socialgouv/matomo-next";
 import { Agreement } from "src/modules/outils/indemnite-depart/types";
 import {
   ConventionCollective,
@@ -13,7 +13,7 @@ import {
 } from "src/modules/analytics";
 
 jest.mock("@socialgouv/matomo-next", () => ({
-  push: jest.fn(),
+  sendEvent: jest.fn(),
 }));
 
 const agreement: Agreement = {
@@ -42,7 +42,7 @@ const enterprise: Enterprise = {
 
 describe("Push agreement events on click next", () => {
   beforeEach(() => {
-    const ma = matopush as jest.MockedFunction<typeof matopush>;
+    const ma = sendEvent as jest.MockedFunction<typeof sendEvent>;
     ma.mockReset();
   });
 
@@ -53,13 +53,12 @@ describe("Push agreement events on click next", () => {
     it("should send a search type of users matomo event", () => {
       const pageTitle = "Préavis de retraite";
       pushAgreementEvents(pageTitle, data, false, false);
-      expect(matopush).toHaveBeenCalledTimes(1);
-      expect(matopush).toHaveBeenCalledWith([
-        MatomoBaseEvent.TRACK_EVENT,
-        MatomoSearchAgreementCategory.AGREEMENT_SEARCH_TYPE_OF_USERS,
-        "click_p3",
-        pageTitle,
-      ]);
+      expect(sendEvent).toHaveBeenCalledTimes(1);
+      expect(sendEvent).toHaveBeenCalledWith({
+        category: MatomoSearchAgreementCategory.AGREEMENT_SEARCH_TYPE_OF_USERS,
+        action: "click_p3",
+        name: pageTitle,
+      });
     });
   });
 
@@ -72,50 +71,46 @@ describe("Push agreement events on click next", () => {
       it("should send matomo events", () => {
         const pageTitle = "Préavis de retraite";
         pushAgreementEvents(pageTitle, data, false, false);
-        expect(matopush).toHaveBeenCalledTimes(3);
-        expect(matopush).toHaveBeenNthCalledWith(1, [
-          MatomoBaseEvent.TRACK_EVENT,
-          MatomoSearchAgreementCategory.AGREEMENT_SEARCH_TYPE_OF_USERS,
-          "click_p1",
-          pageTitle,
-        ]);
-        expect(matopush).toHaveBeenNthCalledWith(2, [
-          MatomoBaseEvent.TRACK_EVENT,
-          MatomoSearchAgreementCategory.AGREEMENT_SELECT_P1,
-          pageTitle,
-          `idcc${agreement.num.toString()}`,
-        ]);
-        expect(matopush).toHaveBeenNthCalledWith(3, [
-          MatomoBaseEvent.TRACK_EVENT,
-          MatomoBaseEvent.OUTIL,
-          MatomoAgreementEvent.CC_UNTREATED,
-          agreement.num,
-        ]);
+        expect(sendEvent).toHaveBeenCalledTimes(3);
+        expect(sendEvent).toHaveBeenNthCalledWith(1, {
+          category:
+            MatomoSearchAgreementCategory.AGREEMENT_SEARCH_TYPE_OF_USERS,
+          action: "click_p1",
+          name: pageTitle,
+        });
+        expect(sendEvent).toHaveBeenNthCalledWith(2, {
+          category: MatomoSearchAgreementCategory.AGREEMENT_SELECT_P1,
+          action: pageTitle,
+          name: `idcc${agreement.num.toString()}`,
+        });
+        expect(sendEvent).toHaveBeenNthCalledWith(3, {
+          category: MatomoBaseEvent.OUTIL,
+          action: MatomoAgreementEvent.CC_UNTREATED,
+          name: agreement.num.toString(),
+        });
       });
     });
     describe("agreement treated", () => {
       it("should send matomo events", () => {
         const pageTitle = "Préavis de retraite";
         pushAgreementEvents(pageTitle, data, true, false);
-        expect(matopush).toHaveBeenCalledTimes(3);
-        expect(matopush).toHaveBeenNthCalledWith(1, [
-          MatomoBaseEvent.TRACK_EVENT,
-          MatomoSearchAgreementCategory.AGREEMENT_SEARCH_TYPE_OF_USERS,
-          "click_p1",
-          pageTitle,
-        ]);
-        expect(matopush).toHaveBeenNthCalledWith(2, [
-          MatomoBaseEvent.TRACK_EVENT,
-          MatomoSearchAgreementCategory.AGREEMENT_SELECT_P1,
-          pageTitle,
-          `idcc${agreement.num.toString()}`,
-        ]);
-        expect(matopush).toHaveBeenNthCalledWith(3, [
-          MatomoBaseEvent.TRACK_EVENT,
-          MatomoBaseEvent.OUTIL,
-          MatomoAgreementEvent.CC_TREATED,
-          agreement.num,
-        ]);
+        expect(sendEvent).toHaveBeenCalledTimes(3);
+        expect(sendEvent).toHaveBeenNthCalledWith(1, {
+          category:
+            MatomoSearchAgreementCategory.AGREEMENT_SEARCH_TYPE_OF_USERS,
+          action: "click_p1",
+          name: pageTitle,
+        });
+        expect(sendEvent).toHaveBeenNthCalledWith(2, {
+          category: MatomoSearchAgreementCategory.AGREEMENT_SELECT_P1,
+          action: pageTitle,
+          name: `idcc${agreement.num.toString()}`,
+        });
+        expect(sendEvent).toHaveBeenNthCalledWith(3, {
+          category: MatomoBaseEvent.OUTIL,
+          action: MatomoAgreementEvent.CC_TREATED,
+          name: agreement.num.toString(),
+        });
       });
     });
   });
@@ -130,31 +125,30 @@ describe("Push agreement events on click next", () => {
     it("should send matomo events", () => {
       const pageTitle = "Préavis de retraite";
       pushAgreementEvents(pageTitle, data, false, false);
-      expect(matopush).toHaveBeenCalledTimes(4);
-      expect(matopush).toHaveBeenNthCalledWith(1, [
-        MatomoBaseEvent.TRACK_EVENT,
-        MatomoSearchAgreementCategory.AGREEMENT_SEARCH_TYPE_OF_USERS,
-        "click_p2",
-        pageTitle,
-      ]);
-      expect(matopush).toHaveBeenNthCalledWith(2, [
-        MatomoBaseEvent.TRACK_EVENT,
-        MatomoSearchAgreementCategory.ENTERPRISE_SELECT,
-        pageTitle,
-        JSON.stringify({ label: enterprise.label, siren: enterprise.siren }),
-      ]);
-      expect(matopush).toHaveBeenNthCalledWith(3, [
-        MatomoBaseEvent.TRACK_EVENT,
-        MatomoSearchAgreementCategory.AGREEMENT_SELECT_P2,
-        pageTitle,
-        `idcc${agreement.num.toString()}`,
-      ]);
-      expect(matopush).toHaveBeenNthCalledWith(4, [
-        MatomoBaseEvent.TRACK_EVENT,
-        MatomoBaseEvent.OUTIL,
-        MatomoAgreementEvent.CC_UNTREATED,
-        agreement.num,
-      ]);
+      expect(sendEvent).toHaveBeenCalledTimes(4);
+      expect(sendEvent).toHaveBeenNthCalledWith(1, {
+        category: MatomoSearchAgreementCategory.AGREEMENT_SEARCH_TYPE_OF_USERS,
+        action: "click_p2",
+        name: pageTitle,
+      });
+      expect(sendEvent).toHaveBeenNthCalledWith(2, {
+        category: MatomoSearchAgreementCategory.ENTERPRISE_SELECT,
+        action: pageTitle,
+        name: JSON.stringify({
+          label: enterprise.label,
+          siren: enterprise.siren,
+        }),
+      });
+      expect(sendEvent).toHaveBeenNthCalledWith(3, {
+        category: MatomoSearchAgreementCategory.AGREEMENT_SELECT_P2,
+        action: pageTitle,
+        name: `idcc${agreement.num.toString()}`,
+      });
+      expect(sendEvent).toHaveBeenNthCalledWith(4, {
+        category: MatomoBaseEvent.OUTIL,
+        action: MatomoAgreementEvent.CC_UNTREATED,
+        name: agreement.num.toString(),
+      });
     });
   });
 
@@ -168,31 +162,27 @@ describe("Push agreement events on click next", () => {
     it("should send matomo events", () => {
       const pageTitle = "Préavis de retraite";
       pushAgreementEvents(pageTitle, data, false, true);
-      expect(matopush).toHaveBeenCalledTimes(4);
-      expect(matopush).toHaveBeenNthCalledWith(1, [
-        MatomoBaseEvent.TRACK_EVENT,
-        MatomoSearchAgreementCategory.AGREEMENT_SEARCH_TYPE_OF_USERS,
-        "click_p2",
-        pageTitle,
-      ]);
-      expect(matopush).toHaveBeenNthCalledWith(2, [
-        MatomoBaseEvent.TRACK_EVENT,
-        MatomoSearchAgreementCategory.AGREEMENT_SELECT_P2,
-        pageTitle,
-        `idcc${agreement.num.toString()}`,
-      ]);
-      expect(matopush).toHaveBeenNthCalledWith(3, [
-        MatomoBaseEvent.TRACK_EVENT,
-        MatomoBaseEvent.OUTIL,
-        MatomoAgreementEvent.CC_UNTREATED,
-        agreement.num,
-      ]);
-      expect(matopush).toHaveBeenNthCalledWith(4, [
-        MatomoBaseEvent.TRACK_EVENT,
-        MatomoSearchAgreementCategory.AGREEMENT_SEARCH_TYPE_OF_USERS,
-        MatomoSimulatorEvent.SELECT_NO_COMPANY,
-        pageTitle,
-      ]);
+      expect(sendEvent).toHaveBeenCalledTimes(4);
+      expect(sendEvent).toHaveBeenNthCalledWith(1, {
+        category: MatomoSearchAgreementCategory.AGREEMENT_SEARCH_TYPE_OF_USERS,
+        action: "click_p2",
+        name: pageTitle,
+      });
+      expect(sendEvent).toHaveBeenNthCalledWith(2, {
+        category: MatomoSearchAgreementCategory.AGREEMENT_SELECT_P2,
+        action: pageTitle,
+        name: `idcc${agreement.num.toString()}`,
+      });
+      expect(sendEvent).toHaveBeenNthCalledWith(3, {
+        category: MatomoBaseEvent.OUTIL,
+        action: MatomoAgreementEvent.CC_UNTREATED,
+        name: agreement.num.toString(),
+      });
+      expect(sendEvent).toHaveBeenNthCalledWith(4, {
+        category: MatomoSearchAgreementCategory.AGREEMENT_SEARCH_TYPE_OF_USERS,
+        action: MatomoSimulatorEvent.SELECT_NO_COMPANY,
+        name: pageTitle,
+      });
     });
   });
 
@@ -231,31 +221,30 @@ describe("Push agreement events on click next", () => {
         false,
         false
       );
-      expect(matopush).toHaveBeenCalledTimes(4);
-      expect(matopush).toHaveBeenNthCalledWith(1, [
-        MatomoBaseEvent.TRACK_EVENT,
-        MatomoSearchAgreementCategory.AGREEMENT_SEARCH_TYPE_OF_USERS,
-        "click_p2",
-        pageTitle,
-      ]);
-      expect(matopush).toHaveBeenNthCalledWith(2, [
-        MatomoBaseEvent.TRACK_EVENT,
-        MatomoSearchAgreementCategory.ENTERPRISE_SELECT,
-        pageTitle,
-        JSON.stringify({ label: enterprise.label, siren: enterprise.siren }),
-      ]);
-      expect(matopush).toHaveBeenNthCalledWith(3, [
-        "trackEvent",
-        "cc_select_p2",
-        "Blabla",
-        "idcc9999",
-      ]);
-      expect(matopush).toHaveBeenNthCalledWith(4, [
-        "trackEvent",
-        "outil",
-        "cc_select_non_traitée",
-        9999,
-      ]);
+      expect(sendEvent).toHaveBeenCalledTimes(4);
+      expect(sendEvent).toHaveBeenNthCalledWith(1, {
+        category: MatomoSearchAgreementCategory.AGREEMENT_SEARCH_TYPE_OF_USERS,
+        action: "click_p2",
+        name: pageTitle,
+      });
+      expect(sendEvent).toHaveBeenNthCalledWith(2, {
+        category: MatomoSearchAgreementCategory.ENTERPRISE_SELECT,
+        action: pageTitle,
+        name: JSON.stringify({
+          label: enterprise.label,
+          siren: enterprise.siren,
+        }),
+      });
+      expect(sendEvent).toHaveBeenNthCalledWith(3, {
+        category: MatomoSearchAgreementCategory.AGREEMENT_SELECT_P2,
+        action: pageTitle,
+        name: "idcc9999",
+      });
+      expect(sendEvent).toHaveBeenNthCalledWith(4, {
+        category: MatomoBaseEvent.OUTIL,
+        action: MatomoAgreementEvent.CC_UNTREATED,
+        name: "9999",
+      });
     });
   });
 });

@@ -3,7 +3,7 @@ import {
   MatomoBaseEvent,
   MatomoSimulatorEvent,
 } from "src/modules/analytics";
-import { sendEvent } from "src/modules/utils";
+import { sendEvent } from "@socialgouv/matomo-next";
 
 export const useSimulatorLayoutTracking = () => {
   const emitNextPreviousEvent = (

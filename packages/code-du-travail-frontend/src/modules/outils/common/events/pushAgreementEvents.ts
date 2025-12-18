@@ -1,4 +1,4 @@
-import { push as matopush } from "@socialgouv/matomo-next";
+import { sendEvent } from "@socialgouv/matomo-next";
 import { Enterprise } from "src/modules/enterprise";
 import { Agreement, AgreementRoute } from "../../indemnite-depart/types";
 import {
@@ -40,45 +40,42 @@ export const pushAgreementEvents = (
       parcours = MatomoSearchAgreementCategory.PARCOURS_3;
       break;
   }
-  matopush([
-    MatomoBaseEvent.TRACK_EVENT,
-    MatomoSearchAgreementCategory.AGREEMENT_SEARCH_TYPE_OF_USERS,
-    parcours,
-    simulatorTitle,
-  ]);
+
+  sendEvent({
+    category: MatomoSearchAgreementCategory.AGREEMENT_SEARCH_TYPE_OF_USERS,
+    action: parcours!,
+    name: simulatorTitle,
+  });
+
   if (values.enterprise) {
-    matopush([
-      MatomoBaseEvent.TRACK_EVENT,
-      MatomoSearchAgreementCategory.ENTERPRISE_SELECT,
-      simulatorTitle,
-      JSON.stringify({
+    sendEvent({
+      category: MatomoSearchAgreementCategory.ENTERPRISE_SELECT,
+      action: simulatorTitle,
+      name: JSON.stringify({
         label: values.enterprise.label,
         siren: values.enterprise.siren,
       }),
-    ]);
+    });
   }
   if (values.selected && agreementSelect) {
-    matopush([
-      MatomoBaseEvent.TRACK_EVENT,
-      agreementSelect,
-      simulatorTitle,
-      `idcc${values.selected.num}`,
-    ]);
-    matopush([
-      MatomoBaseEvent.TRACK_EVENT,
-      MatomoBaseEvent.OUTIL,
-      isAgreementTreated
+    sendEvent({
+      category: agreementSelect,
+      action: simulatorTitle,
+      name: `idcc${values.selected.num}`,
+    });
+    sendEvent({
+      category: MatomoBaseEvent.OUTIL,
+      action: isAgreementTreated
         ? MatomoAgreementEvent.CC_TREATED
         : MatomoAgreementEvent.CC_UNTREATED,
-      values.selected.num,
-    ]);
+      name: values.selected.num.toString(),
+    });
   }
   if (hasNoEnterpriseSelected) {
-    matopush([
-      MatomoBaseEvent.TRACK_EVENT,
-      MatomoSearchAgreementCategory.AGREEMENT_SEARCH_TYPE_OF_USERS,
-      MatomoSimulatorEvent.SELECT_NO_COMPANY,
-      simulatorTitle,
-    ]);
+    sendEvent({
+      category: MatomoSearchAgreementCategory.AGREEMENT_SEARCH_TYPE_OF_USERS,
+      action: MatomoSimulatorEvent.SELECT_NO_COMPANY,
+      name: simulatorTitle,
+    });
   }
 };

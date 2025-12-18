@@ -1,10 +1,10 @@
-import { push as matopush } from "@socialgouv/matomo-next";
+import { sendEvent } from "@socialgouv/matomo-next";
 import { fireEvent, render } from "@testing-library/react";
 import { LetterModel } from "../LetterModel";
 
 jest.mock("@socialgouv/matomo-next", () => {
   return {
-    push: jest.fn(),
+    sendEvent: jest.fn(),
   };
 });
 
@@ -59,12 +59,11 @@ describe("<LetterModel />", () => {
     );
 
     fireEvent.copy(container);
-    expect(matopush).toHaveBeenCalledWith([
-      "trackEvent",
-      "page_modeles_de_documents",
-      "type_CTRL_C",
-      "mon-modele",
-    ]);
+    expect(sendEvent).toHaveBeenCalledWith({
+      category: "page_modeles_de_documents",
+      action: "type_CTRL_C",
+      name: "mon-modele",
+    });
   });
   it("should send matomo event when firing copy event", () => {
     const { container } = render(
@@ -84,12 +83,11 @@ describe("<LetterModel />", () => {
     );
 
     fireEvent.copy(container);
-    expect(matopush).toHaveBeenCalledWith([
-      "trackEvent",
-      "page_modeles_de_documents",
-      "type_CTRL_C",
-      "mon-modele",
-    ]);
+    expect(sendEvent).toHaveBeenCalledWith({
+      category: "page_modeles_de_documents",
+      action: "type_CTRL_C",
+      name: "mon-modele",
+    });
   });
 
   it("doit envoyer un event et appeler la méthode writeText de clipboard", async () => {
@@ -111,12 +109,11 @@ describe("<LetterModel />", () => {
 
     getAllByTestId("copy-button")[0].click();
 
-    expect(matopush).toHaveBeenCalledWith([
-      "trackEvent",
-      "page_modeles_de_documents",
-      "type_CTRL_C",
-      "mon-modele",
-    ]);
+    expect(sendEvent).toHaveBeenCalledWith({
+      category: "page_modeles_de_documents",
+      action: "type_CTRL_C",
+      name: "mon-modele",
+    });
     expect(navigator.clipboard.writeText).toHaveBeenCalled();
   });
 
@@ -140,6 +137,6 @@ describe("<LetterModel />", () => {
     fireEvent.keyDown(container, { key: "A", ctrlKey: true });
     fireEvent.keyDown(container, { key: "c", shitKey: true });
 
-    expect(matopush).toHaveBeenCalledTimes(0);
+    expect(sendEvent).toHaveBeenCalledTimes(0);
   });
 });

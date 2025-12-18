@@ -3,7 +3,7 @@ import { render, screen, waitFor } from "@testing-library/react";
 import { TrackingAgreementSearchAction } from "../tracking";
 import { ui } from "./ui";
 import { ui as enterpriseUi } from "../../enterprise/EnterpriseAgreementSearch/__tests__/ui";
-import { sendEvent } from "../../utils";
+import { sendEvent } from "@socialgouv/matomo-next";
 import { AgreementSearchForm } from "../AgreementSearch/AgreementSearchForm";
 import { UserAction } from "src/modules/outils/common/utils/UserAction";
 
