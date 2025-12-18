@@ -1,4 +1,4 @@
-export function formatFileSize(bytesValue: string): string {
+export function formatFileSize(bytesValue: string | number): string {
   const bytes = Number(bytesValue);
 
   if (!Number.isFinite(bytes) || bytes < 0) {

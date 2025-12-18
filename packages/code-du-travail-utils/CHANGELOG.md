@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.207.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.206.2...v4.207.0) (2025-12-18)
+
+
+### Bug Fixes
+
+* **widget:** possibilité de switch entre les modèles de courrier + permission pour copier un modèle ([#7040](https://github.com/SocialGouv/code-du-travail-numerique/issues/7040)) ([26059f6](https://github.com/SocialGouv/code-du-travail-numerique/commit/26059f690d27ad3db440e4c35da85f46e238e38e))
+
+
+
+
+
 ## [4.206.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.206.1...v4.206.2) (2025-12-16)
 
 **Note:** Version bump only for package @socialgouv/cdtn-utils

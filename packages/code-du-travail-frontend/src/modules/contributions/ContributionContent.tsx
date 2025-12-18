@@ -18,6 +18,9 @@ export const ContributionContent = ({ contribution, titleLevel }: Props) => {
         <DisplayContent
           content={contribution.content}
           titleLevel={titleLevel}
+          extra={{
+            infographics: contribution.infographics ?? [],
+          }}
         />
       )}
     </section>

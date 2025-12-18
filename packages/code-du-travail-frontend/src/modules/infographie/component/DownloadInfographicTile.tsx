@@ -30,7 +30,7 @@ export const DownloadInfographicTile = ({
           <Image
             className="fr-responsive-img"
             src="/static/assets/img/infographies-download.svg"
-            alt="Télécharger l'infographie"
+            alt=""
             width={40}
             height={40}
           />

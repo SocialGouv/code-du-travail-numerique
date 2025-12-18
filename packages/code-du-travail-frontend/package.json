@@ -1,6 +1,6 @@
 {
   "name": "@cdt/frontend",
-  "version": "4.206.2",
+  "version": "4.207.0",
   "description": "Code du travail frontend",
   "private": true,
   "homepage": "https://code-du-travail.beta.gouv.fr/",
@@ -38,7 +38,7 @@
     "@opentelemetry/instrumentation-net": "^0.47.0",
     "@sentry/nextjs": "~10.9.0",
     "@socialgouv/cdtn-elasticsearch": "^2.44.2",
-    "@socialgouv/cdtn-types": "^2.61.0",
+    "@socialgouv/cdtn-types": "^2.63.0",
     "@socialgouv/cdtn-utils": "workspace:^",
     "@socialgouv/matomo-next": "^1.11.0",
     "@socialgouv/modeles-social": "workspace:^",

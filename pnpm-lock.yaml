@@ -43,8 +43,8 @@ importers:
         specifier: ^2.44.2
         version: 2.62.8
       '@socialgouv/cdtn-types':
-        specifier: ^2.61.0
-        version: 2.62.8
+        specifier: ^2.63.0
+        version: 2.63.0
       '@socialgouv/cdtn-utils':
         specifier: workspace:^
         version: link:../code-du-travail-utils
@@ -280,6 +280,10 @@ importers:
         version: 8.49.0(eslint@9.39.1)(typescript@5.9.3)
 
   packages/code-du-travail-utils:
+    dependencies:
+      react:
+        specifier: '>=19'
+        version: 19.2.3
     devDependencies:
       '@eslint/js':
         specifier: ^9.12.0
@@ -2647,8 +2651,8 @@ packages:
   '@socialgouv/cdtn-elasticsearch@2.62.8':
     resolution: {integrity: sha512-/Xo6OnY069vabkoLKRAcJwUvIxIEJXIoxzhOhr+4F+EpjAqhlvGKWrCEKoMkZHtHbM+vC1MsqY6D0ece9LXNag==}
 
-  '@socialgouv/cdtn-types@2.62.8':
-    resolution: {integrity: sha512-F8OK4eVxTFASQ7XfoS+AEx9v4EpCUKD1uDJE+EK5KksxDK64PiimrpxPfyiivlVZEAKzCmYSThbj+JZnINQRxg==}
+  '@socialgouv/cdtn-types@2.63.0':
+    resolution: {integrity: sha512-f89WTd2fTpibt5qvaGFpyL9i+qYahUZLXdIVgqN8q2Os/vBmmwIQXrIgrmkLtQnqfJC07E1rAOrf9+UrDD/BaA==}
 
   '@socialgouv/matomo-next@1.11.0':
     resolution: {integrity: sha512-48XLGnq4LzwOHf2wgm76UXFnGGKOKeOal4+QHeewQH+VY/gxJiIZ1k0o8LuUvKOHThW5Mqco8yAGNe25f7s28g==}
@@ -10842,7 +10846,7 @@ snapshots:
 
   '@socialgouv/cdtn-elasticsearch@2.62.8': {}
 
-  '@socialgouv/cdtn-types@2.62.8': {}
+  '@socialgouv/cdtn-types@2.63.0': {}
 
   '@socialgouv/matomo-next@1.11.0(next@16.0.10(@babel/core@7.28.5)(@opentelemetry/api@1.9.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(sass@1.96.0))':
     dependencies:

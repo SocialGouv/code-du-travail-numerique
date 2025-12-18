@@ -2,8 +2,7 @@
 
 import { fr } from "@codegouvfr/react-dsfr";
 import { Select } from "@codegouvfr/react-dsfr/Select";
-import { css } from "@styled-system/css";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { IntegrationInstructions } from "./IntegrationInstructions";
 import { IntegrationTracking } from "./IntegrationTracking";
 import { IntegrationDetailContentProps } from "./types";
@@ -40,12 +39,22 @@ export const IntegrationDetailContent = ({
   }, [selectValue, url]);
 
   useEffect(() => {
+    const iframe = document.querySelector(
+      `iframe[id^="cdtn-iframe-${id}"]`
+    ) as HTMLIFrameElement | null;
+
+    if (iframe) {
+      iframe.src = `${host}${parsedUrl}`;
+    }
+  }, [host, id, parsedUrl]);
+
+  useEffect(() => {
     const script = document.createElement("script");
 
     const handleMessage = ({ data, source }: MessageEvent) => {
-      const iframe = document.getElementById(
-        `cdtn-iframe-${id}`
-      ) as HTMLIFrameElement;
+      const iframe = document.querySelector(
+        `iframe[id^="cdtn-iframe-${id}"]`
+      ) as HTMLIFrameElement | null;
       if (source === iframe?.contentWindow && data.kind === "click") {
         setMessage(data);
       }

@@ -108,11 +108,10 @@ exports[`<ListLayout /> affiche la liste des contenus 1`] = `
         <div
           class="fr-col-12 fr-col-xl-9"
         >
-          <section
-            id="contenus-populaires"
-          >
+          <section>
             <h2
               class="fr-h3 fr-mb-3w d_flex ai_center gap_0.5rem ring_none scr-mt_64px [&:focus]:ring_2px_solid_var(--border-active-blue-france) [&:focus]:ring-o_4px [&:focus]:bdr_4px"
+              id="contenus-populaires"
               tabindex="-1"
             >
               <img
@@ -136,10 +135,10 @@ exports[`<ListLayout /> affiche la liste des contenus 1`] = `
           </section>
           <section
             class="fr-mt-3w"
-            id="conges-et-repos"
           >
             <h2
               class="fr-h3 fr-mb-3w d_flex ai_center gap_0.5rem ring_none scr-mt_64px [&:focus]:ring_2px_solid_var(--border-active-blue-france) [&:focus]:ring-o_4px [&:focus]:bdr_4px"
+              id="conges-et-repos"
               tabindex="-1"
             >
               Congés et repos
@@ -229,10 +228,10 @@ exports[`<ListLayout /> affiche la liste des contenus 1`] = `
           </section>
           <section
             class="fr-mt-3w"
-            id="embauche-et-contrat"
           >
             <h2
               class="fr-h3 fr-mb-3w d_flex ai_center gap_0.5rem ring_none scr-mt_64px [&:focus]:ring_2px_solid_var(--border-active-blue-france) [&:focus]:ring-o_4px [&:focus]:bdr_4px"
+              id="embauche-et-contrat"
               tabindex="-1"
             >
               Embauche et contrat

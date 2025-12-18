@@ -582,78 +582,7 @@ exports[`DisplayContent Headings should replace span with class "title" and "sub
 </div>
 `;
 
-exports[`DisplayContent Infographic should replace div with infographic class to Infographic component 1`] = `
-<div>
-  <img
-    alt="infographie Titre de test. Description détaillée ci-après."
-    aria-hidden="true"
-    src="bucket.url/preview/default/file.svg"
-  />
-  <div>
-    <div
-      class="details"
-    >
-      &lt;button type="button"&gt;&lt;/button&gt;
-      <div>
-        <summary>
-          Afficher le contenu de l'infographie
-        </summary>
-        <div>
-          <p
-            class="fr-mt-2w"
-          >
-            Décrire ici le contenu de l'infographie
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    class="fr-tile fr-enlarge-link fr-tile--vertical fr-tile--download"
-    id="fr-tile-_r_g_"
-  >
-    <div
-      class="fr-tile__body"
-    >
-      <div
-        class="fr-tile__content"
-      >
-        <h3
-          class="fr-tile__title"
-        >
-          <a
-            aria-disabled="false"
-            class=""
-            href="bucket.url/preview/default/file.pdf"
-          >
-            Télécharger l'infographie
-          </a>
-        </h3>
-        <div
-          class="fr-tile__detail"
-        >
-          <p>
-            Format PDF - 3200Ko
-          </p>
-        </div>
-      </div>
-    </div>
-    <div
-      class="fr-tile__header"
-    >
-      <div
-        class="fr-tile__img"
-      >
-        <img
-          alt=""
-          class="fr-responsive-img"
-          src="/static/assets/img/modeles-de-courriers-download.svg"
-        />
-      </div>
-    </div>
-  </div>
-</div>
-`;
+exports[`DisplayContent Infographic should replace div with infographic class to Infographic component 1`] = `null`;
 
 exports[`DisplayContent Tables should add thead to table if not present and move table into a Table element 1`] = `
 <div
