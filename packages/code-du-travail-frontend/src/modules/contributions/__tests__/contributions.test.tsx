@@ -35,7 +35,7 @@ jest.mock("../../convention-collective/search", () => ({
   searchAgreement: jest.fn(),
 }));
 
-jest.mock("../../utils", () => ({
+jest.mock("@socialgouv/matomo-next", () => ({
   sendEvent: jest.fn(),
 }));
 

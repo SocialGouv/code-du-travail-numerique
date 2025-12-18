@@ -5,7 +5,7 @@ import { UserAction } from "src/modules/outils/common/utils/UserAction";
 import { sendEvent } from "@socialgouv/matomo-next";
 import { AgreementSearchIntro } from "../AgreementSearch";
 
-jest.mock("../../utils", () => ({
+jest.mock("@socialgouv/matomo-next", () => ({
   sendEvent: jest.fn(),
 }));
 

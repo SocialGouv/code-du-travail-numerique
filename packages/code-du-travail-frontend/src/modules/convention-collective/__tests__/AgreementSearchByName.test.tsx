@@ -8,7 +8,7 @@ import { byText } from "testing-library-selector";
 import { UserAction } from "src/modules/outils/common/utils/UserAction";
 import { Agreement } from "src/modules/outils/indemnite-depart/types";
 
-jest.mock("../../utils", () => ({
+jest.mock("@socialgouv/matomo-next", () => ({
   sendEvent: jest.fn(),
 }));
 

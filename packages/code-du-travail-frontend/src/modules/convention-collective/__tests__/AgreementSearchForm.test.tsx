@@ -7,7 +7,7 @@ import { sendEvent } from "@socialgouv/matomo-next";
 import { AgreementSearchForm } from "../AgreementSearch/AgreementSearchForm";
 import { UserAction } from "src/modules/outils/common/utils/UserAction";
 
-jest.mock("../../utils", () => ({
+jest.mock("@socialgouv/matomo-next", () => ({
   sendEvent: jest.fn(),
 }));
 
@@ -48,7 +48,6 @@ describe("<PageContribution />", () => {
         action: "Trouver sa convention collective",
         category: "enterprise_search",
         name: '{"query":"carrefour"}',
-        value: "",
       });
     });
     expect(
@@ -79,7 +78,6 @@ describe("<PageContribution />", () => {
         action: "Trouver sa convention collective",
         category: "enterprise_search",
         name: '{"query":"bnp"}',
-        value: "",
       });
     });
     expect(

@@ -5,7 +5,7 @@ import { ui } from "./ui";
 import { sendEvent } from "@socialgouv/matomo-next";
 import { UserAction } from "src/modules/outils/common/utils/UserAction";
 
-jest.mock("../../../utils", () => ({
+jest.mock("@socialgouv/matomo-next", () => ({
   sendEvent: jest.fn(),
 }));
 
