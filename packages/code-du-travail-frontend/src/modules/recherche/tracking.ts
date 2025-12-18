@@ -1,11 +1,10 @@
-import { sendEvent } from "../utils";
 import {
   getRouteBySource,
   routeBySource,
   SOURCES,
 } from "@socialgouv/cdtn-utils";
 import { useCallback } from "react";
-import { push as matopush } from "@socialgouv/matomo-next";
+import { sendEvent } from "@socialgouv/matomo-next";
 import { MatomoBaseEvent } from "../analytics/types";
 import {
   SearchResult,
@@ -83,11 +82,10 @@ export const useSearchTracking = () => {
   );
 
   const emitWidgetEvent = useCallback((event: MatomoWidgetEvent) => {
-    matopush([
-      MatomoBaseEvent.TRACK_EVENT,
-      MatomoBaseEvent.WIDGET_SEARCH,
-      event,
-    ]);
+    sendEvent({
+      category: MatomoBaseEvent.WIDGET_SEARCH,
+      action: event,
+    });
   }, []);
 
   const emitPresearchEvent = useCallback(

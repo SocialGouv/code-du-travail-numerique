@@ -1,6 +1,6 @@
 import { usePathname } from "next/navigation";
-import { sendEvent } from "../utils/events";
 import { SITE_URL } from "../../config";
+import { sendEvent } from "@socialgouv/matomo-next";
 
 enum CommonCategory {
   SELECTED_RELATED = "selectRelated",

@@ -1,6 +1,6 @@
 import { fireEvent, render, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { sendEvent } from "../../utils";
+import { sendEvent } from "@socialgouv/matomo-next";
 import { mockAgreementSearch, ui } from "./ui";
 import { ui as ccUi } from "../../convention-collective/__tests__/ui";
 import { byText } from "testing-library-selector";
@@ -11,7 +11,7 @@ beforeEach(() => {
   localStorage.clear();
 });
 
-jest.mock("../../utils", () => ({
+jest.mock("@socialgouv/matomo-next", () => ({
   sendEvent: jest.fn(),
 }));
 
@@ -91,7 +91,6 @@ describe("<ContributionGeneric />", () => {
           action: "/contribution/my-contrib",
           category: "cc_search",
           name: '{"query":"1"}',
-          value: "",
         },
       ],
       [
@@ -99,7 +98,6 @@ describe("<ContributionGeneric />", () => {
           action: "/contribution/my-contrib",
           category: "cc_search",
           name: '{"query":"13"}',
-          value: "",
         },
       ],
       [
@@ -107,7 +105,6 @@ describe("<ContributionGeneric />", () => {
           action: "/contribution/my-contrib",
           category: "cc_search",
           name: '{"query":"138"}',
-          value: "",
         },
       ],
       [
@@ -115,7 +112,6 @@ describe("<ContributionGeneric />", () => {
           action: "/contribution/my-contrib",
           category: "cc_search",
           name: '{"query":"1388"}',
-          value: "",
         },
       ],
       [
@@ -123,7 +119,6 @@ describe("<ContributionGeneric />", () => {
           action: "/contribution/my-contrib",
           category: "cc_select_p1",
           name: "idcc1388",
-          value: "",
         },
       ],
       [
@@ -181,7 +176,6 @@ describe("<ContributionGeneric />", () => {
           action: "/contribution/my-contrib",
           category: "cc_search",
           name: '{"query":"1"}',
-          value: "",
         },
       ],
       [
@@ -189,7 +183,6 @@ describe("<ContributionGeneric />", () => {
           action: "/contribution/my-contrib",
           category: "cc_search",
           name: '{"query":"16"}',
-          value: "",
         },
       ],
       [
@@ -197,7 +190,6 @@ describe("<ContributionGeneric />", () => {
           action: "/contribution/my-contrib",
           category: "cc_select_p1",
           name: "idcc16",
-          value: "",
         },
       ],
       [
@@ -250,7 +242,6 @@ describe("<ContributionGeneric />", () => {
           action: "/contribution/my-contrib",
           category: "enterprise_search",
           name: '{"query":"carrefour"}',
-          value: "",
         },
       ],
       [
@@ -258,7 +249,6 @@ describe("<ContributionGeneric />", () => {
           action: "/contribution/my-contrib",
           category: "enterprise_select",
           name: '{"label":"CARREFOUR PROXIMITE FRANCE (SHOPI-8 A HUIT)","siren":"345130488"}',
-          value: "",
         },
       ],
       [
@@ -266,7 +256,6 @@ describe("<ContributionGeneric />", () => {
           action: "/contribution/my-contrib",
           category: "cc_select_p2",
           name: "idcc2216",
-          value: "",
         },
       ],
       [

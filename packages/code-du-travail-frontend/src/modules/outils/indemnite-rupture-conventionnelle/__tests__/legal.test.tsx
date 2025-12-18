@@ -4,10 +4,10 @@ import { UserAction } from "../../common/utils/UserAction";
 import { ui } from "../../indemnite-depart/__tests__/ui";
 import { byText } from "testing-library-selector";
 import IndemniteRuptureCoSimulator from "../IndemniteRuptureCoSimulator";
-import { push } from "@socialgouv/matomo-next";
+import { sendEvent } from "@socialgouv/matomo-next";
 
 jest.mock("@socialgouv/matomo-next", () => ({
-  push: jest.fn(),
+  sendEvent: jest.fn(),
 }));
 
 describe("Rupture conventionnelle - légale", () => {
@@ -20,54 +20,49 @@ describe("Rupture conventionnelle - légale", () => {
         title="Indemnité de rupture conventionnelle"
       />
     );
-    expect(push).toHaveBeenNthCalledWith(1, [
-      "trackEvent",
-      "outil",
-      "view_step_Indemnité de rupture conventionnelle",
-      "start",
-    ]);
+    expect(sendEvent).toHaveBeenNthCalledWith(1, {
+      category: "outil",
+      action: "view_step_Indemnité de rupture conventionnelle",
+      name: "start",
+    });
 
-    const startEventCalls = (push as jest.Mock).mock.calls.filter(
+    const startEventCalls = (sendEvent as jest.Mock).mock.calls.filter(
       (call) =>
-        call[0][0] === "trackEvent" &&
-        call[0][1] === "outil" &&
-        call[0][2] === "view_step_Indemnité de rupture conventionnelle" &&
-        call[0][3] === "start"
+        call[0].category === "outil" &&
+        call[0].action === "view_step_Indemnité de rupture conventionnelle" &&
+        call[0].name === "start"
     );
     expect(startEventCalls.length).toBe(1);
     userAction = new UserAction();
     userAction
       .click(ui.introduction.startButton.get())
       .click(ui.contract.type.cdi.get());
-    expect(push).toHaveBeenCalledWith([
-      "trackEvent",
-      "outil",
-      "view_step_Indemnité de rupture conventionnelle",
-      "contrat_travail",
-    ]);
+    expect(sendEvent).toHaveBeenCalledWith({
+      category: "outil",
+      action: "view_step_Indemnité de rupture conventionnelle",
+      name: "contrat_travail",
+    });
 
     expect(ui.contract.fauteGrave.question.query()).not.toBeInTheDocument();
     expect(ui.result.dismissalType.inaptitude.query()).not.toBeInTheDocument();
 
     userAction.click(ui.contract.arretTravail.non.get()).click(ui.next.get());
 
-    expect(push).toHaveBeenCalledWith([
-      "trackEvent",
-      "outil",
-      "view_step_Indemnité de rupture conventionnelle",
-      "info_cc",
-    ]);
+    expect(sendEvent).toHaveBeenCalledWith({
+      category: "outil",
+      action: "view_step_Indemnité de rupture conventionnelle",
+      name: "info_cc",
+    });
 
     expect(ui.activeStep.query()).toHaveTextContent("Convention collective");
 
     userAction.click(ui.agreement.noAgreement.get()).click(ui.next.get());
 
-    expect(push).toHaveBeenCalledWith([
-      "trackEvent",
-      "outil",
-      "view_step_Indemnité de rupture conventionnelle",
-      "anciennete",
-    ]);
+    expect(sendEvent).toHaveBeenCalledWith({
+      category: "outil",
+      action: "view_step_Indemnité de rupture conventionnelle",
+      name: "anciennete",
+    });
     expect(ui.activeStep.query()).toHaveTextContent("Ancienneté");
     expect(ui.seniority.notificationDate.query()).not.toBeInTheDocument();
 
@@ -77,12 +72,11 @@ describe("Rupture conventionnelle - légale", () => {
       .click(ui.seniority.hasAbsence.non.get())
       .click(ui.next.get());
 
-    expect(push).toHaveBeenCalledWith([
-      "trackEvent",
-      "outil",
-      "view_step_Indemnité de rupture conventionnelle",
-      "salaires",
-    ]);
+    expect(sendEvent).toHaveBeenCalledWith({
+      category: "outil",
+      action: "view_step_Indemnité de rupture conventionnelle",
+      name: "salaires",
+    });
     expect(ui.activeStep.query()).toHaveTextContent("Salaire");
 
     userAction
@@ -91,12 +85,11 @@ describe("Rupture conventionnelle - légale", () => {
       .setInput(ui.salary.sameSalaryValue.get(), "1000")
       .click(ui.next.get());
 
-    expect(push).toHaveBeenCalledWith([
-      "trackEvent",
-      "outil",
-      "view_step_Indemnité de rupture conventionnelle",
-      "results",
-    ]);
+    expect(sendEvent).toHaveBeenCalledWith({
+      category: "outil",
+      action: "view_step_Indemnité de rupture conventionnelle",
+      name: "results",
+    });
     expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
 
     expect(ui.result.resultat.get()).toHaveTextContent("83,33 €");

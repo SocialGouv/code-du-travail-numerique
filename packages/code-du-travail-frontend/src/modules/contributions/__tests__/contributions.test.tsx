@@ -7,7 +7,7 @@ import { ui } from "./ui";
 import { ui as ccUi } from "../../convention-collective/__tests__/ui";
 import { Contribution } from "../type";
 import { searchAgreement } from "../../convention-collective";
-import { sendEvent } from "../../utils";
+import { sendEvent } from "@socialgouv/matomo-next";
 
 const contribution = {
   source: "contributions",
@@ -35,7 +35,7 @@ jest.mock("../../convention-collective/search", () => ({
   searchAgreement: jest.fn(),
 }));
 
-jest.mock("../../utils", () => ({
+jest.mock("@socialgouv/matomo-next", () => ({
   sendEvent: jest.fn(),
 }));
 

@@ -1,4 +1,4 @@
-import { push as matopush } from "@socialgouv/matomo-next";
+import { sendEvent } from "@socialgouv/matomo-next";
 import {
   fireEvent,
   getAllByRole,
@@ -10,7 +10,7 @@ import { SOURCES } from "@socialgouv/cdtn-utils";
 
 jest.mock("@socialgouv/matomo-next", () => {
   return {
-    push: jest.fn(),
+    sendEvent: jest.fn(),
   };
 });
 
@@ -100,11 +100,10 @@ describe("<ThemeModel />", () => {
 
     fireEvent.click(getByRole(document1Title, "link"));
 
-    expect(matopush).toHaveBeenCalledWith([
-      "trackEvent",
-      "selectResult",
-      `{"url":"/convention-collective/document_1"}`,
-    ]);
+    expect(sendEvent).toHaveBeenCalledWith({
+      category: "selectResult",
+      action: `{"url":"/convention-collective/document_1"}`,
+    });
   });
 
   it("affiche un thème", () => {
@@ -135,10 +134,9 @@ describe("<ThemeModel />", () => {
 
     fireEvent.click(getByRole(externalDocumentTitle, "link"));
 
-    expect(matopush).toHaveBeenCalledWith([
-      "trackEvent",
-      "selectResult",
-      `{"url":"https://example.com/document"}`,
-    ]);
+    expect(sendEvent).toHaveBeenCalledWith({
+      category: "selectResult",
+      action: `{"url":"https://example.com/document"}`,
+    });
   });
 });

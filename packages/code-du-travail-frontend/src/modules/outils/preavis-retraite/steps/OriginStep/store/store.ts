@@ -7,10 +7,10 @@ import {
 import produce from "immer";
 import { validateStep } from "./validator";
 import { StoreSliceWrapperPreavisRetraite } from "../../store";
-import { push as matopush } from "@socialgouv/matomo-next";
 import { InformationsStoreSlice } from "../../Informations/store";
 import { ValidationResponse } from "src/modules/outils/common/components/SimulatorLayout/types";
 import { MatomoBaseEvent, MatomoRetirementEvent } from "src/modules/analytics";
+import { sendEvent } from "@socialgouv/matomo-next";
 
 const initialState: OriginDepartStoreData = {
   input: {},
@@ -41,13 +41,13 @@ const createOriginDepartStore: StoreSliceWrapperPreavisRetraite<
         })
       );
 
-      matopush([
-        MatomoBaseEvent.TRACK_EVENT,
-        MatomoBaseEvent.OUTIL,
-        get().originDepartData.input.originDepart === "mise-retraite"
-          ? MatomoRetirementEvent.MISE_RETRAITE
-          : MatomoRetirementEvent.DEPART_RETRAITE,
-      ]);
+      sendEvent({
+        category: MatomoBaseEvent.OUTIL,
+        action:
+          get().originDepartData.input.originDepart === "mise-retraite"
+            ? MatomoRetirementEvent.MISE_RETRAITE
+            : MatomoRetirementEvent.DEPART_RETRAITE,
+      });
 
       return isValid ? ValidationResponse.Valid : ValidationResponse.NotValid;
     },

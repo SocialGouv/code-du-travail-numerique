@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { eventEmitter } from "src/modules/outils/common/events/emitter";
 import { EventType } from "src/modules/outils/common/events/events";
 import { TrackingContributionCategory } from "src/modules/contributions/tracking";
-import { sendEvent } from "src/modules/utils";
+import { sendEvent } from "@socialgouv/matomo-next";
 import { MatomoActionEvent, MatomoAgreementEvent } from "src/modules/analytics";
 
 export const useHeuresRechercheEmploiEventEmitter = () => {

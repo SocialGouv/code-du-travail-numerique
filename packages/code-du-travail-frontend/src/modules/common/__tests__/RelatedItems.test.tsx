@@ -1,11 +1,11 @@
-import { push as matopush } from "@socialgouv/matomo-next";
+import { sendEvent } from "@socialgouv/matomo-next";
 import { render } from "@testing-library/react";
 import { RelatedItems } from "../RelatedItems";
 import { RelatedItem } from "../../documents";
 
 jest.mock("@socialgouv/matomo-next", () => {
   return {
-    push: jest.fn(),
+    sendEvent: jest.fn(),
   };
 });
 const items = [
@@ -62,29 +62,28 @@ describe("<RelatedItems />", () => {
     const { getByText } = render(<RelatedItems relatedItems={items} />);
     getByText(/événements familiaux/).click();
 
-    expect(matopush).toHaveBeenCalledWith([
-      "trackEvent",
-      "selectRelated",
-      '{"selection":"contribution/les-conges-pour-evenements-familiaux"}',
-    ]);
+    expect(sendEvent).toHaveBeenCalledWith({
+      category: "selectRelated",
+      action:
+        '{"selection":"contribution/les-conges-pour-evenements-familiaux"}',
+    });
   });
   it("should track related items clicks for external link", async () => {
     jest.resetAllMocks();
     const { getByText } = render(<RelatedItems relatedItems={items} />);
     getByText(/événements familiaux/).click();
 
-    expect(matopush).toHaveBeenCalledWith([
-      "trackEvent",
-      "selectRelated",
-      '{"selection":"contribution/les-conges-pour-evenements-familiaux"}',
-    ]);
+    expect(sendEvent).toHaveBeenCalledWith({
+      category: "selectRelated",
+      action:
+        '{"selection":"contribution/les-conges-pour-evenements-familiaux"}',
+    });
 
     getByText(/compte formation/).click();
 
-    expect(matopush).toHaveBeenCalledWith([
-      "trackEvent",
-      "selectRelated",
-      '{"selection":"https://www.moncompteformation.gouv.fr"}',
-    ]);
+    expect(sendEvent).toHaveBeenCalledWith({
+      category: "selectRelated",
+      action: '{"selection":"https://www.moncompteformation.gouv.fr"}',
+    });
   });
 });

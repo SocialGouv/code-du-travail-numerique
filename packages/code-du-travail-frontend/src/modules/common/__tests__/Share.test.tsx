@@ -1,12 +1,10 @@
 import { render } from "@testing-library/react";
-import React from "react";
-
 import { Share } from "../Share";
-import { push as matopush } from "@socialgouv/matomo-next";
+import { sendEvent } from "@socialgouv/matomo-next";
 
 jest.mock("@socialgouv/matomo-next", () => {
   return {
-    push: jest.fn(),
+    sendEvent: jest.fn(),
   };
 });
 jest.mock("next/navigation", () => ({
@@ -40,12 +38,11 @@ describe("<Share />", () => {
       const link = getByText(linkText);
       link.click();
 
-      expect(matopush).toHaveBeenCalledWith([
-        "trackEvent",
-        "clic_share",
-        "http://api.url/my-page",
-        event,
-      ]);
+      expect(sendEvent).toHaveBeenCalledWith({
+        category: "clic_share",
+        action: "http://api.url/my-page",
+        name: event,
+      });
     }
   );
 });

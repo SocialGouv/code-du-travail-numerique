@@ -1,12 +1,12 @@
 import { fireEvent, render } from "@testing-library/react";
 import { Feedback } from "..";
-import { push as matopush } from "@socialgouv/matomo-next";
+import { sendEvent } from "@socialgouv/matomo-next";
 import { EVENT_CATEGORY } from "../tracking";
 import { ui } from "./ui";
 
 jest.mock("@socialgouv/matomo-next", () => {
   return {
-    push: jest.fn(),
+    sendEvent: jest.fn(),
   };
 });
 
@@ -43,12 +43,11 @@ describe("Etant donné un composant Feedback", () => {
         fireEvent.click(ui.sendButton.get());
       });
       test("Vérification du tracking et que le 2e questionnaire s'affiche", () => {
-        expect(matopush).toHaveBeenCalledWith([
-          "trackEvent",
-          "feedback_simulateurs",
-          "Comment_s_est_passée_la_simulation",
-          "moyen",
-        ]);
+        expect(sendEvent).toHaveBeenCalledWith({
+          category: "feedback_simulateurs",
+          action: "Comment_s_est_passée_la_simulation",
+          name: "moyen",
+        });
 
         expect(ui.questionnaire2.simulator.title.query()).toBeInTheDocument();
         expect(ui.questionnaire2.simulator.one.query()).toBeInTheDocument();
@@ -105,30 +104,26 @@ describe("Etant donné un composant Feedback", () => {
           fireEvent.click(ui.sendButton.get());
         });
         test("Vérification du tracking et que la fin du questionnaire s'affiche", () => {
-          expect(matopush).toHaveBeenCalledWith([
-            "trackEvent",
-            "feedback_simulateurs",
-            "Comment_s_est_passée_la_simulation",
-            "moyen",
-          ]);
-          expect(matopush).toHaveBeenCalledWith([
-            "trackEvent",
-            "feedback_simulateurs",
-            "Facilité_utilisation_simulateur",
-            "1",
-          ]);
-          expect(matopush).toHaveBeenCalledWith([
-            "trackEvent",
-            "feedback_simulateurs",
-            "Clarté_questions",
-            "3",
-          ]);
-          expect(matopush).toHaveBeenCalledWith([
-            "trackEvent",
-            "feedback_simulateurs",
-            "Clarté_résultat",
-            "5",
-          ]);
+          expect(sendEvent).toHaveBeenCalledWith({
+            category: "feedback_simulateurs",
+            action: "Comment_s_est_passée_la_simulation",
+            name: "moyen",
+          });
+          expect(sendEvent).toHaveBeenCalledWith({
+            category: "feedback_simulateurs",
+            action: "Facilité_utilisation_simulateur",
+            name: "1",
+          });
+          expect(sendEvent).toHaveBeenCalledWith({
+            category: "feedback_simulateurs",
+            action: "Clarté_questions",
+            name: "3",
+          });
+          expect(sendEvent).toHaveBeenCalledWith({
+            category: "feedback_simulateurs",
+            action: "Clarté_résultat",
+            name: "5",
+          });
           expect(ui.questionnaireEnd.title.query()).toBeInTheDocument();
           expect(ui.questionnaireEnd.description.query()).toBeInTheDocument();
         });

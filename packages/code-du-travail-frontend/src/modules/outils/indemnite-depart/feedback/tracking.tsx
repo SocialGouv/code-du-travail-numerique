@@ -1,4 +1,4 @@
-import { sendEvent } from "src/modules/utils";
+import { sendEvent } from "@socialgouv/matomo-next";
 
 export enum EVENT_CATEGORY {
   indemniteLicenciement = "feedback_simulateurs",

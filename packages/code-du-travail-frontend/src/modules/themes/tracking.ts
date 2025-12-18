@@ -1,4 +1,4 @@
-import { sendEvent } from "../utils";
+import { sendEvent } from "@socialgouv/matomo-next";
 import { getRouteBySource, routeBySource } from "@socialgouv/cdtn-utils";
 
 enum MatomoThemeCategory {

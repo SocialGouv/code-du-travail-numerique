@@ -1,5 +1,5 @@
+import { sendEvent } from "@socialgouv/matomo-next";
 import { MatomoAgreementEvent } from "../analytics";
-import { sendEvent } from "../utils";
 
 export enum TrackingContributionCategory {
   TOOL = "outil",

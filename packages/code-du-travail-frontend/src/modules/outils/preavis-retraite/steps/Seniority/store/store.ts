@@ -7,7 +7,7 @@ import {
 import produce from "immer";
 import { validateStep } from "./validator";
 import { StoreSliceWrapperPreavisRetraite } from "../../store";
-import { push as matopush } from "@socialgouv/matomo-next";
+import { sendEvent } from "@socialgouv/matomo-next";
 import { ValidationResponse } from "src/modules/outils/common/types";
 import { MatomoBaseEvent, MatomoRetirementEvent } from "src/modules/analytics";
 
@@ -43,13 +43,13 @@ const createSeniorityStore: StoreSliceWrapperPreavisRetraite<
           state.seniorityData.error = errorState;
         })
       );
-      matopush([
-        MatomoBaseEvent.TRACK_EVENT,
-        MatomoBaseEvent.OUTIL,
-        get().seniorityData.input.moreThanXYears === "oui"
-          ? MatomoRetirementEvent.ANCIENNETE_PLUS_2_ANS
-          : MatomoRetirementEvent.ANCIENNETE_MOINS_2_ANS,
-      ]);
+      sendEvent({
+        category: MatomoBaseEvent.OUTIL,
+        action:
+          get().seniorityData.input.moreThanXYears === "oui"
+            ? MatomoRetirementEvent.ANCIENNETE_PLUS_2_ANS
+            : MatomoRetirementEvent.ANCIENNETE_MOINS_2_ANS,
+      });
 
       return isValid ? ValidationResponse.Valid : ValidationResponse.NotValid;
     },

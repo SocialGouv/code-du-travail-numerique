@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { EventType, eventEmitter } from "../../common/events";
-import { sendEvent } from "src/modules/utils";
+import { sendEvent } from "@socialgouv/matomo-next";
 import {
   MatomoActionEvent,
   MatomoBaseEvent,
