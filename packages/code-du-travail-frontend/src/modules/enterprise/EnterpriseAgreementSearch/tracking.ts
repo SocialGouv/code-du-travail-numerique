@@ -1,4 +1,3 @@
-import { v4 as generateUUID } from "uuid";
 import { sendEvent } from "@socialgouv/matomo-next";
 import {
   TrackingAgreementSearchAction,
@@ -16,7 +15,6 @@ export const useEnterpriseAgreementSearchTracking = () => {
       category: TrackingAgreementSearchCategory.ENTERPRISE_SEARCH,
       action: action,
       name: JSON.stringify({ query, apiGeoResult }),
-      value: generateUUID(),
     });
   };
 
@@ -31,7 +29,6 @@ export const useEnterpriseAgreementSearchTracking = () => {
       category: TrackingAgreementSearchCategory.CC_ENTERPRISE_SELECT,
       action: action,
       name: JSON.stringify(enterprise),
-      value: generateUUID(),
     });
   };
 
@@ -40,7 +37,6 @@ export const useEnterpriseAgreementSearchTracking = () => {
       category: TrackingAgreementSearchCategory.CC_SELECT_P2,
       action: action,
       name: idcc,
-      value: generateUUID(),
     });
   };
 
@@ -49,7 +45,6 @@ export const useEnterpriseAgreementSearchTracking = () => {
       category: TrackingAgreementSearchCategory.VIEW_STEP_CC_SEARCH_P2,
       action: TrackingAgreementSearchAction.BACK_STEP_P2,
       name: TrackingAgreementSearchAction.AGREEMENT_SEARCH,
-      value: generateUUID(),
     });
   };
 

@@ -1,6 +1,4 @@
 import { render } from "@testing-library/react";
-import React from "react";
-
 import { Share } from "../Share";
 import { sendEvent } from "@socialgouv/matomo-next";
 

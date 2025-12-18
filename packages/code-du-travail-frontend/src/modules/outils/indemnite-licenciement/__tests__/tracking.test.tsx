@@ -8,10 +8,6 @@ jest.mock("@socialgouv/matomo-next", () => ({
   sendEvent: jest.fn(),
 }));
 
-jest.mock("uuid", () => ({
-  v4: jest.fn(() => "test-uuid"),
-}));
-
 jest.mock(
   "../../../enterprise/EnterpriseAgreementSearch/EnterpriseAgreementSearchInput"
 );
@@ -145,7 +141,6 @@ describe("Indemnité licenciement - Tracking", () => {
       category: "enterprise_search",
       action: "Indemnité de licenciement",
       name: JSON.stringify({ query: "carrefour" }),
-      value: "test-uuid",
     });
   });
 
@@ -166,7 +161,6 @@ describe("Indemnité licenciement - Tracking", () => {
       category: "cc_search",
       action: "Indemnité de licenciement",
       name: JSON.stringify({ query: "16" }),
-      value: "test-uuid",
     });
   });
 

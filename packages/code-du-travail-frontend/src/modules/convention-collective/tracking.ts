@@ -29,7 +29,6 @@ export const useAgreementSearchTracking = () => {
       category: TrackingAgreementSearchCategory.CC_SEARCH,
       action: action,
       name: JSON.stringify({ query }),
-      value: generateUUID(),
     });
   };
 
@@ -46,7 +45,6 @@ export const useAgreementSearchTracking = () => {
       category: TrackingAgreementSearchCategory.CC_SEARCH_TYPE_OF_USERS,
       action: TrackingAgreementSearchAction.CLICK_P1,
       name: TrackingAgreementSearchAction.AGREEMENT_SEARCH,
-      value: generateUUID(),
     });
   };
 
@@ -55,7 +53,6 @@ export const useAgreementSearchTracking = () => {
       category: TrackingAgreementSearchCategory.CC_SEARCH_TYPE_OF_USERS,
       action: TrackingAgreementSearchAction.CLICK_P2,
       name: TrackingAgreementSearchAction.AGREEMENT_SEARCH,
-      value: generateUUID(),
     });
   };
 
@@ -64,7 +61,6 @@ export const useAgreementSearchTracking = () => {
       category: TrackingAgreementSearchCategory.CC_SELECT_P1,
       action: action,
       name: idcc,
-      value: generateUUID(),
     });
   };
 
@@ -73,7 +69,6 @@ export const useAgreementSearchTracking = () => {
       category: TrackingAgreementSearchCategory.VIEW_STEP_CC_SEARCH_P1,
       action: TrackingAgreementSearchAction.BACK_STEP_P1,
       name: TrackingAgreementSearchAction.AGREEMENT_SEARCH,
-      value: generateUUID(),
     });
   };
 
