@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.207.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.206.2...v4.207.0) (2025-12-18)
+
+
+### Bug Fixes
+
+* **vuln:** upgrade yaml lib ([#7031](https://github.com/SocialGouv/code-du-travail-numerique/issues/7031)) ([c8cf1c0](https://github.com/SocialGouv/code-du-travail-numerique/commit/c8cf1c074e0080f07171e20ee03de94d3a66a48b))
+
+
+
+
+
 ## [4.206.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.206.1...v4.206.2) (2025-12-16)
 
 **Note:** Version bump only for package @socialgouv/modeles-social

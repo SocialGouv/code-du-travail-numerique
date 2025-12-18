@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.207.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.206.2...v4.207.0) (2025-12-18)
+
+
+### Bug Fixes
+
+* **dares:** ajout des redirections du mois de décembre ([#7021](https://github.com/SocialGouv/code-du-travail-numerique/issues/7021)) ([bd41793](https://github.com/SocialGouv/code-du-travail-numerique/commit/bd417938611053a94170b1f31abc5efe3e169b07))
+* **h1:** suppression du `h1` sur les modal, pour avoir un `role: heading` à la place ([#6956](https://github.com/SocialGouv/code-du-travail-numerique/issues/6956)) ([4326e7e](https://github.com/SocialGouv/code-du-travail-numerique/commit/4326e7e3c7c0fe8da34ace38c5b52b53fc99f889))
+* **infographie:** correctifs RGAA sur les pages infographies ([#7041](https://github.com/SocialGouv/code-du-travail-numerique/issues/7041)) ([08f7357](https://github.com/SocialGouv/code-du-travail-numerique/commit/08f7357395d91ddde63f7a6f095bea526dcbca53))
+* **widget:** possibilité de switch entre les modèles de courrier + permission pour copier un modèle ([#7040](https://github.com/SocialGouv/code-du-travail-numerique/issues/7040)) ([26059f6](https://github.com/SocialGouv/code-du-travail-numerique/commit/26059f690d27ad3db440e4c35da85f46e238e38e))
+
+
+### Features
+
+* **infographie:** ajout des infographie dans les contributions ([#7029](https://github.com/SocialGouv/code-du-travail-numerique/issues/7029)) ([bb84117](https://github.com/SocialGouv/code-du-travail-numerique/commit/bb8411797bbc22ade0f2462839f5ec26e999950c))
+
+
+
+
+
 ## [4.206.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.206.1...v4.206.2) (2025-12-16)
 
 
