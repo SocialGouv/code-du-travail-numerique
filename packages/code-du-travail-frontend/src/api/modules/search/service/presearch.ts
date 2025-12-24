@@ -152,6 +152,8 @@ const defaultIdccResults: SearchResult[] = [
 
 const CC_SCORE_THRESHOLD = 20;
 
+const PRESEARCH_MAX_RESULTS = 8;
+
 const MATCHING_CC_TOKENS = [
   "convention",
   "colectif",
@@ -338,7 +340,7 @@ const fillup = async (
 
 const getArticles = async (query): Promise<SearchResult[]> => {
   // proper references
-  let refs: { text: string }[] = extractReferences(query);
+  const refs: { text: string }[] = extractReferences(query);
 
   if (refs.length < 1) {
     // first token matching regex
@@ -431,10 +433,15 @@ export const presearch = async (
     classes.push(PresearchClass.UNKNOWN);
   }
 
-  if (results.length < 4) {
-    const filled = await fillup(query, 4, results);
-    return { results: filled, classes: [...new Set(classes)] };
-  } else {
-    return { results, classes };
+  const uniqueClasses = [...new Set(classes)];
+
+  if (results.length < PRESEARCH_MAX_RESULTS) {
+    const filled = await fillup(query, PRESEARCH_MAX_RESULTS, results);
+    return { results: filled, classes: uniqueClasses };
   }
+
+  return {
+    results: results.slice(0, PRESEARCH_MAX_RESULTS),
+    classes: uniqueClasses,
+  };
 };
