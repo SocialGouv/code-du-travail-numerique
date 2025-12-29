@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.207.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.207.0...v4.207.1) (2025-12-29)
+
+
+### Bug Fixes
+
+* **events:** uniformisation des calls via la fonction `sendEvent` au lieu du `matopush` + correction sur la `value` ([#7042](https://github.com/SocialGouv/code-du-travail-numerique/issues/7042)) ([b451266](https://github.com/SocialGouv/code-du-travail-numerique/commit/b4512667d273ede849faaaab24ebcd233498974f))
+* **recherche:** mise en place de 8 résultats de presearch au lieu des 4 initiaux ([#7047](https://github.com/SocialGouv/code-du-travail-numerique/issues/7047)) ([0e0048a](https://github.com/SocialGouv/code-du-travail-numerique/commit/0e0048a08586a4cd233862acd8153903147e5c78))
+
+
+
+
+
 # [4.207.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.206.2...v4.207.0) (2025-12-18)
 
 
