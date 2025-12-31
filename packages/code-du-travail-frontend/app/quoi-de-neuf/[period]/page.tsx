@@ -6,6 +6,7 @@ import {
   fetchWhatIsNewMonth,
   getPeriods,
 } from "../../../src/modules/whatIsNew";
+import * as Sentry from "@sentry/nextjs";
 
 type PageProps = {
   params: Promise<{ period: string }>;
@@ -19,7 +20,13 @@ export const metadata = generateDefaultMetadata({
 });
 
 export async function generateStaticParams() {
-  return getPeriods().map((period) => ({ period }));
+  try {
+    const periods = await getPeriods();
+    return periods.map((period) => ({ period }));
+  } catch (error) {
+    Sentry.captureException(error);
+    return [];
+  }
 }
 
 export default async function Index({ params }: PageProps) {
@@ -31,9 +38,12 @@ export default async function Index({ params }: PageProps) {
     notFound();
   }
 
+  const periods = await getPeriods().catch(() => []);
+  const periodsForNav = periods.length > 0 ? periods : [month.period];
+
   return (
     <DsfrLayout>
-      <WhatIsNew month={month} />
+      <WhatIsNew month={month} periods={periodsForNav} />
     </DsfrLayout>
   );
 }

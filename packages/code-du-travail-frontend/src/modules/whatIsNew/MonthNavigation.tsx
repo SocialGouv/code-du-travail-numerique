@@ -4,12 +4,12 @@ import { useEffect, useRef } from "react";
 import Link from "next/link";
 import { css } from "@styled-system/css";
 import { fr } from "@codegouvfr/react-dsfr";
-import { getPeriods } from "./queries";
 import { parse, format } from "date-fns";
 import { fr as frLocale } from "date-fns/locale";
 
 type Props = {
   currentPeriod: string;
+  periods: string[];
   position?: "top" | "bottom";
 };
 
@@ -29,10 +29,17 @@ const wrapper = (position?: "top" | "bottom") =>
     justifyContent: "center",
   });
 
-const getMonthNav = (): MonthNavItem[] => {
-  const periods = getPeriods().slice().reverse();
+const getMonthNav = (periods: string[]): MonthNavItem[] => {
+  const orderedPeriods = periods
+    .slice()
+    .sort(
+      (a, b) =>
+        parse(a, "MM-yyyy", new Date()).getTime() -
+        parse(b, "MM-yyyy", new Date()).getTime()
+    )
+    .reverse();
 
-  return periods.map((period) => {
+  return orderedPeriods.map((period) => {
     const date = parse(period, "MM-yyyy", new Date());
     return {
       period,
@@ -94,9 +101,28 @@ export function computeVisiblePeriods(
   return result;
 }
 
-export const MonthNavigation = ({ currentPeriod, position }: Props) => {
-  const MONTH_NAV = getMonthNav();
-  const currentIndex = MONTH_NAV.findIndex((m) => m.period === currentPeriod);
+export const MonthNavigation = ({
+  currentPeriod,
+  position,
+  periods,
+}: Props) => {
+  const activeMonthRef = useRef<HTMLAnchorElement | null>(null);
+
+  useEffect(() => {
+    if (position === "top" && activeMonthRef.current) {
+      activeMonthRef.current.focus();
+    }
+  }, [currentPeriod, position]);
+
+  const MONTH_NAV = getMonthNav(periods);
+
+  if (MONTH_NAV.length === 0) {
+    return null;
+  }
+
+  const idx = MONTH_NAV.findIndex((m) => m.period === currentPeriod);
+  const currentIndex = idx === -1 ? 0 : idx;
+
   const mostRecent = MONTH_NAV[0];
   const oldest = MONTH_NAV[MONTH_NAV.length - 1];
 
@@ -125,14 +151,6 @@ export const MonthNavigation = ({ currentPeriod, position }: Props) => {
       MONTH_NAV.findIndex((m) => m.period === a.period) -
       MONTH_NAV.findIndex((m) => m.period === b.period)
   );
-
-  const activeMonthRef = useRef<HTMLAnchorElement | null>(null);
-
-  useEffect(() => {
-    if (position === "top" && activeMonthRef.current) {
-      activeMonthRef.current.focus();
-    }
-  }, [currentPeriod, position]);
 
   return (
     <nav

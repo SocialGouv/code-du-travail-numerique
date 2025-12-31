@@ -1,4 +1,4 @@
-import { redirect } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import { getMostRecentPeriod } from "../../src/modules/whatIsNew";
 import { generateDefaultMetadata } from "../../src/modules/common/metas";
 
@@ -9,7 +9,12 @@ export const metadata = generateDefaultMetadata({
   path: "/quoi-de-neuf",
 });
 
-export default function Index() {
-  const period = getMostRecentPeriod();
+export default async function Index() {
+  const period = await getMostRecentPeriod();
+
+  if (!period) {
+    notFound();
+  }
+
   redirect(`/quoi-de-neuf/${period}`);
 }
