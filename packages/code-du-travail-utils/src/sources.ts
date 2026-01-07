@@ -16,7 +16,7 @@ export const SOURCES = {
   THEMES: "themes",
   TOOLS: "outils",
   INFOGRAPHICS: "infographies",
-  WHAT_IS_NEW: "quoi_de_neuf",
+  WHAT_IS_NEW: "what_is_new",
 } as const;
 
 export const routeBySource = {
