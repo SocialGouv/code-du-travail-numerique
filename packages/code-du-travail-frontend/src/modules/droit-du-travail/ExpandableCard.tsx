@@ -1,17 +1,19 @@
 "use client";
 
-import React, { useState, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { fr } from "@codegouvfr/react-dsfr";
 import { css } from "@styled-system/css";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 type ExpandableCardProps = {
   title: string;
   children: React.ReactNode;
   iconSrc: string;
-  id?: string;
+  id: string;
   backgroundColor?: string;
   showBottomTab?: boolean;
+  isDefaultExpanded?: boolean;
 };
 
 const ExpandableCard = ({
@@ -21,9 +23,23 @@ const ExpandableCard = ({
   id,
   backgroundColor,
   showBottomTab = false,
+  isDefaultExpanded = false,
 }: ExpandableCardProps) => {
-  const [isExpanded, setIsExpanded] = useState(false);
+  const path = useRouter();
+
+  const [isExpanded, setIsExpanded] = useState<boolean>(() => {
+    if (typeof window !== "undefined") {
+      const hash = window.location.hash?.substring(1);
+      return hash === id;
+    }
+    return isDefaultExpanded;
+  });
   const contentRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const hash = window.location.hash?.substring(1);
+    setIsExpanded(hash === id);
+  }, [path]);
 
   const toggleExpand = () => {
     setIsExpanded(!isExpanded);

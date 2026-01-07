@@ -221,11 +221,16 @@ exports[`<Home /> should match snapshot 1`] = `
                       width="56"
                     />
                   </div>
-                  <h4
-                    class="fr-mb-0 fr-ml-2w fr-text--md"
+                  <button
+                    class="fr-btn--tertiary-no-outline ta_left"
+                    type="button"
                   >
-                    Les textes internationaux
-                  </h4>
+                    <h4
+                      class="fr-mb-0 fr-ml-2w fr-text--md fr-btn--tertiary-no-outline"
+                    >
+                      Les textes internationaux
+                    </h4>
+                  </button>
                 </div>
               </div>
               <div
@@ -264,11 +269,16 @@ exports[`<Home /> should match snapshot 1`] = `
                       width="56"
                     />
                   </div>
-                  <h4
-                    class="fr-mb-0 fr-ml-2w fr-text--md"
+                  <button
+                    class="fr-btn--tertiary-no-outline ta_left"
+                    type="button"
                   >
-                    Les textes européens
-                  </h4>
+                    <h4
+                      class="fr-mb-0 fr-ml-2w fr-text--md fr-btn--tertiary-no-outline"
+                    >
+                      Les textes européens
+                    </h4>
+                  </button>
                 </div>
               </div>
               <div
@@ -307,11 +317,16 @@ exports[`<Home /> should match snapshot 1`] = `
                       width="56"
                     />
                   </div>
-                  <h4
-                    class="fr-mb-0 fr-ml-2w fr-text--md"
+                  <button
+                    class="fr-btn--tertiary-no-outline ta_left"
+                    type="button"
                   >
-                    La Constitution française
-                  </h4>
+                    <h4
+                      class="fr-mb-0 fr-ml-2w fr-text--md fr-btn--tertiary-no-outline"
+                    >
+                      La Constitution française
+                    </h4>
+                  </button>
                 </div>
               </div>
               <div
@@ -350,11 +365,16 @@ exports[`<Home /> should match snapshot 1`] = `
                       width="56"
                     />
                   </div>
-                  <h4
-                    class="fr-mb-0 fr-ml-2w fr-text--md"
+                  <button
+                    class="fr-btn--tertiary-no-outline ta_left"
+                    type="button"
                   >
-                    Lois, ordonnances et décrets (Code du travail)
-                  </h4>
+                    <h4
+                      class="fr-mb-0 fr-ml-2w fr-text--md fr-btn--tertiary-no-outline"
+                    >
+                      Lois, ordonnances et décrets (Code du travail)
+                    </h4>
+                  </button>
                 </div>
               </div>
               <div
@@ -393,11 +413,16 @@ exports[`<Home /> should match snapshot 1`] = `
                       width="56"
                     />
                   </div>
-                  <h4
-                    class="fr-mb-0 fr-ml-2w fr-text--md"
+                  <button
+                    class="fr-btn--tertiary-no-outline ta_left"
+                    type="button"
                   >
-                    Les conventions et accords collectifs
-                  </h4>
+                    <h4
+                      class="fr-mb-0 fr-ml-2w fr-text--md fr-btn--tertiary-no-outline"
+                    >
+                      Les conventions et accords collectifs
+                    </h4>
+                  </button>
                 </div>
               </div>
               <div
@@ -436,11 +461,16 @@ exports[`<Home /> should match snapshot 1`] = `
                       width="56"
                     />
                   </div>
-                  <h4
-                    class="fr-mb-0 fr-ml-2w fr-text--md"
+                  <button
+                    class="fr-btn--tertiary-no-outline ta_left"
+                    type="button"
                   >
-                    Les usages et les engagements unilatéraux
-                  </h4>
+                    <h4
+                      class="fr-mb-0 fr-ml-2w fr-text--md fr-btn--tertiary-no-outline"
+                    >
+                      Les usages et les engagements unilatéraux
+                    </h4>
+                  </button>
                 </div>
               </div>
               <div
@@ -479,11 +509,16 @@ exports[`<Home /> should match snapshot 1`] = `
                       width="56"
                     />
                   </div>
-                  <h4
-                    class="fr-mb-0 fr-ml-2w fr-text--md"
+                  <button
+                    class="fr-btn--tertiary-no-outline ta_left"
+                    type="button"
                   >
-                    Le règlement intérieur de l'entreprise
-                  </h4>
+                    <h4
+                      class="fr-mb-0 fr-ml-2w fr-text--md fr-btn--tertiary-no-outline"
+                    >
+                      Le règlement intérieur de l'entreprise
+                    </h4>
+                  </button>
                 </div>
               </div>
               <div
@@ -522,11 +557,16 @@ exports[`<Home /> should match snapshot 1`] = `
                       width="56"
                     />
                   </div>
-                  <h4
-                    class="fr-mb-0 fr-ml-2w fr-text--md"
+                  <button
+                    class="fr-btn--tertiary-no-outline ta_left"
+                    type="button"
                   >
-                    Le contrat de travail
-                  </h4>
+                    <h4
+                      class="fr-mb-0 fr-ml-2w fr-text--md fr-btn--tertiary-no-outline"
+                    >
+                      Le contrat de travail
+                    </h4>
+                  </button>
                 </div>
               </div>
               <div
@@ -614,6 +654,7 @@ exports[`<Home /> should match snapshot 1`] = `
                       >
                         <img
                           alt=""
+                          class="max-w_unset"
                           data-nimg="1"
                           decoding="async"
                           height="56"
@@ -643,6 +684,7 @@ exports[`<Home /> should match snapshot 1`] = `
                       >
                         <img
                           alt=""
+                          class="max-w_unset"
                           data-nimg="1"
                           decoding="async"
                           height="56"
@@ -672,6 +714,7 @@ exports[`<Home /> should match snapshot 1`] = `
                       >
                         <img
                           alt=""
+                          class="max-w_unset"
                           data-nimg="1"
                           decoding="async"
                           height="56"
@@ -701,6 +744,7 @@ exports[`<Home /> should match snapshot 1`] = `
                       >
                         <img
                           alt=""
+                          class="max-w_unset"
                           data-nimg="1"
                           decoding="async"
                           height="56"
@@ -766,7 +810,7 @@ exports[`<Home /> should match snapshot 1`] = `
                     <p
                       class="c_var(--text-default-grey) mb_0px! fr-text--md fr-text--bold"
                     >
-                      Je souhaite embaucher mon premier salarié en CDI. Quelles sont les formalités obligatoires ? Comment écrire le contrat de travail ?
+                      Mon entreprise me demande de faire des heures supplémentaires. Suis-je obligé(e) ? Si, oui comment sont-elles compensées ou payées ?
                     </p>
                   </div>
                 </div>
@@ -791,6 +835,7 @@ exports[`<Home /> should match snapshot 1`] = `
                       >
                         <img
                           alt=""
+                          class="max-w_unset"
                           data-nimg="1"
                           decoding="async"
                           height="56"
@@ -806,9 +851,9 @@ exports[`<Home /> should match snapshot 1`] = `
                         Découvrez
                          
                         <a
-                          href="/fiche-service-public/procedure-et-formalites-dembauche-dun-salarie-du-secteur-prive"
+                          href="/fiche-service-public/heures-supplementaires-dun-salarie-du-secteur-prive"
                         >
-                          les principales obligations et formalités
+                          la fiche synthèse sur les heures supplémentaires
                         </a>
                       </p>
                     </div>
@@ -820,64 +865,7 @@ exports[`<Home /> should match snapshot 1`] = `
                       >
                         <img
                           alt=""
-                          data-nimg="1"
-                          decoding="async"
-                          height="56"
-                          loading="lazy"
-                          src="/static/assets/icons/home/simulator.svg"
-                          style="color: transparent;"
-                          width="56"
-                        />
-                      </div>
-                      <p
-                        class="fr-mb-0"
-                      >
-                        Simulez
-                         
-                        <a
-                          href="/outils/simulateur-embauche"
-                        >
-                          le coût de l'embauche
-                        </a>
-                      </p>
-                    </div>
-                    <div
-                      class="d_flex ai_center"
-                    >
-                      <div
-                        class="d_flex ai_center jc_center fr-mr-2w"
-                      >
-                        <img
-                          alt=""
-                          data-nimg="1"
-                          decoding="async"
-                          height="56"
-                          loading="lazy"
-                          src="/static/assets/icons/home/letter.svg"
-                          style="color: transparent;"
-                          width="56"
-                        />
-                      </div>
-                      <p
-                        class="fr-mb-0"
-                      >
-                        Retrouvez la
-                         
-                        <a
-                          href="/modeles-de-courriers/promesse-dembauche"
-                        >
-                          promesse d'embauche
-                        </a>
-                      </p>
-                    </div>
-                    <div
-                      class="d_flex ai_center"
-                    >
-                      <div
-                        class="d_flex ai_center jc_center fr-mr-2w"
-                      >
-                        <img
-                          alt=""
+                          class="max-w_unset"
                           data-nimg="1"
                           decoding="async"
                           height="56"
@@ -890,12 +878,72 @@ exports[`<Home /> should match snapshot 1`] = `
                       <p
                         class="fr-mb-0"
                       >
-                        Vérifiez également
+                        Découvrez
                          
                         <a
-                          href="/contribution/quelle-est-la-duree-maximale-de-la-periode-dessai-sans-et-avec-renouvellement"
+                          href="/contribution/heures-supplementaires"
                         >
-                          la durée de la période d'essai
+                          les contreparties des heures supplémentaires en fonction de votre convention collective
+                        </a>
+                      </p>
+                    </div>
+                    <div
+                      class="d_flex ai_center"
+                    >
+                      <div
+                        class="d_flex ai_center jc_center fr-mr-2w"
+                      >
+                        <img
+                          alt=""
+                          class="max-w_unset"
+                          data-nimg="1"
+                          decoding="async"
+                          height="56"
+                          loading="lazy"
+                          src="/static/assets/icons/home/letter.svg"
+                          style="color: transparent;"
+                          width="56"
+                        />
+                      </div>
+                      <p
+                        class="fr-mb-0"
+                      >
+                        Utilisez
+                         
+                        <a
+                          href="/modeles-de-courriers/releve-dheures-supplementaires"
+                        >
+                          le modèle de relevé d’heures supplémentaires
+                        </a>
+                      </p>
+                    </div>
+                    <div
+                      class="d_flex ai_center"
+                    >
+                      <div
+                        class="d_flex ai_center jc_center fr-mr-2w"
+                      >
+                        <img
+                          alt=""
+                          class="max-w_unset"
+                          data-nimg="1"
+                          decoding="async"
+                          height="56"
+                          loading="lazy"
+                          src="/static/assets/icons/home/letter.svg"
+                          style="color: transparent;"
+                          width="56"
+                        />
+                      </div>
+                      <p
+                        class="fr-mb-0"
+                      >
+                        Retrouvez
+                         
+                        <a
+                          href="/modeles-de-courriers/lettre-de-reclamation-des-heures-supplementaires"
+                        >
+                          le modèle de courrier pour réclamer vos heures supplémentaires
                         </a>
                       </p>
                     </div>
@@ -913,7 +961,7 @@ exports[`<Home /> should match snapshot 1`] = `
           class="fr-my-8w fr-container"
         >
           <h2>
-            Boîte à outils
+            Simulateurs
           </h2>
           <p
             class="fr-text--xl"
@@ -982,7 +1030,7 @@ exports[`<Home /> should match snapshot 1`] = `
               href="/outils"
               id="fr-button-_r_4_"
             >
-              Voir tous les outils
+              Voir tous les simulateurs
             </a>
           </div>
         </div>

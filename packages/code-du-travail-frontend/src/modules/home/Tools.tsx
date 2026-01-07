@@ -13,12 +13,12 @@ export const Tools = (props: Props) => {
   return (
     <SectionContainer
       sectionId="home-outils"
-      title="Boîte à outils"
+      title="Simulateurs"
       subtitle="Trouvez des réponses personnalisées selon votre situation"
       footerNode={
         <HomeButton
           buttonLink="/outils"
-          buttonText="Voir tous les outils"
+          buttonText="Voir tous les simulateurs"
           onButtonClick={() => {
             emitHomeClickButtonEvent(
               MatomoHomeEvent.CLICK_VOIR_TOUS_LES_OUTILS

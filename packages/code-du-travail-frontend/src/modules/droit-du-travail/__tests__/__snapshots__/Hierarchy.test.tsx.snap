@@ -29,6 +29,7 @@ exports[`<Hierarchy /> renders correctly 1`] = `
         >
           <div
             class="bg_var(--background-alt-blue-cumulus) h_fit-content trs_all_0.3s_ease pos_relative bx-sh_0_2px_8px_rgba(0,_0,_0,_0.1)"
+            id="hierarchie-textes-internationaux-euorpeens"
           >
             <button
               aria-controls="content-les-textes-internationaux-et-européens"
@@ -95,6 +96,7 @@ exports[`<Hierarchy /> renders correctly 1`] = `
         >
           <div
             class="bg_var(--background-alt-blue-cumulus) h_fit-content trs_all_0.3s_ease pos_relative bx-sh_0_2px_8px_rgba(0,_0,_0,_0.1)"
+            id="hierarchie-constitution"
           >
             <button
               aria-controls="content-la-constitution"
@@ -161,6 +163,7 @@ exports[`<Hierarchy /> renders correctly 1`] = `
         >
           <div
             class="bg_var(--background-alt-blue-cumulus) h_fit-content trs_all_0.3s_ease pos_relative bx-sh_0_2px_8px_rgba(0,_0,_0,_0.1)"
+            id="hierarchie-lois-ordonnances-decrets"
           >
             <button
               aria-controls="content-lois,-ordonnances-et-décrets-(code-du-travail)"
@@ -294,6 +297,7 @@ exports[`<Hierarchy /> renders correctly 1`] = `
         >
           <div
             class="bg_var(--background-alt-blue-cumulus) h_fit-content trs_all_0.3s_ease pos_relative bx-sh_0_2px_8px_rgba(0,_0,_0,_0.1)"
+            id="hierarchie-usages-engagements-unilateraux"
           >
             <button
               aria-controls="content-les-usages-et-les-engagements-unilatéraux"
@@ -360,6 +364,7 @@ exports[`<Hierarchy /> renders correctly 1`] = `
         >
           <div
             class="bg_var(--background-alt-blue-cumulus) h_fit-content trs_all_0.3s_ease pos_relative bx-sh_0_2px_8px_rgba(0,_0,_0,_0.1)"
+            id="hierarchie-reglement-interieur-entreprise"
           >
             <button
               aria-controls="content-le-règlement-intérieur-de-l'entreprise"
@@ -426,6 +431,7 @@ exports[`<Hierarchy /> renders correctly 1`] = `
         >
           <div
             class="bg_var(--background-alt-blue-cumulus) h_fit-content trs_all_0.3s_ease pos_relative bx-sh_0_2px_8px_rgba(0,_0,_0,_0.1)"
+            id="hierarchie-contrat-travail"
           >
             <button
               aria-controls="content-le-contrat-de-travail"

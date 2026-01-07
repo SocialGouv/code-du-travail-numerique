@@ -157,7 +157,7 @@ describe("Contributions", () => {
       relatedItems: [
         {
           items: [],
-          title: "Modèles et outils liés",
+          title: "Modèles et simulateurs liés",
         },
         {
           items: [

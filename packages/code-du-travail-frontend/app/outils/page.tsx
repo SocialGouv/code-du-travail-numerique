@@ -7,7 +7,7 @@ import { fetchExternalTools, fetchTools } from "../../src/modules/outils";
 import { ElasticTool } from "@socialgouv/cdtn-types";
 
 export const metadata = generateDefaultMetadata({
-  title: "Outils et simulateurs",
+  title: "Simulateurs",
   description:
     "Trouvez des réponses personnalisées selon votre situation grâce à nos outils et simulateurs",
   path: "/outils",

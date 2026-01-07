@@ -9,36 +9,44 @@ import { css } from "@styled-system/css";
 const hierarchyItems = [
   {
     title: "Les textes internationaux",
+    anchor: "textes-internationaux",
     iconSrc: "/static/assets/icons/droit-du-travail/texte-internationaux.svg",
   },
   {
     title: "Les textes européens",
+    anchor: "textes-europeens",
     iconSrc: "/static/assets/icons/droit-du-travail/texte-europeens.svg",
   },
   {
     title: "La Constitution française",
+    anchor: "constitution-francaise",
     iconSrc: "/static/assets/icons/droit-du-travail/constitution-francaise.svg",
   },
   {
     title: "Lois, ordonnances et décrets (Code du travail)",
+    anchor: "lois-ordonnances-decrets",
     iconSrc: "/static/assets/icons/droit-du-travail/lois.svg",
   },
   {
     title: "Les conventions et accords collectifs",
+    anchor: "conventions-accords-collectifs",
     iconSrc:
       "/static/assets/icons/droit-du-travail/conventions-collectives.svg",
   },
   {
     title: "Les usages et les engagements unilatéraux",
+    anchor: "usages-engagements-unilateraux",
     iconSrc: "/static/assets/icons/droit-du-travail/usage-unilateraux.svg",
   },
   {
     title: "Le règlement intérieur de l'entreprise",
+    anchor: "reglement-interieur-entreprise",
     iconSrc:
       "/static/assets/icons/droit-du-travail/reglement-interieur-entreprise.svg",
   },
   {
     title: "Le contrat de travail",
+    anchor: "contrat-travail",
     iconSrc: "/static/assets/icons/droit-du-travail/contrat-travail.svg",
   },
 ];
@@ -102,7 +110,11 @@ export const ComprendreLeDroitDuTravail = () => {
               "fr-col-xl-3"
             )}
           >
-            <CardWithArrow title={item.title} iconSrc={item.iconSrc} />
+            <CardWithArrow
+              title={item.title}
+              iconSrc={item.iconSrc}
+              anchor={item.anchor}
+            />
           </li>
         ))}
       </ul>
