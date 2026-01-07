@@ -58,7 +58,7 @@ export const labelBySource = {
   [SOURCES.PREQUALIFIED]: "Requêtes préqualifiées",
   [SOURCES.GLOSSARY]: "Glossaire",
   [SOURCES.INFOGRAPHICS]: "Infographies",
-  [SOURCES.WHAT_IS_NEW]: "Quoi de neuf",
+  [SOURCES.WHAT_IS_NEW]: "Quoi de neuf ?",
 } as const;
 
 export const getLabelBySource = (src: keyof typeof labelBySource) =>
