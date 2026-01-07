@@ -16,6 +16,7 @@ export const SOURCES = {
   THEMES: "themes",
   TOOLS: "outils",
   INFOGRAPHICS: "infographies",
+  WHAT_IS_NEW: "what_is_new",
 } as const;
 
 export const routeBySource = {
@@ -36,6 +37,7 @@ export const routeBySource = {
   [SOURCES.HIGHLIGHTS]: "highlights",
   [SOURCES.PREQUALIFIED]: "prequalified",
   [SOURCES.INFOGRAPHICS]: "infographie",
+  [SOURCES.WHAT_IS_NEW]: "quoi-de-neuf",
 } as const;
 
 export const labelBySource = {
@@ -56,6 +58,7 @@ export const labelBySource = {
   [SOURCES.PREQUALIFIED]: "Requêtes préqualifiées",
   [SOURCES.GLOSSARY]: "Glossaire",
   [SOURCES.INFOGRAPHICS]: "Infographies",
+  [SOURCES.WHAT_IS_NEW]: "Quoi de neuf ?",
 } as const;
 
 export const getLabelBySource = (src: keyof typeof labelBySource) =>
