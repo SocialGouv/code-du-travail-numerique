@@ -439,6 +439,101 @@ export const WHAT_IS_NEW_MONTHS: WhatIsNewMonth[] = [
     shortLabel: "12/25",
     weeks: [
       {
+        id: "2025-12-22_2025-12-28",
+        label: "Semaine du 22 au 28 décembre",
+        hasUpdates: true,
+        categories: [
+          {
+            kind: "evolution-juridique",
+            label: "Évolution juridique",
+            items: [
+              {
+                title: "IDCC 86 Question/Réponse : Maintien de salaire",
+                href: "/contribution/86-en-cas-darret-maladie-du-salarie-lemployeur-doit-il-assurer-le-maintien-de-salaire",
+                description:
+                  "L’employeur assure le maintien de salaire dès le 1er jour de l’arrêt maladie. Avant, c’était dans les 3 jours suivants le début de l’arrêt maladie.",
+              },
+              {
+                title: "IDCC 1480 Question/Réponse : Salaires minimum",
+                href: "/contribution/1480-quel-est-le-salaire-minimum",
+                description:
+                  "Modification des grilles de salaires pour les journalistes de la presse périodique et hebdomadaire.",
+              },
+              {
+                title:
+                  "Nouveau modèle : Demande de retour anticipé après un congé parental d’éducation à temps partiel",
+                href: "/modeles-de-courriers/demande-de-retour-anticipe-a-la-suite-dun-conge-parental-deducation-a-temps-partiel",
+                description:
+                  "Ce modèle de lettre s’adresse au salarié qui souhaite demander un retour anticipé après un congé parental d’éducation à temps partiel.",
+              },
+              {
+                title:
+                  "Nouveau modèle : Demande de retour anticipé après un congé parental d’éducation à temps plein",
+                href: "/modeles-de-courriers/demande-de-retour-anticipe-a-la-suite-dun-conge-parental-deducation-a-temps-plein",
+                description:
+                  "Ce modèle de lettre s’adresse au salarié qui souhaite demander un retour anticipé après un congé parental d’éducation à temps plein.",
+              },
+              {
+                title:
+                  "Nouveau modèle : Demande de prolongation et/ou de transformation du congé parental d’éducation à temps partiel",
+                href: "/modeles-de-courriers/demande-de-prolongation-et-ou-de-transformation-du-conge-parental-deducation-a-temps-partiel",
+                description:
+                  "Modèle de lettre pour le salarié qui souhaite demander la prolongation du congé parental d’éducation à temps partiel et/ou sa transformation en congé parental d’éducation à temps plein.",
+              },
+              {
+                title:
+                  "Nouveau modèle : Demande de prolongation et/ou de transformation du congé parental d’éducation à temps plein",
+                href: "/modeles-de-courriers/demande-de-prolongation-et-ou-de-transformation-du-conge-parental-deducation-a-temps-plein",
+                description:
+                  "Modèle de lettre pour le salarié qui souhaite demander la prolongation du congé parental d’éducation à temps plein et/ou sa transformation en activité à temps partiel.",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        id: "2025-12-15_2025-12-21",
+        label: "Semaine du 15 au 21 décembre",
+        hasUpdates: true,
+        categories: [
+          {
+            kind: "mise-a-jour-fonctionnelle",
+            label: "Mise à jour fonctionnelle",
+            items: [
+              {
+                title: "Ajout des infographies dans les Questions/Réponses",
+                description:
+                  "Permettre à l’usager d’avoir une réponse complète et synthétique en droit du travail.",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        id: "2025-12-08_2025-12-14",
+        label: "Semaine du 8 au 14 décembre",
+        hasUpdates: true,
+        categories: [
+          {
+            kind: "mise-a-jour-fonctionnelle",
+            label: "Mise à jour fonctionnelle",
+            items: [
+              {
+                title: "Ajout du nouveau parcours de recherche",
+                description:
+                  "Permettre à l’usager de comprendre plus facilement le droit du travail.",
+              },
+              {
+                title:
+                  'Ajout de la section "Quoi de neuf" sur la page d’accueil',
+                description:
+                  "Permettre à l’usager de comprendre plus facilement le droit du travail.",
+              },
+            ],
+          },
+        ],
+      },
+      {
         id: "2025-12-01_2025-12-07",
         label: "Semaine du 1er au 7 décembre",
         hasUpdates: true,
@@ -621,6 +716,72 @@ export const WHAT_IS_NEW_MONTHS: WhatIsNewMonth[] = [
                 href: "/contribution/2120-heures-supplementaires",
                 description:
                   "Création de la page détaillant les contreparties (majoration et/ou repos compensateur) en cas d’heures supplémentaires dans la branche de la banque.",
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+
+  //
+  // JANVIER 2026 — 01-2026
+  //
+  {
+    period: "01-2026",
+    label: "Janvier 2026",
+    shortLabel: "01/26",
+    weeks: [
+      {
+        id: "2026-01-05_2026-01-11",
+        label: "Semaine du 5 au 11 janvier",
+        hasUpdates: true,
+        categories: [
+          {
+            kind: "evolution-juridique",
+            label: "Évolution juridique",
+            items: [
+              {
+                title: "Le contrat de valorisation de l’expérience (CVE)",
+                href: "/fiche-ministere-travail/le-contrat-de-valorisation-de-lexperience-cve",
+              },
+              {
+                title:
+                  "Nouveau cas de recours de CDD dans le modèle de courrier",
+                href: "/modeles-de-courriers/contrat-de-travail-a-duree-determinee-cdd",
+                description:
+                  "Ajout d’un cas de recours de CDD dans le modèle : reconversion professionnelle dans le cadre d’une mobilité professionnelle interne ou externe à l’entreprise.",
+              },
+              {
+                title: "Modification de la durée maximale d'un CDD",
+                href: "/contribution/quelle-peut-etre-la-duree-maximale-dun-cdd",
+                description:
+                  "Durée maximale pour un CDD de reconversion professionnelle : selon la réalisation de l’objet du contrat, avec une durée minimale de 6 mois.",
+              },
+              {
+                title: "IDCC 1518 - Question/Réponse : prime d'ancienneté",
+                href: "/contribution/1518-quand-le-salarie-a-t-il-droit-a-une-prime-danciennete-quel-est-son-montant",
+                description:
+                  "Modification du montant de la prime d'ancienneté.",
+              },
+              {
+                title:
+                  "IDCC 1351 - Question/Réponse : primes prévues par la convention collective",
+                href: "/contribution/1351-quelles-sont-les-primes-prevues-par-la-convention-collective",
+                description:
+                  "Modification du montant de la prime panier, de l'indemnité panier, de la prime d'entretien des tenues et ajout de l'indemnité d'amortissement et d'entretien du chien.",
+              },
+              {
+                title: "Question/Réponse : Quel est le salaire minimum ?",
+                href: "/contribution/quel-est-le-salaire-minimum",
+                description:
+                  "Revalorisation du SMIC au 1er janvier 2026 et nouvelles grilles de salaire des conventions collectives impactées.",
+              },
+              {
+                title: "Question/Réponse : Indemnités du congé maternité",
+                href: "/contribution/quelles-sont-les-conditions-dindemnisation-pendant-le-conge-de-maternite",
+                description:
+                  "Revalorisation du plafond mensuel de la Sécurité sociale au 1er janvier 2026 et déclinaison du montant de cette indemnité par convention collective.",
               },
             ],
           },
