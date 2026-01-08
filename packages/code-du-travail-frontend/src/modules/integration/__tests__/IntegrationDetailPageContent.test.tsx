@@ -26,7 +26,7 @@ describe("IntegrationDetailPageContent", () => {
 
     const homeLink = screen.getByText("Accueil");
     const integrationLink = screen.getByText(
-      "Intégrer les outils du Code du travail numérique"
+      "Intégrer les contenus du Code du travail numérique"
     );
 
     expect(homeLink).toBeInTheDocument();
@@ -38,7 +38,7 @@ describe("IntegrationDetailPageContent", () => {
 
     const homeLink = screen.getByText("Accueil").closest("a");
     const integrationLink = screen
-      .getByText("Intégrer les outils du Code du travail numérique")
+      .getByText("Intégrer les contenus du Code du travail numérique")
       .closest("a");
 
     expect(homeLink).toHaveAttribute("href", "/");

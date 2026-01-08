@@ -133,7 +133,7 @@ export const Accessibilite = () => {
           </Link>
         </li>
         <li>
-          Page boîte à outils :{" "}
+          Page simulateurs :{" "}
           <Link href="https://code.travail.gouv.fr/outils">
             https://code.travail.gouv.fr/outils
           </Link>

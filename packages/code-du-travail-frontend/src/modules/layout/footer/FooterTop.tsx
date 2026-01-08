@@ -12,7 +12,7 @@ export const FooterTop = () => {
         { href: "/stats", label: "Statistiques d'utilisation" },
         {
           href: "/integration",
-          label: "Intégrer les outils du Code du travail numérique",
+          label: "Intégrer les contenus du Code du travail numérique",
         },
       ],
       title: "Code du travail numérique",
@@ -32,7 +32,7 @@ export const FooterTop = () => {
           label: "Trouver sa convention collective",
         },
       ],
-      title: "Outils populaires",
+      title: "Simulateurs populaires",
     },
     {
       links: [

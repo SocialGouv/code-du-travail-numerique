@@ -19,7 +19,7 @@ export const IntegrationDetailPageContent = ({
       title={widget.shortTitle}
       segments={[
         {
-          label: "Intégrer les outils du Code du travail numérique",
+          label: "Intégrer les contenus du Code du travail numérique",
           linkProps: { href: "/integration" },
         },
       ]}
