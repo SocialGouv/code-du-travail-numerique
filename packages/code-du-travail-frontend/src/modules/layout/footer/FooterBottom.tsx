@@ -8,7 +8,7 @@ export const FooterBottom = () => (
     <ul className={fr.cx("fr-footer__bottom-list")}>
       <li className={fr.cx("fr-footer__bottom-item")}>
         <Link href="/accessibilite" className={fr.cx("fr-footer__bottom-link")}>
-          Accessibilité : totalement conforme
+          Accessibilité : partiellement conforme
         </Link>
       </li>
       <li className={fr.cx("fr-footer__bottom-item")}>

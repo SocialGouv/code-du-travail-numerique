@@ -43,7 +43,7 @@ exports[`<Accessibilite /> should match snapshot 1`] = `
         État de conformité
       </h2>
       <p>
-        Le site Internet code.travail.gouv.fr (« Code du travail numérique ») est en totale conformité avec le référentiel général d'amélioration de l'accessibilité.
+        Le site Internet code.travail.gouv.fr (« Code du travail numérique ») est en conformité partielle avec le référentiel général d'amélioration de l'accessibilité.
       </p>
       <h2>
         Résultats des tests
@@ -53,7 +53,7 @@ exports[`<Accessibilite /> should match snapshot 1`] = `
       </p>
       <p>
         <strong>
-          100 % des critères RGAA sont respectés.
+          98,33 % des critères RGAA sont respectés.
         </strong>
       </p>
       <p>
@@ -63,10 +63,10 @@ exports[`<Accessibilite /> should match snapshot 1`] = `
         class="fr-mb-2w"
       >
         <li>
-          Nombre de critères conformes : 60
+          Nombre de critères conformes : 59
         </li>
         <li>
-          Nombre de critères non conformes : 0
+          Nombre de critères non conformes : 1
         </li>
         <li>
           Nombre de critères non applicables : 46
@@ -76,16 +76,14 @@ exports[`<Accessibilite /> should match snapshot 1`] = `
         Contenus non accessibles
       </h2>
       <h3>
-        Contenus non soumis à l'obligation d'accessibilité
+        Non-conformités
       </h3>
-      <ul
-        class="fr-mb-2w"
-      >
+      <p>
+        Liste des critères non conformes :
+      </p>
+      <ul>
         <li>
-          Les fichiers disponibles dans des formats bureautiques publiés avant le 23 septembre 2018 ;
-        </li>
-        <li>
-          Les contenus de tiers qui ne sont ni financés ni développés par l'organisme concerné et qui ne sont pas sous son contrôle : cela concerne le niveau de titre de certains contenus venant des fiches du ministère de travail. Leur niveau de titre n'est pas déclaré ou contient un saut de titre.
+          9.1 Dans chaque page web, l'information est-elle structurée par l'utilisation appropriée de titres ?
         </li>
       </ul>
       <h2>
