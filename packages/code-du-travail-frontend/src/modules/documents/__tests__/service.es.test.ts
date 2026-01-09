@@ -22,7 +22,7 @@ describe("RelatedItems", () => {
             url: "/outils/preavis-demission",
           },
         ],
-        title: "Modèles et outils liés",
+        title: "Modèles et simulateurs liés",
       },
       {
         items: [

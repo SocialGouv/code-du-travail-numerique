@@ -1,13 +1,21 @@
 import { css } from "@styled-system/css";
 import { fr } from "@codegouvfr/react-dsfr";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 type Props = {
   title: string;
+  anchor: string;
   iconSrc: string;
 };
 
-export const CardWithArrow = ({ title, iconSrc }: Props) => {
+export const CardWithArrow = ({ title, anchor, iconSrc }: Props) => {
+  const router = useRouter();
+
+  const onClickItem = () => {
+    router.push(`/droit-du-travail#${anchor}`);
+  };
+
   return (
     <div className={wrapper}>
       <div className={cardContainer}>
@@ -21,9 +29,22 @@ export const CardWithArrow = ({ title, iconSrc }: Props) => {
               className={iconStyle}
             />
           </div>
-          <h4 className={fr.cx("fr-mb-0", "fr-ml-2w", "fr-text--md")}>
-            {title}
-          </h4>
+          <button
+            type="button"
+            className={`${fr.cx("fr-btn--tertiary-no-outline")} ${buttonStyle}`}
+            onClick={onClickItem}
+          >
+            <h4
+              className={fr.cx(
+                "fr-mb-0",
+                "fr-ml-2w",
+                "fr-text--md",
+                "fr-btn--tertiary-no-outline"
+              )}
+            >
+              {title}
+            </h4>
+          </button>
         </div>
       </div>
       <div className={arrowContainer}>
@@ -32,6 +53,10 @@ export const CardWithArrow = ({ title, iconSrc }: Props) => {
     </div>
   );
 };
+
+const buttonStyle = css({
+  textAlign: "left",
+});
 
 const wrapper = css({
   display: "flex",

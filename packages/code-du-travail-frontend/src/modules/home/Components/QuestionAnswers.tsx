@@ -20,7 +20,13 @@ export const QuestionAnswers = ({ items }: Props) => {
         {items.map((item, index) => (
           <div key={index} className={itemContainer}>
             <div className={`${iconWrapper} ${fr.cx("fr-mr-2w")}`}>
-              <Image src={item.icon} alt="" width={56} height={56} />
+              <Image
+                src={item.icon}
+                alt=""
+                width={56}
+                height={56}
+                className={imageStyle}
+              />
             </div>
             {item.content}
           </div>
@@ -30,6 +36,9 @@ export const QuestionAnswers = ({ items }: Props) => {
   );
 };
 
+const imageStyle = css({
+  maxWidth: "unset",
+});
 const itemsList = css({
   display: "flex",
   flexDirection: "column",

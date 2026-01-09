@@ -1,13 +1,22 @@
 import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
 import ExpandableCard from "../ExpandableCard";
+import userEvent from "@testing-library/user-event";
+import * as nextNavigation from "next/navigation";
 
 describe("<ExpandableCard />", () => {
   const defaultProps = {
     title: "Test Title",
+    id: "test-anchor",
     iconSrc: "/test-icon.svg",
     children: <p>Test content</p>,
   };
+
+  const stableRouter = { push: jest.fn() } as any;
+
+  beforeEach(() => {
+    jest.spyOn(nextNavigation, "useRouter").mockReturnValue(stableRouter);
+  });
 
   it("renders correctly with default props", () => {
     const { container } = render(<ExpandableCard {...defaultProps} />);
@@ -24,14 +33,17 @@ describe("<ExpandableCard />", () => {
     expect(screen.queryByText("Test content")).not.toBeInTheDocument();
   });
 
-  it("shows content when expanded", () => {
+  it("shows content when expanded", async () => {
+    (window as any).location.hash = "";
     render(<ExpandableCard {...defaultProps} />);
 
     // Click the button to expand
-    fireEvent.click(screen.getByRole("button"));
+    const user = userEvent.setup();
+    const button = screen.getByRole("button");
+    await user.click(button);
 
     // Content should now be visible
-    expect(screen.getByText("Test content")).toBeInTheDocument();
+    expect(await screen.findByText("Test content")).toBeInTheDocument();
   });
 
   it("hides content when collapsed after being expanded", () => {
@@ -46,7 +58,8 @@ describe("<ExpandableCard />", () => {
     expect(screen.queryByText("Test content")).not.toBeInTheDocument();
   });
 
-  it("renders with bottom tab when showBottomTab is true", () => {
+  it("renders with bottom tab when showBottomTab is true", async () => {
+    (window as any).location.hash = "";
     const { container } = render(
       <ExpandableCard {...defaultProps} showBottomTab={true} />
     );
@@ -57,8 +70,10 @@ describe("<ExpandableCard />", () => {
     const expandedContent = screen.queryByText("Test content");
     expect(expandedContent).not.toBeInTheDocument(); // Content is not visible initially
 
-    // Click to expand
-    fireEvent.click(screen.getByRole("button"));
+    // Click the button to expand
+    const user = userEvent.setup();
+    const button = screen.getByRole("button");
+    await user.click(button);
 
     // Now check the structure - there should be a div after the content div
     // when showBottomTab is true

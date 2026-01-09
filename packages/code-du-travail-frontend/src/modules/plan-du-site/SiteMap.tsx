@@ -90,7 +90,7 @@ export const SiteMap = ({
     </h1>
     <SiteMapSection title={"Page d'accueil"} url={"/"} headingLevel={2} />
     <SiteMapSection
-      title={"Boîte à outils"}
+      title={"Simulateurs"}
       url={"/outils"}
       detail={{
         source: SOURCES.TOOLS,

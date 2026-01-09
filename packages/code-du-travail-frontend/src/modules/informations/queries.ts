@@ -153,7 +153,7 @@ const formatRelatedItems = (
   );
   if (toolsAndModels.length > 0) {
     result.push({
-      title: "Modèles et outils liés",
+      title: "Modèles et simulateurs liés",
       items: toolsAndModels
         .map((item) => ({
           title: item.title,

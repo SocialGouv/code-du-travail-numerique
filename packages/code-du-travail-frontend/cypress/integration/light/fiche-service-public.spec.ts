@@ -22,7 +22,7 @@ describe("Fiche Service public", () => {
         "contain",
         "https://www.service-public.gouv.fr/particuliers/vosdroits/F2301"
       );
-    cy.get("body").should("contain", "01/11/2024");
+    cy.get("body").should("contain", "01/01/2026");
     cy.get("h2").first().should("contain", "Salaire");
   });
 

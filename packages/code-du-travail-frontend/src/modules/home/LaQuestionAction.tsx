@@ -86,37 +86,38 @@ export const LaQuestionAction = () => {
     },
   ];
 
-  const formalitesEmbaucheAnswers = [
+  const heureSupAnswers = [
     {
       icon: "/static/assets/icons/home/step.svg",
       content: (
         <p className={fr.cx("fr-mb-0")}>
           Découvrez{" "}
           <Link
-            href="/fiche-service-public/procedure-et-formalites-dembauche-dun-salarie-du-secteur-prive"
+            href="/fiche-service-public/heures-supplementaires-dun-salarie-du-secteur-prive"
             onClick={() =>
               emitQuestionActionEvent(
-                "/fiche-service-public/procedure-et-formalites-dembauche-dun-salarie-du-secteur-prive"
+                "/fiche-service-public/heures-supplementaires-dun-salarie-du-secteur-prive"
               )
             }
           >
-            les principales obligations et formalités
+            la fiche synthèse sur les heures supplémentaires
           </Link>
         </p>
       ),
     },
     {
-      icon: "/static/assets/icons/home/simulator.svg",
+      icon: "/static/assets/icons/home/step.svg",
       content: (
         <p className={fr.cx("fr-mb-0")}>
-          Simulez{" "}
+          Découvrez{" "}
           <Link
-            href="/outils/simulateur-embauche"
+            href="/contribution/heures-supplementaires"
             onClick={() =>
-              emitQuestionActionEvent("/outils/simulateur-embauche")
+              emitQuestionActionEvent("/contribution/heures-supplementaires")
             }
           >
-            le coût de l&apos;embauche
+            les contreparties des heures supplémentaires en fonction de votre
+            convention collective
           </Link>
         </p>
       ),
@@ -125,34 +126,34 @@ export const LaQuestionAction = () => {
       icon: "/static/assets/icons/home/letter.svg",
       content: (
         <p className={fr.cx("fr-mb-0")}>
-          Retrouvez la{" "}
+          Utilisez{" "}
           <Link
-            href="/modeles-de-courriers/promesse-dembauche"
+            href="/modeles-de-courriers/releve-dheures-supplementaires"
             onClick={() =>
               emitQuestionActionEvent(
-                "/modeles-de-courriers/promesse-dembauche"
+                "/modeles-de-courriers/releve-dheures-supplementaires"
               )
             }
           >
-            promesse d&apos;embauche
+            le modèle de relevé d’heures supplémentaires
           </Link>
         </p>
       ),
     },
     {
-      icon: "/static/assets/icons/home/step.svg",
+      icon: "/static/assets/icons/home/letter.svg",
       content: (
         <p className={fr.cx("fr-mb-0")}>
-          Vérifiez également{" "}
+          Retrouvez{" "}
           <Link
-            href="/contribution/quelle-est-la-duree-maximale-de-la-periode-dessai-sans-et-avec-renouvellement"
+            href="/modeles-de-courriers/lettre-de-reclamation-des-heures-supplementaires"
             onClick={() =>
               emitQuestionActionEvent(
-                "/contribution/quelle-est-la-duree-maximale-de-la-periode-dessai-sans-et-avec-renouvellement"
+                "/modeles-de-courriers/lettre-de-reclamation-des-heures-supplementaires"
               )
             }
           >
-            la durée de la période d&apos;essai
+            le modèle de courrier pour réclamer vos heures supplémentaires
           </Link>
         </p>
       ),
@@ -209,13 +210,13 @@ export const LaQuestionAction = () => {
           >
             <div className={fr.cx("fr-col-12", "fr-col-md-6")}>
               <QuestionBubble>
-                Je souhaite embaucher mon premier salarié en CDI. Quelles sont
-                les formalités obligatoires ? Comment écrire le contrat de
-                travail ?
+                Mon entreprise me demande de faire des heures supplémentaires.
+                Suis-je obligé(e)&nbsp;? Si, oui comment sont-elles compensées
+                ou payées&nbsp;?
               </QuestionBubble>
             </div>
             <div className={fr.cx("fr-col-12", "fr-col-md-6")}>
-              <QuestionAnswers items={formalitesEmbaucheAnswers} />
+              <QuestionAnswers items={heureSupAnswers} />
             </div>
           </div>
         </div>

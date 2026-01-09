@@ -80,7 +80,7 @@ export const formatRelatedItems = (
     .slice(0, MAX_RELATED_ITEMS_ARTICLES);
 
   return [
-    { items: relatedOtherItems, title: "Modèles et outils liés" },
+    { items: relatedOtherItems, title: "Modèles et simulateurs liés" },
     { items: relatedArticleItems, title: "Articles liés" },
   ];
 };

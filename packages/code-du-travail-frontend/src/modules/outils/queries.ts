@@ -83,7 +83,7 @@ export const fetchTool = async (
     size: 1,
   });
   if (!result) {
-    throw new Error("Outils non trouvé");
+    throw new Error("Simulateur non trouvé");
   }
   return result;
 };
