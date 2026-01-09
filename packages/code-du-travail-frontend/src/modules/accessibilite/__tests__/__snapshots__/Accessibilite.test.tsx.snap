@@ -16,6 +16,18 @@ exports[`<Accessibilite /> should match snapshot 1`] = `
       </p>
       <p>
         À cette fin, il met en œuvre la stratégie et les actions suivantes :
+         
+        <a
+          href="https://travail-emploi.gouv.fr/IMG/pdf/schema-pluriannuel-accessibilite-2025-2028.pdf"
+          rel="noopener noreferrer"
+          target="_blank"
+          title="Schéma pluriannuel d’accessibilité numérique 2025-2028 et plan d'actions du ministère du travail et des solidarités (PDF, nouvelle fenêtre) - nouvelle fenêtre"
+        >
+          Schéma pluriannuel d’accessibilité numérique 2025-2028 et plan d'actions du ministère du travail et des solidarités
+        </a>
+      </p>
+      <p>
+        Pour le Code du travail numérique (CDTN), les actions suivantes ont été mises en place :
       </p>
       <ul
         class="fr-mb-2w"

@@ -12,7 +12,20 @@ export const Accessibilite = () => {
       </p>
       <p>
         À cette fin, il met en œuvre la stratégie et les actions
-        suivantes&nbsp;:
+        suivantes&nbsp;:{" "}
+        <Link
+          href="https://travail-emploi.gouv.fr/IMG/pdf/schema-pluriannuel-accessibilite-2025-2028.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Schéma pluriannuel d’accessibilité numérique 2025-2028 et plan d'actions du ministère du travail et des solidarités (PDF, nouvelle fenêtre)"
+        >
+          Schéma pluriannuel d’accessibilité numérique 2025-2028 et plan
+          d&apos;actions du ministère du travail et des solidarités
+        </Link>
+      </p>
+      <p>
+        Pour le Code du travail numérique (CDTN), les actions suivantes ont été
+        mises en place&nbsp;:
       </p>
       <ul className="fr-mb-2w">
         <li>La réalisation d&apos;un audit de conformité le 9 juillet 2025</li>
