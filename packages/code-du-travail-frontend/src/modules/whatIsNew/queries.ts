@@ -454,7 +454,7 @@ export const WHAT_IS_NEW_MONTHS: WhatIsNewMonth[] = [
                   "L’employeur assure le maintien de salaire dès le 1er jour de l’arrêt maladie. Avant, c’était dans les 3 jours suivants le début de l’arrêt maladie.",
               },
               {
-                title: "IDCC 1480 Question/Réponse : Salaires minimum",
+                title: "IDCC 1480 Question/Réponse : Salaire minimum",
                 href: "/contribution/1480-quel-est-le-salaire-minimum",
                 description:
                   "Modification des grilles de salaires pour les journalistes de la presse périodique et hebdomadaire.",
