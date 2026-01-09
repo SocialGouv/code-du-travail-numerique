@@ -300,7 +300,7 @@ export const WHAT_IS_NEW_MONTHS: WhatIsNewMonth[] = [
                   "Nouveau modèle : Demande de prise de congé de paternité et de l’accueil de l’enfant",
                 href: "/modeles-de-courriers/modele-de-lettre-de-prise-de-conge-paternite-et-daccueil",
                 description:
-                  "Modèle permettant au / à la salarié(e) de prendre des jours de congé de paternité et d’accueil de l’enfant.",
+                  "Ce modèle permet au / à la salarié(e) de prendre des jours de congé de paternité et d’accueil de l’enfant.",
               },
             ],
           },
@@ -412,7 +412,8 @@ export const WHAT_IS_NEW_MONTHS: WhatIsNewMonth[] = [
               {
                 title: "IDCC 3248 Question/Réponse : Primes",
                 href: "/contribution/3248-quelles-sont-les-primes-prevues-par-la-convention-collective",
-                description: "Ajout de la VP Maine-et-Loire.",
+                description:
+                  "Ajout de la valeur de point pour le Maine-et-Loire.",
               },
               {
                 title: "IDCC 2098 Question/Réponse : Salaire minimum",
@@ -478,14 +479,14 @@ export const WHAT_IS_NEW_MONTHS: WhatIsNewMonth[] = [
                   "Nouveau modèle : Demande de prolongation et/ou de transformation du congé parental d’éducation à temps partiel",
                 href: "/modeles-de-courriers/demande-de-prolongation-et-ou-de-transformation-du-conge-parental-deducation-a-temps-partiel",
                 description:
-                  "Modèle de lettre pour le salarié qui souhaite demander la prolongation du congé parental d’éducation à temps partiel et/ou sa transformation en congé parental d’éducation à temps plein.",
+                  "Ce modèle de lettre s'adresse au salarié qui souhaite demander la prolongation du congé parental d’éducation à temps plein et/ou sa transformation en activité à temps partiel.",
               },
               {
                 title:
                   "Nouveau modèle : Demande de prolongation et/ou de transformation du congé parental d’éducation à temps plein",
                 href: "/modeles-de-courriers/demande-de-prolongation-et-ou-de-transformation-du-conge-parental-deducation-a-temps-plein",
                 description:
-                  "Modèle de lettre pour le salarié qui souhaite demander la prolongation du congé parental d’éducation à temps plein et/ou sa transformation en activité à temps partiel.",
+                  "Ce modèle de lettre s'adresse au salarié qui souhaite demander la prolongation du congé parental d’éducation à temps partiel et/ou sa transformation en congé parental d’éducation à temps plein.",
               },
             ],
           },
