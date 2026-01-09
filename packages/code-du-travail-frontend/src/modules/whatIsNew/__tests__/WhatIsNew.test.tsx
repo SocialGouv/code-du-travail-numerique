@@ -44,7 +44,7 @@ const mockMonth: WhatIsNewMonth = {
 };
 
 jest.mock("../queries", () => ({
-  getPeriods: jest.fn(() => ["09-2025", "10-2025", "11-2025"]),
+  getPeriods: jest.fn(async () => ["09-2025", "10-2025", "11-2025"]),
   fetchWhatIsNewMonth: jest.fn(async (_period: string) => mockMonth),
 }));
 
@@ -78,7 +78,12 @@ describe("WhatIsNew – intégration complète avec fetchWhatIsNewMonth mocké",
   });
 
   test("affiche le titre principal et le texte d’introduction", () => {
-    render(<WhatIsNew month={monthFromFetch} />);
+    render(
+      <WhatIsNew
+        month={monthFromFetch}
+        periods={["09-2025", "10-2025", "11-2025"]}
+      />
+    );
 
     expect(
       screen.getByRole("heading", {
@@ -92,7 +97,12 @@ describe("WhatIsNew – intégration complète avec fetchWhatIsNewMonth mocké",
   });
 
   test("affiche la navigation du haut et du bas", () => {
-    render(<WhatIsNew month={monthFromFetch} />);
+    render(
+      <WhatIsNew
+        month={monthFromFetch}
+        periods={["09-2025", "10-2025", "11-2025"]}
+      />
+    );
 
     const navs = screen.getAllByRole("navigation", {
       name: /Navigation entre les mois/,
@@ -101,7 +111,12 @@ describe("WhatIsNew – intégration complète avec fetchWhatIsNewMonth mocké",
   });
 
   test("la pagination affiche les mois du plus récent au plus ancien", () => {
-    render(<WhatIsNew month={monthFromFetch} />);
+    render(
+      <WhatIsNew
+        month={monthFromFetch}
+        periods={["09-2025", "10-2025", "11-2025"]}
+      />
+    );
 
     const navs = screen.getAllByRole("navigation", {
       name: /Navigation entre les mois/,
@@ -117,7 +132,12 @@ describe("WhatIsNew – intégration complète avec fetchWhatIsNewMonth mocké",
   });
 
   test("affiche les semaines et le message 'Aucune nouveauté cette semaine.' quand hasUpdates = false", () => {
-    render(<WhatIsNew month={monthFromFetch} />);
+    render(
+      <WhatIsNew
+        month={monthFromFetch}
+        periods={["09-2025", "10-2025", "11-2025"]}
+      />
+    );
 
     expect(screen.getByText("Semaine 1")).toBeInTheDocument();
     expect(
@@ -126,7 +146,12 @@ describe("WhatIsNew – intégration complète avec fetchWhatIsNewMonth mocké",
   });
 
   test("affiche les catégories 'Évolution juridique' et 'Mise à jour fonctionnelle' pour les semaines avec mises à jour", () => {
-    render(<WhatIsNew month={monthFromFetch} />);
+    render(
+      <WhatIsNew
+        month={monthFromFetch}
+        periods={["09-2025", "10-2025", "11-2025"]}
+      />
+    );
 
     expect(screen.getByText("Semaine 2")).toBeInTheDocument();
     expect(screen.getByText("Évolution juridique")).toBeInTheDocument();
@@ -134,7 +159,12 @@ describe("WhatIsNew – intégration complète avec fetchWhatIsNewMonth mocké",
   });
 
   test("affiche les items avec lien et sans lien dans les catégories", () => {
-    render(<WhatIsNew month={monthFromFetch} />);
+    render(
+      <WhatIsNew
+        month={monthFromFetch}
+        periods={["09-2025", "10-2025", "11-2025"]}
+      />
+    );
 
     const lienA = screen.getByRole("link", { name: /Changement A/i });
     expect(lienA).toHaveAttribute("href", "/a");
@@ -146,14 +176,24 @@ describe("WhatIsNew – intégration complète avec fetchWhatIsNewMonth mocké",
   });
 
   test("affiche les descriptions des items", () => {
-    render(<WhatIsNew month={monthFromFetch} />);
+    render(
+      <WhatIsNew
+        month={monthFromFetch}
+        periods={["09-2025", "10-2025", "11-2025"]}
+      />
+    );
 
     expect(screen.getByText("Desc A")).toBeInTheDocument();
     expect(screen.getByText("Desc B")).toBeInTheDocument();
   });
 
   test("inclut le composant Feedback via le layout", () => {
-    render(<WhatIsNew month={monthFromFetch} />);
+    render(
+      <WhatIsNew
+        month={monthFromFetch}
+        periods={["09-2025", "10-2025", "11-2025"]}
+      />
+    );
 
     expect(screen.getByTestId("feedback")).toBeInTheDocument();
   });
