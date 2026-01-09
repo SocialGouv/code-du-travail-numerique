@@ -300,7 +300,7 @@ export const WHAT_IS_NEW_MONTHS: WhatIsNewMonth[] = [
                   "Nouveau modèle : Demande de prise de congé de paternité et de l’accueil de l’enfant",
                 href: "/modeles-de-courriers/modele-de-lettre-de-prise-de-conge-paternite-et-daccueil",
                 description:
-                  "Modèle permettant au / à la salarié(e) de prendre des jours de congé de paternité et d’accueil de l’enfant.",
+                  "Ce modèle permet au / à la salarié(e) de prendre des jours de congé de paternité et d’accueil de l’enfant.",
               },
             ],
           },
@@ -412,7 +412,8 @@ export const WHAT_IS_NEW_MONTHS: WhatIsNewMonth[] = [
               {
                 title: "IDCC 3248 Question/Réponse : Primes",
                 href: "/contribution/3248-quelles-sont-les-primes-prevues-par-la-convention-collective",
-                description: "Ajout de la VP Maine-et-Loire.",
+                description:
+                  "Ajout de la valeur de point pour le Maine-et-Loire.",
               },
               {
                 title: "IDCC 2098 Question/Réponse : Salaire minimum",
@@ -439,6 +440,101 @@ export const WHAT_IS_NEW_MONTHS: WhatIsNewMonth[] = [
     shortLabel: "12/25",
     weeks: [
       {
+        id: "2025-12-22_2025-12-28",
+        label: "Semaine du 22 au 28 décembre",
+        hasUpdates: true,
+        categories: [
+          {
+            kind: "evolution-juridique",
+            label: "Évolution juridique",
+            items: [
+              {
+                title: "IDCC 86 Question/Réponse : Maintien de salaire",
+                href: "/contribution/86-en-cas-darret-maladie-du-salarie-lemployeur-doit-il-assurer-le-maintien-de-salaire",
+                description:
+                  "Le maintien de salaire est désormais assuré dès le premier jour d’arrêt maladie (suppression du délai de carence de 3 jours).",
+              },
+              {
+                title: "IDCC 1480 Question/Réponse : Salaire minimum",
+                href: "/contribution/1480-quel-est-le-salaire-minimum",
+                description:
+                  "Modification des grilles de salaires pour les journalistes de la presse périodique et hebdomadaire.",
+              },
+              {
+                title:
+                  "Nouveau modèle : Demande de retour anticipé après un congé parental d’éducation à temps partiel",
+                href: "/modeles-de-courriers/demande-de-retour-anticipe-a-la-suite-dun-conge-parental-deducation-a-temps-partiel",
+                description:
+                  "Ce modèle de lettre s’adresse au salarié qui souhaite demander un retour anticipé après un congé parental d’éducation à temps partiel.",
+              },
+              {
+                title:
+                  "Nouveau modèle : Demande de retour anticipé après un congé parental d’éducation à temps plein",
+                href: "/modeles-de-courriers/demande-de-retour-anticipe-a-la-suite-dun-conge-parental-deducation-a-temps-plein",
+                description:
+                  "Ce modèle de lettre s’adresse au salarié qui souhaite demander un retour anticipé après un congé parental d’éducation à temps plein.",
+              },
+              {
+                title:
+                  "Nouveau modèle : Demande de prolongation et/ou de transformation du congé parental d’éducation à temps partiel",
+                href: "/modeles-de-courriers/demande-de-prolongation-et-ou-de-transformation-du-conge-parental-deducation-a-temps-partiel",
+                description:
+                  "Ce modèle de lettre s'adresse au salarié qui souhaite demander la prolongation du congé parental d’éducation à temps plein et/ou sa transformation en activité à temps partiel.",
+              },
+              {
+                title:
+                  "Nouveau modèle : Demande de prolongation et/ou de transformation du congé parental d’éducation à temps plein",
+                href: "/modeles-de-courriers/demande-de-prolongation-et-ou-de-transformation-du-conge-parental-deducation-a-temps-plein",
+                description:
+                  "Ce modèle de lettre s'adresse au salarié qui souhaite demander la prolongation du congé parental d’éducation à temps partiel et/ou sa transformation en congé parental d’éducation à temps plein.",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        id: "2025-12-15_2025-12-21",
+        label: "Semaine du 15 au 21 décembre",
+        hasUpdates: true,
+        categories: [
+          {
+            kind: "mise-a-jour-fonctionnelle",
+            label: "Mise à jour fonctionnelle",
+            items: [
+              {
+                title: "Ajout des infographies dans les Questions/Réponses",
+                description:
+                  "Permettre à l’usager d’avoir une réponse complète et synthétique en droit du travail.",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        id: "2025-12-08_2025-12-14",
+        label: "Semaine du 8 au 14 décembre",
+        hasUpdates: true,
+        categories: [
+          {
+            kind: "mise-a-jour-fonctionnelle",
+            label: "Mise à jour fonctionnelle",
+            items: [
+              {
+                title: "Ajout du nouveau parcours de recherche",
+                description:
+                  "Permettre à l’usager de trouver plus facilement une information en droit du travail.",
+              },
+              {
+                title:
+                  'Ajout de la section "Quoi de neuf" sur la page d’accueil',
+                description:
+                  "Permettre à l’usager de voir les nouveautés du code du travail numérique.",
+              },
+            ],
+          },
+        ],
+      },
+      {
         id: "2025-12-01_2025-12-07",
         label: "Semaine du 1er au 7 décembre",
         hasUpdates: true,
@@ -452,175 +548,74 @@ export const WHAT_IS_NEW_MONTHS: WhatIsNewMonth[] = [
                   "Question/Réponse : Heures supplémentaires : contreparties",
                 href: "/contribution/heures-supplementaires",
                 description:
-                  "Création de la page détaillant les contreparties (majoration et/ou repos compensateur) en cas d’heures supplémentaires.",
+                  "Création d’une nouvelle page avec ces déclinaisons par convention collective.",
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+
+  //
+  // JANVIER 2026 — 01-2026
+  //
+  {
+    period: "01-2026",
+    label: "Janvier 2026",
+    shortLabel: "01/26",
+    weeks: [
+      {
+        id: "2026-01-05_2026-01-11",
+        label: "Semaine du 5 au 11 janvier",
+        hasUpdates: true,
+        categories: [
+          {
+            kind: "evolution-juridique",
+            label: "Évolution juridique",
+            items: [
+              {
+                title:
+                  "Nouvelle fiche juridique : Le contrat de valorisation de l’expérience (CVE)",
+                href: "/fiche-ministere-travail/le-contrat-de-valorisation-de-lexperience-cve",
               },
               {
                 title:
-                  "IDCC 292 Question/Réponse : Heures supplémentaires : contreparties",
-                href: "/contribution/292-heures-supplementaires",
+                  "Nouveau cas de recours de CDD dans le modèle de courrier",
+                href: "/modeles-de-courriers/contrat-de-travail-a-duree-determinee-cdd",
                 description:
-                  "Création de la page détaillant les contreparties (majoration et/ou repos compensateur) en cas d’heures supplémentaires dans la branche de la plasturgie.",
+                  "Ajout d’un cas de recours de CDD dans le modèle : reconversion professionnelle dans le cadre d’une mobilité professionnelle interne ou externe à l’entreprise.",
+              },
+              {
+                title: "Modification de la durée maximale d'un CDD",
+                href: "/contribution/quelle-peut-etre-la-duree-maximale-dun-cdd",
+                description:
+                  "Durée maximale pour un CDD de reconversion professionnelle : selon la réalisation de l’objet du contrat, avec une durée minimale de 6 mois.",
+              },
+              {
+                title: "IDCC 1518 - Question/Réponse : Prime d'ancienneté",
+                href: "/contribution/1518-quand-le-salarie-a-t-il-droit-a-une-prime-danciennete-quel-est-son-montant",
+                description:
+                  "Modification du montant de la prime d'ancienneté.",
               },
               {
                 title:
-                  "IDCC 1090 Question/Réponse : Heures supplémentaires : contreparties",
-                href: "/contribution/1090-heures-supplementaires",
+                  "IDCC 1351 - Question/Réponse : primes prévues par la convention collective",
+                href: "/contribution/1351-quelles-sont-les-primes-prevues-par-la-convention-collective",
                 description:
-                  "Création de la page détaillant les contreparties (majoration et/ou repos compensateur) en cas d’heures supplémentaires dans la branche de l’automobile.",
+                  "Modification du montant de la prime panier, de l'indemnité panier, de la prime d'entretien des tenues et ajout de l'indemnité d'amortissement et d'entretien du chien.",
               },
               {
-                title:
-                  "IDCC 1147 Question/Réponse : Heures supplémentaires : contreparties",
-                href: "/contribution/1147-heures-supplementaires",
+                title: "Question/Réponse : Quel est le salaire minimum ?",
+                href: "/contribution/quel-est-le-salaire-minimum",
                 description:
-                  "Création de la page détaillant les contreparties (majoration et/ou repos compensateur) en cas d’heures supplémentaires dans la branche du personnel des cabinets médicaux.",
+                  "Revalorisation du SMIC au 1er janvier 2026 et nouvelles grilles de salaire des conventions collectives impactées.",
               },
               {
-                title:
-                  "IDCC 1996 Question/Réponse : Heures supplémentaires : contreparties",
-                href: "/contribution/1996-heures-supplementaires",
+                title: "Question/Réponse : Indemnités du congé maternité",
+                href: "/contribution/quelles-sont-les-conditions-dindemnisation-pendant-le-conge-de-maternite",
                 description:
-                  "Création de la page détaillant les contreparties (majoration et/ou repos compensateur) en cas d’heures supplémentaires dans la branche de la pharmacie d'officine.",
-              },
-              {
-                title:
-                  "IDCC 1606 Question/Réponse : Heures supplémentaires : contreparties",
-                href: "/contribution/1606-heures-supplementaires",
-                description:
-                  "Création de la page détaillant les contreparties (majoration et/ou repos compensateur) en cas d’heures supplémentaires dans la branche du bricolage.",
-              },
-              {
-                title:
-                  "IDCC 573 Question/Réponse : Heures supplémentaires : contreparties",
-                href: "/contribution/573-heures-supplementaires",
-                description:
-                  "Création de la page détaillant les contreparties (majoration et/ou repos compensateur) en cas d’heures supplémentaires dans la branche des commerces de gros.",
-              },
-              {
-                title:
-                  "IDCC 3248 Question/Réponse : Heures supplémentaires : contreparties",
-                href: "/contribution/3248-heures-supplementaires",
-                description:
-                  "Création de la page détaillant les contreparties (majoration et/ou repos compensateur) en cas d’heures supplémentaires dans la branche de la métallurgie.",
-              },
-              {
-                title:
-                  "IDCC 1486 Question/Réponse : Heures supplémentaires : contreparties",
-                href: "/contribution/1486-heures-supplementaires",
-                description:
-                  "Création de la page détaillant les contreparties (majoration et/ou repos compensateur) en cas d’heures supplémentaires dans la branche des bureaux d'études techniques.",
-              },
-              {
-                title:
-                  "IDCC 1979 Question/Réponse : Heures supplémentaires : contreparties",
-                href: "/contribution/1979-heures-supplementaires",
-                description:
-                  "Création de la page détaillant les contreparties (majoration et/ou repos compensateur) en cas d’heures supplémentaires dans la branche des hôtels, cafés, restaurants.",
-              },
-              {
-                title:
-                  "IDCC 44 Question/Réponse : Heures supplémentaires : contreparties",
-                href: "/contribution/44-heures-supplementaires",
-                description:
-                  "Création de la page détaillant les contreparties (majoration et/ou repos compensateur) en cas d’heures supplémentaires dans la branche des industries chimiques et connexes.",
-              },
-              {
-                title:
-                  "IDCC 1351 Question/Réponse : Heures supplémentaires : contreparties",
-                href: "/contribution/1351-heures-supplementaires",
-                description:
-                  "Création de la page détaillant les contreparties (majoration et/ou repos compensateur) en cas d’heures supplémentaires dans la branche des entreprises de prévention et de sécurité.",
-              },
-              {
-                title:
-                  "IDCC 1516 Question/Réponse : Heures supplémentaires : contreparties",
-                href: "/contribution/1516-heures-supplementaires",
-                description:
-                  "Création de la page détaillant les contreparties (majoration et/ou repos compensateur) en cas d’heures supplémentaires dans la branche des organismes de formation.",
-              },
-              {
-                title:
-                  "IDCC 1517 Question/Réponse : Heures supplémentaires : contreparties",
-                href: "/contribution/1517-heures-supplementaires",
-                description:
-                  "Création de la page détaillant les contreparties (majoration et/ou repos compensateur) en cas d’heures supplémentaires dans la branche des commerces de détail non alimentaires.",
-              },
-              {
-                title:
-                  "IDCC 843 Question/Réponse : Heures supplémentaires : contreparties",
-                href: "/contribution/843-heures-supplementaires",
-                description:
-                  "Création de la page détaillant les contreparties (majoration et/ou repos compensateur) en cas d’heures supplémentaires dans la branche des boulangerie-pâtisserie.",
-              },
-              {
-                title:
-                  "IDCC 3127 Question/Réponse : Heures supplémentaires : contreparties",
-                href: "/contribution/3127-heures-supplementaires",
-                description:
-                  "Création de la page détaillant les contreparties (majoration et/ou repos compensateur) en cas d’heures supplémentaires dans la branche des entreprises de services à la personne.",
-              },
-              {
-                title:
-                  "IDCC 3043 Question/Réponse : Heures supplémentaires : contreparties",
-                href: "/contribution/3043-heures-supplementaires",
-                description:
-                  "Création de la page détaillant les contreparties (majoration et/ou repos compensateur) en cas d’heures supplémentaires dans la branche des entreprises de propreté et services associés.",
-              },
-              {
-                title:
-                  "IDCC 1527 Question/Réponse : Heures supplémentaires : contreparties",
-                href: "/contribution/1527-heures-supplementaires",
-                description:
-                  "Création de la page détaillant les contreparties (majoration et/ou repos compensateur) en cas d’heures supplémentaires dans la branche de l’immobilier.",
-              },
-              {
-                title:
-                  "IDCC 1501 Question/Réponse : Heures supplémentaires : contreparties",
-                href: "/contribution/1501-heures-supplementaires",
-                description:
-                  "Création de la page détaillant les contreparties (majoration et/ou repos compensateur) en cas d’heures supplémentaires dans la branche de la restauration rapide.",
-              },
-              {
-                title:
-                  "IDCC 1505 Question/Réponse : Heures supplémentaires : contreparties",
-                href: "/contribution/1505-heures-supplementaires",
-                description:
-                  "Création de la page détaillant les contreparties (majoration et/ou repos compensateur) en cas d’heures supplémentaires dans la branche des commerces de détail alimentaire non spécialisé.",
-              },
-              {
-                title:
-                  "IDCC 86 Question/Réponse : Heures supplémentaires : contreparties",
-                href: "/contribution/86-heures-supplementaires",
-                description:
-                  "Création de la page détaillant les contreparties (majoration et/ou repos compensateur) en cas d’heures supplémentaires dans la branche des entreprises de la publicité.",
-              },
-              {
-                title:
-                  "IDCC 2511 Question/Réponse : Heures supplémentaires : contreparties",
-                href: "/contribution/2511-heures-supplementaires",
-                description:
-                  "Création de la page détaillant les contreparties (majoration et/ou repos compensateur) en cas d’heures supplémentaires dans la branche du sport.",
-              },
-              {
-                title:
-                  "IDCC 2596 Question/Réponse : Heures supplémentaires : contreparties",
-                href: "/contribution/2596-heures-supplementaires",
-                description:
-                  "Création de la page détaillant les contreparties (majoration et/ou repos compensateur) en cas d’heures supplémentaires dans la branche de la coiffure.",
-              },
-              {
-                title:
-                  "IDCC 2216 Question/Réponse : Heures supplémentaires : contreparties",
-                href: "/contribution/2216-heures-supplementaires",
-                description:
-                  "Création de la page détaillant les contreparties (majoration et/ou repos compensateur) en cas d’heures supplémentaires dans la branche du commerce de détail et de gros à prédominance alimentaire.",
-              },
-              {
-                title:
-                  "IDCC 2120 Question/Réponse : Heures supplémentaires : contreparties",
-                href: "/contribution/2120-heures-supplementaires",
-                description:
-                  "Création de la page détaillant les contreparties (majoration et/ou repos compensateur) en cas d’heures supplémentaires dans la branche de la banque.",
+                  "Revalorisation du plafond mensuel de la Sécurité sociale au 1er janvier 2026 et déclinaison du montant de cette indemnité par convention collective.",
               },
             ],
           },
