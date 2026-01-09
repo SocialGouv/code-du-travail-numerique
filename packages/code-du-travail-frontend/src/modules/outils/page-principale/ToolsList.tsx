@@ -42,7 +42,7 @@ export const ToolsList = ({ tools, externalTools }: ToolsListProps) => {
       </div>
 
       <h2 id="externalTools" className={fr.cx("fr-mt-0", "fr-mb-6w", "fr-h1")}>
-        Services et sites
+        Services et sites externes
       </h2>
 
       <div
