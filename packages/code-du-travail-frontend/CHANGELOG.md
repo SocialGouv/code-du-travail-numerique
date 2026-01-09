@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.208.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.207.2...v4.208.0) (2026-01-09)
+
+
+### Bug Fixes
+
+* **accessibility:** changement de l'accessibilité suite à un retour utilisateur ([#7055](https://github.com/SocialGouv/code-du-travail-numerique/issues/7055)) ([71fbd14](https://github.com/SocialGouv/code-du-travail-numerique/commit/71fbd14bc48f600ed3ae63d8b6ceef98a0478000))
+* corrections sur les tests e2e de service public et indemnité licenciement ([#7053](https://github.com/SocialGouv/code-du-travail-numerique/issues/7053)) ([e06ffdc](https://github.com/SocialGouv/code-du-travail-numerique/commit/e06ffdcf40cd3fc52d85afedb5bc83ef00868885))
+
+
+### Features
+
+* **home:** amélioration de la page d'accueil ([#7050](https://github.com/SocialGouv/code-du-travail-numerique/issues/7050)) ([d3120e3](https://github.com/SocialGouv/code-du-travail-numerique/commit/d3120e31dee0843421d3faf6e244654654333ace))
+* **quoi-de-neuf:** ajout du contenu pour décembre 2025 ([#7052](https://github.com/SocialGouv/code-du-travail-numerique/issues/7052)) ([dcd7165](https://github.com/SocialGouv/code-du-travail-numerique/commit/dcd716565ab5db2df4a2cb63b9e69d1b2cfad3d0))
+* **tools:** changement du wording sur les outils externes ([#7054](https://github.com/SocialGouv/code-du-travail-numerique/issues/7054)) ([f7e2e7b](https://github.com/SocialGouv/code-du-travail-numerique/commit/f7e2e7b31015a185d842573ca48e178259b99d71))
+
+
+
+
+
 ## [4.207.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.207.1...v4.207.2) (2026-01-07)
 
 **Note:** Version bump only for package @cdt/frontend
