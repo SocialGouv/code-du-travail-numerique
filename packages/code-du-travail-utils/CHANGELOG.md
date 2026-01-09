@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.208.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.207.2...v4.208.0) (2026-01-09)
+
+**Note:** Version bump only for package @socialgouv/cdtn-utils
+
+
+
+
+
+## [4.207.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.207.1...v4.207.2) (2026-01-07)
+
+
+### Bug Fixes
+
+* **source:** ajout de la source `what-is-new` pour la page `Quoi de Neuf ?` ([#7051](https://github.com/SocialGouv/code-du-travail-numerique/issues/7051)) ([a0810b3](https://github.com/SocialGouv/code-du-travail-numerique/commit/a0810b35e6ecdc172b01f08c4bf24c7e30aa1d05))
+
+
+
+
+
 ## [4.207.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.207.0...v4.207.1) (2025-12-29)
 
 **Note:** Version bump only for package @socialgouv/cdtn-utils

@@ -63,6 +63,7 @@ const Hierarchy = () => {
           <div className={fr.cx("fr-col-12")}>
             <ExpandableCard
               title="Les textes internationaux et européens"
+              id="hierarchie-textes-internationaux-euorpeens"
               iconSrc="/static/assets/icons/droit-du-travail/texte-internationaux.svg"
               showBottomTab={true}
             >
@@ -76,6 +77,7 @@ const Hierarchy = () => {
           <div className={fr.cx("fr-col-12")}>
             <ExpandableCard
               title="La Constitution"
+              id="hierarchie-constitution"
               iconSrc="/static/assets/icons/droit-du-travail/constitution-francaise.svg"
               showBottomTab={true}
             >
@@ -90,6 +92,7 @@ const Hierarchy = () => {
           <div className={fr.cx("fr-col-12")}>
             <ExpandableCard
               title="Lois, ordonnances et décrets (Code du travail)"
+              id="hierarchie-lois-ordonnances-decrets"
               iconSrc="/static/assets/icons/droit-du-travail/lois.svg"
               showBottomTab={true}
             >
@@ -294,6 +297,7 @@ const Hierarchy = () => {
           <div className={fr.cx("fr-col-12")}>
             <ExpandableCard
               title="Les usages et les engagements unilatéraux"
+              id="hierarchie-usages-engagements-unilateraux"
               iconSrc="/static/assets/icons/droit-du-travail/usage-unilateraux.svg"
               showBottomTab={true}
             >
@@ -309,6 +313,7 @@ const Hierarchy = () => {
           <div className={fr.cx("fr-col-12")}>
             <ExpandableCard
               title="Le règlement intérieur de l'entreprise"
+              id="hierarchie-reglement-interieur-entreprise"
               iconSrc="/static/assets/icons/droit-du-travail/reglement-interieur-entreprise.svg"
               showBottomTab={true}
             >
@@ -324,6 +329,7 @@ const Hierarchy = () => {
           <div className={fr.cx("fr-col-12")}>
             <ExpandableCard
               title="Le contrat de travail"
+              id="hierarchie-contrat-travail"
               iconSrc="/static/assets/icons/droit-du-travail/contrat-travail.svg"
             >
               <p>

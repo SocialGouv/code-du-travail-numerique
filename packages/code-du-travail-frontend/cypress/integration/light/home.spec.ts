@@ -28,7 +28,11 @@ describe("Page d’accueil", () => {
       .eq(1)
       .should("have.text", "Comprendre le droit du travail");
 
-    cy.contains("Voir tous les outils").should("have.attr", "href", "/outils");
+    cy.contains("Voir tous les simulateurs").should(
+      "have.attr",
+      "href",
+      "/outils"
+    );
     cy.get("#home-outils").find("a").should("have.length", 5);
 
     cy.contains("Voir tous les modèles de documents").should(

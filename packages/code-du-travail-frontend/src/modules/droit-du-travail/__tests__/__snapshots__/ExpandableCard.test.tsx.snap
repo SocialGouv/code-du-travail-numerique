@@ -4,6 +4,7 @@ exports[`<ExpandableCard /> renders correctly with default props 1`] = `
 <div>
   <div
     class="bg_var(--background-alt-blue-cumulus) h_fit-content trs_all_0.3s_ease pos_relative bx-sh_0_2px_8px_rgba(0,_0,_0,_0.1)"
+    id="test-anchor"
   >
     <button
       aria-controls="content-test-title"

@@ -106,7 +106,7 @@ exports[`<Footer /> should match snapshot 1`] = `
                     class="fr-footer__top-link"
                     href="/integration"
                   >
-                    Intégrer les outils du Code du travail numérique
+                    Intégrer les contenus du Code du travail numérique
                   </a>
                 </li>
               </ul>
@@ -117,7 +117,7 @@ exports[`<Footer /> should match snapshot 1`] = `
               <h3
                 class="fr-footer__top-cat"
               >
-                Outils populaires
+                Simulateurs populaires
               </h3>
               <ul
                 class="fr-footer__top-list"
@@ -368,7 +368,7 @@ exports[`<Footer /> should match snapshot 1`] = `
                 class="fr-footer__bottom-link"
                 href="/accessibilite"
               >
-                Accessibilité : totalement conforme
+                Accessibilité : partiellement conforme
               </a>
             </li>
             <li

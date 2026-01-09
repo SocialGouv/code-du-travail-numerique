@@ -12,7 +12,20 @@ export const Accessibilite = () => {
       </p>
       <p>
         À cette fin, il met en œuvre la stratégie et les actions
-        suivantes&nbsp;:
+        suivantes&nbsp;:{" "}
+        <Link
+          href="https://travail-emploi.gouv.fr/IMG/pdf/schema-pluriannuel-accessibilite-2025-2028.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Schéma pluriannuel d’accessibilité numérique 2025-2028 et plan d'actions du ministère du travail et des solidarités (PDF, nouvelle fenêtre)"
+        >
+          Schéma pluriannuel d’accessibilité numérique 2025-2028 et plan
+          d&apos;actions du ministère du travail et des solidarités
+        </Link>
+      </p>
+      <p>
+        Pour le Code du travail numérique (CDTN), les actions suivantes ont été
+        mises en place&nbsp;:
       </p>
       <ul className="fr-mb-2w">
         <li>La réalisation d&apos;un audit de conformité le 9 juillet 2025</li>
@@ -22,62 +35,49 @@ export const Accessibilite = () => {
           100%
         </li>
       </ul>
-
       <p>
         Cette déclaration d&apos;accessibilité s&apos;applique au site web :{" "}
         <Link href="https://code.travail.gouv.fr/">
           https://code.travail.gouv.fr/
         </Link>
       </p>
-
       <h2>État de conformité</h2>
       <p>
         Le site Internet code.travail.gouv.fr (« Code du travail numérique »)
-        est en totale conformité avec le référentiel général d&apos;amélioration
-        de l&apos;accessibilité.
+        est en conformité partielle avec le référentiel général
+        d&apos;amélioration de l&apos;accessibilité.
       </p>
-
       <h2>Résultats des tests</h2>
       <p>
         L&apos;audit de conformité au RGAA 4.1.2 réalisé par la société Temesis
         et le contre audit réalisé en interne révèle que :
       </p>
       <p>
-        <strong>100 % des critères RGAA sont respectés.</strong>
+        <strong>98,33 % des critères RGAA sont respectés.</strong>
       </p>
       <p>Dans le détail :</p>
       <ul className="fr-mb-2w">
-        <li>Nombre de critères conformes : 60</li>
-        <li>Nombre de critères non conformes : 0</li>
+        <li>Nombre de critères conformes : 59</li>
+        <li>Nombre de critères non conformes : 1</li>
         <li>Nombre de critères non applicables : 46</li>
       </ul>
-
       <h2>Contenus non accessibles</h2>
-      <h3>Contenus non soumis à l&apos;obligation d&apos;accessibilité</h3>
-      <ul className="fr-mb-2w">
+      <h3>Non-conformités</h3>
+      <p>Liste des critères non conformes&nbsp;:</p>
+      <ul>
         <li>
-          Les fichiers disponibles dans des formats bureautiques publiés avant
-          le 23 septembre 2018 ;
-        </li>
-        <li>
-          Les contenus de tiers qui ne sont ni financés ni développés par
-          l&apos;organisme concerné et qui ne sont pas sous son contrôle : cela
-          concerne le niveau de titre de certains contenus venant des fiches du
-          ministère de travail. Leur niveau de titre n&apos;est pas déclaré ou
-          contient un saut de titre.
+          9.1 Dans chaque page web, l&apos;information est-elle structurée par
+          l&apos;utilisation appropriée de titres ?
         </li>
       </ul>
-
       <h2>Établissement de cette déclaration d&apos;accessibilité</h2>
       <p>Cette déclaration a été établie le 24 octobre 2025.</p>
-
       <h3>Technologies utilisées pour la réalisation du site web</h3>
       <ul className="fr-mb-2w">
         <li>HTML</li>
         <li>CSS</li>
         <li>JavaScript</li>
       </ul>
-
       <h3>Environnement de test</h3>
       <p>
         Les tests des pages web ont été effectués avec les combinaisons de
@@ -97,7 +97,6 @@ export const Accessibilite = () => {
         <li>Web developer</li>
         <li>ARC Toolkit</li>
       </ul>
-
       <h3>
         Pages du site ayant fait l&apos;objet de la vérification de conformité
       </h3>
@@ -133,7 +132,7 @@ export const Accessibilite = () => {
           </Link>
         </li>
         <li>
-          Page boîte à outils :{" "}
+          Page simulateurs :{" "}
           <Link href="https://code.travail.gouv.fr/outils">
             https://code.travail.gouv.fr/outils
           </Link>
@@ -217,7 +216,6 @@ export const Accessibilite = () => {
           </Link>
         </li>
       </ul>
-
       <h2>Retour d&apos;information et contact</h2>
       <p>
         Si vous n&apos;arrivez pas à accéder à un contenu ou à un service, vous
@@ -233,7 +231,6 @@ export const Accessibilite = () => {
           codedutravailnumerique@travail.gouv.fr
         </Link>
       </p>
-
       <h2>Voies de recours</h2>
       <p>Cette procédure est à utiliser dans le cas suivant.</p>
       <p>
@@ -270,7 +267,6 @@ export const Accessibilite = () => {
           75342 Paris CEDEX 07
         </li>
       </ul>
-
       <h2>En savoir plus sur l’accessibilité</h2>
       <p>
         Pour en savoir plus sur la politique d’accessibilité numérique de
