@@ -451,7 +451,7 @@ export const WHAT_IS_NEW_MONTHS: WhatIsNewMonth[] = [
                 title: "IDCC 86 Question/Réponse : Maintien de salaire",
                 href: "/contribution/86-en-cas-darret-maladie-du-salarie-lemployeur-doit-il-assurer-le-maintien-de-salaire",
                 description:
-                  "L’employeur assure le maintien de salaire dès le 1er jour de l’arrêt maladie. Avant, c’était dans les 3 jours suivants le début de l’arrêt maladie.",
+                  "Le maintien de salaire est désormais assuré dès le premier jour d’arrêt maladie (suppression du délai de carence de 3 jours).",
               },
               {
                 title: "IDCC 1480 Question/Réponse : Salaire minimum",
@@ -521,13 +521,13 @@ export const WHAT_IS_NEW_MONTHS: WhatIsNewMonth[] = [
               {
                 title: "Ajout du nouveau parcours de recherche",
                 description:
-                  "Permettre à l’usager de comprendre plus facilement le droit du travail.",
+                  "Permettre à l’usager de trouver plus facilement une information en droit du travail.",
               },
               {
                 title:
                   'Ajout de la section "Quoi de neuf" sur la page d’accueil',
                 description:
-                  "Permettre à l’usager de comprendre plus facilement le droit du travail.",
+                  "Permettre à l’usager de voir les nouveautés du code du travail numérique.",
               },
             ],
           },
@@ -547,7 +547,7 @@ export const WHAT_IS_NEW_MONTHS: WhatIsNewMonth[] = [
                   "Question/Réponse : Heures supplémentaires : contreparties",
                 href: "/contribution/heures-supplementaires",
                 description:
-                  "Création de la page détaillant les contreparties (majoration et/ou repos compensateur) en cas d’heures supplémentaires.",
+                  "Création d’une nouvelle page avec ces déclinaisons par convention collective.",
               },
             ],
           },
@@ -574,7 +574,8 @@ export const WHAT_IS_NEW_MONTHS: WhatIsNewMonth[] = [
             label: "Évolution juridique",
             items: [
               {
-                title: "Le contrat de valorisation de l’expérience (CVE)",
+                title:
+                  "Nouvelle fiche juridique : Le contrat de valorisation de l’expérience (CVE)",
                 href: "/fiche-ministere-travail/le-contrat-de-valorisation-de-lexperience-cve",
               },
               {
@@ -591,7 +592,7 @@ export const WHAT_IS_NEW_MONTHS: WhatIsNewMonth[] = [
                   "Durée maximale pour un CDD de reconversion professionnelle : selon la réalisation de l’objet du contrat, avec une durée minimale de 6 mois.",
               },
               {
-                title: "IDCC 1518 Question/Réponse : Prime d'ancienneté",
+                title: "IDCC 1518 - Question/Réponse : Prime d'ancienneté",
                 href: "/contribution/1518-quand-le-salarie-a-t-il-droit-a-une-prime-danciennete-quel-est-son-montant",
                 description:
                   "Modification du montant de la prime d'ancienneté.",
