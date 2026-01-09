@@ -591,7 +591,7 @@ export const WHAT_IS_NEW_MONTHS: WhatIsNewMonth[] = [
                   "Durée maximale pour un CDD de reconversion professionnelle : selon la réalisation de l’objet du contrat, avec une durée minimale de 6 mois.",
               },
               {
-                title: "IDCC 1518 - Question/Réponse : prime d'ancienneté",
+                title: "IDCC 1518 Question/Réponse : Prime d'ancienneté",
                 href: "/contribution/1518-quand-le-salarie-a-t-il-droit-a-une-prime-danciennete-quel-est-son-montant",
                 description:
                   "Modification du montant de la prime d'ancienneté.",
