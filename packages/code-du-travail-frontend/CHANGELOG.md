@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.208.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.208.0...v4.208.1) (2026-01-12)
+
+
+### Bug Fixes
+
+* **accessibility:** correction d'un lien mort ([63b251d](https://github.com/SocialGouv/code-du-travail-numerique/commit/63b251db196aef12728563db90e559735df788df))
+
+
+
+
+
 # [4.208.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.207.2...v4.208.0) (2026-01-09)
 
 
