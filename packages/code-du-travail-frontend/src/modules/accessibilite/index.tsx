@@ -14,10 +14,10 @@ export const Accessibilite = () => {
         À cette fin, il met en œuvre la stratégie et les actions
         suivantes&nbsp;:{" "}
         <Link
-          href="https://travail-emploi.gouv.fr/IMG/pdf/schema-pluriannuel-accessibilite-2025-2028.pdf"
+          href="https://travail-emploi.gouv.fr/schema-pluriannuel-daccessibilite-numerique-2025-2028"
           target="_blank"
           rel="noopener noreferrer"
-          title="Schéma pluriannuel d’accessibilité numérique 2025-2028 et plan d'actions du ministère du travail et des solidarités (PDF, nouvelle fenêtre)"
+          title="Schéma pluriannuel d’accessibilité numérique 2025-2028 et plan d'actions du ministère du travail et des solidarités"
         >
           Schéma pluriannuel d’accessibilité numérique 2025-2028 et plan
           d&apos;actions du ministère du travail et des solidarités

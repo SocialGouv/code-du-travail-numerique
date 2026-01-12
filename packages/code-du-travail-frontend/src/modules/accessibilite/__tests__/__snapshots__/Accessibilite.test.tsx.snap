@@ -18,10 +18,10 @@ exports[`<Accessibilite /> should match snapshot 1`] = `
         À cette fin, il met en œuvre la stratégie et les actions suivantes :
          
         <a
-          href="https://travail-emploi.gouv.fr/IMG/pdf/schema-pluriannuel-accessibilite-2025-2028.pdf"
+          href="https://travail-emploi.gouv.fr/schema-pluriannuel-daccessibilite-numerique-2025-2028"
           rel="noopener noreferrer"
           target="_blank"
-          title="Schéma pluriannuel d’accessibilité numérique 2025-2028 et plan d'actions du ministère du travail et des solidarités (PDF, nouvelle fenêtre) - nouvelle fenêtre"
+          title="Schéma pluriannuel d’accessibilité numérique 2025-2028 et plan d'actions du ministère du travail et des solidarités - nouvelle fenêtre"
         >
           Schéma pluriannuel d’accessibilité numérique 2025-2028 et plan d'actions du ministère du travail et des solidarités
         </a>
