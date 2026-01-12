@@ -4,10 +4,12 @@ import {
   addDays,
   addMonths,
   format,
+  isAfter,
   isSameMonth,
   parse,
   parseISO,
   startOfMonth,
+  startOfToday,
 } from "date-fns";
 import { fr as frLocale } from "date-fns/locale";
 import { cache } from "react";
@@ -246,19 +248,31 @@ export const fetchWhatIsNewMonth = cache(
 
       const weekStarts = listWeekStartsForPeriod(period);
 
-      const weeks: WhatIsNewWeek[] = weekStarts.map((weekStart) => {
-        const weekEntries = entries.filter((e) => e.weekStart === weekStart);
+      const today = startOfToday();
+      const currentPeriod = format(today, "MM-yyyy");
+      const isCurrentMonth = period === currentPeriod;
 
-        const byKind = new Map<WhatIsNewKind, WhatIsNewItem[]>();
-        for (const entry of weekEntries) {
-          const items = byKind.get(entry.kind) ?? [];
-          items.push(entryToItem(entry));
-          byKind.set(entry.kind, items);
-        }
+      const lastWeekWithData =
+        entries.length > 0 ? entries[entries.length - 1].weekStart : null;
 
-        const categories: WhatIsNewCategory[] = [];
-        (["mise-a-jour-fonctionnelle", "evolution-juridique"] as const).forEach(
-          (kind) => {
+      const cutoffDate =
+        isCurrentMonth && lastWeekWithData ? parseISO(lastWeekWithData) : null;
+
+      const weeks: WhatIsNewWeek[] = weekStarts
+        .map((weekStart) => {
+          const weekEntries = entries.filter((e) => e.weekStart === weekStart);
+
+          const byKind = new Map<WhatIsNewKind, WhatIsNewItem[]>();
+          for (const entry of weekEntries) {
+            const items = byKind.get(entry.kind) ?? [];
+            items.push(entryToItem(entry));
+            byKind.set(entry.kind, items);
+          }
+
+          const categories: WhatIsNewCategory[] = [];
+          (
+            ["mise-a-jour-fonctionnelle", "evolution-juridique"] as const
+          ).forEach((kind) => {
             const items = byKind.get(kind);
             if (items && items.length > 0) {
               categories.push({
@@ -267,17 +281,28 @@ export const fetchWhatIsNewMonth = cache(
                 items,
               });
             }
+          });
+
+          return {
+            id: weekStart,
+            label: getWeekLabel(weekStart),
+            hasUpdates: categories.length > 0,
+            categories: categories.length > 0 ? categories : undefined,
+          };
+        })
+        .filter((week) => {
+          // Always keep weeks with updates
+          if (week.hasUpdates) {
+            return true;
           }
-        );
 
-        return {
-          id: weekStart,
-          label: getWeekLabel(weekStart),
-          hasUpdates: categories.length > 0,
-          categories: categories.length > 0 ? categories : undefined,
-        };
-      });
+          if (cutoffDate) {
+            return !isAfter(parseISO(week.id), cutoffDate);
+          }
 
+          return true;
+        })
+        .reverse();
       const createdAt = entries
         .map((e) => e.createdAt)
         .filter((v): v is string => Boolean(v))
