@@ -1,3 +1,4 @@
+import { SOURCES } from "@socialgouv/cdtn-utils";
 import { elasticDocumentsIndex, elasticsearchClient } from "../../api/utils";
 import {
   addDays,
@@ -17,6 +18,7 @@ type WhatIsNewEntryDocument = {
   url?: string;
   kind: WhatIsNewKind;
   weekStart: string; // YYYY-MM-DD
+  title?: string;
   description?: string;
   createdAt?: string;
   updatedAt?: string;
@@ -100,7 +102,6 @@ const listWeekStartsForPeriod = (period: string): string[] => {
   const monthStart = startOfMonth(parsePeriod(period));
   const nextMonthStart = addMonths(monthStart, 1);
 
-  // Find the first Monday within this month
   let cursor = monthStart;
   while (cursor.getDay() !== 1) {
     cursor = addDays(cursor, 1);
@@ -139,73 +140,62 @@ const isMeaningfulEntry = (
 };
 
 const entryToItem = (entry: WhatIsNewEntryDocument): WhatIsNewItem => {
-  const title = entry.description?.trim();
+  const title = entry.title?.trim();
+  const description = entry.description?.trim();
   const href = toHref(entry.url);
 
   return {
-    title:
-      title && title.length > 0
-        ? title
-        : href
-          ? "Voir le détail"
-          : "Mise à jour",
+    title: title || "Mise à jour",
+    description,
     href,
   };
 };
 
-/**
- * “Quoi de neuf” entries are indexed inside elasticDocumentsIndex.
- *
- * The admin schema is now "flat": each entry is a document with:
- * - weekStart (YYYY-MM-DD)
- * - kind
- * - url
- * - description
- * - createdAt / updatedAt
- *
- * We primarily filter by the presence of `weekStart` + `kind`, and by allowed `kind` values.
- */
-const getWhatIsNewBaseFilter = () => ({
-  bool: {
-    filter: [
-      { exists: { field: "weekStart" } },
-      { exists: { field: "kind" } },
-      {
-        terms: {
-          kind: ["evolution-juridique", "mise-a-jour-fonctionnelle"],
+export const getPeriods = cache(async (): Promise<string[]> => {
+  try {
+    const queryBody = {
+      index: elasticDocumentsIndex,
+      _source: ["weekStart", "url", "title", "description"],
+      size: 5000,
+      query: {
+        bool: {
+          filter: [
+            { term: { source: SOURCES.WHAT_IS_NEW } },
+            { term: { isPublished: true } },
+          ],
         },
       },
-    ],
-  },
-});
+    };
 
-export const getPeriods = cache(async (): Promise<string[]> => {
-  const response = await elasticsearchClient.search<
-    Pick<WhatIsNewEntryDocument, "weekStart" | "url" | "description">
-  >({
-    index: elasticDocumentsIndex,
-    _source: ["weekStart", "url", "description"],
-    size: 5000,
-    query: getWhatIsNewBaseFilter(),
-  });
+    const response =
+      await elasticsearchClient.search<
+        Pick<
+          WhatIsNewEntryDocument,
+          "weekStart" | "url" | "title" | "description"
+        >
+      >(queryBody);
 
-  const periods = response.hits.hits
-    .map((hit) => hit._source)
-    .filter(
-      (
-        s
-      ): s is Pick<
-        WhatIsNewEntryDocument,
-        "weekStart" | "url" | "description"
-      > => Boolean(s)
-    )
-    .filter(isMeaningfulEntry)
-    .map((s) => s.weekStart)
-    .filter((ws): ws is string => Boolean(ws))
-    .map(getPeriodFromWeekStart)
-    .filter((p): p is string => Boolean(p));
+    const periods = response.hits.hits
+      .map((hit) => hit._source)
+      .filter(
+        (
+          s
+        ): s is Pick<
+          WhatIsNewEntryDocument,
+          "weekStart" | "url" | "title" | "description"
+        > => Boolean(s)
+      )
+      .filter(isMeaningfulEntry)
+      .map((s) => s.weekStart)
+      .filter((ws): ws is string => Boolean(ws))
+      .map(getPeriodFromWeekStart)
+      .filter((p): p is string => Boolean(p));
 
-  return uniq(periods).sort(comparePeriodsAsc);
+    return uniq(periods).sort(comparePeriodsAsc);
+  } catch (error) {
+    console.error("[getPeriods] Error querying Elasticsearch:", error);
+    throw error;
+  }
 });
 
 export const getMostRecentPeriod = cache(
@@ -220,88 +210,99 @@ export const fetchWhatIsNewMonth = cache(
     const monthStart = startOfMonth(parsePeriod(period));
     const nextMonthStart = addMonths(monthStart, 1);
 
-    const response = await elasticsearchClient.search<WhatIsNewEntryDocument>({
-      index: elasticDocumentsIndex,
-      size: 5000,
-      query: {
-        bool: {
-          filter: [
-            getWhatIsNewBaseFilter(),
-            {
-              range: {
-                weekStart: {
-                  gte: format(monthStart, "yyyy-MM-dd"),
-                  lt: format(nextMonthStart, "yyyy-MM-dd"),
+    try {
+      const response = await elasticsearchClient.search<WhatIsNewEntryDocument>(
+        {
+          index: elasticDocumentsIndex,
+          size: 5000,
+          query: {
+            bool: {
+              filter: [
+                { term: { source: SOURCES.WHAT_IS_NEW } },
+                { term: { isPublished: true } },
+                {
+                  range: {
+                    weekStart: {
+                      gte: format(monthStart, "yyyy-MM-dd"),
+                      lt: format(nextMonthStart, "yyyy-MM-dd"),
+                    },
+                  },
                 },
-              },
+              ],
             },
-          ],
-        },
-      },
-      sort: [{ weekStart: "asc" }, { createdAt: "asc" }],
-    });
-
-    const entries = response.hits.hits
-      .map((hit) => hit._source)
-      .filter((s): s is WhatIsNewEntryDocument => Boolean(s))
-      .filter(isMeaningfulEntry);
-
-    if (entries.length === 0) {
-      return;
-    }
-
-    const weekStarts = listWeekStartsForPeriod(period);
-
-    const weeks: WhatIsNewWeek[] = weekStarts.map((weekStart) => {
-      const weekEntries = entries.filter((e) => e.weekStart === weekStart);
-
-      const byKind = new Map<WhatIsNewKind, WhatIsNewItem[]>();
-      for (const entry of weekEntries) {
-        const items = byKind.get(entry.kind) ?? [];
-        items.push(entryToItem(entry));
-        byKind.set(entry.kind, items);
-      }
-
-      const categories: WhatIsNewCategory[] = [];
-      (["mise-a-jour-fonctionnelle", "evolution-juridique"] as const).forEach(
-        (kind) => {
-          const items = byKind.get(kind);
-          if (items && items.length > 0) {
-            categories.push({
-              kind,
-              label: getCategoryLabel(kind),
-              items,
-            });
-          }
+          },
+          sort: [{ weekStart: "asc" }, { createdAt: "asc" }],
         }
       );
 
+      const entries = response.hits.hits
+        .map((hit) => hit._source)
+        .filter((s): s is WhatIsNewEntryDocument => Boolean(s))
+        .filter(isMeaningfulEntry);
+
+      if (entries.length === 0) {
+        return;
+      }
+
+      const weekStarts = listWeekStartsForPeriod(period);
+
+      const weeks: WhatIsNewWeek[] = weekStarts.map((weekStart) => {
+        const weekEntries = entries.filter((e) => e.weekStart === weekStart);
+
+        const byKind = new Map<WhatIsNewKind, WhatIsNewItem[]>();
+        for (const entry of weekEntries) {
+          const items = byKind.get(entry.kind) ?? [];
+          items.push(entryToItem(entry));
+          byKind.set(entry.kind, items);
+        }
+
+        const categories: WhatIsNewCategory[] = [];
+        (["mise-a-jour-fonctionnelle", "evolution-juridique"] as const).forEach(
+          (kind) => {
+            const items = byKind.get(kind);
+            if (items && items.length > 0) {
+              categories.push({
+                kind,
+                label: getCategoryLabel(kind),
+                items,
+              });
+            }
+          }
+        );
+
+        return {
+          id: weekStart,
+          label: getWeekLabel(weekStart),
+          hasUpdates: categories.length > 0,
+          categories: categories.length > 0 ? categories : undefined,
+        };
+      });
+
+      const createdAt = entries
+        .map((e) => e.createdAt)
+        .filter((v): v is string => Boolean(v))
+        .sort()[0];
+
+      const updatedAt = entries
+        .map((e) => e.updatedAt)
+        .filter((v): v is string => Boolean(v))
+        .sort()
+        .at(-1);
+
       return {
-        id: weekStart,
-        label: getWeekLabel(weekStart),
-        hasUpdates: categories.length > 0,
-        categories: categories.length > 0 ? categories : undefined,
+        period,
+        label: getMonthLabel(period),
+        shortLabel: getMonthShortLabel(period),
+        weeks,
+        createdAt,
+        updatedAt,
       };
-    });
-
-    const createdAt = entries
-      .map((e) => e.createdAt)
-      .filter((v): v is string => Boolean(v))
-      .sort()[0];
-
-    const updatedAt = entries
-      .map((e) => e.updatedAt)
-      .filter((v): v is string => Boolean(v))
-      .sort()
-      .at(-1);
-
-    return {
-      period,
-      label: getMonthLabel(period),
-      shortLabel: getMonthShortLabel(period),
-      weeks,
-      createdAt,
-      updatedAt,
-    };
+    } catch (error) {
+      console.error(
+        "[fetchWhatIsNewMonth] Error querying Elasticsearch:",
+        error
+      );
+      throw error;
+    }
   }
 );
