@@ -1,9 +1,9 @@
 import { fr } from "@codegouvfr/react-dsfr";
 import { css } from "@styled-system/css";
 import { SearchResultCard } from "./SearchResultCard";
-import { useRef, useEffect } from "react";
-import { SearchResult } from "src/api/modules/search/service/presearch";
+import { useRef } from "react";
 import { useSearchTracking } from "../tracking";
+import { SearchResult } from "src/api/modules/search/service/search";
 
 interface Props {
   results: SearchResult[];

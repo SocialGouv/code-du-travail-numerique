@@ -11,13 +11,14 @@ import { ContainerWithBreadcrumbs } from "../layout/ContainerWithBreadcrumbs";
 import { useSearchTracking } from "./tracking";
 import { generateSearchLink } from "./utils";
 import { SEARCH_VISIBLE_ITEMS } from "./constants";
+import { SearchResult } from "src/api";
 
-type SearchPageClientProps = {
+export type SearchPageClientProps = {
   query: string;
   items: {
-    documents: any[];
-    themes: any[];
-    articles: any[];
+    documents: SearchResult[];
+    themes: SearchResult[];
+    articles: SearchResult[];
   };
 };
 
@@ -142,7 +143,7 @@ export const SearchPageClient: React.FC<SearchPageClientProps> = ({
                     category={
                       item.source === "code_du_travail"
                         ? "Code du travail"
-                        : item.breadcrumbs?.length > 0
+                        : item.breadcrumbs && item.breadcrumbs.length > 0
                           ? item.breadcrumbs[item.breadcrumbs.length - 1].label
                           : item.source
                     }

@@ -1,6 +1,6 @@
 import { css } from "@styled-system/css";
 import { SearchResultCard } from "./SearchResultCard";
-import { SearchResult } from "src/api/modules/search/service/presearch";
+import { SearchResult } from "src/api/modules/search/service/search";
 
 interface SearchResultsPreviewProps {
   results: SearchResult[];

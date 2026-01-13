@@ -6,10 +6,8 @@ import {
 import { useCallback } from "react";
 import { sendEvent } from "@socialgouv/matomo-next";
 import { MatomoBaseEvent } from "../analytics/types";
-import {
-  SearchResult,
-  PresearchClass,
-} from "src/api/modules/search/service/presearch";
+import { PresearchClass } from "src/api/modules/search/service/presearch";
+import { SearchResult } from "src/api/modules/search/service/search";
 
 enum MatomoSearchCategory {
   SEARCH = "search",

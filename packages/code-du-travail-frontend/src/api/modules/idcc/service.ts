@@ -15,8 +15,8 @@ export const getIdccByQuery = async (query: string, size?: number) => {
     body,
     index: elasticDocumentsIndex,
   });
-  const { took, ...rest } = response;
-  return { ...rest };
+  const { ...rest } = response;
+  return rest;
 };
 
 let idccs: Set<number> = new Set();
@@ -63,6 +63,7 @@ export const ccSearch = async (
       cdtnId: string;
       score: number;
       source: SourceKeys;
+      description: string;
     }
   | undefined
 > => {
@@ -76,6 +77,7 @@ export const ccSearch = async (
       slug: hit["_source"]["slug"],
       title: hit["_source"]["shortTitle"],
       cdtnId: hit["_source"]["cdtnId"],
+      description: hit["_source"]["description"],
       score: hit["_score"] || undefined,
       source: SOURCES.CCN,
     };

@@ -1,12 +1,9 @@
 import { complex } from "talisman/stemmers/french/unine";
 import fingerprint from "talisman/tokenizers/fingerprint";
 import { ccSearch, ensureIdccsInstantiated, isIdccToken } from "../../idcc";
-import { SourceKeys, SOURCES } from "@socialgouv/cdtn-utils";
-import { getPrequalifiedResults } from "./prequalified";
-import { getSearchBody, getRelatedArticlesBody } from "../queries";
+import { getRelatedArticlesBody } from "../queries";
 import { elasticDocumentsIndex, elasticsearchClient } from "src/api/utils";
-import { extractHits } from "./search";
-import { removeDuplicate } from "../utils";
+import { extractHits, SEARCH_ALGO, SearchResult } from "./search";
 import { articleMatcher, extractReferences } from "./referenceExtractor";
 
 const keyword_std = [
@@ -99,6 +96,8 @@ const keyword_std = [
   "retard",
 ];
 
+const DEFAULT_CC_CONTENT = ["db8ffe3574", "b1041bd7ca", "825821a69e"];
+
 export enum PresearchClass {
   CC = "cc",
   CC_FOUND = "cc_found",
@@ -110,45 +109,47 @@ export enum PresearchClass {
   UNKNOWN = "unknown",
 }
 
-export type SearchResult = {
-  cdtnId: string;
-  shortTitle?: string;
-  title: string;
-  slug: string;
-  source: SourceKeys;
-  class: PresearchClass;
-  algo: "presearch";
+export type PreSearchResult = SearchResult & {
+  algo: typeof SEARCH_ALGO.PRESEARCH;
 };
 
-export type ThemeSearchResult = SearchResult & { breadcrumbs: unknown[] };
+export type ThemeSearchResult = PreSearchResult & { breadcrumbs: unknown[] };
+
+let defaultsIdccResults: PreSearchResult[] = [];
 
 // temporary
-const defaultIdccResults: SearchResult[] = [
-  {
-    cdtnId: "db8ffe3574",
-    slug: "convention-collective",
-    title: "Trouver sa convention collective",
-    source: SOURCES.TOOLS,
-    class: PresearchClass.CC_FOUND,
-    algo: "presearch",
-  },
-  {
-    cdtnId: "b1041bd7ca",
-    slug: "convention-collective",
-    title: "Convention collective",
-    source: SOURCES.SHEET_SP,
-    class: PresearchClass.CC_FOUND,
-    algo: "presearch",
-  },
-  {
-    cdtnId: "825821a69e",
-    slug: "comment-consulter-une-convention-collective",
-    title: "Comment consulter une convention collective ?",
-    source: SOURCES.SHEET_SP,
-    class: PresearchClass.CC_FOUND,
-    algo: "presearch",
-  },
-];
+const getDefaultIdccResults = async (): Promise<PreSearchResult[]> => {
+  if (defaultsIdccResults.length < 1) {
+    defaultsIdccResults = await elasticsearchClient
+      .search<any>({
+        body: {
+          size: 1000,
+          _source: [
+            "title",
+            "slug",
+            "url",
+            "source",
+            "cdtnId",
+            "description",
+            "breadcrumbs",
+          ],
+          query: {
+            bool: {
+              must: { terms: { cdtnId: DEFAULT_CC_CONTENT } },
+            },
+          },
+        },
+        index: elasticDocumentsIndex,
+      })
+      .then((r) =>
+        extractHits(r).map(({ _source }) => ({
+          ..._source,
+          algo: SEARCH_ALGO.PRESEARCH,
+        }))
+      );
+  }
+  return defaultsIdccResults;
+};
 
 const CC_SCORE_THRESHOLD = 20;
 
@@ -208,15 +209,27 @@ const isCC = async (query: string): Promise<SearchResult[]> => {
     );
 
     if (found) {
-      return [{ ...found, class: PresearchClass.CC, algo: "presearch" }];
+      return [
+        {
+          ...found,
+          class: PresearchClass.CC,
+          algo: SEARCH_ALGO.PRESEARCH,
+        },
+      ];
     } else {
       // case where CC related content but no match
-      return defaultIdccResults;
+      return getDefaultIdccResults();
     }
   } else {
     const foundNoCC = await ccSearch(query, CC_SCORE_THRESHOLD);
     if (foundNoCC) {
-      return [{ ...foundNoCC, class: PresearchClass.CC, algo: "presearch" }];
+      return [
+        {
+          ...foundNoCC,
+          class: PresearchClass.CC,
+          algo: SEARCH_ALGO.PRESEARCH,
+        },
+      ];
     } else {
       return [];
     }
@@ -249,93 +262,10 @@ const getThemes = (
         cdtnId: match.theme.cdtnId,
         source: match.theme.source,
         class: PresearchClass.THEME,
-        algo: "presearch",
+        algo: SEARCH_ALGO.PRESEARCH,
+        description: `Retrouvez les contenus relatifs au thème : ${match.theme.title}`,
       }
     : undefined;
-};
-
-// TODO borrowed from search / temporary code
-const fillup = async (
-  query: string,
-  n: number,
-  matches: SearchResult[]
-): Promise<SearchResult[]> => {
-  // do not complete in case of article query
-  if (matches.length > 0 && matches[0].class == PresearchClass.ARTICLE) {
-    return matches;
-  }
-
-  const sources = [
-    SOURCES.SHEET_MT,
-    SOURCES.SHEET_SP,
-    SOURCES.LETTERS,
-    SOURCES.TOOLS,
-    SOURCES.CONTRIBUTIONS,
-    SOURCES.EXTERNALS,
-    SOURCES.THEMATIC_FILES,
-    SOURCES.EDITORIAL_CONTENT,
-    SOURCES.CCN,
-  ];
-
-  // check prequalified requests
-  const prequalifiedResults = await getPrequalifiedResults(query).then(
-    (results) => (results ? results.slice(0, n) : [])
-  );
-
-  let documents: SearchResult[] = matches;
-
-  if (prequalifiedResults) {
-    prequalifiedResults.forEach(
-      (item) => (item._source.algo = "pre-qualified")
-    );
-    documents.push(
-      ...prequalifiedResults
-        .filter(
-          ({ _source: { source } }) =>
-            ![SOURCES.CDT, SOURCES.THEMES].includes(source)
-        )
-        .map((d) => d._source)
-    );
-  }
-
-  // deduplicate presearch and prequalified
-  documents = removeDuplicate(
-    documents.map((d) => ({
-      _source: d,
-    }))
-  ).map((d: { _source: SearchResult }) => d._source);
-
-  // if not enough prequalified results, we also trigger ES search
-  if (documents.length < n) {
-    const size = 10;
-    const docSearch = getSearchBody(query, size, sources);
-    const ftRes = await elasticsearchClient.search({
-      index: elasticDocumentsIndex,
-      body: docSearch as any,
-    });
-
-    const results = extractHits(ftRes).map((d) => ({
-      ...d._source,
-      algo: "fulltext",
-    }));
-
-    documents.push(...results);
-
-    // deduplicate a second time after ES search
-    documents = removeDuplicate(
-      documents.map((d) => ({
-        _source: d,
-      }))
-    ).map((d: { _source: SearchResult }) => d._source);
-  }
-
-  return documents
-    .map((res) => ({
-      type: res.source as any as DocumentType,
-      ...res,
-      title: res.shortTitle ?? res.title,
-    }))
-    .slice(0, n);
 };
 
 const getArticles = async (query): Promise<SearchResult[]> => {
@@ -362,7 +292,7 @@ const getArticles = async (query): Promise<SearchResult[]> => {
     return extractHits(hits).map((h) => ({
       ...h._source,
       class: PresearchClass.ARTICLE,
-      algo: "presearch",
+      algo: SEARCH_ALGO.PRESEARCH,
     }));
   } else {
     return [];
@@ -434,11 +364,6 @@ export const presearch = async (
   }
 
   const uniqueClasses = [...new Set(classes)];
-
-  if (results.length < PRESEARCH_MAX_RESULTS) {
-    const filled = await fillup(query, PRESEARCH_MAX_RESULTS, results);
-    return { results: filled, classes: uniqueClasses };
-  }
 
   return {
     results: results.slice(0, PRESEARCH_MAX_RESULTS),

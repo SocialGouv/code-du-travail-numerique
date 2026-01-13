@@ -1,10 +1,8 @@
 import { useState, useEffect, useCallback } from "react";
 import { fetchSearchResults } from "../api/fetchSearchResults";
-import {
-  SearchResult,
-  PresearchClass,
-} from "src/api/modules/search/service/presearch";
+import { PresearchClass } from "src/api/modules/search/service/presearch";
 import { useSearchTracking } from "../tracking";
+import { SearchResult } from "src/api/modules/search/service/search";
 
 interface UseSearchResultsReturn {
   results: SearchResult[];
