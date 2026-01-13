@@ -134,11 +134,12 @@ const toHref = (url?: string): string | undefined => {
 };
 
 const isMeaningfulEntry = (
-  entry: Pick<WhatIsNewEntryDocument, "url" | "description">
+  entry: Pick<WhatIsNewEntryDocument, "url" | "title" | "description">
 ): boolean => {
   const hasUrl = Boolean(entry.url?.trim());
+  const hasTitle = Boolean(entry.title?.trim());
   const hasDescription = Boolean(entry.description?.trim());
-  return hasUrl || hasDescription;
+  return hasUrl || hasTitle || hasDescription;
 };
 
 const entryToItem = (entry: WhatIsNewEntryDocument): WhatIsNewItem => {
