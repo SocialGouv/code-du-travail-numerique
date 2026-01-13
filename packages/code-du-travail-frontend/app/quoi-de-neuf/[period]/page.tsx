@@ -6,7 +6,8 @@ import {
   fetchWhatIsNewMonth,
   getPeriods,
 } from "../../../src/modules/whatIsNew";
-import * as Sentry from "@sentry/nextjs";
+
+export const dynamic = "force-dynamic";
 
 type PageProps = {
   params: Promise<{ period: string }>;
@@ -18,16 +19,6 @@ export const metadata = generateDefaultMetadata({
     "Consultez les dernières évolutions et mises à jour du Code du travail numérique.",
   path: "/quoi-de-neuf",
 });
-
-export async function generateStaticParams() {
-  try {
-    const periods = await getPeriods();
-    return periods.map((period) => ({ period }));
-  } catch (error) {
-    Sentry.captureException(error);
-    return [];
-  }
-}
 
 export default async function Index({ params }: PageProps) {
   const { period } = await params;

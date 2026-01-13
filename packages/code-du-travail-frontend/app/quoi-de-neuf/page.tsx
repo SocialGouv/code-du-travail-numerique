@@ -2,6 +2,8 @@ import { notFound, redirect } from "next/navigation";
 import { getMostRecentPeriod } from "../../src/modules/whatIsNew";
 import { generateDefaultMetadata } from "../../src/modules/common/metas";
 
+export const dynamic = "force-dynamic";
+
 export const metadata = generateDefaultMetadata({
   title: "Quoi de neuf",
   description:
