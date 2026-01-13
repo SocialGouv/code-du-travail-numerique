@@ -5,7 +5,7 @@ const engine = new RuptureConventionnellePublicodes(
   "292"
 );
 
-describe("Vérifier qu'il n'y a pas d'ancienneté conventionnelle requise", () => {
+describe("Vérifier qu'il y a une ancienneté conventionnelle requise", () => {
   test("Cadres", () => {
     const result = engine.calculate({
       "contrat salarié . convention collective": "'IDCC0292'",
@@ -25,7 +25,7 @@ describe("Vérifier qu'il n'y a pas d'ancienneté conventionnelle requise", () =
         '[{"month":"février 2024","value":3000},{"month":"janvier 2024","value":3000}]',
       typeContratTravail: "cdi",
     });
-    expect(result).toAgreementResultBeEqual(125, "€");
+    expect(result).toAgreementResultBeEqual(0, "€");
   });
 
   test("non Cadres", () => {
@@ -47,6 +47,6 @@ describe("Vérifier qu'il n'y a pas d'ancienneté conventionnelle requise", () =
         '[{"month":"février 2024","value":3000},{"month":"janvier 2024","value":3000}]',
       typeContratTravail: "cdi",
     });
-    expect(result).toAgreementResultBeEqual(125, "€");
+    expect(result).toAgreementResultBeEqual(0, "€");
   });
 });

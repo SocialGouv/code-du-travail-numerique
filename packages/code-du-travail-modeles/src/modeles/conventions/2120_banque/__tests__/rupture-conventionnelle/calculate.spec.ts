@@ -94,7 +94,7 @@ describe("Un seul type de licenciement pour la CC 2120", () => {
     }
   );
 
-  describe("Vérifier qu'il n'y a pas d'ancienneté conventionnelle requise", () => {
+  describe("Vérifier qu'il y a une ancienneté conventionnelle requise", () => {
     test("Cadres", () => {
       const result = engine.calculate({
         "contrat salarié . convention collective": "'IDCC2120'",
@@ -117,7 +117,7 @@ describe("Un seul type de licenciement pour la CC 2120", () => {
           '[{"month":"février 2024","value":3000},{"month":"janvier 2024","value":3000}]',
         typeContratTravail: "cdi",
       });
-      expect(result).toAgreementResultBeEqual(125, "€");
+      expect(result).toAgreementResultBeEqual(0, "€");
     });
 
     test("Non-cadres", () => {
@@ -142,7 +142,7 @@ describe("Un seul type de licenciement pour la CC 2120", () => {
         salariesVariablePart: "1000",
         typeContratTravail: "cdi",
       });
-      expect(result).toAgreementResultBeEqual(125, "€");
+      expect(result).toAgreementResultBeEqual(0, "€");
     });
   });
 });

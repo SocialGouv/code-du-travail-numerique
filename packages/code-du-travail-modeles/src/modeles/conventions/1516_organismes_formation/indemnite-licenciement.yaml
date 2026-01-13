@@ -26,13 +26,9 @@ contrat salarié . convention collective . organismes de formation . indemnité 
   applicable si: contrat salarié . indemnité de licenciement . date de notification < 04/06/2023
   valeur: oui
 
-contrat salarié . convention collective . organismes de formation . indemnité de licenciement . avant avenant 2023 . minimum ancienneté conventionnelle requise en année:
-  remplace: paramètre . minimum ancienneté conventionnelle requise en année
-  valeur: 2 ans
-
 contrat salarié . convention collective . organismes de formation . indemnité de licenciement . avant avenant 2023 . résultat conventionnel:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
-  applicable si: indemnité de licenciement . ancienneté conventionnelle requise en année >= paramètre . minimum ancienneté conventionnelle requise en année
+  applicable si: indemnité de licenciement . ancienneté conventionnelle requise en année >= 2 ans
   plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 6
   somme:
     - ancienneté totale
@@ -73,7 +69,7 @@ contrat salarié . convention collective . organismes de formation . indemnité 
   valeur: oui
 
 contrat salarié . convention collective . organismes de formation . indemnité de licenciement . après avenant 2023 . résultat conventionnel:
-  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= paramètre . minimum ancienneté conventionnelle requise en année
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 8 mois
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel identique au légal
   valeur: oui
   références:

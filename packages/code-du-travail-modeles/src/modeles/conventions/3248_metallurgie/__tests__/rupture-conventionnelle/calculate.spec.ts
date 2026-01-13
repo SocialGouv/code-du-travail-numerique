@@ -6,7 +6,7 @@ const engine = new RuptureConventionnellePublicodes(
 );
 
 describe("Calcul de l'indemnité de rupture conventionnelle pour la CC 3248", () => {
-  describe("Vérifier qu'il ,'y a pas d'ancienneté conventionnelle requise", () => {
+  describe("Vérifier qu'il y a une ancienneté conventionnelle requise", () => {
     test("A, B, C, D ou E", () => {
       const result = engine.calculate({
         "contrat salarié . convention collective": "'IDCC3248'",
@@ -30,7 +30,7 @@ describe("Calcul de l'indemnité de rupture conventionnelle pour la CC 3248", ()
           '[{"month":"février 2024","value":3000},{"month":"janvier 2024","value":3000}]',
         typeContratTravail: "cdi",
       });
-      expect(result).toAgreementResultBeEqual(125, "€");
+      expect(result).toAgreementResultBeEqual(0, "€");
     });
 
     test("F, G, H ou I", () => {
@@ -54,7 +54,7 @@ describe("Calcul de l'indemnité de rupture conventionnelle pour la CC 3248", ()
           '[{"month":"février 2024","value":3000},{"month":"janvier 2024","value":3000}]',
         typeContratTravail: "cdi",
       });
-      expect(result).toAgreementResultBeEqual(125, "€");
+      expect(result).toAgreementResultBeEqual(0, "€");
     });
   });
 });

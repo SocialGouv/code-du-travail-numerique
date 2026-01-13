@@ -89,7 +89,7 @@ contrat salarié . convention collective . plasturgie . indemnité de licencieme
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si:
     toutes ces conditions:
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= paramètre . minimum ancienneté conventionnelle requise en année
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 8 mois
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année <= 3 an
   valeur:
     produit:
@@ -145,7 +145,7 @@ contrat salarié . convention collective . plasturgie . indemnité de licencieme
 
 contrat salarié . convention collective . plasturgie . indemnité de licenciement . non cadres . résultat conventionnel:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
-  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= paramètre . minimum ancienneté conventionnelle requise en année
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 8 mois
   somme:
     - un quart du salaire de référence pour moins de 10 ans
     - un tier du salaire de référence pour plus de 10 ans

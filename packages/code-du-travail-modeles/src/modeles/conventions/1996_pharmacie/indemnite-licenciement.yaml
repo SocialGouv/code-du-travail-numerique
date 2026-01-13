@@ -93,7 +93,7 @@ contrat salarié . convention collective . pharmacie . indemnité de licenciemen
 contrat salarié . convention collective . pharmacie . indemnité de licenciement . non cadres . résultat conventionnel moins de 10 ans:
   applicable si:
     toutes ces conditions:
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= paramètre . minimum ancienneté conventionnelle requise en année
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 8 mois
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année <= 10 an
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   valeur: dix ans ou moins
@@ -136,7 +136,7 @@ contrat salarié . convention collective . pharmacie . indemnité de licenciemen
 contrat salarié . convention collective . pharmacie . indemnité de licenciement . cadres . résultat conventionnel moins de 5 ans:
   applicable si:
     toutes ces conditions:
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= paramètre . minimum ancienneté conventionnelle requise en année
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 8 mois
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année < 5 an
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   valeur: dix ans ou moins

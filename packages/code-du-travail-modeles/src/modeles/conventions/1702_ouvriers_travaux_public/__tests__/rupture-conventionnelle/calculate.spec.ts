@@ -56,7 +56,7 @@ describe("Un seul type de licenciement pour la CC 1702", () => {
     expect(result).toAgreementResultBeEqual(14025, "€");
   });
 
-  describe("Vérifier qu'il n'y a pas d'ancienneté conventionnelle requise", () => {
+  describe("Vérifier qu'il y a une ancienneté conventionnelle requise", () => {
     test("Cas de base", () => {
       const result = engine.calculate({
         "contrat salarié . convention collective": "'IDCC1702'",
@@ -78,7 +78,7 @@ describe("Un seul type de licenciement pour la CC 1702", () => {
           '[{"month":"février 2024","value":3000},{"month":"janvier 2024","value":3000}]',
         typeContratTravail: "cdi",
       });
-      expect(result).toAgreementResultBeEqual(50, "€");
+      expect(result).toAgreementResultBeEqual(0, "€");
     });
   });
 });
