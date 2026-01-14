@@ -4,61 +4,90 @@ const MappingReplacement = await import("./redirects.json", {
   with: { type: "json" },
 });
 
-const sentryConfig = {
-  // Sentry webpack plugin options
-  org: process.env.NEXT_PUBLIC_SENTRY_ORG,
-  project: process.env.NEXT_PUBLIC_SENTRY_PROJECT,
-  url: process.env.NEXT_PUBLIC_SENTRY_URL,
-  authToken: process.env.SENTRY_AUTH_TOKEN,
+const RELEASE =
+  process.env.NEXT_PUBLIC_SENTRY_RELEASE ||
+  process.env.SENTRY_RELEASE ||
+  process.env.NEXT_PUBLIC_GITHUB_SHA ||
+  process.env.VERCEL_GIT_COMMIT_SHA ||
+  "dev";
 
-  // Source maps configuration
+const DIST =
+  process.env.NEXT_PUBLIC_GITHUB_SHA ||
+  process.env.VERCEL_GIT_COMMIT_SHA ||
+  "dev";
+
+const SENTRY_ORG = process.env.SENTRY_ORG || process.env.NEXT_PUBLIC_SENTRY_ORG;
+const SENTRY_PROJECT =
+  process.env.SENTRY_PROJECT || process.env.NEXT_PUBLIC_SENTRY_PROJECT;
+const SENTRY_URL = process.env.SENTRY_URL || process.env.NEXT_PUBLIC_SENTRY_URL;
+
+// Fail the build on Sentry upload errors in CI/production, but be permissive locally.
+const SHOULD_FAIL_ON_SENTRY_BUILD_ERROR =
+  process.env.CI === "true" ||
+  process.env.VERCEL_ENV === "production" ||
+  process.env.NEXT_PUBLIC_APP_ENV === "production" ||
+  process.env.NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT === "true";
+
+const sentryBuildOptions = {
+  org: SENTRY_ORG,
+  project: SENTRY_PROJECT,
+  authToken: process.env.SENTRY_AUTH_TOKEN,
+  sentryUrl: SENTRY_URL,
+
+  silent: process.env.SENTRY_DEBUG !== "true",
+  debug: process.env.SENTRY_DEBUG === "true",
+
+  // Source maps upload (webpack plugin options)
   sourcemaps: {
+    // If you want to fully disable sourcemaps generation/upload, set this to true.
+    disable: false,
     assets: ".next/**/*.{js,map}",
     ignore: ["node_modules/**/*"],
-    rewrite: true,
-    stripPrefix: ["webpack://_N_E/", "webpack://", "app://"],
-    urlPrefix: "app:///_next",
+    // Sentry defaults to deleting client sourcemaps after upload; we set it explicitly.
+    deleteSourcemapsAfterUpload: true,
   },
 
-  // Debug and release configuration
-  silent: false,
-  debug: true,
-  release:
-    process.env.NEXT_PUBLIC_SENTRY_RELEASE ||
-    process.env.NEXT_PUBLIC_GITHUB_SHA ||
-    "dev",
-  dist: process.env.NEXT_PUBLIC_GITHUB_SHA || "dev",
-  setCommits: {
-    auto: true,
-    ignoreMissing: true,
-  },
-  deploy: {
-    env: process.env.NEXT_PUBLIC_SENTRY_ENV || "development",
-    dist: process.env.NEXT_PUBLIC_GITHUB_SHA || "dev",
-  },
-  injectBuildInformation: true,
-};
-
-const sentrySdkConfig = {
-  tunnelRoute: false,
-  widenClientFileUpload: true,
-  hideSourceMaps: false,
-  disableLogger: true,
-
-  // Enable component names and release injection
-  includeNames: true,
+  // Release management
   release: {
-    inject: true,
-    name:
-      process.env.NEXT_PUBLIC_SENTRY_RELEASE ||
-      process.env.NEXT_PUBLIC_GITHUB_SHA ||
-      "dev",
+    name: RELEASE,
+    dist: DIST,
+    setCommits: {
+      auto: true,
+      ignoreMissing: true,
+    },
+    deploy: {
+      env:
+        process.env.NEXT_PUBLIC_SENTRY_ENV ||
+        process.env.SENTRY_ENVIRONMENT ||
+        "development",
+    },
   },
 
-  // Server instrumentation options
-  autoInstrumentServerFunctions: true,
-  autoInstrumentMiddleware: true,
-  automaticVercelMonitors: true,
+  // Upload a wider set of client files (Next.js internals + deps) for better stacktraces
+  widenClientFileUpload: true,
+
+  // Build-time instrumentation behavior
+  webpack: {
+    autoInstrumentServerFunctions: true,
+    autoInstrumentMiddleware: true,
+    autoInstrumentAppDirectory: true,
+    automaticVercelMonitors: true,
+
+    // Bundle size optimizations
+    treeshake: {
+      removeDebugLogging: true,
+    },
+
+    // React component name annotations (replays + breadcrumbs)
+    reactComponentAnnotation: {
+      enabled: true,
+    },
+  },
+
+  errorHandler: (err) => {
+    if (SHOULD_FAIL_ON_SENTRY_BUILD_ERROR) throw err;
+    console.warn(err);
+  },
 };
 
 const nextConfig = {
@@ -78,9 +107,10 @@ const nextConfig = {
       test: /\.woff2$/,
       type: "asset/resource",
     });
-    // Configure source maps for production
+
+    // Let Sentry manage sourcemap settings (it uses `hidden-source-map` for client builds by default).
+    // We only keep our deterministic optimization tweaks.
     if (!isServer && !dev) {
-      config.devtool = "source-map";
       config.optimization = {
         ...config.optimization,
         minimize: true,
@@ -88,10 +118,10 @@ const nextConfig = {
         chunkIds: "deterministic",
       };
     }
+
     return config;
   },
   transpilePackages: ["@codegouvfr/react-dsfr"],
-  serverExternalPackages: ["require-in-the-middle", "import-in-the-middle"],
 };
 
 const moduleExports = {
@@ -136,4 +166,4 @@ const moduleExports = {
   },
 };
 
-export default withSentryConfig(moduleExports, sentryConfig, sentrySdkConfig);
+export default withSentryConfig(moduleExports, sentryBuildOptions);
