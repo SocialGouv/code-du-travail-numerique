@@ -7,8 +7,6 @@ import {
   getPeriods,
 } from "../../../src/modules/whatIsNew";
 
-export const dynamic = "force-dynamic";
-
 type PageProps = {
   params: Promise<{ period: string }>;
 };
