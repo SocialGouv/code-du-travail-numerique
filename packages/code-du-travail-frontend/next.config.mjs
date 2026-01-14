@@ -91,12 +91,13 @@ const nextConfig = {
     return config;
   },
   transpilePackages: ["@codegouvfr/react-dsfr"],
+  serverExternalPackages: ["require-in-the-middle", "import-in-the-middle"],
 };
 
 const moduleExports = {
   ...nextConfig,
   async headers() {
-    let headers = [
+    const headers = [
       {
         key: "X-Content-Type-Options",
         value: "nosniff",
