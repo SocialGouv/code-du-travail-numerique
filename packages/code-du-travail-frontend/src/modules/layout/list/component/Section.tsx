@@ -2,11 +2,10 @@ import { fr } from "@codegouvfr/react-dsfr";
 import React, { forwardRef } from "react";
 import { css } from "@styled-system/css";
 import Card from "@codegouvfr/react-dsfr/Card";
-import { getRouteBySource } from "@socialgouv/cdtn-utils";
+import { getRouteBySource, SourceKeys } from "@socialgouv/cdtn-utils/";
 import { summarize } from "../../../utils";
 import Button from "@codegouvfr/react-dsfr/Button";
 import Image from "next/image";
-import { SourceKeys } from "@socialgouv/cdtn-utils/src/sources";
 
 const INITIAL_ITEMS_DISPLAY_COUNT = 6;
 

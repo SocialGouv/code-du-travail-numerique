@@ -18,10 +18,6 @@ export const metadata = generateDefaultMetadata({
   path: "/quoi-de-neuf",
 });
 
-export async function generateStaticParams() {
-  return getPeriods().map((period) => ({ period }));
-}
-
 export default async function Index({ params }: PageProps) {
   const { period } = await params;
 
@@ -31,9 +27,12 @@ export default async function Index({ params }: PageProps) {
     notFound();
   }
 
+  const periods = await getPeriods();
+  const periodsForNav = periods.length > 0 ? periods : [month.period];
+
   return (
     <DsfrLayout>
-      <WhatIsNew month={month} />
+      <WhatIsNew month={month} periods={periodsForNav} />
     </DsfrLayout>
   );
 }

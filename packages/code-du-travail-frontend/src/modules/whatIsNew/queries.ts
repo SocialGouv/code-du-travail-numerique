@@ -1,4 +1,31 @@
+import { SOURCES } from "@socialgouv/cdtn-utils";
+import { elasticDocumentsIndex, elasticsearchClient } from "../../api/utils";
+import {
+  addDays,
+  addMonths,
+  format,
+  isAfter,
+  isSameMonth,
+  parse,
+  parseISO,
+  startOfMonth,
+  startOfToday,
+} from "date-fns";
+import { fr as frLocale } from "date-fns/locale";
+import { cache } from "react";
+
 export type WhatIsNewKind = "evolution-juridique" | "mise-a-jour-fonctionnelle";
+
+type WhatIsNewEntryDocument = {
+  url?: string;
+  kind: WhatIsNewKind;
+  weekStart: string; // YYYY-MM-DD
+  title?: string;
+  description?: string;
+  createdAt?: string;
+  updatedAt?: string;
+  source?: string;
+};
 
 export type WhatIsNewItem = {
   title: string;
@@ -20,622 +47,288 @@ export type WhatIsNewWeek = {
 };
 
 export type WhatIsNewMonth = {
-  period: string;
+  id?: string;
+  period: string; // MM-yyyy
   label: string;
   shortLabel: string;
   weeks: WhatIsNewWeek[];
+  createdAt?: string;
+  updatedAt?: string;
 };
 
-export const WHAT_IS_NEW_MONTHS: WhatIsNewMonth[] = [
-  //
-  // SEPTEMBRE 2025 — 09-2025
-  //
-  {
-    period: "09-2025",
-    label: "Septembre 2025",
-    shortLabel: "09/25",
-    weeks: [
-      {
-        id: "2025-09-29_2025-09-30",
-        label: "Semaine du 29 au 30 septembre",
-        hasUpdates: false,
-      },
-      {
-        id: "2025-09-22_2025-09-28",
-        label: "Semaine du 22 au 28 septembre",
-        hasUpdates: true,
-        categories: [
-          {
-            kind: "evolution-juridique",
-            label: "Évolution juridique",
-            items: [
-              {
-                title:
-                  "IDCC 1501 Question/Réponse : Durée de la période d’essai",
-                href: "/contribution/1501-quelle-est-la-duree-maximale-de-la-periode-dessai-sans-et-avec-renouvellement",
-                description:
-                  "Modification de la durée initiale de la période d’essai et retrait de la mention « 1 mois pour les ouvriers ».",
-              },
-              {
-                title:
-                  "IDCC 1501 Question/Réponse : Renouvellement de la période d’essai",
-                href: "/contribution/1501-la-periode-dessai-peut-elle-etre-renouvelee",
-                description:
-                  "Précision sur le renouvellement de la période d’essai pour les cadres et retrait de la mention « les ouvriers ».",
-              },
-            ],
-          },
-        ],
-      },
-      {
-        id: "2025-09-15_2025-09-21",
-        label: "Semaine du 15 au 21 septembre",
-        hasUpdates: true,
-        categories: [
-          {
-            kind: "evolution-juridique",
-            label: "Évolution juridique",
-            items: [
-              {
-                title: "IDCC 1480 Question/Réponse : Salaire minimum",
-                href: "/contribution/1480-quel-est-le-salaire-minimum",
-                description:
-                  "Modification du salaire minimum hiérarchique pour les radios, agences de presse et piges agences de presse.",
-              },
-              {
-                title: "IDCC 3248 Question/Réponse : Prime d’ancienneté",
-                href: "/contribution/3248-quand-le-salarie-a-t-il-droit-a-une-prime-danciennete-quel-est-son-montant",
-                description:
-                  "Ajout de la valeur de point pour l’Indre-et-Loire et le Loiret.",
-              },
-              {
-                title: "Nouveau modèle : Mise en demeure pour abandon de poste",
-                href: "/modeles-de-courriers/modele-de-mise-en-demeure-pour-abandon-de-poste",
-                description:
-                  "Modèle de lettre pour mettre en demeure un salarié ayant abandonné volontairement son poste de justifier son absence et de reprendre son poste.",
-              },
-              {
-                title:
-                  "Nouveau modèle : Convocation à un entretien préalable au licenciement du salarié particulier employeur",
-                href: "/modeles-de-courriers/convocation-a-un-entretien-prealable-au-licenciement-du-salarie-du-particulier-employeur",
-                description:
-                  "Modèle permettant de convoquer le salarié du particulier employeur à un entretien préalable au licenciement.",
-              },
-            ],
-          },
-        ],
-      },
-      {
-        id: "2025-09-08_2025-09-14",
-        label: "Semaine du 8 au 14 septembre",
-        hasUpdates: true,
-        categories: [
-          {
-            kind: "evolution-juridique",
-            label: "Évolution juridique",
-            items: [
-              {
-                title: "IDCC 3248 Question/Réponse : Prime d’ancienneté",
-                href: "/contribution/3248-quand-le-salarie-a-t-il-droit-a-une-prime-danciennete-quel-est-son-montant",
-                description:
-                  "Ajout de la valeur de point pour la Flandre Douaisis, le Pas-de-Calais, Rouen et Dieppe.",
-              },
-              {
-                title:
-                  "Modification de la Question/Réponse : Arrêt maladie pendant les congés payés",
-                href: "/contribution/si-le-salarie-est-malade-pendant-ses-conges-quelles-en-sont-les-consequences",
-              },
-            ],
-          },
-          {
-            kind: "mise-a-jour-fonctionnelle",
-            label: "Mise à jour fonctionnelle",
-            items: [
-              {
-                title: "Mise en ligne d’un formulaire de satisfaction",
-                description:
-                  "Formulaire permettant d’évaluer la satisfaction suite à la refonte du site vers le système de design de l’État.",
-              },
-            ],
-          },
-        ],
-      },
-      {
-        id: "2025-09-01_2025-09-07",
-        label: "Semaine du 1 au 7 septembre",
-        hasUpdates: true,
-        categories: [
-          {
-            kind: "evolution-juridique",
-            label: "Évolution juridique",
-            items: [
-              {
-                title: "IDCC 3248 Question/Réponse : Prime d’ancienneté",
-                href: "/contribution/3248-quand-le-salarie-a-t-il-droit-a-une-prime-danciennete-quel-est-son-montant",
-                description:
-                  "Ajout de la valeur de point pour la Gironde, les Landes, l’Aisne, la Charente-Maritime, l’Oise et la Haute-Marne.",
-              },
-              {
-                title: "IDCC 275 Question/Réponse : Salaire minimum",
-                href: "/contribution/275-quel-est-le-salaire-minimum",
-                description:
-                  "Mise à jour des salaires minima en vigueur au 1er septembre.",
-              },
-              {
-                title: "IDCC 3248 Question/Réponse : Primes",
-                href: "/contribution/3248-quelles-sont-les-primes-prevues-par-la-convention-collective",
-                description:
-                  "Modification de la prime de vacances pour l’Aisne.",
-              },
-            ],
-          },
-        ],
-      },
-    ],
-  },
+const parsePeriod = (period: string): Date =>
+  parse(period, "MM-yyyy", new Date());
 
-  //
-  // OCTOBRE 2025 — 10-2025
-  //
-  {
-    period: "10-2025",
-    label: "Octobre 2025",
-    shortLabel: "10/25",
-    weeks: [
-      {
-        id: "2025-10-27_2025-10-31",
-        label: "Semaine du 27 au 31 octobre",
-        hasUpdates: true,
-        categories: [
-          {
-            kind: "evolution-juridique",
-            label: "Évolution juridique",
-            items: [
-              {
-                title:
-                  "Nouveau modèle : Lettre de licenciement pour faute simple ou grave du salarié du particulier employeur",
-                href: "/modeles-de-courriers/lettre-de-licenciement-pour-faute-simple-ou-grave-du-salarie-du-particulier-employeur",
-                description:
-                  "Modèle permettant de notifier le licenciement pour faute simple ou grave d’un salarié du particulier employeur.",
-              },
-              {
-                title: "IDCC 3248 Question/Réponse : Prime d’ancienneté",
-                href: "/contribution/3248-quand-le-salarie-a-t-il-droit-a-une-prime-danciennete-quel-est-son-montant",
-                description:
-                  "Ajout de la valeur de point pour l’Aube, les Pyrénées-Atlantiques et Seignanx.",
-              },
-            ],
-          },
-          {
-            kind: "mise-a-jour-fonctionnelle",
-            label: "Mise à jour fonctionnelle",
-            items: [
-              {
-                title:
-                  "Mise à jour de la page déclaration d’accessibilité : totalement conforme",
-                href: "/accessibilite",
-                description:
-                  "Suite à un audit puis un contre-audit en octobre 2025, 100 % des critères RGAA sont respectés sur le site.",
-              },
-              {
-                title: "Ajout dans la page outil de services externes",
-                href: "/outils",
-              },
-              {
-                title:
-                  "Ajout d’un nouvel onglet « Code du travail » sur la page d’accueil",
-                href: "/",
-                description:
-                  "Accès direct à la page « Comprendre le droit du travail » et au glossaire depuis le haut du site.",
-              },
-              {
-                title: "Ajout de sous section dans le menu du site",
-                description:
-                  "Mise en avant dans chaque section du menu des principaux contenus les plus consultés.",
-              },
-            ],
-          },
-        ],
-      },
-      {
-        id: "2025-10-20_2025-10-26",
-        label: "Semaine du 20 au 26 octobre",
-        hasUpdates: true,
-        categories: [
-          {
-            kind: "evolution-juridique",
-            label: "Évolution juridique",
-            items: [
-              {
-                title: "IDCC 0016 Question/Réponse : Salaire minimum",
-                href: "/contribution/16-quel-est-le-salaire-minimum",
-                description:
-                  "Intégration du secteur des transports de fonds et valeurs aux transports routiers et activités auxiliaires.",
-              },
-              {
-                title: "IDCC 0016 Question/Réponse : Primes",
-                href: "/contribution/16-quelles-sont-les-primes-prevues-par-la-convention-collective",
-                description:
-                  "Intégration du secteur des transports de fonds et valeurs aux transports routiers et activités auxiliaires.",
-              },
-              {
-                title: "IDCC 0016 Question/Réponse : Jours fériés",
-                href: "/contribution/16-jours-feries-et-ponts-dans-le-secteur-prive",
-                description:
-                  "Intégration du secteur des transports de fonds et valeurs aux transports routiers et activités auxiliaires.",
-              },
-              {
-                title: "IDCC 0016 Question/Réponse : Travail du dimanche",
-                href: "/contribution/travail-du-dimanche-quelle-contrepartie",
-                description:
-                  "Intégration du secteur des transports de fonds et valeurs aux transports routiers et activités auxiliaires.",
-              },
-            ],
-          },
-        ],
-      },
-      {
-        id: "2025-10-13_2025-10-19",
-        label: "Semaine du 13 au 19 octobre",
-        hasUpdates: true,
-        categories: [
-          {
-            kind: "evolution-juridique",
-            label: "Évolution juridique",
-            items: [
-              {
-                title: "IDCC 1480 Question/Réponse : Salaire minimum",
-                href: "/contribution/1480-quel-est-le-salaire-minimum",
-                description:
-                  "Ajout du salaire minimum pour la presse quotidienne nationale.",
-              },
-              {
-                title: "IDCC 3248 Question/Réponse : Prime d’ancienneté",
-                href: "/contribution/3248-quand-le-salarie-a-t-il-droit-a-une-prime-danciennete-quel-est-son-montant",
-                description:
-                  "Ajout de la valeur de point pour l’arrondissement d’Avesnes (Maubeuge).",
-              },
-              {
-                title:
-                  "Nouveau modèle : Demande de prise de congé de paternité et de l’accueil de l’enfant",
-                href: "/modeles-de-courriers/modele-de-lettre-de-prise-de-conge-paternite-et-daccueil",
-                description:
-                  "Ce modèle permet au / à la salarié(e) de prendre des jours de congé de paternité et d’accueil de l’enfant.",
-              },
-            ],
-          },
-        ],
-      },
-      {
-        id: "2025-10-06_2025-10-12",
-        label: "Semaine du 6 au 12 octobre",
-        hasUpdates: false,
-      },
-      {
-        id: "2025-10-01_2025-10-05",
-        label: "Semaine du 1er au 5 octobre",
-        hasUpdates: true,
-        categories: [
-          {
-            kind: "evolution-juridique",
-            label: "Évolution juridique",
-            items: [
-              {
-                title: "IDCC 1090 Question/Réponse : Salaire minimum",
-                href: "/contribution/1090-quel-est-le-salaire-minimum",
-                description: "Modification du salaire conventionnel.",
-              },
-              {
-                title: "IDCC 1090 Question/Réponse : Prime",
-                href: "/contribution/1090-quelles-sont-les-primes-prevues-par-la-convention-collective",
-                description: "Modification de l’indemnité de panier.",
-              },
-              {
-                title:
-                  "IDCC 2098 Question/Réponse : Congé pour évènements familiaux",
-                href: "/contribution/2098-les-conges-pour-evenements-familiaux",
-                description:
-                  "Modification du congé pour annonce d’une maladie ou d’un handicap pour un enfant.",
-              },
-              {
-                title:
-                  "Modification page : Arrêt maladie « L’employeur peut-il organiser un contrôle »",
-                href: "/information/arret-maladie-lemployeur-peut-il-organiser-un-controle",
-                description:
-                  "Ajout d’une précision sur la visite de pré-reprise.",
-              },
-              {
-                title:
-                  "Modification de la page : Le suivi médical des salariés",
-                href: "/information/suivi-medical-et-accompagnement-de-certains-salaries",
-                description:
-                  "Décret instaurant un examen périodique pour certains salariés et précision sur la visite de pré-reprise.",
-              },
-            ],
-          },
-        ],
-      },
-    ],
-  },
+const comparePeriodsAsc = (a: string, b: string): number =>
+  parsePeriod(a).getTime() - parsePeriod(b).getTime();
 
-  //
-  // NOVEMBRE 2025 — 11-2025
-  //
-  {
-    period: "11-2025",
-    label: "Novembre 2025",
-    shortLabel: "11/25",
-    weeks: [
-      {
-        id: "2025-11-24_2025-11-30",
-        label: "Semaine du 24 au 30 novembre",
-        hasUpdates: false,
-      },
-      {
-        id: "2025-11-17_2025-11-23",
-        label: "Semaine du 17 au 23 novembre",
-        hasUpdates: false,
-      },
-      {
-        id: "2025-11-10_2025-11-16",
-        label: "Semaine du 10 au 16 novembre",
-        hasUpdates: true,
-        categories: [
-          {
-            kind: "mise-a-jour-fonctionnelle",
-            label: "Mise à jour fonctionnelle",
-            items: [
-              {
-                title:
-                  "Ajout de la section « Comprendre le droit du travail » sur la page d’accueil",
-                description:
-                  "Permettre à l’usager de comprendre plus facilement le droit du travail.",
-              },
-            ],
-          },
-        ],
-      },
-      {
-        id: "2025-11-03_2025-11-09",
-        label: "Semaine du 3 au 9 novembre",
-        hasUpdates: false,
-      },
-      {
-        id: "2025-11-01_2025-11-02",
-        label: "Semaine du 1er au 2 novembre",
-        hasUpdates: true,
-        categories: [
-          {
-            kind: "evolution-juridique",
-            label: "Évolution juridique",
-            items: [
-              {
-                title: "IDCC 3248 Question/Réponse : Primes",
-                href: "/contribution/3248-quelles-sont-les-primes-prevues-par-la-convention-collective",
-                description:
-                  "Ajout de la valeur de point pour le Maine-et-Loire.",
-              },
-              {
-                title: "IDCC 2098 Question/Réponse : Salaire minimum",
-                href: "/contribution/2098-quel-est-le-salaire-minimum",
-                description: "Réévaluation du salaire minimum.",
-              },
-              {
-                title: "IDCC 275 Question/Réponse : Salaire minimum",
-                href: "/contribution/275-quel-est-le-salaire-minimum",
-                description: "Réévaluation du salaire minimum.",
-              },
-            ],
-          },
-        ],
-      },
-    ],
-  },
-  //
-  // DÉCEMBRE 2025 — 12-2025
-  //
-  {
-    period: "12-2025",
-    label: "Décembre 2025",
-    shortLabel: "12/25",
-    weeks: [
-      {
-        id: "2025-12-22_2025-12-28",
-        label: "Semaine du 22 au 28 décembre",
-        hasUpdates: true,
-        categories: [
-          {
-            kind: "evolution-juridique",
-            label: "Évolution juridique",
-            items: [
-              {
-                title: "IDCC 86 Question/Réponse : Maintien de salaire",
-                href: "/contribution/86-en-cas-darret-maladie-du-salarie-lemployeur-doit-il-assurer-le-maintien-de-salaire",
-                description:
-                  "Le maintien de salaire est désormais assuré dès le premier jour d’arrêt maladie (suppression du délai de carence de 3 jours).",
-              },
-              {
-                title: "IDCC 1480 Question/Réponse : Salaire minimum",
-                href: "/contribution/1480-quel-est-le-salaire-minimum",
-                description:
-                  "Modification des grilles de salaires pour les journalistes de la presse périodique et hebdomadaire.",
-              },
-              {
-                title:
-                  "Nouveau modèle : Demande de retour anticipé après un congé parental d’éducation à temps partiel",
-                href: "/modeles-de-courriers/demande-de-retour-anticipe-a-la-suite-dun-conge-parental-deducation-a-temps-partiel",
-                description:
-                  "Ce modèle de lettre s’adresse au salarié qui souhaite demander un retour anticipé après un congé parental d’éducation à temps partiel.",
-              },
-              {
-                title:
-                  "Nouveau modèle : Demande de retour anticipé après un congé parental d’éducation à temps plein",
-                href: "/modeles-de-courriers/demande-de-retour-anticipe-a-la-suite-dun-conge-parental-deducation-a-temps-plein",
-                description:
-                  "Ce modèle de lettre s’adresse au salarié qui souhaite demander un retour anticipé après un congé parental d’éducation à temps plein.",
-              },
-              {
-                title:
-                  "Nouveau modèle : Demande de prolongation et/ou de transformation du congé parental d’éducation à temps partiel",
-                href: "/modeles-de-courriers/demande-de-prolongation-et-ou-de-transformation-du-conge-parental-deducation-a-temps-partiel",
-                description:
-                  "Ce modèle de lettre s'adresse au salarié qui souhaite demander la prolongation du congé parental d’éducation à temps plein et/ou sa transformation en activité à temps partiel.",
-              },
-              {
-                title:
-                  "Nouveau modèle : Demande de prolongation et/ou de transformation du congé parental d’éducation à temps plein",
-                href: "/modeles-de-courriers/demande-de-prolongation-et-ou-de-transformation-du-conge-parental-deducation-a-temps-plein",
-                description:
-                  "Ce modèle de lettre s'adresse au salarié qui souhaite demander la prolongation du congé parental d’éducation à temps partiel et/ou sa transformation en congé parental d’éducation à temps plein.",
-              },
-            ],
-          },
-        ],
-      },
-      {
-        id: "2025-12-15_2025-12-21",
-        label: "Semaine du 15 au 21 décembre",
-        hasUpdates: true,
-        categories: [
-          {
-            kind: "mise-a-jour-fonctionnelle",
-            label: "Mise à jour fonctionnelle",
-            items: [
-              {
-                title: "Ajout des infographies dans les Questions/Réponses",
-                description:
-                  "Permettre à l’usager d’avoir une réponse complète et synthétique en droit du travail.",
-              },
-            ],
-          },
-        ],
-      },
-      {
-        id: "2025-12-08_2025-12-14",
-        label: "Semaine du 8 au 14 décembre",
-        hasUpdates: true,
-        categories: [
-          {
-            kind: "mise-a-jour-fonctionnelle",
-            label: "Mise à jour fonctionnelle",
-            items: [
-              {
-                title: "Ajout du nouveau parcours de recherche",
-                description:
-                  "Permettre à l’usager de trouver plus facilement une information en droit du travail.",
-              },
-              {
-                title:
-                  'Ajout de la section "Quoi de neuf" sur la page d’accueil',
-                description:
-                  "Permettre à l’usager de voir les nouveautés du code du travail numérique.",
-              },
-            ],
-          },
-        ],
-      },
-      {
-        id: "2025-12-01_2025-12-07",
-        label: "Semaine du 1er au 7 décembre",
-        hasUpdates: true,
-        categories: [
-          {
-            kind: "evolution-juridique",
-            label: "Évolution juridique",
-            items: [
-              {
-                title:
-                  "Question/Réponse : Heures supplémentaires : contreparties",
-                href: "/contribution/heures-supplementaires",
-                description:
-                  "Création d’une nouvelle page avec ces déclinaisons par convention collective.",
-              },
-            ],
-          },
-        ],
-      },
-    ],
-  },
+const uniq = <T>(items: T[]): T[] => Array.from(new Set(items));
 
-  //
-  // JANVIER 2026 — 01-2026
-  //
-  {
-    period: "01-2026",
-    label: "Janvier 2026",
-    shortLabel: "01/26",
-    weeks: [
-      {
-        id: "2026-01-05_2026-01-11",
-        label: "Semaine du 5 au 11 janvier",
-        hasUpdates: true,
-        categories: [
-          {
-            kind: "evolution-juridique",
-            label: "Évolution juridique",
-            items: [
-              {
-                title:
-                  "Nouvelle fiche juridique : Le contrat de valorisation de l’expérience (CVE)",
-                href: "/fiche-ministere-travail/le-contrat-de-valorisation-de-lexperience-cve",
-              },
-              {
-                title:
-                  "Nouveau cas de recours de CDD dans le modèle de courrier",
-                href: "/modeles-de-courriers/contrat-de-travail-a-duree-determinee-cdd",
-                description:
-                  "Ajout d’un cas de recours de CDD dans le modèle : reconversion professionnelle dans le cadre d’une mobilité professionnelle interne ou externe à l’entreprise.",
-              },
-              {
-                title: "Modification de la durée maximale d'un CDD",
-                href: "/contribution/quelle-peut-etre-la-duree-maximale-dun-cdd",
-                description:
-                  "Durée maximale pour un CDD de reconversion professionnelle : selon la réalisation de l’objet du contrat, avec une durée minimale de 6 mois.",
-              },
-              {
-                title: "IDCC 1518 - Question/Réponse : Prime d'ancienneté",
-                href: "/contribution/1518-quand-le-salarie-a-t-il-droit-a-une-prime-danciennete-quel-est-son-montant",
-                description:
-                  "Modification du montant de la prime d'ancienneté.",
-              },
-              {
-                title:
-                  "IDCC 1351 - Question/Réponse : primes prévues par la convention collective",
-                href: "/contribution/1351-quelles-sont-les-primes-prevues-par-la-convention-collective",
-                description:
-                  "Modification du montant de la prime panier, de l'indemnité panier, de la prime d'entretien des tenues et ajout de l'indemnité d'amortissement et d'entretien du chien.",
-              },
-              {
-                title: "Question/Réponse : Quel est le salaire minimum ?",
-                href: "/contribution/quel-est-le-salaire-minimum",
-                description:
-                  "Revalorisation du SMIC au 1er janvier 2026 et nouvelles grilles de salaire des conventions collectives impactées.",
-              },
-              {
-                title: "Question/Réponse : Indemnités du congé maternité",
-                href: "/contribution/quelles-sont-les-conditions-dindemnisation-pendant-le-conge-de-maternite",
-                description:
-                  "Revalorisation du plafond mensuel de la Sécurité sociale au 1er janvier 2026 et déclinaison du montant de cette indemnité par convention collective.",
-              },
-            ],
-          },
-        ],
-      },
-    ],
-  },
-];
+const capitalizeFirst = (value: string): string =>
+  value.length === 0 ? value : value[0].toUpperCase() + value.slice(1);
 
-export const getMonthByPeriod = (period: string): WhatIsNewMonth | undefined =>
-  WHAT_IS_NEW_MONTHS.find((month) => month.period === period);
-
-export const getPeriods = (): string[] =>
-  WHAT_IS_NEW_MONTHS.map((month) => month.period);
-
-export const fetchWhatIsNewMonth = async (
-  period: string
-): Promise<WhatIsNewMonth | undefined> => {
-  return getMonthByPeriod(period);
+const getPeriodFromWeekStart = (weekStart: string): string | undefined => {
+  try {
+    return format(parseISO(weekStart), "MM-yyyy");
+  } catch {
+    return;
+  }
 };
 
-export const getMostRecentPeriod = (): string =>
-  WHAT_IS_NEW_MONTHS[WHAT_IS_NEW_MONTHS.length - 1].period;
+const getMonthLabel = (period: string): string =>
+  capitalizeFirst(
+    format(parsePeriod(period), "MMMM yyyy", { locale: frLocale })
+  );
+
+const getMonthShortLabel = (period: string): string =>
+  format(parsePeriod(period), "MM/yy");
+
+const getWeekLabel = (weekStart: string): string => {
+  const start = parseISO(weekStart);
+  const end = addDays(start, 6);
+
+  if (isSameMonth(start, end)) {
+    // "Semaine du 5 au 11 janvier 2026"
+    return `Semaine du ${format(start, "d", {
+      locale: frLocale,
+    })} au ${format(end, "d MMMM yyyy", { locale: frLocale })}`;
+  }
+
+  // "Semaine du 26 janvier 2026 au 1 février 2026"
+  return `Semaine du ${format(start, "d MMMM yyyy", {
+    locale: frLocale,
+  })} au ${format(end, "d MMMM yyyy", { locale: frLocale })}`;
+};
+
+const listWeekStartsForPeriod = (period: string): string[] => {
+  const monthStart = startOfMonth(parsePeriod(period));
+  const nextMonthStart = addMonths(monthStart, 1);
+
+  let cursor = monthStart;
+  while (cursor.getDay() !== 1) {
+    cursor = addDays(cursor, 1);
+  }
+
+  const weekStarts: string[] = [];
+  while (cursor.getTime() < nextMonthStart.getTime()) {
+    weekStarts.push(format(cursor, "yyyy-MM-dd"));
+    cursor = addDays(cursor, 7);
+  }
+
+  return weekStarts;
+};
+
+const getCategoryLabel = (kind: WhatIsNewKind): string => {
+  switch (kind) {
+    case "mise-a-jour-fonctionnelle":
+      return "Mise à jour fonctionnelle";
+    case "evolution-juridique":
+    default:
+      return "Évolution juridique";
+  }
+};
+
+const toHref = (url?: string): string | undefined => {
+  const trimmed = url?.trim();
+  return trimmed ? trimmed : undefined;
+};
+
+const isMeaningfulEntry = (
+  entry: Pick<WhatIsNewEntryDocument, "url" | "title" | "description">
+): boolean => {
+  const hasUrl = Boolean(entry.url?.trim());
+  const hasTitle = Boolean(entry.title?.trim());
+  const hasDescription = Boolean(entry.description?.trim());
+  return hasUrl || hasTitle || hasDescription;
+};
+
+const entryToItem = (entry: WhatIsNewEntryDocument): WhatIsNewItem => {
+  const title = entry.title?.trim();
+  const description = entry.description?.trim();
+  const href = toHref(entry.url);
+
+  return {
+    title: title || "Mise à jour",
+    description,
+    href,
+  };
+};
+
+export const getPeriods = cache(async (): Promise<string[]> => {
+  try {
+    const queryBody = {
+      index: elasticDocumentsIndex,
+      _source: ["weekStart", "url", "title", "description"],
+      size: 5000,
+      query: {
+        bool: {
+          filter: [
+            { term: { source: SOURCES.WHAT_IS_NEW } },
+            { term: { isPublished: true } },
+          ],
+        },
+      },
+    };
+
+    const response =
+      await elasticsearchClient.search<
+        Pick<
+          WhatIsNewEntryDocument,
+          "weekStart" | "url" | "title" | "description"
+        >
+      >(queryBody);
+
+    const periods = response.hits.hits
+      .map((hit) => hit._source)
+      .filter(
+        (
+          s
+        ): s is Pick<
+          WhatIsNewEntryDocument,
+          "weekStart" | "url" | "title" | "description"
+        > => Boolean(s)
+      )
+      .filter(isMeaningfulEntry)
+      .map((s) => s.weekStart)
+      .filter((ws): ws is string => Boolean(ws))
+      .map(getPeriodFromWeekStart)
+      .filter((p): p is string => Boolean(p));
+
+    return uniq(periods).sort(comparePeriodsAsc);
+  } catch (error) {
+    console.error("[getPeriods] Error querying Elasticsearch:", error);
+    throw error;
+  }
+});
+
+export const getMostRecentPeriod = cache(
+  async (): Promise<string | undefined> => {
+    const periods = await getPeriods();
+    return periods[periods.length - 1];
+  }
+);
+
+export const fetchWhatIsNewMonth = cache(
+  async (period: string): Promise<WhatIsNewMonth | undefined> => {
+    const monthStart = startOfMonth(parsePeriod(period));
+    const nextMonthStart = addMonths(monthStart, 1);
+
+    try {
+      const response = await elasticsearchClient.search<WhatIsNewEntryDocument>(
+        {
+          index: elasticDocumentsIndex,
+          size: 5000,
+          query: {
+            bool: {
+              filter: [
+                { term: { source: SOURCES.WHAT_IS_NEW } },
+                { term: { isPublished: true } },
+                {
+                  range: {
+                    weekStart: {
+                      gte: format(monthStart, "yyyy-MM-dd"),
+                      lt: format(nextMonthStart, "yyyy-MM-dd"),
+                    },
+                  },
+                },
+              ],
+            },
+          },
+          sort: [{ weekStart: "asc" }, { createdAt: "asc" }],
+        }
+      );
+
+      const entries = response.hits.hits
+        .map((hit) => hit._source)
+        .filter((s): s is WhatIsNewEntryDocument => Boolean(s))
+        .filter(isMeaningfulEntry);
+
+      if (entries.length === 0) {
+        return;
+      }
+
+      const weekStarts = listWeekStartsForPeriod(period);
+
+      const today = startOfToday();
+      const currentPeriod = format(today, "MM-yyyy");
+      const isCurrentMonth = period === currentPeriod;
+
+      const lastWeekWithData =
+        entries.length > 0 ? entries[entries.length - 1].weekStart : null;
+
+      const cutoffDate =
+        isCurrentMonth && lastWeekWithData ? parseISO(lastWeekWithData) : null;
+
+      const weeks: WhatIsNewWeek[] = weekStarts
+        .map((weekStart) => {
+          const weekEntries = entries.filter((e) => e.weekStart === weekStart);
+
+          const byKind = new Map<WhatIsNewKind, WhatIsNewItem[]>();
+          for (const entry of weekEntries) {
+            const items = byKind.get(entry.kind) ?? [];
+            items.push(entryToItem(entry));
+            byKind.set(entry.kind, items);
+          }
+
+          const categories: WhatIsNewCategory[] = [];
+          (
+            ["mise-a-jour-fonctionnelle", "evolution-juridique"] as const
+          ).forEach((kind) => {
+            const items = byKind.get(kind);
+            if (items && items.length > 0) {
+              categories.push({
+                kind,
+                label: getCategoryLabel(kind),
+                items,
+              });
+            }
+          });
+
+          return {
+            id: weekStart,
+            label: getWeekLabel(weekStart),
+            hasUpdates: categories.length > 0,
+            categories: categories.length > 0 ? categories : undefined,
+          };
+        })
+        .filter((week) => {
+          // Always keep weeks with updates
+          if (week.hasUpdates) {
+            return true;
+          }
+
+          if (cutoffDate) {
+            return !isAfter(parseISO(week.id), cutoffDate);
+          }
+
+          return true;
+        })
+        .reverse();
+      const createdAt = entries
+        .map((e) => e.createdAt)
+        .filter((v): v is string => Boolean(v))
+        .sort()[0];
+
+      const updatedAt = entries
+        .map((e) => e.updatedAt)
+        .filter((v): v is string => Boolean(v))
+        .sort()
+        .at(-1);
+
+      return {
+        period,
+        label: getMonthLabel(period),
+        shortLabel: getMonthShortLabel(period),
+        weeks,
+        createdAt,
+        updatedAt,
+      };
+    } catch (error) {
+      console.error(
+        "[fetchWhatIsNewMonth] Error querying Elasticsearch:",
+        error
+      );
+      throw error;
+    }
+  }
+);
