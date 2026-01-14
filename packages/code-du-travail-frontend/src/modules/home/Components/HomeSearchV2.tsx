@@ -69,6 +69,7 @@ export const HomeSearchV2 = () => {
       {hasSearched && !isLoading && (
         <SearchResults
           results={results}
+          queryClass={classes[0]}
           contextType="home"
           titleRef={resultsTitleRef}
         />

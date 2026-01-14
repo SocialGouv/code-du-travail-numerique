@@ -19,7 +19,8 @@ enum MatomoSearchCategory {
 
 enum MatomoSearchAction {
   PRESEARCH = "presearch",
-  CLIK_SEE_ALL_RESULTS = "clickSeeAllResults",
+  FULL_SEARCH = "fullsearch",
+  CLICK_SEE_ALL_RESULTS = "clickSeeAllResults",
   SELECT_PRESEARCH_RESULT = "selectPresearchResult",
 }
 
@@ -60,6 +61,21 @@ export const useSearchTracking = () => {
       });
     }
   }, []);
+
+  const emitFullsearchEvent = useCallback(
+    (searchTerm: string, queryClass: string) => {
+      if (searchTerm?.trim()) {
+        const name = JSON.stringify({ query: searchTerm, queryClass });
+
+        sendEvent({
+          category: MatomoSearchCategory.SEARCH,
+          action: MatomoSearchAction.FULL_SEARCH,
+          name,
+        });
+      }
+    },
+    []
+  );
 
   const emitNextPageEvent = useCallback((query: string) => {
     sendEvent({
@@ -109,26 +125,29 @@ export const useSearchTracking = () => {
       });
       sendEvent({
         category: MatomoSearchCategory.SEARCH,
-        action: MatomoSearchAction.CLIK_SEE_ALL_RESULTS,
+        action: MatomoSearchAction.CLICK_SEE_ALL_RESULTS,
         name,
       });
     },
     []
   );
 
-  const emitSelectPresearchResultEvent = useCallback((result: SearchResult) => {
-    const name = JSON.stringify({
-      algo: result.algo || "presearch",
-      classe: result.class,
-      url: `/${getRouteBySource(result.source)}/${result.slug}`,
-    });
+  const emitSelectPresearchResultEvent = useCallback(
+    (result: SearchResult, queryClass: string) => {
+      const name = JSON.stringify({
+        algo: result.algo,
+        queryClass,
+        url: `/${getRouteBySource(result.source)}/${result.slug}`,
+      });
 
-    sendEvent({
-      category: MatomoSearchCategory.SEARCH,
-      action: MatomoSearchAction.SELECT_PRESEARCH_RESULT,
-      name,
-    });
-  }, []);
+      sendEvent({
+        category: MatomoSearchCategory.SEARCH,
+        action: MatomoSearchAction.SELECT_PRESEARCH_RESULT,
+        name,
+      });
+    },
+    []
+  );
 
   return {
     emitResultSelectionEvent,
@@ -139,5 +158,6 @@ export const useSearchTracking = () => {
     emitPresearchEvent,
     emitSelectPresearchResultEvent,
     emitClickSeeAllResultsEvent,
+    emitFullsearchEvent,
   };
 };

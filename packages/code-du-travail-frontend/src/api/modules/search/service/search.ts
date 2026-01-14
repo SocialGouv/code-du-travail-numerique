@@ -33,7 +33,6 @@ export type SearchResult = {
   source: SourceKeys;
   title: string;
   algo: SearchAlgo;
-  class: PresearchClass;
   breadcrumbs?: {
     label: string;
     position: number;

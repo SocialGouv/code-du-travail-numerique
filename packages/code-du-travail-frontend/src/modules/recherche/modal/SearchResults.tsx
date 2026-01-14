@@ -7,6 +7,7 @@ import { SearchResult } from "src/api/modules/search/service/search";
 
 interface Props {
   results: SearchResult[];
+  queryClass: string;
   onResultClick?: () => void;
   contextType: "home" | "modal";
   titleRef?: React.RefObject<HTMLHeadingElement | null>;
@@ -14,6 +15,7 @@ interface Props {
 
 export const SearchResults = ({
   results,
+  queryClass,
   onResultClick,
   contextType,
   titleRef,
@@ -25,8 +27,8 @@ export const SearchResults = ({
     return null;
   }
 
-  const handleResultClick = (result: SearchResult) => {
-    emitSelectPresearchResultEvent(result);
+  const handleResultClick = (result: SearchResult, queryClass: string) => {
+    emitSelectPresearchResultEvent(result, queryClass);
     if (onResultClick) {
       onResultClick();
     }
@@ -79,7 +81,7 @@ export const SearchResults = ({
           >
             <SearchResultCard
               result={result}
-              onClick={() => handleResultClick(result)}
+              onClick={() => handleResultClick(result, queryClass)}
               headingLevel={contextType === "home" ? "h4" : "h3"}
             />
           </li>

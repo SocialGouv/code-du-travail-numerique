@@ -111,6 +111,7 @@ export enum PresearchClass {
 
 export type PreSearchResult = SearchResult & {
   algo: typeof SEARCH_ALGO.PRESEARCH;
+  class: PresearchClass;
 };
 
 export type ThemeSearchResult = PreSearchResult & { breadcrumbs: unknown[] };
@@ -177,7 +178,7 @@ const prepro = (content: string | undefined): string[] => {
   return tokens ? tokens.map(complex) : [];
 };
 
-const isCC = async (query: string): Promise<SearchResult[]> => {
+const isCC = async (query: string): Promise<PreSearchResult[]> => {
   await ensureIdccsInstantiated();
 
   const tokens: string[] = tokenize(query);
@@ -239,7 +240,7 @@ const isCC = async (query: string): Promise<SearchResult[]> => {
 const getThemes = (
   pQuery: string[],
   themes: ThemeSearchResult[]
-): SearchResult | undefined => {
+): PreSearchResult | undefined => {
   // sort by breadcrumbs
   themes.sort((a, b) => a.breadcrumbs.length - b.breadcrumbs.length);
 
@@ -268,7 +269,7 @@ const getThemes = (
     : undefined;
 };
 
-const getArticles = async (query): Promise<SearchResult[]> => {
+const getArticles = async (query): Promise<PreSearchResult[]> => {
   // proper references
   const refs: { text: string }[] = extractReferences(query);
 
@@ -329,7 +330,7 @@ export const presearch = async (
   themes: ThemeSearchResult[],
   allClasses: boolean
 ): Promise<{ results: SearchResult[]; classes: PresearchClass[] }> => {
-  const results: SearchResult[] = [];
+  const results: PreSearchResult[] = [];
 
   const pQuery = prepro(query);
 
