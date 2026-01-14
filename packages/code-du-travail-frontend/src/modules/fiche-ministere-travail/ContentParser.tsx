@@ -45,6 +45,17 @@ const options = (): HTMLReactParserOptions => {
   return {
     replace(domNode) {
       if (domNode instanceof Element) {
+        if (domNode.name === "a" && !domNode.attribs.title) {
+          return (
+            <Link
+              href={domNode.attribs["href"]}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {domToReact(domNode.children as DOMNode[])}
+            </Link>
+          );
+        }
         if (
           domNode.name === "div" &&
           domNode.attribs.class?.includes("youtube_player")
