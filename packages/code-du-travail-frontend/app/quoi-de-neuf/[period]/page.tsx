@@ -27,7 +27,7 @@ export default async function Index({ params }: PageProps) {
     notFound();
   }
 
-  const periods = await getPeriods().catch(() => []);
+  const periods = await getPeriods();
   const periodsForNav = periods.length > 0 ? periods : [month.period];
 
   return (
