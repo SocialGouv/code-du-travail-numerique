@@ -1,4 +1,4 @@
-import { getByRole, render } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import { FicheMinistereTravail } from "../ficheMinistereTravail";
 
 const ficheMTData = {
