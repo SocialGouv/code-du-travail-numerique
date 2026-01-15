@@ -1,8 +1,16 @@
 import { withSentryConfig } from "@sentry/nextjs";
+import fs from "node:fs";
+import path from "node:path";
 
 const MappingReplacement = await import("./redirects.json", {
   with: { type: "json" },
 });
+
+// Docker builds often don't include the `.git` directory.
+// When missing, `releases set-commits --auto` fails hard in Sentry CLI.
+const HAS_GIT_REPO = [".git", "../.git", "../../.git", "../../../.git"].some(
+  (p) => fs.existsSync(path.resolve(process.cwd(), p))
+);
 
 const RELEASE =
   process.env.NEXT_PUBLIC_SENTRY_RELEASE ||
@@ -51,10 +59,14 @@ const sentryBuildOptions = {
   release: {
     name: RELEASE,
     dist: DIST,
-    setCommits: {
-      auto: true,
-      ignoreMissing: true,
-    },
+    ...(HAS_GIT_REPO && process.env.SENTRY_DISABLE_GIT_SET_COMMITS !== "true"
+      ? {
+          setCommits: {
+            auto: true,
+            ignoreMissing: true,
+          },
+        }
+      : {}),
     deploy: {
       env:
         process.env.NEXT_PUBLIC_SENTRY_ENV ||
