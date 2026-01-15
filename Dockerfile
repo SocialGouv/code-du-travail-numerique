@@ -91,7 +91,20 @@ RUN --mount=type=cache,id=next-cache,target=/app/packages/code-du-travail-fronte
 # Deploy (creates a production-ready deployment without dev dependencies)
 RUN pnpm --filter @cdt/frontend deploy --prod /app/deploy && \
   cp -r /app/packages/code-du-travail-frontend/.next /app/deploy/.next && \
-  cp -r /app/packages/code-du-travail-frontend/public/* /app/deploy/public/
+  cp -r /app/packages/code-du-travail-frontend/public/* /app/deploy/public/ && \
+  # Turbopack can emit references to pnpm's "virtual store" shim packages (e.g. `require-in-the-middle-<hash>`)
+  # when compiling `instrumentation.(js|ts)`. Those shims live under the package's node_modules but are not guaranteed
+  # to be present in the `pnpm deploy` output.
+  #
+  # If missing, Next fails at runtime with: "An error occurred while loading the instrumentation hook".
+  for d in \
+  /app/node_modules/require-in-the-middle-* \
+  /app/node_modules/import-in-the-middle-* \
+  /app/packages/code-du-travail-frontend/node_modules/require-in-the-middle-* \
+  /app/packages/code-du-travail-frontend/node_modules/import-in-the-middle-* \
+  ; do \
+  if [ -e "$d" ]; then cp -R "$d" /app/deploy/node_modules/; fi; \
+  done
 
 # runner stage: no corepack/pnpm, just Node runtime
 FROM node:$NODE_VERSION AS runner
@@ -116,4 +129,3 @@ RUN chmod -R a-w /app && \
 USER 1000
 
 CMD ["node", "node_modules/next/dist/bin/next", "start"]
-
