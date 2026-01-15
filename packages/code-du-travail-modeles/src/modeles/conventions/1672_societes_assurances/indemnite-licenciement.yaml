@@ -36,12 +36,8 @@ contrat salarié . convention collective . sociétés d'assurances . catégorie 
     - sinon: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
   unité: an
 
-contrat salarié . convention collective . sociétés d'assurances . minimum ancienneté conventionnelle requise en année:
-  remplace: paramètre . minimum ancienneté conventionnelle requise en année
-  valeur: 3 ans
-
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle . non cadres . résultat conventionnel:
-  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année > paramètre . minimum ancienneté conventionnelle requise en année
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année > 3 ans
   remplace: non cadres
   valeur: base + majoration
   unité: €
@@ -115,7 +111,7 @@ contrat salarié . convention collective . sociétés d'assurances . catégorie 
   remplace: majoration
   applicable si:
     toutes ces conditions:
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année > paramètre . minimum ancienneté conventionnelle requise en année
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année > 3 ans
       - age >= 50 an
   valeur: 0.005 * contrat salarié . indemnité de licenciement . salaire de référence conventionnel * ancienneté
   cdtn:
@@ -153,7 +149,7 @@ contrat salarié . convention collective . sociétés d'assurances . catégorie 
   unité: an
 
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle . cadres . résultat conventionnel:
-  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année > paramètre . minimum ancienneté conventionnelle requise en année
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année > 3 ans
   valeur: base + majoration
   unité: €
   arrondi: 2 décimales

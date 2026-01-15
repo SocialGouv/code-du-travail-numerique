@@ -6,7 +6,7 @@ const engine = new RuptureConventionnellePublicodes(
 );
 
 describe("Gestion des licenciements pour la CC 2148", () => {
-  test("Vérifier qu'il n'y a pas d'ancienneté conventionnelle requise", () => {
+  test("Vérifier qu'il y a une ancienneté conventionnelle requise", () => {
     const result = engine.calculate({
       "contrat salarié . convention collective": "'IDCC2148'",
       "contrat salarié . convention collective . télécommunications . rupture conventionnelle . cadre age":
@@ -28,6 +28,6 @@ describe("Gestion des licenciements pour la CC 2148", () => {
         '[{"month":"février 2024","value":3000},{"month":"janvier 2024","value":3000}]',
       typeContratTravail: "cdi",
     });
-    expect(result).toAgreementResultBeEqual(30, "€");
+    expect(result).toAgreementResultBeEqual(0, "€");
   });
 });

@@ -6,7 +6,7 @@ const engine = new RuptureConventionnellePublicodes(
 );
 
 describe("Calcul de l'indemnité de rupture conventionnelle pour la CC 1266", () => {
-  describe("Vérifier qu'il n'y a pas d'ancienneté conventionnelle requise", () => {
+  describe("Vérifier qu'il y a une ancienneté conventionnelle requise", () => {
     test("Non cadres", () => {
       const result = engine.calculate({
         "contrat salarié . convention collective": "'IDCC1266'",
@@ -26,7 +26,7 @@ describe("Calcul de l'indemnité de rupture conventionnelle pour la CC 1266", ()
           '[{"month":"février 2024","value":3000},{"month":"janvier 2024","value":3000}]',
         typeContratTravail: "cdi",
       });
-      expect(result).toAgreementResultBeEqual(100, "€");
+      expect(result).toAgreementResultBeEqual(0, "€");
     });
 
     test("Cadres", () => {
@@ -48,7 +48,7 @@ describe("Calcul de l'indemnité de rupture conventionnelle pour la CC 1266", ()
           '[{"month":"février 2024","value":3000},{"month":"janvier 2024","value":3000}]',
         typeContratTravail: "cdi",
       });
-      expect(result).toAgreementResultBeEqual(100, "€");
+      expect(result).toAgreementResultBeEqual(0, "€");
     });
   });
 });

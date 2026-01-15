@@ -114,7 +114,7 @@ describe("Gestion des licenciements pour la CC 2098", () => {
         {
           catPro: "Non-cadres",
           dateEntree: "01/01/2000",
-          dateSortie: "01/07/2000",
+          dateSortie: "01/09/2000",
         },
       ])(
         "Licenciement pour inaptitude totale et définitive non consécutive à un accident du travail",
@@ -135,13 +135,13 @@ describe("Gestion des licenciements pour la CC 2098", () => {
               '[{"month":"décembre 2024","value":2700},{"month":"novembre 2024","value":2700},{"month":"octobre 2024","value":2700},{"month":"septembre 2024","value":2700},{"month":"août 2024","value":2700},{"month":"juillet 2024","value":2700},{"month":"juin 2024","value":2700},{"month":"mai 2024","value":2700},{"month":"avril 2024","value":2700},{"month":"mars 2024","value":2700},{"month":"février 2024","value":2700},{"month":"janvier 2024","value":2700}]',
             typeContratTravail: "cdi",
           });
-          expect(result).toAgreementResultBeEqual(337.5);
+          expect(result).toAgreementResultBeEqual(450);
         }
       );
     });
   });
 
-  describe("Vérifier qu'il n'y a pas d'ancienneté conventionnelle requise", () => {
+  describe("Vérifier qu'il y a une ancienneté conventionnelle requise", () => {
     test("Cadres", () => {
       const result = engine.calculate({
         "contrat salarié . convention collective": "'IDCC2098'",
@@ -165,7 +165,7 @@ describe("Gestion des licenciements pour la CC 2098", () => {
           '[{"month":"février 2024","value":3000},{"month":"janvier 2024","value":3000}]',
         typeContratTravail: "cdi",
       });
-      expect(result).toAgreementResultBeEqual(125, "€");
+      expect(result).toAgreementResultBeEqual(0, "€");
     });
 
     test("Non-cadres", () => {
@@ -189,7 +189,7 @@ describe("Gestion des licenciements pour la CC 2098", () => {
           '[{"month":"février 2024","value":3000},{"month":"janvier 2024","value":3000}]',
         typeContratTravail: "cdi",
       });
-      expect(result).toAgreementResultBeEqual(125, "€");
+      expect(result).toAgreementResultBeEqual(0, "€");
     });
   });
 });

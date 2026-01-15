@@ -125,7 +125,7 @@ describe("Gestion des multiples types de licenciement pour la CC 16", () => {
     });
   });
 
-  describe("Vérifier qu'il n'y a pas d'ancienneté conventionnelle requise", () => {
+  describe("Vérifier qu'il y a une ancienneté conventionnelle requise", () => {
     test("Ouvriers", () => {
       const result = engine.calculate({
         "contrat salarié . convention collective": "'IDCC0016'",
@@ -146,7 +146,7 @@ describe("Gestion des multiples types de licenciement pour la CC 16", () => {
           '[{"month":"février 2024","value":2600},{"month":"janvier 2024","value":2600}]',
         typeContratTravail: "cdi",
       });
-      expect(result).toAgreementResultBeEqual(28.89, "€");
+      expect(result).toAgreementResultBeEqual(0, "€");
     });
     test("Ingénieurs et cadres", () => {
       const result = engine.calculate({
@@ -171,7 +171,7 @@ describe("Gestion des multiples types de licenciement pour la CC 16", () => {
           '[{"month":"février 2024","value":3000},{"month":"janvier 2024","value":3000}]',
         typeContratTravail: "cdi",
       });
-      expect(result).toAgreementResultBeEqual(200, "€");
+      expect(result).toAgreementResultBeEqual(0, "€");
     });
 
     test("Employés", () => {
@@ -195,7 +195,7 @@ describe("Gestion des multiples types de licenciement pour la CC 16", () => {
           '[{"month":"février 2024","value":3000},{"month":"janvier 2024","value":3000}]',
         typeContratTravail: "cdi",
       });
-      expect(result).toAgreementResultBeEqual(33.33, "€");
+      expect(result).toAgreementResultBeEqual(0, "€");
     });
 
     test("TAM", () => {
@@ -219,7 +219,7 @@ describe("Gestion des multiples types de licenciement pour la CC 16", () => {
           '[{"month":"février 2024","value":3000},{"month":"janvier 2024","value":3000}]',
         typeContratTravail: "cdi",
       });
-      expect(result).toAgreementResultBeEqual(50, "€");
+      expect(result).toAgreementResultBeEqual(0, "€");
     });
   });
 });

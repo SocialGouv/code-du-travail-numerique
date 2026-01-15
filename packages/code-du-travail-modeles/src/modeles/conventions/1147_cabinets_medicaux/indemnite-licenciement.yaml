@@ -26,13 +26,9 @@ contrat salarié . convention collective . cabinets médicaux . somme formule:
   unité: €
 
 # Résultat
-contrat salarié . convention collective . cabinets médicaux . minimum ancienneté conventionnelle requise en année:
-  remplace: paramètre . minimum ancienneté conventionnelle requise en année
-  valeur: 1 an
-
 contrat salarié . convention collective . cabinets médicaux . résultat conventionnel:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
-  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année > paramètre . minimum ancienneté conventionnelle requise en année
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année > 1 an
   valeur: somme formule
   unité: €
   arrondi: 2 décimales

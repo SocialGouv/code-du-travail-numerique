@@ -85,12 +85,12 @@ describe("Gestion des licenciements pour la CC 1996", () => {
       {
         catPro: "Cadres",
         dateEntree: "01/01/2000",
-        dateSortie: "01/06/2000",
+        dateSortie: "01/12/2000",
       },
       {
         catPro: "Non-cadres",
         dateEntree: "01/01/2000",
-        dateSortie: "01/06/2000",
+        dateSortie: "01/12/2000",
       },
     ])("Le moins favorable - cas licenciement économique", (value) => {
       const result = engine.calculate({
@@ -109,11 +109,11 @@ describe("Gestion des licenciements pour la CC 1996", () => {
           '[{"month":"décembre 2024","value":2700},{"month":"novembre 2024","value":2700},{"month":"octobre 2024","value":2700},{"month":"septembre 2024","value":2700},{"month":"août 2024","value":2700},{"month":"juillet 2024","value":2700},{"month":"juin 2024","value":2700},{"month":"mai 2024","value":2700},{"month":"avril 2024","value":2700},{"month":"mars 2024","value":2700},{"month":"février 2024","value":2700},{"month":"janvier 2024","value":2700}]',
         typeContratTravail: "cdi",
       });
-      expect(result).toAgreementResultBeEqual(281.25);
+      expect(result).toAgreementResultBeEqual(618.75);
     });
   });
 
-  describe("Vérifier qu'il n'y a pas d'ancienneté conventionnelle requise", () => {
+  describe("Vérifier qu'il y a une ancienneté conventionnelle requise", () => {
     test("Cadres", () => {
       const result = engine.calculate({
         "contrat salarié . convention collective": "'IDCC1996'",
@@ -135,7 +135,7 @@ describe("Gestion des licenciements pour la CC 1996", () => {
           '[{"month":"février 2024","value":3000},{"month":"janvier 2024","value":3000}]',
         typeContratTravail: "cdi",
       });
-      expect(result).toAgreementResultBeEqual(125, "€");
+      expect(result).toAgreementResultBeEqual(0, "€");
     });
 
     test("Non-cadres", () => {
@@ -159,7 +159,7 @@ describe("Gestion des licenciements pour la CC 1996", () => {
           '[{"month":"février 2024","value":3000},{"month":"janvier 2024","value":3000}]',
         typeContratTravail: "cdi",
       });
-      expect(result).toAgreementResultBeEqual(125, "€");
+      expect(result).toAgreementResultBeEqual(0, "€");
     });
   });
 });

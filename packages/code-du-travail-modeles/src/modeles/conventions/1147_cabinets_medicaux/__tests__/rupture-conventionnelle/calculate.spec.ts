@@ -6,7 +6,7 @@ const engine = new RuptureConventionnellePublicodes(
 );
 
 describe("Calcul de l'indemnité de rupture conventionnelle pour la CC 1147", () => {
-  describe("Vérifier qu'il n'y a pas d'ancienneté conventionnelle requise", () => {
+  describe("Vérifier qu'il y a une ancienneté conventionnelle requise", () => {
     test("Cas de base", () => {
       const result = engine.calculate({
         "contrat salarié . convention collective": "'IDCC1147'",
@@ -24,7 +24,7 @@ describe("Calcul de l'indemnité de rupture conventionnelle pour la CC 1147", ()
           '[{"month":"février 2024","value":3000},{"month":"janvier 2024","value":3000}]',
         typeContratTravail: "cdi",
       });
-      expect(result).toAgreementResultBeEqual(100, "€");
+      expect(result).toAgreementResultBeEqual(0, "€");
     });
   });
 });

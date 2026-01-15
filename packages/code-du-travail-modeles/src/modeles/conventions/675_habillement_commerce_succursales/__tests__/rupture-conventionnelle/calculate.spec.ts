@@ -168,7 +168,7 @@ describe("Gestion des licenciements pour la CC675", () => {
     );
   });
 
-  describe("Vérifier qu'il n'y a pas d'ancienneté conventionnelle requise", () => {
+  describe("Vérifier qu'il y a une ancienneté conventionnelle requise", () => {
     test("Employés", () => {
       const result = engine.calculate({
         "contrat salarié . convention collective": "'IDCC0675'",
@@ -188,7 +188,7 @@ describe("Gestion des licenciements pour la CC675", () => {
           '[{"month":"février 2024","value":3000},{"month":"janvier 2024","value":3000}]',
         typeContratTravail: "cdi",
       });
-      expect(result).toAgreementResultBeEqual(33.33, "€");
+      expect(result).toAgreementResultBeEqual(0, "€");
     });
 
     test("Agents de maitrise", () => {
@@ -212,7 +212,7 @@ describe("Gestion des licenciements pour la CC675", () => {
           '[{"month":"février 2024","value":3000},{"month":"janvier 2024","value":3000}]',
         typeContratTravail: "cdi",
       });
-      expect(result).toAgreementResultBeEqual(33.33, "€");
+      expect(result).toAgreementResultBeEqual(0, "€");
     });
 
     test("Cadres", () => {
@@ -236,7 +236,7 @@ describe("Gestion des licenciements pour la CC675", () => {
           '[{"month":"février 2024","value":3000},{"month":"janvier 2024","value":3000}]',
         typeContratTravail: "cdi",
       });
-      expect(result).toAgreementResultBeEqual(33.33, "€");
+      expect(result).toAgreementResultBeEqual(0, "€");
     });
   });
 });

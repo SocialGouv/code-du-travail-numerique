@@ -45,8 +45,40 @@ const expectedReferenceGroupeFGHI = [
 
 const expectedReferenceGroupeFGHI2 = [
   {
-    article: "Article 75.3.1.2",
-    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314538?idConteneur=KALICONT000046993250&origin=list#KALIARTI000046314538",
+    article: "Article L1234-9",
+    url: "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000035644154",
+  },
+  {
+    article: "Article L1234-10",
+    url: "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006901123",
+  },
+  {
+    article: "Article L1234-11",
+    url: "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006901124",
+  },
+  {
+    article: "Article R1234-1",
+    url: "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000035644687",
+  },
+  {
+    article: "Article R1234-2",
+    url: "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000035644692",
+  },
+  {
+    article: "Article R1234-4",
+    url: "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000035644695",
+  },
+  {
+    article: "Article L1226-7",
+    url: "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000023272293",
+  },
+  {
+    article: "Article L1225-54",
+    url: "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000018764621",
+  },
+  {
+    article: "Article L1225-65",
+    url: "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038219280",
   },
 ];
 
@@ -230,7 +262,7 @@ describe("Calcul de l'indemnité de licenciement pour CC 3248", () => {
         salaryPeriods: '[{"month":"janvier 2024","value":2000}]',
         typeContratTravail: "cdi",
       });
-      expect(result).toAgreementResultBeEqual(125, "€");
+      expect(result).toAgreementResultBeEqual(0, "€");
       expect(result).toHaveReferencesBeEqual(expectedReferenceGroupeFGHI2);
     });
   });
