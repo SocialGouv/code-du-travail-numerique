@@ -8,12 +8,8 @@ export const BUCKET_FOLDER = process.env.NEXT_PUBLIC_BUCKET_FOLDER ?? "preview";
 export const BUCKET_SITEMAP_FOLDER =
   process.env.NEXT_PUBLIC_BUCKET_SITEMAP_FOLDER ?? "sitemap";
 export const COMMIT = process.env.NEXT_PUBLIC_COMMIT ?? "";
-// Beware: Docker/GHA can pass an empty string build-arg, which would break `new URL(SITE_URL)`.
-const RAW_SITE_URL = process.env.NEXT_PUBLIC_SITE_URL;
 export const SITE_URL =
-  RAW_SITE_URL && RAW_SITE_URL.trim().length > 0
-    ? RAW_SITE_URL
-    : "http://localhost:3000";
+  process.env.NEXT_PUBLIC_SITE_URL ?? `http://localhost:3000`;
 export const PACKAGE_VERSION = version;
 export const PIWIK_SITE_ID = process.env.NEXT_PUBLIC_PIWIK_SITE_ID ?? "3";
 export const PIWIK_URL =
