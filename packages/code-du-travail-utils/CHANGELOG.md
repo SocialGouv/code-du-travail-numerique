@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.209.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.208.2...v4.209.0) (2026-01-15)
+
+
+### Reverts
+
+* Revert "fix(next): upgrade new version + react de `peerDep` à `devDep` (#7060)" ([ccf3d4f](https://github.com/SocialGouv/code-du-travail-numerique/commit/ccf3d4f8ed1c68acfaf1daed267f0f8953f6d5bb)), closes [#7060](https://github.com/SocialGouv/code-du-travail-numerique/issues/7060)
+
+
+
+
+
 ## [4.208.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.208.1...v4.208.2) (2026-01-13)
 
 

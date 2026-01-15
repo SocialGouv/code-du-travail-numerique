@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.209.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.208.2...v4.209.0) (2026-01-15)
+
+
+### Bug Fixes
+
+* **rupture-co:** prendre en compte le minimum d'ancienneté conventionnel ([#7062](https://github.com/SocialGouv/code-du-travail-numerique/issues/7062)) ([a9559fd](https://github.com/SocialGouv/code-du-travail-numerique/commit/a9559fd875de5cf3076df1ed31ba2cf983927a0e))
+
+
+
+
+
 ## [4.208.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.208.1...v4.208.2) (2026-01-13)
 
 **Note:** Version bump only for package @socialgouv/modeles-social
