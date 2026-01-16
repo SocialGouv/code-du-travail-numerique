@@ -9,6 +9,7 @@ import React from "react";
 import { GraphicContentPart } from "@socialgouv/cdtn-types/build/hasura/editorial-content";
 import { KeysToCamelCase } from "../informations/type";
 import { DownloadTile } from "../informations/components/DownloadTile";
+import { BreadcrumbListJsonLd } from "../seo/jsonld";
 
 type Props = ContainerRichProps & {
   currentPage: string;
@@ -31,6 +32,13 @@ export const ContainerInformation = ({
 }: Props) => {
   return (
     <div>
+      <BreadcrumbListJsonLd
+        currentPageLabel={currentPage}
+        items={breadcrumbs.map(({ label, slug }) => ({
+          label,
+          href: slug,
+        }))}
+      />
       <Breadcrumb
         currentPageLabel={currentPage}
         homeLinkProps={{

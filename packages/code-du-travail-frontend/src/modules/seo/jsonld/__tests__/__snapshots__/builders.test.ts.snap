@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`jsonld builders buildBreadcrumbListJsonLd() 1`] = `
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "item": "http://api.url/",
+      "name": "Accueil",
+      "position": 1,
+    },
+    {
+      "@type": "ListItem",
+      "item": "http://api.url/section",
+      "name": "Section",
+      "position": 2,
+    },
+    {
+      "@type": "ListItem",
+      "item": "http://api.url/section/page",
+      "name": "Page",
+      "position": 3,
+    },
+  ],
+}
+`;
+
+exports[`jsonld builders buildGovernmentOrganizationJsonLd() 1`] = `
+{
+  "@context": "https://schema.org",
+  "@id": "http://api.url/#government-organization",
+  "@type": "GovernmentOrganization",
+  "logo": "http://api.url/static/assets/img/logo.svg",
+  "name": "Code du travail numérique",
+  "url": "http://api.url",
+}
+`;
+
+exports[`jsonld builders buildHowToJsonLd() 1`] = `
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Simulateur",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Étape 1",
+      "position": 1,
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Étape 2",
+      "position": 2,
+    },
+  ],
+  "url": "http://api.url/outils/xxx",
+}
+`;
+
+exports[`jsonld builders buildLegislationJsonLd() 1`] = `
+{
+  "@context": "https://schema.org",
+  "@type": "Legislation",
+  "datePublished": "2020-01-01",
+  "identifier": "L123",
+  "inLanguage": "fr-FR",
+  "isBasedOn": "https://www.legifrance.gouv.fr",
+  "legislationIdentifier": "L123",
+  "legislationJurisdiction": "FR",
+  "name": "Article L123",
+  "publisher": {
+    "@id": "http://api.url/#government-organization",
+  },
+  "url": "http://api.url/code-du-travail/l123",
+}
+`;
+
+exports[`jsonld builders buildWebSiteWithSearchActionJsonLd() 1`] = `
+{
+  "@context": "https://schema.org",
+  "@id": "http://api.url/#website",
+  "@type": "WebSite",
+  "inLanguage": "fr-FR",
+  "name": "Code du travail numérique",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "query-input": "required name=search_term_string",
+    "target": "http://api.url/recherche?query={search_term_string}",
+  },
+  "publisher": {
+    "@id": "http://api.url/#government-organization",
+  },
+  "url": "http://api.url",
+}
+`;

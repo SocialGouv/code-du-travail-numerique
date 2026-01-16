@@ -9,6 +9,7 @@ jest.mock("next/navigation", () => ({
   useSearchParams: () => ({
     get: jest.fn((param) => (param === "query" ? "test query" : null)),
   }),
+  usePathname: () => "/recherche",
   useRouter: () => ({
     push: jest.fn(),
     replace: jest.fn(),

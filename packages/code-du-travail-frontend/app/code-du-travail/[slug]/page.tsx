@@ -10,6 +10,7 @@ import {
 } from "../../../src/modules/code-du-travail";
 import { generateDefaultMetadata } from "../../../src/modules/common/metas";
 import { fetchRelatedItems } from "../../../src/modules/documents";
+import { LegislationJsonLd } from "../../../src/modules/seo/jsonld";
 
 export async function generateMetadata(props) {
   const params = await props.params;
@@ -31,6 +32,13 @@ async function Fiche(props) {
   const fixedHtml = replaceArticlesRefs("https://legifrance.gouv.fr", html);
   return (
     <DsfrLayout>
+      <LegislationJsonLd
+        name={title}
+        url={`/code-du-travail/${params.slug}`}
+        identifier={params.slug}
+        datePublished={dateDebut}
+        isBasedOn={url}
+      />
       <ArticleCodeDuTravail
         title={title}
         relatedItems={relatedItems}

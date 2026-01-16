@@ -22,6 +22,7 @@ import {
   StepResultat,
 } from "./steps";
 import { PublicodesSimulator } from "@socialgouv/modeles-social";
+import { HowToJsonLd } from "../../seo/jsonld";
 
 const steps: Step<IndemnitePrecariteStepName>[] = [
   {
@@ -71,6 +72,11 @@ const IndemnitePrecariteSimulator = ({
       title={displayTitle}
       segments={[{ label: "Simulateurs", linkProps: { href: "/outils" } }]}
     >
+      <HowToJsonLd
+        name={displayTitle}
+        url="/outils/indemnite-precarite"
+        steps={steps.map((s) => s.label)}
+      />
       <CalculateurIndemnitePrecarite title={title} />
     </ContainerSimulator>
   );

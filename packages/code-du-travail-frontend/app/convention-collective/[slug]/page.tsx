@@ -7,6 +7,8 @@ import { getBySlugAgreements } from "src/api";
 import { AgreementContainer } from "src/modules/convention-collective/AgreementContainer";
 import { fetchRelatedItems } from "src/modules/documents";
 import { SOURCES } from "@socialgouv/cdtn-utils";
+import { LegislationJsonLd } from "src/modules/seo/jsonld";
+import { getIdConvention } from "src/modules/convention-collective/utils";
 
 export async function generateMetadata(props) {
   const params = await props.params;
@@ -66,6 +68,17 @@ async function Page(props) {
 
   return (
     <DsfrLayout>
+      <LegislationJsonLd
+        name={agreement.shortTitle}
+        url={`/convention-collective/${params.slug}`}
+        identifier={agreement.num}
+        datePublished={agreement.date_publi}
+        isBasedOn={
+          agreement.url
+            ? `https://www.legifrance.gouv.fr/conv_coll/id/${getIdConvention(agreement.url)}`
+            : undefined
+        }
+      />
       <AgreementContainer
         agreement={agreement}
         relatedItems={augmentedRelatedItems}

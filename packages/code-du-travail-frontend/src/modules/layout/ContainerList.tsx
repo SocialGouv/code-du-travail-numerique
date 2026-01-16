@@ -1,5 +1,6 @@
 import { fr } from "@codegouvfr/react-dsfr";
 import { Breadcrumb, BreadcrumbProps } from "@codegouvfr/react-dsfr/Breadcrumb";
+import { BreadcrumbListJsonLd } from "../seo/jsonld";
 
 type Props = {
   title: string;
@@ -9,6 +10,16 @@ type Props = {
 export const ContainerList = ({ children, title, segments = [] }: Props) => {
   return (
     <div className={fr.cx("fr-grid-row")}>
+      <BreadcrumbListJsonLd
+        currentPageLabel={title}
+        items={segments.map((segment) => ({
+          label: String(segment.label),
+          href:
+            typeof segment.linkProps.href === "string"
+              ? segment.linkProps.href
+              : (segment.linkProps.href.pathname ?? "/"),
+        }))}
+      />
       <Breadcrumb
         currentPageLabel={title}
         homeLinkProps={{

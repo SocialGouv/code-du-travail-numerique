@@ -18,6 +18,7 @@ import { Step } from "../common/components/SimulatorLayout/types";
 import { IndemniteDepartType } from "../indemnite-depart/types";
 import StepSalaires from "../indemnite-depart/steps/Salaires";
 import { EVENT_CATEGORY } from "../indemnite-depart/feedback/tracking";
+import { HowToJsonLd } from "../../seo/jsonld";
 
 const steps: Step<IndemniteDepartStepName>[] = [
   {
@@ -81,6 +82,11 @@ const IndemniteRuptureCoSimulator = ({
       title={displayTitle}
       segments={[{ label: "Simulateurs", linkProps: { href: "/outils" } }]}
     >
+      <HowToJsonLd
+        name={displayTitle}
+        url="/outils/indemnite-rupture-conventionnelle"
+        steps={steps.map((s) => s.label)}
+      />
       <CalculateurIndemniteRuptureCo title={title} />
     </ContainerSimulator>
   );

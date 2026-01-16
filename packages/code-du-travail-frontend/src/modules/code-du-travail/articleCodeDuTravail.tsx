@@ -1,7 +1,7 @@
 import React from "react";
 import { fr } from "@codegouvfr/react-dsfr";
 import Html from "../common/Html";
-import { ContainerRich } from "../layout/ContainerRich";
+import { ContainerRichWithBreadcrumbs } from "../layout/ContainerRichWithBreadcrumbs";
 import { RelatedItem } from "../documents";
 import { ContentParser } from "./ContentParser";
 import Link from "../common/Link";
@@ -26,7 +26,9 @@ export function ArticleCodeDuTravail({
   notaHtml,
 }: Props) {
   return (
-    <ContainerRich
+    <ContainerRichWithBreadcrumbs
+      currentPage={title}
+      breadcrumbs={[]}
       relatedItems={relatedItems}
       title={title}
       description={metaDescription}
@@ -50,6 +52,6 @@ export function ArticleCodeDuTravail({
           <Html>{notaHtml}</Html>
         </div>
       )}
-    </ContainerRich>
+    </ContainerRichWithBreadcrumbs>
   );
 }

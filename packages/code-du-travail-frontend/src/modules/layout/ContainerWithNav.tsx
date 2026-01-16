@@ -3,6 +3,7 @@ import { Breadcrumb, BreadcrumbProps } from "@codegouvfr/react-dsfr/Breadcrumb";
 import { ReactNode } from "react";
 import { SummaryNavigation } from "./SummaryNavigation";
 import { css } from "@styled-system/css";
+import { BreadcrumbListJsonLd } from "../seo/jsonld";
 
 type SidebarSection = {
   id: string;
@@ -26,6 +27,16 @@ export const ContainerWithNav = ({
 }: Props) => {
   return (
     <div className={fr.cx("fr-grid-row", "fr-mb-12w")}>
+      <BreadcrumbListJsonLd
+        currentPageLabel={title}
+        items={breadcrumbSegments.map((segment) => ({
+          label: String(segment.label),
+          href:
+            typeof segment.linkProps.href === "string"
+              ? segment.linkProps.href
+              : (segment.linkProps.href.pathname ?? "/"),
+        }))}
+      />
       <Breadcrumb
         currentPageLabel={title}
         homeLinkProps={{
