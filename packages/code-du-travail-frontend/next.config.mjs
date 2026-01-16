@@ -96,7 +96,7 @@ const nextConfig = {
 const moduleExports = {
   ...nextConfig,
   async headers() {
-    let headers = [
+    const headers = [
       {
         key: "X-Content-Type-Options",
         value: "nosniff",
