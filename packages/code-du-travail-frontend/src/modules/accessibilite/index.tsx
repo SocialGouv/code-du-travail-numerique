@@ -44,8 +44,8 @@ export const Accessibilite = () => {
       <h2>État de conformité</h2>
       <p>
         Le site Internet code.travail.gouv.fr (« Code du travail numérique »)
-        est en conformité partielle avec le référentiel général
-        d&apos;amélioration de l&apos;accessibilité.
+        est en totale conformité avec le référentiel général d&apos;amélioration
+        de l&apos;accessibilité.
       </p>
       <h2>Résultats des tests</h2>
       <p>
@@ -53,25 +53,16 @@ export const Accessibilite = () => {
         et le contre audit réalisé en interne révèle que :
       </p>
       <p>
-        <strong>98,33 % des critères RGAA sont respectés.</strong>
+        <strong>100 % des critères RGAA sont respectés.</strong>
       </p>
       <p>Dans le détail :</p>
       <ul className="fr-mb-2w">
-        <li>Nombre de critères conformes : 59</li>
-        <li>Nombre de critères non conformes : 1</li>
+        <li>Nombre de critères conformes : 60</li>
+        <li>Nombre de critères non conformes : 0</li>
         <li>Nombre de critères non applicables : 46</li>
       </ul>
-      <h2>Contenus non accessibles</h2>
-      <h3>Non-conformités</h3>
-      <p>Liste des critères non conformes&nbsp;:</p>
-      <ul>
-        <li>
-          9.1 Dans chaque page web, l&apos;information est-elle structurée par
-          l&apos;utilisation appropriée de titres ?
-        </li>
-      </ul>
       <h2>Établissement de cette déclaration d&apos;accessibilité</h2>
-      <p>Cette déclaration a été établie le 24 octobre 2025.</p>
+      <p>Cette déclaration a été établie le 16 janvier 2026.</p>
       <h3>Technologies utilisées pour la réalisation du site web</h3>
       <ul className="fr-mb-2w">
         <li>HTML</li>

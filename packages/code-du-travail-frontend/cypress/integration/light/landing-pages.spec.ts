@@ -29,7 +29,7 @@ describe("Landing pages", () => {
     );
     cy.contains("État de conformité");
     cy.contains(
-      "Le site Internet code.travail.gouv.fr (« Code du travail numérique ») est en conformité partielle avec le référentiel général d'amélioration de l'accessibilité."
+      "Le site Internet code.travail.gouv.fr (« Code du travail numérique ») est en totale conformité avec le référentiel général d'amélioration de l'accessibilité."
     );
   });
 
