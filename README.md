@@ -63,4 +63,4 @@ où chaque convention possède son fichier.
 Une classe `MergeModele` dans le dossier `src/utils` permet de fusionner l'ensemble des fichiers YAML présent dans le dossier `modeles` pour alimenter le moteur de publicodes.
 
 Enfin le dossier `src/__test__` contient les tests permettant de valider les règles dans le modèle YAML.
-Le but étant de pouvoir fonctionner en mode TDD pour rédiger nos règles.
+Le but étant de pouvoir fonctionner en mode TDD pour rédiger nos règles
