@@ -1,7 +1,5 @@
-import {
-  SearchResult,
-  PresearchClass,
-} from "src/api/modules/search/service/presearch";
+import { PresearchClass } from "src/api/modules/search/service/presearch";
+import { SearchResult } from "src/api/modules/search/service/search";
 
 export interface FetchSearchResultsResponse {
   results: SearchResult[];

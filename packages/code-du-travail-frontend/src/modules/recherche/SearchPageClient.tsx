@@ -11,13 +11,15 @@ import { ContainerWithBreadcrumbs } from "../layout/ContainerWithBreadcrumbs";
 import { useSearchTracking } from "./tracking";
 import { generateSearchLink } from "./utils";
 import { SEARCH_VISIBLE_ITEMS } from "./constants";
+import { SearchResult } from "src/api";
 
-type SearchPageClientProps = {
+export type SearchPageClientProps = {
   query: string;
   items: {
-    documents: any[];
-    themes: any[];
-    articles: any[];
+    documents: SearchResult[];
+    themes: SearchResult[];
+    articles: SearchResult[];
+    classes: string[];
   };
 };
 
@@ -27,7 +29,7 @@ export const SearchPageClient: React.FC<SearchPageClientProps> = ({
 }) => {
   const searchParams = useSearchParams();
   const [query, setQuery] = useState(initialQuery);
-  const { emitSearchEvent, emitResultSelectionEvent, emitNextPageEvent } =
+  const { emitFullsearchEvent, emitResultSelectionEvent, emitNextPageEvent } =
     useSearchTracking();
 
   // Ref for focusing search results heading
@@ -38,6 +40,8 @@ export const SearchPageClient: React.FC<SearchPageClientProps> = ({
     [searchParams]
   );
 
+  const { documents, themes, articles, classes } = items;
+
   useEffect(() => {
     const query = getSearchParam("query");
     if (query) {
@@ -46,16 +50,14 @@ export const SearchPageClient: React.FC<SearchPageClientProps> = ({
   }, [getSearchParam]);
 
   useEffect(() => {
-    if (query) {
-      emitSearchEvent(query);
+    if (query && classes) {
+      emitFullsearchEvent(query, classes[0]);
       // Focus the search results heading when a search is performed
       setTimeout(() => {
         searchResultsHeadingRef.current?.focus();
       }, 100);
     }
-  }, [query, emitSearchEvent]);
-
-  const { documents, themes, articles } = items;
+  }, [query, emitFullsearchEvent, classes]);
 
   const codeArticles = articles.filter(
     (item) => item.source === SOURCES.CDT && item.slug
@@ -142,7 +144,7 @@ export const SearchPageClient: React.FC<SearchPageClientProps> = ({
                     category={
                       item.source === "code_du_travail"
                         ? "Code du travail"
-                        : item.breadcrumbs?.length > 0
+                        : item.breadcrumbs && item.breadcrumbs.length > 0
                           ? item.breadcrumbs[item.breadcrumbs.length - 1].label
                           : item.source
                     }

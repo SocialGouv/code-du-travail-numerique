@@ -1,9 +1,9 @@
 import { fr } from "@codegouvfr/react-dsfr";
 import { getRouteBySource } from "@socialgouv/cdtn-utils";
 import { css } from "@styled-system/css";
-import { SearchResult } from "src/api/modules/search/service/presearch";
 import Link from "src/modules/common/Link";
 import { getSourceLabel } from "../utils";
+import { SearchResult } from "src/api/modules/search/service/search";
 
 type Props = {
   result: SearchResult;

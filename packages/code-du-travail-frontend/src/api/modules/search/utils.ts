@@ -17,7 +17,7 @@ export const merge = (res1, res2, max_result) => {
 };
 
 // Remove Duplicates
-export const predicateFn = ({ _source: { source, slug } }) =>
+export const predicateFn = ({ source, slug }) =>
   `${getRouteBySource(source) || source}/${slug}`;
 
 export const removeDuplicate = (

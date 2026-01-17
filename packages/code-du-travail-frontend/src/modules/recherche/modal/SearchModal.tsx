@@ -214,6 +214,7 @@ export const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
           {hasSearched && !isLoading && (
             <SearchResults
               results={results}
+              queryClass={classes[0]}
               onResultClick={handleClose}
               contextType="modal"
               titleRef={resultsTitleRef}

@@ -128,6 +128,7 @@ export const getPrequalifiedResults = async (query) => {
     return knownQuery.refs.map((ref) => ({
       _source: ref,
     }));
+  } else {
+    return [];
   }
-  return false;
 };
