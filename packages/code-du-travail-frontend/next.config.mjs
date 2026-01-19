@@ -90,7 +90,11 @@ const nextConfig = {
     }
     return config;
   },
-  transpilePackages: ["@codegouvfr/react-dsfr"],
+  transpilePackages: [
+    "@codegouvfr/react-dsfr",
+    "import-in-the-middle",
+    "require-in-the-middle",
+  ],
 };
 
 const moduleExports = {
