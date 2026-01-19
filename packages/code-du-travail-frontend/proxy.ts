@@ -70,7 +70,7 @@ export function proxy(request: NextRequest) {
     object-src 'none';
     base-uri 'self';
     form-action 'self';
-    frame-src 'self' https://mon-entreprise.urssaf.fr https://matomo.fabrique.social.gouv.fr https://www.googletagmanager.com *.dailymotion.com https://*.doubleclick.net;
+    frame-src 'self' https://www.urssaf.fr https://code.travail.gouv.fr https://www.aides-entreprises.fr https://mon-entreprise.urssaf.fr https://matomo.fabrique.social.gouv.fr https://www.googletagmanager.com *.dailymotion.com https://*.doubleclick.net;
     connect-src 'self' https://geo.api.gouv.fr https://sentry2.fabrique.social.gouv.fr https://matomo.fabrique.social.gouv.fr https://www.googletagmanager.com https://www.google.com;
     worker-src 'self' blob:;
     upgrade-insecure-requests;
