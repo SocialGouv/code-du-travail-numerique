@@ -19,7 +19,7 @@ export function JsonLd({ id, data, nonce: nonceProp }: Props) {
       id={id}
       type="application/ld+json"
       nonce={nonce}
-      // eslint-disable-next-line react/no-danger
+      suppressHydrationWarning={true}
       dangerouslySetInnerHTML={{ __html: safeJsonStringify(data) }}
     />
   );
