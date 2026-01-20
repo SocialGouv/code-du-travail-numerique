@@ -25,7 +25,7 @@ jobs:
         run: |
           if [ "${{ github.event.inputs.baseUrl }}" != "" ]; then
             echo "LHCI_BASE_URL=${{ github.event.inputs.baseUrl }}" >> $GITHUB_ENV
-          elif [ "${{ github.ref_name }}" = "master" ] || [ "${{ github.ref_name }}" = "main" ]; then
+          elif [ "${{ github.ref_name }}" = "master" ] ]; then
             echo "LHCI_BASE_URL=https://code-du-travail-numerique-preprod.ovh.fabrique.social.gouv.fr" >> $GITHUB_ENV
           else
             echo "LHCI_BASE_URL=https://${{ steps.env.outputs.subdomain }}.ovh.fabrique.social.gouv.fr" >> $GITHUB_ENV
