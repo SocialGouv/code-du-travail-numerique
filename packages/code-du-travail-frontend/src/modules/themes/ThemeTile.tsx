@@ -15,8 +15,10 @@ export const ThemeTile = ({ title, iconName, link, subThemes }: Props) => (
     <p className={fr.cx("fr-tile__title")}>
       <Link href={link}>{title}</Link>
     </p>
-    <p className={`${fr.cx("fr-tile__detail", "fr-mb-4w")} ${centerDetail}`}>
-      {subThemes.slice(0, 3).join(" • ")}
+    <p
+      className={`${fr.cx("fr-tile__detail", "fr-text--sm", "fr-mb-4w")} ${centerDetail}`}
+    >
+      {subThemes.slice(0, 2).join(" • ")}
       {subThemes.length > 2 && <>&nbsp;&hellip;</>}
     </p>
     <div className={fr.cx("fr-tile__img")}>
