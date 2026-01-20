@@ -164,6 +164,7 @@ export const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
 
   return (
     <div
+      id="search-modal"
       ref={modalRef}
       className={overlayContainer}
       role="dialog"

@@ -5,9 +5,19 @@ import Link from "src/modules/common/Link";
 
 type HeaderBrandProps = {
   onSearchClick?: () => void;
+  searchModalId?: string;
+  enableDsfrModalBehavior?: boolean;
 };
 
-export const HeaderBrand = ({ onSearchClick }: HeaderBrandProps) => {
+export const HeaderBrand = ({
+  onSearchClick,
+  searchModalId,
+  enableDsfrModalBehavior = true,
+}: HeaderBrandProps) => {
+  const resolvedSearchModalId = enableDsfrModalBehavior
+    ? (searchModalId ?? "fr-header-search-modal")
+    : searchModalId;
+
   return (
     <div className={fr.cx("fr-header__brand", "fr-enlarge-link")}>
       <div className={fr.cx("fr-header__brand-top")}>
@@ -36,10 +46,16 @@ export const HeaderBrand = ({ onSearchClick }: HeaderBrandProps) => {
             id="fr-header-search-button"
             type="button"
             className={fr.cx("fr-btn--search", "fr-btn")}
-            data-fr-opened="false"
-            aria-controls="fr-header-search-modal"
             title="Rechercher"
-            data-fr-js-modal-button="true"
+            {...(resolvedSearchModalId
+              ? { "aria-controls": resolvedSearchModalId }
+              : {})}
+            {...(enableDsfrModalBehavior
+              ? {
+                  "data-fr-opened": "false",
+                  "data-fr-js-modal-button": "true",
+                }
+              : {})}
             onClick={onSearchClick}
           >
             Rechercher

@@ -46,6 +46,8 @@ export const HeaderDsfr = ({
   const variant = useABTestVariant(ABTesting.SEARCH);
   const { isOpen, openModal, closeModal } = useSearchModal();
 
+  const isSearchV2 = variant === ABTestVariant.SEARCH_V2;
+
   const handleSearchToggle = () => {
     if (isOpen) {
       closeModal();
@@ -60,13 +62,11 @@ export const HeaderDsfr = ({
         <div className={fr.cx("fr-container")}>
           <div className={fr.cx("fr-header__body-row")}>
             <HeaderBrand
-              onSearchClick={
-                variant === ABTestVariant.SEARCH_V2
-                  ? handleSearchToggle
-                  : undefined
-              }
+              onSearchClick={isSearchV2 ? handleSearchToggle : undefined}
+              searchModalId={isSearchV2 ? undefined : "fr-header-search-modal"}
+              enableDsfrModalBehavior={!isSearchV2}
             />
-            {variant === ABTestVariant.SEARCH_V2 ? (
+            {isSearchV2 ? (
               <HeaderSearchV2 onSearchClick={handleSearchToggle} />
             ) : (
               <HeaderSearch onSearchSubmit={onSearchSubmit} />
