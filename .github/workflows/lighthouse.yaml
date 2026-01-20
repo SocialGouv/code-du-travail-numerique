@@ -1,6 +1,5 @@
 name: Lighthouse CI
 on:
-  pull_request:
   workflow_dispatch:
     inputs:
       baseUrl:
@@ -17,25 +16,10 @@ jobs:
     name: Lighthouse audit
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - name: Env
-        id: env
-        uses: socialgouv/kontinuous/.github/actions/env@v1
-
-      - name: Set Lighthouse base URL
-        run: |
-          if [ "${{ github.event.inputs.baseUrl }}" != "" ]; then
-            echo "LHCI_BASE_URL=${{ github.event.inputs.baseUrl }}" >> $GITHUB_ENV
-          elif [ "${{ github.ref_name }}" = "master" ]; then
-            echo "LHCI_BASE_URL=https://code-du-travail-numerique-preprod.ovh.fabrique.social.gouv.fr" >> $GITHUB_ENV
-          else
-            echo "LHCI_BASE_URL=https://${{ steps.env.outputs.subdomain }}.ovh.fabrique.social.gouv.fr" >> $GITHUB_ENV
-          fi
-
       - name: Audit URLs using Lighthouse
         uses: treosh/lighthouse-ci-action@v12
         env:
-          LHCI_BASE_URL: ${{ env.LHCI_BASE_URL }}
+          LHCI_BASE_URL: ${{ github.event.inputs.baseUrl }}
         with:
           configPath: ./lighthouserc.cjs
           temporaryPublicStorage: true

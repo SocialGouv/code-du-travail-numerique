@@ -85,6 +85,27 @@ jobs:
     uses: socialgouv/workflows/.github/workflows/use-ks-gh-review-auto-atlas.yaml@v1
     secrets: inherit
 
+  lighthouse:
+    name: Lighthouse audit
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Env
+        id: env
+        uses: socialgouv/kontinuous/.github/actions/env@v1
+      - name: Set env
+        run: |
+          echo "SITE_URL=https://${{ steps.env.outputs.subdomain }}.ovh.fabrique.social.gouv.fr" >> $GITHUB_ENV
+      - name: Audit URLs using Lighthouse
+        uses: treosh/lighthouse-ci-action@v12
+        env:
+          LHCI_BASE_URL: ${{ env.SITE_URL }}
+        with:
+          configPath: ./lighthouserc.cjs
+          temporaryPublicStorage: true
+          uploadArtifacts: true
+
   e2e:
     name: End-to-end testing
     runs-on: ubuntu-latest
