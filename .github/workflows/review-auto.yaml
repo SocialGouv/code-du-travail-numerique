@@ -88,6 +88,7 @@ jobs:
   lighthouse:
     name: Lighthouse audit
     runs-on: ubuntu-latest
+    needs: [kontinuous]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
