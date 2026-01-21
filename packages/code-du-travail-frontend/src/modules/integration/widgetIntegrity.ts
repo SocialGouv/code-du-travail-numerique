@@ -1,9 +1,3 @@
-// This file is overwritten at build time by `scripts/prebuild.ts`.
-//
-// It contains the Subresource Integrity (SRI) value for
-// `https://code.travail.gouv.fr/widget.js`.
-//
-// In development (without the build step), this value can stay empty and the
-// integration snippet will omit `integrity`.
+// This file is generated at build time by scripts/prebuild.ts
 
-export const WIDGET_SCRIPT_INTEGRITY = "" as const;
+export const WIDGET_LOADER_INTEGRITY = "sha384-GSEnlAvltlfCZ/5CP94DUwe0FLoBfXRnju/gZ9iMpJRAbnZUj9yZp441sl1NtCui" as const;

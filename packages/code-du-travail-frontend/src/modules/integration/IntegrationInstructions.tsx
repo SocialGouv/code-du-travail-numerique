@@ -1,7 +1,7 @@
 import { fr } from "@codegouvfr/react-dsfr";
 import React from "react";
 import { css } from "@styled-system/css";
-import { WIDGET_SCRIPT_INTEGRITY } from "./widgetIntegrity";
+import { WIDGET_LOADER_INTEGRITY } from "./widgetIntegrity";
 
 interface IntegrationInstructionsProps {
   parsedUrl: string;
@@ -12,8 +12,8 @@ export const IntegrationInstructions = ({
   parsedUrl,
   shortTitle,
 }: IntegrationInstructionsProps) => {
-  const widgetScriptTag = WIDGET_SCRIPT_INTEGRITY
-    ? `<script src="https://code.travail.gouv.fr/widget.js" integrity="${WIDGET_SCRIPT_INTEGRITY}" crossorigin="anonymous" defer></script>`
+  const widgetScriptTag = WIDGET_LOADER_INTEGRITY
+    ? `<script src="https://code.travail.gouv.fr/widget-loader.js" integrity="${WIDGET_LOADER_INTEGRITY}" crossorigin="anonymous" defer></script>`
     : `<script src="https://code.travail.gouv.fr/widget.js" defer></script>`;
 
   return (

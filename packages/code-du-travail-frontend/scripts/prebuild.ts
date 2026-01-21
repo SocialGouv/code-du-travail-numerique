@@ -34,31 +34,16 @@ export const generateWidgetScript = (host: string) => {
 };
 
 export const generateWidgetIntegrity = () => {
-  const widgetInputScriptPath = path.join(__dirname, "widget-template.js");
+  const widgetLoaderPath = path.join(__dirname, "../public/widget-loader.js");
   const widgetIntegrityOutputPath = path.join(
     __dirname,
     "../src/modules/integration/widgetIntegrity.ts"
   );
 
-  // The snippet shown on the integration pages always points to
-  // `https://code.travail.gouv.fr/widget.js`.
-  //
-  // We therefore compute the integrity for that specific script content,
-  // regardless of the current deployment host.
-  const sriHost =
-    process.env.NEXT_PUBLIC_WIDGET_SRI_HOST ?? "https://code.travail.gouv.fr";
-  const normalizedSriHost = sriHost.replace(/\/$/, "");
-
-  const template = fs.readFileSync(widgetInputScriptPath, {
-    encoding: "utf8",
-    flag: "r",
-  });
-  const hostedData = template.replace(/__HOST__/g, normalizedSriHost);
-
-  const hash = crypto
-    .createHash("sha384")
-    .update(Buffer.from(hostedData, "utf8"))
-    .digest("base64");
+  // The embed snippet uses a stable loader file (`/widget-loader.js`) so
+  // integrators don't have to update their HTML on each release.
+  const content = fs.readFileSync(widgetLoaderPath);
+  const hash = crypto.createHash("sha384").update(content).digest("base64");
   const integrity = `sha384-${hash}`;
 
   fs.mkdirSync(path.dirname(widgetIntegrityOutputPath), { recursive: true });
@@ -67,7 +52,7 @@ export const generateWidgetIntegrity = () => {
     [
       "// This file is generated at build time by scripts/prebuild.ts",
       "",
-      'export const WIDGET_SCRIPT_INTEGRITY = "' + integrity + '" as const;',
+      'export const WIDGET_LOADER_INTEGRITY = "' + integrity + '" as const;',
       "",
     ].join("\n")
   );
