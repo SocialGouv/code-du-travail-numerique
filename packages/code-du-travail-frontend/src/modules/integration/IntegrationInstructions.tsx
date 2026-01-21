@@ -1,6 +1,7 @@
 import { fr } from "@codegouvfr/react-dsfr";
 import React from "react";
 import { css } from "@styled-system/css";
+import { WIDGET_SCRIPT_INTEGRITY } from "./widgetIntegrity";
 
 interface IntegrationInstructionsProps {
   parsedUrl: string;
@@ -11,6 +12,10 @@ export const IntegrationInstructions = ({
   parsedUrl,
   shortTitle,
 }: IntegrationInstructionsProps) => {
+  const widgetScriptTag = WIDGET_SCRIPT_INTEGRITY
+    ? `<script src="https://code.travail.gouv.fr/widget.js" integrity="${WIDGET_SCRIPT_INTEGRITY}" crossorigin="anonymous" defer></script>`
+    : `<script src="https://code.travail.gouv.fr/widget.js" defer></script>`;
+
   return (
     <div className={fr.cx("fr-mb-6w")} data-testid="integration-instructions">
       <h2 className={fr.cx("fr-h3", "fr-mb-3w")}>
@@ -27,7 +32,7 @@ export const IntegrationInstructions = ({
             votre page&nbsp;:
           </p>
           <pre className={`${fr.cx("fr-alert")} ${preWrap}`}>
-            {`<script src="https://code.travail.gouv.fr/widget.js" defer></script>`}
+            {widgetScriptTag}
           </pre>
         </li>
         <li>

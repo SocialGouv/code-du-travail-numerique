@@ -118,6 +118,21 @@ const moduleExports = {
       });
     }
     return [
+      // `/widget.js` is meant to be embedded on third-party websites. When used
+      // with Subresource Integrity (SRI), browsers fetch it with CORS.
+      {
+        source: "/widget.js",
+        headers: [
+          {
+            key: "Access-Control-Allow-Origin",
+            value: "*",
+          },
+          {
+            key: "Access-Control-Allow-Methods",
+            value: "GET, OPTIONS",
+          },
+        ],
+      },
       {
         source: "/:path*",
         headers,

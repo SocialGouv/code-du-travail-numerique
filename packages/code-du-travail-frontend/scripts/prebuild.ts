@@ -1,5 +1,6 @@
 import path from "path";
 import fs from "fs";
+import crypto from "crypto";
 
 export const filePath = path.join(__dirname, "../public/robots.txt");
 export const generateRobotsTxt = (isOnProduction: boolean, host: string) => {
@@ -21,14 +22,55 @@ export const generateRobotsTxt = (isOnProduction: boolean, host: string) => {
 export const generateWidgetScript = (host: string) => {
   const widgetInputScriptPath = path.join(__dirname, "widget-template.js");
   const widgetOutputScriptPath = path.join(__dirname, "../public/widget.js");
+  const normalizedHost = host.replace(/\/$/, "");
   const data = fs.readFileSync(widgetInputScriptPath, {
     encoding: "utf8",
     flag: "r",
   });
   if (!data) return;
-  const hostedData = data.replace(/__HOST__/g, host);
+  const hostedData = data.replace(/__HOST__/g, normalizedHost);
 
   fs.writeFileSync(widgetOutputScriptPath, hostedData);
+};
+
+export const generateWidgetIntegrity = () => {
+  const widgetInputScriptPath = path.join(__dirname, "widget-template.js");
+  const widgetIntegrityOutputPath = path.join(
+    __dirname,
+    "../src/modules/integration/widgetIntegrity.ts"
+  );
+
+  // The snippet shown on the integration pages always points to
+  // `https://code.travail.gouv.fr/widget.js`.
+  //
+  // We therefore compute the integrity for that specific script content,
+  // regardless of the current deployment host.
+  const sriHost =
+    process.env.NEXT_PUBLIC_WIDGET_SRI_HOST ?? "https://code.travail.gouv.fr";
+  const normalizedSriHost = sriHost.replace(/\/$/, "");
+
+  const template = fs.readFileSync(widgetInputScriptPath, {
+    encoding: "utf8",
+    flag: "r",
+  });
+  const hostedData = template.replace(/__HOST__/g, normalizedSriHost);
+
+  const hash = crypto
+    .createHash("sha384")
+    .update(Buffer.from(hostedData, "utf8"))
+    .digest("base64");
+  const integrity = `sha384-${hash}`;
+
+  fs.mkdirSync(path.dirname(widgetIntegrityOutputPath), { recursive: true });
+  fs.writeFileSync(
+    widgetIntegrityOutputPath,
+    [
+      "// This file is generated at build time by scripts/prebuild.ts",
+      "",
+      'export const WIDGET_SCRIPT_INTEGRITY = "' + integrity + '" as const;',
+      "",
+    ].join("\n")
+  );
 };
 
 const run = () => {
@@ -38,6 +80,8 @@ const run = () => {
   console.log("Robots.txt generated.");
   generateWidgetScript(host);
   console.log("widget.js generated.");
+  generateWidgetIntegrity();
+  console.log("widgetIntegrity.ts generated.");
 };
 
 run();
