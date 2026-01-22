@@ -31,9 +31,7 @@ describe("Modèles de documents", () => {
       .should("contain", "Contenus populaires");
     cy.findAllByRole("heading", { level: 3 }).should("have.length.at.least", 1);
     cy.findAllByRole("heading", { level: 3 }).first().click();
-    cy.urlEqual(
-      "/modeles-de-courriers/rupture-du-contrat-en-periode-dessai-par-le-salarie"
-    );
+    cy.urlEqual("/modeles-de-courriers/lettre-de-demission");
   });
 
   it("cherche un modèle", () => {
