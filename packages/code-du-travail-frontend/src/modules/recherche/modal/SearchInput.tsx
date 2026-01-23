@@ -121,14 +121,14 @@ export const SearchInput = forwardRef<ModalSearchHandle, ModalSearchProps>(
       }
     };
 
-    const inputId = `${contextType}-search-autocomplete`;
-    const labelId = `${contextType}-search-label`;
+    const inputId = `search-${contextType}-autocomplete`;
+    const labelId = `search-${contextType}-label`;
     const modalTitleId = "search-modal-title";
-    const feedbackId = `${contextType}-search-feedback`;
+    const feedbackId = `search-${contextType}-feedback`;
     const desktopMinSearchHintId = `${feedbackId}-min-search-hint`;
-    const minSearchHintId = `${contextType}-min-search-length-hint`;
-    const inputHintId = `${contextType}-input-hint`;
-    const noResultParagraphId = `${contextType}-no-result-message`;
+    const minSearchHintId = `search-${contextType}-min-search-length-hint`;
+    const inputHintId = `search-${contextType}-input-hint`;
+    const noResultParagraphId = `search-${contextType}-no-result-message`;
     const ariaDescribedbyIds = `${inputHintId} ${minSearchHintId} ${desktopMinSearchHintId} ${noResultParagraphId}`;
 
     return (

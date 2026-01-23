@@ -33,7 +33,7 @@ exports[`<SkipLinks /> should match snapshot 1`] = `
         <li>
           <a
             class="fr-link"
-            href="#fr-header-search-input"
+            href="#fr-header-search-button-desktop"
           >
             Recherche
           </a>

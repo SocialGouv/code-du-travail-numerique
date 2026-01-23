@@ -4,14 +4,20 @@ import { css } from "@styled-system/css";
 
 type HeaderSearchProps = {
   onSearchClick: () => void;
+  isSearchOpen?: boolean;
 };
 
-export const HeaderSearchV2 = ({ onSearchClick }: HeaderSearchProps) => {
+export const HeaderSearchV2 = ({
+  onSearchClick,
+  isSearchOpen,
+}: HeaderSearchProps) => {
   return (
     <div className={fr.cx("fr-header__tools", "fr-hidden", "fr-unhidden-lg")}>
       <Button
         id="fr-header-search-button-desktop"
         title="Rechercher"
+        aria-controls="search-modal"
+        aria-expanded={isSearchOpen}
         onClick={onSearchClick}
         iconId="fr-icon-search-line"
         iconPosition="right"
