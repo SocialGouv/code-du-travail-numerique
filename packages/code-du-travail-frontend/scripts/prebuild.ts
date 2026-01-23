@@ -52,7 +52,8 @@ export const generateWidgetIntegrity = () => {
     [
       "// This file is generated at build time by scripts/prebuild-cli.ts",
       "",
-      'export const WIDGET_LOADER_INTEGRITY = "' + integrity + '" as const;',
+      "export const WIDGET_LOADER_INTEGRITY =",
+      `  "${integrity}" as const;`,
       "",
     ].join("\n")
   );
