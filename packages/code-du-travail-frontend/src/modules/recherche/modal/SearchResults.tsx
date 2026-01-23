@@ -1,7 +1,7 @@
 import { fr } from "@codegouvfr/react-dsfr";
 import { css } from "@styled-system/css";
 import { SearchResultCard } from "./SearchResultCard";
-import { useRef, useEffect } from "react";
+import { useRef } from "react";
 import { SearchResult } from "src/api/modules/search/service/presearch";
 import { useSearchTracking } from "../tracking";
 
@@ -33,10 +33,7 @@ export const SearchResults = ({
   };
 
   return (
-    <section
-      ref={containerRef}
-      aria-labelledby={`search-results-heading-${contextType}`}
-    >
+    <section ref={containerRef}>
       <div
         className={`${contextType === "modal" ? titleDivStyle : ""} ${fr.cx(
           "fr-p-1w"
@@ -80,7 +77,6 @@ export const SearchResults = ({
             <SearchResultCard
               result={result}
               onClick={() => handleResultClick(result)}
-              headingLevel={contextType === "home" ? "h4" : "h3"}
             />
           </li>
         ))}

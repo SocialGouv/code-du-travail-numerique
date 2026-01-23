@@ -82,7 +82,6 @@ export const SearchInput = forwardRef<ModalSearchHandle, ModalSearchProps>(
       e?.preventDefault();
       if (!query.trim() || query.trim().length < MIN_SEARCH_LENGTH) return;
       clearSuggestions();
-      inputRef.current?.blur();
       onSearchTriggered?.(query.trim());
       onFocusRequest?.();
     };
@@ -124,14 +123,17 @@ export const SearchInput = forwardRef<ModalSearchHandle, ModalSearchProps>(
 
     const inputId = `${contextType}-search-autocomplete`;
     const labelId = `${contextType}-search-label`;
+    const modalTitleId = "search-modal-title";
     const feedbackId = `${contextType}-search-feedback`;
+    const desktopMinSearchHintId = `${feedbackId}-min-search-hint`;
     const minSearchHintId = `${contextType}-min-search-length-hint`;
+    const inputHintId = `${contextType}-input-hint`;
     const noResultParagraphId = `${contextType}-no-result-message`;
-    const ariaDescribedbyIds = `${minSearchHintId} ${noResultParagraphId}`;
+    const ariaDescribedbyIds = `${inputHintId} ${minSearchHintId} ${desktopMinSearchHintId} ${noResultParagraphId}`;
 
     return (
       <div className={fr.cx("fr-mt-2w")}>
-        <form onSubmit={onSubmit} role="search" aria-label="Recherche">
+        <form onSubmit={onSubmit} role="search">
           <div className={searchContainerStyle}>
             <div className={autocompleteWrapper}>
               <label
@@ -139,12 +141,16 @@ export const SearchInput = forwardRef<ModalSearchHandle, ModalSearchProps>(
                 id={labelId}
                 className={fr.cx("fr-label")}
               >
+                <span className={fr.cx("fr-sr-only")}>Rechercher</span>
                 {contextType === "home" ? (
                   <h2 className={fr.cx("fr-text--md", "fr-mb-1w")}>
                     Que souhaitez-vous savoir ?
                   </h2>
                 ) : (
-                  <h1 className={fr.cx("fr-text--md", "fr-mb-1w")}>
+                  <h1
+                    id={modalTitleId}
+                    className={fr.cx("fr-text--md", "fr-mb-1w")}
+                  >
                     Que souhaitez-vous savoir ?
                   </h1>
                 )}
@@ -153,17 +159,23 @@ export const SearchInput = forwardRef<ModalSearchHandle, ModalSearchProps>(
                   arrêts maladies ?
                 </p>
               </label>
+              <p id={inputHintId} className={fr.cx("fr-sr-only")}>
+                Tapez {MIN_SEARCH_LENGTH} caractères ou plus pour lancer une
+                recherche.
+              </p>
               <HomemadeAutocomplete<string>
                 id={inputId}
                 search={search}
                 displayLabel={(item: string | null) => item ?? ""}
                 highlightQuery={true}
-                label="Recherche"
+                label="Rechercher"
                 hideLabel={true}
                 isSearch={false}
                 displayNoResult={false}
                 inputRef={inputRef}
                 ariaDescribedby={ariaDescribedbyIds}
+                disableNativeLabelAssociation={true}
+                listboxAriaLabelledby={labelId}
                 onInputValueChange={(value) => {
                   setQuery(value || "");
                   onChangeQuery(value || "");

@@ -58,13 +58,9 @@ export const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
           resultsTitleRef.current?.focus();
         }, 100);
       } else {
-        // Focus on "no results" message if displayed, otherwise keep on input
+        // Keep focus on input when there are no results
         setTimeout(() => {
-          if (noResultMessageRef.current) {
-            noResultMessageRef.current.focus();
-          } else {
-            modalSearchRef.current?.focusInput();
-          }
+          modalSearchRef.current?.focusInput();
         }, 100);
       }
     }
