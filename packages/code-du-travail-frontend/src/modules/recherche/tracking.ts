@@ -6,8 +6,7 @@ import {
 import { useCallback } from "react";
 import { sendEvent } from "@socialgouv/matomo-next";
 import { MatomoBaseEvent } from "../analytics/types";
-import { PresearchClass } from "src/api/modules/search/service/presearch";
-import { SearchResult } from "src/api/modules/search/service/search";
+import { PresearchClass, SearchResult } from "src/api";
 
 enum MatomoSearchCategory {
   SEARCH = "search",
@@ -103,10 +102,10 @@ export const useSearchTracking = () => {
   }, []);
 
   const emitPresearchEvent = useCallback(
-    (query: string, classes: PresearchClass[]) => {
+    (query: string, queryClass: PresearchClass) => {
       const name = JSON.stringify({
         query: query.trim(),
-        classes,
+        class: queryClass,
       });
       sendEvent({
         category: MatomoSearchCategory.SEARCH,
@@ -118,10 +117,10 @@ export const useSearchTracking = () => {
   );
 
   const emitClickSeeAllResultsEvent = useCallback(
-    (query: string, classes?: PresearchClass[]) => {
+    (query: string, queryClass?: PresearchClass) => {
       const name = JSON.stringify({
         query: query.trim(),
-        classes,
+        class: queryClass,
       });
       sendEvent({
         category: MatomoSearchCategory.SEARCH,

@@ -29,7 +29,7 @@ export const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
 
   const {
     results,
-    classes,
+    queryClass,
     isLoading,
     hasSearched,
     triggerSearch,
@@ -200,7 +200,7 @@ export const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
             contextType="modal"
             onFocusRequest={handleFocusRequest}
             noResultMessageRef={noResultMessageRef}
-            classes={classes}
+            queryClass={queryClass}
           />
 
           {!hasSearched && (
@@ -214,7 +214,7 @@ export const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
           {hasSearched && !isLoading && (
             <SearchResults
               results={results}
-              queryClass={classes[0]}
+              queryClass={queryClass}
               onResultClick={handleClose}
               contextType="modal"
               titleRef={resultsTitleRef}

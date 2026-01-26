@@ -3,7 +3,7 @@ import { css } from "@styled-system/css";
 import { SearchResultCard } from "./SearchResultCard";
 import { useRef } from "react";
 import { useSearchTracking } from "../tracking";
-import { SearchResult } from "src/api/modules/search/service/search";
+import { SearchResult } from "src/api";
 
 interface Props {
   results: SearchResult[];

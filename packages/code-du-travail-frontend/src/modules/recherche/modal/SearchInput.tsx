@@ -11,7 +11,7 @@ import { SearchFeedback } from "./SearchFeedback";
 import { useSuggestions } from "../hooks/useSuggestions";
 import { MinSearchLengthHint } from "./MinSearchLengthHint";
 import { HomemadeAutocomplete } from "src/modules/common/Autocomplete";
-import { PresearchClass } from "src/api/modules/search/service/presearch";
+import { PresearchClass } from "src/api";
 
 interface ModalSearchProps {
   onClose?: () => void;
@@ -26,7 +26,7 @@ interface ModalSearchProps {
   onSearchSubmit?: (hasResults: boolean) => void;
   onFocusRequest?: () => void;
   noResultMessageRef?: React.RefObject<HTMLParagraphElement | null>;
-  classes?: PresearchClass[];
+  queryClass?: PresearchClass;
 }
 
 export interface ModalSearchHandle {
@@ -51,7 +51,7 @@ export const SearchInput = forwardRef<ModalSearchHandle, ModalSearchProps>(
       onSearchSubmit,
       onFocusRequest,
       noResultMessageRef,
-      classes = [],
+      queryClass = undefined,
     },
     ref
   ) => {
@@ -73,7 +73,7 @@ export const SearchInput = forwardRef<ModalSearchHandle, ModalSearchProps>(
 
     const handleSearch = () => {
       if (!query.trim()) return;
-      emitClickSeeAllResultsEvent(query.trim(), classes);
+      emitClickSeeAllResultsEvent(query.trim(), queryClass);
       router.push(`/recherche?query=${encodeURIComponent(query.trim())}`);
       onClose?.();
     };

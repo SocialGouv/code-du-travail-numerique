@@ -15,8 +15,8 @@ export const getIdccByQuery = async (query: string, size?: number) => {
     body,
     index: elasticDocumentsIndex,
   });
-  const { ...rest } = response;
-  return rest;
+
+  return extractHits(response);
 };
 
 let idccs: Set<number> = new Set();
@@ -67,9 +67,7 @@ export const ccSearch = async (
     }
   | undefined
 > => {
-  const idccResults = await getIdccByQuery(query, 1);
-
-  const hits = extractHits(idccResults);
+  const hits = await getIdccByQuery(query, 1);
 
   if (hits.length > 0 && (hits[0]["_score"] || 0) > threshold) {
     const hit = hits[0];

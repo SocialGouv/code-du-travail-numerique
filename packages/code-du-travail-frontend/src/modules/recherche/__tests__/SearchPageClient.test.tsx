@@ -85,7 +85,7 @@ describe("SearchPageClient", () => {
         algo: SEARCH_ALGO.FULL_TEXT,
       },
     ],
-    classes: [],
+    class: "",
   };
 
   it("should emit search event when mounted with a query", () => {

@@ -1,4 +1,4 @@
-import { SourceKeys, SOURCES } from "@socialgouv/cdtn-utils";
+import { SOURCES } from "@socialgouv/cdtn-utils";
 import { elasticDocumentsIndex, elasticsearchClient } from "../../../utils";
 import {
   getRelatedArticlesBody,
@@ -7,7 +7,10 @@ import {
 } from "../queries";
 import { removeDuplicate } from "../utils";
 import { getPrequalifiedResults } from "./prequalified";
-import { presearch, PresearchClass } from "./presearch";
+import { presearch } from "./presearch";
+import { SEARCH_ALGO, SearchAlgo, SearchResponse, SearchResult } from "./types";
+
+export const DEFAULT_PRESEARCH_RESULTS_NUMBER = 8;
 
 const MAX_RESULTS = 100;
 const DEFAULT_RESULTS_NUMBER = 25;
@@ -16,30 +19,6 @@ const CDT_RESULTS_NUMBER = 5;
 
 const DOCUMENTS_ES = "documents_es";
 const CDT_ES = "cdt_es";
-
-export const SEARCH_ALGO = {
-  PREQUA: "pre-qualified",
-  FULL_TEXT: "fulltext",
-  PRESEARCH: "presearch",
-} as const;
-
-export type SearchAlgo = (typeof SEARCH_ALGO)[keyof typeof SEARCH_ALGO];
-
-export type SearchResult = {
-  _score?: number;
-  description: string;
-  cdtnId: string;
-  slug: string;
-  source: SourceKeys;
-  title: string;
-  algo: SearchAlgo;
-  breadcrumbs?: {
-    label: string;
-    position: number;
-    slug: string;
-  }[];
-  url?: string;
-};
 
 const esDocToSearchResult =
   (algo: SearchAlgo) =>
@@ -53,12 +32,7 @@ const esDocToSearchResult =
 export const searchWithQuery = async (
   query: string,
   sizeParams = DEFAULT_RESULTS_NUMBER
-): Promise<{
-  articles: SearchResult[];
-  themes: SearchResult[];
-  documents: SearchResult[];
-  classes: string[];
-}> => {
+): Promise<SearchResponse> => {
   const size = Math.min(sizeParams, MAX_RESULTS);
 
   const sources = [
@@ -147,7 +121,7 @@ export const searchWithQuery = async (
     articles: removeDuplicate(documents),
     documents: removeDuplicate(documents),
     themes: removeDuplicate(themes).slice(0, THEMES_RESULTS_NUMBER),
-    classes: parsed.classes,
+    class: parsed.classes[0],
   };
 };
 

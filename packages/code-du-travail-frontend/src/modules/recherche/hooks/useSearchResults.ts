@@ -1,12 +1,14 @@
 import { useState, useEffect, useCallback } from "react";
 import { fetchSearchResults } from "../api/fetchSearchResults";
-import { PresearchClass } from "src/api/modules/search/service/presearch";
 import { useSearchTracking } from "../tracking";
-import { SearchResult } from "src/api/modules/search/service/search";
+import {
+  PresearchClass,
+  SearchResult,
+} from "src/api/modules/search/service/types";
 
 interface UseSearchResultsReturn {
   results: SearchResult[];
-  classes: PresearchClass[];
+  queryClass: PresearchClass;
   isLoading: boolean;
   hasSearched: boolean;
   triggerSearch: (searchQuery?: string) => Promise<void>;
@@ -17,7 +19,9 @@ interface UseSearchResultsReturn {
 
 export const useSearchResults = (): UseSearchResultsReturn => {
   const [results, setResults] = useState<SearchResult[]>([]);
-  const [classes, setClasses] = useState<PresearchClass[]>([]);
+  const [queryClass, setQueryClass] = useState<PresearchClass>(
+    PresearchClass.UNKNOWN
+  );
   const [isLoading, setIsLoading] = useState(false);
   const [hasSearched, setHasSearched] = useState(false);
   const [query, setQuery] = useState("");
@@ -31,15 +35,15 @@ export const useSearchResults = (): UseSearchResultsReturn => {
       setHasSearched(true);
 
       try {
-        const { results: fetchedResults, classes: fetchedClasses } =
+        const { results: fetchedResults, class: fetchedClass } =
           await fetchSearchResults(queryToUse);
         setResults(fetchedResults);
-        setClasses(fetchedClasses);
-        emitPresearchEvent(queryToUse, fetchedClasses);
+        setQueryClass(fetchedClass);
+        emitPresearchEvent(queryToUse, fetchedClass);
       } catch (error) {
         console.error("Error fetching search results:", error);
         setResults([]);
-        setClasses([]);
+        setQueryClass(PresearchClass.UNKNOWN);
       } finally {
         setIsLoading(false);
       }
@@ -49,7 +53,7 @@ export const useSearchResults = (): UseSearchResultsReturn => {
 
   const resetSearch = useCallback(() => {
     setResults([]);
-    setClasses([]);
+    setQueryClass(PresearchClass.UNKNOWN);
     setHasSearched(false);
     setIsLoading(false);
   }, []);
@@ -63,7 +67,7 @@ export const useSearchResults = (): UseSearchResultsReturn => {
 
   return {
     results,
-    classes,
+    queryClass,
     isLoading,
     hasSearched,
     triggerSearch,

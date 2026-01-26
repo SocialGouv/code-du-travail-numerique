@@ -35,7 +35,7 @@ export default async function SearchPage(props: SearchPageProps) {
     articles: [],
     documents: [],
     themes: [],
-    classes: [],
+    class: "",
   };
 
   if (query) {

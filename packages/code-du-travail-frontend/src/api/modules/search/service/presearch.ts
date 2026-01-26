@@ -3,8 +3,20 @@ import fingerprint from "talisman/tokenizers/fingerprint";
 import { ccSearch, ensureIdccsInstantiated, isIdccToken } from "../../idcc";
 import { getRelatedArticlesBody } from "../queries";
 import { elasticDocumentsIndex, elasticsearchClient } from "src/api/utils";
-import { extractHits, SEARCH_ALGO, SearchResult } from "./search";
+import { extractHits } from "./search";
 import { articleMatcher, extractReferences } from "./referenceExtractor";
+import {
+  getDefaultIdccResults,
+  MATCHING_CC_TOKENS,
+  NO_CC_TOKENS,
+} from "./defaultIdcc";
+import {
+  PresearchClass,
+  PreSearchResult,
+  SEARCH_ALGO,
+  SearchResult,
+  ThemeSearchResult,
+} from "./types";
 
 const keyword_std = [
   "a conservatoir mise pied",
@@ -96,76 +108,9 @@ const keyword_std = [
   "retard",
 ];
 
-const DEFAULT_CC_CONTENT = ["db8ffe3574", "b1041bd7ca", "825821a69e"];
-
-export enum PresearchClass {
-  CC = "cc",
-  CC_FOUND = "cc_found",
-  KEYWORD = "keyword",
-  KEYWORD_STD = "keyword_standard",
-  ARTICLE = "article",
-  THEME = "theme",
-  NATURAL = "natural",
-  UNKNOWN = "unknown",
-}
-
-export type PreSearchResult = SearchResult & {
-  algo: typeof SEARCH_ALGO.PRESEARCH;
-  class: PresearchClass;
-};
-
-export type ThemeSearchResult = PreSearchResult & { breadcrumbs: unknown[] };
-
-let defaultsIdccResults: PreSearchResult[] = [];
-
-// temporary
-const getDefaultIdccResults = async (): Promise<PreSearchResult[]> => {
-  if (defaultsIdccResults.length < 1) {
-    defaultsIdccResults = await elasticsearchClient
-      .search<any>({
-        body: {
-          size: 1000,
-          _source: [
-            "title",
-            "slug",
-            "url",
-            "source",
-            "cdtnId",
-            "description",
-            "breadcrumbs",
-          ],
-          query: {
-            bool: {
-              must: { terms: { cdtnId: DEFAULT_CC_CONTENT } },
-            },
-          },
-        },
-        index: elasticDocumentsIndex,
-      })
-      .then((r) =>
-        extractHits(r).map(({ _source }) => ({
-          ..._source,
-          algo: SEARCH_ALGO.PRESEARCH,
-        }))
-      );
-  }
-  return defaultsIdccResults;
-};
-
 const CC_SCORE_THRESHOLD = 20;
 
 const PRESEARCH_MAX_RESULTS = 8;
-
-const MATCHING_CC_TOKENS = [
-  "convention",
-  "colectif",
-  "national",
-  "branch",
-  "idcc",
-  "ccn",
-];
-
-const NO_CC_TOKENS = ["ruptur"];
 
 const tokenize = (content: string): string[] => {
   const cleaned = content.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, " ");

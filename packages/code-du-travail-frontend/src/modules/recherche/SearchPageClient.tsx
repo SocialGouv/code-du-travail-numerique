@@ -19,7 +19,7 @@ export type SearchPageClientProps = {
     documents: SearchResult[];
     themes: SearchResult[];
     articles: SearchResult[];
-    classes: string[];
+    class: string;
   };
 };
 
@@ -40,7 +40,7 @@ export const SearchPageClient: React.FC<SearchPageClientProps> = ({
     [searchParams]
   );
 
-  const { documents, themes, articles, classes } = items;
+  const { documents, themes, articles, class: klass } = items;
 
   useEffect(() => {
     const query = getSearchParam("query");
@@ -50,14 +50,14 @@ export const SearchPageClient: React.FC<SearchPageClientProps> = ({
   }, [getSearchParam]);
 
   useEffect(() => {
-    if (query && classes) {
-      emitFullsearchEvent(query, classes[0]);
+    if (query && klass) {
+      emitFullsearchEvent(query, klass);
       // Focus the search results heading when a search is performed
       setTimeout(() => {
         searchResultsHeadingRef.current?.focus();
       }, 100);
     }
-  }, [query, emitFullsearchEvent, classes]);
+  }, [query, emitFullsearchEvent, klass]);
 
   const codeArticles = articles.filter(
     (item) => item.source === SOURCES.CDT && item.slug

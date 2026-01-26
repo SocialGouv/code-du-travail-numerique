@@ -1,4 +1,4 @@
-import { searchWithQuery } from "./service";
+import { DEFAULT_PRESEARCH_RESULTS_NUMBER, searchWithQuery } from "./service";
 import { NextResponse } from "next/server";
 
 export class SearchController {
@@ -35,9 +35,12 @@ export class SearchController {
       );
     }
 
-    const parsed = await searchWithQuery(query, 8).then((r) => ({
+    const parsed = await searchWithQuery(
+      query,
+      DEFAULT_PRESEARCH_RESULTS_NUMBER
+    ).then((r) => ({
       results: r.documents,
-      classes: [r.classes],
+      class: r.class,
     }));
     return NextResponse.json(parsed, {
       status: 200,

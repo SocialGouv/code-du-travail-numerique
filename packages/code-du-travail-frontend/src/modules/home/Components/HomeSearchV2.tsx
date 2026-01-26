@@ -16,7 +16,7 @@ export const HomeSearchV2 = () => {
   const [pendingFocus, setPendingFocus] = useState(false);
   const {
     results,
-    classes,
+    queryClass,
     isLoading,
     hasSearched,
     triggerSearch,
@@ -63,13 +63,13 @@ export const HomeSearchV2 = () => {
         contextType="home"
         onFocusRequest={handleFocusRequest}
         noResultMessageRef={noResultMessageRef}
-        classes={classes}
+        queryClass={queryClass}
       />
 
       {hasSearched && !isLoading && (
         <SearchResults
           results={results}
-          queryClass={classes[0]}
+          queryClass={queryClass}
           contextType="home"
           titleRef={resultsTitleRef}
         />
