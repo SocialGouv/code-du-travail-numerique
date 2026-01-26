@@ -76,4 +76,64 @@ describe("Content fiche MT", () => {
       getAllByRole("heading", { level: 2 })[2].parentElement
     ).toHaveTextContent("Anchor content 3");
   });
+
+  test("should insert a Résumé h2 when highlight starts with h3 (missing h2)", () => {
+    const { getByRole, container } = render(
+      <FicheMinistereTravail
+        date={ficheMTData.date}
+        metaDescription={ficheMTData.description}
+        breadcrumbs={[]}
+        sections={[]}
+        url={ficheMTData.url}
+        highlight={{
+          anchor: "",
+          title: "",
+          html: `<h3>Premier titre du document</h3><p>Du contenu</p>`,
+        }}
+        title={ficheMTData.title}
+        intro={ficheMTData.intro}
+        relatedItems={[]}
+      />
+    );
+
+    expect(getByRole("heading", { level: 1 })).toHaveTextContent(
+      "Fiche MT title"
+    );
+
+    expect(getByRole("heading", { level: 2, name: "Résumé" })).toBeVisible();
+    expect(
+      getByRole("heading", { level: 3, name: "Premier titre du document" })
+    ).toBeVisible();
+
+    const headings = Array.from(container.querySelectorAll("h2, h3")).map(
+      (n) => n.textContent
+    );
+    expect(headings[0]).toBe("Résumé");
+    expect(headings[1]).toBe("Premier titre du document");
+  });
+
+  test("should not insert a Résumé h2 when highlight already starts with h2", () => {
+    const { queryByRole, getByRole } = render(
+      <FicheMinistereTravail
+        date={ficheMTData.date}
+        metaDescription={ficheMTData.description}
+        breadcrumbs={[]}
+        sections={[]}
+        url={ficheMTData.url}
+        highlight={{
+          anchor: "",
+          title: "",
+          html: `<h2>Déjà un h2</h2><p>Du contenu</p>`,
+        }}
+        title={ficheMTData.title}
+        intro={ficheMTData.intro}
+        relatedItems={[]}
+      />
+    );
+
+    expect(queryByRole("heading", { level: 2, name: "Résumé" })).toBeNull();
+    expect(
+      getByRole("heading", { level: 2, name: "Déjà un h2" })
+    ).toBeVisible();
+  });
 });
