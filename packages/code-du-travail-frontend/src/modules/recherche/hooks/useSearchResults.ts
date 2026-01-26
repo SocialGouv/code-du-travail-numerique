@@ -8,7 +8,7 @@ import {
 
 interface UseSearchResultsReturn {
   results: SearchResult[];
-  queryClass: PresearchClass;
+  queryClass?: PresearchClass;
   isLoading: boolean;
   hasSearched: boolean;
   triggerSearch: (searchQuery?: string) => Promise<void>;
@@ -19,14 +19,12 @@ interface UseSearchResultsReturn {
 
 export const useSearchResults = (): UseSearchResultsReturn => {
   const [results, setResults] = useState<SearchResult[]>([]);
-  const [queryClass, setQueryClass] = useState<PresearchClass>(
-    PresearchClass.UNKNOWN
-  );
+  const [queryClass, setQueryClass] = useState<PresearchClass>();
   const [isLoading, setIsLoading] = useState(false);
   const [hasSearched, setHasSearched] = useState(false);
   const [query, setQuery] = useState("");
 
-  const { emitPresearchEvent } = useSearchTracking();
+  const { emitPresearchEvent, emitMatomoTrackSiteSearch } = useSearchTracking();
 
   const triggerSearch = useCallback(
     async (searchQuery?: string) => {
@@ -40,20 +38,21 @@ export const useSearchResults = (): UseSearchResultsReturn => {
         setResults(fetchedResults);
         setQueryClass(fetchedClass);
         emitPresearchEvent(queryToUse, fetchedClass);
+        emitMatomoTrackSiteSearch(queryToUse);
       } catch (error) {
         console.error("Error fetching search results:", error);
         setResults([]);
-        setQueryClass(PresearchClass.UNKNOWN);
+        setQueryClass(undefined);
       } finally {
         setIsLoading(false);
       }
     },
-    [emitPresearchEvent, query]
+    [emitPresearchEvent, emitMatomoTrackSiteSearch, query]
   );
 
   const resetSearch = useCallback(() => {
     setResults([]);
-    setQueryClass(PresearchClass.UNKNOWN);
+    setQueryClass(undefined);
     setHasSearched(false);
     setIsLoading(false);
   }, []);

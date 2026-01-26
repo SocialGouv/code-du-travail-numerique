@@ -11,6 +11,7 @@ import { useSearchResults } from "../hooks/useSearchResults";
 import { useHints } from "../hooks/useHints";
 import useScrollBlock from "../../utils/useScrollBlock";
 import { useBreakpoints } from "src/modules/common/useBreakpoints";
+import { PresearchClass } from "src/api";
 
 interface SearchModalProps {
   isOpen: boolean;
@@ -214,7 +215,7 @@ export const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
           {hasSearched && !isLoading && (
             <SearchResults
               results={results}
-              queryClass={queryClass}
+              queryClass={queryClass as PresearchClass}
               onResultClick={handleClose}
               contextType="modal"
               titleRef={resultsTitleRef}

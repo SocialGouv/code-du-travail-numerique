@@ -59,8 +59,11 @@ export const SearchInput = forwardRef<ModalSearchHandle, ModalSearchProps>(
     const [query, setQuery] = useState(initialQuery || "");
     const [isAutocompleteOpen, setIsAutocompleteOpen] = useState(false);
     const router = useRouter();
-    const { emitClickSeeAllResultsEvent, emitSuggestionSelectionEvent } =
-      useSearchTracking();
+    const {
+      emitSearchEvent,
+      emitClickSeeAllResultsEvent,
+      emitSuggestionSelectionEvent,
+    } = useSearchTracking();
     const { suggestions, fetchSuggestions, clearSuggestions } =
       useSuggestions();
 
@@ -73,6 +76,7 @@ export const SearchInput = forwardRef<ModalSearchHandle, ModalSearchProps>(
 
     const handleSearch = () => {
       if (!query.trim()) return;
+      emitSearchEvent(query.trim());
       emitClickSeeAllResultsEvent(query.trim(), queryClass);
       router.push(`/recherche?query=${encodeURIComponent(query.trim())}`);
       onClose?.();

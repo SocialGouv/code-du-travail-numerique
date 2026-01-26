@@ -61,7 +61,7 @@ export const searchWithQuery = async (
 
   const parsed = await presearch(query, themes, true);
 
-  const documents: SearchResult[] = parsed.results;
+  const documents: SearchResult[] = parsed.results.slice(0, size);
 
   // check prequalified requests : to be removed soon
   const prequalifiedResults = await getPrequalifiedResults(query);
@@ -84,10 +84,7 @@ export const searchWithQuery = async (
   const shouldRequestCdt = articles.length < 5;
 
   // if not enough prequalified results, we also trigger ES search
-  if (
-    !prequalifiedResults ||
-    prequalifiedResults.length < DEFAULT_RESULTS_NUMBER
-  ) {
+  if (documents.length < size) {
     searches[DOCUMENTS_ES] = [
       { index: elasticDocumentsIndex },
       getSearchBody(query, size, sources),
@@ -119,7 +116,7 @@ export const searchWithQuery = async (
 
   return {
     articles: removeDuplicate(documents),
-    documents: removeDuplicate(documents),
+    documents: removeDuplicate(documents).slice(0, size),
     themes: removeDuplicate(themes).slice(0, THEMES_RESULTS_NUMBER),
     class: parsed.classes[0],
   };

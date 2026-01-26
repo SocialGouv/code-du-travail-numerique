@@ -4,7 +4,7 @@ import {
   SOURCES,
 } from "@socialgouv/cdtn-utils";
 import { useCallback } from "react";
-import { sendEvent } from "@socialgouv/matomo-next";
+import { sendEvent, push } from "@socialgouv/matomo-next";
 import { MatomoBaseEvent } from "../analytics/types";
 import { PresearchClass, SearchResult } from "src/api";
 
@@ -64,7 +64,10 @@ export const useSearchTracking = () => {
   const emitFullsearchEvent = useCallback(
     (searchTerm: string, queryClass: string) => {
       if (searchTerm?.trim()) {
-        const name = JSON.stringify({ query: searchTerm, queryClass });
+        const name = JSON.stringify({
+          query: searchTerm.trim(),
+          class: queryClass,
+        });
 
         sendEvent({
           category: MatomoSearchCategory.SEARCH,
@@ -148,6 +151,12 @@ export const useSearchTracking = () => {
     []
   );
 
+  // standard search event for Matomo, called explicitly in Modal Presearch context
+  // otherwise, it's triggered automatically by matomo-next when visiting /recherche page path
+  const emitMatomoTrackSiteSearch = useCallback((query: string) => {
+    push(["trackSiteSearch", query]);
+  }, []);
+
   return {
     emitResultSelectionEvent,
     emitSearchEvent,
@@ -158,5 +167,6 @@ export const useSearchTracking = () => {
     emitSelectPresearchResultEvent,
     emitClickSeeAllResultsEvent,
     emitFullsearchEvent,
+    emitMatomoTrackSiteSearch,
   };
 };

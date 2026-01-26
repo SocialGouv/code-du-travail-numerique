@@ -8,6 +8,7 @@ import {
 } from "../../recherche/modal/SearchInput";
 import { SearchResults } from "../../recherche/modal/SearchResults";
 import { useSearchResults } from "../../recherche/hooks/useSearchResults";
+import { PresearchClass } from "src/api";
 
 export const HomeSearchV2 = () => {
   const searchRef = useRef<ModalSearchHandle>(null);
@@ -69,7 +70,7 @@ export const HomeSearchV2 = () => {
       {hasSearched && !isLoading && (
         <SearchResults
           results={results}
-          queryClass={queryClass}
+          queryClass={queryClass as PresearchClass}
           contextType="home"
           titleRef={resultsTitleRef}
         />
