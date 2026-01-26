@@ -1,25 +1,37 @@
 describe("Modèles de documents", () => {
-  it("liste les modèles", () => {
-    cy.visit("/modeles-de-courriers");
+  it("je vois la liste de toutes les modèles de documents par thèmes", () => {
+    cy.visit("/");
+    cy.findByRole("heading", { level: 1 })
+      .should("have.text", "Bienvenue sur le Code du travail numérique")
+      .click();
+    cy.get("#fr-header-main-navigation")
+      .contains("Modèles de documents")
+      .click();
+    cy.get("#fr-header-main-navigation")
+      .contains("Voir tous les modèles par thème")
+      .click();
     cy.isIndexable();
+    cy.urlEqual("/modeles-de-courriers");
     cy.canonicalUrlEqual("/modeles-de-courriers");
     cy.titleAndMetaDescriptionEqual(
       "Modèles de documents - Code du travail numérique",
       "Téléchargez et personnalisez les modèles de documents et de lettres pour vos démarches en lien avec le droit du travail"
     );
-    cy.findByRole("heading", { level: 1 })
-      .should("have.text", "Modèles de documents")
-      .click();
-
-    cy.contains("Rupture du contrat en période d’essai par le salarié").click();
-
-    cy.urlEqual(
-      "/modeles-de-courriers/rupture-du-contrat-en-periode-dessai-par-le-salarie"
+    cy.get("h1").should("have.text", "Modèles de documents");
+    cy.get("body").should(
+      "contain",
+      "Téléchargez et personnalisez les modèles de documents et de lettres pour vos démarches en lien avec le droit du travail"
     );
-    cy.titleAndMetaDescriptionEqual(
-      "Modèle de document : Rupture du contrat en période d’essai par le salarié - Code du travail numérique",
-      "Pendant la période d’essai, le contrat de travail peut être rompu librement par le salarié. Téléchargez et personnalisez notre modèle pour informer votre employeur de votre intention de mettre fin à la période d’essai."
-    );
+    cy.findAllByRole("heading", { level: 2 }).should("have.length.at.least", 3);
+    cy.findAllByRole("heading", { level: 2 })
+      .eq(0)
+      .should("contain", "Sommaire");
+    cy.findAllByRole("heading", { level: 2 })
+      .eq(1)
+      .should("contain", "Contenus populaires");
+    cy.findAllByRole("heading", { level: 3 }).should("have.length.at.least", 1);
+    cy.findAllByRole("heading", { level: 3 }).first().click();
+    cy.urlEqual("/modeles-de-courriers/lettre-de-demission");
   });
 
   it("cherche un modèle", () => {

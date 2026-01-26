@@ -11,7 +11,7 @@ type Props = {
   title?: string;
 };
 
-export const SummaryNavigation = ({ sections, title = "Résumé" }: Props) => {
+export const SummaryNavigation = ({ sections }: Props) => {
   return (
     <nav
       className={fr.cx("fr-summary")}
@@ -19,7 +19,7 @@ export const SummaryNavigation = ({ sections, title = "Résumé" }: Props) => {
       role="navigation"
     >
       <h2 className={fr.cx("fr-summary__title")} id={`fr-summary-title-main`}>
-        {title}
+        Sommaire
       </h2>
       <ol>
         {sections.map((section) => (

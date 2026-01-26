@@ -63,7 +63,7 @@ describe("<ListLayout />", () => {
     );
     const headingsH2 = getAllByRole("heading", { level: 2 });
     expect(headingsH2).toHaveLength(4);
-    expect(headingsH2[0]).toHaveTextContent("Résumé");
+    expect(headingsH2[0]).toHaveTextContent("Sommaire");
     expect(headingsH2[1]).toHaveTextContent("Contenus populaires");
     expect(headingsH2[2]).toHaveTextContent("Congés et repos");
     expect(headingsH2[3]).toHaveTextContent("Embauche et contrat");
