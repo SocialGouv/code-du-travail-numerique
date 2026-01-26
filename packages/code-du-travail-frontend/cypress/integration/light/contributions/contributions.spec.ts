@@ -21,7 +21,9 @@ describe("Contributions", () => {
       "Obtenez une réponse personnalisée selon votre convention collective"
     );
     cy.findAllByRole("heading", { level: 2 }).should("have.length", 13);
-    cy.findAllByRole("heading", { level: 2 }).eq(0).should("contain", "Résumé");
+    cy.findAllByRole("heading", { level: 2 })
+      .eq(0)
+      .should("contain", "Sommaire");
     cy.findAllByRole("heading", { level: 2 })
       .eq(1)
       .should("contain", "Contenus populaires");
