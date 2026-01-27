@@ -20,6 +20,7 @@ exports[`IDCC getIdccByQuery 1`] = `
         "_source": {
           "cdtnId": "a25dfc974f",
           "contributions": true,
+          "description": "Retrouvez les questions-réponses les plus fréquentes organisées par thème et élaborées par le ministère du Travail concernant cette convention collective.",
           "effectif": 216431,
           "id": "KALICONT000005635780",
           "num": 2120,
@@ -36,6 +37,7 @@ exports[`IDCC getIdccByQuery 1`] = `
         "_source": {
           "cdtnId": "ceb38cca3c",
           "contributions": false,
+          "description": "Retrouvez les questions-réponses les plus fréquentes organisées par thème et élaborées par le ministère du Travail concernant cette convention collective.",
           "effectif": 219,
           "id": "KALICONT000023973390",
           "num": 2701,
@@ -53,5 +55,6 @@ exports[`IDCC getIdccByQuery 1`] = `
     },
   },
   "timed_out": false,
+  "took": 15,
 }
 `;
