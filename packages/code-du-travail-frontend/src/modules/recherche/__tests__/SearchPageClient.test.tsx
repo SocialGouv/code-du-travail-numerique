@@ -3,6 +3,7 @@ import { render, screen, fireEvent } from "@testing-library/react";
 import { SearchPageClient } from "../SearchPageClient";
 import { useSearchTracking } from "../tracking";
 import { SOURCES } from "@socialgouv/cdtn-utils";
+import { SEARCH_ALGO } from "src/api/modules/search/service/types";
 
 // Mock the Next.js navigation hooks
 jest.mock("next/navigation", () => ({
@@ -26,7 +27,7 @@ jest.mock("../tracking", () => ({
 
 describe("SearchPageClient", () => {
   // Mock the tracking functions
-  const mockEmitSearchEvent = jest.fn();
+  const mockEmitFullsearchEventOnce = jest.fn();
   const mockEmitResultSelectionEvent = jest.fn();
   const mockEmitNextPageEvent = jest.fn();
 
@@ -35,7 +36,7 @@ describe("SearchPageClient", () => {
 
     // Setup the mock implementation for useSearchTracking
     (useSearchTracking as jest.Mock).mockReturnValue({
-      emitSearchEvent: mockEmitSearchEvent,
+      emitFullsearchEventOnce: mockEmitFullsearchEventOnce,
       emitResultSelectionEvent: mockEmitResultSelectionEvent,
       emitNextPageEvent: mockEmitNextPageEvent,
     });
@@ -49,8 +50,8 @@ describe("SearchPageClient", () => {
         slug: "document-1",
         title: "Document 1",
         description: "Description 1",
-        algo: "fulltext",
-        breadcrumbs: [{ label: "Fiches pratiques" }],
+        algo: SEARCH_ALGO.FULL_TEXT,
+        breadcrumbs: [{ label: "Fiches pratiques", position: 1, slug: "1" }],
       },
       {
         cdtnId: "doc-2",
@@ -58,34 +59,43 @@ describe("SearchPageClient", () => {
         slug: "document-2",
         title: "Document 2",
         description: "Description 2",
-        algo: "fulltext",
-        breadcrumbs: [{ label: "Fiches service public" }],
+        algo: SEARCH_ALGO.FULL_TEXT,
+        breadcrumbs: [
+          { label: "Fiches service public", position: 1, slug: "1" },
+        ],
       },
     ],
     themes: [
       {
+        description: "123",
+        cdtnId: "th1",
         source: SOURCES.THEMES,
         slug: "theme-1",
         title: "Theme 1",
-        algo: "fulltext",
+        algo: SEARCH_ALGO.FULL_TEXT,
       },
     ],
     articles: [
       {
+        cdtnId: "art1",
         source: SOURCES.CDT,
         slug: "article-1",
         title: "Article 1",
         description: "Description 1",
-        algo: "fulltext",
+        algo: SEARCH_ALGO.FULL_TEXT,
       },
     ],
+    class: "keyword",
   };
 
-  it("should emit search event when mounted with a query", () => {
+  it("should emit fullsearch event when mounted with a query and a class", () => {
     render(<SearchPageClient query="test query" items={mockItems} />);
 
-    // Check that emitSearchEvent was called with the query
-    expect(mockEmitSearchEvent).toHaveBeenCalledWith("test query");
+    // Check that emitFullsearchEventOnce was called with query and class
+    expect(mockEmitFullsearchEventOnce).toHaveBeenCalledWith(
+      "test query",
+      mockItems.class
+    );
   });
 
   it("should emit result selection event when a search result is clicked", () => {
@@ -114,8 +124,8 @@ describe("SearchPageClient", () => {
         slug: `document-${index}`,
         title: `Document ${index}`,
         description: `Description ${index}`,
-        algo: "fulltext",
-        breadcrumbs: [{ label: "Fiches pratiques" }],
+        algo: SEARCH_ALGO.FULL_TEXT,
+        breadcrumbs: [{ label: "Fiches pratiques", position: 1, slug: "1" }],
       }));
 
     const itemsWithManyDocuments = {
