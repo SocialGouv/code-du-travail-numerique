@@ -3,6 +3,61 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.209.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.209.0...v4.209.1) (2026-01-16)
+
+
+### Bug Fixes
+
+* **rgaa:** modification de la déclaration d'accessibilité suite aux modifications editoriales ([#7068](https://github.com/SocialGouv/code-du-travail-numerique/issues/7068)) ([1a84048](https://github.com/SocialGouv/code-du-travail-numerique/commit/1a84048736104073beaa1e953d9051242d985122))
+
+
+
+
+
+# [4.209.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.208.2...v4.209.0) (2026-01-15)
+
+
+### Bug Fixes
+
+* **accessibility:** ajout d'un title si manquant sur les liens ([#7067](https://github.com/SocialGouv/code-du-travail-numerique/issues/7067)) ([14388fe](https://github.com/SocialGouv/code-du-travail-numerique/commit/14388fe1599bc0b31c76eebe8b4f7c2339de21f8))
+* **rupture-co:** prendre en compte le minimum d'ancienneté conventionnel ([#7062](https://github.com/SocialGouv/code-du-travail-numerique/issues/7062)) ([a9559fd](https://github.com/SocialGouv/code-du-travail-numerique/commit/a9559fd875de5cf3076df1ed31ba2cf983927a0e))
+
+
+### Features
+
+* **quoi-de-neuf:** ajout de la page permettant d'ajouter les éléments par les admins ([#7048](https://github.com/SocialGouv/code-du-travail-numerique/issues/7048)) ([50c1547](https://github.com/SocialGouv/code-du-travail-numerique/commit/50c1547aa4be2c6b442bbcb7162ef189829f4818))
+
+
+### Reverts
+
+* Revert "fix(next): upgrade new version + react de `peerDep` à `devDep` (#7060)" ([ccf3d4f](https://github.com/SocialGouv/code-du-travail-numerique/commit/ccf3d4f8ed1c68acfaf1daed267f0f8953f6d5bb)), closes [#7060](https://github.com/SocialGouv/code-du-travail-numerique/issues/7060)
+
+
+
+
+
+## [4.208.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.208.1...v4.208.2) (2026-01-13)
+
+
+### Bug Fixes
+
+* **next:** upgrade new version + react de `peerDep` à `devDep` ([#7060](https://github.com/SocialGouv/code-du-travail-numerique/issues/7060)) ([9a20e75](https://github.com/SocialGouv/code-du-travail-numerique/commit/9a20e75bbeadb00168b5aca60df26765d189cee4))
+
+
+
+
+
+## [4.208.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.208.0...v4.208.1) (2026-01-12)
+
+
+### Bug Fixes
+
+* **accessibility:** correction d'un lien mort ([63b251d](https://github.com/SocialGouv/code-du-travail-numerique/commit/63b251db196aef12728563db90e559735df788df))
+
+
+
+
+
 # [4.208.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.207.2...v4.208.0) (2026-01-09)
 
 

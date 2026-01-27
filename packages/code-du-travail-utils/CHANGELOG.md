@@ -3,6 +3,44 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.209.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.209.0...v4.209.1) (2026-01-16)
+
+**Note:** Version bump only for package @socialgouv/cdtn-utils
+
+
+
+
+
+# [4.209.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.208.2...v4.209.0) (2026-01-15)
+
+
+### Reverts
+
+* Revert "fix(next): upgrade new version + react de `peerDep` à `devDep` (#7060)" ([ccf3d4f](https://github.com/SocialGouv/code-du-travail-numerique/commit/ccf3d4f8ed1c68acfaf1daed267f0f8953f6d5bb)), closes [#7060](https://github.com/SocialGouv/code-du-travail-numerique/issues/7060)
+
+
+
+
+
+## [4.208.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.208.1...v4.208.2) (2026-01-13)
+
+
+### Bug Fixes
+
+* **next:** upgrade new version + react de `peerDep` à `devDep` ([#7060](https://github.com/SocialGouv/code-du-travail-numerique/issues/7060)) ([9a20e75](https://github.com/SocialGouv/code-du-travail-numerique/commit/9a20e75bbeadb00168b5aca60df26765d189cee4))
+
+
+
+
+
+## [4.208.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.208.0...v4.208.1) (2026-01-12)
+
+**Note:** Version bump only for package @socialgouv/cdtn-utils
+
+
+
+
+
 # [4.208.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.207.2...v4.208.0) (2026-01-09)
 
 **Note:** Version bump only for package @socialgouv/cdtn-utils

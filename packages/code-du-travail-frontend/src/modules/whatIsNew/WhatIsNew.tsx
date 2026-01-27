@@ -7,9 +7,10 @@ import { Feedback } from "../layout/feedback";
 
 type Props = {
   month: WhatIsNewMonth;
+  periods: string[];
 };
 
-export const WhatIsNew = ({ month }: Props) => {
+export const WhatIsNew = ({ month, periods }: Props) => {
   return (
     <ContainerList title="Quoi de neuf sur le Code du travail numérique ?">
       <div className={fr.cx("fr-mb-5w")}>
@@ -26,11 +27,19 @@ export const WhatIsNew = ({ month }: Props) => {
           </p>
         </div>
 
-        <MonthNavigation currentPeriod={month.period} position="top" />
+        <MonthNavigation
+          currentPeriod={month.period}
+          periods={periods}
+          position="top"
+        />
 
         <MonthContent month={month} />
 
-        <MonthNavigation currentPeriod={month.period} position="bottom" />
+        <MonthNavigation
+          currentPeriod={month.period}
+          periods={periods}
+          position="bottom"
+        />
       </div>
       <div className={fr.cx("fr-col-12", "fr-col-md-8")}>
         <Feedback />

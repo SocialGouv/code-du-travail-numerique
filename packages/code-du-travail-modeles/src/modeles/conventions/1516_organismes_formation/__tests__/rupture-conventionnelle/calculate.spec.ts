@@ -6,7 +6,7 @@ const engine = new RuptureConventionnellePublicodes(
 );
 
 describe("Gestion des licenciements pour la CC 1516", () => {
-  describe("Vérifier qu'il n'y a pas d'ancienneté conventionnelle requise", () => {
+  describe("Vérifier qu'il y a une ancienneté conventionnelle requise", () => {
     test("Avant avenant", () => {
       const result = engine.calculate({
         "contrat salarié . convention collective": "'IDCC1516'",
@@ -25,7 +25,7 @@ describe("Gestion des licenciements pour la CC 1516", () => {
           '[{"month":"février 2024","value":3000},{"month":"janvier 2024","value":3000}]',
         typeContratTravail: "cdi",
       });
-      expect(result).toAgreementResultBeEqual(100, "€");
+      expect(result).toAgreementResultBeEqual(0, "€");
     });
 
     test("Après avenant", () => {
@@ -46,7 +46,7 @@ describe("Gestion des licenciements pour la CC 1516", () => {
           '[{"month":"février 2024","value":3000},{"month":"janvier 2024","value":3000}]',
         typeContratTravail: "cdi",
       });
-      expect(result).toAgreementResultBeEqual(125, "€");
+      expect(result).toAgreementResultBeEqual(0, "€");
     });
   });
 });

@@ -109,4 +109,12 @@ describe("Fiche MT content parser", () => {
       `<p><a href=\"/le-contrat-duree-determinee-cdd\" title=\"Le contrat à durée déterminée (CDD) - nouvelle fenêtre\">limitativement énumérées</a>.</p>`
     );
   });
+
+  test("Should add title on link when no title set", () => {
+    const src = `<p><a href="/le-contrat-duree-determinee-cdd">limitativement énumérées</a>.</p>`;
+    const { container } = render(<ContentParser>{src}</ContentParser>);
+    expect(container.innerHTML).toBe(
+      `<p><a target=\"_blank\" rel=\"noopener noreferrer\" title=\"limitativement énumérées - nouvelle fenêtre\" href=\"/le-contrat-duree-determinee-cdd\">limitativement énumérées</a>.</p>`
+    );
+  });
 });

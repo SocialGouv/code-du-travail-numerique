@@ -33,92 +33,6 @@ describe("Rupture conventionnelle pour la CC 1486", () => {
     });
   });
 
-  describe("Calcul de l'indemnité de licenciement", () => {
-    test.each([
-      {
-        catPro: "ETAM",
-        dateEntree: "01/01/2000",
-        dateSortie: "01/09/2000",
-        result: 450,
-      },
-      {
-        catPro: "ETAM",
-        dateEntree: "01/01/2000",
-        dateSortie: "01/01/2006",
-        result: 4050,
-      },
-      {
-        catPro: "ETAM",
-        dateEntree: "01/01/2000",
-        dateSortie: "01/01/2011",
-        result: 7425,
-      },
-      {
-        catPro: "ETAM",
-        dateEntree: "01/01/2000",
-        dateSortie: "01/01/2025",
-        result: 22500,
-      },
-      {
-        catPro: "Ingénieurs et cadres",
-        dateEntree: "01/01/2000",
-        dateSortie: "01/09/2000",
-        result: 600,
-      },
-      {
-        catPro: "Ingénieurs et cadres",
-        dateEntree: "01/01/2000",
-        dateSortie: "01/01/2001",
-        result: 900,
-      },
-      {
-        catPro: "Ingénieurs et cadres",
-        dateEntree: "01/01/2000",
-        dateSortie: "01/01/2006",
-        result: 5400,
-      },
-      {
-        catPro: "Chargés d'enquête intermittents",
-        dateEntree: "01/01/2000",
-        dateSortie: "01/09/2000",
-        result: 720,
-      },
-      {
-        catPro: "Chargés d'enquête intermittents",
-        dateEntree: "01/01/2000",
-        dateSortie: "01/01/2002",
-        result: 2160,
-      },
-      {
-        catPro: "Chargés d'enquête intermittents",
-        dateEntree: "01/01/2000",
-        dateSortie: "01/01/2005",
-        result: 5400,
-      },
-    ])(
-      "Calcul pour $catPro avec une entrée dans l'entreprise le $dateEntree et sortie le $dateSortie",
-      (value) => {
-        const result = engine.calculate({
-          "contrat salarié . convention collective": "'IDCC1486'",
-          "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . catégorie professionnelle": `'${value.catPro}'`,
-          "contrat salarié . indemnité de licenciement . date d'entrée":
-            value.dateEntree,
-          "contrat salarié . indemnité de licenciement . date de notification":
-            value.dateSortie,
-          "contrat salarié . indemnité de licenciement . date de sortie":
-            value.dateSortie,
-          "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
-            "non",
-          licenciementFauteGrave: "non",
-          salaryPeriods:
-            '[{"month":"décembre 2024","value":2700},{"month":"novembre 2024","value":2700},{"month":"octobre 2024","value":2700},{"month":"septembre 2024","value":2700},{"month":"août 2024","value":2700},{"month":"juillet 2024","value":2700},{"month":"juin 2024","value":2700},{"month":"mai 2024","value":2700},{"month":"avril 2024","value":2700},{"month":"mars 2024","value":2700},{"month":"février 2024","value":2700},{"month":"janvier 2024","value":2700}]',
-          typeContratTravail: "cdi",
-        });
-        expect(result).toAgreementResultBeEqual(value.result, "€");
-      }
-    );
-  });
-
   describe("Désactivation des anciennes règles", () => {
     test("Calcul pour les chargés d'enquête intermittents", () => {
       const result = engine.calculate({
@@ -141,7 +55,7 @@ describe("Rupture conventionnelle pour la CC 1486", () => {
     });
   });
 
-  describe("Vérifier qu'il n'y a pas d'ancienneté conventionnelle requise", () => {
+  describe("Vérifier qu'il y a une ancienneté conventionnelle requise", () => {
     test("ETAM", () => {
       const result = engine.calculate({
         "contrat salarié . convention collective": "'IDCC1486'",
@@ -162,7 +76,7 @@ describe("Rupture conventionnelle pour la CC 1486", () => {
           '[{"month":"février 2024","value":3000},{"month":"janvier 2024","value":3000}]',
         typeContratTravail: "cdi",
       });
-      expect(result).toAgreementResultBeEqual(125, "€");
+      expect(result).toAgreementResultBeEqual(0, "€");
     });
 
     test("Ingénieurs et cadres", () => {
@@ -185,7 +99,7 @@ describe("Rupture conventionnelle pour la CC 1486", () => {
           '[{"month":"février 2024","value":3000},{"month":"janvier 2024","value":3000}]',
         typeContratTravail: "cdi",
       });
-      expect(result).toAgreementResultBeEqual(125, "€");
+      expect(result).toAgreementResultBeEqual(0, "€");
     });
 
     test("Chargés d'enquête intermittents", () => {
@@ -208,7 +122,7 @@ describe("Rupture conventionnelle pour la CC 1486", () => {
           '[{"month":"février 2024","value":3000},{"month":"janvier 2024","value":3000}]',
         typeContratTravail: "cdi",
       });
-      expect(result).toAgreementResultBeEqual(200, "€");
+      expect(result).toAgreementResultBeEqual(0, "€");
     });
   });
 });

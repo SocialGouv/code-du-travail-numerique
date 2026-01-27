@@ -1,7 +1,25 @@
+/**
+ * IDCC (Identifiant de Convention Collective) mappings
+ *
+ * Ces mappings gèrent les redirections et fusions de conventions collectives
+ */
+
+/**
+ * IDCC_SPLIT: Conventions collectives qui ont été divisées
+ *
+ * Clé: IDCC source
+ * Valeur: Tableau des nouveaux IDCC résultants de la division
+ */
 export const IDCC_SPLIT = {
   1740: [1596, 1597],
 } as const;
 
+/**
+ * IDCC_MERGE: Conventions collectives qui ont été fusionnées
+ *
+ * Clé: IDCC de destination (nouvelle CC)
+ * Valeur: Tableau des IDCC sources qui ont été fusionnés dans cette CC
+ */
 export const IDCC_MERGE = {
   3248: [
     54, 650, 714, 822, 827, 828, 829, 836, 860, 863, 878, 887, 898, 899, 911,
@@ -54,4 +72,12 @@ export const IDCC_MERGE = {
   1486: [2230],
   653: [438],
   3253: [1000, 1850],
-};
+} as const;
+
+/**
+ * Types dérivés des constantes
+ */
+export type IdccSplitKeys = keyof typeof IDCC_SPLIT;
+export type IdccMergeKeys = keyof typeof IDCC_MERGE;
+export type IdccSplitValues = (typeof IDCC_SPLIT)[IdccSplitKeys][number];
+export type IdccMergeValues = (typeof IDCC_MERGE)[IdccMergeKeys][number];
