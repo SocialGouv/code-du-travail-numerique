@@ -1,5 +1,5 @@
 import { ApiEnterpriseData } from "../types";
-import { IDCC_SPLIT, IDCC_MERGE } from "../../../config";
+import { IDCC_SPLIT, IDCC_MERGE } from "@socialgouv/cdtn-utils";
 import { Convention, EnterpriseApiResponse } from "./fetchEnterprises";
 import { fetchAgreements } from "./fetchAgreements";
 
