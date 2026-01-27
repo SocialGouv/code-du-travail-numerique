@@ -136,28 +136,32 @@ export const SearchInput = forwardRef<ModalSearchHandle, ModalSearchProps>(
         <form onSubmit={onSubmit} role="search">
           <div className={searchContainerStyle}>
             <div className={autocompleteWrapper}>
+              {contextType !== "home" && (
+                <h1
+                  id={modalTitleId}
+                  className={fr.cx("fr-text--md", "fr-mb-1w")}
+                >
+                  Que souhaitez-vous savoir ?
+                </h1>
+              )}
               <label
                 htmlFor={inputId}
                 id={labelId}
                 className={fr.cx("fr-label")}
               >
-                <span className={fr.cx("fr-sr-only")}>Rechercher</span>
                 {contextType === "home" ? (
-                  <h2 className={fr.cx("fr-text--md", "fr-mb-1w")}>
+                  <span className={fr.cx("fr-text--md", "fr-mb-1w")}>
                     Que souhaitez-vous savoir ?
-                  </h2>
+                  </span>
                 ) : (
-                  <h1
-                    id={modalTitleId}
-                    className={fr.cx("fr-text--md", "fr-mb-1w")}
-                  >
-                    Que souhaitez-vous savoir ?
-                  </h1>
+                  <span className={fr.cx("fr-sr-only")}>Rechercher</span>
                 )}
-                <p className={fr.cx("fr-text--sm", "fr-mb-2w", "fr-hint-text")}>
+                <span
+                  className={fr.cx("fr-text--sm", "fr-mb-2w", "fr-hint-text")}
+                >
                   par exemple : Comment sont comptés les congés pendant les
                   arrêts maladies ?
-                </p>
+                </span>
               </label>
               <p id={inputHintId} className={fr.cx("fr-sr-only")}>
                 Tapez {MIN_SEARCH_LENGTH} caractères ou plus pour lancer une
