@@ -56,7 +56,7 @@ describe("Modèles de documents", () => {
       "/recherche?query=modele%20rupture%20contrat%20periode%20d%27essai"
     );
 
-    cy.contains("Rupture du contrat en période d’essai par le salarié").click();
+    cy.contains("Rupture de période d’essai par le salarié").click();
 
     cy.urlEqual(
       "/modeles-de-courriers/rupture-du-contrat-en-periode-dessai-par-le-salarie"
