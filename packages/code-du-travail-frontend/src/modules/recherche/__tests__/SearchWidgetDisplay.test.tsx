@@ -1,7 +1,7 @@
 import React from "react";
 import { fireEvent, render, screen } from "@testing-library/react";
 import { SearchWidgetDisplay } from "../SearchWidgetDisplay";
-import { MatomoWidgetEvent, useSearchTracking } from "../tracking";
+import { useSearchTracking } from "../tracking";
 
 // Mock the useIframeResizer hook
 jest.mock("../../utils/useIframeResizer", () => ({
@@ -11,15 +11,12 @@ jest.mock("../../utils/useIframeResizer", () => ({
 // Mock the useSearchTracking hook
 jest.mock("../tracking", () => ({
   useSearchTracking: jest.fn(),
-  MatomoWidgetEvent: {
-    CLICK_LOGO: "click_logo",
-    SUBMIT_SEARCH: "submit_search",
-  },
 }));
 
 describe("SearchWidgetDisplay", () => {
   // Mock the tracking functions
-  const mockEmitWidgetEvent = jest.fn();
+  const mockEmitWidgetLogoClickEvent = jest.fn();
+  const mockEmitWidgetSubmitSearchEvent = jest.fn();
   const mockPostMessage = jest.fn();
 
   beforeEach(() => {
@@ -27,7 +24,8 @@ describe("SearchWidgetDisplay", () => {
 
     // Setup the mock implementation for useSearchTracking
     (useSearchTracking as jest.Mock).mockReturnValue({
-      emitWidgetEvent: mockEmitWidgetEvent,
+      emitWidgetLogoClickEvent: mockEmitWidgetLogoClickEvent,
+      emitWidgetSubmitSearchEvent: mockEmitWidgetSubmitSearchEvent,
     });
 
     // Mock window.parent.postMessage
@@ -63,10 +61,8 @@ describe("SearchWidgetDisplay", () => {
     const logo = screen.getByAltText("Code du travail numérique");
     fireEvent.click(logo);
 
-    // Check that emitWidgetEvent was called with the correct event
-    expect(mockEmitWidgetEvent).toHaveBeenCalledWith(
-      MatomoWidgetEvent.CLICK_LOGO
-    );
+    // Check that emitWidgetLogoClickEvent was called
+    expect(mockEmitWidgetLogoClickEvent).toHaveBeenCalled();
 
     // Check that postMessage was called with the correct parameters
     expect(mockPostMessage).toHaveBeenCalledWith(
@@ -82,7 +78,7 @@ describe("SearchWidgetDisplay", () => {
       .fn()
       .mockImplementation((selector) => {
         if (selector === 'input[name="query"]') {
-          return { value: "" };
+          return { value: "hello" };
         }
         return null;
       });
@@ -102,10 +98,8 @@ describe("SearchWidgetDisplay", () => {
     // Trigger the form submission
     fireEvent.submit(form as HTMLFormElement);
 
-    // Check that emitWidgetEvent was called with the correct event
-    expect(mockEmitWidgetEvent).toHaveBeenCalledWith(
-      MatomoWidgetEvent.SUBMIT_SEARCH
-    );
+    // Check that emitWidgetSubmitSearchEvent was called with the correct query
+    expect(mockEmitWidgetSubmitSearchEvent).toHaveBeenCalledWith("hello");
 
     // Check that postMessage was called with the correct parameters
     expect(mockPostMessage).toHaveBeenCalledWith(
@@ -144,6 +138,8 @@ describe("SearchWidgetDisplay", () => {
     // Trigger the form submission
     fireEvent.submit(form as HTMLFormElement);
 
+    expect(mockEmitWidgetSubmitSearchEvent).toHaveBeenCalledWith("test query");
+
     // Restore original querySelector
     HTMLFormElement.prototype.querySelector = originalQuerySelector;
   });
@@ -174,6 +170,8 @@ describe("SearchWidgetDisplay", () => {
 
     // Trigger the form submission
     fireEvent.submit(form as HTMLFormElement);
+
+    expect(mockEmitWidgetSubmitSearchEvent).toHaveBeenCalledWith("");
 
     // Restore original querySelector
     HTMLFormElement.prototype.querySelector = originalQuerySelector;
@@ -229,6 +227,8 @@ describe("SearchWidgetDisplay", () => {
 
     // Trigger the form submission
     fireEvent.submit(form as HTMLFormElement);
+
+    expect(mockEmitWidgetSubmitSearchEvent).toHaveBeenCalledWith("test query");
 
     // Restore original querySelector
     HTMLFormElement.prototype.querySelector = originalQuerySelector;

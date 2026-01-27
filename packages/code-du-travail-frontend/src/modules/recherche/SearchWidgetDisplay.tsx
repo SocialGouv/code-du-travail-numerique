@@ -3,23 +3,24 @@
 import React from "react";
 import { fr } from "@codegouvfr/react-dsfr";
 import { css } from "@styled-system/css";
-import { useSearchTracking, MatomoWidgetEvent } from "./tracking";
+import { useSearchTracking } from "./tracking";
 import Image from "next/image";
 import Button from "@codegouvfr/react-dsfr/Button";
 import { useIframeResizer } from "../utils/useIframeResizer";
 import Link from "../common/Link";
 
 export const SearchWidgetDisplay: React.FC = () => {
-  const { emitWidgetEvent } = useSearchTracking();
+  const { emitWidgetLogoClickEvent, emitWidgetSubmitSearchEvent } =
+    useSearchTracking();
   useIframeResizer();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const form = e.target as HTMLFormElement;
     const input = form.querySelector('input[name="query"]') as HTMLInputElement;
-    const query = input?.value?.trim();
+    const query = input?.value?.trim() ?? "";
 
-    emitWidgetEvent(MatomoWidgetEvent.SUBMIT_SEARCH, query);
+    emitWidgetSubmitSearchEvent(query);
     window.parent?.postMessage({ name: "button-search", kind: "click" }, "*");
 
     form.submit();
@@ -27,7 +28,7 @@ export const SearchWidgetDisplay: React.FC = () => {
 
   const onClickLogo = () => {
     window.parent?.postMessage({ name: "logo-link", kind: "click" }, "*");
-    emitWidgetEvent(MatomoWidgetEvent.CLICK_LOGO);
+    emitWidgetLogoClickEvent();
   };
 
   return (
