@@ -129,7 +129,7 @@ jobs:
           changelog = changelog_path.read_text(encoding="utf-8") if changelog_path.exists() else ""
 
           text = (
-              f"# Nouvelle release du site d'administration **{tag}** publiée.\n\n"
+              f"# Nouvelle release du site principal (code.travail.gouv.fr) **{tag}** publiée.\n\n"
               f"[Workflow]({run_url})\n\n"
               f"\n{changelog.strip()}\n"
           )
