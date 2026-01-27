@@ -55,6 +55,5 @@ exports[`IDCC getIdccByQuery 1`] = `
     },
   },
   "timed_out": false,
-  "took": 15,
 }
 `;
