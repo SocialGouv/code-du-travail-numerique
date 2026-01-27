@@ -14,8 +14,9 @@ describe("SearchResultCard", () => {
     const { container } = render(<SearchResultCard result={result} />);
 
     const nodes = Array.from(container.querySelectorAll("span"));
-    expect(nodes[0]?.textContent).toBeTruthy();
-    expect(nodes[1]?.textContent).toBeTruthy();
+    expect(nodes).toHaveLength(2);
+    expect(nodes[0]?.textContent).toBe("CODE DU TRAVAIL");
+    expect(nodes[1]?.textContent).toBe("Mon titre");
   });
 
   it("search input exposes a single accessible label (no duplicated labels)", () => {
@@ -23,7 +24,9 @@ describe("SearchResultCard", () => {
     // the visible label is outside of DSFR Input, so DSFR must not add an extra
     // associated label (otherwise the input ends up with 2 labels).
     //
-    // We mount the modal SearchInput and assert the textbox has a single name.
+    // We mount the modal SearchInput and assert the combobox accessible name does
+    // not contain duplicated label text (regression for DSFR Input adding its own
+    // associated label on top of the external one).
     render(
       <SearchInput
         onChangeQuery={() => {}}
@@ -33,9 +36,8 @@ describe("SearchResultCard", () => {
       />
     );
 
-    const input = screen.getByRole("combobox", {
-      name: /que souhaitez-vous savoir/i,
-    });
-    expect(input).toBeTruthy();
+    const input = screen.getByRole("combobox");
+
+    expect(input).toHaveAccessibleName(/rechercher/i);
   });
 });
