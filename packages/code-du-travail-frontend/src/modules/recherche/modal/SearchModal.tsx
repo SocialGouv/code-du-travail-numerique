@@ -31,6 +31,7 @@ export const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
   const {
     results,
     queryClass,
+    lastPresearchQuery,
     isLoading,
     hasSearched,
     triggerSearch,
@@ -59,13 +60,9 @@ export const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
           resultsTitleRef.current?.focus();
         }, 100);
       } else {
-        // Focus on "no results" message if displayed, otherwise keep on input
+        // Keep focus on input when there are no results
         setTimeout(() => {
-          if (noResultMessageRef.current) {
-            noResultMessageRef.current.focus();
-          } else {
-            modalSearchRef.current?.focusInput();
-          }
+          modalSearchRef.current?.focusInput();
         }, 100);
       }
     }
@@ -166,6 +163,7 @@ export const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
   return (
     <div
       ref={modalRef}
+      id="search-modal"
       className={overlayContainer}
       role="dialog"
       aria-modal="true"
@@ -202,6 +200,7 @@ export const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
             onFocusRequest={handleFocusRequest}
             noResultMessageRef={noResultMessageRef}
             queryClass={queryClass}
+            lastPresearchQuery={lastPresearchQuery}
           />
 
           {!hasSearched && (

@@ -8,16 +8,9 @@ import { SearchResult } from "src/api";
 type Props = {
   result: SearchResult;
   onClick?: () => void;
-  headingLevel?: "h2" | "h3" | "h4";
 };
 
-export const SearchResultCard = ({
-  result,
-  onClick,
-  headingLevel = "h3",
-}: Props) => {
-  const HeadingTag = headingLevel;
-
+export const SearchResultCard = ({ result, onClick }: Props) => {
   return (
     <Link
       href={`/${getRouteBySource(result.source)}/${result.slug}`}
@@ -25,16 +18,16 @@ export const SearchResultCard = ({
       onClick={onClick}
     >
       <div className={cardContainer}>
-        <HeadingTag
-          className={`${fr.cx("fr-text--md", "fr-mb-0", "fr-text--bold")} ${titleStyle}`}
-        >
-          {result.title}
-        </HeadingTag>
         <div className={`${fr.cx("fr-mb-1w")} ${badgeContainer}`}>
           <span className={`${badgeBase} ${badgeColorClasses[result.source]}`}>
             {getSourceLabel(result.source).toUpperCase()}
           </span>
         </div>
+        <span
+          className={`${fr.cx("fr-text--md", "fr-mb-0", "fr-text--bold")} ${titleStyle}`}
+        >
+          {result.title}
+        </span>
       </div>
     </Link>
   );

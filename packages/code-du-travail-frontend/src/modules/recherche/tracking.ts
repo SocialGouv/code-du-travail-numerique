@@ -54,15 +54,6 @@ export const useSearchTracking = () => {
     []
   );
 
-  const emitSearchEvent = useCallback((searchTerm: string) => {
-    if (searchTerm?.trim()) {
-      sendEvent({
-        category: MatomoSearchCategory.CANDIDATE_RESULTS,
-        action: searchTerm.trim(),
-      });
-    }
-  }, []);
-
   const emitFullsearchEvent = useCallback(
     (searchTerm: string, queryClass: string) => {
       if (searchTerm?.trim()) {
@@ -128,10 +119,18 @@ export const useSearchTracking = () => {
     []
   );
 
-  const emitWidgetEvent = useCallback((event: MatomoWidgetEvent) => {
+  const emitWidgetLogoClickEvent = useCallback(() => {
     sendEvent({
       category: MatomoBaseEvent.WIDGET_SEARCH,
-      action: event,
+      action: MatomoWidgetEvent.CLICK_LOGO,
+    });
+  }, []);
+
+  const emitWidgetSubmitSearchEvent = useCallback((query: string) => {
+    sendEvent({
+      category: MatomoBaseEvent.WIDGET_SEARCH,
+      action: MatomoWidgetEvent.SUBMIT_SEARCH,
+      name: query,
     });
   }, []);
 
@@ -190,10 +189,10 @@ export const useSearchTracking = () => {
 
   return {
     emitResultSelectionEvent,
-    emitSearchEvent,
     emitNextPageEvent,
     emitSuggestionSelectionEvent,
-    emitWidgetEvent,
+    emitWidgetLogoClickEvent,
+    emitWidgetSubmitSearchEvent,
     emitPresearchEvent,
     emitSelectPresearchResultEvent,
     emitClickSeeAllResultsEvent,

@@ -18,6 +18,7 @@ export const HomeSearchV2 = () => {
   const {
     results,
     queryClass,
+    lastPresearchQuery,
     isLoading,
     hasSearched,
     triggerSearch,
@@ -65,6 +66,7 @@ export const HomeSearchV2 = () => {
         onFocusRequest={handleFocusRequest}
         noResultMessageRef={noResultMessageRef}
         queryClass={queryClass}
+        lastPresearchQuery={lastPresearchQuery}
       />
 
       {hasSearched && !isLoading && (

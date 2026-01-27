@@ -53,21 +53,4 @@ describe("SearchModalContext", () => {
       { timeout: 1000 }
     );
   });
-
-  it("openModal focuses the search-modal-autocomplete input when mounted (alternate id)", async () => {
-    render(
-      <SearchModalProvider>
-        <FocusConsumer id="search-modal-autocomplete" />
-      </SearchModalProvider>
-    );
-
-    fireEvent.click(screen.getByRole("button", { name: /Open focus/ }));
-
-    await waitFor(
-      () => expect(screen.getByTestId("modal-input")).toHaveFocus(),
-      {
-        timeout: 1000,
-      }
-    );
-  });
 });

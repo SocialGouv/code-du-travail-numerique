@@ -5,9 +5,13 @@ import Link from "src/modules/common/Link";
 
 type HeaderBrandProps = {
   onSearchClick?: () => void;
+  isSearchOpen?: boolean;
 };
 
-export const HeaderBrand = ({ onSearchClick }: HeaderBrandProps) => {
+export const HeaderBrand = ({
+  onSearchClick,
+  isSearchOpen,
+}: HeaderBrandProps) => {
   return (
     <div className={fr.cx("fr-header__brand", "fr-enlarge-link")}>
       <div className={fr.cx("fr-header__brand-top")}>
@@ -36,10 +40,9 @@ export const HeaderBrand = ({ onSearchClick }: HeaderBrandProps) => {
             id="fr-header-search-button"
             type="button"
             className={fr.cx("fr-btn--search", "fr-btn")}
-            data-fr-opened="false"
-            aria-controls="fr-header-search-modal"
+            aria-controls="search-modal"
+            aria-expanded={isSearchOpen}
             title="Rechercher"
-            data-fr-js-modal-button="true"
             onClick={onSearchClick}
           >
             Rechercher

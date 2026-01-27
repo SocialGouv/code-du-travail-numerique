@@ -35,10 +35,7 @@ export const SearchResults = ({
   };
 
   return (
-    <section
-      ref={containerRef}
-      aria-labelledby={`search-results-heading-${contextType}`}
-    >
+    <section ref={containerRef}>
       <div
         className={`${contextType === "modal" ? titleDivStyle : ""} ${fr.cx(
           "fr-p-1w"
@@ -82,7 +79,6 @@ export const SearchResults = ({
             <SearchResultCard
               result={result}
               onClick={() => handleResultClick(result, queryClass)}
-              headingLevel={contextType === "home" ? "h4" : "h3"}
             />
           </li>
         ))}
