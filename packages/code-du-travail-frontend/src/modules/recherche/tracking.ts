@@ -3,7 +3,7 @@ import {
   routeBySource,
   SOURCES,
 } from "@socialgouv/cdtn-utils";
-import { useCallback } from "react";
+import { useCallback, useRef } from "react";
 import { sendEvent, push } from "@socialgouv/matomo-next";
 import { MatomoBaseEvent } from "../analytics/types";
 import { PresearchClass, SearchResult } from "src/api";
@@ -29,6 +29,8 @@ export enum MatomoWidgetEvent {
 }
 
 export const useSearchTracking = () => {
+  const lastFullsearchKeyRef = useRef<string | null>(null);
+
   const emitResultSelectionEvent = useCallback(
     (
       source: keyof typeof routeBySource | "external",
@@ -75,6 +77,35 @@ export const useSearchTracking = () => {
           name,
         });
       }
+    },
+    []
+  );
+
+  // Emits the FULL_SEARCH event at most once for a given {query, class} pair
+  // during the current component lifetime.
+  const emitFullsearchEventOnce = useCallback(
+    (searchTerm: string, queryClass: string) => {
+      const normalizedQuery = searchTerm?.trim();
+      if (!normalizedQuery) {
+        return;
+      }
+
+      const key = `${normalizedQuery}::${queryClass}`;
+      if (lastFullsearchKeyRef.current === key) {
+        return;
+      }
+      lastFullsearchKeyRef.current = key;
+
+      const name = JSON.stringify({
+        query: normalizedQuery,
+        class: queryClass,
+      });
+
+      sendEvent({
+        category: MatomoSearchCategory.SEARCH,
+        action: MatomoSearchAction.FULL_SEARCH,
+        name,
+      });
     },
     []
   );
@@ -167,6 +198,7 @@ export const useSearchTracking = () => {
     emitSelectPresearchResultEvent,
     emitClickSeeAllResultsEvent,
     emitFullsearchEvent,
+    emitFullsearchEventOnce,
     emitMatomoTrackSiteSearch,
   };
 };

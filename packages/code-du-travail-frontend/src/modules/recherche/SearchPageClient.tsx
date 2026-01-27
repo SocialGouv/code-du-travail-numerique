@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useCallback, useEffect, useState, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { useSearchParams } from "next/navigation";
 import { Button } from "@codegouvfr/react-dsfr/Button";
 import { fr } from "@codegouvfr/react-dsfr";
@@ -28,36 +28,31 @@ export const SearchPageClient: React.FC<SearchPageClientProps> = ({
   items,
 }) => {
   const searchParams = useSearchParams();
-  const [query, setQuery] = useState(initialQuery);
-  const { emitFullsearchEvent, emitResultSelectionEvent, emitNextPageEvent } =
-    useSearchTracking();
+  const {
+    emitFullsearchEventOnce,
+    emitResultSelectionEvent,
+    emitNextPageEvent,
+  } = useSearchTracking();
 
   // Ref for focusing search results heading
   const searchResultsHeadingRef = useRef<HTMLHeadingElement>(null);
 
-  const getSearchParam = useCallback(
-    (param: string) => searchParams?.get(param),
-    [searchParams]
-  );
-
   const { documents, themes, articles, class: klass } = items;
 
-  useEffect(() => {
-    const query = getSearchParam("query");
-    if (query) {
-      setQuery(query);
-    }
-  }, [getSearchParam]);
+  const urlQuery = searchParams?.get("query");
+  const query = urlQuery && urlQuery.length > 0 ? urlQuery : initialQuery;
 
   useEffect(() => {
     if (query && klass) {
-      emitFullsearchEvent(query, klass);
+      emitFullsearchEventOnce(query, klass);
       // Focus the search results heading when a search is performed
-      setTimeout(() => {
+      const timeout = window.setTimeout(() => {
         searchResultsHeadingRef.current?.focus();
       }, 100);
+
+      return () => window.clearTimeout(timeout);
     }
-  }, [query, emitFullsearchEvent, klass]);
+  }, [query, emitFullsearchEventOnce, klass]);
 
   const codeArticles = articles.filter(
     (item) => item.source === SOURCES.CDT && item.slug
@@ -95,7 +90,7 @@ export const SearchPageClient: React.FC<SearchPageClientProps> = ({
 
       <div className={fr.cx("fr-grid-row", "fr-grid-row--gutters", "fr-mb-6w")}>
         <div className={fr.cx("fr-col-12", "fr-col-md-4")}>
-          <SearchBar initialValue={query} />
+          <SearchBar key={query} initialValue={query} />
         </div>
       </div>
 
