@@ -35,7 +35,16 @@ export const sourcesFilter = (sources: any) =>
 
 export function getRelatedThemesBody(query, size = 5) {
   return {
-    _source: ["icon", "title", "slug", "url", "source", "cdtnId", "shortTitle"],
+    _source: [
+      "icon",
+      "title",
+      "slug",
+      "url",
+      "source",
+      "cdtnId",
+      "shortTitle",
+      "breadcrumbs",
+    ],
     query: {
       bool: {
         filter: [
@@ -104,7 +113,8 @@ export function getRelatedArticlesBody(query: any, size = 5) {
               {
                 match: {
                   "text.french_with_synonyms": {
-                    query: query,
+                    // using 'dot' in query might cause mismatch in article references (ex. L.4121-1 would return R4121-1)
+                    query: query.replace(".", ""),
                   },
                 },
               },
@@ -132,7 +142,7 @@ export function getRelatedArticlesBody(query: any, size = 5) {
           {
             match: {
               "title.french_with_synonyms": {
-                query: query,
+                query: query.replace(".", ""),
               },
             },
           },

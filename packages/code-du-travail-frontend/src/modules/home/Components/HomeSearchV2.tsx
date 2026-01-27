@@ -8,6 +8,7 @@ import {
 } from "../../recherche/modal/SearchInput";
 import { SearchResults } from "../../recherche/modal/SearchResults";
 import { useSearchResults } from "../../recherche/hooks/useSearchResults";
+import { PresearchClass } from "src/api";
 
 export const HomeSearchV2 = () => {
   const searchRef = useRef<ModalSearchHandle>(null);
@@ -16,7 +17,7 @@ export const HomeSearchV2 = () => {
   const [pendingFocus, setPendingFocus] = useState(false);
   const {
     results,
-    classes,
+    queryClass,
     isLoading,
     hasSearched,
     triggerSearch,
@@ -63,12 +64,13 @@ export const HomeSearchV2 = () => {
         contextType="home"
         onFocusRequest={handleFocusRequest}
         noResultMessageRef={noResultMessageRef}
-        classes={classes}
+        queryClass={queryClass}
       />
 
       {hasSearched && !isLoading && (
         <SearchResults
           results={results}
+          queryClass={queryClass as PresearchClass}
           contextType="home"
           titleRef={resultsTitleRef}
         />

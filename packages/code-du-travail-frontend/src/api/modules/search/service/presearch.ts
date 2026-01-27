@@ -1,13 +1,22 @@
 import { complex } from "talisman/stemmers/french/unine";
 import fingerprint from "talisman/tokenizers/fingerprint";
 import { ccSearch, ensureIdccsInstantiated, isIdccToken } from "../../idcc";
-import { SourceKeys, SOURCES } from "@socialgouv/cdtn-utils";
-import { getPrequalifiedResults } from "./prequalified";
-import { getSearchBody, getRelatedArticlesBody } from "../queries";
+import { getRelatedArticlesBody } from "../queries";
 import { elasticDocumentsIndex, elasticsearchClient } from "src/api/utils";
-import { extractHits } from "./search";
-import { removeDuplicate } from "../utils";
+import { extractHits } from "../utils";
 import { articleMatcher, extractReferences } from "./referenceExtractor";
+import {
+  getDefaultIdccResults,
+  MATCHING_CC_TOKENS,
+  NO_CC_TOKENS,
+} from "./defaultIdcc";
+import {
+  PresearchClass,
+  PreSearchResult,
+  SEARCH_ALGO,
+  SearchResult,
+  ThemeSearchResult,
+} from "./types";
 
 const keyword_std = [
   "a conservatoir mise pied",
@@ -99,71 +108,9 @@ const keyword_std = [
   "retard",
 ];
 
-export enum PresearchClass {
-  CC = "cc",
-  CC_FOUND = "cc_found",
-  KEYWORD = "keyword",
-  KEYWORD_STD = "keyword_standard",
-  ARTICLE = "article",
-  THEME = "theme",
-  NATURAL = "natural",
-  UNKNOWN = "unknown",
-}
-
-export type SearchResult = {
-  cdtnId: string;
-  shortTitle?: string;
-  title: string;
-  slug: string;
-  source: SourceKeys;
-  class: PresearchClass;
-  algo: "presearch";
-};
-
-export type ThemeSearchResult = SearchResult & { breadcrumbs: unknown[] };
-
-// temporary
-const defaultIdccResults: SearchResult[] = [
-  {
-    cdtnId: "db8ffe3574",
-    slug: "convention-collective",
-    title: "Trouver sa convention collective",
-    source: SOURCES.TOOLS,
-    class: PresearchClass.CC_FOUND,
-    algo: "presearch",
-  },
-  {
-    cdtnId: "b1041bd7ca",
-    slug: "convention-collective",
-    title: "Convention collective",
-    source: SOURCES.SHEET_SP,
-    class: PresearchClass.CC_FOUND,
-    algo: "presearch",
-  },
-  {
-    cdtnId: "825821a69e",
-    slug: "comment-consulter-une-convention-collective",
-    title: "Comment consulter une convention collective ?",
-    source: SOURCES.SHEET_SP,
-    class: PresearchClass.CC_FOUND,
-    algo: "presearch",
-  },
-];
-
 const CC_SCORE_THRESHOLD = 20;
 
 const PRESEARCH_MAX_RESULTS = 8;
-
-const MATCHING_CC_TOKENS = [
-  "convention",
-  "colectif",
-  "national",
-  "branch",
-  "idcc",
-  "ccn",
-];
-
-const NO_CC_TOKENS = ["ruptur"];
 
 const tokenize = (content: string): string[] => {
   const cleaned = content.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, " ");
@@ -176,7 +123,7 @@ const prepro = (content: string | undefined): string[] => {
   return tokens ? tokens.map(complex) : [];
 };
 
-const isCC = async (query: string): Promise<SearchResult[]> => {
+const isCC = async (query: string): Promise<PreSearchResult[]> => {
   await ensureIdccsInstantiated();
 
   const tokens: string[] = tokenize(query);
@@ -208,15 +155,27 @@ const isCC = async (query: string): Promise<SearchResult[]> => {
     );
 
     if (found) {
-      return [{ ...found, class: PresearchClass.CC, algo: "presearch" }];
+      return [
+        {
+          ...found,
+          class: PresearchClass.CC,
+          algo: SEARCH_ALGO.PRESEARCH,
+        },
+      ];
     } else {
       // case where CC related content but no match
-      return defaultIdccResults;
+      return getDefaultIdccResults();
     }
   } else {
     const foundNoCC = await ccSearch(query, CC_SCORE_THRESHOLD);
     if (foundNoCC) {
-      return [{ ...foundNoCC, class: PresearchClass.CC, algo: "presearch" }];
+      return [
+        {
+          ...foundNoCC,
+          class: PresearchClass.CC,
+          algo: SEARCH_ALGO.PRESEARCH,
+        },
+      ];
     } else {
       return [];
     }
@@ -226,7 +185,7 @@ const isCC = async (query: string): Promise<SearchResult[]> => {
 const getThemes = (
   pQuery: string[],
   themes: ThemeSearchResult[]
-): SearchResult | undefined => {
+): PreSearchResult | undefined => {
   // sort by breadcrumbs
   themes.sort((a, b) => a.breadcrumbs.length - b.breadcrumbs.length);
 
@@ -249,96 +208,13 @@ const getThemes = (
         cdtnId: match.theme.cdtnId,
         source: match.theme.source,
         class: PresearchClass.THEME,
-        algo: "presearch",
+        algo: SEARCH_ALGO.PRESEARCH,
+        description: `Retrouvez les contenus relatifs au thème : ${match.theme.title}`,
       }
     : undefined;
 };
 
-// TODO borrowed from search / temporary code
-const fillup = async (
-  query: string,
-  n: number,
-  matches: SearchResult[]
-): Promise<SearchResult[]> => {
-  // do not complete in case of article query
-  if (matches.length > 0 && matches[0].class == PresearchClass.ARTICLE) {
-    return matches;
-  }
-
-  const sources = [
-    SOURCES.SHEET_MT,
-    SOURCES.SHEET_SP,
-    SOURCES.LETTERS,
-    SOURCES.TOOLS,
-    SOURCES.CONTRIBUTIONS,
-    SOURCES.EXTERNALS,
-    SOURCES.THEMATIC_FILES,
-    SOURCES.EDITORIAL_CONTENT,
-    SOURCES.CCN,
-  ];
-
-  // check prequalified requests
-  const prequalifiedResults = await getPrequalifiedResults(query).then(
-    (results) => (results ? results.slice(0, n) : [])
-  );
-
-  let documents: SearchResult[] = matches;
-
-  if (prequalifiedResults) {
-    prequalifiedResults.forEach(
-      (item) => (item._source.algo = "pre-qualified")
-    );
-    documents.push(
-      ...prequalifiedResults
-        .filter(
-          ({ _source: { source } }) =>
-            ![SOURCES.CDT, SOURCES.THEMES].includes(source)
-        )
-        .map((d) => d._source)
-    );
-  }
-
-  // deduplicate presearch and prequalified
-  documents = removeDuplicate(
-    documents.map((d) => ({
-      _source: d,
-    }))
-  ).map((d: { _source: SearchResult }) => d._source);
-
-  // if not enough prequalified results, we also trigger ES search
-  if (documents.length < n) {
-    const size = 10;
-    const docSearch = getSearchBody(query, size, sources);
-    const ftRes = await elasticsearchClient.search({
-      index: elasticDocumentsIndex,
-      body: docSearch as any,
-    });
-
-    const results = extractHits(ftRes).map((d) => ({
-      ...d._source,
-      algo: "fulltext",
-    }));
-
-    documents.push(...results);
-
-    // deduplicate a second time after ES search
-    documents = removeDuplicate(
-      documents.map((d) => ({
-        _source: d,
-      }))
-    ).map((d: { _source: SearchResult }) => d._source);
-  }
-
-  return documents
-    .map((res) => ({
-      type: res.source as any as DocumentType,
-      ...res,
-      title: res.shortTitle ?? res.title,
-    }))
-    .slice(0, n);
-};
-
-const getArticles = async (query): Promise<SearchResult[]> => {
+const getArticles = async (query): Promise<PreSearchResult[]> => {
   // proper references
   const refs: { text: string }[] = extractReferences(query);
 
@@ -362,7 +238,7 @@ const getArticles = async (query): Promise<SearchResult[]> => {
     return extractHits(hits).map((h) => ({
       ...h._source,
       class: PresearchClass.ARTICLE,
-      algo: "presearch",
+      algo: SEARCH_ALGO.PRESEARCH,
     }));
   } else {
     return [];
@@ -399,7 +275,7 @@ export const presearch = async (
   themes: ThemeSearchResult[],
   allClasses: boolean
 ): Promise<{ results: SearchResult[]; classes: PresearchClass[] }> => {
-  const results: SearchResult[] = [];
+  const results: PreSearchResult[] = [];
 
   const pQuery = prepro(query);
 
@@ -434,11 +310,6 @@ export const presearch = async (
   }
 
   const uniqueClasses = [...new Set(classes)];
-
-  if (results.length < PRESEARCH_MAX_RESULTS) {
-    const filled = await fillup(query, PRESEARCH_MAX_RESULTS, results);
-    return { results: filled, classes: uniqueClasses };
-  }
 
   return {
     results: results.slice(0, PRESEARCH_MAX_RESULTS),

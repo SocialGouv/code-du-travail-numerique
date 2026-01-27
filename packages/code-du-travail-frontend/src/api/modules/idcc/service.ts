@@ -15,6 +15,7 @@ export const getIdccByQuery = async (query: string, size?: number) => {
     body,
     index: elasticDocumentsIndex,
   });
+
   const { took, ...rest } = response;
   return { ...rest };
 };
@@ -63,12 +64,11 @@ export const ccSearch = async (
       cdtnId: string;
       score: number;
       source: SourceKeys;
+      description: string;
     }
   | undefined
 > => {
-  const idccResults = await getIdccByQuery(query, 1);
-
-  const hits = extractHits(idccResults);
+  const hits = await getIdccByQuery(query, 1).then(extractHits);
 
   if (hits.length > 0 && (hits[0]["_score"] || 0) > threshold) {
     const hit = hits[0];
@@ -76,6 +76,7 @@ export const ccSearch = async (
       slug: hit["_source"]["slug"],
       title: hit["_source"]["shortTitle"],
       cdtnId: hit["_source"]["cdtnId"],
+      description: hit["_source"]["description"],
       score: hit["_score"] || undefined,
       source: SOURCES.CCN,
     };

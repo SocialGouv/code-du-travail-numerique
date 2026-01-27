@@ -4,7 +4,7 @@ import { searchWithQuery } from "../service";
 
 describe("Search", () => {
   it("searchWithQuery", async () => {
-    const result = await searchWithQuery("démission", false);
+    const result = await searchWithQuery("démission");
     expect(result).toMatchSnapshot();
   });
 });
