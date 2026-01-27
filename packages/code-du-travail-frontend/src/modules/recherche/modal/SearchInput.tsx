@@ -27,6 +27,7 @@ interface ModalSearchProps {
   onFocusRequest?: () => void;
   noResultMessageRef?: React.RefObject<HTMLParagraphElement | null>;
   queryClass?: PresearchClass;
+  lastPresearchQuery?: string;
 }
 
 export interface ModalSearchHandle {
@@ -52,6 +53,7 @@ export const SearchInput = forwardRef<ModalSearchHandle, ModalSearchProps>(
       onFocusRequest,
       noResultMessageRef,
       queryClass = undefined,
+      lastPresearchQuery = undefined,
     },
     ref
   ) => {
@@ -73,8 +75,17 @@ export const SearchInput = forwardRef<ModalSearchHandle, ModalSearchProps>(
 
     const handleSearch = () => {
       if (!query.trim()) return;
-      emitClickSeeAllResultsEvent(query.trim(), queryClass);
-      router.push(`/recherche?query=${encodeURIComponent(query.trim())}`);
+      const normalizedQuery = query.trim();
+
+      // Use the presearch class only if it corresponds to the query currently displayed *and* presearch results are currently displayed.
+      const normalizedLastPresearchQuery = lastPresearchQuery?.trim();
+      const classForTracking =
+        resultsCount > 0 && normalizedLastPresearchQuery === normalizedQuery
+          ? queryClass
+          : undefined;
+
+      emitClickSeeAllResultsEvent(normalizedQuery, classForTracking);
+      router.push(`/recherche?query=${encodeURIComponent(normalizedQuery)}`);
       onClose?.();
     };
 

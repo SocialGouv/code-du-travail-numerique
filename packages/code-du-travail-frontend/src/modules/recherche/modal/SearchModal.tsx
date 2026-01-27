@@ -31,6 +31,7 @@ export const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
   const {
     results,
     queryClass,
+    lastPresearchQuery,
     isLoading,
     hasSearched,
     triggerSearch,
@@ -199,6 +200,7 @@ export const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
             onFocusRequest={handleFocusRequest}
             noResultMessageRef={noResultMessageRef}
             queryClass={queryClass}
+            lastPresearchQuery={lastPresearchQuery}
           />
 
           {!hasSearched && (
