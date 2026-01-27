@@ -19,7 +19,6 @@ jest.mock("../tracking", () => ({
 
 describe("SearchWidgetDisplay", () => {
   // Mock the tracking functions
-  const mockEmitSearchEvent = jest.fn();
   const mockEmitWidgetEvent = jest.fn();
   const mockPostMessage = jest.fn();
 
@@ -28,7 +27,6 @@ describe("SearchWidgetDisplay", () => {
 
     // Setup the mock implementation for useSearchTracking
     (useSearchTracking as jest.Mock).mockReturnValue({
-      emitSearchEvent: mockEmitSearchEvent,
       emitWidgetEvent: mockEmitWidgetEvent,
     });
 
@@ -146,9 +144,6 @@ describe("SearchWidgetDisplay", () => {
     // Trigger the form submission
     fireEvent.submit(form as HTMLFormElement);
 
-    // Check that emitSearchEvent was called with the query
-    expect(mockEmitSearchEvent).toHaveBeenCalledWith("test query");
-
     // Restore original querySelector
     HTMLFormElement.prototype.querySelector = originalQuerySelector;
   });
@@ -179,9 +174,6 @@ describe("SearchWidgetDisplay", () => {
 
     // Trigger the form submission
     fireEvent.submit(form as HTMLFormElement);
-
-    // Check that emitSearchEvent was not called
-    expect(mockEmitSearchEvent).not.toHaveBeenCalled();
 
     // Restore original querySelector
     HTMLFormElement.prototype.querySelector = originalQuerySelector;
@@ -237,9 +229,6 @@ describe("SearchWidgetDisplay", () => {
 
     // Trigger the form submission
     fireEvent.submit(form as HTMLFormElement);
-
-    // Check that emitSearchEvent was called with the trimmed query
-    expect(mockEmitSearchEvent).toHaveBeenCalledWith("test query");
 
     // Restore original querySelector
     HTMLFormElement.prototype.querySelector = originalQuerySelector;

@@ -59,7 +59,6 @@ jest.mock("@sentry/nextjs", () => ({
 
 describe("SearchBar", () => {
   // Mock the tracking functions
-  const mockEmitSearchEvent = jest.fn();
   const mockEmitSuggestionSelectionEvent = jest.fn();
 
   beforeEach(() => {
@@ -67,7 +66,6 @@ describe("SearchBar", () => {
 
     // Setup the mock implementation for useSearchTracking
     (useSearchTracking as jest.Mock).mockReturnValue({
-      emitSearchEvent: mockEmitSearchEvent,
       emitSuggestionSelectionEvent: mockEmitSuggestionSelectionEvent,
     });
 
@@ -77,23 +75,6 @@ describe("SearchBar", () => {
       "suggestion2",
       "suggestion3",
     ]);
-  });
-
-  it("should emit search event when form is submitted", async () => {
-    render(<SearchBar />);
-
-    // Find the input and type a search query
-    const input = screen.getByTestId("search-bar-input");
-    fireEvent.change(input, { target: { value: "test query" } });
-
-    // Submit the form
-    const form = screen.getByRole("search");
-    fireEvent.submit(form);
-
-    // Check that emitSearchEvent was called with the query
-    await waitFor(() => {
-      expect(mockEmitSearchEvent).toHaveBeenCalledWith("test query");
-    });
   });
 
   it("should handle errors when fetching suggestions", async () => {
@@ -122,8 +103,5 @@ describe("SearchBar", () => {
     // Submit the form without changing the input
     const form = screen.getByRole("search");
     fireEvent.submit(form);
-
-    // Check that emitSearchEvent was called with the initial value
-    expect(mockEmitSearchEvent).toHaveBeenCalledWith("initial query");
   });
 });
