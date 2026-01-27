@@ -10,7 +10,7 @@ import { useIframeResizer } from "../utils/useIframeResizer";
 import Link from "../common/Link";
 
 export const SearchWidgetDisplay: React.FC = () => {
-  const { emitSearchEvent, emitWidgetEvent } = useSearchTracking();
+  const { emitWidgetEvent } = useSearchTracking();
   useIframeResizer();
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -19,12 +19,8 @@ export const SearchWidgetDisplay: React.FC = () => {
     const input = form.querySelector('input[name="query"]') as HTMLInputElement;
     const query = input?.value?.trim();
 
-    emitWidgetEvent(MatomoWidgetEvent.SUBMIT_SEARCH);
+    emitWidgetEvent(MatomoWidgetEvent.SUBMIT_SEARCH, query);
     window.parent?.postMessage({ name: "button-search", kind: "click" }, "*");
-
-    if (query) {
-      emitSearchEvent(query);
-    }
 
     form.submit();
   };
