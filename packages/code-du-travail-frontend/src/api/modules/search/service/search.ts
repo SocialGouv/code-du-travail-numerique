@@ -8,7 +8,8 @@ import {
 import { removeDuplicate } from "../utils";
 import { getPrequalifiedResults } from "./prequalified";
 import { presearch } from "./presearch";
-import { SEARCH_ALGO, SearchAlgo, SearchResponse, SearchResult } from "./types";
+import { SEARCH_ALGO, SearchResponse, SearchResult } from "./types";
+import { esDocToSearchResult, extractHits } from "../utils";
 
 export const DEFAULT_PRESEARCH_RESULTS_NUMBER = 8;
 
@@ -19,15 +20,6 @@ const CDT_RESULTS_NUMBER = 5;
 
 const DOCUMENTS_ES = "documents_es";
 const CDT_ES = "cdt_es";
-
-const esDocToSearchResult =
-  (algo: SearchAlgo) =>
-  ({ _score, _source }): SearchResult => ({
-    _score: _score ?? null,
-    ..._source,
-    title: _source.shortTitle ?? _source.title,
-    algo,
-  });
 
 export const searchWithQuery = async (
   query: string,
@@ -115,19 +107,12 @@ export const searchWithQuery = async (
   }
 
   return {
-    articles: removeDuplicate(documents),
+    articles: removeDuplicate(articles),
     documents: removeDuplicate(documents).slice(0, size),
     themes: removeDuplicate(themes).slice(0, THEMES_RESULTS_NUMBER),
     class: parsed.classes[0],
   };
 };
-
-export function extractHits(response) {
-  if (response && response.hits) {
-    return response.hits.hits;
-  }
-  return [];
-}
 
 async function msearch(searches) {
   const requests: any[] = [];

@@ -1,6 +1,6 @@
 import { SOURCES } from "@socialgouv/cdtn-utils";
 import { elasticDocumentsIndex, elasticsearchClient } from "src/api/utils";
-import { extractHits } from "./search";
+import { extractHits } from "../utils";
 import { PresearchClass, PreSearchResult, SEARCH_ALGO } from "./types";
 
 const DEFAULT_CC_CONTENT = [

@@ -3,7 +3,7 @@ import fingerprint from "talisman/tokenizers/fingerprint";
 import { ccSearch, ensureIdccsInstantiated, isIdccToken } from "../../idcc";
 import { getRelatedArticlesBody } from "../queries";
 import { elasticDocumentsIndex, elasticsearchClient } from "src/api/utils";
-import { extractHits } from "./search";
+import { extractHits } from "../utils";
 import { articleMatcher, extractReferences } from "./referenceExtractor";
 import {
   getDefaultIdccResults,
