@@ -12,8 +12,6 @@ describe("Arrêt de travail", () => {
     beforeEach(async () => {
       render(<CalculateurIndemniteLicenciement title={""} />);
       userAction.click(ui.introduction.startButton.get());
-      userAction.click(ui.contract.type.cdi.get());
-      userAction.click(ui.contract.fauteGrave.non.get());
       userAction.click(ui.contract.inaptitude.non.get());
     });
 
@@ -82,8 +80,6 @@ describe("Arrêt de travail", () => {
 
     test("should display with the good number of months at the 'Salaires' step if no inaptitude", async () => {
       userAction.click(ui.introduction.startButton.get());
-      userAction.click(ui.contract.type.cdi.get());
-      userAction.click(ui.contract.fauteGrave.non.get());
       userAction.click(ui.contract.inaptitude.non.get());
       userAction.click(ui.contract.arretTravail.non.get());
       userAction.click(ui.next.get());
@@ -94,15 +90,12 @@ describe("Arrêt de travail", () => {
       userAction.setInput(ui.seniority.endDate.get(), "01/12/2022");
       userAction.click(ui.seniority.hasAbsence.non.get());
       userAction.click(ui.next.get());
-      userAction.click(ui.salary.hasPartialTime.non.get());
       userAction.click(ui.salary.hasSameSalary.non.get());
       expect(ui.salary.salaries.queryAll()).toHaveLength(8);
     });
 
     test("should display with the good number of months at the 'Salaires' step", async () => {
       userAction.click(ui.introduction.startButton.get());
-      userAction.click(ui.contract.type.cdi.get());
-      userAction.click(ui.contract.fauteGrave.non.get());
       userAction.click(ui.contract.inaptitude.non.get());
       userAction.click(ui.contract.arretTravail.oui.get());
       userAction.setInput(ui.contract.dateArretTravail.get(), "01/07/2022");
@@ -114,7 +107,6 @@ describe("Arrêt de travail", () => {
       userAction.setInput(ui.seniority.endDate.get(), "01/12/2022");
       userAction.click(ui.seniority.hasAbsence.non.get());
       userAction.click(ui.next.get());
-      userAction.click(ui.salary.hasPartialTime.non.get());
       userAction.click(ui.salary.hasSameSalary.non.get());
       expect(ui.salary.salaries.queryAll()).toHaveLength(6);
     });

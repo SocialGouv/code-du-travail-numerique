@@ -25,8 +25,6 @@ describe("Indemnité licenciement - CC 3239 - changement de convention collectiv
     render(<CalculateurIndemniteLicenciement title={""} />);
     userAction = new UserAction();
     userAction.click(ui.introduction.startButton.get());
-    userAction.click(ui.contract.type.cdi.get());
-    userAction.click(ui.contract.fauteGrave.non.get());
     userAction.click(ui.contract.inaptitude.non.get());
     userAction.click(ui.contract.arretTravail.non.get());
     userAction.click(ui.next.get());
@@ -75,16 +73,11 @@ describe("Indemnité licenciement - CC 3239 - changement de convention collectiv
     userAction.setInput(ui.seniority.absences.duration(0).get(), "6");
     userAction.click(ui.next.get());
     expect(ui.activeStep.query()).toHaveTextContent("Salaires");
-    expect(ui.salary.hasPartialTime.non.query()).toBeInTheDocument();
-    userAction.click(ui.salary.hasPartialTime.non.get());
     userAction.click(ui.next.get());
     expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
     expect(ui.result.absences.motif.queryAll()).toHaveLength(1);
     expect(ui.result.absences.motif.queryAll()[0]).not.toHaveTextContent(
       "Congé pour convenance personnelle"
     );
-    expect(
-      screen.queryByText(/Alternance temps plein \/ temps partiel : Non/i)
-    ).toBeInTheDocument();
   });
 });

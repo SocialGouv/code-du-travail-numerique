@@ -25,40 +25,8 @@ describe(`Tests des erreurs d'éligibilité`, () => {
     userAction.click(ui.introduction.startButton.get());
   });
 
-  test("Vérifier l'affichage de l'erreur légal cdd", () => {
-    userAction
-      .click(ui.contract.type.cdi.get())
-      .click(ui.next.get())
-      .click(ui.contract.type.cdd.get())
-      .click(ui.next.get());
-    expect(ui.result.legalError.cddLicenciement.query()).toBeInTheDocument();
-    expect(
-      ui.result.infoWarning.eligibleInfoWarningblock.query()
-    ).not.toBeInTheDocument();
-    expect(
-      ui.result.infoWarning.ineligibleInfoWarningblock.query()
-    ).not.toBeInTheDocument();
-  });
-
-  test("Vérifier l'affichage de l'erreur légal faute grave", () => {
-    userAction
-      .click(ui.contract.type.cdi.get())
-      .click(ui.contract.fauteGrave.non.get())
-      .click(ui.next.get())
-      .click(ui.contract.fauteGrave.oui.get())
-      .click(ui.next.get());
-    expect(
-      ui.result.infoWarning.eligibleInfoWarningblock.query()
-    ).not.toBeInTheDocument();
-    expect(ui.result.infoWarning.title.ineligible.query()).toBeInTheDocument();
-    expect(ui.result.legalError.fauteGrave.query()).toBeInTheDocument();
-    expect(ui.result.infoWarning.message.mayBeCC.query()).toBeInTheDocument();
-  });
-
   test("Vérifier l'affichage de l'erreur ancienneté < 8 mois", async () => {
     userAction
-      .click(ui.contract.type.cdi.get())
-      .click(ui.contract.fauteGrave.non.get())
       .click(ui.contract.inaptitude.non.get())
       .click(ui.contract.arretTravail.non.get())
       .click(ui.next.get())
@@ -92,8 +60,6 @@ describe(`Tests des erreurs d'éligibilité`, () => {
 
   test("Vérifier l'affichage de l'erreur ancienneté < 8 mois quand on revient changer la date de notification", async () => {
     userAction
-      .click(ui.contract.type.cdi.get())
-      .click(ui.contract.fauteGrave.non.get())
       .click(ui.contract.inaptitude.non.get())
       .click(ui.contract.arretTravail.non.get())
       .click(ui.next.get())
@@ -111,7 +77,6 @@ describe(`Tests des erreurs d'éligibilité`, () => {
       .setInput(ui.seniority.endDate.get(), "01/12/2024")
       .click(ui.seniority.hasAbsence.non.get())
       .click(ui.next.get())
-      .click(ui.salary.hasPartialTime.non.get())
       .click(ui.salary.hasSameSalary.oui.get())
       .setInput(ui.salary.sameSalaryValue.get(), "2000")
       .click(ui.next.get());

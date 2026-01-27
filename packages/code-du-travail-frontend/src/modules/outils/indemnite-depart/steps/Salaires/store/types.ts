@@ -4,11 +4,9 @@ import { SalaryPeriods } from "@socialgouv/modeles-social";
 import { ValidationResponse } from "src/modules/outils/common/types";
 
 export type SalairesStoreInput = {
-  hasTempsPartiel?: OuiNon;
   salaryPeriods: SalaryPeriods[];
   hasSameSalary?: OuiNon;
   salary?: string;
-  showHasTempsPartiel: boolean;
 };
 
 export enum SalaryErrorType {
@@ -24,7 +22,6 @@ export type SalaryFieldError = {
 };
 
 export type SalairesStoreError = {
-  errorHasTempsPartiel?: string;
   errorHasSameSalary?: string;
   errorSalary?: string;
   errorTempsPartiel?: boolean;
@@ -39,12 +36,10 @@ export type SalairesStoreData = StepData<
 
 export type SalairesStoreFn = {
   initFieldSalaries: () => void;
-  onChangeHasTempsPartiel: (value: OuiNon) => void;
   onSalariesChange: (value: SalaryPeriods[]) => void;
   onNextStep: (nextStepName?: string) => ValidationResponse;
   onChangeHasSameSalary: (value: OuiNon) => void;
   onChangeSalary: (value: string) => void;
-  initShowHasTempsPartiel: () => void;
 };
 
 export type SalairesStoreSlice = {

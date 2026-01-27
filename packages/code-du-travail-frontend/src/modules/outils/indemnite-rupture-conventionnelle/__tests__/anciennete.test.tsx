@@ -19,7 +19,6 @@ describe("Rupture conventionnelle - Etape ancienneté", () => {
     userAction = new UserAction();
     userAction
       .click(ui.introduction.startButton.get())
-      .click(ui.contract.type.cdi.get())
       .click(ui.contract.arretTravail.non.get())
       .click(ui.next.get());
 

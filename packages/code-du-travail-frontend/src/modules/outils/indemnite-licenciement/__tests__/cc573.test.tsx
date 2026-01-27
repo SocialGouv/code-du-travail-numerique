@@ -27,8 +27,6 @@ describe("Indemnité licenciement - CC 573", () => {
 
     userAction
       .click(ui.introduction.startButton.get())
-      .click(ui.contract.type.cdi.get())
-      .click(ui.contract.fauteGrave.non.get())
       .click(ui.contract.inaptitude.non.get())
       .click(ui.contract.arretTravail.non.get())
       .click(ui.next.get())
@@ -49,7 +47,6 @@ describe("Indemnité licenciement - CC 573", () => {
       .setInput(ui.seniority.endDate.get(), "01/01/2024")
       .click(ui.seniority.hasAbsence.non.get())
       .click(ui.next.get())
-      .click(ui.salary.hasPartialTime.non.get())
       .click(ui.salary.hasSameSalary.oui.get())
       .setInput(ui.salary.sameSalaryValue.get(), "2700")
       .click(ui.next.get());

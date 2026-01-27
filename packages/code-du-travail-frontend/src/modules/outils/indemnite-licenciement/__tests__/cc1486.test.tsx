@@ -26,8 +26,6 @@ describe("Indemnité licenciement - CC 1486", () => {
 
     userAction
       .click(ui.introduction.startButton.get())
-      .click(ui.contract.type.cdi.get())
-      .click(ui.contract.fauteGrave.non.get())
       .click(ui.contract.inaptitude.non.get())
       .click(ui.contract.arretTravail.non.get())
       .click(ui.next.get())
@@ -54,7 +52,6 @@ describe("Indemnité licenciement - CC 1486", () => {
     userAction
       .setInput(ui.seniority.absences.duration(0).get(), "3")
       .click(ui.next.get())
-      .click(ui.salary.hasPartialTime.non.get())
       .click(ui.salary.hasSameSalary.non.get())
       .setInputs(ui.salary.salaries.getAll(), [
         "3500",

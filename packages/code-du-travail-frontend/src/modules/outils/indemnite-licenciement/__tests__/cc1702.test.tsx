@@ -27,8 +27,6 @@ describe("Indemnité licenciement - CC 1702", () => {
 
     userAction
       .click(ui.introduction.startButton.get())
-      .click(ui.contract.type.cdi.get())
-      .click(ui.contract.fauteGrave.non.get())
       .click(ui.contract.inaptitude.non.get())
       .click(ui.contract.arretTravail.non.get())
       .click(ui.next.get())
@@ -47,7 +45,6 @@ describe("Indemnité licenciement - CC 1702", () => {
     userAction.click(ui.next.get());
     expect(ui.activeStep.query()).toHaveTextContent("Salaires");
 
-    userAction.click(ui.salary.hasPartialTime.non.get());
     userAction.click(ui.salary.hasSameSalary.non.get());
     userAction.click(ui.salary.hasSameSalary.oui.get());
     userAction.setInput(ui.salary.sameSalaryValue.get(), "2500");
@@ -143,7 +140,6 @@ describe("Indemnité licenciement - CC 1702", () => {
     userAction.click(ui.next.get());
     expect(ui.activeStep.query()).toHaveTextContent("Salaires");
 
-    userAction.click(ui.salary.hasPartialTime.non.get());
     userAction.click(ui.salary.hasSameSalary.oui.get());
     userAction.setInput(ui.salary.sameSalaryValue.get(), "2500");
     expect(
@@ -169,7 +165,6 @@ describe("Indemnité licenciement - CC 1702", () => {
     userAction.click(ui.next.get());
     expect(ui.activeStep.query()).toHaveTextContent("Salaires");
 
-    userAction.click(ui.salary.hasPartialTime.non.get());
     userAction.click(ui.salary.hasSameSalary.non.get());
     userAction.click(ui.salary.hasSameSalary.oui.get());
     userAction.setInput(ui.salary.sameSalaryValue.get(), "2500");

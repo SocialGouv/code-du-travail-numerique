@@ -20,7 +20,6 @@ describe("Rupture co avec un arrêt de travail", () => {
   test(`Rupture conventionnelle avec un arrêt de travail`, () => {
     userAction
       .click(ui.introduction.startButton.get())
-      .click(ui.contract.type.cdi.get())
       .click(ui.contract.arretTravail.oui.get())
       .setInput(ui.contract.dateArretTravail.get(), "01/10/2024")
       .click(ui.next.get())
@@ -30,7 +29,6 @@ describe("Rupture co avec un arrêt de travail", () => {
       .setInput(ui.seniority.endDate.get(), "01/01/2025")
       .click(ui.seniority.hasAbsence.non.get())
       .click(ui.next.get())
-      .click(ui.salary.hasPartialTime.non.get())
       .click(ui.salary.hasSameSalary.non.get());
 
     expect(ui.salary.salaries.queryAll()).toHaveLength(7);
@@ -52,7 +50,6 @@ describe("Rupture co avec un arrêt de travail", () => {
   test(`Rupture conventionnelle sans arrêt de travail`, () => {
     userAction
       .click(ui.introduction.startButton.get())
-      .click(ui.contract.type.cdi.get())
       .click(ui.contract.arretTravail.non.get())
       .click(ui.next.get())
       .click(ui.agreement.noAgreement.get())
@@ -61,7 +58,6 @@ describe("Rupture co avec un arrêt de travail", () => {
       .setInput(ui.seniority.endDate.get(), "01/01/2025")
       .click(ui.seniority.hasAbsence.non.get())
       .click(ui.next.get())
-      .click(ui.salary.hasPartialTime.non.get())
       .click(ui.salary.hasSameSalary.non.get());
 
     userAction.click(ui.salary.hasSameSalary.non.get());
