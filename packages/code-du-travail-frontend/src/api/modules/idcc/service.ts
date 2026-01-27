@@ -16,7 +16,8 @@ export const getIdccByQuery = async (query: string, size?: number) => {
     index: elasticDocumentsIndex,
   });
 
-  return response;
+  const { took, ...rest } = response;
+  return { ...rest };
 };
 
 let idccs: Set<number> = new Set();
