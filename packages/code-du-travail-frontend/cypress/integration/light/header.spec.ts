@@ -8,7 +8,9 @@ describe("Header", () => {
     cy.realPress("Tab");
     cy.focused().should("have.attr", "href", "#fr-header-main-navigation");
     cy.realPress("Tab");
-    cy.focused().should("have.attr", "href", "#fr-header-search-input");
+    cy.focused()
+      .invoke("attr", "href")
+      .should("match", /^#fr-header-search-button(-desktop)?$/);
     cy.realPress("Tab");
     cy.focused().should("have.attr", "href", "#more-info");
     cy.realPress("Enter");
