@@ -69,3 +69,83 @@ jobs:
           EMAIL: ${{ secrets.SOCIALGROOVYBOT_EMAIL }}
       - name: Deploy to npm
         run: pnpm lerna publish from-package --yes
+      - name: Extract latest changelog section
+        id: changelog
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          TAG="$(git describe --tags --abbrev=0)"
+          VERSION="${TAG#v}"
+          VERSION="${VERSION##*@}"
+
+          SECTION="$(awk -v ver="$VERSION" '
+            # WARNING: do not use variable name `in` (reserved keyword in awk)
+            $0 ~ "^##? \\["ver"\\]" {inside=1}
+            inside && $0 ~ "^##? \\[" && $0 !~ "^##? \\["ver"\\]" {exit}
+            inside {print}
+          ' CHANGELOG.md)"
+
+          if [ -z "$SECTION" ]; then
+            SECTION="$(sed -n '1,120p' CHANGELOG.md)"
+          fi
+
+          SAFE_TAG="${TAG//\//_}"
+          CHANGELOG_FILE="${RUNNER_TEMP}/changelog-${SAFE_TAG}.md"
+          printf '%s\n' "$SECTION" > "$CHANGELOG_FILE"
+
+          {
+            echo "tag=$TAG"
+            echo "version=$VERSION"
+            echo "changelog_file=$CHANGELOG_FILE"
+            echo "changelog<<EOF"
+            printf '%s\n' "$SECTION"
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Build Mattermost payload (escape changelog)
+        id: mm_payload
+        if: success()
+        shell: bash
+        env:
+          MM_CHANNEL: s-cdtn-dev-suivi-mise-en-prod
+          TAG: ${{ steps.changelog.outputs.tag }}
+          CHANGELOG_FILE: ${{ steps.changelog.outputs.changelog_file }}
+          ACTOR: ${{ github.actor }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          set -euo pipefail
+
+          python3 - <<'PY' >> "$GITHUB_OUTPUT"
+          import json
+          import os
+          from pathlib import Path
+
+          tag = os.environ["TAG"]
+          channel = os.environ["MM_CHANNEL"]
+          actor = os.environ.get("ACTOR", "")
+          run_url = os.environ.get("RUN_URL", "")
+          changelog_path = Path(os.environ["CHANGELOG_FILE"])
+          changelog = changelog_path.read_text(encoding="utf-8") if changelog_path.exists() else ""
+
+          text = (
+              f"# Nouvelle release du site d'administration **{tag}** publiée.\n\n"
+              f"[Workflow]({run_url})\n\n"
+              f"\n{changelog.strip()}\n"
+          )
+
+          payload = {
+              "channel": channel,
+              "username": actor,
+              "text": text,
+          }
+
+          print(f"payload={json.dumps(payload)}")
+          PY
+
+      - name: Notify Mattermost - Release notes
+        if: success()
+        uses: mattermost/action-mattermost-notify@master
+        with:
+          MATTERMOST_WEBHOOK_URL: ${{ secrets.MATTERMOST_WEBHOOK_URL }}
+          PAYLOAD: ${{ steps.mm_payload.outputs.payload }}
