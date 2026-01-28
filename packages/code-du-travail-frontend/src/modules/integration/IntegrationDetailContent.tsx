@@ -133,7 +133,11 @@ export const IntegrationDetailContent = ({
         </div>
       )}
 
-      <IntegrationInstructions parsedUrl={parsedUrl} shortTitle={shortTitle} />
+      <IntegrationInstructions
+        host={host}
+        parsedUrl={parsedUrl}
+        shortTitle={shortTitle}
+      />
 
       {messages && <IntegrationTracking messages={messages} id={id} />}
 
