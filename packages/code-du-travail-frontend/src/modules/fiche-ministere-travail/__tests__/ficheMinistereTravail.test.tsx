@@ -77,7 +77,7 @@ describe("Content fiche MT", () => {
     ).toHaveTextContent("Anchor content 3");
   });
 
-  test("should insert a Résumé h2 when highlight starts with h3 (missing h2)", () => {
+  test("should insert a Introduction h2 when highlight starts with h3 (missing h2)", () => {
     const { getByRole, container } = render(
       <FicheMinistereTravail
         date={ficheMTData.date}
@@ -100,7 +100,9 @@ describe("Content fiche MT", () => {
       "Fiche MT title"
     );
 
-    expect(getByRole("heading", { level: 2, name: "Résumé" })).toBeVisible();
+    expect(
+      getByRole("heading", { level: 2, name: "Introduction" })
+    ).toBeVisible();
     expect(
       getByRole("heading", { level: 3, name: "Premier titre du document" })
     ).toBeVisible();
@@ -108,11 +110,11 @@ describe("Content fiche MT", () => {
     const headings = Array.from(container.querySelectorAll("h2, h3")).map(
       (n) => n.textContent
     );
-    expect(headings[0]).toBe("Résumé");
+    expect(headings[0]).toBe("Introduction");
     expect(headings[1]).toBe("Premier titre du document");
   });
 
-  test("should not insert a Résumé h2 when highlight already starts with h2", () => {
+  test("should not insert a Introduction h2 when highlight already starts with h2", () => {
     const { queryByRole, getByRole } = render(
       <FicheMinistereTravail
         date={ficheMTData.date}
@@ -131,7 +133,9 @@ describe("Content fiche MT", () => {
       />
     );
 
-    expect(queryByRole("heading", { level: 2, name: "Résumé" })).toBeNull();
+    expect(
+      queryByRole("heading", { level: 2, name: "Introduction" })
+    ).toBeNull();
     expect(
       getByRole("heading", { level: 2, name: "Déjà un h2" })
     ).toBeVisible();
