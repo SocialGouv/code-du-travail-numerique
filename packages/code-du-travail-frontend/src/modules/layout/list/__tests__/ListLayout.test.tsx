@@ -58,7 +58,7 @@ describe("<ListLayout />", () => {
         title={""}
         description={""}
         data={contribs}
-        popularSlugs={[]}
+        popularSlugs={["periode-essai"]}
       />
     );
     const headingsH2 = getAllByRole("heading", { level: 2 });
@@ -68,10 +68,11 @@ describe("<ListLayout />", () => {
     expect(headingsH2[2]).toHaveTextContent("Congés et repos");
     expect(headingsH2[3]).toHaveTextContent("Embauche et contrat");
     const documents = getAllByRole("heading", { level: 3 });
-    expect(documents).toHaveLength(3);
-    expect(documents[0]).toHaveTextContent("Congés payés");
-    expect(documents[1]).toHaveTextContent("Jours fériés");
-    expect(documents[2]).toHaveTextContent("Période d'essai");
+    expect(documents).toHaveLength(4);
+    expect(documents[0]).toHaveTextContent("Période d'essai");
+    expect(documents[1]).toHaveTextContent("Congés payés");
+    expect(documents[2]).toHaveTextContent("Jours fériés");
+    expect(documents[3]).toHaveTextContent("Période d'essai");
     expect(container).toMatchSnapshot();
   });
 });

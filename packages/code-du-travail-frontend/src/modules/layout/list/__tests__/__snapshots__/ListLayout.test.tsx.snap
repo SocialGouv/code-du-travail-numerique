@@ -131,7 +131,46 @@ exports[`<ListLayout /> affiche la liste des contenus 1`] = `
               aria-live="polite"
               class="fr-grid-row fr-grid-row--gutters fr-grid-row--left"
               id="contenus-populaires-items"
-            />
+            >
+              <li
+                class="fr-col-12 fr-col-sm-12 fr-col-md-6 fr-col-lg-6 li-s_none!"
+              >
+                <div
+                  class="fr-card fr-enlarge-link fr-card--horizontal"
+                  id="fr-card-_r_2_"
+                >
+                  <div
+                    class="fr-card__body"
+                  >
+                    <div
+                      class="fr-card__content"
+                    >
+                      <h3
+                        class="fr-card__title"
+                      >
+                        <a
+                          class=""
+                          href="/contribution/periode-essai"
+                        >
+                          Période d'essai
+                        </a>
+                      </h3>
+                      <p
+                        class="fr-card__desc"
+                      >
+                        Tout savoir sur la période d'essai
+                      </p>
+                      <div
+                        class="fr-card__start fr-hidden"
+                      />
+                      <div
+                        class="fr-card__end"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
           </section>
           <section
             class="fr-mt-3w"
@@ -153,7 +192,7 @@ exports[`<ListLayout /> affiche la liste des contenus 1`] = `
               >
                 <div
                   class="fr-card fr-enlarge-link fr-card--horizontal"
-                  id="fr-card-_r_2_"
+                  id="fr-card-_r_3_"
                 >
                   <div
                     class="fr-card__body"
@@ -191,7 +230,7 @@ exports[`<ListLayout /> affiche la liste des contenus 1`] = `
               >
                 <div
                   class="fr-card fr-enlarge-link fr-card--horizontal"
-                  id="fr-card-_r_3_"
+                  id="fr-card-_r_4_"
                 >
                   <div
                     class="fr-card__body"
@@ -246,7 +285,7 @@ exports[`<ListLayout /> affiche la liste des contenus 1`] = `
               >
                 <div
                   class="fr-card fr-enlarge-link fr-card--horizontal"
-                  id="fr-card-_r_4_"
+                  id="fr-card-_r_5_"
                 >
                   <div
                     class="fr-card__body"
