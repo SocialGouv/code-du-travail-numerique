@@ -162,8 +162,8 @@ export const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
 
   return (
     <div
-      id="search-modal"
       ref={modalRef}
+      id="search-modal"
       className={overlayContainer}
       role="dialog"
       aria-modal="true"
