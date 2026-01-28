@@ -7,6 +7,7 @@ import { RelatedItem } from "../documents";
 import { Feedback } from "./feedback";
 import { css } from "@styled-system/css";
 import { BreadcrumbListJsonLd } from "../seo/jsonld";
+import { getPathFromBreadcrumbLinkProps } from "./breadcrumbLinkProps";
 
 type Props = {
   relatedItems: { items: RelatedItem[]; title: string }[];
@@ -28,10 +29,7 @@ export const ContainerSimulatorLight = ({
         currentPageLabel={title}
         items={segments.map((segment) => ({
           label: String(segment.label),
-          href:
-            typeof segment.linkProps.href === "string"
-              ? segment.linkProps.href
-              : (segment.linkProps.href.pathname ?? "/"),
+          href: getPathFromBreadcrumbLinkProps(segment.linkProps),
         }))}
       />
       <Breadcrumb

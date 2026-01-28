@@ -1,6 +1,7 @@
 import { fr } from "@codegouvfr/react-dsfr";
 import { Breadcrumb, BreadcrumbProps } from "@codegouvfr/react-dsfr/Breadcrumb";
 import { BreadcrumbListJsonLd } from "../seo/jsonld";
+import { getPathFromBreadcrumbLinkProps } from "./breadcrumbLinkProps";
 
 type Props = {
   title: string;
@@ -14,10 +15,7 @@ export const ContainerList = ({ children, title, segments = [] }: Props) => {
         currentPageLabel={title}
         items={segments.map((segment) => ({
           label: String(segment.label),
-          href:
-            typeof segment.linkProps.href === "string"
-              ? segment.linkProps.href
-              : (segment.linkProps.href.pathname ?? "/"),
+          href: getPathFromBreadcrumbLinkProps(segment.linkProps),
         }))}
       />
       <Breadcrumb

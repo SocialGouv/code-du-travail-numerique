@@ -4,6 +4,7 @@ import { ReactNode } from "react";
 import { SummaryNavigation } from "./SummaryNavigation";
 import { css } from "@styled-system/css";
 import { BreadcrumbListJsonLd } from "../seo/jsonld";
+import { getPathFromBreadcrumbLinkProps } from "./breadcrumbLinkProps";
 
 type SidebarSection = {
   id: string;
@@ -31,10 +32,7 @@ export const ContainerWithNav = ({
         currentPageLabel={title}
         items={breadcrumbSegments.map((segment) => ({
           label: String(segment.label),
-          href:
-            typeof segment.linkProps.href === "string"
-              ? segment.linkProps.href
-              : (segment.linkProps.href.pathname ?? "/"),
+          href: getPathFromBreadcrumbLinkProps(segment.linkProps),
         }))}
       />
       <Breadcrumb
