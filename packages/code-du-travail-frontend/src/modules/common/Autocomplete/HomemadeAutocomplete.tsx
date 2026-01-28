@@ -87,6 +87,7 @@ export const HomemadeAutocomplete = <K,>({
   const [a11yStatusMessage, setA11yStatusMessage] = useState("");
   const [liveRegionMessage, setLiveRegionMessage] = useState("");
 
+  const containerRef = useRef<HTMLDivElement | null>(null);
   const internalInputRef = useRef<HTMLInputElement | null>(null);
   const listRef = useRef<HTMLUListElement | null>(null);
   const isFocusedRef = useRef(false);
@@ -174,6 +175,32 @@ export const HomemadeAutocomplete = <K,>({
     onDropdownOpenChange?.(isOpen);
   }, [isOpen, onDropdownOpenChange]);
 
+  useEffect(() => {
+    if (!isOpen) return;
+
+    const handleOutsidePointerDown = (event: MouseEvent | TouchEvent) => {
+      const target = event.target as Node | null;
+      if (!target) return;
+
+      if (containerRef.current && !containerRef.current.contains(target)) {
+        setIsOpen(false);
+        setHighlightedIndex(-1);
+      }
+    };
+
+    document.addEventListener("mousedown", handleOutsidePointerDown, true);
+    document.addEventListener("touchstart", handleOutsidePointerDown, true);
+
+    return () => {
+      document.removeEventListener("mousedown", handleOutsidePointerDown, true);
+      document.removeEventListener(
+        "touchstart",
+        handleOutsidePointerDown,
+        true
+      );
+    };
+  }, [isOpen]);
+
   const handleInputChange = async (value: string) => {
     setInputValue(value);
     onInputValueChange?.(value);
@@ -182,6 +209,7 @@ export const HomemadeAutocomplete = <K,>({
       onSearch?.(value, []);
       setSuggestions([]);
       setIsOpen(false);
+      setHighlightedIndex(-1);
       return;
     }
 
@@ -333,7 +361,7 @@ export const HomemadeAutocomplete = <K,>({
   const getOptionId = (index: number) => `${listboxId}-option-${index}`;
 
   return (
-    <div className={`${searchContainer}`}>
+    <div ref={containerRef} className={`${searchContainer}`}>
       <Input
         nativeLabelProps={{
           id: labelId,
