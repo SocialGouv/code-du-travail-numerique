@@ -5,33 +5,13 @@ import Link from "src/modules/common/Link";
 
 type HeaderBrandProps = {
   onSearchClick?: () => void;
-<<<<<<< HEAD
-  searchModalId?: string;
-  enableDsfrModalBehavior?: boolean;
-||||||| ac898bb53
-=======
   isSearchOpen?: boolean;
->>>>>>> dev
 };
 
-<<<<<<< HEAD
-export const HeaderBrand = ({
-  onSearchClick,
-  searchModalId,
-  enableDsfrModalBehavior = true,
-}: HeaderBrandProps) => {
-  const resolvedSearchModalId = enableDsfrModalBehavior
-    ? (searchModalId ?? "fr-header-search-modal")
-    : searchModalId;
-
-||||||| ac898bb53
-export const HeaderBrand = ({ onSearchClick }: HeaderBrandProps) => {
-=======
 export const HeaderBrand = ({
   onSearchClick,
   isSearchOpen,
 }: HeaderBrandProps) => {
->>>>>>> dev
   return (
     <div className={fr.cx("fr-header__brand", "fr-enlarge-link")}>
       <div className={fr.cx("fr-header__brand-top")}>
@@ -60,29 +40,9 @@ export const HeaderBrand = ({
             id="fr-header-search-button"
             type="button"
             className={fr.cx("fr-btn--search", "fr-btn")}
-<<<<<<< HEAD
-||||||| ac898bb53
-            data-fr-opened="false"
-            aria-controls="fr-header-search-modal"
-=======
             aria-controls="search-modal"
             aria-expanded={isSearchOpen}
->>>>>>> dev
             title="Rechercher"
-<<<<<<< HEAD
-            {...(resolvedSearchModalId
-              ? { "aria-controls": resolvedSearchModalId }
-              : {})}
-            {...(enableDsfrModalBehavior
-              ? {
-                  "data-fr-opened": "false",
-                  "data-fr-js-modal-button": "true",
-                }
-              : {})}
-||||||| ac898bb53
-            data-fr-js-modal-button="true"
-=======
->>>>>>> dev
             onClick={onSearchClick}
           >
             Rechercher

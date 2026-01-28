@@ -53,39 +53,13 @@ export const HeaderDsfr = ({ navigation, currentPath }: Props) => {
         <div className={fr.cx("fr-container")}>
           <div className={fr.cx("fr-header__body-row")}>
             <HeaderBrand
-<<<<<<< HEAD
-              onSearchClick={isSearchV2 ? handleSearchToggle : undefined}
-              searchModalId={isSearchV2 ? undefined : "fr-header-search-modal"}
-              enableDsfrModalBehavior={!isSearchV2}
-||||||| ac898bb53
-              onSearchClick={
-                variant === ABTestVariant.SEARCH_V2
-                  ? handleSearchToggle
-                  : undefined
-              }
-=======
               onSearchClick={handleSearchToggle}
               isSearchOpen={isOpen}
             />
             <HeaderSearchV2
               onSearchClick={handleSearchToggle}
               isSearchOpen={isOpen}
->>>>>>> dev
             />
-<<<<<<< HEAD
-            {isSearchV2 ? (
-              <HeaderSearchV2 onSearchClick={handleSearchToggle} />
-            ) : (
-              <HeaderSearch onSearchSubmit={onSearchSubmit} />
-            )}
-||||||| ac898bb53
-            {variant === ABTestVariant.SEARCH_V2 ? (
-              <HeaderSearchV2 onSearchClick={handleSearchToggle} />
-            ) : (
-              <HeaderSearch onSearchSubmit={onSearchSubmit} />
-            )}
-=======
->>>>>>> dev
           </div>
         </div>
       </div>
