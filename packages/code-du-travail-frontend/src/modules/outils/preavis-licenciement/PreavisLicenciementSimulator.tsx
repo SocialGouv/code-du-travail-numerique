@@ -16,7 +16,6 @@ import StepResult from "./steps/Result";
 import StepAgreement from "./steps/Agreement";
 import StepStatus from "./steps/Status";
 import StepInformations from "./steps/Informations";
-import { HowToJsonLd } from "../../seo/jsonld";
 
 enum PreavisLicenciementStepName {
   Intro = "start",
@@ -74,11 +73,6 @@ const PreavisLicenciementSimulator = ({
       title={displayTitle}
       segments={[{ label: "Simulateurs", linkProps: { href: "/outils" } }]}
     >
-      <HowToJsonLd
-        name={displayTitle}
-        url="/outils/preavis-licenciement"
-        steps={steps.map((s) => s.label)}
-      />
       <CalculateurPreavisLicenciement title={title} />
     </ContainerSimulator>
   );

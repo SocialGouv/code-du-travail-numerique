@@ -19,7 +19,6 @@ import {
 import { useIndemniteLicenciementEventEmitter } from "./events/useIndemniteLicenciementEventEmitter";
 import StepSalaires from "../indemnite-depart/steps/Salaires";
 import { EVENT_CATEGORY } from "../indemnite-depart/feedback/tracking";
-import { HowToJsonLd } from "../../seo/jsonld";
 
 const steps: Step<IndemniteDepartStepName>[] = [
   {
@@ -81,11 +80,6 @@ const IndemniteLicenciementSimulator = ({
       title={displayTitle}
       segments={[{ label: "Simulateurs", linkProps: { href: "/outils" } }]}
     >
-      <HowToJsonLd
-        name={displayTitle}
-        url="/outils/indemnite-licenciement"
-        steps={steps.map((s) => s.label)}
-      />
       <CalculateurIndemniteLicenciement title={title} />
     </ContainerSimulator>
   );

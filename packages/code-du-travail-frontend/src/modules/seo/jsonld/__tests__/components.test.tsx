@@ -3,7 +3,6 @@ import { render } from "@testing-library/react";
 import {
   BreadcrumbListJsonLd,
   GovernmentOrganizationJsonLd,
-  HowToJsonLd,
   LegislationJsonLd,
   WebSiteJsonLd,
   JSON_LD_IDS,
@@ -53,22 +52,6 @@ describe("jsonld components", () => {
     ) as HTMLScriptElement | null;
 
     expect(script?.textContent).toContain("/une-page");
-  });
-
-  it("HowToJsonLd renders a JSON-LD script", () => {
-    render(
-      <HowToJsonLd
-        name="Simulateur"
-        url="/outils/x"
-        steps={["Étape 1", "Étape 2"]}
-      />
-    );
-
-    const script = document.querySelector(
-      `script#${JSON_LD_IDS.howTo}`
-    ) as HTMLScriptElement | null;
-    expect(script).not.toBeNull();
-    expect(script?.textContent).toContain("HowTo");
   });
 
   it("LegislationJsonLd renders a JSON-LD script", () => {

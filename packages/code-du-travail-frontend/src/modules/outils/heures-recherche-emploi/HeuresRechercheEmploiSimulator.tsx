@@ -16,7 +16,6 @@ import StepResult from "./steps/Result";
 import StepInformations from "./steps/Informations";
 import StepAgreement from "./steps/Agreement";
 import { useHeuresRechercheEmploiEventEmitter } from "./events/useHeuresRechercheEmploiEventEmitter";
-import { HowToJsonLd } from "../../seo/jsonld";
 
 enum HeuresRechercheEmploiStepName {
   Intro = "start",
@@ -68,11 +67,6 @@ const HeuresRechercheEmploiSimulator = ({
       title={displayTitle}
       segments={[{ label: "Simulateurs", linkProps: { href: "/outils" } }]}
     >
-      <HowToJsonLd
-        name={displayTitle}
-        url="/outils/heures-recherche-emploi"
-        steps={steps.map((s) => s.label)}
-      />
       <CalculateurHeuresRechercheEmploi title={title} />
     </ContainerSimulator>
   );

@@ -38,27 +38,6 @@ exports[`jsonld builders buildGovernmentOrganizationJsonLd() 1`] = `
 }
 `;
 
-exports[`jsonld builders buildHowToJsonLd() 1`] = `
-{
-  "@context": "https://schema.org",
-  "@type": "HowTo",
-  "name": "Simulateur",
-  "step": [
-    {
-      "@type": "HowToStep",
-      "name": "Étape 1",
-      "position": 1,
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Étape 2",
-      "position": 2,
-    },
-  ],
-  "url": "http://api.url/outils/xxx",
-}
-`;
-
 exports[`jsonld builders buildLegislationJsonLd() 1`] = `
 {
   "@context": "https://schema.org",

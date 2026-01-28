@@ -17,7 +17,6 @@ import StepResult from "./steps/Result";
 import StepInformations from "./steps/Informations";
 import StepAgreement from "./steps/Agreement";
 import { usePreavisRetraiteEventEmitter } from "./events/usePreavisRetraiteEventEmitter";
-import { HowToJsonLd } from "../../seo/jsonld";
 
 enum PreavisRetraiteStepName {
   Intro = "intro",
@@ -81,11 +80,6 @@ const PreavisRetraiteSimulator = ({
       title={displayTitle}
       segments={[{ label: "Simulateurs", linkProps: { href: "/outils" } }]}
     >
-      <HowToJsonLd
-        name={displayTitle}
-        url="/outils/preavis-retraite"
-        steps={steps.map((s) => s.label)}
-      />
       <CalculateurPreavisRetraite title={title} />
     </ContainerSimulator>
   );

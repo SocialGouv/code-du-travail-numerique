@@ -1,7 +1,6 @@
 import {
   buildBreadcrumbListJsonLd,
   buildGovernmentOrganizationJsonLd,
-  buildHowToJsonLd,
   buildLegislationJsonLd,
   buildWebSiteWithSearchActionJsonLd,
   JSON_LD_ENTITY_IDS,
@@ -29,16 +28,6 @@ describe("jsonld builders", () => {
       currentPageHref: "/section/page",
     });
     expect(jsonld["@type"]).toBe("BreadcrumbList");
-    expect(jsonld).toMatchSnapshot();
-  });
-
-  it("buildHowToJsonLd()", () => {
-    const jsonld = buildHowToJsonLd({
-      name: "Simulateur",
-      url: "/outils/xxx",
-      steps: ["Étape 1", "Étape 2"],
-    });
-    expect(jsonld["@type"]).toBe("HowTo");
     expect(jsonld).toMatchSnapshot();
   });
 

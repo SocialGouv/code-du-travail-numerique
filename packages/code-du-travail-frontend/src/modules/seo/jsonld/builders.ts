@@ -4,7 +4,6 @@ export const JSON_LD_IDS = {
   organization: "jsonld-government-organization",
   website: "jsonld-website",
   breadcrumbs: "jsonld-breadcrumbs",
-  howTo: "jsonld-howto",
   legislation: "jsonld-legislation",
 } as const;
 
@@ -79,31 +78,6 @@ export function buildBreadcrumbListJsonLd({
       position: index + 1,
       name: item.label,
       item: toAbsoluteUrl(item.href),
-    })),
-  };
-}
-
-export function buildHowToJsonLd({
-  name,
-  description,
-  url,
-  steps,
-}: {
-  name: string;
-  description?: string;
-  url: string;
-  steps: string[];
-}): Record<string, unknown> {
-  return {
-    "@context": "https://schema.org",
-    "@type": "HowTo",
-    name,
-    ...(description ? { description } : {}),
-    url: toAbsoluteUrl(url),
-    step: steps.map((stepName, index) => ({
-      "@type": "HowToStep",
-      position: index + 1,
-      name: stepName,
     })),
   };
 }

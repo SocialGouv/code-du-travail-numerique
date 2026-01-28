@@ -5,7 +5,6 @@ import { createRef, memo, useEffect, useState } from "react";
 import { RelatedItem } from "../../documents";
 import * as Sentry from "@sentry/nextjs";
 import { ContainerSimulatorLight } from "../../layout/ContainerSimulatorLight";
-import { HowToJsonLd } from "../../seo/jsonld";
 
 type Props = {
   relatedItems: {
@@ -85,16 +84,6 @@ const HiringSimulator = memo(function HiringSimulator({
       description={description}
       segments={[{ label: "Simulateurs", linkProps: { href: "/outils" } }]}
     >
-      <HowToJsonLd
-        name={breadcrumbTitle}
-        description={description}
-        url="/outils/simulateur-embauche"
-        steps={[
-          "Ouvrir le simulateur",
-          "Renseigner les informations demandées",
-          "Consulter le résultat",
-        ]}
-      />
       <h1 id="simulateur-embauche">{title}</h1>
       <Highlight size="lg" className={fr.cx("fr-mb-12v")}>
         Pour information, l&apos;estimation du salaire net après impôt est basée
