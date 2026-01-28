@@ -54,7 +54,9 @@ export const SearchFeedback = ({
         {isSearching && query.length >= minSearchLength && (
           <div className={loadingContainer}>
             <LoadingSpinner />
-            <p className={hintTextStyle}>{feedbackMessage}</p>
+            <p id={noResultParagraphId} className={hintTextStyle}>
+              {feedbackMessage}
+            </p>
           </div>
         )}
 

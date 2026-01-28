@@ -1,10 +1,7 @@
 import { fr } from "@codegouvfr/react-dsfr";
 import type { MainNavigationProps } from "@codegouvfr/react-dsfr/MainNavigation/MainNavigation";
 import { HeaderBrand } from "./HeaderBrand";
-import { HeaderSearch } from "./HeaderSearch";
 import { HeaderNavigation } from "./HeaderNavigation";
-import { useABTestVariant } from "src/modules/utils/useABTestVariant";
-import { ABTesting, ABTestVariant } from "src/modules/config/initABTesting";
 import { HeaderSearchV2 } from "./HeaderSearchV2";
 import { SearchModal } from "src/modules/recherche/modal/SearchModal";
 import { useSearchModal } from "src/modules/recherche/modal/SearchModalContext";
@@ -34,16 +31,10 @@ export function hasMenuLinks(item: NavigationItem): item is NavigationMenu {
 
 type Props = {
   navigation?: NavigationItem[];
-  onSearchSubmit: (data: string) => void;
   currentPath: string;
 };
 
-export const HeaderDsfr = ({
-  navigation,
-  onSearchSubmit,
-  currentPath,
-}: Props) => {
-  const variant = useABTestVariant(ABTesting.SEARCH);
+export const HeaderDsfr = ({ navigation, currentPath }: Props) => {
   const { isOpen, openModal, closeModal } = useSearchModal();
 
   const isSearchV2 = variant === ABTestVariant.SEARCH_V2;
@@ -62,15 +53,39 @@ export const HeaderDsfr = ({
         <div className={fr.cx("fr-container")}>
           <div className={fr.cx("fr-header__body-row")}>
             <HeaderBrand
+<<<<<<< HEAD
               onSearchClick={isSearchV2 ? handleSearchToggle : undefined}
               searchModalId={isSearchV2 ? undefined : "fr-header-search-modal"}
               enableDsfrModalBehavior={!isSearchV2}
+||||||| ac898bb53
+              onSearchClick={
+                variant === ABTestVariant.SEARCH_V2
+                  ? handleSearchToggle
+                  : undefined
+              }
+=======
+              onSearchClick={handleSearchToggle}
+              isSearchOpen={isOpen}
             />
+            <HeaderSearchV2
+              onSearchClick={handleSearchToggle}
+              isSearchOpen={isOpen}
+>>>>>>> dev
+            />
+<<<<<<< HEAD
             {isSearchV2 ? (
               <HeaderSearchV2 onSearchClick={handleSearchToggle} />
             ) : (
               <HeaderSearch onSearchSubmit={onSearchSubmit} />
             )}
+||||||| ac898bb53
+            {variant === ABTestVariant.SEARCH_V2 ? (
+              <HeaderSearchV2 onSearchClick={handleSearchToggle} />
+            ) : (
+              <HeaderSearch onSearchSubmit={onSearchSubmit} />
+            )}
+=======
+>>>>>>> dev
           </div>
         </div>
       </div>

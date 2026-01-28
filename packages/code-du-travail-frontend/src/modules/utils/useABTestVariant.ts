@@ -1,26 +1,29 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { ABTesting, ABTestVariant } from "../config/initABTesting";
+import type { ABTestName, ABTestVariant } from "../config/initABTesting";
 
+/**
+ * Returns the activated variant for a given Matomo A/B test.
+ * - `null` means: no variant yet (not enabled, not ready, or not participating)
+ */
 export const useABTestVariant = (
-  abTestName: ABTesting
+  abTestName: ABTestName
 ): ABTestVariant | null => {
   const [variant, setVariant] = useState<ABTestVariant | null>(null);
 
   useEffect(() => {
-    if (typeof window === "undefined") {
-      return;
-    }
+    if (typeof window === "undefined") return;
 
     const getCurrentVariant = (): ABTestVariant | null => {
-      const abTest = window.__MATOMO_AB_TEST__;
+      const store = window.__MATOMO_AB_TEST__;
+      const state = store?.[abTestName];
 
-      if (!abTest || !abTest.isReady || abTest.abTest !== abTestName) {
+      if (!state || !state.isReady) {
         return null;
       }
 
-      return abTest.variant;
+      return state.variant;
     };
 
     const initialVariant = getCurrentVariant();

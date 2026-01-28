@@ -1,22 +1,14 @@
 "use client";
 
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { HeaderDsfr } from "./HeaderDsfr";
 
 export const Header = () => {
   const currentPath = usePathname();
-  const router = useRouter();
-
-  const onSearchSubmit = (text: string) => {
-    if (text !== "") {
-      router.push(`/recherche?query=${encodeURIComponent(text)}`);
-    }
-  };
 
   return (
     <HeaderDsfr
       currentPath={currentPath}
-      onSearchSubmit={onSearchSubmit}
       navigation={[
         {
           text: "Code du travail",

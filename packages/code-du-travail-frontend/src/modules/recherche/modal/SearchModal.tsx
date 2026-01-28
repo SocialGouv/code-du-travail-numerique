@@ -11,6 +11,7 @@ import { useSearchResults } from "../hooks/useSearchResults";
 import { useHints } from "../hooks/useHints";
 import useScrollBlock from "../../utils/useScrollBlock";
 import { useBreakpoints } from "src/modules/common/useBreakpoints";
+import { PresearchClass } from "src/api";
 
 interface SearchModalProps {
   isOpen: boolean;
@@ -29,7 +30,8 @@ export const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
 
   const {
     results,
-    classes,
+    queryClass,
+    lastPresearchQuery,
     isLoading,
     hasSearched,
     triggerSearch,
@@ -58,13 +60,9 @@ export const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
           resultsTitleRef.current?.focus();
         }, 100);
       } else {
-        // Focus on "no results" message if displayed, otherwise keep on input
+        // Keep focus on input when there are no results
         setTimeout(() => {
-          if (noResultMessageRef.current) {
-            noResultMessageRef.current.focus();
-          } else {
-            modalSearchRef.current?.focusInput();
-          }
+          modalSearchRef.current?.focusInput();
         }, 100);
       }
     }
@@ -166,6 +164,7 @@ export const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
     <div
       id="search-modal"
       ref={modalRef}
+      id="search-modal"
       className={overlayContainer}
       role="dialog"
       aria-modal="true"
@@ -201,7 +200,8 @@ export const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
             contextType="modal"
             onFocusRequest={handleFocusRequest}
             noResultMessageRef={noResultMessageRef}
-            classes={classes}
+            queryClass={queryClass}
+            lastPresearchQuery={lastPresearchQuery}
           />
 
           {!hasSearched && (
@@ -215,6 +215,7 @@ export const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
           {hasSearched && !isLoading && (
             <SearchResults
               results={results}
+              queryClass={queryClass as PresearchClass}
               onResultClick={handleClose}
               contextType="modal"
               titleRef={resultsTitleRef}

@@ -41,7 +41,7 @@ describe("Modèles de documents", () => {
       .should("have.text", "Bienvenue sur le Code du travail numérique")
       .click();
 
-    cy.selectByLabel("Recherchez par mots-clés").as("home-searchbar");
+    cy.get("#search-home-autocomplete").as("home-searchbar");
 
     cy.get("@home-searchbar").type("modele rupture contrat periode d'essai");
 
@@ -52,11 +52,13 @@ describe("Modèles de documents", () => {
       "modele rupture contrat periode d'essai"
     );
 
+    cy.contains("button", "Voir tous les résultats").click();
+
     cy.urlEqual(
       "/recherche?query=modele%20rupture%20contrat%20periode%20d%27essai"
     );
 
-    cy.contains("Rupture du contrat en période d’essai par le salarié").click();
+    cy.contains("Rupture de période d’essai par le salarié").click();
 
     cy.urlEqual(
       "/modeles-de-courriers/rupture-du-contrat-en-periode-dessai-par-le-salarie"

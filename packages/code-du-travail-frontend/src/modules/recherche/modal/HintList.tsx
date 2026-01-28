@@ -13,7 +13,7 @@ type Props = {
 export const HintList = ({ actualites, suggestions, isLoading }: Props) => {
   if (isLoading) {
     return (
-      <div className={loadingContainer} aria-live="polite">
+      <div className={loadingContainer} aria-live="polite" aria-atomic="true">
         <LoadingSpinner size={48} />
         <p className={fr.cx("fr-mt-2w")}>Chargement des suggestions...</p>
       </div>
@@ -23,10 +23,7 @@ export const HintList = ({ actualites, suggestions, isLoading }: Props) => {
   return (
     <div className={fr.cx("fr-mt-6w")}>
       <div className={fr.cx("fr-grid-row", "fr-grid-row--gutters")}>
-        <section
-          className={fr.cx("fr-col-12", "fr-col-md-6")}
-          aria-labelledby="actualites-heading"
-        >
+        <section className={fr.cx("fr-col-12", "fr-col-md-6")}>
           <h2
             id="actualites-heading"
             className={fr.cx("fr-badge", "fr-badge--info")}
@@ -54,7 +51,6 @@ export const HintList = ({ actualites, suggestions, isLoading }: Props) => {
             "fr-mt-3w",
             "fr-mt-md-0"
           )}
-          aria-labelledby="suggestions-heading"
         >
           <h2
             id="suggestions-heading"

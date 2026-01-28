@@ -35,6 +35,7 @@ exports[`Search searchWithQuery 1`] = `
     },
     {
       "_score": 4.1066437,
+      "algo": "fulltext",
       "cdtnId": "f13147ec33",
       "description": "Le salarié informe son employeur de sa démission, en application de l'article L. 1225-66 , par lettre recommandée avec avis de réception ou remise contre récépissé. Il adresse à l'employeur sa demande de réembauche, en application de l'article L. 1225-67 , par lettre recommandée avec avis de réception ou remise contre récépissé",
       "slug": "r1225-18",
@@ -43,7 +44,17 @@ exports[`Search searchWithQuery 1`] = `
       "url": "https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000018537778&cidTexte=LEGITEXT000006072050",
     },
   ],
+  "class": "theme",
   "documents": [
+    {
+      "algo": "presearch",
+      "cdtnId": "a9ccf1d613",
+      "class": "theme",
+      "description": "Retrouvez les contenus relatifs au thème : Démission",
+      "slug": "demission",
+      "source": "themes",
+      "title": "Démission",
+    },
     {
       "_score": null,
       "algo": "pre-qualified",
@@ -304,6 +315,13 @@ exports[`Search searchWithQuery 1`] = `
     {
       "_score": 2.6255991,
       "algo": "fulltext",
+      "breadcrumbs": [
+        {
+          "label": "Départ de l’entreprise",
+          "position": 8,
+          "slug": "/themes/depart-de-lentreprise",
+        },
+      ],
       "cdtnId": "a9ccf1d613",
       "slug": "demission",
       "source": "themes",
