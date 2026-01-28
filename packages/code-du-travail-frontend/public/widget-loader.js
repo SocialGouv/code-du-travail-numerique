@@ -5,6 +5,21 @@
 (function () {
   let origin = "https://code.travail.gouv.fr";
 
+  function normalizeHttpOrigin(value) {
+    if (!value) return null;
+    try {
+      const url = new URL(value);
+      // Only allow http(s) origins to prevent `javascript:`, `data:`, etc.
+      if (url.protocol !== "https:" && url.protocol !== "http:") {
+        return null;
+      }
+      // Keep only the origin (drop any path/query/hash).
+      return url.origin;
+    } catch (e) {
+      return null;
+    }
+  }
+
   function getLoaderScript() {
     // Most reliable: the currently executing script.
     const current = document.currentScript;
@@ -31,10 +46,16 @@
       loaderScript.getAttribute &&
       loaderScript.getAttribute("data-cdtn-widget-origin");
     if (overrideOrigin) {
-      origin = overrideOrigin;
+      const normalized = normalizeHttpOrigin(overrideOrigin);
+      if (normalized) {
+        origin = normalized;
+      }
     } else if (loaderScript.src) {
       try {
-        origin = new URL(loaderScript.src).origin;
+        const normalized = normalizeHttpOrigin(loaderScript.src);
+        if (normalized) {
+          origin = normalized;
+        }
       } catch (e) {
         // Ignore URL parsing errors and keep the default origin.
       }
@@ -49,7 +70,7 @@
 
     const script = document.createElement("script");
     script.setAttribute("data-cdtn-widget-runtime", "1");
-    script.src = origin.replace(/\/$/, "") + "/widget.js";
+    script.src = new URL("/widget.js", origin).toString();
     // Dynamic scripts are async by default.
     script.async = true;
 
