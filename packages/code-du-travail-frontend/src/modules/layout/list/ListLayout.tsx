@@ -13,15 +13,16 @@ import { cleanHash } from "../../utils";
 import { fr } from "@codegouvfr/react-dsfr";
 import { SourceKeys } from "@socialgouv/cdtn-utils";
 import { Breadcrumb } from "@socialgouv/cdtn-types";
+import { BreadcrumbProps } from "@codegouvfr/react-dsfr/Breadcrumb";
 
-type Item = {
+export type Item = {
   title: string;
   description: string;
   slug: string;
   source: string;
 };
 
-type Data = {
+export type Data = {
   theme: Breadcrumb;
   documents: Item[];
 }[];
@@ -32,6 +33,7 @@ type Props = {
   source: SourceKeys;
   data: Data;
   popularSlugs: string[];
+  breadcrumbSegments?: BreadcrumbProps["segments"];
 };
 
 const SCROLL_DELAY_MS = 100;
@@ -42,6 +44,7 @@ export const ListLayout = ({
   source,
   data: initialData,
   popularSlugs,
+  breadcrumbSegments = [],
 }: Props) => {
   const [expandedSections, setExpandedSections] = useState<Set<string>>(
     new Set()
@@ -138,13 +141,17 @@ export const ListLayout = ({
   }, []);
 
   const sidebarSections = useMemo(() => {
-    return [
-      { id: "contenus-populaires", label: "Contenus populaires" },
-      ...documents.map(({ theme }) => ({
-        id: cleanHash(theme.label),
-        label: theme.label,
-      })),
-    ];
+    const sections = documents.map(({ theme }) => ({
+      id: cleanHash(theme.label),
+      label: theme.label,
+    }));
+    if (popularItems.length > 0) {
+      sections.unshift({
+        id: "contenus-populaires",
+        label: "Contenus populaires",
+      });
+    }
+    return sections;
   }, [documents]);
 
   return (
@@ -152,28 +159,28 @@ export const ListLayout = ({
       title={title}
       description={description}
       sidebarSections={sidebarSections}
-      breadcrumbSegments={[]}
+      breadcrumbSegments={breadcrumbSegments}
     >
-      <Section
-        source={source}
-        ref={(el) => {
-          sectionRefs.current["contenus-populaires"] = el;
-        }}
-        sectionId="contenus-populaires"
-        title="Contenus populaires"
-        items={popularItems}
-        isExpanded={expandedSections.has("contenus-populaires")}
-        onToggle={toggleSection}
-        firstHiddenItemRef={handleFirstHiddenItemRef}
-        buttonRef={handleButtonRef}
-        icon="/static/assets/img/star.svg"
-      />
+      {popularItems.length > 0 && (
+        <Section
+          ref={(el) => {
+            sectionRefs.current["contenus-populaires"] = el;
+          }}
+          sectionId="contenus-populaires"
+          title="Contenus populaires"
+          items={popularItems}
+          isExpanded={expandedSections.has("contenus-populaires")}
+          onToggle={toggleSection}
+          firstHiddenItemRef={handleFirstHiddenItemRef}
+          buttonRef={handleButtonRef}
+          icon="/static/assets/img/star.svg"
+        />
+      )}
 
-      {documents.map(({ theme, documents }) => {
+      {documents.map(({ theme, documents }, index) => {
         const sectionId = cleanHash(theme.label);
         return (
           <Section
-            source={source}
             key={sectionId}
             ref={(el) => {
               sectionRefs.current[sectionId] = el;
@@ -185,7 +192,11 @@ export const ListLayout = ({
             onToggle={toggleSection}
             firstHiddenItemRef={handleFirstHiddenItemRef}
             buttonRef={handleButtonRef}
-            className={fr.cx("fr-mt-3w")}
+            className={
+              popularItems.length == 0 && index == 0
+                ? undefined
+                : fr.cx("fr-mt-3w")
+            }
           />
         );
       })}

@@ -2,10 +2,11 @@ import { fr } from "@codegouvfr/react-dsfr";
 import React, { forwardRef } from "react";
 import { css } from "@styled-system/css";
 import Card from "@codegouvfr/react-dsfr/Card";
-import { getRouteBySource, SourceKeys } from "@socialgouv/cdtn-utils/";
+import { getRouteBySource } from "@socialgouv/cdtn-utils/";
 import { summarize } from "../../../utils";
 import Button from "@codegouvfr/react-dsfr/Button";
 import Image from "next/image";
+import { routeBySource } from "@socialgouv/cdtn-utils";
 
 const INITIAL_ITEMS_DISPLAY_COUNT = 6;
 
@@ -17,7 +18,6 @@ type Item = {
 };
 
 type SectionProps = {
-  source: SourceKeys;
   sectionId: string;
   title: string;
   items: Item[];
@@ -32,7 +32,6 @@ type SectionProps = {
 export const Section = forwardRef<HTMLHeadingElement, SectionProps>(
   (
     {
-      source,
       sectionId,
       title,
       items,
@@ -99,7 +98,7 @@ export const Section = forwardRef<HTMLHeadingElement, SectionProps>(
                 desc={summarize(item.description)}
                 horizontal
                 linkProps={{
-                  href: `/${getRouteBySource(source)}/${item.slug}`,
+                  href: `/${getRouteBySource(item.source as keyof typeof routeBySource)}/${item.slug}`,
                 }}
                 size="medium"
                 title={item.title}
