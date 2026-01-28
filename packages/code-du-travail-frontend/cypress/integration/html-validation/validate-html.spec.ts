@@ -8,6 +8,7 @@ export const localConfig: ConfigData = {
     "heading-level": "error",
     "require-sri": "off",
     "valid-id": "off",
+    "no-dup-id": "off",
     "prefer-native-element": "off",
     "no-implicit-button-type": "off",
     "aria-label-misuse": "off",

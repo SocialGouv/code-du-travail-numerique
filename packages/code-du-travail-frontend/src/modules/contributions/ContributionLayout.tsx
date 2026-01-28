@@ -8,6 +8,7 @@ import { Contribution } from "./type";
 import { SourceData } from "../layout/SourceData";
 import { ContributionGeneric } from "./ContributionGeneric";
 import { ContributionAgreement } from "./ContributionAgreement";
+import { BreadcrumbListJsonLd } from "../seo/jsonld";
 
 type Props = {
   contribution: Contribution;
@@ -18,6 +19,13 @@ export function ContributionLayout({ contribution }: Props) {
 
   return (
     <>
+      <BreadcrumbListJsonLd
+        currentPageLabel={title}
+        items={contribution.breadcrumbs.map((breadcrumb) => ({
+          label: breadcrumb.label,
+          href: breadcrumb.slug,
+        }))}
+      />
       <Breadcrumb
         currentPageLabel={title}
         homeLinkProps={{

@@ -1,6 +1,7 @@
 import { fr } from "@codegouvfr/react-dsfr";
 import Breadcrumb from "@codegouvfr/react-dsfr/Breadcrumb";
 import { Breadcrumb as BreadcrumbType } from "@socialgouv/cdtn-types";
+import { BreadcrumbListJsonLd } from "../seo/jsonld";
 
 type Props = {
   children: React.ReactNode;
@@ -15,6 +16,13 @@ export const ContainerWithBreadcrumbs = ({
 }: Props) => {
   return (
     <div>
+      <BreadcrumbListJsonLd
+        currentPageLabel={currentPage}
+        items={breadcrumbs.map(({ label, slug }) => ({
+          label,
+          href: slug,
+        }))}
+      />
       <Breadcrumb
         currentPageLabel={currentPage}
         homeLinkProps={{

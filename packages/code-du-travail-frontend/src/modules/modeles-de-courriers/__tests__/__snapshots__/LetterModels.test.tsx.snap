@@ -5,6 +5,12 @@ exports[`<LetterModels /> affiche la liste des modèles de document 1`] = `
   <div
     class="fr-grid-row"
   >
+    <script
+      id="jsonld-breadcrumbs"
+      type="application/ld+json"
+    >
+      {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"http://api.url/"},{"@type":"ListItem","position":2,"name":"Modèles de documents","item":"http://api.url/"}]}
+    </script>
     <nav
       aria-label="vous êtes ici :"
       class="fr-breadcrumb fr-mb-2v"
