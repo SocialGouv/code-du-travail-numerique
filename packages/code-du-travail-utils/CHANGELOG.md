@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.210.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.209.1...v4.210.0) (2026-01-28)
+
+
+### Features
+
+* **utils:** ajout du `naf` et des redirections `idcc` dans le package partagé ([#7075](https://github.com/SocialGouv/code-du-travail-numerique/issues/7075)) ([ac898bb](https://github.com/SocialGouv/code-du-travail-numerique/commit/ac898bb5363514ab1ef1c831f55f54d5ac6c4c2c))
+
+
+
+
+
 ## [4.209.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.209.0...v4.209.1) (2026-01-16)
 
 **Note:** Version bump only for package @socialgouv/cdtn-utils
