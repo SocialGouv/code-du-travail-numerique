@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.210.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.209.1...v4.210.0) (2026-01-28)
+
+
+### Bug Fixes
+
+* **csp:** ajout des domaines pour l'ouverture de liens externes dans l'outil brut/net ([#7070](https://github.com/SocialGouv/code-du-travail-numerique/issues/7070)) ([d35a47e](https://github.com/SocialGouv/code-du-travail-numerique/commit/d35a47e4a03ed541d4ef95358f36b26f66976b72))
+* **e2e:** renommage d'un modèle de courrier ([#7078](https://github.com/SocialGouv/code-du-travail-numerique/issues/7078)) ([e383fe8](https://github.com/SocialGouv/code-du-travail-numerique/commit/e383fe8d32dbad7ddf0e0bb0e5337a0ce3923b23))
+* **next:** correction de l'erreur empêchant next de fonctionner en v16.1 ([#7064](https://github.com/SocialGouv/code-du-travail-numerique/issues/7064)) ([6fe5d2e](https://github.com/SocialGouv/code-du-travail-numerique/commit/6fe5d2e2e690284fad3431b82757f46887eb98d1))
+* **recherche:** utilisation de la recherche v2 par défaut en supprimant l'AB testing + accessibilité ([#7077](https://github.com/SocialGouv/code-du-travail-numerique/issues/7077)) ([7e54e6b](https://github.com/SocialGouv/code-du-travail-numerique/commit/7e54e6b9203b7b69d86b05b9ebe50814eeff0d86))
+
+
+### Features
+
+* **modeles-de-courrier:** mise en place du nouveau layout ([#7072](https://github.com/SocialGouv/code-du-travail-numerique/issues/7072)) ([e4e2280](https://github.com/SocialGouv/code-du-travail-numerique/commit/e4e22802b342fcbbd03945e3c54a9118cbe453e7))
+* **search:** use same results for presearch modal and actual search ([#7061](https://github.com/SocialGouv/code-du-travail-numerique/issues/7061)) ([03ba96f](https://github.com/SocialGouv/code-du-travail-numerique/commit/03ba96f9d935bee96d3f3d6721cb33aef7dae656))
+* **theme:** nouveau design de pages thèmes ([#7073](https://github.com/SocialGouv/code-du-travail-numerique/issues/7073)) ([7cb63a5](https://github.com/SocialGouv/code-du-travail-numerique/commit/7cb63a5a36eb9e4711f466ee020da183b5efe390))
+* **utils:** ajout du `naf` et des redirections `idcc` dans le package partagé ([#7075](https://github.com/SocialGouv/code-du-travail-numerique/issues/7075)) ([ac898bb](https://github.com/SocialGouv/code-du-travail-numerique/commit/ac898bb5363514ab1ef1c831f55f54d5ac6c4c2c))
+
+
+
+
+
 ## [4.209.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.209.0...v4.209.1) (2026-01-16)
 
 
