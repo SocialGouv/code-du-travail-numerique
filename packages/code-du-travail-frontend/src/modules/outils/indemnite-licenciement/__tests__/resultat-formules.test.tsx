@@ -92,8 +92,6 @@ describe("Page résultat: vérification de la formule affichée", () => {
         render(<CalculateurIndemniteLicenciement title={""} />);
         userAction = new UserAction();
         userAction.click(ui.introduction.startButton.get());
-        userAction.click(ui.contract.type.cdi.get());
-        userAction.click(ui.contract.fauteGrave.non.get());
         userAction.click(
           ui.contract.inaptitude[inaptitude ? "oui" : "non"].get()
         );
@@ -109,7 +107,6 @@ describe("Page résultat: vérification de la formule affichée", () => {
 
         userAction.click(ui.seniority.hasAbsence.non.get());
         userAction.click(ui.next.get());
-        userAction.click(ui.salary.hasPartialTime.non.get());
         userAction.click(ui.salary.hasSameSalary.oui.get());
         userAction.setInput(ui.salary.sameSalaryValue.get(), "2500");
         userAction.click(ui.next.get());

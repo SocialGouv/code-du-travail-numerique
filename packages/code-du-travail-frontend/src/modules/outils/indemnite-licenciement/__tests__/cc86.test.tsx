@@ -29,8 +29,6 @@ describe("Indemnité licenciement - CC 86", () => {
 
   test(`Vérification du fait que le salaire de reference est bien celui issu de la formule de calcul de l'indemnité`, () => {
     userAction.click(ui.introduction.startButton.get());
-    userAction.click(ui.contract.type.cdi.get());
-    userAction.click(ui.contract.fauteGrave.non.get());
     userAction.click(ui.contract.inaptitude.non.get());
     userAction.click(ui.contract.arretTravail.non.get());
     userAction.click(ui.next.get());
@@ -40,7 +38,6 @@ describe("Indemnité licenciement - CC 86", () => {
     userAction.setInput(ui.seniority.endDate.get(), "01/03/2022");
     userAction.click(ui.seniority.hasAbsence.non.get());
     userAction.click(ui.next.get());
-    userAction.click(ui.salary.hasPartialTime.non.get());
     userAction.click(ui.salary.hasSameSalary.non.get());
     userAction
       .setInput(ui.salary.salaries.getAll()[0], "25000")

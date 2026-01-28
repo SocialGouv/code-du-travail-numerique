@@ -9,7 +9,6 @@ describe("Outil - Indemnité de rupture conventionnelle", () => {
     );
     cy.get("button").contains("Commencer").click({ force: true });
 
-    cy.contains("Contrat à durée indéterminée (CDI)").click();
     cy.get('label:contains("Non")').eq(0).click();
     cy.contains("Suivant").click();
 
@@ -28,8 +27,7 @@ describe("Outil - Indemnité de rupture conventionnelle", () => {
     cy.get("[id='1.duration']").type("1");
     cy.contains("Suivant").click();
 
-    cy.contains("Non").click();
-    cy.get('label:contains("Oui")').eq(1).click();
+    cy.get('label:contains("Oui")').eq(0).click();
     cy.get("#salary").type("1000");
     cy.contains("Suivant").click();
 

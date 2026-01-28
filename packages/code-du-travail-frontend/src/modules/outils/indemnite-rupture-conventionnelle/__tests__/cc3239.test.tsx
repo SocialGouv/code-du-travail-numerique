@@ -31,7 +31,6 @@ describe("Indemnité licenciement - CC 3239", () => {
     );
     userAction = new UserAction();
     userAction.click(ui.introduction.startButton.get());
-    userAction.click(ui.contract.type.cdi.get());
     userAction.click(ui.contract.arretTravail.non.get());
     userAction.click(ui.next.get());
     userAction.click(ui.next.get());

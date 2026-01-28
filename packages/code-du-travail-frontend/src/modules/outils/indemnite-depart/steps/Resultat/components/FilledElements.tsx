@@ -1,7 +1,9 @@
 import { Absence, SalaryPeriods } from "@socialgouv/modeles-social";
 import { AgreementInformation } from "../../../common";
-import { publicodesUnitTranslator } from "../../../../common/publicodes";
-import { sanitizePublicodesValue } from "../../../../common/publicodes";
+import {
+  publicodesUnitTranslator,
+  sanitizePublicodesValue,
+} from "../../../../common/publicodes";
 import AbsenceTable from "./AbsenceTable";
 import {
   generateResultSalaireTempsPlein,
@@ -29,12 +31,10 @@ type Props = {
   dateNotification?: string;
   absencesPeriods: Absence[];
   salaryPeriods: SalaryPeriods[];
-  hasTempsPartiel: boolean;
   isAgreementBetter: boolean;
   hasSameSalary: boolean;
   salary?: string;
   isStepSalaryHidden: boolean;
-  showHasTempsPartiel: boolean;
   disableParentalNotice?: boolean;
   type: IndemniteDepartType;
 };
@@ -126,12 +126,6 @@ export default function FilledElements(props: Props) {
           <li>
             <strong>Salaire de référence (Sref)</strong>
             <ul className={fr.cx("fr-ml-2w")}>
-              {props.showHasTempsPartiel && (
-                <li>
-                  Alternance temps plein / temps partiel&nbsp;:&nbsp;
-                  {props.hasTempsPartiel ? "Oui" : "Non"}
-                </li>
-              )}
               <li>
                 {generateResultSameSalary(
                   props.type,

@@ -26,8 +26,6 @@ describe("Indemnité licenciement - CC 2609", () => {
       rendering = render(<CalculateurIndemniteLicenciement title={""} />);
       userAction = new UserAction();
       userAction.click(ui.introduction.startButton.get());
-      userAction.click(ui.contract.type.cdi.get());
-      userAction.click(ui.contract.fauteGrave.non.get());
       userAction.click(ui.contract.inaptitude.non.get());
       userAction.click(ui.contract.arretTravail.non.get());
       userAction.click(ui.next.get());
@@ -53,8 +51,6 @@ describe("Indemnité licenciement - CC 2609", () => {
       userAction.click(ui.seniority.hasAbsence.non.get());
       userAction.click(ui.next.get());
       expect(ui.activeStep.query()).toHaveTextContent("Salaires");
-
-      userAction.click(ui.salary.hasPartialTime.non.get());
 
       // vérification que l'on ne demande pas si le salaire comporte une partie de variable si salaire fixe
       userAction.click(ui.salary.hasSameSalary.oui.get());

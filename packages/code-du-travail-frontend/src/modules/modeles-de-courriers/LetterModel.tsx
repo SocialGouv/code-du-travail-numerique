@@ -12,6 +12,7 @@ import { LetterModelContent } from "./components/LetterModelContent";
 import { RelatedItem } from "../documents";
 import { useModeleEvents } from "./tracking";
 import Breadcrumb from "@codegouvfr/react-dsfr/Breadcrumb";
+import { BreadcrumbListJsonLd } from "../seo/jsonld";
 
 export type LetterModelProps = Pick<
   MailElasticDocument,
@@ -54,6 +55,13 @@ export const LetterModel = ({
 
   return (
     <>
+      <BreadcrumbListJsonLd
+        currentPageLabel={title}
+        items={breadcrumbs.map(({ label, slug }) => ({
+          label,
+          href: slug,
+        }))}
+      />
       <Breadcrumb
         currentPageLabel={title}
         homeLinkProps={{

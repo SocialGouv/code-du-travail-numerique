@@ -22,8 +22,6 @@ describe("Indemnité licenciement - CC 44", () => {
       render(<CalculateurIndemniteLicenciement title={""} />);
       userAction = new UserAction();
       userAction.click(ui.introduction.startButton.get());
-      userAction.click(ui.contract.type.cdi.get());
-      userAction.click(ui.contract.fauteGrave.non.get());
       userAction.click(ui.contract.inaptitude.non.get());
       userAction.click(ui.contract.arretTravail.non.get());
       userAction.click(ui.next.get());
@@ -49,7 +47,6 @@ describe("Indemnité licenciement - CC 44", () => {
       - vérification que l'on ne demande pas si le salaire a eu des primes pour un Ingénieurs et cadres (Groupe V)
     `, async () => {
       // vérification que l'on demande si le salaire a eu des primes pour un Ouvriers et collaborateurs (Groupes I à III)
-      userAction.click(ui.salary.hasPartialTime.non.get());
       userAction.click(ui.salary.hasSameSalary.oui.get());
       expect(
         screen.queryByText(
@@ -113,7 +110,6 @@ describe("Indemnité licenciement - CC 44", () => {
 
     test(`Ajout des questions supplémentaires pour le dernier salaire`, () => {
       // vérification que l'on demande si le salaire a eu des primes pour un Ouvriers et collaborateurs (Groupes I à III)
-      userAction.click(ui.salary.hasPartialTime.non.get());
       userAction.click(ui.salary.hasSameSalary.non.get());
       userAction.click(ui.salary.variablePart.non.get());
       expect(
@@ -136,8 +132,6 @@ describe("Indemnité licenciement - CC 44", () => {
       render(<CalculateurIndemniteLicenciement title={""} />);
       userAction = new UserAction();
       userAction.click(ui.introduction.startButton.get());
-      userAction.click(ui.contract.type.cdi.get());
-      userAction.click(ui.contract.fauteGrave.non.get());
       userAction.click(ui.contract.inaptitude.non.get());
       userAction.click(ui.contract.arretTravail.non.get());
       userAction.click(ui.next.get());
@@ -158,7 +152,6 @@ describe("Indemnité licenciement - CC 44", () => {
     });
 
     test("Vérification que la cc est privilégié grâce à un salaire de référence conventionnel import", () => {
-      userAction.click(ui.salary.hasPartialTime.non.get());
       userAction.click(ui.salary.hasSameSalary.non.get());
       userAction.setInput(ui.salary.salaries.getAll()[0], "10000");
       userAction.setInput(ui.salary.salaries.getAll()[1], "1000");
@@ -187,8 +180,6 @@ describe("Indemnité licenciement - CC 44", () => {
 
     test(`ne doit pas afficher la question sur le salaire pour le dernier mois`, async () => {
       userAction.click(ui.introduction.startButton.get());
-      userAction.click(ui.contract.type.cdi.get());
-      userAction.click(ui.contract.fauteGrave.non.get());
       userAction.click(ui.contract.inaptitude.non.get());
       userAction.click(ui.contract.arretTravail.oui.get());
       userAction.setInput(ui.contract.dateArretTravail.get(), "01/09/2022");
@@ -205,7 +196,6 @@ describe("Indemnité licenciement - CC 44", () => {
       userAction.setInput(ui.seniority.endDate.get(), "01/03/2023");
       userAction.click(ui.seniority.hasAbsence.non.get());
       userAction.click(ui.next.get());
-      userAction.click(ui.salary.hasPartialTime.non.get());
       userAction.click(ui.salary.hasSameSalary.non.get());
       userAction.click(ui.salary.variablePart.non.get());
       expect(
@@ -221,8 +211,6 @@ describe("Indemnité licenciement - CC 44", () => {
     const userAction = new UserAction();
     userAction
       .click(ui.introduction.startButton.get())
-      .click(ui.contract.type.cdi.get())
-      .click(ui.contract.fauteGrave.non.get())
       .click(ui.contract.inaptitude.non.get())
       .click(ui.contract.arretTravail.non.get())
       .click(ui.next.get())
@@ -240,7 +228,6 @@ describe("Indemnité licenciement - CC 44", () => {
       .setInput(ui.seniority.endDate.get(), "01/01/2024")
       .click(ui.seniority.hasAbsence.non.get())
       .click(ui.next.get())
-      .click(ui.salary.hasPartialTime.non.get())
       .click(ui.salary.hasSameSalary.non.get())
       .setInput(ui.salary.salaries.getAll()[0], "3541")
       .setInput(ui.salary.salaries.getAll()[1], "3555")

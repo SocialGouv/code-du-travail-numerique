@@ -11,8 +11,6 @@ describe("Page ancienneté: vérification validation lorsque absence > anciennet
     );
     const userAction = new UserAction();
     userAction.click(ui.introduction.startButton.get());
-    userAction.click(ui.contract.type.cdi.get());
-    userAction.click(ui.contract.fauteGrave.non.get());
     userAction.click(ui.contract.inaptitude.oui.get());
     userAction.click(ui.next.get());
     userAction.click(ui.agreement.noAgreement.get());

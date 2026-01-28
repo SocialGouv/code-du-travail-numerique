@@ -17,6 +17,8 @@ import {
 import { usePathname } from "next/navigation";
 import { MatomoAnalytics } from "./MatomoAnalytics";
 import { SearchModalProvider } from "../recherche/modal/SearchModalContext";
+import { NonceProvider } from "./NonceContext";
+import { GovernmentOrganizationJsonLd, WebSiteJsonLd } from "../seo/jsonld";
 
 type Props = {
   children: React.ReactNode;
@@ -41,44 +43,48 @@ export default function DefaultLayout({
 
   return (
     <html {...getHtmlAttributes({ lang })}>
-      <head>
-        <StartDsfrLight />
-        <DsfrHead
-          Link={Link}
-          preloadFonts={[
-            //"Marianne-Light",
-            //"Marianne-Light_Italic",
-            "Marianne-Regular",
-            //"Marianne-Regular_Italic",
-            "Marianne-Medium",
-            //"Marianne-Medium_Italic",
-            "Marianne-Bold",
-            //"Marianne-Bold_Italic",
-            //"Spectral-Regular",
-            //"Spectral-ExtraBold"
-          ]}
-          nonce={nonce}
-        />
-      </head>
-      <body>
-        <DsfrProvider
-          lang={lang}
-          Link={Link}
-          defaultColorScheme={defaultColorScheme}
-        >
-          <SearchModalProvider>
-            {children}
-            {showCookieBanner && (
-              <ConsentManager
-                adsEnabled={isAdsEnabled()}
-                heatmapEnabled={isHeatmapEnabled()}
-              />
-            )}
-          </SearchModalProvider>
-        </DsfrProvider>
-        <MatomoAnalytics heatmapEnabled={heatMapEnabled} />
-        {ENV === "development" && <SentryTest />}
-      </body>
+      <NonceProvider nonce={nonce}>
+        <head>
+          <StartDsfrLight />
+          <DsfrHead
+            Link={Link}
+            preloadFonts={[
+              //"Marianne-Light",
+              //"Marianne-Light_Italic",
+              "Marianne-Regular",
+              //"Marianne-Regular_Italic",
+              "Marianne-Medium",
+              //"Marianne-Medium_Italic",
+              "Marianne-Bold",
+              //"Marianne-Bold_Italic",
+              //"Spectral-Regular",
+              //"Spectral-ExtraBold"
+            ]}
+            nonce={nonce}
+          />
+          <GovernmentOrganizationJsonLd />
+          <WebSiteJsonLd />
+        </head>
+        <body>
+          <DsfrProvider
+            lang={lang}
+            Link={Link}
+            defaultColorScheme={defaultColorScheme}
+          >
+            <SearchModalProvider>
+              {children}
+              {showCookieBanner && (
+                <ConsentManager
+                  adsEnabled={isAdsEnabled()}
+                  heatmapEnabled={isHeatmapEnabled()}
+                />
+              )}
+            </SearchModalProvider>
+          </DsfrProvider>
+          <MatomoAnalytics heatmapEnabled={heatMapEnabled} />
+          {ENV === "development" && <SentryTest />}
+        </body>
+      </NonceProvider>
     </html>
   );
 }

@@ -27,8 +27,6 @@ describe("Indemnité licenciement - CC 16", () => {
       userAction = new UserAction();
       userAction
         .click(ui.introduction.startButton.get())
-        .click(ui.contract.type.cdi.get())
-        .click(ui.contract.fauteGrave.non.get())
         .click(ui.contract.inaptitude.non.get())
         .click(ui.contract.arretTravail.non.get())
         .click(ui.next.get())
@@ -56,7 +54,6 @@ describe("Indemnité licenciement - CC 16", () => {
 
     test("Validation d'un cas avec calculs spécifiques", () => {
       userAction
-        .click(ui.salary.hasPartialTime.non.get())
         .click(ui.salary.hasSameSalary.oui.get())
         .setInput(ui.salary.sameSalaryValue.get(), "2500")
         .click(ui.next.get());
@@ -73,9 +70,7 @@ describe("Indemnité licenciement - CC 16", () => {
      - vérification que l'on ne demande pas si le salaire a eu des primes pour un ouvrier
     `, async () => {
       // vérification que l'on demande si le salaire a eu des primes pour un cadre
-      userAction
-        .click(ui.salary.hasPartialTime.non.get())
-        .click(ui.salary.hasSameSalary.oui.get());
+      userAction.click(ui.salary.hasSameSalary.oui.get());
 
       expect(
         rendering.queryByText(
