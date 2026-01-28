@@ -80,7 +80,7 @@ exports[`<ListLayout /> affiche la liste des contenus 1`] = `
                 class="fr-summary__title"
                 id="fr-summary-title-main"
               >
-                Résumé
+                Sommaire
               </h2>
               <ol>
                 <li>

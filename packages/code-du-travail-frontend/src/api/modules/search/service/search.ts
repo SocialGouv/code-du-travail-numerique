@@ -7,20 +7,26 @@ import {
 } from "../queries";
 import { removeDuplicate } from "../utils";
 import { getPrequalifiedResults } from "./prequalified";
+import { presearch } from "./presearch";
+import { SEARCH_ALGO, SearchResponse, SearchResult } from "./types";
+import { esDocToSearchResult, extractHits } from "../utils";
+
+export const DEFAULT_PRESEARCH_RESULTS_NUMBER = 8;
 
 const MAX_RESULTS = 100;
 const DEFAULT_RESULTS_NUMBER = 25;
 const THEMES_RESULTS_NUMBER = 5;
 const CDT_RESULTS_NUMBER = 5;
+
 const DOCUMENTS_ES = "documents_es";
-const THEMES_ES = "themes_es";
 const CDT_ES = "cdt_es";
 
 export const searchWithQuery = async (
   query: string,
-  skipPrequalifiedResults: boolean,
-  sizeParams?: number
-) => {
+  sizeParams = DEFAULT_RESULTS_NUMBER
+): Promise<SearchResponse> => {
+  const size = Math.min(sizeParams, MAX_RESULTS);
+
   const sources = [
     SOURCES.SHEET_MT,
     SOURCES.SHEET_SP,
@@ -33,50 +39,47 @@ export const searchWithQuery = async (
     SOURCES.CCN,
   ];
 
-  // check prequalified requests
-  const prequalifiedResults =
-    !skipPrequalifiedResults && (await getPrequalifiedResults(query));
-  let documents: any[] = [];
-  let articles: any[] = [];
-  let themes: any[] = [];
+  const articles: SearchResult[] = [];
 
-  if (prequalifiedResults) {
-    prequalifiedResults.forEach(
-      (item) => (item._source.algo = "pre-qualified")
+  const esReq = getRelatedThemesBody(query);
+  const themes = await elasticsearchClient
+    .search<any>({
+      body: esReq,
+      index: elasticDocumentsIndex,
+    })
+    .then((r) =>
+      extractHits(r).map(esDocToSearchResult(SEARCH_ALGO.FULL_TEXT))
     );
-    documents = prequalifiedResults.filter(
-      ({ _source: { source } }) =>
-        ![SOURCES.CDT, SOURCES.THEMES].includes(source)
-    );
-    articles = prequalifiedResults.filter(
-      ({ _source: { source } }) => source === SOURCES.CDT
-    );
-    themes = prequalifiedResults.filter(
-      ({ _source: { source } }) => source === SOURCES.THEMES
-    );
+
+  const parsed = await presearch(query, themes, true);
+
+  const documents: SearchResult[] = parsed.results.slice(0, size);
+
+  // check prequalified requests : to be removed soon
+  const prequalifiedResults = await getPrequalifiedResults(query);
+
+  const mappedPrequa: SearchResult[] = prequalifiedResults.map(
+    esDocToSearchResult(SEARCH_ALGO.PREQUA)
+  );
+
+  for (const e of mappedPrequa) {
+    if (e.source === SOURCES.CDT) {
+      articles.push(e);
+    } else if (e.source === SOURCES.THEMES) {
+      themes.push(e);
+    } else {
+      documents.push(e);
+    }
   }
 
   const searches = {};
   const shouldRequestCdt = articles.length < 5;
-  const shouldRequestThemes = themes.length < 5;
-  const size = Math.min(sizeParams ?? DEFAULT_RESULTS_NUMBER, MAX_RESULTS);
 
   // if not enough prequalified results, we also trigger ES search
-  if (
-    !prequalifiedResults ||
-    prequalifiedResults.length < DEFAULT_RESULTS_NUMBER
-  ) {
+  if (documents.length < size) {
     searches[DOCUMENTS_ES] = [
       { index: elasticDocumentsIndex },
       getSearchBody(query, size, sources),
-    ];
-  }
-
-  if (shouldRequestThemes) {
-    const themeNumber = THEMES_RESULTS_NUMBER - themes.length;
-    searches[THEMES_ES] = [
-      { index: elasticDocumentsIndex }, // we search in themeIndex here to try to match title in breadcrumb
-      getRelatedThemesBody(query, themeNumber),
     ];
   }
 
@@ -90,52 +93,26 @@ export const searchWithQuery = async (
 
   const results = await msearch(searches);
 
-  const fulltextHits = extractHits(results[DOCUMENTS_ES]);
-  fulltextHits.forEach((item) => (item._source.algo = "fulltext"));
-
+  const fulltextHits: SearchResult[] = extractHits(results[DOCUMENTS_ES]).map(
+    esDocToSearchResult(SEARCH_ALGO.FULL_TEXT)
+  );
   documents.push(...fulltextHits);
-  documents = removeDuplicate(documents);
 
-  if (shouldRequestThemes) {
-    const fulltextHits = extractHits(results[THEMES_ES]);
-    fulltextHits.forEach((item) => (item._source.algo = "fulltext"));
-    themes = removeDuplicate(
-      themes.concat(fulltextHits).slice(0, THEMES_RESULTS_NUMBER)
+  if (shouldRequestCdt) {
+    articles.push(
+      ...extractHits(results[CDT_ES]).map(
+        esDocToSearchResult(SEARCH_ALGO.FULL_TEXT)
+      )
     );
   }
-  if (shouldRequestCdt) {
-    articles = removeDuplicate(articles.concat(results[CDT_ES].hits.hits));
-  }
-
-  const mapDocuments = documents.map(({ _score, _source }) => ({
-    _score: _score ?? null,
-    ..._source,
-    title: _source.shortTitle ?? _source.title,
-  }));
 
   return {
-    articles: articles.map(({ _score, _source }) => ({
-      _score: _score ?? null,
-      ..._source,
-      title: _source.shortTitle ?? _source.title,
-    })),
-    documents: mapDocuments,
-    // we add source prop since some result might come from dedicated themes index
-    // which has no source prop
-    themes: themes.map(({ _score, _source }) => ({
-      _score: _score ?? null,
-      ..._source,
-      source: SOURCES.THEMES,
-    })),
+    articles: removeDuplicate(articles),
+    documents: removeDuplicate(documents).slice(0, size),
+    themes: removeDuplicate(themes).slice(0, THEMES_RESULTS_NUMBER),
+    class: parsed.classes[0],
   };
 };
-
-export function extractHits(response) {
-  if (response && response.hits) {
-    return response.hits.hits;
-  }
-  return [];
-}
 
 async function msearch(searches) {
   const requests: any[] = [];

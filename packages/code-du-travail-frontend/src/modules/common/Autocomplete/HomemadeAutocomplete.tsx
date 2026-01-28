@@ -37,6 +37,16 @@ type HomemadeAutocompleteProps<K> = InputProps & {
   ariaDescribedby?: string;
   onDropdownOpenChange?: (isOpen: boolean) => void;
   onEnterPress?: () => void;
+  /**
+   * Allows the consumer to provide their own visible <label htmlFor=...> and
+   * avoid creating a second associated label from DSFR Input.
+   */
+  disableNativeLabelAssociation?: boolean;
+  /**
+   * Override the listbox accessible name source.
+   * Useful when the visible label is outside of the DSFR Input.
+   */
+  listboxAriaLabelledby?: string;
 };
 
 export const HomemadeAutocomplete = <K,>({
@@ -63,6 +73,8 @@ export const HomemadeAutocomplete = <K,>({
   ariaDescribedby,
   onDropdownOpenChange,
   onEnterPress,
+  disableNativeLabelAssociation,
+  listboxAriaLabelledby,
 }: HomemadeAutocompleteProps<K>) => {
   const [loading, setLoading] = useState(false);
   const [inputValue, setInputValue] = useState(
@@ -325,7 +337,7 @@ export const HomemadeAutocomplete = <K,>({
       <Input
         nativeLabelProps={{
           id: labelId,
-          ...(id ? { htmlFor: id } : {}),
+          ...(id && !disableNativeLabelAssociation ? { htmlFor: id } : {}),
         }}
         hideLabel={hideLabel}
         addon={
@@ -419,7 +431,7 @@ export const HomemadeAutocomplete = <K,>({
         ref={listRef}
         id={listboxId}
         role="listbox"
-        aria-labelledby={labelId}
+        aria-labelledby={listboxAriaLabelledby ?? labelId}
         onMouseEnter={() => {
           isMouseOverListRef.current = true;
         }}
@@ -546,8 +558,11 @@ const buttonClose = css({
 });
 
 const isHighlightedStyle = css({
+  // Ensure a strong visual focus/selection indicator for keyboard navigation.
   bg: "var(--background-contrast-grey)",
   fontWeight: "bold",
+  outline: "2px solid var(--border-action-high-blue-france)",
+  outlineOffset: "-2px",
 });
 
 const link = css({

@@ -23,7 +23,9 @@ describe("Pages infographies", () => {
       "Découvrez toutes nos infographies : des visuels clairs pour comprendre vos droits, obligations et démarches en un coup d'oeil."
     );
     cy.findAllByRole("heading", { level: 2 }).should("have.length", 10);
-    cy.findAllByRole("heading", { level: 2 }).eq(0).should("contain", "Résumé");
+    cy.findAllByRole("heading", { level: 2 })
+      .eq(0)
+      .should("contain", "Sommaire");
     cy.findAllByRole("heading", { level: 2 })
       .eq(1)
       .should("contain", "Contenus populaires");

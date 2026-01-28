@@ -1,6 +1,6 @@
 import { ENTERPRISE_API_URL } from "../../../../config";
 import { Enterprise } from "../types";
-import { nafMapper } from "./naf";
+import { nafMapper } from "@socialgouv/cdtn-utils";
 import { ApiRechercheEntrepriseResponse } from "./types";
 
 export type Convention = {

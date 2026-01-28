@@ -11,7 +11,7 @@ import { SearchFeedback } from "./SearchFeedback";
 import { useSuggestions } from "../hooks/useSuggestions";
 import { MinSearchLengthHint } from "./MinSearchLengthHint";
 import { HomemadeAutocomplete } from "src/modules/common/Autocomplete";
-import { PresearchClass } from "src/api/modules/search/service/presearch";
+import { PresearchClass } from "src/api";
 
 interface ModalSearchProps {
   onClose?: () => void;
@@ -26,7 +26,8 @@ interface ModalSearchProps {
   onSearchSubmit?: (hasResults: boolean) => void;
   onFocusRequest?: () => void;
   noResultMessageRef?: React.RefObject<HTMLParagraphElement | null>;
-  classes?: PresearchClass[];
+  queryClass?: PresearchClass;
+  lastPresearchQuery?: string;
 }
 
 export interface ModalSearchHandle {
@@ -51,7 +52,8 @@ export const SearchInput = forwardRef<ModalSearchHandle, ModalSearchProps>(
       onSearchSubmit,
       onFocusRequest,
       noResultMessageRef,
-      classes = [],
+      queryClass = undefined,
+      lastPresearchQuery = undefined,
     },
     ref
   ) => {
@@ -73,8 +75,17 @@ export const SearchInput = forwardRef<ModalSearchHandle, ModalSearchProps>(
 
     const handleSearch = () => {
       if (!query.trim()) return;
-      emitClickSeeAllResultsEvent(query.trim(), classes);
-      router.push(`/recherche?query=${encodeURIComponent(query.trim())}`);
+      const normalizedQuery = query.trim();
+
+      // Use the presearch class only if it corresponds to the query currently displayed *and* presearch results are currently displayed.
+      const normalizedLastPresearchQuery = lastPresearchQuery?.trim();
+      const classForTracking =
+        resultsCount > 0 && normalizedLastPresearchQuery === normalizedQuery
+          ? queryClass
+          : undefined;
+
+      emitClickSeeAllResultsEvent(normalizedQuery, classForTracking);
+      router.push(`/recherche?query=${encodeURIComponent(normalizedQuery)}`);
       onClose?.();
     };
 
@@ -82,7 +93,6 @@ export const SearchInput = forwardRef<ModalSearchHandle, ModalSearchProps>(
       e?.preventDefault();
       if (!query.trim() || query.trim().length < MIN_SEARCH_LENGTH) return;
       clearSuggestions();
-      inputRef.current?.blur();
       onSearchTriggered?.(query.trim());
       onFocusRequest?.();
     };
@@ -122,48 +132,65 @@ export const SearchInput = forwardRef<ModalSearchHandle, ModalSearchProps>(
       }
     };
 
-    const inputId = `${contextType}-search-autocomplete`;
-    const labelId = `${contextType}-search-label`;
-    const feedbackId = `${contextType}-search-feedback`;
-    const minSearchHintId = `${contextType}-min-search-length-hint`;
-    const noResultParagraphId = `${contextType}-no-result-message`;
-    const ariaDescribedbyIds = `${minSearchHintId} ${noResultParagraphId}`;
+    const inputId = `search-${contextType}-autocomplete`;
+    const labelId = `search-${contextType}-label`;
+    const modalTitleId = "search-modal-title";
+    const feedbackId = `search-${contextType}-feedback`;
+    const desktopMinSearchHintId = `${feedbackId}-min-search-hint`;
+    const minSearchHintId = `search-${contextType}-min-search-length-hint`;
+    const inputHintId = `search-${contextType}-input-hint`;
+    const noResultParagraphId = `search-${contextType}-no-result-message`;
+    const ariaDescribedbyIds = `${inputHintId} ${minSearchHintId} ${desktopMinSearchHintId} ${noResultParagraphId}`;
 
     return (
       <div className={fr.cx("fr-mt-2w")}>
-        <form onSubmit={onSubmit} role="search" aria-label="Recherche">
+        <form onSubmit={onSubmit} role="search">
           <div className={searchContainerStyle}>
             <div className={autocompleteWrapper}>
+              {contextType !== "home" && (
+                <h1
+                  id={modalTitleId}
+                  className={fr.cx("fr-text--md", "fr-mb-1w")}
+                >
+                  Que souhaitez-vous savoir ?
+                </h1>
+              )}
               <label
                 htmlFor={inputId}
                 id={labelId}
                 className={fr.cx("fr-label")}
               >
                 {contextType === "home" ? (
-                  <h2 className={fr.cx("fr-text--md", "fr-mb-1w")}>
+                  <span className={fr.cx("fr-text--md", "fr-mb-1w")}>
                     Que souhaitez-vous savoir ?
-                  </h2>
+                  </span>
                 ) : (
-                  <h1 className={fr.cx("fr-text--md", "fr-mb-1w")}>
-                    Que souhaitez-vous savoir ?
-                  </h1>
+                  <span className={fr.cx("fr-sr-only")}>Rechercher</span>
                 )}
-                <p className={fr.cx("fr-text--sm", "fr-mb-2w", "fr-hint-text")}>
+                <span
+                  className={fr.cx("fr-text--sm", "fr-mb-2w", "fr-hint-text")}
+                >
                   par exemple : Comment sont comptés les congés pendant les
                   arrêts maladies ?
-                </p>
+                </span>
               </label>
+              <p id={inputHintId} className={fr.cx("fr-sr-only")}>
+                Tapez {MIN_SEARCH_LENGTH} caractères ou plus pour lancer une
+                recherche.
+              </p>
               <HomemadeAutocomplete<string>
                 id={inputId}
                 search={search}
                 displayLabel={(item: string | null) => item ?? ""}
                 highlightQuery={true}
-                label="Recherche"
+                label="Rechercher"
                 hideLabel={true}
                 isSearch={false}
                 displayNoResult={false}
                 inputRef={inputRef}
                 ariaDescribedby={ariaDescribedbyIds}
+                disableNativeLabelAssociation={true}
+                listboxAriaLabelledby={labelId}
                 onInputValueChange={(value) => {
                   setQuery(value || "");
                   onChangeQuery(value || "");

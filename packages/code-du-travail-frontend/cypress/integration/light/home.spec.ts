@@ -19,14 +19,15 @@ describe("Page d’accueil", () => {
         "Obtenez les réponses à vos questions sur le droit du travail."
       );
 
-    cy.contains("Recherchez par mots-clés");
-    cy.get("button[aria-label='Lancer la recherche']").contains("Rechercher");
-
     cy.findAllByRole("heading", {
       level: 2,
     })
       .eq(1)
       .should("have.text", "Comprendre le droit du travail");
+
+    cy.contains("Que souhaitez-vous savoir ?");
+    cy.get("#search-home-autocomplete").should("exist");
+    cy.contains("button", "Voir tous les résultats").should("be.visible");
 
     cy.contains("Voir tous les simulateurs").should(
       "have.attr",
@@ -75,33 +76,29 @@ describe("Page d’accueil", () => {
       .should("have.text", "Bienvenue sur le Code du travail numérique")
       .click();
 
-    cy.selectByLabel("Recherchez par mots-clés").type("congés");
+    cy.get("#search-home-autocomplete").type("congés");
 
-    cy.get('ul[role="listbox"]:visible')
-      .should("have.length", 1)
-      .as("suggestions");
+    // Pick the first available suggestion (content can evolve)
+    cy.get("#search-home-autocomplete-listbox")
+      .find("li[role='option']")
+      .should("have.length.gte", 1)
+      .first()
+      .click();
 
-    cy.get("@suggestions").find("li").its("length").should("be.gte", 1);
-
-    cy.get("@suggestions").within(() => {
-      cy.contains("li", "Congés sans solde").should("be.visible").click();
-    });
-
-    cy.contains('de recherche pour "Congés sans solde"').should("be.visible");
-    cy.contains("Articles du code du travail").should("be.visible");
-    cy.contains("Les thèmes suivants peuvent vous intéresser").should(
-      "be.visible"
+    // Search V2 displays presearch results preview directly on home
+    cy.get("#search-results-heading-home").should(
+      "have.text",
+      "Cela pourrait vous intéresser ?"
     );
+    cy.get("#search-results-heading-home")
+      .closest("section")
+      .find("ul[role='list'] li")
+      .its("length")
+      .should("be.gte", 1);
 
-    // "Plus de résultats" doit augmenter le nombre de résultats affichés
-    cy.findAllByRole("heading", { level: 3 }).then(($h3) => {
-      const initialCount = $h3.length;
-      expect(initialCount).to.be.greaterThan(0);
-
-      cy.get("button").contains("Plus de résultats").click();
-      cy.findAllByRole("heading", { level: 3 })
-        .its("length")
-        .should("be.gt", initialCount);
-    });
+    // And the CTA still navigates to the full search page
+    cy.contains("button", "Voir tous les résultats").click();
+    cy.url().should("include", "/recherche?query=");
+    cy.contains("h1", "Rechercher").should("exist");
   });
 });

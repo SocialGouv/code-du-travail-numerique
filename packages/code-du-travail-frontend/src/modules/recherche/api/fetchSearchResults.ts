@@ -1,11 +1,8 @@
-import {
-  SearchResult,
-  PresearchClass,
-} from "src/api/modules/search/service/presearch";
+import { PresearchClass, SearchResult } from "src/api";
 
 export interface FetchSearchResultsResponse {
   results: SearchResult[];
-  classes: PresearchClass[];
+  class: PresearchClass;
 }
 
 export const fetchSearchResults = async (
