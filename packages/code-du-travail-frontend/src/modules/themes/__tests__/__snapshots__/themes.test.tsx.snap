@@ -80,7 +80,7 @@ exports[`<Themes /> affiche la liste des thèmes principaux 1`] = `
                 </a>
               </p>
               <p
-                class="fr-tile__detail fr-mb-4w jc_center"
+                class="fr-tile__detail fr-text--sm fr-mb-4w jc_center"
               >
                 children 1 • children 2
               </p>
@@ -132,7 +132,7 @@ exports[`<Themes /> affiche la liste des thèmes principaux 1`] = `
                 </a>
               </p>
               <p
-                class="fr-tile__detail fr-mb-4w jc_center"
+                class="fr-tile__detail fr-text--sm fr-mb-4w jc_center"
               >
                 children 3 • children 4
               </p>
