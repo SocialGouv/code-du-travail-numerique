@@ -13,7 +13,7 @@ describe("Outil - Heures d'absence pour rechercher un emploi", () => {
       .first()
       .click();
     cy.contains("Précisez et sélectionnez votre convention collective");
-    cy.get('input[type="text"]').eq(1).type("1388");
+    cy.get("#agreement-search-autocomplete").type("1388");
     cy.get('ul[role="listbox"] li').contains("Industrie du pétrole").click();
     cy.contains("Nous n’avons pas de réponse pour cette convention collective");
     cy.get("button").contains("Suivant").click();
@@ -36,7 +36,7 @@ describe("Outil - Heures d'absence pour rechercher un emploi", () => {
       .first()
       .click();
     cy.contains("Précisez et sélectionnez votre convention collective");
-    cy.get('input[type="text"]').eq(1).type("843");
+    cy.get("#agreement-search-autocomplete").type("843");
     cy.get('ul[role="listbox"] li').contains("Boulangerie").click();
     cy.get("button").contains("Suivant").click();
 
@@ -78,7 +78,7 @@ describe("Outil - Heures d'absence pour rechercher un emploi", () => {
       .first()
       .click();
     cy.contains("Précisez et sélectionnez votre convention collective");
-    cy.get('input[type="text"]').eq(1).type("787");
+    cy.get("#agreement-search-autocomplete").type("787");
     cy.get('ul[role="listbox"] li')
       .contains(
         "Personnel des cabinets d'experts-comptables et de commissaires aux comptes"

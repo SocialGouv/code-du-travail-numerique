@@ -75,6 +75,7 @@ jobs:
             NEXT_PUBLIC_SENTRY_URL=https://sentry2.fabrique.social.gouv.fr
             NEXT_PUBLIC_ES_INDEX_PREFIX=cdtn-preprod
             NEXT_PUBLIC_BRANCH_NAME_SLUG=${{ steps.env.outputs.branchSlug32 }}
+            NEXT_PUBLIC_ENABLE_AB_TESTING=false
 
   kontinuous:
     needs: [build-app]

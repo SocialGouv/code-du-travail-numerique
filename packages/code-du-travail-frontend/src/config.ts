@@ -14,6 +14,8 @@ export const PACKAGE_VERSION = version;
 export const PIWIK_SITE_ID = process.env.NEXT_PUBLIC_PIWIK_SITE_ID ?? "3";
 export const PIWIK_URL =
   process.env.NEXT_PUBLIC_PIWIK_URL ?? "https://matomo.fabrique.social.gouv.fr";
+export const AB_TESTING_ENABLED =
+  process.env.NEXT_PUBLIC_ENABLE_AB_TESTING === "true";
 export const IS_PREPROD =
   process.env.NEXT_PUBLIC_IS_PREPRODUCTION_DEPLOYMENT ?? false;
 export const IS_PROD =

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import { useRouter } from "next/navigation";
 import * as Sentry from "@sentry/nextjs";
 import { Autocomplete } from "../common/Autocomplete";
@@ -18,11 +18,10 @@ export const SearchBar = ({ initialValue = "" }: SearchBarProps) => {
   const inputRef = useRef<HTMLInputElement>(null);
   const [query, setQuery] = useState(initialValue);
   const [key, setKey] = useState(0);
-  const { emitSearchEvent, emitSuggestionSelectionEvent } = useSearchTracking();
+  const { emitSuggestionSelectionEvent } = useSearchTracking();
 
   const handleSearch = (searchTerm: string) => {
     if (searchTerm.trim()) {
-      emitSearchEvent(searchTerm.trim());
       router.push(`/recherche?query=${encodeURIComponent(searchTerm.trim())}`);
       setKey((prevKey) => prevKey + 1);
     }

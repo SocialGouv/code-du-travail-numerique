@@ -3,13 +3,10 @@ import {
   routeBySource,
   SOURCES,
 } from "@socialgouv/cdtn-utils";
-import { useCallback } from "react";
-import { sendEvent } from "@socialgouv/matomo-next";
+import { useCallback, useRef } from "react";
+import { sendEvent, push } from "@socialgouv/matomo-next";
 import { MatomoBaseEvent } from "../analytics/types";
-import {
-  SearchResult,
-  PresearchClass,
-} from "src/api/modules/search/service/presearch";
+import { PresearchClass, SearchResult } from "src/api";
 
 enum MatomoSearchCategory {
   SEARCH = "search",
@@ -21,7 +18,8 @@ enum MatomoSearchCategory {
 
 enum MatomoSearchAction {
   PRESEARCH = "presearch",
-  CLIK_SEE_ALL_RESULTS = "clickSeeAllResults",
+  FULL_SEARCH = "fullsearch",
+  CLICK_SEE_ALL_RESULTS = "clickSeeAllResults",
   SELECT_PRESEARCH_RESULT = "selectPresearchResult",
 }
 
@@ -31,6 +29,8 @@ export enum MatomoWidgetEvent {
 }
 
 export const useSearchTracking = () => {
+  const lastFullsearchKeyRef = useRef<string | null>(null);
+
   const emitResultSelectionEvent = useCallback(
     (
       source: keyof typeof routeBySource | "external",
@@ -54,14 +54,52 @@ export const useSearchTracking = () => {
     []
   );
 
-  const emitSearchEvent = useCallback((searchTerm: string) => {
-    if (searchTerm?.trim()) {
-      sendEvent({
-        category: MatomoSearchCategory.CANDIDATE_RESULTS,
-        action: searchTerm.trim(),
+  const emitFullsearchEvent = useCallback(
+    (searchTerm: string, queryClass: string) => {
+      if (searchTerm?.trim()) {
+        const name = JSON.stringify({
+          query: searchTerm.trim(),
+          class: queryClass,
+        });
+
+        sendEvent({
+          category: MatomoSearchCategory.SEARCH,
+          action: MatomoSearchAction.FULL_SEARCH,
+          name,
+        });
+      }
+    },
+    []
+  );
+
+  // Emits the FULL_SEARCH event at most once for a given {query, class} pair
+  // during the current component lifetime.
+  const emitFullsearchEventOnce = useCallback(
+    (searchTerm: string, queryClass: string) => {
+      const normalizedQuery = searchTerm?.trim();
+      if (!normalizedQuery) {
+        return;
+      }
+
+      const key = `${normalizedQuery}::${queryClass}`;
+      if (lastFullsearchKeyRef.current === key) {
+        return;
+      }
+      lastFullsearchKeyRef.current = key;
+
+      const name = JSON.stringify({
+        query: normalizedQuery,
+        class: queryClass,
       });
-    }
-  }, []);
+
+      sendEvent({
+        category: MatomoSearchCategory.SEARCH,
+        action: MatomoSearchAction.FULL_SEARCH,
+        name,
+      });
+    },
+    []
+  );
 
   const emitNextPageEvent = useCallback((query: string) => {
     sendEvent({
@@ -81,18 +119,26 @@ export const useSearchTracking = () => {
     []
   );
 
-  const emitWidgetEvent = useCallback((event: MatomoWidgetEvent) => {
+  const emitWidgetLogoClickEvent = useCallback(() => {
     sendEvent({
       category: MatomoBaseEvent.WIDGET_SEARCH,
-      action: event,
+      action: MatomoWidgetEvent.CLICK_LOGO,
+    });
+  }, []);
+
+  const emitWidgetSubmitSearchEvent = useCallback((query: string) => {
+    sendEvent({
+      category: MatomoBaseEvent.WIDGET_SEARCH,
+      action: MatomoWidgetEvent.SUBMIT_SEARCH,
+      name: query,
     });
   }, []);
 
   const emitPresearchEvent = useCallback(
-    (query: string, classes: PresearchClass[]) => {
+    (query: string, queryClass: PresearchClass) => {
       const name = JSON.stringify({
         query: query.trim(),
-        classes,
+        class: queryClass,
       });
       sendEvent({
         category: MatomoSearchCategory.SEARCH,
@@ -104,42 +150,54 @@ export const useSearchTracking = () => {
   );
 
   const emitClickSeeAllResultsEvent = useCallback(
-    (query: string, classes?: PresearchClass[]) => {
+    (query: string, queryClass?: PresearchClass) => {
       const name = JSON.stringify({
         query: query.trim(),
-        classes,
+        class: queryClass,
       });
       sendEvent({
         category: MatomoSearchCategory.SEARCH,
-        action: MatomoSearchAction.CLIK_SEE_ALL_RESULTS,
+        action: MatomoSearchAction.CLICK_SEE_ALL_RESULTS,
         name,
       });
     },
     []
   );
 
-  const emitSelectPresearchResultEvent = useCallback((result: SearchResult) => {
-    const name = JSON.stringify({
-      algo: result.algo || "presearch",
-      classe: result.class,
-      url: `/${getRouteBySource(result.source)}/${result.slug}`,
-    });
+  const emitSelectPresearchResultEvent = useCallback(
+    (result: SearchResult, queryClass: string) => {
+      const name = JSON.stringify({
+        algo: result.algo,
+        queryClass,
+        url: `/${getRouteBySource(result.source)}/${result.slug}`,
+      });
 
-    sendEvent({
-      category: MatomoSearchCategory.SEARCH,
-      action: MatomoSearchAction.SELECT_PRESEARCH_RESULT,
-      name,
-    });
+      sendEvent({
+        category: MatomoSearchCategory.SEARCH,
+        action: MatomoSearchAction.SELECT_PRESEARCH_RESULT,
+        name,
+      });
+    },
+    []
+  );
+
+  // standard search event for Matomo, called explicitly in Modal Presearch context
+  // otherwise, it's triggered automatically by matomo-next when visiting /recherche page path
+  const emitMatomoTrackSiteSearch = useCallback((query: string) => {
+    push(["trackSiteSearch", query]);
   }, []);
 
   return {
     emitResultSelectionEvent,
-    emitSearchEvent,
     emitNextPageEvent,
     emitSuggestionSelectionEvent,
-    emitWidgetEvent,
+    emitWidgetLogoClickEvent,
+    emitWidgetSubmitSearchEvent,
     emitPresearchEvent,
     emitSelectPresearchResultEvent,
     emitClickSeeAllResultsEvent,
+    emitFullsearchEvent,
+    emitFullsearchEventOnce,
+    emitMatomoTrackSiteSearch,
   };
 };
