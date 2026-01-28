@@ -37,8 +37,6 @@ type Props = {
 export const HeaderDsfr = ({ navigation, currentPath }: Props) => {
   const { isOpen, openModal, closeModal } = useSearchModal();
 
-  const isSearchV2 = variant === ABTestVariant.SEARCH_V2;
-
   const handleSearchToggle = () => {
     if (isOpen) {
       closeModal();
