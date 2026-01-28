@@ -34,7 +34,7 @@ export const createAgreement1516StoreSalaires: StoreSlice<
   agreement1516Data: { ...initialState },
   agreement1516Function: {
     onInit: () => {
-      const dateArretTravail = get().contratTravailData.input.dateArretTravail;
+      const dateArretTravail = get().ancienneteData.input.dateArretTravail;
 
       if (dateArretTravail) {
         get().situationFunction.setSituation("noticeSalaryPeriods", "[]");

@@ -27,6 +27,12 @@ const StepAnciennete = () => {
     dateSortie,
     onChangeDateSortie,
     onChangeDateNotification,
+    arretTravail,
+    onChangeArretTravail,
+    errorArretTravail,
+    dateArretTravail,
+    onChangeDateArretTravail,
+    errorDateArretTravail,
     errorDateSortie,
     errorAbsenceProlonge,
     errorDateEntree,
@@ -47,6 +53,12 @@ const StepAnciennete = () => {
     onChangeDateSortie: state.ancienneteFunction.onChangeDateSortie,
     onChangeDateNotification: state.ancienneteFunction.onChangeDateNotification,
     errorDateSortie: state.ancienneteData.error.errorDateSortie,
+    arretTravail: state.ancienneteData.input.arretTravail,
+    dateArretTravail: state.ancienneteData.input.dateArretTravail,
+    onChangeArretTravail: state.ancienneteFunction.onChangeArretTravail,
+    onChangeDateArretTravail: state.ancienneteFunction.onChangeDateArretTravail,
+    errorArretTravail: state.ancienneteData.error.errorArretTravail,
+    errorDateArretTravail: state.ancienneteData.error.errorDateArretTravail,
     errorAbsenceProlonge: state.ancienneteData.error.errorAbsenceProlonge,
     errorDateEntree: state.ancienneteData.error.errorDateEntree,
     errorAbsencePeriods: state.ancienneteData.error.errorAbsencePeriods,
@@ -92,6 +104,36 @@ const StepAnciennete = () => {
           dataTestId={"date-sortie"}
           subLabel="La date de rupture du contrat est indiquée dans la convention de rupture. Dans tous les cas, elle ne peut intervenir avant la fin du délai laissé à l’administration pour valider la rupture conventionnelle."
         />
+        <RadioQuestion
+          questions={[
+            {
+              label: "Oui",
+              value: "oui",
+              id: "arretTravail-oui",
+            },
+            {
+              label: "Non",
+              value: "non",
+              id: "arretTravail-non",
+            },
+          ]}
+          name="licenciementArretTravail"
+          label="Le salarié est-il en arrêt de travail au moment de la rupture conventionnelle&nbsp;?"
+          selectedOption={arretTravail}
+          onChangeSelectedOption={onChangeArretTravail}
+          error={errorArretTravail}
+        />
+        {arretTravail === "oui" && (
+          <TextQuestion
+            label="Depuis quelle date le salarié est-il en arrêt&nbsp;?"
+            inputType="date"
+            value={dateArretTravail}
+            onChange={onChangeDateArretTravail}
+            error={errorDateArretTravail}
+            id="dateArretTravail"
+            dataTestId={"date-arret-travail"}
+          />
+        )}
       </div>
       <div className={fr.cx("fr-mt-2w")}>
         <h3>Période d&apos;absence prolongée</h3>

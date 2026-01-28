@@ -30,6 +30,12 @@ const StepAnciennete = () => {
     onChangeDateNotification,
     errorDateNotification,
     errorDateSortie,
+    arretTravail,
+    onChangeArretTravail,
+    errorArretTravail,
+    dateArretTravail,
+    onChangeDateArretTravail,
+    errorDateArretTravail,
     errorAbsenceProlonge,
     errorDateEntree,
     errorAbsencePeriods,
@@ -48,6 +54,12 @@ const StepAnciennete = () => {
     dateSortie: state.ancienneteData.input.dateSortie,
     onChangeDateSortie: state.ancienneteFunction.onChangeDateSortie,
     dateNotification: state.ancienneteData.input.dateNotification,
+    arretTravail: state.ancienneteData.input.arretTravail,
+    dateArretTravail: state.ancienneteData.input.dateArretTravail,
+    onChangeArretTravail: state.ancienneteFunction.onChangeArretTravail,
+    onChangeDateArretTravail: state.ancienneteFunction.onChangeDateArretTravail,
+    errorArretTravail: state.ancienneteData.error.errorArretTravail,
+    errorDateArretTravail: state.ancienneteData.error.errorDateArretTravail,
     onChangeDateNotification: state.ancienneteFunction.onChangeDateNotification,
     errorDateNotification: state.ancienneteData.error.errorDateNotification,
     errorDateSortie: state.ancienneteData.error.errorDateSortie,
@@ -102,6 +114,36 @@ const StepAnciennete = () => {
           dataTestId={"date-sortie"}
           subLabel="En cas de dispense de préavis à l'initiative de l'employeur, ou si le licenciement intervient à la suite d'un avis d'inaptitude non professionnelle, indiquer la date de fin du préavis « théorique » non effectué."
         />
+        <RadioQuestion
+          questions={[
+            {
+              label: "Oui",
+              value: "oui",
+              id: "arretTravail-oui",
+            },
+            {
+              label: "Non",
+              value: "non",
+              id: "arretTravail-non",
+            },
+          ]}
+          name="licenciementArretTravail"
+          label="Le salarié est-il en arrêt de travail au moment du licenciement&nbsp;?"
+          selectedOption={arretTravail}
+          onChangeSelectedOption={onChangeArretTravail}
+          error={errorArretTravail}
+        />
+        {arretTravail === "oui" && (
+          <TextQuestion
+            label="Depuis quelle date le salarié est-il en arrêt&nbsp;?"
+            inputType="date"
+            value={dateArretTravail}
+            onChange={onChangeDateArretTravail}
+            error={errorDateArretTravail}
+            id="dateArretTravail"
+            dataTestId={"date-arret-travail"}
+          />
+        )}
       </div>
       <div className={fr.cx("fr-mt-2w")}>
         <h3>Période d&apos;absence prolongée</h3>

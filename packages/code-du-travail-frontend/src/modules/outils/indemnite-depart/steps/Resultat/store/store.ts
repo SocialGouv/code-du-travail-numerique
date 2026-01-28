@@ -140,7 +140,7 @@ const createResultStore: StoreSlicePublicodes<
           get().ancienneteData.input.dateEntree!,
           get().ancienneteData.input.dateSortie!,
           get().contratTravailData.input.licenciementInaptitude === "oui",
-          get().contratTravailData.input.arretTravail === "oui",
+          get().ancienneteData.input.arretTravail === "oui",
           { ...infos }
         ),
         absencePeriods:

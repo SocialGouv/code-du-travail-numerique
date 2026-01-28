@@ -35,7 +35,6 @@ describe("Rupture Co - CC 2120", () => {
 
     userAction
       .click(ui.introduction.startButton.get())
-      .click(ui.contract.arretTravail.non.get())
       .click(ui.next.get())
       .click(ui.next.get());
   });
@@ -50,6 +49,7 @@ describe("Rupture Co - CC 2120", () => {
       .click(ui.next.get())
       .setInput(ui.seniority.startDate.get(), "01/01/1980")
       .setInput(ui.seniority.endDate.get(), "01/03/2024")
+      .click(ui.seniority.arretTravail.non.get())
       .click(ui.seniority.hasAbsence.non.get())
       .click(ui.next.get())
       .click(ui.salary.hasSameSalary.oui.get())
@@ -75,6 +75,7 @@ describe("Rupture Co - CC 2120", () => {
       .click(ui.next.get())
       .setInput(ui.seniority.startDate.get(), "01/01/1980")
       .setInput(ui.seniority.endDate.get(), "01/03/2024")
+      .click(ui.seniority.arretTravail.non.get())
       .click(ui.seniority.hasAbsence.oui.get())
       .setInput(ui.seniority.absences.duration(0).get(), "8")
       .setInput(ui.seniority.absences.date(0).get(), "01/01/2015")

@@ -23,7 +23,6 @@ describe("Indemnité licenciement - CC 44", () => {
       userAction = new UserAction();
       userAction.click(ui.introduction.startButton.get());
       userAction.click(ui.contract.inaptitude.non.get());
-      userAction.click(ui.contract.arretTravail.non.get());
       userAction.click(ui.next.get());
       userAction.click(ui.next.get());
       await userAction.changeInputList(
@@ -35,6 +34,7 @@ describe("Indemnité licenciement - CC 44", () => {
       userAction.setInput(ui.seniority.startDate.get(), "01/01/2000");
       userAction.setInput(ui.seniority.notificationDate.get(), "01/01/2022");
       userAction.setInput(ui.seniority.endDate.get(), "01/03/2022");
+      userAction.click(ui.seniority.arretTravail.non.get());
       userAction.click(ui.seniority.hasAbsence.non.get());
       userAction.click(ui.next.get());
       // Validation que l'on est bien sur l'étape ancienneté
@@ -133,7 +133,6 @@ describe("Indemnité licenciement - CC 44", () => {
       userAction = new UserAction();
       userAction.click(ui.introduction.startButton.get());
       userAction.click(ui.contract.inaptitude.non.get());
-      userAction.click(ui.contract.arretTravail.non.get());
       userAction.click(ui.next.get());
       userAction.click(ui.next.get());
       await userAction.changeInputList(
@@ -145,6 +144,7 @@ describe("Indemnité licenciement - CC 44", () => {
       userAction.setInput(ui.seniority.startDate.get(), "01/01/2000");
       userAction.setInput(ui.seniority.notificationDate.get(), "01/01/2023");
       userAction.setInput(ui.seniority.endDate.get(), "01/01/2023");
+      userAction.click(ui.seniority.arretTravail.non.get());
       userAction.click(ui.seniority.hasAbsence.non.get());
       userAction.click(ui.next.get());
       // Validation que l'on est bien sur l'étape ancienneté
@@ -181,8 +181,6 @@ describe("Indemnité licenciement - CC 44", () => {
     test(`ne doit pas afficher la question sur le salaire pour le dernier mois`, async () => {
       userAction.click(ui.introduction.startButton.get());
       userAction.click(ui.contract.inaptitude.non.get());
-      userAction.click(ui.contract.arretTravail.oui.get());
-      userAction.setInput(ui.contract.dateArretTravail.get(), "01/09/2022");
       userAction.click(ui.next.get());
       userAction.click(ui.next.get());
       await userAction.changeInputList(
@@ -194,6 +192,8 @@ describe("Indemnité licenciement - CC 44", () => {
       userAction.setInput(ui.seniority.startDate.get(), "01/01/2000");
       userAction.setInput(ui.seniority.notificationDate.get(), "01/01/2023");
       userAction.setInput(ui.seniority.endDate.get(), "01/03/2023");
+      userAction.click(ui.seniority.arretTravail.oui.get());
+      userAction.setInput(ui.seniority.dateArretTravail.get(), "01/09/2022");
       userAction.click(ui.seniority.hasAbsence.non.get());
       userAction.click(ui.next.get());
       userAction.click(ui.salary.hasSameSalary.non.get());
@@ -212,7 +212,6 @@ describe("Indemnité licenciement - CC 44", () => {
     userAction
       .click(ui.introduction.startButton.get())
       .click(ui.contract.inaptitude.non.get())
-      .click(ui.contract.arretTravail.non.get())
       .click(ui.next.get())
       .click(ui.next.get());
 
@@ -226,6 +225,7 @@ describe("Indemnité licenciement - CC 44", () => {
       .setInput(ui.seniority.startDate.get(), "01/01/2019")
       .setInput(ui.seniority.notificationDate.get(), "01/01/2024")
       .setInput(ui.seniority.endDate.get(), "01/01/2024")
+      .click(ui.seniority.arretTravail.non.get())
       .click(ui.seniority.hasAbsence.non.get())
       .click(ui.next.get())
       .click(ui.salary.hasSameSalary.non.get())

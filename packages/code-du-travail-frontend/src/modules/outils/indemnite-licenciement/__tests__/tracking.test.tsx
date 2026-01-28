@@ -40,7 +40,6 @@ describe("Indemnité licenciement - Tracking", () => {
       name: "contrat_travail",
     });
     userAction.click(ui.contract.inaptitude.non.get());
-    userAction.click(ui.contract.arretTravail.non.get());
     userAction.click(ui.next.get());
     expect(sendEvent).toHaveBeenCalledWith({
       category: "outil",
@@ -74,6 +73,7 @@ describe("Indemnité licenciement - Tracking", () => {
     userAction.setInput(ui.seniority.startDate.get(), "01/01/2022");
     userAction.setInput(ui.seniority.notificationDate.get(), "15/12/2022");
     userAction.setInput(ui.seniority.endDate.get(), "15/12/2022");
+    userAction.click(ui.seniority.arretTravail.non.get());
     userAction.click(ui.seniority.hasAbsence.non.get());
     userAction.click(ui.next.get());
     expect(sendEvent).toHaveBeenCalledWith({
@@ -124,7 +124,6 @@ describe("Indemnité licenciement - Tracking", () => {
   test("vérifier le tracking sur la recherche entreprise", async () => {
     userAction.click(ui.introduction.startButton.get());
     userAction.click(ui.contract.inaptitude.non.get());
-    userAction.click(ui.contract.arretTravail.non.get());
     userAction.click(ui.next.get());
     userAction.click(ui.agreement.unknownAgreement.get());
     userAction.setInput(ui.agreement.agreementCompanyInput.get(), "carrefour");
@@ -143,7 +142,6 @@ describe("Indemnité licenciement - Tracking", () => {
     userAction
       .click(ui.introduction.startButton.get())
       .click(ui.contract.inaptitude.non.get())
-      .click(ui.contract.arretTravail.non.get())
       .click(ui.next.get())
       .click(ui.agreement.noAgreement.get())
       .click(ui.agreement.agreement.get())
@@ -161,7 +159,6 @@ describe("Indemnité licenciement - Tracking", () => {
     userAction
       .click(ui.introduction.startButton.get())
       .click(ui.contract.inaptitude.non.get())
-      .click(ui.contract.arretTravail.non.get())
       .click(ui.next.get())
       .click(ui.agreement.noAgreement.get())
       .click(ui.agreement.agreement.get())
@@ -216,7 +213,6 @@ describe("Indemnité licenciement - Tracking", () => {
     );
     userAction.click(ui.introduction.startButton.get());
     userAction.click(ui.contract.inaptitude.non.get());
-    userAction.click(ui.contract.arretTravail.non.get());
     userAction.click(ui.next.get());
     userAction.click(ui.next.get());
     expect(sendEvent).toHaveBeenCalledWith({
@@ -234,7 +230,6 @@ describe("Indemnité licenciement - Tracking", () => {
     );
     userAction.click(ui.introduction.startButton.get());
     userAction.click(ui.contract.inaptitude.non.get());
-    userAction.click(ui.contract.arretTravail.non.get());
     userAction.click(ui.next.get());
     userAction.click(ui.next.get());
     expect(sendEvent).toHaveBeenCalledWith({

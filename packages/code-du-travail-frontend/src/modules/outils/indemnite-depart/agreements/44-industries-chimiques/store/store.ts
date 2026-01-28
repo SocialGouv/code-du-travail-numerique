@@ -48,7 +48,7 @@ export const createAgreement44StoreSalaires: StoreSlice<
             "contrat-salarie-convention-collective-industries-chimiques-indemnite-de-licenciement-categorie-professionnelle"
         )?.info;
       const ancienneteInput = get().ancienneteData.input;
-      const dateArretTravail = get().contratTravailData.input.dateArretTravail;
+      const dateArretTravail = get().ancienneteData.input.dateArretTravail;
       const periods = computeSalaryPeriods({
         dateEntree: generateFrenchDate(
           new Date(
@@ -121,7 +121,7 @@ export const createAgreement44StoreSalaires: StoreSlice<
       const isOuvrierOrAgent =
         categoryPro === "'Ouvriers et collaborateurs (Groupes I à III)'" ||
         categoryPro === "'Agents de maîtrise et techniciens (Groupe IV)'";
-      const dateArretTravail = get().contratTravailData.input.dateArretTravail;
+      const dateArretTravail = get().ancienneteData.input.dateArretTravail;
       get().situationFunction.setSituation("hasVariablePay", value);
       applyGenericValidation(get, set, [
         { paramName: "hasVariablePay", value: value },

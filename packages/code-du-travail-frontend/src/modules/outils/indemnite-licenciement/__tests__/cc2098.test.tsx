@@ -35,6 +35,7 @@ describe("Indemnité licenciement- CC 2098", () => {
       .setInput(ui.seniority.startDate.get(), "01/01/2009")
       .setInput(ui.seniority.notificationDate.get(), "01/01/2024")
       .setInput(ui.seniority.endDate.get(), "01/01/2024")
+      .click(ui.seniority.arretTravail.non.get())
       .click(ui.seniority.hasAbsence.oui.get())
       .setInput(ui.seniority.absences.duration(0).get(), "8")
       .click(ui.next.get())

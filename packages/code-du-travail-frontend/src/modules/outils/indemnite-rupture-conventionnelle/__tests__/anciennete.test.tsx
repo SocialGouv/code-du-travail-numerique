@@ -17,10 +17,7 @@ describe("Rupture conventionnelle - Etape ancienneté", () => {
       />
     );
     userAction = new UserAction();
-    userAction
-      .click(ui.introduction.startButton.get())
-      .click(ui.contract.arretTravail.non.get())
-      .click(ui.next.get());
+    userAction.click(ui.introduction.startButton.get()).click(ui.next.get());
 
     expect(ui.activeStep.query()).toHaveTextContent("Convention collective");
 
@@ -31,6 +28,7 @@ describe("Rupture conventionnelle - Etape ancienneté", () => {
     userAction
       .setInput(ui.seniority.startDate.get(), "01/01/2024")
       .setInput(ui.seniority.endDate.get(), "01/01/2024")
+      .click(ui.seniority.arretTravail.non.get())
       .click(ui.seniority.hasAbsence.non.get())
       .click(ui.next.get());
 

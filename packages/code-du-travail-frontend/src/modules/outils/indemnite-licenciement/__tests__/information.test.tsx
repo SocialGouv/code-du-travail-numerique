@@ -31,7 +31,6 @@ describe("Indemnité licenciement - Validation de la page information", () => {
       userAction
         .click(ui.introduction.startButton.get())
         .click(ui.contract.inaptitude.non.get())
-        .click(ui.contract.arretTravail.non.get())
         .click(ui.next.get())
         .click(ui.next.get());
       // Validation que l'on est bien sur l'étape ancienneté

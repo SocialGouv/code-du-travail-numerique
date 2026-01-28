@@ -28,7 +28,6 @@ describe("Indemnité licenciement - CC 2596", () => {
     userAction
       .click(ui.introduction.startButton.get())
       .click(ui.contract.inaptitude.non.get())
-      .click(ui.contract.arretTravail.non.get())
       .click(ui.next.get())
       .click(ui.next.get());
   });
@@ -42,6 +41,7 @@ describe("Indemnité licenciement - CC 2596", () => {
     userAction.setInput(ui.seniority.startDate.get(), "01/01/2018");
     userAction.setInput(ui.seniority.notificationDate.get(), "01/01/2022");
     userAction.setInput(ui.seniority.endDate.get(), "01/01/2022");
+    userAction.click(ui.seniority.arretTravail.non.get());
     userAction.click(ui.seniority.hasAbsence.non.get());
     userAction.click(ui.next.get());
     expect(ui.activeStep.query()).toHaveTextContent("Salaires");
@@ -118,6 +118,7 @@ describe("Indemnité licenciement - CC 2596", () => {
     userAction.setInput(ui.seniority.startDate.get(), "01/01/2022");
     userAction.setInput(ui.seniority.notificationDate.get(), "01/03/2022");
     userAction.setInput(ui.seniority.endDate.get(), "01/03/2022");
+    userAction.click(ui.seniority.arretTravail.non.get());
     userAction.click(ui.seniority.hasAbsence.non.get());
     userAction.click(ui.next.get());
     expect(ui.activeStep.query()).toHaveTextContent("Salaires");
@@ -132,13 +133,6 @@ describe("Indemnité licenciement - CC 2596", () => {
     expect(ui.result.resultatLegal.get()).toHaveTextContent("0 €");
   });
   test(`Cadres avec arret de travail`, async () => {
-    userAction
-      .click(ui.previous.get())
-      .click(ui.previous.get())
-      .click(ui.contract.arretTravail.oui.get());
-
-    userAction.setInput(ui.contract.dateArretTravail.get(), "01/01/2022");
-    userAction.click(ui.next.get()).click(ui.next.get());
     await userAction.changeInputList(
       ui.information.agreement2596.proCategory.get(),
       "Cadres"
@@ -148,6 +142,8 @@ describe("Indemnité licenciement - CC 2596", () => {
     userAction.setInput(ui.seniority.startDate.get(), "01/01/2018");
     userAction.setInput(ui.seniority.notificationDate.get(), "01/01/2022");
     userAction.setInput(ui.seniority.endDate.get(), "01/06/2022");
+    userAction.click(ui.seniority.arretTravail.oui.get());
+    userAction.setInput(ui.seniority.dateArretTravail.get(), "01/01/2022");
     userAction.click(ui.seniority.hasAbsence.non.get());
     userAction.click(ui.next.get());
     expect(ui.activeStep.query()).toHaveTextContent("Salaires");
@@ -170,6 +166,7 @@ describe("Indemnité licenciement - CC 2596", () => {
     userAction.setInput(ui.seniority.startDate.get(), "01/01/2000");
     userAction.setInput(ui.seniority.notificationDate.get(), "01/01/2022");
     userAction.setInput(ui.seniority.endDate.get(), "01/03/2022");
+    userAction.click(ui.seniority.arretTravail.non.get());
     userAction.click(ui.seniority.hasAbsence.non.get());
     userAction.click(ui.next.get());
     expect(ui.activeStep.query()).toHaveTextContent("Salaires");
@@ -202,6 +199,7 @@ describe("Indemnité licenciement - CC 2596", () => {
     userAction.setInput(ui.seniority.startDate.get(), "01/01/2020");
     userAction.setInput(ui.seniority.notificationDate.get(), "01/03/2024");
     userAction.setInput(ui.seniority.endDate.get(), "01/03/2024");
+    userAction.click(ui.seniority.arretTravail.non.get());
     userAction.click(ui.seniority.hasAbsence.non.get());
     userAction.click(ui.next.get());
     expect(ui.activeStep.query()).toHaveTextContent("Salaires");
@@ -234,6 +232,7 @@ describe("Indemnité licenciement - CC 2596", () => {
     userAction.setInput(ui.seniority.startDate.get(), "01/09/2023");
     userAction.setInput(ui.seniority.notificationDate.get(), "01/03/2024");
     userAction.setInput(ui.seniority.endDate.get(), "01/03/2024");
+    userAction.click(ui.seniority.arretTravail.non.get());
     userAction.click(ui.seniority.hasAbsence.non.get());
     userAction.click(ui.next.get());
 

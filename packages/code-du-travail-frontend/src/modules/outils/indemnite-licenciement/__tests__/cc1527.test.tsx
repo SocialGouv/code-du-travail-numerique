@@ -27,7 +27,6 @@ describe("Indemnité licenciement - CC 1527", () => {
     userAction
       .click(ui.introduction.startButton.get())
       .click(ui.contract.inaptitude.non.get())
-      .click(ui.contract.arretTravail.non.get())
       .click(ui.next.get())
       .click(ui.next.get());
   });
@@ -36,6 +35,7 @@ describe("Indemnité licenciement - CC 1527", () => {
       .setInput(ui.seniority.startDate.get(), "01/01/2014")
       .setInput(ui.seniority.notificationDate.get(), "01/01/2024")
       .setInput(ui.seniority.endDate.get(), "01/01/2024")
+      .click(ui.seniority.arretTravail.non.get())
       .click(ui.seniority.hasAbsence.non.get())
       .click(ui.next.get())
       .click(ui.salary.hasSameSalary.non.get())
@@ -66,6 +66,7 @@ describe("Indemnité licenciement - CC 1527", () => {
       .setInput(ui.seniority.startDate.get(), "01/01/2014")
       .setInput(ui.seniority.notificationDate.get(), "01/01/2024")
       .setInput(ui.seniority.endDate.get(), "01/01/2024")
+      .click(ui.seniority.arretTravail.non.get())
       .click(ui.seniority.hasAbsence.non.get())
       .click(ui.next.get())
       .click(ui.salary.hasSameSalary.non.get())

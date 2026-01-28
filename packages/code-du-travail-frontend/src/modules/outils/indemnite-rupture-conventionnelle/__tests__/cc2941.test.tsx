@@ -35,7 +35,6 @@ describe("Indemnité licenciement - CC 2941", () => {
 
     userAction
       .click(ui.introduction.startButton.get())
-      .click(ui.contract.arretTravail.non.get())
       .click(ui.next.get())
       .click(ui.next.get());
   });
@@ -44,6 +43,7 @@ describe("Indemnité licenciement - CC 2941", () => {
     userAction
       .setInput(ui.seniority.startDate.get(), "01/01/2000")
       .setInput(ui.seniority.endDate.get(), "01/01/2025")
+      .click(ui.seniority.arretTravail.non.get())
       .click(ui.seniority.hasAbsence.non.get())
       .click(ui.next.get())
       .click(ui.salary.hasSameSalary.oui.get())
@@ -61,6 +61,7 @@ describe("Indemnité licenciement - CC 2941", () => {
     userAction
       .setInput(ui.seniority.startDate.get(), "01/01/2000")
       .setInput(ui.seniority.endDate.get(), "01/01/2025")
+      .click(ui.seniority.arretTravail.non.get())
       .click(ui.seniority.hasAbsence.oui.get());
     await userAction.changeInputList(
       ui.seniority.absences.motif(0).get(),

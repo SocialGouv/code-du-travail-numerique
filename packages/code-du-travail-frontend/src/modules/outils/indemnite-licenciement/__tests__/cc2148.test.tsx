@@ -28,7 +28,6 @@ describe("Indemnité licenciement - CC 2148", () => {
     userAction
       .click(ui.introduction.startButton.get())
       .click(ui.contract.inaptitude.non.get())
-      .click(ui.contract.arretTravail.non.get())
       .click(ui.next.get())
       .click(ui.next.get());
   });
@@ -39,6 +38,7 @@ describe("Indemnité licenciement - CC 2148", () => {
     userAction.setInput(ui.seniority.startDate.get(), "01/01/2018");
     userAction.setInput(ui.seniority.notificationDate.get(), "01/01/2022");
     userAction.setInput(ui.seniority.endDate.get(), "01/01/2022");
+    userAction.click(ui.seniority.arretTravail.non.get());
     userAction.click(ui.seniority.hasAbsence.non.get());
     userAction.click(ui.next.get());
     expect(ui.activeStep.query()).toHaveTextContent("Salaires");
@@ -106,20 +106,14 @@ describe("Indemnité licenciement - CC 2148", () => {
     expect(ui.result.resultTableRows.queryAll().length).toBe(0);
   });
   test(`Cas avec arrêt de travail`, () => {
-    userAction
-      .click(ui.previous.get())
-      .click(ui.previous.get())
-      .click(ui.contract.arretTravail.oui.get());
-
-    userAction.setInput(ui.contract.dateArretTravail.get(), "01/01/2022");
-    userAction.click(ui.next.get()).click(ui.next.get());
-
     userAction.setInput(ui.information.agreement2148.age.get(), "42");
     userAction.click(ui.next.get());
 
     userAction.setInput(ui.seniority.startDate.get(), "01/01/2018");
     userAction.setInput(ui.seniority.notificationDate.get(), "01/01/2022");
     userAction.setInput(ui.seniority.endDate.get(), "01/06/2022");
+    userAction.click(ui.seniority.arretTravail.oui.get());
+    userAction.setInput(ui.seniority.dateArretTravail.get(), "01/01/2022");
     userAction.click(ui.seniority.hasAbsence.non.get());
     userAction.click(ui.next.get());
     expect(ui.activeStep.query()).toHaveTextContent("Salaires");
