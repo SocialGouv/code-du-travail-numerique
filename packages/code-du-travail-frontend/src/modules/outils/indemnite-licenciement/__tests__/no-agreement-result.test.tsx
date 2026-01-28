@@ -1,4 +1,4 @@
-import { fireEvent, render, screen, waitFor } from "@testing-library/react";
+import { render, screen, waitFor } from "@testing-library/react";
 import React from "react";
 import { UserAction } from "../../common/utils/UserAction";
 import { CalculateurIndemniteLicenciement } from "../IndemniteLicenciementSimulator";
@@ -28,8 +28,6 @@ describe("Indemnité licenciement", () => {
       render(<CalculateurIndemniteLicenciement title={""} />);
       userAction = new UserAction();
       userAction.click(ui.introduction.startButton.get());
-      userAction.click(ui.contract.type.cdi.get());
-      userAction.click(ui.contract.fauteGrave.non.get());
       userAction.click(ui.contract.inaptitude.non.get());
       userAction.click(ui.contract.arretTravail.non.get());
       userAction.click(ui.next.get());
@@ -51,8 +49,7 @@ describe("Indemnité licenciement", () => {
       );
       userAction
         .setInput(ui.seniority.absences.duration(0).get(), "3")
-        .click(ui.next.get())
-        .click(ui.salary.hasPartialTime.non.get());
+        .click(ui.next.get());
       userAction.click(ui.salary.hasSameSalary.oui.get());
       userAction.setInput(ui.salary.sameSalaryValue.get(), "2000");
       userAction.click(ui.next.get());
@@ -90,8 +87,6 @@ describe("Indemnité licenciement", () => {
     userAction = new UserAction();
     userAction
       .click(ui.introduction.startButton.get())
-      .click(ui.contract.type.cdi.get())
-      .click(ui.contract.fauteGrave.non.get())
       .click(ui.contract.inaptitude.non.get())
       .click(ui.contract.arretTravail.non.get())
       .click(ui.next.get())
@@ -109,7 +104,6 @@ describe("Indemnité licenciement", () => {
       .setInput(ui.seniority.endDate.get(), "01/01/2024")
       .click(ui.seniority.hasAbsence.non.get())
       .click(ui.next.get())
-      .click(ui.salary.hasPartialTime.non.get())
       .click(ui.salary.hasSameSalary.oui.get())
       .setInput(ui.salary.sameSalaryValue.get(), "2500")
       .click(ui.next.get());

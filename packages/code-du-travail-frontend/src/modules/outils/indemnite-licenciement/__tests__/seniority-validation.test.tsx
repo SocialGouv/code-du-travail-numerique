@@ -27,8 +27,6 @@ describe("Indemnité licenciement - Validation des erreurs sur l'étape ancienne
       userAction = new UserAction();
       userAction
         .click(ui.introduction.startButton.get())
-        .click(ui.contract.type.cdi.get())
-        .click(ui.contract.fauteGrave.non.get())
         .click(ui.contract.inaptitude.non.get())
         .click(ui.contract.arretTravail.non.get())
         .click(ui.next.get())
@@ -184,8 +182,6 @@ describe("Indemnité licenciement - Validation des erreurs sur l'étape ancienne
       userAction = new UserAction();
       userAction
         .click(ui.introduction.startButton.get())
-        .click(ui.contract.type.cdi.get())
-        .click(ui.contract.fauteGrave.non.get())
         .click(ui.contract.inaptitude.non.get())
         .click(ui.contract.arretTravail.non.get())
         .click(ui.next.get())

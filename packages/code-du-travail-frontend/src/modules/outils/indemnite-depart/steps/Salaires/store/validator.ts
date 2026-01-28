@@ -1,7 +1,7 @@
 import { deepEqualObject } from "src/modules/utils/object";
 import {
-  SalairesStoreInput,
   SalairesStoreError,
+  SalairesStoreInput,
   SalaryErrorType,
   SalaryFieldError,
 } from "./types";
@@ -119,7 +119,7 @@ export const validateStep = (state: SalairesStoreInput) => {
   let errorPrimes: Record<string, SalaryFieldError | null> | undefined =
     undefined;
 
-  if (state.hasTempsPartiel === "non" && state.hasSameSalary === "non") {
+  if (state.hasSameSalary === "non") {
     // Validation des salaires
     errorSalaryPeriods = validateSalaryPeriods(state.salaryPeriods);
     const hasSalaryErrors = Object.values(errorSalaryPeriods).some(
@@ -140,26 +140,17 @@ export const validateStep = (state: SalairesStoreInput) => {
   }
 
   const errorState: SalairesStoreError = {
-    errorHasTempsPartiel: !state.hasTempsPartiel
-      ? "Vous devez répondre à cette question"
-      : undefined,
-    errorTempsPartiel: state.hasTempsPartiel === "oui",
     errorHasSameSalary: !state.hasSameSalary
       ? "Vous devez répondre à cette question"
       : undefined,
     errorSalary:
-      state.hasTempsPartiel === "non" &&
-      state.hasSameSalary === "oui" &&
-      !state.salary
+      state.hasSameSalary === "oui" && !state.salary
         ? "Vous devez répondre à cette question"
-        : state.hasTempsPartiel === "non" &&
-            state.hasSameSalary === "oui" &&
+        : state.hasSameSalary === "oui" &&
             state.salary &&
             isNaN(parseFloat(state.salary))
           ? "Vous devez saisir un nombre"
-          : state.hasTempsPartiel === "non" &&
-              state.hasSameSalary === "oui" &&
-              parseFloat(state.salary!) <= 0
+          : state.hasSameSalary === "oui" && parseFloat(state.salary!) <= 0
             ? "Vous devez saisir un montant supérieur à zéro"
             : undefined,
     errorSalaryPeriods,
@@ -168,10 +159,8 @@ export const validateStep = (state: SalairesStoreInput) => {
 
   return {
     isValid: deepEqualObject(errorState, {
-      errorHasTempsPartiel: undefined,
       errorHasSameSalary: undefined,
       errorSalary: undefined,
-      errorTempsPartiel: false,
       errorSalaryPeriods: undefined,
       errorPrimes: undefined,
     }),

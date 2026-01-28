@@ -17,7 +17,6 @@ describe("<FilledElement />", () => {
             },
           ]}
           agreementName="agreementName"
-          showHasTempsPartiel={true}
           isArretTravail={true}
           agreementInformations={[
             {
@@ -46,7 +45,6 @@ describe("<FilledElement />", () => {
               value: 1000,
             },
           ]}
-          hasTempsPartiel={true}
           isAgreementBetter={false}
           hasSameSalary={true}
           salary={"1000"}

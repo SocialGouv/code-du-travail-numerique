@@ -25,8 +25,6 @@ describe("Indemnité licenciement - CC 675", () => {
     render(<CalculateurIndemniteLicenciement title={""} />);
     userAction = new UserAction();
     userAction.click(ui.introduction.startButton.get());
-    userAction.click(ui.contract.type.cdi.get());
-    userAction.click(ui.contract.fauteGrave.non.get());
     userAction.click(ui.contract.inaptitude.non.get());
     userAction.click(ui.contract.arretTravail.non.get());
     userAction.click(ui.next.get());
@@ -43,7 +41,6 @@ describe("Indemnité licenciement - CC 675", () => {
     userAction.setInput(ui.seniority.endDate.get(), "01/01/2024");
     fireEvent.click(ui.seniority.hasAbsence.non.get());
     fireEvent.click(ui.next.get());
-    fireEvent.click(ui.salary.hasPartialTime.non.get());
     fireEvent.click(ui.salary.hasSameSalary.oui.get());
     userAction.setInput(ui.salary.sameSalaryValue.get(), "1488");
     fireEvent.click(ui.next.get());

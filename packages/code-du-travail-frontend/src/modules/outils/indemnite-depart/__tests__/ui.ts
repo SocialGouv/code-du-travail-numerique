@@ -5,24 +5,6 @@ export const ui = {
     startButton: byText("Commencer"),
   },
   contract: {
-    type: {
-      alert: byText("indemnité de précarité (nouvelle fenêtre)"),
-      question: byText("Quel est le type du contrat de travail ?"),
-      cdi: byTestId("typeContratTravail-Contrat à durée indéterminée (CDI)"),
-      cdd: byTestId(
-        "typeContratTravail-Contrat à durée déterminée (CDD) ou contrat d'intérim"
-      ),
-    },
-    fauteGrave: {
-      alert: byText(
-        "L’indemnité légale de licenciement n’est pas dûe en cas de faute grave."
-      ),
-      question: byText(
-        "Le licenciement est-il dû à une faute grave (ou lourde) ?"
-      ),
-      oui: byTestId("licenciementFauteGrave-Oui"),
-      non: byTestId("licenciementFauteGrave-Non"),
-    },
     inaptitude: {
       question: byText(
         "Le licenciement fait-il suite à une inaptitude professionnelle (suite à un accident du travail ou une maladie professionnelle reconnue) ?"
@@ -389,10 +371,6 @@ export const ui = {
     },
   },
   salary: {
-    hasPartialTime: {
-      oui: byTestId("hasTempsPartiel-Oui"),
-      non: byTestId("hasTempsPartiel-Non"),
-    },
     hasSameSalary: {
       oui: byTestId("hasSameSalary-Oui"),
       non: byTestId("hasSameSalary-Non"),
@@ -448,15 +426,6 @@ export const ui = {
       ),
       ruptureTitle: byText(
         "Il n'y a pas d'indemnité de rupture conventionnelle dans cette situation"
-      ),
-      cddLicenciement: byText(
-        /L’indemnité de licenciement ne concerne pas les salariés en CDD et en contrat de travail temporaire/
-      ),
-      cddRupture: byText(
-        /La rupture conventionnelle ne concerne pas les salariés en CDD ou en contrat d'intérim/
-      ),
-      fauteGrave: byText(
-        /L’indemnité de licenciement n’est pas due en cas de faute grave/
       ),
       seniorityToLow: byText(
         /L’indemnité de licenciement n’est pas due lorsque l’ancienneté dans l’entreprise est inférieure à 8 mois/

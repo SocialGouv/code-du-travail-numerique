@@ -1,8 +1,7 @@
-import { render, waitFor, RenderResult } from "@testing-library/react";
+import { render, RenderResult, waitFor } from "@testing-library/react";
 import { UserAction } from "../../common/utils/UserAction";
 import { CalculateurIndemniteLicenciement } from "../IndemniteLicenciementSimulator";
 import { ui } from "../../indemnite-depart/__tests__/ui";
-import { AgreementSearchInput } from "src/modules/convention-collective/AgreementSearch/AgreementSearchInput";
 
 jest.spyOn(Storage.prototype, "setItem");
 Storage.prototype.getItem = jest.fn(
@@ -31,8 +30,6 @@ describe("Indemnité licenciement - Validation de la page information", () => {
       userAction = new UserAction();
       userAction
         .click(ui.introduction.startButton.get())
-        .click(ui.contract.type.cdi.get())
-        .click(ui.contract.fauteGrave.non.get())
         .click(ui.contract.inaptitude.non.get())
         .click(ui.contract.arretTravail.non.get())
         .click(ui.next.get())

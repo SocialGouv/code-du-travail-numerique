@@ -1,9 +1,8 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import {
   RadioQuestion,
   TextQuestion,
 } from "src/modules/outils/common/components";
-import { CdiCdd } from "src/modules/outils/indemnite-depart/steps/ContratTravail";
 import {
   IndemniteDepartContext,
   useIndemniteDepartStore,
@@ -12,11 +11,7 @@ import {
 const StepContratTravail = () => {
   const store = useContext(IndemniteDepartContext);
   const {
-    onChangeLicenciementFauteGrave,
     onChangeLicenciementInaptitude,
-    typeContratTravail,
-    onChangeTypeContratTravail,
-    errorTypeContratTravail,
     arretTravail,
     onChangeArretTravail,
     errorArretTravail,
@@ -24,21 +19,12 @@ const StepContratTravail = () => {
     onChangeDateArretTravail,
     errorDateArretTravail,
   } = useIndemniteDepartStore(store, (state) => ({
-    onChangeLicenciementFauteGrave:
-      state.contratTravailFunction.onChangeLicenciementFauteGrave,
     licenciementInaptitude:
       state.contratTravailData.input.licenciementInaptitude,
     onChangeLicenciementInaptitude:
       state.contratTravailFunction.onChangeLicenciementInaptitude,
-    typeContratTravail: state.contratTravailData.input.typeContratTravail,
-    onChangeTypeContratTravail:
-      state.contratTravailFunction.onChangeTypeContratTravail,
-    errorLicenciementFauteGrave:
-      state.contratTravailData.error.errorLicenciementFauteGrave,
     errorLicenciementInaptitude:
       state.contratTravailData.error.errorLicenciementInaptitude,
-    errorTypeContratTravail:
-      state.contratTravailData.error.errorTypeContratTravail,
     arretTravail: state.contratTravailData.input.arretTravail,
     dateArretTravail: state.contratTravailData.input.dateArretTravail,
     onChangeArretTravail: state.contratTravailFunction.onChangeArretTravail,
@@ -48,55 +34,32 @@ const StepContratTravail = () => {
     errorDateArretTravail: state.contratTravailData.error.errorDateArretTravail,
   }));
 
+  useEffect(() => {
+    onChangeLicenciementInaptitude("non");
+  }, []);
+
   return (
     <>
       <RadioQuestion
         questions={[
           {
-            label: "Contrat à durée indéterminée (CDI)",
-            value: "cdi",
-            id: "cdi",
+            label: "Oui",
+            value: "oui",
+            id: "arretTravail-oui",
           },
           {
-            label: "Contrat à durée déterminée (CDD) ou contrat d'intérim",
-            value: "cdd",
-            id: "cdd",
+            label: "Non",
+            value: "non",
+            id: "arretTravail-non",
           },
         ]}
-        name="typeContratTravail"
-        label="Quel est le type du contrat de travail&nbsp;?"
-        selectedOption={typeContratTravail}
-        onChangeSelectedOption={(value: CdiCdd) => {
-          onChangeTypeContratTravail(value);
-          if (value === "cdi") {
-            onChangeLicenciementFauteGrave("non");
-            onChangeLicenciementInaptitude("non");
-          }
-        }}
-        error={errorTypeContratTravail}
+        name="licenciementArretTravail"
+        label="Le salarié est-il en arrêt de travail au moment de la rupture conventionnelle&nbsp;?"
+        selectedOption={arretTravail}
+        onChangeSelectedOption={onChangeArretTravail}
+        error={errorArretTravail}
       />
-      {typeContratTravail === "cdi" && (
-        <RadioQuestion
-          questions={[
-            {
-              label: "Oui",
-              value: "oui",
-              id: "arretTravail-oui",
-            },
-            {
-              label: "Non",
-              value: "non",
-              id: "arretTravail-non",
-            },
-          ]}
-          name="licenciementArretTravail"
-          label="Le salarié est-il en arrêt de travail au moment de la rupture conventionnelle&nbsp;?"
-          selectedOption={arretTravail}
-          onChangeSelectedOption={onChangeArretTravail}
-          error={errorArretTravail}
-        />
-      )}
-      {typeContratTravail === "cdi" && arretTravail === "oui" && (
+      {arretTravail === "oui" && (
         <TextQuestion
           label="Depuis quelle date le salarié est-il en arrêt&nbsp;?"
           inputType="date"

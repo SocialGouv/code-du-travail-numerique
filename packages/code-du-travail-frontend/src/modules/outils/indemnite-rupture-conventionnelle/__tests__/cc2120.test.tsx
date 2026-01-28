@@ -35,7 +35,6 @@ describe("Rupture Co - CC 2120", () => {
 
     userAction
       .click(ui.introduction.startButton.get())
-      .click(ui.contract.type.cdi.get())
       .click(ui.contract.arretTravail.non.get())
       .click(ui.next.get())
       .click(ui.next.get());
@@ -53,7 +52,6 @@ describe("Rupture Co - CC 2120", () => {
       .setInput(ui.seniority.endDate.get(), "01/03/2024")
       .click(ui.seniority.hasAbsence.non.get())
       .click(ui.next.get())
-      .click(ui.salary.hasPartialTime.non.get())
       .click(ui.salary.hasSameSalary.oui.get())
       .setInput(ui.salary.sameSalaryValue.get(), "1488")
       .setInput(ui.salary.agreement2120.salariesVariablePart.get(), "2000")
@@ -82,7 +80,6 @@ describe("Rupture Co - CC 2120", () => {
       .setInput(ui.seniority.absences.date(0).get(), "01/01/2015")
 
       .click(ui.next.get())
-      .click(ui.salary.hasPartialTime.non.get())
       .click(ui.salary.hasSameSalary.oui.get())
       .setInput(ui.salary.sameSalaryValue.get(), "1488")
       .setInput(ui.salary.agreement2120.salariesVariablePart.get(), "2000")
