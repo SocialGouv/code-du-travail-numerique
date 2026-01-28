@@ -58,7 +58,7 @@ export function FicheMinistereTravail({
 
       <div className={fr.cx("fr-mb-5w")}>
         {highlight && shouldInsertResumeHeading(highlight.html) && (
-          <h2 className={fr.cx("fr-sr-only")}>Résumé</h2>
+          <h2 className={fr.cx("fr-sr-only")}>Introduction</h2>
         )}
         <Html>{intro}</Html>
         {highlight && <ContentParser>{highlight.html}</ContentParser>}
