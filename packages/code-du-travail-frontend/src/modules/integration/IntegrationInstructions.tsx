@@ -1,16 +1,24 @@
 import { fr } from "@codegouvfr/react-dsfr";
 import React from "react";
 import { css } from "@styled-system/css";
+import { WIDGET_LOADER_INTEGRITY } from "./widgetIntegrity";
 
 interface IntegrationInstructionsProps {
+  host: string;
   parsedUrl: string;
   shortTitle: string;
 }
 
 export const IntegrationInstructions = ({
+  host,
   parsedUrl,
   shortTitle,
 }: IntegrationInstructionsProps) => {
+  const baseHost = host.replace(/\/$/, "");
+  const widgetScriptTagWithHost = WIDGET_LOADER_INTEGRITY
+    ? `<script src="${baseHost}/widget-loader.js" integrity="${WIDGET_LOADER_INTEGRITY}" crossorigin="anonymous" defer></script>`
+    : `<script src="${baseHost}/widget.js" defer></script>`;
+
   return (
     <div className={fr.cx("fr-mb-6w")} data-testid="integration-instructions">
       <h2 className={fr.cx("fr-h3", "fr-mb-3w")}>
@@ -27,7 +35,7 @@ export const IntegrationInstructions = ({
             votre page&nbsp;:
           </p>
           <pre className={`${fr.cx("fr-alert")} ${preWrap}`}>
-            {`<script src="https://code.travail.gouv.fr/widget.js" defer></script>`}
+            {widgetScriptTagWithHost}
           </pre>
         </li>
         <li>
@@ -36,7 +44,7 @@ export const IntegrationInstructions = ({
             module s&apos;afficher&nbsp;:
           </p>
           <pre className={`${fr.cx("fr-alert")} ${preWrap}`}>
-            {`<a href="https://code.travail.gouv.fr${parsedUrl}">${shortTitle}</a>`}
+            {`<a href="${baseHost}${parsedUrl}">${shortTitle}</a>`}
           </pre>
         </li>
       </ol>
