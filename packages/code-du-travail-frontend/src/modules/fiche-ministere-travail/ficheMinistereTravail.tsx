@@ -9,12 +9,7 @@ import { ElasticFicheTravailEmploiSection } from "@socialgouv/cdtn-types";
 import { SourceData } from "../layout/SourceData";
 import Html from "../common/Html";
 import "../../../public/static/fiches-mt.css";
-
-const shouldInsertResumeHeading = (html: string): boolean => {
-  const match = html.match(/<h([2-6])\b/i);
-  if (!match) return false;
-  return Number(match[1]) > 2;
-};
+import { normalizeHeadingsToH2 } from "./utils";
 
 type Props = {
   relatedItems: { items: RelatedItem[]; title: string }[];
@@ -57,11 +52,10 @@ export function FicheMinistereTravail({
       />
 
       <div className={fr.cx("fr-mb-5w")}>
-        {highlight && shouldInsertResumeHeading(highlight.html) && (
-          <h2 className={fr.cx("fr-sr-only")}>Introduction</h2>
-        )}
         <Html>{intro}</Html>
-        {highlight && <ContentParser>{highlight.html}</ContentParser>}
+        {highlight && (
+          <ContentParser>{normalizeHeadingsToH2(highlight.html)}</ContentParser>
+        )}
 
         <div className={fr.cx("fr-accordions-group")}>
           <AccordionWithAnchor
