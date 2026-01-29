@@ -3,6 +3,7 @@ import { css } from "@styled-system/css";
 import Link from "src/modules/common/Link";
 import { LoadingSpinner } from "./LoadingSpinner";
 import { ModalLink } from "./types";
+import { useSearchModal } from "./SearchModalContext";
 
 type Props = {
   actualites: ModalLink[];
@@ -11,6 +12,8 @@ type Props = {
 };
 
 export const HintList = ({ actualites, suggestions, isLoading }: Props) => {
+  const { closeModal } = useSearchModal();
+
   if (isLoading) {
     return (
       <div className={loadingContainer} aria-live="polite" aria-atomic="true">
@@ -36,6 +39,7 @@ export const HintList = ({ actualites, suggestions, isLoading }: Props) => {
                 <Link
                   className={fr.cx("fr-link", "fr-text--bold")}
                   href={result.slug}
+                  onClick={closeModal}
                 >
                   {result.title}
                 </Link>
@@ -64,6 +68,7 @@ export const HintList = ({ actualites, suggestions, isLoading }: Props) => {
                 <Link
                   className={fr.cx("fr-link", "fr-text--bold")}
                   href={result.slug}
+                  onClick={closeModal}
                 >
                   {result.title}
                 </Link>

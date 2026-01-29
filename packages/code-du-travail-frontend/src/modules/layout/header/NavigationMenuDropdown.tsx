@@ -2,6 +2,7 @@ import { fr } from "@codegouvfr/react-dsfr";
 import { useState } from "react";
 import Link from "../../common/Link";
 import type { NavigationMenu } from "./HeaderDsfr";
+import { useSearchModal } from "../../recherche/modal/SearchModalContext";
 
 type NavigationMenuDropdownProps = {
   item: NavigationMenu;
@@ -16,6 +17,7 @@ export const NavigationMenuDropdown = ({
 }: NavigationMenuDropdownProps) => {
   const { isActive = false, text, menuLinks } = item;
   const [isExpanded, setIsExpanded] = useState(false);
+  const { closeModal } = useSearchModal();
 
   const handleToggle = () => {
     setIsExpanded(!isExpanded);
@@ -47,6 +49,7 @@ export const NavigationMenuDropdown = ({
                   href={menuItem.linkProps.href}
                   target={menuItem.linkProps.target}
                   rel={menuItem.linkProps.rel}
+                  onClick={closeModal}
                   {...(isLinkActive && { ["aria-current"]: "page" })}
                 >
                   {menuItem.text}
