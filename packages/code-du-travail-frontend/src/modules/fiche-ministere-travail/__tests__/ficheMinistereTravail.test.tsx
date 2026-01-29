@@ -76,4 +76,130 @@ describe("Content fiche MT", () => {
       getAllByRole("heading", { level: 2 })[2].parentElement
     ).toHaveTextContent("Anchor content 3");
   });
+
+  test("should transform h3 to h2 in highlight", () => {
+    const { getByRole, container, queryByRole } = render(
+      <FicheMinistereTravail
+        date={ficheMTData.date}
+        metaDescription={ficheMTData.description}
+        breadcrumbs={[]}
+        sections={[]}
+        url={ficheMTData.url}
+        highlight={{
+          anchor: "",
+          title: "",
+          html: `<h3>Premier titre du document</h3><p>Du contenu</p>`,
+        }}
+        title={ficheMTData.title}
+        intro={ficheMTData.intro}
+        relatedItems={[]}
+      />
+    );
+
+    expect(getByRole("heading", { level: 1 })).toHaveTextContent(
+      "Fiche MT title"
+    );
+
+    // No invisible "Introduction" h2 should be present
+    expect(
+      queryByRole("heading", { level: 2, name: "Introduction" })
+    ).toBeNull();
+
+    // h3 should be transformed to h2
+    expect(
+      getByRole("heading", { level: 2, name: "Premier titre du document" })
+    ).toBeVisible();
+
+    // No h3 should remain
+    expect(
+      queryByRole("heading", { level: 3, name: "Premier titre du document" })
+    ).toBeNull();
+  });
+
+  test("should keep h2 unchanged in highlight", () => {
+    const { queryByRole, getByRole } = render(
+      <FicheMinistereTravail
+        date={ficheMTData.date}
+        metaDescription={ficheMTData.description}
+        breadcrumbs={[]}
+        sections={[]}
+        url={ficheMTData.url}
+        highlight={{
+          anchor: "",
+          title: "",
+          html: `<h2>Déjà un h2</h2><p>Du contenu</p>`,
+        }}
+        title={ficheMTData.title}
+        intro={ficheMTData.intro}
+        relatedItems={[]}
+      />
+    );
+
+    expect(
+      queryByRole("heading", { level: 2, name: "Introduction" })
+    ).toBeNull();
+    expect(
+      getByRole("heading", { level: 2, name: "Déjà un h2" })
+    ).toBeVisible();
+  });
+
+  test("should transform multiple h3/h4/h5/h6 to h2 in highlight", () => {
+    const { getByRole, queryByRole } = render(
+      <FicheMinistereTravail
+        date={ficheMTData.date}
+        metaDescription={ficheMTData.description}
+        breadcrumbs={[]}
+        sections={[]}
+        url={ficheMTData.url}
+        highlight={{
+          anchor: "",
+          title: "",
+          html: `<h3>Titre h3</h3><p>Contenu</p><h4>Titre h4</h4><p>Plus de contenu</p><h5>Titre h5</h5>`,
+        }}
+        title={ficheMTData.title}
+        intro={ficheMTData.intro}
+        relatedItems={[]}
+      />
+    );
+
+    // All should be transformed to h2
+    expect(
+      getByRole("heading", { level: 2, name: "Titre h3" })
+    ).toBeInTheDocument();
+    expect(
+      getByRole("heading", { level: 2, name: "Titre h4" })
+    ).toBeInTheDocument();
+    expect(
+      getByRole("heading", { level: 2, name: "Titre h5" })
+    ).toBeInTheDocument();
+
+    // No h3, h4, h5 should remain
+    expect(queryByRole("heading", { level: 3 })).toBeNull();
+    expect(queryByRole("heading", { level: 4 })).toBeNull();
+    expect(queryByRole("heading", { level: 5 })).toBeNull();
+  });
+
+  test("should preserve heading attributes when transforming", () => {
+    const { container } = render(
+      <FicheMinistereTravail
+        date={ficheMTData.date}
+        metaDescription={ficheMTData.description}
+        breadcrumbs={[]}
+        sections={[]}
+        url={ficheMTData.url}
+        highlight={{
+          anchor: "",
+          title: "",
+          html: `<h3 id="test-id" class="test-class">Titre avec attributs</h3>`,
+        }}
+        title={ficheMTData.title}
+        intro={ficheMTData.intro}
+        relatedItems={[]}
+      />
+    );
+
+    const h2 = container.querySelector("h2#test-id.test-class");
+    expect(h2).toBeInTheDocument();
+    expect(h2).toHaveTextContent("Titre avec attributs");
+  });
 });
