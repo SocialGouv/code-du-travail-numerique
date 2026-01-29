@@ -58,7 +58,6 @@ const createResultStore: StoreSlicePublicodes<
     init: () => {
       const contratTravailEligibility =
         !get().contratTravailData.error.errorEligibility;
-      const isCdd = get().contratTravailData.input.typeContratTravail === "cdd";
       const ancienneteEligibility =
         !get().ancienneteData.error.errorEligibility;
       const informationEligibility =
@@ -75,7 +74,6 @@ const createResultStore: StoreSlicePublicodes<
         informationEligibility,
         contratTravailEligibility,
         ancienneteEligibility,
-        isCdd,
         agreement,
       });
       const isEligible =

@@ -26,8 +26,6 @@ describe("Indemnité licenciement- CC 2098", () => {
 
     userAction
       .click(ui.introduction.startButton.get())
-      .click(ui.contract.type.cdi.get())
-      .click(ui.contract.fauteGrave.non.get())
       .click(ui.contract.inaptitude.oui.get())
       .click(ui.next.get())
       .click(ui.next.get())
@@ -40,7 +38,6 @@ describe("Indemnité licenciement- CC 2098", () => {
       .click(ui.seniority.hasAbsence.oui.get())
       .setInput(ui.seniority.absences.duration(0).get(), "8")
       .click(ui.next.get())
-      .click(ui.salary.hasPartialTime.non.get())
       .click(ui.salary.hasSameSalary.non.get())
       .setInputs(ui.salary.salaries.getAll(), [
         "2266",

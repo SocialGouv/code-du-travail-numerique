@@ -16,8 +16,6 @@ describe("Indemnité licenciement - Validation du comportement avec l'absence de
       userAction = new UserAction();
       userAction
         .click(ui.introduction.startButton.get())
-        .click(ui.contract.type.cdi.get())
-        .click(ui.contract.fauteGrave.non.get())
         .click(ui.contract.inaptitude.non.get())
         .click(ui.contract.arretTravail.non.get())
         .click(ui.next.get())
@@ -52,7 +50,6 @@ describe("Indemnité licenciement - Validation du comportement avec l'absence de
       // On se rend sur la page information pour vérifier que la date n'est pas présente
       expect(ui.activeStep.query()).toHaveTextContent("Salaires");
       userAction
-        .click(ui.salary.hasPartialTime.non.get())
         .click(ui.salary.hasSameSalary.oui.get())
         .setInput(ui.salary.sameSalaryValue.get(), "2500")
         .click(ui.next.get());

@@ -17,10 +17,7 @@ import { ValidationResponse } from "src/modules/outils/common/components/Simulat
 
 const initialState: ContratTravailStoreData = {
   input: {},
-  error: {
-    errorCdd: false,
-    errorFauteGrave: false,
-  },
+  error: {},
   hasBeenSubmit: false,
   isStepValid: true,
 };
@@ -36,14 +33,6 @@ const createContratTravailStore: StoreSlice<
   },
   contratTravailData: { ...initialState },
   contratTravailFunction: {
-    onChangeTypeContratTravail: (value) => {
-      get().situationFunction.setSituation("typeContratTravail", value);
-      applyGenericValidation(get, set, "typeContratTravail", value);
-    },
-    onChangeLicenciementFauteGrave: (value) => {
-      get().situationFunction.setSituation("licenciementFauteGrave", value);
-      applyGenericValidation(get, set, "licenciementFauteGrave", value);
-    },
     onChangeLicenciementInaptitude: (value) => {
       applyGenericValidation(get, set, "licenciementInaptitude", value);
       applyGenericValidation(get, set, "dateArretTravail", undefined);
@@ -81,6 +70,8 @@ const createContratTravailStore: StoreSlice<
           console.error(e);
           Sentry.captureException(e);
         }
+      } else {
+        console.log("MMA - Is not valid ", errorState);
       }
 
       set(

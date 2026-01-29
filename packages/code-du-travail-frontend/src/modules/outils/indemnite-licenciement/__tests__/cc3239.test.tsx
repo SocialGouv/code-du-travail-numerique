@@ -24,8 +24,6 @@ describe("Indemnité licenciement - CC 3239", () => {
     render(<CalculateurIndemniteLicenciement title={""} />);
     userAction = new UserAction();
     userAction.click(ui.introduction.startButton.get());
-    userAction.click(ui.contract.type.cdi.get());
-    userAction.click(ui.contract.fauteGrave.non.get());
     userAction.click(ui.contract.inaptitude.non.get());
     userAction.click(ui.contract.arretTravail.non.get());
     userAction.click(ui.next.get());
@@ -99,28 +97,6 @@ describe("Indemnité licenciement - CC 3239", () => {
     userAction.click(ui.seniority.hasAbsence.non.get());
     userAction.click(ui.next.get());
     expect(ui.result.legalError.seniorityToLow.get()).toBeInTheDocument();
-    expect(
-      ui.result.infoWarning.ineligibleInfoWarningblock.query()
-    ).toBeInTheDocument();
-  });
-  test("vérifier que la CC 3239 n'affecte pas les autres inéligibilités", async () => {
-    userAction.click(ui.previous.get());
-    userAction.click(ui.previous.get());
-    userAction.click(ui.contract.type.cdd.get());
-    userAction.click(ui.next.get());
-    expect(
-      ui.result.infoWarning.eligibleInfoWarningblock.query()
-    ).not.toBeInTheDocument();
-    expect(
-      ui.result.infoWarning.ineligibleInfoWarningblock.query()
-    ).not.toBeInTheDocument();
-    userAction.click(ui.previous.get());
-    userAction.click(ui.contract.type.cdi.get());
-    userAction.click(ui.contract.fauteGrave.oui.get());
-    userAction.click(ui.next.get());
-    expect(
-      ui.result.infoWarning.eligibleInfoWarningblock.query()
-    ).not.toBeInTheDocument();
     expect(
       ui.result.infoWarning.ineligibleInfoWarningblock.query()
     ).toBeInTheDocument();

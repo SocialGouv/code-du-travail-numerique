@@ -6,6 +6,8 @@ import { Share } from "../common/Share";
 import { RelatedItem } from "../documents";
 import { Feedback } from "./feedback";
 import { css } from "@styled-system/css";
+import { BreadcrumbListJsonLd } from "../seo/jsonld";
+import { getPathFromBreadcrumbLinkProps } from "./breadcrumbLinkProps";
 
 type Props = {
   relatedItems: { items: RelatedItem[]; title: string }[];
@@ -23,6 +25,13 @@ export const ContainerSimulatorLight = ({
 }: Props) => {
   return (
     <div className={`${fr.cx("fr-grid-row")} ${printOnlySpace}`}>
+      <BreadcrumbListJsonLd
+        currentPageLabel={title}
+        items={segments.map((segment) => ({
+          label: String(segment.label),
+          href: getPathFromBreadcrumbLinkProps(segment.linkProps),
+        }))}
+      />
       <Breadcrumb
         currentPageLabel={title}
         homeLinkProps={{

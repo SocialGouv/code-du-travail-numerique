@@ -6,6 +6,7 @@ import { Breadcrumb as BreadcrumbType } from "@socialgouv/cdtn-types";
 import Breadcrumb from "@codegouvfr/react-dsfr/Breadcrumb";
 import { Feedback } from "./feedback";
 import React from "react";
+import { BreadcrumbListJsonLd } from "../seo/jsonld";
 
 type Props = ContainerRichProps & {
   currentPage: string;
@@ -22,6 +23,13 @@ export const ContainerRichWithBreadcrumbs = ({
 }: Props) => {
   return (
     <div>
+      <BreadcrumbListJsonLd
+        currentPageLabel={currentPage}
+        items={breadcrumbs.map(({ label, slug }) => ({
+          label,
+          href: slug,
+        }))}
+      />
       <Breadcrumb
         currentPageLabel={currentPage}
         homeLinkProps={{

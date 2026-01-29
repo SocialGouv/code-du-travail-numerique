@@ -32,8 +32,6 @@ describe("Indemnité licenciement - Affichage de la notification si le légal et
     // Etape Contrat de travail
     userAction
       .click(ui.introduction.startButton.get())
-      .click(ui.contract.type.cdi.get())
-      .click(ui.contract.fauteGrave.non.get())
       .click(ui.contract.inaptitude.non.get())
       .click(ui.contract.arretTravail.non.get())
       .click(ui.next.get());
@@ -50,7 +48,6 @@ describe("Indemnité licenciement - Affichage de la notification si le légal et
 
     // Etape Salaires
     userAction
-      .click(ui.salary.hasPartialTime.non.get())
       .click(ui.salary.hasSameSalary.oui.get())
       .setInput(ui.salary.sameSalaryValue.get(), "2500")
       .click(ui.next.get());

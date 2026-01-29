@@ -25,7 +25,6 @@ import { deepMergeArray } from "src/modules/utils/array";
 
 const initialState: SalairesStoreData = {
   input: {
-    showHasTempsPartiel: true,
     salaryPeriods: [],
   },
   error: {},
@@ -71,21 +70,6 @@ const createSalairesStore: StoreSlice<
           state.salairesData.input.salaryPeriods = salaryPeriods;
         })
       );
-    },
-    initShowHasTempsPartiel: () => {
-      const idcc = get().agreementData.input.agreement?.num;
-      const showPartialTime = idcc !== 3239;
-      set(
-        produce((state: SalairesStoreSlice) => {
-          state.salairesData.input.showHasTempsPartiel = showPartialTime;
-          state.salairesData.input.hasTempsPartiel = showPartialTime
-            ? state.salairesData.input.hasTempsPartiel
-            : "non";
-        })
-      );
-    },
-    onChangeHasTempsPartiel: (value) => {
-      applyGenericValidation(get, set, "hasTempsPartiel", value);
     },
     onChangeHasSameSalary: (value) => {
       applyGenericValidation(get, set, "hasSameSalary", value);

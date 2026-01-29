@@ -14,8 +14,6 @@ describe("Indemnité licenciement - Step salaire", () => {
       render(<CalculateurIndemniteLicenciement title={""} />);
       userAction = new UserAction();
       userAction.click(ui.introduction.startButton.get());
-      userAction.click(ui.contract.type.cdi.get());
-      userAction.click(ui.contract.fauteGrave.non.get());
       userAction.click(ui.contract.inaptitude.non.get());
       userAction.click(ui.contract.arretTravail.non.get());
       userAction.click(ui.next.get());
@@ -49,17 +47,7 @@ describe("Indemnité licenciement - Step salaire", () => {
         screen.queryByText("Vous devez répondre à cette question")
       ).toBeInTheDocument();
 
-      // vérification que l'on affiche un message à noter quand on a des périodes d'alternances
-      userAction.click(ui.salary.hasPartialTime.oui.get());
-      expect(screen.queryByText("À noter")).toBeInTheDocument();
-      expect(
-        screen.queryByText(
-          "Le calcul de l’indemnité de licenciement dans le cas d’une alternance de temps plein et de temps partiel est actuellement en cours de développement."
-        )
-      ).toBeInTheDocument();
-
       // vérification que le message disparait quand on n'a pas de périodes d'alternances
-      userAction.click(ui.salary.hasPartialTime.non.get());
       expect(screen.queryByText("À noter")).not.toBeInTheDocument();
 
       // vérification que l'on demande si le salaire a été le même sur les 12 derniers mois
@@ -121,7 +109,6 @@ describe("Indemnité licenciement - Step salaire", () => {
     });
 
     test("Vérification qu'un salaire ne peut pas être inférieur à 0 dans le champ où on saisit plusieurs salaires pour chaque mois", () => {
-      userAction.click(ui.salary.hasPartialTime.non.get());
       userAction.click(ui.salary.hasSameSalary.non.get());
       ui.salary.salaries.getAll().forEach((input) => {
         userAction.setInput(input, "0");
@@ -139,7 +126,6 @@ describe("Indemnité licenciement - Step salaire", () => {
     });
 
     test("Vérification qu'un salaire ne peut pas être inférieur à 0 dans le champ où on saisit un seul salaire", () => {
-      userAction.click(ui.salary.hasPartialTime.non.get());
       userAction.click(ui.salary.hasSameSalary.oui.get());
       userAction.setInput(ui.salary.sameSalaryValue.get(), "0");
       userAction.click(ui.next.get());

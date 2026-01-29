@@ -93,7 +93,7 @@ const Eligible = () => {
         contractTravail={[
           {
             text: "Type de contrat",
-            value: contratTravail.typeContratTravail!.toString().toUpperCase(),
+            value: "CDI",
           },
           {
             text: "Arrêt de travail au moment de la rupture conventionnelle",
@@ -109,14 +109,12 @@ const Eligible = () => {
               ]
             : []
         )}
-        showHasTempsPartiel={salary.showHasTempsPartiel}
         absencesPeriods={seniority.absencePeriods}
         agreementName={agreement.agreement?.shortTitle}
         isArretTravail={contratTravail.arretTravail === "oui"}
         dateEntree={seniority.dateEntree!}
         dateSortie={seniority.dateSortie!}
         salaryPeriods={salary.salaryPeriods}
-        hasTempsPartiel={salary.hasTempsPartiel === "oui"}
         hasSameSalary={salary.hasSameSalary === "oui"}
         salary={salary.salary}
         isAgreementBetter={result.isAgreementBetter}

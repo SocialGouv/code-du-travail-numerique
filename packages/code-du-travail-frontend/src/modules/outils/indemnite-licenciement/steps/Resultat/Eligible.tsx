@@ -1,6 +1,6 @@
 import {
-  Notification,
   getSupportedAgreement,
+  Notification,
 } from "@socialgouv/modeles-social";
 import React, { useContext } from "react";
 import { PubliReferences } from "src/modules/outils/common/components";
@@ -31,11 +31,8 @@ export default function Eligible() {
     publicodesAgreementResult,
     agreementExplanation,
     resultExplanation,
-    typeContratTravail,
     licenciementInaptitude,
-    licenciementFauteGrave,
     agreement,
-    route,
     dateEntree,
     dateSortie,
     dateNotification,
@@ -44,7 +41,6 @@ export default function Eligible() {
     formula,
     legalReferences,
     agreementReferences,
-    hasTempsPartiel,
     isAgreementBetter,
     agreementInformations,
     salary,
@@ -56,7 +52,6 @@ export default function Eligible() {
     infoWarning,
     dateArretTravail,
     arretTravail,
-    showHasTempsPartiel,
     informationData,
     isAgreementSupported,
     isParentalNoticeHidden,
@@ -64,13 +59,9 @@ export default function Eligible() {
     result: state.resultData.input.result,
     publicodesLegalResult: state.resultData.input.publicodesLegalResult,
     publicodesAgreementResult: state.resultData.input.publicodesAgreementResult,
-    typeContratTravail: state.contratTravailData.input.typeContratTravail,
     licenciementInaptitude:
       state.contratTravailData.input.licenciementInaptitude,
-    licenciementFauteGrave:
-      state.contratTravailData.input.licenciementFauteGrave,
     agreement: state.agreementData.input.agreement,
-    route: state.agreementData.input.route,
     dateEntree: state.ancienneteData.input.dateEntree,
     dateSortie: state.ancienneteData.input.dateSortie,
     dateNotification: state.ancienneteData.input.dateNotification,
@@ -79,7 +70,6 @@ export default function Eligible() {
     formula: state.resultData.input.formula,
     legalReferences: state.resultData.input.legalReferences,
     agreementReferences: state.resultData.input.agreementReferences,
-    hasTempsPartiel: state.salairesData.input.hasTempsPartiel,
     isAgreementBetter: state.resultData.input.isAgreementBetter,
     agreementInformations: state.resultData.input.agreementInformations,
     salary: state.salairesData.input.salary,
@@ -93,7 +83,6 @@ export default function Eligible() {
     infoWarning: state.resultData.input.infoWarning,
     dateArretTravail: state.contratTravailData.input.dateArretTravail,
     arretTravail: state.contratTravailData.input.arretTravail,
-    showHasTempsPartiel: state.salairesData.input.showHasTempsPartiel,
     informationData: informationToSituation(
       state.informationsData.input.publicodesInformations
     ),
@@ -147,11 +136,11 @@ export default function Eligible() {
         contractTravail={[
           {
             text: "Type de contrat",
-            value: typeContratTravail!.toString().toUpperCase(),
+            value: "CDI",
           },
           {
             text: "Licenciement dû à une faute grave (ou lourde)",
-            value: licenciementFauteGrave === "oui" ? "Oui" : "Non",
+            value: "Non",
           },
           {
             text: "Licenciement dû à une inaptitude d'origine professionnelle",
@@ -176,14 +165,12 @@ export default function Eligible() {
             : []
         )}
         isArretTravail={arretTravail === "oui"}
-        showHasTempsPartiel={showHasTempsPartiel}
         absencesPeriods={absencePeriods}
         agreementName={agreement?.shortTitle}
         dateEntree={dateEntree!}
         dateSortie={dateSortie!}
         dateNotification={dateNotification}
         salaryPeriods={salaryPeriods}
-        hasTempsPartiel={hasTempsPartiel === "oui"}
         hasSameSalary={hasSameSalary === "oui"}
         salary={salary}
         isAgreementBetter={isAgreementBetter}

@@ -27,8 +27,6 @@ describe("Indemnité licenciement", () => {
       userAction = new UserAction();
       userAction
         .click(ui.introduction.startButton.get())
-        .click(ui.contract.type.cdi.get())
-        .click(ui.contract.fauteGrave.non.get())
         .click(ui.contract.inaptitude.non.get())
         .click(ui.contract.arretTravail.non.get())
         .click(ui.next.get())
@@ -68,7 +66,6 @@ describe("Indemnité licenciement", () => {
         .setInput(ui.seniority.absences.duration(0).get(), "6")
         .setInput(ui.seniority.absences.date(0).get(), "01/01/2015")
         .click(ui.next.get())
-        .click(ui.salary.hasPartialTime.non.get())
         .click(ui.salary.hasSameSalary.oui.get())
         .setInput(ui.salary.sameSalaryValue.get(), "2500")
         .click(ui.next.get());

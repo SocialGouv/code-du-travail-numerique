@@ -34,16 +34,13 @@ describe("Rupture conventionnelle - légale", () => {
     );
     expect(startEventCalls.length).toBe(1);
     userAction = new UserAction();
-    userAction
-      .click(ui.introduction.startButton.get())
-      .click(ui.contract.type.cdi.get());
+    userAction.click(ui.introduction.startButton.get());
     expect(sendEvent).toHaveBeenCalledWith({
       category: "outil",
       action: "view_step_Indemnité de rupture conventionnelle",
       name: "contrat_travail",
     });
 
-    expect(ui.contract.fauteGrave.question.query()).not.toBeInTheDocument();
     expect(ui.result.dismissalType.inaptitude.query()).not.toBeInTheDocument();
 
     userAction.click(ui.contract.arretTravail.non.get()).click(ui.next.get());
@@ -80,7 +77,6 @@ describe("Rupture conventionnelle - légale", () => {
     expect(ui.activeStep.query()).toHaveTextContent("Salaire");
 
     userAction
-      .click(ui.salary.hasPartialTime.non.get())
       .click(ui.salary.hasSameSalary.oui.get())
       .setInput(ui.salary.sameSalaryValue.get(), "1000")
       .click(ui.next.get());
