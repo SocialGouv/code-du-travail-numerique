@@ -16,8 +16,10 @@ jobs:
       - uses: actions/checkout@v4
       - name: Audit URLs using Lighthouse
         uses: treosh/lighthouse-ci-action@v12
+        env:
+          LHCI_BASE_URL: https://code-du-travail-numerique-preprod.ovh.fabrique.social.gouv.fr
         with:
-          configPath: ./lighthouserc.json
+          configPath: ./lighthouserc.cjs
           temporaryPublicStorage: true
           uploadArtifacts: true
           runs: 3 # Multiple runs to reduce variance

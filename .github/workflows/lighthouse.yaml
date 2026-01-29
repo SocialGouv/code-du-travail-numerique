@@ -1,0 +1,26 @@
+name: Lighthouse CI
+on:
+  workflow_dispatch:
+    inputs:
+      baseUrl:
+        description: "Override base URL (optional). Example: https://code-du-travail-numerique-preprod.ovh.fabrique.social.gouv.fr"
+        required: false
+        default: ""
+
+concurrency:
+  cancel-in-progress: true
+  group: ${{ github.workflow }}-${{ github.event_name }}-${{ github.ref }}
+
+jobs:
+  lighthouse:
+    name: Lighthouse audit
+    runs-on: ubuntu-latest
+    steps:
+      - name: Audit URLs using Lighthouse
+        uses: treosh/lighthouse-ci-action@v12
+        env:
+          LHCI_BASE_URL: ${{ github.event.inputs.baseUrl }}
+        with:
+          configPath: ./lighthouserc.cjs
+          temporaryPublicStorage: true
+          uploadArtifacts: true

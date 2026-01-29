@@ -9,6 +9,7 @@ import { ElasticFicheTravailEmploiSection } from "@socialgouv/cdtn-types";
 import { SourceData } from "../layout/SourceData";
 import Html from "../common/Html";
 import "../../../public/static/fiches-mt.css";
+import { normalizeHeadingsToH2 } from "./utils";
 
 type Props = {
   relatedItems: { items: RelatedItem[]; title: string }[];
@@ -52,7 +53,9 @@ export function FicheMinistereTravail({
 
       <div className={fr.cx("fr-mb-5w")}>
         <Html>{intro}</Html>
-        {highlight && <ContentParser>{highlight.html}</ContentParser>}
+        {highlight && (
+          <ContentParser>{normalizeHeadingsToH2(highlight.html)}</ContentParser>
+        )}
 
         <div className={fr.cx("fr-accordions-group")}>
           <AccordionWithAnchor
