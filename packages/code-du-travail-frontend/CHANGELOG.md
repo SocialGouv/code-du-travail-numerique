@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.211.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.210.0...v4.211.0) (2026-01-29)
+
+
+### Bug Fixes
+
+* **recherche:** ferme la popup quand on change de lien ([#7083](https://github.com/SocialGouv/code-du-travail-numerique/issues/7083)) ([6bb7615](https://github.com/SocialGouv/code-du-travail-numerique/commit/6bb76158c6f5c199a7552e7c7b1bfd8d4df4964b))
+
+
+### Features
+
+* **json-ld:** ajout du support `GovernmentOrganization` + `Website` + `Breadcrumbs` + `Legislation` JSON-LD ([#7071](https://github.com/SocialGouv/code-du-travail-numerique/issues/7071)) ([7e71476](https://github.com/SocialGouv/code-du-travail-numerique/commit/7e714763b1f956f914cbca8f171a6ad779ec58cb))
+* **lighthouse:** ajout des `urls` qui sont présents dans l'audit + mise en place d'un CI se lançant manuellement ([#7074](https://github.com/SocialGouv/code-du-travail-numerique/issues/7074)) ([1fa6624](https://github.com/SocialGouv/code-du-travail-numerique/commit/1fa66248c0744ce32da420f8882afae9f0c19f9c))
+* **outils:** retrait des questions cul de sac ([#7079](https://github.com/SocialGouv/code-du-travail-numerique/issues/7079)) ([90432de](https://github.com/SocialGouv/code-du-travail-numerique/commit/90432de1089bdb49bffb159a6e9ae420bd2d3bd7))
+
+
+
+
+
 # [4.210.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.209.1...v4.210.0) (2026-01-28)
 
 

@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.211.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.210.0...v4.211.0) (2026-01-29)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
+
+
+
+
 # [4.210.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.209.1...v4.210.0) (2026-01-28)
 
 **Note:** Version bump only for package @socialgouv/modeles-social
