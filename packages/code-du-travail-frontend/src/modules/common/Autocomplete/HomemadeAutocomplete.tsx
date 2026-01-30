@@ -37,15 +37,7 @@ type HomemadeAutocompleteProps<K> = InputProps & {
   ariaDescribedby?: string;
   onDropdownOpenChange?: (isOpen: boolean) => void;
   onEnterPress?: () => void;
-  /**
-   * Allows the consumer to provide their own visible <label htmlFor=...> and
-   * avoid creating a second associated label from DSFR Input.
-   */
   disableNativeLabelAssociation?: boolean;
-  /**
-   * Override the listbox accessible name source.
-   * Useful when the visible label is outside of the DSFR Input.
-   */
   listboxAriaLabelledby?: string;
 };
 
