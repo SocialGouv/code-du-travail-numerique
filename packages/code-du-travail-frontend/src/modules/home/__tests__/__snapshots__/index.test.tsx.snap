@@ -230,386 +230,386 @@ exports[`<Home /> should match snapshot 1`] = `
           <li
             class="fr-col-12 fr-col-md-6 fr-col-lg-4 fr-col-xl-3"
           >
-            <div
-              class="d_flex flex-d_column md:flex-d_row ai_center md:ai_center h_auto md:h_88px w_100% filter_drop-shadow(0_2px_8px_rgba(0,_0,_0,_0.1))"
+            <button
+              class="fr-btn--tertiary-no-outline ta_left w_100% p_0 bd_none bg_transparent cursor_pointer [&:hover]:bg_transparent!"
+              type="button"
             >
               <div
-                class="h_88px md:h_100% w_100% md:w_auto flex_none md:flex_1 min-w_0 ov_hidden bg_var(--background-default-grey) bdr_8px md:bdr_0 bdr-tl_8px md:bdr-tl_8px bdr-bl_8px md:bdr-bl_8px trs_all_0.3s_ease"
+                class="d_flex flex-d_column md:flex-d_row ai_center md:ai_center h_auto md:h_88px w_100% filter_drop-shadow(0_2px_8px_rgba(0,_0,_0,_0.1))"
               >
                 <div
-                  class="fr-py-4w fr-px-2w d_flex ai_center h_100%"
+                  class="h_88px md:h_100% w_100% md:w_auto flex_none md:flex_1 min-w_0 ov_hidden bg_var(--background-default-grey) bdr_8px md:bdr_0 bdr-tl_8px md:bdr-tl_8px bdr-bl_8px md:bdr-bl_8px"
                 >
                   <div
-                    class="d_flex ai_center jc_center flex-sh_0"
+                    class="fr-py-4w fr-px-2w d_flex ai_center h_100%"
                   >
-                    <img
-                      alt=""
-                      class="w_40px md:w_48px lg:w_56px h_40px md:h_48px lg:h_56px"
-                      data-nimg="1"
-                      decoding="async"
-                      height="56"
-                      loading="lazy"
-                      src="/static/assets/icons/droit-du-travail/texte-internationaux.svg"
-                      style="color: transparent;"
-                      width="56"
-                    />
-                  </div>
-                  <button
-                    class="fr-btn--tertiary-no-outline ta_left"
-                    type="button"
-                  >
+                    <div
+                      class="d_flex ai_center jc_center flex-sh_0"
+                    >
+                      <img
+                        alt=""
+                        class="w_40px md:w_48px lg:w_56px h_40px md:h_48px lg:h_56px"
+                        data-nimg="1"
+                        decoding="async"
+                        height="56"
+                        loading="lazy"
+                        src="/static/assets/icons/droit-du-travail/texte-internationaux.svg"
+                        style="color: transparent;"
+                        width="56"
+                      />
+                    </div>
                     <h4
                       class="fr-mb-0 fr-ml-2w fr-text--md fr-btn--tertiary-no-outline"
                     >
                       Les textes internationaux
                     </h4>
-                  </button>
+                  </div>
+                </div>
+                <div
+                  class="w_60px md:w_30px h_15px md:h_100% flex-sh_0"
+                >
+                  <div
+                    class="w_100% h_100% cp-path_polygon(0%_0%,_100%_0%,_50%_100%) md:cp-path_polygon(0%_0%,_0%_100%,_100%_50%) bg_var(--background-default-grey)"
+                  />
                 </div>
               </div>
-              <div
-                class="w_60px md:w_30px h_15px md:h_100% flex-sh_0 trs_all_0.3s_ease"
-              >
-                <div
-                  class="w_100% h_100% cp-path_polygon(0%_0%,_100%_0%,_50%_100%) md:cp-path_polygon(0%_0%,_0%_100%,_100%_50%) bg_var(--background-default-grey)"
-                />
-              </div>
-            </div>
+            </button>
           </li>
           <li
             class="fr-col-12 fr-col-md-6 fr-col-lg-4 fr-col-xl-3"
           >
-            <div
-              class="d_flex flex-d_column md:flex-d_row ai_center md:ai_center h_auto md:h_88px w_100% filter_drop-shadow(0_2px_8px_rgba(0,_0,_0,_0.1))"
+            <button
+              class="fr-btn--tertiary-no-outline ta_left w_100% p_0 bd_none bg_transparent cursor_pointer [&:hover]:bg_transparent!"
+              type="button"
             >
               <div
-                class="h_88px md:h_100% w_100% md:w_auto flex_none md:flex_1 min-w_0 ov_hidden bg_var(--background-default-grey) bdr_8px md:bdr_0 bdr-tl_8px md:bdr-tl_8px bdr-bl_8px md:bdr-bl_8px trs_all_0.3s_ease"
+                class="d_flex flex-d_column md:flex-d_row ai_center md:ai_center h_auto md:h_88px w_100% filter_drop-shadow(0_2px_8px_rgba(0,_0,_0,_0.1))"
               >
                 <div
-                  class="fr-py-4w fr-px-2w d_flex ai_center h_100%"
+                  class="h_88px md:h_100% w_100% md:w_auto flex_none md:flex_1 min-w_0 ov_hidden bg_var(--background-default-grey) bdr_8px md:bdr_0 bdr-tl_8px md:bdr-tl_8px bdr-bl_8px md:bdr-bl_8px"
                 >
                   <div
-                    class="d_flex ai_center jc_center flex-sh_0"
+                    class="fr-py-4w fr-px-2w d_flex ai_center h_100%"
                   >
-                    <img
-                      alt=""
-                      class="w_40px md:w_48px lg:w_56px h_40px md:h_48px lg:h_56px"
-                      data-nimg="1"
-                      decoding="async"
-                      height="56"
-                      loading="lazy"
-                      src="/static/assets/icons/droit-du-travail/texte-europeens.svg"
-                      style="color: transparent;"
-                      width="56"
-                    />
-                  </div>
-                  <button
-                    class="fr-btn--tertiary-no-outline ta_left"
-                    type="button"
-                  >
+                    <div
+                      class="d_flex ai_center jc_center flex-sh_0"
+                    >
+                      <img
+                        alt=""
+                        class="w_40px md:w_48px lg:w_56px h_40px md:h_48px lg:h_56px"
+                        data-nimg="1"
+                        decoding="async"
+                        height="56"
+                        loading="lazy"
+                        src="/static/assets/icons/droit-du-travail/texte-europeens.svg"
+                        style="color: transparent;"
+                        width="56"
+                      />
+                    </div>
                     <h4
                       class="fr-mb-0 fr-ml-2w fr-text--md fr-btn--tertiary-no-outline"
                     >
                       Les textes européens
                     </h4>
-                  </button>
+                  </div>
+                </div>
+                <div
+                  class="w_60px md:w_30px h_15px md:h_100% flex-sh_0"
+                >
+                  <div
+                    class="w_100% h_100% cp-path_polygon(0%_0%,_100%_0%,_50%_100%) md:cp-path_polygon(0%_0%,_0%_100%,_100%_50%) bg_var(--background-default-grey)"
+                  />
                 </div>
               </div>
-              <div
-                class="w_60px md:w_30px h_15px md:h_100% flex-sh_0 trs_all_0.3s_ease"
-              >
-                <div
-                  class="w_100% h_100% cp-path_polygon(0%_0%,_100%_0%,_50%_100%) md:cp-path_polygon(0%_0%,_0%_100%,_100%_50%) bg_var(--background-default-grey)"
-                />
-              </div>
-            </div>
+            </button>
           </li>
           <li
             class="fr-col-12 fr-col-md-6 fr-col-lg-4 fr-col-xl-3"
           >
-            <div
-              class="d_flex flex-d_column md:flex-d_row ai_center md:ai_center h_auto md:h_88px w_100% filter_drop-shadow(0_2px_8px_rgba(0,_0,_0,_0.1))"
+            <button
+              class="fr-btn--tertiary-no-outline ta_left w_100% p_0 bd_none bg_transparent cursor_pointer [&:hover]:bg_transparent!"
+              type="button"
             >
               <div
-                class="h_88px md:h_100% w_100% md:w_auto flex_none md:flex_1 min-w_0 ov_hidden bg_var(--background-default-grey) bdr_8px md:bdr_0 bdr-tl_8px md:bdr-tl_8px bdr-bl_8px md:bdr-bl_8px trs_all_0.3s_ease"
+                class="d_flex flex-d_column md:flex-d_row ai_center md:ai_center h_auto md:h_88px w_100% filter_drop-shadow(0_2px_8px_rgba(0,_0,_0,_0.1))"
               >
                 <div
-                  class="fr-py-4w fr-px-2w d_flex ai_center h_100%"
+                  class="h_88px md:h_100% w_100% md:w_auto flex_none md:flex_1 min-w_0 ov_hidden bg_var(--background-default-grey) bdr_8px md:bdr_0 bdr-tl_8px md:bdr-tl_8px bdr-bl_8px md:bdr-bl_8px"
                 >
                   <div
-                    class="d_flex ai_center jc_center flex-sh_0"
+                    class="fr-py-4w fr-px-2w d_flex ai_center h_100%"
                   >
-                    <img
-                      alt=""
-                      class="w_40px md:w_48px lg:w_56px h_40px md:h_48px lg:h_56px"
-                      data-nimg="1"
-                      decoding="async"
-                      height="56"
-                      loading="lazy"
-                      src="/static/assets/icons/droit-du-travail/constitution-francaise.svg"
-                      style="color: transparent;"
-                      width="56"
-                    />
-                  </div>
-                  <button
-                    class="fr-btn--tertiary-no-outline ta_left"
-                    type="button"
-                  >
+                    <div
+                      class="d_flex ai_center jc_center flex-sh_0"
+                    >
+                      <img
+                        alt=""
+                        class="w_40px md:w_48px lg:w_56px h_40px md:h_48px lg:h_56px"
+                        data-nimg="1"
+                        decoding="async"
+                        height="56"
+                        loading="lazy"
+                        src="/static/assets/icons/droit-du-travail/constitution-francaise.svg"
+                        style="color: transparent;"
+                        width="56"
+                      />
+                    </div>
                     <h4
                       class="fr-mb-0 fr-ml-2w fr-text--md fr-btn--tertiary-no-outline"
                     >
                       La Constitution française
                     </h4>
-                  </button>
+                  </div>
+                </div>
+                <div
+                  class="w_60px md:w_30px h_15px md:h_100% flex-sh_0"
+                >
+                  <div
+                    class="w_100% h_100% cp-path_polygon(0%_0%,_100%_0%,_50%_100%) md:cp-path_polygon(0%_0%,_0%_100%,_100%_50%) bg_var(--background-default-grey)"
+                  />
                 </div>
               </div>
-              <div
-                class="w_60px md:w_30px h_15px md:h_100% flex-sh_0 trs_all_0.3s_ease"
-              >
-                <div
-                  class="w_100% h_100% cp-path_polygon(0%_0%,_100%_0%,_50%_100%) md:cp-path_polygon(0%_0%,_0%_100%,_100%_50%) bg_var(--background-default-grey)"
-                />
-              </div>
-            </div>
+            </button>
           </li>
           <li
             class="fr-col-12 fr-col-md-6 fr-col-lg-4 fr-col-xl-3"
           >
-            <div
-              class="d_flex flex-d_column md:flex-d_row ai_center md:ai_center h_auto md:h_88px w_100% filter_drop-shadow(0_2px_8px_rgba(0,_0,_0,_0.1))"
+            <button
+              class="fr-btn--tertiary-no-outline ta_left w_100% p_0 bd_none bg_transparent cursor_pointer [&:hover]:bg_transparent!"
+              type="button"
             >
               <div
-                class="h_88px md:h_100% w_100% md:w_auto flex_none md:flex_1 min-w_0 ov_hidden bg_var(--background-default-grey) bdr_8px md:bdr_0 bdr-tl_8px md:bdr-tl_8px bdr-bl_8px md:bdr-bl_8px trs_all_0.3s_ease"
+                class="d_flex flex-d_column md:flex-d_row ai_center md:ai_center h_auto md:h_88px w_100% filter_drop-shadow(0_2px_8px_rgba(0,_0,_0,_0.1))"
               >
                 <div
-                  class="fr-py-4w fr-px-2w d_flex ai_center h_100%"
+                  class="h_88px md:h_100% w_100% md:w_auto flex_none md:flex_1 min-w_0 ov_hidden bg_var(--background-default-grey) bdr_8px md:bdr_0 bdr-tl_8px md:bdr-tl_8px bdr-bl_8px md:bdr-bl_8px"
                 >
                   <div
-                    class="d_flex ai_center jc_center flex-sh_0"
+                    class="fr-py-4w fr-px-2w d_flex ai_center h_100%"
                   >
-                    <img
-                      alt=""
-                      class="w_40px md:w_48px lg:w_56px h_40px md:h_48px lg:h_56px"
-                      data-nimg="1"
-                      decoding="async"
-                      height="56"
-                      loading="lazy"
-                      src="/static/assets/icons/droit-du-travail/lois.svg"
-                      style="color: transparent;"
-                      width="56"
-                    />
-                  </div>
-                  <button
-                    class="fr-btn--tertiary-no-outline ta_left"
-                    type="button"
-                  >
+                    <div
+                      class="d_flex ai_center jc_center flex-sh_0"
+                    >
+                      <img
+                        alt=""
+                        class="w_40px md:w_48px lg:w_56px h_40px md:h_48px lg:h_56px"
+                        data-nimg="1"
+                        decoding="async"
+                        height="56"
+                        loading="lazy"
+                        src="/static/assets/icons/droit-du-travail/lois.svg"
+                        style="color: transparent;"
+                        width="56"
+                      />
+                    </div>
                     <h4
                       class="fr-mb-0 fr-ml-2w fr-text--md fr-btn--tertiary-no-outline"
                     >
                       Lois, ordonnances et décrets (Code du travail)
                     </h4>
-                  </button>
+                  </div>
+                </div>
+                <div
+                  class="w_60px md:w_30px h_15px md:h_100% flex-sh_0"
+                >
+                  <div
+                    class="w_100% h_100% cp-path_polygon(0%_0%,_100%_0%,_50%_100%) md:cp-path_polygon(0%_0%,_0%_100%,_100%_50%) bg_var(--background-default-grey)"
+                  />
                 </div>
               </div>
-              <div
-                class="w_60px md:w_30px h_15px md:h_100% flex-sh_0 trs_all_0.3s_ease"
-              >
-                <div
-                  class="w_100% h_100% cp-path_polygon(0%_0%,_100%_0%,_50%_100%) md:cp-path_polygon(0%_0%,_0%_100%,_100%_50%) bg_var(--background-default-grey)"
-                />
-              </div>
-            </div>
+            </button>
           </li>
           <li
             class="fr-col-12 fr-col-md-6 fr-col-lg-4 fr-col-xl-3"
           >
-            <div
-              class="d_flex flex-d_column md:flex-d_row ai_center md:ai_center h_auto md:h_88px w_100% filter_drop-shadow(0_2px_8px_rgba(0,_0,_0,_0.1))"
+            <button
+              class="fr-btn--tertiary-no-outline ta_left w_100% p_0 bd_none bg_transparent cursor_pointer [&:hover]:bg_transparent!"
+              type="button"
             >
               <div
-                class="h_88px md:h_100% w_100% md:w_auto flex_none md:flex_1 min-w_0 ov_hidden bg_var(--background-default-grey) bdr_8px md:bdr_0 bdr-tl_8px md:bdr-tl_8px bdr-bl_8px md:bdr-bl_8px trs_all_0.3s_ease"
+                class="d_flex flex-d_column md:flex-d_row ai_center md:ai_center h_auto md:h_88px w_100% filter_drop-shadow(0_2px_8px_rgba(0,_0,_0,_0.1))"
               >
                 <div
-                  class="fr-py-4w fr-px-2w d_flex ai_center h_100%"
+                  class="h_88px md:h_100% w_100% md:w_auto flex_none md:flex_1 min-w_0 ov_hidden bg_var(--background-default-grey) bdr_8px md:bdr_0 bdr-tl_8px md:bdr-tl_8px bdr-bl_8px md:bdr-bl_8px"
                 >
                   <div
-                    class="d_flex ai_center jc_center flex-sh_0"
+                    class="fr-py-4w fr-px-2w d_flex ai_center h_100%"
                   >
-                    <img
-                      alt=""
-                      class="w_40px md:w_48px lg:w_56px h_40px md:h_48px lg:h_56px"
-                      data-nimg="1"
-                      decoding="async"
-                      height="56"
-                      loading="lazy"
-                      src="/static/assets/icons/droit-du-travail/conventions-collectives.svg"
-                      style="color: transparent;"
-                      width="56"
-                    />
-                  </div>
-                  <button
-                    class="fr-btn--tertiary-no-outline ta_left"
-                    type="button"
-                  >
+                    <div
+                      class="d_flex ai_center jc_center flex-sh_0"
+                    >
+                      <img
+                        alt=""
+                        class="w_40px md:w_48px lg:w_56px h_40px md:h_48px lg:h_56px"
+                        data-nimg="1"
+                        decoding="async"
+                        height="56"
+                        loading="lazy"
+                        src="/static/assets/icons/droit-du-travail/conventions-collectives.svg"
+                        style="color: transparent;"
+                        width="56"
+                      />
+                    </div>
                     <h4
                       class="fr-mb-0 fr-ml-2w fr-text--md fr-btn--tertiary-no-outline"
                     >
                       Les conventions et accords collectifs
                     </h4>
-                  </button>
+                  </div>
+                </div>
+                <div
+                  class="w_60px md:w_30px h_15px md:h_100% flex-sh_0"
+                >
+                  <div
+                    class="w_100% h_100% cp-path_polygon(0%_0%,_100%_0%,_50%_100%) md:cp-path_polygon(0%_0%,_0%_100%,_100%_50%) bg_var(--background-default-grey)"
+                  />
                 </div>
               </div>
-              <div
-                class="w_60px md:w_30px h_15px md:h_100% flex-sh_0 trs_all_0.3s_ease"
-              >
-                <div
-                  class="w_100% h_100% cp-path_polygon(0%_0%,_100%_0%,_50%_100%) md:cp-path_polygon(0%_0%,_0%_100%,_100%_50%) bg_var(--background-default-grey)"
-                />
-              </div>
-            </div>
+            </button>
           </li>
           <li
             class="fr-col-12 fr-col-md-6 fr-col-lg-4 fr-col-xl-3"
           >
-            <div
-              class="d_flex flex-d_column md:flex-d_row ai_center md:ai_center h_auto md:h_88px w_100% filter_drop-shadow(0_2px_8px_rgba(0,_0,_0,_0.1))"
+            <button
+              class="fr-btn--tertiary-no-outline ta_left w_100% p_0 bd_none bg_transparent cursor_pointer [&:hover]:bg_transparent!"
+              type="button"
             >
               <div
-                class="h_88px md:h_100% w_100% md:w_auto flex_none md:flex_1 min-w_0 ov_hidden bg_var(--background-default-grey) bdr_8px md:bdr_0 bdr-tl_8px md:bdr-tl_8px bdr-bl_8px md:bdr-bl_8px trs_all_0.3s_ease"
+                class="d_flex flex-d_column md:flex-d_row ai_center md:ai_center h_auto md:h_88px w_100% filter_drop-shadow(0_2px_8px_rgba(0,_0,_0,_0.1))"
               >
                 <div
-                  class="fr-py-4w fr-px-2w d_flex ai_center h_100%"
+                  class="h_88px md:h_100% w_100% md:w_auto flex_none md:flex_1 min-w_0 ov_hidden bg_var(--background-default-grey) bdr_8px md:bdr_0 bdr-tl_8px md:bdr-tl_8px bdr-bl_8px md:bdr-bl_8px"
                 >
                   <div
-                    class="d_flex ai_center jc_center flex-sh_0"
+                    class="fr-py-4w fr-px-2w d_flex ai_center h_100%"
                   >
-                    <img
-                      alt=""
-                      class="w_40px md:w_48px lg:w_56px h_40px md:h_48px lg:h_56px"
-                      data-nimg="1"
-                      decoding="async"
-                      height="56"
-                      loading="lazy"
-                      src="/static/assets/icons/droit-du-travail/usage-unilateraux.svg"
-                      style="color: transparent;"
-                      width="56"
-                    />
-                  </div>
-                  <button
-                    class="fr-btn--tertiary-no-outline ta_left"
-                    type="button"
-                  >
+                    <div
+                      class="d_flex ai_center jc_center flex-sh_0"
+                    >
+                      <img
+                        alt=""
+                        class="w_40px md:w_48px lg:w_56px h_40px md:h_48px lg:h_56px"
+                        data-nimg="1"
+                        decoding="async"
+                        height="56"
+                        loading="lazy"
+                        src="/static/assets/icons/droit-du-travail/usage-unilateraux.svg"
+                        style="color: transparent;"
+                        width="56"
+                      />
+                    </div>
                     <h4
                       class="fr-mb-0 fr-ml-2w fr-text--md fr-btn--tertiary-no-outline"
                     >
                       Les usages et les engagements unilatéraux
                     </h4>
-                  </button>
+                  </div>
+                </div>
+                <div
+                  class="w_60px md:w_30px h_15px md:h_100% flex-sh_0"
+                >
+                  <div
+                    class="w_100% h_100% cp-path_polygon(0%_0%,_100%_0%,_50%_100%) md:cp-path_polygon(0%_0%,_0%_100%,_100%_50%) bg_var(--background-default-grey)"
+                  />
                 </div>
               </div>
-              <div
-                class="w_60px md:w_30px h_15px md:h_100% flex-sh_0 trs_all_0.3s_ease"
-              >
-                <div
-                  class="w_100% h_100% cp-path_polygon(0%_0%,_100%_0%,_50%_100%) md:cp-path_polygon(0%_0%,_0%_100%,_100%_50%) bg_var(--background-default-grey)"
-                />
-              </div>
-            </div>
+            </button>
           </li>
           <li
             class="fr-col-12 fr-col-md-6 fr-col-lg-4 fr-col-xl-3"
           >
-            <div
-              class="d_flex flex-d_column md:flex-d_row ai_center md:ai_center h_auto md:h_88px w_100% filter_drop-shadow(0_2px_8px_rgba(0,_0,_0,_0.1))"
+            <button
+              class="fr-btn--tertiary-no-outline ta_left w_100% p_0 bd_none bg_transparent cursor_pointer [&:hover]:bg_transparent!"
+              type="button"
             >
               <div
-                class="h_88px md:h_100% w_100% md:w_auto flex_none md:flex_1 min-w_0 ov_hidden bg_var(--background-default-grey) bdr_8px md:bdr_0 bdr-tl_8px md:bdr-tl_8px bdr-bl_8px md:bdr-bl_8px trs_all_0.3s_ease"
+                class="d_flex flex-d_column md:flex-d_row ai_center md:ai_center h_auto md:h_88px w_100% filter_drop-shadow(0_2px_8px_rgba(0,_0,_0,_0.1))"
               >
                 <div
-                  class="fr-py-4w fr-px-2w d_flex ai_center h_100%"
+                  class="h_88px md:h_100% w_100% md:w_auto flex_none md:flex_1 min-w_0 ov_hidden bg_var(--background-default-grey) bdr_8px md:bdr_0 bdr-tl_8px md:bdr-tl_8px bdr-bl_8px md:bdr-bl_8px"
                 >
                   <div
-                    class="d_flex ai_center jc_center flex-sh_0"
+                    class="fr-py-4w fr-px-2w d_flex ai_center h_100%"
                   >
-                    <img
-                      alt=""
-                      class="w_40px md:w_48px lg:w_56px h_40px md:h_48px lg:h_56px"
-                      data-nimg="1"
-                      decoding="async"
-                      height="56"
-                      loading="lazy"
-                      src="/static/assets/icons/droit-du-travail/reglement-interieur-entreprise.svg"
-                      style="color: transparent;"
-                      width="56"
-                    />
-                  </div>
-                  <button
-                    class="fr-btn--tertiary-no-outline ta_left"
-                    type="button"
-                  >
+                    <div
+                      class="d_flex ai_center jc_center flex-sh_0"
+                    >
+                      <img
+                        alt=""
+                        class="w_40px md:w_48px lg:w_56px h_40px md:h_48px lg:h_56px"
+                        data-nimg="1"
+                        decoding="async"
+                        height="56"
+                        loading="lazy"
+                        src="/static/assets/icons/droit-du-travail/reglement-interieur-entreprise.svg"
+                        style="color: transparent;"
+                        width="56"
+                      />
+                    </div>
                     <h4
                       class="fr-mb-0 fr-ml-2w fr-text--md fr-btn--tertiary-no-outline"
                     >
                       Le règlement intérieur de l'entreprise
                     </h4>
-                  </button>
+                  </div>
+                </div>
+                <div
+                  class="w_60px md:w_30px h_15px md:h_100% flex-sh_0"
+                >
+                  <div
+                    class="w_100% h_100% cp-path_polygon(0%_0%,_100%_0%,_50%_100%) md:cp-path_polygon(0%_0%,_0%_100%,_100%_50%) bg_var(--background-default-grey)"
+                  />
                 </div>
               </div>
-              <div
-                class="w_60px md:w_30px h_15px md:h_100% flex-sh_0 trs_all_0.3s_ease"
-              >
-                <div
-                  class="w_100% h_100% cp-path_polygon(0%_0%,_100%_0%,_50%_100%) md:cp-path_polygon(0%_0%,_0%_100%,_100%_50%) bg_var(--background-default-grey)"
-                />
-              </div>
-            </div>
+            </button>
           </li>
           <li
             class="fr-col-12 fr-col-md-6 fr-col-lg-4 fr-col-xl-3"
           >
-            <div
-              class="d_flex flex-d_column md:flex-d_row ai_center md:ai_center h_auto md:h_88px w_100% filter_drop-shadow(0_2px_8px_rgba(0,_0,_0,_0.1))"
+            <button
+              class="fr-btn--tertiary-no-outline ta_left w_100% p_0 bd_none bg_transparent cursor_pointer [&:hover]:bg_transparent!"
+              type="button"
             >
               <div
-                class="h_88px md:h_100% w_100% md:w_auto flex_none md:flex_1 min-w_0 ov_hidden bg_var(--background-default-grey) bdr_8px md:bdr_0 bdr-tl_8px md:bdr-tl_8px bdr-bl_8px md:bdr-bl_8px trs_all_0.3s_ease"
+                class="d_flex flex-d_column md:flex-d_row ai_center md:ai_center h_auto md:h_88px w_100% filter_drop-shadow(0_2px_8px_rgba(0,_0,_0,_0.1))"
               >
                 <div
-                  class="fr-py-4w fr-px-2w d_flex ai_center h_100%"
+                  class="h_88px md:h_100% w_100% md:w_auto flex_none md:flex_1 min-w_0 ov_hidden bg_var(--background-default-grey) bdr_8px md:bdr_0 bdr-tl_8px md:bdr-tl_8px bdr-bl_8px md:bdr-bl_8px"
                 >
                   <div
-                    class="d_flex ai_center jc_center flex-sh_0"
+                    class="fr-py-4w fr-px-2w d_flex ai_center h_100%"
                   >
-                    <img
-                      alt=""
-                      class="w_40px md:w_48px lg:w_56px h_40px md:h_48px lg:h_56px"
-                      data-nimg="1"
-                      decoding="async"
-                      height="56"
-                      loading="lazy"
-                      src="/static/assets/icons/droit-du-travail/contrat-travail.svg"
-                      style="color: transparent;"
-                      width="56"
-                    />
-                  </div>
-                  <button
-                    class="fr-btn--tertiary-no-outline ta_left"
-                    type="button"
-                  >
+                    <div
+                      class="d_flex ai_center jc_center flex-sh_0"
+                    >
+                      <img
+                        alt=""
+                        class="w_40px md:w_48px lg:w_56px h_40px md:h_48px lg:h_56px"
+                        data-nimg="1"
+                        decoding="async"
+                        height="56"
+                        loading="lazy"
+                        src="/static/assets/icons/droit-du-travail/contrat-travail.svg"
+                        style="color: transparent;"
+                        width="56"
+                      />
+                    </div>
                     <h4
                       class="fr-mb-0 fr-ml-2w fr-text--md fr-btn--tertiary-no-outline"
                     >
                       Le contrat de travail
                     </h4>
-                  </button>
+                  </div>
+                </div>
+                <div
+                  class="w_60px md:w_30px h_15px md:h_100% flex-sh_0"
+                >
+                  <div
+                    class="w_100% h_100% cp-path_polygon(0%_0%,_100%_0%,_50%_100%) md:cp-path_polygon(0%_0%,_0%_100%,_100%_50%) bg_var(--background-default-grey)"
+                  />
                 </div>
               </div>
-              <div
-                class="w_60px md:w_30px h_15px md:h_100% flex-sh_0 trs_all_0.3s_ease"
-              >
-                <div
-                  class="w_100% h_100% cp-path_polygon(0%_0%,_100%_0%,_50%_100%) md:cp-path_polygon(0%_0%,_0%_100%,_100%_50%) bg_var(--background-default-grey)"
-                />
-              </div>
-            </div>
+            </button>
           </li>
         </ul>
         <div
