@@ -50,14 +50,8 @@ export const HeaderDsfr = ({ navigation, currentPath }: Props) => {
       <div className={fr.cx("fr-header__body")}>
         <div className={fr.cx("fr-container")}>
           <div className={fr.cx("fr-header__body-row")}>
-            <HeaderBrand
-              onSearchClick={handleSearchToggle}
-              isSearchOpen={isOpen}
-            />
-            <HeaderSearchV2
-              onSearchClick={handleSearchToggle}
-              isSearchOpen={isOpen}
-            />
+            <HeaderBrand onSearchClick={handleSearchToggle} />
+            <HeaderSearchV2 onSearchClick={handleSearchToggle} />
           </div>
         </div>
       </div>

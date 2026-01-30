@@ -67,34 +67,19 @@ exports[`<Home /> should match snapshot 1`] = `
                             par exemple : Comment sont comptés les congés pendant les arrêts maladies ?
                           </span>
                         </label>
-                        <p
-                          class="fr-sr-only"
-                          id="search-home-input-hint"
-                        >
-                          Tapez 
-                          3
-                           caractères ou plus pour lancer une recherche.
-                        </p>
                         <div
                           class="d_flex flex-d_row ai_center w_100% pos_relative"
                         >
                           <div
                             class="fr-input-group w_100% h_100% fr-mb-0"
                           >
-                            <label
-                              class="fr-label fr-sr-only"
-                              for="search-home-autocomplete"
-                              id="search-home-autocomplete-label"
-                            >
-                              Rechercher
-                            </label>
                             <div
                               class="fr-input-wrap fr-input-wrap--addon"
                             >
                               <input
                                 aria-autocomplete="list"
                                 aria-controls="search-home-autocomplete-listbox"
-                                aria-describedby="search-home-input-hint search-home-min-search-length-hint search-home-feedback-min-search-hint search-home-no-result-message"
+                                aria-describedby="search-home-feedback-min-search-hint search-home-no-result-message"
                                 aria-expanded="false"
                                 aria-haspopup="listbox"
                                 autocomplete="off"
@@ -109,17 +94,13 @@ exports[`<Home /> should match snapshot 1`] = `
                                 class="pos_absolute right_0 h_100% ac_center"
                               />
                             </div>
-                            <div
-                              aria-live="polite"
-                              class="fr-messages-group"
-                              id="search-home-autocomplete-messages-group"
-                            />
                           </div>
                           <div
                             aria-atomic="true"
                             aria-live="polite"
-                            class="fr-sr-only"
-                            lang="fr"
+                            aria-relevant="additions text"
+                            class="pos_absolute w_1px h_1px p_0 m_-1px ov_hidden clip_rect(0,_0,_0,_0) white-space_nowrap bd_0"
+                            role="status"
                           />
                           <ul
                             aria-labelledby="search-home-label"
@@ -143,7 +124,7 @@ exports[`<Home /> should match snapshot 1`] = `
                       </div>
                       <button
                         class="fr-btn fr-icon-search-line fr-btn--icon-right md:min-h_76px! min-h_40px! flex-sh_0 md:as_flex-end mdDown:w_100%! mdDown:jc_center!"
-                        id="fr-button-_r_1_"
+                        id="fr-button-_r_0_"
                         type="button"
                       >
                         Voir tous les résultats
@@ -151,8 +132,6 @@ exports[`<Home /> should match snapshot 1`] = `
                     </div>
                   </form>
                   <div
-                    aria-atomic="true"
-                    aria-live="polite"
                     class="fr-mt-6w"
                     id="search-home-feedback"
                   >
@@ -618,7 +597,7 @@ exports[`<Home /> should match snapshot 1`] = `
           <a
             class="fr-btn fr-btn--secondary fr-btn--lg fr-icon-arrow-right-line fr-btn--icon-right"
             href="/droit-du-travail"
-            id="fr-button-_r_2_"
+            id="fr-button-_r_1_"
           >
             Comprendre le droit du travail
           </a>
@@ -1009,7 +988,7 @@ exports[`<Home /> should match snapshot 1`] = `
             >
               <div
                 class="fr-tile fr-enlarge-link fr-tile--vertical"
-                id="fr-tile-_r_3_"
+                id="fr-tile-_r_2_"
               >
                 <div
                   class="fr-tile__body"
@@ -1061,7 +1040,7 @@ exports[`<Home /> should match snapshot 1`] = `
             <a
               class="fr-btn fr-btn--secondary fr-btn--lg fr-icon-arrow-right-line fr-btn--icon-right"
               href="/outils"
-              id="fr-button-_r_4_"
+              id="fr-button-_r_3_"
             >
               Voir tous les simulateurs
             </a>
@@ -1091,7 +1070,7 @@ exports[`<Home /> should match snapshot 1`] = `
             >
               <div
                 class="fr-card fr-enlarge-link fr-card--horizontal"
-                id="fr-card-_r_5_"
+                id="fr-card-_r_4_"
               >
                 <div
                   class="fr-card__body"
@@ -1143,7 +1122,7 @@ exports[`<Home /> should match snapshot 1`] = `
             <a
               class="fr-btn fr-btn--secondary fr-btn--lg fr-icon-arrow-right-line fr-btn--icon-right"
               href="/modeles-de-courriers"
-              id="fr-button-_r_6_"
+              id="fr-button-_r_5_"
             >
               Voir tous les modèles de documents
             </a>
@@ -1172,7 +1151,7 @@ exports[`<Home /> should match snapshot 1`] = `
             >
               <div
                 class="fr-card fr-enlarge-link fr-card--horizontal"
-                id="fr-card-_r_7_"
+                id="fr-card-_r_6_"
               >
                 <div
                   class="fr-card__body"
@@ -1224,7 +1203,7 @@ exports[`<Home /> should match snapshot 1`] = `
             <a
               class="fr-btn fr-btn--secondary fr-btn--lg fr-icon-arrow-right-line fr-btn--icon-right"
               href="/contribution"
-              id="fr-button-_r_8_"
+              id="fr-button-_r_7_"
             >
               Voir toutes les fiches pratiques
             </a>
@@ -1254,7 +1233,7 @@ exports[`<Home /> should match snapshot 1`] = `
             >
               <div
                 class="fr-card fr-enlarge-link fr-card--horizontal"
-                id="fr-card-_r_9_"
+                id="fr-card-_r_8_"
               >
                 <div
                   class="fr-card__body"
@@ -1306,7 +1285,7 @@ exports[`<Home /> should match snapshot 1`] = `
             <a
               class="fr-btn fr-btn--secondary fr-btn--lg fr-icon-arrow-right-line fr-btn--icon-right"
               href="/convention-collective"
-              id="fr-button-_r_a_"
+              id="fr-button-_r_9_"
             >
               Voir toutes les conventions collectives
             </a>
@@ -1398,7 +1377,7 @@ exports[`<Home /> should match snapshot 1`] = `
             <a
               class="fr-btn fr-btn--secondary fr-btn--lg fr-icon-arrow-right-line fr-btn--icon-right"
               href="/themes"
-              id="fr-button-_r_b_"
+              id="fr-button-_r_a_"
             >
               Voir tous les thèmes
             </a>
