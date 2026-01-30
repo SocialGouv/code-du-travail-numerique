@@ -18,6 +18,19 @@ import { css } from "@styled-system/css";
 import Link from "../Link";
 import { redirect } from "next/navigation";
 
+const A11Y_MESSAGES = {
+  NO_RESULTS: "Aucun résultat disponible",
+  NAVIGATION_HINT: "Utilisez les flèches haut et bas pour naviguer.",
+  SELECTED: (label: string) => `${label} sélectionné`,
+  RESULT_COUNT: (count: number) => {
+    const resultatText = count === 1 ? "résultat est" : "résultats sont";
+    const pluralSuffix = count > 1 ? "s" : "";
+    return `${count} ${resultatText} disponible${pluralSuffix}`;
+  },
+  RESULT_COUNT_WITH_HINT: (count: number) =>
+    `${A11Y_MESSAGES.RESULT_COUNT(count)}. ${A11Y_MESSAGES.NAVIGATION_HINT}`,
+} as const;
+
 type HomemadeAutocompleteProps<K> = InputProps & {
   onChange?: (value: K | undefined, suggestions?: K[]) => void;
   onError?: (value: string) => void;
@@ -39,12 +52,8 @@ type HomemadeAutocompleteProps<K> = InputProps & {
   onEnterPress?: () => void;
   disableNativeLabelAssociation?: boolean;
   listboxAriaLabelledby?: string;
-  /**
-   * Minimum input length before announcing "no results" in the internal live region.
-   * This helps avoid noisy announcements when suggestions are intentionally disabled
-   * for short queries (e.g. "type 3 characters" behaviour).
-   */
   minQueryLengthForNoResultsA11y?: number;
+  a11yExternalStatusMessage?: string;
 };
 
 export const HomemadeAutocomplete = <K,>({
@@ -74,6 +83,7 @@ export const HomemadeAutocomplete = <K,>({
   disableNativeLabelAssociation,
   listboxAriaLabelledby,
   minQueryLengthForNoResultsA11y = 1,
+  a11yExternalStatusMessage,
 }: HomemadeAutocompleteProps<K>) => {
   const [loading, setLoading] = useState(false);
   const [inputValue, setInputValue] = useState(
@@ -83,7 +93,6 @@ export const HomemadeAutocomplete = <K,>({
   const [isOpen, setIsOpen] = useState(false);
   const [highlightedIndex, setHighlightedIndex] = useState<number>(-1);
   const [selectedItem, setSelectedItem] = useState<K | undefined>(defaultValue);
-  const [a11yStatusMessage, setA11yStatusMessage] = useState("");
   const [liveRegionMessage, setLiveRegionMessage] = useState("");
 
   const internalInputRef = useRef<HTMLInputElement | null>(null);
@@ -93,7 +102,6 @@ export const HomemadeAutocomplete = <K,>({
 
   const listboxId = id ? `${id}-listbox` : "autocomplete-listbox";
   const labelId = id ? `${id}-label` : "autocomplete-label";
-  const messagesGroupId = id ? `${id}-messages-group` : undefined;
 
   const generateA11yStatusMessage = useCallback(
     (
@@ -103,55 +111,63 @@ export const HomemadeAutocomplete = <K,>({
       currentSelectedItem: K | undefined,
       currentInputValue: string
     ) => {
+      // Item selected
       if (!isMenuOpen && currentSelectedItem) {
-        return `${displayLabel(currentSelectedItem)} sélectionné`;
+        return A11Y_MESSAGES.SELECTED(displayLabel(currentSelectedItem));
       }
 
+      // Empty input
       if (!currentInputValue) {
         return "";
       }
 
       const resultCount = results.length;
 
+      // No results after search (menu closed)
       if (
         !isMenuOpen &&
         resultCount === 0 &&
         currentInputValue.length >= minQueryLengthForNoResultsA11y
       ) {
-        return "Aucun résultat disponible";
+        return A11Y_MESSAGES.NO_RESULTS;
       }
 
+      // Menu closed without results
       if (!isMenuOpen) {
         return "";
       }
 
+      // No results in open menu
       if (resultCount === 0) {
-        return "Aucun résultat disponible";
+        return A11Y_MESSAGES.NO_RESULTS;
       }
 
-      const resultatText =
-        resultCount === 1 ? "résultat est" : "résultats sont";
-      const baseMessage = `${resultCount} ${resultatText} disponible${resultCount > 1 ? "s" : ""}`;
-
+      // Results available with or without navigation hint
       if (currentHighlightedIndex !== null && currentHighlightedIndex >= 0) {
-        return `${baseMessage}. Utilisez les flèches haut et bas pour naviguer.`;
+        return A11Y_MESSAGES.RESULT_COUNT_WITH_HINT(resultCount);
       }
 
-      return baseMessage;
+      return A11Y_MESSAGES.RESULT_COUNT(resultCount);
     },
     [displayLabel, minQueryLengthForNoResultsA11y]
   );
 
   useEffect(() => {
-    const message = generateA11yStatusMessage(
+    const messageFromCombobox = generateA11yStatusMessage(
       isOpen,
       suggestions,
       highlightedIndex,
       selectedItem,
       inputValue
     );
-    setA11yStatusMessage(message);
 
+    const message =
+      a11yExternalStatusMessage && a11yExternalStatusMessage.trim().length > 0
+        ? a11yExternalStatusMessage
+        : messageFromCombobox;
+
+    // We intentionally update a dedicated piece of state for the live region.
+    // Clearing then re-setting helps some screen readers announce repeated updates.
     if (message) {
       setLiveRegionMessage("");
       setTimeout(() => {
@@ -161,6 +177,7 @@ export const HomemadeAutocomplete = <K,>({
       setLiveRegionMessage("");
     }
   }, [
+    a11yExternalStatusMessage,
     isOpen,
     suggestions,
     highlightedIndex,
@@ -328,18 +345,6 @@ export const HomemadeAutocomplete = <K,>({
     );
   };
 
-  const getPluralSuffix = (count: number) => (count > 1 ? "s" : "");
-
-  let statusMessage = "";
-  if (!loading && isOpen && inputValue) {
-    if (suggestions.length > 0) {
-      const suffix = getPluralSuffix(suggestions.length);
-      statusMessage = `${suggestions.length} résultat${suffix} trouvé${suffix}.`;
-    } else {
-      statusMessage = "Aucun résultat trouvé.";
-    }
-  }
-
   const getOptionId = (index: number) => `${listboxId}-option-${index}`;
 
   return (
@@ -502,6 +507,7 @@ export const HomemadeAutocomplete = <K,>({
         Using aria-live="polite" + aria-atomic="true" (better screen reader support than role="status")
       */}
       <div
+        role="status"
         aria-live="polite"
         aria-atomic="true"
         className={fr.cx("fr-sr-only")}
@@ -669,4 +675,16 @@ const inputSearchNoMarginTop = css({
 const listSearch = css({
   marginTop: "0!",
   textAlign: "left",
+});
+
+const liveRegionStyle = css({
+  position: "absolute",
+  width: "1px",
+  height: "1px",
+  padding: "0",
+  margin: "-1px",
+  overflow: "hidden",
+  clip: "rect(0, 0, 0, 0)",
+  whiteSpace: "nowrap",
+  border: "0",
 });

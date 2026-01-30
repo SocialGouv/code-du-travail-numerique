@@ -13,6 +13,11 @@ import { MinSearchLengthHint } from "./MinSearchLengthHint";
 import { HomemadeAutocomplete } from "src/modules/common/Autocomplete";
 import { PresearchClass } from "src/api";
 
+const SEARCH_A11Y_MESSAGES = {
+  SEARCHING: "Nous recherchons les bons résultats",
+  NO_RESULTS_REFINE: "Précisez votre saisie, aucun résultat disponible.",
+} as const;
+
 interface ModalSearchProps {
   onClose?: () => void;
   initialQuery?: string;
@@ -141,6 +146,25 @@ export const SearchInput = forwardRef<ModalSearchHandle, ModalSearchProps>(
     const desktopMinSearchHintId = `${feedbackId}-min-search-hint`;
     const ariaDescribedbyIds = `${desktopMinSearchHintId} ${noResultParagraphId}`;
 
+    const a11yExternalStatusMessage = (() => {
+      // Show loading message during search
+      if (isLoadingResults && query.length >= MIN_SEARCH_LENGTH) {
+        return SEARCH_A11Y_MESSAGES.SEARCHING;
+      }
+
+      // Show no results message after search completes
+      if (
+        hasSearched &&
+        !isLoadingResults &&
+        resultsCount === 0 &&
+        query.length >= MIN_SEARCH_LENGTH
+      ) {
+        return SEARCH_A11Y_MESSAGES.NO_RESULTS_REFINE;
+      }
+
+      return undefined;
+    })();
+
     return (
       <div className={fr.cx("fr-mt-2w")}>
         <form onSubmit={onSubmit} role="search">
@@ -187,6 +211,7 @@ export const SearchInput = forwardRef<ModalSearchHandle, ModalSearchProps>(
                 disableNativeLabelAssociation={true}
                 listboxAriaLabelledby={labelId}
                 minQueryLengthForNoResultsA11y={MIN_SEARCH_LENGTH}
+                a11yExternalStatusMessage={a11yExternalStatusMessage}
                 onInputValueChange={(value) => {
                   setQuery(value || "");
                   onChangeQuery(value || "");
