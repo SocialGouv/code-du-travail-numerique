@@ -45,12 +45,7 @@ export const SearchFeedback = ({
 
   return (
     <>
-      <div
-        id={id}
-        className={fr.cx("fr-mt-6w")}
-        aria-live="polite"
-        aria-atomic="true"
-      >
+      <div id={id} className={fr.cx("fr-mt-6w")}>
         {isSearching && query.length >= minSearchLength && (
           <div className={loadingContainer}>
             <LoadingSpinner />

@@ -63,7 +63,7 @@ export const HomemadeAutocomplete = <K,>({
   hintText,
   dataTestId,
   defaultValue,
-  displayNoResult,
+  displayNoResult = false,
   isSearch = false,
   placeholder,
   id,
@@ -94,6 +94,7 @@ export const HomemadeAutocomplete = <K,>({
 
   const listboxId = id ? `${id}-listbox` : "autocomplete-listbox";
   const labelId = id ? `${id}-label` : "autocomplete-label";
+  const messagesGroupId = id ? `${id}-messages-group` : undefined;
 
   const generateA11yStatusMessage = useCallback(
     (
@@ -194,7 +195,10 @@ export const HomemadeAutocomplete = <K,>({
       const results = await search(value);
       onSearch?.(value, results);
       setSuggestions(results);
-      setIsOpen(true);
+      // Only mark the combobox as expanded when the listbox is actually displayed.
+      // - If we have results, the listbox is visible.
+      // - If `displayNoResult` is enabled, we can also display an "Aucun résultat" option.
+      setIsOpen(results.length > 0 || (displayNoResult && value.length > 0));
       setHighlightedIndex(-1);
     } catch (error) {
       onError?.(error as string);
@@ -334,14 +338,54 @@ export const HomemadeAutocomplete = <K,>({
 
   return (
     <div className={`${searchContainer}`}>
-      <Input
-        nativeLabelProps={{
-          id: labelId,
-          ...(id && !disableNativeLabelAssociation ? { htmlFor: id } : {}),
-        }}
-        hideLabel={hideLabel}
-        addon={
-          <>
+      {disableNativeLabelAssociation ? (
+        // Custom DSFR input markup, without rendering a second <label>.
+        // Consumers can provide their own <label htmlFor=...>.
+        <div
+          className={`${fr.cx("fr-input-group")} ${rootInputCss} ${fr.cx(
+            "fr-mb-0"
+          )}`}
+        >
+          <div className={fr.cx("fr-input-wrap", "fr-input-wrap--addon")}>
+            <input
+              type="text"
+              autoComplete="off"
+              // @ts-ignore
+              data-testid={dataTestId}
+              placeholder={placeholder}
+              ref={(el: HTMLInputElement | null) => {
+                internalInputRef.current = el;
+                if (
+                  externalInputRef &&
+                  typeof externalInputRef === "object" &&
+                  "current" in externalInputRef
+                ) {
+                  (
+                    externalInputRef as MutableRefObject<HTMLInputElement | null>
+                  ).current = el;
+                }
+              }}
+              value={inputValue}
+              onChange={(e) => handleInputChange(e.target.value)}
+              onKeyDown={handleKeyDown}
+              onFocus={handleFocus}
+              onBlur={handleBlur}
+              {...(id ? { id } : {})}
+              role="combobox"
+              aria-expanded={isOpen}
+              aria-controls={listboxId}
+              aria-haspopup="listbox"
+              aria-autocomplete="list"
+              aria-activedescendant={
+                highlightedIndex >= 0
+                  ? getOptionId(highlightedIndex)
+                  : undefined
+              }
+              {...(ariaDescribedby
+                ? { "aria-describedby": ariaDescribedby }
+                : {})}
+              className={`${fr.cx("fr-input")} ${inputStyle}`}
+            />
             <div className={addonBlock}>
               {!loading && (selectedItem || inputValue) && (
                 <Button
@@ -365,52 +409,95 @@ export const HomemadeAutocomplete = <K,>({
                 />
               )}
             </div>
-          </>
-        }
-        nativeInputProps={{
-          type: "text",
-          autoComplete: "off",
-          // @ts-ignore
-          "data-testid": dataTestId,
-          placeholder,
-          ref: (el: HTMLInputElement | null) => {
-            internalInputRef.current = el;
-            if (
-              externalInputRef &&
-              typeof externalInputRef === "object" &&
-              "current" in externalInputRef
-            ) {
-              (
-                externalInputRef as MutableRefObject<HTMLInputElement | null>
-              ).current = el;
-            }
-          },
-          value: inputValue,
-          onChange: (e) => handleInputChange(e.target.value),
-          onKeyDown: handleKeyDown,
-          onFocus: handleFocus,
-          onBlur: handleBlur,
-          ...(id ? { id } : {}),
-          role: "combobox",
-          "aria-expanded": isOpen,
-          "aria-controls": listboxId,
-          "aria-haspopup": "listbox",
-          "aria-autocomplete": "list" as const,
-          "aria-activedescendant":
-            highlightedIndex >= 0 ? getOptionId(highlightedIndex) : undefined,
-          ...(ariaDescribedby ? { "aria-describedby": ariaDescribedby } : {}),
-        }}
-        className={`${fr.cx("fr-mb-0")}`}
-        hintText={hintText}
-        label={label}
-        state={autocompleteState}
-        stateRelatedMessage={stateRelatedMessage}
-        classes={{
-          wrap: isSearch ? inputSearchNoMarginTop : undefined,
-          root: rootInputCss,
-          nativeInputOrTextArea: inputStyle,
-        }}
-      />
+          </div>
+          <div
+            aria-live="polite"
+            className={fr.cx("fr-messages-group")}
+            {...(messagesGroupId ? { id: messagesGroupId } : {})}
+          />
+        </div>
+      ) : (
+        <Input
+          nativeLabelProps={{
+            id: labelId,
+            ...(id ? { htmlFor: id } : {}),
+          }}
+          hideLabel={hideLabel}
+          addon={
+            <>
+              <div className={addonBlock}>
+                {!loading && (selectedItem || inputValue) && (
+                  <Button
+                    data-testid={`${dataTestId ? dataTestId + "-" : ""}autocomplete-close`}
+                    iconId="fr-icon-close-circle-fill"
+                    className={`${fr.cx("fr-p-0")} ${buttonClose}`}
+                    onClick={clearSelection}
+                    priority="tertiary no outline"
+                    title="Effacer la sélection"
+                    type="button"
+                  >
+                    <span className={"fr-sr-only"}>Effacer la sélection</span>
+                  </Button>
+                )}
+                {loading && (
+                  <Image
+                    className={fr.cx("fr-mr-1v")}
+                    priority
+                    src={Spinner}
+                    alt="Chargement en cours"
+                  />
+                )}
+              </div>
+            </>
+          }
+          nativeInputProps={{
+            type: "text",
+            autoComplete: "off",
+            // @ts-ignore
+            "data-testid": dataTestId,
+            placeholder,
+            ref: (el: HTMLInputElement | null) => {
+              internalInputRef.current = el;
+              if (
+                externalInputRef &&
+                typeof externalInputRef === "object" &&
+                "current" in externalInputRef
+              ) {
+                (
+                  externalInputRef as MutableRefObject<HTMLInputElement | null>
+                ).current = el;
+              }
+            },
+            value: inputValue,
+            onChange: (e) => handleInputChange(e.target.value),
+            onKeyDown: handleKeyDown,
+            onFocus: handleFocus,
+            onBlur: handleBlur,
+            ...(id ? { id } : {}),
+            role: "combobox",
+            "aria-expanded": isOpen,
+            "aria-controls": listboxId,
+            "aria-haspopup": "listbox",
+            "aria-autocomplete": "list" as const,
+            "aria-activedescendant":
+              highlightedIndex >= 0 ? getOptionId(highlightedIndex) : undefined,
+            ...(ariaDescribedby ? { "aria-describedby": ariaDescribedby } : {}),
+            // Avoid DSFR Input injecting an extra accessible name source.
+            // The accessible name should come from the external <label htmlFor=...>.
+            "aria-labelledby": undefined,
+          }}
+          className={`${fr.cx("fr-mb-0")}`}
+          hintText={hintText}
+          label={label}
+          state={autocompleteState}
+          stateRelatedMessage={stateRelatedMessage}
+          classes={{
+            wrap: isSearch ? inputSearchNoMarginTop : undefined,
+            root: rootInputCss,
+            nativeInputOrTextArea: inputStyle,
+          }}
+        />
+      )}
 
       {/*
         Live region for screen reader announcements.
@@ -431,7 +518,17 @@ export const HomemadeAutocomplete = <K,>({
         ref={listRef}
         id={listboxId}
         role="listbox"
-        aria-labelledby={listboxAriaLabelledby ?? labelId}
+        aria-labelledby={
+          listboxAriaLabelledby ??
+          (disableNativeLabelAssociation ? undefined : labelId)
+        }
+        aria-label={
+          disableNativeLabelAssociation && !listboxAriaLabelledby
+            ? typeof label === "string"
+              ? label
+              : undefined
+            : undefined
+        }
         onMouseEnter={() => {
           isMouseOverListRef.current = true;
         }}

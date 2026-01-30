@@ -136,11 +136,14 @@ export const SearchInput = forwardRef<ModalSearchHandle, ModalSearchProps>(
     const labelId = `search-${contextType}-label`;
     const modalTitleId = "search-modal-title";
     const feedbackId = `search-${contextType}-feedback`;
-    const desktopMinSearchHintId = `${feedbackId}-min-search-hint`;
+    // Still used for the *visible* mobile hint (not referenced in aria-describedby).
     const minSearchHintId = `search-${contextType}-min-search-length-hint`;
-    const inputHintId = `search-${contextType}-input-hint`;
     const noResultParagraphId = `search-${contextType}-no-result-message`;
-    const ariaDescribedbyIds = `${inputHintId} ${minSearchHintId} ${desktopMinSearchHintId} ${noResultParagraphId}`;
+    const desktopMinSearchHintId = `${feedbackId}-min-search-hint`;
+    // Keep a single, non-duplicated hint source in aria-describedby.
+    // - The "type 3 chars" instruction is already rendered in SearchFeedback's desktop hint.
+    // - The no-result / searching message shares the same paragraph id.
+    const ariaDescribedbyIds = `${desktopMinSearchHintId} ${noResultParagraphId}`;
 
     return (
       <div className={fr.cx("fr-mt-2w")}>
@@ -174,10 +177,6 @@ export const SearchInput = forwardRef<ModalSearchHandle, ModalSearchProps>(
                   arrêts maladies ?
                 </span>
               </label>
-              <p id={inputHintId} className={fr.cx("fr-sr-only")}>
-                Tapez {MIN_SEARCH_LENGTH} caractères ou plus pour lancer une
-                recherche.
-              </p>
               <HomemadeAutocomplete<string>
                 id={inputId}
                 search={search}
