@@ -94,11 +94,6 @@ exports[`<Home /> should match snapshot 1`] = `
                                 class="pos_absolute right_0 h_100% ac_center"
                               />
                             </div>
-                            <div
-                              aria-live="polite"
-                              class="fr-messages-group"
-                              id="search-home-autocomplete-messages-group"
-                            />
                           </div>
                           <div
                             aria-atomic="true"

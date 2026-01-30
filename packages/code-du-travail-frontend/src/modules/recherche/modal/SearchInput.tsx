@@ -186,6 +186,7 @@ export const SearchInput = forwardRef<ModalSearchHandle, ModalSearchProps>(
                 ariaDescribedby={ariaDescribedbyIds}
                 disableNativeLabelAssociation={true}
                 listboxAriaLabelledby={labelId}
+                minQueryLengthForNoResultsA11y={MIN_SEARCH_LENGTH}
                 onInputValueChange={(value) => {
                   setQuery(value || "");
                   onChangeQuery(value || "");

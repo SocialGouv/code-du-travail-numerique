@@ -39,6 +39,12 @@ type HomemadeAutocompleteProps<K> = InputProps & {
   onEnterPress?: () => void;
   disableNativeLabelAssociation?: boolean;
   listboxAriaLabelledby?: string;
+  /**
+   * Minimum input length before announcing "no results" in the internal live region.
+   * This helps avoid noisy announcements when suggestions are intentionally disabled
+   * for short queries (e.g. "type 3 characters" behaviour).
+   */
+  minQueryLengthForNoResultsA11y?: number;
 };
 
 export const HomemadeAutocomplete = <K,>({
@@ -67,6 +73,7 @@ export const HomemadeAutocomplete = <K,>({
   onEnterPress,
   disableNativeLabelAssociation,
   listboxAriaLabelledby,
+  minQueryLengthForNoResultsA11y = 1,
 }: HomemadeAutocompleteProps<K>) => {
   const [loading, setLoading] = useState(false);
   const [inputValue, setInputValue] = useState(
@@ -96,10 +103,8 @@ export const HomemadeAutocomplete = <K,>({
       currentSelectedItem: K | undefined,
       currentInputValue: string
     ) => {
-      if (!isMenuOpen) {
-        return currentSelectedItem
-          ? `${displayLabel(currentSelectedItem)} sélectionné`
-          : "";
+      if (!isMenuOpen && currentSelectedItem) {
+        return `${displayLabel(currentSelectedItem)} sélectionné`;
       }
 
       if (!currentInputValue) {
@@ -107,6 +112,18 @@ export const HomemadeAutocomplete = <K,>({
       }
 
       const resultCount = results.length;
+
+      if (
+        !isMenuOpen &&
+        resultCount === 0 &&
+        currentInputValue.length >= minQueryLengthForNoResultsA11y
+      ) {
+        return "Aucun résultat disponible";
+      }
+
+      if (!isMenuOpen) {
+        return "";
+      }
 
       if (resultCount === 0) {
         return "Aucun résultat disponible";
@@ -122,7 +139,7 @@ export const HomemadeAutocomplete = <K,>({
 
       return baseMessage;
     },
-    [displayLabel]
+    [displayLabel, minQueryLengthForNoResultsA11y]
   );
 
   useEffect(() => {
@@ -396,11 +413,6 @@ export const HomemadeAutocomplete = <K,>({
               )}
             </div>
           </div>
-          <div
-            aria-live="polite"
-            className={fr.cx("fr-messages-group")}
-            {...(messagesGroupId ? { id: messagesGroupId } : {})}
-          />
         </div>
       ) : (
         <Input
