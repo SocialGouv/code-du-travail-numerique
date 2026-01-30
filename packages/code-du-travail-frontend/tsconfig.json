@@ -1,6 +1,10 @@
 {
   "compilerOptions": {
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
@@ -22,7 +26,9 @@
     ],
     "baseUrl": ".",
     "paths": {
-      "@styled-system/*": ["./src/styled-system/*"]
+      "@styled-system/*": [
+        "./src/styled-system/*"
+      ]
     },
     "target": "es2024"
   },
@@ -32,7 +38,11 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "./global.d.ts",
-    ".next/dev/types/**/*.ts"
+    ".next/dev/types/**/*.ts",
+    ".next/dev/dev/types/**/*.ts"
   ],
-  "exclude": ["node_modules/**/*", "cypress"]
+  "exclude": [
+    "node_modules/**/*",
+    "cypress"
+  ]
 }
