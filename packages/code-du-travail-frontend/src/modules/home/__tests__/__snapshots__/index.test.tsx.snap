@@ -98,8 +98,9 @@ exports[`<Home /> should match snapshot 1`] = `
                           <div
                             aria-atomic="true"
                             aria-live="polite"
-                            class="fr-sr-only"
-                            lang="fr"
+                            aria-relevant="additions text"
+                            class="pos_absolute w_1px h_1px p_0 m_-1px ov_hidden clip_rect(0,_0,_0,_0) white-space_nowrap bd_0"
+                            role="status"
                           />
                           <ul
                             aria-labelledby="search-home-label"
