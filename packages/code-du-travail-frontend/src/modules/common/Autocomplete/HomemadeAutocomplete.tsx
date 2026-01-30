@@ -18,7 +18,7 @@ import { css } from "@styled-system/css";
 import Link from "../Link";
 import { redirect } from "next/navigation";
 
-const A11Y_MESSAGES = {
+export const A11Y_MESSAGES = {
   NO_RESULTS: "Aucun résultat disponible",
   NAVIGATION_HINT: "Utilisez les flèches haut et bas pour naviguer.",
   SELECTED: (label: string) => `${label} sélectionné`,
@@ -510,8 +510,8 @@ export const HomemadeAutocomplete = <K,>({
         role="status"
         aria-live="polite"
         aria-atomic="true"
-        className={fr.cx("fr-sr-only")}
-        lang="fr"
+        aria-relevant="additions text"
+        className={liveRegionStyle}
       >
         {liveRegionMessage}
       </div>

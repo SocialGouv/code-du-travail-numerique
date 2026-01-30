@@ -13,7 +13,7 @@ import { MinSearchLengthHint } from "./MinSearchLengthHint";
 import { HomemadeAutocomplete } from "src/modules/common/Autocomplete";
 import { PresearchClass } from "src/api";
 
-const SEARCH_A11Y_MESSAGES = {
+export const SEARCH_A11Y_MESSAGES = {
   SEARCHING: "Nous recherchons les bons résultats",
   NO_RESULTS_REFINE: "Précisez votre saisie, aucun résultat disponible.",
 } as const;

@@ -1,7 +1,7 @@
 import React from "react";
 import { render, screen, act } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { SearchInput } from "../SearchInput";
+import { SearchInput, SEARCH_A11Y_MESSAGES } from "../SearchInput";
 import { useSearchTracking } from "../../tracking";
 
 jest.mock("../../tracking", () => ({
@@ -62,9 +62,7 @@ describe("SearchInput - Accessibility", () => {
       });
 
       const liveRegion = screen.getByRole("status");
-      expect(liveRegion.textContent).toMatch(
-        /nous recherchons les bons résultats/i
-      );
+      expect(liveRegion.textContent).toBe(SEARCH_A11Y_MESSAGES.SEARCHING);
     });
 
     it("should announce no results message when search returns no results", async () => {
@@ -92,8 +90,8 @@ describe("SearchInput - Accessibility", () => {
       });
 
       const liveRegion = screen.getByRole("status");
-      expect(liveRegion.textContent).toMatch(
-        /précisez votre saisie, aucun résultat disponible/i
+      expect(liveRegion.textContent).toBe(
+        SEARCH_A11Y_MESSAGES.NO_RESULTS_REFINE
       );
     });
 
@@ -145,9 +143,7 @@ describe("SearchInput - Accessibility", () => {
       });
 
       const liveRegion = screen.getByRole("status");
-      expect(liveRegion.textContent).toMatch(
-        /nous recherchons les bons résultats/i
-      );
+      expect(liveRegion.textContent).toBe(SEARCH_A11Y_MESSAGES.SEARCHING);
 
       // Results are now available
       rerender(

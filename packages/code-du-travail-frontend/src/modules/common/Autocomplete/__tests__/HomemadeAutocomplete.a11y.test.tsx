@@ -1,7 +1,7 @@
 import React from "react";
 import { render, screen, act } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { HomemadeAutocomplete } from "../HomemadeAutocomplete";
+import { HomemadeAutocomplete, A11Y_MESSAGES } from "../HomemadeAutocomplete";
 
 describe("HomemadeAutocomplete - Accessibility", () => {
   const mockSearch = jest.fn();
@@ -57,7 +57,7 @@ describe("HomemadeAutocomplete - Accessibility", () => {
     });
 
     const liveRegion = screen.getByRole("status");
-    expect(liveRegion.textContent).toMatch(/3 résultats sont disponibles/i);
+    expect(liveRegion.textContent).toBe(A11Y_MESSAGES.RESULT_COUNT(3));
   });
 
   it("should announce when there are no results", async () => {
@@ -84,7 +84,7 @@ describe("HomemadeAutocomplete - Accessibility", () => {
     });
 
     const liveRegion = screen.getByRole("status");
-    expect(liveRegion.textContent).toMatch(/aucun résultat disponible/i);
+    expect(liveRegion.textContent).toBe(A11Y_MESSAGES.NO_RESULTS);
   });
 
   it("should announce when an item is selected", async () => {
@@ -122,7 +122,7 @@ describe("HomemadeAutocomplete - Accessibility", () => {
     });
 
     const liveRegion = screen.getByRole("status");
-    expect(liveRegion.textContent).toMatch(/résultat 1 sélectionné/i);
+    expect(liveRegion.textContent).toBe(A11Y_MESSAGES.SELECTED("résultat 1"));
   });
 
   it("should use external status message when provided", async () => {
@@ -170,7 +170,7 @@ describe("HomemadeAutocomplete - Accessibility", () => {
     });
 
     const liveRegion = screen.getByRole("status");
-    expect(liveRegion.textContent).toMatch(/1 résultat est disponible/i);
+    expect(liveRegion.textContent).toBe(A11Y_MESSAGES.RESULT_COUNT(1));
   });
 
   it("should announce navigation instructions when results are highlighted", async () => {
@@ -206,8 +206,8 @@ describe("HomemadeAutocomplete - Accessibility", () => {
     });
 
     const liveRegion = screen.getByRole("status");
-    expect(liveRegion.textContent).toMatch(
-      /utilisez les flèches haut et bas pour naviguer/i
+    expect(liveRegion.textContent).toBe(
+      A11Y_MESSAGES.RESULT_COUNT_WITH_HINT(2)
     );
   });
 
@@ -316,7 +316,7 @@ describe("HomemadeAutocomplete - Accessibility", () => {
       jest.advanceTimersByTime(200);
     });
 
-    expect(liveRegion.textContent).toMatch(/aucun résultat disponible/i);
+    expect(liveRegion.textContent).toBe(A11Y_MESSAGES.NO_RESULTS);
   });
 
   it("should properly link input to label with disableNativeLabelAssociation", () => {
