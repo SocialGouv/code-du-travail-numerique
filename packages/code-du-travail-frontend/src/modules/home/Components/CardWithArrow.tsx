@@ -17,23 +17,23 @@ export const CardWithArrow = ({ title, anchor, iconSrc }: Props) => {
   };
 
   return (
-    <div className={wrapper}>
-      <div className={cardContainer}>
-        <div className={`${fr.cx("fr-py-4w", "fr-px-2w")} ${cardHeader}`}>
-          <div className={iconContainer}>
-            <Image
-              src={iconSrc}
-              alt=""
-              width={56}
-              height={56}
-              className={iconStyle}
-            />
-          </div>
-          <button
-            type="button"
-            className={`${fr.cx("fr-btn--tertiary-no-outline")} ${buttonStyle}`}
-            onClick={onClickItem}
-          >
+    <button
+      type="button"
+      className={`${fr.cx("fr-btn--tertiary-no-outline")} ${buttonStyle}`}
+      onClick={onClickItem}
+    >
+      <div className={wrapper}>
+        <div className={cardContainer}>
+          <div className={`${fr.cx("fr-py-4w", "fr-px-2w")} ${cardHeader}`}>
+            <div className={iconContainer}>
+              <Image
+                src={iconSrc}
+                alt=""
+                width={56}
+                height={56}
+                className={iconStyle}
+              />
+            </div>
             <h4
               className={fr.cx(
                 "fr-mb-0",
@@ -44,18 +44,26 @@ export const CardWithArrow = ({ title, anchor, iconSrc }: Props) => {
             >
               {title}
             </h4>
-          </button>
+          </div>
+        </div>
+        <div className={arrowContainer}>
+          <div className={arrow} />
         </div>
       </div>
-      <div className={arrowContainer}>
-        <div className={arrow} />
-      </div>
-    </div>
+    </button>
   );
 };
 
 const buttonStyle = css({
   textAlign: "left",
+  width: "100%",
+  padding: "0",
+  border: "none",
+  background: "transparent",
+  cursor: "pointer",
+  "&:hover": {
+    background: "transparent!",
+  },
 });
 
 const wrapper = css({
@@ -77,7 +85,6 @@ const cardContainer = css({
   borderRadius: { base: "8px", md: "0" },
   borderTopLeftRadius: { base: "8px", md: "8px" },
   borderBottomLeftRadius: { base: "8px", md: "8px" },
-  transition: "all 0.3s ease",
 });
 
 const cardHeader = css({
@@ -102,7 +109,6 @@ const arrowContainer = css({
   width: { base: "60px", md: "30px" },
   height: { base: "15px", md: "100%" },
   flexShrink: "0",
-  transition: "all 0.3s ease",
 });
 
 const arrow = css({
