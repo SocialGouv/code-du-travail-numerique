@@ -136,13 +136,9 @@ export const SearchInput = forwardRef<ModalSearchHandle, ModalSearchProps>(
     const labelId = `search-${contextType}-label`;
     const modalTitleId = "search-modal-title";
     const feedbackId = `search-${contextType}-feedback`;
-    // Still used for the *visible* mobile hint (not referenced in aria-describedby).
     const minSearchHintId = `search-${contextType}-min-search-length-hint`;
     const noResultParagraphId = `search-${contextType}-no-result-message`;
     const desktopMinSearchHintId = `${feedbackId}-min-search-hint`;
-    // Keep a single, non-duplicated hint source in aria-describedby.
-    // - The "type 3 chars" instruction is already rendered in SearchFeedback's desktop hint.
-    // - The no-result / searching message shares the same paragraph id.
     const ariaDescribedbyIds = `${desktopMinSearchHintId} ${noResultParagraphId}`;
 
     return (

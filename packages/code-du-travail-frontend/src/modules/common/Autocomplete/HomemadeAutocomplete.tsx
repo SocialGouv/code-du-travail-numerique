@@ -195,9 +195,6 @@ export const HomemadeAutocomplete = <K,>({
       const results = await search(value);
       onSearch?.(value, results);
       setSuggestions(results);
-      // Only mark the combobox as expanded when the listbox is actually displayed.
-      // - If we have results, the listbox is visible.
-      // - If `displayNoResult` is enabled, we can also display an "Aucun résultat" option.
       setIsOpen(results.length > 0 || (displayNoResult && value.length > 0));
       setHighlightedIndex(-1);
     } catch (error) {
@@ -339,8 +336,6 @@ export const HomemadeAutocomplete = <K,>({
   return (
     <div className={`${searchContainer}`}>
       {disableNativeLabelAssociation ? (
-        // Custom DSFR input markup, without rendering a second <label>.
-        // Consumers can provide their own <label htmlFor=...>.
         <div
           className={`${fr.cx("fr-input-group")} ${rootInputCss} ${fr.cx(
             "fr-mb-0"
@@ -350,7 +345,6 @@ export const HomemadeAutocomplete = <K,>({
             <input
               type="text"
               autoComplete="off"
-              // @ts-ignore
               data-testid={dataTestId}
               placeholder={placeholder}
               ref={(el: HTMLInputElement | null) => {
@@ -482,8 +476,6 @@ export const HomemadeAutocomplete = <K,>({
             "aria-activedescendant":
               highlightedIndex >= 0 ? getOptionId(highlightedIndex) : undefined,
             ...(ariaDescribedby ? { "aria-describedby": ariaDescribedby } : {}),
-            // Avoid DSFR Input injecting an extra accessible name source.
-            // The accessible name should come from the external <label htmlFor=...>.
             "aria-labelledby": undefined,
           }}
           className={`${fr.cx("fr-mb-0")}`}
