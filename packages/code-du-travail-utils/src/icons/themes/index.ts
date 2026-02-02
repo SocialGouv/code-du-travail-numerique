@@ -16,3 +16,6 @@ export { default as RisksIcon } from "./Risks";
 export { default as SalaryIcon } from "./Salary";
 export { default as SpecificIcon } from "./Specific";
 export { default as TimeIcon } from "./Time";
+export { default as ParentsIcon } from "./Parents";
+export { default as YoungsIcon } from "./Youngs";
+export { default as HouseEmploymentIcon } from "./HouseEmployment";

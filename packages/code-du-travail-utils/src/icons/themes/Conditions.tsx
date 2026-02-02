@@ -1,5 +1,5 @@
 import * as React from "react";
-export default function Conditions() {
+export default function Conditions(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       width="56"
@@ -7,6 +7,7 @@ export default function Conditions() {
       viewBox="0 0 56 56"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...props}
     >
       <path
         d="M52.52 53.031C51.7245 50.9538 50.3124 49.1699 48.4734 47.9187C46.6344 46.6676 44.4565 46.0091 42.2324 46.0318C40.0082 46.0545 37.8443 46.7573 36.0312 48.0458C34.2181 49.3343 32.8428 51.1467 32.0898 53.2396"

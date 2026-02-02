@@ -1,5 +1,5 @@
 import * as React from "react";
-export default function Conflicts() {
+export default function Conflicts(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       width="56"
@@ -7,6 +7,7 @@ export default function Conflicts() {
       viewBox="0 0 56 56"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...props}
     >
       <path
         d="M35.8525 30.2441V53.8018"

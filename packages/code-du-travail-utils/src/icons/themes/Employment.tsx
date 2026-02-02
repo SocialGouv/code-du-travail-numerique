@@ -1,5 +1,5 @@
 import * as React from "react";
-export default function Employment() {
+export default function Employment(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       width="56"
@@ -7,6 +7,7 @@ export default function Employment() {
       viewBox="0 0 56 56"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...props}
     >
       <path
         d="M47.0707 47.4082L38.2534 49.1806"

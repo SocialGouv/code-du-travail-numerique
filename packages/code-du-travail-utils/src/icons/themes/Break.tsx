@@ -1,5 +1,5 @@
 import * as React from "react";
-export default function Break() {
+export default function Break(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       width="56"
@@ -7,6 +7,7 @@ export default function Break() {
       viewBox="0 0 56 56"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...props}
     >
       <path
         d="M33.0503 18.252H35.2939C36.2354 18.2512 37.1665 18.4483 38.0269 18.8306C38.8872 19.2128 39.6576 19.7717 40.2881 20.4709"

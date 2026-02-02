@@ -1,5 +1,5 @@
 import * as React from "react";
-export default function Specific() {
+export default function Specific(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       width="56"
@@ -7,6 +7,7 @@ export default function Specific() {
       viewBox="0 0 56 56"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...props}
     >
       <path
         d="M4.85505 48.9432C3.65558 46.5747 2.92924 43.995 2.71665 41.3487C2.69954 41.1941 2.71534 41.0375 2.76302 40.8894C2.8107 40.7413 2.88917 40.6051 2.99329 40.4896C3.0974 40.3741 3.22479 40.2818 3.3671 40.219C3.50939 40.1562 3.66337 40.1241 3.81892 40.125H53.3546C53.3584 43.2012 52.6012 46.2307 51.15 48.9432"
