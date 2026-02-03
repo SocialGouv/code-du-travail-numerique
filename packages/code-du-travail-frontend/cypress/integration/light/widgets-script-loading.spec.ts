@@ -1,41 +1,23 @@
 import "cypress-iframe";
-import * as http from "http";
-import * as fs from "fs";
-import * as path from "path";
 
 describe("Widgets - Chargement via script widget-loader.js", () => {
   const PORT = 8888;
-  let server: http.Server;
 
   before(() => {
-    // Créer un serveur HTTP simple pour servir les fichiers HTML de test
-    server = http.createServer((req, res) => {
-      const filePath = path.join(
-        __dirname,
-        "../../fixtures/widget-tests/index.html"
-      );
-
-      fs.readFile(filePath, (err, data) => {
-        if (err) {
-          res.writeHead(404);
-          res.end("File not found");
-          return;
-        }
-        res.writeHead(200, { "Content-Type": "text/html" });
-        res.end(data);
-      });
+    // Démarrer un serveur HTTP simple pour servir le fichier HTML de test
+    cy.task("startStaticServer", {
+      port: PORT,
+      filePath: "cypress/fixtures/widget-tests/index.html",
     });
-
-    server.listen(PORT);
   });
 
   after(() => {
-    if (server) {
-      server.close();
-    }
+    // Arrêter le serveur HTTP
+    cy.task("stopStaticServer");
   });
 
   it("devrait charger tous les widgets via le script widget-loader.js", () => {
+    // Visiter la page HTML de test servie par le serveur statique
     cy.visit(`http://localhost:${PORT}`);
 
     // Attendre que le script widget-loader.js soit chargé et que les iframes soient créées
