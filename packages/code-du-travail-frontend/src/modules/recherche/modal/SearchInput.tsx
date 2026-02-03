@@ -13,6 +13,11 @@ import { MinSearchLengthHint } from "./MinSearchLengthHint";
 import { HomemadeAutocomplete } from "src/modules/common/Autocomplete";
 import { PresearchClass } from "src/api";
 
+export const SEARCH_A11Y_MESSAGES = {
+  SEARCHING: "Nous recherchons les bons résultats",
+  NO_RESULTS_REFINE: "Précisez votre saisie, aucun résultat disponible.",
+} as const;
+
 interface ModalSearchProps {
   onClose?: () => void;
   initialQuery?: string;
@@ -136,11 +141,29 @@ export const SearchInput = forwardRef<ModalSearchHandle, ModalSearchProps>(
     const labelId = `search-${contextType}-label`;
     const modalTitleId = "search-modal-title";
     const feedbackId = `search-${contextType}-feedback`;
-    const desktopMinSearchHintId = `${feedbackId}-min-search-hint`;
     const minSearchHintId = `search-${contextType}-min-search-length-hint`;
-    const inputHintId = `search-${contextType}-input-hint`;
     const noResultParagraphId = `search-${contextType}-no-result-message`;
-    const ariaDescribedbyIds = `${inputHintId} ${minSearchHintId} ${desktopMinSearchHintId} ${noResultParagraphId}`;
+    const desktopMinSearchHintId = `${feedbackId}-min-search-hint`;
+    const ariaDescribedbyIds = `${desktopMinSearchHintId} ${noResultParagraphId}`;
+
+    const a11yExternalStatusMessage = (() => {
+      // Show loading message during search
+      if (isLoadingResults && query.length >= MIN_SEARCH_LENGTH) {
+        return SEARCH_A11Y_MESSAGES.SEARCHING;
+      }
+
+      // Show no results message after search completes
+      if (
+        hasSearched &&
+        !isLoadingResults &&
+        resultsCount === 0 &&
+        query.length >= MIN_SEARCH_LENGTH
+      ) {
+        return SEARCH_A11Y_MESSAGES.NO_RESULTS_REFINE;
+      }
+
+      return undefined;
+    })();
 
     return (
       <div className={fr.cx("fr-mt-2w")}>
@@ -174,10 +197,6 @@ export const SearchInput = forwardRef<ModalSearchHandle, ModalSearchProps>(
                   arrêts maladies ?
                 </span>
               </label>
-              <p id={inputHintId} className={fr.cx("fr-sr-only")}>
-                Tapez {MIN_SEARCH_LENGTH} caractères ou plus pour lancer une
-                recherche.
-              </p>
               <HomemadeAutocomplete<string>
                 id={inputId}
                 search={search}
@@ -191,6 +210,8 @@ export const SearchInput = forwardRef<ModalSearchHandle, ModalSearchProps>(
                 ariaDescribedby={ariaDescribedbyIds}
                 disableNativeLabelAssociation={true}
                 listboxAriaLabelledby={labelId}
+                minQueryLengthForNoResultsA11y={MIN_SEARCH_LENGTH}
+                a11yExternalStatusMessage={a11yExternalStatusMessage}
                 onInputValueChange={(value) => {
                   setQuery(value || "");
                   onChangeQuery(value || "");
