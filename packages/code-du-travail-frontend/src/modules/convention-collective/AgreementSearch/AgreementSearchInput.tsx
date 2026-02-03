@@ -13,6 +13,7 @@ type Props = {
   onSearch?: (query: string, value?: Agreement[]) => void;
   onAgreementSelect?: (agreement?: Agreement) => void;
   lineAsLink?: boolean;
+  autocompleteId?: string;
   selectedAgreementAlert?: (
     agreement?: Agreement
   ) => NonNullable<ReactNode> | undefined;
@@ -26,6 +27,7 @@ export const AgreementSearchInput = ({
   onSearch,
   onAgreementSelect,
   lineAsLink,
+  autocompleteId,
   selectedAgreementAlert,
   defaultAgreement,
   trackingActionName,
@@ -80,7 +82,7 @@ export const AgreementSearchInput = ({
       <div className={fr.cx("fr-mt-2w")}>
         <div className={fr.cx("fr-col-12")}>
           <Autocomplete<Agreement>
-            id="agreement-search-autocomplete"
+            id={autocompleteId ?? "agreement-search-autocomplete"}
             defaultValue={selectedAgreement}
             dataTestId="AgreementSearchAutocomplete"
             hintText="Ex : transport routier ou 1486"

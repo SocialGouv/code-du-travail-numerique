@@ -7,6 +7,8 @@ import { Footer } from "./footer";
 import { Header } from "./header";
 import { SkipLinks } from "./SkipLinks";
 import { useSearchModal } from "../recherche/modal/SearchModalContext";
+import { useAgreementModal } from "../convention-collective/AgreementSelectionModal";
+import { AgreementModal } from "./header/AgreementModal";
 
 type Props = {
   children: ReactNode;
@@ -15,40 +17,58 @@ type Props = {
 
 export const DsfrLayout = ({ children, container = "fr-container" }: Props) => {
   const { isOpen, closeModal, openModal } = useSearchModal();
+  const {
+    isOpen: isAgreementOpen,
+    openModal: openAgreementModal,
+    closeModal: closeAgreementModal,
+  } = useAgreementModal();
+
+  const isAnyModalOpen = isOpen || isAgreementOpen;
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       if ((event.metaKey || event.ctrlKey) && event.key === "k") {
         event.preventDefault();
-        if (!isOpen) {
-          openModal();
+
+        // Keep search + agreement mutually exclusive
+        if (isAgreementOpen) {
+          closeAgreementModal();
         }
+        if (!isOpen) openModal();
       }
     };
 
     document.addEventListener("keydown", handleKeyDown);
     return () => document.removeEventListener("keydown", handleKeyDown);
-  }, [isOpen, openModal]);
+  }, [isOpen, openModal, isAgreementOpen, closeAgreementModal]);
 
   return (
     <>
       <PolyfillComponent />
-      <div inert={isOpen}>
+      <div inert={isAnyModalOpen}>
         <SkipLinks />
       </div>
-      {isOpen && (
-        <div className={overlayStyle} aria-hidden="true" onClick={closeModal} />
+      {isAnyModalOpen && (
+        <div
+          className={overlayStyle}
+          aria-hidden="true"
+          onClick={() => {
+            closeModal();
+            closeAgreementModal();
+          }}
+        />
       )}
       <Header />
+      <AgreementModal isOpen={isAgreementOpen} onClose={closeAgreementModal} />
       <main
         className={`${container} ${printStyle}`}
         id="main"
         role="main"
-        inert={isOpen}
+        inert={isAnyModalOpen}
       >
         {children}
       </main>
-      <Footer inert={isOpen} />
+      <Footer inert={isAnyModalOpen} />
     </>
   );
 };

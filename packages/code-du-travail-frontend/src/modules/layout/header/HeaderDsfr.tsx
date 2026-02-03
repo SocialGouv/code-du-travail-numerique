@@ -5,6 +5,7 @@ import { HeaderNavigation } from "./HeaderNavigation";
 import { HeaderSearchV2 } from "./HeaderSearchV2";
 import { SearchModal } from "src/modules/recherche/modal/SearchModal";
 import { useSearchModal } from "src/modules/recherche/modal/SearchModalContext";
+import { useAgreementModal } from "src/modules/convention-collective/AgreementSelectionModal";
 
 export type NavigationLink = MainNavigationProps.Item.Link;
 
@@ -36,12 +37,27 @@ type Props = {
 
 export const HeaderDsfr = ({ navigation, currentPath }: Props) => {
   const { isOpen, openModal, closeModal } = useSearchModal();
+  const {
+    isOpen: isAgreementOpen,
+    openModal: openAgreementModal,
+    closeModal: closeAgreementModal,
+  } = useAgreementModal();
 
   const handleSearchToggle = () => {
     if (isOpen) {
       closeModal();
     } else {
+      closeAgreementModal();
       openModal();
+    }
+  };
+
+  const handleAgreementToggle = () => {
+    if (isAgreementOpen) {
+      closeAgreementModal();
+    } else {
+      closeModal();
+      openAgreementModal();
     }
   };
 
@@ -57,6 +73,8 @@ export const HeaderDsfr = ({ navigation, currentPath }: Props) => {
             <HeaderSearchV2
               onSearchClick={handleSearchToggle}
               isSearchOpen={isOpen}
+              onAgreementClick={handleAgreementToggle}
+              isAgreementOpen={isAgreementOpen}
             />
           </div>
         </div>
