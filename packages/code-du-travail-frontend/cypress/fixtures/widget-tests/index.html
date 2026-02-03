@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test Widgets - Chargement des scripts</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      h1 {
+        color: #333;
+      }
+      .widget-container {
+        margin: 40px 0;
+        border: 1px solid #ddd;
+        padding: 20px;
+        border-radius: 8px;
+      }
+      .widget-container h2 {
+        margin-top: 0;
+        color: #0053b3;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Test de chargement des widgets</h1>
+
+    <div class="widget-container">
+      <h2>Widget - Indemnité de licenciement</h2>
+      <a href="http://localhost:3000/widgets/indemnite-licenciement"
+        >Calculer l'indemnité de licenciement</a
+      >
+    </div>
+
+    <div class="widget-container">
+      <h2>Widget - Procédure de licenciement</h2>
+      <a href="http://localhost:3000/widgets/procedure-licenciement"
+        >Comprendre sa procédure de licenciement</a
+      >
+    </div>
+
+    <div class="widget-container">
+      <h2>Widget - Indemnité de précarité</h2>
+      <a href="http://localhost:3000/widgets/indemnite-precarite"
+        >Calculer l'indemnité de précarité</a
+      >
+    </div>
+
+    <div class="widget-container">
+      <h2>Widget - Préavis de démission</h2>
+      <a href="http://localhost:3000/widgets/preavis-demission"
+        >Calculer le préavis de démission</a
+      >
+    </div>
+
+    <div class="widget-container">
+      <h2>Widget - Préavis de licenciement</h2>
+      <a href="http://localhost:3000/widgets/preavis-licenciement"
+        >Calculer le préavis de licenciement</a
+      >
+    </div>
+
+    <div class="widget-container">
+      <h2>Widget - Préavis de retraite</h2>
+      <a href="http://localhost:3000/widgets/preavis-retraite"
+        >Calculer le préavis de départ à la retraite</a
+      >
+    </div>
+
+    <div class="widget-container">
+      <h2>Widget - Convention collective</h2>
+      <a href="http://localhost:3000/widgets/convention-collective"
+        >Trouver sa convention collective</a
+      >
+    </div>
+
+    <script src="http://localhost:3000/widget.js" defer></script>
+  </body>
+</html>
