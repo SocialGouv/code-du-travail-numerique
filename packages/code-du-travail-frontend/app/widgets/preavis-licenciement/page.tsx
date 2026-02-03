@@ -15,6 +15,7 @@ export async function generateMetadata() {
     description: description,
     path: `${SITE_URL}/widgets/preavis-licenciement`,
     overrideCanonical: `${SITE_URL}/outils/preavis-licenciement`,
+    robots: "noindex,nofollow",
   });
 }
 

@@ -15,6 +15,7 @@ export async function generateMetadata() {
     description: description,
     path: `${SITE_URL}/widgets/procedure-licenciement`,
     overrideCanonical: `${SITE_URL}/outils/procedure-licenciement`,
+    robots: "noindex,nofollow",
   });
 }
 

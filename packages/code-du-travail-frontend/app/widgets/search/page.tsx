@@ -9,6 +9,7 @@ export async function generateMetadata() {
       "Posez votre question sur le droit du travail et obtenez une réponse personnalisée à vos questions (formation, rupture de contrat, démission, indemnités).",
     path: `${SITE_URL}/widgets/recherche`,
     overrideCanonical: `${SITE_URL}/recherche`,
+    robots: "noindex,nofollow",
   });
 }
 

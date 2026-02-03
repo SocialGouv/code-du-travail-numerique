@@ -15,6 +15,7 @@ export async function generateMetadata() {
     description: description,
     path: `${SITE_URL}/widgets/preavis-retraite`,
     overrideCanonical: `${SITE_URL}/outils/preavis-retraite`,
+    robots: "noindex,nofollow",
   });
 }
 
