@@ -38,7 +38,11 @@ describe("Widgets - Chargement local", () => {
     it(`devrait charger le widget ${widget.path}`, () => {
       cy.visit(widget.path);
       cy.checkNoIndex();
-      cy.canonicalUrlEqual("/outils/" + widget.path.split("/").pop());
+      const expectedUrl =
+        widget.path === "/widgets/search"
+          ? "/recherche"
+          : "/outils/" + widget.path.split("/").pop();
+      cy.canonicalUrlEqual(expectedUrl);
       cy.contains(widget.title).should("be.visible");
     });
   });
