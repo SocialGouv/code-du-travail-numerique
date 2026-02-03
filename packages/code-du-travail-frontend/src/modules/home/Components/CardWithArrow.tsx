@@ -1,7 +1,7 @@
 import { css } from "@styled-system/css";
 import { fr } from "@codegouvfr/react-dsfr";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 type Props = {
   title: string;
@@ -10,20 +10,14 @@ type Props = {
 };
 
 export const CardWithArrow = ({ title, anchor, iconSrc }: Props) => {
-  const router = useRouter();
-
-  const onClickItem = () => {
-    router.push(`/droit-du-travail#${anchor}`);
-  };
-
   return (
-    <button
-      type="button"
-      className={`${fr.cx("fr-btn--tertiary-no-outline")} ${buttonStyle}`}
-      onClick={onClickItem}
+    <Link
+      href={`/droit-du-travail#${anchor}`}
+      className={linkStyle}
+      aria-label={title}
     >
       <div className={wrapper}>
-        <div className={cardContainer}>
+        <div className={`${cardContainer} card-content`}>
           <div className={`${fr.cx("fr-py-4w", "fr-px-2w")} ${cardHeader}`}>
             <div className={iconContainer}>
               <Image
@@ -34,7 +28,7 @@ export const CardWithArrow = ({ title, anchor, iconSrc }: Props) => {
                 className={iconStyle}
               />
             </div>
-            <h4
+            <div
               className={fr.cx(
                 "fr-mb-0",
                 "fr-ml-2w",
@@ -43,26 +37,38 @@ export const CardWithArrow = ({ title, anchor, iconSrc }: Props) => {
               )}
             >
               {title}
-            </h4>
+            </div>
           </div>
         </div>
         <div className={arrowContainer}>
-          <div className={arrow} />
+          <div className={`${arrow} arrow-shape`} />
         </div>
       </div>
-    </button>
+    </Link>
   );
 };
 
-const buttonStyle = css({
+const linkStyle = css({
   textAlign: "left",
   width: "100%",
   padding: "0",
-  border: "none",
-  background: "transparent",
-  cursor: "pointer",
+  border: "none!important",
+  background: "transparent!important",
+  textDecoration: "none !important",
+  fontWeight: "bold",
+  display: "block",
   "&:hover": {
-    background: "transparent!",
+    background: "transparent !important",
+    textDecoration: "none !important",
+  },
+  "&:focus": {
+    textDecoration: "none !important",
+  },
+  "&:active": {
+    textDecoration: "none !important",
+  },
+  "&:visited": {
+    textDecoration: "none !important",
   },
 });
 
@@ -85,6 +91,7 @@ const cardContainer = css({
   borderRadius: { base: "8px", md: "0" },
   borderTopLeftRadius: { base: "8px", md: "8px" },
   borderBottomLeftRadius: { base: "8px", md: "8px" },
+  transition: "background 0.3s ease",
 });
 
 const cardHeader = css({
@@ -119,4 +126,5 @@ const arrow = css({
     md: "polygon(0% 0%, 0% 100%, 100% 50%)",
   },
   background: "var(--background-default-grey)",
+  transition: "background 0.3s ease",
 });
