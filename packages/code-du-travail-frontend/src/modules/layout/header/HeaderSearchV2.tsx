@@ -16,6 +16,7 @@ export const HeaderSearchV2 = ({
   isSearchOpen,
   isAgreementOpen,
 }: HeaderSearchProps) => {
+export const HeaderSearchV2 = ({ onSearchClick }: HeaderSearchProps) => {
   return (
     <div
       className={`${fr.cx(
@@ -44,6 +45,20 @@ export const HeaderSearchV2 = ({
           onClick={onAgreementClick}
         />
       </div>
+    <div className={fr.cx("fr-header__tools", "fr-hidden", "fr-unhidden-lg")}>
+      <Button
+        id="fr-header-search-button-desktop"
+        title="Rechercher"
+        aria-controls="search-modal"
+        aria-haspopup="dialog"
+        onClick={onSearchClick}
+        iconId="fr-icon-search-line"
+        iconPosition="right"
+        className={buttonStyle}
+        type="button"
+      >
+        Rechercher
+      </Button>
     </div>
   );
 };
