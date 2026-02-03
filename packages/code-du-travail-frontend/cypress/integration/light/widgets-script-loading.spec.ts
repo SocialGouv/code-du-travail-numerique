@@ -3,7 +3,7 @@ import * as http from "http";
 import * as fs from "fs";
 import * as path from "path";
 
-describe("Widgets - Chargement via script widget.js", () => {
+describe("Widgets - Chargement via script widget-loader.js", () => {
   const PORT = 8888;
   let server: http.Server;
 
@@ -35,10 +35,10 @@ describe("Widgets - Chargement via script widget.js", () => {
     }
   });
 
-  it("devrait charger tous les widgets via le script widget.js", () => {
+  it("devrait charger tous les widgets via le script widget-loader.js", () => {
     cy.visit(`http://localhost:${PORT}`);
 
-    // Attendre que le script widget.js soit chargé et que les iframes soient créées
+    // Attendre que le script widget-loader.js soit chargé et que les iframes soient créées
     cy.wait(2000);
 
     // Vérifier que les iframes ont été créées pour chaque widget
