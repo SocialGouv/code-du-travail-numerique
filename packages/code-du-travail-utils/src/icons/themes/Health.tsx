@@ -1,5 +1,5 @@
 import * as React from "react";
-export default function Health() {
+export default function Health(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       width="52"
@@ -7,6 +7,7 @@ export default function Health() {
       viewBox="0 0 52 52"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...props}
     >
       <path
         d="M30 17H10C7.23857 17 5 19.2386 5 22V31C5 33.7614 7.23857 36 10 36H16V34H10C8.34315 34 7 32.6569 7 31L7 22C7 20.3431 8.34315 19 10 19L30 19V17Z"

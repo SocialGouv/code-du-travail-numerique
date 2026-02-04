@@ -1,5 +1,5 @@
 import * as React from "react";
-export default function Retirement() {
+export default function Retirement(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       width="56"
@@ -7,6 +7,7 @@ export default function Retirement() {
       viewBox="0 0 56 56"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...props}
     >
       <path
         d="M21.5386 6.68515C21.5386 8.17274 22.1295 9.5994 23.1814 10.6513C24.2333 11.7032 25.66 12.2941 27.1475 12.2941C28.6351 12.2941 30.0618 11.7032 31.1137 10.6513C32.1656 9.5994 32.7565 8.17274 32.7565 6.68515C32.7565 5.19755 32.1656 3.77089 31.1137 2.719C30.0618 1.66712 28.6351 1.07617 27.1475 1.07617C25.66 1.07617 24.2333 1.66712 23.1814 2.719C22.1295 3.77089 21.5386 5.19755 21.5386 6.68515Z"

@@ -10,13 +10,16 @@ import {
   HealthIcon,
   HiringIcon,
   HolidaysIcon,
+  HouseEmploymentIcon,
   NegoIcon,
+  ParentsIcon,
   ResignationIcon,
   RetirementIcon,
   RisksIcon,
   SalaryIcon,
   SpecificIcon,
   TimeIcon,
+  YoungsIcon,
 } from "./themes";
 
 export const ThemeIcons = {
@@ -38,4 +41,7 @@ export const ThemeIcons = {
   Salary: SalaryIcon,
   Specific: SpecificIcon,
   Time: TimeIcon,
+  HouseEmployment: HouseEmploymentIcon,
+  Parents: ParentsIcon,
+  Youngs: YoungsIcon,
 } as const;

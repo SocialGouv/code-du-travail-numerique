@@ -1,5 +1,5 @@
 import * as React from "react";
-export default function Time() {
+export default function Time(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       width="52"
@@ -7,6 +7,7 @@ export default function Time() {
       viewBox="0 0 52 52"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...props}
     >
       <g clipPath="url(#clip0_852_18587)">
         <path

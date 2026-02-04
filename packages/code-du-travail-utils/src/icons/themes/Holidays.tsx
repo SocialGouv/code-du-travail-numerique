@@ -1,5 +1,5 @@
 import * as React from "react";
-export default function Holidays() {
+export default function Holidays(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       width="56"
@@ -7,6 +7,7 @@ export default function Holidays() {
       viewBox="0 0 56 56"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...props}
     >
       <path
         d="M4.44232 6.68555H51.5577C51.5577 6.68555 53.8013 6.68555 53.8013 8.92914V51.5573C53.8013 51.5573 53.8013 53.8009 51.5577 53.8009H4.44232C4.44232 53.8009 2.19873 53.8009 2.19873 51.5573V8.92914C2.19873 8.92914 2.19873 6.68555 4.44232 6.68555Z"
