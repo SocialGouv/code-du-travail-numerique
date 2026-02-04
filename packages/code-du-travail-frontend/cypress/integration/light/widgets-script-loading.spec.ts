@@ -21,7 +21,7 @@ describe("Widgets - Chargement via script widget-loader.js", () => {
     cy.visit(`http://localhost:${PORT}`);
 
     // Attendre que le script widget-loader.js soit chargé et que les iframes soient créées
-    cy.wait(5000);
+    cy.wait(2000);
 
     // Vérifier que les iframes ont été créées pour chaque widget
     const widgets = [
