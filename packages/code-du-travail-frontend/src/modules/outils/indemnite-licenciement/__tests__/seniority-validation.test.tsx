@@ -28,7 +28,6 @@ describe("Indemnité licenciement - Validation des erreurs sur l'étape ancienne
       userAction
         .click(ui.introduction.startButton.get())
         .click(ui.contract.inaptitude.non.get())
-        .click(ui.contract.arretTravail.non.get())
         .click(ui.next.get())
         .click(ui.next.get());
       await userAction.changeInputList(
@@ -119,6 +118,24 @@ describe("Indemnité licenciement - Validation des erreurs sur l'étape ancienne
         .setInput(ui.seniority.notificationDate.get(), "01/09/2022")
         .setInput(ui.seniority.endDate.get(), "01/10/2022");
 
+      // validation de l'erreur quand on a pas répondu à la l'arrêt de travail
+      expect(
+        screen.getByText("Vous devez répondre à cette question", {
+          selector: "#hasAbsenceProlonge-error",
+        })
+      ).toBeInTheDocument();
+
+      userAction.click(ui.seniority.arretTravail.oui.get());
+
+      // Validation de l'erreur quand on a pas répondu à la date de l'arrêt
+      expect(
+        rendering.getByText("Vous devez répondre à cette question", {
+          selector: "#dateArretTravail-error",
+        })
+      ).toBeInTheDocument();
+
+      userAction.setInput(ui.seniority.dateArretTravail.get(), "01/08/2022");
+
       // validation de l'erreur quand on a pas répondu à présence de périodes d'absence
       expect(
         rendering.queryByText("Vous devez répondre à cette question")
@@ -183,7 +200,6 @@ describe("Indemnité licenciement - Validation des erreurs sur l'étape ancienne
       userAction
         .click(ui.introduction.startButton.get())
         .click(ui.contract.inaptitude.non.get())
-        .click(ui.contract.arretTravail.non.get())
         .click(ui.next.get())
         .click(ui.agreement.noAgreement.get())
         .click(ui.next.get());
@@ -197,6 +213,7 @@ describe("Indemnité licenciement - Validation des erreurs sur l'étape ancienne
         .setInput(ui.seniority.startDate.get(), "01/01/2022")
         .setInput(ui.seniority.notificationDate.get(), "01/09/2022")
         .setInput(ui.seniority.endDate.get(), "01/09/2022")
+        .click(ui.seniority.arretTravail.non.get())
         .click(ui.seniority.hasAbsence.oui.get())
         .setInput(ui.seniority.absences.duration(0).get(), "1")
         .click(ui.next.get())

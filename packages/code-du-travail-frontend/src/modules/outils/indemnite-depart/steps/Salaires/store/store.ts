@@ -42,11 +42,9 @@ const createSalairesStore: StoreSlice<
   salairesFunction: {
     initFieldSalaries: () => {
       const ancienneteInput = get().ancienneteData.input;
-      const contratTravailInput = get().contratTravailData.input;
       const dateNotification = add(
         parse(
-          contratTravailInput.dateArretTravail ??
-            ancienneteInput.dateNotification!
+          ancienneteInput.dateArretTravail ?? ancienneteInput.dateNotification!
         ),
         {
           days: 1,

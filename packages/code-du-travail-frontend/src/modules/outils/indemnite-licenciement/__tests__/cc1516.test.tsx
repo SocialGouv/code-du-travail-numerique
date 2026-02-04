@@ -1,4 +1,4 @@
-import { render, fireEvent, RenderResult } from "@testing-library/react";
+import { render, RenderResult } from "@testing-library/react";
 import React from "react";
 import { UserAction } from "../../common/utils/UserAction";
 import { CalculateurIndemniteLicenciement } from "../IndemniteLicenciementSimulator";
@@ -28,7 +28,6 @@ describe("Indemnité licenciement - CC 1516", () => {
     userAction
       .click(ui.introduction.startButton.get())
       .click(ui.contract.inaptitude.non.get())
-      .click(ui.contract.arretTravail.non.get())
       .click(ui.next.get())
       .click(ui.next.get());
   });
@@ -36,11 +35,12 @@ describe("Indemnité licenciement - CC 1516", () => {
     userAction.setInput(ui.seniority.startDate.get(), "01/01/2018");
     userAction.setInput(ui.seniority.notificationDate.get(), "01/01/2022");
     userAction.setInput(ui.seniority.endDate.get(), "01/06/2022");
-    fireEvent.click(ui.seniority.hasAbsence.non.get());
-    fireEvent.click(ui.next.get());
+    userAction.click(ui.seniority.arretTravail.non.get());
+    userAction.click(ui.seniority.hasAbsence.non.get());
+    userAction.click(ui.next.get());
     expect(ui.activeStep.query()).toHaveTextContent("Salaires");
 
-    fireEvent.click(ui.salary.hasSameSalary.oui.get());
+    userAction.click(ui.salary.hasSameSalary.oui.get());
     userAction.setInput(ui.salary.sameSalaryValue.get(), "2500");
 
     expect(
@@ -48,7 +48,7 @@ describe("Indemnité licenciement - CC 1516", () => {
         "Connaissez-vous le montant des salaires perçus pendant le préavis ?"
       )
     ).toBeInTheDocument();
-    fireEvent.click(
+    userAction.click(
       ui.salary.agreementWithNoticeSalary.knowingLastSalary.oui.get()
     );
     expect(
@@ -73,7 +73,7 @@ describe("Indemnité licenciement - CC 1516", () => {
       "200"
     );
 
-    fireEvent.click(ui.next.get());
+    userAction.click(ui.next.get());
 
     expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
     expect(ui.result.resultat.get()).toHaveTextContent("3 548,06 €");
@@ -99,22 +99,19 @@ describe("Indemnité licenciement - CC 1516", () => {
   });
 
   test(`user avec arret de travail is not asked for salary`, () => {
-    userAction
-      .click(ui.previous.get())
-      .click(ui.previous.get())
-      .click(ui.contract.arretTravail.oui.get());
+    userAction.click(ui.seniority.arretTravail.oui.get());
 
-    userAction.setInput(ui.contract.dateArretTravail.get(), "01/01/2022");
-    userAction.click(ui.next.get()).click(ui.next.get());
+    userAction.setInput(ui.seniority.dateArretTravail.get(), "01/01/2022");
+    userAction.click(ui.next.get());
 
     userAction.setInput(ui.seniority.startDate.get(), "01/01/2018");
     userAction.setInput(ui.seniority.notificationDate.get(), "01/01/2022");
     userAction.setInput(ui.seniority.endDate.get(), "01/06/2022");
-    fireEvent.click(ui.seniority.hasAbsence.non.get());
-    fireEvent.click(ui.next.get());
+    userAction.click(ui.seniority.hasAbsence.non.get());
+    userAction.click(ui.next.get());
     expect(ui.activeStep.query()).toHaveTextContent("Salaires");
 
-    fireEvent.click(ui.salary.hasSameSalary.oui.get());
+    userAction.click(ui.salary.hasSameSalary.oui.get());
     userAction.setInput(ui.salary.sameSalaryValue.get(), "2500");
     expect(
       rendering.queryByText(

@@ -7,6 +7,8 @@ export type AncienneteStoreInput = {
   dateEntree?: string;
   dateSortie?: string;
   dateNotification?: string;
+  arretTravail?: OuiNon;
+  dateArretTravail?: string;
   absencePeriods: Absence[];
   motifs: Motif[];
   hasAbsenceProlonge?: OuiNon;
@@ -22,6 +24,8 @@ export type AncienneteStoreError = {
   };
   errorEligibility?: string;
   errorPublicodes?: string;
+  errorArretTravail?: string;
+  errorDateArretTravail?: string;
 };
 
 export type AncienneteAbsenceStoreError = {
@@ -39,6 +43,8 @@ export type AncienneteStoreFn = {
   onChangeDateEntree: (value: string) => void;
   onChangeDateSortie: (value: string) => void;
   onChangeDateNotification: (value: string) => void;
+  onChangeArretTravail: (value: OuiNon) => void;
+  onChangeDateArretTravail: (value: string) => void;
   onChangeAbsencePeriods: (value: Absence[]) => void;
   onNextStep: () => ValidationResponse;
   onChangeHasAbsenceProlonge: (value: OuiNon) => void;

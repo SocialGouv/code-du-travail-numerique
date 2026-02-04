@@ -28,7 +28,6 @@ describe(`Tests des erreurs d'éligibilité`, () => {
   test("Vérifier l'affichage de l'erreur ancienneté < 8 mois", async () => {
     userAction
       .click(ui.contract.inaptitude.non.get())
-      .click(ui.contract.arretTravail.non.get())
       .click(ui.next.get())
       .click(ui.next.get());
     await userAction.changeInputList(
@@ -47,6 +46,7 @@ describe(`Tests des erreurs d'éligibilité`, () => {
       .setInput(ui.seniority.notificationDate.get(), "01/01/2022")
       .click(ui.seniority.hasAbsence.non.get())
       .setInput(ui.seniority.endDate.get(), "01/01/2022")
+      .click(ui.seniority.arretTravail.non.get())
       .click(ui.next.get());
     expect(
       ui.result.infoWarning.eligibleInfoWarningblock.query()
@@ -61,7 +61,6 @@ describe(`Tests des erreurs d'éligibilité`, () => {
   test("Vérifier l'affichage de l'erreur ancienneté < 8 mois quand on revient changer la date de notification", async () => {
     userAction
       .click(ui.contract.inaptitude.non.get())
-      .click(ui.contract.arretTravail.non.get())
       .click(ui.next.get())
       .click(ui.next.get());
     await userAction.changeInputList(
@@ -75,6 +74,7 @@ describe(`Tests des erreurs d'éligibilité`, () => {
       .setInput(ui.seniority.startDate.get(), "01/01/2024")
       .setInput(ui.seniority.notificationDate.get(), "01/10/2024")
       .setInput(ui.seniority.endDate.get(), "01/12/2024")
+      .click(ui.seniority.arretTravail.non.get())
       .click(ui.seniority.hasAbsence.non.get())
       .click(ui.next.get())
       .click(ui.salary.hasSameSalary.oui.get())

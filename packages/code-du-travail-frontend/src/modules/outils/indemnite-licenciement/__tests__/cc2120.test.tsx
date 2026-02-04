@@ -1,4 +1,4 @@
-import { render, RenderResult } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import React from "react";
 import { UserAction } from "../../common/utils/UserAction";
 import { CalculateurIndemniteLicenciement } from "../IndemniteLicenciementSimulator";
@@ -19,16 +19,14 @@ Storage.prototype.getItem = jest.fn(
 );
 
 describe("Indemnité licenciement - CC 2120", () => {
-  let rendering: RenderResult;
   let userAction: UserAction;
   beforeEach(() => {
-    rendering = render(<CalculateurIndemniteLicenciement title={""} />);
+    render(<CalculateurIndemniteLicenciement title={""} />);
     userAction = new UserAction();
 
     userAction
       .click(ui.introduction.startButton.get())
       .click(ui.contract.inaptitude.non.get())
-      .click(ui.contract.arretTravail.non.get())
       .click(ui.next.get())
       .click(ui.next.get());
   });
@@ -44,6 +42,7 @@ describe("Indemnité licenciement - CC 2120", () => {
       .setInput(ui.seniority.startDate.get(), "01/01/1999")
       .setInput(ui.seniority.notificationDate.get(), "01/01/2024")
       .setInput(ui.seniority.endDate.get(), "01/01/2024")
+      .click(ui.seniority.arretTravail.non.get())
       .click(ui.seniority.hasAbsence.non.get())
       .click(ui.next.get())
       .click(ui.salary.hasSameSalary.oui.get())

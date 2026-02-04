@@ -1,5 +1,5 @@
 import * as React from "react";
-export default function Hiring() {
+export default function Hiring(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       width="47"
@@ -7,6 +7,7 @@ export default function Hiring() {
       viewBox="0 0 47 56"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...props}
     >
       <path
         fillRule="evenodd"

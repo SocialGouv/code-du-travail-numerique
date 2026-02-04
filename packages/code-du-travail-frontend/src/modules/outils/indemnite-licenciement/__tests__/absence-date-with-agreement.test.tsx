@@ -28,7 +28,6 @@ describe("Indemnité licenciement", () => {
       userAction
         .click(ui.introduction.startButton.get())
         .click(ui.contract.inaptitude.non.get())
-        .click(ui.contract.arretTravail.non.get())
         .click(ui.next.get())
         .click(ui.next.get());
       await userAction.changeInputList(
@@ -57,6 +56,7 @@ describe("Indemnité licenciement", () => {
         .setInput(ui.seniority.startDate.get(), "01/01/2000")
         .setInput(ui.seniority.notificationDate.get(), "01/01/2022")
         .setInput(ui.seniority.endDate.get(), "01/03/2022")
+        .click(ui.seniority.arretTravail.non.get())
         .click(ui.seniority.hasAbsence.oui.get());
       await userAction.changeInputList(
         ui.seniority.absences.motif(0).get(),

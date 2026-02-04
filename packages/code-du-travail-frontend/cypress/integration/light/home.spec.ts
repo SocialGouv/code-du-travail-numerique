@@ -36,7 +36,7 @@ describe("Page d’accueil", () => {
     );
     cy.get("#home-outils").find("a").should("have.length", 5);
 
-    cy.contains("Voir tous les modèles de documents").should(
+    cy.contains("Parcourir les modèles").should(
       "have.attr",
       "href",
       "/modeles-de-courriers"

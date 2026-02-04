@@ -13,8 +13,9 @@ export async function generateMetadata() {
   return generateDefaultMetadata({
     title: `Simulateur - ${title}`,
     description: description,
-    path: `${SITE_URL}/widgets/preavis-demission`,
-    overrideCanonical: `${SITE_URL}/outils/preavis-demission`,
+    path: `${SITE_URL}/widgets/indemnite-precarite`,
+    overrideCanonical: `${SITE_URL}/outils/indemnite-precarite`,
+    robots: "noindex,nofollow",
   });
 }
 

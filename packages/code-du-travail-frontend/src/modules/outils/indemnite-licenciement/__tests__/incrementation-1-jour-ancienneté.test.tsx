@@ -12,13 +12,13 @@ describe("Page salaire: vérification l'affichage des salaires mensuels", () => 
     const userAction = new UserAction();
     userAction.click(ui.introduction.startButton.get());
     userAction.click(ui.contract.inaptitude.non.get());
-    userAction.click(ui.contract.arretTravail.non.get());
     userAction.click(ui.next.get());
     userAction.click(ui.agreement.noAgreement.get());
     userAction.click(ui.next.get());
     userAction.setInput(ui.seniority.startDate.get(), "01/01/2022");
     userAction.setInput(ui.seniority.notificationDate.get(), "31/12/2022");
     userAction.setInput(ui.seniority.endDate.get(), "31/12/2022");
+    userAction.click(ui.seniority.arretTravail.non.get());
 
     userAction.click(ui.seniority.hasAbsence.non.get());
     userAction.click(ui.next.get());

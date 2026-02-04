@@ -64,6 +64,9 @@ const IndemniteDepartSimulator = ({
 
   const getHiddenSteps = (): IndemniteDepartStepName[] => {
     const hiddenSteps: IndemniteDepartStepName[] = [];
+    if (tool === IndemniteDepartType.RUPTURE_CONVENTIONNELLE) {
+      hiddenSteps.push(IndemniteDepartStepName.ContratTravail);
+    }
     if (isStepInformationsHidden) {
       hiddenSteps.push(IndemniteDepartStepName.Informations);
     }

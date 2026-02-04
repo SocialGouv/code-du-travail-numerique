@@ -1,4 +1,4 @@
-import { fireEvent, render } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import React from "react";
 import { UserAction } from "../../common/utils/UserAction";
 import { CalculateurIndemniteLicenciement } from "../IndemniteLicenciementSimulator";
@@ -26,7 +26,6 @@ describe("Indemnité licenciement - CC 675", () => {
     userAction = new UserAction();
     userAction.click(ui.introduction.startButton.get());
     userAction.click(ui.contract.inaptitude.non.get());
-    userAction.click(ui.contract.arretTravail.non.get());
     userAction.click(ui.next.get());
     userAction.click(ui.next.get());
     userAction.click(ui.next.get());
@@ -35,15 +34,16 @@ describe("Indemnité licenciement - CC 675", () => {
       ui.information.agreement675.proCategory.get(),
       "'Employés'"
     );
-    fireEvent.click(ui.next.get());
+    userAction.click(ui.next.get());
     userAction.setInput(ui.seniority.startDate.get(), "01/01/2021");
     userAction.setInput(ui.seniority.notificationDate.get(), "01/01/2024");
     userAction.setInput(ui.seniority.endDate.get(), "01/01/2024");
-    fireEvent.click(ui.seniority.hasAbsence.non.get());
-    fireEvent.click(ui.next.get());
-    fireEvent.click(ui.salary.hasSameSalary.oui.get());
+    userAction.click(ui.seniority.arretTravail.non.get());
+    userAction.click(ui.seniority.hasAbsence.non.get());
+    userAction.click(ui.next.get());
+    userAction.click(ui.salary.hasSameSalary.oui.get());
     userAction.setInput(ui.salary.sameSalaryValue.get(), "1488");
-    fireEvent.click(ui.next.get());
+    userAction.click(ui.next.get());
 
     expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
     expect(ui.result.resultatAgreement.get()).toHaveTextContent("446,40");

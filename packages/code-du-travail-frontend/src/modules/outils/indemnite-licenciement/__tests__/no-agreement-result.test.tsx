@@ -29,7 +29,6 @@ describe("Indemnité licenciement", () => {
       userAction = new UserAction();
       userAction.click(ui.introduction.startButton.get());
       userAction.click(ui.contract.inaptitude.non.get());
-      userAction.click(ui.contract.arretTravail.non.get());
       userAction.click(ui.next.get());
       userAction.click(ui.next.get());
       await userAction.changeInputList(
@@ -42,6 +41,7 @@ describe("Indemnité licenciement", () => {
         .setInput(ui.seniority.startDate.get(), "01/10/2023")
         .setInput(ui.seniority.notificationDate.get(), "01/06/2024")
         .setInput(ui.seniority.endDate.get(), "01/06/2024")
+        .click(ui.seniority.arretTravail.non.get())
         .click(ui.seniority.hasAbsence.oui.get());
       await userAction.changeInputList(
         ui.seniority.absences.motif(0).get(),
@@ -88,7 +88,6 @@ describe("Indemnité licenciement", () => {
     userAction
       .click(ui.introduction.startButton.get())
       .click(ui.contract.inaptitude.non.get())
-      .click(ui.contract.arretTravail.non.get())
       .click(ui.next.get())
       .click(ui.agreement.unknownAgreement.get())
       .setInput(ui.agreement.agreementCompanyInput.get(), "bricomanie")
@@ -102,6 +101,7 @@ describe("Indemnité licenciement", () => {
       .setInput(ui.seniority.startDate.get(), "01/01/2018")
       .setInput(ui.seniority.notificationDate.get(), "01/01/2024")
       .setInput(ui.seniority.endDate.get(), "01/01/2024")
+      .click(ui.seniority.arretTravail.non.get())
       .click(ui.seniority.hasAbsence.non.get())
       .click(ui.next.get())
       .click(ui.salary.hasSameSalary.oui.get())

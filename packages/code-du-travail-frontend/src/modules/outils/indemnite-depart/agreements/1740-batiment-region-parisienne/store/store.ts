@@ -36,7 +36,7 @@ export const createAgreement1740StoreSalaires: StoreSlice<
   agreement1740Data: { ...initialState },
   agreement1740Function: {
     onInit: () => {
-      const dateArretTravail = get().contratTravailData.input.dateArretTravail;
+      const dateArretTravail = get().ancienneteData.input.dateArretTravail;
 
       if (dateArretTravail) {
         get().situationFunction.setSituation(

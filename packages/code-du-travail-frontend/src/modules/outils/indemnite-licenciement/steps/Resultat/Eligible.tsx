@@ -81,8 +81,8 @@ export default function Eligible() {
       state.resultData.input.agreementHasNoBetterAllowance,
     isStepSalaryHidden: state.informationsData.input.isStepSalaryHidden,
     infoWarning: state.resultData.input.infoWarning,
-    dateArretTravail: state.contratTravailData.input.dateArretTravail,
-    arretTravail: state.contratTravailData.input.arretTravail,
+    dateArretTravail: state.ancienneteData.input.dateArretTravail,
+    arretTravail: state.ancienneteData.input.arretTravail,
     informationData: informationToSituation(
       state.informationsData.input.publicodesInformations
     ),

@@ -20,15 +20,13 @@ Storage.prototype.getItem = jest.fn(
 
 describe("Indemnité licenciement - CC 3248", () => {
   describe("parcours avec la convention collective pour valider ses spécificités", () => {
-    let rendering: RenderResult;
     let userAction: UserAction;
     beforeEach(() => {
-      rendering = render(<CalculateurIndemniteLicenciement title={""} />);
+      render(<CalculateurIndemniteLicenciement title={""} />);
       userAction = new UserAction();
       userAction
         .click(ui.introduction.startButton.get())
         .click(ui.contract.inaptitude.non.get())
-        .click(ui.contract.arretTravail.non.get())
         .click(ui.next.get())
         .click(ui.next.get());
     });
@@ -54,6 +52,7 @@ describe("Indemnité licenciement - CC 3248", () => {
         .setInput(ui.seniority.startDate.get(), "01/01/2000")
         .setInput(ui.seniority.notificationDate.get(), "01/01/2023")
         .setInput(ui.seniority.endDate.get(), "01/06/2023")
+        .click(ui.seniority.arretTravail.non.get())
         .click(ui.seniority.hasAbsence.non.get())
         .click(ui.next.get());
       // Validation que l'on est bien sur l'étape ancienneté
@@ -75,6 +74,7 @@ describe("Indemnité licenciement - CC 3248", () => {
         .setInput(ui.seniority.startDate.get(), "01/01/2021")
         .setInput(ui.seniority.notificationDate.get(), "30/06/2024")
         .setInput(ui.seniority.endDate.get(), "30/06/2024")
+        .click(ui.seniority.arretTravail.non.get())
         .click(ui.seniority.hasAbsence.non.get())
         .click(ui.next.get())
         .click(ui.salary.hasSameSalary.oui.get())

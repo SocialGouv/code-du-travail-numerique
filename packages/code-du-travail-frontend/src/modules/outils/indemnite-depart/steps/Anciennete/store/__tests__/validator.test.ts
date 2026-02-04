@@ -21,7 +21,6 @@ describe("Ancienneté store", () => {
           ],
           hasAbsenceProlonge: "oui",
         },
-        {},
         {
           publicodesInformations: [],
           isStepHidden: false,
@@ -59,7 +58,6 @@ describe("Ancienneté store", () => {
           ],
           hasAbsenceProlonge: "oui",
         },
-        {},
         {
           publicodesInformations: [],
           isStepHidden: false,
@@ -98,7 +96,6 @@ describe("Ancienneté store", () => {
           ],
           hasAbsenceProlonge: "oui",
         },
-        {},
         {
           publicodesInformations: [],
           isStepHidden: false,
@@ -122,6 +119,7 @@ describe("Ancienneté store", () => {
           dateEntree: "01/01/2020",
           dateSortie: "01/03/2022",
           dateNotification: "01/01/2022",
+          arretTravail: "non",
           motifs: [],
           absencePeriods: [
             {
@@ -137,7 +135,6 @@ describe("Ancienneté store", () => {
           ],
           hasAbsenceProlonge: "oui",
         },
-        {},
         {
           publicodesInformations: [],
           isStepHidden: false,
@@ -172,8 +169,6 @@ describe("Ancienneté store", () => {
             },
           ],
           hasAbsenceProlonge: "oui",
-        },
-        {
           dateArretTravail: "01/01/2019",
           arretTravail: "oui",
         },
@@ -211,8 +206,6 @@ describe("Ancienneté store", () => {
             },
           ],
           hasAbsenceProlonge: "oui",
-        },
-        {
           dateArretTravail: "01/01/2023",
           arretTravail: "oui",
         },
@@ -249,8 +242,6 @@ describe("Ancienneté store", () => {
             },
           ],
           hasAbsenceProlonge: "oui",
-        },
-        {
           dateArretTravail: "01/01/2023",
           arretTravail: "non",
         },
@@ -287,7 +278,6 @@ describe("Ancienneté store", () => {
         ],
         hasAbsenceProlonge: "oui",
       },
-      {},
       {
         publicodesInformations: [],
         isStepHidden: false,
@@ -315,7 +305,6 @@ describe("Ancienneté store", () => {
         absencePeriods: [],
         hasAbsenceProlonge: "non",
       },
-      {},
       {
         publicodesInformations: [],
         isStepHidden: false,

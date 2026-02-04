@@ -42,7 +42,7 @@ export const createAgreement2596StoreSalaires: StoreSlice<
             item.question.name ===
             "contrat-salarie-convention-collective-coiffure-indemnite-de-licenciement-categorie-professionnelle"
         )?.info;
-      const dateArretTravail = get().contratTravailData.input.dateArretTravail;
+      const dateArretTravail = get().ancienneteData.input.dateArretTravail;
 
       if (
         (categoryPro !== "'Cadres'" &&

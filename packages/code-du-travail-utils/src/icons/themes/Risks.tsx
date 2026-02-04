@@ -1,5 +1,5 @@
 import * as React from "react";
-export default function Risks() {
+export default function Risks(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       width="56"
@@ -7,6 +7,7 @@ export default function Risks() {
       viewBox="0 0 56 56"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...props}
     >
       <path
         d="M38.937 48.1925C38.4724 48.1925 38.0957 47.8158 38.0957 47.3511C38.0957 46.8865 38.4724 46.5098 38.937 46.5098"

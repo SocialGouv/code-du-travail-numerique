@@ -18,10 +18,6 @@ const Intro = () => {
         description={
           <>
             <p>
-              L&apos;indemnité de rupture conventionnelle concerne uniquement
-              les salariés en contrat à durée indéterminée (CDI).
-            </p>
-            <p>
               À noter&nbsp;: ce simulateur ne prend pas en compte les contrats
               ayant alterné entre temps plein et temps partiel.
             </p>

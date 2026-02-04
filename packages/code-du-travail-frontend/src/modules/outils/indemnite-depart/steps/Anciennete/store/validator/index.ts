@@ -7,21 +7,19 @@ import { getDateNotificationErrors } from "./dateNotification";
 import { getAbsencePeriodsErrors } from "./absencePeriods";
 import { getAbsenceProlongeErrors } from "./absenceProlonge";
 import { getDateArretTravailErrors } from "./dateArretTravail";
-import { ContratTravailStoreInput } from "../../../ContratTravail/store";
 import { deepEqualObject } from "src/modules/utils/object";
 
 export const validateStep = (
   state: AncienneteStoreInput,
-  stateContratTravail: ContratTravailStoreInput,
   information?: CommonInformationsStoreInput
 ) => {
-  const errors: AncienneteStoreError = {
+  let errors: AncienneteStoreError = {
     ...getDateEntreeErrors(state),
     ...getDateSortieErrors(state),
     ...getDateNotificationErrors(state),
     ...getAbsencePeriodsErrors(state, information),
     ...getAbsenceProlongeErrors(state),
-    ...getDateArretTravailErrors(state, stateContratTravail),
+    ...getDateArretTravailErrors(state),
   };
 
   return {
@@ -31,6 +29,8 @@ export const validateStep = (
       errorDateNotification: undefined,
       errorDateEntree: undefined,
       errorAbsencePeriods: undefined,
+      errorArretTravail: undefined,
+      errorDateArretTravail: undefined,
     }),
     errorState: errors,
   };

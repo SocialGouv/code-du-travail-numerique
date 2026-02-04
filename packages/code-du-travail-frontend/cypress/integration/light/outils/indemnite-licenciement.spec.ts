@@ -7,7 +7,6 @@ describe("Outil - Indemnité de licenciement", () => {
     cy.get("button").contains("Commencer").click({ force: true });
 
     cy.get('label:contains("Non")').eq(0).click();
-    cy.get('label:contains("Non")').eq(1).click();
     cy.contains("Suivant").click();
 
     cy.contains(
@@ -18,8 +17,9 @@ describe("Outil - Indemnité de licenciement", () => {
     cy.get("#dateEntree").type("2003-01-01");
     cy.get("#dateNotification").type("2026-06-01");
     cy.get("#dateSortie").type("2026-06-01");
+    cy.get('label:contains("Non")').eq(0).click();
 
-    cy.contains("Oui").click();
+    cy.get('label:contains("Oui")').eq(1).click();
     cy.get("[id='0.duration']").type("1");
     cy.contains("Ajouter une absence").click();
     cy.contains("Absence 2").should("be.focused");

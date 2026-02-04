@@ -15,13 +15,13 @@ describe("Indemnité licenciement - Step salaire", () => {
       userAction = new UserAction();
       userAction.click(ui.introduction.startButton.get());
       userAction.click(ui.contract.inaptitude.non.get());
-      userAction.click(ui.contract.arretTravail.non.get());
       userAction.click(ui.next.get());
       userAction.click(ui.agreement.noAgreement.get());
       userAction.click(ui.next.get());
       userAction.setInput(ui.seniority.startDate.get(), "01/01/2000");
       userAction.setInput(ui.seniority.notificationDate.get(), "01/01/2022");
       userAction.setInput(ui.seniority.endDate.get(), "01/03/2022");
+      userAction.click(ui.seniority.arretTravail.non.get());
       userAction.click(ui.seniority.hasAbsence.non.get());
       userAction.click(ui.next.get());
       // Validation que l'on est bien sur l'étape ancienneté
