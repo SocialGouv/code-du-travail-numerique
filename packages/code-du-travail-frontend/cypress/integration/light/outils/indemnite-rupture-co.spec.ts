@@ -9,9 +9,6 @@ describe("Outil - Indemnité de rupture conventionnelle", () => {
     );
     cy.get("button").contains("Commencer").click({ force: true });
 
-    cy.get('label:contains("Non")').eq(0).click();
-    cy.contains("Suivant").click();
-
     cy.contains(
       "Je ne souhaite pas renseigner ma convention collective (je passe l'étape)."
     ).click();
@@ -20,7 +17,8 @@ describe("Outil - Indemnité de rupture conventionnelle", () => {
     cy.get("#dateEntree").type("2001-01-01");
     cy.get("#dateSortie").type("2025-01-01");
 
-    cy.contains("Oui").click();
+    cy.get('label:contains("Non")').eq(0).click();
+    cy.get('label:contains("Oui")').eq(1).click();
     cy.get("[id='0.duration']").type("1");
     cy.contains("Ajouter une absence").click();
     cy.contains("Absence 2").should("be.focused");

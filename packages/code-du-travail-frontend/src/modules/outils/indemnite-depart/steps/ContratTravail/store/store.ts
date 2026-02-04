@@ -35,19 +35,7 @@ const createContratTravailStore: StoreSlice<
   contratTravailFunction: {
     onChangeLicenciementInaptitude: (value) => {
       applyGenericValidation(get, set, "licenciementInaptitude", value);
-      applyGenericValidation(get, set, "dateArretTravail", undefined);
-      applyGenericValidation(get, set, "arretTravail", undefined);
       get().informationsFunction.generatePublicodesQuestions();
-    },
-    onChangeArretTravail: (value) => {
-      applyGenericValidation(get, set, "arretTravail", value);
-      applyGenericValidation(get, set, "dateArretTravail", undefined);
-    },
-    onChangeDateArretTravail: (value) => {
-      applyGenericValidation(get, set, "dateArretTravail", value);
-      if (get().ancienneteData.hasBeenSubmit) {
-        get().ancienneteFunction.onNextStep();
-      }
     },
     onNextStep: () => {
       const state = get().contratTravailData.input;

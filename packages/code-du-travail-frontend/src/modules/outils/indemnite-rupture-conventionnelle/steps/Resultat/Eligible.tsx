@@ -97,21 +97,21 @@ const Eligible = () => {
           },
           {
             text: "Arrêt de travail au moment de la rupture conventionnelle",
-            value: contratTravail.arretTravail === "oui" ? "Oui" : "Non",
+            value: seniority.arretTravail === "oui" ? "Oui" : "Non",
           },
         ].concat(
-          contratTravail.dateArretTravail
+          seniority.dateArretTravail
             ? [
                 {
                   text: "Date de début de l'arrêt de travail",
-                  value: contratTravail.dateArretTravail,
+                  value: seniority.dateArretTravail,
                 },
               ]
             : []
         )}
         absencesPeriods={seniority.absencePeriods}
         agreementName={agreement.agreement?.shortTitle}
-        isArretTravail={contratTravail.arretTravail === "oui"}
+        isArretTravail={seniority.arretTravail === "oui"}
         dateEntree={seniority.dateEntree!}
         dateSortie={seniority.dateSortie!}
         salaryPeriods={salary.salaryPeriods}

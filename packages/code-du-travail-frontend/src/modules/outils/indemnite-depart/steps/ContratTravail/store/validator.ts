@@ -6,20 +6,10 @@ export const validateStep = (state: ContratTravailStoreInput) => {
     errorLicenciementInaptitude: !state.licenciementInaptitude
       ? "Vous devez répondre à cette question"
       : undefined,
-    errorArretTravail:
-      !state.arretTravail && state.licenciementInaptitude === "non"
-        ? "Vous devez répondre à cette question"
-        : undefined,
-    errorDateArretTravail:
-      state.arretTravail === "oui" && !state.dateArretTravail
-        ? "Vous devez répondre à cette question"
-        : undefined,
   };
   return {
     isValid: deepEqualObject(errorState, {
       errorLicenciementInaptitude: undefined,
-      errorArretTravail: undefined,
-      errorDateArretTravail: undefined,
     }),
     errorState,
   };

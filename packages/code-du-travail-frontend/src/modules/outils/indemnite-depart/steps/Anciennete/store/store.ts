@@ -79,6 +79,13 @@ const createAncienneteStore: StoreSlice<
     onChangeDateNotification: (value) => {
       applyGenericValidation(get, set, "dateNotification", value);
     },
+    onChangeArretTravail: (value) => {
+      applyGenericValidation(get, set, "arretTravail", value);
+      applyGenericValidation(get, set, "dateArretTravail", undefined);
+    },
+    onChangeDateArretTravail: (value) => {
+      applyGenericValidation(get, set, "dateArretTravail", value);
+    },
     onChangeAbsencePeriods: (value) => {
       const absence = cleanAbsence(value, get());
       applyGenericValidation(get, set, "absencePeriods", absence);
@@ -113,7 +120,6 @@ const createAncienneteStore: StoreSlice<
     onNextStep: () => {
       const { isValid, errorState } = validateStep(
         get().ancienneteData.input,
-        get().contratTravailData.input,
         get().informationsData.input
       );
       let errorEligibility;
@@ -124,10 +130,14 @@ const createAncienneteStore: StoreSlice<
           const infos = informationToSituation(
             get().informationsData.input.publicodesInformations
           );
-          const { licenciementInaptitude, arretTravail } =
-            get().contratTravailData.input;
-          const { dateEntree, dateNotification, dateSortie, absencePeriods } =
-            get().ancienneteData.input;
+          const { licenciementInaptitude } = get().contratTravailData.input;
+          const {
+            dateEntree,
+            dateNotification,
+            dateSortie,
+            arretTravail,
+            absencePeriods,
+          } = get().ancienneteData.input;
           const situation = {
             ...get().situationData.situation,
             ...infos,
@@ -205,7 +215,6 @@ const applyGenericValidation = (
 
     const { isValid, errorState } = validateStep(
       nextState.ancienneteData.input,
-      nextState.contratTravailData.input,
       get().informationsData.input
     );
     set(

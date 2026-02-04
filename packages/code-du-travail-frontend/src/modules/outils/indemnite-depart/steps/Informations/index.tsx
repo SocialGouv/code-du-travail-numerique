@@ -14,7 +14,7 @@ const InformationsStep = () => {
 
   return (
     <>
-      {informations.map((info, index) => {
+      {informations.map((info) => {
         return (
           <PubliQuestion
             key={info.id}

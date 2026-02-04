@@ -26,7 +26,6 @@ describe("Indemnité licenciement - CC 3239 - changement de convention collectiv
     userAction = new UserAction();
     userAction.click(ui.introduction.startButton.get());
     userAction.click(ui.contract.inaptitude.non.get());
-    userAction.click(ui.contract.arretTravail.non.get());
     userAction.click(ui.next.get());
     userAction.click(ui.next.get());
     userAction.setInput(
@@ -37,6 +36,7 @@ describe("Indemnité licenciement - CC 3239 - changement de convention collectiv
     userAction.setInput(ui.seniority.startDate.get(), "01/01/2020");
     userAction.setInput(ui.seniority.notificationDate.get(), "15/09/2022");
     userAction.setInput(ui.seniority.endDate.get(), "15/09/2022");
+    userAction.click(ui.seniority.arretTravail.non.get());
     userAction.click(ui.seniority.hasAbsence.oui.get());
     await userEvent.selectOptions(
       ui.seniority.absences.motif(0).get(),
@@ -59,6 +59,7 @@ describe("Indemnité licenciement - CC 3239 - changement de convention collectiv
   });
   test("vérifier que la question sur la question sur le temps partiel soit affichée et que l'absence spécifique à la 3239 a été supprimée", async () => {
     expect(ui.activeStep.query()).toHaveTextContent("Ancienneté");
+    userAction.click(ui.seniority.arretTravail.non.get());
     expect(ui.seniority.absences.motifs.queryAll()).toHaveLength(1);
     expect(ui.seniority.absences.motif(0).get()).not.toHaveValue(
       "Congé pour convenance personnelle"

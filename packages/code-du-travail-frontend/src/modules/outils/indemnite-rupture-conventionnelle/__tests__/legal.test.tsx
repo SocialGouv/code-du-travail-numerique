@@ -35,15 +35,6 @@ describe("Rupture conventionnelle - légale", () => {
     expect(startEventCalls.length).toBe(1);
     userAction = new UserAction();
     userAction.click(ui.introduction.startButton.get());
-    expect(sendEvent).toHaveBeenCalledWith({
-      category: "outil",
-      action: "view_step_Indemnité de rupture conventionnelle",
-      name: "contrat_travail",
-    });
-
-    expect(ui.result.dismissalType.inaptitude.query()).not.toBeInTheDocument();
-
-    userAction.click(ui.contract.arretTravail.non.get()).click(ui.next.get());
 
     expect(sendEvent).toHaveBeenCalledWith({
       category: "outil",
@@ -66,6 +57,7 @@ describe("Rupture conventionnelle - légale", () => {
     userAction
       .setInput(ui.seniority.startDate.get(), "01/01/2024")
       .setInput(ui.seniority.endDate.get(), "01/05/2024")
+      .click(ui.seniority.arretTravail.non.get())
       .click(ui.seniority.hasAbsence.non.get())
       .click(ui.next.get());
 
