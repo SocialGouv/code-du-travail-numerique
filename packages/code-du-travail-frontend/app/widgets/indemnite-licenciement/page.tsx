@@ -15,6 +15,7 @@ export async function generateMetadata() {
     description: description,
     path: `${SITE_URL}/widgets/indemnite-licenciement`,
     overrideCanonical: `${SITE_URL}/outils/indemnite-licenciement`,
+    robots: "noindex,nofollow",
   });
 }
 

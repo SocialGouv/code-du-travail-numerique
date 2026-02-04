@@ -1,5 +1,6 @@
 import path from "path";
 import fs from "fs";
+import crypto from "crypto";
 
 export const filePath = path.join(__dirname, "../public/robots.txt");
 export const generateRobotsTxt = (isOnProduction: boolean, host: string) => {
@@ -21,23 +22,39 @@ export const generateRobotsTxt = (isOnProduction: boolean, host: string) => {
 export const generateWidgetScript = (host: string) => {
   const widgetInputScriptPath = path.join(__dirname, "widget-template.js");
   const widgetOutputScriptPath = path.join(__dirname, "../public/widget.js");
+  const normalizedHost = host.replace(/\/$/, "");
   const data = fs.readFileSync(widgetInputScriptPath, {
     encoding: "utf8",
     flag: "r",
   });
   if (!data) return;
-  const hostedData = data.replace(/__HOST__/g, host);
+  const hostedData = data.replace(/__HOST__/g, normalizedHost);
 
   fs.writeFileSync(widgetOutputScriptPath, hostedData);
 };
 
-const run = () => {
-  const isProduction = !!process.env.NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT;
-  const host = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
-  generateRobotsTxt(isProduction, host);
-  console.log("Robots.txt generated.");
-  generateWidgetScript(host);
-  console.log("widget.js generated.");
-};
+export const generateWidgetIntegrity = () => {
+  const widgetLoaderPath = path.join(__dirname, "../public/widget-loader.js");
+  const widgetIntegrityOutputPath = path.join(
+    __dirname,
+    "../src/modules/integration/widgetIntegrity.ts"
+  );
 
-run();
+  // The embed snippet uses a stable loader file (`/widget-loader.js`) so
+  // integrators don't have to update their HTML on each release.
+  const content = fs.readFileSync(widgetLoaderPath);
+  const hash = crypto.createHash("sha384").update(content).digest("base64");
+  const integrity = `sha384-${hash}`;
+
+  fs.mkdirSync(path.dirname(widgetIntegrityOutputPath), { recursive: true });
+  fs.writeFileSync(
+    widgetIntegrityOutputPath,
+    [
+      "// This file is generated at build time by scripts/prebuild-cli.ts",
+      "",
+      "export const WIDGET_LOADER_INTEGRITY =",
+      `  "${integrity}" as const;`,
+      "",
+    ].join("\n")
+  );
+};

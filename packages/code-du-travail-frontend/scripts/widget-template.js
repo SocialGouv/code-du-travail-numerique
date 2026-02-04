@@ -59,4 +59,8 @@ function loadWidgets() {
   });
 }
 
-loadWidgets();
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", loadWidgets);
+} else {
+  loadWidgets();
+}
