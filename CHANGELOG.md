@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.212.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.211.0...v4.212.0) (2026-02-04)
+
+
+### Bug Fixes
+
+* **accessibilité:** amélioration de la popup recherche ([#7089](https://github.com/SocialGouv/code-du-travail-numerique/issues/7089)) ([f1da88e](https://github.com/SocialGouv/code-du-travail-numerique/commit/f1da88ed42bc31b855cc3e513d71c0d3d7e0499e))
+* **home:** zone de click sur `La hiérarchie des textes` ([#7090](https://github.com/SocialGouv/code-du-travail-numerique/issues/7090)) ([efd0336](https://github.com/SocialGouv/code-du-travail-numerique/commit/efd033684e13d8ac31450587a55bd4368fa06d1e))
+
+
+### Features
+
+* **home:** ajout de nouvelles icones pour les thèmes + correctif rgaa ([#7094](https://github.com/SocialGouv/code-du-travail-numerique/issues/7094)) ([bb6cd8f](https://github.com/SocialGouv/code-du-travail-numerique/commit/bb6cd8f653fb8cf3b1d5716d861d0b3fb3222720))
+* **home:** changement UI dans la section modèle ([#7093](https://github.com/SocialGouv/code-du-travail-numerique/issues/7093)) ([9713624](https://github.com/SocialGouv/code-du-travail-numerique/commit/97136249d5f9d5ee6c02db8e1232d5980d079fb5))
+* **outils:** déplacer la question sur l'arrêt de travail à l'étape ancienneté ([#7092](https://github.com/SocialGouv/code-du-travail-numerique/issues/7092)) ([c927a7e](https://github.com/SocialGouv/code-du-travail-numerique/commit/c927a7eddf176516070b8da16bea5a3a9aee459d))
+* **widget:** ajout d'un integrity hash pour l'intégration du `script` ([#7076](https://github.com/SocialGouv/code-du-travail-numerique/issues/7076)) ([ae4160b](https://github.com/SocialGouv/code-du-travail-numerique/commit/ae4160b398bea1d5de6e093142c788e78cb9d7f2))
+
+
+
+
+
 # [4.211.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.210.0...v4.211.0) (2026-01-29)
 
 
