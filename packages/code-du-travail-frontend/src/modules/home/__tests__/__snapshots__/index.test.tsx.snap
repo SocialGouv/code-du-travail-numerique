@@ -211,7 +211,7 @@ exports[`<Home /> should match snapshot 1`] = `
           >
             <a
               aria-label="Les textes internationaux"
-              class="ta_left w_100% p_0 bd_none! bg_transparent! td_none! fw_bold d_block [&:hover]:bg_transparent! [&:hover]:td_none! [&:focus]:td_none! [&:active]:td_none! [&:visited]:td_none!"
+              class="ta_left w_100% p_0 bd_none! bg_transparent! td_none! fw_bold d_block [&:hover]:bg_transparent! [&:hover]:td_none! [&:hover]:[&_.card-content]:bg_var(--background-default-grey-hover) [&:hover]:[&_.arrow-shape]:bg_var(--background-default-grey-hover) [&:focus]:td_none! [&:active]:td_none! [&:visited]:td_none!"
               href="/droit-du-travail#textes-internationaux"
             >
               <div
@@ -260,7 +260,7 @@ exports[`<Home /> should match snapshot 1`] = `
           >
             <a
               aria-label="Les textes européens"
-              class="ta_left w_100% p_0 bd_none! bg_transparent! td_none! fw_bold d_block [&:hover]:bg_transparent! [&:hover]:td_none! [&:focus]:td_none! [&:active]:td_none! [&:visited]:td_none!"
+              class="ta_left w_100% p_0 bd_none! bg_transparent! td_none! fw_bold d_block [&:hover]:bg_transparent! [&:hover]:td_none! [&:hover]:[&_.card-content]:bg_var(--background-default-grey-hover) [&:hover]:[&_.arrow-shape]:bg_var(--background-default-grey-hover) [&:focus]:td_none! [&:active]:td_none! [&:visited]:td_none!"
               href="/droit-du-travail#textes-europeens"
             >
               <div
@@ -309,7 +309,7 @@ exports[`<Home /> should match snapshot 1`] = `
           >
             <a
               aria-label="La Constitution française"
-              class="ta_left w_100% p_0 bd_none! bg_transparent! td_none! fw_bold d_block [&:hover]:bg_transparent! [&:hover]:td_none! [&:focus]:td_none! [&:active]:td_none! [&:visited]:td_none!"
+              class="ta_left w_100% p_0 bd_none! bg_transparent! td_none! fw_bold d_block [&:hover]:bg_transparent! [&:hover]:td_none! [&:hover]:[&_.card-content]:bg_var(--background-default-grey-hover) [&:hover]:[&_.arrow-shape]:bg_var(--background-default-grey-hover) [&:focus]:td_none! [&:active]:td_none! [&:visited]:td_none!"
               href="/droit-du-travail#constitution-francaise"
             >
               <div
@@ -358,7 +358,7 @@ exports[`<Home /> should match snapshot 1`] = `
           >
             <a
               aria-label="Lois, ordonnances et décrets (Code du travail)"
-              class="ta_left w_100% p_0 bd_none! bg_transparent! td_none! fw_bold d_block [&:hover]:bg_transparent! [&:hover]:td_none! [&:focus]:td_none! [&:active]:td_none! [&:visited]:td_none!"
+              class="ta_left w_100% p_0 bd_none! bg_transparent! td_none! fw_bold d_block [&:hover]:bg_transparent! [&:hover]:td_none! [&:hover]:[&_.card-content]:bg_var(--background-default-grey-hover) [&:hover]:[&_.arrow-shape]:bg_var(--background-default-grey-hover) [&:focus]:td_none! [&:active]:td_none! [&:visited]:td_none!"
               href="/droit-du-travail#lois-ordonnances-decrets"
             >
               <div
@@ -407,7 +407,7 @@ exports[`<Home /> should match snapshot 1`] = `
           >
             <a
               aria-label="Les conventions et accords collectifs"
-              class="ta_left w_100% p_0 bd_none! bg_transparent! td_none! fw_bold d_block [&:hover]:bg_transparent! [&:hover]:td_none! [&:focus]:td_none! [&:active]:td_none! [&:visited]:td_none!"
+              class="ta_left w_100% p_0 bd_none! bg_transparent! td_none! fw_bold d_block [&:hover]:bg_transparent! [&:hover]:td_none! [&:hover]:[&_.card-content]:bg_var(--background-default-grey-hover) [&:hover]:[&_.arrow-shape]:bg_var(--background-default-grey-hover) [&:focus]:td_none! [&:active]:td_none! [&:visited]:td_none!"
               href="/droit-du-travail#conventions-accords-collectifs"
             >
               <div
@@ -456,7 +456,7 @@ exports[`<Home /> should match snapshot 1`] = `
           >
             <a
               aria-label="Les usages et les engagements unilatéraux"
-              class="ta_left w_100% p_0 bd_none! bg_transparent! td_none! fw_bold d_block [&:hover]:bg_transparent! [&:hover]:td_none! [&:focus]:td_none! [&:active]:td_none! [&:visited]:td_none!"
+              class="ta_left w_100% p_0 bd_none! bg_transparent! td_none! fw_bold d_block [&:hover]:bg_transparent! [&:hover]:td_none! [&:hover]:[&_.card-content]:bg_var(--background-default-grey-hover) [&:hover]:[&_.arrow-shape]:bg_var(--background-default-grey-hover) [&:focus]:td_none! [&:active]:td_none! [&:visited]:td_none!"
               href="/droit-du-travail#usages-engagements-unilateraux"
             >
               <div
@@ -505,7 +505,7 @@ exports[`<Home /> should match snapshot 1`] = `
           >
             <a
               aria-label="Le règlement intérieur de l'entreprise"
-              class="ta_left w_100% p_0 bd_none! bg_transparent! td_none! fw_bold d_block [&:hover]:bg_transparent! [&:hover]:td_none! [&:focus]:td_none! [&:active]:td_none! [&:visited]:td_none!"
+              class="ta_left w_100% p_0 bd_none! bg_transparent! td_none! fw_bold d_block [&:hover]:bg_transparent! [&:hover]:td_none! [&:hover]:[&_.card-content]:bg_var(--background-default-grey-hover) [&:hover]:[&_.arrow-shape]:bg_var(--background-default-grey-hover) [&:focus]:td_none! [&:active]:td_none! [&:visited]:td_none!"
               href="/droit-du-travail#reglement-interieur-entreprise"
             >
               <div
@@ -554,7 +554,7 @@ exports[`<Home /> should match snapshot 1`] = `
           >
             <a
               aria-label="Le contrat de travail"
-              class="ta_left w_100% p_0 bd_none! bg_transparent! td_none! fw_bold d_block [&:hover]:bg_transparent! [&:hover]:td_none! [&:focus]:td_none! [&:active]:td_none! [&:visited]:td_none!"
+              class="ta_left w_100% p_0 bd_none! bg_transparent! td_none! fw_bold d_block [&:hover]:bg_transparent! [&:hover]:td_none! [&:hover]:[&_.card-content]:bg_var(--background-default-grey-hover) [&:hover]:[&_.arrow-shape]:bg_var(--background-default-grey-hover) [&:focus]:td_none! [&:active]:td_none! [&:visited]:td_none!"
               href="/droit-du-travail#contrat-travail"
             >
               <div
