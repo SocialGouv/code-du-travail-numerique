@@ -22,9 +22,7 @@ const mockData: HomePageProps = {
   ],
   modeles: [
     {
-      description: "Model description",
       link: "https://example.com/model",
-      theme: "dark",
       title: "Model Title",
     },
   ],

@@ -23,7 +23,7 @@ export type HomeTileItem = {
 export type HomePageProps = {
   highlights: HomeCardItem[];
   tools: HomeTileItem[];
-  modeles: HomeCardItem[];
+  modeles: Omit<HomeCardItem, "description" | "theme">[];
   contributions: HomeCardItem[];
   agreements: HomeCardItem[];
   themes: HomeTileItem[];
@@ -56,21 +56,16 @@ export const fetchHomeData = async (): Promise<HomePageProps> => {
     description: tool.description,
   }));
 
-  const modeles = await fetchModels(
-    ["source", "slug", "title", "description"],
-    {
-      cdtnIds: [
-        "72bd2d0080", // rupture-du-contrat-en-periode-dessai-par-le-salarie
-        "772cb955ce", // rupture-de-periode-dessai-par-lemployeur
-        "8122c6c3eb", // convocation-a-un-entretien-prealable-au-licenciement-pour-motif-personnel
-        "9a6cf1b40c", // lettre-de-demission
-      ],
-    }
-  );
+  const modeles = await fetchModels(["source", "slug", "title"], {
+    cdtnIds: [
+      "72bd2d0080", // rupture-du-contrat-en-periode-dessai-par-le-salarie
+      "772cb955ce", // rupture-de-periode-dessai-par-lemployeur
+      "8122c6c3eb", // convocation-a-un-entretien-prealable-au-licenciement-pour-motif-personnel
+      "9a6cf1b40c", // lettre-de-demission
+    ],
+  });
   const parsedModeles = modeles.map((modele) => ({
-    description: modele.description,
     link: `/${getRouteBySource(modele.source)}/${modele.slug}`,
-    theme: getLabelBySource(modele.source),
     title: modele.title,
   }));
 

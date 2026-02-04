@@ -1063,7 +1063,7 @@ exports[`<Home /> should match snapshot 1`] = `
           class="fr-my-8w fr-container fr-py-6w"
         >
           <h2>
-            Modèles de documents
+            Une démarche ? Trouvez le bon modèle de document
           </h2>
           <p
             class="fr-text--xl"
@@ -1074,10 +1074,10 @@ exports[`<Home /> should match snapshot 1`] = `
             class="fr-grid-row fr-grid-row--gutters fr-grid-row--right"
           >
             <div
-              class="fr-col-12 fr-col-md-6 fr-col-lg-6"
+              class="fr-col-12 fr-col-md-6 fr-col-lg-3"
             >
               <div
-                class="fr-card fr-enlarge-link fr-card--horizontal"
+                class="fr-card fr-enlarge-link fr-card--horizontal fr-card--sm"
                 id="fr-card-_r_4_"
               >
                 <div
@@ -1093,23 +1093,16 @@ exports[`<Home /> should match snapshot 1`] = `
                         class=""
                         href="https://example.com/model"
                       >
-                        Model Title
+                        <span
+                          class="d_-webkit-box! -webkit-box-orient_vertical -webkit-line-clamp_3 ov_hidden tov_ellipsis ov-wrap_break-word white-space_normal"
+                        >
+                          Model Title
+                        </span>
                       </a>
                     </h3>
-                    <p
-                      class="fr-card__desc"
-                    >
-                      Model description
-                    </p>
                     <div
-                      class="fr-card__start fr-mb-2w"
-                    >
-                      <p
-                        class="fr-tag fr-tag--sm"
-                      >
-                        dark
-                      </p>
-                    </div>
+                      class="fr-card__start"
+                    />
                     <div
                       class="fr-card__end fr-text--xs"
                     >
@@ -1132,7 +1125,7 @@ exports[`<Home /> should match snapshot 1`] = `
               href="/modeles-de-courriers"
               id="fr-button-_r_5_"
             >
-              Voir tous les modèles de documents
+              Parcourir les modèles
             </a>
           </div>
         </div>
