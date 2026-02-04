@@ -60,6 +60,12 @@ const linkStyle = css({
   "&:hover": {
     background: "transparent !important",
     textDecoration: "none !important",
+    "& .card-content": {
+      background: "var(--background-default-grey-hover)",
+    },
+    "& .arrow-shape": {
+      background: "var(--background-default-grey-hover)",
+    },
   },
   "&:focus": {
     textDecoration: "none !important",
