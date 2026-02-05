@@ -25,6 +25,7 @@ export const SearchResultCard = ({ result, onClick }: Props) => {
       onClick={onClick}
       target={isExternal ? "_blank" : undefined}
       rel={isExternal ? "noopener noreferrer" : undefined}
+      title={isExternal ? result.title : undefined}
     >
       <div className={cardContainer}>
         <div className={`${fr.cx("fr-mb-1w")} ${badgeContainer}`}>

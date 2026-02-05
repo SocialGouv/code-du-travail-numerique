@@ -155,7 +155,7 @@ describe("SearchPageClient", () => {
     const themeButton = screen.getByRole("link", { name: "Theme 1" });
     fireEvent.click(themeButton);
 
-    expect(themeButton).toHaveAttribute("href", "/themes/parent-theme/theme-1");
+    expect(themeButton).toHaveAttribute("href", "/themes/parent-theme#theme-1");
 
     // Check that emitResultSelectionEvent was called with the correct parameters
     expect(mockEmitResultSelectionEvent).toHaveBeenCalledWith(

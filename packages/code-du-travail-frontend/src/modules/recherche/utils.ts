@@ -14,7 +14,7 @@ export const generateSearchLink = (
     return url;
   }
   if (source === "themes" && parentSlug) {
-    return `/themes/${parentSlug}/${slug}`;
+    return `/themes/${parentSlug}#${slug}`;
   }
   return `/${getRouteBySource(source)}/${slug}`;
 };

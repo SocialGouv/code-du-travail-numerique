@@ -28,6 +28,6 @@ describe("generateSearchLink", () => {
 
     const result = generateSearchLink(source, slug, undefined, parentSlug);
 
-    expect(result).toBe("/themes/parent-theme/child-theme");
+    expect(result).toBe("/themes/parent-theme#child-theme");
   });
 });
