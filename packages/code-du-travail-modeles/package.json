@@ -13,9 +13,9 @@
   ],
   "exports": {
     ".": {
-      "import": "./build/index.js",
-      "require": "./build/index.js",
-      "types": "./build/index.d.ts"
+      "import": "./lib/index.js",
+      "require": "./lib/index.js",
+      "types": "./lib/index.d.ts"
     }
   },
   "repository": {
