@@ -1,8 +1,7 @@
 import { fr } from "@codegouvfr/react-dsfr";
-import { getRouteBySource } from "@socialgouv/cdtn-utils";
 import { css } from "@styled-system/css";
 import Link from "src/modules/common/Link";
-import { getSourceLabel } from "../utils";
+import { generateSearchLink, getSourceLabel } from "../utils";
 import { SearchResult } from "src/api";
 
 type Props = {
@@ -11,11 +10,21 @@ type Props = {
 };
 
 export const SearchResultCard = ({ result, onClick }: Props) => {
+  const isExternal = result.source === "external" && Boolean(result.url);
+  const href = generateSearchLink(
+    result.source,
+    result.slug,
+    result.url,
+    result.parentSlug
+  );
+
   return (
     <Link
-      href={`/${getRouteBySource(result.source)}/${result.slug}`}
+      href={href}
       className={linkStyle}
       onClick={onClick}
+      target={isExternal ? "_blank" : undefined}
+      rel={isExternal ? "noopener noreferrer" : undefined}
     >
       <div className={cardContainer}>
         <div className={`${fr.cx("fr-mb-1w")} ${badgeContainer}`}>

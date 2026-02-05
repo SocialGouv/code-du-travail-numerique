@@ -1,12 +1,9 @@
-import {
-  getRouteBySource,
-  routeBySource,
-  SOURCES,
-} from "@socialgouv/cdtn-utils";
+import { routeBySource } from "@socialgouv/cdtn-utils";
 import { useCallback, useRef } from "react";
 import { sendEvent, push } from "@socialgouv/matomo-next";
 import { MatomoBaseEvent } from "../analytics/types";
 import { PresearchClass, SearchResult } from "src/api";
+import { generateSearchLink } from "./utils";
 
 enum MatomoSearchCategory {
   SEARCH = "search",
@@ -36,12 +33,15 @@ export const useSearchTracking = () => {
       source: keyof typeof routeBySource | "external",
       slug: string,
       url?: string,
-      algo?: string
+      algo?: string,
+      parentSlug?: string
     ) => {
-      const formattedUrl =
-        source === SOURCES.EXTERNALS && url
-          ? url
-          : `/${getRouteBySource(source as keyof typeof routeBySource)}/${slug}`;
+      const formattedUrl = generateSearchLink(
+        source as keyof typeof routeBySource,
+        slug,
+        url,
+        parentSlug
+      );
 
       sendEvent({
         category: MatomoSearchCategory.SELECT_RESULT,
@@ -166,10 +166,16 @@ export const useSearchTracking = () => {
 
   const emitSelectPresearchResultEvent = useCallback(
     (result: SearchResult, queryClass: string) => {
+      const url = generateSearchLink(
+        result.source,
+        result.slug,
+        result.url,
+        result.parentSlug
+      );
       const name = JSON.stringify({
         algo: result.algo,
         queryClass,
-        url: `/${getRouteBySource(result.source)}/${result.slug}`,
+        url,
       });
 
       sendEvent({
