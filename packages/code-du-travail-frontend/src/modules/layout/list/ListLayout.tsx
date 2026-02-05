@@ -20,6 +20,7 @@ export type Item = {
   description: string;
   slug: string;
   source: string;
+  url?: string;
 };
 
 export type Data = {

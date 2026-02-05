@@ -143,13 +143,19 @@ export const SearchPageClient: React.FC<SearchPageClientProps> = ({
                           ? item.breadcrumbs[item.breadcrumbs.length - 1].label
                           : item.source
                     }
-                    link={generateSearchLink(item.source, item.slug, item.url)}
+                    link={generateSearchLink(
+                      item.source,
+                      item.slug,
+                      item.url,
+                      item.parentSlug
+                    )}
                     onClick={() =>
                       emitResultSelectionEvent(
                         item.source,
                         item.slug,
                         item.url,
-                        item.algo
+                        item.algo,
+                        item.parentSlug
                       )
                     }
                   />
@@ -227,13 +233,19 @@ export const SearchPageClient: React.FC<SearchPageClientProps> = ({
                   <li key={index} className={fr.cx("fr-mr-2w", "fr-mb-2w")}>
                     <Button
                       linkProps={{
-                        href: generateSearchLink(theme.source, theme.slug),
+                        href: generateSearchLink(
+                          theme.source,
+                          theme.slug,
+                          theme.url,
+                          theme.parentSlug
+                        ),
                         onClick: () =>
                           emitResultSelectionEvent(
                             theme.source,
                             theme.slug,
                             undefined,
-                            theme.algo
+                            theme.algo,
+                            theme.parentSlug
                           ),
                       }}
                       priority="secondary"

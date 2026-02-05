@@ -205,6 +205,7 @@ const getThemes = (
     ? {
         title: match.theme.title,
         slug: match.theme.slug,
+        parentSlug: (match.theme as any).parentSlug,
         cdtnId: match.theme.cdtnId,
         source: match.theme.source,
         class: PresearchClass.THEME,

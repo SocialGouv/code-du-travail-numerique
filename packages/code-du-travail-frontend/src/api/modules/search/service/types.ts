@@ -7,6 +7,7 @@ export type SearchResult = {
   description: string;
   cdtnId: string;
   slug: string;
+  parentSlug?: string;
   source: SourceKeys;
   title: string;
   algo: SearchAlgo;
