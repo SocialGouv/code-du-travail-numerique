@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.212.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.212.0...v4.212.1) (2026-02-05)
+
+
+### Bug Fixes
+
+* **themes:** gestion du `parentTheme` sur la recherche + `external` dans la liste des thèmes ([#7097](https://github.com/SocialGouv/code-du-travail-numerique/issues/7097)) ([4131abc](https://github.com/SocialGouv/code-du-travail-numerique/commit/4131abc9b75cf380b53caa88d04ef2249db8e687))
+
+
+
+
+
 # [4.212.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.211.0...v4.212.0) (2026-02-04)
 
 
