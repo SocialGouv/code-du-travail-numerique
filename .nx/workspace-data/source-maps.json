@@ -1,0 +1,1608 @@
+{
+  "packages/code-du-travail-frontend": {
+    "root": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "name": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "tags": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.npm:private": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.0": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.1": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.2": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.3": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.4": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.5": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.6": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.7": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.8": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.9": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.10": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.11": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.12": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.13": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.14": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.15": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.16": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.17": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.18": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.19": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.20": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.description": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageName": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageVersion": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageExports": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageMain": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.isInPackageManagerWorkspaces": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.dev": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.dev.executor": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.dev.options": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.dev.metadata": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.dev.options.script": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.dev.metadata.scriptContent": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.dev.metadata.runCommand": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.lint": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.lint.executor": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.lint.options": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.lint.metadata": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.lint.options.script": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.lint.metadata.scriptContent": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.lint.metadata.runCommand": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.precommit": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.precommit.executor": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.precommit.options": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.precommit.metadata": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.precommit.options.script": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.precommit.metadata.scriptContent": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.precommit.metadata.runCommand": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.start": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.start.executor": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.start.options": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.start.metadata": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.start.options.script": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.start.metadata.scriptContent": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.start.metadata.runCommand": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.tsup": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.tsup.executor": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.tsup.options": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.tsup.metadata": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.tsup.options.script": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.tsup.metadata.scriptContent": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.tsup.metadata.runCommand": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.executor": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.options": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.metadata": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.options.script": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.metadata.scriptContent": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.metadata.runCommand": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build:analyze": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build:analyze.executor": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build:analyze.options": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build:analyze.metadata": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build:analyze.options.script": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build:analyze.metadata.scriptContent": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build:analyze.metadata.runCommand": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test.executor": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test.options": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test.metadata": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test.options.script": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test.metadata.scriptContent": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test.metadata.runCommand": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test:watch": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test:watch.executor": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test:watch.options": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test:watch.metadata": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test:watch.options.script": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test:watch.metadata.scriptContent": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test:watch.metadata.runCommand": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test:frontend": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test:frontend.executor": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test:frontend.options": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test:frontend.metadata": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test:frontend.options.script": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test:frontend.metadata.scriptContent": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test:frontend.metadata.runCommand": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test:frontend:update": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test:frontend:update.executor": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test:frontend:update.options": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test:frontend:update.metadata": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test:frontend:update.options.script": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test:frontend:update.metadata.scriptContent": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test:frontend:update.metadata.runCommand": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test:api": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test:api.executor": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test:api.options": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test:api.metadata": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test:api.options.script": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test:api.metadata.scriptContent": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test:api.metadata.runCommand": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test:api:update": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test:api:update.executor": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test:api:update.options": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test:api:update.metadata": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test:api:update.options.script": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test:api:update.metadata.scriptContent": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test:api:update.metadata.runCommand": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test:update": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test:update.executor": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test:update.options": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test:update.metadata": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test:update.options.script": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test:update.metadata.scriptContent": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test:update.metadata.runCommand": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test:e2e": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test:e2e.executor": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test:e2e.options": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test:e2e.metadata": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test:e2e.options.script": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test:e2e.metadata.scriptContent": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test:e2e.metadata.runCommand": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test:e2e:ui": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test:e2e:ui.executor": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test:e2e:ui.options": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test:e2e:ui.metadata": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test:e2e:ui.options.script": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test:e2e:ui.metadata.scriptContent": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test:e2e:ui.metadata.runCommand": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.type-check": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.type-check.executor": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.type-check.options": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.type-check.metadata": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.type-check.options.script": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.type-check.metadata.scriptContent": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.type-check.metadata.runCommand": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.type-check:watch": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.type-check:watch.executor": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.type-check:watch.options": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.type-check:watch.metadata": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.type-check:watch.options.script": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.type-check:watch.metadata.scriptContent": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.type-check:watch.metadata.runCommand": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.format": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.format.executor": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.format.options": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.format.metadata": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.format.options.script": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.format.metadata.scriptContent": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.format.metadata.runCommand": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.format:check": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.format:check.executor": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.format:check.options": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.format:check.metadata": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.format:check.options.script": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.format:check.metadata.scriptContent": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.format:check.metadata.runCommand": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.clean:redirects": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.clean:redirects.executor": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.clean:redirects.options": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.clean:redirects.metadata": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.clean:redirects.options.script": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.clean:redirects.metadata.scriptContent": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.clean:redirects.metadata.runCommand": [
+      "packages/code-du-travail-frontend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.dependsOn": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.build.parallelism": [
+      "nx.json",
+      "nx/target-defaults"
+    ]
+  },
+  "packages/code-du-travail-modeles": {
+    "root": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "name": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "tags": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.npm:public": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.0": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.1": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.2": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.3": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.4": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.5": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.6": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.7": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.8": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.9": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.10": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.11": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.12": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.13": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.14": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.description": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageName": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageVersion": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageExports": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageMain": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.isInPackageManagerWorkspaces": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.precommit": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.precommit.executor": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.precommit.options": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.precommit.metadata": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.precommit.options.script": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.precommit.metadata.scriptContent": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.precommit.metadata.runCommand": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.prebuild": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.prebuild.executor": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.prebuild.options": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.prebuild.metadata": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.prebuild.options.script": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.prebuild.metadata.scriptContent": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.prebuild.metadata.runCommand": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test.executor": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test.options": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test.metadata": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test.options.script": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test.metadata.scriptContent": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test.metadata.runCommand": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.lint": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.lint.executor": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.lint.options": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.lint.metadata": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.lint.options.script": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.lint.metadata.scriptContent": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.lint.metadata.runCommand": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.dev": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.dev.executor": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.dev.options": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.dev.metadata": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.dev.options.script": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.dev.metadata.scriptContent": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.dev.metadata.runCommand": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test:watch": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test:watch.executor": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test:watch.options": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test:watch.metadata": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test:watch.options.script": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test:watch.metadata.scriptContent": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test:watch.metadata.runCommand": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.executor": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.options": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.metadata": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.options.script": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.metadata.scriptContent": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.metadata.runCommand": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build:dev": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build:dev.executor": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build:dev.options": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build:dev.metadata": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build:dev.options.script": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build:dev.metadata.scriptContent": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build:dev.metadata.runCommand": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build:swc": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build:swc.executor": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build:swc.options": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build:swc.metadata": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build:swc.options.script": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build:swc.metadata.scriptContent": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build:swc.metadata.runCommand": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.postbuild": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.postbuild.executor": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.postbuild.options": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.postbuild.metadata": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.postbuild.options.script": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.postbuild.metadata.scriptContent": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.postbuild.metadata.runCommand": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.clean": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.clean.executor": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.clean.options": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.clean.metadata": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.clean.options.script": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.clean.metadata.scriptContent": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.clean.metadata.runCommand": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.type-check": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.type-check.executor": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.type-check.options": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.type-check.metadata": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.type-check.options.script": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.type-check.metadata.scriptContent": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.type-check.metadata.runCommand": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.type-check:watch": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.type-check:watch.executor": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.type-check:watch.options": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.type-check:watch.metadata": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.type-check:watch.options.script": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.type-check:watch.metadata.scriptContent": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.type-check:watch.metadata.runCommand": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.format": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.format.executor": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.format.options": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.format.metadata": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.format.options.script": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.format.metadata.scriptContent": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.format.metadata.runCommand": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.format:check": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.format:check.executor": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.format:check.options": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.format:check.metadata": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.format:check.options.script": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.format:check.metadata.scriptContent": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.format:check.metadata.runCommand": [
+      "packages/code-du-travail-modeles/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.dependsOn": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.build.parallelism": [
+      "nx.json",
+      "nx/target-defaults"
+    ]
+  },
+  "packages/code-du-travail-utils": {
+    "root": [
+      "packages/code-du-travail-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "name": [
+      "packages/code-du-travail-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "tags": [
+      "packages/code-du-travail-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.npm:public": [
+      "packages/code-du-travail-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups": [
+      "packages/code-du-travail-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts": [
+      "packages/code-du-travail-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.0": [
+      "packages/code-du-travail-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.1": [
+      "packages/code-du-travail-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.2": [
+      "packages/code-du-travail-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.3": [
+      "packages/code-du-travail-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.4": [
+      "packages/code-du-travail-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.5": [
+      "packages/code-du-travail-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.6": [
+      "packages/code-du-travail-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.7": [
+      "packages/code-du-travail-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.description": [
+      "packages/code-du-travail-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js": [
+      "packages/code-du-travail-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageName": [
+      "packages/code-du-travail-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageVersion": [
+      "packages/code-du-travail-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageExports": [
+      "packages/code-du-travail-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageMain": [
+      "packages/code-du-travail-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.isInPackageManagerWorkspaces": [
+      "packages/code-du-travail-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "targets": [
+      "packages/code-du-travail-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build": [
+      "packages/code-du-travail-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.executor": [
+      "packages/code-du-travail-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.options": [
+      "packages/code-du-travail-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.metadata": [
+      "packages/code-du-travail-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.options.script": [
+      "packages/code-du-travail-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.metadata.scriptContent": [
+      "packages/code-du-travail-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.metadata.runCommand": [
+      "packages/code-du-travail-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build:watch": [
+      "packages/code-du-travail-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build:watch.executor": [
+      "packages/code-du-travail-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build:watch.options": [
+      "packages/code-du-travail-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build:watch.metadata": [
+      "packages/code-du-travail-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build:watch.options.script": [
+      "packages/code-du-travail-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build:watch.metadata.scriptContent": [
+      "packages/code-du-travail-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build:watch.metadata.runCommand": [
+      "packages/code-du-travail-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test": [
+      "packages/code-du-travail-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test.executor": [
+      "packages/code-du-travail-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test.options": [
+      "packages/code-du-travail-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test.metadata": [
+      "packages/code-du-travail-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test.options.script": [
+      "packages/code-du-travail-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test.metadata.scriptContent": [
+      "packages/code-du-travail-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test.metadata.runCommand": [
+      "packages/code-du-travail-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.type-check": [
+      "packages/code-du-travail-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.type-check.executor": [
+      "packages/code-du-travail-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.type-check.options": [
+      "packages/code-du-travail-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.type-check.metadata": [
+      "packages/code-du-travail-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.type-check.options.script": [
+      "packages/code-du-travail-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.type-check.metadata.scriptContent": [
+      "packages/code-du-travail-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.type-check.metadata.runCommand": [
+      "packages/code-du-travail-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.lint": [
+      "packages/code-du-travail-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.lint.executor": [
+      "packages/code-du-travail-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.lint.options": [
+      "packages/code-du-travail-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.lint.metadata": [
+      "packages/code-du-travail-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.lint.options.script": [
+      "packages/code-du-travail-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.lint.metadata.scriptContent": [
+      "packages/code-du-travail-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.lint.metadata.runCommand": [
+      "packages/code-du-travail-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.format": [
+      "packages/code-du-travail-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.format.executor": [
+      "packages/code-du-travail-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.format.options": [
+      "packages/code-du-travail-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.format.metadata": [
+      "packages/code-du-travail-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.format.options.script": [
+      "packages/code-du-travail-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.format.metadata.scriptContent": [
+      "packages/code-du-travail-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.format.metadata.runCommand": [
+      "packages/code-du-travail-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.format:check": [
+      "packages/code-du-travail-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.format:check.executor": [
+      "packages/code-du-travail-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.format:check.options": [
+      "packages/code-du-travail-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.format:check.metadata": [
+      "packages/code-du-travail-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.format:check.options.script": [
+      "packages/code-du-travail-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.format:check.metadata.scriptContent": [
+      "packages/code-du-travail-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.format:check.metadata.runCommand": [
+      "packages/code-du-travail-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.precommit": [
+      "packages/code-du-travail-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.precommit.executor": [
+      "packages/code-du-travail-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.precommit.options": [
+      "packages/code-du-travail-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.precommit.metadata": [
+      "packages/code-du-travail-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.precommit.options.script": [
+      "packages/code-du-travail-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.precommit.metadata.scriptContent": [
+      "packages/code-du-travail-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.precommit.metadata.runCommand": [
+      "packages/code-du-travail-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.dependsOn": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.build.parallelism": [
+      "nx.json",
+      "nx/target-defaults"
+    ]
+  }
+}

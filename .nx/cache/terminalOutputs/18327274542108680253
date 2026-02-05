@@ -1,0 +1,12 @@
+
+> @socialgouv/modeles-social@4.212.0 build /Users/max/Documents/Code/code-du-travail-numerique/packages/code-du-travail-modeles
+> pnpm prebuild && pnpm postbuild
+
+
+> @socialgouv/modeles-social@4.212.0 prebuild /Users/max/Documents/Code/code-du-travail-numerique/packages/code-du-travail-modeles
+> tsc -p tsconfig.build.json
+
+
+> @socialgouv/modeles-social@4.212.0 postbuild /Users/max/Documents/Code/code-du-travail-numerique/packages/code-du-travail-modeles
+> node bin/internal/build.js
+

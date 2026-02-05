@@ -1,0 +1,43 @@
+{
+  "run": {
+    "command": "cli run build --scope=@socialgouv/cdtn-utils --scope=@socialgouv/modeles-social --scope=@cdt/frontend --stream",
+    "startTime": "2026-02-05T19:16:08.232Z",
+    "endTime": "2026-02-05T19:17:54.974Z",
+    "inner": false
+  },
+  "tasks": [
+    {
+      "taskId": "@socialgouv/cdtn-utils:build",
+      "target": "build",
+      "projectName": "@socialgouv/cdtn-utils",
+      "hash": "588680906924950826",
+      "startTime": "2026-02-05T19:16:08.308Z",
+      "endTime": "2026-02-05T19:16:10.301Z",
+      "params": "",
+      "cacheStatus": "cache-miss",
+      "status": 0
+    },
+    {
+      "taskId": "@socialgouv/modeles-social:build",
+      "target": "build",
+      "projectName": "@socialgouv/modeles-social",
+      "hash": "18327274542108680253",
+      "startTime": "2026-02-05T19:16:08.308Z",
+      "endTime": "2026-02-05T19:16:12.813Z",
+      "params": "",
+      "cacheStatus": "cache-miss",
+      "status": 0
+    },
+    {
+      "taskId": "@cdt/frontend:build",
+      "target": "build",
+      "projectName": "@cdt/frontend",
+      "hash": "15411364326927127448",
+      "startTime": "2026-02-05T19:16:12.816Z",
+      "endTime": "2026-02-05T19:17:54.948Z",
+      "params": "",
+      "cacheStatus": "cache-miss",
+      "status": 0
+    }
+  ]
+}
