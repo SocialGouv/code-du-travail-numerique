@@ -94,8 +94,6 @@ const nextConfig = {
     "@codegouvfr/react-dsfr",
     "import-in-the-middle",
     "require-in-the-middle",
-    "@socialgouv/cdtn-utils",
-    "@socialgouv/modeles-social",
   ],
 };
 
