@@ -23,8 +23,14 @@ const CDT_ES = "cdt_es";
 
 export const searchWithQuery = async (
   query: string,
-  sizeParams = DEFAULT_RESULTS_NUMBER
-): Promise<SearchResponse> => {
+  sizeParams = DEFAULT_RESULTS_NUMBER,
+  withPQ = false
+): Promise<{
+  articles: SearchResult[];
+  themes: SearchResult[];
+  documents: SearchResult[];
+  class: string;
+}> => {
   const size = Math.min(sizeParams, MAX_RESULTS);
 
   const sources = [
@@ -56,7 +62,7 @@ export const searchWithQuery = async (
   const documents: SearchResult[] = parsed.results.slice(0, size);
 
   // check prequalified requests : to be removed soon
-  const prequalifiedResults = await getPrequalifiedResults(query);
+  const prequalifiedResults = withPQ ? await getPrequalifiedResults(query) : [];
 
   const mappedPrequa: SearchResult[] = prequalifiedResults.map(
     esDocToSearchResult(SEARCH_ALGO.PREQUA)
