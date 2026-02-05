@@ -3,7 +3,7 @@ import "cypress-iframe";
 describe("Widget - Trouver sa convention collective", () => {
   it("should display the widget", () => {
     cy.visit(
-      "https://socialgouv.github.io/cdtn-admin/trouver-sa-convention-collective"
+      "https://socialgouv.github.io/code-du-travail-numerique/trouver-sa-convention-collective"
     );
 
     cy.iframe()
