@@ -46,13 +46,13 @@ importers:
         specifier: ^2.63.0
         version: 2.63.0
       '@socialgouv/cdtn-utils':
-        specifier: workspace:^
+        specifier: workspace:*
         version: file:packages/code-du-travail-utils(react@19.2.4)
       '@socialgouv/matomo-next':
         specifier: ^1.11.0
         version: 1.11.0(next@16.1.6(@babel/core@7.28.5)(@opentelemetry/api@1.9.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(sass@1.96.0))
       '@socialgouv/modeles-social':
-        specifier: workspace:^
+        specifier: workspace:*
         version: link:../code-du-travail-modeles
       date-fns:
         specifier: ^2.22.1
