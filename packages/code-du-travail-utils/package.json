@@ -8,6 +8,15 @@
   "main": "build/index.js",
   "module": "build/index.js",
   "types": "build/index.d.ts",
+  "source": "src/index.ts",
+  "exports": {
+    ".": {
+      "source": "./src/index.ts",
+      "types": "./build/index.d.ts",
+      "import": "./build/index.js",
+      "default": "./build/index.js"
+    }
+  },
   "files": [
     "build"
   ],
