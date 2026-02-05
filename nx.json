@@ -1,8 +1,0 @@
-{
-  "$schema": "https://json.schemastore.org/nx",
-  "targetDefaults": {
-    "build": {
-      "dependsOn": ["^build"]
-    }
-  }
-}
