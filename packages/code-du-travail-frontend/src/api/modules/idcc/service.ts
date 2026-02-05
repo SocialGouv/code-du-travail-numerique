@@ -43,14 +43,16 @@ export const ensureIdccsInstantiated = async (): Promise<void> => {
       .then(
         (r) =>
           new Set(
-            extractHits(r).map((t: { _source: { id: number } }) => t._source.id)
+            extractHits(r).map((t: { _source: { id: string } }) =>
+              parseInt(t._source.id)
+            )
           )
       );
   }
 };
 
 export const isIdccToken = (token: string) => {
-  const fToken = parseFloat(token);
+  const fToken = parseInt(token);
   return !isNaN(fToken) && idccs.has(fToken);
 };
 

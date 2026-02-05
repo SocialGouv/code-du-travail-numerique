@@ -2,6 +2,7 @@ import { SOURCES } from "@socialgouv/cdtn-utils";
 import { elasticDocumentsIndex, elasticsearchClient } from "src/api/utils";
 import { extractHits } from "../utils";
 import { PresearchClass, PreSearchResult, SEARCH_ALGO } from "./types";
+import { format } from "path";
 
 const DEFAULT_CC_CONTENT = [
   {

@@ -33,7 +33,7 @@ export const sourcesFilter = (sources: any) =>
       }
     : { terms: { source: sources } };
 
-export function getRelatedThemesBody(query, size = 5) {
+export function getRelatedThemesBody(query: string, size = 5) {
   return {
     _source: [
       "icon",
@@ -74,7 +74,10 @@ export function getRelatedThemesBody(query, size = 5) {
   };
 }
 
-export function getRelatedArticlesBody(query: any, size = 5) {
+export function getRelatedArticlesBody(query: string, size = 5) {
+  // try to match the actual title format
+  const formattedTitle = query.replace(".", "").replace(" ", "").toUpperCase();
+
   return {
     _source: [
       "title",
@@ -105,17 +108,16 @@ export function getRelatedArticlesBody(query: any, size = 5) {
               },
               {
                 match: {
-                  "title.article_id": {
+                  "title.french": {
                     boost: 3,
-                    query: query,
+                    query: formattedTitle,
                   },
                 },
               },
               {
                 match: {
                   "text.french_with_synonyms": {
-                    // using 'dot' in query might cause mismatch in article references (ex. L.4121-1 would return R4121-1)
-                    query: query.replace(".", ""),
+                    query,
                   },
                 },
               },
@@ -127,7 +129,7 @@ export function getRelatedArticlesBody(query: any, size = 5) {
             match_phrase: {
               "title.french": {
                 boost: 2,
-                query: `__start__ ${query}`,
+                query: `__start__ ${formattedTitle}`,
                 slop: 1,
               },
             },
@@ -143,7 +145,7 @@ export function getRelatedArticlesBody(query: any, size = 5) {
           {
             match: {
               "title.french_with_synonyms": {
-                query: query.replace(".", ""),
+                query: formattedTitle,
               },
             },
           },
@@ -241,6 +243,14 @@ export function getSearchBody(query, size, sources) {
               },
             },
           },
+          // {
+          //   match: {
+          //     source: {
+          //       boost: 1.1,
+          //       query: SOURCES.SHEET_SP,
+          //     },
+          //   },
+          // },
           {
             match: {
               source: {

@@ -11,7 +11,9 @@ export class SearchController {
 
   public async get() {
     const q = this.searchParams.get("q");
-    const response = await searchWithQuery(q as string);
+    const pq = this.searchParams.get("pq");
+    console.log({ q, pq });
+    const response = await searchWithQuery(q as string, 5, pq != "false");
     return NextResponse.json(response, {
       status: 200,
       headers: {

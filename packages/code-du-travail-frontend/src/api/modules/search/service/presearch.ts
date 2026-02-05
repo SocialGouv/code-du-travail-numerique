@@ -17,6 +17,8 @@ import {
   SearchResult,
   ThemeSearchResult,
 } from "./types";
+import { getThemeBySlugQuery } from "../../themes/queries";
+import { getBySlugsThemes, getBySlugThemes } from "../../themes";
 
 const keyword_std = [
   "a conservatoir mise pied",
@@ -113,7 +115,7 @@ const CC_SCORE_THRESHOLD = 20;
 const PRESEARCH_MAX_RESULTS = 8;
 
 const tokenize = (content: string): string[] => {
-  const cleaned = content.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, " ");
+  const cleaned = content.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()°]/g, " ");
   return fingerprint(cleaned);
 };
 
@@ -122,6 +124,13 @@ const prepro = (content: string | undefined): string[] => {
   const tokens = tokenize(content);
   return tokens ? tokens.map(complex) : [];
 };
+
+const formatResult =
+  (klass: PresearchClass) => (result: Omit<SearchResult, "algo">) => ({
+    ...result,
+    algo: SEARCH_ALGO.PRESEARCH,
+    class: klass,
+  });
 
 const isCC = async (query: string): Promise<PreSearchResult[]> => {
   await ensureIdccsInstantiated();
@@ -155,13 +164,7 @@ const isCC = async (query: string): Promise<PreSearchResult[]> => {
     );
 
     if (found) {
-      return [
-        {
-          ...found,
-          class: PresearchClass.CC,
-          algo: SEARCH_ALGO.PRESEARCH,
-        },
-      ];
+      return [formatResult(PresearchClass.CC)(found)];
     } else {
       // case where CC related content but no match
       return getDefaultIdccResults();
@@ -169,23 +172,17 @@ const isCC = async (query: string): Promise<PreSearchResult[]> => {
   } else {
     const foundNoCC = await ccSearch(query, CC_SCORE_THRESHOLD);
     if (foundNoCC) {
-      return [
-        {
-          ...foundNoCC,
-          class: PresearchClass.CC,
-          algo: SEARCH_ALGO.PRESEARCH,
-        },
-      ];
+      return [formatResult(PresearchClass.CC)(foundNoCC)];
     } else {
       return [];
     }
   }
 };
 
-const getThemes = (
+const getThemes = async (
   pQuery: string[],
   themes: ThemeSearchResult[]
-): PreSearchResult | undefined => {
+): Promise<PreSearchResult[]> => {
   // sort by breadcrumbs
   themes.sort((a, b) => a.breadcrumbs.length - b.breadcrumbs.length);
 
@@ -201,18 +198,44 @@ const getThemes = (
     match = pThemes.find((th) => pQuery.every((to) => th.pTheme.includes(to)));
   }
 
+  const themeDocs: PreSearchResult[] = [];
+  if (match) {
+    const themeDoc = await getBySlugThemes(match.theme.slug);
+    const results: SearchResult[] = [];
+
+    if (themeDoc.refs?.length) {
+      results.push(...themeDoc.refs);
+    } else if (themeDoc.children?.length) {
+      const underThemes = await getBySlugsThemes(
+        themeDoc.children.map((c) => c.slug)
+      );
+      results.push(...underThemes);
+    }
+
+    themeDocs.push(...results.map(formatResult(PresearchClass.THEME)));
+  }
+
+  // todo works for sous theme - what should we do with main theme ?
+  // check most frequent "main theme" requests
+
   return match
-    ? {
-        title: match.theme.title,
-        slug: match.theme.slug,
-        parentSlug: (match.theme as any).parentSlug,
-        cdtnId: match.theme.cdtnId,
-        source: match.theme.source,
-        class: PresearchClass.THEME,
-        algo: SEARCH_ALGO.PRESEARCH,
-        description: `Retrouvez les contenus relatifs au thème : ${match.theme.title}`,
-      }
-    : undefined;
+    ? [
+        {
+          title: match.theme.title,
+          slug: match.theme.slug,
+          parentSlug: (match.theme as any).parentSlug,
+          cdtnId: match.theme.cdtnId,
+          source: match.theme.source,
+          class: PresearchClass.THEME,
+          algo: SEARCH_ALGO.PRESEARCH,
+          description: `Retrouvez les contenus relatifs au thème : ${match.theme.title}`,
+        },
+        ...themeDocs.map((t) => ({
+          ...t,
+          description: `Retrouvez les contenus relatifs au thème : ${t.title}`,
+        })),
+      ]
+    : [];
 };
 
 const getArticles = async (query): Promise<PreSearchResult[]> => {
@@ -236,11 +259,9 @@ const getArticles = async (query): Promise<PreSearchResult[]> => {
       index: elasticDocumentsIndex,
     });
 
-    return extractHits(hits).map((h) => ({
-      ...h._source,
-      class: PresearchClass.ARTICLE,
-      algo: SEARCH_ALGO.PRESEARCH,
-    }));
+    return extractHits(hits)
+      .map((h) => h._source)
+      .map(formatResult(PresearchClass.ARTICLE));
   } else {
     return [];
   }
@@ -284,14 +305,10 @@ export const presearch = async (
   results.push(...idccResult);
 
   const articles = await getArticles(query);
-  if (articles) {
-    results.push(...articles);
-  }
+  results.push(...articles);
 
-  const matchingTheme = getThemes(pQuery, themes);
-  if (matchingTheme) {
-    results.push(matchingTheme);
-  }
+  const matchingTheme = await getThemes(pQuery, themes);
+  results.push(...matchingTheme);
 
   const classes = results.map((r) => r.class);
 

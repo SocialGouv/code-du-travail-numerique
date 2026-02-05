@@ -42,6 +42,7 @@ export const SearchPageClient: React.FC<SearchPageClientProps> = ({
   const urlQuery = searchParams?.get("query");
   const query = urlQuery && urlQuery.length > 0 ? urlQuery : initialQuery;
 
+  // TODO : fix this event : sent twice with unsync data
   useEffect(() => {
     if (query && klass) {
       emitFullsearchEventOnce(query, klass);
