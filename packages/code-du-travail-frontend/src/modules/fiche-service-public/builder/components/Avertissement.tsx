@@ -2,7 +2,7 @@ import React, { JSX } from "react";
 import { ElementBuilder } from "./ElementBuilder";
 import { fr } from "@codegouvfr/react-dsfr";
 import { format, parseISO } from "date-fns";
-import frLocale from "date-fns/locale/fr";
+import { fr as frLocale } from "date-fns/locale/fr";
 import { filterOutTitle, getInChildrenByName, getText } from "../utils";
 import { FicheSPDataAvertissement } from "../type";
 

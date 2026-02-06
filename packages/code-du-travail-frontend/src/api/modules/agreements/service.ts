@@ -13,8 +13,8 @@ export const getAllAgreements = async (): Promise<ElasticAgreement[]> => {
   const body = getAllAgreementsWithContributions();
 
   const response = await elasticsearchClient.search<ElasticAgreement>({
-    body,
     index: elasticDocumentsIndex,
+    ...body,
   });
 
   return response.hits.hits
@@ -28,8 +28,8 @@ export const getBySlugsAgreements = async (
 ): Promise<ElasticSearchItem[]> => {
   const body = getAgreementsBySlugs(slugs);
   const response = await elasticsearchClient.search<any>({
-    body,
     index: elasticDocumentsIndex,
+    ...body,
   });
   return response.hits.hits.length > 0
     ? response.hits.hits.map(({ _source }) => _source)
@@ -41,8 +41,8 @@ export const getByIdsAgreements = async (
 ): Promise<ElasticSearchItem<{ shortTitle: string }>[]> => {
   const body = getAgreementsByIds(ids);
   const response = await elasticsearchClient.search<any>({
-    body,
     index: elasticDocumentsIndex,
+    ...body,
   });
   return response.hits.hits.length > 0
     ? response.hits.hits.map(({ _source }) => _source)
@@ -55,8 +55,8 @@ export const getBySlugAgreements = async (
   const body = await getAgreementBySlug(slug);
 
   const response = await elasticsearchClient.search<ElasticAgreement>({
-    body,
     index: elasticDocumentsIndex,
+    ...body,
   });
   if (response.hits.hits.length === 0 || !response.hits.hits[0]._source) {
     return;

@@ -49,20 +49,18 @@ export const getDefaultIdccResults = async (): Promise<PreSearchResult[]> => {
 
     defaultsIdccResults = await elasticsearchClient
       .search<any>({
-        body: {
-          size: 1000,
-          _source: [
-            "title",
-            "slug",
-            "url",
-            "source",
-            "cdtnId",
-            "description",
-            "breadcrumbs",
-          ],
-          query,
-        },
         index: elasticDocumentsIndex,
+        size: 1000,
+        _source: [
+          "title",
+          "slug",
+          "url",
+          "source",
+          "cdtnId",
+          "description",
+          "breadcrumbs",
+        ],
+        query,
       })
       .then((r) =>
         extractHits(r).map(({ _source }) => ({

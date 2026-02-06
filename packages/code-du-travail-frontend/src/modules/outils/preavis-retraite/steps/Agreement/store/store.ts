@@ -1,5 +1,5 @@
 import { StoreApi } from "zustand";
-import produce from "immer";
+import { produce } from "immer";
 import { PublicodesSimulator, supportedCcn } from "@socialgouv/modeles-social";
 import { StoreSliceWrapperPreavisRetraite } from "../../store";
 import { AgreementStoreData, AgreementStoreSlice } from "./types";

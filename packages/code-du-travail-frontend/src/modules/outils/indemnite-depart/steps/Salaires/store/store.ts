@@ -1,5 +1,5 @@
 import { StoreApi } from "zustand";
-import produce from "immer";
+import { produce } from "immer";
 import {
   SalairesStoreData,
   SalairesStoreInput,

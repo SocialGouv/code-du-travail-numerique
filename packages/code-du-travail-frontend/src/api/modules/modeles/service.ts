@@ -15,8 +15,8 @@ export const getAllModeles = async () => {
   const response = await elasticsearchClient.search<
     DocumentElasticWithSource<MailTemplate>
   >({
-    body,
     index: elasticDocumentsIndex,
+    ...body,
   });
   return response.hits.hits.length > 0
     ? response.hits.hits.map(({ _source }) => _source)
@@ -28,8 +28,8 @@ export const getByIdsModeles = async (
 ): Promise<ElasticSearchItem[]> => {
   const body = getModelesByIds(ids);
   const response = await elasticsearchClient.search<any>({
-    body,
     index: elasticDocumentsIndex,
+    ...body,
   });
   if (response.hits.hits.length === 0) {
     throw new NotFoundError({

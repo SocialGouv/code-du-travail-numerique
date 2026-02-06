@@ -5,8 +5,8 @@ export const getAllInformations = async () => {
   const body = fetchInformations();
 
   const response = await elasticsearchClient.search<any>({
-    body,
     index: elasticDocumentsIndex,
+    ...body,
   });
   return response.hits.hits
     .map(({ _source }) => _source)

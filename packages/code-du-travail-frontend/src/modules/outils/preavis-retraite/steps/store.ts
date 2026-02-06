@@ -1,4 +1,6 @@
-import { createStore as create, StoreApi, useStore } from "zustand";
+import { createStore as create, StoreApi } from "zustand";
+import { useStoreWithEqualityFn } from "zustand/traditional";
+import { shallow } from "zustand/shallow";
 import { createContext } from "react";
 import {
   createOriginDepartStore,
@@ -59,9 +61,14 @@ const PreavisRetraiteContext = createContext<StoreApi<MainStore>>(
 
 const { Provider } = PreavisRetraiteContext;
 
+const usePreavisRetraiteStore = <T>(
+  store: StoreApi<MainStore>,
+  selector: (state: MainStore) => T
+) => useStoreWithEqualityFn(store, selector, shallow);
+
 export {
   Provider as PreavisRetraiteProvider,
   createStore as createPreavisRetraiteStore,
   PreavisRetraiteContext,
-  useStore as usePreavisRetraiteStore,
+  usePreavisRetraiteStore,
 };

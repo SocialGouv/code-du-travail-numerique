@@ -27,19 +27,15 @@ const prequalifiedQuery = {
 
 async function _getPrequalified() {
   const body = await elasticsearchClient.count({
-    body: {
-      query: prequalifiedQuery,
-    },
     index: elasticDocumentsIndex,
+    query: prequalifiedQuery,
   });
   const count = body.count ?? 10000;
 
   const response = await elasticsearchClient.search<any>({
-    body: {
-      query: prequalifiedQuery,
-      size: count,
-    },
     index: elasticDocumentsIndex,
+    query: prequalifiedQuery,
+    size: count,
   });
 
   if (response.hits.hits.length === 0) {

@@ -38,7 +38,7 @@ export const ElementBuilder = ({
   if (Array.isArray(data)) {
     return data.map((child) => (
       <ElementBuilder
-        key={generateUUID(child)}
+        key={generateUUID()}
         data={child}
         headingLevel={headingLevel}
       />

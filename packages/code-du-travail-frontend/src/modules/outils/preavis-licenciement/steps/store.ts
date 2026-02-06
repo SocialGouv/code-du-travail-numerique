@@ -1,4 +1,6 @@
-import { createStore as create, StoreApi, useStore } from "zustand";
+import { createStore as create, StoreApi } from "zustand";
+import { useStoreWithEqualityFn } from "zustand/traditional";
+import { shallow } from "zustand/shallow";
 import { createContext } from "react";
 import { createStatusStore, StatusStoreSlice } from "./Status/store";
 import { createAgreementStore, AgreementStoreSlice } from "./Agreement/store";
@@ -52,9 +54,16 @@ const PreavisLicenciementContext = createContext<StoreApi<MainStore>>(
 
 const { Provider } = PreavisLicenciementContext;
 
+// Default to shallow equality so selectors returning object literals don't cause
+// infinite re-render loops with `useSyncExternalStore` (React 19 is stricter here).
+const usePreavisLicenciementStore = <T>(
+  store: StoreApi<MainStore>,
+  selector: (state: MainStore) => T
+) => useStoreWithEqualityFn(store, selector, shallow);
+
 export {
   Provider as PreavisLicenciementProvider,
   createStore as createPreavisLicenciementStore,
   PreavisLicenciementContext,
-  useStore as usePreavisLicenciementStore,
+  usePreavisLicenciementStore,
 };

@@ -8,8 +8,8 @@ export const getBySourceAndSlugItems = async <Type>(
 ) => {
   const body = getSearchBySourceSlugBody({ slug, source });
   const response = await elasticsearchClient.search<Type>({
-    body,
     index: elasticDocumentsIndex,
+    ...body,
   });
   if (response.hits.hits.length === 0) {
     return;
