@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.212.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.212.0...v4.212.1) (2026-02-05)
+
+**Note:** Version bump only for package @socialgouv/cdtn-utils
+
+
+
+
+
+# [4.212.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.211.0...v4.212.0) (2026-02-04)
+
+
+### Features
+
+* **home:** ajout de nouvelles icones pour les thèmes + correctif rgaa ([#7094](https://github.com/SocialGouv/code-du-travail-numerique/issues/7094)) ([bb6cd8f](https://github.com/SocialGouv/code-du-travail-numerique/commit/bb6cd8f653fb8cf3b1d5716d861d0b3fb3222720))
+
+
+
+
+
 # [4.211.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.210.0...v4.211.0) (2026-01-29)
 
 **Note:** Version bump only for package @socialgouv/cdtn-utils

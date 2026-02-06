@@ -72,6 +72,7 @@ describe("SearchPageClient", () => {
         cdtnId: "th1",
         source: SOURCES.THEMES,
         slug: "theme-1",
+        parentSlug: "parent-theme",
         title: "Theme 1",
         algo: SEARCH_ALGO.FULL_TEXT,
       },
@@ -111,7 +112,8 @@ describe("SearchPageClient", () => {
       mockItems.documents[0].source,
       mockItems.documents[0].slug,
       undefined,
-      mockItems.documents[0].algo
+      mockItems.documents[0].algo,
+      undefined
     );
   });
 
@@ -153,12 +155,15 @@ describe("SearchPageClient", () => {
     const themeButton = screen.getByRole("link", { name: "Theme 1" });
     fireEvent.click(themeButton);
 
+    expect(themeButton).toHaveAttribute("href", "/themes/parent-theme#theme-1");
+
     // Check that emitResultSelectionEvent was called with the correct parameters
     expect(mockEmitResultSelectionEvent).toHaveBeenCalledWith(
       mockItems.themes[0].source,
       mockItems.themes[0].slug,
       undefined,
-      mockItems.themes[0].algo
+      mockItems.themes[0].algo,
+      mockItems.themes[0].parentSlug
     );
   });
 
