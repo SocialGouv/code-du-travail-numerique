@@ -50,5 +50,5 @@ export const useABTestVariant = (
     };
   }, [abTestName]);
 
-  return ABTestVariant.SEARCH_V2;
+  return variant;
 };
