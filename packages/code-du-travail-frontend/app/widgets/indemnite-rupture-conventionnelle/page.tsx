@@ -15,6 +15,7 @@ export async function generateMetadata() {
     description: description,
     path: `${SITE_URL}/widgets/indemnite-rupture-conventionnelle`,
     overrideCanonical: `${SITE_URL}/outils/indemnite-rupture-conventionnelle`,
+    robots: "noindex,nofollow",
   });
 }
 

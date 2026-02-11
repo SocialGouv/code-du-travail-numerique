@@ -56,6 +56,7 @@ describe("Widgets - Chargement local", () => {
   });
 
   it("Vérification du lien de téléchargement du modèle de lettre de démission", () => {
+    cy.visit("/widgets/modeles-de-courriers/9a6cf1b40c");
     cy.contains("Télécharger le Modèle de lettre - Lettre de démission").should(
       "have.attr",
       "href",
