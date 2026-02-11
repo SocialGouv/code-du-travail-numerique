@@ -17,6 +17,7 @@ describe("SearchWidgetDisplay", () => {
   // Mock the tracking functions
   const mockEmitWidgetLogoClickEvent = jest.fn();
   const mockEmitWidgetSubmitSearchEvent = jest.fn();
+  const mockPostMessage = jest.fn();
 
   beforeEach(() => {
     jest.clearAllMocks();
@@ -25,6 +26,14 @@ describe("SearchWidgetDisplay", () => {
     (useSearchTracking as jest.Mock).mockReturnValue({
       emitWidgetLogoClickEvent: mockEmitWidgetLogoClickEvent,
       emitWidgetSubmitSearchEvent: mockEmitWidgetSubmitSearchEvent,
+    });
+
+    // Mock window.parent.postMessage
+    Object.defineProperty(window, "parent", {
+      value: {
+        postMessage: mockPostMessage,
+      },
+      writable: true,
     });
   });
 
@@ -45,7 +54,7 @@ describe("SearchWidgetDisplay", () => {
     ).toBeInTheDocument();
   });
 
-  it("should emit widget event when logo is clicked", () => {
+  it("should emit widget event and post message when logo is clicked", () => {
     render(<SearchWidgetDisplay />);
 
     // Find and click the logo
@@ -54,9 +63,15 @@ describe("SearchWidgetDisplay", () => {
 
     // Check that emitWidgetLogoClickEvent was called
     expect(mockEmitWidgetLogoClickEvent).toHaveBeenCalled();
+
+    // Check that postMessage was called with the correct parameters
+    expect(mockPostMessage).toHaveBeenCalledWith(
+      { name: "logo-link", kind: "click" },
+      "*"
+    );
   });
 
-  it("should emit widget event when form is submitted", () => {
+  it("should emit widget event and post message when form is submitted", () => {
     // Mock HTMLFormElement.prototype.querySelector
     const originalQuerySelector = HTMLFormElement.prototype.querySelector;
     HTMLFormElement.prototype.querySelector = jest
@@ -85,6 +100,12 @@ describe("SearchWidgetDisplay", () => {
 
     // Check that emitWidgetSubmitSearchEvent was called with the correct query
     expect(mockEmitWidgetSubmitSearchEvent).toHaveBeenCalledWith("hello");
+
+    // Check that postMessage was called with the correct parameters
+    expect(mockPostMessage).toHaveBeenCalledWith(
+      { name: "button-search", kind: "click" },
+      "*"
+    );
 
     // Restore original querySelector
     HTMLFormElement.prototype.querySelector = originalQuerySelector;
