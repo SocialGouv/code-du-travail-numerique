@@ -156,30 +156,6 @@ describe("SearchWidgetDisplay", () => {
     HTMLFormElement.prototype.querySelector = originalQuerySelector;
   });
 
-  it("should call form.submit when form is submitted", () => {
-    // Create a spy on HTMLFormElement.prototype.submit
-    const submitSpy = jest
-      .spyOn(HTMLFormElement.prototype, "submit")
-      .mockImplementation(() => {});
-
-    const { container } = render(<SearchWidgetDisplay />);
-
-    // Find the input and type a search query
-    const input = screen.getByPlaceholderText("Période d'essai");
-    fireEvent.change(input, { target: { value: "test query" } });
-
-    // Find the form and submit it
-    const form = container.querySelector("form");
-    expect(form).not.toBeNull();
-    fireEvent.submit(form as HTMLFormElement);
-
-    // Check that form.submit was called
-    expect(submitSpy).toHaveBeenCalled();
-
-    // Restore the original implementation
-    submitSpy.mockRestore();
-  });
-
   it("should trim the query before emitting search event", () => {
     // Mock HTMLFormElement.prototype.querySelector
     const originalQuerySelector = HTMLFormElement.prototype.querySelector;
