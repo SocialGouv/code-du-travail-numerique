@@ -21,49 +21,38 @@ export const AgreementSelectionModalContent = ({ onClose }: Props) => {
   if (agreement) {
     return (
       <div>
-        <p className={fr.cx("fr-mb-2w")}>
-          Votre convention collective est actuellement sélectionnée.
-        </p>
-
         <div className={selectedContainer}>
+          <p className={fr.cx("fr-mb-2w", "fr-text--bold", "fr-text--lg")}>
+            Les réponses seront personnalisées pour la convention collective :
+          </p>
+
           <div
-            className={fr.cx("fr-card", "fr-card--sm", "fr-col-12")}
+            className={selectedCard}
             data-testid="header-selected-agreement-card"
           >
-            <div
-              className={fr.cx("fr-card__body")}
-              style={{
-                border: "1px solid var(--border-action-high-blue-france)",
-                borderRadius: "0.25rem",
-              }}
+            <p
+              className={fr.cx("fr-mb-0")}
+              style={{ color: "var(--text-action-high-blue-france)" }}
             >
-              <div
-                className={fr.cx("fr-card__content", "fr-py-2w")}
-                style={{ paddingLeft: "1rem", paddingRight: "1rem" }}
-              >
-                <p className={fr.cx("fr-text--xs", "fr-mb-1v")}>
-                  IDCC {agreement.num}
-                </p>
-                <p className={fr.cx("fr-text--bold", "fr-mb-0")}>
-                  {agreement.shortTitle}
-                </p>
-              </div>
-            </div>
+              {agreement.shortTitle} (IDCC {agreement.num})
+            </p>
           </div>
         </div>
 
         <div className={buttonRow}>
+          <Button priority="secondary" onClick={onClose} type="button">
+            Fermer
+          </Button>
           <Button
-            priority="secondary"
+            priority="primary"
+            iconId="fr-icon-arrow-go-back-line"
+            iconPosition="right"
             onClick={() => {
               clearAgreement();
             }}
             type="button"
           >
-            Supprimer
-          </Button>
-          <Button priority="primary" onClick={onClose} type="button">
-            Fermer
+            Modifier
           </Button>
         </div>
       </div>
@@ -96,17 +85,25 @@ export const AgreementSelectionModalContent = ({ onClose }: Props) => {
 };
 
 const selectedContainer = css({
-  padding: "1rem",
+  padding: "1.5rem",
   backgroundColor: "var(--background-alt-blue-cumulus)",
   borderRadius: "0.25rem",
   marginBottom: "1rem",
+});
+
+const selectedCard = css({
+  border: "1px solid var(--border-action-high-blue-france)",
+  borderRadius: "0.25rem",
+  padding: "1rem 1.5rem",
+  backgroundColor: "white",
+  fontSize: "1.25rem",
 });
 
 const buttonRow = css({
   display: "flex",
   gap: "0.75rem",
   flexWrap: "wrap",
-  justifyContent: "center",
+  justifyContent: "flex-end",
   marginTop: "1.5rem",
 });
 
