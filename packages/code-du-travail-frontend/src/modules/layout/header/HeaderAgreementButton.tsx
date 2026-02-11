@@ -4,6 +4,7 @@ import { fr } from "@codegouvfr/react-dsfr";
 import { css } from "@styled-system/css";
 import Image from "next/image";
 import { useAgreementStorageSync } from "src/modules/convention-collective/AgreementSelectionModal";
+import { useBreakpoints } from "src/modules/common/useBreakpoints";
 
 type Props = {
   id: string;
@@ -19,58 +20,71 @@ export const HeaderAgreementButton = ({
   variant = "desktop",
 }: Props) => {
   const { agreement } = useAgreementStorageSync();
+  const { isBelow } = useBreakpoints();
+  const isMobile = isBelow("lg");
 
   const fullTitle = agreement
     ? `${agreement.num} - ${agreement.shortTitle}`
     : "Ma convention collective";
 
-  const isMobile = variant === "mobile";
-  const iconSize = isMobile
+  const isMobileVariant = variant === "mobile";
+  const iconSize = isMobileVariant
     ? { width: 32, height: 36 }
     : { width: 24, height: 28 };
 
+  const tooltipId = `${id}-tooltip`;
+
   return (
-    <button
-      id={id}
-      type="button"
-      className={`${fr.cx("fr-btn", "fr-btn--tertiary")} ${
-        isMobile ? buttonStyleMobile : buttonStyle
-      }`}
-      aria-controls="agreement-modal"
-      aria-haspopup="dialog"
-      aria-expanded={isOpen}
-      onClick={onClick}
-      data-testid="header-agreement-button"
-      title={fullTitle}
-    >
-      <Image
-        src="/static/assets/icons/search_agreement.svg"
-        alt=""
-        width={iconSize.width}
-        height={iconSize.height}
-        aria-hidden
-      />
-      <span className={textContainer}>
-        {agreement ? (
-          <>
-            <span className={fr.cx("fr-text--xs", "fr-mb-0")}>
-              CC {agreement.num}
-            </span>
+    <>
+      <button
+        id={id}
+        type="button"
+        className={`${fr.cx("fr-btn", "fr-btn--tertiary")} ${
+          isMobileVariant ? buttonStyleMobile : buttonStyle
+        }`}
+        aria-controls="agreement-modal"
+        aria-haspopup="dialog"
+        aria-expanded={isOpen}
+        onClick={onClick}
+        data-testid="header-agreement-button"
+        aria-describedby={tooltipId}
+      >
+        <Image
+          src="/static/assets/icons/search_agreement.svg"
+          alt=""
+          width={iconSize.width}
+          height={iconSize.height}
+          aria-hidden
+        />
+        <span className={textContainer}>
+          {agreement ? (
+            <>
+              <span className={fr.cx("fr-text--xs", "fr-mb-0")}>
+                CC {agreement.num}
+              </span>
+              <span
+                className={`${fr.cx("fr-text--sm", "fr-mb-0")} ${isMobile || isMobileVariant ? titleLineMobile : titleLine}`}
+              >
+                {agreement.shortTitle}
+              </span>
+            </>
+          ) : (
             <span
-              className={`${fr.cx("fr-text--sm", "fr-mb-0")} ${isMobile ? titleLineMobile : titleLine}`}
+              className={`${fr.cx("fr-text--sm", "fr-mb-0")} ${isMobile || isMobileVariant ? titleLineMobile : titleLine}`}
             >
-              {agreement.shortTitle}
+              Ma convention collective
             </span>
-          </>
-        ) : (
-          <span
-            className={`${fr.cx("fr-text--sm", "fr-mb-0")} ${isMobile ? titleLineMobile : titleLine}`}
-          >
-            Ma convention collective
-          </span>
-        )}
+          )}
+        </span>
+      </button>
+      <span
+        className={fr.cx("fr-tooltip", "fr-placement")}
+        id={tooltipId}
+        role="tooltip"
+      >
+        {fullTitle}
       </span>
-    </button>
+    </>
   );
 };
 
@@ -90,10 +104,9 @@ const buttonStyleMobile = css({
   display: "flex",
   alignItems: "center",
   gap: "0.75rem",
-  paddingLeft: "0",
+  paddingLeft: "0.75rem",
   paddingRight: "0.75rem",
-  justifyContent: "flex-start",
-  width: "100%",
+  justifyContent: "center",
   border: "none",
   backgroundColor: "transparent",
   _hover: {

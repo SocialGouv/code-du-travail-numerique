@@ -98,4 +98,6 @@ const mobileAgreementContainer = css({
   padding: "1.25rem 0",
   borderTop: "1px solid var(--border-default-grey)",
   marginTop: "1rem",
+  display: "flex",
+  justifyContent: "center",
 });
