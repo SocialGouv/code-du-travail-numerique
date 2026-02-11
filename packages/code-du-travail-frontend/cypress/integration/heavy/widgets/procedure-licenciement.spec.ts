@@ -1,6 +1,6 @@
 import "cypress-iframe";
 
-describe("Widget - Dossier Licenciement", () => {
+describe("Widget - Procédure de licenciement", () => {
   it("should display the legacy widget", () => {
     cy.visit(
       "https://socialgouv.github.io/code-du-travail-numerique/procedure-licenciement-legacy"
