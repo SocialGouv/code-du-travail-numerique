@@ -31,7 +31,6 @@ export const IntegrationDetailPageContent = ({
         shortTitle={widget.shortTitle}
         url={widget.url}
         host={host}
-        messages={widget.messages}
         selectOptions={selectOptions}
       />
     </ContainerList>

@@ -21,13 +21,9 @@ export const SearchWidgetDisplay: React.FC = () => {
     const query = input?.value?.trim() ?? "";
 
     emitWidgetSubmitSearchEvent(query);
-    window.parent?.postMessage({ name: "button-search", kind: "click" }, "*");
-
-    form.submit();
   };
 
   const onClickLogo = () => {
-    window.parent?.postMessage({ name: "logo-link", kind: "click" }, "*");
     emitWidgetLogoClickEvent();
   };
 
@@ -39,13 +35,13 @@ export const SearchWidgetDisplay: React.FC = () => {
           href="/"
           target="_blank"
           className={logoLinkStyles}
+          onClick={onClickLogo}
         >
           <Image
             src="/static/assets/img/logo.svg"
             alt="Code du travail numérique"
             width={144}
             height={65}
-            onClick={onClickLogo}
           />
         </Link>
       </div>

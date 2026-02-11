@@ -9,19 +9,7 @@
     "shortTitle": "Moteur de recherche du Code du travail numérique",
     "shortDescription": "Effectuez une recherche depuis votre site sur le Code du travail numérique",
     "url": "/widgets/search",
-    "id": "widget",
-    "messages": {
-      "click": [
-        {
-          "name": "logo-link",
-          "description": "le message envoyé lors d'un click sur le logo \"code du travail numérique\""
-        },
-        {
-          "name": "button-search",
-          "description": "le message envoyé lors d'un click sur la loupe de la recherche"
-        }
-      ]
-    }
+    "id": "widget"
   },
   "modeles-de-courriers": {
     "metaTitle": "Intégrer les modèles de documents du Code du travail numérique",
@@ -107,19 +95,7 @@
     "shortTitle": "Trouver sa convention collective",
     "shortDescription": "Trouvez une convention collective à partir du nom de l'entreprise ou son SIRET",
     "url": "/widgets/convention-collective",
-    "id": "convention-collective",
-    "messages": {
-      "select": [
-        {
-          "name": "agreement",
-          "description": "le message envoyé lors de la selection d'une convention collective",
-          "extra": {
-            "idcc": "id de la convention collective",
-            "title": "nom de la convention collective"
-          }
-        }
-      ]
-    }
+    "id": "convention-collective"
   },
   "preavis-retraite": {
     "metaTitle": "Intégrer l’outil de calcul du préavis de retraite du Code du travail numérique",

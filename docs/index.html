@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page de démo des widgets du code du travail numérique</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      h1 {
+        color: #0053b3;
+      }
+      h2 {
+        margin-top: 30px;
+        color: #333;
+      }
+      .widget-list {
+        list-style: none;
+        padding: 0;
+      }
+      .widget-item {
+        margin-bottom: 15px;
+        padding: 15px;
+        background-color: #f8f9fa;
+        border-radius: 5px;
+        border-left: 4px solid #0053b3;
+      }
+      .widget-item h3 {
+        margin: 0 0 10px 0;
+        color: #0053b3;
+      }
+      .widget-links {
+        display: flex;
+        gap: 15px;
+      }
+      .widget-link {
+        display: inline-block;
+        padding: 8px 15px;
+        text-decoration: none;
+        border-radius: 4px;
+        font-weight: 500;
+        transition: background-color 0.2s;
+      }
+      .widget-link.new {
+        background-color: #0053b3;
+        color: white;
+      }
+      .widget-link.new:hover {
+        background-color: #003d82;
+      }
+      .widget-link.legacy {
+        background-color: #666;
+        color: white;
+      }
+      .widget-link.legacy:hover {
+        background-color: #444;
+      }
+      .badge {
+        font-size: 12px;
+        padding: 2px 6px;
+        border-radius: 3px;
+        margin-left: 5px;
+      }
+      .badge.new {
+        background-color: #d4edff;
+        color: #0053b3;
+      }
+      .badge.legacy {
+        background-color: #e0e0e0;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Page de démo des widgets du code du travail numérique</h1>
+
+    <p>
+      Cette page présente tous les widgets disponibles en deux versions
+      d'intégration :
+    </p>
+    <ul>
+      <li>
+        <strong>Version avec widget-loader.js</strong> (recommandée) : Utilise
+        Subresource Integrity (SRI) pour plus de sécurité
+      </li>
+      <li>
+        <strong>Version legacy</strong> : Utilise le chargement direct via
+        widget.js
+      </li>
+    </ul>
+
+    <h2>Liste des widgets disponibles</h2>
+
+    <ul class="widget-list">
+      <li class="widget-item">
+        <h3>Trouver sa convention collective</h3>
+        <div class="widget-links">
+          <a
+            href="trouver-sa-convention-collective.html"
+            class="widget-link new"
+          >
+            Version widget-loader.js <span class="badge new">SRI</span>
+          </a>
+          <a
+            href="trouver-sa-convention-collective-legacy.html"
+            class="widget-link legacy"
+          >
+            Version legacy
+          </a>
+        </div>
+      </li>
+
+      <li class="widget-item">
+        <h3>Moteur de recherche du Code du travail numérique</h3>
+        <div class="widget-links">
+          <a href="recherche.html" class="widget-link new">
+            Version widget-loader.js <span class="badge new">SRI</span>
+          </a>
+          <a href="recherche-legacy.html" class="widget-link legacy">
+            Version legacy
+          </a>
+        </div>
+      </li>
+
+      <li class="widget-item">
+        <h3>Indemnité de licenciement</h3>
+        <div class="widget-links">
+          <a href="indemnite-licenciement.html" class="widget-link new">
+            Version widget-loader.js <span class="badge new">SRI</span>
+          </a>
+          <a
+            href="indemnite-licenciement-legacy.html"
+            class="widget-link legacy"
+          >
+            Version legacy
+          </a>
+        </div>
+      </li>
+
+      <li class="widget-item">
+        <h3>Indemnité de rupture conventionnelle</h3>
+        <div class="widget-links">
+          <a
+            href="indemnite-rupture-conventionnelle.html"
+            class="widget-link new"
+          >
+            Version widget-loader.js <span class="badge new">SRI</span>
+          </a>
+          <a
+            href="indemnite-rupture-conventionnelle-legacy.html"
+            class="widget-link legacy"
+          >
+            Version legacy
+          </a>
+        </div>
+      </li>
+
+      <li class="widget-item">
+        <h3>Préavis de démission</h3>
+        <div class="widget-links">
+          <a href="preavis-demission.html" class="widget-link new">
+            Version widget-loader.js <span class="badge new">SRI</span>
+          </a>
+          <a href="preavis-demission-legacy.html" class="widget-link legacy">
+            Version legacy
+          </a>
+        </div>
+      </li>
+
+      <li class="widget-item">
+        <h3>Indemnité de précarité</h3>
+        <div class="widget-links">
+          <a href="indemnite-precarite.html" class="widget-link new">
+            Version widget-loader.js <span class="badge new">SRI</span>
+          </a>
+          <a href="indemnite-precarite-legacy.html" class="widget-link legacy">
+            Version legacy
+          </a>
+        </div>
+      </li>
+
+      <li class="widget-item">
+        <h3>Préavis de licenciement</h3>
+        <div class="widget-links">
+          <a href="preavis-licenciement.html" class="widget-link new">
+            Version widget-loader.js <span class="badge new">SRI</span>
+          </a>
+          <a href="preavis-licenciement-legacy.html" class="widget-link legacy">
+            Version legacy
+          </a>
+        </div>
+      </li>
+
+      <li class="widget-item">
+        <h3>Préavis de départ ou mise à la retraite</h3>
+        <div class="widget-links">
+          <a href="preavis-retraite.html" class="widget-link new">
+            Version widget-loader.js <span class="badge new">SRI</span>
+          </a>
+          <a href="preavis-retraite-legacy.html" class="widget-link legacy">
+            Version legacy
+          </a>
+        </div>
+      </li>
+
+      <li class="widget-item">
+        <h3>Comprendre sa procédure de licenciement</h3>
+        <div class="widget-links">
+          <a href="procedure-licenciement.html" class="widget-link new">
+            Version widget-loader.js <span class="badge new">SRI</span>
+          </a>
+          <a
+            href="procedure-licenciement-legacy.html"
+            class="widget-link legacy"
+          >
+            Version legacy
+          </a>
+        </div>
+      </li>
+
+      <li class="widget-item">
+        <h3>Heures de recherche d'emploi</h3>
+        <div class="widget-links">
+          <a href="heures-recherche-emploi.html" class="widget-link new">
+            Version widget-loader.js <span class="badge new">SRI</span>
+          </a>
+          <a
+            href="heures-recherche-emploi-legacy.html"
+            class="widget-link legacy"
+          >
+            Version legacy
+          </a>
+        </div>
+      </li>
+
+      <li class="widget-item">
+        <h3>Modèles de documents</h3>
+        <div class="widget-links">
+          <a href="modeles.html" class="widget-link new">
+            Version widget-loader.js <span class="badge new">SRI</span>
+          </a>
+          <a href="modeles-legacy.html" class="widget-link legacy">
+            Version legacy
+          </a>
+        </div>
+      </li>
+    </ul>
+  </body>
+</html>

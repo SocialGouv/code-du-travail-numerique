@@ -8,15 +8,7 @@ Cypress.Commands.add("getIframe" as any, () => {
 
 describe("Pages integration", () => {
   it("should display iframe moteur de recherche", () => {
-    const postMessageStub = cy.stub().as("postMessage");
-
-    cy.visit("/integration/moteur-recherche", {
-      onBeforeLoad(win) {
-        win.addEventListener("message", (e) => {
-          postMessageStub(e.data);
-        });
-      },
-    });
+    cy.visit("/integration/moteur-recherche");
 
     // @ts-ignore
     cy.getIframe().as("iframe");
@@ -28,12 +20,6 @@ describe("Pages integration", () => {
         "Trouvez les réponses à vos questions en droit du travail"
       );
     cy.get("@iframe").find("#button-search").click();
-    cy.get("@postMessage")
-      .should("have.been.calledOnce")
-      .and("have.been.calledWithExactly", {
-        name: "button-search",
-        kind: "click",
-      });
   });
 
   it("should display iframe modèle de courrier", () => {
