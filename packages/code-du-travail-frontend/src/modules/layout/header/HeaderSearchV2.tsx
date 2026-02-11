@@ -53,8 +53,8 @@ const toolsStyle = css({
   display: "flex",
   alignItems: "center",
   flexWrap: "nowrap",
-  width: "100%",
   justifyContent: "flex-end",
+  flexShrink: 0,
 });
 
 const toolsRow = css({

@@ -3,7 +3,8 @@
 import { fr } from "@codegouvfr/react-dsfr";
 import { Button } from "@codegouvfr/react-dsfr/Button";
 import { css } from "@styled-system/css";
-import { useCallback, useEffect, useRef } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import useScrollBlock from "src/modules/utils/useScrollBlock";
 import { AgreementSelectionModalContent } from "src/modules/convention-collective/AgreementSelectionModal";
 
@@ -16,6 +17,11 @@ export const AgreementModal = ({ isOpen, onClose }: Props) => {
   const modalRef = useRef<HTMLDivElement>(null);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
   const [blockScroll, allowScroll] = useScrollBlock();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const handleClose = useCallback(() => {
     onClose();
@@ -61,9 +67,9 @@ export const AgreementModal = ({ isOpen, onClose }: Props) => {
     return () => document.removeEventListener("keydown", handleEscape);
   }, [isOpen, handleClose]);
 
-  if (!isOpen) return null;
+  if (!isOpen || !mounted) return null;
 
-  return (
+  const modalContent = (
     <div
       ref={modalRef}
       id="agreement-modal"
@@ -71,10 +77,13 @@ export const AgreementModal = ({ isOpen, onClose }: Props) => {
       role="dialog"
       aria-modal="true"
       aria-labelledby="agreement-modal-title"
-      hidden={!isOpen}
+      style={{ zIndex: 2147483647 }}
+      onClick={(e) => {
+        if (e.target === e.currentTarget) handleClose();
+      }}
     >
       <div className={content}>
-        <div className={fr.cx("fr-container", "fr-pb-8w", "fr-pt-4w")}>
+        <div className={modalInner}>
           <div className={closeButtonContainer}>
             <Button
               iconId="fr-icon-close-line"
@@ -90,8 +99,11 @@ export const AgreementModal = ({ isOpen, onClose }: Props) => {
             </Button>
           </div>
 
-          <h1 id="agreement-modal-title" className={fr.cx("fr-h3", "fr-mb-2w")}>
-            Sélectionner ma convention collective
+          <h1
+            id="agreement-modal-title"
+            className={`${fr.cx("fr-h3", "fr-mb-2w")} ${modalTitle}`}
+          >
+            Personnaliser mes réponses avec ma convention collective
           </h1>
 
           <AgreementSelectionModalContent onClose={handleClose} />
@@ -99,36 +111,61 @@ export const AgreementModal = ({ isOpen, onClose }: Props) => {
       </div>
     </div>
   );
+
+  return createPortal(modalContent, document.body);
 };
 
 const modalContainer = css({
   position: "fixed",
-  top: "calc(50% + 40px)",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  zIndex: 1000,
-  width: "calc(100% - 2rem)",
-  maxWidth: "792px",
-  maxHeight: "calc(100vh - 4rem)",
-  overflowY: "auto",
-  paddingTop: "env(safe-area-inset-top)",
+  top: 0,
+  left: 0,
+  right: 0,
+  bottom: 0,
+  zIndex: 2147483647,
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  padding: "1rem",
+  paddingTop: "calc(1rem + env(safe-area-inset-top))",
+  backgroundColor: "rgba(0, 0, 0, 0.5)",
+  md: {
+    padding: "2rem",
+  },
 });
 
 const content = css({
   backgroundColor: "var(--background-default-grey)",
-  boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-  borderRadius: "0.25rem",
+  boxShadow: "0 16px 48px rgba(0, 0, 0, 0.2)",
+  borderRadius: "0.5rem",
   position: "relative",
+  width: "100%",
+  maxWidth: "792px",
+  maxHeight: "100%",
+  overflowY: "auto",
+});
+
+const modalInner = css({
+  padding: "1.5rem",
+  paddingTop: "3rem",
+  md: {
+    padding: "2rem",
+    paddingTop: "3.5rem",
+  },
 });
 
 const closeButtonContainer = css({
   position: "absolute",
-  top: "1rem",
-  right: "1rem",
+  top: "0.75rem",
+  right: "0.75rem",
+  zIndex: 1,
 });
 
 const closeButton = css({
   _hover: {
     backgroundColor: "var(--background-default-grey-hover)!",
   },
+});
+
+const modalTitle = css({
+  paddingRight: "4rem",
 });

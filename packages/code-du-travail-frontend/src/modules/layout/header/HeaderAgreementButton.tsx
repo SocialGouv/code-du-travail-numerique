@@ -9,27 +9,45 @@ type Props = {
   id: string;
   isOpen: boolean;
   onClick: () => void;
+  variant?: "desktop" | "mobile";
 };
 
-export const HeaderAgreementButton = ({ id, isOpen, onClick }: Props) => {
+export const HeaderAgreementButton = ({
+  id,
+  isOpen,
+  onClick,
+  variant = "desktop",
+}: Props) => {
   const { agreement } = useAgreementStorageSync();
+
+  const fullTitle = agreement
+    ? `${agreement.num} - ${agreement.shortTitle}`
+    : "Ma convention collective";
+
+  const isMobile = variant === "mobile";
+  const iconSize = isMobile
+    ? { width: 32, height: 36 }
+    : { width: 24, height: 28 };
 
   return (
     <button
       id={id}
       type="button"
-      className={`${fr.cx("fr-btn", "fr-btn--tertiary")} ${buttonStyle}`}
+      className={`${fr.cx("fr-btn", "fr-btn--tertiary")} ${
+        isMobile ? buttonStyleMobile : buttonStyle
+      }`}
       aria-controls="agreement-modal"
       aria-haspopup="dialog"
       aria-expanded={isOpen}
       onClick={onClick}
       data-testid="header-agreement-button"
+      title={fullTitle}
     >
       <Image
         src="/static/assets/icons/search_agreement.svg"
         alt=""
-        width={24}
-        height={28}
+        width={iconSize.width}
+        height={iconSize.height}
         aria-hidden
       />
       <span className={textContainer}>
@@ -38,19 +56,18 @@ export const HeaderAgreementButton = ({ id, isOpen, onClick }: Props) => {
             <span className={fr.cx("fr-text--xs", "fr-mb-0")}>
               CC {agreement.num}
             </span>
-            <span className={`${fr.cx("fr-text--sm", "fr-mb-0")} ${titleLine}`}>
+            <span
+              className={`${fr.cx("fr-text--sm", "fr-mb-0")} ${isMobile ? titleLineMobile : titleLine}`}
+            >
               {agreement.shortTitle}
             </span>
           </>
         ) : (
-          <>
-            <span className={`${fr.cx("fr-text--sm", "fr-mb-0")} ${titleLine}`}>
-              Ma convention
-            </span>
-            <span className={`${fr.cx("fr-text--sm", "fr-mb-0")} ${titleLine}`}>
-              collective
-            </span>
-          </>
+          <span
+            className={`${fr.cx("fr-text--sm", "fr-mb-0")} ${isMobile ? titleLineMobile : titleLine}`}
+          >
+            Ma convention collective
+          </span>
         )}
       </span>
     </button>
@@ -68,6 +85,22 @@ const buttonStyle = css({
   justifyContent: "flex-start",
 });
 
+const buttonStyleMobile = css({
+  height: "56px",
+  display: "flex",
+  alignItems: "center",
+  gap: "0.75rem",
+  paddingLeft: "0",
+  paddingRight: "0.75rem",
+  justifyContent: "flex-start",
+  width: "100%",
+  border: "none",
+  backgroundColor: "transparent",
+  _hover: {
+    backgroundColor: "var(--background-default-grey-hover)!",
+  },
+});
+
 const textContainer = css({
   display: "flex",
   flexDirection: "column",
@@ -81,4 +114,11 @@ const titleLine = css({
   overflow: "hidden",
   textOverflow: "ellipsis",
   maxWidth: "9.5rem",
+});
+
+const titleLineMobile = css({
+  whiteSpace: "nowrap",
+  overflow: "hidden",
+  textOverflow: "ellipsis",
+  maxWidth: "100%",
 });

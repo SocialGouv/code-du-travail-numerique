@@ -235,7 +235,7 @@ const overlayContainer = css({
     md: "calc(100vh - 116.5px - 56px)",
     base: "calc(100vh - 92.5px)",
   },
-  zIndex: 100,
+  zIndex: 1000000,
   pointerEvents: "auto",
   overflowY: "auto",
 });

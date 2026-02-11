@@ -1,18 +1,38 @@
 import { fr } from "@codegouvfr/react-dsfr";
+import { css } from "@styled-system/css";
+import { useCallback } from "react";
 import type { NavigationItem } from "./HeaderDsfr";
 import { hasMenuLinks } from "./HeaderDsfr";
 import { NavigationMenuDropdown } from "./NavigationMenuDropdown";
 import { NavigationLinkItem } from "./NavigationLinkItem";
+import { HeaderAgreementButton } from "./HeaderAgreementButton";
 
 type HeaderNavigationProps = {
   navigation?: NavigationItem[];
   currentPath: string;
+  onAgreementClick?: () => void;
+  isAgreementOpen?: boolean;
 };
 
 export const HeaderNavigation = ({
   navigation,
   currentPath,
+  onAgreementClick,
+  isAgreementOpen,
 }: HeaderNavigationProps) => {
+  const handleMobileAgreementClick = useCallback(() => {
+    // Close the DSFR burger menu before opening the agreement modal
+    const closeBtn = document.getElementById(
+      "fr-header-mobile-overlay-button-close"
+    ) as HTMLButtonElement | null;
+    closeBtn?.click();
+
+    // Delay to let the burger menu close animation finish
+    setTimeout(() => {
+      onAgreementClick?.();
+    }, 400);
+  }, [onAgreementClick]);
+
   return (
     <div
       className={fr.cx("fr-header__menu", "fr-modal")}
@@ -56,7 +76,26 @@ export const HeaderNavigation = ({
             })}
           </ul>
         </nav>
+
+        {onAgreementClick && (
+          <div
+            className={`${fr.cx("fr-hidden-lg")} ${mobileAgreementContainer}`}
+          >
+            <HeaderAgreementButton
+              id="fr-header-agreement-button"
+              isOpen={!!isAgreementOpen}
+              onClick={handleMobileAgreementClick}
+              variant="mobile"
+            />
+          </div>
+        )}
       </div>
     </div>
   );
 };
+
+const mobileAgreementContainer = css({
+  padding: "1.25rem 0",
+  borderTop: "1px solid var(--border-default-grey)",
+  marginTop: "1rem",
+});

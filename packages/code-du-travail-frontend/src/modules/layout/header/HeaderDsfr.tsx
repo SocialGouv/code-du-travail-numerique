@@ -79,7 +79,12 @@ export const HeaderDsfr = ({ navigation, currentPath }: Props) => {
           </div>
         </div>
       </div>
-      <HeaderNavigation navigation={navigation} currentPath={currentPath} />
+      <HeaderNavigation
+        navigation={navigation}
+        currentPath={currentPath}
+        onAgreementClick={handleAgreementToggle}
+        isAgreementOpen={isAgreementOpen}
+      />
       <SearchModal isOpen={isOpen} onClose={closeModal} />
     </header>
   );
