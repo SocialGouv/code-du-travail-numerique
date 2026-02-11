@@ -7,10 +7,14 @@ import {
 export const generateSearchLink = (
   source: keyof typeof routeBySource,
   slug: string,
-  url?: string
+  url?: string,
+  parentSlug?: string
 ): string => {
   if (source === "external" && url) {
     return url;
+  }
+  if (source === "themes" && parentSlug) {
+    return `/themes/${parentSlug}#${slug}`;
   }
   return `/${getRouteBySource(source)}/${slug}`;
 };

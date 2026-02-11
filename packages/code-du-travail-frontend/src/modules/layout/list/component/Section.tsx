@@ -15,6 +15,7 @@ type Item = {
   description: string;
   slug: string;
   source: string;
+  url?: string;
 };
 
 type SectionProps = {
@@ -98,7 +99,22 @@ export const Section = forwardRef<HTMLHeadingElement, SectionProps>(
                 desc={summarize(item.description)}
                 horizontal
                 linkProps={{
-                  href: `/${getRouteBySource(item.source as keyof typeof routeBySource)}/${item.slug}`,
+                  href:
+                    item.source === "external" && item.url
+                      ? item.url
+                      : `/${getRouteBySource(item.source as keyof typeof routeBySource)}/${item.slug}`,
+                  title:
+                    item.source === "external" && item.url
+                      ? `${item.title} - nouvelle fenêtre`
+                      : undefined,
+                  target:
+                    item.source === "external" && item.url
+                      ? "_blank"
+                      : undefined,
+                  rel:
+                    item.source === "external" && item.url
+                      ? "noopener noreferrer"
+                      : undefined,
                 }}
                 size="medium"
                 title={item.title}

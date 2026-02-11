@@ -51,6 +51,7 @@ exports[`Search searchWithQuery 1`] = `
       "cdtnId": "a9ccf1d613",
       "class": "theme",
       "description": "Retrouvez les contenus relatifs au thème : Démission",
+      "parentSlug": undefined,
       "slug": "demission",
       "source": "themes",
       "title": "Démission",

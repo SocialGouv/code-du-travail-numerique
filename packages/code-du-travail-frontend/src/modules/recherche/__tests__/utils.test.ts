@@ -20,4 +20,14 @@ describe("generateSearchLink", () => {
 
     expect(result).toBe("/code-du-travail/article-l1234-5");
   });
+
+  it("should generate a theme link with parentSlug when provided", () => {
+    const source = SOURCES.THEMES;
+    const slug = "child-theme";
+    const parentSlug = "parent-theme";
+
+    const result = generateSearchLink(source, slug, undefined, parentSlug);
+
+    expect(result).toBe("/themes/parent-theme#child-theme");
+  });
 });
