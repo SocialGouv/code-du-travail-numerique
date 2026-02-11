@@ -1,5 +1,7 @@
 name: Lighthouse CI
 on:
+  schedule:
+    - cron: "0 23 * * *" # each day at 23:00
   workflow_dispatch:
     inputs:
       baseUrl:
