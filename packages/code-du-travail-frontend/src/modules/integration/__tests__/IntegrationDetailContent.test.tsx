@@ -21,7 +21,6 @@ describe("IntegrationDetailContent", () => {
           shortTitle="Modèles de documents"
           url="/widgets/modeles-de-courriers/[value]"
           host="https://example.com"
-          messages={undefined}
           id="modeles-de-courriers"
           selectOptions={[
             { value: "option1", label: "Option 1" },

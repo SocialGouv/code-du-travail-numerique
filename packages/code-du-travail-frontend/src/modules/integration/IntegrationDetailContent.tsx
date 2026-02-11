@@ -4,7 +4,6 @@ import { fr } from "@codegouvfr/react-dsfr";
 import { Select } from "@codegouvfr/react-dsfr/Select";
 import { useEffect, useState } from "react";
 import { IntegrationInstructions } from "./IntegrationInstructions";
-import { IntegrationTracking } from "./IntegrationTracking";
 import { IntegrationDetailContentProps } from "./types";
 import Link from "../common/Link";
 
@@ -14,7 +13,6 @@ export const IntegrationDetailContent = ({
   shortTitle,
   url,
   host,
-  messages,
   id,
   selectOptions,
 }: IntegrationDetailContentProps) => {
@@ -138,8 +136,6 @@ export const IntegrationDetailContent = ({
         parsedUrl={parsedUrl}
         shortTitle={shortTitle}
       />
-
-      {messages && <IntegrationTracking messages={messages} id={id} />}
 
       <p className={fr.cx("fr-mb-0")}>
         En cas de difficulté, nous vous invitons à nous contacter à
