@@ -21,6 +21,7 @@ export async function generateMetadata(props) {
     description: metaDescription,
     overrideCanonical: `${SITE_URL}/modeles-de-courriers/${slug}`,
     path: `${SITE_URL}/modeles-de-courriers/${slug}`,
+    robots: "noindex,nofollow",
   });
 }
 
