@@ -85,7 +85,6 @@ export const HeaderNavigation = ({
               id="fr-header-agreement-button"
               isOpen={!!isAgreementOpen}
               onClick={handleMobileAgreementClick}
-              variant="mobile"
             />
           </div>
         )}

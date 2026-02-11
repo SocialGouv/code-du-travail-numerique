@@ -10,15 +10,9 @@ type Props = {
   id: string;
   isOpen: boolean;
   onClick: () => void;
-  variant?: "desktop" | "mobile";
 };
 
-export const HeaderAgreementButton = ({
-  id,
-  isOpen,
-  onClick,
-  variant = "desktop",
-}: Props) => {
+export const HeaderAgreementButton = ({ id, isOpen, onClick }: Props) => {
   const { agreement } = useAgreementStorageSync();
   const { isBelow } = useBreakpoints();
   const isMobile = isBelow("lg");
@@ -27,8 +21,7 @@ export const HeaderAgreementButton = ({
     ? `${agreement.num} - ${agreement.shortTitle}`
     : "Ma convention collective";
 
-  const isMobileVariant = variant === "mobile";
-  const iconSize = isMobileVariant
+  const iconSize = isMobile
     ? { width: 32, height: 36 }
     : { width: 24, height: 28 };
 
@@ -37,7 +30,7 @@ export const HeaderAgreementButton = ({
       id={id}
       type="button"
       className={`${fr.cx("fr-btn", "fr-btn--tertiary")} ${
-        isMobileVariant ? buttonStyleMobile : buttonStyle
+        isMobile ? buttonStyleMobile : buttonStyle
       }`}
       aria-controls="agreement-modal"
       aria-haspopup="dialog"
@@ -60,14 +53,14 @@ export const HeaderAgreementButton = ({
               IDCC {agreement.num}
             </span>
             <span
-              className={`${fr.cx("fr-text--sm", "fr-mb-0")} ${isMobile || isMobileVariant ? titleLineMobile : titleLine}`}
+              className={`${fr.cx("fr-text--sm", "fr-mb-0")} ${isMobile ? titleLineMobile : titleLine}`}
             >
               {agreement.shortTitle}
             </span>
           </>
         ) : (
           <span
-            className={`${fr.cx("fr-text--sm", "fr-mb-0")} ${isMobile || isMobileVariant ? titleLineMobile : titleLine}`}
+            className={`${fr.cx("fr-text--sm", "fr-mb-0")} ${isMobile ? titleLineMobile : titleLine}`}
           >
             Ma convention collective
           </span>
