@@ -68,19 +68,6 @@ export const EnterpriseAgreementSelectionLink = ({
                             `idcc${agreement.num}`,
                             TrackingAgreementSearchAction.AGREEMENT_SEARCH
                           );
-                          if (widgetMode) {
-                            window.parent?.postMessage(
-                              {
-                                name: "agreement",
-                                kind: "select",
-                                extra: {
-                                  idcc: agreement.num,
-                                  title: agreement.title,
-                                },
-                              },
-                              "*"
-                            );
-                          }
                         },
                       }
                     : {

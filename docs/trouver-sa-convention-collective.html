@@ -26,77 +26,6 @@
         border-left: 4px solid #0053b3;
         margin: 20px 0;
       }
-      .postmessage-monitor {
-        position: fixed;
-        top: 10px;
-        right: 10px;
-        width: 350px;
-        max-height: 400px;
-        background: #ffffff;
-        border: 2px solid #0053b3;
-        border-radius: 8px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-        z-index: 10000;
-      }
-      .postmessage-monitor-header {
-        background: #0053b3;
-        color: white;
-        padding: 12px 15px;
-        border-radius: 6px 6px 0 0;
-        font-weight: bold;
-        font-size: 14px;
-      }
-      .postmessage-monitor-content {
-        padding: 15px;
-        max-height: 350px;
-        overflow-y: auto;
-      }
-      .message-item {
-        padding: 10px;
-        margin: 5px 0;
-        border-radius: 4px;
-        font-size: 13px;
-        animation: fadeIn 0.3s;
-      }
-      .message-item.agreement {
-        background-color: #e8f5e9;
-        border-left: 4px solid #4caf50;
-      }
-      .message-time {
-        font-size: 11px;
-        color: #666;
-        margin-top: 5px;
-      }
-      .no-messages {
-        text-align: center;
-        color: #999;
-        padding: 20px;
-        font-style: italic;
-      }
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-          transform: translateY(-10px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-      .clear-button {
-        background: #f44336;
-        color: white;
-        border: none;
-        padding: 6px 12px;
-        border-radius: 4px;
-        cursor: pointer;
-        font-size: 12px;
-        margin-left: 10px;
-        float: right;
-      }
-      .clear-button:hover {
-        background: #d32f2f;
-      }
     </style>
   </head>
   <body>
@@ -104,20 +33,6 @@
       <a href="./index.html" style="text-decoration: none; color: #0053b3"
         >← Retour à la home</a
       >
-    </div>
-
-    <!-- Moniteur postMessage -->
-    <div class="postmessage-monitor">
-      <div class="postmessage-monitor-header">
-        📡 Moniteur postMessage
-        <button class="clear-button" onclick="clearMessages()">Effacer</button>
-      </div>
-      <div class="postmessage-monitor-content" id="messages-container">
-        <div class="no-messages" id="no-messages">
-          En attente de messages...<br />
-          Sélectionnez une convention collective
-        </div>
-      </div>
     </div>
     <span class="version-badge"
       >Version: widget-loader.js (avec integrity)</span
@@ -138,75 +53,6 @@
     <a href="https://code.travail.gouv.fr/widgets/convention-collective"
       >Trouver sa convention collective</a
     >
-
-    <script>
-      let messageCount = 0;
-
-      function clearMessages() {
-        const container = document.getElementById("messages-container");
-        const noMessages = document.getElementById("no-messages");
-        container.innerHTML = "";
-        container.appendChild(noMessages);
-        noMessages.style.display = "block";
-        messageCount = 0;
-      }
-
-      function addMessage(idcc, title) {
-        messageCount++;
-        const container = document.getElementById("messages-container");
-        const noMessages = document.getElementById("no-messages");
-        noMessages.style.display = "none";
-
-        const messageDiv = document.createElement("div");
-        messageDiv.className = "message-item agreement";
-
-        const now = new Date().toLocaleTimeString("fr-FR");
-
-        messageDiv.innerHTML = `
-      <strong>🏢 Convention collective sélectionnée</strong><br>
-      <span style="font-size: 11px;">
-        <strong>IDCC:</strong> <code>${idcc}</code><br>
-        <strong>Nom:</strong> ${title}
-      </span>
-      <div class="message-time">⏰ ${now}</div>
-    `;
-
-        container.insertBefore(messageDiv, container.firstChild);
-
-        // Limiter à 10 messages
-        if (container.children.length > 11) {
-          // +1 pour no-messages
-          container.removeChild(container.lastChild);
-        }
-      }
-
-      // ✅ CODE CORRIGÉ : Écoute des messages postMessage de l'iframe du widget
-      window.addEventListener("message", ({ data, source }) => {
-        const iframe = document.getElementById(
-          "cdtn-iframe-convention-collective",
-        );
-
-        // ✅ Vérification que l'iframe existe
-        if (
-          iframe &&
-          source === iframe.contentWindow &&
-          data.kind === "select"
-        ) {
-          console.log("✅ Message postMessage reçu :", data);
-
-          // ✅ Utilisation de if pour exécuter des actions
-          if (data.name === "agreement") {
-            const idcc = data.extra.idcc; // id de la convention collective
-            const title = data.extra.title; // nom de la convention collective
-            console.log("✅ Convention collective sélectionnée !", {
-              idcc,
-              title,
-            });
-            addMessage(idcc, title);
-          }
-        }
-      });
-    </script>
 
     <script
       src="https://code.travail.gouv.fr/widget-loader.js"

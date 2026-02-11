@@ -21,11 +21,9 @@ export const SearchWidgetDisplay: React.FC = () => {
     const query = input?.value?.trim() ?? "";
 
     emitWidgetSubmitSearchEvent(query);
-    window.parent?.postMessage({ name: "button-search", kind: "click" }, "*");
   };
 
   const onClickLogo = () => {
-    window.parent?.postMessage({ name: "logo-link", kind: "click" }, "*");
     emitWidgetLogoClickEvent();
   };
 

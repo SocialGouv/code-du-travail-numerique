@@ -538,20 +538,6 @@ export const EnterpriseAgreementSearchInput = ({
                   ...(widgetMode ? { target: "_blank" } : {}),
                   onClick: () => {
                     emitNoEnterpriseClickEvent();
-                    if (widgetMode) {
-                      window.parent?.postMessage(
-                        {
-                          name: "agreement",
-                          kind: "select",
-                          extra: {
-                            idcc: 3239,
-                            title:
-                              "Particuliers employeurs et emploi à domicile",
-                          },
-                        },
-                        "*"
-                      );
-                    }
                   },
                 }
               : {
