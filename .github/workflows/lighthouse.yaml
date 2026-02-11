@@ -23,7 +23,7 @@ jobs:
       - name: Audit URLs using Lighthouse
         uses: treosh/lighthouse-ci-action@v12
         env:
-          LHCI_BASE_URL: ${{ github.event.inputs.baseUrl }}
+          LHCI_BASE_URL: ${{ github.event.inputs.baseUrl || 'https://code-du-travail-numerique-preprod.ovh.fabrique.social.gouv.fr' }}
         with:
           configPath: ./lighthouserc.cjs
           temporaryPublicStorage: true
