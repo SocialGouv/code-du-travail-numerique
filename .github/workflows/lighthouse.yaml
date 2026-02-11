@@ -7,7 +7,7 @@ on:
       baseUrl:
         description: "Override base URL (optional). Example: https://code-du-travail-numerique-preprod.ovh.fabrique.social.gouv.fr"
         required: false
-        default: ""
+        default: "https://code-du-travail-numerique-preprod.ovh.fabrique.social.gouv.fr"
 
 concurrency:
   cancel-in-progress: true
