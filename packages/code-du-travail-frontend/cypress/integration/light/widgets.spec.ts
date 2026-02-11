@@ -25,6 +25,14 @@ describe("Widgets - Chargement local", () => {
       title: "Calculer le préavis de départ à la retraite",
     },
     {
+      path: "/widgets/indemnite-rupture-conventionnelle",
+      title: "Calculer l'indemnité de rupture conventionnelle",
+    },
+    {
+      path: "/widgets/modeles-de-courriers/9a6cf1b40c",
+      title: "Lettre de démission",
+    },
+    {
       path: "/widgets/search",
       title: "Trouvez les réponses à vos questions en droit du travail",
     },
@@ -45,5 +53,13 @@ describe("Widgets - Chargement local", () => {
       cy.canonicalUrlEqual(expectedUrl);
       cy.contains(widget.title).should("be.visible");
     });
+  });
+
+  it("Vérification du lien de téléchargement du modèle de lettre de démission", () => {
+    cy.contains("Télécharger le Modèle de lettre - Lettre de démission").should(
+      "have.attr",
+      "href",
+      "https://cdtn-prod-public.s3.gra.io.cloud.ovh.net/preview/default/lettre_de_demission.docx"
+    );
   });
 });

@@ -22,10 +22,6 @@ export const SearchWidgetDisplay: React.FC = () => {
 
     emitWidgetSubmitSearchEvent(query);
     window.parent?.postMessage({ name: "button-search", kind: "click" }, "*");
-
-    setTimeout(() => {
-      form.submit();
-    }, 50);
   };
 
   const onClickLogo = () => {

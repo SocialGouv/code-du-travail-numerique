@@ -1,16 +1,13 @@
 import "cypress-iframe";
 
 describe("Widget - Modèles de courrier", () => {
-  it("Page widget modeles", () => {
-    cy.visit("/widgets/modeles-de-courriers/9a6cf1b40c");
-    cy.contains("Lettre de démission");
-
-    cy.contains("Télécharger le Modèle de lettre - Lettre de démission").should(
-      "have.attr",
-      "href",
-      "https://cdtn-prod-public.s3.gra.io.cloud.ovh.net/preview/default/lettre_de_demission.docx"
+  it("should display the legacy widget", () => {
+    cy.visit(
+      "https://socialgouv.github.io/code-du-travail-numerique/modeles-legacy"
     );
-    cy.canonicalUrlEqual("/modeles-de-courriers/lettre-de-demission");
+    cy.iframe()
+      .contains("LUTTE CONTRE LE HARCELEMENT SEXUEL")
+      .should("be.visible");
   });
 
   it("s'affiche bien sur un site externe", () => {
