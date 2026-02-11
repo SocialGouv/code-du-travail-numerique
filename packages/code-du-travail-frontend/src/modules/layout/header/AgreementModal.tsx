@@ -1,7 +1,6 @@
 "use client";
 
 import { fr } from "@codegouvfr/react-dsfr";
-import { Button } from "@codegouvfr/react-dsfr/Button";
 import { css } from "@styled-system/css";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
@@ -85,23 +84,19 @@ export const AgreementModal = ({ isOpen, onClose }: Props) => {
       <div className={content}>
         <div className={modalInner}>
           <div className={closeButtonContainer}>
-            <Button
-              iconId="fr-icon-close-line"
-              iconPosition="right"
+            <button
+              className={`${fr.cx("fr-btn", "fr-btn--tertiary-no-outline", "fr-icon-close-line", "fr-btn--sm")} ${closeButton}`}
               title="Fermer"
+              aria-label="Fermer"
               onClick={handleClose}
-              priority="tertiary no outline"
-              className={closeButton}
               ref={closeButtonRef}
               type="button"
-            >
-              Fermer
-            </Button>
+            />
           </div>
 
           <h1
             id="agreement-modal-title"
-            className={`${fr.cx("fr-h3", "fr-mb-2w")} ${modalTitle}`}
+            className={`${fr.cx("fr-mb-2w")} ${modalTitle}`}
           >
             Personnaliser mes réponses avec ma convention collective
           </h1>
@@ -136,7 +131,6 @@ const modalContainer = css({
 const content = css({
   backgroundColor: "var(--background-default-grey)",
   boxShadow: "0 16px 48px rgba(0, 0, 0, 0.2)",
-  borderRadius: "0.5rem",
   position: "relative",
   width: "100%",
   maxWidth: "792px",
@@ -167,5 +161,10 @@ const closeButton = css({
 });
 
 const modalTitle = css({
-  paddingRight: "4rem",
+  fontSize: "18px!",
+  lineHeight: "1.4!",
+  whiteSpace: "nowrap",
+  overflow: "hidden",
+  textOverflow: "ellipsis",
+  paddingRight: "2.5rem",
 });
