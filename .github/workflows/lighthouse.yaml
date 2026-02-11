@@ -1,11 +1,13 @@
 name: Lighthouse CI
 on:
+  schedule:
+    - cron: "0 23 * * *" # each day at 23:00
   workflow_dispatch:
     inputs:
       baseUrl:
         description: "Override base URL (optional). Example: https://code-du-travail-numerique-preprod.ovh.fabrique.social.gouv.fr"
         required: false
-        default: ""
+        default: "https://code-du-travail-numerique-preprod.ovh.fabrique.social.gouv.fr"
 
 concurrency:
   cancel-in-progress: true
@@ -16,10 +18,12 @@ jobs:
     name: Lighthouse audit
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
       - name: Audit URLs using Lighthouse
         uses: treosh/lighthouse-ci-action@v12
         env:
-          LHCI_BASE_URL: ${{ github.event.inputs.baseUrl }}
+          LHCI_BASE_URL: ${{ github.event.inputs.baseUrl || 'https://code-du-travail-numerique-preprod.ovh.fabrique.social.gouv.fr' }}
         with:
           configPath: ./lighthouserc.cjs
           temporaryPublicStorage: true
