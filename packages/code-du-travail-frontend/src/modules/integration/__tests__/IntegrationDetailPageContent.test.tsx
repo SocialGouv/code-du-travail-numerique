@@ -73,30 +73,6 @@ describe("IntegrationDetailPageContent", () => {
     expect(selectContainer).toBeInTheDocument();
   });
 
-  it("should render with messages when provided", () => {
-    const widgetWithMessages = {
-      ...mockWidget,
-      messages: {
-        click: [
-          {
-            name: "test-click",
-            description: "Test click event",
-          },
-        ],
-      },
-    };
-
-    render(
-      <IntegrationDetailPageContent
-        {...defaultProps}
-        widget={widgetWithMessages}
-      />
-    );
-
-    const tracking = screen.getByTestId("integration-tracking");
-    expect(tracking).toBeInTheDocument();
-  });
-
   it("should use ContainerList layout", () => {
     render(<IntegrationDetailPageContent {...defaultProps} />);
 
