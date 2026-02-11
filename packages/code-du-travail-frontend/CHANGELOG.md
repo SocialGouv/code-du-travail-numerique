@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.212.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.212.1...v4.212.2) (2026-02-11)
+
+
+### Bug Fixes
+
+* **agreement:** suppression de la redirection pour les CCs 1031 et 3203 ([#7109](https://github.com/SocialGouv/code-du-travail-numerique/issues/7109)) ([d31b9a3](https://github.com/SocialGouv/code-du-travail-numerique/commit/d31b9a3032825b4dd03945aa4cb149e0f8bd0a8f))
+
+
+
+
+
 ## [4.212.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.212.0...v4.212.1) (2026-02-05)
 
 
