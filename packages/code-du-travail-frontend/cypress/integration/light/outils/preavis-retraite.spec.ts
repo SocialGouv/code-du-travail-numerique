@@ -90,6 +90,7 @@ describe("Outil - Préavis de retraite", () => {
     cy.get("button").contains("Commencer").click({ force: true });
 
     // Origine du départ à la retraite
+    cy.contains("Qui est à l'origine du départ en retraite ?");
     cy.get(
       'label:contains("Le salarié décide lui-même de partir à la retraite")'
     )
@@ -110,6 +111,9 @@ describe("Outil - Préavis de retraite", () => {
     cy.get("button").contains("Suivant").click();
 
     // Informations
+    cy.contains(
+      "Le salarié concerné est-il reconnu en tant que travailleur handicapé"
+    );
     cy.get('label:contains("Oui")').first().click();
     cy.get("button").contains("Suivant").click();
 
@@ -146,6 +150,7 @@ describe("Outil - Préavis de retraite", () => {
     cy.get("button").contains("Commencer").click({ force: true });
 
     // Origine du départ à la retraite
+    cy.contains("Qui est à l'origine du départ en retraite ?");
     cy.get(
       'label:contains("Le salarié décide lui-même de partir à la retraite")'
     )
@@ -193,10 +198,16 @@ describe("Outil - Préavis de retraite", () => {
     cy.get("button").contains("Suivant").click();
 
     // Informations
+    cy.contains(
+      "Le salarié concerné est-il reconnu en tant que travailleur handicapé"
+    );
     cy.get('label:contains("Non")').first().click();
     cy.get("button").contains("Suivant").click();
 
     // Ancienneté
+    cy.contains(
+      "Le salarié a-t-il plus de 2 ans d'ancienneté dans l'entreprise"
+    );
     cy.get('label:contains("Oui")').first().click();
     cy.get("button").contains("Suivant").click();
 

@@ -42,11 +42,13 @@ describe("Outil - Préavis de licenciement", () => {
 
     cy.get("button").contains("Commencer").click({ force: true });
 
+    cy.contains("Le licenciement est-il dû à une faute grave (ou lourde)");
     cy.get('label:contains("Non")').eq(0).click();
     cy.get('label:contains("Non")').eq(1).click();
     cy.get('[id="input-seniority"]').select("2 ans et plus");
     cy.contains("Suivant").click();
 
+    cy.contains("Quel est le nom de la convention collective applicable ?");
     cy.get(
       'label:contains("Je sais quelle est ma convention collective et je la saisis.")'
     )
