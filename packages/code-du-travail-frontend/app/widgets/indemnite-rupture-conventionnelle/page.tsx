@@ -20,9 +20,9 @@ export async function generateMetadata() {
 }
 
 async function IndemniteRuptureCoWidget() {
-  const { title } = await getTool();
+  const { title, displayTitle } = await getTool();
   return (
-    <WidgetWithIframeResizer title={title}>
+    <WidgetWithIframeResizer title={displayTitle}>
       <CalculateurIndemniteRuptureCo title={title} />
     </WidgetWithIframeResizer>
   );
