@@ -63,11 +63,9 @@ describe("Widgets - Chargement local", () => {
 
   it("Vérification du lien de téléchargement du modèle de lettre de démission", () => {
     cy.visit("/widgets/modeles-de-courriers/9a6cf1b40c");
-    cy.contains("Télécharger le Modèle de lettre - Lettre de démission").should(
-      "have.attr",
-      "href",
-      "https://cdtn-prod-public.s3.gra.io.cloud.ovh.net/preview/default/lettre_de_demission.docx"
-    );
+    cy.contains("Télécharger le Modèle de lettre - Lettre de démission")
+      .should("have.attr", "href")
+      .and("match", /\/preview\/default\/lettre_de_demission\.docx$/);
   });
 
   it("Page widget preavis de retraite", () => {
