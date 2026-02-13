@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.213.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.212.2...v4.213.0) (2026-02-13)
+
+
+### Bug Fixes
+
+* **ci:** modifications des tests e2e qui ont fail sur la preprod suite à leur modification ([#7111](https://github.com/SocialGouv/code-du-travail-numerique/issues/7111)) ([c5f22ed](https://github.com/SocialGouv/code-du-travail-numerique/commit/c5f22ed7759a378e3eb9ed6a60a75dbf0b8a4dbd))
+* **ci:** normalisation du widget Indemnité de rupture conventionnelle ([#7112](https://github.com/SocialGouv/code-du-travail-numerique/issues/7112)) ([86dae1b](https://github.com/SocialGouv/code-du-travail-numerique/commit/86dae1bbd8fa9d22872ee3674b49658097da655e))
+* **e2e:** amélioration des tests pour que tout soit green ([#7114](https://github.com/SocialGouv/code-du-travail-numerique/issues/7114)) ([0acf475](https://github.com/SocialGouv/code-du-travail-numerique/commit/0acf4750f7da23ab647b6619e24e90cceb17afc3))
+* **e2e:** update canonical URL checks for widget paths in widget tests ([f74c236](https://github.com/SocialGouv/code-du-travail-numerique/commit/f74c2366ba152794aab47a406da555772b01dfb8))
+* remove CodeQL analysis workflow file ([31c344c](https://github.com/SocialGouv/code-du-travail-numerique/commit/31c344cb0a050de0be43e3a3d79eba37b47f009b))
+
+
+### Features
+
+* **widgets:** ajout des widgets en legacy et des nouveaux widgets ([#7096](https://github.com/SocialGouv/code-du-travail-numerique/issues/7096)) ([d165aa3](https://github.com/SocialGouv/code-du-travail-numerique/commit/d165aa395a02abbd9767d54ccf22853be3d206fb))
+
+
+
+
+
 ## [4.212.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.212.1...v4.212.2) (2026-02-11)
 
 
