@@ -10,7 +10,11 @@ import { FeedbackAdblock } from "./FeedbackAdblock";
 import { detectAdBlockCall } from "./AdBlockDetector";
 import { css } from "@styled-system/css";
 
-export const Feedback = () => {
+type FeedbackProps = {
+  question?: string;
+};
+
+export const Feedback = ({ question }: FeedbackProps = {}) => {
   const [viewFeedback, setViewFeedback] = useState<
     "yes" | "no" | "default" | "answered" | "adBlockDetected"
   >("default");
@@ -46,7 +50,11 @@ export const Feedback = () => {
       className={`${fr.cx("fr-highlight", "fr-p-2w", "fr-m-0")} ${hideOnPrint}`}
     >
       {viewFeedback === "default" && (
-        <FeedbackDefault onClickNo={onClickNo} onClickYes={onClickYes} />
+        <FeedbackDefault
+          onClickNo={onClickNo}
+          onClickYes={onClickYes}
+          question={question}
+        />
       )}
       {viewFeedback === "no" && (
         <FeedbackContent onSubmit={onSubmit} type="negative" />
