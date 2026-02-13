@@ -71,7 +71,7 @@ jest.mock("date-fns", () => ({
   parseISO: jest.fn().mockReturnValue(new Date("2022-01-01")),
 }));
 
-jest.mock("date-fns/locale/fr", () => ({}));
+jest.mock("date-fns/locale/fr", () => ({ fr: {} }));
 
 describe("AgreementContainer", () => {
   // Mock data avec toutes les propriétés requises

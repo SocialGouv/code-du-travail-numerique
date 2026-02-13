@@ -13,7 +13,25 @@ if (typeof window !== "undefined") {
   global.setImmediate = jest.useRealTimers;
   global.TextEncoder = require("util").TextEncoder;
   global.TextDecoder = require("util").TextDecoder;
-  global.ReadableStream = require("stream").Readable;
+
+  // Polyfills for libs (undici/@elastic) that rely on some Web APIs being present in the runtime.
+  // - undici expects MessagePort/MessageChannel to exist (browser-like globals)
+  // - some code expects ReadableStream (Web Streams)
+  try {
+    const { MessageChannel, MessagePort } = require("worker_threads");
+    global.MessageChannel ??= MessageChannel;
+    global.MessagePort ??= MessagePort;
+  } catch {
+    // ignore
+  }
+
+  try {
+    const { ReadableStream } = require("stream/web");
+    global.ReadableStream ??= ReadableStream;
+  } catch {
+    // ignore
+  }
+
   Element.prototype.scrollIntoView = jest.fn();
 }
 
@@ -48,4 +66,19 @@ jest.mock("./src/config.ts", () => ({
   SUGGEST_MAX_RESULTS: 5,
   MAX_RELATED_ITEMS_MODELS_AND_TOOLS: 2,
   MAX_RELATED_ITEMS_ARTICLES: 4,
+}));
+
+// uuid@13 ships ESM; jest runs in CJS mode here and may choke on node_modules ESM.
+// For unit tests we need deterministic *and* unique UUIDs (some tests assert ID uniqueness).
+let __uuidCounter = 0;
+
+beforeEach(() => {
+  __uuidCounter = 0;
+});
+
+jest.mock("uuid", () => ({
+  v4: () => {
+    const suffix = String(__uuidCounter++).padStart(12, "0");
+    return `00000000-0000-4000-8000-${suffix}`;
+  },
 }));

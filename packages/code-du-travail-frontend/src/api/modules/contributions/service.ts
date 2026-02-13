@@ -44,8 +44,8 @@ export const getByIdsContributions = async (
 ): Promise<ElasticSearchItem[]> => {
   const body = getContributionsByIds(ids);
   const response = await elasticsearchClient.search<any>({
-    body,
     index: elasticDocumentsIndex,
+    ...body,
   });
   return response.hits.hits.length > 0
     ? response.hits.hits.map(({ _source }) => _source)

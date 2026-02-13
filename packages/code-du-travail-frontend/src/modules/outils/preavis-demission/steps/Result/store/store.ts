@@ -1,4 +1,4 @@
-import produce from "immer";
+import { produce } from "immer";
 import * as Sentry from "@sentry/nextjs";
 import { StoreSliceWrapperPreavisDemission } from "../../store";
 import { ResultStoreData, ResultStoreSlice } from "./types";

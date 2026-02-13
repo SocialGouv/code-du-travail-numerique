@@ -4,7 +4,7 @@ import {
   ContratTravailStoreInput,
   ContratTravailStoreSlice,
 } from "./types";
-import produce from "immer";
+import { produce } from "immer";
 import { IndemniteDepartType, StoreSlice } from "../../../types";
 import { validateStep } from "./validator";
 import { AncienneteStoreSlice } from "../../Anciennete";

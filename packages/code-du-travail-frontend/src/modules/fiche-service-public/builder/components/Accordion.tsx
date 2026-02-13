@@ -41,7 +41,7 @@ export const AccordionWrapper = ({
       <SectionWithTitle
         data={child}
         headingLevel={headingLevel}
-        key={generateUUID(child)}
+        key={generateUUID()}
       />
     ));
   }
@@ -49,14 +49,14 @@ export const AccordionWrapper = ({
   const accordionItems = data.children
     .filter(isItemOfAccordion)
     .map((child: FicheSPDataChapitre) =>
-      formatAccordionItem(child, headingLevel, generateUUID(child))
+      formatAccordionItem(child, headingLevel, generateUUID())
     );
 
   const beforeAccordionElements = data.children
     .slice(0, firstIndexOfAccordionItem)
     .map((element) => (
       <ElementBuilder
-        key={generateUUID(element)}
+        key={generateUUID()}
         data={element}
         headingLevel={headingLevel}
       />
@@ -66,7 +66,7 @@ export const AccordionWrapper = ({
     .slice(firstIndexOfAccordionItem + accordionItems.length)
     .map((element) => (
       <ElementBuilder
-        key={generateUUID(element)}
+        key={generateUUID()}
         data={element}
         headingLevel={headingLevel}
       />

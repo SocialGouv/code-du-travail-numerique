@@ -1,5 +1,5 @@
 import { elasticDocumentsIndex, elasticsearchClient } from "../../api/utils";
-import { SOURCES } from "@socialgouv/cdtn-utils";
+import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
 import {
   DocumentElasticResult,
   fetchDocument,
@@ -9,7 +9,6 @@ import {
 import { Infographic } from "./type";
 import { InfographicElasticDocument } from "@socialgouv/cdtn-types";
 import { LinkedContent } from "@socialgouv/cdtn-types/build/elastic/related-items";
-import { getRouteBySource } from "@socialgouv/cdtn-utils/src/sources";
 
 export const fetchInfographics = async <
   K extends keyof InfographicElasticDocument,

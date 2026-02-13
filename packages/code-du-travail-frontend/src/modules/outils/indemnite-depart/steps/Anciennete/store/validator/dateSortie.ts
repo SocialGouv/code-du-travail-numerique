@@ -7,7 +7,7 @@ import {
 } from "date-fns";
 import { parse } from "../../../../../common/utils";
 import { AncienneteStoreError, AncienneteStoreInput } from "../types";
-import frLocale from "date-fns/locale/fr";
+import { fr as frLocale } from "date-fns/locale/fr";
 
 export const getDateSortieErrors = (
   state: AncienneteStoreInput

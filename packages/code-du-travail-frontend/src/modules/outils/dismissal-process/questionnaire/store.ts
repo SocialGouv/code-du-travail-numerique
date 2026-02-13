@@ -7,7 +7,9 @@ import {
   SlugResponses,
 } from "./type";
 import { createContext } from "react";
-import { createStore as create, StoreApi, useStore } from "zustand";
+import { createStore as create, StoreApi } from "zustand";
+import { useStoreWithEqualityFn } from "zustand/traditional";
+import { shallow } from "zustand/shallow";
 
 export type Store = {
   questionTree?: QuestionnaireQuestion;
@@ -116,4 +118,14 @@ const DossierLicenciementContext = createContext<StoreApi<Store>>(
 
 const { Provider } = DossierLicenciementContext;
 
-export { Provider, createStore, useStore, DossierLicenciementContext };
+const useDossierLicenciementStore = <T>(
+  store: StoreApi<Store>,
+  selector: (state: Store) => T
+) => useStoreWithEqualityFn(store, selector, shallow);
+
+export {
+  Provider,
+  createStore,
+  useDossierLicenciementStore as useStore,
+  DossierLicenciementContext,
+};

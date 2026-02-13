@@ -7,8 +7,8 @@ export const getSuggestions = async (q: string, size = 5) => {
   if (q.length >= minQueryLength) {
     const body = getSuggestQuery(q, size);
     const response = await elasticsearchClient.search<any>({
-      body,
       index: elasticSuggestionsIndex,
+      ...body,
     });
     return response.hits.hits.map((t) => t._source.title);
   } else {

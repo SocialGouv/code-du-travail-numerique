@@ -1,5 +1,5 @@
 import { StoreApi } from "zustand";
-import produce from "immer";
+import { produce } from "immer";
 import { validateStep } from "./validator";
 import { CommonAgreementStoreData, CommonAgreementStoreSlice } from "./types";
 import { PublicodesSimulator, supportedCcn } from "@socialgouv/modeles-social";

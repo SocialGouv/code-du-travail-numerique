@@ -1,5 +1,5 @@
-import produce from "immer";
-import { GetState, SetState } from "zustand";
+import { produce } from "immer";
+import type { StoreApi } from "zustand";
 import { SalairesStoreSlice } from "../../../steps/Salaires/store";
 import { StoreSlice } from "../../../types";
 import {
@@ -57,8 +57,8 @@ export const createAgreement2120StoreSalaires: StoreSlice<
 });
 
 const applyGenericValidation = (
-  get: GetState<Agreement2120StoreSlice & SalairesStoreSlice>,
-  set: SetState<Agreement2120StoreSlice & SalairesStoreSlice>,
+  get: StoreApi<Agreement2120StoreSlice & SalairesStoreSlice>["getState"],
+  set: StoreApi<Agreement2120StoreSlice & SalairesStoreSlice>["setState"],
   paramName: keyof Agreement2120StoreInput,
   value: any
 ) => {

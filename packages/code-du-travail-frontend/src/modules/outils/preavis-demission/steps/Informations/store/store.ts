@@ -1,4 +1,4 @@
-import produce from "immer";
+import { produce } from "immer";
 import { ValidationResponse } from "src/modules/outils/common/components/SimulatorLayout/types";
 import { StoreSliceWrapperPreavisDemission } from "../../store";
 import { InformationsStoreData, InformationsStoreSlice } from "./types";

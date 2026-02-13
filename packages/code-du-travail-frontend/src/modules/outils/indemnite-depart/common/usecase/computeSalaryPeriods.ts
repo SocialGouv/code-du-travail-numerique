@@ -1,5 +1,5 @@
 import { differenceInMonths, format, subMonths } from "date-fns";
-import frLocale from "date-fns/locale/fr";
+import { fr as frLocale } from "date-fns/locale/fr";
 import { parse } from "../../../common/utils";
 
 type Props = {

@@ -1,4 +1,6 @@
-import { createStore as create, StoreApi, useStore } from "zustand";
+import { createStore as create, StoreApi } from "zustand";
+import { useStoreWithEqualityFn } from "zustand/traditional";
+import { shallow } from "zustand/shallow";
 import {
   AgreementStoreError,
   AgreementStoreInput,
@@ -128,9 +130,14 @@ const IndemniteDepartContext = createContext<StoreApi<MainStore>>(
 
 const { Provider } = IndemniteDepartContext;
 
+const useIndemniteDepartStore = <T>(
+  store: StoreApi<MainStore>,
+  selector: (state: MainStore) => T
+) => useStoreWithEqualityFn(store, selector, shallow);
+
 export {
   Provider as IndemniteDepartProvider,
   createStore as createIndemniteDepartStore,
   IndemniteDepartContext,
-  useStore as useIndemniteDepartStore,
+  useIndemniteDepartStore,
 };
