@@ -1,5 +1,5 @@
 import React from "react";
-import { render, screen } from "@testing-library/react";
+import { render, screen, within } from "@testing-library/react";
 import { HeaderAgreementButton } from "../HeaderAgreementButton";
 
 // Mock useBreakpoints
@@ -99,6 +99,54 @@ describe("HeaderAgreementButton - Accessibility", () => {
       const button = screen.getByTestId("header-agreement-button");
       expect(button).toHaveAttribute("type", "button");
     });
+
+    it("should have aria-describedby pointing to the tooltip", () => {
+      render(
+        <HeaderAgreementButton
+          id="test-button"
+          isOpen={false}
+          onClick={mockOnClick}
+        />
+      );
+
+      const button = screen.getByTestId("header-agreement-button");
+      expect(button).toHaveAttribute("aria-describedby", "test-button-tooltip");
+    });
+  });
+
+  describe("Tooltip", () => {
+    it("should render a tooltip with the full title", () => {
+      render(
+        <HeaderAgreementButton
+          id="test-button"
+          isOpen={false}
+          onClick={mockOnClick}
+        />
+      );
+
+      const tooltip = document.getElementById("test-button-tooltip");
+      expect(tooltip).toBeInTheDocument();
+      expect(tooltip).toHaveAttribute("role", "tooltip");
+      expect(tooltip).toHaveTextContent("Ma convention collective");
+    });
+
+    it("should render tooltip with agreement details when selected", () => {
+      agreementValue = mockAgreement;
+
+      render(
+        <HeaderAgreementButton
+          id="test-button"
+          isOpen={false}
+          onClick={mockOnClick}
+        />
+      );
+
+      const tooltip = document.getElementById("test-button-tooltip");
+      expect(tooltip).toBeInTheDocument();
+      expect(tooltip).toHaveTextContent(
+        "Ma convention collective : IDCC 1486 - Bureaux d'études techniques"
+      );
+    });
   });
 
   describe("Button title and accessible name", () => {
@@ -161,7 +209,10 @@ describe("HeaderAgreementButton - Accessibility", () => {
         />
       );
 
-      expect(screen.getByText("Ma convention collective")).toBeInTheDocument();
+      const button = screen.getByTestId("header-agreement-button");
+      expect(
+        within(button).getByText("Ma convention collective")
+      ).toBeInTheDocument();
     });
 
     it("should display IDCC number and short title when agreement is set", () => {
@@ -175,9 +226,10 @@ describe("HeaderAgreementButton - Accessibility", () => {
         />
       );
 
-      expect(screen.getByText("IDCC 1486")).toBeInTheDocument();
+      const button = screen.getByTestId("header-agreement-button");
+      expect(within(button).getByText("IDCC 1486")).toBeInTheDocument();
       expect(
-        screen.getByText("Bureaux d'études techniques")
+        within(button).getByText("Bureaux d'études techniques")
       ).toBeInTheDocument();
     });
   });
