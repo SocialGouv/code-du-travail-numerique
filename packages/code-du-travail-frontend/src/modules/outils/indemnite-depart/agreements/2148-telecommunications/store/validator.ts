@@ -1,4 +1,4 @@
-import produce from "immer";
+import { produce } from "immer";
 import { StoreApi } from "zustand";
 import { deepEqualObject } from "src/modules/utils/object";
 import { validateSalaryPeriods } from "../../../steps/Salaires/store/validator";

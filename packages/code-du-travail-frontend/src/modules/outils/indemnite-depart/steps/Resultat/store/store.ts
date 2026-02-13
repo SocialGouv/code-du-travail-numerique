@@ -9,7 +9,7 @@ import { mapToPublicodesSituationForIndemniteLicenciementConventionnelWithValues
 import { AncienneteStoreSlice } from "../../Anciennete";
 import { ContratTravailStoreSlice } from "../../ContratTravail";
 import { SalairesStoreSlice } from "../../Salaires/store";
-import produce from "immer";
+import { produce } from "immer";
 import { ResultStoreData, ResultStoreSlice } from "./types";
 import { CommonInformationsStoreSlice } from "../../Informations/store";
 import { isParentalNoticeHiddenForAgreement } from "../../../agreements/messages";

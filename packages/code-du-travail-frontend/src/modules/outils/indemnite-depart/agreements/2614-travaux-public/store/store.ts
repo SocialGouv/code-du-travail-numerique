@@ -1,4 +1,4 @@
-import produce from "immer";
+import { produce } from "immer";
 import { StoreApi } from "zustand";
 import { SalairesStoreSlice } from "../../../steps/Salaires/store";
 import { StoreSlice } from "../../../types";

@@ -4,7 +4,7 @@ import {
   SeniorityStoreInput,
   SeniorityStoreSlice,
 } from "./types";
-import produce from "immer";
+import { produce } from "immer";
 import { validateStep } from "./validator";
 import { StoreSliceWrapperPreavisRetraite } from "../../store";
 import { sendEvent } from "@socialgouv/matomo-next";

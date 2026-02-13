@@ -1,4 +1,6 @@
-import { createStore as create, StoreApi, useStore } from "zustand";
+import { createStore as create, StoreApi } from "zustand";
+import { useStoreWithEqualityFn } from "zustand/traditional";
+import { shallow } from "zustand/shallow";
 import { createContext } from "react";
 import { createAgreementStore, AgreementStoreSlice } from "./Agreement/store";
 import {
@@ -55,9 +57,14 @@ const IndemnitePrecariteContext = createContext<StoreApi<MainStore>>(
 
 const { Provider } = IndemnitePrecariteContext;
 
+const useIndemnitePrecariteStore = <T>(
+  store: StoreApi<MainStore>,
+  selector: (state: MainStore) => T
+) => useStoreWithEqualityFn(store, selector, shallow);
+
 export {
   Provider as IndemnitePrecariteProvider,
   createStore as createIndemnitePrecariteStore,
   IndemnitePrecariteContext,
-  useStore as useIndemnitePrecariteStore,
+  useIndemnitePrecariteStore,
 };

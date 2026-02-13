@@ -1,11 +1,11 @@
-import produce from "immer";
-import { GetState, SetState } from "zustand";
+import { produce } from "immer";
+import type { StoreApi } from "zustand";
 import { MainStore } from "../../../store";
 import { Agreement2120StoreInput, Agreement2120StoreSlice } from "./types";
 
 export const validateAgreement2120 = (
-  get: GetState<MainStore>,
-  set: SetState<MainStore>
+  get: StoreApi<MainStore>["getState"],
+  set: StoreApi<MainStore>["setState"]
 ) => {
   const { isValid, errorState } = validateStep(get().agreement2120Data.input);
   set(

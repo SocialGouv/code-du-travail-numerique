@@ -1,5 +1,5 @@
 import { StoreApi } from "zustand";
-import produce from "immer";
+import { produce } from "immer";
 import { isValidField, validateStep } from "./validator";
 import { InformationsStoreData, InformationsStoreSlice } from "./types";
 import { MissingArgs } from "@socialgouv/modeles-social";

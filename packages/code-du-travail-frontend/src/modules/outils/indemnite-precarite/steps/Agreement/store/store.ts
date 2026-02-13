@@ -1,5 +1,5 @@
 import { StoreApi } from "zustand";
-import produce from "immer";
+import { produce } from "immer";
 import { PublicodesSimulator } from "@socialgouv/modeles-social";
 import { AgreementStoreData, AgreementStoreSlice } from "./types";
 import { validateStep } from "./validator";

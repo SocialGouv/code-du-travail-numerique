@@ -12,8 +12,8 @@ export const getIdccByQuery = async (query: string, size?: number) => {
   const body: any = getIdccBody({ idccQuery, query, size });
 
   const response = await elasticsearchClient.search<any>({
-    body,
     index: elasticDocumentsIndex,
+    ...body,
   });
 
   const { took, ...rest } = response;
@@ -26,19 +26,17 @@ export const ensureIdccsInstantiated = async (): Promise<void> => {
   if (idccs.size < 1) {
     idccs = await elasticsearchClient
       .search<any>({
-        body: {
-          size: 1000,
-          _source: ["id"],
-          query: {
-            bool: {
-              filter: [
-                { term: { source: SOURCES.CCN } },
-                { term: { isPublished: true } },
-              ],
-            },
+        index: elasticDocumentsIndex,
+        size: 1000,
+        _source: ["id"],
+        query: {
+          bool: {
+            filter: [
+              { term: { source: SOURCES.CCN } },
+              { term: { isPublished: true } },
+            ],
           },
         },
-        index: elasticDocumentsIndex,
       })
       .then(
         (r) =>

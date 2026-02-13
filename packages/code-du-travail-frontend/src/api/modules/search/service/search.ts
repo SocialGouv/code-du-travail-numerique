@@ -44,8 +44,8 @@ export const searchWithQuery = async (
   const esReq = getRelatedThemesBody(query);
   const themes = await elasticsearchClient
     .search<any>({
-      body: esReq,
       index: elasticDocumentsIndex,
+      ...esReq,
     })
     .then((r) =>
       extractHits(r).map(esDocToSearchResult(SEARCH_ALGO.FULL_TEXT))

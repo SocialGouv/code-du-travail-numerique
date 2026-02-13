@@ -10,7 +10,7 @@ export const fetchDocument = async <
   body: estypes.SearchRequest
 ): Promise<DocumentElasticResult<V> | undefined> => {
   const response = await elasticsearchClient.search<V>({
-    _source: fields,
+    _source: fields as unknown as string[],
     index: elasticDocumentsIndex,
     ...body,
     size: 1,

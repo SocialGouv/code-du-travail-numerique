@@ -1,4 +1,6 @@
-import { createStore as create, StoreApi, useStore } from "zustand";
+import { createStore as create, StoreApi } from "zustand";
+import { useStoreWithEqualityFn } from "zustand/traditional";
+import { shallow } from "zustand/shallow";
 import { createContext } from "react";
 import { createAgreementStore, AgreementStoreSlice } from "./Agreement/store";
 import {
@@ -49,9 +51,14 @@ const HeuresRechercheEmploiContext = createContext<StoreApi<MainStore>>(
 
 const { Provider } = HeuresRechercheEmploiContext;
 
+const useHeuresRechercheEmploiStore = <T>(
+  store: StoreApi<MainStore>,
+  selector: (state: MainStore) => T
+) => useStoreWithEqualityFn(store, selector, shallow);
+
 export {
   Provider as HeuresRechercheEmploiProvider,
   createStore as createHeuresRechercheEmploiStore,
   HeuresRechercheEmploiContext,
-  useStore as useHeuresRechercheEmploiStore,
+  useHeuresRechercheEmploiStore,
 };

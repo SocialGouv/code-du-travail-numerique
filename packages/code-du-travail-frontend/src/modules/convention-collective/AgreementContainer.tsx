@@ -5,7 +5,7 @@ import { fr } from "@codegouvfr/react-dsfr";
 import { ElasticAgreement } from "@socialgouv/cdtn-types";
 import { RelatedItem } from "../documents";
 import { format, parseISO } from "date-fns";
-import frLocale from "date-fns/locale/fr";
+import { fr as frLocale } from "date-fns/locale/fr";
 import { FrequentQuestions } from "./FrequentQuestions";
 import { AgreementArticles } from "./AgreementArticles";
 import { LegiFranceSearch } from "./LegiFranceSearch";

@@ -10,8 +10,8 @@ async function getGlossaryData() {
   const body = getGlossaryBody();
 
   const response = await elasticsearchClient.search<any>({
-    body,
     index: elasticDocumentsIndex,
+    ...body,
   });
 
   if (response.hits.hits.length === 0) {
