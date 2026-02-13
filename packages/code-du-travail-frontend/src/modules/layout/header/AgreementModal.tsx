@@ -17,6 +17,7 @@ export const AgreementModal = ({ isOpen, onClose }: Props) => {
   const closeButtonRef = useRef<HTMLButtonElement>(null);
   const [blockScroll, allowScroll] = useScrollBlock();
   const [mounted, setMounted] = useState(false);
+  const previousActiveElementRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
     setMounted(true);
@@ -25,7 +26,14 @@ export const AgreementModal = ({ isOpen, onClose }: Props) => {
   const handleClose = useCallback(() => {
     onClose();
 
+    // Restore focus to the trigger button that opened the modal
     setTimeout(() => {
+      if (previousActiveElementRef.current) {
+        previousActiveElementRef.current.focus();
+        previousActiveElementRef.current = null;
+        return;
+      }
+
       const desktopBtn = document.getElementById(
         "fr-header-agreement-button-desktop"
       ) as HTMLButtonElement | null;
@@ -37,14 +45,18 @@ export const AgreementModal = ({ isOpen, onClose }: Props) => {
     }, 100);
   }, [onClose]);
 
+  // Store the element that had focus before the modal opened
   useEffect(() => {
     if (isOpen) {
+      previousActiveElementRef.current =
+        document.activeElement as HTMLElement | null;
       blockScroll();
     } else {
       allowScroll();
     }
   }, [isOpen, blockScroll, allowScroll]);
 
+  // Focus the close button when the modal opens
   useEffect(() => {
     if (!isOpen) return;
     const focusTimer = setTimeout(() => {
@@ -53,11 +65,20 @@ export const AgreementModal = ({ isOpen, onClose }: Props) => {
     return () => clearTimeout(focusTimer);
   }, [isOpen]);
 
+  // Handle Escape key - check if an autocomplete dropdown is open first
   useEffect(() => {
     if (!isOpen) return;
 
     const handleEscape = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
+        // Check if any autocomplete dropdown is open inside the modal
+        const openListboxes = modalRef.current?.querySelectorAll(
+          '[role="listbox"] [role="option"]'
+        );
+        if (openListboxes && openListboxes.length > 0) {
+          // Let the autocomplete component handle this Escape first
+          return;
+        }
         handleClose();
       }
     };
@@ -66,7 +87,42 @@ export const AgreementModal = ({ isOpen, onClose }: Props) => {
     return () => document.removeEventListener("keydown", handleEscape);
   }, [isOpen, handleClose]);
 
-  if (!isOpen || !mounted) return null;
+  // Focus trap: keep Tab cycling within the modal
+  useEffect(() => {
+    if (!isOpen || !modalRef.current) return;
+
+    const modal = modalRef.current;
+
+    const handleTab = (event: KeyboardEvent) => {
+      if (event.key !== "Tab") return;
+
+      const focusableElements = modal.querySelectorAll<HTMLElement>(
+        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+      );
+
+      if (focusableElements.length === 0) return;
+
+      const firstFocusable = focusableElements[0];
+      const lastFocusable = focusableElements[focusableElements.length - 1];
+
+      if (event.shiftKey) {
+        if (document.activeElement === firstFocusable) {
+          event.preventDefault();
+          lastFocusable?.focus();
+        }
+      } else {
+        if (document.activeElement === lastFocusable) {
+          event.preventDefault();
+          firstFocusable?.focus();
+        }
+      }
+    };
+
+    document.addEventListener("keydown", handleTab);
+    return () => document.removeEventListener("keydown", handleTab);
+  }, [isOpen]);
+
+  if (!mounted) return null;
 
   const modalContent = (
     <div
@@ -76,18 +132,19 @@ export const AgreementModal = ({ isOpen, onClose }: Props) => {
       role="dialog"
       aria-modal="true"
       aria-labelledby="agreement-modal-title"
+      hidden={!isOpen}
       style={{ zIndex: 2147483647 }}
       onClick={(e) => {
         if (e.target === e.currentTarget) handleClose();
       }}
     >
-      <div className={content}>
+      <div className={content} role="document">
         <div className={modalInner}>
           <div className={closeButtonContainer}>
             <button
               className={`${fr.cx("fr-btn", "fr-btn--tertiary-no-outline", "fr-icon-close-line", "fr-btn--sm")} ${closeButton}`}
-              title="Fermer"
-              aria-label="Fermer"
+              title="Fermer la fenêtre de sélection de convention collective"
+              aria-label="Fermer la fenêtre de sélection de convention collective"
               onClick={handleClose}
               ref={closeButtonRef}
               type="button"
@@ -125,6 +182,9 @@ const modalContainer = css({
   backgroundColor: "rgba(0, 0, 0, 0.5)",
   md: {
     padding: "2rem",
+  },
+  "&[hidden]": {
+    display: "none",
   },
 });
 

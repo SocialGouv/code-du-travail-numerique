@@ -3,7 +3,7 @@
 import Button from "@codegouvfr/react-dsfr/Button";
 import { fr } from "@codegouvfr/react-dsfr";
 import { css } from "@styled-system/css";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import type { Agreement } from "src/modules/outils/indemnite-depart/types";
 import { AgreementSelectionForm } from "./AgreementSelectionForm";
 import { useAgreementStorageSync } from "./useAgreementStorageSync";
@@ -12,26 +12,68 @@ type Props = {
   onClose: () => void;
 };
 
+export const AGREEMENT_A11Y_MESSAGES = {
+  AGREEMENT_SAVED: (title: string) =>
+    `Convention collective ${title} enregistrée avec succès`,
+  AGREEMENT_CLEARED:
+    "Convention collective supprimée. Vous pouvez en sélectionner une nouvelle.",
+} as const;
+
 export const AgreementSelectionModalContent = ({ onClose }: Props) => {
   const { agreement, setAgreement, clearAgreement } = useAgreementStorageSync();
   const [isEditing, setIsEditing] = useState(false);
+  const [liveRegionMessage, setLiveRegionMessage] = useState("");
+  const editButtonRef = useRef<HTMLButtonElement>(null);
+
+  const announceToScreenReader = (message: string) => {
+    // Clear then re-set to ensure screen readers re-announce
+    setLiveRegionMessage("");
+    setTimeout(() => {
+      setLiveRegionMessage(message);
+    }, 100);
+  };
 
   const handleSelect = (nextAgreement: Agreement) => {
     setAgreement(nextAgreement);
     setIsEditing(false);
+    announceToScreenReader(
+      AGREEMENT_A11Y_MESSAGES.AGREEMENT_SAVED(
+        `${nextAgreement.shortTitle} (IDCC ${nextAgreement.num})`
+      )
+    );
+  };
+
+  const handleEdit = () => {
+    setIsEditing(true);
+    announceToScreenReader(AGREEMENT_A11Y_MESSAGES.AGREEMENT_CLEARED);
   };
 
   if (agreement && !isEditing) {
     return (
       <div>
+        {/* Live region for screen reader announcements */}
+        <div
+          role="status"
+          aria-live="polite"
+          aria-atomic="true"
+          className={liveRegionStyle}
+        >
+          {liveRegionMessage}
+        </div>
+
         <div className={selectedContainer}>
-          <p className={fr.cx("fr-mb-2w", "fr-text--bold", "fr-text--lg")}>
+          <p
+            className={fr.cx("fr-mb-2w", "fr-text--bold", "fr-text--lg")}
+            id="agreement-selection-label"
+          >
             Les réponses seront personnalisées pour la convention collective :
           </p>
 
           <div
             className={selectedCard}
             data-testid="header-selected-agreement-card"
+            role="region"
+            aria-labelledby="agreement-selection-label"
           >
             <p
               className={fr.cx("fr-mb-0")}
@@ -47,12 +89,11 @@ export const AgreementSelectionModalContent = ({ onClose }: Props) => {
             Fermer
           </Button>
           <Button
+            ref={editButtonRef}
             priority="primary"
             iconId="fr-icon-arrow-go-back-line"
             iconPosition="right"
-            onClick={() => {
-              setIsEditing(true);
-            }}
+            onClick={handleEdit}
             type="button"
           >
             Modifier
@@ -64,6 +105,16 @@ export const AgreementSelectionModalContent = ({ onClose }: Props) => {
 
   return (
     <div>
+      {/* Live region for screen reader announcements */}
+      <div
+        role="status"
+        aria-live="polite"
+        aria-atomic="true"
+        className={liveRegionStyle}
+      >
+        {liveRegionMessage}
+      </div>
+
       <div className={infoBox}>
         <AgreementSelectionForm
           defaultAgreement={agreement}
@@ -135,4 +186,16 @@ const infoTextTopAligned = css({
     alignSelf: "flex-start",
     marginTop: "0.25rem",
   },
+});
+
+const liveRegionStyle = css({
+  position: "absolute",
+  width: "1px",
+  height: "1px",
+  padding: "0",
+  margin: "-1px",
+  overflow: "hidden",
+  clip: "rect(0, 0, 0, 0)",
+  whiteSpace: "nowrap",
+  border: "0",
 });
