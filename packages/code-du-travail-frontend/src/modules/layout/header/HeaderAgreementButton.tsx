@@ -18,55 +18,67 @@ export const HeaderAgreementButton = ({ id, isOpen, onClick }: Props) => {
   const isMobile = isBelow("lg");
 
   const fullTitle = agreement
-    ? `${agreement.num} - ${agreement.shortTitle}`
+    ? `IDCC ${agreement.num} - ${agreement.shortTitle}`
     : "Ma convention collective";
 
   const iconSize = isMobile
     ? { width: 32, height: 36 }
     : { width: 24, height: 28 };
 
+  const tooltipId = `${id}-tooltip`;
+
   return (
-    <button
-      id={id}
-      type="button"
-      className={`${fr.cx("fr-btn", "fr-btn--tertiary")} ${
-        isMobile ? buttonStyleMobile : buttonStyle
-      }`}
-      aria-controls="agreement-modal"
-      aria-haspopup="dialog"
-      aria-expanded={isOpen}
-      onClick={onClick}
-      data-testid="header-agreement-button"
-      title={fullTitle}
-    >
-      <Image
-        src="/static/assets/icons/search_agreement.svg"
-        alt=""
-        width={iconSize.width}
-        height={iconSize.height}
-        aria-hidden
-      />
-      <span className={textContainer}>
-        {agreement ? (
-          <>
-            <span className={fr.cx("fr-text--xs", "fr-mb-0")}>
-              IDCC {agreement.num}
-            </span>
+    <>
+      <button
+        id={id}
+        type="button"
+        className={`${fr.cx("fr-btn", "fr-btn--tertiary")} ${
+          isMobile ? buttonStyleMobile : buttonStyle
+        }`}
+        aria-controls="agreement-modal"
+        aria-haspopup="dialog"
+        aria-expanded={isOpen}
+        aria-describedby={tooltipId}
+        onClick={onClick}
+        data-testid="header-agreement-button"
+        title={fullTitle}
+      >
+        <Image
+          src="/static/assets/icons/search_agreement.svg"
+          alt=""
+          width={iconSize.width}
+          height={iconSize.height}
+          aria-hidden
+        />
+        <span className={textContainer}>
+          {agreement ? (
+            <>
+              <span className={fr.cx("fr-text--xs", "fr-mb-0")}>
+                IDCC {agreement.num}
+              </span>
+              <span
+                className={`${fr.cx("fr-text--sm", "fr-mb-0")} ${isMobile ? titleLineMobile : titleLine}`}
+              >
+                {agreement.shortTitle}
+              </span>
+            </>
+          ) : (
             <span
               className={`${fr.cx("fr-text--sm", "fr-mb-0")} ${isMobile ? titleLineMobile : titleLine}`}
             >
-              {agreement.shortTitle}
+              Ma convention collective
             </span>
-          </>
-        ) : (
-          <span
-            className={`${fr.cx("fr-text--sm", "fr-mb-0")} ${isMobile ? titleLineMobile : titleLine}`}
-          >
-            Ma convention collective
-          </span>
-        )}
+          )}
+        </span>
+      </button>
+      <span
+        className={fr.cx("fr-tooltip", "fr-placement")}
+        id={tooltipId}
+        role="tooltip"
+      >
+        {fullTitle}
       </span>
-    </button>
+    </>
   );
 };
 
