@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from "react";
 import { useSearchParams } from "next/navigation";
 import { Button } from "@codegouvfr/react-dsfr/Button";
 import { fr } from "@codegouvfr/react-dsfr";
+import { Feedback } from "../layout/feedback";
 import { SearchBar } from "./SearchBar";
 import { SearchCard } from "./Card";
 import { SOURCES } from "@socialgouv/cdtn-utils";
@@ -179,6 +180,10 @@ export const SearchPageClient: React.FC<SearchPageClientProps> = ({
               </div>
             </div>
           )}
+
+          <div className={fr.cx("fr-mt-6w")}>
+            <Feedback question="Ces résultats sont-ils pertinents pour votre recherche ?" />
+          </div>
 
           {codeArticles.length > 0 && (
             <section className={fr.cx("fr-mt-6w")}>
