@@ -23,10 +23,10 @@ export function getSuggestQuery(query, size) {
           },
           {
             rank_feature: {
-              boost: 10,
+              boost: 3,
               field: "ranking",
               log: {
-                scaling_factor: 1,
+                scaling_factor: 10,
               },
             },
           },
