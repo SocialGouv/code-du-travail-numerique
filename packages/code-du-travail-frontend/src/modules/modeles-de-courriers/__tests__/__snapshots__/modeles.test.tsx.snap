@@ -64,11 +64,15 @@ exports[`<LetterModel /> affiche un modèle de document 1`] = `
         Mis à jour le : 
         12/02/2020
       </p>
-      <p
+      <div
         class="fr-highlight fr-mb-6w"
       >
-        Ceci est mon intro
-      </p>
+        <p
+          class="fr-mt-2w"
+        >
+          Ceci est mon intro
+        </p>
+      </div>
       <div
         class="fr-hidden-md"
       >
@@ -154,7 +158,7 @@ exports[`<LetterModel /> affiche un modèle de document 1`] = `
         class="fr-alert fr-alert--info fr-mb-6w fr-alert--sm"
       >
         <p>
-          Attention, chaque modèle de lettre proposé est à personnaliser selon votre situation et est susceptible d’évoluer suite à des changements de réglementation. Assurez-vous d’avoir la dernière version mise à jour avant toute utilisation.
+          Attention, chaque modèle de lettre proposé est à personnaliser selon votre situation et est susceptible d'évoluer suite à des changements de réglementation. Assurez-vous d'avoir la dernière version mise à jour avant toute utilisation.
         </p>
       </div>
       <div

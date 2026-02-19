@@ -1,7 +1,7 @@
 import { fr } from "@codegouvfr/react-dsfr";
 import Html from "../../common/Html";
 import { css } from "@styled-system/css";
-import { getDisclaimer } from "../helpers";
+import { getDisclaimer, wrapInParagraphIfNeeded } from "../helpers";
 import { DownloadTile } from "./DownloadTile";
 import { CopyButton } from "./CopyButton";
 import "../../../../public/static/modeles.css";
@@ -30,9 +30,12 @@ export const LetterModelContent = ({
     <>
       <p className={fr.cx("fr-mb-6w")}>Mis à jour le&nbsp;: {date}</p>
       {intro && (
-        <p className={`${fr.cx("fr-highlight", "fr-mb-6w")}`}>
-          <DisplayContent content={intro} titleLevel={2} />
-        </p>
+        <div className={fr.cx("fr-highlight", "fr-mb-6w")}>
+          <DisplayContent
+            content={wrapInParagraphIfNeeded(intro)}
+            titleLevel={2}
+          />
+        </div>
       )}
       <div className={fr.cx("fr-hidden-md")}>
         <div className={fr.cx("fr-mb-6w")}>
