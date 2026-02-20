@@ -79,10 +79,10 @@ export const searchWithQuery = async (
   }
 
   const searches = {};
-  const shouldRequestCdt = articles.length < 5;
+  const shouldRequestCdt = removeDuplicate(articles).length < 5;
 
   // if not enough prequalified results, we also trigger ES search
-  if (documents.length < size) {
+  if (removeDuplicate(documents).length < size) {
     searches[DOCUMENTS_ES] = [
       { index: elasticDocumentsIndex },
       getSearchBody(query, size, sources),
