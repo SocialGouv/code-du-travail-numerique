@@ -19,6 +19,7 @@ import { MatomoAnalytics } from "./MatomoAnalytics";
 import { SearchModalProvider } from "../recherche/modal/SearchModalContext";
 import { NonceProvider } from "./NonceContext";
 import { GovernmentOrganizationJsonLd, WebSiteJsonLd } from "../seo/jsonld";
+import { Tally } from "./Tally";
 
 type Props = {
   children: React.ReactNode;
@@ -38,6 +39,7 @@ export default function DefaultLayout({
 }: Props) {
   const lang = "fr";
   const pathname = usePathname() || "";
+  const isWidgetPage = pathname.startsWith("/widgets");
   const showCookieBanner = shouldShowCookieBanner(pathname);
   const heatMapEnabled = isHeatmapEnabled(pathname);
 
@@ -73,13 +75,14 @@ export default function DefaultLayout({
           >
             <SearchModalProvider>
               {children}
-              {showCookieBanner && (
+              {showCookieBanner && !isWidgetPage && (
                 <ConsentManager
                   adsEnabled={isAdsEnabled()}
                   heatmapEnabled={isHeatmapEnabled()}
                 />
               )}
             </SearchModalProvider>
+            {!isWidgetPage && <Tally id={"q4d4Z2"} />}
           </DsfrProvider>
           <MatomoAnalytics heatmapEnabled={heatMapEnabled} />
           {ENV === "development" && <SentryTest />}
