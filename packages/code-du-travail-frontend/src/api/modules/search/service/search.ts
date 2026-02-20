@@ -8,7 +8,7 @@ import {
 import { removeDuplicate } from "../utils";
 import { getPrequalifiedResults } from "./prequalified";
 import { presearch } from "./presearch";
-import { SEARCH_ALGO, SearchResponse, SearchResult } from "./types";
+import { SEARCH_ALGO, SearchResult } from "./types";
 import { esDocToSearchResult, extractHits } from "../utils";
 
 export const DEFAULT_PRESEARCH_RESULTS_NUMBER = 8;
@@ -23,8 +23,14 @@ const CDT_ES = "cdt_es";
 
 export const searchWithQuery = async (
   query: string,
-  sizeParams = DEFAULT_RESULTS_NUMBER
-): Promise<SearchResponse> => {
+  sizeParams = DEFAULT_RESULTS_NUMBER,
+  withPQ = false
+): Promise<{
+  articles: SearchResult[];
+  themes: SearchResult[];
+  documents: SearchResult[];
+  class: string;
+}> => {
   const size = Math.min(sizeParams, MAX_RESULTS);
 
   const sources = [
@@ -56,7 +62,7 @@ export const searchWithQuery = async (
   const documents: SearchResult[] = parsed.results.slice(0, size);
 
   // check prequalified requests : to be removed soon
-  const prequalifiedResults = await getPrequalifiedResults(query);
+  const prequalifiedResults = withPQ ? await getPrequalifiedResults(query) : [];
 
   const mappedPrequa: SearchResult[] = prequalifiedResults.map(
     esDocToSearchResult(SEARCH_ALGO.PREQUA)
@@ -73,10 +79,10 @@ export const searchWithQuery = async (
   }
 
   const searches = {};
-  const shouldRequestCdt = articles.length < 5;
+  const shouldRequestCdt = removeDuplicate(articles).length < 5;
 
   // if not enough prequalified results, we also trigger ES search
-  if (documents.length < size) {
+  if (removeDuplicate(documents).length < size) {
     searches[DOCUMENTS_ES] = [
       { index: elasticDocumentsIndex },
       getSearchBody(query, size, sources),
