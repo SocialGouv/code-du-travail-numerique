@@ -110,7 +110,7 @@ ENV NEXT_TELEMETRY_DISABLED=1
 WORKDIR /app
 
 # Copy deployed standalone files (with real node_modules, not symlinks)
-COPY --from=builder --chown=1000:1000 --chmod=555 /app/deploy /app
+COPY --from=builder /app/deploy /app
 
 USER 1000
 
