@@ -8,7 +8,7 @@ import {
 import { removeDuplicate } from "../utils";
 import { getPrequalifiedResults } from "./prequalified";
 import { presearch } from "./presearch";
-import { SEARCH_ALGO, SearchResponse, SearchResult } from "./types";
+import { SEARCH_ALGO, SearchResult } from "./types";
 import { esDocToSearchResult, extractHits } from "../utils";
 
 export const DEFAULT_PRESEARCH_RESULTS_NUMBER = 8;
