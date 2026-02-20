@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.215.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.214.0...v4.215.0) (2026-02-20)
+
+
+### Bug Fixes
+
+* **html:** gestion des listes et des informations dans la page de `modèle de documents` ([#7117](https://github.com/SocialGouv/code-du-travail-numerique/issues/7117)) ([b1d470d](https://github.com/SocialGouv/code-du-travail-numerique/commit/b1d470d8ad29f54ef5cf158e394dc9fb20dc5597))
+
+
+### Features
+
+* **search:** search improvements ([#7107](https://github.com/SocialGouv/code-du-travail-numerique/issues/7107)) ([76bc2aa](https://github.com/SocialGouv/code-du-travail-numerique/commit/76bc2aa88668fa9cbbc1e0f172520eff6da07082))
+
+
+
+
+
 # [4.214.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.213.0...v4.214.0) (2026-02-17)
 
 
