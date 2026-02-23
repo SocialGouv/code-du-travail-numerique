@@ -19,7 +19,6 @@ import { MatomoAnalytics } from "./MatomoAnalytics";
 import { SearchModalProvider } from "../recherche/modal/SearchModalContext";
 import { NonceProvider } from "./NonceContext";
 import { GovernmentOrganizationJsonLd, WebSiteJsonLd } from "../seo/jsonld";
-import { Tally } from "./Tally";
 
 type Props = {
   children: React.ReactNode;
@@ -82,7 +81,6 @@ export default function DefaultLayout({
                 />
               )}
             </SearchModalProvider>
-            {!isWidgetPage && <Tally id={"q4d4Z2"} />}
           </DsfrProvider>
           <MatomoAnalytics heatmapEnabled={heatMapEnabled} />
           {ENV === "development" && <SentryTest />}
