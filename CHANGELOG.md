@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.216.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.215.0...v4.216.0) (2026-02-23)
+
+
+### Features
+
+* **tally:** ajout d'un formulaire pour le sondage sur les accords d'entreprise ([#7121](https://github.com/SocialGouv/code-du-travail-numerique/issues/7121)) ([11a1b82](https://github.com/SocialGouv/code-du-travail-numerique/commit/11a1b826fa91f1954598dcf7858dfd411884ec06))
+
+
+
+
+
 # [4.215.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.214.0...v4.215.0) (2026-02-20)
 
 
