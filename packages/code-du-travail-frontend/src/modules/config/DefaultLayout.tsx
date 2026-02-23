@@ -38,6 +38,7 @@ export default function DefaultLayout({
 }: Props) {
   const lang = "fr";
   const pathname = usePathname() || "";
+  const isWidgetPage = pathname.startsWith("/widgets");
   const showCookieBanner = shouldShowCookieBanner(pathname);
   const heatMapEnabled = isHeatmapEnabled(pathname);
 
@@ -73,7 +74,7 @@ export default function DefaultLayout({
           >
             <SearchModalProvider>
               {children}
-              {showCookieBanner && (
+              {showCookieBanner && !isWidgetPage && (
                 <ConsentManager
                   adsEnabled={isAdsEnabled()}
                   heatmapEnabled={isHeatmapEnabled()}

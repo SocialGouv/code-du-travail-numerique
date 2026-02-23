@@ -7,6 +7,8 @@ import { Footer } from "./footer";
 import { Header } from "./header";
 import { SkipLinks } from "./SkipLinks";
 import { useSearchModal } from "../recherche/modal/SearchModalContext";
+import { usePathname } from "next/navigation";
+import { TallyNotice } from "./TallyNotice";
 
 type Props = {
   children: ReactNode;
@@ -15,6 +17,8 @@ type Props = {
 
 export const DsfrLayout = ({ children, container = "fr-container" }: Props) => {
   const { isOpen, closeModal, openModal } = useSearchModal();
+  const pathname = usePathname() || "";
+  const showTally = !pathname.startsWith("/widgets");
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -40,6 +44,7 @@ export const DsfrLayout = ({ children, container = "fr-container" }: Props) => {
         <div className={overlayStyle} aria-hidden="true" onClick={closeModal} />
       )}
       <Header />
+      {showTally && <TallyNotice id="q4d4Z2" />}
       <main
         className={`${container} ${printStyle}`}
         id="main"
