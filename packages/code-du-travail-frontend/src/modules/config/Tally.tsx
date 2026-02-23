@@ -12,24 +12,6 @@ function TallyWidgetComponent({ id }: Props) {
   return (
     <>
       <style jsx global>{`
-        @keyframes moveLeftAndRight {
-          0% {
-            right: -10.2rem;
-          }
-          6.66% {
-            right: -4.5rem;
-          }
-          23.33% {
-            right: -4.5rem;
-          }
-          30% {
-            right: -10.2rem;
-          }
-          100% {
-            right: -10.2rem;
-          }
-        }
-
         @keyframes wiggle {
           0% {
             transform: rotate(0deg);
@@ -57,26 +39,24 @@ function TallyWidgetComponent({ id }: Props) {
           }
         }
 
-        /* Mobile responsive styles for Tally popup */
-        @media (max-width: 768px) {
-          .tally-popup-iframe,
-          iframe[src*="tally.so"] {
-            width: 100vw !important;
-            max-width: 100vw !important;
-            height: 95vh !important;
-            max-height: 95vh !important;
-            left: 0 !important;
-            top: 5vh !important;
-            right: 0 !important;
-            bottom: 0 !important;
-            border-radius: 8px !important;
-            position: fixed !important;
-            z-index: 999999 !important;
-          }
+        /* Full-screen styles for Tally popup */
+        .tally-popup-iframe,
+        iframe[src*="tally.so"] {
+          width: 100vw !important;
+          max-width: 100vw !important;
+          height: 95vh !important;
+          max-height: 95vh !important;
+          left: 0 !important;
+          top: 5vh !important;
+          right: 0 !important;
+          bottom: 0 !important;
+          border-radius: 8px !important;
+          position: fixed !important;
+          z-index: 999999 !important;
+        }
 
-          .tally-popup-overlay {
-            background-color: rgba(0, 0, 0, 0.8) !important;
-          }
+        .tally-popup-overlay {
+          background-color: rgba(0, 0, 0, 0.8) !important;
         }
       `}</style>
 
@@ -88,7 +68,7 @@ function TallyWidgetComponent({ id }: Props) {
         data-tally-width="500"
         data-tally-overlay="1"
         data-tally-auto-resize="true"
-        aria-label="Donner votre avis"
+        aria-label="Mini sondage (1mn) !"
         aria-haspopup="dialog"
         aria-expanded="false"
       >
@@ -98,7 +78,7 @@ function TallyWidgetComponent({ id }: Props) {
           src="/static/assets/img/emoj-wave.png"
           aria-hidden="true"
         />
-        <span className={spanStyle}>Donnez votre avis</span>
+        <span className={spanStyle}>Mini sondage (1mn) !</span>
       </button>
     </>
   );
@@ -116,11 +96,11 @@ export function Tally({ id }: Props) {
 
 const buttonSuggestionStyles = css({
   position: "fixed",
-  top: "12rem",
-  right: "-10.2rem",
-  width: "13.5rem",
+  bottom: "1rem",
+  left: "1rem",
+  width: "auto",
   height: "3.8rem",
-  borderRadius: "3rem 0px 0px 3rem",
+  borderRadius: "3rem",
   border: "none",
   boxShadow: "rgba(0, 0, 0, 0.25) 0px 1px 2px",
   zIndex: 5,
@@ -129,32 +109,15 @@ const buttonSuggestionStyles = css({
   alignItems: "center",
   justifyContent: "flex-start",
   paddingLeft: "16px",
+  paddingRight: "16px",
   paddingTop: "0",
   backgroundColor: "hsl(220deg, calc(100% - 34%), 33%)!",
-  "@media (min-width: 1200px)": {
-    animation: "moveLeftAndRight 30s ease-in-out infinite 5s",
-  },
-  "@media (max-width: 768px)": {
-    top: "auto",
-    bottom: "1rem",
-    right: "auto",
-    left: "1rem",
-    width: "auto",
-    height: "3.2rem",
-    fontSize: "13px",
-    borderRadius: "3rem",
-    paddingRight: "16px",
-    animation: "none",
+  "&:hover img": {
+    animation: "wiggle 2.5s ease 0s infinite",
   },
   "@media (max-width: 480px)": {
-    top: "auto",
-    bottom: "1rem",
-    right: "auto",
-    left: "1rem",
-    width: "auto",
     height: "3rem",
     fontSize: "12px",
-    borderRadius: "3rem",
     paddingRight: "14px",
   },
 });
@@ -165,9 +128,6 @@ const imgSuggestionStyles = css({
   margin: "0",
   marginRight: "8px",
   animation: "wiggle 2.5s ease 7.5s 1",
-  "&:hover": {
-    animation: "wiggle 2.5s ease 0s infinite",
-  },
 });
 
 const spanStyle = css({
