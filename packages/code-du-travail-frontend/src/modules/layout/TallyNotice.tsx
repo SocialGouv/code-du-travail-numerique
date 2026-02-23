@@ -28,8 +28,8 @@ export const TallyNotice = ({ id }: TallyNoticeProps) => {
               "fr-my-1w"
             )}
           >
-            Est-ce que la terme &quot;accord d&apos;entreprise&quot; vous parle
-            ? si ça ne vous parle pas, ça nous intéresse aussi ! (30 sec)
+            Est-ce que le terme &quot;accord d&apos;entreprise&quot; vous parle
+            ? Si ça ne vous parle pas, ça nous intéresse aussi ! (30 sec)
           </p>
           <button
             className={`${fr.cx(
@@ -39,7 +39,9 @@ export const TallyNotice = ({ id }: TallyNoticeProps) => {
               "fr-ml-md-2w",
               "fr-col-12",
               "fr-col-md-2",
-              "fr-text--middle"
+              "fr-text--middle",
+              "fr-btn--icon-left",
+              "fr-icon-draft-fill"
             )} ${respondButtonStyles}`}
             data-tally-open={id}
             data-tally-width="700"
