@@ -24,9 +24,8 @@ describe("Indemnité licenciement - CC 3239", () => {
     render(<CalculateurIndemniteLicenciement title={""} />);
     userAction = new UserAction();
     userAction.click(ui.introduction.startButton.get());
-    userAction.click(ui.contract.inaptitude.non.get());
     userAction.click(ui.next.get());
-    userAction.click(ui.next.get());
+    userAction.click(ui.information.inaptitude.non.get());
   });
   test("vérifier l'ineligibilite des ass mat en cas de suspension", async () => {
     await userAction.changeInputList(
@@ -92,9 +91,9 @@ describe("Indemnité licenciement - CC 3239", () => {
       "'Salarié du particulier employeur'"
     );
     userAction.click(ui.next.get());
-    userAction.setInput(ui.seniority.startDate.get(), "01/01/2022");
-    userAction.setInput(ui.seniority.notificationDate.get(), "01/08/2022");
-    userAction.setInput(ui.seniority.endDate.get(), "01/08/2022");
+    userAction.setInput(ui.seniority.startDate.get(), "01/01/2025");
+    userAction.setInput(ui.seniority.notificationDate.get(), "01/08/2025");
+    userAction.setInput(ui.seniority.endDate.get(), "01/08/2025");
     userAction.click(ui.seniority.arretTravail.non.get());
     userAction.click(ui.seniority.hasAbsence.non.get());
     userAction.click(ui.next.get());

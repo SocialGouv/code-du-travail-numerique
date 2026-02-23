@@ -4,15 +4,6 @@ export const ui = {
   introduction: {
     startButton: byText("Commencer"),
   },
-  contract: {
-    inaptitude: {
-      question: byText(
-        "Le licenciement fait-il suite à une inaptitude professionnelle (suite à un accident du travail ou une maladie professionnelle reconnue) ?"
-      ),
-      oui: byTestId("licenciementInaptitude-Oui"),
-      non: byTestId("licenciementInaptitude-Non"),
-    },
-  },
   agreement: {
     noAgreement: byTestId(
       "route-Je ne souhaite pas renseigner ma convention collective (je passe l'étape)."
@@ -52,6 +43,13 @@ export const ui = {
     },
   },
   information: {
+    inaptitude: {
+      question: byText(
+        "Le licenciement fait-il suite à une inaptitude professionnelle (suite à un accident du travail ou une maladie professionnelle reconnue) ?"
+      ),
+      oui: byTestId("licenciementInaptitude-Oui"),
+      non: byTestId("licenciementInaptitude-Non"),
+    },
     agreement16: {
       proCategory: byTestId(
         "infos-contrat-salarie-convention-collective-transports-routiers-indemnite-de-licenciement-categorie-professionnelle"
@@ -330,7 +328,9 @@ export const ui = {
       age: byTestId(
         "infos-contrat-salarie-convention-collective-personnel-presta-service-tertiaire-rupture-conventionnelle-cadre-age"
       ),
-      inaptitudeNonPro: byText("Oui"),
+      inaptitudeNonPro: byTestId(
+        "infos-contrat-salarie-convention-collective-personnel-presta-service-tertiaire-inaptitude-suite-a-un-accident-non-professionnelle-Oui"
+      ),
     },
     agreement2216: {
       proCategory: byTestId(

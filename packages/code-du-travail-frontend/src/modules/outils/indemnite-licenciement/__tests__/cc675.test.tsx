@@ -25,11 +25,8 @@ describe("Indemnité licenciement - CC 675", () => {
     render(<CalculateurIndemniteLicenciement title={""} />);
     userAction = new UserAction();
     userAction.click(ui.introduction.startButton.get());
-    userAction.click(ui.contract.inaptitude.non.get());
     userAction.click(ui.next.get());
-    userAction.click(ui.next.get());
-    userAction.click(ui.next.get());
-    userAction.click(ui.next.get());
+    userAction.click(ui.information.inaptitude.non.get());
     await userAction.changeInputList(
       ui.information.agreement675.proCategory.get(),
       "'Employés'"

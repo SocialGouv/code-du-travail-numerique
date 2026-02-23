@@ -22,9 +22,8 @@ describe("Indemnité licenciement - CC 44", () => {
       render(<CalculateurIndemniteLicenciement title={""} />);
       userAction = new UserAction();
       userAction.click(ui.introduction.startButton.get());
-      userAction.click(ui.contract.inaptitude.non.get());
       userAction.click(ui.next.get());
-      userAction.click(ui.next.get());
+      userAction.click(ui.information.inaptitude.non.get());
       await userAction.changeInputList(
         ui.information.agreement44.proCategory.get(),
         "Ouvriers et collaborateurs (Groupes I à III)"
@@ -132,9 +131,8 @@ describe("Indemnité licenciement - CC 44", () => {
       render(<CalculateurIndemniteLicenciement title={""} />);
       userAction = new UserAction();
       userAction.click(ui.introduction.startButton.get());
-      userAction.click(ui.contract.inaptitude.non.get());
       userAction.click(ui.next.get());
-      userAction.click(ui.next.get());
+      userAction.click(ui.information.inaptitude.non.get());
       await userAction.changeInputList(
         ui.information.agreement44.proCategory.get(),
         "Ouvriers et collaborateurs (Groupes I à III)"
@@ -180,9 +178,8 @@ describe("Indemnité licenciement - CC 44", () => {
 
     test(`ne doit pas afficher la question sur le salaire pour le dernier mois`, async () => {
       userAction.click(ui.introduction.startButton.get());
-      userAction.click(ui.contract.inaptitude.non.get());
       userAction.click(ui.next.get());
-      userAction.click(ui.next.get());
+      userAction.click(ui.information.inaptitude.non.get());
       await userAction.changeInputList(
         ui.information.agreement44.proCategory.get(),
         "Ouvriers et collaborateurs (Groupes I à III)"
@@ -211,9 +208,8 @@ describe("Indemnité licenciement - CC 44", () => {
     const userAction = new UserAction();
     userAction
       .click(ui.introduction.startButton.get())
-      .click(ui.contract.inaptitude.non.get())
       .click(ui.next.get())
-      .click(ui.next.get());
+      .click(ui.information.inaptitude.non.get());
 
     await userAction.changeInputList(
       ui.information.agreement44.proCategory.get(),

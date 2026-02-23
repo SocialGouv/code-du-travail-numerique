@@ -30,8 +30,8 @@ describe("Indemnité licenciement - Validation de la page information", () => {
       userAction = new UserAction();
       userAction
         .click(ui.introduction.startButton.get())
-        .click(ui.contract.inaptitude.non.get())
         .click(ui.next.get())
+        .click(ui.information.inaptitude.non.get())
         .click(ui.next.get());
       // Validation que l'on est bien sur l'étape ancienneté
       expect(ui.activeStep.query()).toHaveTextContent("Informations");
@@ -131,8 +131,6 @@ describe("Indemnité licenciement - Validation de la page information", () => {
       userAction
         .click(ui.previous.get())
         .click(ui.previous.get())
-        .click(ui.previous.get())
-        .click(ui.next.get())
         .click(ui.next.get());
 
       expect(ui.information.agreement16.proCategory.get()).toHaveValue(

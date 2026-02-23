@@ -26,10 +26,7 @@ describe(`Tests des erreurs d'éligibilité`, () => {
   });
 
   test("Vérifier l'affichage de l'erreur ancienneté < 8 mois", async () => {
-    userAction
-      .click(ui.contract.inaptitude.non.get())
-      .click(ui.next.get())
-      .click(ui.next.get());
+    userAction.click(ui.next.get()).click(ui.information.inaptitude.non.get());
     await userAction.changeInputList(
       ui.information.agreement16.proCategory.get(),
       "Ingénieurs et cadres"
@@ -59,10 +56,7 @@ describe(`Tests des erreurs d'éligibilité`, () => {
   });
 
   test("Vérifier l'affichage de l'erreur ancienneté < 8 mois quand on revient changer la date de notification", async () => {
-    userAction
-      .click(ui.contract.inaptitude.non.get())
-      .click(ui.next.get())
-      .click(ui.next.get());
+    userAction.click(ui.next.get()).click(ui.information.inaptitude.non.get());
     await userAction.changeInputList(
       ui.information.agreement16.proCategory.get(),
       "Ingénieurs et cadres"

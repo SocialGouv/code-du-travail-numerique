@@ -19,7 +19,6 @@ type SimulateurProps = CalculateurIndemniteProps & {
 
 export enum IndemniteDepartStepName {
   Introduction = "start",
-  ContratTravail = "contrat_travail",
   Agreement = "info_cc",
   Anciennete = "anciennete",
   Salaires = "salaires",
@@ -35,8 +34,6 @@ const IndemniteDepartSimulator = ({
 }: SimulateurProps) => {
   const store = useContext(IndemniteDepartContext);
   const {
-    onNextStepContratTravail,
-    isStepContratTravailValid,
     onNextStepAnciennete,
     isStepAncienneteValid,
     onNextStepSalaires,
@@ -48,8 +45,6 @@ const IndemniteDepartSimulator = ({
     isStepInformationsHidden,
     isStepSalaryHidden,
   } = useIndemniteDepartStore(store, (state) => ({
-    onNextStepContratTravail: state.contratTravailFunction.onNextStep,
-    isStepContratTravailValid: state.contratTravailData.isStepValid,
     onNextStepAnciennete: state.ancienneteFunction.onNextStep,
     isStepAncienneteValid: state.ancienneteData.isStepValid,
     onNextStepSalaires: state.salairesFunction.onNextStep,
@@ -64,9 +59,6 @@ const IndemniteDepartSimulator = ({
 
   const getHiddenSteps = (): IndemniteDepartStepName[] => {
     const hiddenSteps: IndemniteDepartStepName[] = [];
-    if (tool === IndemniteDepartType.RUPTURE_CONVENTIONNELLE) {
-      hiddenSteps.push(IndemniteDepartStepName.ContratTravail);
-    }
     if (isStepInformationsHidden) {
       hiddenSteps.push(IndemniteDepartStepName.Informations);
     }
@@ -86,11 +78,6 @@ const IndemniteDepartSimulator = ({
       title={title}
       steps={steps}
       onStepChange={[
-        {
-          stepName: IndemniteDepartStepName.ContratTravail,
-          isStepValid: isStepContratTravailValid,
-          onNextStep: onNextStepContratTravail,
-        },
         {
           stepName: IndemniteDepartStepName.Agreement,
           isStepValid: isStepAgreementValid,

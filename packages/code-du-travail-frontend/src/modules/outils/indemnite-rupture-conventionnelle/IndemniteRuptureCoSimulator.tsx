@@ -3,12 +3,7 @@ import { ContainerSimulator } from "../../layout/ContainerSimulator";
 import { RelatedItem } from "../../documents";
 import React from "react";
 import { StepAgreement, StepInformations } from "../indemnite-depart/steps";
-import {
-  StepAnciennete,
-  StepContratTravail,
-  StepIntro,
-  StepResultat,
-} from "./steps";
+import { StepAnciennete, StepIntro, StepResultat } from "./steps";
 import { useRuptureCoEventEmitter } from "./events/useRuptureCoEventEmitter";
 import {
   CalculateurIndemnite,
@@ -24,11 +19,6 @@ const steps: Step<IndemniteDepartStepName>[] = [
     label: "Introduction",
     name: IndemniteDepartStepName.Introduction,
     Component: StepIntro,
-  },
-  {
-    label: "Contrat de travail",
-    name: IndemniteDepartStepName.ContratTravail,
-    Component: StepContratTravail,
   },
   {
     label: "Convention collective",

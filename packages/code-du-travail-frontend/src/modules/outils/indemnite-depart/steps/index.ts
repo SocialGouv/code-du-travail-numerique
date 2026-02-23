@@ -1,4 +1,3 @@
-export * from "./ContratTravail";
 export * from "./Anciennete";
 export { default as StepSalaires } from "./Salaires";
 export { default as StepResultat } from "./Resultat";

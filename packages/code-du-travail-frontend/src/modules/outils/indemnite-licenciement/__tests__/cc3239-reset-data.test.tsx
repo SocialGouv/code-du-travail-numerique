@@ -25,9 +25,8 @@ describe("Indemnité licenciement - CC 3239 - changement de convention collectiv
     render(<CalculateurIndemniteLicenciement title={""} />);
     userAction = new UserAction();
     userAction.click(ui.introduction.startButton.get());
-    userAction.click(ui.contract.inaptitude.non.get());
     userAction.click(ui.next.get());
-    userAction.click(ui.next.get());
+    userAction.click(ui.information.inaptitude.non.get());
     userAction.setInput(
       ui.information.agreement3239.proCategory.get(),
       "'Salarié du particulier employeur'"
@@ -55,6 +54,7 @@ describe("Indemnité licenciement - CC 3239 - changement de convention collectiv
     userAction.click(ui.previous.get());
     userAction.click(ui.previous.get());
     userAction.click(ui.agreement.noAgreement.get());
+    userAction.click(ui.next.get());
     userAction.click(ui.next.get());
   });
   test("vérifier que la question sur la question sur le temps partiel soit affichée et que l'absence spécifique à la 3239 a été supprimée", async () => {

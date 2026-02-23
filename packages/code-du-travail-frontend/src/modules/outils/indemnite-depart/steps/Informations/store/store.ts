@@ -7,7 +7,7 @@ import {
   CommonInformationsStoreSlice,
   PublicodesInformation,
 } from "./types";
-import { StoreSlice } from "../../../types";
+import { IndemniteDepartType, StoreSlice } from "../../../types";
 import {
   CatPro3239,
   MissingArgs,
@@ -16,50 +16,56 @@ import {
 import { mapToPublicodesSituationForIndemniteLicenciementConventionnel } from "../../../../common/publicodes";
 import { removeDuplicateObject } from "src/modules/utils/array";
 import { informationToSituation } from "../components/utils";
-import { ContratTravailStoreSlice } from "../../ContratTravail/store";
 import * as Sentry from "@sentry/nextjs";
 import { CommonAgreementStoreSlice } from "../../Agreement/store";
 import { CommonSituationStoreSlice } from "../../../situationStore";
 import { ValidationResponse } from "src/modules/outils/common/components/SimulatorLayout/types";
+import { OuiNon } from "../../../common";
 
-const initialState: CommonInformationsStoreData = {
+const initialState = (
+  type: IndemniteDepartType
+): CommonInformationsStoreData => ({
   input: {
+    showLicenciementInaptitude: type === IndemniteDepartType.LICENCIEMENT,
     publicodesInformations: [],
-    isStepHidden: true,
+    isStepHidden: type === IndemniteDepartType.RUPTURE_CONVENTIONNELLE,
     isStepSalaryHidden: false,
     hasNoMissingQuestions: false,
     informationError: false,
   },
   error: {
     errorInformations: {},
+    errorLicenciementInaptitude: undefined,
   },
   hasBeenSubmit: false,
   isStepValid: true,
-};
+});
 
 const createCommonInformationsStore: StoreSlice<
   CommonInformationsStoreSlice,
-  CommonAgreementStoreSlice<PublicodesSimulator> &
-    ContratTravailStoreSlice &
-    CommonSituationStoreSlice
-> = (set, get) => ({
+  CommonAgreementStoreSlice<PublicodesSimulator> & CommonSituationStoreSlice
+> = (set, get, { type }) => ({
   informationsData: {
-    ...initialState,
+    ...initialState(type),
   },
   informationsFunction: {
+    onChangeLicenciementInaptitude: (value: OuiNon) => {
+      applyGenericValidation(get, set, "licenciementInaptitude", value);
+      get().informationsFunction.generatePublicodesQuestions();
+    },
     generatePublicodesQuestions: (): boolean => {
       const publicodes = get().agreementData.publicodes;
       const agreement = get().agreementData.input.agreement;
       const isAgreementSupportedIndemniteLicenciement =
         get().agreementData.input.isAgreementSupportedIndemniteLicenciement;
-      const isLicenciementInaptitude =
-        get().contratTravailData.input.licenciementInaptitude === "oui";
+      const licenciementInaptitude =
+        get().informationsData.input.licenciementInaptitude;
       try {
         if (agreement && isAgreementSupportedIndemniteLicenciement) {
           const result = publicodes.calculate(
             mapToPublicodesSituationForIndemniteLicenciementConventionnel(
               agreement.num,
-              isLicenciementInaptitude,
+              licenciementInaptitude === "oui",
               false
             )
           );
@@ -85,7 +91,9 @@ const createCommonInformationsStore: StoreSlice<
                     info: undefined,
                   },
                 ];
-                state.informationsData.input.isStepHidden = false;
+                if (type === IndemniteDepartType.RUPTURE_CONVENTIONNELLE) {
+                  state.informationsData.input.isStepHidden = false;
+                }
               })
             );
             return true;
@@ -93,8 +101,11 @@ const createCommonInformationsStore: StoreSlice<
         }
         set(
           produce((state: CommonInformationsStoreSlice) => {
-            state.informationsData.input = initialState.input;
-            state.informationsData.error = initialState.error;
+            state.informationsData.input = {
+              ...initialState(type).input,
+              licenciementInaptitude: licenciementInaptitude,
+            };
+            state.informationsData.error = initialState(type).error;
           })
         );
         return true;
@@ -115,8 +126,6 @@ const createCommonInformationsStore: StoreSlice<
       let informationError = false;
       const publicodesInformations =
         get().informationsData.input.publicodesInformations;
-      const isLicenciementInaptitude =
-        get().contratTravailData.input.licenciementInaptitude === "oui";
       const questionAnswered = publicodesInformations.find(
         (question) => question.question.rule.nom === key
       );
@@ -142,10 +151,12 @@ const createCommonInformationsStore: StoreSlice<
         let missingArgs: MissingArgs[] = [];
         let blockingNotification: any = undefined;
         try {
+          const licenciementInaptitude =
+            get().informationsData.input.licenciementInaptitude === "oui";
           const result = publicodes.calculate(
             mapToPublicodesSituationForIndemniteLicenciementConventionnel(
               agreement.num,
-              isLicenciementInaptitude,
+              licenciementInaptitude,
               false,
               rules
             )
@@ -211,32 +222,33 @@ const createCommonInformationsStore: StoreSlice<
       );
       applyGenericValidation(get, set, "informationError", informationError);
     },
-    onSetStepHidden: () => {
+    onUpdateSalaryStepVisibility: () => {
       const publicodesInformations =
         get().informationsData.input.publicodesInformations;
       const agreement = get().agreementData.input.agreement!;
       let isStepHidden = false;
-      if (
-        (agreement &&
-          agreement.num === 3239 &&
-          publicodesInformations.find(
-            (v) =>
-              v.question.rule.nom ===
-              "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle"
-          )?.info === CatPro3239.assistantMaternel &&
-          publicodesInformations.find(
-            (v) =>
-              v.question.rule.nom ===
-              "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . assistante maternelle . type de licenciement"
-          )?.info === `'Non'`) ||
-        (agreement.num === 1404 &&
-          publicodesInformations.find(
-            (v) =>
-              v.question.rule.nom ===
-              "contrat salarié . convention collective . sedima . question cdi opération"
-          )?.info === `'Oui'`)
-      ) {
-        isStepHidden = true;
+      if (agreement) {
+        if (
+          (agreement.num === 3239 &&
+            publicodesInformations.find(
+              (v) =>
+                v.question.rule.nom ===
+                "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle"
+            )?.info === CatPro3239.assistantMaternel &&
+            publicodesInformations.find(
+              (v) =>
+                v.question.rule.nom ===
+                "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . assistante maternelle . type de licenciement"
+            )?.info === `'Non'`) ||
+          (agreement.num === 1404 &&
+            publicodesInformations.find(
+              (v) =>
+                v.question.rule.nom ===
+                "contrat salarié . convention collective . sedima . question cdi opération"
+            )?.info === `'Oui'`)
+        ) {
+          isStepHidden = true;
+        }
       }
       set(
         produce((state: CommonInformationsStoreSlice) => {
@@ -273,7 +285,7 @@ const createCommonInformationsStore: StoreSlice<
           state.informationsData.error.errorEligibility = errorEligibility;
         })
       );
-      get().informationsFunction.onSetStepHidden();
+      get().informationsFunction.onUpdateSalaryStepVisibility();
       return errorEligibility
         ? ValidationResponse.NotEligible
         : isValid

@@ -2,12 +2,12 @@ import {
   Formula,
   Notification,
   PublicodesIndemniteLicenciementResult,
+  PublicodesResult,
   PublicodesSimulator,
   References,
 } from "@socialgouv/modeles-social";
 import { mapToPublicodesSituationForIndemniteLicenciementConventionnelWithValues } from "../../../../common/publicodes";
 import { AncienneteStoreSlice } from "../../Anciennete";
-import { ContratTravailStoreSlice } from "../../ContratTravail";
 import { SalairesStoreSlice } from "../../Salaires/store";
 import { produce } from "immer";
 import { ResultStoreData, ResultStoreSlice } from "./types";
@@ -19,7 +19,6 @@ import getSupportedCc from "../../../../common/utils/getSupportedCc";
 import * as Sentry from "@sentry/nextjs";
 import { eventEmitter } from "../../../../common/events/emitter";
 import { EventType } from "../../../../common/events/events";
-import { PublicodesResult } from "@socialgouv/modeles-social";
 import { CommonAgreementStoreSlice } from "../../Agreement/store";
 import { CommonSituationStoreSlice } from "../../../situationStore";
 import { StoreSlicePublicodes } from "../../../types";
@@ -45,7 +44,6 @@ const initialState: ResultStoreData = {
 const createResultStore: StoreSlicePublicodes<
   ResultStoreSlice,
   AncienneteStoreSlice &
-    ContratTravailStoreSlice &
     SalairesStoreSlice &
     CommonAgreementStoreSlice<PublicodesSimulator.INDEMNITE_LICENCIEMENT> &
     CommonInformationsStoreSlice &
@@ -56,8 +54,6 @@ const createResultStore: StoreSlicePublicodes<
   },
   resultFunction: {
     init: () => {
-      const contratTravailEligibility =
-        !get().contratTravailData.error.errorEligibility;
       const ancienneteEligibility =
         !get().ancienneteData.error.errorEligibility;
       const informationEligibility =
@@ -72,14 +68,10 @@ const createResultStore: StoreSlicePublicodes<
         hasSelectedAgreement,
         isAgreementSupported,
         informationEligibility,
-        contratTravailEligibility,
         ancienneteEligibility,
         agreement,
       });
-      const isEligible =
-        contratTravailEligibility &&
-        ancienneteEligibility &&
-        informationEligibility;
+      const isEligible = ancienneteEligibility && informationEligibility;
 
       if (!isEligible) eventEmitter.dispatch(EventType.SEND_INELIGIBLE_RESULT);
 
@@ -92,16 +84,10 @@ const createResultStore: StoreSlicePublicodes<
       return { isEligible };
     },
     getEligibilityError: () => {
-      const contratTravailEligibility =
-        get().contratTravailData.error.errorEligibility;
       const informationEligibility =
         get().informationsData.error.errorEligibility;
       const ancienneteEligibility = get().ancienneteData.error.errorEligibility;
-      return (
-        contratTravailEligibility ||
-        informationEligibility ||
-        ancienneteEligibility
-      );
+      return informationEligibility || ancienneteEligibility;
     },
     getPublicodesResult: () => {
       const agreement = get().agreementData.input.agreement;
@@ -139,7 +125,7 @@ const createResultStore: StoreSlicePublicodes<
           get().ancienneteData.input.dateNotification!,
           get().ancienneteData.input.dateEntree!,
           get().ancienneteData.input.dateSortie!,
-          get().contratTravailData.input.licenciementInaptitude === "oui",
+          get().informationsData.input.licenciementInaptitude === "oui",
           get().ancienneteData.input.arretTravail === "oui",
           { ...infos }
         ),
@@ -176,9 +162,6 @@ const createResultStore: StoreSlicePublicodes<
         );
         console.error(
           `Les informations liées aux salaires sont ${JSON.stringify(get().salairesData.input)}`
-        );
-        console.error(
-          `Les informations liées au contrat de travail sont ${JSON.stringify(get().contratTravailData.input)}`
         );
         console.error(
           `Les informations issues de publicodes sont ${JSON.stringify(infos)}`

@@ -27,9 +27,8 @@ describe("Indemnité licenciement", () => {
       userAction = new UserAction();
       userAction
         .click(ui.introduction.startButton.get())
-        .click(ui.contract.inaptitude.non.get())
         .click(ui.next.get())
-        .click(ui.next.get());
+        .click(ui.information.inaptitude.non.get());
       await userAction.changeInputList(
         ui.information.agreement16.proCategory.get(),
         "Ingénieurs et cadres"

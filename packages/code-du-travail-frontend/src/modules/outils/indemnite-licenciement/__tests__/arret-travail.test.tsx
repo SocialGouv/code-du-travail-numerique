@@ -13,9 +13,9 @@ describe("Arrêt de travail", () => {
       render(<CalculateurIndemniteLicenciement title={""} />);
       userAction
         .click(ui.introduction.startButton.get())
-        .click(ui.contract.inaptitude.non.get())
-        .click(ui.next.get())
         .click(ui.agreement.noAgreement.get())
+        .click(ui.next.get())
+        .click(ui.information.inaptitude.non.get())
         .click(ui.next.get())
         .setInput(ui.seniority.startDate.get(), "01/01/2000")
         .setInput(ui.seniority.notificationDate.get(), "01/01/2022")
@@ -77,9 +77,10 @@ describe("Arrêt de travail", () => {
 
     test("should display with the good number of months at the 'Salaires' step if no inaptitude", async () => {
       userAction.click(ui.introduction.startButton.get());
-      userAction.click(ui.contract.inaptitude.non.get());
       userAction.click(ui.next.get());
       userAction.click(ui.agreement.noAgreement.get());
+      userAction.click(ui.next.get());
+      userAction.click(ui.information.inaptitude.non.get());
       userAction.click(ui.next.get());
       userAction.setInput(ui.seniority.startDate.get(), "01/01/2022");
       userAction.setInput(ui.seniority.notificationDate.get(), "01/09/2022");
@@ -93,9 +94,10 @@ describe("Arrêt de travail", () => {
 
     test("should display with the good number of months at the 'Salaires' step", async () => {
       userAction.click(ui.introduction.startButton.get());
-      userAction.click(ui.contract.inaptitude.non.get());
       userAction.click(ui.next.get());
       userAction.click(ui.agreement.noAgreement.get());
+      userAction.click(ui.next.get());
+      userAction.click(ui.information.inaptitude.non.get());
       userAction.click(ui.next.get());
       userAction.setInput(ui.seniority.startDate.get(), "01/01/2022");
       userAction.setInput(ui.seniority.notificationDate.get(), "01/09/2022");
