@@ -24,12 +24,12 @@ export const TallyNotice = ({ id }: TallyNoticeProps) => {
             className={fr.cx(
               "fr-notice__title",
               "fr-col-12",
-              "fr-col-md-9",
+              "fr-col-md-8",
               "fr-my-1w"
             )}
           >
-            Est-ce que le terme &quot;accord d&apos;entreprise&quot; vous parle
-            ? Si ça ne vous parle pas, ça nous intéresse aussi ! (30 sec)
+            Savez-vous si votre entreprise a conclu un accord d&apos;entreprise
+            pouvant vous accorder des droits supplémentaires ?
           </p>
           <button
             className={`${fr.cx(
@@ -38,7 +38,7 @@ export const TallyNotice = ({ id }: TallyNoticeProps) => {
               "fr-btn--primary",
               "fr-ml-md-2w",
               "fr-col-12",
-              "fr-col-md-2",
+              "fr-col-md-3",
               "fr-text--middle",
               "fr-btn--icon-left",
               "fr-icon-draft-fill"
@@ -51,7 +51,7 @@ export const TallyNotice = ({ id }: TallyNoticeProps) => {
             aria-haspopup="dialog"
             aria-expanded="false"
           >
-            Répondre
+            Répondez en 30 secondes
           </button>
         </div>
       </div>
