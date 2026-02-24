@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.217.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.216.0...v4.217.0) (2026-02-24)
+
+
+### Bug Fixes
+
+* **docker:** optimisation du temps de build ([#7122](https://github.com/SocialGouv/code-du-travail-numerique/issues/7122)) ([3e9726a](https://github.com/SocialGouv/code-du-travail-numerique/commit/3e9726a3addb9d2c84760f737dbe1af40b2d976e))
+* **fiche-sp:** correction des tests e2e suite à modification de la date de maj ([#7124](https://github.com/SocialGouv/code-du-travail-numerique/issues/7124)) ([95012a4](https://github.com/SocialGouv/code-du-travail-numerique/commit/95012a496293f059d08481c522c3c5009808632f))
+
+
+### Features
+
+* **tally:** changement de la phrase d'accroche pour le questionnaire sur les accords d'entreprise ([#7126](https://github.com/SocialGouv/code-du-travail-numerique/issues/7126)) ([37f955f](https://github.com/SocialGouv/code-du-travail-numerique/commit/37f955fd1b242c55cc82280f3e9fec365068a6e1))
+
+
+
+
+
 # [4.216.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.215.0...v4.216.0) (2026-02-23)
 
 
