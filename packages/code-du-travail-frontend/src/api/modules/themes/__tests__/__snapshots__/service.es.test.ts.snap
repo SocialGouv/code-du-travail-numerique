@@ -86,6 +86,7 @@ exports[`Themes getAllThemesAndSubThemes 1`] = `
       {
         "label": "Démission",
         "slug": "demission",
+        "source": "themes",
         "title": "Démission",
       },
       {

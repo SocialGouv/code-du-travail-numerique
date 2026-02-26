@@ -3,6 +3,65 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.217.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.216.0...v4.217.0) (2026-02-24)
+
+
+### Bug Fixes
+
+* **fiche-sp:** correction des tests e2e suite à modification de la date de maj ([#7124](https://github.com/SocialGouv/code-du-travail-numerique/issues/7124)) ([95012a4](https://github.com/SocialGouv/code-du-travail-numerique/commit/95012a496293f059d08481c522c3c5009808632f))
+
+
+### Features
+
+* **tally:** changement de la phrase d'accroche pour le questionnaire sur les accords d'entreprise ([#7126](https://github.com/SocialGouv/code-du-travail-numerique/issues/7126)) ([37f955f](https://github.com/SocialGouv/code-du-travail-numerique/commit/37f955fd1b242c55cc82280f3e9fec365068a6e1))
+
+
+
+
+
+# [4.216.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.215.0...v4.216.0) (2026-02-23)
+
+
+### Features
+
+* **tally:** ajout d'un formulaire pour le sondage sur les accords d'entreprise ([#7121](https://github.com/SocialGouv/code-du-travail-numerique/issues/7121)) ([11a1b82](https://github.com/SocialGouv/code-du-travail-numerique/commit/11a1b826fa91f1954598dcf7858dfd411884ec06))
+
+
+
+
+
+# [4.215.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.214.0...v4.215.0) (2026-02-20)
+
+
+### Bug Fixes
+
+* **html:** gestion des listes et des informations dans la page de `modèle de documents` ([#7117](https://github.com/SocialGouv/code-du-travail-numerique/issues/7117)) ([b1d470d](https://github.com/SocialGouv/code-du-travail-numerique/commit/b1d470d8ad29f54ef5cf158e394dc9fb20dc5597))
+
+
+### Features
+
+* **search:** search improvements ([#7107](https://github.com/SocialGouv/code-du-travail-numerique/issues/7107)) ([76bc2aa](https://github.com/SocialGouv/code-du-travail-numerique/commit/76bc2aa88668fa9cbbc1e0f172520eff6da07082))
+
+
+
+
+
+# [4.214.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.213.0...v4.214.0) (2026-02-17)
+
+
+### Bug Fixes
+
+* **next:** update to the latest version ([#7095](https://github.com/SocialGouv/code-du-travail-numerique/issues/7095)) ([cc5feb6](https://github.com/SocialGouv/code-du-travail-numerique/commit/cc5feb6837b0f5d190ee16a740dbd6cf1faf40b1))
+
+
+### Features
+
+* **recherche:** ajout de la question pour savoir si la recherche correspond à ses attentes ([#7115](https://github.com/SocialGouv/code-du-travail-numerique/issues/7115)) ([ac63522](https://github.com/SocialGouv/code-du-travail-numerique/commit/ac63522334302960bd71b7add36d71d14a36e544))
+
+
+
+
+
 # [4.213.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.212.2...v4.213.0) (2026-02-13)
 
 

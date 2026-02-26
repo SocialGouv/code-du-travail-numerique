@@ -26,6 +26,11 @@ jest.mock("../tracking", () => ({
   useSearchTracking: jest.fn(),
 }));
 
+// Mock matomo (used by Feedback component)
+jest.mock("@socialgouv/matomo-next", () => ({
+  sendEvent: jest.fn(),
+}));
+
 describe("SearchPageClient", () => {
   // Mock the tracking functions
   const mockEmitFullsearchEventOnce = jest.fn();
