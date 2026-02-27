@@ -1,22 +1,8 @@
 import { SkipLinks as DsfrSkipLinks } from "@codegouvfr/react-dsfr/SkipLinks";
-import { useState, useEffect } from "react";
-
-const getSearchAnchor = () => {
-  const desktop = document.getElementById("fr-header-search-button-desktop");
-  return desktop && desktop.offsetParent !== null
-    ? "#fr-header-search-button-desktop"
-    : "#fr-header-search-button";
-};
+import { useBreakpoints } from "../common/useBreakpoints";
 
 export const SkipLinks = () => {
-  const [searchAnchor, setSearchAnchor] = useState("#fr-header-search-button");
-
-  useEffect(() => {
-    const updateAnchor = () => setSearchAnchor(getSearchAnchor());
-    updateAnchor();
-    window.addEventListener("resize", updateAnchor);
-    return () => window.removeEventListener("resize", updateAnchor);
-  }, []);
+  const { isBelow } = useBreakpoints();
 
   return (
     <DsfrSkipLinks
@@ -30,7 +16,9 @@ export const SkipLinks = () => {
           label: "Menu",
         },
         {
-          anchor: searchAnchor,
+          anchor: isBelow("lg")
+            ? "#fr-header-search-button"
+            : "#fr-header-search-button-desktop",
           label: "Recherche",
         },
         {

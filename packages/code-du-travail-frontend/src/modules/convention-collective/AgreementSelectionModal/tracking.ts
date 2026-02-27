@@ -7,8 +7,8 @@ export enum TrackingHeaderAgreementCategory {
 export enum TrackingHeaderAgreementAction {
   OPEN_MODAL = "open_modal",
   CC_CONSULT = "cc_consult",
-  CC_TREATED = "cc_select_traitée",
-  CC_UNTREATED = "cc_select_non_traitée",
+  CC_TREATED = "cc_select_processed",
+  CC_UNTREATED = "cc_select_unprocessed",
 }
 
 export const useHeaderAgreementTracking = () => {
