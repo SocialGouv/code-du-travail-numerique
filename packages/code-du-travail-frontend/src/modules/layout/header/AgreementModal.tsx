@@ -133,7 +133,6 @@ export const AgreementModal = ({ isOpen, onClose }: Props) => {
       aria-modal="true"
       aria-labelledby="agreement-modal-title"
       hidden={!isOpen}
-      style={{ zIndex: 2147483647 }}
       onClick={(e) => {
         if (e.target === e.currentTarget) handleClose();
       }}
@@ -151,14 +150,19 @@ export const AgreementModal = ({ isOpen, onClose }: Props) => {
             />
           </div>
 
-          <h1
+          <p
             id="agreement-modal-title"
-            className={`${fr.cx("fr-mb-2w")} ${modalTitle}`}
+            role="heading"
+            aria-level={1}
+            className={`${fr.cx("fr-mb-2w", "fr-h4")} ${modalTitle}`}
           >
             Personnaliser mes réponses avec ma convention collective
-          </h1>
+          </p>
 
-          <AgreementSelectionModalContent onClose={handleClose} />
+          <AgreementSelectionModalContent
+            onClose={handleClose}
+            isOpen={isOpen}
+          />
         </div>
       </div>
     </div>
@@ -173,13 +177,13 @@ const modalContainer = css({
   left: 0,
   right: 0,
   bottom: 0,
-  zIndex: 2147483647,
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
   padding: "1rem",
   paddingTop: "calc(1rem + env(safe-area-inset-top))",
   backgroundColor: "rgba(0, 0, 0, 0.5)",
+  zIndex: 1000,
   md: {
     padding: "2rem",
   },
@@ -223,8 +227,5 @@ const closeButton = css({
 const modalTitle = css({
   fontSize: "18px!",
   lineHeight: "1.4!",
-  whiteSpace: "nowrap",
-  overflow: "hidden",
-  textOverflow: "ellipsis",
   paddingRight: "2.5rem",
 });

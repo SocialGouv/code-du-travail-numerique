@@ -32,6 +32,23 @@ jest.mock("../AgreementSelectionForm", () => ({
   ),
 }));
 
+// Mock AccessibleAlert
+jest.mock("../../../outils/common/components/AccessibleAlert", () => ({
+  AccessibleAlert: ({
+    severity,
+    description,
+    ...props
+  }: {
+    severity: string;
+    description: string;
+    "data-testid"?: string;
+  }) => (
+    <div role="alert" data-severity={severity} {...props}>
+      {description}
+    </div>
+  ),
+}));
+
 // Mock useAgreementStorageSync
 const mockSetAgreement = jest.fn();
 const mockClearAgreement = jest.fn();
@@ -122,6 +139,7 @@ describe("AgreementSelectionModalContent - Accessibility", () => {
         id: "1486",
         slug: "1486-bureaux-detudes-techniques",
         title: "Convention collective des bureaux d'études techniques",
+        contributions: true,
       };
     });
 
@@ -140,31 +158,80 @@ describe("AgreementSelectionModalContent - Accessibility", () => {
     it("should have a label for the selected agreement region", () => {
       render(<AgreementSelectionModalContent onClose={mockOnClose} />);
 
-      const label = screen.getByText(
-        "Les réponses seront personnalisées pour la convention collective :"
-      );
+      const label = screen.getByText("Convention collective sélectionnée :");
       expect(label).toHaveAttribute("id", "agreement-selection-label");
     });
 
-    it("should have Fermer and Modifier buttons", () => {
+    it("should have Supprimer, Modifier and Fermer buttons", () => {
       render(<AgreementSelectionModalContent onClose={mockOnClose} />);
 
       expect(
-        screen.getByRole("button", { name: "Fermer" })
+        screen.getByRole("button", { name: "Supprimer" })
       ).toBeInTheDocument();
       expect(
         screen.getByRole("button", { name: /Modifier/i })
+      ).toBeInTheDocument();
+      expect(
+        screen.getByRole("button", { name: "Fermer" })
       ).toBeInTheDocument();
     });
 
     it("should have buttons with type=button", () => {
       render(<AgreementSelectionModalContent onClose={mockOnClose} />);
 
+      const deleteButton = screen.getByRole("button", { name: "Supprimer" });
       const closeButton = screen.getByRole("button", { name: "Fermer" });
       const editButton = screen.getByRole("button", { name: /Modifier/i });
 
+      expect(deleteButton).toHaveAttribute("type", "button");
       expect(closeButton).toHaveAttribute("type", "button");
       expect(editButton).toHaveAttribute("type", "button");
+    });
+
+    it("should call clearAgreement and onClose when Supprimer is clicked", async () => {
+      const user = userEvent.setup({ delay: null });
+
+      render(<AgreementSelectionModalContent onClose={mockOnClose} />);
+
+      const deleteButton = screen.getByRole("button", { name: "Supprimer" });
+      await user.click(deleteButton);
+
+      expect(mockClearAgreement).toHaveBeenCalled();
+      expect(mockOnClose).toHaveBeenCalled();
+    });
+
+    it("should render agreement name as a link when slug is defined", () => {
+      render(<AgreementSelectionModalContent onClose={mockOnClose} />);
+
+      const link = screen.getByRole("link", {
+        name: "Bureaux d'études techniques (IDCC 1486)",
+      });
+      expect(link).toBeInTheDocument();
+      expect(link).toHaveAttribute(
+        "href",
+        "/convention-collective/1486-bureaux-detudes-techniques"
+      );
+    });
+
+    it("should not show warning alert when contributions is true", () => {
+      render(<AgreementSelectionModalContent onClose={mockOnClose} />);
+
+      expect(
+        screen.queryByTestId("agreement-not-treated-warning")
+      ).not.toBeInTheDocument();
+    });
+
+    it("should show warning alert when contributions is false", () => {
+      currentAgreement = {
+        ...currentAgreement,
+        contributions: false,
+      };
+
+      render(<AgreementSelectionModalContent onClose={mockOnClose} />);
+
+      expect(
+        screen.getByTestId("agreement-not-treated-warning")
+      ).toBeInTheDocument();
     });
   });
 });

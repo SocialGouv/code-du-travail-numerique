@@ -63,7 +63,11 @@ export const DsfrLayout = ({ children, container = "fr-container" }: Props) => {
       )}
       <div
         style={
-          isAgreementOpen ? { position: "relative", zIndex: 0 } : undefined
+          isAgreementOpen
+            ? { position: "relative", zIndex: 0 }
+            : isOpen
+              ? { position: "relative", zIndex: 1000 }
+              : undefined
         }
         inert={isAgreementOpen}
       >
@@ -102,6 +106,6 @@ const overlayStyle = css({
   left: 0,
   right: 0,
   bottom: 0,
-  zIndex: 999999,
   backgroundColor: "rgba(0, 0, 0, 0.5)",
+  zIndex: 999,
 });

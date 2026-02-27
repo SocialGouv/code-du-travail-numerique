@@ -3,13 +3,27 @@
 import Button from "@codegouvfr/react-dsfr/Button";
 import { fr } from "@codegouvfr/react-dsfr";
 import { css } from "@styled-system/css";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import type { Agreement } from "src/modules/outils/indemnite-depart/types";
+import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
+import Link from "src/modules/common/Link";
+import { supportedCcn, SupportedTypes } from "@socialgouv/modeles-social";
+import { AccessibleAlert } from "src/modules/outils/common/components/AccessibleAlert";
 import { AgreementSelectionForm } from "./AgreementSelectionForm";
+import { useHeaderAgreementTracking } from "./tracking";
 import { useAgreementStorageSync } from "./useAgreementStorageSync";
+
+const isCcSupportedByAnySimulator = (idcc: number): boolean => {
+  const cc = supportedCcn.find((item) => item.idcc === idcc);
+  if (!cc) return false;
+  return Object.entries(cc).some(
+    ([key, value]) => key !== "idcc" && value === SupportedTypes.FULLY_SUPPORTED
+  );
+};
 
 type Props = {
   onClose: () => void;
+  isOpen?: boolean;
 };
 
 export const AGREEMENT_A11Y_MESSAGES = {
@@ -17,13 +31,22 @@ export const AGREEMENT_A11Y_MESSAGES = {
     `Convention collective ${title} enregistrée avec succès`,
   AGREEMENT_CLEARED:
     "Convention collective supprimée. Vous pouvez en sélectionner une nouvelle.",
+  AGREEMENT_EDITING: "Mode modification activé",
 } as const;
 
-export const AgreementSelectionModalContent = ({ onClose }: Props) => {
+export const AgreementSelectionModalContent = ({ onClose, isOpen }: Props) => {
   const { agreement, setAgreement, clearAgreement } = useAgreementStorageSync();
+  const { emitSelectEvent, emitConsultEvent } =
+    useHeaderAgreementTracking();
   const [isEditing, setIsEditing] = useState(false);
   const [liveRegionMessage, setLiveRegionMessage] = useState("");
   const editButtonRef = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    if (!isOpen) {
+      setIsEditing(false);
+    }
+  }, [isOpen]);
 
   const announceToScreenReader = (message: string) => {
     // Clear then re-set to ensure screen readers re-announce
@@ -36,6 +59,7 @@ export const AgreementSelectionModalContent = ({ onClose }: Props) => {
   const handleSelect = (nextAgreement: Agreement) => {
     setAgreement(nextAgreement);
     setIsEditing(false);
+    emitSelectEvent(`idcc${nextAgreement.num}`, nextAgreement.contributions);
     announceToScreenReader(
       AGREEMENT_A11Y_MESSAGES.AGREEMENT_SAVED(
         `${nextAgreement.shortTitle} (IDCC ${nextAgreement.num})`
@@ -45,10 +69,23 @@ export const AgreementSelectionModalContent = ({ onClose }: Props) => {
 
   const handleEdit = () => {
     setIsEditing(true);
+    announceToScreenReader(AGREEMENT_A11Y_MESSAGES.AGREEMENT_EDITING);
+  };
+
+  const handleDelete = () => {
+    clearAgreement();
     announceToScreenReader(AGREEMENT_A11Y_MESSAGES.AGREEMENT_CLEARED);
+    onClose();
+  };
+
+  const handleClose = () => {
+    setIsEditing(false);
+    onClose();
   };
 
   if (agreement && !isEditing) {
+    const ccRoute = getRouteBySource(SOURCES.CCN);
+
     return (
       <div>
         {/* Live region for screen reader announcements */}
@@ -66,7 +103,7 @@ export const AgreementSelectionModalContent = ({ onClose }: Props) => {
             className={fr.cx("fr-mb-2w", "fr-text--bold", "fr-text--lg")}
             id="agreement-selection-label"
           >
-            Les réponses seront personnalisées pour la convention collective :
+            Convention collective sélectionnée :
           </p>
 
           <div
@@ -75,28 +112,60 @@ export const AgreementSelectionModalContent = ({ onClose }: Props) => {
             role="region"
             aria-labelledby="agreement-selection-label"
           >
-            <p
-              className={fr.cx("fr-mb-0")}
-              style={{ color: "var(--text-action-high-blue-france)" }}
-            >
-              {agreement.shortTitle} (IDCC {agreement.num})
-            </p>
+            {agreement.slug ? (
+              <span
+                onClick={() => {
+                  emitConsultEvent(`idcc${agreement.num}`);
+                  onClose();
+                }}
+              >
+                <Link
+                  href={`/${ccRoute}/${agreement.slug}`}
+                  className={`${fr.cx("fr-mb-0")} ${selectedCardLink}`}
+                >
+                  {agreement.shortTitle} (IDCC {agreement.num})
+                </Link>
+              </span>
+            ) : (
+              <p
+                className={fr.cx("fr-mb-0")}
+                style={{ color: "var(--text-action-high-blue-france)" }}
+              >
+                {agreement.shortTitle} (IDCC {agreement.num})
+              </p>
+            )}
           </div>
         </div>
 
+        {!isCcSupportedByAnySimulator(agreement.num) && (
+          <AccessibleAlert
+            severity="warning"
+            description="Vous pouvez consulter cette convention via le lien ci-dessus. Pour information, nos services ne l'intègrent pas encore : les contenus et simulateurs proposés se baseront sur les dispositions générales du Code du travail."
+            data-testid="agreement-not-treated-warning"
+          />
+        )}
+
         <div className={buttonRow}>
-          <Button priority="secondary" onClick={onClose} type="button">
-            Fermer
+          <Button
+            priority="secondary"
+            onClick={handleDelete}
+            type="button"
+            className={dangerButton}
+          >
+            Supprimer
           </Button>
           <Button
             ref={editButtonRef}
-            priority="primary"
+            priority="secondary"
             iconId="fr-icon-arrow-go-back-line"
             iconPosition="right"
             onClick={handleEdit}
             type="button"
           >
             Modifier
+          </Button>
+          <Button priority="primary" onClick={handleClose} type="button">
+            Fermer
           </Button>
         </div>
       </div>
@@ -133,7 +202,11 @@ export const AgreementSelectionModalContent = ({ onClose }: Props) => {
       </div>
 
       <div className={stickyButtonRow}>
-        <Button priority="secondary" onClick={onClose} type="button">
+        <Button
+          priority={isEditing ? "primary" : "secondary"}
+          onClick={handleClose}
+          type="button"
+        >
           Fermer
         </Button>
       </div>
@@ -152,6 +225,8 @@ const selectedCard = css({
   padding: "1rem 1.5rem",
   backgroundColor: "white",
   fontSize: "1.25rem",
+  overflow: "hidden",
+  wordBreak: "break-word",
 });
 
 const buttonRow = css({
@@ -186,6 +261,16 @@ const infoTextTopAligned = css({
     alignSelf: "flex-start",
     marginTop: "0.25rem",
   },
+});
+
+const selectedCardLink = css({
+  fontSize: "1.25rem",
+  wordBreak: "break-word",
+});
+
+const dangerButton = css({
+  color: "var(--text-default-error)!",
+  boxShadow: "inset 0 0 0 1px var(--text-default-error)!",
 });
 
 const liveRegionStyle = css({

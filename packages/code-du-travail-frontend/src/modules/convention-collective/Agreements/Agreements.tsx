@@ -3,6 +3,7 @@ import { ElasticAgreement } from "@socialgouv/cdtn-types";
 import { AgreementsSection } from "./AgreementsSection";
 import { AgreementsGlossaire } from "./AgreementsGlossaire";
 import { AgreementsIntro } from "./AgreementsIntro";
+import { SelectedAgreementBanner } from "./SelectedAgreementBanner";
 import { ContainerSimulatorLight } from "../../layout/ContainerSimulatorLight";
 
 type Agreement = Pick<ElasticAgreement, "shortTitle" | "slug">;
@@ -26,6 +27,7 @@ export const Agreements = ({ firstLettersAgreements }: Props) => {
       <h1 id="convention-collective" className={fr.cx("fr-mt-0", "fr-mb-6w")}>
         Votre convention collective
       </h1>
+      <SelectedAgreementBanner />
       <AgreementsIntro />
       <div className={fr.cx("fr-mb-6w")}>
         <AgreementsGlossaire letters={Object.keys(firstLettersAgreements)} />

@@ -21,6 +21,10 @@ export const HeaderAgreementButton = ({ id, isOpen, onClick }: Props) => {
     ? `Ma convention collective : IDCC ${agreement.num} - ${agreement.shortTitle}`
     : "Ma convention collective";
 
+  const tooltipText = agreement
+    ? fullTitle
+    : "Renseignez votre convention collective pour personnaliser nos contenus";
+
   const iconSize = isMobile
     ? { width: 32, height: 36 }
     : { width: 24, height: 28 };
@@ -28,7 +32,7 @@ export const HeaderAgreementButton = ({ id, isOpen, onClick }: Props) => {
   const tooltipId = `${id}-tooltip`;
 
   return (
-    <>
+    <div className={tooltipWrapper}>
       <button
         id={id}
         type="button"
@@ -76,11 +80,21 @@ export const HeaderAgreementButton = ({ id, isOpen, onClick }: Props) => {
         id={tooltipId}
         role="tooltip"
       >
-        {fullTitle}
+        {tooltipText}
       </span>
-    </>
+    </div>
   );
 };
+
+const tooltipWrapper = css({
+  position: "relative",
+  minWidth: 0,
+  maxWidth: "100%",
+  "&:focus-within:not(:hover) .fr-tooltip": {
+    visibility: "hidden!",
+    opacity: "0!",
+  },
+});
 
 const buttonStyle = css({
   height: "48px",
@@ -90,6 +104,7 @@ const buttonStyle = css({
   paddingLeft: "0.75rem",
   paddingRight: "0.75rem",
   minWidth: "164px",
+  maxWidth: "20rem",
   justifyContent: "flex-start",
 });
 
@@ -100,8 +115,9 @@ const buttonStyleMobile = css({
   gap: "0.75rem",
   paddingLeft: "0.75rem",
   paddingRight: "0.75rem",
-  justifyContent: "center",
+  justifyContent: "flex-start",
   maxWidth: "100%",
+  overflow: "hidden",
   border: "none",
   backgroundColor: "transparent",
   _hover: {
@@ -122,7 +138,7 @@ const titleLine = css({
   whiteSpace: "nowrap",
   overflow: "hidden",
   textOverflow: "ellipsis",
-  maxWidth: "9.5rem",
+  maxWidth: "100%",
 });
 
 const titleLineMobile = css({

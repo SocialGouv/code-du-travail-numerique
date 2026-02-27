@@ -6,6 +6,7 @@ import { HeaderSearchV2 } from "./HeaderSearchV2";
 import { SearchModal } from "src/modules/recherche/modal/SearchModal";
 import { useSearchModal } from "src/modules/recherche/modal/SearchModalContext";
 import { useAgreementModal } from "src/modules/convention-collective/AgreementSelectionModal";
+import { useHeaderAgreementTracking } from "src/modules/convention-collective/AgreementSelectionModal/tracking";
 
 export type NavigationLink = MainNavigationProps.Item.Link;
 
@@ -52,12 +53,15 @@ export const HeaderDsfr = ({ navigation, currentPath }: Props) => {
     }
   };
 
+  const { emitOpenModalEvent } = useHeaderAgreementTracking();
+
   const handleAgreementToggle = () => {
     if (isAgreementOpen) {
       closeAgreementModal();
     } else {
       closeModal();
       openAgreementModal();
+      emitOpenModalEvent();
     }
   };
 
