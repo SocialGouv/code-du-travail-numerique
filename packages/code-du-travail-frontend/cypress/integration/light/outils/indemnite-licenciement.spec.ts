@@ -4,7 +4,7 @@ describe("Outil - Indemnité de licenciement", () => {
   it("Calcul de l'indemnité de licenciement", () => {
     cy.visit("/outils/indemnite-licenciement");
     cy.get("h1").should("have.text", "Calculer l'indemnité de licenciement");
-    cy.get("button").contains("Commencer").click({ force: true });
+    cy.get("button").contains("Commencer").should("be.visible").click();
 
     cy.get('label:contains("Non")').eq(0).click();
     cy.contains("Suivant").click();

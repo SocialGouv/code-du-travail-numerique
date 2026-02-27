@@ -5,7 +5,7 @@ describe("Outil - Heures d'absence pour rechercher un emploi", () => {
       "have.text",
       "Calculer le nombre d'heures d'absence pour rechercher un emploi"
     );
-    cy.get("button").contains("Commencer").click({ force: true });
+    cy.get("button").contains("Commencer").should("be.visible").click();
 
     cy.contains("Quel est le nom de la convention collective applicable ?");
     cy.get(
@@ -14,7 +14,7 @@ describe("Outil - Heures d'absence pour rechercher un emploi", () => {
       .first()
       .click();
     cy.contains("Précisez et sélectionnez votre convention collective");
-    cy.get("#agreement-search-autocomplete").type("1388");
+    cy.get("#agreement-search-autocomplete").type("1388", { delay: 50 });
     cy.get('ul[role="listbox"] li').contains("Industrie du pétrole").click();
     cy.contains("Nous n’avons pas de réponse pour cette convention collective");
     cy.get("button").contains("Suivant").click();
@@ -29,7 +29,7 @@ describe("Outil - Heures d'absence pour rechercher un emploi", () => {
       "have.text",
       "Calculer le nombre d'heures d'absence pour rechercher un emploi"
     );
-    cy.get("button").contains("Commencer").click({ force: true });
+    cy.get("button").contains("Commencer").should("be.visible").click();
 
     cy.contains("Quel est le nom de la convention collective applicable ?");
     cy.get(
@@ -38,7 +38,7 @@ describe("Outil - Heures d'absence pour rechercher un emploi", () => {
       .first()
       .click();
     cy.contains("Précisez et sélectionnez votre convention collective");
-    cy.get("#agreement-search-autocomplete").type("843");
+    cy.get("#agreement-search-autocomplete").type("843", { delay: 50 });
     cy.get('ul[role="listbox"] li').contains("Boulangerie").click();
     cy.get("button").contains("Suivant").click();
 
@@ -72,7 +72,7 @@ describe("Outil - Heures d'absence pour rechercher un emploi", () => {
       "have.text",
       "Calculer le nombre d'heures d'absence pour rechercher un emploi"
     );
-    cy.get("button").contains("Commencer").click({ force: true });
+    cy.get("button").contains("Commencer").should("be.visible").click();
 
     cy.contains("Quel est le nom de la convention collective applicable ?");
     cy.get(
@@ -81,7 +81,7 @@ describe("Outil - Heures d'absence pour rechercher un emploi", () => {
       .first()
       .click();
     cy.contains("Précisez et sélectionnez votre convention collective");
-    cy.get("#agreement-search-autocomplete").type("787");
+    cy.get("#agreement-search-autocomplete").type("787", { delay: 50 });
     cy.get('ul[role="listbox"] li')
       .contains(
         "Personnel des cabinets d'experts-comptables et de commissaires aux comptes"

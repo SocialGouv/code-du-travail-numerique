@@ -2,7 +2,7 @@ describe("Outil - Indemnité de Precarite", () => {
   it("Calcul de l'indemnité de precarite", () => {
     cy.visit("/outils/indemnite-precarite");
     cy.get("h1").should("have.text", "Calculer l'indemnité de précarité");
-    cy.get("button").contains("Commencer").click({ force: true });
+    cy.get("button").contains("Commencer").should("be.visible").click();
 
     cy.contains("Quel est le nom de la convention collective applicable ?");
     cy.get(
@@ -11,7 +11,7 @@ describe("Outil - Indemnité de Precarite", () => {
       .first()
       .click();
     cy.contains("Précisez et sélectionnez votre convention collective");
-    cy.get("#agreement-search-autocomplete").type("843");
+    cy.get("#agreement-search-autocomplete").type("843", { delay: 50 });
     cy.get('ul[role="listbox"] li').contains("Boulangerie-pâtisserie").click();
     cy.get("button").contains("Suivant").click();
 

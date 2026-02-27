@@ -7,14 +7,14 @@ describe("Pages integration convention collective", () => {
     cy.iframe()
       .findByRole("heading", { level: 1 })
       .should("have.text", "Trouver sa convention collective")
-      .click();
+      .should("be.visible");
 
     cy.iframe()
       // @ts-ignore
       .findByLabel("Nom de votre entreprise ou numéro Siren/Siret")
       .as("inputSiret");
 
-    cy.get("@inputSiret").type("carrefour", { force: true });
+    cy.get("@inputSiret").type("carrefour", { delay: 50 });
 
     cy.iframe().find("button[type=submit]").contains("Rechercher").click();
     cy.iframe().contains("CARREFOUR HYPERMARCHES").click();

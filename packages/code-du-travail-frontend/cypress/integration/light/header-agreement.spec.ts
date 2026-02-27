@@ -22,14 +22,9 @@ const typeInAgreementSearch = (text: string) => {
 };
 
 describe("Header agreement selector", () => {
-  beforeEach(() => {
-    // Suppress uncaught exceptions from third-party scripts (e.g., Matomo/analytics)
-    cy.on("uncaught:exception", () => false);
-  });
-
   it("should allow selecting an agreement, show selected view with actions, and persist in localStorage", () => {
     cy.visit("/");
-    cy.wait(2000);
+    cy.findByRole("heading", { level: 1 }).should("be.visible");
     openHeaderAgreementModal();
 
     typeInAgreementSearch("2247");

@@ -27,7 +27,6 @@ module.exports = defineConfig({
   responseTimeout: 30000, // 30s
   numTestsKeptInMemory: isCI ? 0 : 50,
   experimentalMemoryManagement: isCI,
-  blockHosts: ["*.matomo.*"],
   e2e: {
     baseUrl: process.env.TEST_BASEURL ?? "http://localhost:3000",
     retries: { runMode: 3, openMode: 0 },

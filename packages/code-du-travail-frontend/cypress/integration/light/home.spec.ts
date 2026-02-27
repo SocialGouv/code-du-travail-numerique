@@ -74,9 +74,9 @@ describe("Page d’accueil", () => {
     cy.visit("/");
     cy.findByRole("heading", { level: 1 })
       .should("have.text", "Bienvenue sur le Code du travail numérique")
-      .click();
+      .should("be.visible");
 
-    cy.get("#search-home-autocomplete").type("congés");
+    cy.get("#search-home-autocomplete").type("congés", { delay: 50 });
 
     // Pick the first available suggestion (content can evolve)
     cy.get("#search-home-autocomplete-listbox")

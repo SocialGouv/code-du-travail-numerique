@@ -156,7 +156,7 @@ describe("Conventions collectives", () => {
 
       cy.get("#search-agreement").should("be.visible");
 
-      cy.get("#search-agreement").type("congés");
+      cy.get("#search-agreement").type("congés", { delay: 50 });
 
       cy.get("#search-agreement").type("{enter}");
 

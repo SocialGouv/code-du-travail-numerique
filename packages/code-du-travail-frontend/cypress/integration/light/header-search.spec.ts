@@ -24,7 +24,7 @@ describe("Header Search", () => {
 
     cy.get("#search-modal").within(() => {
       cy.get("#search-modal-autocomplete").as("searchInput");
-      cy.get("@searchInput").type("congé");
+      cy.get("@searchInput").type("congé", { delay: 50 });
       cy.contains("button", "Voir tous les résultats").click();
     });
 
@@ -37,7 +37,7 @@ describe("Header Search", () => {
 
     cy.get("#search-modal").within(() => {
       cy.get("#search-modal-autocomplete").as("searchInput");
-      cy.get("@searchInput").type("rét");
+      cy.get("@searchInput").type("rét", { delay: 50 });
 
       // Suggestions listbox is always present; ensure we have options.
       cy.get("#search-modal-autocomplete-listbox")

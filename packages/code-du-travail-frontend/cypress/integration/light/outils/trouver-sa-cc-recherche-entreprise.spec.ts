@@ -8,7 +8,7 @@ describe("Outil - Trouver sa convention collective", () => {
     );
     cy.findByRole("heading", { level: 1 })
       .should("have.text", "Trouver sa convention collective")
-      .click();
+      .should("be.visible");
     cy.contains(
       "Je cherche mon entreprise pour trouver ma convention collective"
     ).click();
@@ -18,10 +18,11 @@ describe("Outil - Trouver sa convention collective", () => {
       "82129756100010",
       { delay: 0 }
     );
-    cy.selectByLabel("Code postal ou Ville").as("locationInput").type("7501");
-    cy.get("@locationInput").type("8{downArrow}{enter}", {
-      delay: 2000,
-      force: true,
+    cy.selectByLabel("Code postal ou Ville")
+      .as("locationInput")
+      .type("75018", { delay: 50 });
+    cy.get("@locationInput").type("{downArrow}{enter}", {
+      delay: 200,
     });
     cy.get('button[type="submit"]').last().click();
     cy.urlEqual("/outils/convention-collective/entreprise");
@@ -33,22 +34,7 @@ describe("Outil - Trouver sa convention collective", () => {
     cy.contains("Précédent").click();
     cy.selectByLabel("Nom de votre entreprise ou numéro Siren/Siret")
       .clear()
-      .type("C")
-      .type("A")
-      .type("R")
-      .type("R")
-      .type("E")
-      .type("F")
-      .type("O")
-      .type("U")
-      .type("R")
-      .type(" ")
-      .type("B")
-      .type("A")
-      .type("N")
-      .type("Q")
-      .type("U")
-      .type("E");
+      .type("CARREFOUR BANQUE", { delay: 50 });
     cy.selectByLabel("Code postal ou Ville").clear();
     cy.get('button[type="submit"]').last().click();
     cy.contains("CARREFOUR BANQUE").click();

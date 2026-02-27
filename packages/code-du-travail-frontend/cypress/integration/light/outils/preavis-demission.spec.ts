@@ -3,7 +3,7 @@ describe("Outil - Préavis de démission", () => {
     cy.visit("/outils/preavis-demission");
     // Intro
     cy.get("h1").should("have.text", "Calculer le préavis de démission");
-    cy.get("button").contains("Commencer").click({ force: true });
+    cy.get("button").contains("Commencer").should("be.visible").click();
 
     // Convention collective
     cy.contains("Quel est le nom de la convention collective applicable ?");
@@ -13,7 +13,7 @@ describe("Outil - Préavis de démission", () => {
       .first()
       .click();
     cy.contains("Précisez et sélectionnez votre convention collective");
-    cy.get("#agreement-search-autocomplete").type("1388");
+    cy.get("#agreement-search-autocomplete").type("1388", { delay: 50 });
     cy.get('ul[role="listbox"] li').contains("Industrie du pétrole").click();
 
     cy.contains(
@@ -29,7 +29,7 @@ describe("Outil - Préavis de démission", () => {
     cy.visit("/outils/preavis-demission");
     // Intro
     cy.get("h1").should("have.text", "Calculer le préavis de démission");
-    cy.get("button").contains("Commencer").click({ force: true });
+    cy.get("button").contains("Commencer").should("be.visible").click();
 
     // Convention collective
     cy.contains("Quel est le nom de la convention collective applicable ?");
@@ -39,7 +39,7 @@ describe("Outil - Préavis de démission", () => {
       .first()
       .click();
     cy.contains("Précisez et sélectionnez votre convention collective");
-    cy.get("#agreement-search-autocomplete").type("843");
+    cy.get("#agreement-search-autocomplete").type("843", { delay: 50 });
     cy.get('ul[role="listbox"] li').contains("Boulangerie").click();
 
     cy.get("button").contains("Suivant").click();
