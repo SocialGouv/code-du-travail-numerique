@@ -7,19 +7,11 @@ import { useEffect, useRef, useState } from "react";
 import type { Agreement } from "src/modules/outils/indemnite-depart/types";
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
 import Link from "src/modules/common/Link";
-import { supportedCcn, SupportedTypes } from "@socialgouv/modeles-social";
 import { AccessibleAlert } from "src/modules/outils/common/components/AccessibleAlert";
+import { isCcSupportedByAnySimulator } from "../utils";
 import { AgreementSelectionForm } from "./AgreementSelectionForm";
 import { useHeaderAgreementTracking } from "./tracking";
 import { useAgreementStorageSync } from "./useAgreementStorageSync";
-
-const isCcSupportedByAnySimulator = (idcc: number): boolean => {
-  const cc = supportedCcn.find((item) => item.idcc === idcc);
-  if (!cc) return false;
-  return Object.entries(cc).some(
-    ([key, value]) => key !== "idcc" && value === SupportedTypes.FULLY_SUPPORTED
-  );
-};
 
 type Props = {
   onClose: () => void;
@@ -36,8 +28,7 @@ export const AGREEMENT_A11Y_MESSAGES = {
 
 export const AgreementSelectionModalContent = ({ onClose, isOpen }: Props) => {
   const { agreement, setAgreement, clearAgreement } = useAgreementStorageSync();
-  const { emitSelectEvent, emitConsultEvent } =
-    useHeaderAgreementTracking();
+  const { emitSelectEvent, emitConsultEvent } = useHeaderAgreementTracking();
   const [isEditing, setIsEditing] = useState(false);
   const [liveRegionMessage, setLiveRegionMessage] = useState("");
   const editButtonRef = useRef<HTMLButtonElement>(null);
@@ -59,7 +50,10 @@ export const AgreementSelectionModalContent = ({ onClose, isOpen }: Props) => {
   const handleSelect = (nextAgreement: Agreement) => {
     setAgreement(nextAgreement);
     setIsEditing(false);
-    emitSelectEvent(`idcc${nextAgreement.num}`, nextAgreement.contributions);
+    emitSelectEvent(
+      `idcc${nextAgreement.num}`,
+      isCcSupportedByAnySimulator(nextAgreement.num)
+    );
     announceToScreenReader(
       AGREEMENT_A11Y_MESSAGES.AGREEMENT_SAVED(
         `${nextAgreement.shortTitle} (IDCC ${nextAgreement.num})`

@@ -127,7 +127,9 @@ describe("HeaderAgreementButton - Accessibility", () => {
       const tooltip = document.getElementById("test-button-tooltip");
       expect(tooltip).toBeInTheDocument();
       expect(tooltip).toHaveAttribute("role", "tooltip");
-      expect(tooltip).toHaveTextContent("Ma convention collective");
+      expect(tooltip).toHaveTextContent(
+        "Renseignez votre convention collective pour personnaliser nos contenus"
+      );
     });
 
     it("should render tooltip with agreement details when selected", () => {

@@ -16,7 +16,9 @@ const typeInAgreementSearch = (text: string) => {
   // Click to focus first, wait for Downshift's focus handler, then type
   cy.get("#agreement-modal input[type='text']").first().click();
   cy.wait(500);
-  cy.get("#agreement-modal input[type='text']").first().type(text, { delay: 100 });
+  cy.get("#agreement-modal input[type='text']")
+    .first()
+    .type(text, { delay: 100 });
 };
 
 describe("Header agreement selector", () => {
@@ -38,13 +40,14 @@ describe("Header agreement selector", () => {
       .click();
 
     // After selection, the modal shows the selected CC view
-    cy.get("#agreement-modal [data-testid='header-selected-agreement-card']").should(
-      "contain",
-      "Entreprises de courtage"
-    );
+    cy.get(
+      "#agreement-modal [data-testid='header-selected-agreement-card']"
+    ).should("contain", "Entreprises de courtage");
 
     // Should show the new subtitle
-    cy.get("#agreement-modal").contains("Convention collective sélectionnée :").should("exist");
+    cy.get("#agreement-modal")
+      .contains("Convention collective sélectionnée :")
+      .should("exist");
 
     // Should have 3 buttons
     cy.get("#agreement-modal").contains("button", "Supprimer").should("exist");
@@ -71,10 +74,7 @@ describe("Header agreement selector", () => {
     cy.get("body").then(($body) => {
       const desktopBtn = $body.find("#fr-header-agreement-button-desktop");
       if (desktopBtn.length) {
-        cy.get("#fr-header-agreement-button-desktop").should(
-          "contain",
-          "2247"
-        );
+        cy.get("#fr-header-agreement-button-desktop").should("contain", "2247");
       } else {
         cy.get("#fr-header-agreement-button").should("contain", "2247");
       }

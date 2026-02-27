@@ -32,6 +32,14 @@ jest.mock("../AgreementSelectionForm", () => ({
   ),
 }));
 
+// Mock @socialgouv/modeles-social
+jest.mock("@socialgouv/modeles-social", () => ({
+  supportedCcn: [{ idcc: 1486, indpiTempsPartiel: "FULLY_SUPPORTED" }],
+  SupportedTypes: {
+    FULLY_SUPPORTED: "FULLY_SUPPORTED",
+  },
+}));
+
 // Mock AccessibleAlert
 jest.mock("../../../outils/common/components/AccessibleAlert", () => ({
   AccessibleAlert: ({
@@ -213,7 +221,7 @@ describe("AgreementSelectionModalContent - Accessibility", () => {
       );
     });
 
-    it("should not show warning alert when contributions is true", () => {
+    it("should not show warning alert when CC is supported by a simulator", () => {
       render(<AgreementSelectionModalContent onClose={mockOnClose} />);
 
       expect(
@@ -221,9 +229,13 @@ describe("AgreementSelectionModalContent - Accessibility", () => {
       ).not.toBeInTheDocument();
     });
 
-    it("should show warning alert when contributions is false", () => {
+    it("should show warning alert when CC is not supported by any simulator", () => {
       currentAgreement = {
-        ...currentAgreement,
+        num: 9999,
+        shortTitle: "Convention non traitée",
+        id: "9999",
+        slug: "9999-convention-non-traitee",
+        title: "Convention collective non traitée",
         contributions: false,
       };
 
