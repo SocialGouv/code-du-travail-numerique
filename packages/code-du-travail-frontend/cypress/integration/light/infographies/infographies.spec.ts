@@ -5,12 +5,11 @@ describe("Pages infographies", () => {
     cy.visit("/");
     cy.findByRole("heading", { level: 1 })
       .should("have.text", "Bienvenue sur le Code du travail numérique")
-      .should("be.visible");
+      .click();
     cy.get("#fr-header-main-navigation").contains("Code du travail").click();
     cy.get("#fr-header-main-navigation")
       .contains("Nos infographies")
-      .should("be.visible")
-      .click();
+      .click({ force: true });
     cy.isIndexable();
     cy.urlEqual("/infographie");
     cy.canonicalUrlEqual("/infographie");

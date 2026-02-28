@@ -3,12 +3,12 @@ describe("Page Besoin de plus d'information", () => {
     cy.visit("/besoin-plus-informations");
     cy.findByRole("heading", { level: 1 })
       .should("have.text", "Besoin de plus d'informations")
-      .should("be.visible");
+      .click();
 
-    cy.selectByLabel("Saisissez le numéro de votre département").as(
+    cy.contains("label", "Saisissez le numéro de votre département").as(
       "input-departement"
     );
-    cy.get("@input-departement").type("75", { delay: 50 });
+    cy.get("@input-departement").type("75");
     cy.get("@input-departement").type("{enter}");
 
     cy.get(

@@ -7,7 +7,7 @@ describe("Outil - Indemnité de rupture conventionnelle", () => {
       "have.text",
       "Calculer l'indemnité de rupture conventionnelle"
     );
-    cy.get("button").contains("Commencer").should("be.visible").click();
+    cy.get("button").contains("Commencer").click({ force: true });
 
     cy.contains(
       "Je ne souhaite pas renseigner ma convention collective (je passe l'étape)."

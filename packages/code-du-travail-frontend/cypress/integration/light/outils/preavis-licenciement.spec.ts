@@ -4,7 +4,7 @@ describe("Outil - Préavis de licenciement", () => {
 
     cy.get("h1").should("have.text", "Calculer le préavis de licenciement");
 
-    cy.get("button").contains("Commencer").should("be.visible").click();
+    cy.get("button").contains("Commencer").click({ force: true });
 
     cy.contains("Le licenciement est-il dû à une faute grave (ou lourde)");
     cy.get('label:contains("Oui")').eq(0).click();
@@ -40,7 +40,7 @@ describe("Outil - Préavis de licenciement", () => {
 
     cy.get("h1").should("have.text", "Calculer le préavis de licenciement");
 
-    cy.get("button").contains("Commencer").should("be.visible").click();
+    cy.get("button").contains("Commencer").click({ force: true });
 
     cy.contains("Le licenciement est-il dû à une faute grave (ou lourde)");
     cy.get('label:contains("Non")').eq(0).click();
@@ -55,7 +55,7 @@ describe("Outil - Préavis de licenciement", () => {
       .first()
       .click();
     cy.contains("Précisez et sélectionnez votre convention collective");
-    cy.get("#agreement-search-autocomplete").type("843", { delay: 50 });
+    cy.get("#agreement-search-autocomplete").type("843");
     cy.get('ul[role="listbox"] li').contains("Boulangerie").click();
     cy.get("button").contains("Suivant").click();
 

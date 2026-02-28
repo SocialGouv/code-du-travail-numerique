@@ -3,7 +3,7 @@ describe("Modèles de documents", () => {
     cy.visit("/");
     cy.findByRole("heading", { level: 1 })
       .should("have.text", "Bienvenue sur le Code du travail numérique")
-      .should("be.visible");
+      .click();
     cy.get("#fr-header-main-navigation")
       .contains("Modèles de documents")
       .click();
@@ -39,13 +39,11 @@ describe("Modèles de documents", () => {
 
     cy.findByRole("heading", { level: 1 })
       .should("have.text", "Bienvenue sur le Code du travail numérique")
-      .should("be.visible");
+      .click();
 
     cy.get("#search-home-autocomplete").as("home-searchbar");
 
-    cy.get("@home-searchbar").type("modele rupture contrat periode d'essai", {
-      delay: 50,
-    });
+    cy.get("@home-searchbar").type("modele rupture contrat periode d'essai");
 
     cy.get("@home-searchbar").type("{enter}");
 

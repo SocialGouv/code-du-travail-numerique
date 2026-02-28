@@ -3,7 +3,7 @@ describe("Contributions", () => {
     cy.visit("/");
     cy.findByRole("heading", { level: 1 })
       .should("have.text", "Bienvenue sur le Code du travail numérique")
-      .should("be.visible");
+      .click();
     cy.get("#fr-header-main-navigation").contains("Fiches pratiques").click();
     cy.get("#fr-header-main-navigation")
       .contains("Voir toutes les fiches par thème")

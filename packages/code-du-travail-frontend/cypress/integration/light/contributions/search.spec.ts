@@ -3,10 +3,8 @@ describe("Contributions", () => {
     cy.visit("/");
     cy.findByRole("heading", { level: 1 })
       .should("have.text", "Bienvenue sur le Code du travail numérique")
-      .should("be.visible");
-    cy.get("#search-home-autocomplete").type("durée maximale CDD", {
-      delay: 50,
-    });
+      .click();
+    cy.get("#search-home-autocomplete").type("durée maximale CDD");
     cy.contains("button", "Voir tous les résultats").click();
     cy.findAllByRole("heading", { level: 3 }).its("length").should("be.gte", 1);
     cy.contains("Durée maximale d'un CDD").click();

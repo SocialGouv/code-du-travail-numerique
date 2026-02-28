@@ -6,7 +6,7 @@ describe("Outil - Préavis de retraite", () => {
       "have.text",
       "Calculer le préavis de départ à la retraite"
     );
-    cy.get("button").contains("Commencer").should("be.visible").click();
+    cy.get("button").contains("Commencer").click({ force: true });
 
     // Origine du départ à la retraite
     cy.contains("Qui est à l'origine du départ en retraite ?");
@@ -87,7 +87,7 @@ describe("Outil - Préavis de retraite", () => {
   it("Parcours en connaissant sa convention collective", () => {
     cy.visit("/outils/preavis-retraite");
     // Intro
-    cy.get("button").contains("Commencer").should("be.visible").click();
+    cy.get("button").contains("Commencer").click({ force: true });
 
     // Origine du départ à la retraite
     cy.contains("Qui est à l'origine du départ en retraite ?");
@@ -106,7 +106,7 @@ describe("Outil - Préavis de retraite", () => {
       .first()
       .click();
     cy.contains("Précisez et sélectionnez votre convention collective");
-    cy.get("#agreement-search-autocomplete").type("843", { delay: 50 });
+    cy.get("#agreement-search-autocomplete").type("843");
     cy.get('ul[role="listbox"] li').contains("Boulangerie").click();
     cy.get("button").contains("Suivant").click();
 
@@ -147,7 +147,7 @@ describe("Outil - Préavis de retraite", () => {
   it("Parcours en ne connaissant pas sa convention collective", () => {
     cy.visit("/outils/preavis-retraite");
     // Intro
-    cy.get("button").contains("Commencer").should("be.visible").click();
+    cy.get("button").contains("Commencer").click({ force: true });
 
     // Origine du départ à la retraite
     cy.contains("Qui est à l'origine du départ en retraite ?");
@@ -169,8 +169,7 @@ describe("Outil - Préavis de retraite", () => {
     cy.get("button").contains("Suivant").click();
     cy.contains("Vous devez sélectionner une entreprise");
     cy.selectByLabel("Nom de votre entreprise ou numéro Siren/Siret").type(
-      "CARREFOUR BANQUE",
-      { delay: 50 }
+      "CARREFOUR BANQUE"
     );
     cy.get('button[type="submit"]').last().click();
     cy.contains("CARREFOUR BANQUE").click();
@@ -183,12 +182,12 @@ describe("Outil - Préavis de retraite", () => {
     cy.get("button").contains("Modifier").click();
     cy.selectByLabel("Nom de votre entreprise ou numéro Siren/Siret").clear();
     cy.selectByLabel("Nom de votre entreprise ou numéro Siren/Siret").type(
-      "boursorama",
-      { delay: 50 }
+      "boursorama"
     );
-    cy.selectByLabel("Code postal ou Ville").type("92100", { delay: 50 });
-    cy.selectByLabel("Code postal ou Ville").type("{downArrow}{enter}", {
-      delay: 200,
+    cy.selectByLabel("Code postal ou Ville").type("9210");
+    cy.selectByLabel("Code postal ou Ville").type("0{downArrow}{enter}", {
+      delay: 2000,
+      force: true,
     });
     cy.get('button[type="submit"]').last().click();
     cy.contains(

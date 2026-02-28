@@ -10,34 +10,25 @@ dotenv.config();
 
 let staticServer = null;
 
-const isCI = !!process.env.CI;
-
-const specPatterns = {
-  heavy: "cypress/integration/heavy/**/*.spec.{js,jsx,ts,tsx}",
-  light: "cypress/integration/light/**/*.spec.{js,jsx,ts,tsx}",
-  "html-validation":
-    "cypress/integration/html-validation/**/*.spec.{js,jsx,ts,tsx}",
-  "heavy-and-light":
-    "cypress/integration/{light,heavy}/**/*.spec.{js,jsx,ts,tsx}",
-};
-
 module.exports = defineConfig({
-  defaultCommandTimeout: 30000, // 30s
-  pageLoadTimeout: 60000, // 60s
-  responseTimeout: 30000, // 30s
-  numTestsKeptInMemory: isCI ? 0 : 50,
-  experimentalMemoryManagement: isCI,
+  defaultCommandTimeout: 20000, // 20s
   e2e: {
     baseUrl: process.env.TEST_BASEURL ?? "http://localhost:3000",
-    retries: { runMode: 3, openMode: 0 },
+    retries: 2,
     specPattern:
-      specPatterns[process.env.TEST_MODE] ??
-      "cypress/integration/**/*.spec.{js,jsx,ts,tsx}",
+      process.env.TEST_MODE === "heavy"
+        ? "cypress/integration/heavy/**/*.spec.{js,jsx,ts,tsx}"
+        : process.env.TEST_MODE === "light"
+          ? "cypress/integration/light/**/*.spec.{js,jsx,ts,tsx}"
+          : process.env.TEST_MODE === "html-validation"
+            ? "cypress/integration/html-validation/**/*.spec.{js,jsx,ts,tsx}"
+            : process.env.TEST_MODE === "heavy-and-light"
+              ? "cypress/integration/{light,heavy}/**/*.spec.{js,jsx,ts,tsx}"
+              : "cypress/integration/**/*.spec.{js,jsx,ts,tsx}",
     supportFile: "cypress/support/index.ts",
     viewportHeight: 1000,
     viewportWidth: 1280,
     chromeWebSecurity: false,
-    watchForFileChanges: !isCI,
     setupNodeEvents(on) {
       htmlvalidate.install(on);
       on("before:run", async () => {

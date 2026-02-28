@@ -9,7 +9,7 @@ describe("Outil - Trouver sa convention collective", () => {
     );
     cy.findByRole("heading", { level: 1 })
       .should("have.text", "Trouver sa convention collective")
-      .should("be.visible");
+      .click();
     cy.contains("Je connais ma convention collective je la saisis").click();
     cy.urlEqual("/outils/convention-collective/convention");
     cy.canonicalUrlEqual("/outils/convention-collective");
@@ -17,7 +17,7 @@ describe("Outil - Trouver sa convention collective", () => {
       "Nom de la convention collective ou son numéro d’identification IDCC (4 chiffres)"
     )
       .as("inputIdcc")
-      .type("boulangerie", { delay: 50 });
+      .type("boulangerie");
     cy.get('ul[role="listbox"] li').should(
       "contain",
       "Boulangerie-pâtisserie (entreprises artisanales)"
@@ -27,7 +27,7 @@ describe("Outil - Trouver sa convention collective", () => {
       "Activités industrielles de boulangerie et pâtisserie"
     );
     cy.get("@inputIdcc").clear();
-    cy.get("@inputIdcc").type("2247", { delay: 50 });
+    cy.get("@inputIdcc").type("2247");
     cy.get('ul[role="listbox"] li').should(
       "contain",
       "Entreprises de courtage d'assurances et/ou de réassurances"

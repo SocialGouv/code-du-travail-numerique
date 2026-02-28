@@ -21,9 +21,8 @@ describe("Page Ministère du travail", () => {
     cy.visit(
       "/fiche-ministere-travail/la-demission#quelle-est-la-situation-du-salarie-a-la-fin-du-contrat"
     );
-    cy.findByRole("heading", { level: 1 })
-      .should("have.text", "La démission")
-      .should("be.visible");
+    cy.findByRole("heading", { level: 1 }).should("have.text", "La démission");
+    cy.findByRole("heading", { level: 1 }).click();
     cy.get('[aria-expanded="true"]', { timeout: 10000 })
       .get("h2")
       .should(
