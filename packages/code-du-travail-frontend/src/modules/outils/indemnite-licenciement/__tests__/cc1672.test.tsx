@@ -27,8 +27,8 @@ describe("Indemnité licenciement - CC 1672", () => {
 
     userAction
       .click(ui.introduction.startButton.get())
-      .click(ui.contract.inaptitude.non.get())
       .click(ui.next.get())
+      .click(ui.information.inaptitude.non.get())
       .click(ui.next.get());
   });
   test(`Cas nominal`, async () => {

@@ -142,11 +142,12 @@ export const SimulatorLayout = ({
 
   return (
     <div>
-      <div data-testid="stepper" className={hideOnPrint}>
+      <div className={hideOnPrint}>
         <div className={fr.cx("fr-stepper", "fr-mb-3w")}>
           <h2
             tabIndex={-1}
             ref={stepperRef}
+            data-testid="stepper"
             className={fr.cx("fr-stepper__title")}
           >
             {stepName}

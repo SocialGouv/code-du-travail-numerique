@@ -26,9 +26,8 @@ describe("Indemnité licenciement - CC 2609", () => {
       rendering = render(<CalculateurIndemniteLicenciement title={""} />);
       userAction = new UserAction();
       userAction.click(ui.introduction.startButton.get());
-      userAction.click(ui.contract.inaptitude.non.get());
       userAction.click(ui.next.get());
-      userAction.click(ui.next.get());
+      userAction.click(ui.information.inaptitude.non.get());
       expect(ui.activeStep.query()).toHaveTextContent("Informations");
     });
 

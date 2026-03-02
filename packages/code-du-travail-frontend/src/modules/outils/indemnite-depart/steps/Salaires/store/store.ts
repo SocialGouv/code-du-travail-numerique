@@ -7,7 +7,6 @@ import {
 } from "./types";
 import { AncienneteStoreSlice } from "../../Anciennete/store";
 import { validateStep } from "./validator";
-import { ContratTravailStoreSlice } from "../../ContratTravail/store";
 import { validatorAgreement } from "../../../agreements";
 import {
   getSupportedAgreement,
@@ -35,7 +34,6 @@ const initialState: SalairesStoreData = {
 const createSalairesStore: StoreSlice<
   SalairesStoreSlice,
   AncienneteStoreSlice &
-    ContratTravailStoreSlice &
     CommonAgreementStoreSlice<PublicodesSimulator.INDEMNITE_LICENCIEMENT>
 > = (set, get) => ({
   salairesData: { ...initialState },

@@ -26,9 +26,8 @@ describe("Indemnité licenciement - CC 3248", () => {
       userAction = new UserAction();
       userAction
         .click(ui.introduction.startButton.get())
-        .click(ui.contract.inaptitude.non.get())
         .click(ui.next.get())
-        .click(ui.next.get());
+        .click(ui.information.inaptitude.non.get());
     });
 
     test(`valider les questions`, async () => {

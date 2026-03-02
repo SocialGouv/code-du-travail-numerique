@@ -27,9 +27,8 @@ describe("Indemnité licenciement - Validation des erreurs sur l'étape ancienne
       userAction = new UserAction();
       userAction
         .click(ui.introduction.startButton.get())
-        .click(ui.contract.inaptitude.non.get())
         .click(ui.next.get())
-        .click(ui.next.get());
+        .click(ui.information.inaptitude.non.get());
       await userAction.changeInputList(
         ui.information.agreement16.proCategory.get(),
         "Ingénieurs et cadres"
@@ -199,9 +198,9 @@ describe("Indemnité licenciement - Validation des erreurs sur l'étape ancienne
       userAction = new UserAction();
       userAction
         .click(ui.introduction.startButton.get())
-        .click(ui.contract.inaptitude.non.get())
-        .click(ui.next.get())
         .click(ui.agreement.noAgreement.get())
+        .click(ui.next.get())
+        .click(ui.information.inaptitude.non.get())
         .click(ui.next.get());
       // Validation que l'on est bien sur l'étape ancienneté
       expect(ui.activeStep.query()).toHaveTextContent("Ancienneté");

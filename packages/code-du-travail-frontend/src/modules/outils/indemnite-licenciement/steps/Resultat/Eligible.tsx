@@ -59,8 +59,7 @@ export default function Eligible() {
     result: state.resultData.input.result,
     publicodesLegalResult: state.resultData.input.publicodesLegalResult,
     publicodesAgreementResult: state.resultData.input.publicodesAgreementResult,
-    licenciementInaptitude:
-      state.contratTravailData.input.licenciementInaptitude,
+    licenciementInaptitude: state.informationsData.input.licenciementInaptitude,
     agreement: state.agreementData.input.agreement,
     dateEntree: state.ancienneteData.input.dateEntree,
     dateSortie: state.ancienneteData.input.dateSortie,

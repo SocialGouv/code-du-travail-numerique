@@ -4,6 +4,7 @@ import {
   RuleType,
 } from "@socialgouv/modeles-social";
 import { ValidationResponse } from "src/modules/outils/common/components/SimulatorLayout/types";
+import { OuiNon } from "../../../common";
 
 export type Question = {
   name: string;
@@ -18,6 +19,8 @@ export type PublicodesInformation = {
 };
 
 export type CommonInformationsStoreInput = {
+  showLicenciementInaptitude?: boolean;
+  licenciementInaptitude?: OuiNon;
   publicodesInformations: Array<PublicodesInformation>;
   isStepHidden: boolean;
   isStepSalaryHidden: boolean;
@@ -27,6 +30,7 @@ export type CommonInformationsStoreInput = {
 };
 
 export type CommonInformationsStoreError = {
+  errorLicenciementInaptitude?: string;
   errorInformations: Record<string, string>;
   errorEligibility?: string;
   errorPublicodes?: string;
@@ -40,6 +44,7 @@ export type CommonInformationsStoreData = {
 };
 
 export type CommonInformationsStoreFn = {
+  onChangeLicenciementInaptitude: (value: OuiNon) => void;
   onInformationsChange: (
     questionKey: string,
     value: string,
@@ -47,7 +52,7 @@ export type CommonInformationsStoreFn = {
   ) => void;
   generatePublicodesQuestions: () => boolean;
   onNextStep: () => ValidationResponse;
-  onSetStepHidden: () => void;
+  onUpdateSalaryStepVisibility: () => void;
 };
 
 export type CommonInformationsStoreSlice = {

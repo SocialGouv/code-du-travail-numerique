@@ -26,10 +26,8 @@ describe("Indemnité licenciement- CC 2098", () => {
 
     userAction
       .click(ui.introduction.startButton.get())
-      .click(ui.contract.inaptitude.oui.get())
       .click(ui.next.get())
-      .click(ui.next.get())
-
+      .click(ui.information.inaptitude.oui.get())
       .click(ui.information.agreement2098.inaptitudeNonPro.get())
       .click(ui.next.get())
       .setInput(ui.seniority.startDate.get(), "01/01/2009")

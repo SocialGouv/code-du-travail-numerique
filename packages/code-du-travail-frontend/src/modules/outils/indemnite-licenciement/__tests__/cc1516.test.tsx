@@ -27,8 +27,8 @@ describe("Indemnité licenciement - CC 1516", () => {
 
     userAction
       .click(ui.introduction.startButton.get())
-      .click(ui.contract.inaptitude.non.get())
       .click(ui.next.get())
+      .click(ui.information.inaptitude.non.get())
       .click(ui.next.get());
   });
   test("user is asked for the notice salary", () => {

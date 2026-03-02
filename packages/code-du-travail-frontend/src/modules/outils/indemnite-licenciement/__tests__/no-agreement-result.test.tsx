@@ -28,9 +28,8 @@ describe("Indemnité licenciement", () => {
       render(<CalculateurIndemniteLicenciement title={""} />);
       userAction = new UserAction();
       userAction.click(ui.introduction.startButton.get());
-      userAction.click(ui.contract.inaptitude.non.get());
       userAction.click(ui.next.get());
-      userAction.click(ui.next.get());
+      userAction.click(ui.information.inaptitude.non.get());
       await userAction.changeInputList(
         ui.information.agreement1486.proCategory.get(),
         "Chargés d'enquête intermittents"
@@ -87,8 +86,6 @@ describe("Indemnité licenciement", () => {
     userAction = new UserAction();
     userAction
       .click(ui.introduction.startButton.get())
-      .click(ui.contract.inaptitude.non.get())
-      .click(ui.next.get())
       .click(ui.agreement.unknownAgreement.get())
       .setInput(ui.agreement.agreementCompanyInput.get(), "bricomanie")
       .click(ui.agreement.agreementCompanySearchButton.get());
@@ -97,6 +94,8 @@ describe("Indemnité licenciement", () => {
       userAction.click(ui.agreement.searchItem.bricomanie.get());
     });
     userAction
+      .click(ui.next.get())
+      .click(ui.information.inaptitude.non.get())
       .click(ui.next.get())
       .setInput(ui.seniority.startDate.get(), "01/01/2018")
       .setInput(ui.seniority.notificationDate.get(), "01/01/2024")
