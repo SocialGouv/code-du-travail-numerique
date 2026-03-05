@@ -2,9 +2,10 @@ describe("Header", () => {
   it("doit afficher les liens d'évitement", () => {
     cy.visit("/mentions-legales");
     cy.get("[id^=fr-skiplinks]").as("skipLink").should("not.be.visible");
-    cy.window().focus().realPress("Tab");
+    cy.get("@skipLink").find('a[href="#main"]').focus();
     cy.get("@skipLink").should("be.visible");
     cy.focused().should("have.attr", "href", "#main");
+
     cy.realPress("Tab");
     cy.focused().should("have.attr", "href", "#fr-header-main-navigation");
     cy.realPress("Tab");

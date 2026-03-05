@@ -6,8 +6,7 @@ describe("Pages integration convention collective", () => {
 
     cy.iframe()
       .findByRole("heading", { level: 1 })
-      .should("have.text", "Trouver sa convention collective")
-      .click();
+      .should("have.text", "Trouver sa convention collective");
 
     cy.iframe()
       // @ts-ignore

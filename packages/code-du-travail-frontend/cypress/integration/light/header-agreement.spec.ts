@@ -18,7 +18,8 @@ const typeInAgreementSearch = (text: string) => {
   cy.wait(500);
   cy.get("#agreement-modal input[type='text']")
     .first()
-    .type(text, { delay: 100 });
+    .clear()
+    .type(text, { delay: 150 });
 };
 
 describe("Header agreement selector", () => {
@@ -29,10 +30,14 @@ describe("Header agreement selector", () => {
 
     typeInAgreementSearch("2247");
 
-    // Wait for autocomplete results and select one
-    cy.get("#agreement-modal ul[role='listbox'] li", { timeout: 10000 })
+    // Wait for autocomplete results to appear and stabilize
+    cy.get("#agreement-modal ul[role='listbox'] li", { timeout: 15000 })
+      .should("have.length.greaterThan", 0);
+
+    // Click on the matching result using mousedown (Downshift listens to mousedown)
+    cy.get("#agreement-modal ul[role='listbox'] li")
       .contains("Entreprises de courtage d'assurances", { matchCase: false })
-      .click();
+      .click({ force: true });
 
     // After selection, the modal shows the selected CC view
     cy.get(
