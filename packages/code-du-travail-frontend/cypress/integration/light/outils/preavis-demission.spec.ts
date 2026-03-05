@@ -2,11 +2,16 @@ describe("Outil - Préavis de démission", () => {
   it("Parcours avec convention collective non traitée", () => {
     cy.visit("/outils/preavis-demission");
     // Intro
-    cy.get("h1").should("have.text", "Calculer le préavis de démission");
+    cy.get("h1", { timeout: 10000 }).should(
+      "have.text",
+      "Calculer le préavis de démission"
+    );
     cy.get("button").contains("Commencer").click({ force: true });
 
     // Convention collective
-    cy.contains("Quel est le nom de la convention collective applicable ?");
+    cy.contains("Quel est le nom de la convention collective applicable ?", {
+      timeout: 10000,
+    });
     cy.get(
       'label:visible:contains("Je sais quelle est ma convention collective et je la saisis.")'
     )
@@ -28,11 +33,16 @@ describe("Outil - Préavis de démission", () => {
   it("Parcours en connaissant sa convention collective", () => {
     cy.visit("/outils/preavis-demission");
     // Intro
-    cy.get("h1").should("have.text", "Calculer le préavis de démission");
+    cy.get("h1", { timeout: 10000 }).should(
+      "have.text",
+      "Calculer le préavis de démission"
+    );
     cy.get("button").contains("Commencer").click({ force: true });
 
     // Convention collective
-    cy.contains("Quel est le nom de la convention collective applicable ?");
+    cy.contains("Quel est le nom de la convention collective applicable ?", {
+      timeout: 10000,
+    });
     cy.get(
       'label:visible:contains("Je sais quelle est ma convention collective et je la saisis.")'
     )

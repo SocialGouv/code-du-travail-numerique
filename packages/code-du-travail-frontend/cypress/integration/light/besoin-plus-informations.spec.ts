@@ -1,9 +1,10 @@
 describe("Page Besoin de plus d'information", () => {
   it("Permet de rechercher le lien vers un service de renseignement", () => {
     cy.visit("/besoin-plus-informations");
-    cy.findByRole("heading", { level: 1 })
-      .should("have.text", "Besoin de plus d'informations")
-      .click();
+    cy.findByRole("heading", { level: 1 }).should(
+      "have.text",
+      "Besoin de plus d'informations"
+    );
 
     cy.contains("label", "Saisissez le numéro de votre département").as(
       "input-departement"

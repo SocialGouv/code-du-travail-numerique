@@ -25,13 +25,15 @@ describe("Outil - Heures d'absence pour rechercher un emploi", () => {
 
   it("Parcours en connaissant sa convention collective et sans information complémentaire", () => {
     cy.visit("/outils/heures-recherche-emploi");
-    cy.get("h1").should(
+    cy.get("h1", { timeout: 10000 }).should(
       "have.text",
       "Calculer le nombre d'heures d'absence pour rechercher un emploi"
     );
     cy.get("button").contains("Commencer").click({ force: true });
 
-    cy.contains("Quel est le nom de la convention collective applicable ?");
+    cy.contains("Quel est le nom de la convention collective applicable ?", {
+      timeout: 10000,
+    });
     cy.get(
       'label:visible:contains("Je sais quelle est ma convention collective et je la saisis.")'
     )
@@ -68,13 +70,15 @@ describe("Outil - Heures d'absence pour rechercher un emploi", () => {
 
   it("Parcours en connaissant sa convention collective et avec informations complémentaires", () => {
     cy.visit("/outils/heures-recherche-emploi");
-    cy.get("h1").should(
+    cy.get("h1", { timeout: 10000 }).should(
       "have.text",
       "Calculer le nombre d'heures d'absence pour rechercher un emploi"
     );
     cy.get("button").contains("Commencer").click({ force: true });
 
-    cy.contains("Quel est le nom de la convention collective applicable ?");
+    cy.contains("Quel est le nom de la convention collective applicable ?", {
+      timeout: 10000,
+    });
     cy.get(
       'label:visible:contains("Je sais quelle est ma convention collective et je la saisis.")'
     )

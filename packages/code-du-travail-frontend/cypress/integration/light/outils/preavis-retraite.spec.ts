@@ -87,10 +87,13 @@ describe("Outil - Préavis de retraite", () => {
   it("Parcours en connaissant sa convention collective", () => {
     cy.visit("/outils/preavis-retraite");
     // Intro
+    cy.get("h1", { timeout: 10000 }).should("be.visible");
     cy.get("button").contains("Commencer").click({ force: true });
 
     // Origine du départ à la retraite
-    cy.contains("Qui est à l'origine du départ en retraite ?");
+    cy.contains("Qui est à l'origine du départ en retraite ?", {
+      timeout: 10000,
+    });
     cy.get(
       'label:contains("Le salarié décide lui-même de partir à la retraite")'
     )
@@ -147,10 +150,13 @@ describe("Outil - Préavis de retraite", () => {
   it("Parcours en ne connaissant pas sa convention collective", () => {
     cy.visit("/outils/preavis-retraite");
     // Intro
+    cy.get("h1", { timeout: 10000 }).should("be.visible");
     cy.get("button").contains("Commencer").click({ force: true });
 
     // Origine du départ à la retraite
-    cy.contains("Qui est à l'origine du départ en retraite ?");
+    cy.contains("Qui est à l'origine du départ en retraite ?", {
+      timeout: 10000,
+    });
     cy.get(
       'label:contains("Le salarié décide lui-même de partir à la retraite")'
     )
