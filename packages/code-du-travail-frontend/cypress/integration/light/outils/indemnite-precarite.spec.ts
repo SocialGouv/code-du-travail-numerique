@@ -6,7 +6,7 @@ describe("Outil - Indemnité de Precarite", () => {
 
     cy.contains("Quel est le nom de la convention collective applicable ?");
     cy.get(
-      'label:contains("Je sais quelle est ma convention collective et je la saisis.")'
+      'label:visible:contains("Je sais quelle est ma convention collective et je la saisis.")'
     )
       .first()
       .click();
