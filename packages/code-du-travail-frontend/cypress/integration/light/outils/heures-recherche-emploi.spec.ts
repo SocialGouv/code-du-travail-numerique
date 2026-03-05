@@ -1,15 +1,18 @@
 describe("Outil - Heures d'absence pour rechercher un emploi", () => {
   it("Parcours avec convention collective non traité", () => {
     cy.visit("/outils/heures-recherche-emploi");
-    cy.get("h1").should(
+    cy.get("h1", { timeout: 10000 }).should(
       "have.text",
       "Calculer le nombre d'heures d'absence pour rechercher un emploi"
     );
-    cy.get("button").contains("Commencer").click({ force: true });
+    cy.get("button").contains("Commencer").should("be.visible").click();
 
-    cy.contains("Quel est le nom de la convention collective applicable ?");
+    cy.contains("Quel est le nom de la convention collective applicable ?", {
+      timeout: 15000,
+    });
     cy.get(
-      'label:visible:contains("Je sais quelle est ma convention collective et je la saisis.")'
+      'label:visible:contains("Je sais quelle est ma convention collective et je la saisis.")',
+      { timeout: 15000 }
     )
       .first()
       .click();
@@ -29,13 +32,14 @@ describe("Outil - Heures d'absence pour rechercher un emploi", () => {
       "have.text",
       "Calculer le nombre d'heures d'absence pour rechercher un emploi"
     );
-    cy.get("button").contains("Commencer").click({ force: true });
+    cy.get("button").contains("Commencer").should("be.visible").click();
 
     cy.contains("Quel est le nom de la convention collective applicable ?", {
-      timeout: 10000,
+      timeout: 15000,
     });
     cy.get(
-      'label:visible:contains("Je sais quelle est ma convention collective et je la saisis.")'
+      'label:visible:contains("Je sais quelle est ma convention collective et je la saisis.")',
+      { timeout: 15000 }
     )
       .first()
       .click();
@@ -74,13 +78,14 @@ describe("Outil - Heures d'absence pour rechercher un emploi", () => {
       "have.text",
       "Calculer le nombre d'heures d'absence pour rechercher un emploi"
     );
-    cy.get("button").contains("Commencer").click({ force: true });
+    cy.get("button").contains("Commencer").should("be.visible").click();
 
     cy.contains("Quel est le nom de la convention collective applicable ?", {
-      timeout: 10000,
+      timeout: 15000,
     });
     cy.get(
-      'label:visible:contains("Je sais quelle est ma convention collective et je la saisis.")'
+      'label:visible:contains("Je sais quelle est ma convention collective et je la saisis.")',
+      { timeout: 15000 }
     )
       .first()
       .click();

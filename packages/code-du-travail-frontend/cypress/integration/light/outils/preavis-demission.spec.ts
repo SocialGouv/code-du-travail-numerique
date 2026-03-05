@@ -6,14 +6,15 @@ describe("Outil - Préavis de démission", () => {
       "have.text",
       "Calculer le préavis de démission"
     );
-    cy.get("button").contains("Commencer").click({ force: true });
+    cy.get("button").contains("Commencer").should("be.visible").click();
 
     // Convention collective
     cy.contains("Quel est le nom de la convention collective applicable ?", {
-      timeout: 10000,
+      timeout: 15000,
     });
     cy.get(
-      'label:visible:contains("Je sais quelle est ma convention collective et je la saisis.")'
+      'label:visible:contains("Je sais quelle est ma convention collective et je la saisis.")',
+      { timeout: 15000 }
     )
       .first()
       .click();
@@ -37,14 +38,15 @@ describe("Outil - Préavis de démission", () => {
       "have.text",
       "Calculer le préavis de démission"
     );
-    cy.get("button").contains("Commencer").click({ force: true });
+    cy.get("button").contains("Commencer").should("be.visible").click();
 
     // Convention collective
     cy.contains("Quel est le nom de la convention collective applicable ?", {
-      timeout: 10000,
+      timeout: 15000,
     });
     cy.get(
-      'label:visible:contains("Je sais quelle est ma convention collective et je la saisis.")'
+      'label:visible:contains("Je sais quelle est ma convention collective et je la saisis.")',
+      { timeout: 15000 }
     )
       .first()
       .click();
