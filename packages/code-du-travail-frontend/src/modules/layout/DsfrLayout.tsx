@@ -10,8 +10,6 @@ import { useSearchModal } from "../recherche/modal/SearchModalContext";
 import { useAgreementModal } from "../convention-collective/AgreementSelectionModal";
 import { AgreementModal } from "./header/AgreementModal";
 import { usePathname } from "next/navigation";
-import { TallyNotice } from "./TallyNotice";
-import { TALLY_ID } from "../../config";
 
 type Props = {
   children: ReactNode;
