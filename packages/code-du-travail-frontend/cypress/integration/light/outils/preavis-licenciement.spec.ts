@@ -2,16 +2,11 @@ describe("Outil - Préavis de licenciement", () => {
   it("Parcours sans convention collective", () => {
     cy.visit("/outils/preavis-licenciement");
 
-    cy.get("h1", { timeout: 10000 }).should(
-      "have.text",
-      "Calculer le préavis de licenciement"
-    );
+    cy.get("h1").should("have.text", "Calculer le préavis de licenciement");
 
     cy.get("button").contains("Commencer").should("be.visible").click();
 
-    cy.contains("Le licenciement est-il dû à une faute grave (ou lourde)", {
-      timeout: 15000,
-    });
+    cy.contains("Le licenciement est-il dû à une faute grave (ou lourde)");
     cy.get('label:contains("Oui")').eq(0).click();
     cy.contains("Pas de préavis en cas de faute grave");
     cy.get('label:contains("Non")').eq(0).click();
@@ -43,27 +38,19 @@ describe("Outil - Préavis de licenciement", () => {
   it("Parcours en connaissant sa convention collective", () => {
     cy.visit("/outils/preavis-licenciement");
 
-    cy.get("h1", { timeout: 10000 }).should(
-      "have.text",
-      "Calculer le préavis de licenciement"
-    );
+    cy.get("h1").should("have.text", "Calculer le préavis de licenciement");
 
     cy.get("button").contains("Commencer").should("be.visible").click();
 
-    cy.contains("Le licenciement est-il dû à une faute grave (ou lourde)", {
-      timeout: 15000,
-    });
+    cy.contains("Le licenciement est-il dû à une faute grave (ou lourde)");
     cy.get('label:contains("Non")').eq(0).click();
     cy.get('label:contains("Non")').eq(1).click();
     cy.get('[id="input-seniority"]').select("2 ans et plus");
     cy.contains("Suivant").click();
 
-    cy.contains("Quel est le nom de la convention collective applicable ?", {
-      timeout: 10000,
-    });
+    cy.contains("Quel est le nom de la convention collective applicable ?");
     cy.get(
-      'label:visible:contains("Je sais quelle est ma convention collective et je la saisis.")',
-      { timeout: 15000 }
+      'label:visible:contains("Je sais quelle est ma convention collective et je la saisis.")'
     )
       .first()
       .click();

@@ -76,9 +76,19 @@ export const AgreementModal = ({ isOpen, onClose }: Props) => {
           '[role="listbox"] [role="option"]'
         );
         if (openListboxes && openListboxes.length > 0) {
-          // Let the autocomplete component handle this Escape first
+          // Let the autocomplete/Downshift handle this Escape to close the dropdown first
           return;
         }
+
+        // Also check if the focused element is an input with an active combobox
+        const focused = document.activeElement;
+        if (
+          focused instanceof HTMLInputElement &&
+          focused.getAttribute("aria-expanded") === "true"
+        ) {
+          return;
+        }
+
         handleClose();
       }
     };

@@ -16,7 +16,7 @@ describe("Pages integration convention collective", () => {
     cy.get("@inputSiret").type("carrefour", { force: true });
 
     cy.iframe().find("button[type=submit]").contains("Rechercher").click();
-    cy.iframe().contains("CARREFOUR HYPERMARCHES", { timeout: 15000 }).click();
+    cy.iframe().contains("CARREFOUR HYPERMARCHES").click();
     cy.iframe()
       .contains("Commerce de détail et de gros à prédominance alimentaire")
       .as("cc");

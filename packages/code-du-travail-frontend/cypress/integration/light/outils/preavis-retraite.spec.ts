@@ -2,16 +2,14 @@ describe("Outil - Préavis de retraite", () => {
   it("Parcours sans convention collective avec validation des erreurs", () => {
     cy.visit("/outils/preavis-retraite");
     // Intro
-    cy.get("h1", { timeout: 10000 }).should(
+    cy.get("h1").should(
       "have.text",
       "Calculer le préavis de départ à la retraite"
     );
     cy.get("button").contains("Commencer").should("be.visible").click();
 
     // Origine du départ à la retraite
-    cy.contains("Qui est à l'origine du départ en retraite ?", {
-      timeout: 15000,
-    });
+    cy.contains("Qui est à l'origine du départ en retraite ?");
     cy.get("button").contains("Suivant").click();
     cy.contains("Vous devez répondre à cette question");
     cy.get(
@@ -89,13 +87,11 @@ describe("Outil - Préavis de retraite", () => {
   it("Parcours en connaissant sa convention collective", () => {
     cy.visit("/outils/preavis-retraite");
     // Intro
-    cy.get("h1", { timeout: 10000 }).should("be.visible");
+    cy.get("h1").should("be.visible");
     cy.get("button").contains("Commencer").should("be.visible").click();
 
     // Origine du départ à la retraite
-    cy.contains("Qui est à l'origine du départ en retraite ?", {
-      timeout: 15000,
-    });
+    cy.contains("Qui est à l'origine du départ en retraite ?");
     cy.get(
       'label:contains("Le salarié décide lui-même de partir à la retraite")'
     )
@@ -104,12 +100,9 @@ describe("Outil - Préavis de retraite", () => {
     cy.get("button").contains("Suivant").click();
 
     // Convention collective
-    cy.contains("Quel est le nom de la convention collective applicable ?", {
-      timeout: 10000,
-    });
+    cy.contains("Quel est le nom de la convention collective applicable ?");
     cy.get(
-      'label:visible:contains("Je sais quelle est ma convention collective et je la saisis.")',
-      { timeout: 15000 }
+      'label:visible:contains("Je sais quelle est ma convention collective et je la saisis.")'
     )
       .first()
       .click();
@@ -120,16 +113,14 @@ describe("Outil - Préavis de retraite", () => {
 
     // Informations
     cy.contains(
-      "Le salarié concerné est-il reconnu en tant que travailleur handicapé",
-      { timeout: 10000 }
+      "Le salarié concerné est-il reconnu en tant que travailleur handicapé"
     );
     cy.get('label:contains("Oui")').first().click();
     cy.get("button").contains("Suivant").click();
 
     // Ancienneté
     cy.contains(
-      "Le salarié a-t-il plus de 2 ans d'ancienneté dans l'entreprise (2 ans + 1 jour)",
-      { timeout: 10000 }
+      "Le salarié a-t-il plus de 2 ans d'ancienneté dans l'entreprise (2 ans + 1 jour)"
     );
     cy.get('label:contains("Non")').first().click();
     cy.contains(
@@ -139,7 +130,7 @@ describe("Outil - Préavis de retraite", () => {
     cy.get("button").contains("Suivant").click();
 
     // Résultat
-    cy.contains("Préavis de départ à la retraite", { timeout: 10000 });
+    cy.contains("Préavis de départ à la retraite");
     cy.contains("2 mois");
     cy.contains("Travailleur handicapé : Oui*");
     cy.contains(
@@ -157,13 +148,11 @@ describe("Outil - Préavis de retraite", () => {
   it("Parcours en ne connaissant pas sa convention collective", () => {
     cy.visit("/outils/preavis-retraite");
     // Intro
-    cy.get("h1", { timeout: 10000 }).should("be.visible");
+    cy.get("h1").should("be.visible");
     cy.get("button").contains("Commencer").should("be.visible").click();
 
     // Origine du départ à la retraite
-    cy.contains("Qui est à l'origine du départ en retraite ?", {
-      timeout: 15000,
-    });
+    cy.contains("Qui est à l'origine du départ en retraite ?");
     cy.get(
       'label:contains("Le salarié décide lui-même de partir à la retraite")'
     )
