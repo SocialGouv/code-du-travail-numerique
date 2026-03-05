@@ -10,7 +10,9 @@ describe("Header", () => {
       .should("exist");
     cy.get("@skipLink")
       .find("a")
-      .filter('[href="#fr-header-search-button"], [href="#fr-header-search-button-desktop"]')
+      .filter(
+        '[href="#fr-header-search-button"], [href="#fr-header-search-button-desktop"]'
+      )
       .should("have.length.gte", 1);
     cy.get("@skipLink").find('a[href="#more-info"]').should("exist");
 
