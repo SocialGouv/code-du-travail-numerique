@@ -11,10 +11,8 @@ import {
 import { validateStep } from "./validator";
 import { CommonInformationsStoreSlice } from "../../../steps/Informations/store";
 import { computeSalaryPeriods } from "../../../common";
-import { parse } from "../../../../common/utils";
+import { generateFrenchDate, parse } from "../../../../common/utils";
 import { SalaryPeriods } from "@socialgouv/modeles-social";
-import { generateFrenchDate } from "../../../../common/utils";
-import { ContratTravailStoreSlice } from "../../../steps/ContratTravail/store";
 import { CommonSituationStoreSlice } from "../../../situationStore";
 
 const initialInputState = {
@@ -35,7 +33,6 @@ export const createAgreement44StoreSalaires: StoreSlice<
   SalairesStoreSlice &
     AncienneteStoreSlice &
     CommonInformationsStoreSlice &
-    ContratTravailStoreSlice &
     CommonSituationStoreSlice
 > = (set, get) => ({
   agreement44Data: { ...initialState },

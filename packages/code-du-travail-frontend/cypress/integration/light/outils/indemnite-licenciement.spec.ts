@@ -6,12 +6,12 @@ describe("Outil - Indemnité de licenciement", () => {
     cy.get("h1").should("have.text", "Calculer l'indemnité de licenciement");
     cy.get("button").contains("Commencer").click({ force: true });
 
-    cy.get('label:contains("Non")').eq(0).click();
-    cy.contains("Suivant").click();
-
     cy.contains(
       "Je ne souhaite pas renseigner ma convention collective (je passe l'étape)."
     ).click();
+    cy.contains("Suivant").click();
+
+    cy.get('label:contains("Non")').eq(0).click();
     cy.contains("Suivant").click();
 
     cy.get("#dateEntree").type("2003-01-01");

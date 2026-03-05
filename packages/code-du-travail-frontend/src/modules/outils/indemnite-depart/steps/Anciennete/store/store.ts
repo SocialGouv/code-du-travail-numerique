@@ -17,7 +17,6 @@ import {
   SupportedCc,
 } from "@socialgouv/modeles-social";
 import { informationToSituation } from "../../Informations/components/utils";
-import { ContratTravailStoreSlice } from "../../ContratTravail/store";
 import { ValidationResponse } from "src/modules/outils/common/components/SimulatorLayout/types";
 import { validateStep } from "./validator";
 import { CommonAgreementStoreSlice } from "../../Agreement/store";
@@ -38,7 +37,6 @@ const createAncienneteStore: StoreSlice<
   SalairesStoreSlice &
     CommonAgreementStoreSlice<PublicodesSimulator.INDEMNITE_LICENCIEMENT> &
     CommonInformationsStoreSlice &
-    ContratTravailStoreSlice &
     CommonSituationStoreSlice
 > = (set, get) => ({
   ancienneteData: { ...initialState },
@@ -130,7 +128,6 @@ const createAncienneteStore: StoreSlice<
           const infos = informationToSituation(
             get().informationsData.input.publicodesInformations
           );
-          const { licenciementInaptitude } = get().contratTravailData.input;
           const {
             dateEntree,
             dateNotification,
@@ -147,10 +144,10 @@ const createAncienneteStore: StoreSlice<
               dateNotification,
             "contrat salarié . indemnité de licenciement . date de sortie":
               dateSortie,
-            "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
-              licenciementInaptitude,
             "contrat salarié . indemnité de licenciement . arrêt de travail":
               arretTravail,
+            "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
+              get().informationsData.input.licenciementInaptitude,
             absencePeriods:
               absencePeriods && absencePeriods.length
                 ? JSON.stringify(absencePeriods)
@@ -196,14 +193,12 @@ const applyGenericValidation = (
   get: StoreApi<
     AncienneteStoreSlice &
       CommonAgreementStoreSlice<PublicodesSimulator.INDEMNITE_LICENCIEMENT> &
-      CommonInformationsStoreSlice &
-      ContratTravailStoreSlice
+      CommonInformationsStoreSlice
   >["getState"],
   set: StoreApi<
     AncienneteStoreSlice &
       CommonAgreementStoreSlice<PublicodesSimulator.INDEMNITE_LICENCIEMENT> &
-      CommonInformationsStoreSlice &
-      ContratTravailStoreSlice
+      CommonInformationsStoreSlice
   >["setState"],
   paramName: keyof AncienneteStoreInput,
   value: any

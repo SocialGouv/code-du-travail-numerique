@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.218.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.217.0...v4.218.0) (2026-03-04)
+
+
+### Features
+
+* **tally:** retrait du questionnaire sur les accords d'entreprise ([f0067d1](https://github.com/SocialGouv/code-du-travail-numerique/commit/f0067d199ab53d2a260bb5cabc97f4ec43c4dadd))
+* **tools:** suppression de l'étape contrat du calcul des indemnités ([#7127](https://github.com/SocialGouv/code-du-travail-numerique/issues/7127)) ([eb1961f](https://github.com/SocialGouv/code-du-travail-numerique/commit/eb1961f460c600bbaae380c871f13f21815848ae))
+
+
+
+
+
 # [4.217.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.216.0...v4.217.0) (2026-02-24)
 
 

@@ -14,8 +14,6 @@ describe("Indemnité licenciement - Sélection de CC", () => {
   beforeEach(() => {
     render(<CalculateurIndemniteLicenciement title={""} />);
     fireEvent.click(ui.introduction.startButton.get());
-    fireEvent.click(ui.contract.inaptitude.non.get());
-    fireEvent.click(ui.next.get());
   });
   test("Vérifier la recherche par cc", async () => {
     const userAction = new UserAction();

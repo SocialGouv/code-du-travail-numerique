@@ -4,9 +4,10 @@ import { fr } from "@codegouvfr/react-dsfr";
 import Script from "next/script";
 import { css } from "@styled-system/css";
 
-type TallyNoticeProps = { id: string };
+type TallyNoticeProps = { id?: string; wording: string };
 
-export const TallyNotice = ({ id }: TallyNoticeProps) => {
+export const TallyNotice = ({ id, wording }: TallyNoticeProps) => {
+  if (!id) return undefined;
   return (
     <>
       <Script id="tally-js" src="https://tally.so/widgets/embed.js" />
@@ -28,8 +29,7 @@ export const TallyNotice = ({ id }: TallyNoticeProps) => {
               "fr-my-1w"
             )}
           >
-            Savez-vous si votre entreprise a conclu un accord d&apos;entreprise
-            pouvant vous accorder des droits supplémentaires ?
+            {wording}
           </p>
           <button
             className={`${fr.cx(
@@ -51,7 +51,7 @@ export const TallyNotice = ({ id }: TallyNoticeProps) => {
             aria-haspopup="dialog"
             aria-expanded="false"
           >
-            Répondez en 30 secondes
+            Répondre
           </button>
         </div>
       </div>

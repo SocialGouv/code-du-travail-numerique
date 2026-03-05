@@ -34,12 +34,6 @@ describe("Indemnité licenciement - Tracking", () => {
         `{"num":16,"shortTitle":"Transports routiers et activités auxiliaires du transport"}`
     );
     userAction.click(ui.introduction.startButton.get());
-    expect(sendEvent).toHaveBeenCalledWith({
-      category: "outil",
-      action: `view_step_Indemnité de licenciement`,
-      name: "contrat_travail",
-    });
-    userAction.click(ui.contract.inaptitude.non.get());
     userAction.click(ui.next.get());
     expect(sendEvent).toHaveBeenCalledWith({
       category: "outil",
@@ -52,6 +46,7 @@ describe("Indemnité licenciement - Tracking", () => {
       action: `view_step_Indemnité de licenciement`,
       name: "infos",
     });
+    await userAction.click(ui.information.inaptitude.non.get());
     await userAction.changeInputList(
       ui.information.agreement16.proCategory.get(),
       "Ingénieurs et cadres"
@@ -113,18 +108,10 @@ describe("Indemnité licenciement - Tracking", () => {
       action: `click_previous_Indemnité de licenciement`,
       name: "info_cc",
     });
-    userAction.click(ui.previous.get());
-    expect(sendEvent).toHaveBeenCalledWith({
-      category: "outil",
-      action: `click_previous_Indemnité de licenciement`,
-      name: "contrat_travail",
-    });
   });
 
   test("vérifier le tracking sur la recherche entreprise", async () => {
     userAction.click(ui.introduction.startButton.get());
-    userAction.click(ui.contract.inaptitude.non.get());
-    userAction.click(ui.next.get());
     userAction.click(ui.agreement.unknownAgreement.get());
     userAction.setInput(ui.agreement.agreementCompanyInput.get(), "carrefour");
     userAction.click(ui.agreement.agreementCompanySearchButton.get());
@@ -141,8 +128,6 @@ describe("Indemnité licenciement - Tracking", () => {
   test("vérifier le tracking sur la recherche CC", async () => {
     userAction
       .click(ui.introduction.startButton.get())
-      .click(ui.contract.inaptitude.non.get())
-      .click(ui.next.get())
       .click(ui.agreement.noAgreement.get())
       .click(ui.agreement.agreement.get())
       .setInput(ui.agreement.agreementInput.get(), "16")
@@ -158,8 +143,6 @@ describe("Indemnité licenciement - Tracking", () => {
   test("vérifier le tracking sur la selection CC", async () => {
     userAction
       .click(ui.introduction.startButton.get())
-      .click(ui.contract.inaptitude.non.get())
-      .click(ui.next.get())
       .click(ui.agreement.noAgreement.get())
       .click(ui.agreement.agreement.get())
       .setInput(ui.agreement.agreementInput.get(), "16")
@@ -212,7 +195,6 @@ describe("Indemnité licenciement - Tracking", () => {
         `{"num":16,"shortTitle":"Transports routiers et activités auxiliaires du transport"}`
     );
     userAction.click(ui.introduction.startButton.get());
-    userAction.click(ui.contract.inaptitude.non.get());
     userAction.click(ui.next.get());
     userAction.click(ui.next.get());
     expect(sendEvent).toHaveBeenCalledWith({
@@ -229,7 +211,6 @@ describe("Indemnité licenciement - Tracking", () => {
         `{"num":1261,"shortTitle":"Acteurs du lien social et familial (centres sociaux et socioculturels, associations d'accueil de jeunes enfants, associations de développement social local)"}`
     );
     userAction.click(ui.introduction.startButton.get());
-    userAction.click(ui.contract.inaptitude.non.get());
     userAction.click(ui.next.get());
     userAction.click(ui.next.get());
     expect(sendEvent).toHaveBeenCalledWith({

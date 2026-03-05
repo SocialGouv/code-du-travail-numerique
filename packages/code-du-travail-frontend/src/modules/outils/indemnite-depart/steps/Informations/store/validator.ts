@@ -16,8 +16,20 @@ export const validateStep = (state: CommonInformationsStoreInput) => {
     }
   });
 
+  let errorLicenciementInaptitude;
+  if (!state.showLicenciementInaptitude) {
+    errorLicenciementInaptitude = undefined;
+  } else if (
+    !state.licenciementInaptitude &&
+    state.licenciementInaptitude !== "'Oui'" &&
+    state.licenciementInaptitude !== "'Non'"
+  ) {
+    errorLicenciementInaptitude = "Vous devez répondre à cette question";
+  }
+
   let errorState: CommonInformationsStoreError = {
     errorInformations,
+    errorLicenciementInaptitude,
     errorPublicodes: state.informationError
       ? "Une erreur liée au moteur de calcul nous empêche de continuer la simulation. Veuillez vérifier les informations saisies ou rafraîchir la page si le problème persiste."
       : undefined,
@@ -25,6 +37,7 @@ export const validateStep = (state: CommonInformationsStoreInput) => {
 
   const isValid = deepEqualObject(errorState, {
     errorInformations: {},
+    errorLicenciementInaptitude: undefined,
     errorPublicodes: undefined,
   });
   return { isValid, errorState };

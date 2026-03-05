@@ -13,7 +13,6 @@ import {
 } from "./types";
 import { validateStep } from "./validator";
 import { CommonInformationsStoreSlice } from "../../../steps/Informations/store";
-import { ContratTravailStoreSlice } from "../../../steps/ContratTravail/store";
 import { CommonSituationStoreSlice } from "../../../situationStore";
 
 const initialState: Agreement1672StoreData = {
@@ -30,7 +29,6 @@ export const createAgreement1672StoreSalaires: StoreSlice<
   SalairesStoreSlice &
     AncienneteStoreSlice &
     CommonInformationsStoreSlice &
-    ContratTravailStoreSlice &
     CommonSituationStoreSlice
 > = (set, get) => ({
   agreement1672Data: { ...initialState },

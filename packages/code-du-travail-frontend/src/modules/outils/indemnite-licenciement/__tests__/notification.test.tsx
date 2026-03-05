@@ -30,12 +30,11 @@ describe("Indemnité licenciement - Affichage de la notification si le légal et
     // On renseigne la page ancienneté avec une absence avec une date
     userAction = new UserAction();
     // Etape Contrat de travail
-    userAction
-      .click(ui.introduction.startButton.get())
-      .click(ui.contract.inaptitude.non.get())
-      .click(ui.next.get());
+    userAction.click(ui.introduction.startButton.get());
     // Etape Convention collective
     userAction.click(ui.next.get());
+    // Etape Information
+    userAction.click(ui.information.inaptitude.non.get()).click(ui.next.get());
     // Etape Ancienneté
     userAction
       .setInput(ui.seniority.startDate.get(), "01/01/2000")

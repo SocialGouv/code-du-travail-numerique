@@ -28,7 +28,6 @@ const Eligible = () => {
 
   const {
     result,
-    contratTravail,
     agreement,
     seniority,
     salary,
@@ -37,7 +36,6 @@ const Eligible = () => {
     resultExplanation,
     agreementExplanation,
   } = useIndemniteDepartStore(store, (state) => ({
-    contratTravail: state.contratTravailData.input,
     agreement: state.agreementData.input,
     seniority: state.ancienneteData.input,
     salary: state.salairesData.input,

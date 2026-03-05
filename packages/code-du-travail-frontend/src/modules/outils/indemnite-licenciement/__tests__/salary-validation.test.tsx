@@ -14,9 +14,9 @@ describe("Indemnité licenciement - Step salaire", () => {
       render(<CalculateurIndemniteLicenciement title={""} />);
       userAction = new UserAction();
       userAction.click(ui.introduction.startButton.get());
-      userAction.click(ui.contract.inaptitude.non.get());
-      userAction.click(ui.next.get());
       userAction.click(ui.agreement.noAgreement.get());
+      userAction.click(ui.next.get());
+      userAction.click(ui.information.inaptitude.non.get());
       userAction.click(ui.next.get());
       userAction.setInput(ui.seniority.startDate.get(), "01/01/2000");
       userAction.setInput(ui.seniority.notificationDate.get(), "01/01/2022");

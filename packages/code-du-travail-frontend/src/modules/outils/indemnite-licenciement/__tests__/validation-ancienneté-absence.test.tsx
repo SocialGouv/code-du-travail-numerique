@@ -11,9 +11,9 @@ describe("Page ancienneté: vérification validation lorsque absence > anciennet
     );
     const userAction = new UserAction();
     userAction.click(ui.introduction.startButton.get());
-    userAction.click(ui.contract.inaptitude.oui.get());
-    userAction.click(ui.next.get());
     userAction.click(ui.agreement.noAgreement.get());
+    userAction.click(ui.next.get());
+    userAction.click(ui.information.inaptitude.oui.get());
     userAction.click(ui.next.get());
     userAction.setInput(ui.seniority.startDate.get(), "01/01/2024");
     userAction.setInput(ui.seniority.notificationDate.get(), "31/01/2025");

@@ -10,12 +10,7 @@ import {
 } from "../indemnite-depart";
 import { Step } from "../common/components/SimulatorLayout/types";
 import { StepAgreement, StepInformations } from "../indemnite-depart/steps";
-import {
-  StepAnciennete,
-  StepContratTravail,
-  StepIntro,
-  StepResultat,
-} from "./steps";
+import { StepAnciennete, StepIntro, StepResultat } from "./steps";
 import { useIndemniteLicenciementEventEmitter } from "./events/useIndemniteLicenciementEventEmitter";
 import StepSalaires from "../indemnite-depart/steps/Salaires";
 import { EVENT_CATEGORY } from "../indemnite-depart/feedback/tracking";
@@ -25,11 +20,6 @@ const steps: Step<IndemniteDepartStepName>[] = [
     label: "Introduction",
     name: IndemniteDepartStepName.Introduction,
     Component: StepIntro,
-  },
-  {
-    label: "Contrat de travail",
-    name: IndemniteDepartStepName.ContratTravail,
-    Component: StepContratTravail,
   },
   {
     label: "Convention collective",

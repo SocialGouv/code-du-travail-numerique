@@ -1,4 +1,4 @@
-import { render } from "@testing-library/react";
+import { fireEvent, render } from "@testing-library/react";
 import React from "react";
 import { UserAction } from "../../common/utils/UserAction";
 import { CalculateurIndemniteLicenciement } from "../IndemniteLicenciementSimulator";
@@ -15,10 +15,13 @@ test(`
 
   // Vérifier l'affichage de l'intro
   expect(ui.introduction.startButton.query()).toBeInTheDocument();
-  userAction.click(ui.introduction.startButton.get());
+  userAction
+    .click(ui.introduction.startButton.get())
+    .click(ui.agreement.noAgreement.get())
+    .click(ui.next.get());
 
   // Vérifier l'affichage de la question inaptitude
-  expect(ui.contract.inaptitude.question.query()).toBeInTheDocument();
-  expect(ui.contract.inaptitude.oui.query()).toBeInTheDocument();
-  expect(ui.contract.inaptitude.non.query()).toBeInTheDocument();
+  expect(ui.information.inaptitude.question.query()).toBeInTheDocument();
+  expect(ui.information.inaptitude.oui.query()).toBeInTheDocument();
+  expect(ui.information.inaptitude.non.query()).toBeInTheDocument();
 });

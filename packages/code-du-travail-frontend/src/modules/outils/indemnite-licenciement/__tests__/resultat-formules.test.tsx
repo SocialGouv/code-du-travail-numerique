@@ -92,12 +92,10 @@ describe("Page résultat: vérification de la formule affichée", () => {
         render(<CalculateurIndemniteLicenciement title={""} />);
         userAction = new UserAction();
         userAction.click(ui.introduction.startButton.get());
+        userAction.click(ui.next.get());
         userAction.click(
-          ui.contract.inaptitude[inaptitude ? "oui" : "non"].get()
+          ui.information.inaptitude[inaptitude ? "oui" : "non"].get()
         );
-        userAction.click(ui.next.get());
-        userAction.click(ui.next.get());
-
         await userAction.changeInputList(byTestId(select).get(), selectOption);
         userAction.click(ui.next.get());
         userAction.setInput(ui.seniority.startDate.get(), startDate);

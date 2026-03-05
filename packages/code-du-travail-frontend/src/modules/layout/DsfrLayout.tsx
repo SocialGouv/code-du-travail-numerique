@@ -11,6 +11,7 @@ import { useAgreementModal } from "../convention-collective/AgreementSelectionMo
 import { AgreementModal } from "./header/AgreementModal";
 import { usePathname } from "next/navigation";
 import { TallyNotice } from "./TallyNotice";
+import { TALLY_ID } from "../../config";
 
 type Props = {
   children: ReactNode;
@@ -25,7 +26,7 @@ export const DsfrLayout = ({ children, container = "fr-container" }: Props) => {
     closeModal: closeAgreementModal,
   } = useAgreementModal();
   const pathname = usePathname() || "";
-  const showTally = !pathname.startsWith("/widgets");
+  const isNotWidget = !pathname.startsWith("/widgets");
 
   const isAnyModalOpen = isOpen || isAgreementOpen;
 
@@ -74,7 +75,6 @@ export const DsfrLayout = ({ children, container = "fr-container" }: Props) => {
         <Header />
       </div>
       <AgreementModal isOpen={isAgreementOpen} onClose={closeAgreementModal} />
-      {showTally && <TallyNotice id="q4d4Z2" />}
       <main
         className={`${container} ${printStyle}`}
         id="main"

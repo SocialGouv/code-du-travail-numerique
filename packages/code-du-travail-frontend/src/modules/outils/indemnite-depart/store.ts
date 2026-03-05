@@ -14,12 +14,6 @@ import {
   createAncienneteStore,
 } from "./steps/Anciennete/store";
 import {
-  ContratTravailStoreError,
-  ContratTravailStoreInput,
-  ContratTravailStoreSlice,
-  createContratTravailStore,
-} from "./steps/ContratTravail/store";
-import {
   createResultStore,
   ResultStoreError,
   ResultStoreInput,
@@ -47,14 +41,13 @@ import { IndemniteDepartType } from "./types";
 import { createContext } from "react";
 import { PublicodesSimulator } from "@socialgouv/modeles-social";
 import {
-  CommonAgreementStoreSlice,
-  CommonAgreementStoreInput,
   CommonAgreementStoreError,
+  CommonAgreementStoreInput,
+  CommonAgreementStoreSlice,
   createCommonAgreementStore,
 } from "./steps/Agreement/store";
 
-export type MainStore = ContratTravailStoreSlice &
-  AncienneteStoreSlice &
+export type MainStore = AncienneteStoreSlice &
   SalairesStoreSlice &
   ResultStoreSlice &
   AgreementStoreSlice &
@@ -66,7 +59,6 @@ export type StepData<
   T extends
     | AncienneteStoreInput
     | SalairesStoreInput
-    | ContratTravailStoreInput
     | ResultStoreInput
     | AgreementStoreInput
     | CommonAgreementStoreInput
@@ -74,7 +66,6 @@ export type StepData<
   U extends
     | AncienneteStoreError
     | SalairesStoreError
-    | ContratTravailStoreError
     | ResultStoreError
     | AgreementStoreError
     | CommonAgreementStoreError
@@ -96,7 +87,6 @@ const createRootSlice = (
   get: StoreApi<MainStore>["getState"],
   { simulatorName, toolName }
 ) => ({
-  ...createContratTravailStore(set, get, { type: toolName }),
   ...createAncienneteStore(set, get, { type: toolName }),
   ...createSalairesStore(set, get, { type: toolName }),
   ...createResultStore(set, get, { type: toolName, simulator: simulatorName }),

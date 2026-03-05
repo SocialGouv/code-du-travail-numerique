@@ -4,7 +4,6 @@ type InfoWarningProps = {
   hasSelectedAgreement: boolean;
   isAgreementSupported: boolean;
   informationEligibility: boolean;
-  contratTravailEligibility: boolean;
   ancienneteEligibility: boolean;
   agreement?: Agreement;
 };
@@ -13,14 +12,10 @@ export const getInfoWarning = ({
   hasSelectedAgreement,
   isAgreementSupported,
   informationEligibility,
-  contratTravailEligibility,
   ancienneteEligibility,
   agreement,
 }: InfoWarningProps) => {
-  const isEligible =
-    contratTravailEligibility &&
-    ancienneteEligibility &&
-    informationEligibility;
+  const isEligible = ancienneteEligibility && informationEligibility;
   let message;
   let title;
   if (isEligible) {
@@ -35,11 +30,7 @@ export const getInfoWarning = ({
   } else {
     title =
       "Attention il peut quand même exister une indemnité pour le salarié";
-    if (
-      contratTravailEligibility &&
-      !informationEligibility &&
-      agreement?.num === 3239
-    ) {
+    if (!informationEligibility && agreement?.num === 3239) {
       return;
     } else if (hasSelectedAgreement && isAgreementSupported) {
       message =
