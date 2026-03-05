@@ -18,13 +18,8 @@ type Props = {
 
 export const DsfrLayout = ({ children, container = "fr-container" }: Props) => {
   const { isOpen, closeModal, openModal } = useSearchModal();
-  const {
-    isOpen: isAgreementOpen,
-    openModal: openAgreementModal,
-    closeModal: closeAgreementModal,
-  } = useAgreementModal();
-  const pathname = usePathname() || "";
-  const isNotWidget = !pathname.startsWith("/widgets");
+  const { isOpen: isAgreementOpen, closeModal: closeAgreementModal } =
+    useAgreementModal();
 
   const isAnyModalOpen = isOpen || isAgreementOpen;
 
