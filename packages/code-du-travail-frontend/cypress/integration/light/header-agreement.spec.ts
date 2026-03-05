@@ -31,8 +31,10 @@ describe("Header agreement selector", () => {
     typeInAgreementSearch("2247");
 
     // Wait for autocomplete results to appear and stabilize
-    cy.get("#agreement-modal ul[role='listbox'] li", { timeout: 15000 })
-      .should("have.length.greaterThan", 0);
+    cy.get("#agreement-modal ul[role='listbox'] li", { timeout: 15000 }).should(
+      "have.length.greaterThan",
+      0
+    );
 
     // Click on the matching result using mousedown (Downshift listens to mousedown)
     cy.get("#agreement-modal ul[role='listbox'] li")
