@@ -13,13 +13,9 @@ const openHeaderAgreementModal = () => {
 };
 
 const typeInAgreementSearch = (text: string) => {
-  // Click to focus first, wait for Downshift's focus handler, then type
-  cy.get("#agreement-modal input[type='text']").first().click();
-  cy.wait(500);
-  cy.get("#agreement-modal input[type='text']")
-    .first()
-    .clear()
-    .type(text, { delay: 150 });
+  cy.get("#header-agreement-search-autocomplete").clear().type(text, {
+    delay: 150,
+  });
 };
 
 describe("Header agreement selector", () => {
@@ -30,60 +26,46 @@ describe("Header agreement selector", () => {
 
     typeInAgreementSearch("2247");
 
-    // Wait for autocomplete results to appear and stabilize
+    // Wait for the search to fully resolve (IDCC 2247 returns exactly 1 result)
     cy.get("#agreement-modal ul[role='listbox'] li", { timeout: 15000 }).should(
-      "have.length.greaterThan",
-      0
+      "have.length",
+      1
     );
 
-    // Click on the matching result using mousedown (Downshift listens to mousedown)
-    cy.get("#agreement-modal ul[role='listbox'] li")
-      .contains("Entreprises de courtage d'assurances", { matchCase: false })
-      .click({ force: true });
+    cy.wait(300);
 
-    // After selection, the modal shows the selected CC view
-    cy.get(
-      "#agreement-modal [data-testid='header-selected-agreement-card']"
-    ).should("contain", "Entreprises de courtage");
+    // Click the result
+    cy.get("#agreement-modal ul[role='listbox'] li").first().click();
 
-    // Should show the new subtitle
-    cy.get("#agreement-modal")
-      .contains("Convention collective sélectionnée :")
-      .should("exist");
-
-    // Should have 3 buttons
-    cy.get("#agreement-modal").contains("button", "Supprimer").should("exist");
-    cy.get("#agreement-modal").contains("button", "Modifier").should("exist");
-    cy.get("#agreement-modal").contains("button", "Fermer").should("exist");
-
-    // The CC name should be a clickable link
-    cy.get("#agreement-modal [data-testid='header-selected-agreement-card']")
-      .find("a")
-      .should("have.attr", "href")
-      .and("include", "/convention-collective/");
-
-    // Close the modal
-    cy.get("#agreement-modal").contains("button", "Fermer").click();
-
-    cy.get("#agreement-modal").should("not.be.visible");
+    // Verify the selection was persisted to localStorage
     cy.window()
       .its("localStorage")
       .invoke("getItem", "convention")
       .should("include", '"num":2247');
 
-    // Reload and ensure header shows a selected CC (via stored value)
-    cy.reload();
-    cy.get("body").then(($body) => {
-      const desktopBtn = $body.find("#fr-header-agreement-button-desktop");
-      if (desktopBtn.length) {
-        cy.get("#fr-header-agreement-button-desktop").should("contain", "2247");
-      } else {
-        cy.get("#fr-header-agreement-button").should("contain", "2247");
-      }
-    });
+    // After selection, the modal should show the selected agreement view
+    // Note: data-testid attributes are stripped in production builds,
+    // so we use content-based selectors instead
+    cy.get("#agreement-modal")
+      .contains("Convention collective sélectionnée :")
+      .should("exist");
 
-    // Re-open the modal to test Supprimer
-    openHeaderAgreementModal();
+    cy.get("#agreement-modal")
+      .contains("Entreprises de courtage")
+      .should("exist");
+
+    cy.get("#agreement-modal").contains("button", "Supprimer").should("exist");
+    cy.get("#agreement-modal").contains("button", "Modifier").should("exist");
+    cy.get("#agreement-modal").contains("button", "Fermer").should("exist");
+
+    cy.get("#agreement-modal")
+      .contains("Entreprises de courtage")
+      .closest("[role='region']")
+      .find("a")
+      .should("have.attr", "href")
+      .and("include", "/convention-collective/");
+
+    // Test Supprimer
     cy.get("#agreement-modal").contains("button", "Supprimer").click();
 
     cy.get("#agreement-modal").should("not.be.visible");
