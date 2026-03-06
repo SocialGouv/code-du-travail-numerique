@@ -17,10 +17,6 @@ import "./commands";
 import "./errors";
 import "cypress-real-events";
 
-beforeEach(() => {
-  cy.clearLocalStorage();
-});
-
 // FIXME Preserve pk_ab_test query parameter across all navigations
 Cypress.on("window:before:load", (win) => {
   // Hide cookie consent banner in tests
