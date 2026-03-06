@@ -7,9 +7,9 @@ import { Footer } from "./footer";
 import { Header } from "./header";
 import { SkipLinks } from "./SkipLinks";
 import { useSearchModal } from "../recherche/modal/SearchModalContext";
+import { useAgreementModal } from "../convention-collective/AgreementSelectionModal";
+import { AgreementModal } from "./header/AgreementModal";
 import { usePathname } from "next/navigation";
-import { TallyNotice } from "./TallyNotice";
-import { TALLY_ID } from "../../config";
 
 type Props = {
   children: ReactNode;
@@ -18,48 +18,65 @@ type Props = {
 
 export const DsfrLayout = ({ children, container = "fr-container" }: Props) => {
   const { isOpen, closeModal, openModal } = useSearchModal();
-  const pathname = usePathname() || "";
-  const isNotWidget = !pathname.startsWith("/widgets");
+  const { isOpen: isAgreementOpen, closeModal: closeAgreementModal } =
+    useAgreementModal();
+
+  const isAnyModalOpen = isOpen || isAgreementOpen;
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       if ((event.metaKey || event.ctrlKey) && event.key === "k") {
         event.preventDefault();
-        if (!isOpen) {
-          openModal();
+
+        // Keep search + agreement mutually exclusive
+        if (isAgreementOpen) {
+          closeAgreementModal();
         }
+        if (!isOpen) openModal();
       }
     };
 
     document.addEventListener("keydown", handleKeyDown);
     return () => document.removeEventListener("keydown", handleKeyDown);
-  }, [isOpen, openModal]);
+  }, [isOpen, openModal, isAgreementOpen, closeAgreementModal]);
 
   return (
     <>
       <PolyfillComponent />
-      <div inert={isOpen}>
+      <div inert={isAnyModalOpen}>
         <SkipLinks />
       </div>
       {isOpen && (
-        <div className={overlayStyle} aria-hidden="true" onClick={closeModal} />
-      )}
-      <Header />
-      {isNotWidget && (
-        <TallyNotice
-          id={TALLY_ID}
-          wording={"Répondez à notre questionnaire en 30 secondes."}
+        <div
+          className={overlayStyle}
+          aria-hidden="true"
+          onClick={() => {
+            closeModal();
+          }}
         />
       )}
+      <div
+        style={
+          isAgreementOpen
+            ? { position: "relative", zIndex: 0 }
+            : isOpen
+              ? { position: "relative", zIndex: 1000 }
+              : undefined
+        }
+        inert={isAgreementOpen}
+      >
+        <Header />
+      </div>
+      <AgreementModal isOpen={isAgreementOpen} onClose={closeAgreementModal} />
       <main
         className={`${container} ${printStyle}`}
         id="main"
         role="main"
-        inert={isOpen}
+        inert={isAnyModalOpen}
       >
         {children}
       </main>
-      <Footer inert={isOpen} />
+      <Footer inert={isAnyModalOpen} />
     </>
   );
 };
@@ -82,6 +99,6 @@ const overlayStyle = css({
   left: 0,
   right: 0,
   bottom: 0,
-  zIndex: 99,
   backgroundColor: "rgba(0, 0, 0, 0.5)",
+  zIndex: 999,
 });

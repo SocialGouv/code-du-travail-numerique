@@ -235,9 +235,9 @@ const overlayContainer = css({
     md: "calc(100vh - 116.5px - 56px)",
     base: "calc(100vh - 92.5px)",
   },
-  zIndex: 100,
   pointerEvents: "auto",
   overflowY: "auto",
+  zIndex: 1000,
 });
 
 const modalContent = css({

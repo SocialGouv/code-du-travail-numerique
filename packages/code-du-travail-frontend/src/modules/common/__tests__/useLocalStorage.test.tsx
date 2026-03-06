@@ -1,7 +1,10 @@
 import { act, render } from "@testing-library/react";
 import React from "react";
 
-import { useLocalStorageForAgreement } from "../../utils/useLocalStorage";
+import {
+  AGREEMENT_STORAGE_EVENT,
+  useLocalStorageForAgreement,
+} from "../../utils/useLocalStorage";
 
 function renderApp(initialValue) {
   function App() {
@@ -25,6 +28,7 @@ describe("useLocalStorageForAgreement", () => {
     const valueElement = getByTestId("value");
     expect(valueElement.innerHTML).toBe("hello cdtn");
   });
+
   it("updates value", () => {
     const { getByTestId } = renderApp("bar");
     act(() => {
@@ -32,5 +36,19 @@ describe("useLocalStorageForAgreement", () => {
     });
     const valueElement = getByTestId("value");
     expect(valueElement.innerHTML).toBe("updated!");
+  });
+
+  it("dispatches an agreement storage event when updating", () => {
+    const listener = jest.fn();
+    window.addEventListener(AGREEMENT_STORAGE_EVENT, listener as any);
+
+    const { getByTestId } = renderApp("bar");
+    act(() => {
+      getByTestId("button").click();
+    });
+
+    expect(listener).toHaveBeenCalledTimes(1);
+
+    window.removeEventListener(AGREEMENT_STORAGE_EVENT, listener as any);
   });
 });

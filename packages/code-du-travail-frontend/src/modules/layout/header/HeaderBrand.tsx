@@ -5,9 +5,13 @@ import Link from "src/modules/common/Link";
 
 type HeaderBrandProps = {
   onSearchClick?: () => void;
+  isSearchOpen?: boolean;
 };
 
-export const HeaderBrand = ({ onSearchClick }: HeaderBrandProps) => {
+export const HeaderBrand = ({
+  onSearchClick,
+  isSearchOpen,
+}: HeaderBrandProps) => {
   return (
     <div className={fr.cx("fr-header__brand", "fr-enlarge-link")}>
       <div className={fr.cx("fr-header__brand-top")}>
@@ -38,6 +42,7 @@ export const HeaderBrand = ({ onSearchClick }: HeaderBrandProps) => {
             className={fr.cx("fr-btn--search", "fr-btn")}
             aria-controls="search-modal"
             aria-haspopup="dialog"
+            aria-expanded={isSearchOpen}
             title="Rechercher"
             onClick={onSearchClick}
           >

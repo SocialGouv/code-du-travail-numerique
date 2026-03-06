@@ -3,6 +3,19 @@ import { Agreement } from "src/modules/outils/indemnite-depart/types";
 
 export const STORAGE_KEY_AGREEMENT = "convention";
 
+export const AGREEMENT_STORAGE_EVENT = "cdtn:agreement-storage";
+
+const dispatchAgreementStorageEvent = (agreement?: Agreement | null) => {
+  try {
+    if (typeof window === "undefined") return;
+    window.dispatchEvent(
+      new CustomEvent(AGREEMENT_STORAGE_EVENT, { detail: agreement ?? null })
+    );
+  } catch (e) {
+    console.error(e);
+  }
+};
+
 export function useLocalStorageForAgreementOnPageLoad(): [
   Agreement | undefined,
   (a?: Agreement) => void,
@@ -49,8 +62,10 @@ export const saveAgreementToLocalStorage = (agreement?: Agreement | null) => {
           STORAGE_KEY_AGREEMENT,
           JSON.stringify(agreement)
         );
+        dispatchAgreementStorageEvent(agreement);
       } else {
         window.localStorage.removeItem(STORAGE_KEY_AGREEMENT);
+        dispatchAgreementStorageEvent(null);
       }
     }
   } catch (e) {
@@ -73,6 +88,7 @@ export const removeAgreementFromLocalStorage = () => {
   try {
     if (window?.localStorage) {
       window.localStorage.removeItem(STORAGE_KEY_AGREEMENT);
+      dispatchAgreementStorageEvent(null);
     }
   } catch (e) {
     console.error(e);

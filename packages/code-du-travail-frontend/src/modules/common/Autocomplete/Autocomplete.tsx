@@ -177,6 +177,8 @@ export const Autocomplete = <K,>({
           ...(id ? { htmlFor: id } : {}),
         };
 
+        const rootProps = getRootProps({}, { suppressRefError: true });
+
         return (
           <div className={`${searchContainer}`}>
             <Input
@@ -234,8 +236,8 @@ export const Autocomplete = <K,>({
                     ).current = el;
                   }
                 },
-                role: getRootProps().role,
-                "aria-expanded": getRootProps()["aria-expanded"],
+                role: rootProps.role,
+                "aria-expanded": rootProps["aria-expanded"],
                 ...inputProps,
                 "aria-labelledby": undefined,
               }}
