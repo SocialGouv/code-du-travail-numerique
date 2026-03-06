@@ -139,7 +139,7 @@ export const AgreementModal = ({ isOpen, onClose }: Props) => {
         if (e.target === e.currentTarget) handleClose();
       }}
     >
-      <div className={content} role="document">
+      <div className={content}>
         <div className={modalInner}>
           <div className={closeButtonContainer}>
             <button
@@ -152,14 +152,12 @@ export const AgreementModal = ({ isOpen, onClose }: Props) => {
             />
           </div>
 
-          <p
+          <h1
             id="agreement-modal-title"
-            role="heading"
-            aria-level={1}
             className={`${fr.cx("fr-mb-2w", "fr-h4")} ${modalTitle}`}
           >
             Personnaliser mes réponses avec ma convention collective
-          </p>
+          </h1>
 
           <AgreementSelectionModalContent
             onClose={handleClose}

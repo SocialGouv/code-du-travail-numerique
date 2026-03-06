@@ -107,19 +107,16 @@ export const AgreementSelectionModalContent = ({ onClose, isOpen }: Props) => {
             aria-labelledby="agreement-selection-label"
           >
             {agreement.slug ? (
-              <span
+              <Link
+                href={`/${ccRoute}/${agreement.slug}`}
+                className={`${fr.cx("fr-mb-0")} ${selectedCardLink}`}
                 onClick={() => {
                   emitConsultEvent(`idcc${agreement.num}`);
                   onClose();
                 }}
               >
-                <Link
-                  href={`/${ccRoute}/${agreement.slug}`}
-                  className={`${fr.cx("fr-mb-0")} ${selectedCardLink}`}
-                >
-                  {agreement.shortTitle} (IDCC {agreement.num})
-                </Link>
-              </span>
+                {agreement.shortTitle} (IDCC {agreement.num})
+              </Link>
             ) : (
               <p
                 className={fr.cx("fr-mb-0")}
@@ -145,6 +142,7 @@ export const AgreementSelectionModalContent = ({ onClose, isOpen }: Props) => {
             onClick={handleDelete}
             type="button"
             className={dangerButton}
+            aria-label="Supprimer la convention collective sélectionnée"
           >
             Supprimer
           </Button>
@@ -155,6 +153,7 @@ export const AgreementSelectionModalContent = ({ onClose, isOpen }: Props) => {
             iconPosition="right"
             onClick={handleEdit}
             type="button"
+            aria-label="Modifier la convention collective sélectionnée"
           >
             Modifier
           </Button>
