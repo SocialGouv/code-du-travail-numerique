@@ -174,10 +174,14 @@ describe("AgreementSelectionModalContent - Accessibility", () => {
       render(<AgreementSelectionModalContent onClose={mockOnClose} />);
 
       expect(
-        screen.getByRole("button", { name: "Supprimer" })
+        screen.getByRole("button", {
+          name: /Supprimer la convention collective sélectionnée/i,
+        })
       ).toBeInTheDocument();
       expect(
-        screen.getByRole("button", { name: /Modifier/i })
+        screen.getByRole("button", {
+          name: /Modifier la convention collective sélectionnée/i,
+        })
       ).toBeInTheDocument();
       expect(
         screen.getByRole("button", { name: "Fermer" })
@@ -187,9 +191,13 @@ describe("AgreementSelectionModalContent - Accessibility", () => {
     it("should have buttons with type=button", () => {
       render(<AgreementSelectionModalContent onClose={mockOnClose} />);
 
-      const deleteButton = screen.getByRole("button", { name: "Supprimer" });
+      const deleteButton = screen.getByRole("button", {
+        name: /Supprimer la convention collective sélectionnée/i,
+      });
       const closeButton = screen.getByRole("button", { name: "Fermer" });
-      const editButton = screen.getByRole("button", { name: /Modifier/i });
+      const editButton = screen.getByRole("button", {
+        name: /Modifier la convention collective sélectionnée/i,
+      });
 
       expect(deleteButton).toHaveAttribute("type", "button");
       expect(closeButton).toHaveAttribute("type", "button");
@@ -201,7 +209,9 @@ describe("AgreementSelectionModalContent - Accessibility", () => {
 
       render(<AgreementSelectionModalContent onClose={mockOnClose} />);
 
-      const deleteButton = screen.getByRole("button", { name: "Supprimer" });
+      const deleteButton = screen.getByRole("button", {
+        name: /Supprimer la convention collective sélectionnée/i,
+      });
       await user.click(deleteButton);
 
       expect(mockClearAgreement).toHaveBeenCalled();

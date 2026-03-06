@@ -266,12 +266,11 @@ describe("AgreementModal - Accessibility", () => {
     });
   });
 
-  describe("Document role", () => {
-    it("should have role=document on the content wrapper", () => {
+  describe("Dialog semantics", () => {
+    it("should not expose an extra document role inside the dialog", () => {
       render(<AgreementModal isOpen={true} onClose={mockOnClose} />);
 
-      const documentRole = screen.getByRole("document");
-      expect(documentRole).toBeInTheDocument();
+      expect(screen.queryByRole("document")).not.toBeInTheDocument();
     });
   });
 });
