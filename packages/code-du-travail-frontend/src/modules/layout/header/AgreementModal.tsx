@@ -152,12 +152,12 @@ export const AgreementModal = ({ isOpen, onClose }: Props) => {
             />
           </div>
 
-          <h1
+          <h2
             id="agreement-modal-title"
             className={`${fr.cx("fr-mb-2w", "fr-h4")} ${modalTitle}`}
           >
             Personnaliser mes réponses avec ma convention collective
-          </h1>
+          </h2>
 
           <AgreementSelectionModalContent
             onClose={handleClose}

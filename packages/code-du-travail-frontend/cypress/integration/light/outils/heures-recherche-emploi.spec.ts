@@ -16,7 +16,7 @@ describe("Outil - Heures d'absence pour rechercher un emploi", () => {
     cy.contains("Précisez et sélectionnez votre convention collective");
     cy.get("#agreement-search-autocomplete").type("1388");
     cy.get('ul[role="listbox"] li').contains("Industrie du pétrole").click();
-    cy.contains("Nous n’avons pas de réponse pour cette convention collective");
+    cy.contains("Nous n'avons pas de réponse pour cette convention collective");
     cy.get("button").contains("Suivant").click();
     cy.contains(
       "Vous ne pouvez pas poursuivre la simulation avec cette convention collective."

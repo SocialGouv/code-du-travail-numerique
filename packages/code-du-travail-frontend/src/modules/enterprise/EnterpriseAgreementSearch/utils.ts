@@ -12,7 +12,7 @@ export const getEnterpriseAgreements = (agreements: Agreement[]) => {
     let description;
     if (slug && !(url || contributions)) {
       description =
-        "Nous n’avons pas d’informations concernant cette convention collective";
+        "Nous n'avons pas d’informations concernant cette convention collective";
       disabled = true;
     } else if (!slug) {
       description =

@@ -259,7 +259,7 @@ describe("AgreementModal - Accessibility", () => {
       render(<AgreementModal isOpen={true} onClose={mockOnClose} />);
 
       const heading = screen.getByRole("heading", {
-        level: 1,
+        level: 2,
         name: "Personnaliser mes réponses avec ma convention collective",
       });
       expect(heading).toBeInTheDocument();
