@@ -163,7 +163,7 @@ export const AgreementSearchInput = ({
         {selectedAgreement && selectedAgreementAlert?.(selectedAgreement) && (
           <AccessibleAlert
             className={["fr-mt-2w"]}
-            title="Nous n’avons pas de réponse pour cette convention collective"
+            title="Nous n'avons pas de réponse pour cette convention collective"
             description={selectedAgreementAlert(selectedAgreement)}
             severity="warning"
           />

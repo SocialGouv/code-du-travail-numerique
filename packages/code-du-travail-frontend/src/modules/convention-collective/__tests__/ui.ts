@@ -17,7 +17,7 @@ export const ui = {
   buttonDisplayInfo: byText("Afficher les informations"),
   warning: {
     title: byText(
-      "Nous n’avons pas de réponse pour cette convention collective"
+      "Nous n'avons pas de réponse pour cette convention collective"
     ),
     nonTreatedAgreement: byText(
       /Vous pouvez consulter les informations générales ci-dessous/
