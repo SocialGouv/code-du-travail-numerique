@@ -39,7 +39,7 @@ export default async function SearchPage(props: SearchPageProps) {
   };
 
   if (query) {
-    items = await searchWithQuery(query, 25, true);
+    items = await searchWithQuery(query, 25, false);
   }
 
   return (

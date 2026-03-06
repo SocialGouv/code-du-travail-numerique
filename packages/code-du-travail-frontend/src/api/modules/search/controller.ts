@@ -39,7 +39,7 @@ export class SearchController {
     const parsed = await searchWithQuery(
       query,
       DEFAULT_PRESEARCH_RESULTS_NUMBER,
-      true
+      false
     ).then((r) => ({
       results: r.documents,
       class: r.class,
