@@ -20,7 +20,12 @@ const typeInAgreementSearch = (text: string) => {
 
 describe("Header agreement selector", () => {
   it("should allow selecting an agreement, show selected view with actions, and persist in localStorage", () => {
-    cy.visit("/");
+    cy.visit("/", {
+      // Ensure the test starts from a clean persisted agreement state.
+      onBeforeLoad(win) {
+        win.localStorage.clear();
+      },
+    });
     cy.findByRole("heading", { level: 1 }).should("be.visible");
     openHeaderAgreementModal();
 
