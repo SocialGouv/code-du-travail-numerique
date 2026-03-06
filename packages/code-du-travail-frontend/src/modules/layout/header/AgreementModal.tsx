@@ -65,32 +65,24 @@ export const AgreementModal = ({ isOpen, onClose }: Props) => {
     return () => clearTimeout(focusTimer);
   }, [isOpen]);
 
-  // Handle Escape key - check if an autocomplete dropdown is open first
+  // Handle Escape key - close modal unless an inner component (e.g. Downshift) already handled it
   useEffect(() => {
     if (!isOpen) return;
 
     const handleEscape = (event: KeyboardEvent) => {
-      if (event.key === "Escape") {
-        // Check if any autocomplete dropdown is open inside the modal
-        const openListboxes = modalRef.current?.querySelectorAll(
-          '[role="listbox"] [role="option"]'
-        );
-        if (openListboxes && openListboxes.length > 0) {
-          // Let the autocomplete/Downshift handle this Escape to close the dropdown first
-          return;
-        }
+      if (event.key !== "Escape") return;
 
-        // Also check if the focused element is an input with an active combobox
-        const focused = document.activeElement;
-        if (
-          focused instanceof HTMLInputElement &&
-          focused.getAttribute("aria-expanded") === "true"
-        ) {
-          return;
-        }
+      // Downshift calls event.preventDefault() when closing its dropdown on Escape.
+      // If that happened, don't also close the modal.
+      if (event.defaultPrevented) return;
 
-        handleClose();
-      }
+      // Also guard against open listbox suggestions (in case preventDefault wasn't called yet)
+      const openListboxes = modalRef.current?.querySelectorAll(
+        '[role="listbox"] [role="option"]'
+      );
+      if (openListboxes && openListboxes.length > 0) return;
+
+      handleClose();
     };
 
     document.addEventListener("keydown", handleEscape);
