@@ -63,7 +63,7 @@ export const ui = {
     },
     description: {
       notFound: byText(
-        "Nous n’avons pas d’informations concernant cette convention collective"
+        "Nous n'avons pas d’informations concernant cette convention collective"
       ),
       unknown: byText(
         "Ce code indique qu’aucune convention collective n’a été renseignée par l'entreprise. Pour savoir si une convention est tout de même appliquée, consultez votre bulletin de paie ou interrogez votre employeur."
