@@ -57,8 +57,18 @@ describe("Rupture conventionnelle - légale", () => {
     userAction
       .setInput(ui.seniority.startDate.get(), "01/01/2024")
       .setInput(ui.seniority.endDate.get(), "01/05/2024")
-      .click(ui.seniority.arretTravail.non.get())
-      .click(ui.seniority.hasAbsence.non.get())
+      .click(ui.next.get());
+
+    expect(sendEvent).toHaveBeenCalledWith({
+      category: "outil",
+      action: "view_step_Indemnité de rupture conventionnelle",
+      name: "absences",
+    });
+    expect(ui.activeStep.query()).toHaveTextContent("Absences");
+
+    userAction
+      .click(ui.absences.arretTravail.non.get())
+      .click(ui.absences.hasAbsence.non.get())
       .click(ui.next.get());
 
     expect(sendEvent).toHaveBeenCalledWith({

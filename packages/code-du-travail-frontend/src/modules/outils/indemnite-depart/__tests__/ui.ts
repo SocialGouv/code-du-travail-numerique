@@ -348,6 +348,11 @@ export const ui = {
     startDate: byTestId("date-entree"),
     notificationDate: byTestId("date-notification"),
     endDate: byTestId("date-sortie"),
+    error: {
+      requiredDate: byText(/Veuillez saisir cette date/),
+    },
+  },
+  absences: {
     arretTravail: {
       question: byText(
         "Le salarié est-il en arrêt de travail au moment du licenciement ?"
@@ -365,9 +370,6 @@ export const ui = {
       motif: (index: number) => byTestId(`absence-motif-${index}`),
       duration: (index: number) => byTestId(`absence-duree-${index}`),
       date: (index: number) => byTestId(`absence-date-${index}`),
-    },
-    error: {
-      requiredDate: byText(/Veuillez saisir cette date/),
     },
   },
   salary: {

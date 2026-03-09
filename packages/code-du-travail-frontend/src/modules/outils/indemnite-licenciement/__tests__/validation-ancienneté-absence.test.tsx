@@ -18,8 +18,9 @@ describe("Page ancienneté: vérification validation lorsque absence > anciennet
     userAction.setInput(ui.seniority.startDate.get(), "01/01/2024");
     userAction.setInput(ui.seniority.notificationDate.get(), "31/01/2025");
     userAction.setInput(ui.seniority.endDate.get(), "31/01/2025");
-    userAction.click(ui.seniority.hasAbsence.oui.get());
-    userAction.setInput(ui.seniority.absences.duration(0).get(), "13");
+    userAction.click(ui.next.get());
+    userAction.click(ui.absences.hasAbsence.oui.get());
+    userAction.setInput(ui.absences.absences.duration(0).get(), "13");
     userAction.click(ui.next.get());
     expect(
       getByText(

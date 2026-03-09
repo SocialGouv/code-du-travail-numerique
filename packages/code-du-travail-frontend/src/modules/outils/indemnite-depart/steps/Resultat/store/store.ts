@@ -23,6 +23,7 @@ import { CommonAgreementStoreSlice } from "../../Agreement/store";
 import { CommonSituationStoreSlice } from "../../../situationStore";
 import { StoreSlicePublicodes } from "../../../types";
 import { informationToSituation } from "src/modules/outils/indemnite-depart/steps/Informations/components/utils";
+import { AbsenceStoreSlice } from "../../Absences";
 
 const initialState: ResultStoreData = {
   input: {
@@ -44,6 +45,7 @@ const initialState: ResultStoreData = {
 const createResultStore: StoreSlicePublicodes<
   ResultStoreSlice,
   AncienneteStoreSlice &
+    AbsenceStoreSlice &
     SalairesStoreSlice &
     CommonAgreementStoreSlice<PublicodesSimulator.INDEMNITE_LICENCIEMENT> &
     CommonInformationsStoreSlice &
@@ -54,6 +56,7 @@ const createResultStore: StoreSlicePublicodes<
   },
   resultFunction: {
     init: () => {
+      const absencesEligibility = !get().absenceData.error.errorEligibility;
       const ancienneteEligibility =
         !get().ancienneteData.error.errorEligibility;
       const informationEligibility =
@@ -69,9 +72,11 @@ const createResultStore: StoreSlicePublicodes<
         isAgreementSupported,
         informationEligibility,
         ancienneteEligibility,
+        absencesEligibility,
         agreement,
       });
-      const isEligible = ancienneteEligibility && informationEligibility;
+      const isEligible =
+        absencesEligibility && ancienneteEligibility && informationEligibility;
 
       if (!isEligible) eventEmitter.dispatch(EventType.SEND_INELIGIBLE_RESULT);
 
@@ -87,7 +92,10 @@ const createResultStore: StoreSlicePublicodes<
       const informationEligibility =
         get().informationsData.error.errorEligibility;
       const ancienneteEligibility = get().ancienneteData.error.errorEligibility;
-      return informationEligibility || ancienneteEligibility;
+      const absencesEligibility = get().absenceData.error.errorEligibility;
+      return (
+        informationEligibility || ancienneteEligibility || absencesEligibility
+      );
     },
     getPublicodesResult: () => {
       const agreement = get().agreementData.input.agreement;
@@ -97,7 +105,7 @@ const createResultStore: StoreSlicePublicodes<
       }
 
       let errorPublicodes: boolean;
-      const absencePeriods = get().ancienneteData.input.absencePeriods;
+      const absencePeriods = get().absenceData.input.absencePeriods;
       const legalReferences = publicodes.getReferences();
       let publicodesSituation:
         | PublicodesResult<PublicodesIndemniteLicenciementResult>
@@ -126,7 +134,7 @@ const createResultStore: StoreSlicePublicodes<
           get().ancienneteData.input.dateEntree!,
           get().ancienneteData.input.dateSortie!,
           get().informationsData.input.licenciementInaptitude === "oui",
-          get().ancienneteData.input.arretTravail === "oui",
+          get().absenceData.input.arretTravail === "oui",
           { ...infos }
         ),
         absencePeriods:
@@ -156,7 +164,11 @@ const createResultStore: StoreSlicePublicodes<
         }
       } catch (e) {
         errorPublicodes = true;
+        console.error(e);
         console.error(`La situation est ${JSON.stringify(situation)}`);
+        console.error(
+          `Les informations de l'ancienneté sont ${JSON.stringify({ ...get().ancienneteData.input, ...get().absenceData.input })}`
+        );
         console.error(
           `Les informations de l'ancienneté sont ${JSON.stringify(get().ancienneteData.input)}`
         );

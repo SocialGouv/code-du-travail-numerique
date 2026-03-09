@@ -40,10 +40,8 @@ describe(`Tests des erreurs d'éligibilité`, () => {
       .setInput(ui.information.agreement16.engineerAge.get(), "38")
       .click(ui.next.get())
       .setInput(ui.seniority.startDate.get(), "01/09/2021")
-      .setInput(ui.seniority.notificationDate.get(), "01/01/2022")
-      .click(ui.seniority.hasAbsence.non.get())
       .setInput(ui.seniority.endDate.get(), "01/01/2022")
-      .click(ui.seniority.arretTravail.non.get())
+      .setInput(ui.seniority.notificationDate.get(), "01/01/2022")
       .click(ui.next.get());
     expect(
       ui.result.infoWarning.eligibleInfoWarningblock.query()
@@ -68,14 +66,16 @@ describe(`Tests des erreurs d'éligibilité`, () => {
       .setInput(ui.seniority.startDate.get(), "01/01/2024")
       .setInput(ui.seniority.notificationDate.get(), "01/10/2024")
       .setInput(ui.seniority.endDate.get(), "01/12/2024")
-      .click(ui.seniority.arretTravail.non.get())
-      .click(ui.seniority.hasAbsence.non.get())
+      .click(ui.next.get())
+      .click(ui.absences.arretTravail.non.get())
+      .click(ui.absences.hasAbsence.non.get())
       .click(ui.next.get())
       .click(ui.salary.hasSameSalary.oui.get())
       .setInput(ui.salary.sameSalaryValue.get(), "2000")
       .click(ui.next.get());
     expect(ui.activeStep.get()).toHaveTextContent("Indemnité");
     userAction
+      .click(ui.previous.get())
       .click(ui.previous.get())
       .click(ui.previous.get())
       .setInput(ui.seniority.notificationDate.get(), "01/08/2024")

@@ -68,8 +68,14 @@ describe("Indemnité licenciement - Tracking", () => {
     userAction.setInput(ui.seniority.startDate.get(), "01/01/2022");
     userAction.setInput(ui.seniority.notificationDate.get(), "15/12/2022");
     userAction.setInput(ui.seniority.endDate.get(), "15/12/2022");
-    userAction.click(ui.seniority.arretTravail.non.get());
-    userAction.click(ui.seniority.hasAbsence.non.get());
+    userAction.click(ui.next.get());
+    expect(sendEvent).toHaveBeenCalledWith({
+      category: "outil",
+      action: `view_step_Indemnité de licenciement`,
+      name: "absences",
+    });
+    userAction.click(ui.absences.arretTravail.non.get());
+    userAction.click(ui.absences.hasAbsence.non.get());
     userAction.click(ui.next.get());
     expect(sendEvent).toHaveBeenCalledWith({
       category: "outil",
@@ -89,6 +95,12 @@ describe("Indemnité licenciement - Tracking", () => {
       category: "outil",
       action: `click_previous_Indemnité de licenciement`,
       name: "salaires",
+    });
+    userAction.click(ui.previous.get());
+    expect(sendEvent).toHaveBeenCalledWith({
+      category: "outil",
+      action: `click_previous_Indemnité de licenciement`,
+      name: "absences",
     });
     userAction.click(ui.previous.get());
     expect(sendEvent).toHaveBeenCalledWith({

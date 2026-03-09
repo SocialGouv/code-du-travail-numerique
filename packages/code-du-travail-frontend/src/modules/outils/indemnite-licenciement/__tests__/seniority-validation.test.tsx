@@ -117,6 +117,9 @@ describe("Indemnité licenciement - Validation des erreurs sur l'étape ancienne
         .setInput(ui.seniority.notificationDate.get(), "01/09/2022")
         .setInput(ui.seniority.endDate.get(), "01/10/2022");
 
+      userAction.click(ui.next.get());
+      userAction.click(ui.next.get());
+
       // validation de l'erreur quand on a pas répondu à la l'arrêt de travail
       expect(
         screen.getByText("Vous devez répondre à cette question", {
@@ -124,16 +127,19 @@ describe("Indemnité licenciement - Validation des erreurs sur l'étape ancienne
         })
       ).toBeInTheDocument();
 
-      userAction.click(ui.seniority.arretTravail.oui.get());
+      userAction.click(ui.absences.arretTravail.oui.get());
 
       // Validation de l'erreur quand on a pas répondu à la date de l'arrêt
       expect(
-        rendering.getByText("Vous devez répondre à cette question", {
-          selector: "#dateArretTravail-error",
-        })
+        rendering.getByText(
+          "La date de l'arrêt de travail doit se situer après la date de début du contrat (01/01/2022) indiquée à l'étape précédente",
+          {
+            selector: "#dateArretTravail-error",
+          }
+        )
       ).toBeInTheDocument();
 
-      userAction.setInput(ui.seniority.dateArretTravail.get(), "01/08/2022");
+      userAction.setInput(ui.absences.dateArretTravail.get(), "01/08/2022");
 
       // validation de l'erreur quand on a pas répondu à présence de périodes d'absence
       expect(
@@ -141,7 +147,7 @@ describe("Indemnité licenciement - Validation des erreurs sur l'étape ancienne
       ).toBeInTheDocument();
 
       // validation de l'erreur quand on a des périodes d'absence mais que l'on a pas saisi le motif de l'absence
-      userAction.click(ui.seniority.hasAbsence.oui.get());
+      userAction.click(ui.absences.hasAbsence.oui.get());
 
       expect(
         screen.getByText("Veuillez renseigner à minima une absence")
@@ -152,7 +158,7 @@ describe("Indemnité licenciement - Validation des erreurs sur l'étape ancienne
 
       // validation de l'erreur quand on a des périodes d'absence mais que l'on a pas saisi la durée et la date de l'absence
       await userAction.changeInputList(
-        ui.seniority.absences.motif(0).get(),
+        ui.absences.absences.motif(0).get(),
         "Congés sans solde"
       );
 
@@ -163,13 +169,13 @@ describe("Indemnité licenciement - Validation des erreurs sur l'étape ancienne
         rendering.queryByText("Veuillez saisir la date de l'absence")
       ).toBeInTheDocument();
 
-      userAction.setInput(ui.seniority.absences.duration(0).get(), "6");
+      userAction.setInput(ui.absences.absences.duration(0).get(), "6");
       expect(
         rendering.queryByText("Veuillez saisir la durée de l'absence")
       ).not.toBeInTheDocument();
 
       // validation de l'erreur quand on a une date d'absence en dehors de la période de présence dans l'entreprise
-      userAction.setInput(ui.seniority.absences.date(0).get(), "01/03/1999");
+      userAction.setInput(ui.absences.absences.date(0).get(), "01/03/1999");
       expect(
         rendering.queryByText(
           "La date de l'absence doit être comprise entre le 01/01/2022 et le 01/10/2022 (dates de début et de fin de contrat)"
@@ -177,7 +183,7 @@ describe("Indemnité licenciement - Validation des erreurs sur l'étape ancienne
       ).toBeInTheDocument();
 
       // validation de l'erreur quand on a une absence qui réduit la période de présence de l'entreprise à moins de 8 mois
-      userAction.setInput(ui.seniority.absences.date(0).get(), "01/02/2022");
+      userAction.setInput(ui.absences.absences.date(0).get(), "01/02/2022");
       expect(
         rendering.queryByText(
           "La date de l'absence doit être comprise entre le 01/01/2022 et le 01/10/2022 (dates de début et de fin de contrat)"
@@ -185,7 +191,9 @@ describe("Indemnité licenciement - Validation des erreurs sur l'étape ancienne
       ).not.toBeInTheDocument();
 
       // validation de la disparition des erreurs quand on a tout renseigné
+      userAction.click(ui.previous.get());
       userAction.setInput(ui.seniority.startDate.get(), "01/02/2000");
+      userAction.click(ui.next.get());
       userAction.click(ui.next.get());
       expect(ui.activeStep.query()).toHaveTextContent("Salaires");
     });
@@ -212,14 +220,17 @@ describe("Indemnité licenciement - Validation des erreurs sur l'étape ancienne
         .setInput(ui.seniority.startDate.get(), "01/01/2022")
         .setInput(ui.seniority.notificationDate.get(), "01/09/2022")
         .setInput(ui.seniority.endDate.get(), "01/09/2022")
-        .click(ui.seniority.arretTravail.non.get())
-        .click(ui.seniority.hasAbsence.oui.get())
-        .setInput(ui.seniority.absences.duration(0).get(), "1")
         .click(ui.next.get())
+        .click(ui.absences.arretTravail.non.get())
+        .click(ui.absences.hasAbsence.oui.get())
+        .setInput(ui.absences.absences.duration(0).get(), "1")
+        .click(ui.next.get())
+        .click(ui.previous.get())
         .click(ui.previous.get())
         .setInput(ui.seniority.notificationDate.get(), "01/10/2022")
         .setInput(ui.seniority.endDate.get(), "01/10/2022")
-        .setInput(ui.seniority.absences.duration(0).get(), "6")
+        .click(ui.next.get())
+        .setInput(ui.absences.absences.duration(0).get(), "6")
         .click(ui.next.get());
       expect(
         rendering.queryByText(

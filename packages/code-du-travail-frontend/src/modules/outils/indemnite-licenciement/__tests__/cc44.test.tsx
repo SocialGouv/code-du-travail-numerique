@@ -33,8 +33,9 @@ describe("Indemnité licenciement - CC 44", () => {
       userAction.setInput(ui.seniority.startDate.get(), "01/01/2000");
       userAction.setInput(ui.seniority.notificationDate.get(), "01/01/2022");
       userAction.setInput(ui.seniority.endDate.get(), "01/03/2022");
-      userAction.click(ui.seniority.arretTravail.non.get());
-      userAction.click(ui.seniority.hasAbsence.non.get());
+      userAction.click(ui.next.get());
+      userAction.click(ui.absences.arretTravail.non.get());
+      userAction.click(ui.absences.hasAbsence.non.get());
       userAction.click(ui.next.get());
       // Validation que l'on est bien sur l'étape ancienneté
       expect(ui.activeStep.query()).toHaveTextContent("Salaires");
@@ -62,11 +63,13 @@ describe("Indemnité licenciement - CC 44", () => {
       // vérification que l'on demande si le salaire a eu des primes pour un Agents de maîtrise et techniciens (Groupe IV)
       userAction.click(ui.previous.get());
       userAction.click(ui.previous.get());
+      userAction.click(ui.previous.get());
       await userAction.changeInputList(
         ui.information.agreement44.proCategory.get(),
         "Agents de maîtrise et techniciens (Groupe IV)"
       );
       userAction.setInput(ui.information.agreement44.age.get(), "36");
+      userAction.click(ui.next.get());
       userAction.click(ui.next.get());
       userAction.click(ui.next.get());
       userAction.click(ui.salary.hasSameSalary.oui.get());
@@ -85,11 +88,13 @@ describe("Indemnité licenciement - CC 44", () => {
       // vérification que l'on demande si le salaire a eu des primes pour un Ingénieurs et cadres (Groupe V)
       userAction.click(ui.previous.get());
       userAction.click(ui.previous.get());
+      userAction.click(ui.previous.get());
       await userAction.changeInputList(
         ui.information.agreement44.proCategory.get(),
         "Ingénieurs et cadres (Groupe V)"
       );
       userAction.setInput(ui.information.agreement44.age.get(), "36");
+      userAction.click(ui.next.get());
       userAction.click(ui.next.get());
       userAction.click(ui.next.get());
       userAction.click(ui.salary.hasSameSalary.oui.get());
@@ -142,8 +147,9 @@ describe("Indemnité licenciement - CC 44", () => {
       userAction.setInput(ui.seniority.startDate.get(), "01/01/2000");
       userAction.setInput(ui.seniority.notificationDate.get(), "01/01/2023");
       userAction.setInput(ui.seniority.endDate.get(), "01/01/2023");
-      userAction.click(ui.seniority.arretTravail.non.get());
-      userAction.click(ui.seniority.hasAbsence.non.get());
+      userAction.click(ui.next.get());
+      userAction.click(ui.absences.arretTravail.non.get());
+      userAction.click(ui.absences.hasAbsence.non.get());
       userAction.click(ui.next.get());
       // Validation que l'on est bien sur l'étape ancienneté
       expect(ui.activeStep.query()).toHaveTextContent("Salaires");
@@ -189,9 +195,10 @@ describe("Indemnité licenciement - CC 44", () => {
       userAction.setInput(ui.seniority.startDate.get(), "01/01/2000");
       userAction.setInput(ui.seniority.notificationDate.get(), "01/01/2023");
       userAction.setInput(ui.seniority.endDate.get(), "01/03/2023");
-      userAction.click(ui.seniority.arretTravail.oui.get());
-      userAction.setInput(ui.seniority.dateArretTravail.get(), "01/09/2022");
-      userAction.click(ui.seniority.hasAbsence.non.get());
+      userAction.click(ui.next.get());
+      userAction.click(ui.absences.arretTravail.oui.get());
+      userAction.setInput(ui.absences.dateArretTravail.get(), "01/09/2022");
+      userAction.click(ui.absences.hasAbsence.non.get());
       userAction.click(ui.next.get());
       userAction.click(ui.salary.hasSameSalary.non.get());
       userAction.click(ui.salary.variablePart.non.get());
@@ -221,8 +228,9 @@ describe("Indemnité licenciement - CC 44", () => {
       .setInput(ui.seniority.startDate.get(), "01/01/2019")
       .setInput(ui.seniority.notificationDate.get(), "01/01/2024")
       .setInput(ui.seniority.endDate.get(), "01/01/2024")
-      .click(ui.seniority.arretTravail.non.get())
-      .click(ui.seniority.hasAbsence.non.get())
+      .click(ui.next.get())
+      .click(ui.absences.arretTravail.non.get())
+      .click(ui.absences.hasAbsence.non.get())
       .click(ui.next.get())
       .click(ui.salary.hasSameSalary.non.get())
       .setInput(ui.salary.salaries.getAll()[0], "3541")

@@ -44,8 +44,9 @@ describe("Indemnité licenciement - CC 16", () => {
         .setInput(ui.seniority.startDate.get(), "01/01/2000")
         .setInput(ui.seniority.notificationDate.get(), "01/01/2024")
         .setInput(ui.seniority.endDate.get(), "01/03/2024")
-        .click(ui.seniority.arretTravail.non.get())
-        .click(ui.seniority.hasAbsence.non.get())
+        .click(ui.next.get())
+        .click(ui.absences.arretTravail.non.get())
+        .click(ui.absences.hasAbsence.non.get())
         .click(ui.next.get());
       // Validation que l'on est bien sur l'étape ancienneté
       expect(ui.activeStep.query()).toHaveTextContent("Salaires");
@@ -111,6 +112,7 @@ describe("Indemnité licenciement - CC 16", () => {
       userAction
         .click(ui.previous.get())
         .click(ui.previous.get())
+        .click(ui.previous.get())
         .click(ui.previous.get());
       await userAction.changeInputList(
         ui.information.agreement16.proCategory.get(),
@@ -118,6 +120,7 @@ describe("Indemnité licenciement - CC 16", () => {
       );
       userAction
         .setInput(ui.information.agreement16.agentAge.get(), "36")
+        .click(ui.next.get())
         .click(ui.next.get())
         .click(ui.next.get())
         .click(ui.salary.hasSameSalary.oui.get());
@@ -151,6 +154,7 @@ describe("Indemnité licenciement - CC 16", () => {
       userAction
         .click(ui.previous.get())
         .click(ui.previous.get())
+        .click(ui.previous.get())
         .click(ui.previous.get());
       await userAction.changeInputList(
         ui.information.agreement16.proCategory.get(),
@@ -158,6 +162,7 @@ describe("Indemnité licenciement - CC 16", () => {
       );
       userAction
         .setInput(ui.information.agreement16.employeeAge.get(), "36")
+        .click(ui.next.get())
         .click(ui.next.get())
         .click(ui.next.get())
         .click(ui.salary.hasSameSalary.oui.get());
@@ -190,6 +195,7 @@ describe("Indemnité licenciement - CC 16", () => {
       userAction
         .click(ui.previous.get())
         .click(ui.previous.get())
+        .click(ui.previous.get())
         .click(ui.previous.get());
       await userAction.changeInputList(
         ui.information.agreement16.proCategory.get(),
@@ -198,6 +204,7 @@ describe("Indemnité licenciement - CC 16", () => {
       userAction
         .click(ui.information.agreement16.driveInability.non.get())
         .setInput(ui.information.agreement16.workerAge.get(), "36")
+        .click(ui.next.get())
         .click(ui.next.get())
         .click(ui.next.get())
         .click(ui.salary.hasSameSalary.oui.get());

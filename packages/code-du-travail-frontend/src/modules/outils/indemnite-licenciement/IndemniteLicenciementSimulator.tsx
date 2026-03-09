@@ -14,6 +14,7 @@ import { StepAnciennete, StepIntro, StepResultat } from "./steps";
 import { useIndemniteLicenciementEventEmitter } from "./events/useIndemniteLicenciementEventEmitter";
 import StepSalaires from "../indemnite-depart/steps/Salaires";
 import { EVENT_CATEGORY } from "../indemnite-depart/feedback/tracking";
+import StepAbsences from "../indemnite-depart/steps/Absences/components";
 
 const steps: Step<IndemniteDepartStepName>[] = [
   {
@@ -35,6 +36,11 @@ const steps: Step<IndemniteDepartStepName>[] = [
     label: "Ancienneté",
     name: IndemniteDepartStepName.Anciennete,
     Component: StepAnciennete,
+  },
+  {
+    label: "Absences",
+    name: IndemniteDepartStepName.Absences,
+    Component: StepAbsences,
   },
   {
     label: "Salaires",

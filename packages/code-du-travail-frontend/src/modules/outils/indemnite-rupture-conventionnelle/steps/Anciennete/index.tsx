@@ -1,13 +1,6 @@
 import { fr } from "@codegouvfr/react-dsfr";
-import React, { useContext, useEffect, useMemo } from "react";
-import {
-  RadioQuestion,
-  TextQuestion,
-} from "src/modules/outils/common/components";
-import { AccessibleAlert } from "src/modules/outils/common/components/AccessibleAlert";
-import { getMotifExampleMessage } from "src/modules/outils/indemnite-depart/agreements";
-import { AbsencePeriods } from "src/modules/outils/indemnite-depart/steps/Anciennete";
-import { informationToSituation } from "src/modules/outils/indemnite-depart/steps/Informations/components/utils";
+import React, { useContext, useEffect } from "react";
+import { TextQuestion } from "src/modules/outils/common/components";
 import {
   IndemniteDepartContext,
   useIndemniteDepartStore,
@@ -17,62 +10,24 @@ const StepAnciennete = () => {
   const store = useContext(IndemniteDepartContext);
   const {
     init,
-    onChangeAbsencePeriods,
-    motifs,
-    absencePeriods,
-    onChangeHasAbsenceProlonge,
-    hasAbsenceProlonge,
     dateEntree,
     onChangeDateEntree,
     dateSortie,
     onChangeDateSortie,
     onChangeDateNotification,
-    arretTravail,
-    onChangeArretTravail,
-    errorArretTravail,
-    dateArretTravail,
-    onChangeDateArretTravail,
-    errorDateArretTravail,
     errorDateSortie,
-    errorAbsenceProlonge,
     errorDateEntree,
-    errorAbsencePeriods,
-    informationData,
-    errorPublicodes,
   } = useIndemniteDepartStore(store, (state) => ({
     init: state.ancienneteFunction.init,
-    onChangeAbsencePeriods: state.ancienneteFunction.onChangeAbsencePeriods,
-    motifs: state.ancienneteData.input.motifs,
-    absencePeriods: state.ancienneteData.input.absencePeriods,
-    onChangeHasAbsenceProlonge:
-      state.ancienneteFunction.onChangeHasAbsenceProlonge,
-    hasAbsenceProlonge: state.ancienneteData.input.hasAbsenceProlonge,
     dateEntree: state.ancienneteData.input.dateEntree,
     onChangeDateEntree: state.ancienneteFunction.onChangeDateEntree,
     dateSortie: state.ancienneteData.input.dateSortie,
     onChangeDateSortie: state.ancienneteFunction.onChangeDateSortie,
     onChangeDateNotification: state.ancienneteFunction.onChangeDateNotification,
     errorDateSortie: state.ancienneteData.error.errorDateSortie,
-    arretTravail: state.ancienneteData.input.arretTravail,
-    dateArretTravail: state.ancienneteData.input.dateArretTravail,
-    onChangeArretTravail: state.ancienneteFunction.onChangeArretTravail,
-    onChangeDateArretTravail: state.ancienneteFunction.onChangeDateArretTravail,
-    errorArretTravail: state.ancienneteData.error.errorArretTravail,
-    errorDateArretTravail: state.ancienneteData.error.errorDateArretTravail,
-    errorAbsenceProlonge: state.ancienneteData.error.errorAbsenceProlonge,
     errorDateEntree: state.ancienneteData.error.errorDateEntree,
-    errorAbsencePeriods: state.ancienneteData.error.errorAbsencePeriods,
     agreement: state.agreementData.input.agreement,
-    informationData: informationToSituation(
-      state.informationsData.input.publicodesInformations
-    ),
-    errorPublicodes: state.ancienneteData.error.errorPublicodes,
   }));
-
-  const messageMotifExample = useMemo(
-    () => getMotifExampleMessage(informationData, true),
-    [informationData]
-  );
 
   useEffect(() => {
     init();
@@ -104,76 +59,6 @@ const StepAnciennete = () => {
           dataTestId={"date-sortie"}
           subLabel="La date de rupture du contrat est indiquée dans la convention de rupture. Dans tous les cas, elle ne peut intervenir avant la fin du délai laissé à l’administration pour valider la rupture conventionnelle."
         />
-        <RadioQuestion
-          questions={[
-            {
-              label: "Oui",
-              value: "oui",
-              id: "arretTravail-oui",
-            },
-            {
-              label: "Non",
-              value: "non",
-              id: "arretTravail-non",
-            },
-          ]}
-          name="licenciementArretTravail"
-          label="Le salarié est-il en arrêt de travail au moment de la rupture conventionnelle&nbsp;?"
-          selectedOption={arretTravail}
-          onChangeSelectedOption={onChangeArretTravail}
-          error={errorArretTravail}
-        />
-        {arretTravail === "oui" && (
-          <TextQuestion
-            label="Depuis quelle date le salarié est-il en arrêt&nbsp;?"
-            inputType="date"
-            value={dateArretTravail}
-            onChange={onChangeDateArretTravail}
-            error={errorDateArretTravail}
-            id="dateArretTravail"
-            dataTestId={"date-arret-travail"}
-          />
-        )}
-      </div>
-      <div className={fr.cx("fr-mt-2w")}>
-        <h3>Période d&apos;absence prolongée</h3>
-        <RadioQuestion
-          questions={[
-            {
-              label: "Oui",
-              value: "oui",
-              id: "hasAbsenceProlonge-oui",
-            },
-            {
-              label: "Non",
-              value: "non",
-              id: "hasAbsenceProlonge-non",
-            },
-          ]}
-          name="hasAbsenceProlonge"
-          label="Y a-t-il eu des absences de plus d’un mois durant le contrat de travail&nbsp;?"
-          selectedOption={hasAbsenceProlonge}
-          onChangeSelectedOption={onChangeHasAbsenceProlonge}
-          error={errorAbsenceProlonge}
-        />
-        {hasAbsenceProlonge === "oui" && (
-          <AbsencePeriods
-            onChange={onChangeAbsencePeriods}
-            motifs={motifs}
-            absences={absencePeriods}
-            error={errorAbsencePeriods}
-            informationData={informationData}
-            messageMotifExample={messageMotifExample}
-          />
-        )}
-        {errorPublicodes && (
-          <AccessibleAlert
-            title="Erreur"
-            description={errorPublicodes}
-            severity="error"
-            className={["fr-mt-2w"]}
-          />
-        )}
       </div>
     </>
   );

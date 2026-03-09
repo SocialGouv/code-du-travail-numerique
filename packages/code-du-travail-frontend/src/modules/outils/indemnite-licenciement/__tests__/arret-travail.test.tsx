@@ -20,11 +20,12 @@ describe("Arrêt de travail", () => {
         .setInput(ui.seniority.startDate.get(), "01/01/2000")
         .setInput(ui.seniority.notificationDate.get(), "01/01/2022")
         .setInput(ui.seniority.endDate.get(), "01/12/2022")
-        .click(ui.seniority.hasAbsence.non.get());
+        .click(ui.next.get())
+        .click(ui.absences.hasAbsence.non.get());
     });
 
     test("should display a new question", async () => {
-      expect(ui.seniority.arretTravail.question.query()).toBeInTheDocument();
+      expect(ui.absences.arretTravail.question.query()).toBeInTheDocument();
     });
 
     test("should stop because a new question is display", async () => {
@@ -33,38 +34,40 @@ describe("Arrêt de travail", () => {
     });
 
     test("should pass to next step", async () => {
-      userAction.click(ui.seniority.arretTravail.non.get());
+      userAction.click(ui.absences.arretTravail.non.get());
       userAction.click(ui.next.get());
       expect(ui.salary.hasSameSalary.oui.query()).toBeInTheDocument();
     });
 
     test("should stop because a date question about the 'arret de travail' is asked", async () => {
-      userAction.click(ui.seniority.arretTravail.oui.get());
+      userAction.click(ui.absences.arretTravail.oui.get());
       userAction.click(ui.next.get());
       expect(ui.salary.hasSameSalary.oui.query()).not.toBeInTheDocument();
     });
 
     test("should pass to next step after selecting a date", async () => {
-      userAction.click(ui.seniority.arretTravail.oui.get());
-      userAction.setInput(ui.seniority.dateArretTravail.get(), "15/09/2022");
+      userAction.click(ui.absences.arretTravail.oui.get());
+      userAction.setInput(ui.absences.dateArretTravail.get(), "15/09/2022");
       userAction.click(ui.next.get());
       expect(ui.salary.hasSameSalary.oui.query()).toBeInTheDocument();
     });
 
     test("user can put an invalid date and then click 'no'", async () => {
-      userAction.click(ui.seniority.arretTravail.oui.get());
-      userAction.setInput(ui.seniority.dateArretTravail.get(), "15/09/2000");
-      userAction.setInput(ui.seniority.startDate.get(), "01/01/2022");
+      userAction.click(ui.absences.arretTravail.oui.get());
+      userAction.setInput(ui.absences.dateArretTravail.get(), "15/09/2020");
+      userAction.click(ui.previous.get());
+      userAction.setInput(ui.seniority.startDate.get(), "01/01/2021");
+      userAction.click(ui.next.get());
       userAction.click(ui.next.get());
       expect(
         byText(
-          "La date de début de contrat doit se situer avant la date d'arrêt de travail indiquée à l'étape n°2"
+          "La date de l'arrêt de travail doit se situer après la date de début du contrat (01/01/2021) indiquée à l'étape précédente"
         ).query()
       ).toBeInTheDocument();
-      userAction.click(ui.seniority.arretTravail.non.get());
+      userAction.click(ui.absences.arretTravail.non.get());
       expect(
         byText(
-          "La date de début de contrat doit se situer avant la date d'arrêt de travail indiquée à l'étape n°2"
+          "La date de l'arrêt de travail doit se situer après la date de début du contrat (01/01/2021) indiquée à l'étape précédente"
         ).query()
       ).not.toBeInTheDocument();
     });
@@ -85,8 +88,9 @@ describe("Arrêt de travail", () => {
       userAction.setInput(ui.seniority.startDate.get(), "01/01/2022");
       userAction.setInput(ui.seniority.notificationDate.get(), "01/09/2022");
       userAction.setInput(ui.seniority.endDate.get(), "01/12/2022");
-      userAction.click(ui.seniority.arretTravail.non.get());
-      userAction.click(ui.seniority.hasAbsence.non.get());
+      userAction.click(ui.next.get());
+      userAction.click(ui.absences.arretTravail.non.get());
+      userAction.click(ui.absences.hasAbsence.non.get());
       userAction.click(ui.next.get());
       userAction.click(ui.salary.hasSameSalary.non.get());
       expect(ui.salary.salaries.queryAll()).toHaveLength(8);
@@ -102,9 +106,10 @@ describe("Arrêt de travail", () => {
       userAction.setInput(ui.seniority.startDate.get(), "01/01/2022");
       userAction.setInput(ui.seniority.notificationDate.get(), "01/09/2022");
       userAction.setInput(ui.seniority.endDate.get(), "01/12/2022");
-      userAction.click(ui.seniority.arretTravail.oui.get());
-      userAction.setInput(ui.seniority.dateArretTravail.get(), "01/07/2022");
-      userAction.click(ui.seniority.hasAbsence.non.get());
+      userAction.click(ui.next.get());
+      userAction.click(ui.absences.arretTravail.oui.get());
+      userAction.setInput(ui.absences.dateArretTravail.get(), "01/07/2022");
+      userAction.click(ui.absences.hasAbsence.non.get());
       userAction.click(ui.next.get());
       userAction.click(ui.salary.hasSameSalary.non.get());
       expect(ui.salary.salaries.queryAll()).toHaveLength(6);

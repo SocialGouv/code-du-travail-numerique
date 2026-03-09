@@ -47,8 +47,9 @@ describe("Indemnité licenciement - CC 573", () => {
 
       .setInput(ui.seniority.startDate.get(), "01/01/2000")
       .setInput(ui.seniority.endDate.get(), "01/01/2025")
-      .click(ui.seniority.arretTravail.non.get())
-      .click(ui.seniority.hasAbsence.non.get())
+      .click(ui.next.get())
+      .click(ui.absences.arretTravail.non.get())
+      .click(ui.absences.hasAbsence.non.get())
       .click(ui.next.get())
       .click(ui.salary.hasSameSalary.oui.get())
       .setInput(ui.salary.sameSalaryValue.get(), "2700")

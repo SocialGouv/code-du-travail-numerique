@@ -21,6 +21,7 @@ import { StoreSlice } from "../../../types";
 import { dateToString, parse } from "src/modules/outils/common/utils";
 import { ValidationResponse } from "src/modules/outils/common/components/SimulatorLayout/types";
 import { deepMergeArray } from "src/modules/utils/array";
+import { AbsenceStoreSlice } from "../../Absences";
 
 const initialState: SalairesStoreData = {
   input: {
@@ -34,6 +35,7 @@ const initialState: SalairesStoreData = {
 const createSalairesStore: StoreSlice<
   SalairesStoreSlice,
   AncienneteStoreSlice &
+    AbsenceStoreSlice &
     CommonAgreementStoreSlice<PublicodesSimulator.INDEMNITE_LICENCIEMENT>
 > = (set, get) => ({
   salairesData: { ...initialState },
@@ -42,7 +44,8 @@ const createSalairesStore: StoreSlice<
       const ancienneteInput = get().ancienneteData.input;
       const dateNotification = add(
         parse(
-          ancienneteInput.dateArretTravail ?? ancienneteInput.dateNotification!
+          get().absenceData.input.dateArretTravail ??
+            get().ancienneteData.input.dateNotification!
         ),
         {
           days: 1,

@@ -13,6 +13,7 @@ import { Step } from "../common/components/SimulatorLayout/types";
 import { IndemniteDepartType } from "../indemnite-depart/types";
 import StepSalaires from "../indemnite-depart/steps/Salaires";
 import { EVENT_CATEGORY } from "../indemnite-depart/feedback/tracking";
+import StepAbsences from "../indemnite-depart/steps/Absences/components";
 
 const steps: Step<IndemniteDepartStepName>[] = [
   {
@@ -34,6 +35,11 @@ const steps: Step<IndemniteDepartStepName>[] = [
     label: "Ancienneté",
     name: IndemniteDepartStepName.Anciennete,
     Component: StepAnciennete,
+  },
+  {
+    label: "Absences",
+    name: IndemniteDepartStepName.Absences,
+    Component: StepAbsences,
   },
   {
     label: "Salaires",

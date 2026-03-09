@@ -21,6 +21,7 @@ export enum IndemniteDepartStepName {
   Introduction = "start",
   Agreement = "info_cc",
   Anciennete = "anciennete",
+  Absences = "absences",
   Salaires = "salaires",
   Resultat = "results",
   Informations = "infos",
@@ -36,6 +37,8 @@ const IndemniteDepartSimulator = ({
   const {
     onNextStepAnciennete,
     isStepAncienneteValid,
+    onNextStepAbsences,
+    isStepAbsencesValid,
     onNextStepSalaires,
     isStepSalairesValid,
     onNextStepAgreement,
@@ -47,6 +50,8 @@ const IndemniteDepartSimulator = ({
   } = useIndemniteDepartStore(store, (state) => ({
     onNextStepAnciennete: state.ancienneteFunction.onNextStep,
     isStepAncienneteValid: state.ancienneteData.isStepValid,
+    onNextStepAbsences: state.absenceFunction.onNextStep,
+    isStepAbsencesValid: state.absenceData.isStepValid,
     onNextStepSalaires: state.salairesFunction.onNextStep,
     isStepSalairesValid: state.salairesData.isStepValid,
     onNextStepAgreement: state.agreementFunction.onNextStep,
@@ -87,6 +92,11 @@ const IndemniteDepartSimulator = ({
           stepName: IndemniteDepartStepName.Anciennete,
           isStepValid: isStepAncienneteValid,
           onNextStep: onNextStepAnciennete,
+        },
+        {
+          stepName: IndemniteDepartStepName.Absences,
+          isStepValid: isStepAbsencesValid,
+          onNextStep: onNextStepAbsences,
         },
         {
           stepName: IndemniteDepartStepName.Salaires,

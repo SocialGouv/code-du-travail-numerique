@@ -3,7 +3,7 @@ import { produce } from "immer";
 import { StoreApi } from "zustand";
 import { deepMergeArray } from "src/modules/utils/array";
 import { computeSalaryPeriods } from "../../../common";
-import { AncienneteStoreSlice } from "../../../steps/Anciennete/store";
+import { AncienneteStoreSlice } from "../../../steps";
 import { SalairesStoreSlice } from "../../../steps/Salaires/store";
 import { StoreSlice } from "../../../types";
 import {
@@ -13,6 +13,7 @@ import {
 } from "./types";
 import { validateStep } from "./validator";
 import { CommonSituationStoreSlice } from "../../../situationStore";
+import { AbsenceStoreSlice } from "../../../steps/Absences";
 
 const initialState: Agreement1483StoreData = {
   input: {
@@ -25,12 +26,15 @@ const initialState: Agreement1483StoreData = {
 
 export const createAgreement1483StoreSalaires: StoreSlice<
   Agreement1483StoreSlice,
-  SalairesStoreSlice & AncienneteStoreSlice & CommonSituationStoreSlice
+  SalairesStoreSlice &
+    AncienneteStoreSlice &
+    AbsenceStoreSlice &
+    CommonSituationStoreSlice
 > = (set, get) => ({
   agreement1483Data: { ...initialState },
   agreement1483Function: {
     onInit: () => {
-      const dateArretTravail = get().ancienneteData.input.dateArretTravail;
+      const dateArretTravail = get().absenceData.input.dateArretTravail;
 
       if (dateArretTravail) {
         get().situationFunction.setSituation("noticeSalaryPeriods", "[]");

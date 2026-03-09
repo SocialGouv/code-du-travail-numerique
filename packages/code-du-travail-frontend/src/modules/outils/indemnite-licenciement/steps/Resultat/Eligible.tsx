@@ -64,7 +64,7 @@ export default function Eligible() {
     dateEntree: state.ancienneteData.input.dateEntree,
     dateSortie: state.ancienneteData.input.dateSortie,
     dateNotification: state.ancienneteData.input.dateNotification,
-    absencePeriods: state.ancienneteData.input.absencePeriods,
+    absencePeriods: state.absenceData.input.absencePeriods,
     salaryPeriods: state.salairesData.input.salaryPeriods,
     formula: state.resultData.input.formula,
     legalReferences: state.resultData.input.legalReferences,
@@ -80,8 +80,8 @@ export default function Eligible() {
       state.resultData.input.agreementHasNoBetterAllowance,
     isStepSalaryHidden: state.informationsData.input.isStepSalaryHidden,
     infoWarning: state.resultData.input.infoWarning,
-    dateArretTravail: state.ancienneteData.input.dateArretTravail,
-    arretTravail: state.ancienneteData.input.arretTravail,
+    dateArretTravail: state.absenceData.input.dateArretTravail,
+    arretTravail: state.absenceData.input.arretTravail,
     informationData: informationToSituation(
       state.informationsData.input.publicodesInformations
     ),
