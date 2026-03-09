@@ -1,5 +1,7 @@
 import { Formula } from "@socialgouv/modeles-social";
 import { MathFormula } from "./MathFormula";
+import React from "react";
+import Link from "../../../common/Link";
 
 type Props = {
   formula?: Formula;
@@ -19,6 +21,15 @@ export default function FormulaInterpreter(props: Props) {
           {props.formula.annotations?.map((annotation, index) => (
             <p key={"annotations-" + index}>{annotation}</p>
           ))}
+
+          <p>
+            <Link
+              href="https://code.travail.gouv.fr/contribution/comment-determiner-lanciennete-du-salarie"
+              target="_blank"
+            >
+              Comment determiner l&apos;ancienneté d&apos;un salarié&nbsp;?
+            </Link>
+          </p>
         </div>
       )}
     </>
