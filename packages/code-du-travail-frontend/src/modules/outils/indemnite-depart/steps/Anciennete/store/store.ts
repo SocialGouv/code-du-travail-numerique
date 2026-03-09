@@ -15,6 +15,7 @@ import { ValidationResponse } from "src/modules/outils/common/components/Simulat
 import { validateStep } from "./validator";
 import { CommonAgreementStoreSlice } from "../../Agreement/store";
 import { CommonSituationStoreSlice } from "../../../situationStore";
+import { AbsenceStoreSlice } from "../../Absences";
 
 const initialState: AncienneteStoreData = {
   hasBeenSubmit: false,
@@ -26,6 +27,7 @@ const initialState: AncienneteStoreData = {
 const createAncienneteStore: StoreSlice<
   AncienneteStoreSlice,
   SalairesStoreSlice &
+    AbsenceStoreSlice &
     CommonAgreementStoreSlice<PublicodesSimulator.INDEMNITE_LICENCIEMENT> &
     CommonInformationsStoreSlice &
     CommonSituationStoreSlice
@@ -42,12 +44,31 @@ const createAncienneteStore: StoreSlice<
     },
     onChangeDateEntree: (value) => {
       applyGenericValidation(get, set, "dateEntree", value);
+      get().ancienneteFunction.updateAncienneteEstimee();
     },
     onChangeDateSortie: (value) => {
       applyGenericValidation(get, set, "dateSortie", value);
+      get().ancienneteFunction.updateAncienneteEstimee();
     },
     onChangeDateNotification: (value) => {
       applyGenericValidation(get, set, "dateNotification", value);
+    },
+    updateAncienneteEstimee: () => {
+      const publicodes = get().agreementData.publicodes;
+      const { dateEntree, dateSortie } = get().ancienneteData.input;
+      const absences = get().absenceData.input.absencePeriods;
+      if (dateEntree && dateSortie) {
+        const result = publicodes.estimatedSeniority(
+          dateEntree,
+          dateSortie,
+          absences
+        );
+        set(
+          produce((state: AncienneteStoreSlice) => {
+            state.ancienneteData.input.ancienneteEstimee = result.value;
+          })
+        );
+      }
     },
     onNextStep: () => {
       const { isValid, errorState } = validateStep(get().ancienneteData.input);

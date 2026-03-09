@@ -13,6 +13,7 @@ import {
 } from "src/modules/outils/indemnite-depart/store";
 import AbsencePeriods from "./AbsencePeriods";
 import { IndemniteDepartType } from "../../../types";
+import { AncienneteDisplay } from "../../Anciennete";
 
 const StepAbsences = () => {
   const store = useContext(IndemniteDepartContext);
@@ -31,6 +32,7 @@ const StepAbsences = () => {
     errorDateArretTravail,
     errorAbsenceProlonge,
     errorAbsencePeriods,
+    ancienneteEstimee,
     informationData,
     errorPublicodes,
   } = useIndemniteDepartStore(store, (state) => ({
@@ -50,6 +52,7 @@ const StepAbsences = () => {
     errorAbsenceProlonge: state.absenceData.error.errorAbsenceProlonge,
     errorAbsencePeriods: state.absenceData.error.errorAbsencePeriods,
     agreement: state.agreementData.input.agreement,
+    ancienneteEstimee: state.ancienneteData.input.ancienneteEstimee,
     informationData: informationToSituation(
       state.informationsData.input.publicodesInformations
     ),
@@ -142,6 +145,7 @@ const StepAbsences = () => {
           />
         )}
       </div>
+      <AncienneteDisplay anciennete={ancienneteEstimee} />
     </>
   );
 };

@@ -5,6 +5,7 @@ export type AncienneteStoreInput = {
   dateEntree?: string;
   dateSortie?: string;
   dateNotification?: string;
+  ancienneteEstimee?: number;
 };
 
 export type AncienneteStoreError = {
@@ -30,6 +31,7 @@ export type AncienneteStoreFn = {
   onChangeDateEntree: (value: string) => void;
   onChangeDateSortie: (value: string) => void;
   onChangeDateNotification: (value: string) => void;
+  updateAncienneteEstimee: () => void;
   onNextStep: () => ValidationResponse;
 };
 

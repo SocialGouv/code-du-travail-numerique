@@ -73,6 +73,7 @@ const createAncienneteStore: StoreSlice<
     onChangeAbsencePeriods: (value) => {
       const absence = cleanAbsence(value, get());
       applyGenericValidation(get, set, "absencePeriods", absence);
+      get().ancienneteFunction.updateAncienneteEstimee();
     },
     onChangeHasAbsenceProlonge: (value) => {
       if (value === "non") {

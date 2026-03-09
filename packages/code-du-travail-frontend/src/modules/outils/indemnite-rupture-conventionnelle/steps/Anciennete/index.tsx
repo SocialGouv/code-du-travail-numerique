@@ -5,6 +5,7 @@ import {
   IndemniteDepartContext,
   useIndemniteDepartStore,
 } from "src/modules/outils/indemnite-depart/store";
+import { AncienneteDisplay } from "../../../indemnite-depart/steps";
 
 const StepAnciennete = () => {
   const store = useContext(IndemniteDepartContext);
@@ -17,6 +18,7 @@ const StepAnciennete = () => {
     onChangeDateNotification,
     errorDateSortie,
     errorDateEntree,
+    ancienneteEstimee,
   } = useIndemniteDepartStore(store, (state) => ({
     init: state.ancienneteFunction.init,
     dateEntree: state.ancienneteData.input.dateEntree,
@@ -27,6 +29,7 @@ const StepAnciennete = () => {
     errorDateSortie: state.ancienneteData.error.errorDateSortie,
     errorDateEntree: state.ancienneteData.error.errorDateEntree,
     agreement: state.agreementData.input.agreement,
+    ancienneteEstimee: state.ancienneteData.input.ancienneteEstimee,
   }));
 
   useEffect(() => {
@@ -59,6 +62,7 @@ const StepAnciennete = () => {
           dataTestId={"date-sortie"}
           subLabel="La date de rupture du contrat est indiquée dans la convention de rupture. Dans tous les cas, elle ne peut intervenir avant la fin du délai laissé à l’administration pour valider la rupture conventionnelle."
         />
+        <AncienneteDisplay anciennete={ancienneteEstimee} />
       </div>
     </>
   );

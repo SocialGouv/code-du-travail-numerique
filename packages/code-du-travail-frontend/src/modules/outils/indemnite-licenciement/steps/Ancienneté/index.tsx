@@ -1,13 +1,12 @@
 import { fr } from "@codegouvfr/react-dsfr";
-import React, { useContext, useEffect, useMemo } from "react";
+import React, { useContext, useEffect } from "react";
 import { TextQuestion } from "src/modules/outils/common/components";
 import { AccessibleAlert } from "src/modules/outils/common/components/AccessibleAlert";
-import { getMotifExampleMessage } from "src/modules/outils/indemnite-depart/agreements";
-import { informationToSituation } from "src/modules/outils/indemnite-depart/steps/Informations/components/utils";
 import {
   IndemniteDepartContext,
   useIndemniteDepartStore,
 } from "src/modules/outils/indemnite-depart/store";
+import { AncienneteDisplay } from "../../../indemnite-depart/steps";
 
 const StepAnciennete = () => {
   const store = useContext(IndemniteDepartContext);
@@ -22,7 +21,7 @@ const StepAnciennete = () => {
     errorDateNotification,
     errorDateSortie,
     errorDateEntree,
-    informationData,
+    ancienneteEstimee,
     errorPublicodes,
   } = useIndemniteDepartStore(store, (state) => ({
     init: state.ancienneteFunction.init,
@@ -36,16 +35,9 @@ const StepAnciennete = () => {
     errorDateSortie: state.ancienneteData.error.errorDateSortie,
     errorDateEntree: state.ancienneteData.error.errorDateEntree,
     agreement: state.agreementData.input.agreement,
-    informationData: informationToSituation(
-      state.informationsData.input.publicodesInformations
-    ),
+    ancienneteEstimee: state.ancienneteData.input.ancienneteEstimee,
     errorPublicodes: state.ancienneteData.error.errorPublicodes,
   }));
-
-  const messageMotifsExample = useMemo(
-    () => getMotifExampleMessage(informationData, false),
-    [informationData]
-  );
 
   useEffect(() => {
     init();
@@ -83,6 +75,7 @@ const StepAnciennete = () => {
           dataTestId={"date-sortie"}
           subLabel="En cas de dispense de préavis à l'initiative de l'employeur, ou si le licenciement intervient à la suite d'un avis d'inaptitude non professionnelle, indiquer la date de fin du préavis « théorique » non effectué."
         />
+        <AncienneteDisplay anciennete={ancienneteEstimee} />
       </div>
       {errorPublicodes && (
         <AccessibleAlert

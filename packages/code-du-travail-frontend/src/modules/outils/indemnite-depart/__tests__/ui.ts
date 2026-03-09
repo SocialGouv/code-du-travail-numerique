@@ -348,6 +348,7 @@ export const ui = {
     startDate: byTestId("date-entree"),
     notificationDate: byTestId("date-notification"),
     endDate: byTestId("date-sortie"),
+    ancienneteEstimee: byTestId("anciennete-estimee"),
     error: {
       requiredDate: byText(/Veuillez saisir cette date/),
     },
@@ -371,6 +372,7 @@ export const ui = {
       duration: (index: number) => byTestId(`absence-duree-${index}`),
       date: (index: number) => byTestId(`absence-date-${index}`),
     },
+    ancienneteEstimee: byTestId("anciennete-estimee"),
   },
   salary: {
     hasSameSalary: {
