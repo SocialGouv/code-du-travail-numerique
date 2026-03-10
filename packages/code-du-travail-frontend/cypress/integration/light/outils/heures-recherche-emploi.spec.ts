@@ -1,11 +1,13 @@
 describe("Outil - Heures d'absence pour rechercher un emploi", () => {
   it("Parcours avec convention collective non traité", () => {
     cy.visit("/outils/heures-recherche-emploi");
-    cy.get("h1").should(
-      "have.text",
-      "Calculer le nombre d'heures d'absence pour rechercher un emploi"
-    );
-    cy.get("button").contains("Commencer").click({ force: true });
+    cy.findByRole("heading", { level: 1 })
+      .first()
+      .should(
+        "have.text",
+        "Calculer le nombre d'heures d'absence pour rechercher un emploi"
+      );
+    cy.get("button").contains("Commencer").click();
 
     cy.contains("Quel est le nom de la convention collective applicable ?");
     cy.get(
@@ -16,7 +18,7 @@ describe("Outil - Heures d'absence pour rechercher un emploi", () => {
     cy.contains("Précisez et sélectionnez votre convention collective");
     cy.get("#agreement-search-autocomplete").type("1388");
     cy.get('ul[role="listbox"] li').contains("Industrie du pétrole").click();
-    cy.contains("Nous n’avons pas de réponse pour cette convention collective");
+    cy.contains("Nous n'avons pas de réponse pour cette convention collective");
     cy.get("button").contains("Suivant").click();
     cy.contains(
       "Vous ne pouvez pas poursuivre la simulation avec cette convention collective."
@@ -25,7 +27,7 @@ describe("Outil - Heures d'absence pour rechercher un emploi", () => {
 
   it("Parcours en connaissant sa convention collective et sans information complémentaire", () => {
     cy.visit("/outils/heures-recherche-emploi");
-    cy.get("h1").should(
+    cy.findByRole("heading", { level: 1 }).should(
       "have.text",
       "Calculer le nombre d'heures d'absence pour rechercher un emploi"
     );

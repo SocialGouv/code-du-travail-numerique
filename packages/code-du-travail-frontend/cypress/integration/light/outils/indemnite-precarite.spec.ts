@@ -1,8 +1,10 @@
 describe("Outil - Indemnité de Precarite", () => {
   it("Calcul de l'indemnité de precarite", () => {
     cy.visit("/outils/indemnite-precarite");
-    cy.get("h1").should("have.text", "Calculer l'indemnité de précarité");
-    cy.get("button").contains("Commencer").click({ force: true });
+    cy.findByRole("heading", { level: 1 })
+      .first()
+      .should("have.text", "Calculer l'indemnité de précarité");
+    cy.get("button").contains("Commencer").click();
 
     cy.contains("Quel est le nom de la convention collective applicable ?");
     cy.get(
