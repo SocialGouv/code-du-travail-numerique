@@ -17,7 +17,7 @@ describe("Modèles de documents", () => {
       "Modèles de documents - Code du travail numérique",
       "Téléchargez et personnalisez les modèles de documents et de lettres pour vos démarches en lien avec le droit du travail"
     );
-    cy.get("h1").should("have.text", "Modèles de documents");
+    cy.get("h1").first().should("have.text", "Modèles de documents");
     cy.get("body").should(
       "contain",
       "Téléchargez et personnalisez les modèles de documents et de lettres pour vos démarches en lien avec le droit du travail"
