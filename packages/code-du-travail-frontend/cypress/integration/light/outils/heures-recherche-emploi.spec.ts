@@ -7,11 +7,11 @@ describe("Outil - Heures d'absence pour rechercher un emploi", () => {
         "have.text",
         "Calculer le nombre d'heures d'absence pour rechercher un emploi"
       );
-    cy.get("button").contains("Commencer").click();
+    cy.get("button").contains("Commencer").should("be.visible").click();
 
     cy.contains("Quel est le nom de la convention collective applicable ?");
     cy.get(
-      'label:contains("Je sais quelle est ma convention collective et je la saisis.")'
+      'label:contains("Je sais quelle est ma convention collective et je la saisis."):visible'
     )
       .first()
       .click();
@@ -27,15 +27,17 @@ describe("Outil - Heures d'absence pour rechercher un emploi", () => {
 
   it("Parcours en connaissant sa convention collective et sans information complémentaire", () => {
     cy.visit("/outils/heures-recherche-emploi");
-    cy.findByRole("heading", { level: 1 }).should(
-      "have.text",
-      "Calculer le nombre d'heures d'absence pour rechercher un emploi"
-    );
-    cy.get("button").contains("Commencer").click({ force: true });
+    cy.findByRole("heading", { level: 1 })
+      .first()
+      .should(
+        "have.text",
+        "Calculer le nombre d'heures d'absence pour rechercher un emploi"
+      );
+    cy.get("button").contains("Commencer").should("be.visible").click();
 
     cy.contains("Quel est le nom de la convention collective applicable ?");
     cy.get(
-      'label:contains("Je sais quelle est ma convention collective et je la saisis.")'
+      'label:contains("Je sais quelle est ma convention collective et je la saisis."):visible'
     )
       .first()
       .click();
@@ -70,15 +72,17 @@ describe("Outil - Heures d'absence pour rechercher un emploi", () => {
 
   it("Parcours en connaissant sa convention collective et avec informations complémentaires", () => {
     cy.visit("/outils/heures-recherche-emploi");
-    cy.get("h1").should(
-      "have.text",
-      "Calculer le nombre d'heures d'absence pour rechercher un emploi"
-    );
-    cy.get("button").contains("Commencer").click({ force: true });
+    cy.findByRole("heading", { level: 1 })
+      .first()
+      .should(
+        "have.text",
+        "Calculer le nombre d'heures d'absence pour rechercher un emploi"
+      );
+    cy.get("button").contains("Commencer").should("be.visible").click();
 
     cy.contains("Quel est le nom de la convention collective applicable ?");
     cy.get(
-      'label:contains("Je sais quelle est ma convention collective et je la saisis.")'
+      'label:contains("Je sais quelle est ma convention collective et je la saisis."):visible'
     )
       .first()
       .click();
