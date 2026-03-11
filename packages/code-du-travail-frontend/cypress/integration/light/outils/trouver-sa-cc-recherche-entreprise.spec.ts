@@ -7,6 +7,7 @@ describe("Outil - Trouver sa convention collective", () => {
       "Recherchez une convention collective par Entreprise, SIRET, Nom ou numéro IDCC"
     );
     cy.findByRole("heading", { level: 1 })
+      .first()
       .should("have.text", "Trouver sa convention collective")
       .click();
     cy.contains(

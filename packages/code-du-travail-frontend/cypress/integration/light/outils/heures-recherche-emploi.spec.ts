@@ -1,23 +1,48 @@
 describe("Outil - Heures d'absence pour rechercher un emploi", () => {
-  it("Parcours avec convention collective non traité", () => {
-    cy.visit("/outils/heures-recherche-emploi");
-    cy.get("h1").should(
-      "have.text",
-      "Calculer le nombre d'heures d'absence pour rechercher un emploi"
-    );
-    cy.get("button").contains("Commencer").click({ force: true });
+  const clickNext = () => {
+    cy.contains("button", "Suivant")
+      .filter(":visible")
+      .should("have.length.at.least", 1)
+      .last()
+      .should("be.visible")
+      .and("not.be.disabled")
+      .then(($button) => {
+        cy.wrap($button).click();
+      });
+  };
 
-    cy.contains("Quel est le nom de la convention collective applicable ?");
+  const selectKnownAgreement = () => {
     cy.get(
-      'label:contains("Je sais quelle est ma convention collective et je la saisis.")'
+      'label:contains("Je sais quelle est ma convention collective et je la saisis."):visible'
     )
       .first()
+      .should("be.visible")
       .click();
+  };
+
+  it("Parcours avec convention collective non traité", () => {
+    cy.visit("/outils/heures-recherche-emploi");
+    cy.findByRole("heading", { level: 1 })
+      .first()
+      .should(
+        "have.text",
+        "Calculer le nombre d'heures d'absence pour rechercher un emploi"
+      );
+    cy.contains("button", "Commencer").should("be.visible").click();
+
+    cy.contains("Quel est le nom de la convention collective applicable ?");
+    selectKnownAgreement();
+
     cy.contains("Précisez et sélectionnez votre convention collective");
-    cy.get("#agreement-search-autocomplete").type("1388");
-    cy.get('ul[role="listbox"] li').contains("Industrie du pétrole").click();
-    cy.contains("Nous n’avons pas de réponse pour cette convention collective");
-    cy.get("button").contains("Suivant").click();
+    cy.get("#agreement-search-autocomplete").should("be.visible").type("1388");
+    cy.get('ul[role="listbox"] li')
+      .contains("Industrie du pétrole")
+      .should("be.visible")
+      .click();
+
+    cy.contains("Nous n'avons pas de réponse pour cette convention collective");
+    clickNext();
+
     cy.contains(
       "Vous ne pouvez pas poursuivre la simulation avec cette convention collective."
     );
@@ -25,28 +50,32 @@ describe("Outil - Heures d'absence pour rechercher un emploi", () => {
 
   it("Parcours en connaissant sa convention collective et sans information complémentaire", () => {
     cy.visit("/outils/heures-recherche-emploi");
-    cy.get("h1").should(
+    cy.findByRole("heading", { level: 1 }).should(
       "have.text",
       "Calculer le nombre d'heures d'absence pour rechercher un emploi"
     );
-    cy.get("button").contains("Commencer").click({ force: true });
+    cy.contains("button", "Commencer").should("be.visible").click();
 
     cy.contains("Quel est le nom de la convention collective applicable ?");
-    cy.get(
-      'label:contains("Je sais quelle est ma convention collective et je la saisis.")'
-    )
-      .first()
-      .click();
+    selectKnownAgreement();
+
     cy.contains("Précisez et sélectionnez votre convention collective");
-    cy.get("#agreement-search-autocomplete").type("843");
-    cy.get('ul[role="listbox"] li').contains("Boulangerie").click();
-    cy.get("button").contains("Suivant").click();
+    cy.get("#agreement-search-autocomplete").should("be.visible").type("843");
+    cy.get('ul[role="listbox"] li')
+      .contains("Boulangerie")
+      .should("be.visible")
+      .click();
+
+    clickNext();
 
     cy.contains("Pour quelle raison le contrat de travail a-t-il été rompu ?");
     cy.get(
       '[id="input-infos-contrat-salarie-convention-collective-boulangerie-patisserie-typeRupture"]'
-    ).select("Licenciement");
-    cy.get("button").contains("Suivant").click();
+    )
+      .should("be.visible")
+      .select("Licenciement");
+
+    clickNext();
 
     cy.contains(
       "Nombre d'heures d'absence autorisée pour rechercher un emploi"
@@ -72,33 +101,37 @@ describe("Outil - Heures d'absence pour rechercher un emploi", () => {
       "have.text",
       "Calculer le nombre d'heures d'absence pour rechercher un emploi"
     );
-    cy.get("button").contains("Commencer").click({ force: true });
+    cy.contains("button", "Commencer").should("be.visible").click();
 
     cy.contains("Quel est le nom de la convention collective applicable ?");
-    cy.get(
-      'label:contains("Je sais quelle est ma convention collective et je la saisis.")'
-    )
-      .first()
-      .click();
+    selectKnownAgreement();
+
     cy.contains("Précisez et sélectionnez votre convention collective");
-    cy.get("#agreement-search-autocomplete").type("787");
+    cy.get("#agreement-search-autocomplete").should("be.visible").type("787");
     cy.get('ul[role="listbox"] li')
       .contains(
         "Personnel des cabinets d'experts-comptables et de commissaires aux comptes"
       )
+      .should("be.visible")
       .click();
-    cy.get("button").contains("Suivant").click();
+
+    clickNext();
 
     cy.contains("Pour quelle raison le contrat de travail a-t-il été rompu ?");
     cy.get(
       '[id="input-infos-contrat-salarie-convention-collective-comptables-typeRupture"]'
-    ).select("Démission");
+    )
+      .should("be.visible")
+      .select("Démission");
+
     cy.contains("Quelle est l'ancienneté du salarié ?");
     cy.get(
       '[id="input-infos-contrat-salarie-convention-collective-comptables-typeRupture-Demission-anciennete"]'
-    ).select("Au moins 5 ans");
+    )
+      .should("be.visible")
+      .select("Au moins 5 ans");
 
-    cy.get("button").contains("Suivant").click();
+    clickNext();
 
     cy.contains(
       "Nombre d'heures d'absence autorisée pour rechercher un emploi"

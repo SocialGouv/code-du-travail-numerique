@@ -29,7 +29,9 @@ describe("Outil - Salaire brut/net", () => {
     cy.findByRole("heading", {
       level: 1,
       name: "Calculer le salaire brut/net",
-    }).should("be.visible");
+    })
+      .first()
+      .should("be.visible");
 
     cy.wait("@simulateurEmbaucheScript");
 

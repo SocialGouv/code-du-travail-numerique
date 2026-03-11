@@ -17,16 +17,18 @@ import "./commands";
 import "./errors";
 import "cypress-real-events";
 
-// FIXME Preserve pk_ab_test query parameter across all navigations
 Cypress.on("window:before:load", (win) => {
   // Hide cookie consent banner in tests
   win.localStorage.setItem("cdtn-cookie-consent-given", "true");
 
+  // Use to force A/B Testing version in test
+  /*
   const url = new URL(win.location.href);
   if (!url.searchParams.has("pk_ab_test")) {
     url.searchParams.set("pk_ab_test", "original");
     win.history.replaceState({}, "", url.toString());
   }
+   */
 });
 
 // in cypress/support/index.ts

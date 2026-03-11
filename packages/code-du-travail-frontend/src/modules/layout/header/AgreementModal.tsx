@@ -126,6 +126,8 @@ export const AgreementModal = ({ isOpen, onClose }: Props) => {
 
   if (!mounted) return null;
 
+  if (!isOpen) return null;
+
   const modalContent = (
     <div
       ref={modalRef}
@@ -134,7 +136,6 @@ export const AgreementModal = ({ isOpen, onClose }: Props) => {
       role="dialog"
       aria-modal="true"
       aria-labelledby="agreement-modal-title"
-      hidden={!isOpen}
       onClick={(e) => {
         if (e.target === e.currentTarget) handleClose();
       }}

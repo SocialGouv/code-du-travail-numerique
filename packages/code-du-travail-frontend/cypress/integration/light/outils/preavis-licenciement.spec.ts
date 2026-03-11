@@ -2,9 +2,11 @@ describe("Outil - Préavis de licenciement", () => {
   it("Parcours sans convention collective", () => {
     cy.visit("/outils/preavis-licenciement");
 
-    cy.get("h1").should("have.text", "Calculer le préavis de licenciement");
+    cy.findByRole("heading", { level: 1 })
+      .first()
+      .should("have.text", "Calculer le préavis de licenciement");
 
-    cy.get("button").contains("Commencer").click({ force: true });
+    cy.get("button").contains("Commencer").click();
 
     cy.contains("Le licenciement est-il dû à une faute grave (ou lourde)");
     cy.get('label:contains("Oui")').eq(0).click();
@@ -38,9 +40,11 @@ describe("Outil - Préavis de licenciement", () => {
   it("Parcours en connaissant sa convention collective", () => {
     cy.visit("/outils/preavis-licenciement");
 
-    cy.get("h1").should("have.text", "Calculer le préavis de licenciement");
+    cy.findByRole("heading", { level: 1 })
+      .first()
+      .should("have.text", "Calculer le préavis de licenciement");
 
-    cy.get("button").contains("Commencer").click({ force: true });
+    cy.get("button").contains("Commencer").click();
 
     cy.contains("Le licenciement est-il dû à une faute grave (ou lourde)");
     cy.get('label:contains("Non")').eq(0).click();

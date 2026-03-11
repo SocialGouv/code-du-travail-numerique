@@ -2,11 +2,10 @@ describe("Outil - Préavis de retraite", () => {
   it("Parcours sans convention collective avec validation des erreurs", () => {
     cy.visit("/outils/preavis-retraite");
     // Intro
-    cy.get("h1").should(
-      "have.text",
-      "Calculer le préavis de départ à la retraite"
-    );
-    cy.get("button").contains("Commencer").click({ force: true });
+    cy.findByRole("heading", { level: 1 })
+      .first()
+      .should("have.text", "Calculer le préavis de départ à la retraite");
+    cy.get("button").contains("Commencer").click();
 
     // Origine du départ à la retraite
     cy.contains("Qui est à l'origine du départ en retraite ?");
@@ -87,7 +86,7 @@ describe("Outil - Préavis de retraite", () => {
   it("Parcours en connaissant sa convention collective", () => {
     cy.visit("/outils/preavis-retraite");
     // Intro
-    cy.get("button").contains("Commencer").click({ force: true });
+    cy.get("button").contains("Commencer").click();
 
     // Origine du départ à la retraite
     cy.contains("Qui est à l'origine du départ en retraite ?");
@@ -147,7 +146,7 @@ describe("Outil - Préavis de retraite", () => {
   it("Parcours en ne connaissant pas sa convention collective", () => {
     cy.visit("/outils/preavis-retraite");
     // Intro
-    cy.get("button").contains("Commencer").click({ force: true });
+    cy.get("button").contains("Commencer").click();
 
     // Origine du départ à la retraite
     cy.contains("Qui est à l'origine du départ en retraite ?");
