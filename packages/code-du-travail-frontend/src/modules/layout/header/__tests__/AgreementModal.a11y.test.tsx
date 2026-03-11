@@ -62,7 +62,7 @@ describe("AgreementModal - Accessibility", () => {
       render(<AgreementModal isOpen={false} onClose={mockOnClose} />);
 
       const dialog = document.getElementById("agreement-modal");
-      expect(dialog).toHaveAttribute("hidden");
+      expect(dialog).not.toBeInTheDocument();
     });
 
     it("should not have hidden attribute when open", () => {
