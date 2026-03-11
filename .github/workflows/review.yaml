@@ -160,5 +160,5 @@ jobs:
         if: always()
         with:
           name: playwright-report
-          path: packages/app/playwright-report/
+          path: packages/code-du-travail-frontend/playwright-report/
           retention-days: 7
