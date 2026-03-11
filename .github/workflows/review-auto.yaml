@@ -139,7 +139,7 @@ jobs:
         env:
           CYPRESS: "true"
         run: |
-          TEST_BASEURL=${{ env.SITE_URL }} TEST_MODE=light pnpm test:e2e
+          TEST_BASEURL=${{ env.SITE_URL }} TEST_MODE=light pnpm test:e2e:old
       - name: Archive generated screenshots
         if: failure()
         uses: actions/upload-artifact@v4
