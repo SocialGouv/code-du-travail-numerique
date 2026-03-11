@@ -19,3 +19,4 @@ next-env.d.ts
 
 # test-results
 /test-results
+src/e2e/.data
