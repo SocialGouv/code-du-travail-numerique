@@ -73,7 +73,7 @@ describe("Header agreement selector", () => {
     // Test Supprimer
     cy.get("#agreement-modal").contains("button", "Supprimer").click();
 
-    cy.get("#agreement-modal").should("not.be.visible");
+    cy.get("#agreement-modal").should("not.exist");
     cy.window()
       .its("localStorage")
       .invoke("getItem", "convention")
