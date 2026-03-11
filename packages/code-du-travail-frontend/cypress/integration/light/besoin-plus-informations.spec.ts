@@ -8,7 +8,8 @@ describe("Page Besoin de plus d'information", () => {
 
     cy.selectByLabel("Saisissez le numéro de votre département")
       .should("be.visible")
-      .type("75{enter}");
+      .as("deptInput");
+    cy.get("@deptInput").type("75{enter}");
 
     cy.get(
       'a[href="https://idf.drieets.gouv.fr/Adresse-et-horaires-d-ouverture-de-l-unite-departementale-75"]'
