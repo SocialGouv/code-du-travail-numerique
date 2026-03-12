@@ -49,8 +49,9 @@ async function searchAndSelectAgreement(
 }
 
 async function expectTexts(page: Page, texts: string[]) {
+  const main = page.locator("main");
   for (const text of texts) {
-    await expect(page.getByText(text)).toBeVisible();
+    await expect(main.getByText(text)).toBeVisible();
   }
 }
 
