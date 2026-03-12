@@ -5,7 +5,7 @@ export const cleanHash = (hash: string): string => {
 
   try {
     cleaned = decodeURIComponent(cleaned);
-  } catch (e) {
+  } catch {
     console.warn("Failed to decode hash:", hash);
   }
 
@@ -14,9 +14,9 @@ export const cleanHash = (hash: string): string => {
     .normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "")
     .trim()
-    .replace(/,/g, "-")
-    .replace(/\s+/g, "-")
-    .replace(/-+/g, "-");
+    .replace(/[^a-z0-9-]/g, "-")
+    .replace(/-+/g, "-")
+    .replace(/^-|-$/g, "");
 
   return cleaned;
 };

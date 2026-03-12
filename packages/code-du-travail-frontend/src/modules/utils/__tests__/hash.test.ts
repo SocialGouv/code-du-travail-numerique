@@ -53,7 +53,7 @@ describe("cleanHash", () => {
     const consoleWarnSpy = jest.spyOn(console, "warn").mockImplementation();
 
     const result = cleanHash("#invalid%encoding");
-    expect(result).toBe("invalid%encoding");
+    expect(result).toBe("invalid-encoding");
     expect(consoleWarnSpy).toHaveBeenCalledWith(
       "Failed to decode hash:",
       "#invalid%encoding"
@@ -96,5 +96,25 @@ describe("cleanHash", () => {
     expect(cleanHash("#élève")).toBe("eleve");
     expect(cleanHash("#naïve")).toBe("naive");
     expect(cleanHash("#Santé et Sécurité")).toBe("sante-et-securite");
+  });
+
+  it("should remove colons and normalize anchors", () => {
+    expect(cleanHash("#arret-de-travail-:-droits-et-obligations")).toBe(
+      "arret-de-travail-droits-et-obligations"
+    );
+    expect(cleanHash("Arrêt de travail : droits et obligations")).toBe(
+      "arret-de-travail-droits-et-obligations"
+    );
+  });
+
+  it("should remove other special characters", () => {
+    expect(cleanHash("#section(1)")).toBe("section-1");
+    expect(cleanHash("#section;name")).toBe("section-name");
+    expect(cleanHash("#section/name")).toBe("section-name");
+  });
+
+  it("should trim leading and trailing hyphens", () => {
+    expect(cleanHash("# section-name ")).toBe("section-name");
+    expect(cleanHash("#-section-name-")).toBe("section-name");
   });
 });
