@@ -53,7 +53,7 @@ describe("cleanHash", () => {
     const consoleWarnSpy = jest.spyOn(console, "warn").mockImplementation();
 
     const result = cleanHash("#invalid%encoding");
-    expect(result).toBe("invalid-encoding");
+    expect(result).toBe("invalidencoding");
     expect(consoleWarnSpy).toHaveBeenCalledWith(
       "Failed to decode hash:",
       "#invalid%encoding"
@@ -87,7 +87,7 @@ describe("cleanHash", () => {
     expect(cleanHash("santé,-sécurité-et-conditions-de-travail")).toBe(
       "sante-securite-et-conditions-de-travail"
     );
-    expect(cleanHash("#section,with,commas")).toBe("section-with-commas");
+    expect(cleanHash("#section,with,commas")).toBe("sectionwithcommas");
   });
 
   it("should remove accents from various characters", () => {

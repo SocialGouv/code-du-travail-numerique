@@ -1,3 +1,5 @@
+import { slugify } from "@socialgouv/cdtn-utils";
+
 export const cleanHash = (hash: string): string => {
   if (!hash) return "";
 
@@ -9,14 +11,5 @@ export const cleanHash = (hash: string): string => {
     console.warn("Failed to decode hash:", hash);
   }
 
-  cleaned = cleaned
-    .toLowerCase()
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .trim()
-    .replace(/[^a-z0-9-]/g, "-")
-    .replace(/-+/g, "-")
-    .replace(/^-|-$/g, "");
-
-  return cleaned;
+  return slugify(cleaned.trim());
 };
