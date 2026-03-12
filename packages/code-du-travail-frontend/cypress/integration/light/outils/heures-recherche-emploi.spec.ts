@@ -2,13 +2,10 @@ describe("Outil - Heures d'absence pour rechercher un emploi", () => {
   const clickNext = () => {
     cy.contains("button", "Suivant")
       .filter(":visible")
-      .should("have.length.at.least", 1)
       .last()
       .should("be.visible")
       .and("not.be.disabled")
-      .then(($button) => {
-        cy.wrap($button).click();
-      });
+      .click();
   };
 
   const selectKnownAgreement = () => {
