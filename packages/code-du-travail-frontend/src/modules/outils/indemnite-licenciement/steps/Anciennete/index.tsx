@@ -1,27 +1,17 @@
 import { fr } from "@codegouvfr/react-dsfr";
-import React, { useContext, useEffect, useMemo } from "react";
-import {
-  RadioQuestion,
-  TextQuestion,
-} from "src/modules/outils/common/components";
+import React, { useContext, useEffect } from "react";
+import { TextQuestion } from "src/modules/outils/common/components";
 import { AccessibleAlert } from "src/modules/outils/common/components/AccessibleAlert";
-import { getMotifExampleMessage } from "src/modules/outils/indemnite-depart/agreements";
-import { AbsencePeriods } from "src/modules/outils/indemnite-depart/steps/Anciennete";
-import { informationToSituation } from "src/modules/outils/indemnite-depart/steps/Informations/components/utils";
 import {
   IndemniteDepartContext,
   useIndemniteDepartStore,
 } from "src/modules/outils/indemnite-depart/store";
+import { AncienneteDisplay } from "../../../indemnite-depart/steps";
 
 const StepAnciennete = () => {
   const store = useContext(IndemniteDepartContext);
   const {
     init,
-    onChangeAbsencePeriods,
-    motifs,
-    absencePeriods,
-    onChangeHasAbsenceProlonge,
-    hasAbsenceProlonge,
     dateEntree,
     onChangeDateEntree,
     dateSortie,
@@ -30,53 +20,24 @@ const StepAnciennete = () => {
     onChangeDateNotification,
     errorDateNotification,
     errorDateSortie,
-    arretTravail,
-    onChangeArretTravail,
-    errorArretTravail,
-    dateArretTravail,
-    onChangeDateArretTravail,
-    errorDateArretTravail,
-    errorAbsenceProlonge,
     errorDateEntree,
-    errorAbsencePeriods,
-    informationData,
+    ancienneteEstimee,
     errorPublicodes,
   } = useIndemniteDepartStore(store, (state) => ({
     init: state.ancienneteFunction.init,
-    onChangeAbsencePeriods: state.ancienneteFunction.onChangeAbsencePeriods,
-    motifs: state.ancienneteData.input.motifs,
-    absencePeriods: state.ancienneteData.input.absencePeriods,
-    onChangeHasAbsenceProlonge:
-      state.ancienneteFunction.onChangeHasAbsenceProlonge,
-    hasAbsenceProlonge: state.ancienneteData.input.hasAbsenceProlonge,
     dateEntree: state.ancienneteData.input.dateEntree,
     onChangeDateEntree: state.ancienneteFunction.onChangeDateEntree,
     dateSortie: state.ancienneteData.input.dateSortie,
     onChangeDateSortie: state.ancienneteFunction.onChangeDateSortie,
     dateNotification: state.ancienneteData.input.dateNotification,
-    arretTravail: state.ancienneteData.input.arretTravail,
-    dateArretTravail: state.ancienneteData.input.dateArretTravail,
-    onChangeArretTravail: state.ancienneteFunction.onChangeArretTravail,
-    onChangeDateArretTravail: state.ancienneteFunction.onChangeDateArretTravail,
-    errorArretTravail: state.ancienneteData.error.errorArretTravail,
-    errorDateArretTravail: state.ancienneteData.error.errorDateArretTravail,
     onChangeDateNotification: state.ancienneteFunction.onChangeDateNotification,
     errorDateNotification: state.ancienneteData.error.errorDateNotification,
     errorDateSortie: state.ancienneteData.error.errorDateSortie,
-    errorAbsenceProlonge: state.ancienneteData.error.errorAbsenceProlonge,
     errorDateEntree: state.ancienneteData.error.errorDateEntree,
-    errorAbsencePeriods: state.ancienneteData.error.errorAbsencePeriods,
     agreement: state.agreementData.input.agreement,
-    informationData: informationToSituation(
-      state.informationsData.input.publicodesInformations
-    ),
+    ancienneteEstimee: state.ancienneteData.input.ancienneteEstimee,
     errorPublicodes: state.ancienneteData.error.errorPublicodes,
   }));
-
-  const messageMotifsExample = useMemo(
-    () => getMotifExampleMessage(informationData, false),
-    [informationData]
-  );
 
   useEffect(() => {
     init();
@@ -114,74 +75,7 @@ const StepAnciennete = () => {
           dataTestId={"date-sortie"}
           subLabel="En cas de dispense de préavis à l'initiative de l'employeur, ou si le licenciement intervient à la suite d'un avis d'inaptitude non professionnelle, indiquer la date de fin du préavis « théorique » non effectué."
         />
-        <RadioQuestion
-          questions={[
-            {
-              label: "Oui",
-              value: "oui",
-              id: "arretTravail-oui",
-            },
-            {
-              label: "Non",
-              value: "non",
-              id: "arretTravail-non",
-            },
-          ]}
-          name="licenciementArretTravail"
-          label="Le salarié est-il en arrêt de travail au moment du licenciement&nbsp;?"
-          selectedOption={arretTravail}
-          onChangeSelectedOption={onChangeArretTravail}
-          error={errorArretTravail}
-        />
-        {arretTravail === "oui" && (
-          <TextQuestion
-            label="Depuis quelle date le salarié est-il en arrêt&nbsp;?"
-            inputType="date"
-            value={dateArretTravail}
-            onChange={onChangeDateArretTravail}
-            error={errorDateArretTravail}
-            id="dateArretTravail"
-            dataTestId={"date-arret-travail"}
-          />
-        )}
-      </div>
-      <div className={fr.cx("fr-mt-2w")}>
-        <h3>Période d&apos;absence prolongée</h3>
-        <p>
-          Pour rendre la saisie de l&apos;outil plus simple, les absences de
-          moins d&apos;un mois ne sont pas comptabilisées. Or, ces absences
-          peuvent impacter l&apos;ancienneté et donner ainsi lieu à un montant
-          d&apos;indemnité inférieur à celui calculé par notre simulateur.
-        </p>
-        <RadioQuestion
-          questions={[
-            {
-              label: "Oui",
-              value: "oui",
-              id: "hasAbsenceProlonge-oui",
-            },
-            {
-              label: "Non",
-              value: "non",
-              id: "hasAbsenceProlonge-non",
-            },
-          ]}
-          name="hasAbsenceProlonge"
-          label="Y a-t-il eu des absences de plus d'un mois durant le contrat de travail&nbsp;?"
-          selectedOption={hasAbsenceProlonge}
-          onChangeSelectedOption={onChangeHasAbsenceProlonge}
-          error={errorAbsenceProlonge}
-        />
-        {hasAbsenceProlonge === "oui" && (
-          <AbsencePeriods
-            onChange={onChangeAbsencePeriods}
-            motifs={motifs}
-            absences={absencePeriods}
-            error={errorAbsencePeriods}
-            informationData={informationData}
-            messageMotifExample={messageMotifsExample}
-          />
-        )}
+        <AncienneteDisplay anciennete={ancienneteEstimee} />
       </div>
       {errorPublicodes && (
         <AccessibleAlert

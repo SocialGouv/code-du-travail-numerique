@@ -42,8 +42,9 @@ describe("Indemnité licenciement - CC 1672", () => {
     userAction.setInput(ui.seniority.startDate.get(), "01/01/2018");
     userAction.setInput(ui.seniority.notificationDate.get(), "01/01/2022");
     userAction.setInput(ui.seniority.endDate.get(), "01/01/2022");
-    userAction.click(ui.seniority.arretTravail.non.get());
-    userAction.click(ui.seniority.hasAbsence.non.get());
+    userAction.click(ui.next.get());
+    userAction.click(ui.absences.arretTravail.non.get());
+    userAction.click(ui.absences.hasAbsence.non.get());
     userAction.click(ui.next.get());
     expect(ui.activeStep.query()).toHaveTextContent("Salaires");
 
@@ -56,7 +57,9 @@ describe("Indemnité licenciement - CC 1672", () => {
       )
     ).not.toBeInTheDocument();
     userAction.click(ui.previous.get());
+    userAction.click(ui.previous.get());
     userAction.setInput(ui.seniority.endDate.get(), "01/06/2022");
+    userAction.click(ui.next.get());
     userAction.click(ui.next.get());
     expect(
       rendering.queryByText(
@@ -120,9 +123,10 @@ describe("Indemnité licenciement - CC 1672", () => {
     userAction.setInput(ui.seniority.startDate.get(), "01/01/2018");
     userAction.setInput(ui.seniority.notificationDate.get(), "01/01/2022");
     userAction.setInput(ui.seniority.endDate.get(), "01/06/2022");
-    userAction.click(ui.seniority.arretTravail.oui.get());
-    userAction.setInput(ui.seniority.dateArretTravail.get(), "01/01/2022");
-    userAction.click(ui.seniority.hasAbsence.non.get());
+    userAction.click(ui.next.get());
+    userAction.click(ui.absences.arretTravail.oui.get());
+    userAction.setInput(ui.absences.dateArretTravail.get(), "01/01/2022");
+    userAction.click(ui.absences.hasAbsence.non.get());
     userAction.click(ui.next.get());
     expect(ui.activeStep.query()).toHaveTextContent("Salaires");
 
@@ -148,8 +152,9 @@ describe("Indemnité licenciement - CC 1672", () => {
       .setInput(ui.seniority.startDate.get(), "01/01/1994")
       .setInput(ui.seniority.notificationDate.get(), "01/01/2024")
       .setInput(ui.seniority.endDate.get(), "01/01/2024")
-      .click(ui.seniority.arretTravail.non.get())
-      .click(ui.seniority.hasAbsence.non.get())
+      .click(ui.next.get())
+      .click(ui.absences.arretTravail.non.get())
+      .click(ui.absences.hasAbsence.non.get())
       .click(ui.next.get())
       .click(ui.salary.hasSameSalary.non.get());
     expect(ui.salary.salaries.queryAll()).toHaveLength(12);

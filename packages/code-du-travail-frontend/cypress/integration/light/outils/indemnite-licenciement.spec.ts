@@ -19,6 +19,7 @@ describe("Outil - Indemnité de licenciement", () => {
     cy.get("#dateEntree").type("2003-01-01");
     cy.get("#dateNotification").type("2026-06-01");
     cy.get("#dateSortie").type("2026-06-01");
+    cy.contains("Suivant").click();
     cy.get('label:contains("Non")').eq(0).click();
 
     cy.get('label:contains("Oui")').eq(1).click();

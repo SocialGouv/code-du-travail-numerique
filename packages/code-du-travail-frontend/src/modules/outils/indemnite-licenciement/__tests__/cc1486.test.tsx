@@ -42,15 +42,16 @@ describe("Indemnité licenciement - CC 1486", () => {
       .setInput(ui.seniority.startDate.get(), "01/01/2004")
       .setInput(ui.seniority.notificationDate.get(), "01/01/2024")
       .setInput(ui.seniority.endDate.get(), "01/01/2024")
-      .click(ui.seniority.arretTravail.non.get())
-      .click(ui.seniority.hasAbsence.oui.get());
+      .click(ui.next.get())
+      .click(ui.absences.arretTravail.non.get())
+      .click(ui.absences.hasAbsence.oui.get());
 
     await userAction.changeInputList(
-      ui.seniority.absences.motif(0).get(),
+      ui.absences.absences.motif(0).get(),
       "Absence pour maladie non professionnelle"
     );
     userAction
-      .setInput(ui.seniority.absences.duration(0).get(), "3")
+      .setInput(ui.absences.absences.duration(0).get(), "3")
       .click(ui.next.get())
       .click(ui.salary.hasSameSalary.non.get())
       .setInputs(ui.salary.salaries.getAll(), [

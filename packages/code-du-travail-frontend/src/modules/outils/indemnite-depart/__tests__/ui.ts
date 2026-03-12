@@ -348,6 +348,12 @@ export const ui = {
     startDate: byTestId("date-entree"),
     notificationDate: byTestId("date-notification"),
     endDate: byTestId("date-sortie"),
+    ancienneteEstimee: byTestId("anciennete-estimee"),
+    error: {
+      requiredDate: byText(/Veuillez saisir cette date/),
+    },
+  },
+  absences: {
     arretTravail: {
       question: byText(
         "Le salarié est-il en arrêt de travail au moment du licenciement ?"
@@ -366,9 +372,7 @@ export const ui = {
       duration: (index: number) => byTestId(`absence-duree-${index}`),
       date: (index: number) => byTestId(`absence-date-${index}`),
     },
-    error: {
-      requiredDate: byText(/Veuillez saisir cette date/),
-    },
+    ancienneteEstimee: byTestId("anciennete-estimee"),
   },
   salary: {
     hasSameSalary: {

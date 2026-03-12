@@ -1,4 +1,4 @@
-import { render, RenderResult } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import React from "react";
 import { UserAction } from "../../common/utils/UserAction";
 import { CalculateurIndemniteLicenciement } from "../IndemniteLicenciementSimulator";
@@ -51,8 +51,9 @@ describe("Indemnité licenciement - CC 3248", () => {
         .setInput(ui.seniority.startDate.get(), "01/01/2000")
         .setInput(ui.seniority.notificationDate.get(), "01/01/2023")
         .setInput(ui.seniority.endDate.get(), "01/06/2023")
-        .click(ui.seniority.arretTravail.non.get())
-        .click(ui.seniority.hasAbsence.non.get())
+        .click(ui.next.get())
+        .click(ui.absences.arretTravail.non.get())
+        .click(ui.absences.hasAbsence.non.get())
         .click(ui.next.get());
       // Validation que l'on est bien sur l'étape ancienneté
       expect(ui.activeStep.query()).toHaveTextContent("Salaires");
@@ -73,8 +74,9 @@ describe("Indemnité licenciement - CC 3248", () => {
         .setInput(ui.seniority.startDate.get(), "01/01/2021")
         .setInput(ui.seniority.notificationDate.get(), "30/06/2024")
         .setInput(ui.seniority.endDate.get(), "30/06/2024")
-        .click(ui.seniority.arretTravail.non.get())
-        .click(ui.seniority.hasAbsence.non.get())
+        .click(ui.next.get())
+        .click(ui.absences.arretTravail.non.get())
+        .click(ui.absences.hasAbsence.non.get())
         .click(ui.next.get())
         .click(ui.salary.hasSameSalary.oui.get())
         .setInput(ui.salary.sameSalaryValue.get(), "2668")

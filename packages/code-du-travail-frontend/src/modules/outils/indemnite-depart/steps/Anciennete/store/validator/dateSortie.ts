@@ -14,7 +14,7 @@ export const getDateSortieErrors = (
 ): Partial<AncienneteStoreError> => {
   const dEntree = parse(state.dateEntree);
   const dSortie = parse(state.dateSortie);
-  let errors: AncienneteStoreError = {};
+  const errors: AncienneteStoreError = {};
 
   if (!state.dateSortie) {
     errors.errorDateSortie = "Veuillez saisir cette date";

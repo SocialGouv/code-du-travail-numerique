@@ -101,9 +101,9 @@ describe("Page résultat: vérification de la formule affichée", () => {
         userAction.setInput(ui.seniority.startDate.get(), startDate);
         userAction.setInput(ui.seniority.notificationDate.get(), notifDate);
         userAction.setInput(ui.seniority.endDate.get(), endDate);
-        userAction.click(ui.seniority.arretTravail.non.get());
-
-        userAction.click(ui.seniority.hasAbsence.non.get());
+        userAction.click(ui.next.get());
+        userAction.click(ui.absences.arretTravail.non.get());
+        userAction.click(ui.absences.hasAbsence.non.get());
         userAction.click(ui.next.get());
         userAction.click(ui.salary.hasSameSalary.oui.get());
         userAction.setInput(ui.salary.sameSalaryValue.get(), "2500");

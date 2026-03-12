@@ -1,9 +1,9 @@
-import { AncienneteStoreError, AncienneteStoreInput } from "../types";
+import { AbsenceStoreError, AbsenceStoreInput } from "../types";
 
 export const getAbsenceProlongeErrors = (
-  state: AncienneteStoreInput
-): Partial<AncienneteStoreError> => {
-  let errors: AncienneteStoreError = {};
+  state: AbsenceStoreInput
+): Partial<AbsenceStoreError> => {
+  let errors: AbsenceStoreError = {};
 
   if (state.hasAbsenceProlonge === undefined) {
     errors.errorAbsenceProlonge = "Vous devez répondre à cette question";

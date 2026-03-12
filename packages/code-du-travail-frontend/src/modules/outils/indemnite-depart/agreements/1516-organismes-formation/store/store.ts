@@ -13,6 +13,7 @@ import {
 } from "./types";
 import { validateStep } from "./validator";
 import { CommonSituationStoreSlice } from "../../../situationStore";
+import { AbsenceStoreSlice } from "../../../steps/Absences";
 
 const initialState: Agreement1516StoreData = {
   input: {
@@ -25,12 +26,15 @@ const initialState: Agreement1516StoreData = {
 
 export const createAgreement1516StoreSalaires: StoreSlice<
   Agreement1516StoreSlice,
-  SalairesStoreSlice & AncienneteStoreSlice & CommonSituationStoreSlice
+  SalairesStoreSlice &
+    AncienneteStoreSlice &
+    AbsenceStoreSlice &
+    CommonSituationStoreSlice
 > = (set, get) => ({
   agreement1516Data: { ...initialState },
   agreement1516Function: {
     onInit: () => {
-      const dateArretTravail = get().ancienneteData.input.dateArretTravail;
+      const dateArretTravail = get().absenceData.input.dateArretTravail;
 
       if (dateArretTravail) {
         get().situationFunction.setSituation("noticeSalaryPeriods", "[]");

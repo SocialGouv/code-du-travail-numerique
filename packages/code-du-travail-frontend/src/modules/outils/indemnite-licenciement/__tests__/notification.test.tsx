@@ -40,9 +40,10 @@ describe("Indemnité licenciement - Affichage de la notification si le légal et
       .setInput(ui.seniority.startDate.get(), "01/01/2000")
       .setInput(ui.seniority.notificationDate.get(), "01/01/2022")
       .setInput(ui.seniority.endDate.get(), "01/03/2022")
-      .click(ui.seniority.arretTravail.non.get())
-      .click(ui.seniority.hasAbsence.oui.get())
-      .setInput(ui.seniority.absences.duration(0).get(), "2")
+      .click(ui.next.get())
+      .click(ui.absences.arretTravail.non.get())
+      .click(ui.absences.hasAbsence.oui.get())
+      .setInput(ui.absences.absences.duration(0).get(), "2")
       .click(ui.next.get());
 
     // Etape Salaires

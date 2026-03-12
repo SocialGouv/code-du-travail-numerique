@@ -5,6 +5,7 @@ type InfoWarningProps = {
   isAgreementSupported: boolean;
   informationEligibility: boolean;
   ancienneteEligibility: boolean;
+  absencesEligibility: boolean;
   agreement?: Agreement;
 };
 
@@ -13,9 +14,11 @@ export const getInfoWarning = ({
   isAgreementSupported,
   informationEligibility,
   ancienneteEligibility,
+  absencesEligibility,
   agreement,
 }: InfoWarningProps) => {
-  const isEligible = ancienneteEligibility && informationEligibility;
+  const isEligible =
+    absencesEligibility && ancienneteEligibility && informationEligibility;
   let message;
   let title;
   if (isEligible) {

@@ -1,21 +1,23 @@
-import { isAfter, isWithinInterval, differenceInMonths } from "date-fns";
+import { differenceInMonths, isAfter, isWithinInterval } from "date-fns";
 import { parse } from "../../../../../common/utils";
 import {
-  AncienneteAbsenceStoreError,
-  AncienneteStoreError,
-  AncienneteStoreInput,
+  AbsenceDetailStoreError,
+  AbsenceStoreError,
+  AbsenceStoreInput,
 } from "../types";
 import { CommonInformationsStoreInput } from "../../../Informations/store";
 import { informationToSituation } from "../../../Informations/components/utils";
+import { AncienneteStoreInput } from "../../../Anciennete";
 
 export const getAbsencePeriodsErrors = (
-  state: AncienneteStoreInput,
+  state: AbsenceStoreInput,
+  ancienneteState: AncienneteStoreInput,
   information?: CommonInformationsStoreInput
-): Partial<AncienneteStoreError> => {
-  const dEntree = parse(state.dateEntree);
-  const dSortie = parse(state.dateSortie);
+): Partial<AbsenceStoreError> => {
+  const dEntree = parse(ancienneteState.dateEntree);
+  const dSortie = parse(ancienneteState.dateSortie);
   const totalMonth = differenceInMonths(dSortie, dEntree);
-  let errors: AncienneteStoreError = {};
+  const errors: AbsenceStoreError = {};
 
   if (!information) return errors;
 
@@ -25,8 +27,8 @@ export const getAbsencePeriodsErrors = (
 
   if (state.hasAbsenceProlonge === "oui") {
     let totalMonthAbsence = 0;
-    const absenceErrors: AncienneteAbsenceStoreError[] =
-      state.absencePeriods.map((item): AncienneteAbsenceStoreError => {
+    const absenceErrors: AbsenceDetailStoreError[] = state.absencePeriods.map(
+      (item): AbsenceDetailStoreError => {
         totalMonthAbsence += item.durationInMonth ?? 0;
         if (
           !item.durationInMonth ||
@@ -59,11 +61,12 @@ export const getAbsencePeriodsErrors = (
           })
         ) {
           return {
-            errorDate: `La date de l'absence doit être comprise entre le ${state.dateEntree} et le ${state.dateSortie} (dates de début et de fin de contrat)`,
+            errorDate: `La date de l'absence doit être comprise entre le ${ancienneteState.dateEntree} et le ${ancienneteState.dateSortie} (dates de début et de fin de contrat)`,
           };
         }
         return {};
-      });
+      }
+    );
     if (absenceErrors.length === 0) {
       errors.errorAbsencePeriods = {
         absences: [

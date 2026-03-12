@@ -55,8 +55,6 @@ describe("Indemnité licenciement - CC 3239", () => {
     userAction.setInput(ui.seniority.startDate.get(), "01/01/2022");
     userAction.setInput(ui.seniority.notificationDate.get(), "15/09/2022");
     userAction.setInput(ui.seniority.endDate.get(), "15/09/2022");
-    userAction.click(ui.seniority.arretTravail.non.get());
-    userAction.click(ui.seniority.hasAbsence.non.get());
     userAction.click(ui.next.get());
     expect(
       ui.result.legalError.specific.agreement3239.lessThan9month.get()
@@ -77,8 +75,9 @@ describe("Indemnité licenciement - CC 3239", () => {
     userAction.setInput(ui.seniority.startDate.get(), "01/01/2022");
     userAction.setInput(ui.seniority.notificationDate.get(), "15/09/2022");
     userAction.setInput(ui.seniority.endDate.get(), "15/09/2022");
-    userAction.click(ui.seniority.arretTravail.non.get());
-    userAction.click(ui.seniority.hasAbsence.non.get());
+    userAction.click(ui.next.get());
+    userAction.click(ui.absences.arretTravail.non.get());
+    userAction.click(ui.absences.hasAbsence.non.get());
     userAction.click(ui.next.get());
     userAction.click(ui.salary.hasSameSalary.oui.get());
     userAction.setInput(ui.salary.sameSalaryValue.get(), "3000");
@@ -94,8 +93,6 @@ describe("Indemnité licenciement - CC 3239", () => {
     userAction.setInput(ui.seniority.startDate.get(), "01/01/2025");
     userAction.setInput(ui.seniority.notificationDate.get(), "01/08/2025");
     userAction.setInput(ui.seniority.endDate.get(), "01/08/2025");
-    userAction.click(ui.seniority.arretTravail.non.get());
-    userAction.click(ui.seniority.hasAbsence.non.get());
     userAction.click(ui.next.get());
     expect(ui.result.legalError.seniorityToLow.get()).toBeInTheDocument();
     expect(
@@ -112,8 +109,9 @@ describe("Indemnité licenciement - CC 3239", () => {
     userAction.setInput(ui.seniority.startDate.get(), "01/01/2022");
     userAction.setInput(ui.seniority.notificationDate.get(), "15/09/2022");
     userAction.setInput(ui.seniority.endDate.get(), "15/09/2022");
-    userAction.click(ui.seniority.arretTravail.non.get());
-    userAction.click(ui.seniority.hasAbsence.non.get());
+    userAction.click(ui.next.get());
+    userAction.click(ui.absences.arretTravail.non.get());
+    userAction.click(ui.absences.hasAbsence.non.get());
     userAction.click(ui.next.get());
     expect(
       screen.queryByText(
@@ -133,8 +131,9 @@ describe("Indemnité licenciement - CC 3239", () => {
     userAction.setInput(ui.seniority.startDate.get(), "01/01/2000");
     userAction.setInput(ui.seniority.notificationDate.get(), "15/09/2022");
     userAction.setInput(ui.seniority.endDate.get(), "15/09/2022");
-    userAction.click(ui.seniority.arretTravail.non.get());
-    userAction.click(ui.seniority.hasAbsence.non.get());
+    userAction.click(ui.next.get());
+    userAction.click(ui.absences.arretTravail.non.get());
+    userAction.click(ui.absences.hasAbsence.non.get());
     userAction.click(ui.next.get());
     expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
     expect(
@@ -153,8 +152,9 @@ describe("Indemnité licenciement - CC 3239", () => {
     userAction.setInput(ui.seniority.startDate.get(), "01/01/2012");
     userAction.setInput(ui.seniority.notificationDate.get(), "01/01/2024");
     userAction.setInput(ui.seniority.endDate.get(), "01/01/2024");
-    userAction.click(ui.seniority.arretTravail.non.get());
-    userAction.click(ui.seniority.hasAbsence.non.get());
+    userAction.click(ui.next.get());
+    userAction.click(ui.absences.arretTravail.non.get());
+    userAction.click(ui.absences.hasAbsence.non.get());
     userAction.click(ui.next.get());
     userAction.click(ui.salary.hasSameSalary.oui.get());
     userAction.setInput(ui.salary.sameSalaryValue.get(), "2100");
@@ -186,8 +186,9 @@ describe("Indemnité licenciement - CC 3239", () => {
     userAction.setInput(ui.seniority.startDate.get(), "01/01/2020");
     userAction.setInput(ui.seniority.notificationDate.get(), "15/09/2024");
     userAction.setInput(ui.seniority.endDate.get(), "15/09/2024");
-    userAction.click(ui.seniority.arretTravail.non.get());
-    userAction.click(ui.seniority.hasAbsence.non.get());
+    userAction.click(ui.next.get());
+    userAction.click(ui.absences.arretTravail.non.get());
+    userAction.click(ui.absences.hasAbsence.non.get());
     userAction.click(ui.next.get());
 
     expect(ui.result.resultat.get()).toHaveTextContent("62,50 €");

@@ -46,8 +46,9 @@ describe("Indemnité licenciement - CC 2609", () => {
       userAction.setInput(ui.seniority.startDate.get(), "01/01/2000");
       userAction.setInput(ui.seniority.notificationDate.get(), "01/01/2022");
       userAction.setInput(ui.seniority.endDate.get(), "01/03/2022");
-      userAction.click(ui.seniority.arretTravail.non.get());
-      userAction.click(ui.seniority.hasAbsence.non.get());
+      userAction.click(ui.next.get());
+      userAction.click(ui.absences.arretTravail.non.get());
+      userAction.click(ui.absences.hasAbsence.non.get());
       userAction.click(ui.next.get());
       expect(ui.activeStep.query()).toHaveTextContent("Salaires");
 

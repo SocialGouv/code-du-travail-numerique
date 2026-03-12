@@ -43,8 +43,9 @@ describe("Indemnité licenciement - CC 2941", () => {
     userAction
       .setInput(ui.seniority.startDate.get(), "01/01/2000")
       .setInput(ui.seniority.endDate.get(), "01/01/2025")
-      .click(ui.seniority.arretTravail.non.get())
-      .click(ui.seniority.hasAbsence.non.get())
+      .click(ui.next.get())
+      .click(ui.absences.arretTravail.non.get())
+      .click(ui.absences.hasAbsence.non.get())
       .click(ui.next.get())
       .click(ui.salary.hasSameSalary.oui.get())
       .setInput(ui.salary.sameSalaryValue.get(), "2700")
@@ -61,15 +62,16 @@ describe("Indemnité licenciement - CC 2941", () => {
     userAction
       .setInput(ui.seniority.startDate.get(), "01/01/2000")
       .setInput(ui.seniority.endDate.get(), "01/01/2025")
-      .click(ui.seniority.arretTravail.non.get())
-      .click(ui.seniority.hasAbsence.oui.get());
+      .click(ui.next.get())
+      .click(ui.absences.arretTravail.non.get())
+      .click(ui.absences.hasAbsence.oui.get());
     await userAction.changeInputList(
-      ui.seniority.absences.motif(0).get(),
+      ui.absences.absences.motif(0).get(),
       "Absence pour maladie non professionnelle"
     );
     userAction
-      .setInput(ui.seniority.absences.duration(0).get(), "6")
-      .setInput(ui.seniority.absences.date(0).get(), "01/01/2025")
+      .setInput(ui.absences.absences.duration(0).get(), "6")
+      .setInput(ui.absences.absences.date(0).get(), "01/01/2025")
       .click(ui.next.get())
       .click(ui.salary.hasSameSalary.oui.get())
       .setInput(ui.salary.sameSalaryValue.get(), "2700")
