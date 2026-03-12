@@ -16,3 +16,6 @@ src/styled-system-studio
 
 *.tsbuildinfo
 next-env.d.ts
+
+# test-results
+/test-results

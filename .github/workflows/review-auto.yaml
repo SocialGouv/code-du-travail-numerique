@@ -108,10 +108,10 @@ jobs:
           temporaryPublicStorage: true
           uploadArtifacts: true
 
-  e2e:
-    name: End-to-end testing
+  e2e-old:
+    name: End-to-end (cypress) testing
     runs-on: ubuntu-latest
-    needs: [kontinuous]
+    needs: [ kontinuous ]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -139,7 +139,7 @@ jobs:
         env:
           CYPRESS: "true"
         run: |
-          TEST_BASEURL=${{ env.SITE_URL }} TEST_MODE=light pnpm test:e2e
+          TEST_BASEURL=${{ env.SITE_URL }} TEST_MODE=light pnpm test:e2e:old
       - name: Archive generated screenshots
         if: failure()
         uses: actions/upload-artifact@v4
@@ -147,3 +147,43 @@ jobs:
           name: e2e-screenshots
           path: |
             packages/code-du-travail-frontend/cypress/screenshots
+
+  e2e:
+    name: End-to-end testing
+    runs-on: ubuntu-latest
+    needs: [ kontinuous ]
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          run_install: false
+      - name: Install dependencies
+        run: |
+          pnpm install --frozen-lockfile
+      - name: Install Playwright binary
+        run: |
+          pnpm --filter @cdt/frontend test:e2e:install
+      - name: Env
+        id: env
+        uses: socialgouv/kontinuous/.github/actions/env@v1
+      - name: Set env
+        run: |
+          echo "SITE_URL=https://${{ steps.env.outputs.subdomain }}.ovh.fabrique.social.gouv.fr" >> $GITHUB_ENV
+      - name: Run test e2e
+        env:
+          CYPRESS: "true"
+        run: |
+          TEST_BASEURL=${{ env.SITE_URL }} pnpm test:e2e
+      - name: Upload Playwright report
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: playwright-report
+          path: packages/code-du-travail-frontend/playwright-report/
+          retention-days: 7

@@ -17,7 +17,7 @@ describe("Modèles de documents", () => {
       "Modèles de documents - Code du travail numérique",
       "Téléchargez et personnalisez les modèles de documents et de lettres pour vos démarches en lien avec le droit du travail"
     );
-    cy.get("h1").should("have.text", "Modèles de documents");
+    cy.get("h1").first().should("have.text", "Modèles de documents");
     cy.get("body").should(
       "contain",
       "Téléchargez et personnalisez les modèles de documents et de lettres pour vos démarches en lien avec le droit du travail"
@@ -58,7 +58,8 @@ describe("Modèles de documents", () => {
       "/recherche?query=modele%20rupture%20contrat%20periode%20d%27essai"
     );
 
-    cy.contains("Rupture de période d’essai par le salarié").click();
+    cy.contains("Rupture de période d'essai par le salarié").as("resultLink");
+    cy.get("@resultLink").click();
 
     cy.urlEqual(
       "/modeles-de-courriers/rupture-du-contrat-en-periode-dessai-par-le-salarie"

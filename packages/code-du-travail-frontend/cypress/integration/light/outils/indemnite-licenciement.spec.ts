@@ -3,8 +3,10 @@ import { formatToEuro } from "../../../support/utils";
 describe("Outil - Indemnité de licenciement", () => {
   it("Calcul de l'indemnité de licenciement", () => {
     cy.visit("/outils/indemnite-licenciement");
-    cy.get("h1").should("have.text", "Calculer l'indemnité de licenciement");
-    cy.get("button").contains("Commencer").click({ force: true });
+    cy.findByRole("heading", { level: 1 })
+      .first()
+      .should("have.text", "Calculer l'indemnité de licenciement");
+    cy.get("button").contains("Commencer").click();
 
     cy.contains(
       "Je ne souhaite pas renseigner ma convention collective (je passe l'étape)."

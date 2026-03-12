@@ -3,11 +3,10 @@ import { formatToEuro } from "../../../support/utils";
 describe("Outil - Indemnité de rupture conventionnelle", () => {
   it("Calcul de l'indemnité de rupture conventionnelle", () => {
     cy.visit("/outils/indemnite-rupture-conventionnelle");
-    cy.get("h1").should(
-      "have.text",
-      "Calculer l'indemnité de rupture conventionnelle"
-    );
-    cy.get("button").contains("Commencer").click({ force: true });
+    cy.findByRole("heading", { level: 1 })
+      .first()
+      .should("have.text", "Calculer l'indemnité de rupture conventionnelle");
+    cy.get("button").contains("Commencer").click();
 
     cy.contains(
       "Je ne souhaite pas renseigner ma convention collective (je passe l'étape)."
