@@ -30,6 +30,7 @@ const Eligible = () => {
     result,
     agreement,
     seniority,
+    absences,
     salary,
     isStepSalaryHidden,
     informationData,
@@ -38,6 +39,7 @@ const Eligible = () => {
   } = useIndemniteDepartStore(store, (state) => ({
     agreement: state.agreementData.input,
     seniority: state.ancienneteData.input,
+    absences: state.absenceData.input,
     salary: state.salairesData.input,
     result: state.resultData.input,
     isStepSalaryHidden: state.informationsData.input.isStepSalaryHidden,
@@ -95,21 +97,21 @@ const Eligible = () => {
           },
           {
             text: "Arrêt de travail au moment de la rupture conventionnelle",
-            value: seniority.arretTravail === "oui" ? "Oui" : "Non",
+            value: absences.arretTravail === "oui" ? "Oui" : "Non",
           },
         ].concat(
-          seniority.dateArretTravail
+          absences.dateArretTravail
             ? [
                 {
                   text: "Date de début de l'arrêt de travail",
-                  value: seniority.dateArretTravail,
+                  value: absences.dateArretTravail,
                 },
               ]
             : []
         )}
-        absencesPeriods={seniority.absencePeriods}
+        absencesPeriods={absences.absencePeriods}
         agreementName={agreement.agreement?.shortTitle}
-        isArretTravail={seniority.arretTravail === "oui"}
+        isArretTravail={absences.arretTravail === "oui"}
         dateEntree={seniority.dateEntree!}
         dateSortie={seniority.dateSortie!}
         salaryPeriods={salary.salaryPeriods}

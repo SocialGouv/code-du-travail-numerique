@@ -8,7 +8,7 @@ export const getDateNotificationErrors = (
   const dEntree = parse(state.dateEntree);
   const dSortie = parse(state.dateSortie);
   const dNotification = parse(state.dateNotification);
-  let errors: AncienneteStoreError = {};
+  const errors: AncienneteStoreError = {};
 
   // Date de notification
   if (!state.dateNotification) {

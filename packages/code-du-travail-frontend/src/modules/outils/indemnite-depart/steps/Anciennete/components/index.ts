@@ -1,1 +1,1 @@
-export { default as AbsencePeriods } from "./AbsencePeriods";
+export * from "./AncienneteDisplay";

@@ -1,31 +1,19 @@
 import { StepData } from "../../../store";
-import { OuiNon } from "../../../common";
-import { Absence, Motif } from "@socialgouv/modeles-social";
 import { ValidationResponse } from "src/modules/outils/common/components/SimulatorLayout/types";
 
 export type AncienneteStoreInput = {
   dateEntree?: string;
   dateSortie?: string;
   dateNotification?: string;
-  arretTravail?: OuiNon;
-  dateArretTravail?: string;
-  absencePeriods: Absence[];
-  motifs: Motif[];
-  hasAbsenceProlonge?: OuiNon;
+  ancienneteEstimee?: number;
 };
 
 export type AncienneteStoreError = {
+  errorDateEntree?: string;
   errorDateSortie?: string;
   errorDateNotification?: string;
-  errorAbsenceProlonge?: string;
-  errorDateEntree?: string;
-  errorAbsencePeriods?: {
-    absences?: AncienneteAbsenceStoreError[];
-  };
   errorEligibility?: string;
   errorPublicodes?: string;
-  errorArretTravail?: string;
-  errorDateArretTravail?: string;
 };
 
 export type AncienneteAbsenceStoreError = {
@@ -43,11 +31,8 @@ export type AncienneteStoreFn = {
   onChangeDateEntree: (value: string) => void;
   onChangeDateSortie: (value: string) => void;
   onChangeDateNotification: (value: string) => void;
-  onChangeArretTravail: (value: OuiNon) => void;
-  onChangeDateArretTravail: (value: string) => void;
-  onChangeAbsencePeriods: (value: Absence[]) => void;
+  updateAncienneteEstimee: () => void;
   onNextStep: () => ValidationResponse;
-  onChangeHasAbsenceProlonge: (value: OuiNon) => void;
 };
 
 export type AncienneteStoreSlice = {

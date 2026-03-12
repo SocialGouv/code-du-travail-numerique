@@ -9,9 +9,9 @@ import React, {
 } from "react";
 import { ContainerWithNav } from "../ContainerWithNav";
 import { Section } from "./component/Section";
+import { slugify, SourceKeys } from "@socialgouv/cdtn-utils";
 import { cleanHash } from "../../utils";
 import { fr } from "@codegouvfr/react-dsfr";
-import { SourceKeys } from "@socialgouv/cdtn-utils";
 import { Breadcrumb } from "@socialgouv/cdtn-types";
 import { BreadcrumbProps } from "@codegouvfr/react-dsfr/Breadcrumb";
 
@@ -143,7 +143,7 @@ export const ListLayout = ({
 
   const sidebarSections = useMemo(() => {
     const sections = documents.map(({ theme }) => ({
-      id: cleanHash(theme.label),
+      id: slugify(theme.label),
       label: theme.label,
     }));
     if (popularItems.length > 0) {
@@ -179,7 +179,7 @@ export const ListLayout = ({
       )}
 
       {documents.map(({ theme, documents }, index) => {
-        const sectionId = cleanHash(theme.label);
+        const sectionId = slugify(theme.label);
         return (
           <Section
             key={sectionId}

@@ -14,6 +14,7 @@ import { computeSalaryPeriods } from "../../../common";
 import { generateFrenchDate, parse } from "../../../../common/utils";
 import { SalaryPeriods } from "@socialgouv/modeles-social";
 import { CommonSituationStoreSlice } from "../../../situationStore";
+import { AbsenceStoreSlice } from "../../../steps/Absences";
 
 const initialInputState = {
   showVariablePay: false,
@@ -32,6 +33,7 @@ export const createAgreement44StoreSalaires: StoreSlice<
   Agreement44StoreSlice,
   SalairesStoreSlice &
     AncienneteStoreSlice &
+    AbsenceStoreSlice &
     CommonInformationsStoreSlice &
     CommonSituationStoreSlice
 > = (set, get) => ({
@@ -45,7 +47,7 @@ export const createAgreement44StoreSalaires: StoreSlice<
             "contrat-salarie-convention-collective-industries-chimiques-indemnite-de-licenciement-categorie-professionnelle"
         )?.info;
       const ancienneteInput = get().ancienneteData.input;
-      const dateArretTravail = get().ancienneteData.input.dateArretTravail;
+      const dateArretTravail = get().absenceData.input.dateArretTravail;
       const periods = computeSalaryPeriods({
         dateEntree: generateFrenchDate(
           new Date(
@@ -118,7 +120,7 @@ export const createAgreement44StoreSalaires: StoreSlice<
       const isOuvrierOrAgent =
         categoryPro === "'Ouvriers et collaborateurs (Groupes I à III)'" ||
         categoryPro === "'Agents de maîtrise et techniciens (Groupe IV)'";
-      const dateArretTravail = get().ancienneteData.input.dateArretTravail;
+      const dateArretTravail = get().absenceData.input.dateArretTravail;
       get().situationFunction.setSituation("hasVariablePay", value);
       applyGenericValidation(get, set, [
         { paramName: "hasVariablePay", value: value },

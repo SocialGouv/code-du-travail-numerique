@@ -15,6 +15,7 @@ describe("Outil - Indemnité de rupture conventionnelle", () => {
 
     cy.get("#dateEntree").type("2001-01-01");
     cy.get("#dateSortie").type("2025-01-01");
+    cy.contains("Suivant").click();
 
     cy.get('label:contains("Non")').eq(0).click();
     cy.get('label:contains("Oui")').eq(1).click();

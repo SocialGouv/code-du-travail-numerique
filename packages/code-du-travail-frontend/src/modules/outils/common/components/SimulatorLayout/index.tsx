@@ -4,7 +4,6 @@ import { Step, StepChange, ValidationResponse } from "./types";
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { useSimulatorLayoutTracking } from "./tracking";
 import { PublicodesSimulator } from "@socialgouv/modeles-social";
-import * as Sentry from "@sentry/nextjs";
 import { scrollToTop } from "../../utils";
 import { css } from "@styled-system/css";
 import { AccessibleAlert } from "../AccessibleAlert";

@@ -1,8 +1,8 @@
 import { Absence, Motif } from "@socialgouv/modeles-social";
-import React, { useEffect, useRef, useMemo } from "react";
+import React, { useEffect, useMemo, useRef } from "react";
 import { Button } from "@codegouvfr/react-dsfr/Button";
 import AbsencePeriod from "./AbsencePeriod";
-import type { AncienneteAbsenceStoreError } from "../store";
+import type { AbsenceDetailStoreError } from "../store";
 import { fr } from "@codegouvfr/react-dsfr";
 import Html from "src/modules/common/Html";
 
@@ -12,7 +12,7 @@ type Props = {
   absences: Absence[];
   informationData: Record<string, string | undefined>;
   error?: {
-    absences?: AncienneteAbsenceStoreError[];
+    absences?: AbsenceDetailStoreError[];
   };
   messageMotifExample?: string;
 };

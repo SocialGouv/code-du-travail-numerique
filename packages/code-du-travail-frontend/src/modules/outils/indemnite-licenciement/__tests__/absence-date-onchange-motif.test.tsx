@@ -45,19 +45,22 @@ describe("Indemnité licenciement", () => {
         .setInput(ui.seniority.startDate.get(), "01/01/2000")
         .setInput(ui.seniority.notificationDate.get(), "01/01/2022")
         .setInput(ui.seniority.endDate.get(), "01/03/2022")
-        .click(ui.seniority.arretTravail.non.get())
-        .click(ui.seniority.hasAbsence.oui.get());
+        .click(ui.next.get());
+      expect(ui.activeStep.query()).toHaveTextContent("Absences");
+      userAction
+        .click(ui.absences.arretTravail.non.get())
+        .click(ui.absences.hasAbsence.oui.get());
       await userAction.changeInputList(
-        ui.seniority.absences.motif(0).get(),
+        ui.absences.absences.motif(0).get(),
         "Absence pour maladie non professionnelle"
       );
 
-      expect(ui.seniority.absences.date(0).query()).toBeInTheDocument();
+      expect(ui.absences.absences.date(0).query()).toBeInTheDocument();
 
       // vérification que la date de l'absence saisie apparait dans l'écran résultat
       userAction
-        .setInput(ui.seniority.absences.duration(0).get(), "6")
-        .setInput(ui.seniority.absences.date(0).get(), "01/01/2015")
+        .setInput(ui.absences.absences.duration(0).get(), "6")
+        .setInput(ui.absences.absences.date(0).get(), "01/01/2015")
         .click(ui.next.get())
         .click(ui.salary.hasSameSalary.oui.get())
         .setInput(ui.salary.sameSalaryValue.get(), "2500")
@@ -74,20 +77,20 @@ describe("Indemnité licenciement", () => {
       // vérification que la date de l'absence n'est plus présente pour un autre motif
       userAction.click(ui.previous.get()).click(ui.previous.get());
       await userAction.changeInputList(
-        ui.seniority.absences.motif(0).get(),
+        ui.absences.absences.motif(0).get(),
         "Congés sans solde"
       );
 
-      expect(ui.activeStep.query()).toHaveTextContent("Ancienneté");
+      expect(ui.activeStep.query()).toHaveTextContent("Absences");
       expect(
         rendering.queryByText("Date de début de l'absence")
       ).not.toBeInTheDocument();
       // On doit garder les anciennes informations saisies
-      expect(ui.seniority.absences.motif(0).query()).toHaveValue(
+      expect(ui.absences.absences.motif(0).query()).toHaveValue(
         "Congés sans solde"
       );
-      expect(ui.seniority.absences.duration(0).query()).toHaveValue(6);
-      expect(ui.seniority.absences.date(0).query()).not.toBeInTheDocument();
+      expect(ui.absences.absences.duration(0).query()).toHaveValue(6);
+      expect(ui.absences.absences.date(0).query()).not.toBeInTheDocument();
 
       // vérification que la date de l'absence n'apparait plus dans l'écran résultat
       userAction.click(ui.next.get()).click(ui.next.get());

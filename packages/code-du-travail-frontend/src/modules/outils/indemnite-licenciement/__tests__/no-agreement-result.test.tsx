@@ -40,14 +40,15 @@ describe("Indemnité licenciement", () => {
         .setInput(ui.seniority.startDate.get(), "01/10/2023")
         .setInput(ui.seniority.notificationDate.get(), "01/06/2024")
         .setInput(ui.seniority.endDate.get(), "01/06/2024")
-        .click(ui.seniority.arretTravail.non.get())
-        .click(ui.seniority.hasAbsence.oui.get());
+        .click(ui.next.get())
+        .click(ui.absences.arretTravail.non.get())
+        .click(ui.absences.hasAbsence.oui.get());
       await userAction.changeInputList(
-        ui.seniority.absences.motif(0).get(),
+        ui.absences.absences.motif(0).get(),
         "Absence pour maladie non professionnelle"
       );
       userAction
-        .setInput(ui.seniority.absences.duration(0).get(), "3")
+        .setInput(ui.absences.absences.duration(0).get(), "3")
         .click(ui.next.get());
       userAction.click(ui.salary.hasSameSalary.oui.get());
       userAction.setInput(ui.salary.sameSalaryValue.get(), "2000");
@@ -70,7 +71,9 @@ describe("Indemnité licenciement", () => {
       // vérification que le montant pour la convention collective est bien affiché quand il y en a un
       userAction.click(ui.previous.get());
       userAction.click(ui.previous.get());
+      userAction.click(ui.previous.get());
       userAction.setInput(ui.seniority.startDate.get(), "01/01/2020");
+      userAction.click(ui.next.get());
       userAction.click(ui.next.get());
       userAction.click(ui.next.get());
 
@@ -100,8 +103,9 @@ describe("Indemnité licenciement", () => {
       .setInput(ui.seniority.startDate.get(), "01/01/2018")
       .setInput(ui.seniority.notificationDate.get(), "01/01/2024")
       .setInput(ui.seniority.endDate.get(), "01/01/2024")
-      .click(ui.seniority.arretTravail.non.get())
-      .click(ui.seniority.hasAbsence.non.get())
+      .click(ui.next.get())
+      .click(ui.absences.arretTravail.non.get())
+      .click(ui.absences.hasAbsence.non.get())
       .click(ui.next.get())
       .click(ui.salary.hasSameSalary.oui.get())
       .setInput(ui.salary.sameSalaryValue.get(), "2500")

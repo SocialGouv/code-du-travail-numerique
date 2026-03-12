@@ -25,9 +25,10 @@ describe("Rupture co avec un arrêt de travail", () => {
       .click(ui.next.get())
       .setInput(ui.seniority.startDate.get(), "01/03/2024")
       .setInput(ui.seniority.endDate.get(), "01/01/2025")
-      .click(ui.seniority.arretTravail.oui.get())
-      .setInput(ui.seniority.dateArretTravail.get(), "01/10/2024")
-      .click(ui.seniority.hasAbsence.non.get())
+      .click(ui.next.get())
+      .click(ui.absences.arretTravail.oui.get())
+      .setInput(ui.absences.dateArretTravail.get(), "01/10/2024")
+      .click(ui.absences.hasAbsence.non.get())
       .click(ui.next.get())
       .click(ui.salary.hasSameSalary.non.get());
 
@@ -55,8 +56,9 @@ describe("Rupture co avec un arrêt de travail", () => {
       .click(ui.next.get())
       .setInput(ui.seniority.startDate.get(), "01/03/2024")
       .setInput(ui.seniority.endDate.get(), "01/01/2025")
-      .click(ui.seniority.arretTravail.non.get())
-      .click(ui.seniority.hasAbsence.non.get())
+      .click(ui.next.get())
+      .click(ui.absences.arretTravail.non.get())
+      .click(ui.absences.hasAbsence.non.get())
       .click(ui.next.get())
       .click(ui.salary.hasSameSalary.non.get());
 

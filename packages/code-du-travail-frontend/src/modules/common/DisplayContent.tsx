@@ -301,11 +301,6 @@ const options = (params: Options): HTMLReactParserOptions => {
           );
         }
         if (domNode.name === "div" && domNode.attribs.class === "infographic") {
-          console.log(
-            "MMA - Rendering infographic: ",
-            domNode.attribs["data-infographic-id"] ?? "no id",
-            domNode.attribs
-          );
           const infoId = domNode.attribs["data-infographic-id"];
           const infographic = params.infographics.find(
             (info) => info.infographicId === infoId

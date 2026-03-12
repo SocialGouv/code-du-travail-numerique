@@ -47,7 +47,7 @@ const StepSalaires = ({ type }: Props) => {
     salary: state.salairesData.input.salary,
     onChangeSalary: state.salairesFunction.onChangeSalary,
     errorSalary: state.salairesData.error.errorSalary,
-    arretTravail: state.ancienneteData.input.arretTravail,
+    arretTravail: state.absenceData.input.arretTravail,
     isAgreementSupported:
       state.agreementData.input.isAgreementSupportedIndemniteLicenciement,
   }));

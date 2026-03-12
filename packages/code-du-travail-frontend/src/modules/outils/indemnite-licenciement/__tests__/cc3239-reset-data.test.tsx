@@ -35,13 +35,14 @@ describe("Indemnité licenciement - CC 3239 - changement de convention collectiv
     userAction.setInput(ui.seniority.startDate.get(), "01/01/2020");
     userAction.setInput(ui.seniority.notificationDate.get(), "15/09/2022");
     userAction.setInput(ui.seniority.endDate.get(), "15/09/2022");
-    userAction.click(ui.seniority.arretTravail.non.get());
-    userAction.click(ui.seniority.hasAbsence.oui.get());
+    userAction.click(ui.next.get());
+    userAction.click(ui.absences.arretTravail.non.get());
+    userAction.click(ui.absences.hasAbsence.oui.get());
     await userEvent.selectOptions(
-      ui.seniority.absences.motif(0).get(),
+      ui.absences.absences.motif(0).get(),
       "Congé pour convenance personnelle"
     );
-    userAction.setInput(ui.seniority.absences.duration(0).get(), "6");
+    userAction.setInput(ui.absences.absences.duration(0).get(), "6");
     userAction.click(ui.next.get());
     userAction.click(ui.salary.hasSameSalary.oui.get());
     userAction.setInput(ui.salary.sameSalaryValue.get(), "3000");
@@ -53,25 +54,27 @@ describe("Indemnité licenciement - CC 3239 - changement de convention collectiv
     userAction.click(ui.previous.get());
     userAction.click(ui.previous.get());
     userAction.click(ui.previous.get());
+    userAction.click(ui.previous.get());
     userAction.click(ui.agreement.noAgreement.get());
+    userAction.click(ui.next.get());
     userAction.click(ui.next.get());
     userAction.click(ui.next.get());
   });
   test("vérifier que la question sur la question sur le temps partiel soit affichée et que l'absence spécifique à la 3239 a été supprimée", async () => {
-    expect(ui.activeStep.query()).toHaveTextContent("Ancienneté");
-    userAction.click(ui.seniority.arretTravail.non.get());
-    expect(ui.seniority.absences.motifs.queryAll()).toHaveLength(1);
-    expect(ui.seniority.absences.motif(0).get()).not.toHaveValue(
+    expect(ui.activeStep.query()).toHaveTextContent("Absences");
+    userAction.click(ui.absences.arretTravail.non.get());
+    expect(ui.absences.absences.motifs.queryAll()).toHaveLength(1);
+    expect(ui.absences.absences.motif(0).get()).not.toHaveValue(
       "Congé pour convenance personnelle"
     );
-    expect(ui.seniority.absences.duration(0).get()).toHaveValue(null);
+    expect(ui.absences.absences.duration(0).get()).toHaveValue(null);
 
     userAction.click(ui.next.get());
     expect(
       screen.getByText("Veuillez renseigner à minima une absence")
     ).toBeInTheDocument();
 
-    userAction.setInput(ui.seniority.absences.duration(0).get(), "6");
+    userAction.setInput(ui.absences.absences.duration(0).get(), "6");
     userAction.click(ui.next.get());
     expect(ui.activeStep.query()).toHaveTextContent("Salaires");
     userAction.click(ui.next.get());

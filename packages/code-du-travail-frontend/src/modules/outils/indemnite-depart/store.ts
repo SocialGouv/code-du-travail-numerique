@@ -46,8 +46,15 @@ import {
   CommonAgreementStoreSlice,
   createCommonAgreementStore,
 } from "./steps/Agreement/store";
+import {
+  AbsenceStoreError,
+  AbsenceStoreInput,
+  AbsenceStoreSlice,
+  createAbsenceStore,
+} from "./steps/Absences";
 
 export type MainStore = AncienneteStoreSlice &
+  AbsenceStoreSlice &
   SalairesStoreSlice &
   ResultStoreSlice &
   AgreementStoreSlice &
@@ -58,6 +65,7 @@ export type MainStore = AncienneteStoreSlice &
 export type StepData<
   T extends
     | AncienneteStoreInput
+    | AbsenceStoreInput
     | SalairesStoreInput
     | ResultStoreInput
     | AgreementStoreInput
@@ -65,6 +73,7 @@ export type StepData<
     | CommonInformationsStoreInput,
   U extends
     | AncienneteStoreError
+    | AbsenceStoreError
     | SalairesStoreError
     | ResultStoreError
     | AgreementStoreError
@@ -88,6 +97,7 @@ const createRootSlice = (
   { simulatorName, toolName }
 ) => ({
   ...createAncienneteStore(set, get, { type: toolName }),
+  ...createAbsenceStore(set, get, { type: toolName }),
   ...createSalairesStore(set, get, { type: toolName }),
   ...createResultStore(set, get, { type: toolName, simulator: simulatorName }),
   ...createRootAgreementsStore(set, get, { type: toolName }),

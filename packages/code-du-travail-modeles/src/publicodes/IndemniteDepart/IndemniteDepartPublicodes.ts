@@ -11,6 +11,7 @@ import type { ExplanationBuilder } from "../common/ExplanationBuilder";
 import type { Legal } from "./Legal";
 import { ResultBuilder } from "../common/ResultBuilder";
 import type { IndemniteDepartOutput } from "./types";
+import type { Absence } from "../../modeles";
 
 export class IndemniteDepartPublicodes extends PublicodesBase<PublicodesIndemniteLicenciementResult> {
   protected legalInstance: Legal;
@@ -35,6 +36,18 @@ export class IndemniteDepartPublicodes extends PublicodesBase<PublicodesIndemnit
     this.legalInstance = legalInstance;
     this.agreementInstance = agreementInstance;
     this.explanationInstance = explanationInstance;
+  }
+
+  public estimatedSeniority(
+    dateEntree: string,
+    dateSortie: string,
+    absencePeriods: Absence[] = []
+  ) {
+    return this.legalInstance.seniority.computeSeniority({
+      dateEntree,
+      dateSortie,
+      absencePeriods,
+    });
   }
 
   public calculate(

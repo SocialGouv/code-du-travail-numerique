@@ -31,20 +31,23 @@ describe("Indemnité licenciement - Validation du comportement avec l'absence de
         .setInput(ui.seniority.startDate.get(), "01/01/2000")
         .setInput(ui.seniority.notificationDate.get(), "01/01/2022")
         .setInput(ui.seniority.endDate.get(), "01/03/2022")
-        .click(ui.seniority.arretTravail.non.get())
+        .click(ui.next.get());
+      expect(ui.activeStep.query()).toHaveTextContent("Absences");
+      userAction
+        .click(ui.absences.arretTravail.non.get())
         .click(ui.next.get())
-        .click(ui.seniority.hasAbsence.oui.get());
+        .click(ui.absences.hasAbsence.oui.get());
 
       expect(
         rendering.queryByText("Date de début de l'absence")
       ).not.toBeInTheDocument();
 
       await userAction.changeInputList(
-        ui.seniority.absences.motif(0).get(),
+        ui.absences.absences.motif(0).get(),
         "Congés sans solde"
       );
       userAction
-        .setInput(ui.seniority.absences.duration(0).get(), "6")
+        .setInput(ui.absences.absences.duration(0).get(), "6")
         .click(ui.next.get());
 
       // On se rend sur la page information pour vérifier que la date n'est pas présente

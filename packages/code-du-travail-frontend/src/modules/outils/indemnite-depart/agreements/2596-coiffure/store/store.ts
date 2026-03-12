@@ -14,6 +14,7 @@ import {
 import { validateStep } from "./validator";
 import { CommonInformationsStoreSlice } from "../../../steps/Informations/store";
 import { CommonSituationStoreSlice } from "../../../situationStore";
+import { AbsenceStoreSlice } from "../../../steps/Absences";
 
 const initialState: Agreement2596StoreData = {
   input: {
@@ -28,6 +29,7 @@ export const createAgreement2596StoreSalaires: StoreSlice<
   Agreement2596StoreSlice,
   SalairesStoreSlice &
     AncienneteStoreSlice &
+    AbsenceStoreSlice &
     CommonInformationsStoreSlice &
     CommonSituationStoreSlice
 > = (set, get) => ({
@@ -40,7 +42,7 @@ export const createAgreement2596StoreSalaires: StoreSlice<
             item.question.name ===
             "contrat-salarie-convention-collective-coiffure-indemnite-de-licenciement-categorie-professionnelle"
         )?.info;
-      const dateArretTravail = get().ancienneteData.input.dateArretTravail;
+      const dateArretTravail = get().absenceData.input.dateArretTravail;
 
       if (
         (categoryPro !== "'Cadres'" &&
