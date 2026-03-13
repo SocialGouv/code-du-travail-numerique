@@ -29,6 +29,6 @@ export const esDocToSearchResult =
   ({ _score, _source }): SearchResult => ({
     _score: _score ?? null,
     ..._source,
-    title: _source.shortTitle ?? _source.title,
+    title: _source.displayTitle ?? _source.shortTitle ?? _source.title,
     algo,
   });

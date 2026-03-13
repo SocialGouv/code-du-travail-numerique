@@ -102,6 +102,19 @@ export const searchWithQuery = async (
   const fulltextHits: SearchResult[] = extractHits(results[DOCUMENTS_ES]).map(
     esDocToSearchResult(SEARCH_ALGO.FULL_TEXT)
   );
+
+  // Enrich tool results from presearch/prequalified with displayTitle from fulltext
+  const fulltextToolTitles = new Map(
+    fulltextHits
+      .filter((h) => h.source === SOURCES.TOOLS)
+      .map((h) => [h.cdtnId, h.title])
+  );
+  for (const doc of documents) {
+    if (doc.source === SOURCES.TOOLS && fulltextToolTitles.has(doc.cdtnId)) {
+      doc.title = fulltextToolTitles.get(doc.cdtnId)!;
+    }
+  }
+
   documents.push(...fulltextHits);
 
   if (shouldRequestCdt) {

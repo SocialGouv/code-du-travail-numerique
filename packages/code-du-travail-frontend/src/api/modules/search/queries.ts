@@ -171,6 +171,7 @@ export function getSearchBody(query, size, sources) {
       "highlight",
       "sectionDisplayMode",
       "shortTitle",
+      "displayTitle",
     ],
     query: {
       bool: {
