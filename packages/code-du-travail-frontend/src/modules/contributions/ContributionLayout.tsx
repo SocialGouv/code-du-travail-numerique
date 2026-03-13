@@ -18,17 +18,23 @@ type Props = {
 export function ContributionLayout({ contribution }: Props) {
   const { date, title, isGeneric, isFicheSP } = contribution;
 
+  const genericSlug = !isGeneric
+    ? removeCCNumberFromSlug(contribution.slug)
+    : undefined;
+  const hasNewBreadcrumb =
+    !isGeneric && genericSlug === "les-conges-pour-evenements-familiaux";
+
   const breadcrumbSegments = contribution.breadcrumbs.map((breadcrumb) => ({
     label: breadcrumb.label,
     linkProps: { href: breadcrumb.slug },
   }));
 
-  const currentPageLabel = isGeneric
-    ? title
-    : `${contribution.ccnShortTitle} (IDCC ${contribution.idcc})`;
+  const currentPageLabel =
+    hasNewBreadcrumb
+      ? `${contribution.ccnShortTitle} (IDCC ${contribution.idcc})`
+      : title;
 
-  if (!isGeneric) {
-    const genericSlug = removeCCNumberFromSlug(contribution.slug);
+  if (hasNewBreadcrumb) {
     breadcrumbSegments.push({
       label: title,
       linkProps: { href: `/contribution/${genericSlug}` },
@@ -40,21 +46,21 @@ export function ContributionLayout({ contribution }: Props) {
       <BreadcrumbListJsonLd
         currentPageLabel={currentPageLabel}
         items={
-          isGeneric
-            ? contribution.breadcrumbs.map((breadcrumb) => ({
-                label: breadcrumb.label,
-                href: breadcrumb.slug,
-              }))
-            : [
+          hasNewBreadcrumb
+            ? [
                 ...contribution.breadcrumbs.map((breadcrumb) => ({
                   label: breadcrumb.label,
                   href: breadcrumb.slug,
                 })),
                 {
                   label: title,
-                  href: `/contribution/${removeCCNumberFromSlug(contribution.slug)}`,
+                  href: `/contribution/${genericSlug}`,
                 },
               ]
+            : contribution.breadcrumbs.map((breadcrumb) => ({
+                label: breadcrumb.label,
+                href: breadcrumb.slug,
+              }))
         }
       />
       <Breadcrumb
