@@ -95,6 +95,7 @@ export const Header = () => {
           menuLinks: [
             {
               text: "Voir tous les modèles par thème",
+              iconId: "fr-icon-folder-2-line",
               linkProps: {
                 href: "/modeles-de-courriers",
               },
@@ -127,6 +128,7 @@ export const Header = () => {
           menuLinks: [
             {
               text: "Voir toutes les fiches par thème",
+              iconId: "fr-icon-folder-2-line",
               linkProps: {
                 href: "/contribution",
               },
@@ -158,6 +160,7 @@ export const Header = () => {
           menuLinks: [
             {
               text: "Voir tous les thèmes",
+              iconId: "fr-icon-folder-2-line",
               linkProps: {
                 href: "/themes",
               },
