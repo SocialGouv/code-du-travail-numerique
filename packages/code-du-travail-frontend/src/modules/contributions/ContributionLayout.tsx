@@ -29,10 +29,9 @@ export function ContributionLayout({ contribution }: Props) {
     linkProps: { href: breadcrumb.slug },
   }));
 
-  const currentPageLabel =
-    hasNewBreadcrumb
-      ? `${contribution.ccnShortTitle} (IDCC ${contribution.idcc})`
-      : title;
+  const currentPageLabel = hasNewBreadcrumb
+    ? `${contribution.ccnShortTitle} (IDCC ${contribution.idcc})`
+    : title;
 
   if (hasNewBreadcrumb) {
     breadcrumbSegments.push({
