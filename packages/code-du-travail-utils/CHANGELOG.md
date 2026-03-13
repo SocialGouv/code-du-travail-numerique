@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.219.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.218.0...v4.219.0) (2026-03-13)
+
+
+### Features
+
+* **agreements:** ajout de la customisation au niveau du header ([#7101](https://github.com/SocialGouv/code-du-travail-numerique/issues/7101)) ([60e28c6](https://github.com/SocialGouv/code-du-travail-numerique/commit/60e28c673b414b36b9e62784bc62377137691c9a))
+
+
+
+
+
 # [4.218.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.217.0...v4.218.0) (2026-03-04)
 
 **Note:** Version bump only for package @socialgouv/cdtn-utils

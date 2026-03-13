@@ -1,6 +1,6 @@
 {
   "name": "@cdt/frontend",
-  "version": "4.218.0",
+  "version": "4.219.0",
   "description": "Code du travail frontend",
   "private": true,
   "homepage": "https://code-du-travail.beta.gouv.fr/",
@@ -67,8 +67,8 @@
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.11.1",
-    "@playwright/test": "^1.58.2",
     "@pandacss/dev": "^1.8.1",
+    "@playwright/test": "^1.58.2",
     "@testing-library/cypress": "^10.1.0",
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.9.1",

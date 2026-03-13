@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.219.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.218.0...v4.219.0) (2026-03-13)
+
+
+### Features
+
+* **indemnite:** séparation de l'étape ancienneté avec les absences ([#7146](https://github.com/SocialGouv/code-du-travail-numerique/issues/7146)) ([4000711](https://github.com/SocialGouv/code-du-travail-numerique/commit/4000711aee34c7ed53241dd885b8d85a4aa0a90a))
+
+
+
+
+
 # [4.218.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.217.0...v4.218.0) (2026-03-04)
 
 **Note:** Version bump only for package @socialgouv/modeles-social

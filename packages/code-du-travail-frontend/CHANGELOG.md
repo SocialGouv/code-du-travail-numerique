@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.219.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.218.0...v4.219.0) (2026-03-13)
+
+
+### Bug Fixes
+
+* configuration des tests playwright dans la CI ([7d86e2d](https://github.com/SocialGouv/code-du-travail-numerique/commit/7d86e2d62aa2efc0c097b7348c2e49e1377daa94))
+* corrections sur les tests e2e ([#7149](https://github.com/SocialGouv/code-du-travail-numerique/issues/7149)) ([cbf7cbd](https://github.com/SocialGouv/code-du-travail-numerique/commit/cbf7cbda47c21313dfb23f8b7ec8c9f62b22c6d8))
+* passage des tests instables sous playwright ([#7151](https://github.com/SocialGouv/code-du-travail-numerique/issues/7151)) ([d20df76](https://github.com/SocialGouv/code-du-travail-numerique/commit/d20df76aa3c7dbef63e4f05ed61c71d9b7ae5a76))
+* **sdr:** correction des URLs qui sont en 404 et des redirections ([#7159](https://github.com/SocialGouv/code-du-travail-numerique/issues/7159)) ([2c1b1e6](https://github.com/SocialGouv/code-du-travail-numerique/commit/2c1b1e658d65b900dd7418ee0c2e71765102de2d))
+* **themes:** correction des ancres sur la page des thèmes ([#7155](https://github.com/SocialGouv/code-du-travail-numerique/issues/7155)) ([db9e75d](https://github.com/SocialGouv/code-du-travail-numerique/commit/db9e75d3ad320640b57b9e0e4701d67f8c12cfd0))
+
+
+### Features
+
+* **agreements:** ajout de la customisation au niveau du header ([#7101](https://github.com/SocialGouv/code-du-travail-numerique/issues/7101)) ([60e28c6](https://github.com/SocialGouv/code-du-travail-numerique/commit/60e28c673b414b36b9e62784bc62377137691c9a))
+* **indemnite:** séparation de l'étape ancienneté avec les absences ([#7146](https://github.com/SocialGouv/code-du-travail-numerique/issues/7146)) ([4000711](https://github.com/SocialGouv/code-du-travail-numerique/commit/4000711aee34c7ed53241dd885b8d85a4aa0a90a))
+
+
+
+
+
 # [4.218.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.217.0...v4.218.0) (2026-03-04)
 
 
