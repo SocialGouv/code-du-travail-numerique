@@ -50,6 +50,7 @@ export const Header = () => {
           menuLinks: [
             {
               text: "Voir tous les simulateurs",
+              iconId: "fr-icon-folder-2-line",
               linkProps: {
                 href: "/outils",
               },
