@@ -103,7 +103,7 @@ describe("<ContributionLayout />", () => {
 
       fireEvent.click(ccUi.buttonDisplayInfo.get());
       expect(pushMock).toHaveBeenCalledTimes(1);
-      expect(pushMock).toHaveBeenCalledWith("/contribution/3239-slug");
+      expect(pushMock).toHaveBeenCalledWith("/contribution/slug/3239");
       expect(sendEvent).toHaveBeenCalledWith({
         action: "cc_select_traitée",
         category: "outil",
@@ -147,7 +147,7 @@ describe("<ContributionLayout />", () => {
 
       fireEvent.click(ccUi.buttonDisplayInfo.get());
       expect(pushMock).toHaveBeenCalledTimes(1);
-      expect(pushMock).toHaveBeenCalledWith("/contribution/16-slug");
+      expect(pushMock).toHaveBeenCalledWith("/contribution/slug/16");
 
       expect(ccUi.warning.nonTreatedAgreement.query()).not.toBeInTheDocument();
       expect(sendEvent).toHaveBeenCalledWith({
@@ -232,7 +232,7 @@ describe("<ContributionLayout />", () => {
 
       fireEvent.click(ccUi.buttonDisplayInfo.get());
       expect(pushMock).toHaveBeenCalledTimes(1);
-      expect(pushMock).toHaveBeenCalledWith("/contribution/16-slug");
+      expect(pushMock).toHaveBeenCalledWith("/contribution/slug/16");
 
       expect(ccUi.warning.nonTreatedAgreement.query()).not.toBeInTheDocument();
       expect(sendEvent).toHaveBeenCalledWith({

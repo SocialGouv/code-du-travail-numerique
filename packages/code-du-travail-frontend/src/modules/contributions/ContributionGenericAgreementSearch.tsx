@@ -131,7 +131,7 @@ export function ContributionGenericAgreementSearch({
             onClick={(event) => {
               onDisplayClick(isValid && !!selectedAgreement);
               if (isValid && selectedAgreement) {
-                router.push(`/contribution/${selectedAgreement?.num}-${slug}`);
+                router.push(`/contribution/${slug}/${selectedAgreement?.num}`);
               } else {
                 event.preventDefault();
               }

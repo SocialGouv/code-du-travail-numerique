@@ -1,5 +1,10 @@
 [
   {
+    "source": "/contribution/1486-:slug",
+    "permanent": true,
+    "destination": "/contribution/:slug/1486"
+  },
+  {
     "destination": "/themes/:slug",
     "permanent": true,
     "source": "/themes/:id(\\d{1,})-:slug"
