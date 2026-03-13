@@ -22,7 +22,7 @@ test.describe("Page Besoin de plus d'information", () => {
       .click();
 
     const link = page.locator(
-      'a[href="https://idf.drieets.gouv.fr/Adresse-et-horaires-d-ouverture-de-l-unite-departementale-75"]'
+      'a[href="https://idf.drieets.gouv.fr/Contacts-de-l-unite-departementale-75"]'
     );
 
     await expect(link).toHaveAttribute("target", "_blank");
