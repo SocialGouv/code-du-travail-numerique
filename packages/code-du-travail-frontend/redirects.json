@@ -553,5 +553,90 @@
     "source": "/convention-collective/1850(-[a-z0-9-]+)?",
     "destination": "/convention-collective/3253-salaries-des-cabinets-davocats",
     "permanent": true
+  },
+  {
+    "source": "/information/petit-licenciement-collectif-2-a-9-salaries-pour-motif-economique-dans-une-entreprise-avec-cse-le-conge-de-reclassement",
+    "destination": "/infographie/petit-licenciement-collectif-2-a-9-salaries-pour-motif-economique-dans-une-entreprise-avec-cse-le-conge-de-reclassement-cr",
+    "permanent": true
+  },
+  {
+    "source": "/information/petit-licenciement-collectif-pour-motif-economique-dans-une-entreprise-sans-cse-la-mise-en-place-du-conge-de-reclassement-cr",
+    "destination": "/infographie/petit-licenciement-collectif-2-a-9-salaries-pour-motif-economique-dans-une-entreprise-sans-cse-le-conge-de-reclassement-cr",
+    "permanent": true
+  },
+  {
+    "source": "/information/petit-licenciement-collectif-pour-motif-economique-dans-une-entreprise-sans-cse-le-contrat-de-securisation-professionnelle-csp",
+    "destination": "/infographie/petit-licenciement-collectif-2-a-9-salaries-pour-motif-economique-dans-une-entreprise-sans-cse-le-contrat-de-securisation-professionnelle-csp",
+    "permanent": true
+  },
+  {
+    "source": "/information/grand-licenciement-collectif-au-moins-10-salaries-pour-motif-economique-dans-une-entreprise-de-moins-de-50-salaries-avec-cse-le-conge-de-reclassement",
+    "destination": "/infographie/grand-licenciement-collectif-au-moins-10-salaries-pour-motif-economique-dans-une-entreprise-de-moins-de-50-salaries-avec-cse-le-conge-de-reclassement-cr",
+    "permanent": true
+  },
+  {
+    "source": "/information/grand-licenciement-collectif-pour-motif-economique-dans-une-entreprise-de-50-salaries-et-plus-avec-cse-le-conge-de-reclassement",
+    "destination": "/infographie/grand-licenciement-collectif-au-moins-10-salaries-pour-motif-economique-dans-une-entreprise-de-50-salaries-et-plus-avec-cse-le-conge-de-reclassement-cr",
+    "permanent": true
+  },
+  {
+    "source": "/information/grand-licenciement-collectif-au-moins-10-salaries-pour-motif-economique-dans-une-entreprise-de-50-salaries-et-plus-avec-cse-le-contrat-de-securisation-professionnelle-csp",
+    "destination": "/infographie/grand-licenciement-collectif-au-moins-10-salaries-pour-motif-economique-dans-une-entreprise-de-50-salaries-et-plus-avec-cse-le-contrat-de-securisation-professionnelle-csp",
+    "permanent": true
+  },
+  {
+    "source": "/information/grand-licenciement-collectif-au-moins-10-salaries-pour-motif-economique-dans-une-entreprise-de-moins-de-50-salaries-sans-cse-le-conge-de-reclassement",
+    "destination": "/infographie/grand-licenciement-collectif-au-moins-10-salaries-pour-motif-economique-dans-une-entreprise-de-moins-de-50-salaries-sans-cse-le-conge-de-reclassement-cr",
+    "permanent": true
+  },
+  {
+    "source": "/information/grand-licenciement-collectif-pour-motif-economique-dans-une-entreprise-de-50-salaries-et-plus-sans-cse-le-conge-de-reclassement",
+    "destination": "/infographie/grand-licenciement-collectif-au-moins-10-salaries-pour-motif-economique-dans-une-entreprise-de-50-salaries-et-plus-sans-cse-le-conge-de-reclassement-cr",
+    "permanent": true
+  },
+  {
+    "source": "/information/grand-licenciement-collectif-pour-motif-economique-dans-une-entreprise-de-50-salaries-et-plus-sans-cse-le-contrat-de-securisation-professionnelle-csp",
+    "destination": "/infographie/grand-licenciement-collectif-au-moins-10-salaries-pour-motif-economique-dans-une-entreprise-de-50-salaries-et-plus-sans-cse-le-contrat-de-securisation-professionnelle-csp",
+    "permanent": true
+  },
+  {
+    "source": "/information/licenciement-pour-motif-disciplinaire",
+    "destination": "/infographie/licenciement-pour-motif-disciplinaire",
+    "permanent": true
+  },
+  {
+    "source": "/information/licenciement-pour-inaptitude-medicale",
+    "destination": "/infographie/licenciement-pour-inaptitude-medicale",
+    "permanent": true
+  },
+  {
+    "source": "/information/licenciement-pour-motif-non-disciplinaire",
+    "destination": "/infographie/licenciement-pour-motif-non-disciplinaire",
+    "permanent": true
+  },
+  {
+    "source": "/information/licenciement-individuel-pour-motif-economique-le-conge-de-reclassement-cr",
+    "destination": "/infographie/licenciement-individuel-pour-motif-economique-le-conge-de-reclassement-cr",
+    "permanent": true
+  },
+  {
+    "source": "/information/licenciement-individuel-pour-motif-economique-le-contrat-de-securisation-professionnelle-csp",
+    "destination": "/infographie/licenciement-individuel-pour-motif-economique-le-contrat-de-securisation-professionnelle-csp",
+    "permanent": true
+  },
+  {
+    "source": "/information/petit-licenciement-collectif-2-a-9-salaries-pour-motif-economique-dans-une-entreprise-avec-cse-le-contrat-de-securisation-professionnelle-csp",
+    "destination": "/infographie/petit-licenciement-collectif-2-a-9-salaries-pour-motif-economique-dans-une-entreprise-avec-cse-le-contrat-de-securisation-professionnelle-csp",
+    "permanent": true
+  },
+  {
+    "source": "/information/petit-licenciement-collectif-2-a-9-salaries-pour-motif-economique-dans-une-entreprise-sans-cse-le-contrat-de-securisation-professionnelle-csp",
+    "destination": "/infographie/petit-licenciement-collectif-2-a-9-salaries-pour-motif-economique-dans-une-entreprise-sans-cse-le-contrat-de-securisation-professionnelle-csp",
+    "permanent": true
+  },
+  {
+    "source": "/information/licenciement-suite-a-un-accord-de-performance-collective-apc",
+    "destination": "/infographie/licenciement-suite-a-un-accord-de-performance-collective-apc",
+    "permanent": true
   }
 ]

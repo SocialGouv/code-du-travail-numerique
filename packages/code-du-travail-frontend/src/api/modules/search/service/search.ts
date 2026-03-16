@@ -43,6 +43,7 @@ export const searchWithQuery = async (
     SOURCES.THEMATIC_FILES,
     SOURCES.EDITORIAL_CONTENT,
     SOURCES.CCN,
+    SOURCES.INFOGRAPHICS,
   ];
 
   const articles: SearchResult[] = [];

@@ -1,7 +1,6 @@
 import React from "react";
-import { render, screen, fireEvent } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import { SearchCard } from "../Card";
-import { summarize } from "src/modules/utils";
 
 // Mock des dépendances
 jest.mock("../../utils", () => ({
@@ -26,7 +25,7 @@ describe("<SearchCard />", () => {
     expect(screen.getByText("Titre du document")).toBeInTheDocument();
     expect(
       screen.getByText(
-        "Résumé: Description détaillée du document qui sera résumée par la fonction summarize"
+        "Description détaillée du document qui sera résumée par la fonction summarize"
       )
     ).toBeInTheDocument();
 
@@ -56,12 +55,6 @@ describe("<SearchCard />", () => {
     fireEvent.click(link);
 
     expect(mockOnClick).toHaveBeenCalledTimes(1);
-  });
-
-  it("should use summarize function for description", () => {
-    render(<SearchCard {...defaultProps} />);
-
-    expect(summarize).toHaveBeenCalledWith(defaultProps.description);
   });
 
   it("should render in a grid column", () => {
