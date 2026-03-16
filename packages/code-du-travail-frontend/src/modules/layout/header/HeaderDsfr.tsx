@@ -12,6 +12,7 @@ export type NavigationLink = MainNavigationProps.Item.Link;
 
 export type NavigationMenuLink = {
   text: string;
+  iconId?: string;
   linkProps: {
     href: string;
     target?: string;

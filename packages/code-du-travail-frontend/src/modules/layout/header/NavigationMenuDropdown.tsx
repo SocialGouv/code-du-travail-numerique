@@ -52,7 +52,21 @@ export const NavigationMenuDropdown = ({
                   onClick={closeModal}
                   {...(isLinkActive && { ["aria-current"]: "page" })}
                 >
-                  {menuItem.text}
+                  <span
+                    style={{ display: "inline-flex", alignItems: "center" }}
+                  >
+                    {menuItem.text}
+                    {menuItem.iconId && (
+                      <span
+                        className={fr.cx(menuItem.iconId as any)}
+                        aria-hidden="true"
+                        style={{
+                          marginLeft: "0.5rem",
+                          color: "var(--text-action-high-blue-france)",
+                        }}
+                      />
+                    )}
+                  </span>
                 </Link>
               </li>
             );
