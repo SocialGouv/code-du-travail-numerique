@@ -38,8 +38,6 @@ describe("generateSearchLink", () => {
 
     const result = generateSearchLink(source, slug, undefined, parentSlug);
 
-    expect(result).toBe(
-      "/themes/formation#entretien-professionnel-cep"
-    );
+    expect(result).toBe("/themes/formation#entretien-professionnel-cep");
   });
 });

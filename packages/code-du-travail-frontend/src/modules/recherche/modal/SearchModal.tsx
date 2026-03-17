@@ -182,7 +182,7 @@ export const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
               iconId="fr-icon-close-line"
               iconPosition="right"
               title="Fermer"
-              onClick={handleClose}
+              onClick={() => handleClose()}
               priority="tertiary no outline"
               className={closeButton}
               ref={closeButtonRef}
