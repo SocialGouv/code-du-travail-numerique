@@ -21,6 +21,7 @@ export default defineConfig({
     baseURL,
     trace: "on-first-retry",
     storageState: "./src/e2e/.data/storage-state.json",
+    ignoreHTTPSErrors: true,
   },
   projects: [
     {
