@@ -2,6 +2,7 @@ import {
   getRouteBySource,
   getLabelBySource,
   routeBySource,
+  slugify,
 } from "@socialgouv/cdtn-utils";
 
 export const generateSearchLink = (
@@ -14,7 +15,7 @@ export const generateSearchLink = (
     return url;
   }
   if (source === "themes" && parentSlug) {
-    return `/themes/${parentSlug}#${slug}`;
+    return `/themes/${parentSlug}#${slugify(slug)}`;
   }
   return `/${getRouteBySource(source)}/${slug}`;
 };

@@ -17,12 +17,14 @@ export const SearchResultCard = ({ result, onClick }: Props) => {
     result.url,
     result.parentSlug
   );
+  const hasHash = href.includes("#");
 
   return (
     <Link
       href={href}
       className={linkStyle}
       onClick={onClick}
+      scroll={!hasHash}
       target={isExternal ? "_blank" : undefined}
       rel={isExternal ? "noopener noreferrer" : undefined}
       title={isExternal ? result.title : undefined}
