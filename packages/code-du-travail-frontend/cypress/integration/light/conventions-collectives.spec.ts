@@ -78,7 +78,7 @@ describe("Conventions collectives", () => {
 
       cy.get("#frequent-questions-list-0 a").first().click();
 
-      cy.urlEqual("/contribution/2941-les-conges-pour-evenements-familiaux");
+      cy.urlEqual("/contribution/les-conges-pour-evenements-familiaux/2941");
     });
   });
 
