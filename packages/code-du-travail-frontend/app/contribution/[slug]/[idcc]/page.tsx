@@ -1,6 +1,6 @@
 import React from "react";
 import { DsfrLayout } from "../../../../src/modules/layout";
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import { generateDefaultMetadata } from "../../../../src/modules/common/metas";
 import {
   ContributionLayout,
@@ -9,11 +9,11 @@ import {
 
 export async function generateMetadata(props) {
   const params = await props.params;
-  const { metas } = await getContribution(params.slug, params.idcc);
+  const contribution = await fetchContribution(params.slug, params.idcc);
 
   return generateDefaultMetadata({
-    title: metas.title,
-    description: metas.description,
+    title: contribution.metas.title,
+    description: contribution.metas.description,
     path: `/contribution/${params.slug}/${params.idcc}`,
     overrideCanonical: `/contribution/${params.slug}`,
   });
@@ -21,7 +21,12 @@ export async function generateMetadata(props) {
 
 async function ContributionByAgreement(props) {
   const params = await props.params;
-  const contribution = await getContribution(params.slug, params.idcc);
+  const contribution = await fetchContribution(params.slug, params.idcc);
+
+  if (/^\d+$/.test(params.idcc) && contribution.ccnSlug) {
+    permanentRedirect(`/contribution/${params.slug}/${contribution.ccnSlug}`);
+  }
+
   return (
     <DsfrLayout>
       <ContributionLayout contribution={contribution} />
@@ -29,7 +34,8 @@ async function ContributionByAgreement(props) {
   );
 }
 
-const getContribution = async (slug: string, idcc: string) => {
+const fetchContribution = async (slug: string, idccOrCcnSlug: string) => {
+  const idcc = idccOrCcnSlug.split("-")[0];
   const contribution = await fetchContributionBySlug(`${idcc}-${slug}`);
 
   if (!contribution) {

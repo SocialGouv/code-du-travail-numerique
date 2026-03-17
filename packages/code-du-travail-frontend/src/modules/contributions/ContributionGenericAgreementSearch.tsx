@@ -133,7 +133,7 @@ export function ContributionGenericAgreementSearch({
               if (isValid && selectedAgreement) {
                 router.push(
                   slug === "les-conges-pour-evenements-familiaux"
-                    ? `/contribution/${slug}/${selectedAgreement?.num}`
+                    ? `/contribution/${slug}/${selectedAgreement?.slug || selectedAgreement?.num}`
                     : `/contribution/${selectedAgreement?.num}-${slug}`
                 );
               } else {

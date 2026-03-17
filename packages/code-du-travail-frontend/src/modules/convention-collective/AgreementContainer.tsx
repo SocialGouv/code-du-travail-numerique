@@ -54,7 +54,7 @@ export function AgreementContainer({ agreement, relatedItems }: Props) {
         Retrouvez l&apos;intégralité de la convention collective sur Légifrance
       </Link>
 
-      <FrequentQuestions answers={agreement.answers} />
+      <FrequentQuestions answers={agreement.answers} agreementSlug={agreement.slug} />
       <AgreementArticles
         articlesByTheme={agreement.articlesByTheme}
         containerId={agreement.id}
