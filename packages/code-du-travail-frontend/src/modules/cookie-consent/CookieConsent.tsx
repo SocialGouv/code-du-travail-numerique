@@ -89,7 +89,12 @@ export const CookieConsentDSFR = ({ heatmapEnabled, adsEnabled }: Props) => {
   return (
     <>
       {showBanner && !showModal && (
-        <section className="fr-consent-banner" id="fr-consent-banner">
+        <section
+          className="fr-consent-banner"
+          id="fr-consent-banner"
+          inert={isAnyModalOpen || undefined}
+          style={isAnyModalOpen ? { zIndex: 0 } : undefined}
+        >
           <div className={fr.cx("fr-container")}>
             <div className="fr-consent-banner__content">
               <p className="fr-consent-banner__title">
@@ -325,5 +330,5 @@ const manageButton = css({
   position: "fixed",
   bottom: "1rem",
   right: "1rem",
-  zIndex: 1000,
+  zIndex: 999,
 });
