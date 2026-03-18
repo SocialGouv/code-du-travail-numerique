@@ -92,7 +92,7 @@ test.describe("Header agreement selector", () => {
 
     // Check the selected agreement card displays the agreement info
     const agreementCard = page.locator(
-      "#agreement-modal [data-testid='header-selected-agreement-card']"
+      "#agreement-modal #selected-agreement-name"
     );
     await expect(agreementCard).toBeVisible();
     await expect(agreementCard).toContainText("2247");
