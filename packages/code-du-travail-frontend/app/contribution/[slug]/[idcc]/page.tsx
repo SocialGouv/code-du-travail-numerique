@@ -1,6 +1,6 @@
 import React from "react";
 import { DsfrLayout } from "../../../../src/modules/layout";
-import { notFound, permanentRedirect } from "next/navigation";
+import { notFound } from "next/navigation";
 import { generateDefaultMetadata } from "../../../../src/modules/common/metas";
 import {
   ContributionLayout,
@@ -22,10 +22,6 @@ export async function generateMetadata(props) {
 async function ContributionByAgreement(props) {
   const params = await props.params;
   const contribution = await fetchContribution(params.slug, params.idcc);
-
-  if (/^\d+$/.test(params.idcc) && contribution.ccnSlug) {
-    permanentRedirect(`/contribution/${params.slug}/${contribution.ccnSlug}`);
-  }
 
   return (
     <DsfrLayout>
