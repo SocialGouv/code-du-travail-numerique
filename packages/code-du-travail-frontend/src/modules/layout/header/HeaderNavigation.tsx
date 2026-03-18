@@ -11,14 +11,12 @@ type HeaderNavigationProps = {
   navigation?: NavigationItem[];
   currentPath: string;
   onAgreementClick?: () => void;
-  isAgreementOpen?: boolean;
 };
 
 export const HeaderNavigation = ({
   navigation,
   currentPath,
   onAgreementClick,
-  isAgreementOpen,
 }: HeaderNavigationProps) => {
   const handleMobileAgreementClick = useCallback(() => {
     // Close the DSFR burger menu before opening the agreement modal

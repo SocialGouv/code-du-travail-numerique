@@ -25,7 +25,6 @@ export const HeaderSearchV2 = ({
       <div className={toolsRow}>
         <Button
           id="fr-header-search-button-desktop"
-          title="Rechercher"
           aria-controls="search-modal"
           aria-expanded={isSearchOpen}
           aria-haspopup="dialog"
