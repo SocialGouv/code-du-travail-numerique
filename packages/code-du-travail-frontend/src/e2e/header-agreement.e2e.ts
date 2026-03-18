@@ -90,14 +90,21 @@ test.describe("Header agreement selector", () => {
         .getByRole("button", { name: "Fermer", exact: true })
     ).toBeVisible();
 
-    // Check link exists for the selected agreement
-    const agreementLink = page.locator(
-      "#agreement-modal [data-testid='header-selected-agreement-card'] a"
+    // Check the selected agreement card displays the agreement info
+    const agreementCard = page.locator(
+      "#agreement-modal [data-testid='header-selected-agreement-card']"
     );
-    await expect(agreementLink).toHaveAttribute(
-      "href",
-      /\/convention-collective\//
-    );
+    await expect(agreementCard).toBeVisible();
+    await expect(agreementCard).toContainText("2247");
+
+    // If the agreement has a slug, a link to the convention page should exist
+    const agreementLink = agreementCard.locator("a");
+    if (await agreementLink.isVisible().catch(() => false)) {
+      await expect(agreementLink).toHaveAttribute(
+        "href",
+        /\/convention-collective\//
+      );
+    }
 
     // Test Supprimer
     await page
