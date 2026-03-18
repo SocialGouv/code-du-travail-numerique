@@ -56,13 +56,11 @@ test.describe("Conventions collectives", () => {
         .first()
         .click();
 
-      await expect(
-        page.locator("#frequent-questions-list-0")
-      ).toBeAttached();
+      await expect(page.locator("#frequent-questions-list-0")).toBeAttached();
 
-      await expect(
-        page.locator("#frequent-questions-list-0 li")
-      ).toHaveCount(3);
+      await expect(page.locator("#frequent-questions-list-0 li")).toHaveCount(
+        3
+      );
 
       await expect(page.locator("#agreement-articles")).toBeAttached();
 
@@ -102,27 +100,21 @@ test.describe("Conventions collectives", () => {
       page,
     }) => {
       await page.goto("/convention-collective/0650");
-      await expect(page).toHaveURL(
-        "/convention-collective/3248-metallurgie"
-      );
+      await expect(page).toHaveURL("/convention-collective/3248-metallurgie");
     });
 
     test("je suis redirigé vers la cc si je mets l'idcc en 3 chiffres", async ({
       page,
     }) => {
       await page.goto("/convention-collective/650");
-      await expect(page).toHaveURL(
-        "/convention-collective/3248-metallurgie"
-      );
+      await expect(page).toHaveURL("/convention-collective/3248-metallurgie");
     });
 
     test("je suis redirigé vers la cc si je mets l'idcc en 4 chiffres et deux zeros", async ({
       page,
     }) => {
       await page.goto("/convention-collective/0054");
-      await expect(page).toHaveURL(
-        "/convention-collective/3248-metallurgie"
-      );
+      await expect(page).toHaveURL("/convention-collective/3248-metallurgie");
     });
 
     test("je ne dois pas être redirigé s'il n'y a pas de redirection", async ({

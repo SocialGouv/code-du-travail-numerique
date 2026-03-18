@@ -36,7 +36,9 @@ test.describe("Header agreement selector", () => {
     await openHeaderAgreementModal(page);
 
     // Ensure the autocomplete input is visible within the modal
-    const input = page.locator("#agreement-modal #header-agreement-search-autocomplete");
+    const input = page.locator(
+      "#agreement-modal #header-agreement-search-autocomplete"
+    );
     await expect(input).toBeVisible();
 
     // Click and focus the input, then type
@@ -80,9 +82,7 @@ test.describe("Header agreement selector", () => {
         .getByRole("button", { name: "Supprimer" })
     ).toBeVisible();
     await expect(
-      page
-        .locator("#agreement-modal")
-        .getByRole("button", { name: "Modifier" })
+      page.locator("#agreement-modal").getByRole("button", { name: "Modifier" })
     ).toBeVisible();
     await expect(
       page
