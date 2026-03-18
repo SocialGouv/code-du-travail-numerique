@@ -17,12 +17,9 @@ jest.mock("../../utils/consent", () => ({
   ConsentType: {},
 }));
 
-jest.mock(
-  "../../convention-collective/AgreementSelectionModal",
-  () => ({
-    useAgreementModal: () => ({ isOpen: false }),
-  })
-);
+jest.mock("../../convention-collective/AgreementSelectionModal", () => ({
+  useAgreementModal: () => ({ isOpen: false }),
+}));
 
 jest.mock("../../recherche/modal/SearchModalContext", () => ({
   useSearchModal: () => ({ isOpen: false }),

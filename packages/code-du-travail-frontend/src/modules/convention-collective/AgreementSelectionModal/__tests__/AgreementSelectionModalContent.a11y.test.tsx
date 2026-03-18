@@ -311,9 +311,7 @@ describe("AgreementSelectionModalContent - Accessibility", () => {
       render(<AgreementSelectionModalContent onClose={mockOnClose} />);
 
       await act(async () => {
-        await user.click(
-          screen.getByRole("button", { name: "Modifier" })
-        );
+        await user.click(screen.getByRole("button", { name: "Modifier" }));
       });
 
       // Allow React to process state updates and effects

@@ -23,9 +23,9 @@ export const AgreementSelectionModalContent = ({ onClose, isOpen }: Props) => {
   const { emitSelectEvent, emitConsultEvent } = useHeaderAgreementTracking();
   const [isEditing, setIsEditing] = useState(false);
   const [liveRegionMessage, setLiveRegionMessage] = useState("");
-  const [focusTarget, setFocusTarget] = useState<
-    "selected" | "title" | null
-  >(null);
+  const [focusTarget, setFocusTarget] = useState<"selected" | "title" | null>(
+    null
+  );
   const selectedLabelRef = useRef<HTMLParagraphElement>(null);
 
   useEffect(() => {
