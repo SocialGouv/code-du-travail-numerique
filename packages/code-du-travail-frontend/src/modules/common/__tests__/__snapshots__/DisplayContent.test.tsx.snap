@@ -882,6 +882,170 @@ exports[`DisplayContent Tables should replace td by th in thead 1`] = `
 </table>
 `;
 
+exports[`DisplayContent Tables should skip colgroup 1`] = `
+<div>
+  <div
+    class="fr-table fr-mb-2w"
+  >
+    <div
+      class="fr-table__wrapper"
+    >
+      <div
+        class="fr-table__container"
+      >
+        <div
+          class="fr-table__content"
+        >
+          <table>
+            <caption
+              class="fr-hidden"
+            >
+              
+      
+            </caption>
+            <thead>
+              <tr>
+                <th
+                  colspan="1"
+                  rowspan="1"
+                  scope="col"
+                >
+                  <p>
+                    Ancienneté 
+                  </p>
+                </th>
+                <th
+                  colspan="1"
+                  rowspan="1"
+                  scope="col"
+                >
+                  <p>
+                    Jours de congés supplémentaires 
+                  </p>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td
+                  colspan="1"
+                  rowspan="1"
+                >
+                  
+        
+                  <p>
+                    à partir de 5 ans 
+                  </p>
+                  
+      
+                </td>
+                <td
+                  colspan="1"
+                  rowspan="1"
+                >
+                  
+        
+                  <p>
+                    1 
+                    <webcomponent-tooltip
+                      content="Jour%20effectivement%20travaill%C3%A9%20dans%20une%20entreprise%20ou%20une%20administration.%20On%20en%20compte%205%20par%20semaine."
+                    >
+                      jour ouvré
+                    </webcomponent-tooltip>
+                    
+        
+                  </p>
+                  
+      
+                </td>
+              </tr>
+              <tr>
+                <td
+                  colspan="1"
+                  rowspan="1"
+                >
+                  
+        
+                  <p>
+                    à partir de 10 ans 
+                  </p>
+                  
+      
+                </td>
+                <td
+                  colspan="1"
+                  rowspan="1"
+                >
+                  
+        
+                  <p>
+                    2 jours ouvrés
+                  </p>
+                  
+      
+                </td>
+              </tr>
+              <tr>
+                <td
+                  colspan="1"
+                  rowspan="1"
+                >
+                  
+        
+                  <p>
+                    à partir de 15 ans 
+                  </p>
+                  
+      
+                </td>
+                <td
+                  colspan="1"
+                  rowspan="1"
+                >
+                  
+        
+                  <p>
+                    3 jours ouvrés
+                  </p>
+                  
+      
+                </td>
+              </tr>
+              <tr>
+                <td
+                  colspan="1"
+                  rowspan="1"
+                >
+                  
+        
+                  <p>
+                    à partir de 20 ans 
+                  </p>
+                  
+      
+                </td>
+                <td
+                  colspan="1"
+                  rowspan="1"
+                >
+                  
+        
+                  <p>
+                    4 jours ouvrés
+                  </p>
+                  
+      
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`DisplayContent should keep whitespace in specific tag 1`] = `
 <p
   class="fr-mt-2w"

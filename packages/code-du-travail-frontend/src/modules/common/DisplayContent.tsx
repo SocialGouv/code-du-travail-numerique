@@ -283,7 +283,13 @@ const options = (params: Options): HTMLReactParserOptions => {
           );
         }
         if (domNode.name === "table") {
-          const tableContent = getFirstElementChild(domNode);
+          // Trouver le tbody en ignorant les colgroup
+          let tableContent = getFirstElementChild(domNode);
+          while (tableContent && tableContent.name === "colgroup") {
+            tableContent = getNextFirstElement(tableContent) as
+              | Element
+              | undefined;
+          }
           if (tableContent?.name === "tbody") {
             return mapTbody(tableContent);
           } else {

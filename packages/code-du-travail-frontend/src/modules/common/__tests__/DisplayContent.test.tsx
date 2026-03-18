@@ -427,6 +427,67 @@ describe("DisplayContent", () => {
 
       expect(baseElement.firstChild).toMatchSnapshot();
     });
+
+    it("should skip colgroup", () => {
+      const { baseElement } = render(
+        <DisplayContent
+          content={`
+<table style="min-width: 50px;">
+  <colgroup>
+    <col style="min-width: 25px;">
+    <col style="min-width: 25px;">
+  </colgroup>
+  <tbody>
+    <tr>
+      <td colspan="1" rowspan="1">
+        <p>Ancienneté&nbsp;</p>
+      </td>
+      <td colspan="1" rowspan="1">
+        <p>Jours de congés supplémentaires&nbsp;</p>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="1" rowspan="1">
+        <p>à partir de 5 ans&nbsp;</p>
+      </td>
+      <td colspan="1" rowspan="1">
+        <p>1 <webcomponent-tooltip content="Jour%20effectivement%20travaill%C3%A9%20dans%20une%20entreprise%20ou%20une%20administration.%20On%20en%20compte%205%20par%20semaine.">jour ouvré</webcomponent-tooltip>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="1" rowspan="1">
+        <p>à partir de 10 ans&nbsp;</p>
+      </td>
+      <td colspan="1" rowspan="1">
+        <p>2 jours&nbsp;ouvrés</p>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="1" rowspan="1">
+        <p>à partir de 15 ans&nbsp;</p>
+      </td>
+      <td colspan="1" rowspan="1">
+        <p>3 jours&nbsp;ouvrés</p>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="1" rowspan="1">
+        <p>à partir de 20 ans&nbsp;</p>
+      </td>
+      <td colspan="1" rowspan="1">
+        <p>4 jours&nbsp;ouvrés</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+`}
+          titleLevel={3}
+        ></DisplayContent>
+      );
+
+      expect(baseElement.firstChild).toMatchSnapshot();
+    });
   });
 
   it(`should return html`, () => {
