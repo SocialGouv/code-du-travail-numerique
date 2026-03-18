@@ -1,5 +1,10 @@
 [
   {
+    "source": "/contribution/:idcc(\\d+)-les-conges-pour-evenements-familiaux",
+    "permanent": true,
+    "destination": "/contribution/les-conges-pour-evenements-familiaux/:idcc"
+  },
+  {
     "destination": "/themes/:slug",
     "permanent": true,
     "source": "/themes/:id(\\d{1,})-:slug"

@@ -9,6 +9,7 @@ import { SourceData } from "../layout/SourceData";
 import { ContributionGeneric } from "./ContributionGeneric";
 import { ContributionAgreement } from "./ContributionAgreement";
 import { BreadcrumbListJsonLd } from "../seo/jsonld";
+import { removeCCNumberFromSlug } from "../utils/removeCCNumberFromSlug";
 
 type Props = {
   contribution: Contribution;
@@ -17,24 +18,56 @@ type Props = {
 export function ContributionLayout({ contribution }: Props) {
   const { date, title, isGeneric, isFicheSP } = contribution;
 
+  const genericSlug = !isGeneric
+    ? removeCCNumberFromSlug(contribution.slug)
+    : undefined;
+  const hasNewBreadcrumb =
+    !isGeneric && genericSlug === "les-conges-pour-evenements-familiaux";
+
+  const breadcrumbSegments = contribution.breadcrumbs.map((breadcrumb) => ({
+    label: breadcrumb.label,
+    linkProps: { href: breadcrumb.slug },
+  }));
+
+  const currentPageLabel = hasNewBreadcrumb
+    ? `${contribution.ccnShortTitle} (IDCC ${contribution.idcc})`
+    : title;
+
+  if (hasNewBreadcrumb) {
+    breadcrumbSegments.push({
+      label: title,
+      linkProps: { href: `/contribution/${genericSlug}` },
+    });
+  }
+
   return (
     <>
       <BreadcrumbListJsonLd
-        currentPageLabel={title}
-        items={contribution.breadcrumbs.map((breadcrumb) => ({
-          label: breadcrumb.label,
-          href: breadcrumb.slug,
-        }))}
+        currentPageLabel={currentPageLabel}
+        items={
+          hasNewBreadcrumb
+            ? [
+                ...contribution.breadcrumbs.map((breadcrumb) => ({
+                  label: breadcrumb.label,
+                  href: breadcrumb.slug,
+                })),
+                {
+                  label: title,
+                  href: `/contribution/${genericSlug}`,
+                },
+              ]
+            : contribution.breadcrumbs.map((breadcrumb) => ({
+                label: breadcrumb.label,
+                href: breadcrumb.slug,
+              }))
+        }
       />
       <Breadcrumb
-        currentPageLabel={title}
+        currentPageLabel={currentPageLabel}
         homeLinkProps={{
           href: "/",
         }}
-        segments={contribution.breadcrumbs.map((breadcrumb) => ({
-          label: breadcrumb.label,
-          linkProps: { href: breadcrumb.slug },
-        }))}
+        segments={breadcrumbSegments}
       />
       <h1 className={fr.cx("fr-mb-0")}>
         {title}

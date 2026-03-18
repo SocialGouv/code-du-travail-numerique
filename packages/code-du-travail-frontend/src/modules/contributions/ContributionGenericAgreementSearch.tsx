@@ -131,7 +131,11 @@ export function ContributionGenericAgreementSearch({
             onClick={(event) => {
               onDisplayClick(isValid && !!selectedAgreement);
               if (isValid && selectedAgreement) {
-                router.push(`/contribution/${selectedAgreement?.num}-${slug}`);
+                router.push(
+                  slug === "les-conges-pour-evenements-familiaux"
+                    ? `/contribution/${slug}/${selectedAgreement?.slug || selectedAgreement?.num}`
+                    : `/contribution/${selectedAgreement?.num}-${slug}`
+                );
               } else {
                 event.preventDefault();
               }

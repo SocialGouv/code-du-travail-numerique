@@ -30,4 +30,14 @@ describe("generateSearchLink", () => {
 
     expect(result).toBe("/themes/parent-theme#child-theme");
   });
+
+  it("should slugify the anchor in theme links for consistency", () => {
+    const source = SOURCES.THEMES;
+    const slug = "Entretien professionnel (CEP)";
+    const parentSlug = "formation";
+
+    const result = generateSearchLink(source, slug, undefined, parentSlug);
+
+    expect(result).toBe("/themes/formation#entretien-professionnel-cep");
+  });
 });
