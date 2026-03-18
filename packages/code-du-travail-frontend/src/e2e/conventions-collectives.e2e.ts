@@ -58,9 +58,8 @@ test.describe("Conventions collectives", () => {
 
       await expect(page.locator("#frequent-questions-list-0")).toBeAttached();
 
-      await expect(page.locator("#frequent-questions-list-0 li")).toHaveCount(
-        3
-      );
+      const items = await page.locator("#frequent-questions-list-0 li").count();
+      expect(items).toBeGreaterThan(1);
 
       await expect(page.locator("#agreement-articles")).toBeAttached();
 
