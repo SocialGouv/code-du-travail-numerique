@@ -1,10 +1,7 @@
 import React from "react";
 import { render, screen, act } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import {
-  AgreementSelectionModalContent,
-  AGREEMENT_A11Y_MESSAGES,
-} from "../AgreementSelectionModalContent";
+import { AgreementSelectionModalContent } from "../AgreementSelectionModalContent";
 
 // Mock AgreementSelectionForm
 jest.mock("../AgreementSelectionForm", () => ({
@@ -114,9 +111,7 @@ describe("AgreementSelectionModalContent - Accessibility", () => {
 
       const liveRegion = screen.getByRole("status");
       expect(liveRegion.textContent).toBe(
-        AGREEMENT_A11Y_MESSAGES.AGREEMENT_SAVED(
-          "Bureaux d'études techniques (IDCC 1486)"
-        )
+        "Convention collective Bureaux d'études techniques (IDCC 1486) enregistrée avec succès"
       );
     });
   });
@@ -151,53 +146,61 @@ describe("AgreementSelectionModalContent - Accessibility", () => {
       };
     });
 
-    it("should display the selected agreement with proper semantics", () => {
+    it("should display the selected agreement card without region role", () => {
       render(<AgreementSelectionModalContent onClose={mockOnClose} />);
 
       const selectedCard = screen.getByTestId("header-selected-agreement-card");
       expect(selectedCard).toBeInTheDocument();
-      expect(selectedCard).toHaveAttribute("role", "region");
-      expect(selectedCard).toHaveAttribute(
-        "aria-labelledby",
-        "agreement-selection-label"
-      );
+      expect(selectedCard).not.toHaveAttribute("role");
+      expect(selectedCard).not.toHaveAttribute("aria-labelledby");
     });
 
-    it("should have a label for the selected agreement region", () => {
+    it("should have a label for the selected agreement", () => {
       render(<AgreementSelectionModalContent onClose={mockOnClose} />);
 
       const label = screen.getByText("Convention collective sélectionnée :");
       expect(label).toHaveAttribute("id", "agreement-selection-label");
+      expect(label).toHaveAttribute("tabindex", "-1");
     });
 
-    it("should have Supprimer, Modifier and Fermer buttons", () => {
+    it("should have Supprimer, Modifier and Fermer buttons with aria-describedby", () => {
       render(<AgreementSelectionModalContent onClose={mockOnClose} />);
 
-      expect(
-        screen.getByRole("button", {
-          name: /Supprimer la convention collective sélectionnée/i,
-        })
-      ).toBeInTheDocument();
-      expect(
-        screen.getByRole("button", {
-          name: /Modifier la convention collective sélectionnée/i,
-        })
-      ).toBeInTheDocument();
+      const deleteButton = screen.getByRole("button", { name: "Supprimer" });
+      expect(deleteButton).toBeInTheDocument();
+      expect(deleteButton).toHaveAttribute(
+        "aria-describedby",
+        "selected-agreement-name"
+      );
+
+      const editButton = screen.getByRole("button", { name: "Modifier" });
+      expect(editButton).toBeInTheDocument();
+      expect(editButton).toHaveAttribute(
+        "aria-describedby",
+        "selected-agreement-name"
+      );
+
       expect(
         screen.getByRole("button", { name: "Fermer" })
       ).toBeInTheDocument();
     });
 
+    it("should not have aria-label on Supprimer and Modifier buttons", () => {
+      render(<AgreementSelectionModalContent onClose={mockOnClose} />);
+
+      const deleteButton = screen.getByRole("button", { name: "Supprimer" });
+      expect(deleteButton).not.toHaveAttribute("aria-label");
+
+      const editButton = screen.getByRole("button", { name: "Modifier" });
+      expect(editButton).not.toHaveAttribute("aria-label");
+    });
+
     it("should have buttons with type=button", () => {
       render(<AgreementSelectionModalContent onClose={mockOnClose} />);
 
-      const deleteButton = screen.getByRole("button", {
-        name: /Supprimer la convention collective sélectionnée/i,
-      });
+      const deleteButton = screen.getByRole("button", { name: "Supprimer" });
       const closeButton = screen.getByRole("button", { name: "Fermer" });
-      const editButton = screen.getByRole("button", {
-        name: /Modifier la convention collective sélectionnée/i,
-      });
+      const editButton = screen.getByRole("button", { name: "Modifier" });
 
       expect(deleteButton).toHaveAttribute("type", "button");
       expect(closeButton).toHaveAttribute("type", "button");
@@ -209,16 +212,14 @@ describe("AgreementSelectionModalContent - Accessibility", () => {
 
       render(<AgreementSelectionModalContent onClose={mockOnClose} />);
 
-      const deleteButton = screen.getByRole("button", {
-        name: /Supprimer la convention collective sélectionnée/i,
-      });
+      const deleteButton = screen.getByRole("button", { name: "Supprimer" });
       await user.click(deleteButton);
 
       expect(mockClearAgreement).toHaveBeenCalled();
       expect(mockOnClose).toHaveBeenCalled();
     });
 
-    it("should render agreement name as a link when slug is defined", () => {
+    it("should render agreement name as a link inside a container with id for aria-describedby", () => {
       render(<AgreementSelectionModalContent onClose={mockOnClose} />);
 
       const link = screen.getByRole("link", {
@@ -229,6 +230,9 @@ describe("AgreementSelectionModalContent - Accessibility", () => {
         "href",
         "/convention-collective/1486-bureaux-detudes-techniques"
       );
+
+      const card = screen.getByTestId("header-selected-agreement-card");
+      expect(card).toHaveAttribute("id", "selected-agreement-name");
     });
 
     it("should not show warning alert when CC is supported by a simulator", () => {
@@ -254,6 +258,73 @@ describe("AgreementSelectionModalContent - Accessibility", () => {
       expect(
         screen.getByTestId("agreement-not-treated-warning")
       ).toBeInTheDocument();
+    });
+  });
+
+  describe("Focus management", () => {
+    it("should focus selected label after selecting an agreement", async () => {
+      const user = userEvent.setup({
+        delay: null,
+        advanceTimers: jest.advanceTimersByTime,
+      });
+
+      render(<AgreementSelectionModalContent onClose={mockOnClose} />);
+
+      const selectBtn = screen.getByTestId("select-agreement-btn");
+
+      await act(async () => {
+        await user.click(selectBtn);
+      });
+
+      // Allow React to process state updates and effects
+      await act(async () => {
+        jest.advanceTimersByTime(0);
+      });
+
+      const selectedLabel = screen.getByText(
+        "Convention collective sélectionnée :"
+      );
+      expect(document.activeElement).toBe(selectedLabel);
+    });
+
+    it("should focus modal title after clicking Modifier", async () => {
+      currentAgreement = {
+        num: 1486,
+        shortTitle: "Bureaux d'études techniques",
+        id: "1486",
+        slug: "1486-bureaux-detudes-techniques",
+        title: "Convention collective des bureaux d'études techniques",
+        contributions: true,
+      };
+
+      // Create the modal title element in the DOM (normally rendered by AgreementModal)
+      const modalTitle = document.createElement("h1");
+      modalTitle.id = "agreement-modal-title";
+      modalTitle.tabIndex = -1;
+      document.body.appendChild(modalTitle);
+
+      const user = userEvent.setup({
+        delay: null,
+        advanceTimers: jest.advanceTimersByTime,
+      });
+
+      render(<AgreementSelectionModalContent onClose={mockOnClose} />);
+
+      await act(async () => {
+        await user.click(
+          screen.getByRole("button", { name: "Modifier" })
+        );
+      });
+
+      // Allow React to process state updates and effects
+      await act(async () => {
+        jest.advanceTimersByTime(0);
+      });
+
+      expect(document.activeElement).toBe(modalTitle);
+
+      // Clean up
+      document.body.removeChild(modalTitle);
     });
   });
 });

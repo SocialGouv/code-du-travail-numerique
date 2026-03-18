@@ -14,6 +14,8 @@ import { Button } from "@codegouvfr/react-dsfr/Button";
 import { ToggleSwitch } from "@codegouvfr/react-dsfr/ToggleSwitch";
 import { fr } from "@codegouvfr/react-dsfr";
 import Link from "../common/Link";
+import { useAgreementModal } from "../convention-collective/AgreementSelectionModal";
+import { useSearchModal } from "../recherche/modal/SearchModalContext";
 
 type Props = {
   heatmapEnabled: boolean;
@@ -24,6 +26,9 @@ export const CookieConsentDSFR = ({ heatmapEnabled, adsEnabled }: Props) => {
   const [consent, setConsent] = useState<ConsentType>(DEFAULT_CONSENT);
   const [showBanner, setShowBanner] = useState(false);
   const [showModal, setShowModal] = useState(false);
+  const { isOpen: isAgreementModalOpen } = useAgreementModal();
+  const { isOpen: isSearchModalOpen } = useSearchModal();
+  const isAnyModalOpen = isAgreementModalOpen || isSearchModalOpen;
 
   useEffect(() => {
     const storedConsent = getStoredConsent();
@@ -242,7 +247,6 @@ export const CookieConsentDSFR = ({ heatmapEnabled, adsEnabled }: Props) => {
               >
                 <li>
                   <Button
-                    title="Tout refuser"
                     onClick={handleRefuseAll}
                     priority="secondary"
                     className={fr.cx("fr-my-1v")}
@@ -252,7 +256,6 @@ export const CookieConsentDSFR = ({ heatmapEnabled, adsEnabled }: Props) => {
                 </li>
                 <li>
                   <Button
-                    title="Tout accepter"
                     onClick={handleAcceptAll}
                     priority="secondary"
                     className={fr.cx("fr-my-1v")}
@@ -262,7 +265,6 @@ export const CookieConsentDSFR = ({ heatmapEnabled, adsEnabled }: Props) => {
                 </li>
                 <li>
                   <Button
-                    title="Enregistrer"
                     onClick={handleSavePreferences}
                     className={fr.cx("fr-my-1v")}
                   >
@@ -276,11 +278,10 @@ export const CookieConsentDSFR = ({ heatmapEnabled, adsEnabled }: Props) => {
       )}
 
       {!showBanner && (
-        <div className={manageButton}>
+        <div className={manageButton} inert={isAnyModalOpen || undefined}>
           <button
             className={fr.cx("fr-btn", "fr-btn--secondary", "fr-btn--sm")}
             onClick={() => setShowModal(true)}
-            title="Gérer les cookies"
             aria-label="Gérer les cookies"
           >
             <span className={fr.cx("fr-sr-only")}>Gérer les cookies</span>

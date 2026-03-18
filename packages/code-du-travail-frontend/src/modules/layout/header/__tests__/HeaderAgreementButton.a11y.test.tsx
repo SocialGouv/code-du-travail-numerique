@@ -39,7 +39,7 @@ describe("HeaderAgreementButton - Accessibility", () => {
       render(
         <HeaderAgreementButton
           id="test-button"
-          isOpen={false}
+
           onClick={mockOnClick}
         />
       );
@@ -48,37 +48,24 @@ describe("HeaderAgreementButton - Accessibility", () => {
       expect(button).toHaveAttribute("aria-haspopup", "dialog");
     });
 
-    it("should have aria-expanded=false when modal is closed", () => {
+    it("should not have aria-expanded (not appropriate for dialog triggers)", () => {
       render(
         <HeaderAgreementButton
           id="test-button"
-          isOpen={false}
+
           onClick={mockOnClick}
         />
       );
 
       const button = screen.getByTestId("header-agreement-button");
-      expect(button).toHaveAttribute("aria-expanded", "false");
-    });
-
-    it("should have aria-expanded=true when modal is open", () => {
-      render(
-        <HeaderAgreementButton
-          id="test-button"
-          isOpen={true}
-          onClick={mockOnClick}
-        />
-      );
-
-      const button = screen.getByTestId("header-agreement-button");
-      expect(button).toHaveAttribute("aria-expanded", "true");
+      expect(button).not.toHaveAttribute("aria-expanded");
     });
 
     it("should have aria-controls pointing to the agreement modal", () => {
       render(
         <HeaderAgreementButton
           id="test-button"
-          isOpen={false}
+
           onClick={mockOnClick}
         />
       );
@@ -91,7 +78,7 @@ describe("HeaderAgreementButton - Accessibility", () => {
       render(
         <HeaderAgreementButton
           id="test-button"
-          isOpen={false}
+
           onClick={mockOnClick}
         />
       );
@@ -104,7 +91,7 @@ describe("HeaderAgreementButton - Accessibility", () => {
       render(
         <HeaderAgreementButton
           id="test-button"
-          isOpen={false}
+
           onClick={mockOnClick}
         />
       );
@@ -112,14 +99,27 @@ describe("HeaderAgreementButton - Accessibility", () => {
       const button = screen.getByTestId("header-agreement-button");
       expect(button).toHaveAttribute("aria-describedby", "test-button-tooltip");
     });
-  });
 
-  describe("Tooltip", () => {
-    it("should render a tooltip with the full title", () => {
+    it("should not have a title attribute (redundant with visible text)", () => {
       render(
         <HeaderAgreementButton
           id="test-button"
-          isOpen={false}
+
+          onClick={mockOnClick}
+        />
+      );
+
+      const button = screen.getByTestId("header-agreement-button");
+      expect(button).not.toHaveAttribute("title");
+    });
+  });
+
+  describe("Tooltip", () => {
+    it("should render a tooltip with instructions when no agreement selected", () => {
+      render(
+        <HeaderAgreementButton
+          id="test-button"
+
           onClick={mockOnClick}
         />
       );
@@ -132,13 +132,13 @@ describe("HeaderAgreementButton - Accessibility", () => {
       );
     });
 
-    it("should render tooltip with agreement details when selected", () => {
+    it("should render tooltip with modify action and agreement details when selected", () => {
       agreementValue = mockAgreement;
 
       render(
         <HeaderAgreementButton
           id="test-button"
-          isOpen={false}
+
           onClick={mockOnClick}
         />
       );
@@ -146,40 +146,7 @@ describe("HeaderAgreementButton - Accessibility", () => {
       const tooltip = document.getElementById("test-button-tooltip");
       expect(tooltip).toBeInTheDocument();
       expect(tooltip).toHaveTextContent(
-        "Ma convention collective : IDCC 1486 - Bureaux d'études techniques"
-      );
-    });
-  });
-
-  describe("Button title and accessible name", () => {
-    it("should have a descriptive title when no agreement is selected", () => {
-      render(
-        <HeaderAgreementButton
-          id="test-button"
-          isOpen={false}
-          onClick={mockOnClick}
-        />
-      );
-
-      const button = screen.getByTestId("header-agreement-button");
-      expect(button).toHaveAttribute("title", "Ma convention collective");
-    });
-
-    it("should include agreement details in the title when selected", () => {
-      agreementValue = mockAgreement;
-
-      render(
-        <HeaderAgreementButton
-          id="test-button"
-          isOpen={false}
-          onClick={mockOnClick}
-        />
-      );
-
-      const button = screen.getByTestId("header-agreement-button");
-      expect(button).toHaveAttribute(
-        "title",
-        "Ma convention collective : IDCC 1486 - Bureaux d'études techniques"
+        "Modifier ma convention collective : IDCC 1486 - Bureaux d'études techniques"
       );
     });
   });
@@ -189,7 +156,7 @@ describe("HeaderAgreementButton - Accessibility", () => {
       render(
         <HeaderAgreementButton
           id="test-button"
-          isOpen={false}
+
           onClick={mockOnClick}
         />
       );
@@ -206,7 +173,7 @@ describe("HeaderAgreementButton - Accessibility", () => {
       render(
         <HeaderAgreementButton
           id="test-button"
-          isOpen={false}
+
           onClick={mockOnClick}
         />
       );
@@ -223,7 +190,7 @@ describe("HeaderAgreementButton - Accessibility", () => {
       render(
         <HeaderAgreementButton
           id="test-button"
-          isOpen={false}
+
           onClick={mockOnClick}
         />
       );

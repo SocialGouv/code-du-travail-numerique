@@ -79,7 +79,6 @@ export const HeaderDsfr = ({ navigation, currentPath }: Props) => {
               onSearchClick={handleSearchToggle}
               isSearchOpen={isOpen}
               onAgreementClick={handleAgreementToggle}
-              isAgreementOpen={isAgreementOpen}
             />
           </div>
         </div>

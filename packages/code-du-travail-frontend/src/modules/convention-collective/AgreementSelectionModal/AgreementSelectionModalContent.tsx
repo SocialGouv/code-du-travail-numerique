@@ -18,26 +18,32 @@ type Props = {
   isOpen?: boolean;
 };
 
-export const AGREEMENT_A11Y_MESSAGES = {
-  AGREEMENT_SAVED: (title: string) =>
-    `Convention collective ${title} enregistrée avec succès`,
-  AGREEMENT_CLEARED:
-    "Convention collective supprimée. Vous pouvez en sélectionner une nouvelle.",
-  AGREEMENT_EDITING: "Mode modification activé",
-} as const;
-
 export const AgreementSelectionModalContent = ({ onClose, isOpen }: Props) => {
   const { agreement, setAgreement, clearAgreement } = useAgreementStorageSync();
   const { emitSelectEvent, emitConsultEvent } = useHeaderAgreementTracking();
   const [isEditing, setIsEditing] = useState(false);
   const [liveRegionMessage, setLiveRegionMessage] = useState("");
-  const editButtonRef = useRef<HTMLButtonElement>(null);
+  const [focusTarget, setFocusTarget] = useState<
+    "selected" | "title" | null
+  >(null);
+  const selectedLabelRef = useRef<HTMLParagraphElement>(null);
 
   useEffect(() => {
     if (!isOpen) {
       setIsEditing(false);
     }
   }, [isOpen]);
+
+  // Handle focus after render when view changes
+  useEffect(() => {
+    if (focusTarget === "selected" && selectedLabelRef.current) {
+      selectedLabelRef.current.focus();
+      setFocusTarget(null);
+    } else if (focusTarget === "title") {
+      document.getElementById("agreement-modal-title")?.focus();
+      setFocusTarget(null);
+    }
+  }, [focusTarget]);
 
   const announceToScreenReader = (message: string) => {
     // Clear then re-set to ensure screen readers re-announce
@@ -50,25 +56,23 @@ export const AgreementSelectionModalContent = ({ onClose, isOpen }: Props) => {
   const handleSelect = (nextAgreement: Agreement) => {
     setAgreement(nextAgreement);
     setIsEditing(false);
+    setFocusTarget("selected");
     emitSelectEvent(
       `idcc${nextAgreement.num}`,
       isCcSupportedByAnySimulator(nextAgreement.num)
     );
     announceToScreenReader(
-      AGREEMENT_A11Y_MESSAGES.AGREEMENT_SAVED(
-        `${nextAgreement.shortTitle} (IDCC ${nextAgreement.num})`
-      )
+      `Convention collective ${nextAgreement.shortTitle} (IDCC ${nextAgreement.num}) enregistrée avec succès`
     );
   };
 
   const handleEdit = () => {
     setIsEditing(true);
-    announceToScreenReader(AGREEMENT_A11Y_MESSAGES.AGREEMENT_EDITING);
+    setFocusTarget("title");
   };
 
   const handleDelete = () => {
     clearAgreement();
-    announceToScreenReader(AGREEMENT_A11Y_MESSAGES.AGREEMENT_CLEARED);
     onClose();
   };
 
@@ -96,6 +100,8 @@ export const AgreementSelectionModalContent = ({ onClose, isOpen }: Props) => {
           <p
             className={fr.cx("fr-mb-2w", "fr-text--bold", "fr-text--lg")}
             id="agreement-selection-label"
+            ref={selectedLabelRef}
+            tabIndex={-1}
           >
             Convention collective sélectionnée :
           </p>
@@ -103,8 +109,7 @@ export const AgreementSelectionModalContent = ({ onClose, isOpen }: Props) => {
           <div
             className={selectedCard}
             data-testid="header-selected-agreement-card"
-            role="region"
-            aria-labelledby="agreement-selection-label"
+            id="selected-agreement-name"
           >
             {agreement.slug ? (
               <Link
@@ -142,18 +147,17 @@ export const AgreementSelectionModalContent = ({ onClose, isOpen }: Props) => {
             onClick={handleDelete}
             type="button"
             className={dangerButton}
-            aria-label="Supprimer la convention collective sélectionnée"
+            aria-describedby="selected-agreement-name"
           >
             Supprimer
           </Button>
           <Button
-            ref={editButtonRef}
             priority="secondary"
             iconId="fr-icon-arrow-go-back-line"
             iconPosition="right"
             onClick={handleEdit}
             type="button"
-            aria-label="Modifier la convention collective sélectionnée"
+            aria-describedby="selected-agreement-name"
           >
             Modifier
           </Button>

@@ -17,6 +17,17 @@ jest.mock("../../utils/consent", () => ({
   ConsentType: {},
 }));
 
+jest.mock(
+  "../../convention-collective/AgreementSelectionModal",
+  () => ({
+    useAgreementModal: () => ({ isOpen: false }),
+  })
+);
+
+jest.mock("../../recherche/modal/SearchModalContext", () => ({
+  useSearchModal: () => ({ isOpen: false }),
+}));
+
 describe("ConsentManager with manage cookies button", () => {
   beforeEach(() => {
     localStorage.setItem("cdtn-cookie-consent-given", "true");
@@ -56,7 +67,7 @@ describe("ConsentManager with manage cookies button", () => {
     const button = screen.getByRole("button", {
       name: /Gérer les cookies/i,
     });
-    expect(button).toHaveAttribute("title", "Gérer les cookies");
+    expect(button).not.toHaveAttribute("title");
     expect(button).toHaveAttribute("aria-label", "Gérer les cookies");
   });
 });

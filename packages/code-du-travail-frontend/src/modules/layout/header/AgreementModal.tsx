@@ -145,7 +145,6 @@ export const AgreementModal = ({ isOpen, onClose }: Props) => {
           <div className={closeButtonContainer}>
             <button
               className={`${fr.cx("fr-btn", "fr-btn--tertiary-no-outline", "fr-icon-close-line", "fr-btn--sm")} ${closeButton}`}
-              title="Fermer la fenêtre de sélection de convention collective"
               aria-label="Fermer la fenêtre de sélection de convention collective"
               onClick={handleClose}
               ref={closeButtonRef}
@@ -156,6 +155,7 @@ export const AgreementModal = ({ isOpen, onClose }: Props) => {
           <h1
             id="agreement-modal-title"
             className={`${fr.cx("fr-mb-2w", "fr-h4")} ${modalTitle}`}
+            tabIndex={-1}
           >
             Personnaliser mes réponses avec ma convention collective
           </h1>
