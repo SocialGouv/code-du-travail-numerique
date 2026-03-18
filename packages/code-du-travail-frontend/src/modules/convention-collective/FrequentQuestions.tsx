@@ -6,12 +6,14 @@ import { ElasticAgreement } from "@socialgouv/cdtn-types";
 import { AccordionWithAnchor } from "../common/AccordionWithAnchor";
 import { fr } from "@codegouvfr/react-dsfr";
 import Link from "../common/Link";
+import { removeCCNumberFromSlug } from "../utils/removeCCNumberFromSlug";
 
 type Props = {
   answers: ElasticAgreement["answers"];
+  agreementSlug?: string;
 };
 
-export function FrequentQuestions({ answers }: Props) {
+export function FrequentQuestions({ answers, agreementSlug }: Props) {
   if (!answers || answers.length === 0) {
     return null;
   }
@@ -35,16 +37,24 @@ export function FrequentQuestions({ answers }: Props) {
           title: group.theme,
           content: (
             <ul id={`frequent-questions-list-${index}`}>
-              {group.answers.map((item) => (
-                <li key={item.slug} data-testid="frequent-question-item">
-                  <Link
-                    href={`/${getRouteBySource(SOURCES.CONTRIBUTIONS)}/${item.slug}`}
-                    data-testid={`frequent-question-link-${item.slug}`}
-                  >
-                    {item.question}
-                  </Link>
-                </li>
-              ))}
+              {group.answers.map((item) => {
+                const genericSlug = removeCCNumberFromSlug(item.slug);
+                const href =
+                  genericSlug === "les-conges-pour-evenements-familiaux" &&
+                  agreementSlug
+                    ? `/contribution/${genericSlug}/${agreementSlug}`
+                    : `/${getRouteBySource(SOURCES.CONTRIBUTIONS)}/${item.slug}`;
+                return (
+                  <li key={item.slug} data-testid="frequent-question-item">
+                    <Link
+                      href={href}
+                      data-testid={`frequent-question-link-${item.slug}`}
+                    >
+                      {item.question}
+                    </Link>
+                  </li>
+                );
+              })}
             </ul>
           ),
         }))}
