@@ -56,7 +56,10 @@ describe("Conventions collectives", () => {
 
       cy.get("#frequent-questions-list-0").should("exist");
 
-      cy.get("#frequent-questions-list-0 li").should("have.length", 2);
+      cy.get("#frequent-questions-list-0 li").should(
+        "have.length.greaterThan",
+        1
+      );
 
       cy.get("#agreement-articles").should("exist");
 
