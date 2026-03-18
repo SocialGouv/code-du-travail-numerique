@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.220.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.219.0...v4.220.0) (2026-03-18)
+
+
+### Bug Fixes
+
+* **contribution:** ajout de la gestion des nouveaux tableaux avec colgroup ([#7172](https://github.com/SocialGouv/code-du-travail-numerique/issues/7172)) ([72f68ca](https://github.com/SocialGouv/code-du-travail-numerique/commit/72f68cae208f25d794f916ffff9ffbf81472c5e5))
+* **recherche:** gestion des liens sur les sous-thèmes  ([#7171](https://github.com/SocialGouv/code-du-travail-numerique/issues/7171)) ([15a30e9](https://github.com/SocialGouv/code-du-travail-numerique/commit/15a30e9e15bb7fd0b2871067da87002dda0256f9))
+* **recherche:** utilisation du `displayTitle` pour les simulateurs ([#7162](https://github.com/SocialGouv/code-du-travail-numerique/issues/7162)) ([7c6dc79](https://github.com/SocialGouv/code-du-travail-numerique/commit/7c6dc7957f56b5131b5a6a723216094032f48166))
+
+
+### Features
+
+* **navigation:** ajout d'un icon au niveau du menu déroulant sur `Voir tous les ...` ([#7164](https://github.com/SocialGouv/code-du-travail-numerique/issues/7164)) ([c4aceb8](https://github.com/SocialGouv/code-du-travail-numerique/commit/c4aceb87015e470911bc15e70801b7f3fcdc9abd))
+
+
+
+
+
 # [4.219.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.218.0...v4.219.0) (2026-03-13)
 
 
