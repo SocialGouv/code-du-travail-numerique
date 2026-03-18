@@ -68,21 +68,26 @@ export const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
     }
   }, [pendingFocus, hasSearched, isLoading, results.length]);
 
-  const handleClose = useCallback(() => {
-    onClose();
+  const handleClose = useCallback(
+    (shouldFocusSearchButton = true) => {
+      onClose();
 
-    setTimeout(() => {
-      const searchButton = document.getElementById(
-        isBelow("lg")
-          ? "fr-header-search-button"
-          : "fr-header-search-button-desktop"
-      ) as HTMLButtonElement;
+      if (shouldFocusSearchButton) {
+        setTimeout(() => {
+          const searchButton = document.getElementById(
+            isBelow("lg")
+              ? "fr-header-search-button"
+              : "fr-header-search-button-desktop"
+          ) as HTMLButtonElement;
 
-      if (searchButton) {
-        searchButton.focus();
+          if (searchButton) {
+            searchButton.focus();
+          }
+        }, 100);
       }
-    }, 100);
-  }, [isBelow, onClose]);
+    },
+    [isBelow, onClose]
+  );
 
   useEffect(() => {
     if (isOpen) {
@@ -177,7 +182,7 @@ export const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
               iconId="fr-icon-close-line"
               iconPosition="right"
               title="Fermer"
-              onClick={handleClose}
+              onClick={() => handleClose()}
               priority="tertiary no outline"
               className={closeButton}
               ref={closeButtonRef}
@@ -215,7 +220,7 @@ export const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
             <SearchResults
               results={results}
               queryClass={queryClass as PresearchClass}
-              onResultClick={handleClose}
+              onResultClick={() => handleClose(false)}
               contextType="modal"
               titleRef={resultsTitleRef}
             />

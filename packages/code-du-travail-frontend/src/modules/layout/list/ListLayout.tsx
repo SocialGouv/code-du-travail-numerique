@@ -132,11 +132,14 @@ export const ListLayout = ({
       }
     };
 
-    handleHashChange();
+    // Delay initial hash handling to ensure any scroll blocking
+    // (e.g. from search modal) has been removed
+    const timer = setTimeout(handleHashChange, SCROLL_DELAY_MS);
 
     window.addEventListener("hashchange", handleHashChange);
 
     return () => {
+      clearTimeout(timer);
       window.removeEventListener("hashchange", handleHashChange);
     };
   }, []);
