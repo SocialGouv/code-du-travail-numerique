@@ -1,14 +1,13 @@
-import { useState, useEffect, useCallback } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { fetchSearchResults } from "../api/fetchSearchResults";
 import { useSearchTracking } from "../tracking";
-import {
-  PresearchClass,
-  SearchResult,
-} from "src/api/modules/search/service/types";
+import type { SearchResultResponse } from "src/api/modules/search/type";
+import { PresearchClass } from "src/api/modules/search/service/types";
 
-interface UseSearchResultsReturn {
-  results: SearchResult[];
-  queryClass?: PresearchClass;
+type UseSearchResultsReturn = {
+  definition: SearchResultResponse["definition"];
+  results: SearchResultResponse["results"];
+  queryClass: SearchResultResponse["class"];
   lastPresearchQuery?: string;
   isLoading: boolean;
   hasSearched: boolean;
@@ -16,11 +15,15 @@ interface UseSearchResultsReturn {
   resetSearch: () => void;
   query: string;
   setQuery: (s: string) => void;
-}
+};
 
 export const useSearchResults = (): UseSearchResultsReturn => {
-  const [results, setResults] = useState<SearchResult[]>([]);
-  const [queryClass, setQueryClass] = useState<PresearchClass>();
+  const [definition, setDefinition] =
+    useState<SearchResultResponse["definition"]>(undefined);
+  const [results, setResults] = useState<SearchResultResponse["results"]>([]);
+  const [queryClass, setQueryClass] = useState<SearchResultResponse["class"]>(
+    PresearchClass.UNKNOWN
+  );
   const [lastPresearchQuery, setLastPresearchQuery] = useState<string>();
   const [isLoading, setIsLoading] = useState(false);
   const [hasSearched, setHasSearched] = useState(false);
@@ -35,17 +38,21 @@ export const useSearchResults = (): UseSearchResultsReturn => {
       setHasSearched(true);
 
       try {
-        const { results: fetchedResults, class: fetchedClass } =
-          await fetchSearchResults(queryToUse);
+        const {
+          results: fetchedResults,
+          class: fetchedClass,
+          definition: fetchedDefinition,
+        } = await fetchSearchResults(queryToUse);
+        setDefinition(fetchedDefinition);
         setResults(fetchedResults);
         setQueryClass(fetchedClass);
         setLastPresearchQuery(queryToUse);
-        emitPresearchEvent(queryToUse, fetchedClass);
+        emitPresearchEvent(queryToUse, fetchedClass, definition?.term);
         emitMatomoTrackSiteSearch(queryToUse);
       } catch (error) {
         console.error("Error fetching search results:", error);
         setResults([]);
-        setQueryClass(undefined);
+        setQueryClass(PresearchClass.UNKNOWN);
         setLastPresearchQuery(undefined);
       } finally {
         setIsLoading(false);
@@ -55,8 +62,9 @@ export const useSearchResults = (): UseSearchResultsReturn => {
   );
 
   const resetSearch = useCallback(() => {
+    setDefinition(undefined);
     setResults([]);
-    setQueryClass(undefined);
+    setQueryClass(PresearchClass.UNKNOWN);
     setLastPresearchQuery(undefined);
     setHasSearched(false);
     setIsLoading(false);
@@ -70,6 +78,7 @@ export const useSearchResults = (): UseSearchResultsReturn => {
   }, [resetSearch]);
 
   return {
+    definition,
     results,
     queryClass,
     lastPresearchQuery,

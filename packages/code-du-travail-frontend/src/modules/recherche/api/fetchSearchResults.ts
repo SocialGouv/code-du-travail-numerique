@@ -1,13 +1,8 @@
-import { PresearchClass, SearchResult } from "src/api";
-
-export interface FetchSearchResultsResponse {
-  results: SearchResult[];
-  class: PresearchClass;
-}
+import { SearchResultResponse } from "../../../api/modules/search/type";
 
 export const fetchSearchResults = async (
   query: string
-): Promise<FetchSearchResultsResponse> => {
+): Promise<SearchResultResponse> => {
   const response = await fetch(`/api/presearch?q=${encodeURIComponent(query)}`);
 
   if (!response.ok) {

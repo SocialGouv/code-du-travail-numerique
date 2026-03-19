@@ -17,3 +17,5 @@ export type GlossaryLetter = {
 };
 
 export type GlossaryByLetter = GlossaryLetter[];
+
+export type GlossarySearchResult = { term: string; definition: string };

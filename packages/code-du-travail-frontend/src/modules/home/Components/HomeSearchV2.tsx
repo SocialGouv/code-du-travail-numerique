@@ -16,6 +16,7 @@ export const HomeSearchV2 = () => {
   const noResultMessageRef = useRef<HTMLParagraphElement>(null);
   const [pendingFocus, setPendingFocus] = useState(false);
   const {
+    definition,
     results,
     queryClass,
     lastPresearchQuery,
@@ -71,6 +72,7 @@ export const HomeSearchV2 = () => {
 
       {hasSearched && !isLoading && (
         <SearchResults
+          definition={definition}
           results={results}
           queryClass={queryClass as PresearchClass}
           contextType="home"

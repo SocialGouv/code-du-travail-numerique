@@ -1,6 +1,6 @@
 import { routeBySource } from "@socialgouv/cdtn-utils";
 import { useCallback, useRef } from "react";
-import { sendEvent, push } from "@socialgouv/matomo-next";
+import { push, sendEvent } from "@socialgouv/matomo-next";
 import { MatomoBaseEvent } from "../analytics/types";
 import { PresearchClass, SearchResult } from "src/api";
 import { generateSearchLink } from "./utils";
@@ -135,10 +135,11 @@ export const useSearchTracking = () => {
   }, []);
 
   const emitPresearchEvent = useCallback(
-    (query: string, queryClass: PresearchClass) => {
+    (query: string, queryClass: PresearchClass, definition?: string) => {
       const name = JSON.stringify({
         query: query.trim(),
         class: queryClass,
+        definition,
       });
       sendEvent({
         category: MatomoSearchCategory.SEARCH,
