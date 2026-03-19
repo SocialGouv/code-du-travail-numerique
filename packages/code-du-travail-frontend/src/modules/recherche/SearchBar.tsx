@@ -10,9 +10,13 @@ import { useSearchTracking } from "./tracking";
 
 type SearchBarProps = {
   initialValue?: string;
+  showLabel?: boolean;
 };
 
-export const SearchBar = ({ initialValue = "" }: SearchBarProps) => {
+export const SearchBar = ({
+  initialValue = "",
+  showLabel = false,
+}: SearchBarProps) => {
   const router = useRouter();
   const formRef = useRef<HTMLFormElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
@@ -59,9 +63,18 @@ export const SearchBar = ({ initialValue = "" }: SearchBarProps) => {
       <Autocomplete<string>
         id="search-bar-autocomplete"
         key={key}
-        label="Recherchez sur le site, la sélection d'une option charge une nouvelle page"
+        label={
+          showLabel
+            ? "Que souhaitez-vous savoir ?"
+            : "Recherchez sur le site, la sélection d'une option charge une nouvelle page"
+        }
+        hintText={
+          showLabel
+            ? "par exemple : Comment sont comptés les congés pendant les arrêts maladies ?"
+            : undefined
+        }
         placeholder="Recherchez sur le site"
-        isSearch
+        isSearch={!showLabel}
         displayLabel={(data) => data ?? ""}
         search={search}
         onError={onError}
