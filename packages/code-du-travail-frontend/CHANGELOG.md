@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.221.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.220.0...v4.221.0) (2026-03-23)
+
+
+### Bug Fixes
+
+* **a11y:** mise en place des retours sur la modale de selection de la convention collective ([#7175](https://github.com/SocialGouv/code-du-travail-numerique/issues/7175)) ([2b85813](https://github.com/SocialGouv/code-du-travail-numerique/commit/2b85813dd05c73989cb0006f50a9f57a77018a57))
+* **e2e:** correction des tests e2e suite à l'ajout d'une contribution ([#7174](https://github.com/SocialGouv/code-du-travail-numerique/issues/7174)) ([00380e0](https://github.com/SocialGouv/code-du-travail-numerique/commit/00380e00951fd5e6af671124317cfbec3b612ad8))
+
+
+### Features
+
+* **infographie:** ajout des infographies dans la recherche + outil ([#7170](https://github.com/SocialGouv/code-du-travail-numerique/issues/7170)) ([adc7197](https://github.com/SocialGouv/code-du-travail-numerique/commit/adc7197124de45d9822b195bf4493472fb4dd610))
+* **search:** ajout de la définition sur la recherche ([#7177](https://github.com/SocialGouv/code-du-travail-numerique/issues/7177)) ([562aaab](https://github.com/SocialGouv/code-du-travail-numerique/commit/562aaabde73f97c215175e1b0951bb948a8ec0a7))
+* **seo:** changement du schema d'url pour la contribution `les-conges-pour-evenements-familiaux` ([#7165](https://github.com/SocialGouv/code-du-travail-numerique/issues/7165)) ([e5927ac](https://github.com/SocialGouv/code-du-travail-numerique/commit/e5927acb301eff4e91897e20f961e1560f96d933))
+
+
+
+
+
 # [4.220.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.219.0...v4.220.0) (2026-03-18)
 
 
