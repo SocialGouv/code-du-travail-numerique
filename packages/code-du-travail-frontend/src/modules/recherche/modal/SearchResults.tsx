@@ -4,16 +4,19 @@ import { SearchResultCard } from "./SearchResultCard";
 import { useRef } from "react";
 import { useSearchTracking } from "../tracking";
 import { SearchResult } from "src/api";
+import { SearchResultResponse } from "src/api/modules/search/type";
 
 interface Props {
-  results: SearchResult[];
-  queryClass: string;
+  definition: SearchResultResponse["definition"];
+  results: SearchResultResponse["results"];
+  queryClass: SearchResultResponse["class"];
   onResultClick?: () => void;
   contextType: "home" | "modal";
   titleRef?: React.RefObject<HTMLHeadingElement | null>;
 }
 
 export const SearchResults = ({
+  definition,
   results,
   queryClass,
   onResultClick,
@@ -61,7 +64,11 @@ export const SearchResults = ({
           </h2>
         )}
       </div>
-
+      {definition && (
+        <p className={fr.cx("fr-mt-3w")}>
+          <strong>{definition.term}</strong> : {definition.definition}
+        </p>
+      )}
       <ul
         className={`${resultListStyle} ${fr.cx("fr-grid-row", "fr-grid-row--gutters", "fr-mt-3w")}`}
         role="list"

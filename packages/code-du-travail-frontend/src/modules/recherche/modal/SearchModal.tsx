@@ -3,15 +3,14 @@
 import { fr } from "@codegouvfr/react-dsfr";
 import { Button } from "@codegouvfr/react-dsfr/Button";
 import { css } from "@styled-system/css";
-import { SearchInput, ModalSearchHandle } from "./SearchInput";
+import { ModalSearchHandle, SearchInput } from "./SearchInput";
 import { SearchResults } from "./SearchResults";
-import { useEffect, useRef, useCallback, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { HintList } from "./HintList";
 import { useSearchResults } from "../hooks/useSearchResults";
 import { useHints } from "../hooks/useHints";
 import useScrollBlock from "../../utils/useScrollBlock";
 import { useBreakpoints } from "src/modules/common/useBreakpoints";
-import { PresearchClass } from "src/api";
 
 interface SearchModalProps {
   isOpen: boolean;
@@ -29,6 +28,7 @@ export const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
   const [pendingFocus, setPendingFocus] = useState(false);
 
   const {
+    definition,
     results,
     queryClass,
     lastPresearchQuery,
@@ -218,8 +218,9 @@ export const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
 
           {hasSearched && !isLoading && (
             <SearchResults
+              definition={definition}
               results={results}
-              queryClass={queryClass as PresearchClass}
+              queryClass={queryClass}
               onResultClick={() => handleClose(false)}
               contextType="modal"
               titleRef={resultsTitleRef}
