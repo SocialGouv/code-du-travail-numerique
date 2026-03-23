@@ -2,7 +2,8 @@
 import React from "react";
 import { fr } from "@codegouvfr/react-dsfr";
 import { Card } from "@codegouvfr/react-dsfr/Card";
-import { summarize } from "../utils";
+import { css } from "@styled-system/css";
+import DisplayContent from "../common/DisplayContent";
 
 type SearchCardProps = {
   id?: string;
@@ -42,7 +43,11 @@ export const SearchCard: React.FC<SearchCardProps> = ({
           href: link,
           onClick: onClick,
         }}
-        desc={summarize(description)}
+        desc={
+          <span className={contentLimited}>
+            <DisplayContent titleLevel={2} content={description} />
+          </span>
+        }
         classes={{
           start: hiddenHeader ? fr.cx("fr-hidden") : fr.cx("fr-mb-2w"),
         }}
@@ -50,3 +55,14 @@ export const SearchCard: React.FC<SearchCardProps> = ({
     </div>
   );
 };
+
+const contentLimited = css({
+  display: "-webkit-box !important",
+  // @ts-expect-error - vendor prefixed properties
+  WebkitBoxOrient: "vertical",
+  WebkitLineClamp: 2,
+  overflow: "hidden",
+  textOverflow: "ellipsis",
+  overflowWrap: "break-word",
+  whiteSpace: "normal", // Important : force le retour à la ligne
+});

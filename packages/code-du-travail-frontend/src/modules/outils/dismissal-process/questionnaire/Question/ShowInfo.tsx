@@ -25,7 +25,7 @@ export const ShowInfo = ({
       className={fr.cx("fr-mt-1w")}
       onClick={() => {
         setQuestionnaireSlug(slug);
-        const destination = `/information/${slug}#contenu`;
+        const destination = `/infographie/${slug}`;
         if (widgetMode) {
           window.open(`${SITE_URL}${destination}`);
           return;
