@@ -6,7 +6,6 @@ import { HeaderAgreementButton } from "./HeaderAgreementButton";
 type HeaderSearchProps = {
   onSearchClick: () => void;
   onAgreementClick: () => void;
-  isAgreementOpen?: boolean;
   isSearchOpen?: boolean;
 };
 
@@ -14,7 +13,6 @@ export const HeaderSearchV2 = ({
   onSearchClick,
   onAgreementClick,
   isSearchOpen,
-  isAgreementOpen,
 }: HeaderSearchProps) => {
   return (
     <div
@@ -27,7 +25,6 @@ export const HeaderSearchV2 = ({
       <div className={toolsRow}>
         <Button
           id="fr-header-search-button-desktop"
-          title="Rechercher"
           aria-controls="search-modal"
           aria-expanded={isSearchOpen}
           aria-haspopup="dialog"
@@ -41,7 +38,6 @@ export const HeaderSearchV2 = ({
         </Button>
         <HeaderAgreementButton
           id="fr-header-agreement-button-desktop"
-          isOpen={!!isAgreementOpen}
           onClick={onAgreementClick}
         />
       </div>

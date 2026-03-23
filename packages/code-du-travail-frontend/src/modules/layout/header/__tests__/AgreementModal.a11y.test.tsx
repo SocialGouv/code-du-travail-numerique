@@ -114,6 +114,15 @@ describe("AgreementModal - Accessibility", () => {
       document.body.removeChild(triggerButton);
       unmount();
     });
+
+    it("should have tabIndex=-1 on modal title for programmatic focus", () => {
+      render(<AgreementModal isOpen={true} onClose={mockOnClose} />);
+
+      const title = screen.getByText(
+        "Personnaliser mes réponses avec ma convention collective"
+      );
+      expect(title).toHaveAttribute("tabindex", "-1");
+    });
   });
 
   describe("Close button accessibility", () => {
@@ -127,13 +136,13 @@ describe("AgreementModal - Accessibility", () => {
       expect(closeButton).toHaveAttribute("type", "button");
     });
 
-    it("should have a descriptive title on the close button", () => {
+    it("should not have a title on the close button (avoid duplication with aria-label)", () => {
       render(<AgreementModal isOpen={true} onClose={mockOnClose} />);
 
-      const closeButton = screen.getByTitle(
+      const closeButton = screen.getByLabelText(
         "Fermer la fenêtre de sélection de convention collective"
       );
-      expect(closeButton).toBeInTheDocument();
+      expect(closeButton).not.toHaveAttribute("title");
     });
   });
 

@@ -8,21 +8,16 @@ import { useBreakpoints } from "src/modules/common/useBreakpoints";
 
 type Props = {
   id: string;
-  isOpen: boolean;
   onClick: () => void;
 };
 
-export const HeaderAgreementButton = ({ id, isOpen, onClick }: Props) => {
+export const HeaderAgreementButton = ({ id, onClick }: Props) => {
   const { agreement } = useAgreementStorageSync();
   const { isBelow } = useBreakpoints();
   const isMobile = isBelow("lg");
 
-  const fullTitle = agreement
-    ? `Ma convention collective : IDCC ${agreement.num} - ${agreement.shortTitle}`
-    : "Ma convention collective";
-
   const tooltipText = agreement
-    ? fullTitle
+    ? `Modifier ma convention collective : IDCC ${agreement.num} - ${agreement.shortTitle}`
     : "Renseignez votre convention collective pour personnaliser nos contenus";
 
   const iconSize = isMobile
@@ -41,11 +36,9 @@ export const HeaderAgreementButton = ({ id, isOpen, onClick }: Props) => {
         }`}
         aria-controls="agreement-modal"
         aria-haspopup="dialog"
-        aria-expanded={isOpen}
         aria-describedby={tooltipId}
         onClick={onClick}
         data-testid="header-agreement-button"
-        title={fullTitle}
       >
         <Image
           src="/static/assets/icons/search_agreement.svg"
@@ -90,9 +83,9 @@ const tooltipWrapper = css({
   position: "relative",
   minWidth: 0,
   maxWidth: "100%",
-  "&:focus-within:not(:hover) .fr-tooltip": {
-    visibility: "hidden!",
-    opacity: "0!",
+  "&:focus-within .fr-tooltip": {
+    visibility: "visible!",
+    opacity: "1!",
   },
 });
 

@@ -208,7 +208,6 @@ export const EnterpriseAgreementSearchInput = ({
           ref={selectedConventionTitleRef}
           className={fr.cx("fr-h4", "fr-mt-2w", "fr-mb-0")}
           tabIndex={-1}
-          id={`selected-convention`}
         >
           Vous avez sélectionné la convention collective
         </TitleTag>
@@ -223,7 +222,10 @@ export const EnterpriseAgreementSearchInput = ({
           <div className={fr.cx("fr-card", "fr-card--sm", "fr-col-10")}>
             <div className={fr.cx("fr-card__body")}>
               <div className={fr.cx("fr-card__content", "fr-py-1w")}>
-                <p className={fr.cx("fr-card__title")}>
+                <p
+                  className={fr.cx("fr-card__title")}
+                  id={"selected-convention"}
+                >
                   {`${selectedAgreement.shortTitle} IDCC ${selectedAgreement.id}`}
                 </p>
               </div>
@@ -251,8 +253,6 @@ export const EnterpriseAgreementSearchInput = ({
               }}
               nativeButtonProps={{
                 "aria-describedby": `selected-convention`,
-                "aria-label": "Modifier la convention collective sélectionnée",
-                title: "Modifier la convention collective sélectionnée",
               }}
             >
               Modifier
