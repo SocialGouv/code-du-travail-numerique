@@ -73,7 +73,7 @@ test.describe("Header Search", () => {
     await searchInput.press("Enter");
 
     await expect(searchModal).toContainText(
-      "Période de suspension du contrat de travail en raison d’une maladie ou d’un accident"
+      "Période pendant laquelle le salarié cesse de travailler en raison de son état de santé"
     );
   });
 });
