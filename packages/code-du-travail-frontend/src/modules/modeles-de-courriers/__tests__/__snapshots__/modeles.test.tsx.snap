@@ -240,7 +240,7 @@ exports[`<LetterModel /> affiche un modèle de document 1`] = `
             class="fr-col-12 fr-col-md"
           >
             <h2
-              class="fr-h5 fr-mb-md-0"
+              class="fr-h5 fr-mb-md-2w"
               id="feedback-title"
             >
               Avez-vous trouvé la réponse à votre question ?

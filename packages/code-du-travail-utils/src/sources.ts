@@ -53,7 +53,7 @@ export const labelBySource = {
   [SOURCES.SHEET_MT_PAGE]: "Ministère du Travail",
   [SOURCES.THEMATIC_FILES]: "Dossiers",
   [SOURCES.THEMES]: "Themes",
-  [SOURCES.TOOLS]: "Outils",
+  [SOURCES.TOOLS]: "Simulateurs",
   [SOURCES.HIGHLIGHTS]: "À la une",
   [SOURCES.PREQUALIFIED]: "Requêtes préqualifiées",
   [SOURCES.GLOSSARY]: "Glossaire",

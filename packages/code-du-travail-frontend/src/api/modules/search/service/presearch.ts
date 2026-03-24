@@ -17,7 +17,6 @@ import {
   SearchResult,
   ThemeSearchResult,
 } from "./types";
-import { getThemeBySlugQuery } from "../../themes/queries";
 import { getBySlugsThemes, getBySlugThemes } from "../../themes";
 
 const keyword_std = [
@@ -230,10 +229,7 @@ const getThemes = async (
           algo: SEARCH_ALGO.PRESEARCH,
           description: `Retrouvez les contenus relatifs au thème : ${match.theme.title}`,
         },
-        ...themeDocs.map((t) => ({
-          ...t,
-          description: `Retrouvez les contenus relatifs au thème : ${t.title}`,
-        })),
+        ...themeDocs,
       ]
     : [];
 };

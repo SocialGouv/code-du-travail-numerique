@@ -36,7 +36,7 @@ test.describe("Header Search", () => {
 
     await expect(page).toHaveURL(/\/recherche\?query=cong%C3%A9/);
     await expect(
-      page.getByRole("heading", { level: 1, name: "Rechercher" })
+      page.getByRole("heading", { level: 1, name: "Recherche" })
     ).toBeVisible();
   });
 

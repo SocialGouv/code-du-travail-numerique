@@ -615,7 +615,7 @@ const rootInputCss = css({
 });
 
 const inputStyle = css({
-  padding: "0.75rem 3rem 0.75rem 1rem!",
+  padding: "0.75rem 3.5rem 0.75rem 1rem!",
   width: "100%!",
   boxSizing: "border-box!",
   fontSize: "1rem!",
@@ -646,13 +646,23 @@ const addonBlock = css({
   right: 0,
   height: "100%",
   alignContent: "center",
+  display: "flex",
+  alignItems: "center",
+  paddingRight: "0.5rem",
 });
 
 const buttonClose = css({
-  height: "100%!",
+  minHeight: "44px!",
+  minWidth: "44px!",
   color: "var(--text-default-grey)!",
+  display: "flex!",
+  alignItems: "center!",
+  justifyContent: "center!",
   _hover: {
     backgroundColor: "transparent!",
+  },
+  "& [class*='fr-icon-']": {
+    fontSize: "1.5rem!",
   },
 });
 

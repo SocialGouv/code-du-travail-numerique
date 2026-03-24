@@ -1,33 +1,21 @@
 import { SOURCES } from "@socialgouv/cdtn-utils";
 import { elasticDocumentsIndex, elasticsearchClient } from "../../../utils";
-import {
-  getRelatedArticlesBody,
-  getRelatedThemesBody,
-  getSearchBody,
-} from "../queries";
-import { removeDuplicate } from "../utils";
+import { getRelatedThemesBody, getSearchBody } from "../queries";
+import { esDocToSearchResult, extractHits, removeDuplicate } from "../utils";
 import { getPrequalifiedResults } from "./prequalified";
 import { presearch } from "./presearch";
 import { SEARCH_ALGO, SearchResult } from "./types";
-import { esDocToSearchResult, extractHits } from "../utils";
 
 export const DEFAULT_PRESEARCH_RESULTS_NUMBER = 8;
 
 const MAX_RESULTS = 100;
 const DEFAULT_RESULTS_NUMBER = 25;
-const THEMES_RESULTS_NUMBER = 5;
-const CDT_RESULTS_NUMBER = 5;
-
-const DOCUMENTS_ES = "documents_es";
-const CDT_ES = "cdt_es";
 
 export const searchWithQuery = async (
   query: string,
   sizeParams = DEFAULT_RESULTS_NUMBER,
   withPQ = false
 ): Promise<{
-  articles: SearchResult[];
-  themes: SearchResult[];
   documents: SearchResult[];
   class: string;
 }> => {
@@ -46,11 +34,9 @@ export const searchWithQuery = async (
     SOURCES.INFOGRAPHICS,
   ];
 
-  const articles: SearchResult[] = [];
-
   const esReq = getRelatedThemesBody(query);
   const themes = await elasticsearchClient
-    .search<any>({
+    .search<unknown>({
       index: elasticDocumentsIndex,
       ...esReq,
     })
@@ -70,100 +56,37 @@ export const searchWithQuery = async (
   );
 
   for (const e of mappedPrequa) {
-    if (e.source === SOURCES.CDT) {
-      articles.push(e);
-    } else if (e.source === SOURCES.THEMES) {
-      themes.push(e);
-    } else {
-      documents.push(e);
-    }
+    documents.push(e);
   }
-
-  const searches = {};
-  const shouldRequestCdt = removeDuplicate(articles).length < 5;
 
   // if not enough prequalified results, we also trigger ES search
   if (removeDuplicate(documents).length < size) {
-    searches[DOCUMENTS_ES] = [
-      { index: elasticDocumentsIndex },
-      getSearchBody(query, size, sources),
-    ];
-  }
-
-  if (shouldRequestCdt) {
-    const cdtNumber = CDT_RESULTS_NUMBER - articles.length;
-    searches[CDT_ES] = [
-      { index: elasticDocumentsIndex },
-      getRelatedArticlesBody(query, cdtNumber),
-    ];
-  }
-
-  const results = await msearch(searches);
-
-  const fulltextHits: SearchResult[] = extractHits(results[DOCUMENTS_ES]).map(
-    esDocToSearchResult(SEARCH_ALGO.FULL_TEXT)
-  );
-
-  // Enrich tool results from presearch/prequalified with displayTitle from fulltext
-  const fulltextToolTitles = new Map(
-    fulltextHits
-      .filter((h) => h.source === SOURCES.TOOLS)
-      .map((h) => [h.cdtnId, h.title])
-  );
-  for (const doc of documents) {
-    if (doc.source === SOURCES.TOOLS && fulltextToolTitles.has(doc.cdtnId)) {
-      doc.title = fulltextToolTitles.get(doc.cdtnId)!;
-    }
-  }
-
-  documents.push(...fulltextHits);
-
-  if (shouldRequestCdt) {
-    articles.push(
-      ...extractHits(results[CDT_ES]).map(
-        esDocToSearchResult(SEARCH_ALGO.FULL_TEXT)
-      )
+    const docReq = getSearchBody(query, size, sources);
+    const fulltextHits: SearchResult[] = await elasticsearchClient
+      .search<unknown>({
+        index: elasticDocumentsIndex,
+        ...docReq,
+      })
+      .then((r) =>
+        extractHits(r).map(esDocToSearchResult(SEARCH_ALGO.FULL_TEXT))
+      );
+    // Enrich tool results from presearch/prequalified with displayTitle from fulltext
+    const fulltextToolTitles = new Map(
+      fulltextHits
+        .filter((h) => h.source === SOURCES.TOOLS)
+        .map((h) => [h.cdtnId, h.title])
     );
+
+    for (const doc of documents) {
+      if (doc.source === SOURCES.TOOLS && fulltextToolTitles.has(doc.cdtnId)) {
+        doc.title = fulltextToolTitles.get(doc.cdtnId)!;
+      }
+    }
+    documents.push(...fulltextHits);
   }
 
   return {
-    articles: removeDuplicate(articles),
     documents: removeDuplicate(documents).slice(0, size),
-    themes: removeDuplicate(themes).slice(0, THEMES_RESULTS_NUMBER),
     class: parsed.classes[0],
   };
 };
-
-async function msearch(searches) {
-  const requests: any[] = [];
-  const keys: any[] = [];
-
-  // return an empty object if we receive an empty object
-  if (Object.keys(searches).length === 0) {
-    return {};
-  }
-
-  const entries: any[] = Object.entries(searches);
-
-  for (const [key, [index, query]] of entries) {
-    requests.push(index, query);
-    keys.push(key);
-  }
-
-  const body = await elasticsearchClient.msearch({ body: requests });
-
-  const results = keys.reduce((state, key, index) => {
-    const resp = body.responses[index];
-
-    if (resp.status !== 200) {
-      console.error(
-        `Elastic search error : index ${index}, search key ${key} : ${JSON.stringify(resp, null, 2)}`
-      );
-    }
-
-    state[key] = resp;
-    return state;
-  }, {});
-
-  return results;
-}

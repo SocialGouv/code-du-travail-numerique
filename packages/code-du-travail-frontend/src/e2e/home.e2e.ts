@@ -105,7 +105,7 @@ test.describe("Page d'accueil", () => {
     await page.getByRole("button", { name: "Voir tous les résultats" }).click();
     await expect(page).toHaveURL(/\/recherche\?query=/);
     await expect(
-      page.getByRole("heading", { level: 1, name: "Rechercher" })
+      page.getByRole("heading", { level: 1, name: "Recherche" })
     ).toBeVisible();
   });
 });
