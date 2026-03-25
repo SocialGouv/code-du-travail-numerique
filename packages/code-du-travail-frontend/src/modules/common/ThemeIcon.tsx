@@ -5,5 +5,5 @@ export function ThemeIcon({ name }: { name: string }) {
 
   if (!IconComponent) return undefined;
 
-  return <IconComponent aria-hidden="true" tabIndex={-1} />;
+  return <IconComponent aria-hidden="true" focusable={false} />;
 }
