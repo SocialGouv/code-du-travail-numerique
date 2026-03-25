@@ -59,12 +59,12 @@ exports[`<Home /> should match snapshot 1`] = `
                           <span
                             class="fr-text--md fr-mb-1w"
                           >
-                            Que souhaitez-vous savoir ?
+                            Recherchez par mots-clés
                           </span>
                           <span
                             class="fr-text--sm fr-mb-2w fr-hint-text"
                           >
-                            par exemple : Comment sont comptés les congés pendant les arrêts maladies ?
+                            par exemple : congés payés, durée de préavis
                           </span>
                         </label>
                         <div

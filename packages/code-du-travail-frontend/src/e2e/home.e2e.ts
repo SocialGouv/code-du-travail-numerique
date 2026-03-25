@@ -21,7 +21,7 @@ test.describe("Page d'accueil", () => {
       "Comprendre le droit du travail"
     );
 
-    await expect(page.getByText("Que souhaitez-vous savoir ?")).toBeVisible();
+    await expect(page.getByText("Recherchez par mots-clés")).toBeVisible();
     await expect(page.locator("#search-home-autocomplete")).toBeVisible();
     await expect(
       page.getByRole("button", { name: "Voir tous les résultats" })

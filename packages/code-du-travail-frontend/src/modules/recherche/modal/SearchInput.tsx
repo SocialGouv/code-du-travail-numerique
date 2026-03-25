@@ -175,7 +175,7 @@ export const SearchInput = forwardRef<ModalSearchHandle, ModalSearchProps>(
                   id={modalTitleId}
                   className={fr.cx("fr-text--md", "fr-mb-1w")}
                 >
-                  Que souhaitez-vous savoir ?
+                  Recherchez par mots-clés
                 </h1>
               )}
               <label
@@ -185,7 +185,7 @@ export const SearchInput = forwardRef<ModalSearchHandle, ModalSearchProps>(
               >
                 {contextType === "home" ? (
                   <span className={fr.cx("fr-text--md", "fr-mb-1w")}>
-                    Que souhaitez-vous savoir ?
+                    Recherchez par mots-clés
                   </span>
                 ) : (
                   <span className={fr.cx("fr-sr-only")}>Rechercher</span>
@@ -193,8 +193,7 @@ export const SearchInput = forwardRef<ModalSearchHandle, ModalSearchProps>(
                 <span
                   className={fr.cx("fr-text--sm", "fr-mb-2w", "fr-hint-text")}
                 >
-                  par exemple : Comment sont comptés les congés pendant les
-                  arrêts maladies ?
+                  par exemple : congés payés, durée de préavis
                 </span>
               </label>
               <HomemadeAutocomplete<string>
