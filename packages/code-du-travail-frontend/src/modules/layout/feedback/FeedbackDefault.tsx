@@ -11,7 +11,7 @@ export const FeedbackDefault = (props: Props) => {
   return (
     <div className={fr.cx("fr-grid-row")}>
       <div className="fr-col-12 fr-col-md">
-        <h2 className={fr.cx("fr-h5", "fr-mb-md-0")} id="feedback-title">
+        <h2 className={fr.cx("fr-h5", "fr-mb-md-2w")} id="feedback-title">
           {props.question ?? "Avez-vous trouvé la réponse à votre question ?"}
         </h2>
       </div>

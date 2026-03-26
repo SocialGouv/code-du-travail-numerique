@@ -3,7 +3,7 @@
 import React, { useState, useRef } from "react";
 import { useRouter } from "next/navigation";
 import * as Sentry from "@sentry/nextjs";
-import { Autocomplete } from "../common/Autocomplete";
+import { HomemadeAutocomplete } from "src/modules/common/Autocomplete";
 import { fetchSuggestResults } from "../layout/header/fetchSuggestResults";
 import { SUGGEST_MAX_RESULTS } from "../../config";
 import { useSearchTracking } from "./tracking";
@@ -56,12 +56,12 @@ export const SearchBar = ({ initialValue = "" }: SearchBarProps) => {
 
   return (
     <form role="search" onSubmit={handleSubmit} ref={formRef}>
-      <Autocomplete<string>
+      <HomemadeAutocomplete<string>
         id="search-bar-autocomplete"
         key={key}
-        label="Recherchez sur le site, la sélection d'une option charge une nouvelle page"
-        placeholder="Recherchez sur le site"
-        isSearch
+        label="Recherchez par mots-clés"
+        hintText="par exemple : congés payés, durée de préavis"
+        isSearch={false}
         displayLabel={(data) => data ?? ""}
         search={search}
         onError={onError}
@@ -79,6 +79,8 @@ export const SearchBar = ({ initialValue = "" }: SearchBarProps) => {
         }}
         dataTestId="search-bar-input"
         inputRef={inputRef}
+        defaultValue={initialValue}
+        disableNativeLabelAssociation={false}
       />
     </form>
   );

@@ -49,6 +49,28 @@ describe("SearchPageClient", () => {
   });
 
   const mockItems = {
+    topDocuments: [
+      {
+        cdtnId: "top-doc-1",
+        source: SOURCES.SHEET_MT,
+        slug: "top-document-1",
+        title: "Top Document 1",
+        description: "Top Description 1",
+        algo: SEARCH_ALGO.FULL_TEXT,
+        breadcrumbs: [{ label: "Fiches pratiques", position: 1, slug: "1" }],
+      },
+      {
+        cdtnId: "top-doc-2",
+        source: SOURCES.SHEET_SP,
+        slug: "top-document-2",
+        title: "Top Document 2",
+        description: "Top Description 2",
+        algo: SEARCH_ALGO.FULL_TEXT,
+        breadcrumbs: [
+          { label: "Fiches service public", position: 1, slug: "1" },
+        ],
+      },
+    ],
     documents: [
       {
         cdtnId: "doc-1",
@@ -71,27 +93,7 @@ describe("SearchPageClient", () => {
         ],
       },
     ],
-    themes: [
-      {
-        description: "123",
-        cdtnId: "th1",
-        source: SOURCES.THEMES,
-        slug: "theme-1",
-        parentSlug: "parent-theme",
-        title: "Theme 1",
-        algo: SEARCH_ALGO.FULL_TEXT,
-      },
-    ],
-    articles: [
-      {
-        cdtnId: "art1",
-        source: SOURCES.CDT,
-        slug: "article-1",
-        title: "Article 1",
-        description: "Description 1",
-        algo: SEARCH_ALGO.FULL_TEXT,
-      },
-    ],
+    size: 4,
     class: "keyword",
   };
 
@@ -119,72 +121,6 @@ describe("SearchPageClient", () => {
       undefined,
       mockItems.documents[0].algo,
       undefined
-    );
-  });
-
-  it("should emit next page event when 'Plus de résultats' button is clicked", () => {
-    // Create more documents to trigger the "Plus de résultats" button
-    const manyDocuments = Array(10)
-      .fill(null)
-      .map((_, index) => ({
-        cdtnId: `doc-${index}`,
-        source: SOURCES.SHEET_MT,
-        slug: `document-${index}`,
-        title: `Document ${index}`,
-        description: `Description ${index}`,
-        algo: SEARCH_ALGO.FULL_TEXT,
-        breadcrumbs: [{ label: "Fiches pratiques", position: 1, slug: "1" }],
-      }));
-
-    const itemsWithManyDocuments = {
-      ...mockItems,
-      documents: manyDocuments,
-    };
-
-    render(
-      <SearchPageClient query="test query" items={itemsWithManyDocuments} />
-    );
-
-    // Find and click the "Plus de résultats" button
-    const loadMoreButton = screen.getByText("Plus de résultats");
-    fireEvent.click(loadMoreButton);
-
-    // Check that emitNextPageEvent was called with the query
-    expect(mockEmitNextPageEvent).toHaveBeenCalledWith("test query");
-  });
-
-  it("should emit result selection event when a theme button is clicked", () => {
-    render(<SearchPageClient query="test query" items={mockItems} />);
-
-    // Find and click the theme link (styled as a button)
-    const themeButton = screen.getByRole("link", { name: "Theme 1" });
-    fireEvent.click(themeButton);
-
-    expect(themeButton).toHaveAttribute("href", "/themes/parent-theme#theme-1");
-
-    // Check that emitResultSelectionEvent was called with the correct parameters
-    expect(mockEmitResultSelectionEvent).toHaveBeenCalledWith(
-      mockItems.themes[0].source,
-      mockItems.themes[0].slug,
-      undefined,
-      mockItems.themes[0].algo,
-      mockItems.themes[0].parentSlug
-    );
-  });
-
-  it("should emit result selection event when a code article is clicked", () => {
-    render(<SearchPageClient query="test query" items={mockItems} />);
-
-    // Find and click the code article link
-    const codeArticle = screen.getByRole("link", { name: "article-1" });
-    fireEvent.click(codeArticle);
-
-    // Check that emitResultSelectionEvent was called with the correct parameters
-    expect(mockEmitResultSelectionEvent).toHaveBeenCalledWith(
-      mockItems.articles[0].source,
-      mockItems.articles[0].slug,
-      undefined,
-      mockItems.articles[0].algo
     );
   });
 });

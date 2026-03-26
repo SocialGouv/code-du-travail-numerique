@@ -19,13 +19,6 @@ export type SearchResult = {
   url?: string;
 };
 
-export type SearchResponse = {
-  articles: SearchResult[];
-  themes: SearchResult[];
-  documents: SearchResult[];
-  class: string;
-};
-
 export enum PresearchClass {
   CC = "cc",
   CC_FOUND = "cc_found",

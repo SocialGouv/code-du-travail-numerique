@@ -2,24 +2,22 @@
 
 import React, { useEffect, useRef } from "react";
 import { useSearchParams } from "next/navigation";
-import { Button } from "@codegouvfr/react-dsfr/Button";
 import { fr } from "@codegouvfr/react-dsfr";
-import { Feedback } from "../layout/feedback";
 import { SearchBar } from "./SearchBar";
 import { SearchCard } from "./Card";
-import { SOURCES } from "@socialgouv/cdtn-utils";
 import { ContainerWithBreadcrumbs } from "../layout/ContainerWithBreadcrumbs";
 import { useSearchTracking } from "./tracking";
 import { generateSearchLink } from "./utils";
-import { SEARCH_VISIBLE_ITEMS } from "./constants";
 import { SearchResult } from "src/api";
+import { css } from "@styled-system/css";
+import { Feedback } from "../layout/feedback";
 
 export type SearchPageClientProps = {
   query: string;
   items: {
+    topDocuments: SearchResult[];
     documents: SearchResult[];
-    themes: SearchResult[];
-    articles: SearchResult[];
+    size: number;
     class: string;
   };
 };
@@ -29,16 +27,13 @@ export const SearchPageClient: React.FC<SearchPageClientProps> = ({
   items,
 }) => {
   const searchParams = useSearchParams();
-  const {
-    emitFullsearchEventOnce,
-    emitResultSelectionEvent,
-    emitNextPageEvent,
-  } = useSearchTracking();
+  const { emitFullsearchEventOnce, emitResultSelectionEvent } =
+    useSearchTracking();
 
   // Ref for focusing search results heading
   const searchResultsHeadingRef = useRef<HTMLHeadingElement>(null);
 
-  const { documents, themes, articles, class: klass } = items;
+  const { topDocuments, documents, class: klass, size } = items;
 
   const urlQuery = searchParams?.get("query");
   const query = urlQuery && urlQuery.length > 0 ? urlQuery : initialQuery;
@@ -47,7 +42,6 @@ export const SearchPageClient: React.FC<SearchPageClientProps> = ({
   useEffect(() => {
     if (query && klass) {
       emitFullsearchEventOnce(query, klass);
-      // Focus the search results heading when a search is performed
       const timeout = window.setTimeout(() => {
         searchResultsHeadingRef.current?.focus();
       }, 100);
@@ -56,60 +50,20 @@ export const SearchPageClient: React.FC<SearchPageClientProps> = ({
     }
   }, [query, emitFullsearchEventOnce, klass]);
 
-  const codeArticles = articles.filter(
-    (item) => item.source === SOURCES.CDT && item.slug
-  );
-
-  const [visibleItems, setVisibleItems] = React.useState(8);
-  const hasMoreResults = visibleItems < documents.length;
-
-  const loadMoreResults = () => {
-    emitNextPageEvent(query);
-    const previousVisibleItems = visibleItems;
-    setVisibleItems((prev) =>
-      Math.min(documents.length, prev + SEARCH_VISIBLE_ITEMS)
-    );
-    // Focus on the first newly displayed result's link
-    setTimeout(() => {
-      const newItem =
-        documents.length > previousVisibleItems
-          ? documents[previousVisibleItems]
-          : undefined;
-      if (newItem) {
-        const newItemLink = document.getElementById(
-          `search-result-${newItem.cdtnId}`
-        );
-        if (newItemLink) {
-          newItemLink.focus();
-        }
-      }
-    }, 350);
-  };
-
   return (
     <ContainerWithBreadcrumbs currentPage="Recherche" breadcrumbs={[]}>
-      <h1 className={fr.cx("fr-mt-0", "fr-mb-6w")}>Rechercher</h1>
+      <h1 className={fr.cx("fr-mt-0", "fr-mb-3w")}>Recherche</h1>
 
-      <div className={fr.cx("fr-grid-row", "fr-grid-row--gutters", "fr-mb-6w")}>
-        <div className={fr.cx("fr-col-12", "fr-col-md-4")}>
+      <div className={fr.cx("fr-grid-row", "fr-grid-row--gutters", "fr-mb-5w")}>
+        <div className={fr.cx("fr-col-md-9", "fr-col-12")}>
           <SearchBar key={query} initialValue={query} />
         </div>
       </div>
-
-      {query && (
-        <>
-          <h2
-            ref={searchResultsHeadingRef}
-            className={fr.cx("fr-h4")}
-            lang="fr"
-            tabIndex={-1}
-            id="search-results-heading"
-          >
-            {documents.length} résultat{documents.length > 1 ? "s" : ""} de
-            recherche pour &quot;{query}&quot;
-          </h2>
-
-          {documents.length === 0 ? (
+      {size === 0 ? (
+        <div
+          className={fr.cx("fr-grid-row", "fr-grid-row--gutters", "fr-mb-6w")}
+        >
+          <div className={fr.cx("fr-col-md-9", "fr-col-12")}>
             <div
               className={fr.cx(
                 "fr-alert",
@@ -122,146 +76,114 @@ export const SearchPageClient: React.FC<SearchPageClientProps> = ({
                 Nous n&apos;avons pas trouvé de résultat pour votre recherche.
               </p>
             </div>
-          ) : (
-            <div
-              id="content"
-              className={fr.cx(
-                "fr-grid-row",
-                "fr-grid-row--gutters",
-                "fr-mt-3w"
-              )}
-            >
-              {documents.slice(0, visibleItems).map((item) => {
-                return (
-                  <SearchCard
-                    key={item.cdtnId}
-                    id={`search-result-${item.cdtnId}`}
-                    title={item.title}
-                    description={item.description || ""}
-                    category={
-                      item.source === "code_du_travail"
-                        ? "Code du travail"
-                        : item.breadcrumbs && item.breadcrumbs.length > 0
-                          ? item.breadcrumbs[item.breadcrumbs.length - 1].label
-                          : item.source
-                    }
-                    link={generateSearchLink(
-                      item.source,
-                      item.slug,
-                      item.url,
-                      item.parentSlug
-                    )}
-                    onClick={() =>
-                      emitResultSelectionEvent(
+          </div>
+        </div>
+      ) : (
+        <>
+          <div
+            className={fr.cx("fr-grid-row", "fr-grid-row--gutters", "fr-mb-0")}
+          >
+            <div className={fr.cx("fr-col-md-9", "fr-col-12")}>
+              <h2
+                ref={searchResultsHeadingRef}
+                className={fr.cx("fr-h3")}
+                tabIndex={-1}
+                id="search-results-heading"
+                lang="fr"
+              >
+                Résultat{size > 1 ? "s" : ""}
+                <span className={fr.cx("fr-sr-only")}>
+                  {" "}
+                  de recherche pour &quot;
+                  {query}&quot;
+                </span>
+              </h2>
+              <div id="content" className={topDocumentsContainer}>
+                {topDocuments.map((item) => {
+                  return (
+                    <SearchCard
+                      key={item.cdtnId}
+                      id={`search-result-${item.cdtnId}`}
+                      title={item.title}
+                      description={item.description || ""}
+                      source={item.source}
+                      link={generateSearchLink(
                         item.source,
                         item.slug,
                         item.url,
-                        item.algo,
                         item.parentSlug
-                      )
-                    }
-                  />
-                );
-              })}
-            </div>
-          )}
-
-          {hasMoreResults && (
-            <div
-              className={fr.cx(
-                "fr-mt-3w",
-                "fr-grid-row",
-                "fr-grid-row--center"
-              )}
-            >
-              <div lang="fr">
-                <Button onClick={loadMoreResults} priority="secondary">
-                  Plus de résultats
-                </Button>
-              </div>
-            </div>
-          )}
-
-          <div className={fr.cx("fr-mt-6w")}>
-            <Feedback question="Ces résultats sont-ils pertinents pour votre recherche ?" />
-          </div>
-
-          {codeArticles.length > 0 && (
-            <section className={fr.cx("fr-mt-6w")}>
-              <h2 className={fr.cx("fr-h3")} lang="fr">
-                Articles du code du travail
-              </h2>
-              <div
-                className={fr.cx(
-                  "fr-grid-row",
-                  "fr-grid-row--gutters",
-                  "fr-mt-3w"
-                )}
-              >
-                {codeArticles.map((article) => {
-                  return (
-                    <SearchCard
-                      key={`${article.source}-${article.slug}`}
-                      title={article.slug}
-                      description={article.description || ""}
-                      link={generateSearchLink(article.source, article.slug)}
+                      )}
                       onClick={() =>
                         emitResultSelectionEvent(
-                          article.source,
-                          article.slug,
-                          undefined,
-                          article.algo
+                          item.source,
+                          item.slug,
+                          item.url,
+                          item.algo,
+                          item.parentSlug
                         )
                       }
-                      hiddenHeader
                     />
                   );
                 })}
               </div>
-            </section>
-          )}
-
-          {themes.length > 0 && (
-            <section className={fr.cx("fr-mt-6w")}>
-              <h2 className={fr.cx("fr-h3")} lang="fr">
-                Les thèmes suivants peuvent vous intéresser
-              </h2>
-              <ul
-                className={fr.cx(
-                  "fr-grid-row",
-                  "fr-grid-row--gutters",
-                  "fr-grid-row--center",
-                  "fr-mt-3w",
-                  "fr-raw-list"
-                )}
-              >
-                {themes.map((theme, index) => (
-                  <li key={index} className={fr.cx("fr-mr-2w", "fr-mb-2w")}>
-                    <Button
-                      linkProps={{
-                        href: generateSearchLink(
-                          theme.source,
-                          theme.slug,
-                          theme.url,
-                          theme.parentSlug
-                        ),
-                        onClick: () =>
-                          emitResultSelectionEvent(
-                            theme.source,
-                            theme.slug,
-                            undefined,
-                            theme.algo,
-                            theme.parentSlug
-                          ),
-                      }}
-                      priority="secondary"
-                    >
-                      {theme.title}
-                    </Button>
-                  </li>
-                ))}
-              </ul>
-            </section>
+            </div>
+            <div className={fr.cx("fr-col-md-3", "fr-col-12")}>
+              <Feedback question="Ces résultats sont-ils pertinents pour votre recherche ?" />
+            </div>
+          </div>
+          {documents.length > 0 && (
+            <div
+              className={fr.cx(
+                "fr-grid-row",
+                "fr-grid-row--gutters",
+                "fr-mb-6w"
+              )}
+            >
+              <div className={fr.cx("fr-col-md-9", "fr-col-12")}>
+                <h2 className={fr.cx("fr-h3", "fr-mt-3w")} lang="fr">
+                  Pour aller plus loin
+                </h2>
+                <div
+                  id="results"
+                  className={fr.cx(
+                    "fr-grid-row",
+                    "fr-grid-row--gutters",
+                    "fr-mt-3w"
+                  )}
+                >
+                  {documents.map((item) => {
+                    return (
+                      <div
+                        key={item.cdtnId}
+                        className={fr.cx("fr-col-md-6", "fr-col-12")}
+                      >
+                        <SearchCard
+                          id={`search-result-${item.cdtnId}`}
+                          title={item.title}
+                          description={item.description || ""}
+                          source={item.source}
+                          link={generateSearchLink(
+                            item.source,
+                            item.slug,
+                            item.url,
+                            item.parentSlug
+                          )}
+                          onClick={() =>
+                            emitResultSelectionEvent(
+                              item.source,
+                              item.slug,
+                              item.url,
+                              item.algo,
+                              item.parentSlug
+                            )
+                          }
+                        />
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
           )}
         </>
       )}
@@ -270,3 +192,7 @@ export const SearchPageClient: React.FC<SearchPageClientProps> = ({
     </ContainerWithBreadcrumbs>
   );
 };
+
+const topDocumentsContainer = css({
+  columns: [1, 2, 3],
+});

@@ -1,8 +1,8 @@
 import { Metadata } from "next";
-import { searchWithQuery } from "../../src/api";
-import { SearchPageClient } from "../../src/modules/recherche";
+import { SearchPageClient } from "src/modules/recherche";
 import { DsfrLayout } from "src/modules/layout";
 import { SearchPageClientProps } from "src/modules/recherche/SearchPageClient";
+import search from "src/modules/recherche/query";
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
@@ -32,14 +32,14 @@ export default async function SearchPage(props: SearchPageProps) {
   const query = searchParams.query || "";
 
   let items: SearchPageClientProps["items"] = {
-    articles: [],
+    topDocuments: [],
     documents: [],
-    themes: [],
     class: "",
+    size: 0,
   };
 
   if (query) {
-    items = await searchWithQuery(query, 25, true);
+    items = await search(query);
   }
 
   return (

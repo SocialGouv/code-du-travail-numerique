@@ -13,6 +13,7 @@ describe("<SearchCard />", () => {
     description:
       "Description détaillée du document qui sera résumée par la fonction summarize",
     link: "/chemin/vers/document",
+    source: undefined,
   };
 
   beforeEach(() => {
@@ -34,9 +35,9 @@ describe("<SearchCard />", () => {
   });
 
   it("should render with category", () => {
-    render(<SearchCard {...defaultProps} category="Catégorie Test" />);
+    render(<SearchCard {...defaultProps} source="contributions" />);
 
-    expect(screen.getByText("Catégorie Test")).toBeInTheDocument();
+    expect(screen.getByText("FICHE")).toBeInTheDocument();
   });
 
   it("should not render category when not provided", () => {
@@ -55,14 +56,6 @@ describe("<SearchCard />", () => {
     fireEvent.click(link);
 
     expect(mockOnClick).toHaveBeenCalledTimes(1);
-  });
-
-  it("should render in a grid column", () => {
-    const { container } = render(<SearchCard {...defaultProps} />);
-
-    // Vérifier que la carte est dans une colonne de grille
-    const gridColumn = container.querySelector(".fr-col-12.fr-col-md-6");
-    expect(gridColumn).toBeInTheDocument();
   });
 
   it("should pass horizontal prop to Card component", () => {

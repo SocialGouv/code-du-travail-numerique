@@ -24,7 +24,12 @@ jest.mock("../../layout/header/fetchSuggestResults", () => ({
 
 // Mock the Autocomplete component
 jest.mock("../../common/Autocomplete", () => ({
-  Autocomplete: ({ onInputValueChange, onChange, search, dataTestId }) => {
+  HomemadeAutocomplete: ({
+    onInputValueChange,
+    onChange,
+    search,
+    dataTestId,
+  }) => {
     // Simulate the search function to get suggestions
     const handleSearch = async () => {
       const suggestions = await search("test");
