@@ -222,7 +222,7 @@ describe("SearchInput - Accessibility", () => {
       );
 
       // The label should be visible (not sr-only)
-      const label = screen.getByText("Que souhaitez-vous savoir ?");
+      const label = screen.getByText("Recherchez par mots-clés");
       expect(label).toBeInTheDocument();
       expect(label).not.toHaveClass("fr-sr-only");
     });
@@ -241,7 +241,7 @@ describe("SearchInput - Accessibility", () => {
 
       const heading = screen.getByRole("heading", {
         level: 1,
-        name: "Que souhaitez-vous savoir ?",
+        name: "Recherchez par mots-clés",
       });
       expect(heading).toBeInTheDocument();
     });
