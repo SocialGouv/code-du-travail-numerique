@@ -83,10 +83,6 @@ const tooltipWrapper = css({
   position: "relative",
   minWidth: 0,
   maxWidth: "100%",
-  "&:focus-within .fr-tooltip": {
-    visibility: "visible!",
-    opacity: "1!",
-  },
 });
 
 const buttonStyle = css({

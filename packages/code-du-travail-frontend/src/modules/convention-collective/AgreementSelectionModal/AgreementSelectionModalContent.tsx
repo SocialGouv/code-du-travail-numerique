@@ -146,7 +146,6 @@ export const AgreementSelectionModalContent = ({ onClose, isOpen }: Props) => {
             priority="secondary"
             onClick={handleDelete}
             type="button"
-            className={dangerButton}
             aria-describedby="selected-agreement-name"
           >
             Supprimer
@@ -263,11 +262,6 @@ const infoTextTopAligned = css({
 const selectedCardLink = css({
   fontSize: "1.25rem",
   wordBreak: "break-word",
-});
-
-const dangerButton = css({
-  color: "var(--text-default-error)!",
-  boxShadow: "inset 0 0 0 1px var(--text-default-error)!",
 });
 
 const liveRegionStyle = css({
