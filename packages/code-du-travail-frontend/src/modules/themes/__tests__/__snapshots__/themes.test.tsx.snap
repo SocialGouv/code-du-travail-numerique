@@ -96,8 +96,8 @@ exports[`<Themes /> affiche la liste des thèmes principaux 1`] = `
                 <svg
                   aria-hidden="true"
                   fill="none"
+                  focusable="false"
                   height="52"
-                  tabindex="-1"
                   viewBox="0 0 52 52"
                   width="52"
                   xmlns="http://www.w3.org/2000/svg"
@@ -150,8 +150,8 @@ exports[`<Themes /> affiche la liste des thèmes principaux 1`] = `
                 <svg
                   aria-hidden="true"
                   fill="none"
+                  focusable="false"
                   height="52"
-                  tabindex="-1"
                   viewBox="0 0 52 52"
                   width="52"
                   xmlns="http://www.w3.org/2000/svg"
