@@ -3,6 +3,7 @@
 import { fr } from "@codegouvfr/react-dsfr";
 import { css } from "@styled-system/css";
 import Image from "next/image";
+import { useState } from "react";
 import { useAgreementStorageSync } from "src/modules/convention-collective/AgreementSelectionModal";
 import { useBreakpoints } from "src/modules/common/useBreakpoints";
 
@@ -15,6 +16,7 @@ export const HeaderAgreementButton = ({ id, onClick }: Props) => {
   const { agreement } = useAgreementStorageSync();
   const { isBelow } = useBreakpoints();
   const isMobile = isBelow("lg");
+  const [focusTooltip, setFocusTooltip] = useState(false);
 
   const tooltipText = agreement
     ? `Modifier ma convention collective : IDCC ${agreement.num} - ${agreement.shortTitle}`
@@ -37,7 +39,12 @@ export const HeaderAgreementButton = ({ id, onClick }: Props) => {
         aria-controls="agreement-modal"
         aria-haspopup="dialog"
         aria-describedby={tooltipId}
-        onClick={onClick}
+        onFocus={() => setFocusTooltip(true)}
+        onBlur={() => setFocusTooltip(false)}
+        onClick={() => {
+          setFocusTooltip(false);
+          onClick();
+        }}
         data-testid="header-agreement-button"
       >
         <Image
@@ -68,7 +75,11 @@ export const HeaderAgreementButton = ({ id, onClick }: Props) => {
           )}
         </span>
       </button>
-      <span className={tooltipStyle} id={tooltipId} role="tooltip">
+      <span
+        className={`${tooltipStyle} ${focusTooltip ? tooltipVisible : ""}`}
+        id={tooltipId}
+        role="tooltip"
+      >
         {tooltipText}
       </span>
     </div>
@@ -129,6 +140,11 @@ const tooltipStyle = css({
       "transparent transparent var(--background-overlap-grey) transparent",
     zIndex: 1,
   },
+});
+
+const tooltipVisible = css({
+  visibility: "visible!",
+  opacity: "1!",
 });
 
 const buttonStyle = css({
