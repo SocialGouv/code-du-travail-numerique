@@ -5,7 +5,6 @@ import { createElement, ReactNode, useState } from "react";
 
 import { Autocomplete } from "../../common/Autocomplete";
 import { searchAgreement } from "../search";
-import { useAgreementSearchTracking } from "../tracking";
 import { Agreement } from "src/modules/outils/indemnite-depart/types";
 import { AccessibleAlert } from "src/modules/outils/common/components/AccessibleAlert";
 
@@ -18,7 +17,6 @@ type Props = {
     agreement?: Agreement
   ) => NonNullable<ReactNode> | undefined;
   defaultAgreement?: Agreement;
-  trackingActionName: string;
   level: 2 | 3;
   emitSearchQueryEvent?: (query: string) => void;
 };
@@ -30,7 +28,6 @@ export const AgreementSearchInput = ({
   autocompleteId,
   selectedAgreementAlert,
   defaultAgreement,
-  trackingActionName,
   level,
   emitSearchQueryEvent,
 }: Props) => {
@@ -39,7 +36,6 @@ export const AgreementSearchInput = ({
     "noSearch" | "lowSearch" | "notFoundSearch" | "errorSearch" | "fullSearch"
   >("noSearch");
   const [error, setError] = useState("");
-  const { emitAgreementSearchInputEvent } = useAgreementSearchTracking();
   const getStateMessage = () => {
     switch (searchState) {
       case "lowSearch":
@@ -111,7 +107,6 @@ export const AgreementSearchInput = ({
             search={searchAgreement}
             onSearch={(query, agreements) => {
               if (query) {
-                emitAgreementSearchInputEvent(query, trackingActionName);
                 emitSearchQueryEvent?.(query);
               }
               if (onSearch) onSearch(query, agreements);

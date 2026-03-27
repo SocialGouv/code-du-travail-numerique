@@ -4,10 +4,7 @@ import { useState } from "react";
 
 import Button from "@codegouvfr/react-dsfr/Button";
 import { AgreementSearchInput } from "./AgreementSearchInput";
-import {
-  TrackingAgreementSearchAction,
-  useAgreementSearchTracking,
-} from "../tracking";
+import { useAgreementSearchTracking } from "../tracking";
 
 export const AgreementSearch = () => {
   const [noResult, setNoResult] = useState(false);
@@ -19,7 +16,6 @@ export const AgreementSearch = () => {
           setNoResult(query.length > 2 && !result?.length);
         }}
         lineAsLink
-        trackingActionName={TrackingAgreementSearchAction.AGREEMENT_SEARCH}
         onAgreementSelect={(agreement) => {
           if (agreement) {
             emitSelectEvent(

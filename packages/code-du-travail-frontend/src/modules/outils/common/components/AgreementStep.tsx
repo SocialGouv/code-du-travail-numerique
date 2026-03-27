@@ -96,7 +96,6 @@ export const CommonAgreementStep = ({
               selectedAgreementAlert(agr, simulator, showNotSelectedOption)
             }
             defaultAgreement={agreement}
-            trackingActionName={trackingActionName}
             level={3}
           />
           {error?.agreement && (

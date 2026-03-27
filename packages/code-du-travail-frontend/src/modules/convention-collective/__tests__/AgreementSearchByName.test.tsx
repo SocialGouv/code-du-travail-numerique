@@ -3,7 +3,6 @@ import "@testing-library/jest-dom";
 import React from "react";
 import { AgreementSearch } from "../AgreementSearch";
 import { ui } from "./ui";
-import { sendEvent } from "@socialgouv/matomo-next";
 import { byText } from "testing-library-selector";
 import { UserAction } from "src/modules/outils/common/utils/UserAction";
 import { Agreement } from "src/modules/outils/indemnite-depart/types";
@@ -96,16 +95,10 @@ describe("Trouver sa CC - recherche par nom de CC", () => {
       render(<AgreementSearch />);
       userAction.setInput(ui.searchByName.input.get(), "16");
       await waitFor(() => {
-        expect(sendEvent).toHaveBeenCalledWith({
-          action: "Trouver sa convention collective",
-          category: "cc_search",
-          name: '{"query":"16"}',
-          value: undefined,
-        });
+        expect(
+          ui.searchByName.autocompleteLines.IDCC16.name.query()
+        ).toBeInTheDocument();
       });
-      expect(
-        ui.searchByName.autocompleteLines.IDCC16.name.query()
-      ).toBeInTheDocument();
       expect(
         ui.searchByName.autocompleteLines.IDCC16.link.query()
       ).toHaveAttribute(
