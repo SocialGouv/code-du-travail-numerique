@@ -98,6 +98,7 @@ const tooltipStyle = css({
   lineHeight: "1.25rem",
   color: "var(--text-default-grey)",
   backgroundColor: "var(--background-overlap-grey)",
+  border: "1px solid var(--border-default-grey)",
   boxShadow: "0 2px 6px rgba(0, 0, 0, 0.16)",
   zIndex: 999,
   pointerEvents: "none",
@@ -105,15 +106,26 @@ const tooltipStyle = css({
   width: "max-content",
   maxWidth: "min(24rem, calc(100vw - 2rem))",
   textAlign: "left",
-  "&::before": {
-    content: '""',
+  "&::after": {
+    content: "''",
     position: "absolute",
     bottom: "100%",
+    left: "50%",
+    transform: "translateX(-50%)",
+    borderWidth: "0 9px 9px 9px",
+    borderStyle: "solid",
+    borderColor: "transparent transparent var(--border-default-grey) transparent",
+  },
+  "&::before": {
+    content: "''",
+    position: "absolute",
+    bottom: "calc(100% - 1px)",
     left: "50%",
     transform: "translateX(-50%)",
     borderWidth: "0 8px 8px 8px",
     borderStyle: "solid",
     borderColor: "transparent transparent var(--background-overlap-grey) transparent",
+    zIndex: 1,
   },
 });
 
