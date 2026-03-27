@@ -114,7 +114,8 @@ const tooltipStyle = css({
     transform: "translateX(-50%)",
     borderWidth: "0 9px 9px 9px",
     borderStyle: "solid",
-    borderColor: "transparent transparent var(--border-default-grey) transparent",
+    borderColor:
+      "transparent transparent var(--border-default-grey) transparent",
   },
   "&::before": {
     content: "''",
@@ -124,7 +125,8 @@ const tooltipStyle = css({
     transform: "translateX(-50%)",
     borderWidth: "0 8px 8px 8px",
     borderStyle: "solid",
-    borderColor: "transparent transparent var(--background-overlap-grey) transparent",
+    borderColor:
+      "transparent transparent var(--background-overlap-grey) transparent",
     zIndex: 1,
   },
 });
