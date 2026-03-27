@@ -10,6 +10,7 @@ import {
   parseISO,
   startOfMonth,
   startOfToday,
+  startOfWeek,
 } from "date-fns";
 import { fr as frLocale } from "date-fns/locale";
 import { cache } from "react";
@@ -253,11 +254,19 @@ export const fetchWhatIsNewMonth = cache(
       const currentPeriod = format(today, "MM-yyyy");
       const isCurrentMonth = period === currentPeriod;
 
-      const lastWeekWithData =
-        entries.length > 0 ? entries[entries.length - 1].weekStart : null;
-
-      const cutoffDate =
-        isCurrentMonth && lastWeekWithData ? parseISO(lastWeekWithData) : null;
+      let cutoffDate: Date | null = null;
+      if (isCurrentMonth) {
+        const currentWeekMonday = startOfWeek(today, { weekStartsOn: 1 });
+        const lastWeekWithData =
+          entries.length > 0 ? entries[entries.length - 1].weekStart : null;
+        const lastWeekDate = lastWeekWithData
+          ? parseISO(lastWeekWithData)
+          : null;
+        cutoffDate =
+          lastWeekDate && isAfter(lastWeekDate, currentWeekMonday)
+            ? lastWeekDate
+            : currentWeekMonday;
+      }
 
       const weeks: WhatIsNewWeek[] = weekStarts
         .map((weekStart) => {
