@@ -68,11 +68,7 @@ export const HeaderAgreementButton = ({ id, onClick }: Props) => {
           )}
         </span>
       </button>
-      <span
-        className={fr.cx("fr-tooltip", "fr-placement")}
-        id={tooltipId}
-        role="tooltip"
-      >
+      <span className={tooltipStyle} id={tooltipId} role="tooltip">
         {tooltipText}
       </span>
     </div>
@@ -83,6 +79,42 @@ const tooltipWrapper = css({
   position: "relative",
   minWidth: 0,
   maxWidth: "100%",
+  "&:hover > [role='tooltip']": {
+    visibility: "visible!",
+    opacity: "1!",
+  },
+});
+
+const tooltipStyle = css({
+  position: "absolute",
+  top: "calc(100% + 12px)",
+  left: "50%",
+  transform: "translateX(-50%)",
+  visibility: "hidden",
+  opacity: 0,
+  transition: "opacity 0.15s, visibility 0.15s",
+  padding: "0.5rem 0.75rem",
+  fontSize: "0.75rem",
+  lineHeight: "1.25rem",
+  color: "var(--text-default-grey)",
+  backgroundColor: "var(--background-overlap-grey)",
+  boxShadow: "0 2px 6px rgba(0, 0, 0, 0.16)",
+  zIndex: 999,
+  pointerEvents: "none",
+  whiteSpace: "normal",
+  width: "max-content",
+  maxWidth: "min(24rem, calc(100vw - 2rem))",
+  textAlign: "left",
+  "&::before": {
+    content: '""',
+    position: "absolute",
+    bottom: "100%",
+    left: "50%",
+    transform: "translateX(-50%)",
+    borderWidth: "0 8px 8px 8px",
+    borderStyle: "solid",
+    borderColor: "transparent transparent var(--background-overlap-grey) transparent",
+  },
 });
 
 const buttonStyle = css({
