@@ -4,7 +4,11 @@ import { useContributionTracking } from "./tracking";
 import { isAgreementSupported, isAgreementValid } from "./contributionUtils";
 import { ContributionGenericContent } from "./ContributionGenericContent";
 import { Contribution } from "./type";
-import { useLocalStorageForAgreementOnPageLoad } from "../utils/useLocalStorage";
+import {
+  useLocalStorageForAgreementOnPageLoad,
+  getAgreementFromLocalStorage,
+} from "../utils/useLocalStorage";
+import { useRouter } from "next/navigation";
 import { ContributionGenericAgreementSearch } from "./ContributionGenericAgreementSearch";
 import { Button } from "@codegouvfr/react-dsfr/Button";
 import { fr } from "@codegouvfr/react-dsfr";
@@ -14,6 +18,7 @@ type Props = {
 };
 
 export function ContributionGeneric({ contribution }: Props) {
+  const router = useRouter();
   const [hash, setHash] = useState("");
   const personalizeTitleRef = useRef<HTMLParagraphElement>(null);
   const getTitle = () => `/contribution/${slug}`;
@@ -51,6 +56,19 @@ export function ContributionGeneric({ contribution }: Props) {
       }, 100);
     }
   }, [hash]);
+
+  useEffect(() => {
+    if (window.location.hash === "#retour") return;
+
+    const storedAgreement = getAgreementFromLocalStorage();
+    if (storedAgreement && isAgreementValid(contribution, storedAgreement)) {
+      const targetUrl =
+        slug === "les-conges-pour-evenements-familiaux"
+          ? `/contribution/${slug}/${storedAgreement.slug || storedAgreement.num}`
+          : `/contribution/${storedAgreement.num}-${slug}`;
+      router.replace(targetUrl);
+    }
+  }, []);
 
   return (
     <>
