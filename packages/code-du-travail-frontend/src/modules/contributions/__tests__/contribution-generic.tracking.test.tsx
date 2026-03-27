@@ -20,11 +20,13 @@ jest.mock("uuid", () => ({
 }));
 
 const pushMock = jest.fn();
+const replaceMock = jest.fn();
 jest.mock("next/navigation", () => ({
   redirect: jest.fn(),
   usePathname: jest.fn(),
   useRouter: () => ({
     push: pushMock,
+    replace: replaceMock,
   }),
 }));
 
