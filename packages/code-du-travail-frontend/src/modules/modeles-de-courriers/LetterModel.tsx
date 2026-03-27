@@ -81,7 +81,7 @@ export const LetterModel = ({
           "fr-mb-md-12w"
         )}
       >
-        <div className={fr.cx("fr-col-12", "fr-col-md-7")}>
+        <div className={fr.cx("fr-col-12", "fr-col-lg-7")}>
           <h1 className={fr.cx("fr-mb-6w")}>{title}</h1>
           <LetterModelContent
             slug={slug}
@@ -97,9 +97,9 @@ export const LetterModel = ({
         </div>
 
         <div
-          className={fr.cx("fr-col-12", "fr-col-offset-md-1", "fr-col-md-4")}
+          className={fr.cx("fr-col-12", "fr-col-offset-lg-1", "fr-col-lg-4")}
         >
-          <div className={fr.cx("fr-hidden", "fr-unhidden-md")}>
+          <div className={fr.cx("fr-hidden", "fr-unhidden-lg")}>
             <div className={fr.cx("fr-mb-6w")}>
               <DownloadTile
                 filename={filename}

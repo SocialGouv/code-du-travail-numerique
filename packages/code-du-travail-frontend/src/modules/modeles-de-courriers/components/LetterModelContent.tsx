@@ -37,7 +37,7 @@ export const LetterModelContent = ({
           />
         </div>
       )}
-      <div className={fr.cx("fr-hidden-md")}>
+      <div className={fr.cx("fr-hidden-lg")}>
         <div className={fr.cx("fr-mb-6w")}>
           <DownloadTile
             filename={filename}
@@ -83,6 +83,6 @@ const border = css({
 
 const button = css({
   "& > button": {
-    md: { w: "auto!" },
+    lg: { w: "auto!" },
   },
 });

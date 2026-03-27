@@ -51,7 +51,7 @@ exports[`<LetterModel /> affiche un modèle de document 1`] = `
     class="fr-grid-row fr-grid-row--gutters fr-mb-4w fr-mb-md-12w"
   >
     <div
-      class="fr-col-12 fr-col-md-7"
+      class="fr-col-12 fr-col-lg-7"
     >
       <h1
         class="fr-mb-6w"
@@ -74,7 +74,7 @@ exports[`<LetterModel /> affiche un modèle de document 1`] = `
         </p>
       </div>
       <div
-        class="fr-hidden-md"
+        class="fr-hidden-lg"
       >
         <div
           class="fr-mb-6w"
@@ -162,7 +162,7 @@ exports[`<LetterModel /> affiche un modèle de document 1`] = `
         </p>
       </div>
       <div
-        class="[&_>_button]:md:w_auto!"
+        class="[&_>_button]:lg:w_auto!"
       >
         <button
           class="fr-btn fr-btn--secondary fr-icon-clipboard-line fr-btn--icon-left w_100%! jc_center"
@@ -268,10 +268,10 @@ exports[`<LetterModel /> affiche un modèle de document 1`] = `
       </div>
     </div>
     <div
-      class="fr-col-12 fr-col-offset-md-1 fr-col-md-4"
+      class="fr-col-12 fr-col-offset-lg-1 fr-col-lg-4"
     >
       <div
-        class="fr-hidden fr-unhidden-md"
+        class="fr-hidden fr-unhidden-lg"
       >
         <div
           class="fr-mb-6w"
