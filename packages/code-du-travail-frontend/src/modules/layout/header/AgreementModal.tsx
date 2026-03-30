@@ -28,8 +28,10 @@ export const AgreementModal = ({ isOpen, onClose }: Props) => {
 
     // Restore focus to the trigger button that opened the modal
     setTimeout(() => {
+      const focusOptions = { focusVisible: true } as FocusOptions;
+
       if (previousActiveElementRef.current) {
-        previousActiveElementRef.current.focus();
+        previousActiveElementRef.current.focus(focusOptions);
         previousActiveElementRef.current = null;
         return;
       }
@@ -41,7 +43,7 @@ export const AgreementModal = ({ isOpen, onClose }: Props) => {
         "fr-header-agreement-button"
       ) as HTMLButtonElement | null;
 
-      (desktopBtn ?? mobileBtn)?.focus();
+      (desktopBtn ?? mobileBtn)?.focus(focusOptions);
     }, 100);
   }, [onClose]);
 

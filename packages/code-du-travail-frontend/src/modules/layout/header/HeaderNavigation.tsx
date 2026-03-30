@@ -96,5 +96,4 @@ const mobileAgreementContainer = css({
   marginTop: "1rem",
   display: "flex",
   justifyContent: "center",
-  overflow: "hidden",
 });
