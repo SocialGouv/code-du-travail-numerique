@@ -17,6 +17,7 @@ export const SOURCES = {
   TOOLS: "outils",
   INFOGRAPHICS: "infographies",
   WHAT_IS_NEW: "what_is_new",
+  NEWS: "actualites",
 } as const;
 
 export const routeBySource = {
@@ -38,6 +39,7 @@ export const routeBySource = {
   [SOURCES.PREQUALIFIED]: "prequalified",
   [SOURCES.INFOGRAPHICS]: "infographie",
   [SOURCES.WHAT_IS_NEW]: "quoi-de-neuf",
+  [SOURCES.NEWS]: "actualites",
 } as const;
 
 export const labelBySource = {
@@ -59,6 +61,7 @@ export const labelBySource = {
   [SOURCES.GLOSSARY]: "Glossaire",
   [SOURCES.INFOGRAPHICS]: "Infographies",
   [SOURCES.WHAT_IS_NEW]: "Quoi de neuf ?",
+  [SOURCES.NEWS]: "Actualités",
 } as const;
 
 export const getLabelBySource = (src: keyof typeof labelBySource) =>
