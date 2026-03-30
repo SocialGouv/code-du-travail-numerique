@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.222.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.221.0...v4.222.0) (2026-03-30)
+
+
+### Bug Fixes
+
+* correction des tests e2e suite au changement de definition ([#7190](https://github.com/SocialGouv/code-du-travail-numerique/issues/7190)) ([6ead1cf](https://github.com/SocialGouv/code-du-travail-numerique/commit/6ead1cfb980bd10f58ea6dde3dbeda64fd912364))
+* **events:** suppression de l'event qui track l'input `agreement search` ([#7200](https://github.com/SocialGouv/code-du-travail-numerique/issues/7200)) ([c1c1af5](https://github.com/SocialGouv/code-du-travail-numerique/commit/c1c1af576d90ac26c82e04a119565b5f8e8fdd98))
+* **modale:** correction des derniers retours UI ([#7194](https://github.com/SocialGouv/code-du-travail-numerique/issues/7194)) ([5212f83](https://github.com/SocialGouv/code-du-travail-numerique/commit/5212f8335d15e27809baa414279d2b430a9ea0ec))
+* **modeles-de-courrier:** changement du breakpoint entre `md` et `lg` ([#7197](https://github.com/SocialGouv/code-du-travail-numerique/issues/7197)) ([f268f90](https://github.com/SocialGouv/code-du-travail-numerique/commit/f268f9058f3640daec1202e3a6b0be5c774ca0e3))
+* **theme:** utilisation de focusable à false sur les icônes ([#7192](https://github.com/SocialGouv/code-du-travail-numerique/issues/7192)) ([a3ff98e](https://github.com/SocialGouv/code-du-travail-numerique/commit/a3ff98e7673c649dac6c743723b98b9f48aa136b))
+
+
+### Features
+
+* **actualites:** ajout de la source actualités ([#7204](https://github.com/SocialGouv/code-du-travail-numerique/issues/7204)) ([3a4d8d6](https://github.com/SocialGouv/code-du-travail-numerique/commit/3a4d8d629a5424fb228b78a4951daad61d266bec))
+* **recherche:** evolution de la page de recherche ([#7189](https://github.com/SocialGouv/code-du-travail-numerique/issues/7189)) ([84ad449](https://github.com/SocialGouv/code-du-travail-numerique/commit/84ad449b99faac6512be6b225a7e648865bc9e47))
+* **recherche:** modification du wording pour le moteur de recherche ([#7191](https://github.com/SocialGouv/code-du-travail-numerique/issues/7191)) ([35f410f](https://github.com/SocialGouv/code-du-travail-numerique/commit/35f410f8629caf8446c6779fd902901d185a568a))
+
+
+
+
+
 # [4.221.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.220.0...v4.221.0) (2026-03-23)
 
 
