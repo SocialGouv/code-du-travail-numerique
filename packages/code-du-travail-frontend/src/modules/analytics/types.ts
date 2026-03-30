@@ -20,7 +20,6 @@ export enum MatomoSearchAgreementCategory {
   PARCOURS_2 = "click_p2",
   PARCOURS_3 = "click_p3",
   ENTERPRISE_SEARCH = "enterprise_search",
-  AGREEMENT_SEARCH = "cc_search",
   AGREEMENT_SEARCH_TYPE_OF_USERS = "cc_search_type_of_users",
 }
 

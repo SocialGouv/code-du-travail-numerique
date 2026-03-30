@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { useAgreementSearchTracking } from "../../tracking";
 import { Agreement } from "src/modules/outils/indemnite-depart/types";
 import Link from "next/link";
 
@@ -11,7 +10,6 @@ type Props = {
     agreement?: Agreement
   ) => React.ReactNode | undefined;
   defaultAgreement?: Agreement;
-  trackingActionName: string;
   level: 2 | 3;
   emitSearchQueryEvent?: (query: string) => void;
   mockSearchAgreement?: (query: string) => Agreement[];
@@ -82,7 +80,6 @@ export const AgreementSearchInput = ({
   lineAsLink,
   selectedAgreementAlert,
   defaultAgreement,
-  trackingActionName,
   level,
   emitSearchQueryEvent,
   mockSearchAgreement = searchAgreement,
@@ -97,8 +94,6 @@ export const AgreementSearchInput = ({
   const [searchQuery, setSearchQuery] = useState<string>("");
   const [searchResults, setSearchResults] = useState<Agreement[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
-  const { emitAgreementSearchInputEvent } = useAgreementSearchTracking();
-
   const getStateMessage = () => {
     switch (searchState) {
       case "lowSearch":
@@ -163,7 +158,6 @@ export const AgreementSearchInput = ({
         return;
       }
 
-      emitAgreementSearchInputEvent(query, trackingActionName);
       emitSearchQueryEvent?.(query);
 
       const results = mockSearchAgreement(query);

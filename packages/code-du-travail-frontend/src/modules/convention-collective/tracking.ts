@@ -1,8 +1,6 @@
-import { v4 as generateUUID } from "uuid";
 import { sendEvent } from "@socialgouv/matomo-next";
 
 export enum TrackingAgreementSearchCategory {
-  CC_SEARCH = "cc_search",
   CC_SEARCH_TYPE_OF_USERS = "cc_search_type_of_users",
   ENTERPRISE_SEARCH = "enterprise_search",
   VIEW_STEP = "view_step_Trouver sa convention collective",
@@ -24,14 +22,6 @@ export enum TrackingAgreementSearchAction {
 }
 
 export const useAgreementSearchTracking = () => {
-  const emitAgreementSearchInputEvent = (query: string, action: string) => {
-    sendEvent({
-      category: TrackingAgreementSearchCategory.CC_SEARCH,
-      action: action,
-      name: JSON.stringify({ query }),
-    });
-  };
-
   const emitViewStepEvent = () => {
     sendEvent({
       category: "outil",
@@ -73,7 +63,6 @@ export const useAgreementSearchTracking = () => {
   };
 
   return {
-    emitAgreementSearchInputEvent,
     emitViewStepEvent,
     emitNavigateAgreementSearchEvent,
     emitNavigateEnterpriseSearchEvent,

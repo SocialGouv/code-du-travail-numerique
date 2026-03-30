@@ -53,7 +53,6 @@ export const AgreementSelectionForm = ({
       {route === "agreement" && (
         <AgreementSearchInput
           autocompleteId="header-agreement-search-autocomplete"
-          trackingActionName="Header - convention collective"
           level={2}
           defaultAgreement={defaultAgreement}
           onAgreementSelect={(agreement) => {

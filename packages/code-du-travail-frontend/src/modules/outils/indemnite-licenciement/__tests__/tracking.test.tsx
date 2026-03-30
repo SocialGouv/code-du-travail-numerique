@@ -137,21 +137,6 @@ describe("Indemnité licenciement - Tracking", () => {
     });
   });
 
-  test("vérifier le tracking sur la recherche CC", async () => {
-    userAction
-      .click(ui.introduction.startButton.get())
-      .click(ui.agreement.noAgreement.get())
-      .click(ui.agreement.agreement.get())
-      .setInput(ui.agreement.agreementInput.get(), "16")
-      .click(await waitFor(() => ui.agreement.ccChoice.transport.get()));
-
-    expect(sendEvent).toHaveBeenCalledWith({
-      category: "cc_search",
-      action: "Indemnité de licenciement",
-      name: JSON.stringify({ query: "16" }),
-    });
-  });
-
   test("vérifier le tracking sur la selection CC", async () => {
     userAction
       .click(ui.introduction.startButton.get())
