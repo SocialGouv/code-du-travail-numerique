@@ -2,7 +2,6 @@ import { SOURCES } from "@socialgouv/cdtn-utils";
 import { elasticDocumentsIndex, elasticsearchClient } from "src/api/utils";
 import { extractHits } from "../utils";
 import { PresearchClass, PreSearchResult, SEARCH_ALGO } from "./types";
-import { format } from "path";
 
 const DEFAULT_CC_CONTENT = [
   {
@@ -23,13 +22,13 @@ let defaultsIdccResults: PreSearchResult[] = [];
 
 export const NO_CC_TOKENS = ["ruptur"];
 
+export const IDCC_TOKENS = ["idcc", "ccn", "cc"];
 export const MATCHING_CC_TOKENS = [
+  ...IDCC_TOKENS,
   "convention",
   "colectif",
   "national",
   "branch",
-  "idcc",
-  "ccn",
 ];
 
 export const getDefaultIdccResults = async (): Promise<PreSearchResult[]> => {

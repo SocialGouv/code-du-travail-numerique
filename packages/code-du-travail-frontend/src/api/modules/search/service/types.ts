@@ -28,6 +28,7 @@ export enum PresearchClass {
   THEME = "theme",
   NATURAL = "natural",
   UNKNOWN = "unknown",
+  SIRET = "siret",
 }
 
 export const SEARCH_ALGO = {
