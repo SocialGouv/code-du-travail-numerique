@@ -8,6 +8,7 @@ export type ContainerRichProps = {
   relatedItems: { items: RelatedItem[]; title: string }[];
   title: string;
   description: string;
+  showFeedback?: boolean;
   children: React.ReactNode;
 };
 
@@ -15,6 +16,7 @@ export const ContainerRich = ({
   children,
   relatedItems,
   title,
+  showFeedback = true,
   description,
 }: ContainerRichProps) => {
   return (
@@ -30,7 +32,7 @@ export const ContainerRich = ({
         className={fr.cx("fr-col-12", "fr-col-md-7", "fr-mb-6w", "fr-mb-md-0")}
       >
         {children}
-        <Feedback />
+        {showFeedback && <Feedback />}
       </div>
 
       <div className={fr.cx("fr-col-12", "fr-col-offset-md-1", "fr-col-md-4")}>

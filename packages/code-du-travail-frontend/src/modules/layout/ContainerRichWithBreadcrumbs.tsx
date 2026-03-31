@@ -20,6 +20,7 @@ export const ContainerRichWithBreadcrumbs = ({
   description,
   breadcrumbs,
   currentPage,
+  showFeedback = true,
 }: Props) => {
   return (
     <div>
@@ -58,7 +59,7 @@ export const ContainerRichWithBreadcrumbs = ({
           )}
         >
           {children}
-          <Feedback />
+          {showFeedback && <Feedback />}
         </div>
 
         <div

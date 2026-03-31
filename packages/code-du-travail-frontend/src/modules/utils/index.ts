@@ -4,3 +4,4 @@ export * from "./hash";
 export * from "./size";
 export * from "./url";
 export * from "./groupByThemes";
+export * from "./date";

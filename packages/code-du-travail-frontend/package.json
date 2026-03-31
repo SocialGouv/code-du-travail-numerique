@@ -42,7 +42,7 @@
     "@opentelemetry/instrumentation-net": "^0.55.0",
     "@sentry/nextjs": "~10.38.0",
     "@socialgouv/cdtn-elasticsearch": "^2.66.6",
-    "@socialgouv/cdtn-types": "^2.66.6",
+    "@socialgouv/cdtn-types": "^2.71.0",
     "@socialgouv/cdtn-utils": "link:../code-du-travail-utils",
     "@socialgouv/matomo-next": "^1.11.0",
     "@socialgouv/modeles-social": "link:../code-du-travail-modeles",
