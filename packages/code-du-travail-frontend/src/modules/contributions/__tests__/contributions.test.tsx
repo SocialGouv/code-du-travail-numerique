@@ -44,12 +44,14 @@ jest.mock("uuid", () => ({
 }));
 
 const pushMock = jest.fn();
+const replaceMock = jest.fn();
 
 jest.mock("next/navigation", () => ({
   redirect: jest.fn(),
   usePathname: jest.fn(),
   useRouter: () => ({
     push: pushMock,
+    replace: replaceMock,
   }),
 }));
 
@@ -59,6 +61,7 @@ describe("<ContributionLayout />", () => {
     const ma = sendEvent as jest.MockedFunction<typeof sendEvent>;
     ma.mockReset();
     pushMock.mockClear();
+    replaceMock.mockClear();
   });
   it("should render title only if generic", () => {
     rendering = render(<ContributionLayout contribution={contribution} />);
@@ -303,6 +306,80 @@ describe("<ContributionLayout />", () => {
       expect(ccUi.buttonDisplayInfo.query()).not.toBeInTheDocument();
       expect(ccUi.warning.title.query()).toBeInTheDocument();
       expect(ccUi.warning.noCdtUnextendedAgreement.query()).toBeInTheDocument();
+    });
+  });
+
+  describe("auto-redirect from header CC", () => {
+    it("should redirect to CC-specific page when a valid agreement is in localStorage", () => {
+      window.localStorage.setItem(
+        "convention",
+        JSON.stringify({
+          id: "0016",
+          num: 16,
+          shortTitle:
+            "Transports routiers et activités auxiliaires du transport",
+          slug: "16-transports-routiers-et-activites-auxiliaires-du-transport",
+          title:
+            "Convention collective nationale des transports routiers et activités auxiliaires du transport du 21 décembre 1950",
+        })
+      );
+      render(<ContributionLayout contribution={contribution} />);
+      expect(replaceMock).toHaveBeenCalledWith("/contribution/16-slug");
+    });
+
+    it("should not redirect when agreement is unsupported", () => {
+      window.localStorage.setItem(
+        "convention",
+        JSON.stringify({
+          id: "1388",
+          num: 1388,
+          shortTitle: "Industrie du pétrole",
+          slug: "1388-industrie-du-petrole",
+          title: "Convention collective nationale de l'industrie du pétrole",
+        })
+      );
+      render(<ContributionLayout contribution={contribution} />);
+      expect(replaceMock).not.toHaveBeenCalled();
+    });
+
+    it("should not redirect when agreement is unextended", () => {
+      window.localStorage.setItem(
+        "convention",
+        JSON.stringify({
+          id: "0029",
+          num: 29,
+          shortTitle: "Hospitalisation privée",
+          slug: "29-hospitalisation-privee",
+          title: "Convention collective nationale des établissements privés",
+        })
+      );
+      render(<ContributionLayout contribution={contribution} />);
+      expect(replaceMock).not.toHaveBeenCalled();
+    });
+
+    it("should not redirect when hash is #retour", () => {
+      window.localStorage.setItem(
+        "convention",
+        JSON.stringify({
+          id: "0016",
+          num: 16,
+          shortTitle:
+            "Transports routiers et activités auxiliaires du transport",
+          slug: "16-transports-routiers-et-activites-auxiliaires-du-transport",
+          title:
+            "Convention collective nationale des transports routiers et activités auxiliaires du transport du 21 décembre 1950",
+        })
+      );
+      window.location.hash = "#retour";
+      render(<ContributionLayout contribution={contribution} />);
+      expect(replaceMock).not.toHaveBeenCalled();
+      window.location.hash = "";
+    });
+
+    it("should not redirect when no agreement is in localStorage", () => {
+      window.localStorage.clear();
+      render(<ContributionLayout contribution={contribution} />);
+      expect(replaceMock).not.toHaveBeenCalled();
     });
   });
 });
