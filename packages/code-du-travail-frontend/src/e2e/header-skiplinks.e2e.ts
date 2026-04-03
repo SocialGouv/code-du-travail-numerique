@@ -5,9 +5,13 @@ test.describe("Header", () => {
     await page.goto("/mentions-legales");
 
     // The skiplinks container uses DSFR :focus-within to reveal links
-    const firstSkipLink = page.locator("[id^=fr-skiplinks] a").first();
+    const skipLinksContainer = page.locator("[id^=fr-skiplinks]");
+    const firstSkipLink = skipLinksContainer.locator("a").first();
+
+    await expect(skipLinksContainer).not.toBeVisible();
 
     await page.keyboard.press("Tab");
+    await expect(skipLinksContainer).toBeVisible();
     await expect(firstSkipLink).toBeFocused();
     await expect(firstSkipLink).toHaveAttribute("href", "#main");
 
@@ -25,6 +29,7 @@ test.describe("Header", () => {
     await expect(page.locator(":focus")).toHaveAttribute("href", "#more-info");
 
     await page.keyboard.press("Enter");
+    await expect(skipLinksContainer).not.toBeVisible();
 
     await page.keyboard.press("Tab");
     await expect(page.locator(":focus")).toHaveText(

@@ -22,6 +22,7 @@ test.describe("Fiche Service public", () => {
       "href",
       /https:\/\/www\.service-public\.gouv\.fr\/particuliers\/vosdroits\/F2301/
     );
+    await expect(page.locator("body")).toContainText("21/02/2026");
     await expect(page.getByRole("heading", { level: 2 }).first()).toContainText(
       "Salaire"
     );
@@ -33,12 +34,9 @@ test.describe("Fiche Service public", () => {
     await page.goto(
       "/fiche-service-public/salaire-primes-et-avantages#salaire"
     );
-    await expect(page.locator('[aria-expanded="true"]')).toBeVisible();
-    await expect(
-      page
-        .getByRole("heading", { level: 2 })
-        .filter({ hasText: "Salaire" })
-        .first()
-    ).toBeVisible();
+    await page.getByRole("heading", { level: 1 }).click();
+    await expect(page.locator('[aria-expanded="true"]')).toContainText(
+      "Salaire"
+    );
   });
 });

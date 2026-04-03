@@ -40,7 +40,7 @@ export async function expectCanonicalUrlEqual(
 }
 
 export async function expectNoIndex(page: Page): Promise<void> {
-  await expect(page.locator('meta[name="robots"]')).toHaveAttribute(
+  await expect(page.locator('meta[name="robots"]').first()).toHaveAttribute(
     "content",
     "noindex,nofollow"
   );

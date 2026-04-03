@@ -29,12 +29,12 @@ export default defineConfig({
     {
       name: "chromium",
       use: { ...devices["Desktop Chrome"] },
-      testIgnore: /validate-html\.e2e\.|widgets\.e2e\./,
+      testIgnore: /validate-html.*\.e2e\.|widgets\.e2e\./,
     },
     {
       name: "html-validation",
       use: { ...devices["Desktop Chrome"] },
-      testMatch: /validate-html\.e2e\./,
+      testMatch: /validate-html.*\.e2e\./,
     },
     {
       name: "widgets",

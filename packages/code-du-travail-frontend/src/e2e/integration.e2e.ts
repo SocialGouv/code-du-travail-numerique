@@ -17,7 +17,9 @@ test.describe("Pages integration", () => {
     await page.goto("/integration/modeles-de-courriers");
 
     const iframe = page.frameLocator("iframe");
-    await expect(iframe.getByText(/harcèlement sexuel/i).first()).toBeVisible({
+    await expect(
+      iframe.getByText("Affichage obligatoire relatif au harcèlement sexuel")
+    ).toBeVisible({
       timeout: 10_000,
     });
   });
