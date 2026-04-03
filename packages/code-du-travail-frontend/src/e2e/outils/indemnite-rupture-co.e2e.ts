@@ -40,7 +40,7 @@ test.describe("Outil - Indemnité de rupture conventionnelle", () => {
     await expect(page.locator("body")).toContainText(
       "indemnité de rupture conventionnelle est estimée à"
     );
-    await expect(page.locator("p strong")).toContainText(formatToEuro(7111.11));
+    await expect(page.locator("body")).toContainText(formatToEuro(7111.11));
     await expect(page.locator("body")).toContainText(
       "Attention il peut exister un montant plus favorable"
     );

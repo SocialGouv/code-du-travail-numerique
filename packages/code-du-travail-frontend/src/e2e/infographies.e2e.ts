@@ -25,6 +25,7 @@ test.describe("Pages infographies", () => {
       .getByRole("link", { name: "Nos infographies" })
       .click({ force: true });
 
+    await page.waitForURL("**/infographie");
     await expectIndexable(page);
     await expectUrlEqual(page, "/infographie");
     await expectCanonicalUrlEqual(page, "/infographie");

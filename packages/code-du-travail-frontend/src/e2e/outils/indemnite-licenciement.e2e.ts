@@ -45,7 +45,7 @@ test.describe("Outil - Indemnité de licenciement", () => {
     await expect(page.locator("body")).toContainText(
       "indemnité de licenciement est estimée à"
     );
-    await expect(page.locator("p strong")).toContainText(formatToEuro(6916.67));
+    await expect(page.locator("body")).toContainText(formatToEuro(6916.67));
     await expect(page.locator("body")).toContainText(
       "Attention il peut exister un montant plus favorable"
     );

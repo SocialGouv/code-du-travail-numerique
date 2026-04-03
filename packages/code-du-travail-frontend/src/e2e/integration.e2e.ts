@@ -19,7 +19,8 @@ test.describe("Pages integration", () => {
     const iframe = page.frameLocator("iframe");
     await expect(
       iframe.getByRole("heading", {
-        name: "Affichage obligatoire relatif au harcèlement sexuel",
+        name: /Affichage obligatoire relatif au harcèlement sexuel/,
+        level: 1,
       })
     ).toBeVisible({
       timeout: 10_000,

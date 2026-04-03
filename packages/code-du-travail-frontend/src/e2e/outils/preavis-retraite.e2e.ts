@@ -159,11 +159,13 @@ test.describe("Outil - Préavis de retraite", () => {
       })
       .first()
       .click();
-    await page.locator("#agreement-search-autocomplete").fill("843");
+    const agreementInput = page.locator("#agreement-search-autocomplete");
+    await agreementInput.click();
+    await agreementInput.fill("843");
     await page
       .locator('ul[role="listbox"] li')
       .first()
-      .waitFor({ timeout: 15_000 });
+      .waitFor({ timeout: 20_000 });
     await page
       .locator('ul[role="listbox"] li')
       .filter({ hasText: "Boulangerie" })

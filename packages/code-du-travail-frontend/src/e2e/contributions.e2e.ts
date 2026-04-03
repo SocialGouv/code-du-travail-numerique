@@ -94,7 +94,7 @@ test.describe("Contributions", () => {
     ).toBeVisible();
 
     await expect(page.locator("body")).toContainText(
-      "Les conditions de renouvellement de la période d'essai varient selon la catégorie professionnelle du salarié."
+      /Les conditions de renouvellement de la période d.essai varient selon la catégorie professionnelle du salarié/
     );
 
     await expect(

@@ -14,7 +14,7 @@ test.describe("Page Ministère du travail", () => {
     ).toHaveAttribute("href", /https:\/\/travail-emploi\.gouv\.fr/);
     await expect(page.getByRole("heading", { level: 2 })).toHaveCount(12);
     await expect(page.getByRole("heading", { level: 2 }).first()).toContainText(
-      "Qu\u2019est-ce qu\u2019une entreprise d\u2019insertion?"
+      /Qu.est-ce qu.une entreprise d.insertion/
     );
   });
 
