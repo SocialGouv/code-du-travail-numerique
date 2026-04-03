@@ -69,4 +69,3 @@ const contentLimited = css({
   overflowWrap: "break-word",
   whiteSpace: "normal", // Important : force le retour à la ligne
 });
-

@@ -190,4 +190,3 @@ export const SearchPageClient: React.FC<SearchPageClientProps> = ({
     </ContainerWithBreadcrumbs>
   );
 };
-
