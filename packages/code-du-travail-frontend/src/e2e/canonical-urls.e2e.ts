@@ -6,9 +6,7 @@ test.describe("Référencement", () => {
     await page.goto("/");
     await expectCanonicalUrlEqual(page, "/");
 
-    await page.goto(
-      "/contribution/quelle-peut-etre-la-duree-maximale-dun-cdd"
-    );
+    await page.goto("/contribution/quelle-peut-etre-la-duree-maximale-dun-cdd");
     await expectCanonicalUrlEqual(
       page,
       "/contribution/quelle-peut-etre-la-duree-maximale-dun-cdd"

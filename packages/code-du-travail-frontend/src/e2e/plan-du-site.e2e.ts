@@ -6,7 +6,9 @@ test.describe("Plan du site", () => {
     await expect(page.getByRole("heading", { level: 1 })).toHaveText(
       "Plan du site"
     );
-    await expect(page.getByRole("link", { name: "Page d'accueil" })).toBeVisible();
+    await expect(
+      page.getByRole("link", { name: "Page d'accueil" })
+    ).toBeVisible();
     await expect(page.getByRole("link", { name: "Simulateurs" })).toBeVisible();
     await expect(
       page.getByRole("link", { name: "Vos fiches pratiques" })

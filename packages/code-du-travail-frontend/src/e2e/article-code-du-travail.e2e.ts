@@ -4,9 +4,7 @@ test.describe("Article code du travail", () => {
   test("je vois une page article code du travail", async ({ page }) => {
     await page.goto("/code-du-travail/l2312-1");
     await expect(page).toHaveTitle("L2312-1 - Code du travail numérique");
-    await expect(page.getByRole("heading", { level: 1 })).toHaveText(
-      "L2312-1"
-    );
+    await expect(page.getByRole("heading", { level: 1 })).toHaveText("L2312-1");
     await expect(
       page.getByRole("link", { name: "Code du travail", exact: true })
     ).toHaveAttribute(

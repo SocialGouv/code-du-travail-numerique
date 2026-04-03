@@ -43,9 +43,7 @@ test.describe("Widgets externes", () => {
   });
 
   test("Widget - Trouver sa convention collective", async ({ page }) => {
-    await page.goto(
-      `${GITHUB_PAGES_BASE}/trouver-sa-convention-collective`
-    );
+    await page.goto(`${GITHUB_PAGES_BASE}/trouver-sa-convention-collective`);
     const iframe = page.frameLocator("iframe");
     await expect(
       iframe.getByText("Trouver sa convention collective")
@@ -191,9 +189,7 @@ test.describe("Widgets externes", () => {
   });
 
   test("Widget - Indemnité de rupture conventionnelle", async ({ page }) => {
-    await page.goto(
-      `${GITHUB_PAGES_BASE}/indemnite-rupture-conventionnelle`
-    );
+    await page.goto(`${GITHUB_PAGES_BASE}/indemnite-rupture-conventionnelle`);
     const iframe = page.frameLocator("iframe");
     await expect(
       iframe.getByText("Calculer l'indemnité de rupture conventionnelle")

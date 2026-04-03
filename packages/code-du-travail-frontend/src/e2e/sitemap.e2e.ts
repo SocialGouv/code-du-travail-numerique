@@ -6,8 +6,6 @@ test.describe("Sitemap", () => {
     expect(response.status()).toBe(200);
 
     const body = await response.text();
-    expect(body).toContain(
-      "<loc>https://code.travail.gouv.fr/</loc>"
-    );
+    expect(body).toContain("<loc>https://code.travail.gouv.fr/</loc>");
   });
 });

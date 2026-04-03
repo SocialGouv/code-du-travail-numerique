@@ -18,8 +18,6 @@ test.describe("Pages quoi de neuf", () => {
 
     const h1Text = await page.getByRole("heading", { level: 1 }).innerText();
     const normalized = h1Text.replace(/\u00A0/g, " ");
-    expect(normalized).toBe(
-      "Quoi de neuf sur le Code du travail numérique ?"
-    );
+    expect(normalized).toBe("Quoi de neuf sur le Code du travail numérique ?");
   });
 });

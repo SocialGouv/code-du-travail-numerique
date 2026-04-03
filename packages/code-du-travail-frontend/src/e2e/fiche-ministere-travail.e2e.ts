@@ -3,9 +3,7 @@ import { test, expect } from "@playwright/test";
 test.describe("Page Ministère du travail", () => {
   test("je vois une page fiche ministère du travail", async ({ page }) => {
     await page.goto("/fiche-ministere-travail/entreprises-dinsertion-ei");
-    await expect(page).toHaveTitle(
-      /Les entreprises d.insertion \(EI\)/
-    );
+    await expect(page).toHaveTitle(/Les entreprises d.insertion \(EI\)/);
     await expect(page.getByRole("heading", { level: 1 })).toHaveText(
       /Les entreprises d.insertion \(EI\)/
     );

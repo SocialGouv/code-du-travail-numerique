@@ -34,9 +34,7 @@ export async function validateHtml(
       .join("\n");
 
     if (errors) {
-      throw new Error(
-        `HTML validation failed for ${page.url()}:\n${errors}`
-      );
+      throw new Error(`HTML validation failed for ${page.url()}:\n${errors}`);
     }
   }
 }

@@ -10,9 +10,7 @@ function resolveWithBaseUrl(page: Page, path: string): string {
 }
 
 export async function expectUrlEqual(page: Page, path: string): Promise<void> {
-  expect(normalize(page.url())).toBe(
-    normalize(resolveWithBaseUrl(page, path))
-  );
+  expect(normalize(page.url())).toBe(normalize(resolveWithBaseUrl(page, path)));
 }
 
 export async function expectTitleAndMetaDescriptionEqual(

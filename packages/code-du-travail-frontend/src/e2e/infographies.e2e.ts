@@ -24,15 +24,15 @@ test.describe("Pages infographies", () => {
       page.getByText(/Découvrez toutes nos infographies/)
     ).toBeVisible();
     await expect(page.getByRole("heading", { level: 2 })).toHaveCount(10);
-    await expect(
-      page.getByRole("heading", { level: 2 }).nth(0)
-    ).toContainText("Sommaire");
-    await expect(
-      page.getByRole("heading", { level: 2 }).nth(1)
-    ).toContainText("Contenus populaires");
-    await expect(
-      page.getByRole("heading", { level: 2 }).nth(2)
-    ).toContainText("Contrat de travail");
+    await expect(page.getByRole("heading", { level: 2 }).nth(0)).toContainText(
+      "Sommaire"
+    );
+    await expect(page.getByRole("heading", { level: 2 }).nth(1)).toContainText(
+      "Contenus populaires"
+    );
+    await expect(page.getByRole("heading", { level: 2 }).nth(2)).toContainText(
+      "Contrat de travail"
+    );
     const h3s = page.getByRole("heading", { level: 3 });
     expect(await h3s.count()).toBeGreaterThanOrEqual(1);
     await h3s.first().click();
@@ -44,9 +44,7 @@ test.describe("Pages infographies", () => {
   });
 
   test("je vois une page infographie classique", async ({ page }) => {
-    await page.goto(
-      "/infographie/que-se-passe-t-il-en-cas-dabandon-de-poste"
-    );
+    await page.goto("/infographie/que-se-passe-t-il-en-cas-dabandon-de-poste");
     await expectIndexable(page);
     await expectCanonicalUrlEqual(
       page,

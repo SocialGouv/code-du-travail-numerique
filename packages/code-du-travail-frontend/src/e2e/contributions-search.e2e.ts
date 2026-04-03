@@ -10,9 +10,7 @@ test.describe("Contributions", () => {
     await page.getByRole("heading", { level: 1 }).click();
 
     await page.locator("#search-home-autocomplete").fill("durée maximale CDD");
-    await page
-      .getByRole("button", { name: "Voir tous les résultats" })
-      .click();
+    await page.getByRole("button", { name: "Voir tous les résultats" }).click();
 
     const h3s = page.getByRole("heading", { level: 3 });
     expect(await h3s.count()).toBeGreaterThanOrEqual(1);

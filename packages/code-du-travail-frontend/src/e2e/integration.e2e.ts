@@ -7,8 +7,7 @@ test.describe("Pages integration", () => {
     const iframe = page.frameLocator("iframe");
     await expect(
       iframe.locator("label").filter({
-        hasText:
-          "Trouvez les réponses à vos questions en droit du travail",
+        hasText: "Trouvez les réponses à vos questions en droit du travail",
       })
     ).toBeVisible({ timeout: 10_000 });
     await iframe.locator("#button-search").click();
@@ -18,9 +17,9 @@ test.describe("Pages integration", () => {
     await page.goto("/integration/modeles-de-courriers");
 
     const iframe = page.frameLocator("iframe");
-    await expect(
-      iframe.getByText(/harcèlement sexuel/i).first()
-    ).toBeVisible({ timeout: 10_000 });
+    await expect(iframe.getByText(/harcèlement sexuel/i).first()).toBeVisible({
+      timeout: 10_000,
+    });
   });
 
   test("should display iframe indemnité licenciement", async ({ page }) => {
