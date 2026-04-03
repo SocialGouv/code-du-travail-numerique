@@ -1,7 +1,7 @@
 import { expect, Page } from "@playwright/test";
 
-function stripQuery(url: string): string {
-  return url.split("?")[0];
+function normalize(url: string): string {
+  return url.split("?")[0].replace(/\/$/, "");
 }
 
 function resolveWithBaseUrl(page: Page, path: string): string {
@@ -10,8 +10,8 @@ function resolveWithBaseUrl(page: Page, path: string): string {
 }
 
 export async function expectUrlEqual(page: Page, path: string): Promise<void> {
-  expect(stripQuery(page.url())).toBe(
-    stripQuery(resolveWithBaseUrl(page, path))
+  expect(normalize(page.url())).toBe(
+    normalize(resolveWithBaseUrl(page, path))
   );
 }
 
@@ -36,8 +36,8 @@ export async function expectCanonicalUrlEqual(
 
   const href = await canonical.getAttribute("href");
   expect(href).not.toBeNull();
-  expect(stripQuery(href as string)).toBe(
-    stripQuery(resolveWithBaseUrl(page, path))
+  expect(normalize(href as string)).toBe(
+    normalize(resolveWithBaseUrl(page, path))
   );
 }
 

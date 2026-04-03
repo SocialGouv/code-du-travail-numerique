@@ -34,5 +34,5 @@
     "./global.d.ts",
     ".next/dev/types/**/*.ts"
   ],
-  "exclude": ["node_modules/**/*", "cypress"]
+  "exclude": ["node_modules/**/*"]
 }

@@ -12,7 +12,6 @@ const customJestConfig = {
   testPathIgnorePatterns: [
     "<rootDir>/.next/",
     "<rootDir>/node_modules/",
-    "<rootDir>/cypress/",
   ],
   // Some deps (uuid@13, @codegouvfr/react-dsfr) ship ESM which Jest (CJS) won’t parse from
   // node_modules unless transformed by Next/Jest.

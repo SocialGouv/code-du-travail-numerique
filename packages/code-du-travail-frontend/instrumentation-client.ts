@@ -8,20 +8,9 @@ import { replayIntegration } from "@sentry/nextjs";
 const ENVIRONMENT = process.env.NEXT_PUBLIC_SENTRY_ENV || "dev";
 const IS_PRODUCTION = ENVIRONMENT === "production";
 
-// Declare Cypress on window for TypeScript
-declare global {
-  interface Window {
-    Cypress?: unknown;
-  }
-}
-
-// Disable Sentry during Cypress tests
-const isCypressTest =
-  typeof window !== "undefined" && window.Cypress !== undefined;
-
 Sentry.init({
   // Basic configuration
-  dsn: isCypressTest ? undefined : process.env.NEXT_PUBLIC_SENTRY_DSN, // Disable Sentry in Cypress by setting DSN to undefined
+  dsn: process.env.NEXT_PUBLIC_SENTRY_DSN,
   environment: ENVIRONMENT,
   dist: process.env.NEXT_PUBLIC_GITHUB_SHA || "dev",
 
