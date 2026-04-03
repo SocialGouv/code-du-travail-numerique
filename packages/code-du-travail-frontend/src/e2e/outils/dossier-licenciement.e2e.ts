@@ -41,9 +41,7 @@ test.describe("Outil - Dossier Licenciement", () => {
       .click();
 
     await expect(
-      page.getByText(
-        "Une faute qui vous est reprochée (motif disciplinaire)"
-      )
+      page.getByText("Une faute qui vous est reprochée (motif disciplinaire)")
     ).toBeVisible();
     await expect(
       page.getByText("Une inaptitude constatée par le médecin du travail")

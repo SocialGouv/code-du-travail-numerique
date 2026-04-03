@@ -29,7 +29,9 @@ test.describe("Page Ministère du travail", () => {
     );
     await page.getByRole("heading", { level: 1 }).click();
     await expect(
-      page.locator('[aria-expanded="true"]', { hasText: /Quelle est la situation du salarié à la fin du contrat/ })
+      page.locator('[aria-expanded="true"]', {
+        hasText: /Quelle est la situation du salarié à la fin du contrat/,
+      })
     ).toBeVisible({ timeout: 10_000 });
   });
 });
