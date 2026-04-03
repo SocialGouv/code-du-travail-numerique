@@ -5,7 +5,6 @@ onlyBuiltDependencies:
   - "@parcel/watcher"
   - "@sentry/cli"
   - "@swc/core"
-  - cypress
   - es5-ext
   - esbuild
   - nx
