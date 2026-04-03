@@ -51,7 +51,7 @@ export const SearchCard: React.FC<SearchCardProps> = ({
           <DisplayContent titleLevel={2} content={description} />
         </span>
       }
-      className={`${fr.cx("fr-mb-3w")} ${dontBreakOut}`}
+      className={fr.cx("fr-mb-0")}
       classes={{
         start: fr.cx("fr-mb-2w"),
       }}
@@ -70,6 +70,3 @@ const contentLimited = css({
   whiteSpace: "normal", // Important : force le retour à la ligne
 });
 
-const dontBreakOut = css({
-  breakInside: "avoid",
-});
