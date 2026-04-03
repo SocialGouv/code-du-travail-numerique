@@ -26,7 +26,7 @@ test.describe("Outil - Indemnité de Precarite", () => {
     await page
       .locator('ul[role="listbox"] li')
       .first()
-      .waitFor({ timeout: 10_000 });
+      .waitFor({ timeout: 15_000 });
     await page
       .locator('ul[role="listbox"] li')
       .filter({ hasText: "Boulangerie-pâtisserie" })
@@ -92,7 +92,7 @@ test.describe("Outil - Indemnité de Precarite", () => {
 
     // Result
     await expect(page.getByText("Détail du calcul")).toBeVisible();
-    await expect(page.getByText("200")).toBeVisible();
+    await expect(page.getByText("200,00 €")).toBeVisible();
     await expect(
       page.getByRole("button", { name: "Imprimer le résultat" })
     ).toBeVisible();

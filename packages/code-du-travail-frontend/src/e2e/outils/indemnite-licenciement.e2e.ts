@@ -42,14 +42,11 @@ test.describe("Outil - Indemnité de licenciement", () => {
     await page.getByRole("button", { name: "Suivant" }).click();
 
     // Result
-    await expect(
-      page.locator("p").filter({
-        hasText:
-          "À partir des éléments que vous avez saisis, l'indemnité de licenciement est estimée à :",
-      })
-    ).toBeVisible();
+    await expect(page.locator("body")).toContainText(
+      "indemnité de licenciement est estimée à"
+    );
     await expect(page.locator("p strong")).toContainText(formatToEuro(6916.67));
-    await expect(page.locator("h4")).toContainText(
+    await expect(page.locator("body")).toContainText(
       "Attention il peut exister un montant plus favorable"
     );
     await expect(

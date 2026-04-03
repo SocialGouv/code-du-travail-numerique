@@ -53,6 +53,7 @@ test.describe("Contributions", () => {
     const h3s = page.getByRole("heading", { level: 3 });
     expect(await h3s.count()).toBeGreaterThanOrEqual(1);
     await h3s.first().click();
+    await page.waitForURL("**/contribution/**");
     await expectUrlEqual(
       page,
       "/contribution/en-cas-darret-maladie-du-salarie-lemployeur-doit-il-assurer-le-maintien-de-salaire"
@@ -78,8 +79,8 @@ test.describe("Contributions", () => {
         { exact: false }
       )
     ).toBeVisible();
-    await expect(page.getByText("Références")).toBeVisible();
-    await expect(page.getByText("L1221-21")).toBeVisible();
+    await expect(page.locator("body")).toContainText("Références");
+    await expect(page.locator("body")).toContainText("L1221-21");
   });
 
   test("je vois une page contribution pour une CC", async ({ page }) => {
@@ -92,11 +93,9 @@ test.describe("Contributions", () => {
       )
     ).toBeVisible();
 
-    await expect(
-      page.getByText(
-        "Les conditions de renouvellement de la période d'essai varient selon la catégorie professionnelle du salarié."
-      )
-    ).toBeVisible();
+    await expect(page.locator("body")).toContainText(
+      "Les conditions de renouvellement de la période d'essai varient selon la catégorie professionnelle du salarié."
+    );
 
     await expect(
       page

@@ -18,7 +18,7 @@ test.describe("Pages infographies", () => {
     await page.getByRole("heading", { level: 1 }).click();
     await page
       .locator("#fr-header-main-navigation")
-      .getByText("Code du travail")
+      .getByRole("button", { name: "Code du travail" })
       .click();
     await page
       .locator("#fr-header-main-navigation")

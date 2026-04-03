@@ -64,6 +64,7 @@ test.describe("Outil - Dossier Licenciement", () => {
       .getByRole("button", { name: "Afficher les informations personnalisées" })
       .click();
 
+    await page.waitForURL("**/infographie/**", { timeout: 10_000 });
     await expectUrlEqual(
       page,
       "/infographie/licenciement-pour-motif-non-disciplinaire"

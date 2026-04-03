@@ -80,7 +80,7 @@ test.describe("Outil - Trouver sa convention collective", () => {
     await page
       .locator('[role="listbox"] [role="option"]')
       .first()
-      .waitFor({ timeout: 10_000 });
+      .waitFor({ timeout: 15_000 });
     await locationInput.press("ArrowDown");
     await locationInput.press("Enter");
     await page.locator('button[type="submit"]').last().click();

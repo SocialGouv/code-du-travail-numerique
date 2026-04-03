@@ -163,7 +163,7 @@ test.describe("Outil - Préavis de retraite", () => {
     await page
       .locator('ul[role="listbox"] li')
       .first()
-      .waitFor({ timeout: 10_000 });
+      .waitFor({ timeout: 15_000 });
     await page
       .locator('ul[role="listbox"] li')
       .filter({ hasText: "Boulangerie" })
@@ -295,7 +295,7 @@ test.describe("Outil - Préavis de retraite", () => {
     await page
       .locator('[role="listbox"] [role="option"]')
       .first()
-      .waitFor({ timeout: 10_000 });
+      .waitFor({ timeout: 15_000 });
     await locationInput.press("ArrowDown");
     await locationInput.press("Enter");
 

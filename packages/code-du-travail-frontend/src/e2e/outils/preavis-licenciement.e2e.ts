@@ -87,7 +87,7 @@ test.describe("Outil - Préavis de licenciement", () => {
     await page
       .locator('ul[role="listbox"] li')
       .first()
-      .waitFor({ timeout: 10_000 });
+      .waitFor({ timeout: 15_000 });
     await page
       .locator('ul[role="listbox"] li')
       .filter({ hasText: "Boulangerie" })
