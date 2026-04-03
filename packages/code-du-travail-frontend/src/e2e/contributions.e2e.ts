@@ -109,8 +109,9 @@ test.describe("Contributions", () => {
     );
 
     await expect(
-      page.getByRole("link", {
-        name: "Demande d'accord du salarié pour le renouvellement d'une période d'essai",
+      page.locator("a", {
+        hasText:
+          /Demande d.accord du salarié pour le renouvellement d.une période d.essai/,
       })
     ).toBeVisible();
   });

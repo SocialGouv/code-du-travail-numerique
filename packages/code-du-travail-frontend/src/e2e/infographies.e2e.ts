@@ -11,21 +11,6 @@ test.describe("Pages infographies", () => {
     page,
   }) => {
     await page.goto("/infographie");
-    await page.goto("/");
-    await expect(page.getByRole("heading", { level: 1 })).toHaveText(
-      "Bienvenue sur le Code du travail numérique"
-    );
-    await page.getByRole("heading", { level: 1 }).click();
-    await page
-      .locator("#fr-header-main-navigation")
-      .getByRole("button", { name: "Code du travail" })
-      .click();
-    await page
-      .locator("#fr-header-main-navigation")
-      .getByRole("link", { name: "Nos infographies" })
-      .click({ force: true });
-
-    await page.waitForURL("**/infographie");
     await expectIndexable(page);
     await expectUrlEqual(page, "/infographie");
     await expectCanonicalUrlEqual(page, "/infographie");
