@@ -38,6 +38,7 @@ export const findGlossaryDefinition = (
     ignoreDiacritics: true,
     includeScore: true,
     ignoreLocation: true,
+    minMatchCharLength: 5,
   });
 
   const results = fuse.search(normalizedQuery);
