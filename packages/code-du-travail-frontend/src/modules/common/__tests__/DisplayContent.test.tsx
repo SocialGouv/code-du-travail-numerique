@@ -599,6 +599,20 @@ describe("DisplayContent", () => {
       );
     });
 
+    it(`should remove link when extra disableLink = true`, () => {
+      const { container, asFragment } = render(
+        <DisplayContent
+          content={`
+        <a target="_blank" href="hello.com">Mon Lien</a>`}
+          titleLevel={3}
+          extra={{ disableLink: true }}
+        ></DisplayContent>
+      );
+
+      expect(asFragment().textContent).toBe("Mon Lien");
+      expect(container.querySelector("a")).toBeNull();
+    });
+
     it(`should remove margin space for p in li`, () => {
       const { container } = render(
         <DisplayContent

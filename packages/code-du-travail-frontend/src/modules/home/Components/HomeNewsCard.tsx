@@ -17,7 +17,11 @@ export const HomeNewsCard = ({
     border
     desc={
       <span className={contentLimited}>
-        <DisplayContent content={description} titleLevel={4} />
+        <DisplayContent
+          content={description}
+          titleLevel={4}
+          extra={{ disableLink: true }}
+        />
       </span>
     }
     horizontal
