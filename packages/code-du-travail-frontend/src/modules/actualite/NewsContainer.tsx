@@ -26,6 +26,6 @@ export const NewsContainer = ({ news }: Props) => (
   >
     <h1 className={fr.cx("fr-mb-6w")}>{news.title}</h1>
     <p className={fr.cx("fr-text--lg")}>{formatDateAsFrenchText(news.date)}</p>
-    <DisplayContent content={news.content} titleLevel={2} />
+    <DisplayContent content={news.content} titleLevel={3} />
   </ContainerRichWithBreadcrumbs>
 );

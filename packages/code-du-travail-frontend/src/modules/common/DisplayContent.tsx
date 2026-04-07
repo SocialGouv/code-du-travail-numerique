@@ -18,7 +18,6 @@ import { AccessibleAlert } from "../outils/common/components/AccessibleAlert";
 import { css } from "@styled-system/css";
 import Image from "next/image";
 import { ContributionInfographicFull } from "@socialgouv/cdtn-types/build/elastic/contributions";
-import { Qahiri } from "next/dist/compiled/@next/font/dist/google";
 
 export type numberLevel = 2 | 3 | 4 | 5 | 6;
 
@@ -228,6 +227,7 @@ const getHeadingElement = (params: Options, domNode) => {
 type Options = {
   titleLevel: numberLevel;
   infographics: ContributionInfographicFull[];
+  disableLink: boolean;
 };
 const options = (params: Options): HTMLReactParserOptions => {
   const { titleLevel } = params;
@@ -338,6 +338,7 @@ const options = (params: Options): HTMLReactParserOptions => {
                           options({
                             titleLevel,
                             infographics: params.infographics,
+                            disableLink: params.disableLink,
                           })
                         )}
                       </>
@@ -406,6 +407,9 @@ const options = (params: Options): HTMLReactParserOptions => {
           );
         }
         if (domNode.name === "a") {
+          if (params.disableLink) {
+            return <>{renderChildren(domNode, true, options(params))}</>;
+          }
           return (
             <Link href={domNode.attribs.href} {...domNode.attribs}>
               {renderChildren(domNode, true, options(params))}
@@ -427,7 +431,8 @@ type Props = {
   content: string;
   titleLevel: numberLevel;
   extra?: {
-    infographics: ContributionInfographicFull[];
+    infographics?: ContributionInfographicFull[];
+    disableLink?: boolean;
   };
 };
 
@@ -439,7 +444,11 @@ const DisplayContent = ({
   try {
     return parse(
       xssWrapper(content),
-      options({ titleLevel, infographics: extra?.infographics ?? [] })
+      options({
+        titleLevel,
+        infographics: extra?.infographics ?? [],
+        disableLink: extra?.disableLink ?? false,
+      })
     );
   } catch (error) {
     console.error("Error parsing HTML content:", error);
