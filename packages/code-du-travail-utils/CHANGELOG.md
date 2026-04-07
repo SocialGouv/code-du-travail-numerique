@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.223.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.222.0...v4.223.0) (2026-04-07)
+
+
+### Features
+
+* **actualites:** ajout de la page listant les actualités ([#7205](https://github.com/SocialGouv/code-du-travail-numerique/issues/7205)) ([db257d9](https://github.com/SocialGouv/code-du-travail-numerique/commit/db257d9f589360ac205b8f4c118e98d625063fad))
+
+
+
+
+
 # [4.222.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.221.0...v4.222.0) (2026-03-30)
 
 

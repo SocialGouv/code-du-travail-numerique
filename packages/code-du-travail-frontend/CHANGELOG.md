@@ -3,6 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.223.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.222.0...v4.223.0) (2026-04-07)
+
+
+### Bug Fixes
+
+* **actualite:** corrections sur les titres, les marges et bug sur les liens ([#7218](https://github.com/SocialGouv/code-du-travail-numerique/issues/7218)) ([c09c36b](https://github.com/SocialGouv/code-du-travail-numerique/commit/c09c36b36e4244973b2b7dedad6939e8d46d1ae8))
+* **contributions:** auto-redirect vers la concention collective quand celle-ci a été sauvegardée dans le header ([#7203](https://github.com/SocialGouv/code-du-travail-numerique/issues/7203)) ([599d3ae](https://github.com/SocialGouv/code-du-travail-numerique/commit/599d3aed5ecb802e1aa2b18b51a4f6861e15138a))
+* migrate e2e tests from Cypress to Playwright ([#7212](https://github.com/SocialGouv/code-du-travail-numerique/issues/7212)) ([7d5872a](https://github.com/SocialGouv/code-du-travail-numerique/commit/7d5872a1c1a686c49f2f3cd7928be6359fc7997b))
+* **quoi-de-neuf:** ajout du message `Aucune actualité cette semaine` sur la semaine courante ([#7198](https://github.com/SocialGouv/code-du-travail-numerique/issues/7198)) ([474efe1](https://github.com/SocialGouv/code-du-travail-numerique/commit/474efe1d50943751f4e3ebfcf5e857330277c99e))
+* **recherche:** mise en place de la masonry grid layout en horizontal ([#7215](https://github.com/SocialGouv/code-du-travail-numerique/issues/7215)) ([800cb47](https://github.com/SocialGouv/code-du-travail-numerique/commit/800cb47916c0cb8025a5cfc40b0bb4503e8f9216))
+* **recherche:** mismatch dans la recherche des définitions ([#7206](https://github.com/SocialGouv/code-du-travail-numerique/issues/7206)) ([4e1416f](https://github.com/SocialGouv/code-du-travail-numerique/commit/4e1416f0bce40a71cc8e0a96512326c68fa25108))
+* **search:** fix idccXXXX pattern and add siret class ([#7216](https://github.com/SocialGouv/code-du-travail-numerique/issues/7216)) ([e5745e1](https://github.com/SocialGouv/code-du-travail-numerique/commit/e5745e184a8be48f1a89ebd5588e8380db814f6f))
+
+
+### Features
+
+* **actualites:** ajout de la page listant les actualités ([#7205](https://github.com/SocialGouv/code-du-travail-numerique/issues/7205)) ([db257d9](https://github.com/SocialGouv/code-du-travail-numerique/commit/db257d9f589360ac205b8f4c118e98d625063fad))
+* **outils:** ajout d'une illustration du bulletin de paie sur le préavis de démission ([#7210](https://github.com/SocialGouv/code-du-travail-numerique/issues/7210)) ([d8dbfc4](https://github.com/SocialGouv/code-du-travail-numerique/commit/d8dbfc4e3bcc82130bf1eacbe58847afc9521acd))
+
+
+
+
+
 # [4.222.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.221.0...v4.222.0) (2026-03-30)
 
 
