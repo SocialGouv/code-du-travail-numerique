@@ -10,6 +10,7 @@ export enum MatomoHomeEvent {
   CLICK_VOIR_TOUTES_LES_FICHES = "click_voir_toutes_les_fiches_pratiques",
   CLICK_VOIR_TOUTES_LES_CONVENTIONS_COLLECTIVES = "click_voir_toutes_les_conventions_collectives",
   CLICK_VOIR_TOUTES_LES_THEMES = "click_voir_tous_les_themes",
+  CLICK_VOIR_TOUTES_LES_ACTUALITES = "click_voir_toutes_les_actualites",
   CLICK_COMPRENDRE_DROIT_DU_TRAVAIL = "click_comprendre_le_droit_du_travail",
   CLICK_PARCOURIR_LES_QUESTIONS = "click_parcourir_les_questions",
   CLICK_DE_LA_QUESTION_A_LACTION = "click_question_action",

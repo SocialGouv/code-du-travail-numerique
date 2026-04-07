@@ -39,7 +39,7 @@ export const routeBySource = {
   [SOURCES.PREQUALIFIED]: "prequalified",
   [SOURCES.INFOGRAPHICS]: "infographie",
   [SOURCES.WHAT_IS_NEW]: "quoi-de-neuf",
-  [SOURCES.NEWS]: "actualites",
+  [SOURCES.NEWS]: "actualite",
 } as const;
 
 export const labelBySource = {

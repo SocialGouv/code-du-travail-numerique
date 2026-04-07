@@ -5,12 +5,17 @@ import { fetchTools } from "../outils";
 import { fetchModels } from "../modeles-de-courriers";
 import { fetchContributions } from "../contributions";
 import { fetchAgreementsByCdtnIds } from "../convention-collective";
+import { fetchNewsList } from "../actualite";
 
 export type HomeCardItem = {
   description: string;
   link: string;
   theme: string;
   title: string;
+};
+
+export type HomeNewsCardItem = Omit<HomeCardItem, "theme"> & {
+  date: string;
 };
 
 export type HomeTileItem = {
@@ -25,6 +30,7 @@ export type HomePageProps = {
   tools: HomeTileItem[];
   modeles: Omit<HomeCardItem, "description" | "theme">[];
   contributions: HomeCardItem[];
+  news: HomeNewsCardItem[];
   agreements: HomeCardItem[];
   themes: HomeTileItem[];
 };
@@ -69,6 +75,19 @@ export const fetchHomeData = async (): Promise<HomePageProps> => {
     title: modele.title,
   }));
 
+  const news = await fetchNewsList(
+    ["source", "date", "slug", "title", "content"],
+    {
+      pageSize: 2,
+      page: 1,
+    }
+  );
+  const parsedNews = news.items.map((item) => ({
+    description: item.content,
+    link: `/${getRouteBySource(item.source)}/${item.slug}`,
+    date: item.date,
+    title: item.title,
+  }));
   const contributions = await fetchContributions(
     ["source", "slug", "title", "description"],
     {
@@ -114,6 +133,7 @@ export const fetchHomeData = async (): Promise<HomePageProps> => {
     themes: parsedThemes,
     highlights: parsedHighlights,
     tools: parsedTools,
+    news: parsedNews,
     modeles: parsedModeles,
     contributions: parsedContributions,
     agreements: parsedAgreements,

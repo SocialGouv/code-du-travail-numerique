@@ -43,8 +43,8 @@ importers:
         specifier: ^2.66.6
         version: 2.66.6
       '@socialgouv/cdtn-types':
-        specifier: ^2.66.6
-        version: 2.66.6
+        specifier: ^2.71.0
+        version: 2.71.0
       '@socialgouv/cdtn-utils':
         specifier: link:../code-du-travail-utils
         version: link:../code-du-travail-utils
@@ -2487,8 +2487,8 @@ packages:
   '@socialgouv/cdtn-elasticsearch@2.66.6':
     resolution: {integrity: sha512-zNq5UwVXrd0T/ofF5PclI85lPj4ZP7cldI7fY6XbCpTivw9lzN0w6MUnlyvwzMptmve60V3aqo/hghHNDOeGqA==}
 
-  '@socialgouv/cdtn-types@2.66.6':
-    resolution: {integrity: sha512-jC11HQ0O/2zBLLE6SmH+b1xCEkkpZBuFWj3NnzAEOuSWs99zIRZu9Dw/Pihyfej7AcBaDIklUMBSScE8GEMErA==}
+  '@socialgouv/cdtn-types@2.71.0':
+    resolution: {integrity: sha512-iI5AfIbk1uoogIcE0TKN5D0cT+NCNv+KNST6dlYLA9ytU55G7AFWXsf/nBPMtPoVZPHicO1fe9gm/VKLM8YkFg==}
 
   '@socialgouv/matomo-next@1.11.0':
     resolution: {integrity: sha512-48XLGnq4LzwOHf2wgm76UXFnGGKOKeOal4+QHeewQH+VY/gxJiIZ1k0o8LuUvKOHThW5Mqco8yAGNe25f7s28g==}
@@ -10178,7 +10178,7 @@ snapshots:
 
   '@socialgouv/cdtn-elasticsearch@2.66.6': {}
 
-  '@socialgouv/cdtn-types@2.66.6': {}
+  '@socialgouv/cdtn-types@2.71.0': {}
 
   '@socialgouv/matomo-next@1.11.0(next@16.1.6(@babel/core@7.29.0)(@opentelemetry/api@1.9.0)(@playwright/test@1.58.2)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(sass@1.97.3))':
     dependencies:

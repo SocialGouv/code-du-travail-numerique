@@ -16,6 +16,7 @@ async function Index() {
   return (
     <DsfrLayout container="fr-container--fluid">
       <Home
+        news={data.news}
         agreements={data.agreements}
         contributions={data.contributions}
         highlights={data.highlights}

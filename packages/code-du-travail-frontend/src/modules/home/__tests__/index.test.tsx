@@ -50,6 +50,14 @@ const mockData: HomePageProps = {
       description: "Theme description",
     },
   ],
+  news: [
+    {
+      title: "Actualité 1",
+      link: "/actualite/actaulite-1",
+      date: "29/03/2026",
+      description: "<p>Description de l'actualité 1</p>",
+    },
+  ],
 };
 
 describe("<Home />", () => {

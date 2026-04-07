@@ -1,3 +1,6 @@
+import { format, parse } from "date-fns";
+import { fr } from "date-fns/locale/fr";
+
 export enum Month {
   janvier = 1,
   février = 2,
@@ -76,4 +79,9 @@ export const dateToString = (date: Date, withDay = false): string => {
   const num = date.getDate();
   const month = date.getMonth() + 1;
   return `${withDay ? `${days[day]} ` : ""}${num} ${Month[month].toString()}`;
+};
+
+export const formatDateAsFrenchText = (date: string): string => {
+  const parsedDate = parse(date, "dd/MM/yyyy", new Date());
+  return format(parsedDate, "d MMMM yyyy", { locale: fr });
 };
