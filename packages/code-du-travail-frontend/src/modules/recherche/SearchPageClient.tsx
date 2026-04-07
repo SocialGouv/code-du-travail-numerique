@@ -5,11 +5,11 @@ import { useSearchParams } from "next/navigation";
 import { fr } from "@codegouvfr/react-dsfr";
 import { SearchBar } from "./SearchBar";
 import { SearchCard } from "./Card";
+import { MasonryGrid } from "./MasonryGrid";
 import { ContainerWithBreadcrumbs } from "../layout/ContainerWithBreadcrumbs";
 import { useSearchTracking } from "./tracking";
 import { generateSearchLink } from "./utils";
 import { SearchResult } from "src/api";
-import { css } from "@styled-system/css";
 import { Feedback } from "../layout/feedback";
 
 export type SearchPageClientProps = {
@@ -98,34 +98,32 @@ export const SearchPageClient: React.FC<SearchPageClientProps> = ({
                   {query}&quot;
                 </span>
               </h2>
-              <div id="content" className={topDocumentsContainer}>
-                {topDocuments.map((item) => {
-                  return (
-                    <SearchCard
-                      key={item.cdtnId}
-                      id={`search-result-${item.cdtnId}`}
-                      title={item.title}
-                      description={item.description || ""}
-                      source={item.source}
-                      link={generateSearchLink(
+              <MasonryGrid id="content">
+                {topDocuments.map((item) => (
+                  <SearchCard
+                    key={item.cdtnId}
+                    id={`search-result-${item.cdtnId}`}
+                    title={item.title}
+                    description={item.description || ""}
+                    source={item.source}
+                    link={generateSearchLink(
+                      item.source,
+                      item.slug,
+                      item.url,
+                      item.parentSlug
+                    )}
+                    onClick={() =>
+                      emitResultSelectionEvent(
                         item.source,
                         item.slug,
                         item.url,
+                        item.algo,
                         item.parentSlug
-                      )}
-                      onClick={() =>
-                        emitResultSelectionEvent(
-                          item.source,
-                          item.slug,
-                          item.url,
-                          item.algo,
-                          item.parentSlug
-                        )
-                      }
-                    />
-                  );
-                })}
-              </div>
+                      )
+                    }
+                  />
+                ))}
+              </MasonryGrid>
             </div>
             <div className={fr.cx("fr-col-md-3", "fr-col-12")}>
               <Feedback question="Ces résultats sont-ils pertinents pour votre recherche ?" />
@@ -192,7 +190,3 @@ export const SearchPageClient: React.FC<SearchPageClientProps> = ({
     </ContainerWithBreadcrumbs>
   );
 };
-
-const topDocumentsContainer = css({
-  columns: [1, 2, 3],
-});

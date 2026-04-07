@@ -32,6 +32,12 @@ if (typeof window !== "undefined") {
     // ignore
   }
 
+  global.ResizeObserver ??= class ResizeObserver {
+    observe() {}
+    unobserve() {}
+    disconnect() {}
+  };
+
   Element.prototype.scrollIntoView = jest.fn();
 }
 
