@@ -90,16 +90,16 @@ jobs:
       - name: Install dependencies
         run: |
           pnpm install --frozen-lockfile
-      - name: Install Cypress binary
+      - name: Install Playwright binary
         run: |
-          pnpm --filter @cdt/frontend exec cypress install
+          pnpm --filter @cdt/frontend test:e2e:install
       - name: Run test e2e
         run: |
-          TEST_BASEURL=https://code-du-travail-numerique-preprod.ovh.fabrique.social.gouv.fr TEST_MODE=heavy-and-light pnpm test:e2e:old
-      - name: Archive generated screenshots
-        if: failure()
+          TEST_BASEURL=https://code-du-travail-numerique-preprod.ovh.fabrique.social.gouv.fr pnpm test:e2e -- --project=chromium --project=widgets
+      - name: Upload Playwright report
+        if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: e2e-screenshots
-          path: |
-            packages/code-du-travail-frontend/cypress/screenshots
+          name: playwright-report
+          path: packages/code-du-travail-frontend/playwright-report/
+          retention-days: 7
