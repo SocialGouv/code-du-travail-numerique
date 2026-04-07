@@ -7,6 +7,7 @@ import { extractHits } from "../utils";
 import { articleMatcher, extractReferences } from "./referenceExtractor";
 import {
   getDefaultIdccResults,
+  IDCC_TOKENS,
   MATCHING_CC_TOKENS,
   NO_CC_TOKENS,
 } from "./defaultIdcc";
@@ -18,6 +19,7 @@ import {
   ThemeSearchResult,
 } from "./types";
 import { getBySlugsThemes, getBySlugThemes } from "../../themes";
+import { queryAllByAltText } from "@testing-library/react";
 
 const keyword_std = [
   "a conservatoir mise pied",
@@ -133,6 +135,17 @@ const formatResult =
 
 const isCC = async (query: string): Promise<PreSearchResult[]> => {
   await ensureIdccsInstantiated();
+
+  // deal with specific idcc single token case : idccXXXX
+  for (const ccToken of IDCC_TOKENS) {
+    if (query.toLowerCase().startsWith(ccToken)) {
+      query = [
+        query.slice(0, ccToken.length),
+        query.slice(ccToken.length),
+      ].join(" ");
+      break;
+    }
+  }
 
   const tokens: string[] = tokenize(query);
 
@@ -288,6 +301,10 @@ const isNatural = (query: string) => {
   );
 };
 
+const isSirenSiret = (query: string) =>
+  // only 9 or 14 digits
+  /^\d+$/.test(query) && (query.length == 9 || query.length == 14);
+
 export const presearch = async (
   query: string,
   themes: ThemeSearchResult[],
@@ -307,6 +324,10 @@ export const presearch = async (
   results.push(...matchingTheme);
 
   const classes = results.map((r) => r.class);
+
+  if (isSirenSiret(query)) {
+    classes.push(PresearchClass.SIRET);
+  }
 
   if (allClasses) {
     const matchingStd = isStandardKeyword(pQuery);
