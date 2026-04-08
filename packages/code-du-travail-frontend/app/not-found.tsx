@@ -2,7 +2,6 @@
 
 import { NotFound } from "../src/modules/errors/NotFound";
 import { DsfrLayout } from "../src/modules/layout";
-import * as Sentry from "@sentry/nextjs";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -11,8 +10,6 @@ export const metadata: Metadata = {
 };
 
 export default function Index() {
-  Sentry.captureMessage("Page non trouvée");
-
   return (
     <DsfrLayout>
       <NotFound />
