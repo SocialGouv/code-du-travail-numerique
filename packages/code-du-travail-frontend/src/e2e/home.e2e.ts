@@ -18,7 +18,7 @@ test.describe("Page d'accueil", () => {
     );
 
     await expect(page.getByRole("heading", { level: 2 }).nth(1)).toHaveText(
-      "Comprendre le droit du travail"
+      "Actualités"
     );
 
     await expect(page.getByText("Recherchez par mots-clés")).toBeVisible();
