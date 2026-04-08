@@ -5,6 +5,7 @@ export const JSON_LD_IDS = {
   website: "jsonld-website",
   breadcrumbs: "jsonld-breadcrumbs",
   legislation: "jsonld-legislation",
+  newsArticle: "jsonld-news-article",
 } as const;
 
 export const JSON_LD_ENTITY_IDS = {
@@ -113,5 +114,38 @@ export function buildLegislationJsonLd({
     },
     inLanguage: "fr-FR",
     legislationJurisdiction: "FR",
+  };
+}
+
+export function buildNewsArticleJsonLd({
+  headline,
+  url,
+  datePublished,
+  description,
+}: {
+  headline: string;
+  url: string;
+  datePublished: string;
+  description?: string;
+}): Record<string, unknown> {
+  const absoluteUrl = toAbsoluteUrl(url);
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    headline,
+    url: absoluteUrl,
+    mainEntityOfPage: absoluteUrl,
+    datePublished,
+    dateModified: datePublished,
+    ...(description ? { description } : {}),
+    author: {
+      "@type": "Organization",
+      name: "Code du travail numérique",
+    },
+    publisher: {
+      "@id": JSON_LD_ENTITY_IDS.organization,
+    },
+    inLanguage: "fr-FR",
   };
 }

@@ -9,6 +9,7 @@ import { fetchTools } from "../outils";
 import { fetchModels } from "../modeles-de-courriers";
 import { fetchAllInformations } from "../informations";
 import { fetchContributions } from "../contributions";
+import { fetchNewsList } from "../actualite";
 
 export type Document = {
   root: DocumentInfo;
@@ -21,6 +22,7 @@ export type DocumentInfo = {
 
 export type GetSitemapPage = {
   themes: Document[];
+  news: Document[];
   tools: Document[];
   modeles: Document[];
   contributions: Document[];
@@ -32,6 +34,7 @@ export const fetchSitemapData = async () => {
   const themes = await getAllThemesAndSubThemes();
   const tools = await fetchTools(["slug", "title"]);
   const modeles = await fetchModels(["slug", "title"]);
+  const news = await fetchNewsList(["slug", "title"], { pageSize: 5 });
   const agreements = await fetchAllAgreements({
     fields: ["slug", "shortTitle", "num"],
     sortBy: "shortTitle",
@@ -39,6 +42,9 @@ export const fetchSitemapData = async () => {
   const informations = await fetchAllInformations(["slug", "title"], "title");
   const contributions = await getAllContributionsGroupByQuestion(agreements);
   const response: GetSitemapPage = {
+    news: news.items.map((root) => ({
+      root,
+    })),
     themes,
     tools: tools.map((root) => ({
       root,

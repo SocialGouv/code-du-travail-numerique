@@ -2,6 +2,7 @@ import {
   buildBreadcrumbListJsonLd,
   buildGovernmentOrganizationJsonLd,
   buildLegislationJsonLd,
+  buildNewsArticleJsonLd,
   buildWebSiteWithSearchActionJsonLd,
   JSON_LD_ENTITY_IDS,
 } from "../builders";
@@ -40,6 +41,17 @@ describe("jsonld builders", () => {
       isBasedOn: "https://www.legifrance.gouv.fr",
     });
     expect(jsonld["@type"]).toBe("Legislation");
+    expect(jsonld).toMatchSnapshot();
+  });
+
+  it("buildNewsArticleJsonLd()", () => {
+    const jsonld = buildNewsArticleJsonLd({
+      headline: "Titre actualite",
+      url: "/actualite/mon-article",
+      datePublished: "2024-01-01",
+      description: "Description de l'actualite",
+    });
+    expect(jsonld["@type"]).toBe("NewsArticle");
     expect(jsonld).toMatchSnapshot();
   });
 });

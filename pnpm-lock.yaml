@@ -40,8 +40,8 @@ importers:
         specifier: ~10.38.0
         version: 10.38.0(@opentelemetry/context-async-hooks@2.5.0(@opentelemetry/api@1.9.0))(@opentelemetry/core@2.5.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@2.5.0(@opentelemetry/api@1.9.0))(encoding@0.1.13)(next@16.1.6(@babel/core@7.29.0)(@opentelemetry/api@1.9.0)(@playwright/test@1.58.2)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(sass@1.97.3))(react@19.2.4)(webpack@5.103.0(@swc/core@1.15.11(@swc/helpers@0.5.18))(esbuild@0.27.2))
       '@socialgouv/cdtn-elasticsearch':
-        specifier: ^2.66.6
-        version: 2.66.6
+        specifier: ^2.72.1
+        version: 2.72.1
       '@socialgouv/cdtn-types':
         specifier: ^2.71.0
         version: 2.71.0
@@ -2484,8 +2484,8 @@ packages:
   '@sinonjs/fake-timers@13.0.5':
     resolution: {integrity: sha512-36/hTbH2uaWuGVERyC6da9YwGWnzUZXuPro/F2LfsdOsLnCojz/iSH8MxUt/FD2S5XBSVPhmArFUXcpCQ2Hkiw==}
 
-  '@socialgouv/cdtn-elasticsearch@2.66.6':
-    resolution: {integrity: sha512-zNq5UwVXrd0T/ofF5PclI85lPj4ZP7cldI7fY6XbCpTivw9lzN0w6MUnlyvwzMptmve60V3aqo/hghHNDOeGqA==}
+  '@socialgouv/cdtn-elasticsearch@2.72.1':
+    resolution: {integrity: sha512-jJ1fnyuvrTUL7z+L/9ZB6GhJjg0FqoikwsB1+6MQX7V8wKbVS5h/PlPH497/2rbuGublvjs+8wzZ0tbiZ94/uA==}
 
   '@socialgouv/cdtn-types@2.71.0':
     resolution: {integrity: sha512-iI5AfIbk1uoogIcE0TKN5D0cT+NCNv+KNST6dlYLA9ytU55G7AFWXsf/nBPMtPoVZPHicO1fe9gm/VKLM8YkFg==}
@@ -10176,7 +10176,7 @@ snapshots:
     dependencies:
       '@sinonjs/commons': 3.0.1
 
-  '@socialgouv/cdtn-elasticsearch@2.66.6': {}
+  '@socialgouv/cdtn-elasticsearch@2.72.1': {}
 
   '@socialgouv/cdtn-types@2.71.0': {}
 
