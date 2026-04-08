@@ -1,18 +1,19 @@
 "use client";
 
-import { useRef, useEffect, type ReactNode, Children } from "react";
+import { Children, type ReactNode, useEffect, useRef } from "react";
 import { css } from "@styled-system/css";
 import { fr } from "@codegouvfr/react-dsfr";
 import { useBreakpoints } from "../common/useBreakpoints";
 
 type MasonryGridProps = {
   children: ReactNode;
+  key: string;
   id?: string;
 };
 
 const GAP_REM = parseFloat(fr.spacing("3w")); // 1.5rem (DSFR 3w token)
 
-export const MasonryGrid = ({ children, id }: MasonryGridProps) => {
+export const MasonryGrid = ({ children, id, key }: MasonryGridProps) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const { isMd, isSm } = useBreakpoints();
   const colCount = isMd ? 3 : isSm ? 2 : 1;
@@ -71,7 +72,7 @@ export const MasonryGrid = ({ children, id }: MasonryGridProps) => {
     const ro = new ResizeObserver(() => layout());
     ro.observe(container);
     return () => ro.disconnect();
-  }, [colCount]);
+  }, [colCount, key]);
 
   return (
     <div ref={containerRef} id={id} className={masonryContainer}>
