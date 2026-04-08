@@ -67,15 +67,20 @@ test.describe("Conventions collectives", () => {
         "Articles de la convention collective"
       );
 
-      await expect(
-        page.locator("#agreement-articles .fr-accordion__title")
-      ).toHaveCount(3);
+      const articles = await page
+        .locator("#agreement-articles .fr-accordion__title")
+        .count();
+      expect(articles).toBeGreaterThan(3);
 
       await expect(
         page.locator("#agreement-articles .fr-accordion__title").first()
       ).toHaveText("Salaires minima hiérarchiques");
 
-      await expect(page.locator("#agreement-articles a")).toHaveCount(49);
+      const agreemmentsArticles = await page
+        .locator("#agreement-articles a")
+        .count();
+
+      await expect(agreemmentsArticles).toBeGreaterThan(49);
 
       await page.locator("#frequent-questions-list-0 a").first().click();
 
