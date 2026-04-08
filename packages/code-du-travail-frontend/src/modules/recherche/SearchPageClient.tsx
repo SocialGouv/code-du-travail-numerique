@@ -98,7 +98,7 @@ export const SearchPageClient: React.FC<SearchPageClientProps> = ({
                   {query}&quot;
                 </span>
               </h2>
-              <MasonryGrid id="content">
+              <MasonryGrid id="content" key={initialQuery}>
                 {topDocuments.map((item) => (
                   <SearchCard
                     key={item.cdtnId}
