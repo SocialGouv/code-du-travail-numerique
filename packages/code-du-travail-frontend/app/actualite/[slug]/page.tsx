@@ -5,6 +5,7 @@ import { generateDefaultMetadata } from "src/modules/common/metas";
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
 import { fetchNews, format, News, NewsContainer } from "src/modules/actualite";
 import { Metadata } from "next";
+import { NewsArticleJsonLd } from "src/modules/seo/jsonld";
 
 export async function generateMetadata(
   props: PageProps<"/actualite/[slug]">
@@ -33,6 +34,12 @@ async function NewsPage(props: PageProps<"/actualite/[slug]">) {
 
   return (
     <DsfrLayout>
+      <NewsArticleJsonLd
+        headline={news.title}
+        url={`/actualite/${params.slug}`}
+        datePublished={news.date}
+        description={news.meta_description}
+      />
       <NewsContainer news={news} />
     </DsfrLayout>
   );

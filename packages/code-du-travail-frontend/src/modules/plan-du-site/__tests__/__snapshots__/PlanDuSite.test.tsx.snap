@@ -38,6 +38,48 @@ exports[`<SiteMap /> should match snapshot 1`] = `
           role="heading"
         >
           <a
+            href="/actualite"
+          >
+            Actualités
+          </a>
+        </div>
+        <ul
+          class="fr-mt-3w"
+        >
+          <li>
+            <a
+              href="/actualite/slug-test"
+            >
+              Test title
+            </a>
+            <ul>
+              <li>
+                <a
+                  href="/actualite/content-1"
+                >
+                  Content 1
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/actualite/content-2"
+                >
+                  Content 2
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div
+        class="fr-mb-4w"
+      >
+        <div
+          aria-level="2"
+          class="fr-text--lead fr-text--bold"
+          role="heading"
+        >
+          <a
             href="/outils"
           >
             Simulateurs

@@ -7,6 +7,7 @@ import { Container } from "../layout/Container";
 
 type Props = {
   themes: Document[];
+  news: Document[];
   tools: Document[];
   modeles: Document[];
   contributions: Document[];
@@ -77,6 +78,7 @@ const SiteMapSection = ({
 );
 
 export const SiteMap = ({
+  news,
   tools,
   modeles,
   contributions,
@@ -89,6 +91,14 @@ export const SiteMap = ({
       Plan du site
     </h1>
     <SiteMapSection title={"Page d'accueil"} url={"/"} headingLevel={2} />
+    <SiteMapSection
+      title={"Actualités"}
+      url={"/actualite"}
+      detail={{
+        source: SOURCES.NEWS,
+        docs: news,
+      }}
+    />
     <SiteMapSection
       title={"Simulateurs"}
       url={"/outils"}

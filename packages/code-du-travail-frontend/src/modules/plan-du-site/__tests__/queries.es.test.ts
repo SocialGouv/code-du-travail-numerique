@@ -44,6 +44,7 @@ describe("Sitemap", () => {
   it("getSitemapData returns empty array if contrib does not exists", async () => {
     const result = await fetchSitemapData();
     expect(Object.keys(result)).toEqual([
+      "news",
       "themes",
       "tools",
       "modeles",

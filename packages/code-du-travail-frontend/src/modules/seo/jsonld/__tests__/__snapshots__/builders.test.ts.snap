@@ -56,6 +56,27 @@ exports[`jsonld builders buildLegislationJsonLd() 1`] = `
 }
 `;
 
+exports[`jsonld builders buildNewsArticleJsonLd() 1`] = `
+{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "author": {
+    "@type": "Organization",
+    "name": "Code du travail numérique",
+  },
+  "dateModified": "2024-01-01",
+  "datePublished": "2024-01-01",
+  "description": "Description de l'actualite",
+  "headline": "Titre actualite",
+  "inLanguage": "fr-FR",
+  "mainEntityOfPage": "http://api.url/actualite/mon-article",
+  "publisher": {
+    "@id": "http://api.url/#government-organization",
+  },
+  "url": "http://api.url/actualite/mon-article",
+}
+`;
+
 exports[`jsonld builders buildWebSiteWithSearchActionJsonLd() 1`] = `
 {
   "@context": "https://schema.org",

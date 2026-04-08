@@ -25,6 +25,7 @@ describe("<SiteMap />", () => {
     ];
     const { container } = render(
       <SiteMap
+        news={sampleData}
         agreements={sampleData}
         contributions={sampleData}
         informations={sampleData}

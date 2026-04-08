@@ -4,3 +4,4 @@ export * from "./GovernmentOrganizationJsonLd";
 export * from "./WebSiteJsonLd";
 export * from "./BreadcrumbListJsonLd";
 export * from "./LegislationJsonLd";
+export * from "./NewsArticleJsonLd";

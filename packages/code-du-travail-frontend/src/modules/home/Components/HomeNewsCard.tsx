@@ -47,7 +47,7 @@ const contentLimited = css({
   display: "-webkit-box !important",
   // @ts-expect-error - vendor prefixed properties
   WebkitBoxOrient: "vertical",
-  WebkitLineClamp: 5,
+  WebkitLineClamp: 2,
   overflow: "hidden",
   textOverflow: "ellipsis",
   overflowWrap: "break-word",

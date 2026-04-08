@@ -4,6 +4,7 @@ import {
   BreadcrumbListJsonLd,
   GovernmentOrganizationJsonLd,
   LegislationJsonLd,
+  NewsArticleJsonLd,
   WebSiteJsonLd,
   JSON_LD_IDS,
 } from "../index";
@@ -68,5 +69,21 @@ describe("jsonld components", () => {
     ) as HTMLScriptElement | null;
     expect(script).not.toBeNull();
     expect(script?.textContent).toContain("Legislation");
+  });
+
+  it("NewsArticleJsonLd renders a JSON-LD script", () => {
+    render(
+      <NewsArticleJsonLd
+        headline="Titre actualite"
+        url="/actualite/mon-article"
+        datePublished="2024-01-01"
+      />
+    );
+
+    const script = document.querySelector(
+      `script#${JSON_LD_IDS.newsArticle}`
+    ) as HTMLScriptElement | null;
+    expect(script).not.toBeNull();
+    expect(script?.textContent).toContain("NewsArticle");
   });
 });
