@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.224.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.223.1...v4.224.0) (2026-04-08)
+
+
+### Bug Fixes
+
+* **fiche-mt:** gestion des liens de type ancre sans href ([#7223](https://github.com/SocialGouv/code-du-travail-numerique/issues/7223)) ([b630587](https://github.com/SocialGouv/code-du-travail-numerique/commit/b630587057aa040d80661c9fe1b8ad35826e8cee))
+
+
+### Features
+
+* **actualite:** ajout du json-ld et au plan du site ([#7224](https://github.com/SocialGouv/code-du-travail-numerique/issues/7224)) ([a8c1bf2](https://github.com/SocialGouv/code-du-travail-numerique/commit/a8c1bf2e6650928902e9f21d12dd7fa3e207d539))
+
+
+
+
+
 ## [4.223.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.223.0...v4.223.1) (2026-04-08)
 
 
