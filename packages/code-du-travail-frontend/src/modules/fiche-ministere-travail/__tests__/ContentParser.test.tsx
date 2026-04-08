@@ -117,4 +117,12 @@ describe("Fiche MT content parser", () => {
       `<p><a target=\"_blank\" rel=\"noopener noreferrer\" title=\"limitativement énumérées - nouvelle fenêtre\" href=\"/le-contrat-duree-determinee-cdd\">limitativement énumérées</a>.</p>`
     );
   });
+
+  test("Should skip link without href", () => {
+    const src = `<p><span>La gestion et le suivi de l’aide est confiée à l’Agence de services et de paiement (ASP). Elle est versée&nbsp;</span><a class="ck-anchor" id="_Hlk188521521"><span><strong>mensuellement et automatiquement</strong>, avant le paiement du salaire de l’apprenti&nbsp;</span></a><span>ou du salarié en contrat de professionnalisation.</span></p>`;
+    const { container } = render(<ContentParser>{src}</ContentParser>);
+    expect(container.innerHTML).toBe(
+      `<p><span>La gestion et le suivi de l’aide est confiée à l’Agence de services et de paiement (ASP). Elle est versée&nbsp;</span><a class="ck-anchor" id="_Hlk188521521"><span><strong>mensuellement et automatiquement</strong>, avant le paiement du salaire de l’apprenti&nbsp;</span></a><span>ou du salarié en contrat de professionnalisation.</span></p>`
+    );
+  });
 });

@@ -45,7 +45,11 @@ const options = (): HTMLReactParserOptions => {
   return {
     replace(domNode) {
       if (domNode instanceof Element) {
-        if (domNode.name === "a" && !domNode.attribs.title) {
+        if (
+          domNode.name === "a" &&
+          !domNode.attribs.title &&
+          domNode.attribs["href"]
+        ) {
           return (
             <Link
               href={domNode.attribs["href"]}
