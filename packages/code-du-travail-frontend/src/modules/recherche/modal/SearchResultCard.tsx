@@ -36,7 +36,7 @@ export const SearchResultCard = ({ result, onClick }: Props) => {
       <div className={cardContainer}>
         <div className={`${fr.cx("fr-mb-1w")} ${badgeContainer}`}>
           <span className={`${badgeBase} ${badgeColorClasses[result.source]}`}>
-            {getSourceLabel(result.source).toUpperCase()}
+            {getSourceLabel(result.source)}
           </span>
         </div>
         <span

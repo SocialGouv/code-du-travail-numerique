@@ -37,7 +37,7 @@ describe("<SearchCard />", () => {
   it("should render with category", () => {
     render(<SearchCard {...defaultProps} source="contributions" />);
 
-    expect(screen.getByText("FICHE")).toBeInTheDocument();
+    expect(screen.getByText("RÉPONSE SUR-MESURE")).toBeInTheDocument();
   });
 
   it("should not render category when not provided", () => {
