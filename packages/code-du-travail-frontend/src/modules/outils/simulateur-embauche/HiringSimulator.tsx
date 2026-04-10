@@ -42,7 +42,10 @@ const HiringSimulator = memo(function HiringSimulator({
     );
     console.log("Event : ", event);
     setState({ simulator: "error" });
-    Sentry.captureMessage(`Erreur durant le chargement de l'iframe brut/net`);
+    Sentry.captureException(
+      error ?? new Error("Erreur durant le chargement de l'iframe brut/net"),
+      { extra: { source, lineno, colno, event: String(event) } }
+    );
   };
 
   const onLoad = () => {
