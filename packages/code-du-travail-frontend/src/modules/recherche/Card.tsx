@@ -31,7 +31,7 @@ export const SearchCard: React.FC<SearchCardProps> = ({
           <p
             className={`${fr.cx("fr-tag", "fr-tag--sm", "fr-text--xs", "fr-text--bold")} ${badgeColorClasses[source]}`}
           >
-            {getSourceLabel(source).toUpperCase()}
+            {getSourceLabel(source)}
           </p>
         ) : null
       }

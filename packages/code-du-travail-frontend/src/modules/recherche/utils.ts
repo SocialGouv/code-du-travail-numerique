@@ -6,6 +6,8 @@ import {
 } from "@socialgouv/cdtn-utils";
 import { SearchResult } from "../../api";
 import { css } from "@styled-system/css";
+import { JSX } from "react";
+import { fr } from "@codegouvfr/react-dsfr";
 
 export const generateSearchLink = (
   source: keyof typeof routeBySource,
@@ -23,19 +25,22 @@ export const generateSearchLink = (
 };
 
 export const getSourceLabel = (source: keyof typeof routeBySource): string => {
-  const ficheSourceTypes = [
-    "contributions",
+  const ficheGeneriqueSourceTypes = [
     "fiches_ministere_travail",
     "fiches_service_public",
     "page_fiche_ministere_travail",
     "information",
   ];
 
-  if (ficheSourceTypes.includes(source)) {
-    return "FICHE";
+  if (ficheGeneriqueSourceTypes.includes(source)) {
+    return "FICHE GÉNÉRIQUE";
   }
 
-  return String(getLabelBySource(source));
+  if (source === "contributions") {
+    return "RÉPONSE SUR-MESURE";
+  }
+
+  return String(getLabelBySource(source)).toUpperCase();
 };
 
 export const badgeColorClasses: Partial<
@@ -67,26 +72,26 @@ export const badgeColorClasses: Partial<
   }),
   infographies: css({
     backgroundColor: "var(--background-alt-brown-cafe-creme) !important", // light option illustration color 975 default brown cafe creme
-    color: "var(--text-action-high-purple-glycine) !important", // light option illustration color sun default purple glycine
+    color: "var(--text-action-high-brown-cafe-creme) !important", // light option illustration color sun default purple glycine
   }),
   contributions: css({
     backgroundColor: "var(--background-alt-green-archipel) !important", // light option illustration color 975 default green archipel
     color: "var(--text-action-high-green-archipel) !important", // light option illustration color sun default green archipel
   }),
   fiches_ministere_travail: css({
-    backgroundColor: "var(--background-alt-green-archipel) !important", // light option illustration color 975 default green archipel
-    color: "var(--text-action-high-green-archipel) !important", // light option illustration color sun default green archipel
+    backgroundColor: "var(--background-alt-green-emeraude) !important", // light option illustration color 975 default green archipel
+    color: "var(--text-action-high-green-emeraude) !important", // light option illustration color sun default green archipel
   }),
   fiches_service_public: css({
-    backgroundColor: "var(--background-alt-green-archipel) !important", // light option illustration color 975 default green archipel
-    color: "var(--text-action-high-green-archipel) !important", // light option illustration color sun default green archipel
+    backgroundColor: "var(--background-alt-green-emeraude) !important", // light option illustration color 975 default green archipel
+    color: "var(--text-action-high-green-emeraude) !important", // light option illustration color sun default green archipel
   }),
   information: css({
-    backgroundColor: "var(--background-alt-green-archipel) !important", // light option illustration color 975 default green archipel
-    color: "var(--text-action-high-green-archipel) !important", // light option illustration color sun default green archipel
+    backgroundColor: "var(--background-alt-green-emeraude) !important", // light option illustration color 975 default green archipel
+    color: "var(--text-action-high-green-emeraude) !important", // light option illustration color sun default green archipel
   }),
   page_fiche_ministere_travail: css({
-    backgroundColor: "var(--background-alt-green-archipel) !important", // light option illustration color 975 default green archipel
+    backgroundColor: "var(--background-alt-green-emeraude) !important", // light option illustration color 975 default green archipel
     color: "var(--text-action-high-green-archipel) !important", // light option illustration color sun default green archipel
   }),
 };
