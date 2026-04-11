@@ -1,4 +1,4 @@
-import { byText } from "testing-library-selector";
+import { byTestId, byText } from "testing-library-selector";
 import { searchAgreement } from "../../convention-collective";
 
 export const ui = {
@@ -10,6 +10,7 @@ export const ui = {
     nonTreatedInfo: byText(
       /Cette réponse correspond à ce que prévoit le code du travail/
     ),
+    missingAgreementError: byTestId("missing-agreement-error"),
   },
 };
 export const mockAgreementSearch = (idcc) =>

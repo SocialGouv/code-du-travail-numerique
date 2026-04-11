@@ -16,6 +16,7 @@ import { Contribution } from "./type";
 import Link from "../common/Link";
 import BlueCard from "../common/BlueCard";
 import { AgreementSearchForm } from "../convention-collective/AgreementSearch/AgreementSearchForm";
+import { AccessibleAlert } from "../outils/common/components/AccessibleAlert";
 
 type Props = {
   onAgreementSelect: (agreement?: Agreement) => void;
@@ -37,9 +38,12 @@ export function ContributionGenericAgreementSearch({
   const router = useRouter();
   const { slug } = contribution;
   const [isValid, setIsValid] = useState(false);
+  const [showMissingAgreementError, setShowMissingAgreementError] =
+    useState(false);
 
   useEffect(() => {
     setIsValid(isAgreementValid(contribution, selectedAgreement));
+    setShowMissingAgreementError(false);
   }, [selectedAgreement]);
 
   const selectedAgreementAlert = (agreement: Agreement) => {
@@ -125,24 +129,49 @@ export function ContributionGenericAgreementSearch({
           }}
         />
         {((contribution.isNoCDT && isValid) || !contribution.isNoCDT) && (
-          <Button
-            className={fr.cx("fr-mt-2w")}
-            type="button"
-            onClick={(event) => {
-              onDisplayClick(isValid && !!selectedAgreement);
-              if (isValid && selectedAgreement) {
-                router.push(
-                  slug === "les-conges-pour-evenements-familiaux"
-                    ? `/contribution/${slug}/${selectedAgreement?.slug || selectedAgreement?.num}`
-                    : `/contribution/${selectedAgreement?.num}-${slug}`
-                );
-              } else {
-                event.preventDefault();
-              }
-            }}
-          >
-            Afficher les informations
-          </Button>
+          <>
+            {showMissingAgreementError && (
+              <AccessibleAlert
+                title="Veuillez sélectionner une convention collective"
+                description={
+                  <p>
+                    Pour afficher des informations personnalisées, vous devez
+                    d’abord sélectionner une convention collective. Si vous ne
+                    souhaitez pas en sélectionner, vous pouvez cliquer sur
+                    «&nbsp;Afficher les informations sans sélectionner une
+                    convention collective&nbsp;» ci-dessous.
+                  </p>
+                }
+                severity="error"
+                className={["fr-mt-2w"]}
+                data-testid="missing-agreement-error"
+              />
+            )}
+            <Button
+              className={fr.cx("fr-mt-2w")}
+              type="button"
+              onClick={(event) => {
+                if (!selectedAgreement) {
+                  event.preventDefault();
+                  setShowMissingAgreementError(true);
+                  return;
+                }
+                setShowMissingAgreementError(false);
+                onDisplayClick(isValid && !!selectedAgreement);
+                if (isValid && selectedAgreement) {
+                  router.push(
+                    slug === "les-conges-pour-evenements-familiaux"
+                      ? `/contribution/${slug}/${selectedAgreement?.slug || selectedAgreement?.num}`
+                      : `/contribution/${selectedAgreement?.num}-${slug}`
+                  );
+                } else {
+                  event.preventDefault();
+                }
+              }}
+            >
+              Afficher les informations
+            </Button>
+          </>
         )}
       </div>
     </BlueCard>
