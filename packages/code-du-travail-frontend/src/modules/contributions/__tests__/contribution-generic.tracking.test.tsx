@@ -235,18 +235,14 @@ describe("<ContributionGeneric />", () => {
     ]);
   });
 
-  it("afficher les infos - sans CC", async () => {
+  it("afficher les infos - sans CC : le clic sur le bouton principal est bloqué et n'envoie aucun évènement", async () => {
     expect(sendEvent).toHaveBeenCalledTimes(0);
 
     render(<ContributionGeneric contribution={contribution} />);
     expect(ui.generic.buttonDisplayInfo.get()).toBeInTheDocument();
     fireEvent.click(ui.generic.buttonDisplayInfo.get());
-    expect(sendEvent).toHaveBeenCalledTimes(1);
-    expect(sendEvent).toHaveBeenLastCalledWith({
-      action: "click_afficher_les_informations_sans_CC",
-      category: "contribution",
-      name: "/contribution/my-contrib",
-    });
+    expect(ui.generic.missingAgreementError.query()).toBeInTheDocument();
+    expect(sendEvent).toHaveBeenCalledTimes(0);
   });
 
   it("voir les infos générales", () => {
