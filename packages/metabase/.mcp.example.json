@@ -1,0 +1,13 @@
+{
+  "$schema": "https://modelcontextprotocol.io/schema/mcp.json",
+  "mcpServers": {
+    "metabase": {
+      "command": "npx",
+      "args": ["@easecloudio/mcp-metabase-server"],
+      "env": {
+        "METABASE_URL": "https://metabase-cdtn.fabrique.social.gouv.fr",
+        "METABASE_API_KEY": "your_api_key_here"
+      }
+    }
+  }
+}

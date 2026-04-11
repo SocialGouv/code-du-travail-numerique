@@ -1,0 +1,15 @@
+{
+  "name": "@cdt/metabase",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Dashboards Metabase et configuration MCP pour le CDTN",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SocialGouv/code-du-travail-numerique.git",
+    "directory": "packages/metabase"
+  },
+  "engines": {
+    "node": ">= 24"
+  }
+}

@@ -14,3 +14,4 @@ packages/code-du-travail-modeles/bin
 packages/code-du-travail-modeles/lib
 token
 .lighthouseci
+.mcp.json
