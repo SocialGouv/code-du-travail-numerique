@@ -235,28 +235,31 @@ describe("<ContributionGeneric />", () => {
     ]);
   });
 
-  it("afficher les infos - sans CC : le clic sur le bouton principal est bloqué et n'envoie aucun évènement", async () => {
+  it("afficher les infos - sans radio sélectionné : le clic sur le bouton principal est bloqué et n'envoie aucun évènement", async () => {
     expect(sendEvent).toHaveBeenCalledTimes(0);
 
     render(<ContributionGeneric contribution={contribution} />);
     expect(ui.generic.buttonDisplayInfo.get()).toBeInTheDocument();
     fireEvent.click(ui.generic.buttonDisplayInfo.get());
-    expect(ui.generic.missingAgreementError.query()).toBeInTheDocument();
+    expect(ui.generic.missingRouteError.query()).toBeInTheDocument();
     expect(sendEvent).toHaveBeenCalledTimes(0);
   });
 
-  it("voir les infos générales", () => {
+  it("voir les infos générales via l'option « Je ne souhaite pas renseigner ma convention collective »", () => {
     expect(sendEvent).toHaveBeenCalledTimes(0);
 
     render(<ContributionGeneric contribution={contribution} />);
 
-    fireEvent.click(ui.generic.linkDisplayInfo.get());
-
+    fireEvent.click(ui.generic.radioNoAgreement.get());
     expect(sendEvent).toHaveBeenCalledTimes(1);
-    expect(sendEvent).toHaveBeenCalledWith({
+    expect(sendEvent).toHaveBeenLastCalledWith({
       action: "click_p3",
       category: "cc_search_type_of_users",
       name: "/contribution/my-contrib",
     });
+
+    fireEvent.click(ui.generic.buttonDisplayInfo.get());
+    // No additional event is emitted: click_p3 already captures the intent
+    expect(sendEvent).toHaveBeenCalledTimes(1);
   });
 });
