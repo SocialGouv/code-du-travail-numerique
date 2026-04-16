@@ -1,16 +1,19 @@
-import { byTestId, byText } from "testing-library-selector";
+import { byLabelText, byTestId, byText } from "testing-library-selector";
 import { searchAgreement } from "../../convention-collective";
 
 export const ui = {
   generic: {
     buttonDisplayInfo: byText(/Afficher les informations$/),
-    linkDisplayInfo: byText(
-      "Afficher les informations sans sélectionner une convention collective"
-    ),
     nonTreatedInfo: byText(
       /Cette réponse correspond à ce que prévoit le code du travail/
     ),
-    missingAgreementError: byTestId("missing-agreement-error"),
+    missingRouteError: byText(
+      /Veuillez sélectionner l'une des options ci-dessus/
+    ),
+    noAgreementBanner: byTestId("no-agreement-banner"),
+    radioNoAgreement: byLabelText(
+      /Je ne souhaite pas renseigner ma convention collective\./
+    ),
   },
 };
 export const mockAgreementSearch = (idcc) =>

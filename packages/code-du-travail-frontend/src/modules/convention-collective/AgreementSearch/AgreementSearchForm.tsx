@@ -20,6 +20,10 @@ type Props = {
   trackingActionName: string;
   level: 2 | 3;
   onBackToPersonalize?: () => void;
+  showNoAgreementOption?: boolean;
+  noAgreementContent?: ReactNode;
+  onRouteChange?: (route: AgreementRoute | undefined) => void;
+  error?: string;
 };
 
 export const AgreementSearchForm = ({
@@ -29,6 +33,10 @@ export const AgreementSearchForm = ({
   trackingActionName,
   level,
   onBackToPersonalize,
+  showNoAgreementOption = false,
+  noAgreementContent,
+  onRouteChange,
+  error,
 }: Props) => {
   const [selectedRoute, setSelectedRoute] = useState<
     AgreementRoute | undefined
@@ -37,24 +45,32 @@ export const AgreementSearchForm = ({
   useEffect(() => {
     if (defaultAgreement && !selectedRoute) {
       setSelectedRoute("agreement");
+      onRouteChange?.("agreement");
     }
   }, [defaultAgreement]);
 
-  const { emitClickP1, emitClickP2 } = useContributionTracking();
+  const { emitClickP1, emitClickP2, emitClickP3 } = useContributionTracking();
 
   const { emitSelectEvent } = useAgreementSearchTracking();
+
+  const updateRoute = (route: AgreementRoute) => {
+    setSelectedRoute(route);
+    onRouteChange?.(route);
+  };
 
   return (
     <>
       <RadioButtons
-        legend="Quel est le nom de la convention collective applicable ?"
+        legend="Quel est le nom de la convention collective applicable ?"
+        state={error ? "error" : "default"}
+        stateRelatedMessage={error}
         options={[
           {
             label:
               "Je sais quelle est ma convention collective et je la saisis.",
             nativeInputProps: {
               checked: selectedRoute === "agreement",
-              onChange: () => setSelectedRoute("agreement"),
+              onChange: () => updateRoute("agreement"),
             },
           },
           {
@@ -64,10 +80,26 @@ export const AgreementSearchForm = ({
               checked: selectedRoute === "enterprise",
               onChange: () => {
                 onAgreementSelect();
-                setSelectedRoute("enterprise");
+                updateRoute("enterprise");
               },
             },
           },
+          ...(showNoAgreementOption
+            ? [
+                {
+                  label:
+                    "Je ne souhaite pas renseigner ma convention collective.",
+                  nativeInputProps: {
+                    checked: selectedRoute === "no-agreement",
+                    onChange: () => {
+                      onAgreementSelect();
+                      updateRoute("no-agreement");
+                      emitClickP3(trackingActionName);
+                    },
+                  },
+                },
+              ]
+            : []),
         ]}
       />
       {selectedRoute === "agreement" && (
@@ -96,6 +128,7 @@ export const AgreementSearchForm = ({
           onBackToPersonalize={onBackToPersonalize}
         />
       )}
+      {selectedRoute === "no-agreement" && noAgreementContent}
     </>
   );
 };

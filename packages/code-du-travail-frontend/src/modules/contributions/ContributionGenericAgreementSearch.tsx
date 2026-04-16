@@ -6,7 +6,10 @@ import Image from "next/image";
 import AgreementSearch from "../convention-collective/AgreementSearch.svg";
 import { useRouter } from "next/navigation";
 
-import { Agreement } from "src/modules/outils/indemnite-depart/types";
+import {
+  Agreement,
+  AgreementRoute,
+} from "src/modules/outils/indemnite-depart/types";
 import {
   isAgreementSupported,
   isAgreementUnextended,
@@ -27,6 +30,9 @@ type Props = {
   personalizeTitleRef: React.RefObject<HTMLParagraphElement | null>;
 };
 
+const MISSING_ROUTE_ERROR =
+  "Veuillez sélectionner l'une des options ci-dessus pour afficher les informations.";
+
 export function ContributionGenericAgreementSearch({
   contribution,
   onAgreementSelect,
@@ -36,20 +42,21 @@ export function ContributionGenericAgreementSearch({
   personalizeTitleRef,
 }: Props) {
   const router = useRouter();
-  const { slug } = contribution;
+  const { slug, isNoCDT } = contribution;
   const [isValid, setIsValid] = useState(false);
-  const [showMissingAgreementError, setShowMissingAgreementError] =
-    useState(false);
+  const [selectedRoute, setSelectedRoute] = useState<
+    AgreementRoute | undefined
+  >();
+  const [showMissingRouteError, setShowMissingRouteError] = useState(false);
 
   useEffect(() => {
     setIsValid(isAgreementValid(contribution, selectedAgreement));
-    setShowMissingAgreementError(false);
   }, [selectedAgreement]);
 
   const selectedAgreementAlert = (agreement: Agreement) => {
     const isSupported = isAgreementSupported(contribution, agreement);
     const isUnextended = isAgreementUnextended(contribution, agreement);
-    if (contribution.isNoCDT) {
+    if (isNoCDT) {
       if (isUnextended && agreement.url)
         return (
           <>
@@ -94,6 +101,27 @@ export function ContributionGenericAgreementSearch({
     if (!isSupported)
       return <>Vous pouvez consulter les informations générales ci-dessous.</>;
   };
+
+  const noAgreementBanner = (
+    <AccessibleAlert
+      title="Attention"
+      description={
+        <p>
+          Vous pouvez passer cette étape et poursuivre la simulation qui vous
+          fournira un résultat basé sur le code du travail. Nous vous
+          recommandons de renseigner votre convention collective qui peut
+          prévoir un résultat plus favorable que celui définit par le code du
+          travail.
+        </p>
+      }
+      severity="warning"
+      className={["fr-mt-2w"]}
+      data-testid="no-agreement-banner"
+    />
+  );
+
+  const isButtonDisplayed = (isNoCDT && isValid) || !isNoCDT;
+
   return (
     <BlueCard>
       <div className={fr.cx("fr-grid-row")}>
@@ -127,51 +155,44 @@ export function ContributionGenericAgreementSearch({
             );
             personalizeTitle?.focus();
           }}
+          showNoAgreementOption={!isNoCDT}
+          noAgreementContent={noAgreementBanner}
+          onRouteChange={(route) => {
+            setSelectedRoute(route);
+            setShowMissingRouteError(false);
+          }}
+          error={showMissingRouteError ? MISSING_ROUTE_ERROR : undefined}
         />
-        {((contribution.isNoCDT && isValid) || !contribution.isNoCDT) && (
-          <>
-            {showMissingAgreementError && (
-              <AccessibleAlert
-                title="Veuillez sélectionner une convention collective"
-                description={
-                  <p>
-                    Pour afficher des informations personnalisées, vous devez
-                    d’abord sélectionner une convention collective. Si vous ne
-                    souhaitez pas en sélectionner, vous pouvez cliquer sur
-                    «&nbsp;Afficher les informations sans sélectionner une
-                    convention collective&nbsp;» ci-dessous.
-                  </p>
-                }
-                severity="error"
-                className={["fr-mt-2w"]}
-                data-testid="missing-agreement-error"
-              />
-            )}
-            <Button
-              className={fr.cx("fr-mt-2w")}
-              type="button"
-              onClick={(event) => {
-                if (!selectedAgreement) {
-                  event.preventDefault();
-                  setShowMissingAgreementError(true);
-                  return;
-                }
-                setShowMissingAgreementError(false);
-                onDisplayClick(isValid && !!selectedAgreement);
-                if (isValid && selectedAgreement) {
-                  router.push(
-                    slug === "les-conges-pour-evenements-familiaux"
-                      ? `/contribution/${slug}/${selectedAgreement?.slug || selectedAgreement?.num}`
-                      : `/contribution/${selectedAgreement?.num}-${slug}`
-                  );
-                } else {
-                  event.preventDefault();
-                }
-              }}
-            >
-              Afficher les informations
-            </Button>
-          </>
+        {isButtonDisplayed && (
+          <Button
+            className={fr.cx("fr-mt-2w")}
+            type="button"
+            onClick={(event) => {
+              if (!selectedRoute) {
+                event.preventDefault();
+                setShowMissingRouteError(true);
+                return;
+              }
+              setShowMissingRouteError(false);
+              if (selectedRoute === "no-agreement") {
+                event.preventDefault();
+                onDisplayClick(false);
+                return;
+              }
+              onDisplayClick(isValid && !!selectedAgreement);
+              if (isValid && selectedAgreement) {
+                router.push(
+                  slug === "les-conges-pour-evenements-familiaux"
+                    ? `/contribution/${slug}/${selectedAgreement?.slug || selectedAgreement?.num}`
+                    : `/contribution/${selectedAgreement?.num}-${slug}`
+                );
+              } else {
+                event.preventDefault();
+              }
+            }}
+          >
+            Afficher les informations
+          </Button>
         )}
       </div>
     </BlueCard>

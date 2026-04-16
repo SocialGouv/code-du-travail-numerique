@@ -114,62 +114,34 @@ describe("<ContributionLayout />", () => {
       });
     });
 
-    it("should display correctly when no agreement is selected", async () => {
-      fireEvent.click(ccUi.radio.agreementSearchOption.get());
+    it("should display the no-agreement banner and the generic content when the no-agreement option is selected", async () => {
+      fireEvent.click(ui.generic.radioNoAgreement.get());
+      expect(ui.generic.noAgreementBanner.query()).toBeInTheDocument();
       expect(ccUi.buttonDisplayInfo.query()).toBeInTheDocument();
-      expect(ui.generic.linkDisplayInfo.query()).toBeInTheDocument();
       expect(rendering.getByText("my content")).toBeInTheDocument();
-      fireEvent.click(ui.generic.linkDisplayInfo.get());
-      expect(ui.generic.linkDisplayInfo.query()).not.toBeInTheDocument();
-      expect(rendering.getByText("my content")).toBeInTheDocument();
-    });
-
-    it("should display an error and not navigate when clicking 'Afficher les informations' without selecting any agreement", async () => {
-      fireEvent.click(ccUi.radio.agreementSearchOption.get());
-      expect(ui.generic.missingAgreementError.query()).not.toBeInTheDocument();
 
       fireEvent.click(ccUi.buttonDisplayInfo.get());
 
-      expect(ui.generic.missingAgreementError.query()).toBeInTheDocument();
-      expect(pushMock).not.toHaveBeenCalled();
-      // The fallback link should still be available
-      expect(ui.generic.linkDisplayInfo.query()).toBeInTheDocument();
-    });
-
-    it("should hide the error when an agreement is selected after the error is shown", async () => {
-      (searchAgreement as jest.Mock).mockImplementation(() =>
-        Promise.resolve([
-          {
-            id: "0016",
-            num: 16,
-            url: "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635624",
-            shortTitle:
-              "Transports routiers et activités auxiliaires du transport",
-            slug: "16-transports-routiers-et-activites-auxiliaires-du-transport",
-            title:
-              "Convention collective nationale des transports routiers et activités auxiliaires du transport du 21 décembre 1950",
-          },
-        ])
-      );
-      fireEvent.click(ccUi.radio.agreementSearchOption.get());
-      fireEvent.click(ccUi.buttonDisplayInfo.get());
-      expect(ui.generic.missingAgreementError.query()).toBeInTheDocument();
-
-      await userEvent.click(ccUi.searchByName.input.get());
-      await userEvent.type(ccUi.searchByName.input.get(), "16");
-      fireEvent.click(ccUi.searchByName.autocompleteLines.IDCC16.name.get());
-
-      expect(ui.generic.missingAgreementError.query()).not.toBeInTheDocument();
-    });
-
-    it("should still allow displaying generic content via the fallback link when no agreement is selected", async () => {
-      fireEvent.click(ccUi.radio.agreementSearchOption.get());
-      // The user clicks the fallback link directly without selecting any CC
-      fireEvent.click(ui.generic.linkDisplayInfo.get());
-      expect(ui.generic.missingAgreementError.query()).not.toBeInTheDocument();
-      expect(ui.generic.linkDisplayInfo.query()).not.toBeInTheDocument();
       expect(rendering.getByText("my content")).toBeInTheDocument();
       expect(pushMock).not.toHaveBeenCalled();
+    });
+
+    it("should display an error when clicking 'Afficher les informations' without selecting any radio option", async () => {
+      expect(ui.generic.missingRouteError.query()).not.toBeInTheDocument();
+
+      fireEvent.click(ccUi.buttonDisplayInfo.get());
+
+      expect(ui.generic.missingRouteError.query()).toBeInTheDocument();
+      expect(pushMock).not.toHaveBeenCalled();
+    });
+
+    it("should hide the error when a radio option is selected after the error is shown", async () => {
+      fireEvent.click(ccUi.buttonDisplayInfo.get());
+      expect(ui.generic.missingRouteError.query()).toBeInTheDocument();
+
+      fireEvent.click(ui.generic.radioNoAgreement.get());
+
+      expect(ui.generic.missingRouteError.query()).not.toBeInTheDocument();
     });
 
     it("should display correctly when a treated agreement is selected", async () => {
@@ -188,13 +160,10 @@ describe("<ContributionLayout />", () => {
         ])
       );
       fireEvent.click(ccUi.radio.agreementSearchOption.get());
-      expect(ui.generic.linkDisplayInfo.query()).toBeInTheDocument();
       await userEvent.click(ccUi.searchByName.input.get());
       await userEvent.type(ccUi.searchByName.input.get(), "16");
 
       fireEvent.click(ccUi.searchByName.autocompleteLines.IDCC16.name.get());
-
-      expect(ui.generic.linkDisplayInfo.query()).not.toBeInTheDocument();
 
       fireEvent.click(ccUi.buttonDisplayInfo.get());
       expect(pushMock).toHaveBeenCalledTimes(1);
@@ -231,7 +200,6 @@ describe("<ContributionLayout />", () => {
 
       await ccUi.searchByName.autocompleteLines.IDCC1388.name.find();
       fireEvent.click(ccUi.searchByName.autocompleteLines.IDCC1388.name.get());
-      expect(ui.generic.linkDisplayInfo.query()).toBeInTheDocument();
 
       expect(ccUi.warning.title.query()).toBeInTheDocument();
       expect(ccUi.warning.nonTreatedAgreement.query()).toBeInTheDocument();
@@ -240,10 +208,9 @@ describe("<ContributionLayout />", () => {
         category: "outil",
         name: "1388",
       });
-      expect(ccUi.warning.title.query()).toBeInTheDocument();
-      fireEvent.click(ui.generic.linkDisplayInfo.get());
+      fireEvent.click(ccUi.buttonDisplayInfo.get());
+      expect(pushMock).not.toHaveBeenCalled();
       expect(ui.generic.nonTreatedInfo.query()).toBeInTheDocument();
-      expect(ui.generic.linkDisplayInfo.query()).not.toBeInTheDocument();
     });
   });
 
@@ -256,8 +223,11 @@ describe("<ContributionLayout />", () => {
     });
     it("should display correctly when no agreement is selected", () => {
       fireEvent.click(ccUi.radio.agreementSearchOption.get());
-      expect(ui.generic.linkDisplayInfo.query()).not.toBeInTheDocument();
       expect(ccUi.buttonDisplayInfo.query()).not.toBeInTheDocument();
+    });
+
+    it("should not display the no-agreement option in noCDT mode", () => {
+      expect(ui.generic.radioNoAgreement.query()).not.toBeInTheDocument();
     });
 
     it("should display correctly when a treated agreement is selected", async () => {
@@ -314,7 +284,6 @@ describe("<ContributionLayout />", () => {
       await userEvent.click(ccUi.searchByName.input.get());
       await userEvent.type(ccUi.searchByName.input.get(), "1388");
       fireEvent.click(ccUi.searchByName.autocompleteLines.IDCC1388.name.get());
-      expect(ui.generic.linkDisplayInfo.query()).not.toBeInTheDocument();
       expect(ccUi.buttonDisplayInfo.query()).not.toBeInTheDocument();
       expect(ccUi.warning.title.query()).toBeInTheDocument();
       expect(ccUi.warning.noCdtNonTreatedAgreement.query()).toBeInTheDocument();
@@ -350,7 +319,6 @@ describe("<ContributionLayout />", () => {
       await userEvent.click(ccUi.searchByName.input.get());
       await userEvent.type(ccUi.searchByName.input.get(), "29");
       fireEvent.click(ccUi.searchByName.autocompleteLines.IDCC29.name.get());
-      expect(ui.generic.linkDisplayInfo.query()).not.toBeInTheDocument();
       expect(ccUi.buttonDisplayInfo.query()).not.toBeInTheDocument();
       expect(ccUi.warning.title.query()).toBeInTheDocument();
       expect(ccUi.warning.noCdtUnextendedAgreement.query()).toBeInTheDocument();
