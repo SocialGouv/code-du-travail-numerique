@@ -1,2 +1,3 @@
-backup/
-sql/
+backup/*
+!backup/CLAUDE.md
+node_modules/

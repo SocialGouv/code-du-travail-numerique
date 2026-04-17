@@ -1,0 +1,151 @@
+name: Metabase events
+
+# Deux jobs :
+# - drift-check (PR) : fail si docs/events.md est desynchronise avec le code.
+# - wiki-sync (push sur dev/master) : regenere docs/events.md et pousse le
+#   glossaire sur le wiki GitHub (pages: Matomo-Events, Metabase-Materialized-Views,
+#   Metabase-Dashboards, Metabase-Schema, Metabase-Models).
+#
+# Pour la sync wiki : le wiki doit avoir ete initialise au moins une fois
+# manuellement (creer la premiere page via l'UI GitHub). Ensuite tout est auto.
+#
+# Secrets requis : aucun - utilise secrets.GITHUB_TOKEN par defaut.
+# Si ce token ne peut pas pousser sur le wiki (selon la config du repo),
+# definir WIKI_TOKEN (PAT avec scope `repo`) dans les secrets.
+
+on:
+  push:
+    branches:
+      - dev
+      - master
+    paths:
+      - "packages/metabase/events/**"
+      - "packages/metabase/docs/**"
+      - "packages/code-du-travail-frontend/src/modules/**/*.ts"
+      - "packages/code-du-travail-frontend/src/modules/**/*.tsx"
+      - ".github/workflows/metabase-events.yml"
+  pull_request:
+    paths:
+      - "packages/metabase/**"
+      - "packages/code-du-travail-frontend/src/modules/**/*.ts"
+      - "packages/code-du-travail-frontend/src/modules/**/*.tsx"
+      - ".github/workflows/metabase-events.yml"
+  workflow_dispatch:
+
+concurrency:
+  group: metabase-events-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  drift-check:
+    name: Drift check (docs/events.md synchronise)
+    if: github.event_name == 'pull_request' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          run_install: false
+      - name: Install metabase deps
+        run: pnpm install --filter @cdt/metabase --frozen-lockfile
+      - name: Verify events.md is up-to-date
+        run: pnpm -F @cdt/metabase events:check
+
+  wiki-sync:
+    name: Sync glossaire events vers le wiki
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          run_install: false
+
+      - name: Install metabase deps
+        run: pnpm install --filter @cdt/metabase --frozen-lockfile
+
+      - name: Regenerate events docs
+        run: pnpm -F @cdt/metabase events:docs
+
+      - name: Determine wiki auth token
+        id: wiki-token
+        env:
+          WIKI_TOKEN: ${{ secrets.WIKI_TOKEN }}
+        run: |
+          if [ -n "${WIKI_TOKEN}" ]; then
+            echo "Using secrets.WIKI_TOKEN"
+            echo "token=${WIKI_TOKEN}" >> "$GITHUB_OUTPUT"
+          else
+            echo "Using secrets.GITHUB_TOKEN (fallback)"
+            echo "token=${{ secrets.GITHUB_TOKEN }}" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Clone wiki repo
+        env:
+          WIKI_URL: https://x-access-token:${{ steps.wiki-token.outputs.token }}@github.com/${{ github.repository }}.wiki.git
+        run: |
+          if ! git clone "$WIKI_URL" wiki 2>clone-err.log; then
+            echo "::warning::Impossible de cloner le wiki. Verifie que le wiki est initialise (creer manuellement une premiere page via l'UI GitHub) et que le token a les droits d'ecriture."
+            cat clone-err.log
+            exit 1
+          fi
+
+      - name: Copy docs to wiki pages
+        run: |
+          # Noms de pages du wiki GitHub (les espaces deviennent des "-").
+          cp packages/metabase/docs/events.md              wiki/Matomo-Events.md
+          cp packages/metabase/docs/materialized-views.md  wiki/Metabase-Materialized-Views.md
+          cp packages/metabase/docs/dashboards.md          wiki/Metabase-Dashboards.md
+          cp packages/metabase/docs/schema.md              wiki/Metabase-Schema.md
+          cp packages/metabase/docs/models.md              wiki/Metabase-Models.md
+          # Page d'index du wiki (Home.md) avec liens croises.
+          cat <<'EOF' > wiki/Home.md
+          # Metabase & Events Matomo — CDTN
+
+          Ce wiki est **auto-genere** depuis `packages/metabase/` a chaque push sur `dev` / `master`.
+          Ne pas editer directement : modifier les fichiers source dans le repo et la sync
+          s'occupera du reste.
+
+          ## Pages disponibles
+
+          - [Matomo-Events](./Matomo-Events) — glossaire exhaustif des events emis par le frontend, avec declencheur metier, KPI, dashboards et cartes lies.
+          - [Metabase-Dashboards](./Metabase-Dashboards) — reference des dashboards et cartes maintenus.
+          - [Metabase-Materialized-Views](./Metabase-Materialized-Views) — definitions et patterns d'usage des vues materialisees.
+          - [Metabase-Models](./Metabase-Models) — modeles Metabase et patterns SQL optimises.
+          - [Metabase-Schema](./Metabase-Schema) — schema de la DB OVH PG CDTN.
+
+          ## Sources
+
+          Code : [`packages/metabase/`](https://github.com/${{ github.repository }}/tree/dev/packages/metabase)
+          Pipeline events : [`packages/metabase/events/`](https://github.com/${{ github.repository }}/tree/dev/packages/metabase/events)
+          Workflow de sync : [`.github/workflows/metabase-events.yml`](https://github.com/${{ github.repository }}/blob/dev/.github/workflows/metabase-events.yml)
+          EOF
+
+      - name: Commit and push to wiki
+        working-directory: wiki
+        run: |
+          git config user.name "cdtn-events-bot"
+          git config user.email "cdtn-events-bot@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Aucun changement a pousser sur le wiki."
+            exit 0
+          fi
+          git commit -m "chore(events): sync depuis ${{ github.sha }} (workflow ${{ github.run_id }})"
+          git push

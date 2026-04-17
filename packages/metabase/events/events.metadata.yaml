@@ -1,0 +1,364 @@
+# events.metadata.yaml
+# ------------------------------------------------------------------
+# Description metier des events Matomo emis par @cdt/frontend.
+# Fichier MAINTENU A LA MAIN. Les events techniques (category/action/fichier/ligne)
+# sont extraits automatiquement par events/extract-events.ts dans events.extracted.json.
+# Ce fichier decrit le POURQUOI (quand est-il declenche, a quel KPI il contribue).
+#
+# Cle : "<category>:<action>"
+# Si un event apparait dans events.extracted.json mais n'a pas d'entree ici,
+# il sera liste dans la section "Orphelins" de docs/events.md (a completer).
+#
+# Voir events/CLAUDE.md pour le workflow d'ajout.
+# ------------------------------------------------------------------
+
+# =====================
+# Contributions (/contribution/*)
+# =====================
+
+"contribution:click_afficher_les_informations_CC":
+  label_fr: "Affichage de la reponse personnalisee sur une page contribution"
+  trigger: "Clic sur le bouton 'afficher les informations personnalisees' apres selection d'une CC TRAITEE"
+  kpi: "Personnalisation reussie (KPI 1 dashboard 36)"
+  dashboards: [36]
+  cards: [435, 438, 443]
+  mv_source: "mv_kpi_personnalisation"
+  feature_group: "contributions"
+
+"contribution:click_afficher_les_informations_sans_CC":
+  label_fr: "Affichage de la reponse generique (CC non traitee)"
+  trigger: "Clic sur le bouton 'afficher les informations' apres selection d'une CC NON TRAITEE"
+  kpi: "CC non traitee (KPI 4 dashboard 36)"
+  dashboards: [36]
+  cards: [441]
+  mv_source: "mv_kpi_personnalisation"
+  feature_group: "contributions"
+
+"contribution:click_afficher_les_informations_générales":
+  label_fr: "Affichage des infos generales (sans personnalisation CC)"
+  trigger: "Clic sur le bouton 'afficher les informations generales' - utilisateur renonce a personnaliser sa reponse"
+  kpi: "Indicateur de rebond sur contributions (cartes 450/451)"
+  dashboards: [88]
+  cards: [450, 451]
+  mv_source: "mv_bounce_contributions"
+  feature_group: "contributions"
+
+"cc_search_type_of_users:click_p1":
+  label_fr: "Parcours P1 : recherche par nom de CC"
+  trigger: "Clic sur l'option 'Je connais le nom de ma convention collective' dans le selecteur de parcours"
+  feature_group: "cc-search"
+
+"cc_search_type_of_users:click_p2":
+  label_fr: "Parcours P2 : recherche par nom d'entreprise"
+  trigger: "Clic sur l'option 'Je connais le nom de mon entreprise' dans le selecteur de parcours"
+  feature_group: "cc-search"
+
+"cc_search_type_of_users:click_p3":
+  label_fr: "Parcours P3 : renonciation CC"
+  trigger: "Clic sur l'option 'Je ne sais pas' / 'Je n'ai pas d'entreprise' - l'utilisateur saute l'etape CC"
+  kpi: "Renonciation (KPI 3 dashboard 36)"
+  dashboards: [36]
+  cards: [436, 440, 444]
+  mv_source: "mv_kpi_personnalisation"
+  feature_group: "cc-search"
+
+"cc_search_type_of_users:click_je_n_ai_pas_d_entreprise":
+  label_fr: "Declaration : pas d'entreprise"
+  trigger: "Clic sur 'Je n'ai pas d'entreprise' dans le parcours CC"
+  kpi: "Parcours bloques (KPI 4 dashboard 36)"
+  dashboards: [36]
+  cards: [441]
+  mv_source: "mv_kpi_personnalisation"
+  feature_group: "cc-search"
+
+"cc_search_type_of_users:select_je_n_ai_pas_d_entreprise":
+  label_fr: "Variante select : pas d'entreprise"
+  trigger: "Meme chose que click_je_n_ai_pas_d_entreprise mais depuis le composant select (backup event)"
+  feature_group: "cc-search"
+  notes: "Double-fired avec click_je_n_ai_pas_d_entreprise dans certains parcours"
+
+"cc_search_type_of_users:*":
+  label_fr: "Parcours CC dynamique (ternary : click_p1 / click_p2 / click_p3 / click_je_n_ai_pas_d_entreprise)"
+  trigger: "Resolu a runtime dans pushAgreementEvents.ts selon le parcours (`parcours!` variable). Voir les entrees specifiques ci-dessus pour chaque valeur."
+  feature_group: "cc-search"
+
+"view_step_cc_search_p1:back_step_cc_search_p1":
+  label_fr: "Retour etape P1 du parcours CC"
+  trigger: "Clic sur 'Precedent' apres avoir cherche une CC par nom (parcours P1)"
+  feature_group: "cc-search"
+
+"view_step_cc_search_p2:back_step_cc_search_p2":
+  label_fr: "Retour etape P2 du parcours CC"
+  trigger: "Clic sur 'Precedent' apres avoir cherche une entreprise (parcours P2)"
+  feature_group: "cc-search"
+
+"cc_select_p1:*":
+  label_fr: "CC selectionnee depuis le parcours P1"
+  trigger: "Apres avoir choisi une CC dans l'autocomplete P1"
+  feature_group: "cc-search"
+
+"cc_select_p2:*":
+  label_fr: "CC selectionnee depuis le parcours P2 (via entreprise)"
+  trigger: "Apres avoir choisi une entreprise puis sa CC rattachee dans P2"
+  feature_group: "cc-search"
+
+# =====================
+# Simulateurs / Outils (/outils/*)
+# =====================
+
+"outil:cc_select_traitée":
+  label_fr: "CC selectionnee et TRAITEE par le simulateur"
+  trigger: "L'utilisateur a selectionne une CC qui a un traitement personnalise dans le simulateur"
+  kpi: "Personnalisation reussie simulateur (KPI 1 dashboard 36)"
+  dashboards: [36]
+  cards: [439, 443]
+  mv_source: "mv_kpi_personnalisation"
+  feature_group: "simulateurs"
+  notes: "La version sans accent (cc_select_traitee) existait aussi historiquement - voir docs/events.md §Orphelins si drift."
+
+"outil:cc_select_non_traitée":
+  label_fr: "CC selectionnee mais NON TRAITEE par le simulateur"
+  trigger: "L'utilisateur a selectionne une CC qui n'a pas de traitement specifique dans le simulateur"
+  kpi: "CC non traitees (KPI 5 dashboard 36)"
+  dashboards: [36]
+  cards: [442, 444]
+  mv_source: "mv_cc_non_traitees"
+  feature_group: "simulateurs"
+  notes: "La version sans accent (cc_select_non_traitee) existait aussi historiquement."
+
+"outil:view_step_Indemnité de licenciement":
+  label_fr: "Visualisation d'une etape du simulateur IL"
+  trigger: "Chaque fois que l'utilisateur navigue sur une etape du simulateur 'Indemnite de licenciement'. Le `name` contient le slug de l'etape (start, info_cc, infos, anciennete, absences, salaires, results, results_ineligible)."
+  kpi: "Taux de completion des etapes (cartes 170, 448)"
+  dashboards: [37]
+  cards: [170, 448]
+  mv_source: "mv_funnel_il_irc_visits"
+  feature_group: "simulateurs"
+
+"outil:view_step_Indemnité de rupture conventionnelle":
+  label_fr: "Visualisation d'une etape du simulateur IRC"
+  trigger: "Chaque fois que l'utilisateur navigue sur une etape du simulateur 'Indemnite de rupture conventionnelle'. Le `name` contient le slug de l'etape."
+  kpi: "Taux de completion des etapes (cartes 107, 449)"
+  dashboards: [37]
+  cards: [107, 449]
+  mv_source: "mv_funnel_il_irc_visits"
+  feature_group: "simulateurs"
+
+"outil:view_step_Préavis de démission":
+  label_fr: "Visualisation d'une etape du simulateur Preavis de demission"
+  trigger: "Navigation sur une etape du simulateur Preavis de demission (start, info_cc, user_blocked_info_cc, results, infos)."
+  feature_group: "simulateurs"
+
+"outil:view_step_Heures d'absence pour rechercher un emploi":
+  label_fr: "Visualisation d'une etape du simulateur Heures recherche emploi"
+  trigger: "Navigation sur une etape du simulateur 'Heures d'absence pour rechercher un emploi' (start, info_cc, results, infos, user_blocked_info_cc)."
+  feature_group: "simulateurs"
+
+"outil:click_print":
+  label_fr: "Impression du resultat du simulateur"
+  trigger: "Clic sur le bouton 'Imprimer' apres obtention d'un resultat"
+  feature_group: "simulateurs"
+
+"outil:*":
+  label_fr: "Event generique simulateur (cc_select / view_step / click_previous / click_print resolus dynamiquement)"
+  trigger: "Plusieurs emit functions (`pushAgreementEvents`, `SimulatorLayout`) fire des events 'outil' avec action construite a runtime (template `view_step_${title}`, ternaire cc_select_traitée / cc_select_non_traitée, etc.). Voir les entrees specifiques ci-dessus pour chaque valeur stable."
+  feature_group: "simulateurs"
+
+# Simulateur Preavis retraite : events emis depuis les stores zustand
+# (cf. outils/preavis-retraite/steps/*/store.ts). Les actions sont ternaires
+# sur l'input utilisateur donc la cle extraite est "outil:mise | depart", etc.
+
+"outil:mise":
+  label_fr: "Simulateur Preavis retraite - choix 'Mise a la retraite'"
+  trigger: "A l'etape 'Origine du depart' du simulateur Preavis de retraite, l'utilisateur a choisi 'Mise a la retraite' (decision employeur)."
+  feature_group: "simulateurs"
+  notes: "Runtime-only : ternaire `originDepart === 'mise-retraite' ? MISE_RETRAITE : DEPART_RETRAITE` dans OriginStep/store.ts. MatomoRetirementEvent.MISE_RETRAITE = 'mise'."
+
+"outil:depart":
+  label_fr: "Simulateur Preavis retraite - choix 'Depart volontaire'"
+  trigger: "A l'etape 'Origine du depart' du simulateur Preavis de retraite, l'utilisateur a choisi 'Depart volontaire' (decision salarie)."
+  feature_group: "simulateurs"
+  notes: "Runtime-only : voir outil:mise. MatomoRetirementEvent.DEPART_RETRAITE = 'depart'."
+
+"outil:anciennete_plus_2_ans":
+  label_fr: "Simulateur Preavis retraite - anciennete > 2 ans"
+  trigger: "A l'etape 'Anciennete' du simulateur Preavis de retraite, l'utilisateur a declare avoir plus de 2 ans d'anciennete."
+  feature_group: "simulateurs"
+  notes: "Runtime-only : ternaire `moreThanXYears === 'oui' ? ANCIENNETE_PLUS_2_ANS : ANCIENNETE_MOINS_2_ANS` dans Seniority/store.ts."
+
+"outil:anciennete_moins_2_ans":
+  label_fr: "Simulateur Preavis retraite - anciennete < 2 ans"
+  trigger: "A l'etape 'Anciennete' du simulateur Preavis de retraite, l'utilisateur a declare avoir moins de 2 ans d'anciennete."
+  feature_group: "simulateurs"
+  notes: "Runtime-only : voir outil:anciennete_plus_2_ans."
+
+# =====================
+# Recherche Legifrance (LegiFranceSearch.tsx)
+# =====================
+
+"pagecc_searchcc:*":
+  label_fr: "Recherche par mots-cles dans le texte d'une CC sur Legifrance"
+  trigger: "Submit du formulaire 'Recherche dans la convention collective' sur une fiche CC. Ouvre legifrance.gouv.fr/search/kali dans un nouvel onglet. Le `action` est le titre court de la CC, le `name` est la query saisie."
+  feature_group: "cc-search"
+  notes: "Category fixe 'pagecc_searchcc', action = shortTitle de la CC (dynamique)."
+
+# =====================
+# Modale selection CC (header)
+# =====================
+
+"header_cc:open_modal":
+  label_fr: "Ouverture de la modale de selection CC (header)"
+  trigger: "Clic sur la CC selectionnee dans le header, qui ouvre la modale de selection globale"
+  feature_group: "header"
+
+"header_cc:cc_consult":
+  label_fr: "Consultation d'une fiche CC depuis la modale globale"
+  trigger: "Clic sur 'Voir la fiche' d'une CC dans la modale de selection globale"
+  feature_group: "header"
+
+"header_cc:*":
+  label_fr: "Selection de CC depuis la modale globale (cc_select_processed / cc_select_unprocessed)"
+  trigger: "Selection d'une CC depuis la modale globale. Le `action` est `cc_select_processed` (CC traitee) ou `cc_select_unprocessed` (CC non traitee) selon la CC choisie."
+  feature_group: "header"
+  notes: "Le code fire un ternaire (processed ? 'cc_select_processed' : 'cc_select_unprocessed') ce qui apparait en dynamic a l'extraction - d'ou le wildcard ici."
+
+# =====================
+# Entreprise
+# =====================
+
+"enterprise_search:*":
+  label_fr: "Recherche d'une entreprise"
+  trigger: "Saisie dans le champ de recherche d'entreprise (parcours P2)"
+  feature_group: "enterprise"
+
+"enterprise_select:*":
+  label_fr: "Entreprise selectionnee"
+  trigger: "Selection d'une entreprise dans les suggestions"
+  feature_group: "enterprise"
+
+# =====================
+# Recherche
+# =====================
+
+"search:*":
+  label_fr: "Action sur la recherche full-text"
+  trigger: "Interaction avec la barre de recherche principale (submit, scroll resultats, etc.)"
+  feature_group: "recherche"
+
+"selectedSuggestion:*":
+  label_fr: "Clic sur une suggestion presearch"
+  trigger: "Clic sur un element de la liste presearch (suggestions rapides sous la barre)"
+  feature_group: "recherche"
+
+"selectResult:*":
+  label_fr: "Clic sur un resultat de recherche"
+  trigger: "Clic sur un item dans la liste des resultats de recherche"
+  feature_group: "recherche"
+
+"nextResultPage:*":
+  label_fr: "Pagination des resultats de recherche"
+  trigger: "Clic sur 'Page suivante' dans les resultats"
+  feature_group: "recherche"
+
+"widget_search:*":
+  label_fr: "Interaction widget de recherche"
+  trigger: "Clic logo / submit depuis le widget de recherche (integre site externe)"
+  feature_group: "recherche"
+
+"_matomo_trackSiteSearch:*":
+  label_fr: "Event Matomo natif : recherche interne (trackSiteSearch)"
+  trigger: "Emis explicitement dans la modale Presearch via `push(['trackSiteSearch', query])`. Alimente le rapport 'Comportement > Recherche sur le site' dans Matomo (separe du report trackEvent)."
+  feature_group: "recherche"
+  notes: "Different d'un sendEvent : c'est l'API Matomo native pour le site search. Sur la page /recherche, trackSiteSearch est automatiquement appele par matomo-next (cf. config `searchKeyword: 'query'` dans MatomoAnalytics.tsx)."
+
+# =====================
+# Feedback
+# =====================
+
+"feedback:positive":
+  label_fr: "Feedback positif (clair / pertinent)"
+  trigger: "Clic sur le pouce vert ou equivalent en bas de page"
+  feature_group: "feedback"
+
+"feedback:negative":
+  label_fr: "Feedback negatif (peu clair / pas pertinent)"
+  trigger: "Clic sur le pouce rouge ou equivalent en bas de page"
+  feature_group: "feedback"
+
+"feedback_category:*":
+  label_fr: "Categorie de feedback negatif"
+  trigger: "Selection d'une raison apres un feedback negatif (infos fausses, pas claires, etc.)"
+  feature_group: "feedback"
+
+"feedback_suggestion:*":
+  label_fr: "Soumission d'une suggestion libre"
+  trigger: "Texte libre envoye apres un feedback negatif"
+  feature_group: "feedback"
+
+"feedback_simulateurs:*":
+  label_fr: "Feedback specifique au simulateur Indemnite de licenciement"
+  trigger: "Note ou texte libre sur la page de resultat du simulateur IL. Runtime-only : la category est passee en parametre a `trackFeedback(event, feedback, category)` dans `outils/indemnite-depart/feedback/tracking.tsx` (entree statique `<category>:<event>` dans les orphelins)."
+  feature_group: "feedback"
+  notes: "Runtime-only : category = EVENT_CATEGORY.indemniteLicenciement, action = EVENT_ACTION.{GLOBAL,EASINESS,QUESTION_CLARITY,RESULT_CLARITY,SUGGESTION}, name = FEEDBACK_RESULT.{1..5 ou pas_bien/moyen/très_bien/etc.}"
+
+"feedback_simulateurs_rupture_co:*":
+  label_fr: "Feedback specifique au simulateur Rupture Conventionnelle"
+  trigger: "Note ou texte libre sur la page de resultat du simulateur RC. Meme mecanisme que feedback_simulateurs (trackFeedback) avec category = EVENT_CATEGORY.ruptureConventionnelle."
+  feature_group: "feedback"
+  notes: "Runtime-only : voir note de feedback_simulateurs:*"
+
+"feedback_suggestion_rupture_co:*":
+  label_fr: "Suggestion texte libre simulateur RC"
+  trigger: "Texte libre envoye apres un feedback negatif sur le simulateur RC. Emis par `trackFeedbackText(text, url, category)` dans `outils/indemnite-depart/feedback/tracking.tsx`."
+  feature_group: "feedback"
+  notes: "Runtime-only : category = EVENT_SUGGESTION.ruptureConventionnelle, action = texte libre saisi par l'utilisateur"
+
+# =====================
+# Home
+# =====================
+
+"page_home:*":
+  label_fr: "Navigation depuis la homepage"
+  trigger: "Clic sur un des boutons / cartes de la page d'accueil"
+  feature_group: "home"
+
+# =====================
+# Partage (share)
+# =====================
+
+"clic_share:*":
+  label_fr: "Partage de contenu"
+  trigger: "Clic sur un bouton de partage social (Facebook, Twitter, LinkedIn, email, WhatsApp, copy link)"
+  feature_group: "share"
+
+# =====================
+# Contact
+# =====================
+
+"contact:click_phone_number":
+  label_fr: "Clic sur le numero de telephone dans le footer"
+  trigger: "Clic sur le lien 'tel:...' dans le footer"
+  feature_group: "contact"
+
+"contact:click_contact_sr_modale":
+  label_fr: "Ouverture de la modale 'Besoin d'aide ?'"
+  trigger: "Clic sur le lien 'Contact' qui ouvre la modale de contact support"
+  feature_group: "contact"
+
+# =====================
+# Modeles de documents
+# =====================
+
+"page_modeles_de_documents:type_CTRL_C":
+  label_fr: "Copie d'un modele de courrier"
+  trigger: "L'utilisateur utilise Ctrl+C / Cmd+C pour copier le contenu d'un modele de courrier"
+  feature_group: "documents"
+
+# =====================
+# selectRelated
+# =====================
+
+"selectRelated:*":
+  label_fr: "Clic sur un contenu relie"
+  trigger: "Clic sur une carte 'Contenus relies' en bas d'une page"
+  feature_group: "navigation"
