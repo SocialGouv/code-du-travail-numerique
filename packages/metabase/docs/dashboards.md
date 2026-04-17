@@ -27,7 +27,10 @@
 | 32  | Fantine_Investigation_2025               | CDTN (14)                   | Investigation                     |
 | 33  | Tableau de bord satisfaction utilisateur | CDTN (14)                   | Satisfaction globale              |
 | 34  | Fantine - Completion outils              | CDTN (14)                   | Completion                        |
-| 36  | **Personnalisation des contenus**        | General (29)                | **NOTRE DASHBOARD**               |
+| 36  | **Personnalisation des contenus**          | General (29)                | **NOTRE DASHBOARD**               |
+| 38  | KPI - Simulateurs "Demarches essentielles" | Demarches essentielles (89)| KPI satisfaction IL/RC            |
+
+> Pour regenerer cette table automatiquement : `curl -s -H "X-API-Key: $METABASE_API_KEY" "$METABASE_URL/api/dashboard" | jq '.[] | {id, name, collection_id, archived}'`.
 
 ---
 
@@ -104,17 +107,19 @@ Chaque type de contenu a le meme pattern de sous-collections :
 
 ### Cartes V1 archivees (IDs 427-434)
 
-Sauvegardees dans `backup/v1_cards_427-434.md`. Utilisaient `matomo_partitioned` directement (performances insuffisantes).
+Remplacees par les V2 (435-444). Les V1 ont ete **archivees via `PUT /api/card/:id` avec `archived: true`** : elles sont restaurables depuis la corbeille Metabase, et l'historique SQL est conserve dans l'onglet "History" de chaque carte. Elles utilisaient `matomo_partitioned` directement (performances insuffisantes).
 
 ---
 
-## Dashboard 37 - Funnel IL/IRC
+## Dashboard 37 - Funnel IL/IRC *(archive)*
 
-| Card ID | Nom                                               | Display | Source           |
-| ------- | ------------------------------------------------- | ------- | ---------------- |
-| 445     | Funnel conversion IL vs IRC - avant/apres refonte | table   | mv_funnel_il_irc |
-| 446     | Taux conversion IL vs IRC - avant/apres refonte   | table   | mv_funnel_il_irc |
-| 447     | Evolution hebdomadaire taux conversion IL vs IRC  | line    | mv_funnel_il_irc |
+Dashboard historique "Funnel de conversion pour l'IL et l'IRC" **archive** (corbeille Metabase). Les cartes 445, 446, 447 qui l'alimentaient sont elles aussi archivees. Conservees pour reference historique ; restaurables via l'UI Metabase si besoin.
+
+| Card ID | Nom                                               | Display | Source           | Statut   |
+| ------- | ------------------------------------------------- | ------- | ---------------- | -------- |
+| 445     | Funnel conversion IL vs IRC - avant/apres refonte | table   | mv_funnel_il_irc | archivee |
+| 446     | Taux conversion IL vs IRC - avant/apres refonte   | table   | mv_funnel_il_irc | archivee |
+| 447     | Evolution hebdomadaire taux conversion IL vs IRC  | line    | mv_funnel_il_irc | archivee |
 
 ---
 

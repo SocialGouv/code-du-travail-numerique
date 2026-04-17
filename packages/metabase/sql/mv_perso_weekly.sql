@@ -1,11 +1,10 @@
 -- mv_perso_weekly.sql
 -- Source de verite : docs/materialized-views.md §5
 -- Role : pre-agrege les stats de personnalisation par semaine pour le graphique
---        d'evolution (KPI 2 dashboard 36).
+--        d'evolution (KPI 2 du dashboard "Personnalisation des contenus").
 -- Source : metabase_model_106.
--- Taille : ~100 lignes.
 -- Refresh : REFRESH MATERIALIZED VIEW mv_perso_weekly;
--- Cartes : 437.
+-- Cartes consommatrices : voir docs/dashboards.md §"Dashboard Personnalisation" (KPI 2).
 
 CREATE MATERIALIZED VIEW IF NOT EXISTS mv_perso_weekly AS
 SELECT

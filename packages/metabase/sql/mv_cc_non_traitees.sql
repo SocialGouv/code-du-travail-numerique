@@ -2,9 +2,8 @@
 -- Source de verite : docs/materialized-views.md §9
 -- Role : pre-agrege les selections de CC non traitees par nom de CC pour 2025.
 -- Source : matomo_partitioned.
--- Taille : ~800 lignes.
 -- Refresh : STATIQUE (donnees 2025, pas de refresh prevu).
--- Cartes : 442 (KPI 5 - CC non traitees 2025).
+-- Cartes consommatrices : voir docs/dashboards.md §"Dashboard Personnalisation" (KPI 5).
 
 CREATE MATERIALIZED VIEW IF NOT EXISTS mv_cc_non_traitees AS
 SELECT action_eventname AS cc_name,

@@ -15,5 +15,5 @@
     "noEmit": true
   },
   "include": ["events/**/*.ts"],
-  "exclude": ["node_modules", "backup"]
+  "exclude": ["node_modules"]
 }

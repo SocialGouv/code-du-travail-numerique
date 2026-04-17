@@ -5,7 +5,7 @@
 
 # Glossaire des Events Matomo
 
-Genere le **2026-04-17T17:26:59.238Z** depuis `packages/code-du-travail-frontend/src`.
+Genere le **2026-04-17T17:49:14.314Z** depuis `packages/code-du-travail-frontend/src`.
 
 **Stats :** 61 callsites · 57 events uniques · **54 documentes** · **3 orphelins** · 7 metadata orphelines.
 
@@ -88,7 +88,7 @@ Parcours P3 : renonciation CC
 
 Variante select : pas d'entreprise
 
-- **Declenche par :** Meme chose que click_je_n_ai_pas_d_entreprise mais depuis le composant select (backup event)
+- **Declenche par :** Meme chose que click_je_n_ai_pas_d_entreprise mais depuis le composant select (event de repli)
 - **Notes :** Double-fired avec click_je_n_ai_pas_d_entreprise dans certains parcours
 - **Callsites :** 2
   - `packages/code-du-travail-frontend/src/modules/enterprise/EnterpriseAgreementSearch/tracking.ts:59` (`emitNoEnterpriseSelectEvent()`) — name: `Trouver sa convention collective`

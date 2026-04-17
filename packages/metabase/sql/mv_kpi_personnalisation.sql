@@ -1,20 +1,19 @@
 -- mv_kpi_personnalisation.sql
 -- Source de verite : docs/materialized-views.md §4
 -- Role : pre-agrege les evenements cibles de personnalisation par visite dedupliquee.
---        Evite les Seq Scan sur metabase_model_106 (~53M lignes) pour les cartes du dashboard 36.
+--        Evite les Seq Scan sur metabase_model_106 pour les cartes du dashboard
+--        "Personnalisation des contenus".
 -- Source : metabase_model_106 (derniere annee glissante).
--- Taille : ~4.3M lignes, ~446 MB.
 -- Refresh : DROP + CREATE (schema fixe, pas de REFRESH).
--- Cartes : 435, 436, 438, 439, 440, 441, 443, 444.
+-- Cartes consommatrices : voir docs/dashboards.md §"Dashboard Personnalisation".
 --
 -- PROCEDURE DE REFRESH
 -- --------------------
 -- 1. Lancer REFRESH MATERIALIZED VIEW metabase_model_106 (long).
--- 2. Backup : copier la sortie SQL de la carte 106 avant de dropper.
--- 3. DROP MATERIALIZED VIEW IF EXISTS mv_kpi_personnalisation CASCADE;
--- 4. Executer ce fichier (CREATE).
--- 5. Recreer les index (section "Indexes" ci-dessous).
--- 6. Verifier avec SELECT COUNT(*) FROM mv_kpi_personnalisation.
+-- 2. Sauvegarder SELECT COUNT(*) FROM mv_kpi_personnalisation (controle avant/apres).
+-- 3. Executer ce fichier (DROP + CREATE).
+-- 4. Verifier SELECT COUNT(*) FROM mv_kpi_personnalisation (proche de l'avant).
+-- Les index sont recrees automatiquement en fin de fichier.
 
 DROP MATERIALIZED VIEW IF EXISTS mv_kpi_personnalisation CASCADE;
 

@@ -3,9 +3,9 @@
 -- Role : une ligne PAR VISITE (idvisit) pour les funnels IL et IRC sur les 60j
 --        derniers, avec un flag booleen par etape. Source matomo_partitioned,
 --        INDEPENDANTE de metabase_model_106 -> temps reel.
--- Taille : ~400-500k lignes.
 -- Refresh : REFRESH MATERIALIZED VIEW mv_funnel_il_irc_visits;
--- Cartes : 170, 107, 448, 449 (cumulative funnel, fenetre parametrable).
+-- Cartes consommatrices : voir docs/dashboards.md §"Taux completion IL/IRC"
+-- (cumulative funnel, fenetre parametrable).
 
 CREATE MATERIALIZED VIEW IF NOT EXISTS mv_funnel_il_irc_visits AS
 SELECT

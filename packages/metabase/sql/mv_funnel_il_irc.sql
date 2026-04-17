@@ -3,11 +3,10 @@
 -- Role : pre-agrege par (semaine, simulateur, etape) les visites uniques sur
 --        les funnels IL et IRC. Usage historique (12 mois), donc base sur
 --        metabase_model_106 (stale si metabase_model_106 n'est pas rafraichi).
--- Taille : ~890 lignes.
 -- Refresh : REFRESH MATERIALIZED VIEW mv_funnel_il_irc;
--- Cartes : 445, 446, 447 (dashboard 37 - comparaison avant/apres refonte).
--- NB : les cartes 170, 107, 448, 449 utilisent mv_funnel_il_irc_visits
---      (temps reel) depuis le 2026-04-11.
+-- Cartes consommatrices : voir docs/dashboards.md §"Funnel IL/IRC" (dashboard
+-- de comparaison avant/apres refonte). Pour les cartes temps reel, voir
+-- mv_funnel_il_irc_visits.
 
 CREATE MATERIALIZED VIEW IF NOT EXISTS mv_funnel_il_irc AS
 SELECT

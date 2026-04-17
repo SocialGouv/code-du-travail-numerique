@@ -3,9 +3,8 @@
 -- Role : une ligne par (visite, contribution) pour le calcul du taux de rebond
 --        des contributions. Source matomo_partitioned, INDEPENDANTE de
 --        metabase_model_106 -> temps reel.
--- Taille : ~1.5M lignes.
 -- Refresh : REFRESH MATERIALIZED VIEW mv_bounce_contributions;
--- Cartes : 450 (scalar), 451 (table).
+-- Cartes consommatrices : voir docs/dashboards.md §"Taux de rebond Contributions".
 
 CREATE MATERIALIZED VIEW IF NOT EXISTS mv_bounce_contributions AS
 WITH contrib_actions AS (

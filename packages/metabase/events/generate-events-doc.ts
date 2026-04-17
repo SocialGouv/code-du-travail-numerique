@@ -145,7 +145,7 @@ function anchor(s: string): string {
 }
 
 function escapePipe(s: string): string {
-  return s.replace(/\|/g, "\\|");
+  return s.replace(/\\/g, "\\\\").replace(/\|/g, "\\|");
 }
 
 const lines: string[] = [];

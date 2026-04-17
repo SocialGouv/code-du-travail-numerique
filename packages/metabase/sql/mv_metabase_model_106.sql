@@ -4,13 +4,14 @@
 --        (pathname, path_level2, path_level3, month).
 -- Donnees : derniere annee glissante (filtre sur action_timestamp).
 -- Refresh : REFRESH MATERIALIZED VIEW metabase_model_106;
--- Taille : ~53M lignes.
--- !! Attention : cette MV est TRES lente a refresh (~minutes a heures).
---    Plusieurs autres MV dependent d'elle. Cf. ../CLAUDE.md §"Refresh des MV" et ../docs/materialized-views.md §"Ordre de refresh des MV".
+-- !! Attention : cette MV est TRES lente a refresh (~minutes a heures) et
+--    plusieurs autres MV dependent d'elle. Cf. ../CLAUDE.md §"Refresh des MV"
+--    et ../docs/materialized-views.md §"Ordre de refresh des MV".
 
--- NOTE : cette MV est geree cote Metabase (card 106). La definition ci-dessous
--- est la requete equivalente, fournie ici pour tracabilite et recreation manuelle
--- si besoin. Ne pas la DROP/CREATE sans concertation.
+-- NOTE : cette MV est egalement exposee cote Metabase par une carte "model".
+-- La definition ci-dessous est la requete equivalente, fournie ici pour
+-- tracabilite et recreation manuelle si besoin. Ne pas la DROP/CREATE sans
+-- concertation.
 
 CREATE MATERIALIZED VIEW IF NOT EXISTS metabase_model_106 AS
 SELECT action_id,

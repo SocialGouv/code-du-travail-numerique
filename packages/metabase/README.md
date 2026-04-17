@@ -8,8 +8,8 @@ Dashboards Metabase et configuration MCP pour le CDTN.
 - [Serveur MCP](#serveur-mcp)
 - [Structure des fichiers](#structure-des-fichiers)
 - [Pipeline events Matomo](#pipeline-events-matomo)
-- [Dashboards et cartes maintenues](#dashboards-et-cartes-maintenues)
-- [Refresh des donnees](#refresh-des-donnees)
+- [Dashboards et cartes](#dashboards-et-cartes)
+- [Refresh des MV](#refresh-des-mv)
 - [Issues](#issues)
 
 ## Installation
@@ -130,7 +130,6 @@ curl -X POST -H "X-API-Key: $METABASE_API_KEY" \
 | `events/generate-events-doc.ts`  | Join extracted + metadata → `docs/events.md`                                         |
 | `events/check-events-drift.ts`   | Exit 1 si `docs/events.md` est desynchronise (utilise en precommit + CI)             |
 | `sql/`                           | SQL DDL des MV custom (source de verite git-tracked)                                 |
-| `backup/`                        | Backups des SQL des cartes avant modification (gitignore)                            |
 
 ## Pipeline events Matomo
 
@@ -176,37 +175,20 @@ pnpm -F @cdt/metabase events:check
 
 Voir `events/CLAUDE.md` pour les details (schema + metadata + scripts du pipeline sont colocalises).
 
-## Dashboards et cartes maintenues
+## Dashboards et cartes
 
-| ID       | Type | Nom                                       | Collection                 | Source                  |
-| -------- | ---- | ----------------------------------------- | -------------------------- | ----------------------- |
-| 36       | Dash | Personnalisation des contenus             | General (29)               | mv_kpi_personnalisation |
-| 37       | Dash | Funnel IL/IRC avant/apres refonte         | General (29)               | mv_funnel_il_irc        |
-| 170      | Card | IL - Taux completion (bar)                | 56 (IL Taux completion)    | mv_funnel_il_irc_visits |
-| 448      | Card | IL - Taux completion (funnel)             | 56 (IL Taux completion)    | mv_funnel_il_irc_visits |
-| 107      | Card | IRC - Taux completion (bar)               | 53 (IRC Taux completion)   | mv_funnel_il_irc_visits |
-| 449      | Card | IRC - Taux completion (funnel)            | 53 (IRC Taux completion)   | mv_funnel_il_irc_visits |
-| 450      | Card | Contributions - Taux de rebond global     | 88 (Taux de rebond)        | mv_bounce_contributions |
-| 451      | Card | Contributions - Taux de rebond par page   | 88 (Taux de rebond)        | mv_bounce_contributions |
+La liste des dashboards et cartes maintenus vit dans [`docs/dashboards.md`](docs/dashboards.md). Pour l'etat en direct, interroger l'API :
 
-Les cards 170, 107, 448, 449 sont parametrees (`date_debut`, `date_fin`, defaut = 30 derniers jours) et utilisent une logique de **funnel cumulatif** (cf. `docs/materialized-views.md` §7).
+```bash
+source .env
+curl -s -H "X-API-Key: $METABASE_API_KEY" "$METABASE_URL/api/dashboard" | jq '.[] | {id, name, collection_id, archived}'
+```
 
-Les cards 450 et 451 (taux de rebond contributions, issue #7136) sont egalement parametrees avec `date_debut` / `date_fin`. Voir `docs/materialized-views.md` §8 pour la definition du rebond.
+## Refresh des MV
 
-Le dashboard 36 utilise aussi `mv_perso_weekly` (KPI 2) et `mv_cc_non_traitees` (KPI 5).
-
-## Refresh des donnees
-
-Voir **`CLAUDE.md` §Refresh des MV** et **`docs/materialized-views.md` §Ordre de refresh** pour les commandes et dependances. Le cron lui-meme est gere cote infra (Kubernetes CronJob / `pg_cron`).
-
-Resume :
-
-- `mv_funnel_il_irc_visits` -> a planifier en cron quotidien independamment (cards 170/107/448/449)
-- `mv_bounce_contributions` -> a planifier en cron quotidien independamment (cards 450/451)
-- `metabase_model_106` -> source de verite, lent, planification cote infra
-- Les autres MV (`visites_uniques`, `mv_perso_weekly`, `mv_funnel_il_irc`, `commentaires_utilisateurs`) -> a refresh **apres** `metabase_model_106`
-- `mv_kpi_personnalisation` -> DROP + CREATE manuel (schema fixe)
-- `mv_cc_non_traitees` -> statique, jamais refresh
+- Commandes detaillees et ordre de refresh : [`docs/materialized-views.md`](docs/materialized-views.md) §"Ordre de refresh des MV".
+- Consignes de process et regles d'archivage des cartes : [`CLAUDE.md`](CLAUDE.md) §"Refresh des MV".
+- Le cron lui-meme est gere cote infra (Kubernetes CronJob / `pg_cron`).
 
 ## Issues
 

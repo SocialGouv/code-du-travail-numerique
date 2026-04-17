@@ -73,7 +73,7 @@
 
 "cc_search_type_of_users:select_je_n_ai_pas_d_entreprise":
   label_fr: "Variante select : pas d'entreprise"
-  trigger: "Meme chose que click_je_n_ai_pas_d_entreprise mais depuis le composant select (backup event)"
+  trigger: "Meme chose que click_je_n_ai_pas_d_entreprise mais depuis le composant select (event de repli)"
   feature_group: "cc-search"
   notes: "Double-fired avec click_je_n_ai_pas_d_entreprise dans certains parcours"
 
