@@ -104,7 +104,7 @@ export function ContributionGenericAgreementSearch({
 
   const noAgreementBanner = (
     <AccessibleAlert
-      title="Attention"
+      title="Information"
       description={
         <p>
           Vous pouvez passer cette étape et poursuivre la simulation qui vous
@@ -114,7 +114,7 @@ export function ContributionGenericAgreementSearch({
           travail.
         </p>
       }
-      severity="warning"
+      severity="info"
       className={["fr-mt-2w"]}
       data-testid="no-agreement-banner"
     />
