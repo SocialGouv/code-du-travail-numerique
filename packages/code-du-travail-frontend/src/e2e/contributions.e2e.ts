@@ -70,7 +70,7 @@ test.describe("Contributions", () => {
 
     await page
       .getByLabel("Je ne souhaite pas renseigner ma convention collective.")
-      .check();
+      .check({ force: true });
     await page
       .getByRole("button", { name: "Afficher les informations" })
       .click();
