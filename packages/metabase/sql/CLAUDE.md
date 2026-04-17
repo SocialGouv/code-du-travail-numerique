@@ -32,7 +32,7 @@ Chaque fichier commence par un bloc de commentaires avec :
 2. **Pour les MV avec `DROP + CREATE`** (`mv_kpi_personnalisation`) :
    - Lister les index dans le fichier SQL (le CASCADE du DROP les supprime aussi)
    - Tester sur un environnement de dev si possible
-   - Backup du SELECT COUNT(*) avant / apres
+   - Backup du SELECT COUNT(\*) avant / apres
 
 3. **Ne PAS** ajouter de REFRESH dans ces fichiers : le refresh est execute separement cote infra (cf. `../CLAUDE.md` §Refresh des MV).
 

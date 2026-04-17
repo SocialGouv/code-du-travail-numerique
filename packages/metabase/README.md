@@ -112,24 +112,24 @@ curl -X POST -H "X-API-Key: $METABASE_API_KEY" \
 
 ## Structure des fichiers
 
-| Fichier                          | Description                                                                          |
-| -------------------------------- | ------------------------------------------------------------------------------------ |
-| `CLAUDE.md`                      | **Hub IA complet** : process cards, SQL, dashboards, events, refresh                 |
-| `../../.mcp.json`                | Config MCP locale, **a la racine du repo** (gitignore)                               |
-| `../../.mcp.example.json`        | Template de config MCP, **a la racine du repo**                                      |
-| `.env`                           | Variables `METABASE_URL` / `METABASE_API_KEY` (gitignore)                            |
-| `docs/schema.md`                 | Schema de la base OVH PG CDTN (`matomo_partitioned`, etc.)                           |
-| `docs/materialized-views.md`     | Definitions et patterns d'usage des vues materialisees                               |
-| `docs/events.md`                 | **Glossaire exhaustif des events Matomo (AUTO-GENERE)**                              |
-| `docs/models.md`                 | Modeles Metabase et patterns SQL optimises                                           |
-| `docs/dashboards.md`             | Reference de tous les dashboards et cartes                                           |
-| `events/events.metadata.yaml`    | Description **metier** des events (label, trigger, KPI, dashboards)                  |
-| `events/events.extracted.json`   | Ground truth technique extraite depuis le code (auto)                                |
-| `events/events.schema.ts`        | Types TS partages du pipeline events                                                 |
-| `events/extract-events.ts`       | AST scan des `tracking.ts` → `events.extracted.json`                                 |
-| `events/generate-events-doc.ts`  | Join extracted + metadata → `docs/events.md`                                         |
-| `events/check-events-drift.ts`   | Exit 1 si `docs/events.md` est desynchronise (utilise en precommit + CI)             |
-| `sql/`                           | SQL DDL des MV custom (source de verite git-tracked)                                 |
+| Fichier                         | Description                                                              |
+| ------------------------------- | ------------------------------------------------------------------------ |
+| `CLAUDE.md`                     | **Hub IA complet** : process cards, SQL, dashboards, events, refresh     |
+| `../../.mcp.json`               | Config MCP locale, **a la racine du repo** (gitignore)                   |
+| `../../.mcp.example.json`       | Template de config MCP, **a la racine du repo**                          |
+| `.env`                          | Variables `METABASE_URL` / `METABASE_API_KEY` (gitignore)                |
+| `docs/schema.md`                | Schema de la base OVH PG CDTN (`matomo_partitioned`, etc.)               |
+| `docs/materialized-views.md`    | Definitions et patterns d'usage des vues materialisees                   |
+| `docs/events.md`                | **Glossaire exhaustif des events Matomo (AUTO-GENERE)**                  |
+| `docs/models.md`                | Modeles Metabase et patterns SQL optimises                               |
+| `docs/dashboards.md`            | Reference de tous les dashboards et cartes                               |
+| `events/events.metadata.yaml`   | Description **metier** des events (label, trigger, KPI, dashboards)      |
+| `events/events.extracted.json`  | Ground truth technique extraite depuis le code (auto)                    |
+| `events/events.schema.ts`       | Types TS partages du pipeline events                                     |
+| `events/extract-events.ts`      | AST scan des `tracking.ts` → `events.extracted.json`                     |
+| `events/generate-events-doc.ts` | Join extracted + metadata → `docs/events.md`                             |
+| `events/check-events-drift.ts`  | Exit 1 si `docs/events.md` est desynchronise (utilise en precommit + CI) |
+| `sql/`                          | SQL DDL des MV custom (source de verite git-tracked)                     |
 
 ## Pipeline events Matomo
 

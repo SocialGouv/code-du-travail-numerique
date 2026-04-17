@@ -18,23 +18,23 @@
 
 ### Schema (15 colonnes)
 
-| Colonne | Type source | Calcul |
-|---|---|---|
-| `action_id` | text | Direct |
-| `idvisit` | text | Direct |
-| `action_type` | text | Direct |
-| `action_eventcategory` | text | Direct |
-| `action_eventaction` | text | Direct |
-| `action_eventname` | text | Direct |
-| `action_eventvalue` | numeric | Direct |
-| `action_timestamp` | timestamptz | Direct |
-| `month` | date | `date_trunc('month', action_timestamp)::date` |
-| `action_url` | text | Direct |
-| `referrertype` | text | Direct |
-| `referrername` | text | Direct |
-| **`pathname`** | text | `substring(action_url, 'https?://[^/]+(/[^?#]*)')` |
-| **`path_level2`** | text | `split_part(pathname, '/', 2)` (ex: `contribution`, `outils`) |
-| **`path_level3`** | text | `split_part(pathname, '/', 3)` (ex: `heures-supplementaires`) |
+| Colonne                | Type source | Calcul                                                        |
+| ---------------------- | ----------- | ------------------------------------------------------------- |
+| `action_id`            | text        | Direct                                                        |
+| `idvisit`              | text        | Direct                                                        |
+| `action_type`          | text        | Direct                                                        |
+| `action_eventcategory` | text        | Direct                                                        |
+| `action_eventaction`   | text        | Direct                                                        |
+| `action_eventname`     | text        | Direct                                                        |
+| `action_eventvalue`    | numeric     | Direct                                                        |
+| `action_timestamp`     | timestamptz | Direct                                                        |
+| `month`                | date        | `date_trunc('month', action_timestamp)::date`                 |
+| `action_url`           | text        | Direct                                                        |
+| `referrertype`         | text        | Direct                                                        |
+| `referrername`         | text        | Direct                                                        |
+| **`pathname`**         | text        | `substring(action_url, 'https?://[^/]+(/[^?#]*)')`            |
+| **`path_level2`**      | text        | `split_part(pathname, '/', 2)` (ex: `contribution`, `outils`) |
+| **`path_level3`**      | text        | `split_part(pathname, '/', 3)` (ex: `heures-supplementaires`) |
 
 ### Definition SQL
 
@@ -77,11 +77,11 @@ WHERE action_timestamp >= date_trunc('month', CURRENT_DATE - interval '1 year');
 
 ### Schema (3 colonnes)
 
-| Colonne | Type | Description |
-|---|---|---|
-| `idvisit` | text | ID visite unique |
+| Colonne    | Type | Description       |
+| ---------- | ---- | ----------------- |
+| `idvisit`  | text | ID visite unique  |
 | `pathname` | text | Chemin de la page |
-| `month` | date | Mois (tronque) |
+| `month`    | date | Mois (tronque)    |
 
 ### Definition SQL
 
@@ -109,15 +109,15 @@ WHERE month >= date_trunc('month', CURRENT_DATE - interval '1 year 1 month');
 
 ### Schema (7 colonnes)
 
-| Colonne | Type | Description |
-|---|---|---|
-| `action_id` | text | ID de l'action |
-| `feedback_suggestion` | text | Texte du feedback |
-| `pathname` | text | Chemin de la page |
-| `feedback` | text | Action feedback (depuis `feedback` category) |
-| `feedback_category` | text | Categorie de feedback (depuis `feedback_category` category) |
-| `idvisit` | text | ID visite |
-| `action_timestamp` | timestamptz | Horodatage |
+| Colonne               | Type        | Description                                                 |
+| --------------------- | ----------- | ----------------------------------------------------------- |
+| `action_id`           | text        | ID de l'action                                              |
+| `feedback_suggestion` | text        | Texte du feedback                                           |
+| `pathname`            | text        | Chemin de la page                                           |
+| `feedback`            | text        | Action feedback (depuis `feedback` category)                |
+| `feedback_category`   | text        | Categorie de feedback (depuis `feedback_category` category) |
+| `idvisit`             | text        | ID visite                                                   |
+| `action_timestamp`    | timestamptz | Horodatage                                                  |
 
 ### Definition SQL
 
@@ -162,6 +162,7 @@ ORDER BY action_timestamp DESC;
 **Refresh** : `DROP MATERIALIZED VIEW + CREATE` (non REFRESHABLE car schema fixe). Requete dans `sql/mv_kpi_personnalisation.sql`.
 
 **Indexes** :
+
 - `idx_mvkpi_month_type` : `(month, content_type)`
 - `idx_mvkpi_month_type_path` : `(month, content_type, path)`
 - `idx_mvkpi_idvisit` : `(idvisit)`
@@ -170,20 +171,21 @@ ORDER BY action_timestamp DESC;
 
 ### Schema (8 colonnes)
 
-| Colonne | Type | Description |
-|---|---|---|
-| `month` | date | Mois de l'evenement |
-| `content_type` | text | `'contribution'`, `'simulateur'` ou `'cc_search'` |
-| `path` | text | Chemin (pathname ou action_eventname selon le type) |
-| `idvisit` | text | ID visite (deduplique par month/content_type/path) |
-| `is_perso` | boolean | L'utilisateur a obtenu une reponse personnalisee |
-| `is_cc_non_traitee` | boolean | L'utilisateur a rencontre une CC non traitee |
-| `is_pas_entreprise` | boolean | L'utilisateur a declare ne pas avoir d'entreprise |
-| `is_renonciation` | boolean | L'utilisateur a renonce a chercher sa CC (click_p3) |
+| Colonne             | Type    | Description                                         |
+| ------------------- | ------- | --------------------------------------------------- |
+| `month`             | date    | Mois de l'evenement                                 |
+| `content_type`      | text    | `'contribution'`, `'simulateur'` ou `'cc_search'`   |
+| `path`              | text    | Chemin (pathname ou action_eventname selon le type) |
+| `idvisit`           | text    | ID visite (deduplique par month/content_type/path)  |
+| `is_perso`          | boolean | L'utilisateur a obtenu une reponse personnalisee    |
+| `is_cc_non_traitee` | boolean | L'utilisateur a rencontre une CC non traitee        |
+| `is_pas_entreprise` | boolean | L'utilisateur a declare ne pas avoir d'entreprise   |
+| `is_renonciation`   | boolean | L'utilisateur a renonce a chercher sa CC (click_p3) |
 
 ### Logique de deduplication
 
 Chaque ligne represente une visite unique (idvisit) pour un (month, content_type, path) donne. Les booleens sont calcules via `BOOL_OR` sur les evenements de la visite :
+
 - **contribution** : regroupe `click_afficher_les_informations_CC`, `click_afficher_les_informations_sans_CC`, `click_afficher_les_informations_generales`
 - **simulateur** : regroupe `cc_select_traitée`, `cc_select_non_traitée`
 - **cc_search** : regroupe `click_p1`, `click_p2`, `click_p3`, `click_je_n_ai_pas_d_entreprise`, `select_je_n_ai_pas_d_entreprise`
@@ -214,12 +216,12 @@ Voir `sql/mv_kpi_personnalisation.sql` pour la requete complete de creation.
 
 ### Schema (4 colonnes)
 
-| Colonne | Type | Description |
-|---|---|---|
-| `semaine` | date | Debut de semaine (`DATE_TRUNC('week', action_timestamp)::date`) |
-| `type` | text | `'contribution'` ou `'simulateur'` |
-| `total_visits` | bigint | Nombre de visites uniques |
-| `personalized_visits` | bigint | Nombre de visites personnalisees |
+| Colonne               | Type   | Description                                                     |
+| --------------------- | ------ | --------------------------------------------------------------- |
+| `semaine`             | date   | Debut de semaine (`DATE_TRUNC('week', action_timestamp)::date`) |
+| `type`                | text   | `'contribution'` ou `'simulateur'`                              |
+| `total_visits`        | bigint | Nombre de visites uniques                                       |
+| `personalized_visits` | bigint | Nombre de visites personnalisees                                |
 
 ### Definition SQL
 
@@ -255,6 +257,7 @@ GROUP BY 1, 2;
 **Refresh** : `REFRESH MATERIALIZED VIEW mv_funnel_il_irc;` (refresh simple, pas de DROP/CREATE necessaire).
 
 **Indexes** :
+
 - `idx_mv_funnel_il_irc_semaine` : `(semaine, simulateur, etape)`
 
 **Cartes utilisees** :
@@ -265,26 +268,26 @@ GROUP BY 1, 2;
 
 ### Schema (4 colonnes)
 
-| Colonne | Type | Description |
-|---|---|---|
-| `semaine` | date | Debut de semaine ISO (`DATE_TRUNC('week', action_timestamp)::date`) |
-| `simulateur` | text | `'indemnite-licenciement'` ou `'indemnite-rupture-conventionnelle'` (= `path_level3`) |
-| `etape` | text | Nom de l'etape (= `action_eventname`) |
-| `visites` | bigint | Nombre de visites uniques (`COUNT(DISTINCT idvisit)`) |
+| Colonne      | Type   | Description                                                                           |
+| ------------ | ------ | ------------------------------------------------------------------------------------- |
+| `semaine`    | date   | Debut de semaine ISO (`DATE_TRUNC('week', action_timestamp)::date`)                   |
+| `simulateur` | text   | `'indemnite-licenciement'` ou `'indemnite-rupture-conventionnelle'` (= `path_level3`) |
+| `etape`      | text   | Nom de l'etape (= `action_eventname`)                                                 |
+| `visites`    | bigint | Nombre de visites uniques (`COUNT(DISTINCT idvisit)`)                                 |
 
 ### Etapes trackees
 
-| Etape | Statut | Apparition |
-|---|---|---|
-| `start` | Active | Toujours |
-| `info_cc` | Active | Toujours |
-| `infos` | Active | Apres refonte du 2025-03-13 |
-| `anciennete` | Active | Toujours |
-| `absences` | Active | Deploye le **2026-03-13** (avant cette date, les visites n'emettent pas l'evenement) |
-| `salaires` | Active | Toujours |
-| `results` | Active | Toujours |
-| `results_ineligible` | Active | Toujours |
-| `contrat_travail` | Legacy | Avant refonte du 2025-03-13 uniquement, supprime du front mais conserve dans la MV pour les comparaisons historiques |
+| Etape                | Statut | Apparition                                                                                                           |
+| -------------------- | ------ | -------------------------------------------------------------------------------------------------------------------- |
+| `start`              | Active | Toujours                                                                                                             |
+| `info_cc`            | Active | Toujours                                                                                                             |
+| `infos`              | Active | Apres refonte du 2025-03-13                                                                                          |
+| `anciennete`         | Active | Toujours                                                                                                             |
+| `absences`           | Active | Deploye le **2026-03-13** (avant cette date, les visites n'emettent pas l'evenement)                                 |
+| `salaires`           | Active | Toujours                                                                                                             |
+| `results`            | Active | Toujours                                                                                                             |
+| `results_ineligible` | Active | Toujours                                                                                                             |
+| `contrat_travail`    | Legacy | Avant refonte du 2025-03-13 uniquement, supprime du front mais conserve dans la MV pour les comparaisons historiques |
 
 > Toute modification de la liste des etapes (front + DB) implique de mettre a jour `sql/mv_funnel_il_irc.sql` puis de relancer un DROP/CREATE de la MV pour rafraichir le filtre `IN`.
 
@@ -332,6 +335,7 @@ WHERE simulateur = 'indemnite-licenciement'
 **Role** : Pre-agrege une ligne PAR VISITE (idvisit) pour les funnels IL et IRC sur les 60 derniers jours, avec un flag booleen par etape. Permet aux cartes "Taux completion des etapes" (cards 170, 107, 448, 449) de calculer un funnel **cumulatif et monotone** sur une fenetre temporelle parametrable.
 
 **Pourquoi cette MV** :
+
 - `mv_funnel_il_irc` depend de `metabase_model_106` qui est rafraichi rarement (~mensuel) et donc systematiquement en retard pour une fenetre courante.
 - Cette MV tape directement `matomo_partitioned` (temps reel).
 - Une ligne par visite (avec flags par etape) permet une logique de funnel cumulatif robuste : "etape N atteinte" = "a fire l'evenement de l'etape N OU d'une etape ulterieure". Cette logique reste monotone meme quand des evenements manquent (deploiement recent d'une nouvelle etape, ad blocker, deep-link, etape conditionnellement masquee).
@@ -343,9 +347,11 @@ WHERE simulateur = 'indemnite-licenciement'
 **Refresh** : `REFRESH MATERIALIZED VIEW mv_funnel_il_irc_visits;` -- a planifier en cron quotidien.
 
 **Indexes** :
+
 - `idx_mv_funnel_il_irc_visits_jour` : `(simulateur, jour)`
 
 **Cartes utilisees** :
+
 - 170 : Taux completion des etapes (IL, bar) - collection 56
 - 107 : Taux completion des etapes (IRC, bar) - collection 53
 - 448 : Taux completion des etapes (IL, funnel) - collection 56
@@ -353,18 +359,18 @@ WHERE simulateur = 'indemnite-licenciement'
 
 ### Schema (10 colonnes)
 
-| Colonne | Type | Description |
-|---|---|---|
-| `idvisit` | text | ID de la visite Matomo |
-| `simulateur` | text | `'indemnite-licenciement'` ou `'indemnite-rupture-conventionnelle'` |
-| `jour` | date | Date du premier evenement de la visite sur le simulateur |
-| `s_start` | bool | A vu l'etape Introduction (`view_step_*` name=`start`) |
-| `s_info_cc` | bool | A vu l'etape Convention collective |
-| `s_infos` | bool | A vu l'etape Informations (peut etre conditionnellement masquee) |
-| `s_anciennete` | bool | A vu l'etape Anciennete |
-| `s_absences` | bool | A vu l'etape Absences (ajoutee le 2026-03-13) |
-| `s_salaires` | bool | A vu l'etape Salaires (peut etre conditionnellement masquee) |
-| `s_results` | bool | A vu l'etape Indemnite (resultat) |
+| Colonne        | Type | Description                                                         |
+| -------------- | ---- | ------------------------------------------------------------------- |
+| `idvisit`      | text | ID de la visite Matomo                                              |
+| `simulateur`   | text | `'indemnite-licenciement'` ou `'indemnite-rupture-conventionnelle'` |
+| `jour`         | date | Date du premier evenement de la visite sur le simulateur            |
+| `s_start`      | bool | A vu l'etape Introduction (`view_step_*` name=`start`)              |
+| `s_info_cc`    | bool | A vu l'etape Convention collective                                  |
+| `s_infos`      | bool | A vu l'etape Informations (peut etre conditionnellement masquee)    |
+| `s_anciennete` | bool | A vu l'etape Anciennete                                             |
+| `s_absences`   | bool | A vu l'etape Absences (ajoutee le 2026-03-13)                       |
+| `s_salaires`   | bool | A vu l'etape Salaires (peut etre conditionnellement masquee)        |
+| `s_results`    | bool | A vu l'etape Indemnite (resultat)                                   |
 
 ### Definition SQL
 
@@ -423,15 +429,16 @@ FROM counts c ORDER BY c.idx;
 
 ### Quand l'utiliser vs `mv_funnel_il_irc`
 
-| Cas d'usage | Utiliser |
-|---|---|
+| Cas d'usage                                                      | Utiliser                  |
+| ---------------------------------------------------------------- | ------------------------- |
 | Funnel temps reel parametre par dates (cards 170, 107, 448, 449) | `mv_funnel_il_irc_visits` |
-| Funnel hebdomadaire historique (12 mois) | `mv_funnel_il_irc` |
-| Comparaison avant/apres une refonte (dashboard 37) | `mv_funnel_il_irc` |
+| Funnel hebdomadaire historique (12 mois)                         | `mv_funnel_il_irc`        |
+| Comparaison avant/apres une refonte (dashboard 37)               | `mv_funnel_il_irc`        |
 
 ### Pourquoi un funnel cumulatif et pas un comptage par evenement
 
 Un comptage par evenement (`COUNT visites WHERE s_etape`) suppose que tous les evenements sont fires de facon fiable. En pratique, ce n'est pas le cas :
+
 - Une nouvelle etape (ex: `absences` deployee le 2026-03-13) n'a pas d'evenements pour les visites pre-deploiement -> le comptage strict d'`absences` est plus bas que celui de `salaires`/`results` sur les fenetres a cheval sur le deploiement.
 - Une etape conditionnellement masquee (`infos`, `salaires`) n'emet pas d'evenement quand elle est masquee -> son comptage est plus bas que prevu.
 - Un user qui refresh la page sur une etape avancee ne re-fire pas les evenements des etapes precedentes.
@@ -445,6 +452,7 @@ La logique cumulative ("a vu l'etape N OU une etape ulterieure") evite ces faux 
 **Role** : Pre-agrege une ligne par couple (visite, contribution visitee) pour le calcul du taux de rebond des contributions du CDTN. Permet aux cartes "Taux de rebond" (450, 451) de calculer le pourcentage de visites qui arrivent sur une contribution avec bouton "afficher les informations generales" et qui repartent **sans aucune interaction**. Issue #7136.
 
 **Pourquoi cette MV** :
+
 - Source `matomo_partitioned` directement (temps reel, **independant** de `metabase_model_106` et de son retard).
 - Granularite par (idvisit, pathname) avec un flag booleen par type d'interaction -> permet de calculer le rebond avec une seule requete simple sur une fenetre temporelle parametrable.
 - Filtre optimise sur `action_url LIKE '%/contribution/%'` pour eviter de scanner toute la table.
@@ -467,17 +475,17 @@ La logique cumulative ("a vu l'etape N OU une etape ulterieure") evite ces faux 
 
 ### Schema (9 colonnes)
 
-| Colonne | Type | Description |
-|---|---|---|
-| `idvisit` | text | ID de la visite Matomo |
-| `pathname` | text | Chemin de la contribution (`/contribution/...`, query string strippe) |
-| `jour` | date | Date du premier evenement de la visite sur cette contribution |
-| `has_pageview` | bool | A vu la page (`action_type = 'action'`) |
-| `has_interaction` | bool | A fait au moins une interaction (toute combinaison des autres flags) |
-| `has_click_generic` | bool | A clique sur "afficher les informations generales" |
-| `has_click_cc` | bool | A clique sur "afficher les informations CC" (parcours personnalise reussi) |
-| `has_click_sans_cc` | bool | A clique sur "afficher les informations sans ma CC" |
-| `has_cc_search` | bool | A interagi avec la recherche de CC (`cc_search`, `cc_select_*`, `click_p1/p2/p3`, `enterprise_*`, `je_n_ai_pas_d_entreprise`) |
+| Colonne             | Type | Description                                                                                                                   |
+| ------------------- | ---- | ----------------------------------------------------------------------------------------------------------------------------- |
+| `idvisit`           | text | ID de la visite Matomo                                                                                                        |
+| `pathname`          | text | Chemin de la contribution (`/contribution/...`, query string strippe)                                                         |
+| `jour`              | date | Date du premier evenement de la visite sur cette contribution                                                                 |
+| `has_pageview`      | bool | A vu la page (`action_type = 'action'`)                                                                                       |
+| `has_interaction`   | bool | A fait au moins une interaction (toute combinaison des autres flags)                                                          |
+| `has_click_generic` | bool | A clique sur "afficher les informations generales"                                                                            |
+| `has_click_cc`      | bool | A clique sur "afficher les informations CC" (parcours personnalise reussi)                                                    |
+| `has_click_sans_cc` | bool | A clique sur "afficher les informations sans ma CC"                                                                           |
+| `has_cc_search`     | bool | A interagi avec la recherche de CC (`cc_search`, `cc_select_*`, `click_p1/p2/p3`, `enterprise_*`, `je_n_ai_pas_d_entreprise`) |
 
 ### Definition SQL
 
@@ -572,11 +580,11 @@ Voir issue [#7136](https://github.com/SocialGouv/code-du-travail-numerique/issue
 
 ### Schema (3 colonnes)
 
-| Colonne | Type | Description |
-|---|---|---|
-| `cc_name` | text | Nom/ID de la convention collective |
-| `nb_utilisateurs` | bigint | Nombre d'utilisateurs distincts |
-| `nb_selections` | bigint | Nombre total de selections |
+| Colonne           | Type   | Description                        |
+| ----------------- | ------ | ---------------------------------- |
+| `cc_name`         | text   | Nom/ID de la convention collective |
+| `nb_utilisateurs` | bigint | Nombre d'utilisateurs distincts    |
+| `nb_selections`   | bigint | Nombre total de selections         |
 
 ### Definition SQL
 

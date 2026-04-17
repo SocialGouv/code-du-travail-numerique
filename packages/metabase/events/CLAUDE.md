@@ -4,14 +4,14 @@
 
 ## Contenu du dossier
 
-| Fichier | Role | Maintenance |
-| --- | --- | --- |
-| `events.schema.ts` | Types TS partages (`ExtractedEvent`, `EventMetadata`, `MatomoConfigCall`, `EventsExtraction`). | Manuel, rare. |
-| `events.metadata.yaml` | Description **metier** de chaque event (label, trigger, KPI, dashboards, cards). | **Manuel**. A maintenir a chaque ajout/renommage d'event. |
-| `events.extracted.json` | Ground truth **technique** extraite du code (category, action, fichier:ligne, tracking_method). | **Auto-genere** par `extract-events.ts`. Tracke en git pour voir les diffs en PR. |
-| `extract-events.ts` | Scanne les fichiers du frontend via ts-morph, ecrit `events.extracted.json`. | Manuel, rare. |
-| `generate-events-doc.ts` | Joint extracted + metadata → `../docs/events.md`. | Manuel, rare. |
-| `check-events-drift.ts` | Rejoue le pipeline en memoire et compare. Exit 1 si drift. Utilise en precommit + CI. | Manuel, rare. |
+| Fichier                  | Role                                                                                            | Maintenance                                                                       |
+| ------------------------ | ----------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `events.schema.ts`       | Types TS partages (`ExtractedEvent`, `EventMetadata`, `MatomoConfigCall`, `EventsExtraction`).  | Manuel, rare.                                                                     |
+| `events.metadata.yaml`   | Description **metier** de chaque event (label, trigger, KPI, dashboards, cards).                | **Manuel**. A maintenir a chaque ajout/renommage d'event.                         |
+| `events.extracted.json`  | Ground truth **technique** extraite du code (category, action, fichier:ligne, tracking_method). | **Auto-genere** par `extract-events.ts`. Tracke en git pour voir les diffs en PR. |
+| `extract-events.ts`      | Scanne les fichiers du frontend via ts-morph, ecrit `events.extracted.json`.                    | Manuel, rare.                                                                     |
+| `generate-events-doc.ts` | Joint extracted + metadata → `../docs/events.md`.                                               | Manuel, rare.                                                                     |
+| `check-events-drift.ts`  | Rejoue le pipeline en memoire et compare. Exit 1 si drift. Utilise en precommit + CI.           | Manuel, rare.                                                                     |
 
 ## Pipeline
 

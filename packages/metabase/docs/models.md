@@ -221,18 +221,18 @@ SELECT action, MONTH, COUNT(*) AS visits FROM filtered_list GROUP BY action, MON
 
 Chaque simulateur a historiquement le meme pattern de 3 cards en chaine :
 
-| Simulateur | Visites etapes | Nombre etapes | Taux completion |
-|---|---|---|---|
-| Indemnite licenciement | 168 | 169 | **170** (migre -> mv_funnel_il_irc) |
-| Indemnite precarite | 174 | 180 | 186 |
-| Indemnite rupture conv. | 105 | 167 | **107** (migre -> mv_funnel_il_irc) |
-| Preavis demission | 172 | 178 | 182 |
-| Preavis depart retraite | 176 | 177 | 184 |
-| Preavis licenciement | 173 | 181 | 183 |
-| Heures recherche emploi | 175 | 179 | 185 |
-| Rupture conv. (autre) | 189 | 191 | - |
-| Rupture conv. (autre 2) | 187 | 192 | - |
-| Rupture conv. (autre 3) | 188 | 190 | - |
+| Simulateur              | Visites etapes | Nombre etapes | Taux completion                     |
+| ----------------------- | -------------- | ------------- | ----------------------------------- |
+| Indemnite licenciement  | 168            | 169           | **170** (migre -> mv_funnel_il_irc) |
+| Indemnite precarite     | 174            | 180           | 186                                 |
+| Indemnite rupture conv. | 105            | 167           | **107** (migre -> mv_funnel_il_irc) |
+| Preavis demission       | 172            | 178           | 182                                 |
+| Preavis depart retraite | 176            | 177           | 184                                 |
+| Preavis licenciement    | 173            | 181           | 183                                 |
+| Heures recherche emploi | 175            | 179           | 185                                 |
+| Rupture conv. (autre)   | 189            | 191           | -                                   |
+| Rupture conv. (autre 2) | 187            | 192           | -                                   |
+| Rupture conv. (autre 3) | 188            | 190           | -                                   |
 
 Pattern historique (encore actif pour les autres simulateurs) :
 
@@ -337,12 +337,12 @@ SELECT action, MONTH, COUNT(*) FROM filtered_list GROUP BY action, MONTH;
 
 ### Quand utiliser quoi
 
-| Source | Periode | Performance | Colonnes speciales |
-|---|---|---|---|
-| `metabase_model_106` | 12 derniers mois | Rapide (MV) | pathname, path_level2, path_level3, month |
-| `visites_uniques` | 13 derniers mois | Tres rapide | idvisit dedoublonne par pathname/mois |
-| `commentaires_utilisateurs` | 13 derniers mois | Tres rapide | feedback joint avec feedback_category |
-| `matomo_partitioned` | Toute periode | OK avec filtre date | action_url (a parser) |
+| Source                      | Periode          | Performance         | Colonnes speciales                        |
+| --------------------------- | ---------------- | ------------------- | ----------------------------------------- |
+| `metabase_model_106`        | 12 derniers mois | Rapide (MV)         | pathname, path_level2, path_level3, month |
+| `visites_uniques`           | 13 derniers mois | Tres rapide         | idvisit dedoublonne par pathname/mois     |
+| `commentaires_utilisateurs` | 13 derniers mois | Tres rapide         | feedback joint avec feedback_category     |
+| `matomo_partitioned`        | Toute periode    | OK avec filtre date | action_url (a parser)                     |
 
 ### Refresher les vues materialisees
 

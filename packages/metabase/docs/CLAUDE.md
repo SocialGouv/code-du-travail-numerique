@@ -4,13 +4,13 @@ Documentation de reference pour humains et IA. Un seul fichier ici est auto-gene
 
 ## Fichiers
 
-| Fichier | Source | Maintenance |
-| --- | --- | --- |
-| `events.md` | **AUTO-GENERE** par `events/generate-events-doc.ts` depuis `events/events.extracted.json` + `events/events.metadata.yaml`. | Ne jamais editer a la main. `pnpm -F @cdt/metabase events:docs` pour regenerer. |
-| `materialized-views.md` | Manuel. | A synchroniser avec `sql/mv_*.sql` a chaque modif de DDL. |
-| `dashboards.md` | Manuel. | A jour a chaque ajout / suppression de card ou de dashboard. |
-| `models.md` | Manuel. | Documente les "models" Metabase (cards sans dashboard, ex: card 106). |
-| `schema.md` | Manuel. | Documente le schema de la DB OVH PG CDTN (tables, partitions). |
+| Fichier                 | Source                                                                                                                     | Maintenance                                                                     |
+| ----------------------- | -------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `events.md`             | **AUTO-GENERE** par `events/generate-events-doc.ts` depuis `events/events.extracted.json` + `events/events.metadata.yaml`. | Ne jamais editer a la main. `pnpm -F @cdt/metabase events:docs` pour regenerer. |
+| `materialized-views.md` | Manuel.                                                                                                                    | A synchroniser avec `sql/mv_*.sql` a chaque modif de DDL.                       |
+| `dashboards.md`         | Manuel.                                                                                                                    | A jour a chaque ajout / suppression de card ou de dashboard.                    |
+| `models.md`             | Manuel.                                                                                                                    | Documente les "models" Metabase (cards sans dashboard, ex: card 106).           |
+| `schema.md`             | Manuel.                                                                                                                    | Documente le schema de la DB OVH PG CDTN (tables, partitions).                  |
 
 ## Regles
 

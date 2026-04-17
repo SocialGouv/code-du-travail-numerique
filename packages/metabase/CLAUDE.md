@@ -57,22 +57,22 @@ Via MCP (Claude Code, Cursor, Windsurf avec `.mcp.json` configure) : `list_datab
 
 ## Map du package
 
-| Chemin | Role | Maintenance |
-| --- | --- | --- |
-| `CLAUDE.md` (ce fichier) | regles IA, process card, sources de donnees, conventions | manuel |
-| `README.md` | installation, MCP | manuel |
-| `docs/materialized-views.md` | definitions et patterns des MV | manuel (synchro avec `sql/`) |
-| `docs/dashboards.md` | reference dashboards et cartes | manuel |
-| `docs/models.md` | models Metabase et patterns SQL | manuel |
-| `docs/schema.md` | schema DB OVH PG CDTN | manuel |
-| `docs/events.md` | **glossaire exhaustif des events Matomo** | **AUTO-GENERE** — ne jamais editer a la main |
-| `events/events.metadata.yaml` | description metier des events | manuel (source pour `docs/events.md`) |
-| `events/events.extracted.json` | ground truth extraite du code frontend | auto-genere par `pnpm events:extract` |
-| `events/events.schema.ts` | types TS partages du pipeline events | manuel, rare |
-| `events/extract-events.ts` | AST scan des tracking.ts → `events.extracted.json` | manuel, rare |
-| `events/generate-events-doc.ts` | joint extracted + metadata → `docs/events.md` | manuel, rare |
-| `events/check-events-drift.ts` | drift check (precommit + CI) | manuel, rare |
-| `sql/` | DDL des MV custom | manuel, source de verite versionnee |
+| Chemin                          | Role                                                     | Maintenance                                  |
+| ------------------------------- | -------------------------------------------------------- | -------------------------------------------- |
+| `CLAUDE.md` (ce fichier)        | regles IA, process card, sources de donnees, conventions | manuel                                       |
+| `README.md`                     | installation, MCP                                        | manuel                                       |
+| `docs/materialized-views.md`    | definitions et patterns des MV                           | manuel (synchro avec `sql/`)                 |
+| `docs/dashboards.md`            | reference dashboards et cartes                           | manuel                                       |
+| `docs/models.md`                | models Metabase et patterns SQL                          | manuel                                       |
+| `docs/schema.md`                | schema DB OVH PG CDTN                                    | manuel                                       |
+| `docs/events.md`                | **glossaire exhaustif des events Matomo**                | **AUTO-GENERE** — ne jamais editer a la main |
+| `events/events.metadata.yaml`   | description metier des events                            | manuel (source pour `docs/events.md`)        |
+| `events/events.extracted.json`  | ground truth extraite du code frontend                   | auto-genere par `pnpm events:extract`        |
+| `events/events.schema.ts`       | types TS partages du pipeline events                     | manuel, rare                                 |
+| `events/extract-events.ts`      | AST scan des tracking.ts → `events.extracted.json`       | manuel, rare                                 |
+| `events/generate-events-doc.ts` | joint extracted + metadata → `docs/events.md`            | manuel, rare                                 |
+| `events/check-events-drift.ts`  | drift check (precommit + CI)                             | manuel, rare                                 |
+| `sql/`                          | DDL des MV custom                                        | manuel, source de verite versionnee          |
 
 Chaque sous-dossier a son propre `CLAUDE.md`. Pour "ou je trouve X", commencer par `CLAUDE.md` du dossier concerne.
 
@@ -193,18 +193,18 @@ SELECT ... FROM visits ...;
 
 ## Sources de donnees (vue d'ensemble)
 
-| Source | Type | Fenetre | Dependance |
-| --- | --- | --- | --- |
-| `matomo_partitioned` | table partitionnee hebdomadaire | illimitee | source brute |
-| `metabase_model_106` | MV | 12 derniers mois | `matomo_partitioned` |
-| `visites_uniques` | MV | 13 derniers mois | `metabase_model_106` |
-| `mv_perso_weekly` | MV hebdomadaire | periode couverte par source | `metabase_model_106` |
-| `mv_kpi_personnalisation` | MV (DROP/CREATE) | 12 derniers mois | `metabase_model_106` |
-| `mv_cc_non_traitees` | MV statique | 2025 | `matomo_partitioned` |
-| `mv_funnel_il_irc` | MV hebdomadaire | 12 derniers mois | `metabase_model_106` |
-| `mv_funnel_il_irc_visits` | MV par visite (temps reel) | 60 jours glissants | `matomo_partitioned` |
-| `mv_bounce_contributions` | MV par (visite, contribution) | 60 jours glissants | `matomo_partitioned` |
-| `commentaires_utilisateurs` | MV | 13 derniers mois | `matomo_partitioned` |
+| Source                      | Type                            | Fenetre                     | Dependance           |
+| --------------------------- | ------------------------------- | --------------------------- | -------------------- |
+| `matomo_partitioned`        | table partitionnee hebdomadaire | illimitee                   | source brute         |
+| `metabase_model_106`        | MV                              | 12 derniers mois            | `matomo_partitioned` |
+| `visites_uniques`           | MV                              | 13 derniers mois            | `metabase_model_106` |
+| `mv_perso_weekly`           | MV hebdomadaire                 | periode couverte par source | `metabase_model_106` |
+| `mv_kpi_personnalisation`   | MV (DROP/CREATE)                | 12 derniers mois            | `metabase_model_106` |
+| `mv_cc_non_traitees`        | MV statique                     | 2025                        | `matomo_partitioned` |
+| `mv_funnel_il_irc`          | MV hebdomadaire                 | 12 derniers mois            | `metabase_model_106` |
+| `mv_funnel_il_irc_visits`   | MV par visite (temps reel)      | 60 jours glissants          | `matomo_partitioned` |
+| `mv_bounce_contributions`   | MV par (visite, contribution)   | 60 jours glissants          | `matomo_partitioned` |
+| `commentaires_utilisateurs` | MV                              | 13 derniers mois            | `matomo_partitioned` |
 
 > Les MV **independantes de `metabase_model_106`** (`mv_funnel_il_irc_visits`, `mv_bounce_contributions`, `commentaires_utilisateurs`, `mv_cc_non_traitees`) restent a jour meme si la MV source est figee. C'est volontaire : les cartes "temps reel" ne doivent pas etre bloquees par le retard de la MV source.
 

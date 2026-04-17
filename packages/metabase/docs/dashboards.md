@@ -2,33 +2,33 @@
 
 ## Dashboards
 
-| ID  | Nom                                      | Collection                  | Description                       |
-| --- | ---------------------------------------- | --------------------------- | --------------------------------- |
-| 1   | E-commerce Insights                      | Examples (2)                | Sample Database                   |
-| 2   | Reproduction dashboard CDTN              | (root)                      | Reproduction                      |
-| 7   | Completion des outils                    | Outils (16)                 | Taux de completion par simulateur |
-| 8   | General                                  | General (29)                | Dashboard general                 |
-| 16  | Contributions                            | Contributions (34)          | Popularite et satisfaction        |
-| 17  | Informations                             | Informations (38)           | Popularite et satisfaction        |
-| 18  | Modeles de documents                     | Modeles de documents (42)   | Popularite et satisfaction        |
-| 19  | Convention collectives                   | Convention collectives (46) | Popularite et satisfaction        |
-| 20  | Indemnite rupture conventionnelle        | Outils > IR (19)            | Funnel et completion              |
-| 21  | Indemnite licenciement                   | Outils > IL (20)            | Funnel et completion              |
-| 22  | Indemnite precarite                      | Outils > IP (23)            | Funnel et completion              |
-| 23  | Heures recherche emploi                  | Outils > HRE (24)           | Funnel et completion              |
-| 24  | Preavis demission                        | Outils > PD (22)            | Funnel et completion              |
-| 25  | Preavis depart retraite                  | Outils > PDR (25)           | Funnel et completion              |
-| 26  | Preavis licenciement                     | Outils > PL (21)            | Funnel et completion              |
-| 27  | Quoi de neuf                             | Quoi de neuf (73)           | Popularite                        |
-| 28  | Infographies                             | Infographies (76)           | Popularite et satisfaction        |
-| 29  | Trouver convention collective            | Outils > TCC (79)           | Funnel CC                         |
-| 30  | IL - Satisfaction Top 100                | IL > Sat Top 100 (84)       | Top 100 satisfaction              |
-| 31  | RC - Satisfaction Top 100                | IR > Sat Top 100 (85)       | Top 100 satisfaction              |
-| 32  | Fantine_Investigation_2025               | CDTN (14)                   | Investigation                     |
-| 33  | Tableau de bord satisfaction utilisateur | CDTN (14)                   | Satisfaction globale              |
-| 34  | Fantine - Completion outils              | CDTN (14)                   | Completion                        |
+| ID  | Nom                                        | Collection                  | Description                       |
+| --- | ------------------------------------------ | --------------------------- | --------------------------------- |
+| 1   | E-commerce Insights                        | Examples (2)                | Sample Database                   |
+| 2   | Reproduction dashboard CDTN                | (root)                      | Reproduction                      |
+| 7   | Completion des outils                      | Outils (16)                 | Taux de completion par simulateur |
+| 8   | General                                    | General (29)                | Dashboard general                 |
+| 16  | Contributions                              | Contributions (34)          | Popularite et satisfaction        |
+| 17  | Informations                               | Informations (38)           | Popularite et satisfaction        |
+| 18  | Modeles de documents                       | Modeles de documents (42)   | Popularite et satisfaction        |
+| 19  | Convention collectives                     | Convention collectives (46) | Popularite et satisfaction        |
+| 20  | Indemnite rupture conventionnelle          | Outils > IR (19)            | Funnel et completion              |
+| 21  | Indemnite licenciement                     | Outils > IL (20)            | Funnel et completion              |
+| 22  | Indemnite precarite                        | Outils > IP (23)            | Funnel et completion              |
+| 23  | Heures recherche emploi                    | Outils > HRE (24)           | Funnel et completion              |
+| 24  | Preavis demission                          | Outils > PD (22)            | Funnel et completion              |
+| 25  | Preavis depart retraite                    | Outils > PDR (25)           | Funnel et completion              |
+| 26  | Preavis licenciement                       | Outils > PL (21)            | Funnel et completion              |
+| 27  | Quoi de neuf                               | Quoi de neuf (73)           | Popularite                        |
+| 28  | Infographies                               | Infographies (76)           | Popularite et satisfaction        |
+| 29  | Trouver convention collective              | Outils > TCC (79)           | Funnel CC                         |
+| 30  | IL - Satisfaction Top 100                  | IL > Sat Top 100 (84)       | Top 100 satisfaction              |
+| 31  | RC - Satisfaction Top 100                  | IR > Sat Top 100 (85)       | Top 100 satisfaction              |
+| 32  | Fantine_Investigation_2025                 | CDTN (14)                   | Investigation                     |
+| 33  | Tableau de bord satisfaction utilisateur   | CDTN (14)                   | Satisfaction globale              |
+| 34  | Fantine - Completion outils                | CDTN (14)                   | Completion                        |
 | 36  | **Personnalisation des contenus**          | General (29)                | **NOTRE DASHBOARD**               |
-| 38  | KPI - Simulateurs "Demarches essentielles" | Demarches essentielles (89)| KPI satisfaction IL/RC            |
+| 38  | KPI - Simulateurs "Demarches essentielles" | Demarches essentielles (89) | KPI satisfaction IL/RC            |
 
 > Pour regenerer cette table automatiquement : `curl -s -H "X-API-Key: $METABASE_API_KEY" "$METABASE_URL/api/dashboard" | jq '.[] | {id, name, collection_id, archived}'`.
 
@@ -111,7 +111,7 @@ Remplacees par les V2 (435-444). Les V1 ont ete **archivees via `PUT /api/card/:
 
 ---
 
-## Dashboard 37 - Funnel IL/IRC *(archive)*
+## Dashboard 37 - Funnel IL/IRC _(archive)_
 
 Dashboard historique "Funnel de conversion pour l'IL et l'IRC" **archive** (corbeille Metabase). Les cartes 445, 446, 447 qui l'alimentaient sont elles aussi archivees. Conservees pour reference historique ; restaurables via l'UI Metabase si besoin.
 
@@ -131,10 +131,10 @@ Source : `mv_bounce_contributions` (par visite + contribution, temps reel via `m
 
 Filtre : seules les contributions qui ont au moins un evenement `click_afficher_les_informations_générales` sur les 60 derniers jours sont incluses (= ~41 contributions sur ~2349 visitees).
 
-| Card ID | Collection                            | Nom                              | Display | Source                  |
-| ------- | ------------------------------------- | -------------------------------- | ------- | ----------------------- |
-| 450     | 88 (Contributions - Taux de rebond)   | Taux de rebond - Global          | scalar  | mv_bounce_contributions |
-| 451     | 88 (Contributions - Taux de rebond)   | Taux de rebond - Par contribution | table   | mv_bounce_contributions |
+| Card ID | Collection                          | Nom                               | Display | Source                  |
+| ------- | ----------------------------------- | --------------------------------- | ------- | ----------------------- |
+| 450     | 88 (Contributions - Taux de rebond) | Taux de rebond - Global           | scalar  | mv_bounce_contributions |
+| 451     | 88 (Contributions - Taux de rebond) | Taux de rebond - Par contribution | table   | mv_bounce_contributions |
 
 Les deux cards sont parametrees `date_debut` / `date_fin` (defaut = 30 derniers jours, modifiable via le widget Metabase ou via dashboard parameter).
 
@@ -146,12 +146,12 @@ Funnel cumulatif parametre par dates (`date_debut`, `date_fin`, defaut = 30 dern
 Source : `mv_funnel_il_irc_visits` (par visite, temps reel via `matomo_partitioned`).
 Logique : pour chaque etape N, on compte les visites qui ont vu l'etape N OU une etape ulterieure (funnel monotone par construction).
 
-| Card ID | Collection                       | Nom                                          | Display | Source                  |
-| ------- | -------------------------------- | -------------------------------------------- | ------- | ----------------------- |
-| 170     | 56 (IL - Taux completion)        | Taux completion des etapes                   | bar     | mv_funnel_il_irc_visits |
-| 448     | 56 (IL - Taux completion)        | Taux completion des etapes (funnel - test)   | funnel  | mv_funnel_il_irc_visits |
-| 107     | 53 (IRC - Taux completion)       | Taux completion des etapes                   | bar     | mv_funnel_il_irc_visits |
-| 449     | 53 (IRC - Taux completion)       | Taux completion des etapes (funnel - test)   | funnel  | mv_funnel_il_irc_visits |
+| Card ID | Collection                 | Nom                                        | Display | Source                  |
+| ------- | -------------------------- | ------------------------------------------ | ------- | ----------------------- |
+| 170     | 56 (IL - Taux completion)  | Taux completion des etapes                 | bar     | mv_funnel_il_irc_visits |
+| 448     | 56 (IL - Taux completion)  | Taux completion des etapes (funnel - test) | funnel  | mv_funnel_il_irc_visits |
+| 107     | 53 (IRC - Taux completion) | Taux completion des etapes                 | bar     | mv_funnel_il_irc_visits |
+| 449     | 53 (IRC - Taux completion) | Taux completion des etapes (funnel - test) | funnel  | mv_funnel_il_irc_visits |
 
 Etapes attendues (post refonte avril 2026) :
 `start` -> `info_cc` -> `infos` -> `anciennete` -> `absences` -> `salaires` -> `results`

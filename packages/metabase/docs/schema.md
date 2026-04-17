@@ -14,41 +14,41 @@ Table partitionnee hebdomadairement. La table parent `matomo_partitioned` unioni
 
 ### Colonnes (39 colonnes)
 
-| Colonne | Type | Description |
-|---|---|---|
-| `action_id` | text | ID unique de l'action |
-| `idsite` | text | ID du site Matomo |
-| `idvisit` | text | ID de visite (utilisateur session) |
-| `actions` | text | Nombre d'actions dans la visite |
-| `country` | text | Pays du visiteur |
-| `region` | text | Region |
-| `city` | text | Ville |
-| `operatingsystemname` | text | OS |
-| `devicemodel` | text | Modele appareil |
-| `devicebrand` | text | Marque appareil |
-| `visitduration` | text | Duree de visite |
-| `dayssincefirstvisit` | text | Jours depuis 1ere visite |
-| `visitortype` | text | Type visiteur (new/returning) |
-| `sitename` | text | Nom du site |
-| `userid` | text | ID utilisateur |
-| `serverdateprettyfirstaction` | date | Date premiere action |
-| **`action_type`** | text | Type d'action (`event`, page view, etc.) |
-| **`action_eventcategory`** | text | Categorie de l'evenement |
-| **`action_eventaction`** | text | Action de l'evenement |
-| **`action_eventname`** | text | Nom de l'evenement |
-| **`action_eventvalue`** | numeric | Valeur de l'evenement |
-| `action_timespent` | text | Temps passe sur l'action |
-| **`action_timestamp`** | timestamptz | Horodatage de l'action |
-| `usercustomproperties` | json | Proprietes custom utilisateur |
-| `usercustomdimensions` | json | Dimensions custom |
-| `dimension1` - `dimension10` | text | Dimensions Matomo (custom) |
-| **`action_url`** | text | URL complete de l'action |
-| `sitesearchkeyword` | text | Mot-cle de recherche |
-| `action_title` | text | Titre de la page |
-| `visitorid` | text | ID visiteur |
-| `referrertype` | text | Type de referent |
-| `referrername` | text | Nom du referent |
-| `resolution` | text | Resolution ecran |
+| Colonne                       | Type        | Description                              |
+| ----------------------------- | ----------- | ---------------------------------------- |
+| `action_id`                   | text        | ID unique de l'action                    |
+| `idsite`                      | text        | ID du site Matomo                        |
+| `idvisit`                     | text        | ID de visite (utilisateur session)       |
+| `actions`                     | text        | Nombre d'actions dans la visite          |
+| `country`                     | text        | Pays du visiteur                         |
+| `region`                      | text        | Region                                   |
+| `city`                        | text        | Ville                                    |
+| `operatingsystemname`         | text        | OS                                       |
+| `devicemodel`                 | text        | Modele appareil                          |
+| `devicebrand`                 | text        | Marque appareil                          |
+| `visitduration`               | text        | Duree de visite                          |
+| `dayssincefirstvisit`         | text        | Jours depuis 1ere visite                 |
+| `visitortype`                 | text        | Type visiteur (new/returning)            |
+| `sitename`                    | text        | Nom du site                              |
+| `userid`                      | text        | ID utilisateur                           |
+| `serverdateprettyfirstaction` | date        | Date premiere action                     |
+| **`action_type`**             | text        | Type d'action (`event`, page view, etc.) |
+| **`action_eventcategory`**    | text        | Categorie de l'evenement                 |
+| **`action_eventaction`**      | text        | Action de l'evenement                    |
+| **`action_eventname`**        | text        | Nom de l'evenement                       |
+| **`action_eventvalue`**       | numeric     | Valeur de l'evenement                    |
+| `action_timespent`            | text        | Temps passe sur l'action                 |
+| **`action_timestamp`**        | timestamptz | Horodatage de l'action                   |
+| `usercustomproperties`        | json        | Proprietes custom utilisateur            |
+| `usercustomdimensions`        | json        | Dimensions custom                        |
+| `dimension1` - `dimension10`  | text        | Dimensions Matomo (custom)               |
+| **`action_url`**              | text        | URL complete de l'action                 |
+| `sitesearchkeyword`           | text        | Mot-cle de recherche                     |
+| `action_title`                | text        | Titre de la page                         |
+| `visitorid`                   | text        | ID visiteur                              |
+| `referrertype`                | text        | Type de referent                         |
+| `referrername`                | text        | Nom du referent                          |
+| `resolution`                  | text        | Resolution ecran                         |
 
 ### Colonnes cles pour les requetes
 
