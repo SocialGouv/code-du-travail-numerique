@@ -53,10 +53,10 @@ exports[`DisplayContent Accordions should not fail if no summary tag 1`] = `
                     class="fr-accordion__title"
                   >
                     <button
-                      aria-controls="conges-payes_1233-collapse"
+                      aria-controls="conges-payes_0-collapse"
                       aria-expanded="false"
                       class="fr-accordion__btn"
-                      id="conges-payes_1233__toggle-btn"
+                      id="conges-payes_0__toggle-btn"
                       type="button"
                     >
                       Congés payés
@@ -64,7 +64,7 @@ exports[`DisplayContent Accordions should not fail if no summary tag 1`] = `
                   </h4>
                   <div
                     class="fr-collapse"
-                    id="conges-payes_1233-collapse"
+                    id="conges-payes_0-collapse"
                   >
                     <div>
                       <div
@@ -81,10 +81,10 @@ exports[`DisplayContent Accordions should not fail if no summary tag 1`] = `
                               class="fr-accordion__title"
                             >
                               <button
-                                aria-controls="dates-des-conges-fixees-avant-la-notification-du-licenciement_1230-collapse"
+                                aria-controls="dates-des-conges-fixees-avant-la-notification-du-licenciement_0-collapse"
                                 aria-expanded="false"
                                 class="fr-accordion__btn"
-                                id="dates-des-conges-fixees-avant-la-notification-du-licenciement_1230__toggle-btn"
+                                id="dates-des-conges-fixees-avant-la-notification-du-licenciement_0__toggle-btn"
                                 type="button"
                               >
                                 
@@ -94,7 +94,7 @@ exports[`DisplayContent Accordions should not fail if no summary tag 1`] = `
                             </h5>
                             <div
                               class="fr-collapse"
-                              id="dates-des-conges-fixees-avant-la-notification-du-licenciement_1230-collapse"
+                              id="dates-des-conges-fixees-avant-la-notification-du-licenciement_0-collapse"
                             >
                               <div>
                                 <p
@@ -117,10 +117,10 @@ exports[`DisplayContent Accordions should not fail if no summary tag 1`] = `
                               class="fr-accordion__title"
                             >
                               <button
-                                aria-controls="dates-des-conges-fixees-apres-la-notification-du-licenciement_1231-collapse"
+                                aria-controls="dates-des-conges-fixees-apres-la-notification-du-licenciement_1-collapse"
                                 aria-expanded="false"
                                 class="fr-accordion__btn"
-                                id="dates-des-conges-fixees-apres-la-notification-du-licenciement_1231__toggle-btn"
+                                id="dates-des-conges-fixees-apres-la-notification-du-licenciement_1__toggle-btn"
                                 type="button"
                               >
                                 
@@ -130,7 +130,7 @@ exports[`DisplayContent Accordions should not fail if no summary tag 1`] = `
                             </h5>
                             <div
                               class="fr-collapse"
-                              id="dates-des-conges-fixees-apres-la-notification-du-licenciement_1231-collapse"
+                              id="dates-des-conges-fixees-apres-la-notification-du-licenciement_1-collapse"
                             >
                               <div>
                                 <p
@@ -154,10 +154,10 @@ exports[`DisplayContent Accordions should not fail if no summary tag 1`] = `
                               class="fr-accordion__title"
                             >
                               <button
-                                aria-controls="licenciement-notifie-pendant-les-conges-payes_1232-collapse"
+                                aria-controls="licenciement-notifie-pendant-les-conges-payes_2-collapse"
                                 aria-expanded="false"
                                 class="fr-accordion__btn"
-                                id="licenciement-notifie-pendant-les-conges-payes_1232__toggle-btn"
+                                id="licenciement-notifie-pendant-les-conges-payes_2__toggle-btn"
                                 type="button"
                               >
                                 Licenciement notifié pendant les congés payés
@@ -165,7 +165,7 @@ exports[`DisplayContent Accordions should not fail if no summary tag 1`] = `
                             </h5>
                             <div
                               class="fr-collapse"
-                              id="licenciement-notifie-pendant-les-conges-payes_1232-collapse"
+                              id="licenciement-notifie-pendant-les-conges-payes_2-collapse"
                             >
                               <div>
                                 <p
@@ -278,10 +278,10 @@ exports[`DisplayContent Accordions should replace details element within details
                   class="fr-accordion__title"
                 >
                   <button
-                    aria-controls="ceci-est-un-sous-titre_1234-collapse"
+                    aria-controls="ceci-est-un-sous-titre_0-collapse"
                     aria-expanded="false"
                     class="fr-accordion__btn"
-                    id="ceci-est-un-sous-titre_1234__toggle-btn"
+                    id="ceci-est-un-sous-titre_0__toggle-btn"
                     type="button"
                   >
                     Ceci est un sous titre
@@ -289,7 +289,7 @@ exports[`DisplayContent Accordions should replace details element within details
                 </h4>
                 <div
                   class="fr-collapse"
-                  id="ceci-est-un-sous-titre_1234-collapse"
+                  id="ceci-est-un-sous-titre_0-collapse"
                 >
                   <div>
                     <p

@@ -13,10 +13,20 @@ export const metadata: Metadata = {
 
 export default function Error({
   error,
+  reset,
 }: {
   error: Error & { digest?: string };
+  reset: () => void;
 }) {
   useEffect(() => {
+    if (error.name === "ChunkLoadError") {
+      const key = `chunk-reload:${error.message}`;
+      if (!sessionStorage.getItem(key)) {
+        sessionStorage.setItem(key, "1");
+        window.location.reload();
+        return;
+      }
+    }
     console.error(error);
     Sentry.captureException(error);
   }, [error]);
