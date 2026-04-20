@@ -1,6 +1,6 @@
 "use client";
 import { RadioButtons } from "@codegouvfr/react-dsfr/RadioButtons";
-import { ReactNode, useEffect, useState } from "react";
+import { ReactNode, useEffect, useRef, useState } from "react";
 import { AgreementSearchInput } from "./AgreementSearchInput";
 
 import { useContributionTracking } from "../../contributions/tracking";
@@ -41,6 +41,7 @@ export const AgreementSearchForm = ({
   const [selectedRoute, setSelectedRoute] = useState<
     AgreementRoute | undefined
   >();
+  const radioRefs = useRef<(HTMLInputElement | null)[]>([]);
 
   useEffect(() => {
     if (defaultAgreement && !selectedRoute) {
@@ -48,6 +49,16 @@ export const AgreementSearchForm = ({
       onRouteChange?.("agreement");
     }
   }, [defaultAgreement]);
+
+  useEffect(() => {
+    if (error && radioRefs.current[0]) {
+      radioRefs.current[0].focus();
+      radioRefs.current[0].scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+      });
+    }
+  }, [error]);
 
   const { emitClickP1, emitClickP2, emitClickP3 } = useContributionTracking();
 
@@ -71,6 +82,9 @@ export const AgreementSearchForm = ({
             nativeInputProps: {
               checked: selectedRoute === "agreement",
               onChange: () => updateRoute("agreement"),
+              ref: (el: HTMLInputElement | null) => {
+                radioRefs.current[0] = el;
+              },
             },
           },
           {
@@ -81,6 +95,9 @@ export const AgreementSearchForm = ({
               onChange: () => {
                 onAgreementSelect();
                 updateRoute("enterprise");
+              },
+              ref: (el: HTMLInputElement | null) => {
+                radioRefs.current[1] = el;
               },
             },
           },
@@ -95,6 +112,9 @@ export const AgreementSearchForm = ({
                       onAgreementSelect();
                       updateRoute("no-agreement");
                       emitClickP3(trackingActionName);
+                    },
+                    ref: (el: HTMLInputElement | null) => {
+                      radioRefs.current[2] = el;
                     },
                   },
                 },
