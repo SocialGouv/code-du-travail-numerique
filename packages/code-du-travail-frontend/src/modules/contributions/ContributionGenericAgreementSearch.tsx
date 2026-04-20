@@ -107,11 +107,10 @@ export function ContributionGenericAgreementSearch({
       title="Information"
       description={
         <p>
-          Vous pouvez passer cette étape et poursuivre la simulation qui vous
-          fournira un résultat basé sur le code du travail. Nous vous
-          recommandons de renseigner votre convention collective qui peut
-          prévoir un résultat plus favorable que celui définit par le code du
-          travail.
+          Vous pouvez ignorer cette étape et poursuivre pour afficher les
+          informations générales. Nous vous recommandons toutefois de renseigner
+          votre convention collective, qui peut prévoir un résultat plus
+          favorable que celui défini par le Code du travail.
         </p>
       }
       severity="info"
