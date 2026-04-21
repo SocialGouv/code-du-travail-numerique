@@ -6,6 +6,7 @@ import { css } from "@styled-system/css";
 import DisplayContent from "../common/DisplayContent";
 import { badgeColorClasses, getSourceLabel } from "./utils";
 import { routeBySource } from "@socialgouv/cdtn-utils";
+import { useABTestVariant } from "@socialgouv/matomo-next";
 
 type SearchCardProps = {
   id?: string;
@@ -24,6 +25,8 @@ export const SearchCard: React.FC<SearchCardProps> = ({
   link,
   onClick,
 }) => {
+  const variant = useABTestVariant("LabelCardSearch");
+
   return (
     <Card
       start={
@@ -31,7 +34,7 @@ export const SearchCard: React.FC<SearchCardProps> = ({
           <p
             className={`${fr.cx("fr-tag", "fr-tag--sm", "fr-text--xs", "fr-text--bold")} ${badgeColorClasses[source]}`}
           >
-            {getSourceLabel(source)}
+            {getSourceLabel(source, variant)}
           </p>
         ) : null
       }
