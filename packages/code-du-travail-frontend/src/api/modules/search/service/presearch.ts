@@ -19,7 +19,6 @@ import {
   ThemeSearchResult,
 } from "./types";
 import { getBySlugsThemes, getBySlugThemes } from "../../themes";
-import { queryAllByAltText } from "@testing-library/react";
 
 const keyword_std = [
   "a conservatoir mise pied",
@@ -203,7 +202,9 @@ const getThemes = async (
     pTheme: prepro(theme.title),
   }));
 
-  let match = pThemes.find((th) => th.pTheme == pQuery);
+  let match = pThemes.find(
+    (th) => JSON.stringify(th.pTheme) == JSON.stringify(pQuery)
+  );
 
   if (!match) {
     // in this case, we select the highest one in the hierarchy (thanks to breadcrumbs length sort above)
