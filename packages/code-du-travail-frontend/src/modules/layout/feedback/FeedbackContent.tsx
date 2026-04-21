@@ -138,10 +138,14 @@ export const FeedbackContent = (props: Props) => {
       <Input
         label={
           <>
-            Faire une suggestion pour améliorer cette page{" "}
+            Une suggestion pour améliorer cette page&nbsp;? Donnez-nous votre
+            avis&nbsp;! Pour protéger votre vie privée, veillez à ne pas
+            mentionner d&apos;informations personnelles dans ce formulaire
             <span className={fr.cx("fr-sr-only")}>
+              {" "}
               (500 caractères maximum)
             </span>
+            .
           </>
         }
         textArea

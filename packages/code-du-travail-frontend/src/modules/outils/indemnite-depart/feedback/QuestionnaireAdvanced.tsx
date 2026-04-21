@@ -177,7 +177,7 @@ export const QuestionnaireAdvanced = forwardRef<
           displayError={displayErrorExplanation}
         />
         <QuestionnaireText
-          title="Vous souhaitez nous en dire davantage ?"
+          title="Vous souhaitez nous en dire davantage ? Pour protéger votre vie privée, veillez à ne pas mentionner d'informations personnelles dans ce formulaire."
           placeholder="Exemple: la question sur la date de début du contrat n'est pas claire"
           onChange={setFeedbackText}
           id="more-input"
