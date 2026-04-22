@@ -54,7 +54,6 @@ describe("Indemnité licenciement - CC 3239", () => {
     userAction.click(ui.next.get());
     userAction.setInput(ui.seniority.startDate.get(), "01/01/2022");
     userAction.setInput(ui.seniority.notificationDate.get(), "15/09/2022");
-    userAction.setInput(ui.seniority.endDate.get(), "15/09/2022");
     userAction.click(ui.next.get());
     expect(
       ui.result.legalError.specific.agreement3239.lessThan9month.get()
@@ -74,7 +73,6 @@ describe("Indemnité licenciement - CC 3239", () => {
     userAction.click(ui.next.get());
     userAction.setInput(ui.seniority.startDate.get(), "01/01/2022");
     userAction.setInput(ui.seniority.notificationDate.get(), "15/09/2022");
-    userAction.setInput(ui.seniority.endDate.get(), "15/09/2022");
     userAction.click(ui.next.get());
     userAction.click(ui.absences.arretTravail.non.get());
     userAction.click(ui.absences.hasAbsence.non.get());
@@ -92,7 +90,6 @@ describe("Indemnité licenciement - CC 3239", () => {
     userAction.click(ui.next.get());
     userAction.setInput(ui.seniority.startDate.get(), "01/01/2025");
     userAction.setInput(ui.seniority.notificationDate.get(), "01/08/2025");
-    userAction.setInput(ui.seniority.endDate.get(), "01/08/2025");
     userAction.click(ui.next.get());
     expect(ui.result.legalError.seniorityToLow.get()).toBeInTheDocument();
     expect(
@@ -108,7 +105,6 @@ describe("Indemnité licenciement - CC 3239", () => {
     userAction.click(ui.next.get());
     userAction.setInput(ui.seniority.startDate.get(), "01/01/2022");
     userAction.setInput(ui.seniority.notificationDate.get(), "15/09/2022");
-    userAction.setInput(ui.seniority.endDate.get(), "15/09/2022");
     userAction.click(ui.next.get());
     userAction.click(ui.absences.arretTravail.non.get());
     userAction.click(ui.absences.hasAbsence.non.get());
@@ -130,7 +126,6 @@ describe("Indemnité licenciement - CC 3239", () => {
     userAction.click(ui.next.get());
     userAction.setInput(ui.seniority.startDate.get(), "01/01/2000");
     userAction.setInput(ui.seniority.notificationDate.get(), "15/09/2022");
-    userAction.setInput(ui.seniority.endDate.get(), "15/09/2022");
     userAction.click(ui.next.get());
     userAction.click(ui.absences.arretTravail.non.get());
     userAction.click(ui.absences.hasAbsence.non.get());
@@ -151,7 +146,6 @@ describe("Indemnité licenciement - CC 3239", () => {
     userAction.click(ui.next.get());
     userAction.setInput(ui.seniority.startDate.get(), "01/01/2012");
     userAction.setInput(ui.seniority.notificationDate.get(), "01/01/2024");
-    userAction.setInput(ui.seniority.endDate.get(), "01/01/2024");
     userAction.click(ui.next.get());
     userAction.click(ui.absences.arretTravail.non.get());
     userAction.click(ui.absences.hasAbsence.non.get());
@@ -185,7 +179,6 @@ describe("Indemnité licenciement - CC 3239", () => {
     userAction.click(ui.next.get());
     userAction.setInput(ui.seniority.startDate.get(), "01/01/2020");
     userAction.setInput(ui.seniority.notificationDate.get(), "15/09/2024");
-    userAction.setInput(ui.seniority.endDate.get(), "15/09/2024");
     userAction.click(ui.next.get());
     userAction.click(ui.absences.arretTravail.non.get());
     userAction.click(ui.absences.hasAbsence.non.get());

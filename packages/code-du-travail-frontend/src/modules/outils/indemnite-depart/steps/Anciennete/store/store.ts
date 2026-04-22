@@ -16,6 +16,7 @@ import { validateStep } from "./validator";
 import { CommonAgreementStoreSlice } from "../../Agreement/store";
 import { CommonSituationStoreSlice } from "../../../situationStore";
 import { AbsenceStoreSlice } from "../../Absences";
+import { shouldShowDateSortie } from "../../../utils/question";
 
 const initialState: AncienneteStoreData = {
   hasBeenSubmit: false,
@@ -52,6 +53,13 @@ const createAncienneteStore: StoreSlice<
     },
     onChangeDateNotification: (value) => {
       applyGenericValidation(get, set, "dateNotification", value);
+      // Quand la question dateSortie est masquée (CC 3239), on aligne la date
+      // de sortie sur la date de notification pour conserver un état cohérent
+      // côté validation et publicodes.
+      if (!shouldShowDateSortie(get().agreementData.input.agreement)) {
+        applyGenericValidation(get, set, "dateSortie", value);
+        get().ancienneteFunction.updateAncienneteEstimee();
+      }
     },
     updateAncienneteEstimee: () => {
       const publicodes = get().agreementData.publicodes;

@@ -34,7 +34,6 @@ describe("Indemnité licenciement - CC 3239 - changement de convention collectiv
     userAction.click(ui.next.get());
     userAction.setInput(ui.seniority.startDate.get(), "01/01/2020");
     userAction.setInput(ui.seniority.notificationDate.get(), "15/09/2022");
-    userAction.setInput(ui.seniority.endDate.get(), "15/09/2022");
     userAction.click(ui.next.get());
     userAction.click(ui.absences.arretTravail.non.get());
     userAction.click(ui.absences.hasAbsence.oui.get());
