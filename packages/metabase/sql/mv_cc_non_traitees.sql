@@ -12,6 +12,6 @@ SELECT action_eventname AS cc_name,
 FROM matomo_partitioned
 WHERE action_type = 'event' AND action_eventcategory = 'outil'
   AND action_eventaction = 'cc_select_non_traitée'
-  AND action_eventname IS NOT NULL AND action_eventname != ''
+  AND COALESCE(action_eventname, '') <> ''
   AND action_timestamp >= '2025-01-01' AND action_timestamp < '2026-01-01'
 GROUP BY action_eventname;

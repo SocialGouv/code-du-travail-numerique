@@ -5,7 +5,7 @@
 
 # Glossaire des Events Matomo
 
-Genere le **2026-04-17T17:59:28.052Z** depuis `packages/code-du-travail-frontend/src`.
+Genere le **2026-04-22T10:01:51.889Z** depuis `packages/code-du-travail-frontend/src`.
 
 **Stats :** 61 callsites · 57 events uniques · **54 documentes** · **3 orphelins** · 7 metadata orphelines.
 

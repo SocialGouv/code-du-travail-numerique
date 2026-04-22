@@ -179,7 +179,7 @@ lines.push(
 lines.push("");
 lines.push("## Sommaire");
 lines.push("");
-for (const group of [...byGroup.keys()].sort()) {
+for (const group of [...byGroup.keys()].sort((a, b) => a.localeCompare(b))) {
   lines.push(
     `- [${group}](#${anchor(group)}) (${byGroup.get(group)!.length})`
   );
@@ -207,7 +207,7 @@ lines.push("");
 lines.push("---");
 lines.push("");
 
-for (const group of [...byGroup.keys()].sort()) {
+for (const group of [...byGroup.keys()].sort((a, b) => a.localeCompare(b))) {
   lines.push(`## ${group}`);
   lines.push("");
   const events = byGroup
@@ -258,7 +258,7 @@ for (const group of [...byGroup.keys()].sort()) {
       // default case, pas besoin d'alourdir
     } else {
       lines.push(
-        `- **Methode :** ${[...methods].sort().join(", ")}`
+        `- **Methode :** ${[...methods].sort((a, b) => a.localeCompare(b)).join(", ")}`
       );
     }
     lines.push(

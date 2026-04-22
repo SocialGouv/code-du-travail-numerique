@@ -209,7 +209,7 @@ function getEnumRefs(obj: ObjectLiteralExpression): string[] {
       }
     }
   });
-  return [...refs].sort();
+  return [...refs].sort((a, b) => a.localeCompare(b));
 }
 
 const events: ExtractedEvent[] = [];
