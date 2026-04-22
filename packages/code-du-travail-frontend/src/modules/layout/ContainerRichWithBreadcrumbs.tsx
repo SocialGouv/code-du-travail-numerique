@@ -7,6 +7,7 @@ import Breadcrumb from "@codegouvfr/react-dsfr/Breadcrumb";
 import { Feedback } from "./feedback";
 import React from "react";
 import { BreadcrumbListJsonLd } from "../seo/jsonld";
+import { WhatsNewLink } from "./whatsnew";
 
 type Props = ContainerRichProps & {
   currentPage: string;
@@ -21,6 +22,7 @@ export const ContainerRichWithBreadcrumbs = ({
   breadcrumbs,
   currentPage,
   showFeedback = true,
+  showWhatsNewLink = false,
 }: Props) => {
   return (
     <div>
@@ -65,6 +67,7 @@ export const ContainerRichWithBreadcrumbs = ({
         <div
           className={fr.cx("fr-col-12", "fr-col-offset-md-1", "fr-col-md-4")}
         >
+          {showWhatsNewLink && <WhatsNewLink />}
           <RelatedItems relatedItems={relatedItems} />
           <Share title={title} metaDescription={description} />
         </div>
