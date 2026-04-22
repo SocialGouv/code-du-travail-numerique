@@ -108,13 +108,14 @@ exports[`<FeedbackContent /> should match snapshot for negative 1`] = `
       class="fr-label"
       for="input-_r_4_"
     >
-      Faire une suggestion pour améliorer cette page
-       
+      Une suggestion pour améliorer cette page ? Donnez-nous votre avis ! Pour protéger votre vie privée, veillez à ne pas mentionner d'informations personnelles dans ce formulaire
       <span
         class="fr-sr-only"
       >
+         
         (500 caractères maximum)
       </span>
+      .
     </label>
     <textarea
       class="fr-input"
@@ -159,13 +160,14 @@ exports[`<FeedbackContent /> should match snapshot for positive 1`] = `
       class="fr-label"
       for="input-_r_0_"
     >
-      Faire une suggestion pour améliorer cette page
-       
+      Une suggestion pour améliorer cette page ? Donnez-nous votre avis ! Pour protéger votre vie privée, veillez à ne pas mentionner d'informations personnelles dans ce formulaire
       <span
         class="fr-sr-only"
       >
+         
         (500 caractères maximum)
       </span>
+      .
     </label>
     <textarea
       class="fr-input"
