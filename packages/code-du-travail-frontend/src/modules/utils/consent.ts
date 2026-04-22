@@ -1,6 +1,6 @@
 // Consent management service for tracking tools
 
-import { safeGetItem, safeSetItem } from "./storage";
+import { safeGetItem, safeRemoveItem, safeSetItem } from "./storage";
 
 // Consent types
 export type ConsentType = {
@@ -9,8 +9,13 @@ export type ConsentType = {
   matomoHeatmap: boolean;
 };
 
-// Local storage key for cookie consent
+// Local storage keys for cookie consent
 export const CONSENT_STORAGE_KEY = "cdtn-cookie-consent";
+export const CONSENT_GIVEN_KEY = "cdtn-cookie-consent-given";
+export const CONSENT_DATE_KEY = "cdtn-cookie-consent-date";
+
+// Consent is valid for 13 months (CNIL recommendation)
+export const CONSENT_VALIDITY_MS = 13 * 30 * 24 * 60 * 60 * 1000;
 
 // Default consent state (opt-out by default)
 export const DEFAULT_CONSENT: ConsentType = {
@@ -19,20 +24,44 @@ export const DEFAULT_CONSENT: ConsentType = {
   matomoHeatmap: false,
 };
 
+export const isConsentExpired = (): boolean => {
+  if (typeof window === "undefined") return false;
+
+  const storedDate = safeGetItem(CONSENT_DATE_KEY);
+  if (!storedDate) return false;
+
+  const consentTimestamp = Number(storedDate);
+  if (Number.isNaN(consentTimestamp)) return true;
+
+  return Date.now() - consentTimestamp > CONSENT_VALIDITY_MS;
+};
+
+export const hasValidConsent = (): boolean => {
+  if (typeof window === "undefined") return false;
+  const hasConsented = safeGetItem(CONSENT_GIVEN_KEY) === "true";
+  if (!hasConsented) return false;
+
+  const storedConsent = safeGetItem(CONSENT_STORAGE_KEY);
+  const consent: ConsentType = storedConsent
+    ? JSON.parse(storedConsent)
+    : DEFAULT_CONSENT;
+  const hasAccepted = Object.values(consent).some(Boolean);
+
+  return !hasAccepted || !isConsentExpired();
+};
+
+export const clearStoredConsent = (): void => {
+  safeRemoveItem(CONSENT_GIVEN_KEY);
+  safeRemoveItem(CONSENT_STORAGE_KEY);
+  safeRemoveItem(CONSENT_DATE_KEY);
+};
+
 // Get consent from local storage
 export const getStoredConsent = (): ConsentType => {
   if (typeof window === "undefined") return DEFAULT_CONSENT;
 
-  // Check if user has explicitly consented
-  const hasConsented = safeGetItem("cdtn-cookie-consent-given");
-
-  if (!hasConsented) {
-    return {
-      ...DEFAULT_CONSENT,
-      matomo: true,
-      sea: false,
-      matomoHeatmap: false,
-    };
+  if (!hasValidConsent()) {
+    return DEFAULT_CONSENT;
   }
 
   const storedConsent = safeGetItem(CONSENT_STORAGE_KEY);
@@ -43,17 +72,17 @@ export const getStoredConsent = (): ConsentType => {
 export const saveConsent = (consent: ConsentType): void => {
   if (typeof window === "undefined") return;
 
-  // Ensure Matomo is always enabled (mandatory), but respect user choice for matomoHeatmap
-  const finalConsent = { ...consent, matomo: true };
-  safeSetItem(CONSENT_STORAGE_KEY, JSON.stringify(finalConsent));
-  applyConsent(finalConsent);
+  safeSetItem(CONSENT_STORAGE_KEY, JSON.stringify(consent));
+  safeSetItem(CONSENT_GIVEN_KEY, "true");
+  safeSetItem(CONSENT_DATE_KEY, Date.now().toString());
+  applyConsent(consent);
 
   window.dispatchEvent(new Event("cdtn:consent-updated"));
 };
 
 // Apply consent settings to tracking tools
 export const applyConsent = (consent: ConsentType): void => {
-  applyMatomoConsent(true);
+  applyMatomoConsent(consent.matomo);
   applyMatomoHeatmapConsent(consent.matomoHeatmap);
   applySeaConsent(consent.sea);
 };
