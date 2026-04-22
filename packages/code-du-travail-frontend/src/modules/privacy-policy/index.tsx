@@ -59,7 +59,7 @@ export const PrivacyPolicy = () => {
             <strong>Pays destinataires :</strong> France (Auto-hébergèrent)
           </li>
           <li>
-            <strong>Base juridique :</strong> Exemption de consentement
+            <strong>Base juridique :</strong> Consentement
           </li>
           <li>
             <strong>Finalités :</strong> Mesure d&apos;audience, suivi du

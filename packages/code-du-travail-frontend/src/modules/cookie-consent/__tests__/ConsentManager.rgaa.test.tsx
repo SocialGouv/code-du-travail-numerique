@@ -7,12 +7,13 @@ jest.mock("next/navigation", () => ({
 
 jest.mock("../../utils/consent", () => ({
   initConsent: jest.fn(),
-  DEFAULT_CONSENT: { matomo: true, sea: false, matomoHeatmap: false },
+  DEFAULT_CONSENT: { matomo: false, sea: false, matomoHeatmap: false },
   getStoredConsent: jest.fn().mockImplementation(() => ({
-    matomo: true,
+    matomo: false,
     sea: false,
     matomoHeatmap: false,
   })),
+  hasValidConsent: jest.fn().mockReturnValue(true),
   saveConsent: jest.fn(),
   ConsentType: {},
 }));

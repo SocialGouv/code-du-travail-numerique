@@ -63,6 +63,18 @@ export default async function globalSetup(config: FullConfig) {
             name: "cdtn-cookie-consent-given",
             value: "true",
           },
+          {
+            name: "cdtn-cookie-consent",
+            value: JSON.stringify({
+              matomo: true,
+              sea: false,
+              matomoHeatmap: false,
+            }),
+          },
+          {
+            name: "cdtn-cookie-consent-date",
+            value: Date.now().toString(),
+          },
         ],
       },
     ],

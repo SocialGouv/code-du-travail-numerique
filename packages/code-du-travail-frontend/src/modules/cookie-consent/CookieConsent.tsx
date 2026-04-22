@@ -6,10 +6,10 @@ import {
   ConsentType,
   DEFAULT_CONSENT,
   getStoredConsent,
+  hasValidConsent,
   initConsent,
   saveConsent,
 } from "../utils/consent";
-import { safeGetItem, safeSetItem } from "../utils/storage";
 import { Button } from "@codegouvfr/react-dsfr/Button";
 import { ToggleSwitch } from "@codegouvfr/react-dsfr/ToggleSwitch";
 import { fr } from "@codegouvfr/react-dsfr";
@@ -31,41 +31,33 @@ export const CookieConsentDSFR = ({ heatmapEnabled, adsEnabled }: Props) => {
   const isAnyModalOpen = isAgreementModalOpen || isSearchModalOpen;
 
   useEffect(() => {
-    const storedConsent = getStoredConsent();
-    setConsent(storedConsent);
+    setConsent(getStoredConsent());
 
-    const hasConsented = safeGetItem("cdtn-cookie-consent-given");
-    if (!hasConsented) {
+    if (!hasValidConsent()) {
       setShowBanner(true);
     } else {
       initConsent();
     }
   }, []);
 
-  const handleAcceptAll = () => {
-    const newConsent = {
-      matomo: true,
-      sea: adsEnabled,
-      matomoHeatmap: heatmapEnabled,
-    };
+  const persistConsent = (newConsent: ConsentType) => {
     setConsent(newConsent);
     saveConsent(newConsent);
     setShowBanner(false);
     setShowModal(false);
-    safeSetItem("cdtn-cookie-consent-given", "true");
-
     initConsent();
   };
 
-  const handleRefuseAll = () => {
-    const newConsent = { matomo: true, sea: false, matomoHeatmap: false };
-    setConsent(newConsent);
-    saveConsent(newConsent);
-    setShowBanner(false);
-    setShowModal(false);
-    safeSetItem("cdtn-cookie-consent-given", "true");
+  const handleAcceptAll = () => {
+    persistConsent({
+      matomo: true,
+      sea: adsEnabled,
+      matomoHeatmap: heatmapEnabled,
+    });
+  };
 
-    initConsent();
+  const handleRefuseAll = () => {
+    persistConsent({ matomo: false, sea: false, matomoHeatmap: false });
   };
 
   const handleCustomize = () => {
@@ -73,10 +65,7 @@ export const CookieConsentDSFR = ({ heatmapEnabled, adsEnabled }: Props) => {
   };
 
   const handleSavePreferences = () => {
-    saveConsent(consent);
-    setShowBanner(false);
-    setShowModal(false);
-    safeSetItem("cdtn-cookie-consent-given", "true");
+    persistConsent(consent);
   };
 
   const handleConsentChange = (type: keyof ConsentType) => {
@@ -101,11 +90,10 @@ export const CookieConsentDSFR = ({ heatmapEnabled, adsEnabled }: Props) => {
                 Ce site utilise des cookies
               </p>
               <p className="fr-consent-banner__desc">
-                Nous utilisons des cookies pour mesurer l&apos;audience et
-                l&apos;interaction des utilisateurs avec notre site. Les cookies
-                de mesure d&apos;audience sont nécessaires au bon fonctionnement
-                du site. Vous pouvez choisir d&apos;accepter ou de refuser les
-                cookies de suivi des interactions des utilisateurs.
+                Nous utilisons des cookies de mesure d&apos;audience et de suivi
+                des interactions des utilisateurs pour améliorer notre site.
+                Vous pouvez accepter, refuser ou personnaliser votre choix.
+                Votre consentement est valable 13 mois.
               </p>
             </div>
             <ul
@@ -173,12 +161,10 @@ export const CookieConsentDSFR = ({ heatmapEnabled, adsEnabled }: Props) => {
                 </h1>
                 <p>
                   Nous utilisons des cookies pour mesurer l&apos;audience et
-                  l&apos;interaction des utilisateurs avec notre site. Les
-                  cookies de mesure d&apos;audience sont nécessaires au bon
-                  fonctionnement du site. Vous pouvez choisir d&apos;accepter ou
-                  de refuser les cookies de suivi des interactions des
-                  utilisateurs. Pour plus d&apos;informations, vous pouvez
-                  consulter notre{" "}
+                  l&apos;interaction des utilisateurs avec notre site. Vous
+                  pouvez choisir d&apos;accepter ou de refuser ces cookies.
+                  Votre consentement est valable 13 mois. Pour plus
+                  d&apos;informations, vous pouvez consulter notre{" "}
                   <Link href="/politique-confidentialite">
                     politique de confidentialité
                   </Link>
@@ -190,10 +176,9 @@ export const CookieConsentDSFR = ({ heatmapEnabled, adsEnabled }: Props) => {
                     Cookies de mesure d&apos;audience
                   </legend>
                   <ToggleSwitch
-                    label="Mesure d'audience - Obligatoire"
+                    label="Mesure d'audience - Matomo"
                     checked={consent.matomo}
-                    onChange={() => {}}
-                    disabled
+                    onChange={() => handleConsentChange("matomo")}
                     style={{ width: "100%" }}
                   />
                   <p className={fr.cx("fr-info-text")}>
