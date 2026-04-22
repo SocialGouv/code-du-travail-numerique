@@ -67,8 +67,8 @@ export const badgeColorClasses: Partial<
     color: "var(--text-action-high-green-archipel) !important", // light option illustration color sun default green archipel
   }),
   conventions_collectives: css({
-    backgroundColor: "var(--background-contrast-success) !important", // light decision background background contrast success
-    color: "var(--text-default-success) !important", // light decision text default success
+    backgroundColor: "var(--background-alt-green-archipel) !important", // light option illustration color 975 default green archipel
+    color: "var(--text-action-high-green-archipel) !important", // light option illustration color sun default green archipel
   }),
   modeles_de_courriers: css({
     backgroundColor: "var(--background-alt-purple-glycine) !important", // light option illustration color 950 default purple glycine
@@ -87,23 +87,23 @@ export const badgeColorClasses: Partial<
     color: "var(--text-action-high-brown-cafe-creme) !important", // light option illustration color sun default purple glycine
   }),
   contributions: css({
-    backgroundColor: "var(--background-alt-yellow-tournesol) !important", // light option illustration color 950 default yellow tournesol
-    color: "var(--text-action-high-yellow-tournesol) !important", // light option illustration color sun default yellow tournesol
+    backgroundColor: "var(--background-contrast-success) !important", // light decision background background contrast success
+    color: "var(--text-default-success) !important", // light decision text default success
   }),
   fiches_ministere_travail: css({
-    backgroundColor: "var(--background-alt-green-emeraude) !important", // light option illustration color 975 default green archipel
-    color: "var(--text-action-high-green-emeraude) !important", // light option illustration color sun default green archipel
+    backgroundColor: "var(--background-alt-grey) !important", // light option illustration color 975 default green archipel
+    color: "var(--text-action-high-grey) !important", // light option illustration color sun default green archipel
   }),
   fiches_service_public: css({
-    backgroundColor: "var(--background-alt-green-emeraude) !important", // light option illustration color 975 default green archipel
-    color: "var(--text-action-high-green-emeraude) !important", // light option illustration color sun default green archipel
+    backgroundColor: "var(--background-alt-grey) !important", // light option illustration color 975 default green archipel
+    color: "var(--text-action-high-grey) !important", // light option illustration color sun default green archipel
   }),
   information: css({
-    backgroundColor: "var(--background-alt-green-emeraude) !important", // light option illustration color 975 default green archipel
-    color: "var(--text-action-high-green-emeraude) !important", // light option illustration color sun default green archipel
+    backgroundColor: "var(--background-alt-grey) !important", // light option illustration color 975 default green archipel
+    color: "var(--text-action-high-grey) !important", // light option illustration color sun default green archipel
   }),
   page_fiche_ministere_travail: css({
-    backgroundColor: "var(--background-alt-green-emeraude) !important", // light option illustration color 975 default green archipel
-    color: "var(--text-action-high-green-archipel) !important", // light option illustration color sun default green archipel
+    backgroundColor: "var(--background-alt-grey) !important", // light option illustration color 975 default green archipel
+    color: "var(--text-action-high-grey) !important", // light option illustration color sun default green archipel
   }),
 };
