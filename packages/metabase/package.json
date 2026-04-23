@@ -1,0 +1,27 @@
+{
+  "name": "@cdt/metabase",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Pipeline d'events Matomo pour le CDTN (extraction, glossaire, drift check)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SocialGouv/code-du-travail-numerique.git",
+    "directory": "packages/metabase"
+  },
+  "scripts": {
+    "events:extract": "tsx events/extract-events.ts",
+    "events:docs": "tsx events/extract-events.ts && tsx events/generate-events-doc.ts",
+    "events:check": "tsx events/check-events-drift.ts",
+    "precommit": "tsx events/check-events-drift.ts"
+  },
+  "devDependencies": {
+    "@types/node": "~22.10.2",
+    "ts-morph": "~24.0.0",
+    "tsx": "~4.19.2",
+    "yaml": "~2.6.1"
+  },
+  "engines": {
+    "node": ">= 24"
+  }
+}

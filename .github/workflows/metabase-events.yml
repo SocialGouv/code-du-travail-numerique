@@ -1,0 +1,113 @@
+name: Metabase events
+
+# Deux jobs :
+# - drift-check (PR) : fail si docs/events.md est desynchronise avec le code.
+# - wiki-sync (push sur dev/master) : regenere les docs et pousse le
+#   glossaire sur le wiki GitHub (pages : Matomo-Events, Metabase-Materialized-Views,
+#   Metabase-Dashboards, Metabase-Schema, Metabase-Models, Home).
+#
+# Prerequis wiki : le wiki doit avoir ete initialise au moins une fois
+# manuellement (creer la premiere page via l'UI GitHub).
+
+on:
+  push:
+    branches:
+      - dev
+      - master
+    paths:
+      - "packages/metabase/events/**"
+      - "packages/metabase/docs/**"
+      - "packages/code-du-travail-frontend/src/modules/**/*.ts"
+      - "packages/code-du-travail-frontend/src/modules/**/*.tsx"
+      - ".github/workflows/metabase-events.yml"
+  pull_request:
+    paths:
+      - "packages/metabase/**"
+      - "packages/code-du-travail-frontend/src/modules/**/*.ts"
+      - "packages/code-du-travail-frontend/src/modules/**/*.tsx"
+      - ".github/workflows/metabase-events.yml"
+  workflow_dispatch:
+
+concurrency:
+  group: metabase-events-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  drift-check:
+    name: Drift check (docs/events.md synchronise)
+    if: github.event_name == 'pull_request' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+      - uses: pnpm/action-setup@v4
+        with:
+          run_install: false
+      - run: pnpm install --filter @cdt/metabase --frozen-lockfile
+      - run: pnpm -F @cdt/metabase events:check
+
+  wiki-sync:
+    name: Sync docs Metabase vers le wiki
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+      - uses: pnpm/action-setup@v4
+        with:
+          run_install: false
+      - run: pnpm install --filter @cdt/metabase --frozen-lockfile
+      - run: pnpm -F @cdt/metabase events:docs
+
+      - name: Clone wiki repo
+        env:
+          WIKI_URL: https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.wiki.git
+        run: |
+          if ! git clone "$WIKI_URL" wiki 2>clone-err.log; then
+            echo "::warning::Impossible de cloner le wiki. Verifie qu'il est initialise (creer une premiere page via l'UI GitHub)."
+            cat clone-err.log
+            exit 1
+          fi
+
+      - name: Copy docs to wiki pages
+        run: |
+          cp packages/metabase/docs/events.md              wiki/Matomo-Events.md
+          cp packages/metabase/docs/materialized-views.md  wiki/Metabase-Materialized-Views.md
+          cp packages/metabase/docs/dashboards.md          wiki/Metabase-Dashboards.md
+          cp packages/metabase/docs/schema.md              wiki/Metabase-Schema.md
+          cp packages/metabase/docs/models.md              wiki/Metabase-Models.md
+          cat > wiki/Home.md <<'EOF'
+          # Metabase & Events Matomo — CDTN
+
+          Ce wiki est **auto-genere** depuis `packages/metabase/` a chaque push sur `dev` / `master`.
+          Ne pas editer directement : modifier les fichiers source dans le repo.
+
+          ## Pages
+
+          - [Matomo-Events](./Matomo-Events) — glossaire des events emis par le frontend.
+          - [Metabase-Dashboards](./Metabase-Dashboards) — reference des dashboards et cartes.
+          - [Metabase-Materialized-Views](./Metabase-Materialized-Views) — vues materialisees.
+          - [Metabase-Models](./Metabase-Models) — modeles Metabase et patterns SQL.
+          - [Metabase-Schema](./Metabase-Schema) — schema de la DB OVH PG CDTN.
+          EOF
+
+      - name: Commit and push to wiki
+        working-directory: wiki
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Aucun changement a pousser."
+            exit 0
+          fi
+          git commit -m "chore(metabase): sync docs depuis ${{ github.sha }}"
+          git push

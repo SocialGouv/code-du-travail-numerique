@@ -6,4 +6,6 @@ module.exports = {
   "*.{js,ts,tsx,jsx}": ["jest --bail --findRelatedTests"],
   "*.{js,ts,tsx,jsx}": [buildEslintCommand],
   "*.{js,ts,tsx,jsx,json,md}": ["pnpm format"],
+  "src/modules/**/*.{ts,tsx}": () =>
+    "pnpm -F @cdt/metabase events:docs && git add ../metabase/events/events.extracted.json ../metabase/docs/events.md",
 };
