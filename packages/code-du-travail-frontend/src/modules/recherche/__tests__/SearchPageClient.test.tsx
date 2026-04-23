@@ -29,6 +29,9 @@ jest.mock("../tracking", () => ({
 // Mock matomo (used by Feedback component)
 jest.mock("@socialgouv/matomo-next", () => ({
   sendEvent: jest.fn(),
+  useABTestVariant: jest.fn(() => ({
+    variant: "original",
+  })),
 }));
 
 describe("SearchPageClient", () => {
