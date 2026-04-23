@@ -78,12 +78,24 @@ jobs:
           fi
 
       - name: Copy docs to wiki pages
+        # Copy only the doc files that exist in the repo. PR #7253 ships the
+        # metabase SQL/MV docs (materialized-views, dashboards, schema, models);
+        # this workflow lives in the events PR and must not fail if those docs
+        # are absent on `dev` before #7253 merges.
         run: |
-          cp packages/metabase/docs/events.md              wiki/Matomo-Events.md
-          cp packages/metabase/docs/materialized-views.md  wiki/Metabase-Materialized-Views.md
-          cp packages/metabase/docs/dashboards.md          wiki/Metabase-Dashboards.md
-          cp packages/metabase/docs/schema.md              wiki/Metabase-Schema.md
-          cp packages/metabase/docs/models.md              wiki/Metabase-Models.md
+          copy_if_exists() {
+            local src="$1" dest="$2"
+            if [ -f "$src" ]; then
+              cp "$src" "$dest"
+            else
+              echo "::notice::Source absente, page wiki non synchronisee: $src"
+            fi
+          }
+          copy_if_exists packages/metabase/docs/events.md             wiki/Matomo-Events.md
+          copy_if_exists packages/metabase/docs/materialized-views.md wiki/Metabase-Materialized-Views.md
+          copy_if_exists packages/metabase/docs/dashboards.md         wiki/Metabase-Dashboards.md
+          copy_if_exists packages/metabase/docs/schema.md             wiki/Metabase-Schema.md
+          copy_if_exists packages/metabase/docs/models.md             wiki/Metabase-Models.md
           cat > wiki/Home.md <<'EOF'
           # Metabase & Events Matomo — CDTN
 

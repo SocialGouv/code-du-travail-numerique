@@ -18,8 +18,8 @@ const METABASE_DIR = path.resolve(__dirname, "..");
 const DOCS_EVENTS = path.join(METABASE_DIR, "docs/events.md");
 const EXTRACTED = path.join(METABASE_DIR, "events/events.extracted.json");
 
-function snapshot(file: string): string {
-  return fs.existsSync(file) ? fs.readFileSync(file, "utf8") : "";
+function snapshot(file: string): string | null {
+  return fs.existsSync(file) ? fs.readFileSync(file, "utf8") : null;
 }
 
 const beforeDocs = snapshot(DOCS_EVENTS);
@@ -33,8 +33,10 @@ function normalize(content: string): string {
     .replace(/Genere le \*\*[^*]+\*\*/g, "Genere le **__NORMALIZED__**");
 }
 
+const TSX_BIN = path.resolve(METABASE_DIR, "node_modules/.bin/tsx");
+
 function run(script: string) {
-  const r = spawnSync("npx", ["tsx", path.join(__dirname, script)], {
+  const r = spawnSync(TSX_BIN, [path.join(__dirname, script)], {
     cwd: METABASE_DIR,
     stdio: "inherit",
     env: process.env,
@@ -52,13 +54,13 @@ const afterDocs = snapshot(DOCS_EVENTS);
 const afterExtracted = snapshot(EXTRACTED);
 
 let drift = false;
-if (normalize(beforeDocs) !== normalize(afterDocs)) {
+if (normalize(beforeDocs ?? "") !== normalize(afterDocs ?? "")) {
   console.error(
     "[check-events-drift] docs/events.md est DESYNCHRONISE avec le code."
   );
   drift = true;
 }
-if (normalize(beforeExtracted) !== normalize(afterExtracted)) {
+if (normalize(beforeExtracted ?? "") !== normalize(afterExtracted ?? "")) {
   console.error(
     "[check-events-drift] events/events.extracted.json est DESYNCHRONISE avec le code."
   );
@@ -67,9 +69,12 @@ if (normalize(beforeExtracted) !== normalize(afterExtracted)) {
 
 if (drift) {
   // Restaurer l'etat avant pour laisser le dev decider quand regenerer
-  // (evite un 'files modified' surprise en CI)
-  if (beforeDocs) fs.writeFileSync(DOCS_EVENTS, beforeDocs);
-  if (beforeExtracted) fs.writeFileSync(EXTRACTED, beforeExtracted);
+  // (evite un 'files modified' surprise en CI). Si le fichier n'existait
+  // pas avant (null), on le supprime au lieu de laisser l'artefact genere.
+  if (beforeDocs !== null) fs.writeFileSync(DOCS_EVENTS, beforeDocs);
+  else if (fs.existsSync(DOCS_EVENTS)) fs.unlinkSync(DOCS_EVENTS);
+  if (beforeExtracted !== null) fs.writeFileSync(EXTRACTED, beforeExtracted);
+  else if (fs.existsSync(EXTRACTED)) fs.unlinkSync(EXTRACTED);
   console.error("");
   console.error(
     "=> Lance `pnpm -F @cdt/metabase events:docs` pour regenerer, puis commit."
