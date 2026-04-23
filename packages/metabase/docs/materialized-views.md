@@ -38,7 +38,10 @@
 
 ### Definition SQL
 
+> NOTE : cette MV est egalement exposee cote Metabase par une carte "model". La DDL ci-dessous est la requete equivalente, fournie pour tracabilite et recreation manuelle. Ne pas la DROP/CREATE sans concertation.
+
 ```sql
+CREATE MATERIALIZED VIEW IF NOT EXISTS metabase_model_106 AS
 SELECT action_id,
     idvisit,
     action_type,
@@ -86,6 +89,7 @@ WHERE action_timestamp >= date_trunc('month', CURRENT_DATE - interval '1 year');
 ### Definition SQL
 
 ```sql
+CREATE MATERIALIZED VIEW IF NOT EXISTS visites_uniques AS
 SELECT DISTINCT idvisit, pathname, month
 FROM metabase_model_106
 WHERE month >= date_trunc('month', CURRENT_DATE - interval '1 year 1 month');
@@ -122,6 +126,7 @@ WHERE month >= date_trunc('month', CURRENT_DATE - interval '1 year 1 month');
 ### Definition SQL
 
 ```sql
+CREATE MATERIALIZED VIEW IF NOT EXISTS commentaires_utilisateurs AS
 WITH feedbacks AS (
     SELECT action_id,
         substring(action_url, 'https?://[^/]+(/[^?#]*)') AS pathname,
@@ -159,7 +164,7 @@ ORDER BY action_timestamp DESC;
 
 **Taille** : ~4.3M lignes, ~446 MB.
 
-**Refresh** : `DROP MATERIALIZED VIEW + CREATE` (non REFRESHABLE car schema fixe). Requete dans `sql/mv_kpi_personnalisation.sql`.
+**Refresh** : `DROP MATERIALIZED VIEW + CREATE` (non REFRESHABLE car schema fixe). Voir la definition SQL ci-dessous.
 
 **Indexes** :
 
@@ -192,7 +197,88 @@ Chaque ligne represente une visite unique (idvisit) pour un (month, content_type
 
 ### Definition SQL
 
-Voir `sql/mv_kpi_personnalisation.sql` pour la requete complete de creation.
+```sql
+DROP MATERIALIZED VIEW IF EXISTS mv_kpi_personnalisation CASCADE;
+
+CREATE MATERIALIZED VIEW mv_kpi_personnalisation AS
+WITH events_bruts AS (
+    SELECT
+        month,
+        action_eventcategory,
+        action_eventaction,
+        action_eventname,
+        pathname,
+        path_level2,
+        path_level3,
+        idvisit,
+        -- Type de contenu
+        CASE
+            WHEN path_level2 = 'contribution' THEN 'contribution'
+            WHEN action_eventcategory = 'outil' AND action_eventaction IN ('cc_select_traitée', 'cc_select_non_traitée') THEN 'simulateur'
+            WHEN action_eventcategory = 'cc_search_type_of_users' THEN 'cc_search'
+            ELSE NULL
+        END AS content_type,
+        -- Path unique par type
+        CASE
+            WHEN path_level2 = 'contribution' THEN pathname
+            WHEN action_eventcategory = 'outil' THEN path_level3
+            WHEN action_eventcategory = 'cc_search_type_of_users' THEN 'global'
+            ELSE NULL
+        END AS path
+    FROM metabase_model_106
+    WHERE action_type = 'event'
+      AND (
+        -- Contributions
+        (path_level2 = 'contribution' AND action_eventaction IN (
+            'click_afficher_les_informations_CC',
+            'click_afficher_les_informations_sans_CC',
+            'click_afficher_les_informations_générales',
+            'click_afficher_les_informations_generales'
+        ))
+        -- Simulateurs
+        OR (action_eventcategory = 'outil' AND action_eventaction IN (
+            'cc_select_traitée', 'cc_select_non_traitée',
+            'cc_select_traitee', 'cc_select_non_traitee'
+        ))
+        -- CC search
+        OR (action_eventcategory = 'cc_search_type_of_users' AND action_eventaction IN (
+            'click_p1','click_p2','click_p3',
+            'click_je_n_ai_pas_d_entreprise','select_je_n_ai_pas_d_entreprise'
+        ))
+      )
+)
+SELECT
+    month,
+    content_type,
+    path,
+    idvisit,
+    BOOL_OR(
+        action_eventaction IN (
+            'click_afficher_les_informations_CC',
+            'cc_select_traitée', 'cc_select_traitee'
+        )
+    ) AS is_perso,
+    BOOL_OR(
+        action_eventaction IN (
+            'click_afficher_les_informations_sans_CC',
+            'cc_select_non_traitée', 'cc_select_non_traitee'
+        )
+    ) AS is_cc_non_traitee,
+    BOOL_OR(
+        action_eventaction IN (
+            'click_je_n_ai_pas_d_entreprise', 'select_je_n_ai_pas_d_entreprise'
+        )
+    ) AS is_pas_entreprise,
+    BOOL_OR(action_eventaction = 'click_p3') AS is_renonciation
+FROM events_bruts
+WHERE content_type IS NOT NULL
+GROUP BY month, content_type, path, idvisit;
+
+-- Indexes
+CREATE INDEX IF NOT EXISTS idx_mvkpi_month_type ON mv_kpi_personnalisation (month, content_type);
+CREATE INDEX IF NOT EXISTS idx_mvkpi_month_type_path ON mv_kpi_personnalisation (month, content_type, path);
+CREATE INDEX IF NOT EXISTS idx_mvkpi_idvisit ON mv_kpi_personnalisation (idvisit);
+```
 
 ### Quand l'utiliser
 
@@ -226,12 +312,15 @@ Voir `sql/mv_kpi_personnalisation.sql` pour la requete complete de creation.
 ### Definition SQL
 
 ```sql
-CREATE MATERIALIZED VIEW mv_perso_weekly AS
+CREATE MATERIALIZED VIEW IF NOT EXISTS mv_perso_weekly AS
 SELECT
     DATE_TRUNC('week', action_timestamp)::date AS semaine,
     CASE WHEN action_eventaction LIKE 'cc_select%' THEN 'simulateur' ELSE 'contribution' END AS type,
     COUNT(DISTINCT idvisit) AS total_visits,
-    COUNT(DISTINCT CASE WHEN action_eventaction IN ('click_afficher_les_informations_CC', 'cc_select_traitée') THEN idvisit END) AS personalized_visits
+    COUNT(DISTINCT CASE
+      WHEN action_eventaction IN ('click_afficher_les_informations_CC', 'cc_select_traitée')
+      THEN idvisit
+    END) AS personalized_visits
 FROM metabase_model_106
 WHERE action_type = 'event'
   AND action_eventaction IN (
@@ -289,13 +378,12 @@ GROUP BY 1, 2;
 | `results_ineligible` | Active | Toujours                                                                                                             |
 | `contrat_travail`    | Legacy | Avant refonte du 2025-03-13 uniquement, supprime du front mais conserve dans la MV pour les comparaisons historiques |
 
-> Toute modification de la liste des etapes (front + DB) implique de mettre a jour `sql/mv_funnel_il_irc.sql` puis de relancer un DROP/CREATE de la MV pour rafraichir le filtre `IN`.
+> Toute modification de la liste des etapes (front + DB) implique de mettre a jour la definition SQL ci-dessous puis de relancer un DROP/CREATE de la MV pour rafraichir le filtre `IN`.
 
 ### Definition SQL
 
-Voir `sql/mv_funnel_il_irc.sql`.
-
 ```sql
+CREATE MATERIALIZED VIEW IF NOT EXISTS mv_funnel_il_irc AS
 SELECT
   DATE_TRUNC('week', action_timestamp)::date AS semaine,
   path_level3 AS simulateur,
@@ -310,6 +398,9 @@ WHERE path_level3 IN ('indemnite-licenciement','indemnite-rupture-conventionnell
     'anciennete','absences','salaires','infos','results','results_ineligible'
   )
 GROUP BY 1, 2, 3;
+
+CREATE INDEX IF NOT EXISTS idx_mv_funnel_il_irc_semaine
+  ON mv_funnel_il_irc (semaine, simulateur, etape);
 ```
 
 ### Quand l'utiliser
@@ -374,9 +465,8 @@ WHERE simulateur = 'indemnite-licenciement'
 
 ### Definition SQL
 
-Voir `sql/mv_funnel_il_irc_visits.sql`.
-
 ```sql
+CREATE MATERIALIZED VIEW IF NOT EXISTS mv_funnel_il_irc_visits AS
 SELECT
   idvisit,
   CASE
@@ -401,6 +491,9 @@ WHERE action_timestamp >= CURRENT_DATE - INTERVAL '60 day'
   AND (action_url LIKE '%/outils/indemnite-licenciement%'
     OR action_url LIKE '%/outils/indemnite-rupture-conventionnelle%')
 GROUP BY 1, 2;
+
+CREATE INDEX IF NOT EXISTS idx_mv_funnel_il_irc_visits_jour
+  ON mv_funnel_il_irc_visits (simulateur, jour);
 ```
 
 ### Pattern funnel cumulatif parametre
@@ -489,9 +582,8 @@ La logique cumulative ("a vu l'etape N OU une etape ulterieure") evite ces faux 
 
 ### Definition SQL
 
-Voir `sql/mv_bounce_contributions.sql`.
-
 ```sql
+CREATE MATERIALIZED VIEW IF NOT EXISTS mv_bounce_contributions AS
 WITH contrib_actions AS (
   SELECT
     idvisit,
@@ -522,6 +614,11 @@ SELECT
   ) AS has_cc_search
 FROM contrib_actions
 GROUP BY idvisit, pathname;
+
+CREATE INDEX IF NOT EXISTS idx_mv_bounce_contributions_jour
+  ON mv_bounce_contributions (jour, pathname);
+CREATE INDEX IF NOT EXISTS idx_mv_bounce_contributions_path
+  ON mv_bounce_contributions (pathname);
 ```
 
 ### Pattern : taux de rebond global (filtre = contributions avec bouton generique)
@@ -589,14 +686,14 @@ Voir issue [#7136](https://github.com/SocialGouv/code-du-travail-numerique/issue
 ### Definition SQL
 
 ```sql
-CREATE MATERIALIZED VIEW mv_cc_non_traitees AS
+CREATE MATERIALIZED VIEW IF NOT EXISTS mv_cc_non_traitees AS
 SELECT action_eventname AS cc_name,
     COUNT(DISTINCT idvisit) AS nb_utilisateurs,
     COUNT(*) AS nb_selections
 FROM matomo_partitioned
 WHERE action_type = 'event' AND action_eventcategory = 'outil'
   AND action_eventaction = 'cc_select_non_traitée'
-  AND action_eventname IS NOT NULL AND action_eventname != ''
+  AND COALESCE(action_eventname, '') <> ''
   AND action_timestamp >= '2025-01-01' AND action_timestamp < '2026-01-01'
 GROUP BY action_eventname;
 ```
@@ -610,9 +707,9 @@ GROUP BY action_eventname;
 REFRESH MATERIALIZED VIEW metabase_model_106;
 
 -- 2. MV dediees qui dependent de metabase_model_106
--- mv_kpi_personnalisation : DROP + CREATE (voir sql/mv_kpi_personnalisation.sql)
+-- mv_kpi_personnalisation : DROP + CREATE (voir §4 "Definition SQL")
 DROP MATERIALIZED VIEW IF EXISTS mv_kpi_personnalisation;
--- ... coller la requete CREATE depuis 06_mv_kpi_personnalisation.sql ...
+-- ... coller la requete CREATE depuis §4 "Definition SQL" ci-dessus ...
 
 -- 3. MV simples (REFRESH)
 REFRESH MATERIALIZED VIEW visites_uniques;

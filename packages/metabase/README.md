@@ -111,17 +111,16 @@ curl -X POST -H "X-API-Key: $METABASE_API_KEY" \
 
 ## Structure des fichiers
 
-| Fichier                      | Description                                                          |
-| ---------------------------- | -------------------------------------------------------------------- |
-| `CLAUDE.md`                  | **Hub IA complet** : process cards, SQL, dashboards, refresh         |
-| `../../.mcp.json`            | Config MCP locale, **a la racine du repo** (gitignore)               |
-| `../../.mcp.example.json`    | Template de config MCP, **a la racine du repo**                      |
-| `.env`                       | Variables `METABASE_URL` / `METABASE_API_KEY` (gitignore)            |
-| `docs/schema.md`             | Schema de la base OVH PG CDTN (`matomo_partitioned`, etc.)           |
-| `docs/materialized-views.md` | Definitions et patterns d'usage des vues materialisees               |
-| `docs/models.md`             | Modeles Metabase et patterns SQL optimises                           |
-| `docs/dashboards.md`         | Reference de tous les dashboards et cartes                           |
-| `sql/`                       | SQL DDL des MV custom (source de verite git-tracked)                 |
+| Fichier                      | Description                                                                                    |
+| ---------------------------- | ---------------------------------------------------------------------------------------------- |
+| `CLAUDE.md`                  | **Hub IA complet** : process cards, SQL, dashboards, refresh                                   |
+| `../../.mcp.json`            | Config MCP locale, **a la racine du repo** (gitignore)                                         |
+| `../../.mcp.example.json`    | Template de config MCP, **a la racine du repo**                                                |
+| `.env`                       | Variables `METABASE_URL` / `METABASE_API_KEY` (gitignore)                                      |
+| `docs/schema.md`             | Schema de la base OVH PG CDTN (`matomo_partitioned`, etc.)                                     |
+| `docs/materialized-views.md` | **Definitions SQL (CREATE + INDEX) et patterns d'usage des MV** — source de verite git-tracked |
+| `docs/models.md`             | Modeles Metabase et patterns SQL optimises                                                     |
+| `docs/dashboards.md`         | Reference de tous les dashboards et cartes                                                     |
 
 ## Dashboards et cartes
 

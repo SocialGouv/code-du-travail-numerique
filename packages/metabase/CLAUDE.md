@@ -2,8 +2,7 @@
 
 **Hub central** de tout ce qui concerne Metabase pour le CDTN :
 
-- definitions des vues materialisees (`sql/`) — source de verite git-tracked
-- docs de reference (dashboards, cards, schema, patterns SQL) dans `docs/`
+- docs de reference (vues materialisees, dashboards, cards, schema, patterns SQL) dans `docs/` — source de verite git-tracked pour les definitions SQL
 - config MCP pour interroger l'instance Metabase (`.mcp.json` a la racine du repo)
 
 ## Contexte
@@ -58,11 +57,10 @@ Via MCP (Claude Code, Cursor, Windsurf avec `.mcp.json` configure) : `list_datab
 | ---------------------------- | -------------------------------------------------------- | ----------------------------------- |
 | `CLAUDE.md` (ce fichier)     | regles IA, process card, sources de donnees, conventions | manuel                              |
 | `README.md`                  | installation, MCP                                        | manuel                              |
-| `docs/materialized-views.md` | definitions et patterns des MV                           | manuel (synchro avec `sql/`)        |
+| `docs/materialized-views.md` | **definitions SQL des MV + patterns d'usage**            | manuel, source de verite versionnee |
 | `docs/dashboards.md`         | reference dashboards et cartes                           | manuel                              |
 | `docs/models.md`             | models Metabase et patterns SQL                          | manuel                              |
 | `docs/schema.md`             | schema DB OVH PG CDTN                                    | manuel                              |
-| `sql/`                       | DDL des MV custom                                        | manuel, source de verite versionnee |
 
 Chaque sous-dossier a son propre `CLAUDE.md`. Pour "ou je trouve X", commencer par `CLAUDE.md` du dossier concerne.
 
@@ -72,12 +70,12 @@ Chaque sous-dossier a son propre `CLAUDE.md`. Pour "ou je trouve X", commencer p
 
 1. **LIRE `docs/materialized-views.md` ET `docs/models.md` EN PREMIER**. Identifier la MV ou la card-modele dediee au cas d'usage avant d'ecrire une seule ligne de SQL.
 2. **Verifier la fraicheur des sources** (commande §"Commandes pour decouvrir l'etat courant" ci-dessus). Si la MV est en retard, signaler le besoin de refresh AVANT d'investiguer un "0 rows".
-3. **Si une MV existe pour ton cas d'usage** : l'utiliser. Si une etape ou un evenement manque, ajouter ce qui manque a la definition (`sql/mv_*.sql`) puis DROP/CREATE la MV - ne JAMAIS bypass la MV en attaquant `metabase_model_106` directement.
-4. **Si AUCUNE MV ne convient** : creer une nouvelle MV dediee dans `sql/mv_*.sql`, l'appliquer via `/api/dataset` (cf. tip ci-dessous), creer son index, puis pointer la carte dessus.
+3. **Si une MV existe pour ton cas d'usage** : l'utiliser. Si une etape ou un evenement manque, mettre a jour la section correspondante de `docs/materialized-views.md` (bloc SQL) puis DROP/CREATE la MV - ne JAMAIS bypass la MV en attaquant `metabase_model_106` directement.
+4. **Si AUCUNE MV ne convient** : ajouter une nouvelle section dans `docs/materialized-views.md` avec la definition SQL (CREATE + INDEX), l'appliquer via `/api/dataset` (cf. tip ci-dessous), puis pointer la carte dessus.
 5. **Pour remplacer une carte en prod** : creer la nouvelle version, la tester, puis **archiver l'ancienne via `archived: true`**. Ne jamais ecrire "par dessus" une carte en prod sans historique : l'onglet "History" de Metabase + la corbeille sont le canal de rollback.
 6. **Apres tout PUT sur une carte, RE-RUN la carte** (`POST /api/card/:id/query`) et verifier que `rows > 0` et que `cols` correspond aux colonnes attendues. Une carte qui parse mais retourne 0 ligne est souvent un probleme de fraicheur (point 2).
 7. **Apres toute modification d'une MV ou d'une carte, METTRE A JOUR LES DOCS** :
-   - `docs/materialized-views.md` (ajout/maj de section, schema, refresh)
+   - `docs/materialized-views.md` (ajout/maj de section, schema, refresh, **bloc SQL CREATE + INDEX**)
    - `docs/models.md` (chaines de cards, patterns)
    - `docs/dashboards.md` (table des cartes par dashboard)
    - `README.md` si la liste des dashboards/MV change
@@ -167,7 +165,7 @@ SELECT ... FROM visits ...;
 
 - Ecrire `SELECT ... FROM metabase_model_106 WHERE pathname = '...' AND action_eventname IN (...)` sans avoir verifie qu'il n'existe pas deja une MV pour ces filtres -> **toujours lent**.
 - Ecraser une carte en prod sans archivage prealable de l'ancienne version.
-- Modifier une MV sans mettre a jour `materialized-views.md` ni `sql/mv_*.sql`.
+- Modifier une MV sans mettre a jour la section correspondante de `docs/materialized-views.md` (bloc SQL inclus).
 - Dupliquer l'etat courant (listes de cards, volumes, lag) dans les docs : ces chiffres drifent tous les jours. Preferer pointer vers une commande MCP / `curl`.
 
 ## Regles de performance SQL
@@ -210,7 +208,7 @@ Resume rapide :
 -- 1. MV source principale (lente, ~minutes - declenche la stale-trace de toutes les MV dependantes)
 REFRESH MATERIALIZED VIEW metabase_model_106;
 
--- 2. mv_kpi_personnalisation : DROP + CREATE (schema fixe, voir sql/mv_kpi_personnalisation.sql)
+-- 2. mv_kpi_personnalisation : DROP + CREATE (schema fixe, voir docs/materialized-views.md §4)
 
 -- 3. MV simples (REFRESH, rapide)
 REFRESH MATERIALIZED VIEW visites_uniques;
