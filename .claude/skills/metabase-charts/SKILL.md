@@ -14,7 +14,6 @@ allowed-tools:
   - mcp__metabase__get_card
   - mcp__metabase__create_card
   - mcp__metabase__update_card
-  - mcp__metabase__delete_card
   - mcp__metabase__execute_card
   - mcp__metabase__execute_query
   - mcp__metabase__get_database_tables
