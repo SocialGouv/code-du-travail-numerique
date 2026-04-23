@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.226.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.225.0...v4.226.0) (2026-04-23)
+
+
+### Bug Fixes
+
+* **indemnite-licenciement:** cohérence du message dans la description ([#7237](https://github.com/SocialGouv/code-du-travail-numerique/issues/7237)) ([e08be3c](https://github.com/SocialGouv/code-du-travail-numerique/commit/e08be3c00da027cacafd26179c56132416dcec8f))
+* **indemnite-licenciement:** retirer la question sur la date de sortie pour la 3239 ([#7236](https://github.com/SocialGouv/code-du-travail-numerique/issues/7236)) ([61527cb](https://github.com/SocialGouv/code-du-travail-numerique/commit/61527cb8128f5d6f881cbf291c2d3cd6ef7453c7))
+* **sentry:** correction des erreurs remontées par Sentry ([#7225](https://github.com/SocialGouv/code-du-travail-numerique/issues/7225)) ([d425440](https://github.com/SocialGouv/code-du-travail-numerique/commit/d425440cd8147d659e35f0bb51c2c975c2b8b90c))
+
+
+### Features
+
+* **recherche:** mise en place A/B Testing sur les labels pour les contributions. ([#7243](https://github.com/SocialGouv/code-du-travail-numerique/issues/7243)) ([9f6641f](https://github.com/SocialGouv/code-du-travail-numerique/commit/9f6641fc6af55be3e38eaf6820f5b657b7004541))
+* **rgpd:** mise à jour du bandeau cookie. ([#7248](https://github.com/SocialGouv/code-du-travail-numerique/issues/7248)) ([1900e05](https://github.com/SocialGouv/code-du-travail-numerique/commit/1900e05cb83acf97a9ccf933a48aed37dffffc45))
+* **rgpd:** mise en place d'un warning sur la saisie de données personnelles dans les commentaires. ([#7244](https://github.com/SocialGouv/code-du-travail-numerique/issues/7244)) ([a1c0440](https://github.com/SocialGouv/code-du-travail-numerique/commit/a1c04406339c576e60f11b74df6e8c29563f9bba))
+
+
+
+
+
 # [4.225.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.224.0...v4.225.0) (2026-04-10)
 
 
