@@ -44,7 +44,9 @@ describe("searchSnapshot", () => {
   it("clearSearchSnapshot removes the stored entry", () => {
     saveSearchSnapshot(baseSnapshot);
     clearSearchSnapshot();
-    expect(window.sessionStorage.getItem(SEARCH_SNAPSHOT_STORAGE_KEY)).toBeNull();
+    expect(
+      window.sessionStorage.getItem(SEARCH_SNAPSHOT_STORAGE_KEY)
+    ).toBeNull();
     expect(peekSearchSnapshot()).toBeNull();
   });
 
@@ -58,7 +60,9 @@ describe("searchSnapshot", () => {
       JSON.stringify(old)
     );
     expect(peekSearchSnapshot()).toBeNull();
-    expect(window.sessionStorage.getItem(SEARCH_SNAPSHOT_STORAGE_KEY)).toBeNull();
+    expect(
+      window.sessionStorage.getItem(SEARCH_SNAPSHOT_STORAGE_KEY)
+    ).toBeNull();
   });
 
   it("returns null when the payload is malformed", () => {
