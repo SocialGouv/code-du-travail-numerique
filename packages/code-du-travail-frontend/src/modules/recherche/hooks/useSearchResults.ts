@@ -4,6 +4,14 @@ import { useSearchTracking } from "../tracking";
 import type { SearchResultResponse } from "src/api/modules/search/type";
 import { PresearchClass } from "src/api/modules/search/service/types";
 
+export type SearchResultsHydrationPayload = {
+  query: string;
+  definition?: SearchResultResponse["definition"];
+  results: SearchResultResponse["results"];
+  queryClass: SearchResultResponse["class"];
+  lastPresearchQuery?: string;
+};
+
 type UseSearchResultsReturn = {
   definition: SearchResultResponse["definition"];
   results: SearchResultResponse["results"];
@@ -13,6 +21,7 @@ type UseSearchResultsReturn = {
   hasSearched: boolean;
   triggerSearch: (searchQuery?: string) => Promise<void>;
   resetSearch: () => void;
+  hydrate: (payload: SearchResultsHydrationPayload) => void;
   query: string;
   setQuery: (s: string) => void;
 };
@@ -70,6 +79,16 @@ export const useSearchResults = (): UseSearchResultsReturn => {
     setIsLoading(false);
   }, []);
 
+  const hydrate = useCallback((payload: SearchResultsHydrationPayload) => {
+    setDefinition(payload.definition);
+    setResults(payload.results);
+    setQueryClass(payload.queryClass);
+    setLastPresearchQuery(payload.lastPresearchQuery);
+    setQuery(payload.query);
+    setHasSearched(true);
+    setIsLoading(false);
+  }, []);
+
   // Cleanup on unmount
   useEffect(() => {
     return () => {
@@ -86,6 +105,7 @@ export const useSearchResults = (): UseSearchResultsReturn => {
     hasSearched,
     triggerSearch,
     resetSearch,
+    hydrate,
     query,
     setQuery,
   };

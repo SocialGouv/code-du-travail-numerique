@@ -124,7 +124,7 @@ exports[`<Home /> should match snapshot 1`] = `
                       </div>
                       <button
                         class="fr-btn fr-icon-search-line fr-btn--icon-right md:min-h_76px! min-h_40px! flex-sh_0 md:as_flex-end mdDown:w_100%! mdDown:jc_center!"
-                        id="fr-button-_r_0_"
+                        id="search-see-all-button-home"
                         type="button"
                       >
                         Voir tous les résultats

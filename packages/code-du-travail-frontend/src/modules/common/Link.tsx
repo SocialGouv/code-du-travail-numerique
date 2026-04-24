@@ -7,6 +7,7 @@ type Props = LinkProps & {
   target?: string;
   className?: string;
   rel?: string;
+  id?: string;
 };
 
 const Link = React.forwardRef<HTMLAnchorElement, Props>(
