@@ -36,6 +36,8 @@ jobs:
         env:
           NEXT_PUBLIC_ES_INDEX_PREFIX: ${{ secrets.NEXT_PUBLIC_ES_INDEX_PREFIX }}
           ELASTICSEARCH_TOKEN_API: ${{ secrets.ELASTICSEARCH_TOKEN_API }}
+          ELASTICSEARCH_USER: ${{ secrets.ELASTICSEARCH_USER }}
+          ELASTICSEARCH_PASSWORD: ${{ secrets.ELASTICSEARCH_PASSWORD }}
           ELASTICSEARCH_URL: ${{ secrets.ELASTICSEARCH_URL }}
       - name: Cache build
         uses: actions/cache@v4

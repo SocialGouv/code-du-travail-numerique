@@ -57,6 +57,8 @@ jobs:
           secrets: |
             SENTRY_AUTH_TOKEN=${{ secrets.SENTRY_AUTH_TOKEN }}
             ELASTICSEARCH_TOKEN_API=${{ secrets.ELASTICSEARCH_TOKEN_API }}
+            ELASTICSEARCH_USER=${{ secrets.ELASTICSEARCH_USER }}
+            ELASTICSEARCH_PASSWORD=${{ secrets.ELASTICSEARCH_PASSWORD }}
             ELASTICSEARCH_URL=${{ secrets.ELASTICSEARCH_URL }}
           build-args: |
             NEXT_PUBLIC_CDTN_ENV=development
