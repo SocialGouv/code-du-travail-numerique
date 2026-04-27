@@ -7,7 +7,10 @@ export const FooterTop = () => {
     {
       links: [
         { href: "/droit-du-travail", label: "Le droit du travail" },
-        { href: "/glossaire", label: "Glossaire" },
+        {
+          href: "/quoi-de-neuf",
+          label: "Quoi de neuf sur le Code du travail numérique ?",
+        },
         { href: "/a-propos", label: "À propos" },
         { href: "/stats", label: "Statistiques d'utilisation" },
         {

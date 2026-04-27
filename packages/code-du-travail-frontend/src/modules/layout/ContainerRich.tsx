@@ -3,12 +3,15 @@ import { RelatedItems } from "../common/RelatedItems";
 import { Share } from "../common/Share";
 import { RelatedItem } from "../documents";
 import { Feedback } from "./feedback";
+import { WhatsNewLink } from "./whatsnew";
+import React from "react";
 
 export type ContainerRichProps = {
   relatedItems: { items: RelatedItem[]; title: string }[];
   title: string;
   description: string;
   showFeedback?: boolean;
+  showWhatsNewLink?: boolean;
   children: React.ReactNode;
 };
 
@@ -17,6 +20,7 @@ export const ContainerRich = ({
   relatedItems,
   title,
   showFeedback = true,
+  showWhatsNewLink = false,
   description,
 }: ContainerRichProps) => {
   return (
@@ -36,6 +40,7 @@ export const ContainerRich = ({
       </div>
 
       <div className={fr.cx("fr-col-12", "fr-col-offset-md-1", "fr-col-md-4")}>
+        {showWhatsNewLink && <WhatsNewLink />}
         <RelatedItems relatedItems={relatedItems} />
         <Share title={title} metaDescription={description} />
       </div>
