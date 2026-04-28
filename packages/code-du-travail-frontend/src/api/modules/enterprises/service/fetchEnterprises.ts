@@ -2,6 +2,7 @@ import { ENTERPRISE_API_URL } from "../../../../config";
 import { Enterprise } from "../types";
 import { nafMapper } from "@socialgouv/cdtn-utils";
 import { ApiRechercheEntrepriseResponse } from "./types";
+import { isSiret } from "./isSiret";
 
 export type Convention = {
   idcc: number;
@@ -70,6 +71,18 @@ export const fetchEnterprises = async (
           }
         : { siret: result.siege.siret, address: result.siege.adresse };
 
+    const matchingEtablissement =
+      isSiret(q) && result.matching_etablissements.length === 1
+        ? {
+            siret: result.matching_etablissements[0].siret,
+            address: result.matching_etablissements[0].adresse,
+            activitePrincipale: `${nafMapper[result.matching_etablissements[0].activite_principale]}`,
+            nomCommercial:
+              result.matching_etablissements[0].nom_commercial ??
+              result.nom_complet,
+          }
+        : undefined;
+
     return {
       activitePrincipale: `${nafMapper[result.activite_principale]}`,
       etablissements: result.nombre_etablissements_ouverts,
@@ -78,8 +91,11 @@ export const fetchEnterprises = async (
       simpleLabel: result.nom_complet,
       matching: result.nombre_etablissements_ouverts,
       siren: result.siren,
+      siret: result.siege.siret,
       address: result.siege.adresse,
       firstMatchingEtablissement,
+      matchingEtablissement,
+      matchingEtablissementCount: result.matching_etablissements.length,
       conventions,
     };
   });

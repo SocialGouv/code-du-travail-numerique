@@ -9,9 +9,12 @@ test.describe("Conventions collectives", () => {
       );
 
       await page
-        .locator("#fr-header-main-navigation a", {
-          hasText: "Conventions collectives",
+        .getByRole("button", {
+          name: "Conventions collectives & Accords d'entreprise",
         })
+        .click();
+      await page
+        .getByRole("link", { name: "Voir toutes les conventions collectives" })
         .click();
 
       await expect(page).toHaveURL("/convention-collective");

@@ -1,4 +1,4 @@
-import { fireEvent, render, waitFor } from "@testing-library/react";
+import { act, fireEvent, render, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { sendEvent } from "@socialgouv/matomo-next";
 import { mockAgreementSearch, ui } from "./ui";
@@ -34,9 +34,7 @@ jest.mock("../../convention-collective/search", () => ({
   searchAgreement: jest.fn(),
 }));
 
-jest.mock(
-  "../../enterprise/EnterpriseAgreementSearch/EnterpriseAgreementSearchInput"
-);
+jest.mock("../../enterprise/queries");
 
 describe("<ContributionGeneric />", () => {
   beforeEach(() => {
@@ -183,7 +181,9 @@ describe("<ContributionGeneric />", () => {
     await userEvent.click(ccUi.radio.enterpriseSearchOption.get());
     await userEvent.click(ccUi.searchByEnterprise.input.get());
     await userEvent.type(ccUi.searchByEnterprise.input.get(), "carrefour");
-    await userEvent.click(ccUi.searchByEnterprise.submitButton.get());
+    await act(async () => {
+      await userEvent.click(ccUi.searchByEnterprise.submitButton.get());
+    });
     await waitFor(() => {
       fireEvent.click(
         ccUi.searchByEnterprise.resultLines.carrefour.title.get()

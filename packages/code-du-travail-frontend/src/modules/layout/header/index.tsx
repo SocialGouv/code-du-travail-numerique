@@ -228,13 +228,33 @@ export const Header = () => {
           ],
         },
         {
-          text: "Conventions collectives",
-          linkProps: {
-            href: "/convention-collective",
-          },
+          text: "Conventions collectives & Accords d'entreprise",
           isActive:
             currentPath === "/convention-collective" ||
-            currentPath.startsWith("/convention-collective/"),
+            currentPath.startsWith("/convention-collective/") ||
+            currentPath ===
+              "/quelles-regles-s-appliquent-dans-votre-entreprise",
+          menuLinks: [
+            {
+              text: "Voir toutes les conventions collectives",
+              iconId: "fr-icon-folder-2-line",
+              linkProps: {
+                href: "/convention-collective",
+              },
+            },
+            {
+              text: "Trouver les textes applicables à votre entreprise",
+              linkProps: {
+                href: "/outils/convention-collective",
+              },
+            },
+            {
+              text: "Comprendre le rôle de ces textes",
+              linkProps: {
+                href: "/quelles-regles-s-appliquent-dans-votre-entreprise",
+              },
+            },
+          ],
         },
       ]}
     />
