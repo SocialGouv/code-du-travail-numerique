@@ -12,6 +12,7 @@ import { useEnterpriseAgreementSearchTracking } from "./tracking";
 import { TrackingAgreementSearchAction } from "../../convention-collective/tracking";
 import { Agreement } from "src/modules/outils/indemnite-depart/types";
 import { AccessibleAlert } from "src/modules/outils/common/components/AccessibleAlert";
+import { AccordsEntreprise } from "./accords";
 
 type Props = {
   enterprise: Omit<Enterprise, "complements">;
@@ -30,6 +31,7 @@ export const EnterpriseAgreementSelectionLink = ({
   const { emitSelectEnterpriseAgreementEvent } =
     useEnterpriseAgreementSearchTracking();
   const agreementPlurial = enterprise.conventions.length > 1 ? "s" : "";
+
   return (
     <>
       <EnterpriseAgreementSelectionDetail
@@ -102,6 +104,11 @@ export const EnterpriseAgreementSelectionLink = ({
             />
           );
         }
+      )}
+      {enterprise.firstMatchingEtablissement?.siret && (
+        <AccordsEntreprise
+          siret={enterprise.firstMatchingEtablissement?.siret}
+        />
       )}
       <div className={fr.cx("fr-mt-2w")}>
         <Button
