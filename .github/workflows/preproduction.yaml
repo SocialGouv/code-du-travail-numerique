@@ -50,6 +50,8 @@ jobs:
             ELASTICSEARCH_USER=${{ secrets.ELASTICSEARCH_USER }}
             ELASTICSEARCH_PASSWORD=${{ secrets.ELASTICSEARCH_PASSWORD }}
             ELASTICSEARCH_URL=${{ secrets.ELASTICSEARCH_URL }}
+            OAUTH_CLIENT_ID=${{ secrets.OAUTH_CLIENT_ID }}
+            OAUTH_CLIENT_SECRET=${{ secrets.OAUTH_CLIENT_SECRET }}
           build-args: |
             NEXT_PUBLIC_CDTN_ENV=preproduction
             NEXT_PUBLIC_IS_PREPRODUCTION_DEPLOYMENT=true
