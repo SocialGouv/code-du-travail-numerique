@@ -14,7 +14,10 @@ const esClientConfig: ClientOptions = {
   node: ELASTICSEARCH_URL,
 };
 
+console.log("Connecting to elasticsearch at", ELASTICSEARCH_URL);
+
 if (ELASTICSEARCH_USER && ELASTICSEARCH_PASSWORD) {
+  console.log("Using basic auth");
   esClientConfig.auth = {
     username: ELASTICSEARCH_USER,
     password: ELASTICSEARCH_PASSWORD,
@@ -22,6 +25,7 @@ if (ELASTICSEARCH_USER && ELASTICSEARCH_PASSWORD) {
 }
 
 if (ELASTICSEARCH_TOKEN_API) {
+  console.log("Using token api");
   esClientConfig.auth = { apiKey: ELASTICSEARCH_TOKEN_API };
 }
 
