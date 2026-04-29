@@ -50,6 +50,7 @@ export const searchWithQuery = async (
 
   // check prequalified requests : to be removed soon
   const prequalifiedResults = withPQ ? await getPrequalifiedResults(query) : [];
+  // const prequalifiedResults = [];
 
   const mappedPrequa: SearchResult[] = prequalifiedResults.map(
     esDocToSearchResult(SEARCH_ALGO.PREQUA)
@@ -62,6 +63,7 @@ export const searchWithQuery = async (
   // if not enough prequalified results, we also trigger ES search
   if (removeDuplicate(documents).length < size) {
     const docReq = getSearchBody(query, size, sources);
+    // console.log(JSON.stringify(docReq, null, 2));
     const fulltextHits: SearchResult[] = await elasticsearchClient
       .search<unknown>({
         index: elasticDocumentsIndex,
