@@ -266,7 +266,7 @@ Soit par les usages pratiqués dans la localité…",
       "title": "L1237-2",
     },
     {
-      "_score": 37.530304,
+      "_score": 35.43836,
       "action": "Calculer",
       "algo": "fulltext",
       "breadcrumbs": [
@@ -283,7 +283,7 @@ Soit par les usages pratiqués dans la localité…",
       "title": "Heures d'absence pour rechercher un emploi",
     },
     {
-      "_score": 32.205956,
+      "_score": 31.3753,
       "algo": "fulltext",
       "breadcrumbs": [
         {
