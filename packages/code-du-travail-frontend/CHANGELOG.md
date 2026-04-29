@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.227.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.226.0...v4.227.0) (2026-04-29)
+
+
+### Bug Fixes
+
+* ajout de logs pour la connection ES ([29bedcd](https://github.com/SocialGouv/code-du-travail-numerique/commit/29bedcd14182cc251e7f7a83fc46f50c66e294b3))
+* **search:** fix exact match for theme presearch ([#7247](https://github.com/SocialGouv/code-du-travail-numerique/issues/7247)) ([aa24274](https://github.com/SocialGouv/code-du-travail-numerique/commit/aa24274081cc0bd5779db0a3e675dafee7039551))
+* **search:** update ES query in order to boost contrib [#7229](https://github.com/SocialGouv/code-du-travail-numerique/issues/7229) [#7217](https://github.com/SocialGouv/code-du-travail-numerique/issues/7217) ([#7246](https://github.com/SocialGouv/code-du-travail-numerique/issues/7246)) ([90a77db](https://github.com/SocialGouv/code-du-travail-numerique/commit/90a77db6ca194f9bdc20fce66e7389ed4ecabe05))
+* utilisation de l'ES interne pour la preprod ([b4c4a45](https://github.com/SocialGouv/code-du-travail-numerique/commit/b4c4a45bba3fd16857476b89317255b01caa2aec))
+
+
+### Features
+
+* migration vers une instance interne d'ES ([#7256](https://github.com/SocialGouv/code-du-travail-numerique/issues/7256)) ([1af3ef3](https://github.com/SocialGouv/code-du-travail-numerique/commit/1af3ef353d9d3002f15b699789cbd3d9d2a720be))
+* **quoi-de-neuf:** mise en avant de la page quoi de neuf. ([#7249](https://github.com/SocialGouv/code-du-travail-numerique/issues/7249)) ([b47439e](https://github.com/SocialGouv/code-du-travail-numerique/commit/b47439e52ff6404116255daad13ae4255c02ee38))
+
+
+
+
+
 # [4.226.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.225.0...v4.226.0) (2026-04-23)
 
 
