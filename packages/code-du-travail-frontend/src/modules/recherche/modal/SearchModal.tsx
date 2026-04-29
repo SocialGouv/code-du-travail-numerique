@@ -6,16 +6,27 @@ import { css } from "@styled-system/css";
 import { ModalSearchHandle, SearchInput } from "./SearchInput";
 import { SearchResults } from "./SearchResults";
 import { useCallback, useEffect, useRef, useState } from "react";
+import { usePathname } from "next/navigation";
 import { HintList } from "./HintList";
 import { useSearchResults } from "../hooks/useSearchResults";
 import { useHints } from "../hooks/useHints";
 import useScrollBlock from "../../utils/useScrollBlock";
 import { useBreakpoints } from "src/modules/common/useBreakpoints";
+import { SearchResult } from "src/api";
+import {
+  consumeSearchSnapshot,
+  saveSearchSnapshot,
+  SearchSnapshotFocusTarget,
+} from "../hooks/searchSnapshot";
 
 interface SearchModalProps {
   isOpen: boolean;
   onClose: () => void;
 }
+
+const MODAL_SEE_ALL_BUTTON_ID = "search-see-all-button-modal";
+const modalResultCardId = (cdtnId: string) =>
+  `search-result-card-modal-${cdtnId}`;
 
 export const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
   const modalSearchRef = useRef<ModalSearchHandle>(null);
@@ -26,6 +37,10 @@ export const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
   const [blockScroll, allowScroll] = useScrollBlock();
   const { isBelow } = useBreakpoints();
   const [pendingFocus, setPendingFocus] = useState(false);
+  const [initialQuery, setInitialQuery] = useState<string | undefined>();
+  const [pendingRestoreFocus, setPendingRestoreFocus] =
+    useState<SearchSnapshotFocusTarget | null>(null);
+  const pathname = usePathname();
 
   const {
     definition,
@@ -36,6 +51,7 @@ export const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
     hasSearched,
     triggerSearch,
     resetSearch,
+    hydrate,
     setQuery,
   } = useSearchResults();
 
@@ -50,23 +66,47 @@ export const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
     setPendingFocus(true);
   };
 
-  // Handle focus after search completes
+  // Handle focus after a fresh (non-restored) search completes.
   useEffect(() => {
+    if (pendingRestoreFocus) return;
     if (pendingFocus && hasSearched && !isLoading) {
       setPendingFocus(false);
       if (results.length > 0) {
-        // Focus on results title if there are results
         setTimeout(() => {
           resultsTitleRef.current?.focus();
         }, 100);
       } else {
-        // Keep focus on input when there are no results
         setTimeout(() => {
           modalSearchRef.current?.focusInput();
         }, 100);
       }
     }
-  }, [pendingFocus, hasSearched, isLoading, results.length]);
+  }, [
+    pendingFocus,
+    hasSearched,
+    isLoading,
+    results.length,
+    pendingRestoreFocus,
+  ]);
+
+  // Move focus to the previously-selected target after restored content renders.
+  useEffect(() => {
+    if (!pendingRestoreFocus) return;
+    if (!hasSearched || isLoading) return;
+
+    const focusTimer = window.setTimeout(() => {
+      const target =
+        pendingRestoreFocus.kind === "see-all"
+          ? document.getElementById(MODAL_SEE_ALL_BUTTON_ID)
+          : document.getElementById(
+              modalResultCardId(pendingRestoreFocus.cdtnId)
+            );
+      target?.focus();
+      setPendingRestoreFocus(null);
+    }, 150);
+
+    return () => window.clearTimeout(focusTimer);
+  }, [pendingRestoreFocus, hasSearched, isLoading, results.length]);
 
   const handleClose = useCallback(
     (shouldFocusSearchButton = true) => {
@@ -98,18 +138,41 @@ export const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
     }
   }, [isOpen, fetchHintsData, blockScroll, allowScroll]);
 
+  // When the modal opens, either hydrate from a matching snapshot (back
+  // navigation) or reset to a fresh search and focus the input.
   useEffect(() => {
-    if (isOpen) {
-      resetSearch();
-      const focusTimer = setTimeout(() => {
-        modalSearchRef.current?.focusInput();
-      }, 100);
+    if (!isOpen) return;
 
-      return () => {
-        clearTimeout(focusTimer);
-      };
+    const snapshot = consumeSearchSnapshot(
+      (s) =>
+        s.origin === "modal" &&
+        s.originPath === pathname &&
+        s.results.length > 0
+    );
+
+    if (snapshot) {
+      hydrate({
+        query: snapshot.query,
+        definition: snapshot.definition,
+        results: snapshot.results,
+        queryClass: snapshot.queryClass,
+        lastPresearchQuery: snapshot.lastPresearchQuery,
+      });
+      setInitialQuery(snapshot.query);
+      setPendingRestoreFocus(snapshot.focusTarget);
+      return;
     }
-  }, [isOpen, resetSearch]);
+
+    resetSearch();
+    setInitialQuery(undefined);
+    const focusTimer = setTimeout(() => {
+      modalSearchRef.current?.focusInput();
+    }, 100);
+
+    return () => {
+      clearTimeout(focusTimer);
+    };
+  }, [isOpen, pathname, resetSearch, hydrate]);
 
   // Handle Escape key - only close modal if autocomplete dropdown is not open
   useEffect(() => {
@@ -117,9 +180,7 @@ export const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
 
     const handleEscape = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
-        // Check if autocomplete dropdown is open
         if (modalSearchRef.current?.isAutocompleteOpen()) {
-          // Let the autocomplete handle this escape first
           return;
         }
         handleClose();
@@ -163,6 +224,36 @@ export const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
     return () => document.removeEventListener("keydown", handleTab);
   }, [isOpen, hasSearched, results.length]);
 
+  const buildSnapshotBase = (normalizedQuery: string) => ({
+    origin: "modal" as const,
+    originPath: pathname ?? undefined,
+    query: normalizedQuery,
+    definition,
+    results,
+    queryClass,
+    lastPresearchQuery,
+  });
+
+  const handleBeforeSeeAllNavigation = (normalizedQuery: string) => {
+    if (results.length === 0) return;
+    saveSearchSnapshot({
+      ...buildSnapshotBase(normalizedQuery),
+      focusTarget: { kind: "see-all" },
+    });
+  };
+
+  const handleResultClick = (result: SearchResult) => {
+    if (!result.cdtnId) {
+      handleClose(false);
+      return;
+    }
+    saveSearchSnapshot({
+      ...buildSnapshotBase(lastPresearchQuery ?? ""),
+      focusTarget: { kind: "result", cdtnId: result.cdtnId },
+    });
+    handleClose(false);
+  };
+
   if (!isOpen) return null;
 
   return (
@@ -193,6 +284,7 @@ export const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
           </div>
 
           <SearchInput
+            key={`modal-${initialQuery ?? "__fresh__"}`}
             ref={modalSearchRef}
             onClose={handleClose}
             onSearchTriggered={triggerSearch}
@@ -206,6 +298,8 @@ export const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
             noResultMessageRef={noResultMessageRef}
             queryClass={queryClass}
             lastPresearchQuery={lastPresearchQuery}
+            initialQuery={initialQuery}
+            onBeforeSeeAllNavigation={handleBeforeSeeAllNavigation}
           />
 
           {!hasSearched && (
@@ -221,7 +315,7 @@ export const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
               definition={definition}
               results={results}
               queryClass={queryClass}
-              onResultClick={() => handleClose(false)}
+              onResultClick={handleResultClick}
               contextType="modal"
               titleRef={resultsTitleRef}
             />

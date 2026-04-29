@@ -33,6 +33,7 @@ interface ModalSearchProps {
   noResultMessageRef?: React.RefObject<HTMLParagraphElement | null>;
   queryClass?: PresearchClass;
   lastPresearchQuery?: string;
+  onBeforeSeeAllNavigation?: (normalizedQuery: string) => void;
 }
 
 export interface ModalSearchHandle {
@@ -59,6 +60,7 @@ export const SearchInput = forwardRef<ModalSearchHandle, ModalSearchProps>(
       noResultMessageRef,
       queryClass = undefined,
       lastPresearchQuery = undefined,
+      onBeforeSeeAllNavigation,
     },
     ref
   ) => {
@@ -90,6 +92,7 @@ export const SearchInput = forwardRef<ModalSearchHandle, ModalSearchProps>(
           : undefined;
 
       emitClickSeeAllResultsEvent(normalizedQuery, classForTracking);
+      onBeforeSeeAllNavigation?.(normalizedQuery);
       router.push(`/recherche?query=${encodeURIComponent(normalizedQuery)}`);
       onClose?.();
     };
@@ -200,6 +203,7 @@ export const SearchInput = forwardRef<ModalSearchHandle, ModalSearchProps>(
                 id={inputId}
                 search={search}
                 displayLabel={(item: string | null) => item ?? ""}
+                defaultValue={initialQuery || undefined}
                 highlightQuery={true}
                 label="Rechercher"
                 hideLabel={true}
@@ -238,6 +242,7 @@ export const SearchInput = forwardRef<ModalSearchHandle, ModalSearchProps>(
               type="button"
               onClick={handleSearch}
               className={searchButton}
+              id={`search-see-all-button-${contextType}`}
             >
               Voir tous les résultats
             </Button>
