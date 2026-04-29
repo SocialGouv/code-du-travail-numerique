@@ -10,7 +10,7 @@ interface Props {
   definition: SearchResultResponse["definition"];
   results: SearchResultResponse["results"];
   queryClass: SearchResultResponse["class"];
-  onResultClick?: () => void;
+  onResultClick?: (result: SearchResult) => void;
   contextType: "home" | "modal";
   titleRef?: React.RefObject<HTMLHeadingElement | null>;
 }
@@ -33,7 +33,7 @@ export const SearchResults = ({
   const handleResultClick = (result: SearchResult, queryClass: string) => {
     emitSelectPresearchResultEvent(result, queryClass);
     if (onResultClick) {
-      onResultClick();
+      onResultClick(result);
     }
   };
 
@@ -86,6 +86,11 @@ export const SearchResults = ({
             <SearchResultCard
               result={result}
               onClick={() => handleResultClick(result, queryClass)}
+              id={
+                result.cdtnId
+                  ? `search-result-card-${contextType}-${result.cdtnId}`
+                  : undefined
+              }
             />
           </li>
         ))}

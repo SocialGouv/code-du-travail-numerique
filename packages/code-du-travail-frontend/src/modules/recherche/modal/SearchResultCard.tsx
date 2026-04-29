@@ -14,9 +14,10 @@ import { useABTestVariant } from "@socialgouv/matomo-next";
 type Props = {
   result: SearchResult;
   onClick?: () => void;
+  id?: string;
 };
 
-export const SearchResultCard = ({ result, onClick }: Props) => {
+export const SearchResultCard = ({ result, onClick, id }: Props) => {
   const isExternal = result.source === "external" && Boolean(result.url);
   const href = generateSearchLink(
     result.source,
@@ -36,6 +37,7 @@ export const SearchResultCard = ({ result, onClick }: Props) => {
       target={isExternal ? "_blank" : undefined}
       rel={isExternal ? "noopener noreferrer" : undefined}
       title={isExternal ? result.title : undefined}
+      id={id}
     >
       <div className={cardContainer}>
         <div className={`${fr.cx("fr-mb-1w")} ${badgeContainer}`}>
