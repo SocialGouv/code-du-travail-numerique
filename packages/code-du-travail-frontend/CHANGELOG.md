@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.228.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.227.0...v4.228.0) (2026-04-30)
+
+
+### Features
+
+* ajout d'un quizz sur le code du travail ([#7261](https://github.com/SocialGouv/code-du-travail-numerique/issues/7261)) ([4678d5e](https://github.com/SocialGouv/code-du-travail-numerique/commit/4678d5e36ffe48649a59ff6b262696e77dfd5d4e))
+* **recherche:** sauvegarde du state sur les navigations back/forward ([#7255](https://github.com/SocialGouv/code-du-travail-numerique/issues/7255)) ([35baf4b](https://github.com/SocialGouv/code-du-travail-numerique/commit/35baf4b1c90387d74270c09b8180c7aaa2263308))
+
+
+
+
+
 # [4.227.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.226.0...v4.227.0) (2026-04-29)
 
 
