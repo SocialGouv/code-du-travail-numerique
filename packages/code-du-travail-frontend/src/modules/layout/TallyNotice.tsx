@@ -4,9 +4,19 @@ import { fr } from "@codegouvfr/react-dsfr";
 import Script from "next/script";
 import { css } from "@styled-system/css";
 
-type TallyNoticeProps = { id?: string; wording: string };
+type TallyNoticeProps = {
+  id?: string;
+  wording: string;
+  buttonText: string;
+  buttonIcon: string;
+};
 
-export const TallyNotice = ({ id, wording }: TallyNoticeProps) => {
+export const TallyNotice = ({
+  id,
+  wording,
+  buttonText,
+  buttonIcon,
+}: TallyNoticeProps) => {
   if (!id) return undefined;
   return (
     <>
@@ -25,7 +35,7 @@ export const TallyNotice = ({ id, wording }: TallyNoticeProps) => {
             className={fr.cx(
               "fr-notice__title",
               "fr-col-12",
-              "fr-col-md-8",
+              "fr-col-md-4",
               "fr-my-1w"
             )}
           >
@@ -41,7 +51,7 @@ export const TallyNotice = ({ id, wording }: TallyNoticeProps) => {
               "fr-col-md-3",
               "fr-text--middle",
               "fr-btn--icon-left",
-              "fr-icon-draft-fill"
+              buttonIcon
             )} ${respondButtonStyles}`}
             data-tally-open={id}
             data-tally-width="700"
@@ -51,7 +61,7 @@ export const TallyNotice = ({ id, wording }: TallyNoticeProps) => {
             aria-haspopup="dialog"
             aria-expanded="false"
           >
-            Répondre
+            {buttonText}
           </button>
         </div>
       </div>
