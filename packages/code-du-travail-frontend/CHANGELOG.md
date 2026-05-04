@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.228.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.228.0...v4.228.1) (2026-05-04)
+
+
+### Bug Fixes
+
+* mise à jour des tests e2e ([#7267](https://github.com/SocialGouv/code-du-travail-numerique/issues/7267)) ([80fffc0](https://github.com/SocialGouv/code-du-travail-numerique/commit/80fffc02b91ccadac57ae5888c3c6c9eb88f2185))
+* **search:** slightly reduce boost on tools ([#7266](https://github.com/SocialGouv/code-du-travail-numerique/issues/7266)) ([ce780b0](https://github.com/SocialGouv/code-du-travail-numerique/commit/ce780b0f835c58350fbd8d3e032925ebf9267bd1))
+
+
+
+
+
 # [4.228.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.227.0...v4.228.0) (2026-04-30)
 
 
