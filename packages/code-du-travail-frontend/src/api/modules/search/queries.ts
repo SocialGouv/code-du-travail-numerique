@@ -255,6 +255,7 @@ export function getSearchBody(query, size, sources) {
           {
             match: {
               source: {
+                boost: 0.8,
                 query: SOURCES.TOOLS,
               },
             },
