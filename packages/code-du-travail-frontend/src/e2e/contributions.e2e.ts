@@ -65,7 +65,7 @@ test.describe("Contributions", () => {
       "/contribution/la-periode-dessai-peut-elle-etre-renouvelee"
     );
     await expect(page.getByRole("heading", { level: 1 })).toHaveText(
-      "Renouvellement de la période d'essai"
+      "Renouvellement de la période d'essai : comment faire ? quelles conditions ? "
     );
 
     await page

@@ -2,7 +2,15 @@ import { expect, test } from "@playwright/test";
 
 test.describe("Pages integration convention collective", () => {
   test("should display iframe convention collective", async ({ page }) => {
+    const frameNavigationPromise = page.waitForEvent("framenavigated", (f) =>
+      f.url().includes("/widgets/convention-collective")
+    );
+
     await page.goto("/integration/convention-collective");
+
+    // Attendre que l'iframe soit chargée et hydratée
+    const widgetFrame = await frameNavigationPromise;
+    await widgetFrame.waitForLoadState("networkidle");
 
     const iframe = page.frameLocator(
       'iframe[src*="/widgets/convention-collective"]'
@@ -19,10 +27,9 @@ test.describe("Pages integration convention collective", () => {
       "Nom de votre entreprise ou numéro Siren/Siret"
     );
 
-    await inputSiret.fill("carrefour");
+    await inputSiret.pressSequentially("carrefour");
 
     await iframe.getByRole("button", { name: "Rechercher" }).click();
-
     await iframe.getByText("CARREFOUR HYPERMARCHES", { exact: true }).click();
     await iframe
       .getByText("Commerce de détail et de gros à prédominance alimentaire")

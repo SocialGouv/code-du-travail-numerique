@@ -16,7 +16,9 @@ test.describe("Contributions", () => {
     expect(await h3s.count()).toBeGreaterThanOrEqual(1);
 
     await page
-      .getByRole("link", { name: "Durée maximale d'un CDD" })
+      .getByRole("link", {
+        name: "CDD : quelle est la durée maximale ? Combien de renouvellements ?",
+      })
       .first()
       .click();
 
