@@ -59,10 +59,7 @@ export function AgreementContainer({ agreement, relatedItems }: Props) {
         answers={agreement.answers}
         agreementSlug={agreement.slug}
       />
-      <AgreementArticles
-        articlesByTheme={agreement.articlesByTheme}
-        containerId={agreement.id}
-      />
+      <AgreementArticles articlesByTheme={agreement.articlesByTheme} />
 
       {agreement.url ? (
         <LegiFranceSearch

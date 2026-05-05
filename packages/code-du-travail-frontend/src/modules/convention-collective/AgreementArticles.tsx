@@ -8,7 +8,6 @@ import Link from "../common/Link";
 
 type Props = {
   articlesByTheme: ElasticAgreement["articlesByTheme"];
-  containerId: string;
 };
 
 const BLOCKS = {
@@ -31,7 +30,7 @@ const BLOCKS = {
   9: { label: "Egalité professionnelle femme-homme" },
 };
 
-export function AgreementArticles({ articlesByTheme, containerId }: Props) {
+export function AgreementArticles({ articlesByTheme }: Props) {
   if (!articlesByTheme || articlesByTheme.length === 0) {
     return null;
   }
@@ -111,7 +110,7 @@ export function AgreementArticles({ articlesByTheme, containerId }: Props) {
                     data-testid={`agreement-article-item-${article.id}`}
                   >
                     <Link
-                      href={`https://legifrance.gouv.fr/conv_coll/id/${article.id}/?idConteneur=${containerId}`}
+                      href={`https://legifrance.gouv.fr/conv_coll/id/${article.id}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       title={`Article ${article.title} : ${article.section}`}
