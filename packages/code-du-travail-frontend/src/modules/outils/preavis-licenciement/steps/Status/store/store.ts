@@ -38,6 +38,25 @@ const createStatusStore: StoreSliceWrapperPreavisLicenciement<
         };
       });
     },
+    onInaptitudeNonProChange: (value: boolean) => {
+      set((state) => {
+        const newInput = {
+          ...state.statusData.input,
+          inaptitudeNonPro: value,
+        };
+        const { errorState, isValid } = validateStatusStepWithState(newInput);
+
+        return {
+          ...state,
+          statusData: {
+            ...state.statusData,
+            input: newInput,
+            error: errorState,
+            isStepValid: isValid,
+          },
+        };
+      });
+    },
     onDisabledWorkerChange: (value: boolean) => {
       set((state) => {
         const newInput = { ...state.statusData.input, disabledWorker: value };

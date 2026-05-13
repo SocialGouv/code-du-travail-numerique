@@ -7,12 +7,14 @@ export type Seniority =
 
 export type StatusStoreInput = {
   seriousMisconduct?: boolean;
+  inaptitudeNonPro?: boolean;
   disabledWorker?: boolean;
   seniority?: Seniority;
 };
 
 export type StatusStoreError = {
   seriousMisconduct?: string;
+  inaptitudeNonPro?: string;
   disabledWorker?: string;
   seniority?: string;
 };
@@ -28,6 +30,7 @@ export type StatusStoreData = StepData<StatusStoreInput, StatusStoreError>;
 
 export type StatusStoreFunction = {
   onSeriousMisconductChange: (value: boolean) => void;
+  onInaptitudeNonProChange: (value: boolean) => void;
   onDisabledWorkerChange: (value: boolean) => void;
   onSeniorityChange: (value: Seniority) => void;
   onNextStep: () => ValidationResponse;

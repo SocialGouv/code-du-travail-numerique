@@ -23,6 +23,7 @@ const ResultStepComponent = () => {
     errorPublicodes,
     isDisabledWorker,
     isSeriousMisconduct,
+    isInaptitudeNonPro,
     seniority,
     publicodesLegalResult,
     publicodesAgreementResult,
@@ -39,6 +40,7 @@ const ResultStepComponent = () => {
     errorPublicodes: state.resultData.error.errorPublicodes,
     isDisabledWorker: state.statusData.input.disabledWorker,
     isSeriousMisconduct: state.statusData.input.seriousMisconduct,
+    isInaptitudeNonPro: state.statusData.input.inaptitudeNonPro,
     seniority: state.statusData.input.seniority,
     publicodesLegalResult: state.resultData.input.publicodesLegalResult,
     publicodesAgreementResult: state.resultData.input.publicodesAgreementResult,
@@ -89,6 +91,7 @@ const ResultStepComponent = () => {
         agreement={agreement}
         isDisabledWorker={isDisabledWorker}
         isSeriousMisconduct={isSeriousMisconduct}
+        isInaptitudeNonPro={isInaptitudeNonPro}
         seniority={seniority}
       />
       <ReferenceJuridiques references={resultReferences || []} />
