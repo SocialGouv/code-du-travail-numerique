@@ -9,6 +9,12 @@ export const validateStatusStepWithState = (input: StatusStoreInput) => {
         : input.seriousMisconduct === true
           ? "Pas de préavis en cas de faute grave"
           : undefined,
+    inaptitudeNonPro:
+      input.inaptitudeNonPro === undefined
+        ? "Veuillez indiquer si le licenciement est dû à une inaptitude d'origine non professionnelle"
+        : input.inaptitudeNonPro === true
+          ? "Pas de préavis en d'inaptitude d'origine non professionnelle"
+          : undefined,
     disabledWorker:
       input.seriousMisconduct === false && input.disabledWorker === undefined
         ? "Veuillez indiquer si le salarié est travailleur handicapé"
@@ -24,6 +30,7 @@ export const validateStatusStepWithState = (input: StatusStoreInput) => {
   return {
     isValid: deepEqualObject(errorState, {
       seriousMisconduct: undefined,
+      inaptitudeNonPro: undefined,
       disabledWorker: undefined,
       seniority: undefined,
     }),

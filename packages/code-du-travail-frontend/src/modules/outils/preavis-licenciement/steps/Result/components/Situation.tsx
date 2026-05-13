@@ -6,6 +6,7 @@ import { sanitizePublicodesValue } from "src/modules/outils/common/publicodes";
 
 type Props = {
   isSeriousMisconduct?: boolean;
+  isInaptitudeNonPro?: boolean;
   isDisabledWorker?: boolean;
   seniority?: string;
   situations: Array<PublicodesInformation>;
@@ -18,6 +19,7 @@ const Situation: React.FC<Props> = ({
   isDisabledWorker,
   seniority,
   isSeriousMisconduct,
+  isInaptitudeNonPro,
 }) => {
   return (
     <>
@@ -32,6 +34,10 @@ const Situation: React.FC<Props> = ({
         <li data-testid="situation-serious-misconduct">
           Licenciement pour faute grave :{" "}
           <strong>{isSeriousMisconduct ? "Oui" : "Non"}</strong>
+        </li>
+        <li data-testid="situation-inaptitude-non-pro">
+          Licenciement pour inaptitude non professionnelle :{" "}
+          <strong>{isInaptitudeNonPro ? "Oui" : "Non"}</strong>
         </li>
         {isDisabledWorker && (
           <li data-testid="situation-disabled-worker">

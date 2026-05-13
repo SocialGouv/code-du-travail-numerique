@@ -12,6 +12,8 @@ export const ui = {
   situation: {
     fauteGraveOui: byTestId("seriousMisconduct-Oui"),
     fauteGraveNon: byTestId("seriousMisconduct-Non"),
+    inaptitudeNonProOui: byTestId("inaptitudePro-Oui"),
+    inaptitudeNonProNon: byTestId("inaptitudePro-Non"),
     handicapOui: byTestId("disabledWorker-Oui"),
     handicapNon: byTestId("disabledWorker-Non"),
     seniority: byTestId("seniority"),

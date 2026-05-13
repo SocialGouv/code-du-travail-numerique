@@ -47,8 +47,25 @@ describe("SimulateurPreavisLicenciement - Sans Convention Collective", () => {
       expect(ui.next.get()).toBeDisabled();
     });
 
-    it("Scénario licenciement sans faute grave - salarié handicapé", () => {
+    it("Scénario licenciement pour inaptitude non pro - bouton désactivé", () => {
       fireEvent.click(ui.situation.fauteGraveNon.get());
+      fireEvent.click(ui.situation.inaptitudeNonProOui.get());
+
+      expect(ui.situation.inaptitudeNonProOui.get()).toBeChecked();
+
+      expect(
+        screen.getByText(
+          "Pas de préavis en cas d’inaptitude d’origine non professionnelle"
+        )
+      ).toBeInTheDocument();
+
+      // Le bouton suivant reste désactivé pour faute grave
+      expect(ui.next.get()).toBeDisabled();
+    });
+
+    it("Scénario licenciement salarié handicapé", () => {
+      fireEvent.click(ui.situation.fauteGraveNon.get());
+      fireEvent.click(ui.situation.inaptitudeNonProNon.get());
 
       expect(ui.situation.fauteGraveNon.get()).toBeChecked();
 
@@ -84,8 +101,9 @@ describe("SimulateurPreavisLicenciement - Sans Convention Collective", () => {
       ).toBeInTheDocument();
     });
 
-    it("Scénario licenciement sans faute grave - salarié non handicapé", () => {
+    it("Scénario licenciement salarié non handicapé", () => {
       fireEvent.click(ui.situation.fauteGraveNon.get());
+      fireEvent.click(ui.situation.inaptitudeNonProNon.get());
       fireEvent.click(ui.situation.handicapNon.get());
 
       expect(ui.situation.handicapNon.get()).toBeChecked();
@@ -107,6 +125,7 @@ describe("SimulateurPreavisLicenciement - Sans Convention Collective", () => {
   describe("Étape - Convention collective", () => {
     beforeEach(() => {
       fireEvent.click(ui.situation.fauteGraveNon.get());
+      fireEvent.click(ui.situation.inaptitudeNonProNon.get());
       fireEvent.click(ui.situation.handicapNon.get());
       fireEvent.change(ui.situation.seniority.get(), {
         target: { value: "'Plus de 2 ans'" },
@@ -133,6 +152,7 @@ describe("SimulateurPreavisLicenciement - Sans Convention Collective", () => {
   describe("Étape - Résultat", () => {
     beforeEach(() => {
       fireEvent.click(ui.situation.fauteGraveNon.get());
+      fireEvent.click(ui.situation.inaptitudeNonProNon.get());
       fireEvent.click(ui.situation.handicapNon.get());
       fireEvent.change(ui.situation.seniority.get(), {
         target: { value: "'Plus de 2 ans'" },
@@ -169,7 +189,12 @@ describe("SimulateurPreavisLicenciement - Sans Convention Collective", () => {
       // Vérifie les valeurs affichées
       expect(screen.getByText("Plus de 2 ans")).toBeInTheDocument();
       expect(ui.result.get()).toHaveTextContent("2 mois");
-      expect(screen.getByText("Non")).toBeInTheDocument(); // pour faute grave
+      expect(
+        screen.getByTestId("situation-serious-misconduct")
+      ).toHaveTextContent("Non");
+      expect(
+        screen.getByTestId("situation-inaptitude-non-pro")
+      ).toHaveTextContent("Non");
       expect(screen.getByText("Code du travail")).toBeInTheDocument();
     });
 
@@ -181,6 +206,7 @@ describe("SimulateurPreavisLicenciement - Sans Convention Collective", () => {
   describe("Étape - Résultat (si handicapé)", () => {
     it("devrait afficher le bon résultat", () => {
       fireEvent.click(ui.situation.fauteGraveNon.get());
+      fireEvent.click(ui.situation.inaptitudeNonProNon.get());
       fireEvent.click(ui.situation.handicapOui.get());
       fireEvent.change(ui.situation.seniority.get(), {
         target: { value: "'Plus de 2 ans'" },
