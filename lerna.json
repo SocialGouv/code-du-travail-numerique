@@ -7,6 +7,6 @@
     }
   },
   "npmClient": "pnpm",
-  "version": "4.228.2",
+  "version": "4.228.3",
   "$schema": "node_modules/lerna/schemas/lerna-schema.json"
 }
