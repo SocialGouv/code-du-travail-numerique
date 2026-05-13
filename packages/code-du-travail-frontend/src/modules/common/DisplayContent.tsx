@@ -6,6 +6,7 @@ import parse, {
   Text,
 } from "html-react-parser";
 import React, { ElementType, JSX } from "react";
+import { v4 as generateUUID } from "uuid";
 import { AccordionWithAnchor } from "./AccordionWithAnchor";
 
 import { fr } from "@codegouvfr/react-dsfr";
@@ -52,11 +53,11 @@ const mapToAccordion = (
       <AccordionWithAnchor
         {...props}
         data-testid="contrib-accordion"
-        items={items.map((item, index) => ({
+        items={items.map((item) => ({
           ...item,
           ...(isParent
             ? { id: slugify(item.title) }
-            : { id: slugify(item.title) + "_" + index }),
+            : { id: slugify(item.title) + "_" + generateUUID() }),
         }))}
         titleAs={`h${titleLevel}`}
       />
