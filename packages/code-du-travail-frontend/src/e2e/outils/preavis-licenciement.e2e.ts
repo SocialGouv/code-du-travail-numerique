@@ -20,10 +20,23 @@ test.describe("Outil - Préavis de licenciement", () => {
 
     await expect(
       page.getByText(
-        "Le salarié concerné est-il reconnu en tant que travailleur handicapé"
+        "Le licenciement est-il dû à une inaptitude d'origine non professionnelle ?"
+      )
+    ).toBeVisible();
+    await page.locator("label").filter({ hasText: /^Oui$/ }).nth(1).click();
+    await expect(
+      page.getByText(
+        "Pas de préavis en cas d’inaptitude d’origine non professionnelle"
       )
     ).toBeVisible();
     await page.locator("label").filter({ hasText: /^Non$/ }).nth(1).click();
+
+    await expect(
+      page.getByText(
+        "Le salarié concerné est-il reconnu en tant que travailleur handicapé"
+      )
+    ).toBeVisible();
+    await page.locator("label").filter({ hasText: /^Non$/ }).nth(2).click();
 
     await expect(
       page.getByText("Quelle est l'ancienneté du salarié ?")
@@ -66,6 +79,7 @@ test.describe("Outil - Préavis de licenciement", () => {
     // Questions
     await page.locator("label").filter({ hasText: /^Non$/ }).first().click();
     await page.locator("label").filter({ hasText: /^Non$/ }).nth(1).click();
+    await page.locator("label").filter({ hasText: /^Non$/ }).nth(2).click();
     await page.locator('[id="input-seniority"]').selectOption("2 ans et plus");
     await page.getByRole("button", { name: "Suivant" }).click();
 

@@ -49,8 +49,8 @@ importers:
         specifier: link:../code-du-travail-utils
         version: link:../code-du-travail-utils
       '@socialgouv/matomo-next':
-        specifier: ^1.11.0
-        version: 1.11.0(next@16.1.6(@babel/core@7.29.0)(@opentelemetry/api@1.9.0)(@playwright/test@1.58.2)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(sass@1.97.3))
+        specifier: ^1.13.1
+        version: 1.13.1(next@16.1.6(@babel/core@7.29.0)(@opentelemetry/api@1.9.0)(@playwright/test@1.58.2)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(sass@1.97.3))(react@19.2.4)
       '@socialgouv/modeles-social':
         specifier: link:../code-du-travail-modeles
         version: link:../code-du-travail-modeles
@@ -2490,10 +2490,12 @@ packages:
   '@socialgouv/cdtn-types@2.71.0':
     resolution: {integrity: sha512-iI5AfIbk1uoogIcE0TKN5D0cT+NCNv+KNST6dlYLA9ytU55G7AFWXsf/nBPMtPoVZPHicO1fe9gm/VKLM8YkFg==}
 
-  '@socialgouv/matomo-next@1.11.0':
-    resolution: {integrity: sha512-48XLGnq4LzwOHf2wgm76UXFnGGKOKeOal4+QHeewQH+VY/gxJiIZ1k0o8LuUvKOHThW5Mqco8yAGNe25f7s28g==}
+  '@socialgouv/matomo-next@1.13.1':
+    resolution: {integrity: sha512-X1772JUsZmGVFfE+rG2k+eWelW1HcEUqq6J8YxviKX4nRDh/jS0Royjft1vKMYPEEdTLrLJK/gvIftq6Rwk+ng==}
+    engines: {node: '>=24.0.0', pnpm: '>=10.0.0'}
     peerDependencies:
-      next: '>= 9.5.5'
+      next: '>= 13.0.0'
+      react: '>= 18.0.0'
 
   '@swc/cli@0.7.10':
     resolution: {integrity: sha512-QQ36Q1VwGTT2YzvMeNe/j1x4DKS277DscNhWc57dIwQn//C+zAgvuSupMB/XkmYqPKQX+8hjn5/cHRJrMvWy0Q==}
@@ -10180,9 +10182,10 @@ snapshots:
 
   '@socialgouv/cdtn-types@2.71.0': {}
 
-  '@socialgouv/matomo-next@1.11.0(next@16.1.6(@babel/core@7.29.0)(@opentelemetry/api@1.9.0)(@playwright/test@1.58.2)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(sass@1.97.3))':
+  '@socialgouv/matomo-next@1.13.1(next@16.1.6(@babel/core@7.29.0)(@opentelemetry/api@1.9.0)(@playwright/test@1.58.2)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(sass@1.97.3))(react@19.2.4)':
     dependencies:
       next: 16.1.6(@babel/core@7.29.0)(@opentelemetry/api@1.9.0)(@playwright/test@1.58.2)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(sass@1.97.3)
+      react: 19.2.4
 
   '@swc/cli@0.7.10(@swc/core@1.15.11(@swc/helpers@0.5.18))(chokidar@4.0.3)':
     dependencies:

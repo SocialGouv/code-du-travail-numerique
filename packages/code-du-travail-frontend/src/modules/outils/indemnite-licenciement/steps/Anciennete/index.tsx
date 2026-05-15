@@ -1,5 +1,5 @@
 import { fr } from "@codegouvfr/react-dsfr";
-import React, { useContext, useEffect } from "react";
+import { useContext, useEffect } from "react";
 import { TextQuestion } from "src/modules/outils/common/components";
 import { AccessibleAlert } from "src/modules/outils/common/components/AccessibleAlert";
 import {
@@ -7,6 +7,7 @@ import {
   useIndemniteDepartStore,
 } from "src/modules/outils/indemnite-depart/store";
 import { AncienneteDisplay } from "../../../indemnite-depart/steps";
+import { shouldShowDateSortie } from "../../../indemnite-depart/utils/question";
 
 const StepAnciennete = () => {
   const store = useContext(IndemniteDepartContext);
@@ -21,6 +22,7 @@ const StepAnciennete = () => {
     errorDateNotification,
     errorDateSortie,
     errorDateEntree,
+    agreement,
     ancienneteEstimee,
     errorPublicodes,
   } = useIndemniteDepartStore(store, (state) => ({
@@ -65,16 +67,18 @@ const StepAnciennete = () => {
           id="dateNotification"
           dataTestId={"date-notification"}
         />
-        <TextQuestion
-          label="Quelle est la date de fin du préavis de licenciement (date de fin du contrat)&nbsp;?"
-          inputType="date"
-          value={dateSortie}
-          onChange={onChangeDateSortie}
-          error={errorDateSortie}
-          id="dateSortie"
-          dataTestId={"date-sortie"}
-          subLabel="En cas de dispense de préavis à l'initiative de l'employeur, ou si le licenciement intervient à la suite d'un avis d'inaptitude non professionnelle, indiquer la date de fin du préavis « théorique » non effectué."
-        />
+        {shouldShowDateSortie(agreement) && (
+          <TextQuestion
+            label="Quelle est la date de fin du préavis de licenciement (date de fin du contrat)&nbsp;?"
+            inputType="date"
+            value={dateSortie}
+            onChange={onChangeDateSortie}
+            error={errorDateSortie}
+            id="dateSortie"
+            dataTestId={"date-sortie"}
+            subLabel="En cas de dispense de préavis à l'initiative de l'employeur, ou si le licenciement intervient à la suite d'un avis d'inaptitude non professionnelle, indiquer la date de fin du préavis « théorique » non effectué."
+          />
+        )}
         <AncienneteDisplay anciennete={ancienneteEstimee} />
       </div>
       {errorPublicodes && (

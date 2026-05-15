@@ -80,11 +80,15 @@ COPY packages/code-du-travail-frontend ./packages/code-du-travail-frontend/
 RUN --mount=type=cache,id=next-cache,target=/tmp/.next-cache \
   --mount=type=secret,id=SENTRY_AUTH_TOKEN \
   --mount=type=secret,id=ELASTICSEARCH_TOKEN_API \
+  --mount=type=secret,id=ELASTICSEARCH_USER \
+  --mount=type=secret,id=ELASTICSEARCH_PASSWORD \
   --mount=type=secret,id=ELASTICSEARCH_URL \
   sh -ce ' \
   cp -a /tmp/.next-cache packages/code-du-travail-frontend/.next/cache 2>/dev/null || true && \
   if [ -f /run/secrets/SENTRY_AUTH_TOKEN ]; then export SENTRY_AUTH_TOKEN="$(cat /run/secrets/SENTRY_AUTH_TOKEN)"; fi; \
   if [ -f /run/secrets/ELASTICSEARCH_TOKEN_API ]; then export ELASTICSEARCH_TOKEN_API="$(cat /run/secrets/ELASTICSEARCH_TOKEN_API)"; fi; \
+  if [ -f /run/secrets/ELASTICSEARCH_USER ]; then export ELASTICSEARCH_USER="$(cat /run/secrets/ELASTICSEARCH_USER)"; fi; \
+  if [ -f /run/secrets/ELASTICSEARCH_PASSWORD ]; then export ELASTICSEARCH_PASSWORD="$(cat /run/secrets/ELASTICSEARCH_PASSWORD)"; fi; \
   if [ -f /run/secrets/ELASTICSEARCH_URL ]; then export ELASTICSEARCH_URL="$(cat /run/secrets/ELASTICSEARCH_URL)"; fi; \
   pnpm --filter @cdt/frontend run build && \
   rm -rf /tmp/.next-cache/* && \

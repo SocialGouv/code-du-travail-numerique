@@ -6,8 +6,9 @@ import parse, {
   Text,
 } from "html-react-parser";
 import React, { ElementType, JSX } from "react";
-import { AccordionWithAnchor } from "./AccordionWithAnchor";
 import { v4 as generateUUID } from "uuid";
+import { AccordionWithAnchor } from "./AccordionWithAnchor";
+
 import { fr } from "@codegouvfr/react-dsfr";
 import Link from "./Link";
 import { slugify } from "@socialgouv/cdtn-utils";
@@ -40,7 +41,11 @@ const mapItem = (params: Options, domNode: Element, summary: Element) => ({
     trim: true,
   }),
 });
-const mapToAccordion = (titleLevel: numberLevel, isParent: boolean, items) => {
+const mapToAccordion = (
+  titleLevel: numberLevel,
+  isParent: boolean,
+  items: any[]
+) => {
   const props = titleLevel <= 6 ? { titleLevel } : {};
 
   return (
@@ -329,7 +334,7 @@ const options = (params: Options): HTMLReactParserOptions => {
                 titleAs={`h${titleLevel}`}
                 items={[
                   {
-                    id: `infographic-description-${Math.random().toString(36).substring(2, 15)}`,
+                    id: `infographic-description-${infoId}`,
                     title: "Lire la description",
                     content: (
                       <>

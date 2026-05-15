@@ -1,19 +1,23 @@
+"use client";
+
 import { fr } from "@codegouvfr/react-dsfr";
 import { css } from "@styled-system/css";
 import Link from "src/modules/common/Link";
 import {
+  badgeColorClasses,
   generateSearchLink,
   getSourceLabel,
-  badgeColorClasses,
 } from "../utils";
 import { SearchResult } from "src/api";
+import { useABTestVariant } from "@socialgouv/matomo-next";
 
 type Props = {
   result: SearchResult;
   onClick?: () => void;
+  id?: string;
 };
 
-export const SearchResultCard = ({ result, onClick }: Props) => {
+export const SearchResultCard = ({ result, onClick, id }: Props) => {
   const isExternal = result.source === "external" && Boolean(result.url);
   const href = generateSearchLink(
     result.source,
@@ -22,6 +26,7 @@ export const SearchResultCard = ({ result, onClick }: Props) => {
     result.parentSlug
   );
   const hasHash = href.includes("#");
+  const variant = useABTestVariant("LabelCardSearch");
 
   return (
     <Link
@@ -32,11 +37,12 @@ export const SearchResultCard = ({ result, onClick }: Props) => {
       target={isExternal ? "_blank" : undefined}
       rel={isExternal ? "noopener noreferrer" : undefined}
       title={isExternal ? result.title : undefined}
+      id={id}
     >
       <div className={cardContainer}>
         <div className={`${fr.cx("fr-mb-1w")} ${badgeContainer}`}>
           <span className={`${badgeBase} ${badgeColorClasses[result.source]}`}>
-            {getSourceLabel(result.source)}
+            {getSourceLabel(result.source, variant)}
           </span>
         </div>
         <span

@@ -80,9 +80,9 @@ exports[`<Footer /> should match snapshot 1`] = `
                 <li>
                   <a
                     class="fr-footer__top-link"
-                    href="/glossaire"
+                    href="/quoi-de-neuf"
                   >
-                    Glossaire
+                    Quoi de neuf sur le Code du travail numérique ?
                   </a>
                 </li>
                 <li>

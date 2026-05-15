@@ -1,6 +1,6 @@
 {
   "name": "@cdt/frontend",
-  "version": "4.225.0",
+  "version": "4.228.3",
   "description": "Code du travail frontend",
   "private": true,
   "homepage": "https://code-du-travail.beta.gouv.fr/",
@@ -41,7 +41,7 @@
     "@socialgouv/cdtn-elasticsearch": "^2.72.1",
     "@socialgouv/cdtn-types": "^2.71.0",
     "@socialgouv/cdtn-utils": "link:../code-du-travail-utils",
-    "@socialgouv/matomo-next": "^1.11.0",
+    "@socialgouv/matomo-next": "^1.13.1",
     "@socialgouv/modeles-social": "link:../code-du-travail-modeles",
     "date-fns": "^4.1.0",
     "debounce-promise": "^3.1.2",

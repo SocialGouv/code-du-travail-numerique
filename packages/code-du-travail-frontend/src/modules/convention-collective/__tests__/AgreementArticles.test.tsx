@@ -18,19 +18,13 @@ jest.mock("../../common/AccordionWithAnchor", () => ({
 }));
 
 describe("AgreementArticles", () => {
-  const containerId = "container-123";
-
   it("should render nothing when articlesByTheme is undefined", () => {
-    const { container } = render(
-      <AgreementArticles articlesByTheme={[]} containerId={containerId} />
-    );
+    const { container } = render(<AgreementArticles articlesByTheme={[]} />);
     expect(container).toBeEmptyDOMElement();
   });
 
   it("should render nothing when articlesByTheme is empty", () => {
-    const { container } = render(
-      <AgreementArticles articlesByTheme={[]} containerId={containerId} />
-    );
+    const { container } = render(<AgreementArticles articlesByTheme={[]} />);
     expect(container).toBeEmptyDOMElement();
   });
 
@@ -66,12 +60,7 @@ describe("AgreementArticles", () => {
       },
     ];
 
-    render(
-      <AgreementArticles
-        articlesByTheme={articlesByTheme}
-        containerId={containerId}
-      />
-    );
+    render(<AgreementArticles articlesByTheme={articlesByTheme} />);
 
     expect(
       screen.getByTestId("agreement-articles-container")
@@ -108,12 +97,7 @@ describe("AgreementArticles", () => {
       },
     ];
 
-    const { container } = render(
-      <AgreementArticles
-        articlesByTheme={articlesByTheme}
-        containerId={containerId}
-      />
-    );
+    render(<AgreementArticles articlesByTheme={articlesByTheme} />);
 
     // Render the component
     expect(

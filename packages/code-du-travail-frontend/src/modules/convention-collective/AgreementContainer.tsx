@@ -33,6 +33,7 @@ export function AgreementContainer({ agreement, relatedItems }: Props) {
       relatedItems={relatedItems}
       title={agreement.shortTitle}
       description={agreement.metaDescription}
+      showWhatsNewLink={true}
     >
       <h1 data-testid="agreement-title">{agreement.shortTitle}</h1>
       <p data-testid="agreement-full-title">{agreement.title}</p>
@@ -58,10 +59,7 @@ export function AgreementContainer({ agreement, relatedItems }: Props) {
         answers={agreement.answers}
         agreementSlug={agreement.slug}
       />
-      <AgreementArticles
-        articlesByTheme={agreement.articlesByTheme}
-        containerId={agreement.id}
-      />
+      <AgreementArticles articlesByTheme={agreement.articlesByTheme} />
 
       {agreement.url ? (
         <LegiFranceSearch

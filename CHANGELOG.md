@@ -3,6 +3,94 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.228.3](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.228.2...v4.228.3) (2026-05-13)
+
+
+### Bug Fixes
+
+* **contribution:** ouverture du mauvais accordéon ([#7278](https://github.com/SocialGouv/code-du-travail-numerique/issues/7278)) ([6065ecb](https://github.com/SocialGouv/code-du-travail-numerique/commit/6065ecb19d6234fce6d821b0ebe72000c9c31ab6))
+* **tools:** ajout de l'inaptitude non pro pour le préavis de licenciement ([#7275](https://github.com/SocialGouv/code-du-travail-numerique/issues/7275)) ([bf9ca46](https://github.com/SocialGouv/code-du-travail-numerique/commit/bf9ca4629fa42cacbb8ccb4693ceda61d1f69140))
+
+
+
+
+
+## [4.228.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.228.1...v4.228.2) (2026-05-05)
+
+
+### Bug Fixes
+
+* **convention-collective:** correction de liens morts suite au passage en DSFR de legifrance ([#7271](https://github.com/SocialGouv/code-du-travail-numerique/issues/7271)) ([f315e3c](https://github.com/SocialGouv/code-du-travail-numerique/commit/f315e3cd5c4fb3777e86a00746063ed7bbc6f070))
+
+
+
+
+
+## [4.228.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.228.0...v4.228.1) (2026-05-04)
+
+
+### Bug Fixes
+
+* mise à jour des tests e2e ([#7267](https://github.com/SocialGouv/code-du-travail-numerique/issues/7267)) ([80fffc0](https://github.com/SocialGouv/code-du-travail-numerique/commit/80fffc02b91ccadac57ae5888c3c6c9eb88f2185))
+* **search:** slightly reduce boost on tools ([#7266](https://github.com/SocialGouv/code-du-travail-numerique/issues/7266)) ([ce780b0](https://github.com/SocialGouv/code-du-travail-numerique/commit/ce780b0f835c58350fbd8d3e032925ebf9267bd1))
+
+
+
+
+
+# [4.228.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.227.0...v4.228.0) (2026-04-30)
+
+
+### Features
+
+* ajout d'un quizz sur le code du travail ([#7261](https://github.com/SocialGouv/code-du-travail-numerique/issues/7261)) ([4678d5e](https://github.com/SocialGouv/code-du-travail-numerique/commit/4678d5e36ffe48649a59ff6b262696e77dfd5d4e))
+* **recherche:** sauvegarde du state sur les navigations back/forward ([#7255](https://github.com/SocialGouv/code-du-travail-numerique/issues/7255)) ([35baf4b](https://github.com/SocialGouv/code-du-travail-numerique/commit/35baf4b1c90387d74270c09b8180c7aaa2263308))
+
+
+
+
+
+# [4.227.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.226.0...v4.227.0) (2026-04-29)
+
+
+### Bug Fixes
+
+* ajout de logs pour la connection ES ([29bedcd](https://github.com/SocialGouv/code-du-travail-numerique/commit/29bedcd14182cc251e7f7a83fc46f50c66e294b3))
+* correction de l'URL de l'ES pour la preprod ([b3ec110](https://github.com/SocialGouv/code-du-travail-numerique/commit/b3ec1107e366a0054887372121684d1d526f989d))
+* **search:** fix exact match for theme presearch ([#7247](https://github.com/SocialGouv/code-du-travail-numerique/issues/7247)) ([aa24274](https://github.com/SocialGouv/code-du-travail-numerique/commit/aa24274081cc0bd5779db0a3e675dafee7039551))
+* **search:** update ES query in order to boost contrib [#7229](https://github.com/SocialGouv/code-du-travail-numerique/issues/7229) [#7217](https://github.com/SocialGouv/code-du-travail-numerique/issues/7217) ([#7246](https://github.com/SocialGouv/code-du-travail-numerique/issues/7246)) ([90a77db](https://github.com/SocialGouv/code-du-travail-numerique/commit/90a77db6ca194f9bdc20fce66e7389ed4ecabe05))
+* utilisation de l'ES interne pour la preprod ([b4c4a45](https://github.com/SocialGouv/code-du-travail-numerique/commit/b4c4a45bba3fd16857476b89317255b01caa2aec))
+
+
+### Features
+
+* migration vers une instance interne d'ES ([#7256](https://github.com/SocialGouv/code-du-travail-numerique/issues/7256)) ([1af3ef3](https://github.com/SocialGouv/code-du-travail-numerique/commit/1af3ef353d9d3002f15b699789cbd3d9d2a720be))
+* **quoi-de-neuf:** mise en avant de la page quoi de neuf. ([#7249](https://github.com/SocialGouv/code-du-travail-numerique/issues/7249)) ([b47439e](https://github.com/SocialGouv/code-du-travail-numerique/commit/b47439e52ff6404116255daad13ae4255c02ee38))
+
+
+
+
+
+# [4.226.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.225.0...v4.226.0) (2026-04-23)
+
+
+### Bug Fixes
+
+* **indemnite-licenciement:** cohérence du message dans la description ([#7237](https://github.com/SocialGouv/code-du-travail-numerique/issues/7237)) ([e08be3c](https://github.com/SocialGouv/code-du-travail-numerique/commit/e08be3c00da027cacafd26179c56132416dcec8f))
+* **indemnite-licenciement:** retirer la question sur la date de sortie pour la 3239 ([#7236](https://github.com/SocialGouv/code-du-travail-numerique/issues/7236)) ([61527cb](https://github.com/SocialGouv/code-du-travail-numerique/commit/61527cb8128f5d6f881cbf291c2d3cd6ef7453c7))
+* **sentry:** correction des erreurs remontées par Sentry ([#7225](https://github.com/SocialGouv/code-du-travail-numerique/issues/7225)) ([d425440](https://github.com/SocialGouv/code-du-travail-numerique/commit/d425440cd8147d659e35f0bb51c2c975c2b8b90c))
+
+
+### Features
+
+* **recherche:** mise en place A/B Testing sur les labels pour les contributions. ([#7243](https://github.com/SocialGouv/code-du-travail-numerique/issues/7243)) ([9f6641f](https://github.com/SocialGouv/code-du-travail-numerique/commit/9f6641fc6af55be3e38eaf6820f5b657b7004541))
+* **rgpd:** mise à jour du bandeau cookie. ([#7248](https://github.com/SocialGouv/code-du-travail-numerique/issues/7248)) ([1900e05](https://github.com/SocialGouv/code-du-travail-numerique/commit/1900e05cb83acf97a9ccf933a48aed37dffffc45))
+* **rgpd:** mise en place d'un warning sur la saisie de données personnelles dans les commentaires. ([#7244](https://github.com/SocialGouv/code-du-travail-numerique/issues/7244)) ([a1c0440](https://github.com/SocialGouv/code-du-travail-numerique/commit/a1c04406339c576e60f11b74df6e8c29563f9bba))
+
+
+
+
+
 # [4.225.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.224.0...v4.225.0) (2026-04-10)
 
 

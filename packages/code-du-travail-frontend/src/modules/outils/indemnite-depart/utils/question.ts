@@ -104,3 +104,8 @@ export const generateSmallText = (
     ? undefined
     : "Prendre en compte les primes et avantages en nature.";
 };
+
+export const shouldShowDateSortie = (agreement?: Agreement): boolean => {
+  // Pour la CC 3239 (particuliers employeurs), seule la date de notification compte : la date de fin du préavis n'est pas demandée à l'utilisateur.
+  return agreement?.num !== 3239;
+};

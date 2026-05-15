@@ -224,7 +224,7 @@ export function getSearchBody(query, size, sources) {
           {
             match_phrase: {
               "text.french": {
-                boost: 1.5,
+                boost: 0.5,
                 query: query,
               },
             },
@@ -239,7 +239,7 @@ export function getSearchBody(query, size, sources) {
           {
             match: {
               source: {
-                boost: 1.2,
+                boost: 2,
                 query: SOURCES.CONTRIBUTIONS,
               },
             },
@@ -255,7 +255,7 @@ export function getSearchBody(query, size, sources) {
           {
             match: {
               source: {
-                boost: 1.1,
+                boost: 0.8,
                 query: SOURCES.TOOLS,
               },
             },
@@ -263,7 +263,7 @@ export function getSearchBody(query, size, sources) {
           {
             match: {
               source: {
-                boost: 1.1,
+                boost: 0.8,
                 query: SOURCES.LETTERS,
               },
             },

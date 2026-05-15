@@ -25,6 +25,7 @@ describe("CalculateurPreavisLicenciement", () => {
 
     // Étape 1 : Situation du salarié - Compléter toutes les questions
     fireEvent.click(ui.situation.fauteGraveNon.get());
+    fireEvent.click(ui.situation.inaptitudeNonProNon.get());
     fireEvent.click(ui.situation.handicapNon.get());
     fireEvent.change(ui.situation.seniority.get(), {
       target: { value: "'Moins de 6 mois'" },
