@@ -1,5 +1,8 @@
 "use client";
 import React, { useRef, useState, useEffect } from "react";
+import { Button } from "@codegouvfr/react-dsfr/Button";
+import { fr } from "@codegouvfr/react-dsfr";
+import { useABTestVariant } from "@socialgouv/matomo-next";
 import { useContributionTracking } from "./tracking";
 import { isAgreementSupported, isAgreementValid } from "./contributionUtils";
 import { ContributionGenericContent } from "./ContributionGenericContent";
@@ -10,6 +13,10 @@ import {
 } from "../utils/useLocalStorage";
 import { useRouter } from "next/navigation";
 import { ContributionGenericAgreementSearch } from "./ContributionGenericAgreementSearch";
+import {
+  CONTRIBUTION_AFFICHER_INFO_TEST,
+  ContributionAfficherInfoVariations,
+} from "../config/abTests";
 
 type Props = {
   contribution: Contribution;
@@ -21,6 +28,9 @@ export function ContributionGeneric({ contribution }: Props) {
   const personalizeTitleRef = useRef<HTMLParagraphElement>(null);
   const getTitle = () => `/contribution/${slug}`;
   const { slug, isNoCDT, relatedItems } = contribution;
+  const variant = useABTestVariant(CONTRIBUTION_AFFICHER_INFO_TEST);
+  const isOriginalVariant =
+    variant === ContributionAfficherInfoVariations.ORIGINAL;
 
   const [displayGeneric, setDisplayGeneric] = useState(false);
 
@@ -31,7 +41,9 @@ export function ContributionGeneric({ contribution }: Props) {
     emitAgreementUntreatedEvent,
     emitDisplayAgreementContent,
     emitDisplayGeneralContent,
-  } = useContributionTracking();
+    emitDisplayGenericContent,
+    emitClickP3,
+  } = useContributionTracking(variant);
   const genericTitleRef = useRef<HTMLDivElement>(null);
 
   const scrollToTitle = () => {
@@ -67,6 +79,12 @@ export function ContributionGeneric({ contribution }: Props) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  const showDisplayGenericButton =
+    isOriginalVariant &&
+    !isNoCDT &&
+    !isAgreementValid(contribution, selectedAgreement) &&
+    !displayGeneric;
+
   return (
     <>
       <ContributionGenericAgreementSearch
@@ -97,27 +115,45 @@ export function ContributionGeneric({ contribution }: Props) {
         }}
         selectedAgreement={selectedAgreement}
         trackingActionName={getTitle()}
+        variant={variant}
       />
 
       {!isNoCDT && !isAgreementValid(contribution, selectedAgreement) && (
-        <ContributionGenericContent
-          ref={genericTitleRef}
-          contribution={contribution}
-          relatedItems={relatedItems}
-          displayGeneric={displayGeneric}
-          alertText={
-            selectedAgreement &&
-            !isAgreementSupported(contribution, selectedAgreement) && (
-              <p>
-                <strong>
-                  Cette réponse correspond à ce que prévoit le code du travail,
-                  elle ne tient pas compte des spécificités de la{" "}
-                  {selectedAgreement.shortTitle}
-                </strong>
-              </p>
-            )
-          }
-        />
+        <>
+          {showDisplayGenericButton && (
+            <Button
+              className={fr.cx("fr-mb-6w")}
+              priority="tertiary no outline"
+              onClick={() => {
+                setDisplayGeneric(true);
+                scrollToTitle();
+                emitClickP3(getTitle());
+                emitDisplayGenericContent(getTitle());
+              }}
+            >
+              Afficher les informations sans sélectionner une convention
+              collective
+            </Button>
+          )}
+          <ContributionGenericContent
+            ref={genericTitleRef}
+            contribution={contribution}
+            relatedItems={relatedItems}
+            displayGeneric={displayGeneric}
+            alertText={
+              selectedAgreement &&
+              !isAgreementSupported(contribution, selectedAgreement) && (
+                <p>
+                  <strong>
+                    Cette réponse correspond à ce que prévoit le code du travail,
+                    elle ne tient pas compte des spécificités de la{" "}
+                    {selectedAgreement.shortTitle}
+                  </strong>
+                </p>
+              )
+            }
+          />
+        </>
       )}
     </>
   );

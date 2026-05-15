@@ -1,11 +1,12 @@
 import { act, fireEvent, render, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { sendEvent } from "@socialgouv/matomo-next";
+import { sendEvent, useABTestVariant } from "@socialgouv/matomo-next";
 import { mockAgreementSearch, ui } from "./ui";
 import { ui as ccUi } from "../../convention-collective/__tests__/ui";
 import { byText } from "testing-library-selector";
 import { ContributionGeneric } from "../ContributionGeneric";
 import { Contribution } from "../type";
+import { ContributionAfficherInfoVariations } from "../../config/abTests";
 
 beforeEach(() => {
   localStorage.clear();
@@ -13,7 +14,12 @@ beforeEach(() => {
 
 jest.mock("@socialgouv/matomo-next", () => ({
   sendEvent: jest.fn(),
+  useABTestVariant: jest.fn(() => null),
 }));
+
+const setVariant = (variant: string | null) => {
+  (useABTestVariant as jest.Mock).mockReturnValue(variant);
+};
 
 jest.mock("uuid", () => ({
   v4: jest.fn(() => ""),
@@ -41,6 +47,7 @@ describe("<ContributionGeneric />", () => {
     const ma = sendEvent as jest.MockedFunction<typeof sendEvent>;
     ma.mockReset();
     pushMock.mockClear();
+    setVariant(null);
   });
   const contribution = {
     date: "05/12/2023",
@@ -261,5 +268,105 @@ describe("<ContributionGeneric />", () => {
     fireEvent.click(ui.generic.buttonDisplayInfo.get());
     // No additional event is emitted: click_p3 already captures the intent
     expect(sendEvent).toHaveBeenCalledTimes(1);
+  });
+
+  describe("variante 'radio_button'", () => {
+    beforeEach(() => {
+      setVariant(ContributionAfficherInfoVariations.RADIO_BUTTON);
+    });
+
+    it("suffixe la variante dans les événements quand on sélectionne une CC traitée", async () => {
+      mockAgreementSearch({
+        num: 1388,
+        shortTitle: "Industrie du pétrole",
+        id: "1388",
+      });
+
+      render(<ContributionGeneric contribution={contribution} />);
+      fireEvent.click(ccUi.radio.agreementSearchOption.get());
+      await userEvent.click(ccUi.searchByName.input.get());
+      await userEvent.type(ccUi.searchByName.input.get(), "1388");
+      await waitFor(() =>
+        expect(
+          ccUi.searchByName.autocompleteLines.IDCC1388.name.get()
+        ).toBeInTheDocument()
+      );
+      fireEvent.click(ccUi.searchByName.autocompleteLines.IDCC1388.name.get());
+
+      expect(sendEvent).toHaveBeenCalledWith({
+        action: "click_p1",
+        category: "cc_search_type_of_users",
+        name: "/contribution/my-contrib|variant=radio_button",
+      });
+    });
+  });
+
+  describe("variante 'original'", () => {
+    beforeEach(() => {
+      setVariant(ContributionAfficherInfoVariations.ORIGINAL);
+    });
+
+    it("affiche le bouton externe 'Afficher les infos sans CC' et émet click_p3 + click_afficher_les_informations_sans_CC suffixés", () => {
+      render(<ContributionGeneric contribution={contribution} />);
+
+      expect(ui.generic.radioNoAgreement.query()).not.toBeInTheDocument();
+      expect(ui.generic.buttonDisplayInfoWithoutCc.get()).toBeInTheDocument();
+
+      fireEvent.click(ui.generic.buttonDisplayInfoWithoutCc.get());
+
+      expect(sendEvent).toHaveBeenCalledWith({
+        action: "click_p3",
+        category: "cc_search_type_of_users",
+        name: "/contribution/my-contrib|variant=original",
+      });
+      expect(sendEvent).toHaveBeenCalledWith({
+        action: "click_afficher_les_informations_sans_CC",
+        category: "contribution",
+        name: "/contribution/my-contrib|variant=original",
+      });
+    });
+
+    it("ne bloque pas le clic sur 'Afficher les informations' sans option sélectionnée (pas d'erreur)", () => {
+      render(<ContributionGeneric contribution={contribution} />);
+
+      fireEvent.click(ui.generic.buttonDisplayInfo.get());
+      expect(ui.generic.missingRouteError.query()).not.toBeInTheDocument();
+    });
+  });
+
+  describe("variante 'regular_button'", () => {
+    beforeEach(() => {
+      setVariant(ContributionAfficherInfoVariations.REGULAR_BUTTON);
+    });
+
+    it("affiche 3 boutons à la place des radios", () => {
+      render(<ContributionGeneric contribution={contribution} />);
+
+      expect(ui.generic.buttonAgreement.get()).toBeInTheDocument();
+      expect(ui.generic.buttonEnterprise.get()).toBeInTheDocument();
+      expect(ui.generic.buttonNoAgreement.get()).toBeInTheDocument();
+      expect(ccUi.radio.agreementSearchOption.query()).not.toBeInTheDocument();
+    });
+
+    it("émet click_p3 suffixé de la variante quand on choisit 'Sans CC'", () => {
+      render(<ContributionGeneric contribution={contribution} />);
+
+      fireEvent.click(ui.generic.buttonNoAgreement.get());
+
+      expect(sendEvent).toHaveBeenCalledWith({
+        action: "click_p3",
+        category: "cc_search_type_of_users",
+        name: "/contribution/my-contrib|variant=regular_button",
+      });
+    });
+
+    it("bloque le clic sur 'Afficher les informations' sans bouton sélectionné", () => {
+      render(<ContributionGeneric contribution={contribution} />);
+
+      fireEvent.click(ui.generic.buttonDisplayInfo.get());
+
+      expect(ui.generic.missingRouteError.query()).toBeInTheDocument();
+      expect(sendEvent).toHaveBeenCalledTimes(0);
+    });
   });
 });

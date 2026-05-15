@@ -20,6 +20,7 @@ import Link from "../common/Link";
 import BlueCard from "../common/BlueCard";
 import { AgreementSearchForm } from "../convention-collective/AgreementSearch/AgreementSearchForm";
 import { AccessibleAlert } from "../outils/common/components/AccessibleAlert";
+import { ContributionAfficherInfoVariations } from "../config/abTests";
 
 type Props = {
   onAgreementSelect: (agreement?: Agreement) => void;
@@ -28,10 +29,14 @@ type Props = {
   selectedAgreement?: Agreement;
   trackingActionName: string;
   personalizeTitleRef: React.RefObject<HTMLParagraphElement | null>;
+  variant?: string | null;
 };
 
 const MISSING_ROUTE_ERROR =
   "Veuillez sélectionner l'une des options ci-dessus pour afficher les informations.";
+
+const LEARN_MORE_URL =
+  "https://code-du-travail-numerique-preprod.ovh.fabrique.social.gouv.fr/droit-du-travail";
 
 export function ContributionGenericAgreementSearch({
   contribution,
@@ -40,6 +45,7 @@ export function ContributionGenericAgreementSearch({
   selectedAgreement,
   trackingActionName,
   personalizeTitleRef,
+  variant,
 }: Props) {
   const router = useRouter();
   const { slug, isNoCDT } = contribution;
@@ -48,6 +54,9 @@ export function ContributionGenericAgreementSearch({
     AgreementRoute | undefined
   >();
   const [showMissingRouteError, setShowMissingRouteError] = useState(false);
+
+  const isOriginalVariant =
+    variant === ContributionAfficherInfoVariations.ORIGINAL;
 
   useEffect(() => {
     setIsValid(isAgreementValid(contribution, selectedAgreement));
@@ -141,6 +150,20 @@ export function ContributionGenericAgreementSearch({
           Personnalisez la réponse avec votre convention collective
         </p>
       </div>
+      <p className={fr.cx("fr-text--sm", "fr-mb-2w")}>
+        La convention collective prévoit des règles spécifiques à votre secteur
+        d&apos;activité, qui peuvent être plus avantageuses que le Code du
+        travail.{" "}
+        <Link
+          href={LEARN_MORE_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          title="En savoir plus sur les conventions collectives (nouvelle fenêtre)"
+        >
+          En savoir plus
+        </Link>
+        .
+      </p>
       <div>
         <AgreementSearchForm
           onAgreementSelect={onAgreementSelect}
@@ -154,19 +177,33 @@ export function ContributionGenericAgreementSearch({
             );
             personalizeTitle?.focus();
           }}
-          showNoAgreementOption={!isNoCDT}
-          noAgreementContent={noAgreementBanner}
+          showNoAgreementOption={!isNoCDT && !isOriginalVariant}
+          noAgreementContent={!isOriginalVariant ? noAgreementBanner : undefined}
           onRouteChange={(route) => {
             setSelectedRoute(route);
             setShowMissingRouteError(false);
           }}
           error={showMissingRouteError ? MISSING_ROUTE_ERROR : undefined}
+          variant={variant}
         />
         {isButtonDisplayed && (
           <Button
             className={fr.cx("fr-mt-2w")}
             type="button"
             onClick={(event) => {
+              if (isOriginalVariant) {
+                onDisplayClick(isValid && !!selectedAgreement);
+                if (isValid && selectedAgreement) {
+                  router.push(
+                    slug === "les-conges-pour-evenements-familiaux"
+                      ? `/contribution/${slug}/${selectedAgreement?.slug || selectedAgreement?.num}`
+                      : `/contribution/${selectedAgreement?.num}-${slug}`
+                  );
+                } else {
+                  event.preventDefault();
+                }
+                return;
+              }
               if (!selectedRoute) {
                 event.preventDefault();
                 setShowMissingRouteError(true);
