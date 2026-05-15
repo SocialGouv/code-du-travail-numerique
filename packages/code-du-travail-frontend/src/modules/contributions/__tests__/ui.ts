@@ -1,9 +1,13 @@
-import { byLabelText, byTestId, byText } from "testing-library-selector";
+import { byLabelText, byRole, byTestId, byText } from "testing-library-selector";
 import { searchAgreement } from "../../convention-collective";
 
 export const ui = {
   generic: {
     buttonDisplayInfo: byText(/Afficher les informations$/),
+    buttonDisplayInfoWithoutCc: byText(
+      /Afficher les informations sans sélectionner une convention collective/
+    ),
+    learnMoreLink: byRole("link", { name: /En savoir plus/ }),
     nonTreatedInfo: byText(
       /Cette réponse correspond à ce que prévoit le code du travail/
     ),
@@ -14,6 +18,15 @@ export const ui = {
     radioNoAgreement: byLabelText(
       /Je ne souhaite pas renseigner ma convention collective\./
     ),
+    buttonAgreement: byRole("button", {
+      name: /Je sais quelle est ma convention collective et je la saisis\./,
+    }),
+    buttonEnterprise: byRole("button", {
+      name: /Je cherche mon entreprise pour trouver ma convention collective\./,
+    }),
+    buttonNoAgreement: byRole("button", {
+      name: /Je ne souhaite pas renseigner ma convention collective\./,
+    }),
   },
 };
 export const mockAgreementSearch = (idcc) =>

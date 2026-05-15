@@ -37,6 +37,7 @@ jest.mock("../../convention-collective/search", () => ({
 
 jest.mock("@socialgouv/matomo-next", () => ({
   sendEvent: jest.fn(),
+  useABTestVariant: jest.fn(() => null),
 }));
 
 jest.mock("uuid", () => ({
