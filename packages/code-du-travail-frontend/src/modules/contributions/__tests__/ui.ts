@@ -1,4 +1,9 @@
-import { byLabelText, byRole, byTestId, byText } from "testing-library-selector";
+import {
+  byLabelText,
+  byRole,
+  byTestId,
+  byText,
+} from "testing-library-selector";
 import { searchAgreement } from "../../convention-collective";
 
 export const ui = {
@@ -18,14 +23,14 @@ export const ui = {
     radioNoAgreement: byLabelText(
       /Je ne souhaite pas renseigner ma convention collective\./
     ),
-    buttonAgreement: byRole("button", {
-      name: /Je sais quelle est ma convention collective et je la saisis\./,
+    regularButtonAgreement: byRole("button", {
+      name: /Non, je saisis ma convention collective/,
     }),
-    buttonEnterprise: byRole("button", {
-      name: /Je cherche mon entreprise pour trouver ma convention collective\./,
+    regularButtonEnterprise: byRole("button", {
+      name: /Je cherche par entreprise/,
     }),
-    buttonNoAgreement: byRole("button", {
-      name: /Je ne souhaite pas renseigner ma convention collective\./,
+    regularButtonNoAgreement: byRole("button", {
+      name: /Je veux juste le code du travail/,
     }),
   },
 };

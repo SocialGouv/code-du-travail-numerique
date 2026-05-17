@@ -1,7 +1,5 @@
 "use client";
-import { ButtonsGroup } from "@codegouvfr/react-dsfr/ButtonsGroup";
 import { RadioButtons } from "@codegouvfr/react-dsfr/RadioButtons";
-import { fr } from "@codegouvfr/react-dsfr";
 import { ReactNode, useEffect, useRef, useState } from "react";
 import { AgreementSearchInput } from "./AgreementSearchInput";
 
@@ -28,6 +26,7 @@ type Props = {
   onRouteChange?: (route: AgreementRoute | undefined) => void;
   error?: string;
   variant?: string | null;
+  forcedRoute?: AgreementRoute;
 };
 
 const AGREEMENT_LABEL =
@@ -49,15 +48,22 @@ export const AgreementSearchForm = ({
   onRouteChange,
   error,
   variant,
+  forcedRoute,
 }: Props) => {
   const [selectedRoute, setSelectedRoute] = useState<
     AgreementRoute | undefined
-  >();
+  >(forcedRoute);
   const radioRefs = useRef<(HTMLInputElement | null)[]>([]);
-  const firstButtonRef = useRef<HTMLButtonElement | null>(null);
 
   const isRegularButtonVariant =
     variant === ContributionAfficherInfoVariations.REGULAR_BUTTON;
+
+  useEffect(() => {
+    if (forcedRoute && forcedRoute !== selectedRoute) {
+      setSelectedRoute(forcedRoute);
+      onRouteChange?.(forcedRoute);
+    }
+  }, [forcedRoute]);
 
   useEffect(() => {
     if (defaultAgreement && !selectedRoute) {
@@ -68,14 +74,6 @@ export const AgreementSearchForm = ({
 
   useEffect(() => {
     if (!error) return;
-    if (isRegularButtonVariant) {
-      firstButtonRef.current?.focus();
-      firstButtonRef.current?.scrollIntoView({
-        behavior: "smooth",
-        block: "center",
-      });
-      return;
-    }
     if (radioRefs.current[0]) {
       radioRefs.current[0].focus();
       radioRefs.current[0].scrollIntoView({
@@ -83,7 +81,7 @@ export const AgreementSearchForm = ({
         block: "center",
       });
     }
-  }, [error, isRegularButtonVariant]);
+  }, [error]);
 
   const { emitClickP1, emitClickP2, emitClickP3 } = useContributionTracking(
     variant ?? undefined
@@ -109,66 +107,7 @@ export const AgreementSearchForm = ({
 
   return (
     <>
-      {isRegularButtonVariant ? (
-        <>
-          <p className={fr.cx("fr-mb-1w", "fr-text--md")}>
-            Quel est le nom de la convention collective applicable ?
-          </p>
-          <ButtonsGroup
-            buttonsSize="medium"
-            inlineLayoutWhen="md and up"
-            buttons={[
-              {
-                children: AGREEMENT_LABEL,
-                priority:
-                  selectedRoute === "agreement" ? "primary" : "secondary",
-                type: "button",
-                onClick: onSelectAgreementRoute,
-                nativeButtonProps: {
-                  ref: (el: HTMLButtonElement | null) => {
-                    firstButtonRef.current = el;
-                  },
-                  "aria-pressed": selectedRoute === "agreement",
-                },
-              },
-              {
-                children: ENTERPRISE_LABEL,
-                priority:
-                  selectedRoute === "enterprise" ? "primary" : "secondary",
-                type: "button",
-                onClick: onSelectEnterpriseRoute,
-                nativeButtonProps: {
-                  "aria-pressed": selectedRoute === "enterprise",
-                },
-              },
-              ...(showNoAgreementOption
-                ? [
-                    {
-                      children: NO_AGREEMENT_LABEL,
-                      priority: (selectedRoute === "no-agreement"
-                        ? "primary"
-                        : "secondary") as "primary" | "secondary",
-                      type: "button" as const,
-                      onClick: onSelectNoAgreementRoute,
-                      nativeButtonProps: {
-                        "aria-pressed": selectedRoute === "no-agreement",
-                      },
-                    },
-                  ]
-                : []),
-            ]}
-          />
-          {error && (
-            <p
-              className={fr.cx("fr-error-text", "fr-mt-1w")}
-              role="alert"
-              data-testid="missing-route-error"
-            >
-              {error}
-            </p>
-          )}
-        </>
-      ) : (
+      {!isRegularButtonVariant && (
         <RadioButtons
           legend="Quel est le nom de la convention collective applicable ?"
           state={error ? "error" : "default"}
