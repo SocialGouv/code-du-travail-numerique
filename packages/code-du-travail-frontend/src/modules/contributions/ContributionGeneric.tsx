@@ -11,7 +11,7 @@ import {
   useLocalStorageForAgreementOnPageLoad,
   getAgreementFromLocalStorage,
 } from "../utils/useLocalStorage";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { ContributionGenericAgreementSearch } from "./ContributionGenericAgreementSearch";
 import {
   CONTRIBUTION_AFFICHER_INFO_TEST,
@@ -22,13 +22,23 @@ type Props = {
   contribution: Contribution;
 };
 
+const ALLOWED_VARIANTS = new Set<string>(
+  Object.values(ContributionAfficherInfoVariations)
+);
+
 export function ContributionGeneric({ contribution }: Props) {
   const router = useRouter();
+  const searchParams = useSearchParams();
   const [hash, setHash] = useState("");
   const personalizeTitleRef = useRef<HTMLParagraphElement>(null);
   const getTitle = () => `/contribution/${slug}`;
   const { slug, isNoCDT, relatedItems } = contribution;
-  const variant = useABTestVariant(CONTRIBUTION_AFFICHER_INFO_TEST);
+  const matomoVariant = useABTestVariant(CONTRIBUTION_AFFICHER_INFO_TEST);
+  const variantOverride = searchParams?.get("ab") ?? null;
+  const variant =
+    variantOverride && ALLOWED_VARIANTS.has(variantOverride)
+      ? variantOverride
+      : matomoVariant;
   const isOriginalVariant =
     variant === ContributionAfficherInfoVariations.ORIGINAL;
 
@@ -145,8 +155,8 @@ export function ContributionGeneric({ contribution }: Props) {
               !isAgreementSupported(contribution, selectedAgreement) && (
                 <p>
                   <strong>
-                    Cette réponse correspond à ce que prévoit le code du travail,
-                    elle ne tient pas compte des spécificités de la{" "}
+                    Cette réponse correspond à ce que prévoit le code du
+                    travail, elle ne tient pas compte des spécificités de la{" "}
                     {selectedAgreement.shortTitle}
                   </strong>
                 </p>

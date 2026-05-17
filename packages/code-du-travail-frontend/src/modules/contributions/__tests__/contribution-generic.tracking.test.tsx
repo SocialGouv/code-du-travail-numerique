@@ -30,6 +30,7 @@ const replaceMock = jest.fn();
 jest.mock("next/navigation", () => ({
   redirect: jest.fn(),
   usePathname: jest.fn(),
+  useSearchParams: jest.fn(() => new URLSearchParams()),
   useRouter: () => ({
     push: pushMock,
     replace: replaceMock,
@@ -339,34 +340,41 @@ describe("<ContributionGeneric />", () => {
       setVariant(ContributionAfficherInfoVariations.REGULAR_BUTTON);
     });
 
-    it("affiche 3 boutons à la place des radios", () => {
+    it("masque les radios et affiche la recherche par entreprise par défaut", () => {
       render(<ContributionGeneric contribution={contribution} />);
 
-      expect(ui.generic.buttonAgreement.get()).toBeInTheDocument();
-      expect(ui.generic.buttonEnterprise.get()).toBeInTheDocument();
-      expect(ui.generic.buttonNoAgreement.get()).toBeInTheDocument();
       expect(ccUi.radio.agreementSearchOption.query()).not.toBeInTheDocument();
+      expect(ccUi.radio.enterpriseSearchOption.query()).not.toBeInTheDocument();
+      expect(ccUi.searchByEnterprise.input.get()).toBeInTheDocument();
     });
 
-    it("émet click_p3 suffixé de la variante quand on choisit 'Sans CC'", () => {
+    it("affiche les 3 boutons d'action en bas de la modale", () => {
       render(<ContributionGeneric contribution={contribution} />);
 
-      fireEvent.click(ui.generic.buttonNoAgreement.get());
+      expect(ui.generic.buttonDisplayInfo.get()).toBeInTheDocument();
+      expect(ui.generic.regularButtonAgreement.get()).toBeInTheDocument();
+      expect(ui.generic.regularButtonNoAgreement.get()).toBeInTheDocument();
+    });
+
+    it("bascule vers la saisie manuelle au clic sur 'Non, je saisis ma convention collective'", async () => {
+      render(<ContributionGeneric contribution={contribution} />);
+
+      fireEvent.click(ui.generic.regularButtonAgreement.get());
+
+      expect(ccUi.searchByName.input.get()).toBeInTheDocument();
+      expect(ui.generic.regularButtonEnterprise.get()).toBeInTheDocument();
+    });
+
+    it("émet click_p3 suffixé de la variante au clic sur 'Je veux juste le code du travail'", () => {
+      render(<ContributionGeneric contribution={contribution} />);
+
+      fireEvent.click(ui.generic.regularButtonNoAgreement.get());
 
       expect(sendEvent).toHaveBeenCalledWith({
         action: "click_p3",
         category: "cc_search_type_of_users",
         name: "/contribution/my-contrib|variant=regular_button",
       });
-    });
-
-    it("bloque le clic sur 'Afficher les informations' sans bouton sélectionné", () => {
-      render(<ContributionGeneric contribution={contribution} />);
-
-      fireEvent.click(ui.generic.buttonDisplayInfo.get());
-
-      expect(ui.generic.missingRouteError.query()).toBeInTheDocument();
-      expect(sendEvent).toHaveBeenCalledTimes(0);
     });
   });
 });

@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { Button } from "@codegouvfr/react-dsfr/Button";
+import { ButtonsGroup } from "@codegouvfr/react-dsfr/ButtonsGroup";
 import { fr } from "@codegouvfr/react-dsfr";
 import Image from "next/image";
 import AgreementSearch from "../convention-collective/AgreementSearch.svg";
@@ -21,6 +22,7 @@ import BlueCard from "../common/BlueCard";
 import { AgreementSearchForm } from "../convention-collective/AgreementSearch/AgreementSearchForm";
 import { AccessibleAlert } from "../outils/common/components/AccessibleAlert";
 import { ContributionAfficherInfoVariations } from "../config/abTests";
+import { useContributionTracking } from "./tracking";
 
 type Props = {
   onAgreementSelect: (agreement?: Agreement) => void;
@@ -37,6 +39,12 @@ const MISSING_ROUTE_ERROR =
 
 const LEARN_MORE_URL =
   "https://code-du-travail-numerique-preprod.ovh.fabrique.social.gouv.fr/droit-du-travail";
+
+const REGULAR_BUTTON_AGREEMENT_LABEL =
+  "Non, je saisis ma convention collective";
+const REGULAR_BUTTON_ENTERPRISE_LABEL = "Je cherche par entreprise";
+const REGULAR_BUTTON_NO_AGREEMENT_LABEL =
+  "Je veux juste le code du travail, me saouler pas";
 
 export function ContributionGenericAgreementSearch({
   contribution,
@@ -57,6 +65,14 @@ export function ContributionGenericAgreementSearch({
 
   const isOriginalVariant =
     variant === ContributionAfficherInfoVariations.ORIGINAL;
+  const isRegularButtonVariant =
+    variant === ContributionAfficherInfoVariations.REGULAR_BUTTON;
+
+  const [forcedRoute, setForcedRoute] = useState<AgreementRoute | undefined>(
+    isRegularButtonVariant ? "enterprise" : undefined
+  );
+
+  const { emitClickP3 } = useContributionTracking(variant ?? undefined);
 
   useEffect(() => {
     setIsValid(isAgreementValid(contribution, selectedAgreement));
@@ -130,6 +146,65 @@ export function ContributionGenericAgreementSearch({
 
   const isButtonDisplayed = (isNoCDT && isValid) || !isNoCDT;
 
+  const handleDisplayClick: React.MouseEventHandler<HTMLButtonElement> = (
+    event
+  ) => {
+    if (isOriginalVariant) {
+      onDisplayClick(isValid && !!selectedAgreement);
+      if (isValid && selectedAgreement) {
+        router.push(
+          slug === "les-conges-pour-evenements-familiaux"
+            ? `/contribution/${slug}/${selectedAgreement?.slug || selectedAgreement?.num}`
+            : `/contribution/${selectedAgreement?.num}-${slug}`
+        );
+      } else {
+        event.preventDefault();
+      }
+      return;
+    }
+    if (!selectedRoute) {
+      event.preventDefault();
+      setShowMissingRouteError(true);
+      return;
+    }
+    setShowMissingRouteError(false);
+    if (selectedRoute === "no-agreement") {
+      event.preventDefault();
+      onDisplayClick(false);
+      return;
+    }
+    onDisplayClick(isValid && !!selectedAgreement);
+    if (isValid && selectedAgreement) {
+      router.push(
+        slug === "les-conges-pour-evenements-familiaux"
+          ? `/contribution/${slug}/${selectedAgreement?.slug || selectedAgreement?.num}`
+          : `/contribution/${selectedAgreement?.num}-${slug}`
+      );
+    } else {
+      event.preventDefault();
+    }
+  };
+
+  const onSwitchToAgreementMode = () => {
+    onAgreementSelect();
+    setForcedRoute("agreement");
+    setShowMissingRouteError(false);
+  };
+
+  const onSwitchToEnterpriseMode = () => {
+    onAgreementSelect();
+    setForcedRoute("enterprise");
+    setShowMissingRouteError(false);
+  };
+
+  const onSkipToGeneric = () => {
+    onAgreementSelect();
+    setForcedRoute("no-agreement");
+    setShowMissingRouteError(false);
+    emitClickP3(trackingActionName);
+    onDisplayClick(false);
+  };
+
   return (
     <BlueCard>
       <div className={fr.cx("fr-grid-row")}>
@@ -177,55 +252,75 @@ export function ContributionGenericAgreementSearch({
             );
             personalizeTitle?.focus();
           }}
-          showNoAgreementOption={!isNoCDT && !isOriginalVariant}
-          noAgreementContent={!isOriginalVariant ? noAgreementBanner : undefined}
+          showNoAgreementOption={
+            !isNoCDT && !isOriginalVariant && !isRegularButtonVariant
+          }
+          noAgreementContent={
+            !isOriginalVariant && !isRegularButtonVariant
+              ? noAgreementBanner
+              : undefined
+          }
           onRouteChange={(route) => {
             setSelectedRoute(route);
             setShowMissingRouteError(false);
           }}
-          error={showMissingRouteError ? MISSING_ROUTE_ERROR : undefined}
+          error={
+            !isRegularButtonVariant && showMissingRouteError
+              ? MISSING_ROUTE_ERROR
+              : undefined
+          }
           variant={variant}
+          forcedRoute={isRegularButtonVariant ? forcedRoute : undefined}
         />
-        {isButtonDisplayed && (
+        {isRegularButtonVariant && isButtonDisplayed && (
+          <>
+            <ButtonsGroup
+              className={fr.cx("fr-mt-3w")}
+              buttonsSize="medium"
+              inlineLayoutWhen="md and up"
+              buttons={[
+                {
+                  children: "Afficher les informations",
+                  priority: "primary",
+                  type: "button",
+                  onClick: handleDisplayClick,
+                },
+                {
+                  children:
+                    selectedRoute === "agreement"
+                      ? REGULAR_BUTTON_ENTERPRISE_LABEL
+                      : REGULAR_BUTTON_AGREEMENT_LABEL,
+                  priority: "primary",
+                  type: "button",
+                  onClick:
+                    selectedRoute === "agreement"
+                      ? onSwitchToEnterpriseMode
+                      : onSwitchToAgreementMode,
+                },
+                {
+                  children: REGULAR_BUTTON_NO_AGREEMENT_LABEL,
+                  priority: "primary",
+                  type: "button",
+                  onClick: onSkipToGeneric,
+                },
+              ]}
+            />
+            {showMissingRouteError && (
+              <p
+                className={fr.cx("fr-error-text", "fr-mt-1w")}
+                role="alert"
+                data-testid="missing-route-error"
+              >
+                {MISSING_ROUTE_ERROR}
+              </p>
+            )}
+          </>
+        )}
+        {!isRegularButtonVariant && isButtonDisplayed && (
           <Button
             className={fr.cx("fr-mt-2w")}
             type="button"
-            onClick={(event) => {
-              if (isOriginalVariant) {
-                onDisplayClick(isValid && !!selectedAgreement);
-                if (isValid && selectedAgreement) {
-                  router.push(
-                    slug === "les-conges-pour-evenements-familiaux"
-                      ? `/contribution/${slug}/${selectedAgreement?.slug || selectedAgreement?.num}`
-                      : `/contribution/${selectedAgreement?.num}-${slug}`
-                  );
-                } else {
-                  event.preventDefault();
-                }
-                return;
-              }
-              if (!selectedRoute) {
-                event.preventDefault();
-                setShowMissingRouteError(true);
-                return;
-              }
-              setShowMissingRouteError(false);
-              if (selectedRoute === "no-agreement") {
-                event.preventDefault();
-                onDisplayClick(false);
-                return;
-              }
-              onDisplayClick(isValid && !!selectedAgreement);
-              if (isValid && selectedAgreement) {
-                router.push(
-                  slug === "les-conges-pour-evenements-familiaux"
-                    ? `/contribution/${slug}/${selectedAgreement?.slug || selectedAgreement?.num}`
-                    : `/contribution/${selectedAgreement?.num}-${slug}`
-                );
-              } else {
-                event.preventDefault();
-              }
-            }}
+            onClick={handleDisplayClick}
           >
             Afficher les informations
           </Button>

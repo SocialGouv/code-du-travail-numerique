@@ -50,6 +50,7 @@ const replaceMock = jest.fn();
 jest.mock("next/navigation", () => ({
   redirect: jest.fn(),
   usePathname: jest.fn(),
+  useSearchParams: jest.fn(() => new URLSearchParams()),
   useRouter: () => ({
     push: pushMock,
     replace: replaceMock,
