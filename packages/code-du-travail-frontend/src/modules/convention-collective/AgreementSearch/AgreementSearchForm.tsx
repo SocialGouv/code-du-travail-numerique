@@ -27,6 +27,7 @@ type Props = {
   error?: string;
   variant?: string | null;
   forcedRoute?: AgreementRoute;
+  enterpriseRequireSearchSignal?: number;
 };
 
 const AGREEMENT_LABEL =
@@ -49,6 +50,7 @@ export const AgreementSearchForm = ({
   error,
   variant,
   forcedRoute,
+  enterpriseRequireSearchSignal,
 }: Props) => {
   const [selectedRoute, setSelectedRoute] = useState<
     AgreementRoute | undefined
@@ -174,6 +176,7 @@ export const AgreementSearchForm = ({
           trackingActionName={trackingActionName}
           level={level}
           onBackToPersonalize={onBackToPersonalize}
+          requireSearchSignal={enterpriseRequireSearchSignal}
         />
       )}
       {selectedRoute === "no-agreement" && noAgreementContent}
