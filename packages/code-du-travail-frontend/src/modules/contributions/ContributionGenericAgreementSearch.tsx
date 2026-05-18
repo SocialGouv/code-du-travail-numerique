@@ -44,7 +44,7 @@ const REGULAR_BUTTON_AGREEMENT_LABEL =
   "Non, je saisis ma convention collective";
 const REGULAR_BUTTON_ENTERPRISE_LABEL = "Je cherche par entreprise";
 const REGULAR_BUTTON_NO_AGREEMENT_LABEL =
-  "Je veux juste le code du travail, me saouler pas";
+  "Je veux juste le Code du travail, merci";
 
 export function ContributionGenericAgreementSearch({
   contribution,
@@ -71,6 +71,8 @@ export function ContributionGenericAgreementSearch({
   const [forcedRoute, setForcedRoute] = useState<AgreementRoute | undefined>(
     isRegularButtonVariant ? "enterprise" : undefined
   );
+  const [enterpriseRequireSearchSignal, setEnterpriseRequireSearchSignal] =
+    useState(0);
 
   const { emitClickP3 } = useContributionTracking(variant ?? undefined);
 
@@ -144,7 +146,8 @@ export function ContributionGenericAgreementSearch({
     />
   );
 
-  const isButtonDisplayed = (isNoCDT && isValid) || !isNoCDT;
+  const isButtonDisplayed =
+    isRegularButtonVariant || (isNoCDT && isValid) || !isNoCDT;
 
   const handleDisplayClick: React.MouseEventHandler<HTMLButtonElement> = (
     event
@@ -171,6 +174,15 @@ export function ContributionGenericAgreementSearch({
     if (selectedRoute === "no-agreement") {
       event.preventDefault();
       onDisplayClick(false);
+      return;
+    }
+    if (
+      isRegularButtonVariant &&
+      selectedRoute === "enterprise" &&
+      !selectedAgreement
+    ) {
+      event.preventDefault();
+      setEnterpriseRequireSearchSignal((c) => c + 1);
       return;
     }
     onDisplayClick(isValid && !!selectedAgreement);
@@ -271,6 +283,9 @@ export function ContributionGenericAgreementSearch({
           }
           variant={variant}
           forcedRoute={isRegularButtonVariant ? forcedRoute : undefined}
+          enterpriseRequireSearchSignal={
+            isRegularButtonVariant ? enterpriseRequireSearchSignal : undefined
+          }
         />
         {isRegularButtonVariant && isButtonDisplayed && (
           <>
@@ -290,7 +305,7 @@ export function ContributionGenericAgreementSearch({
                     selectedRoute === "agreement"
                       ? REGULAR_BUTTON_ENTERPRISE_LABEL
                       : REGULAR_BUTTON_AGREEMENT_LABEL,
-                  priority: "primary",
+                  priority: "secondary",
                   type: "button",
                   onClick:
                     selectedRoute === "agreement"
@@ -299,7 +314,7 @@ export function ContributionGenericAgreementSearch({
                 },
                 {
                   children: REGULAR_BUTTON_NO_AGREEMENT_LABEL,
-                  priority: "primary",
+                  priority: "secondary",
                   type: "button",
                   onClick: onSkipToGeneric,
                 },
