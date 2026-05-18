@@ -30,7 +30,7 @@ export const ui = {
       name: /Je cherche par entreprise/,
     }),
     regularButtonNoAgreement: byRole("button", {
-      name: /Je veux juste le code du travail/,
+      name: /Je veux juste le Code du travail/,
     }),
   },
 };
