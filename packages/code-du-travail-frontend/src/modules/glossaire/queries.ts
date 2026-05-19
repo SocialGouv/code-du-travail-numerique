@@ -34,7 +34,7 @@ export const findGlossaryDefinition = (
 
   const fuse = new Fuse(glossaryData, {
     keys: ["term", "variants", "abbreviations"],
-    threshold: 0.3,
+    threshold: 0.15,
     ignoreDiacritics: true,
     includeScore: true,
     ignoreLocation: true,
