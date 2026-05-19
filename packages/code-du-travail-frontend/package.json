@@ -43,6 +43,7 @@
     "@socialgouv/cdtn-utils": "link:../code-du-travail-utils",
     "@socialgouv/matomo-next": "^1.13.1",
     "@socialgouv/modeles-social": "link:../code-du-travail-modeles",
+    "@socialgouv/dila-api-client": "1.2.4",
     "date-fns": "^4.1.0",
     "debounce-promise": "^3.1.2",
     "downshift": "^9.2.0",

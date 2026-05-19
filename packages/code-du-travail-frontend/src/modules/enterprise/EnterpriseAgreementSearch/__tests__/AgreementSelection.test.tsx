@@ -18,6 +18,10 @@ jest.mock("next/navigation", () => ({
   useSearchParams: jest.fn(),
 }));
 
+jest.mock("../accords", () => ({
+  AccordsEntreprise: () => null,
+}));
+
 const defaultEnterprise = {
   activitePrincipale:
     "Location-bail de propriété intellectuelle et de produits similaires, à l’exception des œuvres soumises à copyright",

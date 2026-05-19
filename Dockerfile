@@ -83,6 +83,8 @@ RUN --mount=type=cache,id=next-cache,target=/tmp/.next-cache \
   --mount=type=secret,id=ELASTICSEARCH_USER \
   --mount=type=secret,id=ELASTICSEARCH_PASSWORD \
   --mount=type=secret,id=ELASTICSEARCH_URL \
+  --mount=type=secret,id=OAUTH_CLIENT_ID \
+  --mount=type=secret,id=OAUTH_CLIENT_SECRET \
   sh -ce ' \
   cp -a /tmp/.next-cache packages/code-du-travail-frontend/.next/cache 2>/dev/null || true && \
   if [ -f /run/secrets/SENTRY_AUTH_TOKEN ]; then export SENTRY_AUTH_TOKEN="$(cat /run/secrets/SENTRY_AUTH_TOKEN)"; fi; \
@@ -90,6 +92,8 @@ RUN --mount=type=cache,id=next-cache,target=/tmp/.next-cache \
   if [ -f /run/secrets/ELASTICSEARCH_USER ]; then export ELASTICSEARCH_USER="$(cat /run/secrets/ELASTICSEARCH_USER)"; fi; \
   if [ -f /run/secrets/ELASTICSEARCH_PASSWORD ]; then export ELASTICSEARCH_PASSWORD="$(cat /run/secrets/ELASTICSEARCH_PASSWORD)"; fi; \
   if [ -f /run/secrets/ELASTICSEARCH_URL ]; then export ELASTICSEARCH_URL="$(cat /run/secrets/ELASTICSEARCH_URL)"; fi; \
+  if [ -f /run/secrets/OAUTH_CLIENT_ID ]; then export OAUTH_CLIENT_ID="$(cat /run/secrets/OAUTH_CLIENT_ID)"; fi; \
+  if [ -f /run/secrets/OAUTH_CLIENT_SECRET ]; then export OAUTH_CLIENT_SECRET="$(cat /run/secrets/OAUTH_CLIENT_SECRET)"; fi; \
   pnpm --filter @cdt/frontend run build && \
   rm -rf /tmp/.next-cache/* && \
   cp -a packages/code-du-travail-frontend/.next/cache/. /tmp/.next-cache/ 2>/dev/null || true \

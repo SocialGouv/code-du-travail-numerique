@@ -21,7 +21,7 @@ export const FindAgreementLayout = ({
   return (
     <ContainerSimulatorLight
       relatedItems={relatedItems}
-      title="Trouver sa convention collective"
+      title="Trouver sa convention collective et ses accords d'entreprise"
       description={description}
       segments={[{ label: "Simulateurs", linkProps: { href: "/outils" } }]}
     >
