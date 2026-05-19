@@ -1,5 +1,8 @@
 "use client";
 import React, { useRef, useState, useEffect } from "react";
+import { Button } from "@codegouvfr/react-dsfr/Button";
+import { fr } from "@codegouvfr/react-dsfr";
+import { useABTestVariant } from "@socialgouv/matomo-next";
 import { useContributionTracking } from "./tracking";
 import { isAgreementSupported, isAgreementValid } from "./contributionUtils";
 import { ContributionGenericContent } from "./ContributionGenericContent";
@@ -8,21 +11,36 @@ import {
   useLocalStorageForAgreementOnPageLoad,
   getAgreementFromLocalStorage,
 } from "../utils/useLocalStorage";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { ContributionGenericAgreementSearch } from "./ContributionGenericAgreementSearch";
-import { Button } from "@codegouvfr/react-dsfr/Button";
-import { fr } from "@codegouvfr/react-dsfr";
+import {
+  CONTRIBUTION_AFFICHER_INFO_TEST,
+  ContributionAfficherInfoVariations,
+} from "../config/abTests";
 
 type Props = {
   contribution: Contribution;
 };
 
+const ALLOWED_VARIANTS = new Set<string>(
+  Object.values(ContributionAfficherInfoVariations)
+);
+
 export function ContributionGeneric({ contribution }: Props) {
   const router = useRouter();
+  const searchParams = useSearchParams();
   const [hash, setHash] = useState("");
   const personalizeTitleRef = useRef<HTMLParagraphElement>(null);
   const getTitle = () => `/contribution/${slug}`;
   const { slug, isNoCDT, relatedItems } = contribution;
+  const matomoVariant = useABTestVariant(CONTRIBUTION_AFFICHER_INFO_TEST);
+  const variantOverride = searchParams?.get("ab") ?? null;
+  const variant =
+    variantOverride && ALLOWED_VARIANTS.has(variantOverride)
+      ? variantOverride
+      : matomoVariant;
+  const isOriginalVariant =
+    variant === ContributionAfficherInfoVariations.ORIGINAL;
 
   const [displayGeneric, setDisplayGeneric] = useState(false);
 
@@ -35,7 +53,7 @@ export function ContributionGeneric({ contribution }: Props) {
     emitDisplayGeneralContent,
     emitDisplayGenericContent,
     emitClickP3,
-  } = useContributionTracking();
+  } = useContributionTracking(variant);
   const genericTitleRef = useRef<HTMLDivElement>(null);
 
   const scrollToTitle = () => {
@@ -71,6 +89,12 @@ export function ContributionGeneric({ contribution }: Props) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  const showDisplayGenericButton =
+    isOriginalVariant &&
+    !isNoCDT &&
+    !isAgreementValid(contribution, selectedAgreement) &&
+    !displayGeneric;
+
   return (
     <>
       <ContributionGenericAgreementSearch
@@ -94,8 +118,6 @@ export function ContributionGeneric({ contribution }: Props) {
             scrollToTitle();
             if (selectedAgreement) {
               emitDisplayGeneralContent(getTitle());
-            } else {
-              emitDisplayGenericContent(getTitle());
             }
           } else {
             emitDisplayAgreementContent(getTitle());
@@ -103,11 +125,12 @@ export function ContributionGeneric({ contribution }: Props) {
         }}
         selectedAgreement={selectedAgreement}
         trackingActionName={getTitle()}
+        variant={variant}
       />
 
       {!isNoCDT && !isAgreementValid(contribution, selectedAgreement) && (
         <>
-          {!displayGeneric && (
+          {showDisplayGenericButton && (
             <Button
               className={fr.cx("fr-mb-6w")}
               priority="tertiary no outline"
@@ -115,6 +138,7 @@ export function ContributionGeneric({ contribution }: Props) {
                 setDisplayGeneric(true);
                 scrollToTitle();
                 emitClickP3(getTitle());
+                emitDisplayGenericContent(getTitle());
               }}
             >
               Afficher les informations sans sélectionner une convention

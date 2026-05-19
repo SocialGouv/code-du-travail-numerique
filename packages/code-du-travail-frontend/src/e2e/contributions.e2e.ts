@@ -69,9 +69,10 @@ test.describe("Contributions", () => {
     );
 
     await page
-      .getByRole("button", {
-        name: "Afficher les informations sans sélectionner une convention collective",
-      })
+      .getByLabel("Je ne souhaite pas renseigner ma convention collective.")
+      .check({ force: true });
+    await page
+      .getByRole("button", { name: "Afficher les informations" })
       .click();
     await expect(
       page.getByText(

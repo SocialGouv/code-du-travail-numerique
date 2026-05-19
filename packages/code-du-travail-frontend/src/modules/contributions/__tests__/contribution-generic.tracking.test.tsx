@@ -1,11 +1,12 @@
 import { fireEvent, render, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { sendEvent } from "@socialgouv/matomo-next";
+import { sendEvent, useABTestVariant } from "@socialgouv/matomo-next";
 import { mockAgreementSearch, ui } from "./ui";
 import { ui as ccUi } from "../../convention-collective/__tests__/ui";
 import { byText } from "testing-library-selector";
 import { ContributionGeneric } from "../ContributionGeneric";
 import { Contribution } from "../type";
+import { ContributionAfficherInfoVariations } from "../../config/abTests";
 
 beforeEach(() => {
   localStorage.clear();
@@ -13,7 +14,12 @@ beforeEach(() => {
 
 jest.mock("@socialgouv/matomo-next", () => ({
   sendEvent: jest.fn(),
+  useABTestVariant: jest.fn(() => null),
 }));
+
+const setVariant = (variant: string | null) => {
+  (useABTestVariant as jest.Mock).mockReturnValue(variant);
+};
 
 jest.mock("uuid", () => ({
   v4: jest.fn(() => ""),
@@ -24,6 +30,7 @@ const replaceMock = jest.fn();
 jest.mock("next/navigation", () => ({
   redirect: jest.fn(),
   usePathname: jest.fn(),
+  useSearchParams: jest.fn(() => new URLSearchParams()),
   useRouter: () => ({
     push: pushMock,
     replace: replaceMock,
@@ -43,6 +50,7 @@ describe("<ContributionGeneric />", () => {
     const ma = sendEvent as jest.MockedFunction<typeof sendEvent>;
     ma.mockReset();
     pushMock.mockClear();
+    setVariant(null);
   });
   const contribution = {
     date: "05/12/2023",
@@ -235,32 +243,138 @@ describe("<ContributionGeneric />", () => {
     ]);
   });
 
-  it("afficher les infos - sans CC", async () => {
+  it("afficher les infos - sans radio sélectionné : le clic sur le bouton principal est bloqué et n'envoie aucun évènement", async () => {
     expect(sendEvent).toHaveBeenCalledTimes(0);
 
     render(<ContributionGeneric contribution={contribution} />);
     expect(ui.generic.buttonDisplayInfo.get()).toBeInTheDocument();
     fireEvent.click(ui.generic.buttonDisplayInfo.get());
-    expect(sendEvent).toHaveBeenCalledTimes(1);
-    expect(sendEvent).toHaveBeenLastCalledWith({
-      action: "click_afficher_les_informations_sans_CC",
-      category: "contribution",
-      name: "/contribution/my-contrib",
-    });
+    expect(ui.generic.missingRouteError.query()).toBeInTheDocument();
+    expect(sendEvent).toHaveBeenCalledTimes(0);
   });
 
-  it("voir les infos générales", () => {
+  it("voir les infos générales via l'option « Je ne souhaite pas renseigner ma convention collective »", () => {
     expect(sendEvent).toHaveBeenCalledTimes(0);
 
     render(<ContributionGeneric contribution={contribution} />);
 
-    fireEvent.click(ui.generic.linkDisplayInfo.get());
-
+    fireEvent.click(ui.generic.radioNoAgreement.get());
     expect(sendEvent).toHaveBeenCalledTimes(1);
-    expect(sendEvent).toHaveBeenCalledWith({
+    expect(sendEvent).toHaveBeenLastCalledWith({
       action: "click_p3",
       category: "cc_search_type_of_users",
       name: "/contribution/my-contrib",
+    });
+
+    fireEvent.click(ui.generic.buttonDisplayInfo.get());
+    // No additional event is emitted: click_p3 already captures the intent
+    expect(sendEvent).toHaveBeenCalledTimes(1);
+  });
+
+  describe("variante 'radio_button'", () => {
+    beforeEach(() => {
+      setVariant(ContributionAfficherInfoVariations.RADIO_BUTTON);
+    });
+
+    it("suffixe la variante dans les événements quand on sélectionne une CC traitée", async () => {
+      mockAgreementSearch({
+        num: 1388,
+        shortTitle: "Industrie du pétrole",
+        id: "1388",
+      });
+
+      render(<ContributionGeneric contribution={contribution} />);
+      fireEvent.click(ccUi.radio.agreementSearchOption.get());
+      await userEvent.click(ccUi.searchByName.input.get());
+      await userEvent.type(ccUi.searchByName.input.get(), "1388");
+      await waitFor(() =>
+        expect(
+          ccUi.searchByName.autocompleteLines.IDCC1388.name.get()
+        ).toBeInTheDocument()
+      );
+      fireEvent.click(ccUi.searchByName.autocompleteLines.IDCC1388.name.get());
+
+      expect(sendEvent).toHaveBeenCalledWith({
+        action: "click_p1",
+        category: "cc_search_type_of_users",
+        name: "/contribution/my-contrib|variant=radio_button",
+      });
+    });
+  });
+
+  describe("variante 'original'", () => {
+    beforeEach(() => {
+      setVariant(ContributionAfficherInfoVariations.ORIGINAL);
+    });
+
+    it("affiche le bouton externe 'Afficher les infos sans CC' et émet click_p3 + click_afficher_les_informations_sans_CC suffixés", () => {
+      render(<ContributionGeneric contribution={contribution} />);
+
+      expect(ui.generic.radioNoAgreement.query()).not.toBeInTheDocument();
+      expect(ui.generic.buttonDisplayInfoWithoutCc.get()).toBeInTheDocument();
+
+      fireEvent.click(ui.generic.buttonDisplayInfoWithoutCc.get());
+
+      expect(sendEvent).toHaveBeenCalledWith({
+        action: "click_p3",
+        category: "cc_search_type_of_users",
+        name: "/contribution/my-contrib|variant=original",
+      });
+      expect(sendEvent).toHaveBeenCalledWith({
+        action: "click_afficher_les_informations_sans_CC",
+        category: "contribution",
+        name: "/contribution/my-contrib|variant=original",
+      });
+    });
+
+    it("ne bloque pas le clic sur 'Afficher les informations' sans option sélectionnée (pas d'erreur)", () => {
+      render(<ContributionGeneric contribution={contribution} />);
+
+      fireEvent.click(ui.generic.buttonDisplayInfo.get());
+      expect(ui.generic.missingRouteError.query()).not.toBeInTheDocument();
+    });
+  });
+
+  describe("variante 'regular_button'", () => {
+    beforeEach(() => {
+      setVariant(ContributionAfficherInfoVariations.REGULAR_BUTTON);
+    });
+
+    it("masque les radios et affiche la recherche par entreprise par défaut", () => {
+      render(<ContributionGeneric contribution={contribution} />);
+
+      expect(ccUi.radio.agreementSearchOption.query()).not.toBeInTheDocument();
+      expect(ccUi.radio.enterpriseSearchOption.query()).not.toBeInTheDocument();
+      expect(ccUi.searchByEnterprise.input.get()).toBeInTheDocument();
+    });
+
+    it("affiche les 3 boutons d'action en bas de la modale", () => {
+      render(<ContributionGeneric contribution={contribution} />);
+
+      expect(ui.generic.buttonDisplayInfo.get()).toBeInTheDocument();
+      expect(ui.generic.regularButtonAgreement.get()).toBeInTheDocument();
+      expect(ui.generic.regularButtonNoAgreement.get()).toBeInTheDocument();
+    });
+
+    it("bascule vers la saisie manuelle au clic sur 'Non, je saisis ma convention collective'", async () => {
+      render(<ContributionGeneric contribution={contribution} />);
+
+      fireEvent.click(ui.generic.regularButtonAgreement.get());
+
+      expect(ccUi.searchByName.input.get()).toBeInTheDocument();
+      expect(ui.generic.regularButtonEnterprise.get()).toBeInTheDocument();
+    });
+
+    it("émet click_p3 suffixé de la variante au clic sur 'Je veux juste le code du travail'", () => {
+      render(<ContributionGeneric contribution={contribution} />);
+
+      fireEvent.click(ui.generic.regularButtonNoAgreement.get());
+
+      expect(sendEvent).toHaveBeenCalledWith({
+        action: "click_p3",
+        category: "cc_search_type_of_users",
+        name: "/contribution/my-contrib|variant=regular_button",
+      });
     });
   });
 });

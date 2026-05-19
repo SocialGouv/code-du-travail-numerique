@@ -37,6 +37,7 @@ type Props = {
   isInSimulator?: boolean;
   canContinueSimulationIfNoAgreement?: boolean;
   onBackToPersonalize?: () => void;
+  requireSearchSignal?: number;
 };
 
 export const EnterpriseAgreementSearchInput = ({
@@ -52,6 +53,7 @@ export const EnterpriseAgreementSearchInput = ({
   isInSimulator,
   canContinueSimulationIfNoAgreement,
   onBackToPersonalize,
+  requireSearchSignal,
 }: Props) => {
   const [selectedAgreement, setSelectedAgreement] = useState<
     Agreement | undefined
@@ -79,8 +81,8 @@ export const EnterpriseAgreementSearchInput = ({
   const [error, setError] = useState("");
   const resultRef = useRef<HTMLHeadingElement>(null);
   const selectedConventionTitleRef = useRef<HTMLParagraphElement>(null);
+  const searchInputRef = useRef<HTMLInputElement>(null);
   const TitleTag = `h${level}` as "h2" | "h3";
-  const SubtitleTag = `h${level + 1}` as "h3" | "h4";
 
   const getStateMessage = () => {
     switch (searchState) {
@@ -189,6 +191,18 @@ export const EnterpriseAgreementSearchInput = ({
       setSelectedEnterprise(enterprise);
     }
   }, [enterprise]);
+
+  useEffect(() => {
+    if (!requireSearchSignal) return;
+    if (search) return;
+    setSearchState("required");
+    searchInputRef.current?.focus();
+    searchInputRef.current?.scrollIntoView({
+      behavior: "smooth",
+      block: "center",
+    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [requireSearchSignal]);
 
   if (
     onAgreementSelect &&
@@ -348,6 +362,7 @@ export const EnterpriseAgreementSearchInput = ({
           state={getInputState()}
           stateRelatedMessage={getStateMessage()}
           nativeInputProps={{
+            ref: searchInputRef,
             value: search,
             onChange: (event) => {
               setSearch(event.target.value);
