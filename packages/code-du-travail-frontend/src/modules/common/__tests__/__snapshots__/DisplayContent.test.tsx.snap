@@ -628,7 +628,9 @@ exports[`DisplayContent Tables should add thead to table if not present and move
                 colspan="1"
                 rowspan="1"
               >
-                <p>
+                <p
+                  class="fr-mt-2w"
+                >
                   Pour les 
                   <strong>
                     cadres
@@ -640,9 +642,13 @@ exports[`DisplayContent Tables should add thead to table if not present and move
                 colspan="1"
                 rowspan="1"
               >
-                <ul>
+                <ul
+                  class="fr-pl-5v"
+                >
                   <li>
-                    <p>
+                    <p
+                      class="fr-mb-0"
+                    >
                       L’employeur et le salarié donnent par écrit ou par mail.
                     </p>
                   </li>
@@ -803,7 +809,9 @@ exports[`DisplayContent Tables should render correctly a table with multiple hea
                 >
                   
         
-                  <p>
+                  <p
+                    class="fr-mt-2w"
+                  >
                     Remplacement d’un salarié absent ou dont le contrat de travail est suspendu
                   </p>
                   
@@ -815,7 +823,9 @@ exports[`DisplayContent Tables should render correctly a table with multiple hea
                 >
                   
         
-                  <p>
+                  <p
+                    class="fr-mt-2w"
+                  >
                     18 mois
                   </p>
                   
@@ -827,7 +837,9 @@ exports[`DisplayContent Tables should render correctly a table with multiple hea
                 >
                   
         
-                  <p>
+                  <p
+                    class="fr-mt-2w"
+                  >
                     Fin de l’absence
                   </p>
                   
@@ -933,7 +945,9 @@ exports[`DisplayContent Tables should skip colgroup 1`] = `
                 >
                   
         
-                  <p>
+                  <p
+                    class="fr-mt-2w"
+                  >
                     à partir de 5 ans 
                   </p>
                   
@@ -945,7 +959,9 @@ exports[`DisplayContent Tables should skip colgroup 1`] = `
                 >
                   
         
-                  <p>
+                  <p
+                    class="fr-mt-2w"
+                  >
                     1 
                     <webcomponent-tooltip
                       content="Jour%20effectivement%20travaill%C3%A9%20dans%20une%20entreprise%20ou%20une%20administration.%20On%20en%20compte%205%20par%20semaine."
@@ -966,7 +982,9 @@ exports[`DisplayContent Tables should skip colgroup 1`] = `
                 >
                   
         
-                  <p>
+                  <p
+                    class="fr-mt-2w"
+                  >
                     à partir de 10 ans 
                   </p>
                   
@@ -978,7 +996,9 @@ exports[`DisplayContent Tables should skip colgroup 1`] = `
                 >
                   
         
-                  <p>
+                  <p
+                    class="fr-mt-2w"
+                  >
                     2 jours ouvrés
                   </p>
                   
@@ -992,7 +1012,9 @@ exports[`DisplayContent Tables should skip colgroup 1`] = `
                 >
                   
         
-                  <p>
+                  <p
+                    class="fr-mt-2w"
+                  >
                     à partir de 15 ans 
                   </p>
                   
@@ -1004,7 +1026,9 @@ exports[`DisplayContent Tables should skip colgroup 1`] = `
                 >
                   
         
-                  <p>
+                  <p
+                    class="fr-mt-2w"
+                  >
                     3 jours ouvrés
                   </p>
                   
@@ -1018,7 +1042,9 @@ exports[`DisplayContent Tables should skip colgroup 1`] = `
                 >
                   
         
-                  <p>
+                  <p
+                    class="fr-mt-2w"
+                  >
                     à partir de 20 ans 
                   </p>
                   
@@ -1030,7 +1056,9 @@ exports[`DisplayContent Tables should skip colgroup 1`] = `
                 >
                   
         
-                  <p>
+                  <p
+                    class="fr-mt-2w"
+                  >
                     4 jours ouvrés
                   </p>
                   
