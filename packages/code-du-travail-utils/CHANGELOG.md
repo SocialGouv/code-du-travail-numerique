@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.229.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.228.3...v4.229.0) (2026-05-21)
+
+
+### Features
+
+* **contribution:** support du challenger pour les modifications du SMIC sur les contributions ([#7284](https://github.com/SocialGouv/code-du-travail-numerique/issues/7284)) ([d6a8269](https://github.com/SocialGouv/code-du-travail-numerique/commit/d6a82699dfdc763114373c69f0ba34c3017b940c))
+
+
+
+
+
 ## [4.228.3](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.228.2...v4.228.3) (2026-05-13)
 
 **Note:** Version bump only for package @socialgouv/cdtn-utils
