@@ -11,7 +11,12 @@ import { AccordionWithAnchor } from "./AccordionWithAnchor";
 
 import { fr } from "@codegouvfr/react-dsfr";
 import Link from "./Link";
-import { slugify } from "@socialgouv/cdtn-utils";
+import {
+  computeChallengerReference,
+  formatChallengerEur,
+  isChallengerFormula,
+  slugify,
+} from "@socialgouv/cdtn-utils";
 import { captureException } from "@sentry/nextjs";
 import { formatFileSize, toUrl } from "../utils";
 import { xssWrapper } from "../utils/xss";
@@ -19,6 +24,7 @@ import { AccessibleAlert } from "../outils/common/components/AccessibleAlert";
 import { css } from "@styled-system/css";
 import Image from "next/image";
 import { ContributionInfographicFull } from "@socialgouv/cdtn-types/build/elastic/contributions";
+import { parseChallengerAmount } from "./challenger";
 
 export type numberLevel = 2 | 3 | 4 | 5 | 6;
 
@@ -108,6 +114,15 @@ const theadMaxRowspan = (tr: Element) => {
   return maxRowspan === -1 ? 1 : maxRowspan;
 };
 
+const getParserText = (node: any): string => {
+  if (!node) return "";
+  if (node.type === "text") return node.data ?? "";
+  if (Array.isArray(node.children)) {
+    return node.children.map(getParserText).join("");
+  }
+  return "";
+};
+
 const getData = (el?: ChildNode) => {
   if (!el) return "";
   if (el instanceof Text) {
@@ -121,7 +136,7 @@ const getData = (el?: ChildNode) => {
   }
 };
 
-const mapTbody = (tbody: Element) => {
+const mapTbody = (tbody: Element, params: Options) => {
   let theadChildren: Element[] = [];
   const firstLine = getFirstElementChild(tbody);
 
@@ -181,7 +196,7 @@ const mapTbody = (tbody: Element) => {
                   </thead>
                 </>
               )}
-              <tbody>{renderChildren(tbody, false)}</tbody>
+              <tbody>{renderChildren(tbody, false, options(params))}</tbody>
             </table>
           </div>
         </div>
@@ -208,13 +223,6 @@ function renderChildren(
   });
 }
 
-function render(domNode, trim: boolean, option: HTMLReactParserOptions) {
-  return domToReact(domNode, {
-    ...option,
-    trim,
-  });
-}
-
 const getHeadingElement = (params: Options, domNode) => {
   const titleLevel = params.titleLevel;
   const Tag = ("h" + titleLevel) as ElementType;
@@ -233,6 +241,8 @@ type Options = {
   titleLevel: numberLevel;
   infographics: ContributionInfographicFull[];
   disableLink: boolean;
+  smicHourly?: number;
+  challengerState?: { substituted: boolean };
 };
 const options = (params: Options): HTMLReactParserOptions => {
   const { titleLevel } = params;
@@ -242,6 +252,34 @@ const options = (params: Options): HTMLReactParserOptions => {
   return {
     replace(domNode) {
       if (domNode instanceof Element) {
+        if (
+          domNode.name === "span" &&
+          domNode.attribs["data-challenger-formula"]
+        ) {
+          const formula = domNode.attribs["data-challenger-formula"];
+          const parameter = domNode.attribs["data-challenger-parameter"];
+          const enteredText = getParserText(domNode).trim();
+          if (params.smicHourly !== undefined && isChallengerFormula(formula)) {
+            const computedAmount = computeChallengerReference(
+              formula,
+              parameter,
+              params.smicHourly
+            );
+            const enteredAmount = parseChallengerAmount(enteredText);
+            if (enteredAmount !== undefined && enteredAmount > computedAmount) {
+              return <span>{enteredText}</span>;
+            }
+            if (params.challengerState) {
+              params.challengerState.substituted = true;
+            }
+            return (
+              <span className="challenger">
+                {formatChallengerEur(computedAmount)}*
+              </span>
+            );
+          }
+          return <span>{enteredText}</span>;
+        }
         if (domNode.name === "span" && domNode.attribs.class === "title") {
           accordionTitleLevel = titleLevel + 1;
           headingTitleLevel = titleLevel + 1;
@@ -296,7 +334,7 @@ const options = (params: Options): HTMLReactParserOptions => {
               | undefined;
           }
           if (tableContent?.name === "tbody") {
-            return mapTbody(tableContent);
+            return mapTbody(tableContent, params);
           } else {
             return domNode;
           }
@@ -344,6 +382,8 @@ const options = (params: Options): HTMLReactParserOptions => {
                             titleLevel,
                             infographics: params.infographics,
                             disableLink: params.disableLink,
+                            smicHourly: params.smicHourly,
+                            challengerState: params.challengerState,
                           })
                         )}
                       </>
@@ -438,6 +478,7 @@ type Props = {
   extra?: {
     infographics?: ContributionInfographicFull[];
     disableLink?: boolean;
+    smicHourly?: number;
   };
 };
 
@@ -447,14 +488,28 @@ const DisplayContent = ({
   extra,
 }: Props): string | JSX.Element | JSX.Element[] => {
   try {
-    return parse(
+    const challengerState = { substituted: false };
+    const parsed = parse(
       xssWrapper(content),
       options({
         titleLevel,
         infographics: extra?.infographics ?? [],
         disableLink: extra?.disableLink ?? false,
+        smicHourly: extra?.smicHourly,
+        challengerState,
       })
     );
+    if (challengerState.substituted) {
+      return (
+        <>
+          {parsed}
+          <p className={fr.cx("fr-text--sm", "fr-mt-2w", "fr-mb-0")}>
+            * montant du SMIC
+          </p>
+        </>
+      );
+    }
+    return parsed;
   } catch (error) {
     console.error("Error parsing HTML content:", error);
     captureException(error);

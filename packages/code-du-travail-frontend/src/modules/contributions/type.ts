@@ -38,7 +38,7 @@ type ContributionElasticDocumentBase = Omit<
 
 export type ContributionElasticDocument = ContributionElasticDocumentBase &
   Partial<ContributionGenericInfos> &
-  Partial<ContributionConventionnelInfos>;
+  Partial<ContributionConventionnelInfos> & { smicValue?: number };
 
 export type ContributionRelatedItems = {
   title: string;
