@@ -10,7 +10,6 @@ import { useSearchModal } from "../recherche/modal/SearchModalContext";
 import { useAgreementModal } from "../convention-collective/AgreementSelectionModal";
 import { AgreementModal } from "./header/AgreementModal";
 import { usePathname } from "next/navigation";
-import { TallyNotice } from "./TallyNotice";
 
 type Props = {
   children: ReactNode;
@@ -22,7 +21,6 @@ export const DsfrLayout = ({ children, container = "fr-container" }: Props) => {
   const { isOpen: isAgreementOpen, closeModal: closeAgreementModal } =
     useAgreementModal();
   const pathname = usePathname() || "";
-  const showTally = !pathname.startsWith("/widgets");
 
   const isAnyModalOpen = isOpen || isAgreementOpen;
 
@@ -71,14 +69,6 @@ export const DsfrLayout = ({ children, container = "fr-container" }: Props) => {
         <Header />
       </div>
       <AgreementModal isOpen={isAgreementOpen} onClose={closeAgreementModal} />
-      {showTally && (
-        <TallyNotice
-          id="9qJzpG"
-          wording="Pensez-vous maîtriser le droit du travail ?"
-          buttonText="Testez vos connaissances !"
-          buttonIcon="ri-play-large-fill"
-        />
-      )}
       <main
         className={`${container} ${printStyle}`}
         id="main"
