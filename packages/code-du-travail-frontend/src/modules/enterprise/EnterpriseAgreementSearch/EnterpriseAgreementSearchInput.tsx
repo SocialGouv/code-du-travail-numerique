@@ -21,6 +21,8 @@ import { Agreement } from "src/modules/outils/indemnite-depart/types";
 import { scrollToTop } from "src/modules/outils/common/utils";
 import { ApiGeoResult } from "./searchCities";
 import { AccessibleAlert } from "src/modules/outils/common/components/AccessibleAlert";
+import { EnterpriseCardV2 } from "./EnterpriseCardV2";
+import { MatchingEtablissement } from "../../../api/modules/enterprises/types";
 
 type Props = {
   widgetMode?: boolean;
@@ -450,16 +452,14 @@ export const EnterpriseAgreementSearchInput = ({
         {!!enterprises?.length &&
           !loading &&
           enterprises?.map((enterprise, index) => (
-            <EnterpriseCard
+            <EnterpriseCardV2
               key={enterprise.label + index}
-              className={fr.cx("fr-mt-2w")}
-              titleAs={`h${level + 1}` as "h3" | "h4"}
-              border
-              enlargeLink
-              linkProps={
+              etablissementsCount={enterprise.etablissements}
+              matchingEtablissements={[]}
+              onEtablissementClick={(etablissement) => {
                 !onAgreementSelect
                   ? {
-                      href: `/${widgetMode ? "widgets" : "outils"}/convention-collective/entreprise/${enterprise.siren}${getQueries()}`,
+                      href: `/${widgetMode ? "widgets" : "outils"}/convention-collective/entreprise/${etablissement.siret}${getQueries()}`,
                       onClick: () => {
                         emitSelectEnterpriseEvent(trackingActionName, {
                           label: enterprise.label,
@@ -495,22 +495,9 @@ export const EnterpriseAgreementSearchInput = ({
                           onAgreementSelect(undefined, enterprise);
                         }
                       },
-                    }
-              }
-              desc={
-                enterprise.activitePrincipale ? (
-                  <>Activité&nbsp;: {enterprise.activitePrincipale}</>
-                ) : undefined
-              }
-              end={<Badge>{`${enterprise.matching} établissements`}</Badge>}
-              size="large"
-              title={enterprise.label}
-              classes={{
-                title: `${fr.cx("fr-h5")} ${CardTitleStyle}`,
-                content: fr.cx("fr-px-2w", "fr-pt-1w", "fr-pb-8w"),
-                desc: fr.cx("fr-mt-1w", "fr-mr-6w"),
-                end: fr.cx("fr-mt-0", "fr-pt-1w", "fr-pb-2w"),
+                    };
               }}
+              activitePrincipale={enterprise.activitePrincipale}
             />
           ))}
       </div>

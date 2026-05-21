@@ -81,6 +81,10 @@ export const fetchEnterprises = async (
       address: result.siege.adresse,
       firstMatchingEtablissement,
       conventions,
+      matchingEtablissement: result.matching_etablissements.map((e) => ({
+        siret: e.siret,
+        address: e.adresse,
+      })),
     };
   });
 
