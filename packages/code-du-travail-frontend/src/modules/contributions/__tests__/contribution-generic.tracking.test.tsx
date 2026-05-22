@@ -328,7 +328,9 @@ describe("<ContributionGeneric />", () => {
       render(<ContributionGeneric contribution={contribution} />);
 
       fireEvent.click(ccUi.radio.enterpriseSearchOption.get());
-      expect(ui.generic.enterpriseRequiredError.query()).not.toBeInTheDocument();
+      expect(
+        ui.generic.enterpriseRequiredError.query()
+      ).not.toBeInTheDocument();
 
       fireEvent.click(ui.generic.buttonDisplayInfo.get());
 
@@ -457,7 +459,9 @@ describe("<ContributionGeneric />", () => {
     it("affiche une erreur inline sur l'entreprise quand on clique 'Afficher les informations' sans entreprise saisie", () => {
       render(<ContributionGeneric contribution={contribution} />);
 
-      expect(ui.generic.enterpriseRequiredError.query()).not.toBeInTheDocument();
+      expect(
+        ui.generic.enterpriseRequiredError.query()
+      ).not.toBeInTheDocument();
 
       fireEvent.click(ui.generic.buttonDisplayInfo.get());
 
