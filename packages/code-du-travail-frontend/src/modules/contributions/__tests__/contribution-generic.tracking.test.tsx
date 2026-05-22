@@ -300,6 +300,83 @@ describe("<ContributionGeneric />", () => {
         name: "/contribution/my-contrib|variant=radio_button",
       });
     });
+
+    it("affiche le message d'erreur sous les radios quand on clique 'Afficher les informations' sans rien sélectionner", () => {
+      render(<ContributionGeneric contribution={contribution} />);
+
+      expect(ui.generic.missingRouteError.query()).not.toBeInTheDocument();
+
+      fireEvent.click(ui.generic.buttonDisplayInfo.get());
+
+      expect(ui.generic.missingRouteError.query()).toBeInTheDocument();
+      expect(pushMock).not.toHaveBeenCalled();
+    });
+
+    it("affiche une erreur inline sur la recherche de convention quand on clique 'Afficher les informations' sans avoir choisi de CC", () => {
+      render(<ContributionGeneric contribution={contribution} />);
+
+      fireEvent.click(ccUi.radio.agreementSearchOption.get());
+      expect(ui.generic.agreementRequiredError.query()).not.toBeInTheDocument();
+
+      fireEvent.click(ui.generic.buttonDisplayInfo.get());
+
+      expect(ui.generic.agreementRequiredError.query()).toBeInTheDocument();
+      expect(pushMock).not.toHaveBeenCalled();
+    });
+
+    it("affiche une erreur inline sur la recherche d'entreprise quand on clique 'Afficher les informations' sans avoir saisi d'entreprise", () => {
+      render(<ContributionGeneric contribution={contribution} />);
+
+      fireEvent.click(ccUi.radio.enterpriseSearchOption.get());
+      expect(ui.generic.enterpriseRequiredError.query()).not.toBeInTheDocument();
+
+      fireEvent.click(ui.generic.buttonDisplayInfo.get());
+
+      expect(ui.generic.enterpriseRequiredError.query()).toBeInTheDocument();
+      expect(pushMock).not.toHaveBeenCalled();
+    });
+
+    it("affiche une erreur de sélection quand on a cherché une entreprise sans en choisir une", async () => {
+      render(<ContributionGeneric contribution={contribution} />);
+
+      fireEvent.click(ccUi.radio.enterpriseSearchOption.get());
+      await userEvent.click(ccUi.searchByEnterprise.input.get());
+      await userEvent.type(ccUi.searchByEnterprise.input.get(), "carrefour");
+      await userEvent.click(ccUi.searchByEnterprise.submitButton.get());
+
+      expect(
+        ui.generic.enterpriseSelectionRequiredError.query()
+      ).not.toBeInTheDocument();
+
+      fireEvent.click(ui.generic.buttonDisplayInfo.get());
+
+      expect(
+        ui.generic.enterpriseSelectionRequiredError.query()
+      ).toBeInTheDocument();
+      expect(pushMock).not.toHaveBeenCalled();
+    });
+
+    it("affiche une erreur de sélection quand l'entreprise a plusieurs conventions et qu'aucune n'est choisie", async () => {
+      render(<ContributionGeneric contribution={contribution} />);
+
+      fireEvent.click(ccUi.radio.enterpriseSearchOption.get());
+      await userEvent.click(ccUi.searchByEnterprise.input.get());
+      await userEvent.type(ccUi.searchByEnterprise.input.get(), "carrefour");
+      await userEvent.click(ccUi.searchByEnterprise.submitButton.get());
+
+      fireEvent.click(byText("CARREFOUR HYPERMARCHES").get());
+
+      expect(
+        ui.generic.conventionSelectionRequiredError.query()
+      ).not.toBeInTheDocument();
+
+      fireEvent.click(ui.generic.buttonDisplayInfo.get());
+
+      expect(
+        ui.generic.conventionSelectionRequiredError.query()
+      ).toBeInTheDocument();
+      expect(pushMock).not.toHaveBeenCalled();
+    });
   });
 
   describe("variante 'original'", () => {
@@ -375,6 +452,53 @@ describe("<ContributionGeneric />", () => {
         category: "cc_search_type_of_users",
         name: "/contribution/my-contrib|variant=regular_button",
       });
+    });
+
+    it("affiche une erreur inline sur l'entreprise quand on clique 'Afficher les informations' sans entreprise saisie", () => {
+      render(<ContributionGeneric contribution={contribution} />);
+
+      expect(ui.generic.enterpriseRequiredError.query()).not.toBeInTheDocument();
+
+      fireEvent.click(ui.generic.buttonDisplayInfo.get());
+
+      expect(ui.generic.enterpriseRequiredError.query()).toBeInTheDocument();
+      expect(pushMock).not.toHaveBeenCalled();
+    });
+
+    it("affiche une erreur inline sur la convention quand on bascule en saisie manuelle puis clique 'Afficher les informations' sans CC", () => {
+      render(<ContributionGeneric contribution={contribution} />);
+
+      fireEvent.click(ui.generic.regularButtonAgreement.get());
+      expect(ui.generic.agreementRequiredError.query()).not.toBeInTheDocument();
+
+      fireEvent.click(ui.generic.buttonDisplayInfo.get());
+
+      expect(ui.generic.agreementRequiredError.query()).toBeInTheDocument();
+      expect(pushMock).not.toHaveBeenCalled();
+    });
+
+    it("navigue vers la page CC-spécifique quand une convention traitée est sélectionnée", async () => {
+      mockAgreementSearch({
+        num: 1388,
+        shortTitle: "Industrie du pétrole",
+        id: "1388",
+      });
+
+      render(<ContributionGeneric contribution={contribution} />);
+
+      fireEvent.click(ui.generic.regularButtonAgreement.get());
+      await userEvent.click(ccUi.searchByName.input.get());
+      await userEvent.type(ccUi.searchByName.input.get(), "1388");
+      await waitFor(() =>
+        expect(
+          ccUi.searchByName.autocompleteLines.IDCC1388.name.get()
+        ).toBeInTheDocument()
+      );
+      fireEvent.click(ccUi.searchByName.autocompleteLines.IDCC1388.name.get());
+
+      fireEvent.click(ui.generic.buttonDisplayInfo.get());
+
+      expect(pushMock).toHaveBeenCalledWith("/contribution/1388-my-contrib");
     });
   });
 });

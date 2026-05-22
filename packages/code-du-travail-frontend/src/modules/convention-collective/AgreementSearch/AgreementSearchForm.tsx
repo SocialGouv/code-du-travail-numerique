@@ -28,6 +28,7 @@ type Props = {
   variant?: string | null;
   forcedRoute?: AgreementRoute;
   enterpriseRequireSearchSignal?: number;
+  agreementRequireSearchSignal?: number;
 };
 
 const AGREEMENT_LABEL =
@@ -51,6 +52,7 @@ export const AgreementSearchForm = ({
   variant,
   forcedRoute,
   enterpriseRequireSearchSignal,
+  agreementRequireSearchSignal,
 }: Props) => {
   const [selectedRoute, setSelectedRoute] = useState<
     AgreementRoute | undefined
@@ -164,6 +166,7 @@ export const AgreementSearchForm = ({
           selectedAgreementAlert={selectedAgreementAlert}
           defaultAgreement={defaultAgreement}
           level={level}
+          requireSearchSignal={agreementRequireSearchSignal}
         />
       )}
       {selectedRoute === "enterprise" && (

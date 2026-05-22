@@ -30,8 +30,20 @@ export const ui = {
       name: /Je cherche par entreprise/,
     }),
     regularButtonNoAgreement: byRole("button", {
-      name: /Je veux juste le Code du travail/,
+      name: /Afficher le Code du travail/,
     }),
+    agreementRequiredError: byText(
+      /Veuillez sélectionner une convention collective/
+    ),
+    enterpriseRequiredError: byText(
+      /Le nom de l'entreprise doit être renseigné/
+    ),
+    enterpriseSelectionRequiredError: byText(
+      /Veuillez sélectionner une entreprise dans la liste/
+    ),
+    conventionSelectionRequiredError: byText(
+      /Veuillez sélectionner une convention collective/
+    ),
   },
 };
 export const mockAgreementSearch = (idcc) =>
