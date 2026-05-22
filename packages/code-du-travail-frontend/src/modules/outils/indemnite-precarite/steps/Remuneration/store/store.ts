@@ -10,11 +10,17 @@ import {
 import { ValidationResponse } from "src/modules/outils/common/components/SimulatorLayout/types";
 import { validateStep } from "./validator";
 
+const DEFAULT_DUREE_CONTRAT = 2;
+
+const buildEmptySalaires = (duree: number): SalaryEntry[] =>
+  Array.from({ length: duree }, () => ({ salaire: null }));
+
 const initialState: RemunerationStoreData = {
   input: {
     typeRemuneration: undefined,
     salaire: undefined,
     salaires: [],
+    dureeContrat: undefined,
   },
   error: {},
   hasBeenSubmit: false,
@@ -31,17 +37,23 @@ const createRemunerationStore: StoreSliceWrapperIndemnitePrecarite<
     onTypeRemunerationChange: (type: "total" | "mensuel") => {
       applyGenericValidation(get, set, "typeRemuneration", type);
 
-      // Reset des autres champs selon le type sélectionné
       if (type === "mensuel") {
-        // Initialiser avec 2 salaires vides pour commencer
-        applyGenericValidation(get, set, "salaires", [
-          { salaire: null },
-          { salaire: null },
-        ]);
+        applyGenericValidation(
+          get,
+          set,
+          "dureeContrat",
+          DEFAULT_DUREE_CONTRAT
+        );
+        applyGenericValidation(
+          get,
+          set,
+          "salaires",
+          buildEmptySalaires(DEFAULT_DUREE_CONTRAT)
+        );
         applyGenericValidation(get, set, "salaire", undefined);
       } else {
-        // Reset des salaires mensuels
         applyGenericValidation(get, set, "salaires", []);
+        applyGenericValidation(get, set, "dureeContrat", undefined);
       }
     },
     onSalaireChange: (salaire: number) => {
@@ -49,11 +61,16 @@ const createRemunerationStore: StoreSliceWrapperIndemnitePrecarite<
     },
     onSalairesChange: (salaires: SalaryEntry[]) => {
       applyGenericValidation(get, set, "salaires", salaires);
+    },
+    onDureeContratChange: (duree: number) => {
+      applyGenericValidation(get, set, "dureeContrat", duree);
 
-      // Si on supprime tous les salaires, revenir au mode total
-      if (salaires.length === 0) {
-        applyGenericValidation(get, set, "typeRemuneration", "total");
-      }
+      const currentSalaires = get().remunerationData.input.salaires;
+      const nextSalaires: SalaryEntry[] = Array.from(
+        { length: duree },
+        (_, index) => currentSalaires[index] ?? { salaire: null }
+      );
+      applyGenericValidation(get, set, "salaires", nextSalaires);
     },
     onNextStep: () => {
       const input = get().remunerationData.input;

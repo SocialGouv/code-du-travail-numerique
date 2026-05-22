@@ -59,5 +59,5 @@ export function getCddTypesForAgreement(agreement?: Agreement): string[] {
       break;
   }
 
-  return [CDD_TYPES.AUTRES, ...specificTypes, ...EXCLUDED_CONTRACTS];
+  return [...specificTypes, ...EXCLUDED_CONTRACTS, CDD_TYPES.AUTRES];
 }

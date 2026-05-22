@@ -60,17 +60,14 @@ export const ui = {
     },
     salaireTotal: byTestId("salaireTotal"),
     salaireMensuel: (index: number) => byTestId(`salaireMensuel-${index}`),
-    addSalaire: byTestId("addSalaire"),
-    removeSalaire: (index: number) => byTestId(`removeSalaire-${index}`),
+    dureeContrat: byTestId("dureeContrat"),
   },
   result: {
     presentation: byText(
       "À partir des éléments que vous avez saisis, le montant de votre indemnité est estimé à"
     ),
     disqualification: byTestId("disqualification-message"),
-    disqualificationTitle: byText(
-      "Vous n'avez pas droit à l'indemnité de précarité"
-    ),
+    disqualificationTitle: byText("Aucune indemnité"),
   },
   next: byTestId("next-button"),
 };

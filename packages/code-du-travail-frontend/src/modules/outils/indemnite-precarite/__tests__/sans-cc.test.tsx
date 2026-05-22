@@ -173,22 +173,32 @@ describe("SimulateurIndemnitePrecarite - Sans Convention Collective", () => {
 
         expect(ui.remuneration.typeRemuneration.mensuel.get()).toBeChecked();
 
+        expect(ui.remuneration.dureeContrat.get()).toBeInTheDocument();
         expect(ui.remuneration.salaireMensuel(1).get()).toBeInTheDocument();
+        expect(ui.remuneration.salaireMensuel(2).get()).toBeInTheDocument();
       });
 
-      it("devrait permettre d'ajouter et supprimer des salaires mensuels", () => {
+      it("devrait permettre de changer la durée du contrat et ajuster le nombre d'inputs", () => {
         fireEvent.click(ui.remuneration.typeRemuneration.mensuel.get());
 
         expect(ui.remuneration.salaireMensuel(1).get()).toBeInTheDocument();
         expect(ui.remuneration.salaireMensuel(2).get()).toBeInTheDocument();
+        expect(
+          ui.remuneration.salaireMensuel(3).query()
+        ).not.toBeInTheDocument();
 
-        fireEvent.click(ui.remuneration.addSalaire.get());
+        fireEvent.change(ui.remuneration.dureeContrat.get(), {
+          target: { value: "3" },
+        });
+
         expect(ui.remuneration.salaireMensuel(3).get()).toBeInTheDocument();
         expect(
           ui.remuneration.salaireMensuel(4).query()
         ).not.toBeInTheDocument();
 
-        fireEvent.click(ui.remuneration.removeSalaire(3).get());
+        fireEvent.change(ui.remuneration.dureeContrat.get(), {
+          target: { value: "2" },
+        });
 
         expect(
           ui.remuneration.salaireMensuel(3).query()
@@ -201,7 +211,7 @@ describe("SimulateurIndemnitePrecarite - Sans Convention Collective", () => {
 
         expect(
           screen.getByText(
-            "Veuillez saisir au moins 2 salaires mensuels valides"
+            "Tous les salaires mensuels doivent être renseignés et supérieurs à 0"
           )
         ).toBeInTheDocument();
       });
@@ -236,14 +246,15 @@ describe("SimulateurIndemnitePrecarite - Sans Convention Collective", () => {
       ).toBeInTheDocument();
 
       fireEvent.click(ui.remuneration.typeRemuneration.mensuel.get());
+      fireEvent.change(ui.remuneration.dureeContrat.get(), {
+        target: { value: "3" },
+      });
       fireEvent.change(ui.remuneration.salaireMensuel(1).get(), {
         target: { value: "2500" },
       });
       fireEvent.change(ui.remuneration.salaireMensuel(2).get(), {
         target: { value: "2600" },
       });
-
-      fireEvent.click(ui.remuneration.addSalaire.get());
       fireEvent.change(ui.remuneration.salaireMensuel(3).get(), {
         target: { value: "2700" },
       });

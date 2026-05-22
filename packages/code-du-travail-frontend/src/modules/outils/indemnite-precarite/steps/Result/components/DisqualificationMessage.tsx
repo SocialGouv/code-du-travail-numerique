@@ -1,12 +1,11 @@
 import { fr } from "@codegouvfr/react-dsfr";
 import React from "react";
 import { DisqualificationReason } from "../../Informations/store/types";
+import { AccessibleAlert } from "src/modules/outils/common/components/AccessibleAlert";
 
 type Props = {
   reason: DisqualificationReason;
 };
-
-const TITLE = "Vous n'avez pas droit à l'indemnité de précarité";
 
 const CDD_MESSAGES: Record<
   Extract<DisqualificationReason, { kind: "cddCondition" }>["key"],
@@ -72,8 +71,19 @@ const DisqualificationMessage: React.FC<Props> = ({ reason }) => {
 
   return (
     <div data-testid="disqualification-message">
-      <h3 className={fr.cx("fr-mt-3w", "fr-h3")}>{TITLE}</h3>
-      <p className={fr.cx("fr-mb-3w", "fr-pr-md-2v")}>{body}</p>
+      <h3 className={fr.cx("fr-mt-3w", "fr-h3")}>Indemnité de précarité</h3>
+      <p className={fr.cx("fr-mb-3w", "fr-pr-md-2v")}>
+        À partir des éléments que vous avez saisis, le montant de votre
+        indemnité est estimé à&nbsp;:
+      </p>
+      <p>
+        <strong className={fr.cx("fr-h2")}>Aucune indemnité</strong>
+      </p>
+      <AccessibleAlert
+        description={body}
+        severity="warning"
+        className={["fr-mt-3w"]}
+      />
     </div>
   );
 };
