@@ -16,6 +16,7 @@ type Props = {
   isInSimulator?: boolean;
   canContinueSimulationIfNoAgreement?: boolean;
   onBackToPersonalize?: () => void;
+  requireSearchSignal?: number;
 };
 
 const searchEnterprises = (searchParams: SearchParams): Enterprise[] => {
@@ -186,6 +187,7 @@ export const EnterpriseAgreementSearchInput = ({
   isInSimulator,
   canContinueSimulationIfNoAgreement,
   onBackToPersonalize,
+  requireSearchSignal,
 }: Props) => {
   const [selectedAgreement, setSelectedAgreement] = useState<any>(agreement);
   const [searchState, setSearchState] = useState<
@@ -269,6 +271,25 @@ export const EnterpriseAgreementSearchInput = ({
       setSelectedEnterprise(enterprise);
     }
   }, [enterprise]);
+
+  const [selectionRequired, setSelectionRequired] = useState(false);
+
+  useEffect(() => {
+    if (!requireSearchSignal) return;
+    if (!search) {
+      setSelectionRequired(false);
+      setSearchState("required");
+      return;
+    }
+    if (!selectedAgreement) {
+      setSelectionRequired(true);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [requireSearchSignal]);
+
+  useEffect(() => {
+    if (selectedAgreement) setSelectionRequired(false);
+  }, [selectedAgreement]);
 
   const handleEnterpriseClick = (ent: any) => {
     setSelectedEnterprise(ent);
@@ -364,6 +385,14 @@ export const EnterpriseAgreementSearchInput = ({
             </div>
           ))}
         </div>
+        {selectionRequired && !selectedAgreement && (
+          <p
+            role="alert"
+            data-testid="enterprise-convention-selection-required-error"
+          >
+            Veuillez sélectionner une convention collective
+          </p>
+        )}
       </div>
     );
   }
@@ -381,6 +410,11 @@ export const EnterpriseAgreementSearchInput = ({
         value={search || ""}
         onChange={(e) => setSearch(e.target.value)}
       />
+      {getStateMessage() && (
+        <p data-testid="enterprise-search-input-state-message">
+          {getStateMessage()}
+        </p>
+      )}
       <input
         type="text"
         id="locationSearchAutocomplete"
@@ -406,6 +440,14 @@ export const EnterpriseAgreementSearchInput = ({
           Particuliers employeurs et emploi à domicile
         </a>
       </div>
+      {selectionRequired && !!enterprises?.length && !loading && (
+        <p
+          role="alert"
+          data-testid="enterprise-selection-required-error"
+        >
+          Veuillez sélectionner une entreprise dans la liste ci-dessous
+        </p>
+      )}
       {!!enterprises?.length &&
         !loading &&
         enterprises?.map((enterprise, index) => (

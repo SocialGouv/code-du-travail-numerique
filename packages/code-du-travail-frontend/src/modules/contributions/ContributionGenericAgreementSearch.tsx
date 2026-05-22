@@ -43,8 +43,7 @@ const LEARN_MORE_URL =
 const REGULAR_BUTTON_AGREEMENT_LABEL =
   "Non, je saisis ma convention collective";
 const REGULAR_BUTTON_ENTERPRISE_LABEL = "Je cherche par entreprise";
-const REGULAR_BUTTON_NO_AGREEMENT_LABEL =
-  "Je veux juste le Code du travail, merci";
+const REGULAR_BUTTON_NO_AGREEMENT_LABEL = "Afficher le Code du travail";
 
 export function ContributionGenericAgreementSearch({
   contribution,
@@ -58,20 +57,21 @@ export function ContributionGenericAgreementSearch({
   const router = useRouter();
   const { slug, isNoCDT } = contribution;
   const [isValid, setIsValid] = useState(false);
-  const [selectedRoute, setSelectedRoute] = useState<
-    AgreementRoute | undefined
-  >();
-  const [showMissingRouteError, setShowMissingRouteError] = useState(false);
-
   const isOriginalVariant =
     variant === ContributionAfficherInfoVariations.ORIGINAL;
   const isRegularButtonVariant =
     variant === ContributionAfficherInfoVariations.REGULAR_BUTTON;
+  const [selectedRoute, setSelectedRoute] = useState<
+    AgreementRoute | undefined
+  >(isRegularButtonVariant ? "enterprise" : undefined);
+  const [showMissingRouteError, setShowMissingRouteError] = useState(false);
 
   const [forcedRoute, setForcedRoute] = useState<AgreementRoute | undefined>(
     isRegularButtonVariant ? "enterprise" : undefined
   );
   const [enterpriseRequireSearchSignal, setEnterpriseRequireSearchSignal] =
+    useState(0);
+  const [agreementRequireSearchSignal, setAgreementRequireSearchSignal] =
     useState(0);
 
   const { emitClickP3 } = useContributionTracking(variant ?? undefined);
@@ -176,13 +176,14 @@ export function ContributionGenericAgreementSearch({
       onDisplayClick(false);
       return;
     }
-    if (
-      isRegularButtonVariant &&
-      selectedRoute === "enterprise" &&
-      !selectedAgreement
-    ) {
+    if (selectedRoute === "enterprise" && !selectedAgreement) {
       event.preventDefault();
       setEnterpriseRequireSearchSignal((c) => c + 1);
+      return;
+    }
+    if (selectedRoute === "agreement" && !selectedAgreement) {
+      event.preventDefault();
+      setAgreementRequireSearchSignal((c) => c + 1);
       return;
     }
     onDisplayClick(isValid && !!selectedAgreement);
@@ -210,8 +211,6 @@ export function ContributionGenericAgreementSearch({
   };
 
   const onSkipToGeneric = () => {
-    onAgreementSelect();
-    setForcedRoute("no-agreement");
     setShowMissingRouteError(false);
     emitClickP3(trackingActionName);
     onDisplayClick(false);
@@ -284,7 +283,10 @@ export function ContributionGenericAgreementSearch({
           variant={variant}
           forcedRoute={isRegularButtonVariant ? forcedRoute : undefined}
           enterpriseRequireSearchSignal={
-            isRegularButtonVariant ? enterpriseRequireSearchSignal : undefined
+            isOriginalVariant ? undefined : enterpriseRequireSearchSignal
+          }
+          agreementRequireSearchSignal={
+            isOriginalVariant ? undefined : agreementRequireSearchSignal
           }
         />
         {isRegularButtonVariant && isButtonDisplayed && (

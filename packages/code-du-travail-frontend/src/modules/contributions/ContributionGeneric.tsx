@@ -41,6 +41,8 @@ export function ContributionGeneric({ contribution }: Props) {
       : matomoVariant;
   const isOriginalVariant =
     variant === ContributionAfficherInfoVariations.ORIGINAL;
+  const isRegularButtonVariant =
+    variant === ContributionAfficherInfoVariations.REGULAR_BUTTON;
 
   const [displayGeneric, setDisplayGeneric] = useState(false);
 
@@ -77,6 +79,7 @@ export function ContributionGeneric({ contribution }: Props) {
 
   useEffect(() => {
     if (window.location.hash === "#retour") return;
+    if (isRegularButtonVariant) return;
 
     const storedAgreement = getAgreementFromLocalStorage();
     if (storedAgreement && isAgreementValid(contribution, storedAgreement)) {
@@ -102,7 +105,9 @@ export function ContributionGeneric({ contribution }: Props) {
         contribution={contribution}
         onAgreementSelect={(agreement) => {
           setSelectedAgreement(agreement);
-          setDisplayGeneric(false);
+          if (!isRegularButtonVariant) {
+            setDisplayGeneric(false);
+          }
           if (!agreement) return;
 
           if (isAgreementSupported(contribution, agreement)) {
@@ -120,6 +125,10 @@ export function ContributionGeneric({ contribution }: Props) {
               emitDisplayGeneralContent(getTitle());
             }
           } else {
+            if (isRegularButtonVariant) {
+              setDisplayGeneric(true);
+              scrollToTitle();
+            }
             emitDisplayAgreementContent(getTitle());
           }
         }}
@@ -128,7 +137,9 @@ export function ContributionGeneric({ contribution }: Props) {
         variant={variant}
       />
 
-      {!isNoCDT && !isAgreementValid(contribution, selectedAgreement) && (
+      {!isNoCDT &&
+        (isRegularButtonVariant ||
+          !isAgreementValid(contribution, selectedAgreement)) && (
         <>
           {showDisplayGenericButton && (
             <Button
