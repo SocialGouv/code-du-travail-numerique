@@ -34,16 +34,12 @@ describe("SimulateurIndemnitePrecarite", () => {
 
     describe("criteria.cddType = CDD d'usage appelé « contrat d'intervention »", () => {
       beforeEach(() => {
-        fireEvent.change(ui.cddType.get(), {
-          target: { value: "CDD d'usage appelé « contrat d'intervention »" },
-        });
+        fireEvent.click(ui.cddType("CDD d'usage appelé « contrat d'intervention »").get());
         fireEvent.click(ui.next.get());
       });
 
       describe("criteria.hasCdiRenewal = non", () => {
         beforeEach(() => {
-          fireEvent.click(screen.getByTestId("hasCdiRenewal-Non"));
-          fireEvent.click(ui.next.get());
         });
 
         describe("typeRemuneration = amount", () => {
@@ -76,46 +72,28 @@ describe("SimulateurIndemnitePrecarite", () => {
 
     describe("criteria.cddType = Autres", () => {
       beforeEach(() => {
-        fireEvent.change(ui.cddType.get(), {
-          target: { value: "Autres" },
-        });
+        fireEvent.click(ui.cddType("Autres").get());
         fireEvent.click(ui.next.get());
       });
 
       describe("finContratPeriodeDessai = Non", () => {
         beforeEach(() => {
-          fireEvent.click(ui.cddQuestions.finContratPeriodeDessai.non.get());
-          fireEvent.click(ui.next.get());
         });
 
         describe("propositionCDIFindeContrat = Non", () => {
           beforeEach(() => {
-            fireEvent.click(
-              ui.cddQuestions.propositionCDIFindeContrat.non.get()
-            );
-            fireEvent.click(ui.next.get());
           });
 
           describe("refusCDIFindeContrat = Non", () => {
             beforeEach(() => {
-              fireEvent.click(ui.cddQuestions.refusCDIFindeContrat.non.get());
-              fireEvent.click(ui.next.get());
             });
 
             describe("interruptionFauteGrave = Non", () => {
               beforeEach(() => {
-                fireEvent.click(
-                  ui.cddQuestions.interruptionFauteGrave.non.get()
-                );
-                fireEvent.click(ui.next.get());
               });
 
               describe("refusRenouvellementAuto = Non", () => {
                 beforeEach(() => {
-                  fireEvent.click(
-                    ui.cddQuestions.refusRenouvellementAuto.non.get()
-                  );
-                  fireEvent.click(ui.next.get());
                 });
 
                 describe("typeRemuneration = amount", () => {

@@ -19,7 +19,7 @@ export const ContractTypeQuestion: React.FC<Props> = ({
 
   return (
     <RadioButtons
-      legend="Quel est le type du contrat de travail ?"
+      legend="Quel est le type de contrat de travail ?"
       name="contractType"
       options={[
         {

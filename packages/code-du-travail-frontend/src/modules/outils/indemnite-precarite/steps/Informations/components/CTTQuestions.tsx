@@ -1,151 +1,65 @@
 import React from "react";
 import { fr } from "@codegouvfr/react-dsfr";
-import { RadioButtons } from "@codegouvfr/react-dsfr/RadioButtons";
-import { InformationsStoreInput, InformationsStoreError } from "../store/types";
+import { CheckboxesQuestion } from "src/modules/outils/common/components/CheckboxesQuestion";
+import {
+  CttConditionKey,
+  InformationsStoreInput,
+} from "../store/types";
 import { AccessibleAlert } from "src/modules/outils/common/components/AccessibleAlert";
 
 interface Props {
   input: InformationsStoreInput;
-  onChange: (key: string, value: boolean) => void;
-  errors: InformationsStoreError;
+  onChange: (key: CttConditionKey, checked: boolean) => void;
 }
 
-export const CTTQuestions: React.FC<Props> = ({ input, onChange, errors }) => {
+const CTT_CHECKBOX_OPTIONS: { key: CttConditionKey; label: string }[] = [
+  {
+    key: "cttFormation",
+    label: "Il s'agit d'un contrat de mission-formation.",
+  },
+  {
+    key: "ruptureContratFauteGrave",
+    label:
+      "Le contrat d'intérim a été rompu avant la fin prévue à la propre initiative du salarié, pour faute grave du salarié ou en cas de force majeure.",
+  },
+  {
+    key: "propositionCDIFinContrat",
+    label:
+      "À la fin du contrat d'intérim, le salarié a été immédiatement embauché en CDI au sein de l'entreprise dans laquelle il effectuait sa mission.",
+  },
+  {
+    key: "refusSouplesse",
+    label:
+      "Le salarié a refusé la mise en œuvre de la souplesse prévue dans le contrat d'intérim.",
+  },
+];
+
+export const CTTQuestions: React.FC<Props> = ({ input, onChange }) => {
+  const values: Partial<Record<CttConditionKey, boolean>> = {
+    cttFormation: input.cttFormation,
+    ruptureContratFauteGrave: input.ruptureContratFauteGrave,
+    propositionCDIFinContrat: input.propositionCDIFinContrat,
+    refusSouplesse: input.refusSouplesse,
+  };
+
   return (
     <>
-      {/* Question sur le contrat de mission-formation */}
       <div className={fr.cx("fr-mb-3w")}>
-        <RadioButtons
-          legend="S'agit-il d'un contrat de mission-formation ?"
-          name="cttFormation"
-          options={[
-            {
-              label: "Oui",
-              nativeInputProps: {
-                value: "true",
-                checked: input.cttFormation === true,
-                onChange: () => onChange("cttFormation", true),
-                "data-testid": "cttFormation-Oui",
-              } as any,
-            },
-            {
-              label: "Non",
-              nativeInputProps: {
-                value: "false",
-                checked: input.cttFormation === false,
-                onChange: () => onChange("cttFormation", false),
-                "data-testid": "cttFormation-Non",
-              } as any,
-            },
-          ]}
-          state={errors.cttFormation ? "error" : "default"}
-          stateRelatedMessage={errors.cttFormation}
-          orientation="horizontal"
+        <CheckboxesQuestion<CttConditionKey>
+          name="cttQuestions"
+          legend="Cochez la ou les situations qui s'appliquent à votre contrat :"
+          options={CTT_CHECKBOX_OPTIONS}
+          values={values}
+          onChange={onChange}
         />
       </div>
 
-      {/* Alerte pour les contrats saisonniers ou d'usage */}
-      {input.cttFormation === false && (
-        <AccessibleAlert
-          severity="warning"
-          title="Attention"
-          description="S'il s'agit d'un contrat de travail temporaire saisonnier ou d'usage, un accord d'entreprise ou d'établissement peut dispenser l'entreprise de travail temporaire (l'entreprise d'intérim) de verser la prime de précarité."
-          className={["fr-mb-3w"]}
-        />
-      )}
-
-      {/* Question sur la rupture pour faute grave */}
-      <div className={fr.cx("fr-mb-3w")}>
-        <RadioButtons
-          legend="Le contrat d'intérim a-t-il été rompu avant la fin prévue pour une des raisons suivantes : la propre initiative du salarié, la faute grave du salarié, cas de force majeure ?"
-          name="ruptureContratFauteGrave"
-          options={[
-            {
-              label: "Oui",
-              nativeInputProps: {
-                value: "true",
-                checked: input.ruptureContratFauteGrave === true,
-                onChange: () => onChange("ruptureContratFauteGrave", true),
-                "data-testid": "ruptureContratFauteGrave-Oui",
-              } as any,
-            },
-            {
-              label: "Non",
-              nativeInputProps: {
-                value: "false",
-                checked: input.ruptureContratFauteGrave === false,
-                onChange: () => onChange("ruptureContratFauteGrave", false),
-                "data-testid": "ruptureContratFauteGrave-Non",
-              } as any,
-            },
-          ]}
-          state={errors.ruptureContratFauteGrave ? "error" : "default"}
-          stateRelatedMessage={errors.ruptureContratFauteGrave}
-          orientation="horizontal"
-        />
-      </div>
-
-      {/* Question sur l'embauche en CDI */}
-      <div className={fr.cx("fr-mb-3w")}>
-        <RadioButtons
-          legend="À la fin du contrat d'intérim, le salarié a-t-il été immédiatement embauché en CDI au sein de l'entreprise dans laquelle il effectuait sa mission ?"
-          name="propositionCDIFinContrat"
-          options={[
-            {
-              label: "Oui",
-              nativeInputProps: {
-                value: "true",
-                checked: input.propositionCDIFinContrat === true,
-                onChange: () => onChange("propositionCDIFinContrat", true),
-                "data-testid": "propositionCDIFinContrat-Oui",
-              } as any,
-            },
-            {
-              label: "Non",
-              nativeInputProps: {
-                value: "false",
-                checked: input.propositionCDIFinContrat === false,
-                onChange: () => onChange("propositionCDIFinContrat", false),
-                "data-testid": "propositionCDIFinContrat-Non",
-              } as any,
-            },
-          ]}
-          state={errors.propositionCDIFinContrat ? "error" : "default"}
-          stateRelatedMessage={errors.propositionCDIFinContrat}
-          orientation="horizontal"
-        />
-      </div>
-
-      {/* Question sur le refus de souplesse */}
-      <div className={fr.cx("fr-mb-3w")}>
-        <RadioButtons
-          legend="Le salarié a-t-il refusé la mise en œuvre de la souplesse prévue dans le contrat d'intérim ?"
-          name="refusSouplesse"
-          options={[
-            {
-              label: "Oui",
-              nativeInputProps: {
-                value: "true",
-                checked: input.refusSouplesse === true,
-                onChange: () => onChange("refusSouplesse", true),
-                "data-testid": "refusSouplesse-Oui",
-              } as any,
-            },
-            {
-              label: "Non",
-              nativeInputProps: {
-                value: "false",
-                checked: input.refusSouplesse === false,
-                onChange: () => onChange("refusSouplesse", false),
-                "data-testid": "refusSouplesse-Non",
-              } as any,
-            },
-          ]}
-          state={errors.refusSouplesse ? "error" : "default"}
-          stateRelatedMessage={errors.refusSouplesse}
-          orientation="horizontal"
-        />
-      </div>
+      <AccessibleAlert
+        severity="warning"
+        title="Attention"
+        description="S'il s'agit d'un contrat de travail temporaire saisonnier ou d'usage, un accord d'entreprise ou d'établissement peut dispenser l'entreprise de travail temporaire (l'entreprise d'intérim) de verser la prime de précarité."
+        className={["fr-mb-3w"]}
+      />
     </>
   );
 };

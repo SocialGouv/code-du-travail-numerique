@@ -25,8 +25,6 @@ const InformationsStepComponent = () => {
     onCriteriaChange: state.informationsFunction.onCriteriaChange,
     onCDDQuestionChange: state.informationsFunction.onCDDQuestionChange,
     onCTTQuestionChange: state.informationsFunction.onCTTQuestionChange,
-    onConventionQuestionChange:
-      state.informationsFunction.onConventionQuestionChange,
     agreement: state.agreementData.input.agreement,
     contractType: state.informationsData.input.contractType,
     criteria: state.informationsData.input.criteria,

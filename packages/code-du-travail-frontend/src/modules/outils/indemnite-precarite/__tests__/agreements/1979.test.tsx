@@ -34,46 +34,28 @@ describe("SimulateurIndemnitePrecarite", () => {
 
     describe("criteria.cddType = Autres", () => {
       beforeEach(() => {
-        fireEvent.change(ui.cddType.get(), {
-          target: { value: "Autres" },
-        });
+        fireEvent.click(ui.cddType("Autres").get());
         fireEvent.click(ui.next.get());
       });
 
       describe("finContratPeriodeDessai = Non", () => {
         beforeEach(() => {
-          fireEvent.click(ui.cddQuestions.finContratPeriodeDessai.non.get());
-          fireEvent.click(ui.next.get());
         });
 
         describe("propositionCDIFindeContrat = Non", () => {
           beforeEach(() => {
-            fireEvent.click(
-              ui.cddQuestions.propositionCDIFindeContrat.non.get()
-            );
-            fireEvent.click(ui.next.get());
           });
 
           describe("refusCDIFindeContrat = Non", () => {
             beforeEach(() => {
-              fireEvent.click(ui.cddQuestions.refusCDIFindeContrat.non.get());
-              fireEvent.click(ui.next.get());
             });
 
             describe("interruptionFauteGrave = Non", () => {
               beforeEach(() => {
-                fireEvent.click(
-                  ui.cddQuestions.interruptionFauteGrave.non.get()
-                );
-                fireEvent.click(ui.next.get());
               });
 
               describe("refusRenouvellementAuto = Non", () => {
                 beforeEach(() => {
-                  fireEvent.click(
-                    ui.cddQuestions.refusRenouvellementAuto.non.get()
-                  );
-                  fireEvent.click(ui.next.get());
                 });
 
                 describe("typeRemuneration = amount", () => {

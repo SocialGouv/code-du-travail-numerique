@@ -36,37 +36,40 @@ describe("SimulateurIndemnitePrecarite - Sans Convention Collective", () => {
       ).toBeInTheDocument();
     });
 
-    it("Scénario CDD complet", () => {
+    it("Scénario CDD avec sous-type exclu (saisonnier) → résultat avec motif de disqualification", () => {
       fireEvent.click(ui.contractType.cdd.get());
 
       expect(ui.contractType.cdd.get()).toBeChecked();
 
-      expect(ui.cddType.get()).toBeInTheDocument();
+      fireEvent.click(ui.cddType("CDD saisonnier").get());
+      fireEvent.click(ui.next.get());
 
-      fireEvent.change(ui.cddType.get(), {
-        target: { value: "CDD saisonnier" },
-      });
-
-      expect(ui.cddType.get()).toHaveValue("CDD saisonnier");
-
-      fireEvent.change(ui.cddType.get(), {
-        target: { value: "Autres" },
-      });
-
-      expect(ui.cddType.get()).toHaveValue("Autres");
-
+      expect(ui.result.disqualificationTitle.get()).toBeInTheDocument();
       expect(
-        ui.cddQuestions.finContratPeriodeDessai.non.get()
+        screen.getByText(
+          "Ce type de contrat ne permet pas au salarié d'avoir droit à une prime de précarité."
+        )
       ).toBeInTheDocument();
+    });
 
-      fireEvent.click(ui.cddQuestions.finContratPeriodeDessai.non.get());
+    it("Scénario CDD Autres + condition cochée → résultat avec motif de disqualification", () => {
+      fireEvent.click(ui.contractType.cdd.get());
+      fireEvent.click(ui.cddType("Autres").get());
 
-      expect(ui.cddQuestions.finContratPeriodeDessai.non.get()).toBeChecked();
+      fireEvent.click(ui.cddQuestions.finContratPeriodeDessai.get());
+      fireEvent.click(ui.next.get());
 
-      fireEvent.click(ui.cddQuestions.propositionCDIFindeContrat.non.get());
-      fireEvent.click(ui.cddQuestions.refusCDIFindeContrat.non.get());
-      fireEvent.click(ui.cddQuestions.interruptionFauteGrave.non.get());
-      fireEvent.click(ui.cddQuestions.refusRenouvellementAuto.non.get());
+      expect(ui.result.disqualificationTitle.get()).toBeInTheDocument();
+      expect(
+        screen.getByText(
+          /Lorsque le CDD a été rompu pendant la période d'essai/
+        )
+      ).toBeInTheDocument();
+    });
+
+    it("Scénario CDD complet sans disqualification", () => {
+      fireEvent.click(ui.contractType.cdd.get());
+      fireEvent.click(ui.cddType("Autres").get());
 
       fireEvent.click(ui.next.get());
 
@@ -77,15 +80,36 @@ describe("SimulateurIndemnitePrecarite - Sans Convention Collective", () => {
       ).toBeInTheDocument();
     });
 
-    it("Scénario CTT complet", () => {
+    it("Scénario CTT sans disqualification", () => {
       fireEvent.click(ui.contractType.ctt.get());
 
       expect(ui.contractType.ctt.get()).toBeChecked();
 
-      fireEvent.click(ui.cttQuestions.cttFormation.non.get());
-      fireEvent.click(ui.cttQuestions.ruptureContratFauteGrave.non.get());
-      fireEvent.click(ui.cttQuestions.propositionCDIFinContrat.non.get());
-      fireEvent.click(ui.cttQuestions.refusSouplesse.non.get());
+      fireEvent.click(ui.next.get());
+
+      expect(
+        screen.getByText(
+          "Comment souhaitez-vous indiquer la rémunération perçue pendant le contrat de travail ?"
+        )
+      ).toBeInTheDocument();
+    });
+
+    it("Scénario CTT avec condition cochée → résultat avec motif", () => {
+      fireEvent.click(ui.contractType.ctt.get());
+
+      fireEvent.click(ui.cttQuestions.cttFormation.get());
+      fireEvent.click(ui.next.get());
+
+      expect(ui.result.disqualificationTitle.get()).toBeInTheDocument();
+    });
+
+    it("Toggle off : cocher puis décocher → parcours normal", () => {
+      fireEvent.click(ui.contractType.cdd.get());
+      fireEvent.click(ui.cddType("Autres").get());
+
+      // Coche puis décoche : aucune disqualification
+      fireEvent.click(ui.cddQuestions.finContratPeriodeDessai.get());
+      fireEvent.click(ui.cddQuestions.finContratPeriodeDessai.get());
 
       fireEvent.click(ui.next.get());
 
@@ -100,15 +124,7 @@ describe("SimulateurIndemnitePrecarite - Sans Convention Collective", () => {
   describe("Étape 4/5 - Rémunération", () => {
     beforeEach(() => {
       fireEvent.click(ui.contractType.cdd.get());
-      fireEvent.change(ui.cddType.get(), {
-        target: { value: "Autres" },
-      });
-
-      fireEvent.click(ui.cddQuestions.finContratPeriodeDessai.non.get());
-      fireEvent.click(ui.cddQuestions.propositionCDIFindeContrat.non.get());
-      fireEvent.click(ui.cddQuestions.refusCDIFindeContrat.non.get());
-      fireEvent.click(ui.cddQuestions.interruptionFauteGrave.non.get());
-      fireEvent.click(ui.cddQuestions.refusRenouvellementAuto.non.get());
+      fireEvent.click(ui.cddType("Autres").get());
 
       fireEvent.click(ui.next.get());
     });
@@ -210,10 +226,6 @@ describe("SimulateurIndemnitePrecarite - Sans Convention Collective", () => {
     beforeEach(() => {
       fireEvent.click(ui.contractType.ctt.get());
 
-      fireEvent.click(ui.cttQuestions.cttFormation.non.get());
-      fireEvent.click(ui.cttQuestions.ruptureContratFauteGrave.non.get());
-      fireEvent.click(ui.cttQuestions.propositionCDIFinContrat.non.get());
-      fireEvent.click(ui.cttQuestions.refusSouplesse.non.get());
       fireEvent.click(ui.next.get());
     });
     it("devrait permettre un parcours avec salaires mensuels", () => {

@@ -4,7 +4,12 @@ import {
   useIndemnitePrecariteStore,
 } from "../store";
 import { fr } from "@codegouvfr/react-dsfr";
-import { ShowResult, Situation, Warning } from "./components";
+import {
+  DisqualificationMessage,
+  ShowResult,
+  Situation,
+  Warning,
+} from "./components";
 import FormulaInterpreter from "src/modules/outils/common/components/FormulaInterpreter";
 import { AccessibleAlert } from "src/modules/outils/common/components/AccessibleAlert";
 import ReferenceJuridiques from "src/modules/outils/preavis-licenciement/steps/Result/components/ReferenceJuridiques";
@@ -21,6 +26,7 @@ const ResultStepComponent = () => {
     totalSalary,
     calculateResult,
     resultFormula,
+    disqualificationReason,
   } = useIndemnitePrecariteStore(store, (state) => ({
     result: state.resultData.result,
     calculationError: state.resultData.calculationError,
@@ -31,11 +37,23 @@ const ResultStepComponent = () => {
     agreement: state.agreementData.input.agreement,
     totalSalary: state.resultData.totalSalary,
     calculateResult: state.resultFunction.calculateResult,
+    disqualificationReason:
+      state.informationsData.disqualificationReason,
   }));
 
   useEffect(() => {
-    calculateResult();
-  }, [calculateResult]);
+    if (!disqualificationReason) {
+      calculateResult();
+    }
+  }, [calculateResult, disqualificationReason]);
+
+  if (disqualificationReason) {
+    return (
+      <div className={fr.cx("fr-col-md-8", "fr-col-12", "fr-mb-6w")}>
+        <DisqualificationMessage reason={disqualificationReason} />
+      </div>
+    );
+  }
 
   if (calculationError) {
     return (
