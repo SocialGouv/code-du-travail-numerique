@@ -336,7 +336,9 @@ export const EnterpriseAgreementSearchInput = ({
             onAgreementSelect(agreement, selectedEnterprise);
           }}
           isInSimulator={isInSimulator}
-          canContinueSimulationIfNoAgreement={canContinueSimulationIfNoAgreement}
+          canContinueSimulationIfNoAgreement={
+            canContinueSimulationIfNoAgreement
+          }
         />
         {selectionRequired && !selectedAgreement && (
           <p

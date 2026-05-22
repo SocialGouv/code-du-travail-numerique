@@ -140,42 +140,42 @@ export function ContributionGeneric({ contribution }: Props) {
       {!isNoCDT &&
         (isRegularButtonVariant ||
           !isAgreementValid(contribution, selectedAgreement)) && (
-        <>
-          {showDisplayGenericButton && (
-            <Button
-              className={fr.cx("fr-mb-6w")}
-              priority="tertiary no outline"
-              onClick={() => {
-                setDisplayGeneric(true);
-                scrollToTitle();
-                emitClickP3(getTitle());
-                emitDisplayGenericContent(getTitle());
-              }}
-            >
-              Afficher les informations sans sélectionner une convention
-              collective
-            </Button>
-          )}
-          <ContributionGenericContent
-            ref={genericTitleRef}
-            contribution={contribution}
-            relatedItems={relatedItems}
-            displayGeneric={displayGeneric}
-            alertText={
-              selectedAgreement &&
-              !isAgreementSupported(contribution, selectedAgreement) && (
-                <p>
-                  <strong>
-                    Cette réponse correspond à ce que prévoit le code du
-                    travail, elle ne tient pas compte des spécificités de la{" "}
-                    {selectedAgreement.shortTitle}
-                  </strong>
-                </p>
-              )
-            }
-          />
-        </>
-      )}
+          <>
+            {showDisplayGenericButton && (
+              <Button
+                className={fr.cx("fr-mb-6w")}
+                priority="tertiary no outline"
+                onClick={() => {
+                  setDisplayGeneric(true);
+                  scrollToTitle();
+                  emitClickP3(getTitle());
+                  emitDisplayGenericContent(getTitle());
+                }}
+              >
+                Afficher les informations sans sélectionner une convention
+                collective
+              </Button>
+            )}
+            <ContributionGenericContent
+              ref={genericTitleRef}
+              contribution={contribution}
+              relatedItems={relatedItems}
+              displayGeneric={displayGeneric}
+              alertText={
+                selectedAgreement &&
+                !isAgreementSupported(contribution, selectedAgreement) && (
+                  <p>
+                    <strong>
+                      Cette réponse correspond à ce que prévoit le code du
+                      travail, elle ne tient pas compte des spécificités de la{" "}
+                      {selectedAgreement.shortTitle}
+                    </strong>
+                  </p>
+                )
+              }
+            />
+          </>
+        )}
     </>
   );
 }

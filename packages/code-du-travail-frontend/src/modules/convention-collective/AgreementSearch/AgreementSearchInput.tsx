@@ -117,7 +117,9 @@ export const AgreementSearchInput = ({
             onChange={(agreement) => {
               setSelectedAgreement(agreement);
               if (agreement) {
-                setSearchState((prev) => (prev === "required" ? "noSearch" : prev));
+                setSearchState((prev) =>
+                  prev === "required" ? "noSearch" : prev
+                );
               }
               if (onAgreementSelect) onAgreementSelect(agreement);
             }}

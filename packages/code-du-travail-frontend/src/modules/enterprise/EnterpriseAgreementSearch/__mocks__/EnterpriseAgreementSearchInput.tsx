@@ -441,10 +441,7 @@ export const EnterpriseAgreementSearchInput = ({
         </a>
       </div>
       {selectionRequired && !!enterprises?.length && !loading && (
-        <p
-          role="alert"
-          data-testid="enterprise-selection-required-error"
-        >
+        <p role="alert" data-testid="enterprise-selection-required-error">
           Veuillez sélectionner une entreprise dans la liste ci-dessous
         </p>
       )}
