@@ -22,7 +22,7 @@ exports[`<RelatedItems /> should render 1`] = `
         class="fr-pl-0 li-s_none!"
       >
         <li
-          class="fr-pb-2w d_flex cg_.5rem"
+          class="fr-py-2w d_flex cg_.5rem"
         >
           <span
             class="ri-arrow-right-line c_var(--artwork-minor-blue-cumulus)"
@@ -36,7 +36,7 @@ exports[`<RelatedItems /> should render 1`] = `
           </span>
         </li>
         <li
-          class="fr-pb-2w d_flex cg_.5rem"
+          class="fr-py-2w d_flex cg_.5rem"
         >
           <span
             class="ri-arrow-right-line c_var(--artwork-minor-blue-cumulus)"
@@ -68,7 +68,7 @@ exports[`<RelatedItems /> should render 1`] = `
         class="fr-pl-0 li-s_none!"
       >
         <li
-          class="fr-pb-2w d_flex cg_.5rem"
+          class="fr-py-2w d_flex cg_.5rem"
         >
           <span
             class="ri-arrow-right-line c_var(--artwork-minor-blue-cumulus)"
@@ -82,7 +82,7 @@ exports[`<RelatedItems /> should render 1`] = `
           </span>
         </li>
         <li
-          class="fr-pb-2w d_flex cg_.5rem"
+          class="fr-py-2w d_flex cg_.5rem"
         >
           <span
             class="ri-arrow-right-line c_var(--artwork-minor-blue-cumulus)"
@@ -96,7 +96,7 @@ exports[`<RelatedItems /> should render 1`] = `
           </span>
         </li>
         <li
-          class="fr-pb-2w d_flex cg_.5rem"
+          class="fr-py-2w d_flex cg_.5rem"
         >
           <span
             class="ri-arrow-right-line c_var(--artwork-minor-blue-cumulus)"

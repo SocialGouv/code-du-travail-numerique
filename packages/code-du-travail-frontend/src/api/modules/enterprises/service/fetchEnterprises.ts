@@ -23,7 +23,7 @@ export const fetchEnterprises = async (
 ): Promise<EnterpriseApiResponse> => {
   const q = encodeURIComponent(query);
 
-  const url = `${ENTERPRISE_API_URL}/search?q=${q}&page=1&per_page=25&etat_administratif=A&sort_by_size=true${
+  const url = `${ENTERPRISE_API_URL}/search?q=${q}&page=1&per_page=25&etat_administratif=A&limite_matching_etablissements=6&sort_by_size=true${
     postCode.length > 0 ? `&code_postal=${postCode.join(",")}` : ""
   }&mtm_campaign=cdtn`;
 
@@ -70,6 +70,16 @@ export const fetchEnterprises = async (
           }
         : { siret: result.siege.siret, address: result.siege.adresse };
 
+    const matchingEtablissements =
+      result.matching_etablissements.length > 0
+        ? result.matching_etablissements
+            .filter((e) => e.etat_administratif === "A")
+            .map((etablissement) => ({
+              siret: etablissement.siret,
+              address: etablissement.adresse,
+            }))
+        : [];
+
     return {
       activitePrincipale: `${nafMapper[result.activite_principale]}`,
       etablissements: result.nombre_etablissements_ouverts,
@@ -80,6 +90,7 @@ export const fetchEnterprises = async (
       siren: result.siren,
       address: result.siege.adresse,
       firstMatchingEtablissement,
+      matchingEtablissements,
       conventions,
     };
   });

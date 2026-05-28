@@ -20,7 +20,7 @@ describe("Test enterprise endpoint", () => {
     expect(response).toEqual({ entreprises: [] });
 
     expect(fetch).toHaveBeenCalledWith(
-      "https://api-entreprise/search?q=query&page=1&per_page=25&etat_administratif=A&sort_by_size=true&mtm_campaign=cdtn"
+      "https://api-entreprise/search?q=query&page=1&per_page=25&etat_administratif=A&limite_matching_etablissements=6&sort_by_size=true&mtm_campaign=cdtn"
     );
   });
 
@@ -61,6 +61,49 @@ describe("Test enterprise endpoint", () => {
           highlightLabel: "CARREFOUR BANQUE",
           label: "CARREFOUR BANQUE",
           matching: 69,
+          matchingEtablissements: [
+            {
+              address: "13 QUAI DE LA MARNE 51200 EPERNAY",
+              siret: "31381151501076",
+            },
+            {
+              address: "RUE DES PLATANES 85000 LA ROCHE-SUR-YON",
+              siret: "31381151501142",
+            },
+            {
+              address: "CENTRE COMMERCIAL RTE DE MAILLOT 89100 SENS",
+              siret: "31381151501159",
+            },
+            {
+              address: "ROUTE DE VOULX 89100 SENS",
+              siret: "31381151501167",
+            },
+            {
+              address: "280 AVENUE GABRIEL PERI 78360 MONTESSON",
+              siret: "31381151501175",
+            },
+            {
+              address:
+                "CENTRE COMMERCIAL REGIONAL SQ DU GERME DE VILLE 78180 MONTIGNY LE BRETONNEUX",
+              siret: "31381151501209",
+            },
+            {
+              address: "AVENUE DU GRAND COTTIGNIES 59290 WASQUEHAL",
+              siret: "31381151501258",
+            },
+            {
+              address: "180 AVENUE FRANCOIS MITTERRAND 91200 ATHIS-MONS",
+              siret: "31381151501274",
+            },
+            {
+              address: "RTE NATIONALE 13 78240 CHAMBOURCY",
+              siret: "31381151501308",
+            },
+            {
+              address: "CTRE CIAL DE LA CREULE LA CREULE 59190 HAZEBROUCK",
+              siret: "31381151501324",
+            },
+          ],
           simpleLabel: "CARREFOUR BANQUE",
           siren: "313811515",
         },
@@ -68,7 +111,7 @@ describe("Test enterprise endpoint", () => {
     });
 
     expect(fetch).toHaveBeenCalledWith(
-      "https://api-entreprise/search?q=query&page=1&per_page=25&etat_administratif=A&sort_by_size=true&mtm_campaign=cdtn"
+      "https://api-entreprise/search?q=query&page=1&per_page=25&etat_administratif=A&limite_matching_etablissements=6&sort_by_size=true&mtm_campaign=cdtn"
     );
   });
 
@@ -96,6 +139,12 @@ describe("Test enterprise endpoint", () => {
           highlightLabel: "JEREMIE BOUILLON",
           label: "JEREMIE BOUILLON",
           matching: 1,
+          matchingEtablissements: [
+            {
+              address: "BAT A - 5EME ETAGE 4 IMPASSE MOLIN 75018 PARIS",
+              siret: "42990443600020",
+            },
+          ],
           simpleLabel: "JEREMIE BOUILLON",
           siren: "429904436",
         },
@@ -111,6 +160,12 @@ describe("Test enterprise endpoint", () => {
           highlightLabel: "LEO BOUILLON",
           label: "LEO BOUILLON",
           matching: 1,
+          matchingEtablissements: [
+            {
+              address: "17 RUE JACQUES KABLE 75018 PARIS",
+              siret: "89320859500015",
+            },
+          ],
           simpleLabel: "LEO BOUILLON",
           siren: "893208595",
         },
@@ -118,7 +173,7 @@ describe("Test enterprise endpoint", () => {
     });
 
     expect(fetch).toHaveBeenCalledWith(
-      "https://api-entreprise/search?q=query&page=1&per_page=25&etat_administratif=A&sort_by_size=true&code_postal=75018&mtm_campaign=cdtn"
+      "https://api-entreprise/search?q=query&page=1&per_page=25&etat_administratif=A&limite_matching_etablissements=6&sort_by_size=true&code_postal=75018&mtm_campaign=cdtn"
     );
   });
 
@@ -167,6 +222,12 @@ describe("Test enterprise endpoint", () => {
           highlightLabel: "CHARLES BOUILLON",
           label: "CHARLES BOUILLON",
           matching: 1,
+          matchingEtablissements: [
+            {
+              address: "47 RUE MESLAY 75003 PARIS",
+              siret: "71101713700011",
+            },
+          ],
           simpleLabel: "CHARLES BOUILLON",
           siren: "711017137",
         },
@@ -174,7 +235,7 @@ describe("Test enterprise endpoint", () => {
     });
 
     expect(fetch).toHaveBeenCalledWith(
-      "https://api-entreprise/search?q=query&page=1&per_page=25&etat_administratif=A&sort_by_size=true&code_postal=75001,75002,75003,75004,75005,75006,75007,75008,75009,75010,75011,75012,75013,75014,75015,75016,75017,75018,75019,75020&mtm_campaign=cdtn"
+      "https://api-entreprise/search?q=query&page=1&per_page=25&etat_administratif=A&limite_matching_etablissements=6&sort_by_size=true&code_postal=75001,75002,75003,75004,75005,75006,75007,75008,75009,75010,75011,75012,75013,75014,75015,75016,75017,75018,75019,75020&mtm_campaign=cdtn"
     );
   });
 
@@ -226,6 +287,12 @@ describe("Test enterprise endpoint", () => {
           highlightLabel: "DEPARTEMENT DE LA SEINE MARITIME",
           label: "DEPARTEMENT DE LA SEINE MARITIME",
           matching: 169,
+          matchingEtablissements: [
+            {
+              address: "HOTEL DU DEPARTEMENT QUAI JEAN MOULIN 76100 ROUEN",
+              siret: "22760540900019",
+            },
+          ],
           simpleLabel: "DEPARTEMENT DE LA SEINE MARITIME",
           siren: "227605409",
         },
@@ -233,7 +300,7 @@ describe("Test enterprise endpoint", () => {
     });
 
     expect(fetch).toHaveBeenCalledWith(
-      "https://api-entreprise/search?q=22760540900019&page=1&per_page=25&etat_administratif=A&sort_by_size=true&mtm_campaign=cdtn"
+      "https://api-entreprise/search?q=22760540900019&page=1&per_page=25&etat_administratif=A&limite_matching_etablissements=6&sort_by_size=true&mtm_campaign=cdtn"
     );
   });
 

@@ -13,8 +13,8 @@ test.describe("Outil - Trouver sa convention collective", () => {
     await expectCanonicalUrlEqual(page, "/outils/convention-collective");
     await expectTitleAndMetaDescriptionEqual(
       page,
-      "Simulateur - Trouver sa convention collective - Code du travail numérique",
-      "Recherchez une convention collective par Entreprise, SIRET, Nom ou numéro IDCC"
+      "Simulateur - Trouver sa convention collective et ses accords d'entreprise - Code du travail numérique",
+      "Trouvez votre convention collective et les accords d’entreprise en saisissant le nom de votre entreprise, SIRET ou numéro IDCC."
     );
 
     await expect(page.getByRole("heading", { level: 1 })).toHaveText(
@@ -54,8 +54,8 @@ test.describe("Outil - Trouver sa convention collective", () => {
     await expectIndexable(page);
     await expectTitleAndMetaDescriptionEqual(
       page,
-      "Simulateur - Trouver sa convention collective - Code du travail numérique",
-      "Recherchez une convention collective par Entreprise, SIRET, Nom ou numéro IDCC"
+      "Simulateur - Trouver sa convention collective et ses accords d'entreprise - Code du travail numérique",
+      "Trouvez votre convention collective et les accords d’entreprise en saisissant le nom de votre entreprise, SIRET ou numéro IDCC."
     );
 
     await expect(page.getByRole("heading", { level: 1 }).first()).toHaveText(
@@ -83,7 +83,7 @@ test.describe("Outil - Trouver sa convention collective", () => {
 
     await expectUrlEqual(page, "/outils/convention-collective/entreprise");
     await expectCanonicalUrlEqual(page, "/outils/convention-collective");
-    await page.getByText("BOUILLON PIGALLE").click();
+    await page.getByText("82129756100010").click();
     await expect(
       page.getByText("1 convention collective trouvée :")
     ).toBeVisible();
@@ -95,10 +95,14 @@ test.describe("Outil - Trouver sa convention collective", () => {
       .clear();
     await page
       .getByLabel("Nom de votre entreprise ou numéro Siren/Siret")
-      .fill("CARREFOUR BANQUE");
+      .fill("31381151502140");
     await page.getByTestId("locationSearchAutocomplete").clear();
     await page.locator('button[type="submit"]').last().click();
-    await page.getByText("CARREFOUR BANQUE").first().click();
+    await page
+      .getByText(
+        "ZAE SAINT GUENAULT 1 RUE JEAN MERMOZ 91000 EVRY-COURCOURONNES"
+      )
+      .click();
     await expect(
       page.getByText("2 conventions collectives trouvées :")
     ).toBeVisible();

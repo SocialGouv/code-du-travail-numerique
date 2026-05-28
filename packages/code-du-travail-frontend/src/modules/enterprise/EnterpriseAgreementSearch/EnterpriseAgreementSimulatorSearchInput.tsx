@@ -56,7 +56,11 @@ export const EnterpriseAgreementSimulatorSearchInput = ({
     selectedAgreement,
     setSelectedAgreement,
     tracking,
-  } = useEnterpriseAgreementSearch({ trackingActionName, agreement, enterprise });
+  } = useEnterpriseAgreementSearch({
+    trackingActionName,
+    agreement,
+    enterprise,
+  });
 
   // Vue 1 : convention collective sélectionnée (entreprise avec 1 seule CC)
   if (selectedAgreement && (selectedEnterprise?.conventions?.length ?? 0) < 2) {

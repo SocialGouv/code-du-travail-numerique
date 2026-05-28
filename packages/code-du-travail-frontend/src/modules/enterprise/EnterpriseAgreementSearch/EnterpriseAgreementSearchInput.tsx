@@ -69,10 +69,10 @@ export const EnterpriseAgreementSearchInput = ({
         onClick: () => tracking.emitNoEnterpriseClickEvent(),
       })}
       buildEnterpriseEnd={(enterprise) => {
-        const etablissements = enterprise.matchingEtablissement;
+        const etablissements = enterprise.matchingEtablissements;
         if (!etablissements)
           return <Badge severity="info" noIcon>{`0 établissements`}</Badge>;
-        if (etablissements?.length > 5) {
+        if (etablissements?.length > MAX_ETABLISSEMENTS) {
           return (
             <div>
               <Badge

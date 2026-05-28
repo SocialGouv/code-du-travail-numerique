@@ -27,10 +27,10 @@ test.describe("Pages integration convention collective", () => {
       "Nom de votre entreprise ou numéro Siren/Siret"
     );
 
-    await inputSiret.pressSequentially("carrefour");
+    await inputSiret.pressSequentially("45132133500023");
 
     await iframe.getByRole("button", { name: "Rechercher" }).click();
-    await iframe.getByText("CARREFOUR HYPERMARCHES", { exact: true }).click();
+    await iframe.getByText("SIRET: 45132133500023").click();
     await iframe
       .getByText("Commerce de détail et de gros à prédominance alimentaire")
       .click();

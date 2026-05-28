@@ -103,9 +103,9 @@ export const EnterpriseCard: React.FC<CardProps> = ({
           </HtmlTitleTag>
           {(desc || end) && (
             <div className={cx(fr.cx("fr-card__desc"), classes.desc)}>
-              {desc && <p className={fr.cx("fr-mb-0")}>{desc}</p>}
+              {desc && <div className={fr.cx("fr-mb-0")}>{desc}</div>}
               {end && (
-                <p className={cx(fr.cx("fr-my-0"), classes.end)}>{end}</p>
+                <div className={cx(fr.cx("fr-my-0"), classes.end)}>{end}</div>
               )}
             </div>
           )}
