@@ -5,7 +5,7 @@ import { fr } from "@codegouvfr/react-dsfr";
 import { useEffect, useState } from "react";
 import type { Agreement } from "src/modules/outils/indemnite-depart/types";
 import { AgreementSearchInput } from "src/modules/convention-collective/AgreementSearch/AgreementSearchInput";
-import { EnterpriseAgreementSearchInput } from "src/modules/enterprise";
+import { EnterpriseAgreementModalSearchInput } from "src/modules/enterprise";
 
 type Route = "agreement" | "enterprise";
 
@@ -63,7 +63,7 @@ export const AgreementSelectionForm = ({
       )}
 
       {route === "enterprise" && (
-        <EnterpriseAgreementSearchInput
+        <EnterpriseAgreementModalSearchInput
           trackingActionName="Header - convention collective"
           level={2}
           agreement={defaultAgreement}

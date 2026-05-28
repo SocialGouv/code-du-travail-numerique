@@ -5,6 +5,7 @@ export const populateAgreementsEnterpriseResponse: EnterpriseApiResponse = {
     {
       activitePrincipale: "Administration publique générale",
       address: "HOTEL DU DEPARTEMENT QUAI JEAN MOULIN 76100 ROUEN",
+      matchingEtablissement: [],
       conventions: [
         {
           id: "5021",

@@ -23,4 +23,5 @@ export type Enterprise = {
   siren: string;
   address?: string;
   firstMatchingEtablissement?: MatchingEtablissement;
+  matchingEtablissement?: MatchingEtablissement[];
 };

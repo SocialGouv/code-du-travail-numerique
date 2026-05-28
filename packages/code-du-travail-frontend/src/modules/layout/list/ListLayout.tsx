@@ -55,6 +55,8 @@ export const ListLayout = ({
   );
   const sectionRefs = useRef<{ [key: string]: HTMLHeadingElement | null }>({});
   const buttonRefs = useRef<{ [key: string]: HTMLButtonElement | null }>({});
+  const toggleTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const focusTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const documents = initialData.toSorted(
     (a, b) => a.theme.position - b.theme.position
@@ -72,24 +74,26 @@ export const ListLayout = ({
   }, [initialData]);
 
   const toggleSection = useCallback((sectionId: string) => {
+    if (toggleTimerRef.current) clearTimeout(toggleTimerRef.current);
+    if (focusTimerRef.current) clearTimeout(focusTimerRef.current);
     setExpandedSections((prev) => {
       const newSet = new Set(prev);
       if (newSet.has(sectionId)) {
         newSet.delete(sectionId);
-        setTimeout(() => {
+        toggleTimerRef.current = setTimeout(() => {
           const button = buttonRefs.current[sectionId];
           if (button) {
             const offsetTop =
               button.getBoundingClientRect().top + window.scrollY - 64; // 4rem = 64px
             window.scrollTo({ top: offsetTop, behavior: "smooth" });
-            setTimeout(() => {
+            focusTimerRef.current = setTimeout(() => {
               button.focus({ preventScroll: true });
             }, SCROLL_DELAY_MS);
           }
         }, SCROLL_DELAY_MS);
       } else {
         newSet.add(sectionId);
-        setTimeout(() => {
+        toggleTimerRef.current = setTimeout(() => {
           const firstHiddenItem = firstHiddenItemRefs.current[sectionId];
           if (firstHiddenItem) {
             const link = firstHiddenItem.querySelector("a");

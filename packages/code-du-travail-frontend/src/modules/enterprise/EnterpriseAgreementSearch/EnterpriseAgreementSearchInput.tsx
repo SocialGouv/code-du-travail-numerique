@@ -1,600 +1,128 @@
 "use client";
 import { fr } from "@codegouvfr/react-dsfr";
-import Image from "next/image";
-import Button from "@codegouvfr/react-dsfr/Button";
-import Input from "@codegouvfr/react-dsfr/Input";
 import Badge from "@codegouvfr/react-dsfr/Badge";
-import { EnterpriseCard } from "./EnterpriseCard";
-import { createElement, ReactNode, useEffect, useRef, useState } from "react";
-import { css } from "@styled-system/css";
-
-import Spinner from "../../common/Spinner.svg";
-import { LocationSearchInput } from "./LocationSearchInput";
-import { searchEnterprises } from "../queries";
-import { Enterprise } from "../types";
-import { CardTitleStyle } from "../../convention-collective/style";
-import { EnterpriseAgreementSelectionForm } from "./EnterpriseAgreementSelectionForm";
-import { EnterpriseAgreementSelectionDetail } from "./EnterpriseAgreementSelectionDetail";
-import { getEnterpriseAgreements } from "./utils";
-import { useEnterpriseAgreementSearchTracking } from "./tracking";
-import { Agreement } from "src/modules/outils/indemnite-depart/types";
-import { scrollToTop } from "src/modules/outils/common/utils";
+import { useEnterpriseAgreementSearch } from "./useEnterpriseAgreementSearch";
+import { EnterpriseSearchFormAndResults } from "./EnterpriseSearchFormAndResults";
+import { EnterpriseEtablissementCard } from "./EnterpriseEtablissementCard";
 import { ApiGeoResult } from "./searchCities";
-import { AccessibleAlert } from "src/modules/outils/common/components/AccessibleAlert";
+import { ListWithArrow } from "../../common/ListWithArrow";
+import { css } from "@styled-system/css";
+import React from "react";
+import Link from "../../common/Link";
+
+const MAX_ETABLISSEMENTS = 5;
 
 type Props = {
   widgetMode?: boolean;
-  onAgreementSelect?: (agreement?: Agreement, enterprise?: Enterprise) => void;
-  selectedAgreementAlert?: (
-    agreement?: Agreement
-  ) => NonNullable<ReactNode> | undefined;
   defaultSearch?: string;
   defaultLocation?: ApiGeoResult;
-  enterprise?: Enterprise;
-  agreement?: Agreement;
   trackingActionName: string;
   level: 2 | 3;
-  isInSimulator?: boolean;
-  canContinueSimulationIfNoAgreement?: boolean;
-  onBackToPersonalize?: () => void;
 };
 
 export const EnterpriseAgreementSearchInput = ({
   widgetMode = false,
   defaultSearch,
   defaultLocation,
-  onAgreementSelect,
-  selectedAgreementAlert,
   trackingActionName,
-  enterprise,
-  agreement,
   level,
-  isInSimulator,
-  canContinueSimulationIfNoAgreement,
-  onBackToPersonalize,
 }: Props) => {
-  const [selectedAgreement, setSelectedAgreement] = useState<
-    Agreement | undefined
-  >(agreement);
-  const [searchState, setSearchState] = useState<
-    "noSearch" | "notFoundSearch" | "errorSearch" | "fullSearch" | "required"
-  >("noSearch");
   const {
-    emitEnterpriseAgreementSearchInputEvent,
-    emitSelectEnterpriseEvent,
-    emitNoEnterpriseClickEvent,
-    emitSelectEnterpriseAgreementEvent,
-    emitNoEnterpriseSelectEvent,
-  } = useEnterpriseAgreementSearchTracking();
+    search,
+    setSearch,
+    location,
+    setLocation,
+    enterprises,
+    loading,
+    searchState,
+    error,
+    onSubmit,
+    resultRef,
+    getStateMargin,
+    getInputState,
+    getQueries,
+    tracking,
+  } = useEnterpriseAgreementSearch({
+    defaultSearch,
+    defaultLocation,
+    trackingActionName,
+  });
 
-  const [search, setSearch] = useState<string | undefined>(defaultSearch);
-  const [loading, setLoading] = useState<boolean>(false);
-  const [location, setLocation] = useState<ApiGeoResult | undefined>(
-    defaultLocation
-  );
-  const [enterprises, setEnterprises] = useState<Enterprise[]>();
-  const [selectedEnterprise, setSelectedEnterprise] = useState<
-    Enterprise | undefined
-  >(enterprise);
-  const [error, setError] = useState("");
-  const resultRef = useRef<HTMLHeadingElement>(null);
-  const selectedConventionTitleRef = useRef<HTMLParagraphElement>(null);
-  const TitleTag = `h${level}` as "h2" | "h3";
-  const SubtitleTag = `h${level + 1}` as "h3" | "h4";
-
-  const getStateMessage = () => {
-    switch (searchState) {
-      case "notFoundSearch":
+  return (
+    <EnterpriseSearchFormAndResults
+      search={search}
+      setSearch={setSearch}
+      location={location}
+      setLocation={setLocation}
+      enterprises={enterprises}
+      loading={loading}
+      searchState={searchState}
+      error={error}
+      onSubmit={onSubmit}
+      resultRef={resultRef}
+      getStateMargin={getStateMargin}
+      getInputState={getInputState}
+      level={level}
+      buildAssistantsMaternielsLinkProps={() => ({
+        href: `/convention-collective/3239-particuliers-employeurs-et-emploi-a-domicile`,
+        ...(widgetMode ? { target: "_blank" } : {}),
+        onClick: () => tracking.emitNoEnterpriseClickEvent(),
+      })}
+      buildEnterpriseEnd={(enterprise) => {
+        const etablissements = enterprise.matchingEtablissement;
+        if (!etablissements)
+          return <Badge severity="info" noIcon>{`0 établissements`}</Badge>;
+        if (etablissements?.length > 5) {
+          return (
+            <div>
+              <Badge
+                severity="info"
+                noIcon
+              >{`${enterprise.matching} établissements`}</Badge>
+              <span
+                className={`${fr.cx("fr-icon-warning-fill", "fr-ml-2v", "fr-mr-2v")} ${css(
+                  {
+                    color: "var(--text-default-warning)",
+                  }
+                )}`}
+              />
+              <span className={fr.cx("fr-text--md")}>
+                Sélectionnez une ville ou saisissez le code SIRET (13 chiffres)
+                pour affiner les établissements.
+              </span>
+            </div>
+          );
+        }
         return (
           <>
-            Aucune entreprise n&apos;a été trouvée.
-            <br />
-            Vérifiez l’orthographe des termes de recherche
+            <Badge
+              severity="info"
+              noIcon
+            >{`${enterprise.matching} établissements`}</Badge>
+            <div className={fr.cx("fr-mt-2w")}>
+              <ListWithArrow
+                withSeparators
+                small
+                items={etablissements.map((etablissement) => (
+                  <Link
+                    className={fr.cx("fr-link")}
+                    key={etablissement.siret}
+                    onClick={() =>
+                      tracking.emitSelectEnterpriseEvent(trackingActionName, {
+                        label: enterprise.label,
+                        siren: etablissement.siret,
+                      })
+                    }
+                    href={`/${widgetMode ? "widgets" : "outils"}/convention-collective/entreprise/${etablissement.siret}${getQueries()}`}
+                  >
+                    {etablissement.address} - SIRET: {etablissement.siret}
+                  </Link>
+                ))}
+              />
+            </div>
           </>
         );
-      case "required":
-        return <>Le nom de l&apos;entreprise doit être renseigné</>;
-      case "errorSearch":
-        return <>{error}</>;
-    }
-  };
-  const getStateMargin = () => {
-    switch (searchState) {
-      case "notFoundSearch":
-        return "fr-mb-14v";
-      case "errorSearch":
-      case "required":
-        return "fr-mb-9v";
-    }
-    return "fr-mb-0";
-  };
-  const getInputState = () => {
-    switch (searchState) {
-      case "errorSearch":
-      case "notFoundSearch":
-      case "required":
-        return "error";
-    }
-  };
-  const getQueries = () => {
-    const jsonString = location ? JSON.stringify(location) : "";
-    const base64String = jsonString
-      ? btoa(
-          encodeURIComponent(jsonString).replace(
-            /%([0-9A-F]{2})/g,
-            (_match, p1) => String.fromCharCode(parseInt(p1, 16))
-          )
-        )
-      : "";
-    return (
-      "?q=" +
-      encodeURIComponent(search ?? "") +
-      (base64String ? "&cp=" + base64String : "")
-    );
-  };
-  const onSubmit = async () => {
-    if (!search) {
-      setSearchState("required");
-      return;
-    }
-    emitEnterpriseAgreementSearchInputEvent(
-      trackingActionName,
-      search,
-      location
-    );
-    setLoading(true);
-    try {
-      const result = await searchEnterprises({
-        query: search,
-        codesPostaux: location?.codesPostaux,
-      });
-      setSearchState(!result.length ? "errorSearch" : "fullSearch");
-      setSearchState(
-        search.length > 0 && !result.length ? "notFoundSearch" : "noSearch"
-      );
-      setEnterprises(result);
-    } catch (e) {
-      setSearchState("errorSearch");
-      setEnterprises(undefined);
-      setError(e);
-    } finally {
-      setLoading(false);
-    }
-  };
-  useEffect(() => {
-    if (defaultSearch) {
-      onSubmit();
-    }
-  }, [defaultSearch]);
-  useEffect(() => {
-    if (selectedEnterprise?.conventions?.length === 1) {
-      const [enterpriseAgreement] = getEnterpriseAgreements(
-        selectedEnterprise.conventions
-      );
-      setSelectedAgreement(enterpriseAgreement);
-    }
-  }, [selectedEnterprise]);
-  useEffect(() => {
-    resultRef.current?.focus();
-  }, [enterprises]);
-
-  useEffect(() => {
-    if (agreement) {
-      setSelectedAgreement(agreement);
-    }
-  }, [agreement]);
-
-  useEffect(() => {
-    if (enterprise) {
-      setSelectedEnterprise(enterprise);
-    }
-  }, [enterprise]);
-
-  if (
-    onAgreementSelect &&
-    selectedAgreement &&
-    (selectedEnterprise?.conventions?.length ?? 0) < 2
-  ) {
-    return (
-      <>
-        {selectedEnterprise && (
-          <EnterpriseAgreementSelectionDetail
-            enterprise={selectedEnterprise}
-            level={level}
-          />
-        )}
-
-        <TitleTag
-          ref={selectedConventionTitleRef}
-          className={fr.cx("fr-h4", "fr-mt-2w", "fr-mb-0")}
-          tabIndex={-1}
-        >
-          Vous avez sélectionné la convention collective
-        </TitleTag>
-        <div
-          className={fr.cx(
-            "fr-my-2w",
-            "fr-grid-row",
-            "fr-grid-row--middle",
-            "fr-grid-row--gutters"
-          )}
-        >
-          <div className={fr.cx("fr-card", "fr-card--sm", "fr-col-10")}>
-            <div className={fr.cx("fr-card__body")}>
-              <div className={fr.cx("fr-card__content", "fr-py-1w")}>
-                <p
-                  className={fr.cx("fr-card__title")}
-                  id={"selected-convention"}
-                >
-                  {`${selectedAgreement.shortTitle} IDCC ${selectedAgreement.id}`}
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className={fr.cx("fr-col")}>
-            <Button
-              iconId="fr-icon-arrow-go-back-fill"
-              priority="secondary"
-              onClick={() => {
-                setSelectedAgreement(undefined);
-                scrollToTop();
-                if (
-                  selectedEnterprise?.conventions.length &&
-                  selectedEnterprise?.conventions.length < 2
-                ) {
-                  setSelectedEnterprise(undefined);
-                }
-                // Focus the "Personnalisez la réponse" title via callback
-                if (onBackToPersonalize) {
-                  setTimeout(() => {
-                    onBackToPersonalize();
-                  }, 100);
-                }
-              }}
-              nativeButtonProps={{
-                "aria-describedby": `selected-convention`,
-              }}
-            >
-              Modifier
-            </Button>
-          </div>
-        </div>
-
-        {selectedAgreement && selectedAgreementAlert?.(selectedAgreement) && (
-          <AccessibleAlert
-            className={["fr-mt-2w"]}
-            title="Nous n'avons pas de réponse pour cette convention collective"
-            description={selectedAgreementAlert(selectedAgreement)}
-            severity="warning"
-          />
-        )}
-      </>
-    );
-  } else if (onAgreementSelect && selectedEnterprise) {
-    return (
-      <EnterpriseAgreementSelectionForm
-        enterprise={selectedEnterprise}
-        selectedAgreement={selectedAgreement}
-        level={level}
-        goBack={() => {
-          setSelectedEnterprise(undefined);
-          setSelectedAgreement(undefined);
-          scrollToTop();
-          // Focus the "Personnalisez la réponse" title via callback
-          if (onBackToPersonalize) {
-            setTimeout(() => {
-              onBackToPersonalize();
-            }, 100);
-          }
-        }}
-        onAgreementSelect={(agreement) => {
-          setSelectedAgreement(agreement);
-          if (selectedEnterprise) {
-            emitSelectEnterpriseEvent(trackingActionName, {
-              label: selectedEnterprise.label,
-              siren: selectedEnterprise.siren,
-            });
-            emitSelectEnterpriseAgreementEvent(
-              `idcc${selectedEnterprise.conventions[0].num}`,
-              trackingActionName
-            );
-          } else {
-            emitNoEnterpriseSelectEvent();
-          }
-          onAgreementSelect(agreement, selectedEnterprise);
-        }}
-        isInSimulator={isInSimulator}
-        canContinueSimulationIfNoAgreement={canContinueSimulationIfNoAgreement}
-      />
-    );
-  }
-  return (
-    <>
-      {createElement(
-        `h${level}`,
-        {
-          className: fr.cx("fr-h4", "fr-my-2w"),
-        },
-        "Précisez votre entreprise"
-      )}
-      <form
-        className={fr.cx(
-          "fr-grid-row",
-          "fr-grid-row--gutters",
-          "fr-grid-row--bottom",
-          "fr-mb-0"
-        )}
-        onSubmit={async (event) => {
-          event.preventDefault();
-          await onSubmit();
-        }}
-      >
-        <Input
-          className={fr.cx(
-            "fr-col-12",
-            "fr-col-xl-6",
-            "fr-col-md-7",
-            "fr-mb-0"
-          )}
-          hintText={
-            <>
-              Ex&nbsp;: Café de la mairie ou 40123778000127 (présent sur la
-              fiche de paie du salarié)
-            </>
-          }
-          label={
-            <>Nom de votre entreprise ou numéro Siren/Siret (obligatoire)</>
-          }
-          state={getInputState()}
-          stateRelatedMessage={getStateMessage()}
-          nativeInputProps={{
-            value: search,
-            onChange: (event) => {
-              setSearch(event.target.value);
-            },
-            // @ts-ignore
-            "data-testid": "enterprise-search-input",
-          }}
-          classes={{
-            label: css({
-              "& > button": {
-                padding: "0!",
-                minHeight: "0!",
-                height: "20px!",
-                width: "24px!",
-                marginLeft: "3px!",
-              },
-            }),
-          }}
-        />
-        <div
-          className={fr.cx(
-            "fr-col-12",
-            "fr-col-md",
-            getStateMargin(),
-            "fr-mt-2w",
-            "fr-mt-md-0"
-          )}
-        >
-          <LocationSearchInput
-            onLocationChange={setLocation}
-            defaultValue={location}
-          />
-        </div>
-        <div
-          className={`${fr.cx("fr-col-xl", getStateMargin())} ${ButtonContainer}`}
-        >
-          <Button
-            type="submit"
-            iconPosition="right"
-            iconId="fr-icon-search-line"
-            data-testid="agreement-company-search-button"
-          >
-            Rechercher
-          </Button>
-        </div>
-      </form>
-
-      <div>
-        <div className={fr.cx("fr-mt-2w")}>
-          {enterprises && enterprises.length > 0 && !loading && (
-            <TitleTag
-              className={fr.cx("fr-h5")}
-              tabIndex={-1}
-              ref={resultRef}
-              data-testid="result-title"
-            >
-              {enterprises.length}
-              {enterprises.length > 1
-                ? " entreprises trouvées"
-                : " entreprise trouvée"}
-            </TitleTag>
-          )}
-          {loading && (
-            <div className={fr.cx("fr-grid-row")}>
-              <p className={fr.cx("fr-h5", "fr-mb-0")}>Chargement en cours</p>
-              <div
-                className={`${fr.cx("fr-ml-1w", "fr-mt-1w")} ${SpinnerBlock}`}
-              >
-                <Image priority src={Spinner} alt="Chargement en cours" />
-              </div>
-            </div>
-          )}
-          {searchState === "notFoundSearch" && (
-            <AccessibleAlert
-              title="Vous ne trouvez pas votre entreprise&nbsp;?"
-              titleAs={`h${level + 1}` as "h3" | "h4"}
-              description={
-                <>
-                  <p>Il peut y avoir plusieurs explications à cela&nbsp;:</p>
-                  <ul>
-                    <li>
-                      Votre entreprise a été enregistrée sous un autre nom ou un
-                      autre code&nbsp;: si vous le pouvez, utilisez son numéro
-                      Siret. Ce dernier doit être présent sur votre bulletin de
-                      paie.
-                    </li>
-                    <li>
-                      Votre entreprise a un statut particulier&nbsp;:
-                      administration ou établissements publics, associations,
-                      secteur agricole, La Poste, La Croix Rouge etc.
-                    </li>
-                    <li>Votre entreprise n’a pas de convention collective.</li>
-                  </ul>
-                </>
-              }
-              severity="info"
-            />
-          )}
-        </div>
-        {!!enterprises?.length &&
-          !loading &&
-          enterprises?.map((enterprise, index) => (
-            <EnterpriseCard
-              key={enterprise.label + index}
-              className={fr.cx("fr-mt-2w")}
-              titleAs={`h${level + 1}` as "h3" | "h4"}
-              border
-              enlargeLink
-              linkProps={
-                !onAgreementSelect
-                  ? {
-                      href: `/${widgetMode ? "widgets" : "outils"}/convention-collective/entreprise/${enterprise.siren}${getQueries()}`,
-                      onClick: () => {
-                        emitSelectEnterpriseEvent(trackingActionName, {
-                          label: enterprise.label,
-                          siren: enterprise.siren,
-                        });
-                      },
-                    }
-                  : {
-                      onClick: (ev) => {
-                        ev.preventDefault();
-                        setSelectedEnterprise(enterprise);
-                        if (!enterprise) {
-                          emitNoEnterpriseSelectEvent();
-                          return;
-                        }
-                        if (enterprise.conventions.length === 1) {
-                          emitSelectEnterpriseEvent(trackingActionName, {
-                            label: enterprise.label,
-                            siren: enterprise.siren,
-                          });
-                          emitSelectEnterpriseAgreementEvent(
-                            `idcc${enterprise.conventions[0].num}`,
-                            trackingActionName
-                          );
-                          onAgreementSelect(
-                            enterprise.conventions[0],
-                            enterprise
-                          );
-                        } else if (
-                          !enterprise.conventions ||
-                          enterprise.conventions.length === 0
-                        ) {
-                          onAgreementSelect(undefined, enterprise);
-                        }
-                      },
-                    }
-              }
-              desc={
-                enterprise.activitePrincipale ? (
-                  <>Activité&nbsp;: {enterprise.activitePrincipale}</>
-                ) : undefined
-              }
-              end={<Badge>{`${enterprise.matching} établissements`}</Badge>}
-              size="large"
-              title={enterprise.label}
-              classes={{
-                title: `${fr.cx("fr-h5")} ${CardTitleStyle}`,
-                content: fr.cx("fr-px-2w", "fr-pt-1w", "fr-pb-8w"),
-                desc: fr.cx("fr-mt-1w", "fr-mr-6w"),
-                end: fr.cx("fr-mt-0", "fr-pt-1w", "fr-pb-2w"),
-              }}
-            />
-          ))}
-      </div>
-      <div>
-        <div
-          role="heading"
-          aria-level={level}
-          className={fr.cx(
-            "fr-text--bold",
-            !loading ? "fr-mt-5w" : "fr-mt-2w",
-            "fr-mb-1w"
-          )}
-        >
-          Votre recherche concerne les assistants maternels, employés de
-          maison&nbsp;?
-        </div>
-        <EnterpriseCard
-          border
-          enlargeLink
-          titleAs={`h${level + 1}` as "h3" | "h4"}
-          linkProps={
-            !onAgreementSelect
-              ? {
-                  href: `/convention-collective/3239-particuliers-employeurs-et-emploi-a-domicile`,
-                  ...(widgetMode ? { target: "_blank" } : {}),
-                  onClick: () => {
-                    emitNoEnterpriseClickEvent();
-                  },
-                }
-              : {
-                  onClick: (ev) => {
-                    ev.preventDefault();
-                    const assMatAgreement = {
-                      contributions: true,
-                      num: 3239,
-                      id: "3239",
-                      shortTitle:
-                        "Particuliers employeurs et emploi à domicile",
-                      slug: "3239-particuliers-employeurs-et-emploi-a-domicile",
-                      title: "Particuliers employeurs et emploi à domicile",
-                      url: "/3239-particuliers-employeurs-et-emploi-a-domicile",
-                    };
-                    setSelectedAgreement(assMatAgreement);
-                    emitNoEnterpriseSelectEvent();
-                    onAgreementSelect(assMatAgreement);
-                    // Focus the "Vous avez sélectionné la convention collective" title after action
-                    setTimeout(() => {
-                      selectedConventionTitleRef.current?.focus();
-                    }, 100);
-                  },
-                }
-          }
-          title="Particuliers employeurs et emploi à domicile"
-          desc="Retrouvez les questions-réponses les plus fréquentes organisées par thème et élaborées par le Ministère du travail concernant cette convention collective."
-          size="small"
-          classes={{
-            title: CardSmallTitleStyle,
-            content: fr.cx("fr-px-2w", "fr-pt-1w", "fr-pb-3w"),
-            desc: fr.cx("fr-mt-1w", "fr-mr-6w"),
-            end: fr.cx("fr-mt-0", "fr-pt-1w", "fr-pb-2w"),
-          }}
-        />
-      </div>
-    </>
+      }}
+    />
   );
 };
-
-const CardSmallTitleStyle = css({
-  fontSize: "initial !important",
-  "& > a": {
-    _after: {
-      top: "calc(50% - 8px)",
-    },
-  },
-});
-
-const SpinnerBlock = css({
-  height: "100%",
-  alignContent: "center",
-  marginTop: "0.5rem",
-});
-
-const ButtonContainer = css({
-  md: {
-    maxW: "164px",
-  },
-});

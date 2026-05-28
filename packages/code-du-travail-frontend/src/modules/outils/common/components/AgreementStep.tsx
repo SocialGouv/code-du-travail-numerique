@@ -2,7 +2,7 @@ import React from "react";
 import { RadioQuestion } from ".";
 import { AgreementRoute } from "../../indemnite-depart/types";
 import { AgreementSearchInput } from "src/modules/convention-collective/AgreementSearch/AgreementSearchInput";
-import { EnterpriseAgreementSearchInput } from "src/modules/enterprise";
+import { EnterpriseAgreementSimulatorSearchInput } from "src/modules/enterprise";
 import {
   CommonAgreementStoreError,
   CommonAgreementStoreFn,
@@ -110,7 +110,7 @@ export const CommonAgreementStep = ({
       )}
       {route === "enterprise" && (
         <>
-          <EnterpriseAgreementSearchInput
+          <EnterpriseAgreementSimulatorSearchInput
             onAgreementSelect={(agr, ent) => {
               onAgreementChange(agr, ent);
             }}
