@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.230.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.229.0...v4.230.0) (2026-05-28)
+
+
+### Features
+
+* **outils:** ajout de méthodes de calcul sur le SMIC annuel ([#7286](https://github.com/SocialGouv/code-du-travail-numerique/issues/7286)) ([948f0e8](https://github.com/SocialGouv/code-du-travail-numerique/commit/948f0e801fa5eee94bf3847119e8e642b30a4e34))
+
+
+
+
+
 # [4.229.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.228.3...v4.229.0) (2026-05-21)
 
 
