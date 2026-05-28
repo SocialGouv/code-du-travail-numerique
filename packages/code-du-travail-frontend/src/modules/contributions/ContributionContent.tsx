@@ -20,6 +20,7 @@ export const ContributionContent = ({ contribution, titleLevel }: Props) => {
           titleLevel={titleLevel}
           extra={{
             infographics: contribution.infographics ?? [],
+            smicHourly: contribution.smicValue,
           }}
         />
       )}

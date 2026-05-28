@@ -627,4 +627,193 @@ describe("DisplayContent", () => {
       expect(allParagraphs[2].getAttribute("class")).toContain("fr-mt-2w");
     });
   });
+
+  describe("SMIC challenger", () => {
+    it("should replace low salary by the SMIC value", () => {
+      const { asFragment } = render(
+        <DisplayContent
+          content={`
+          <table style="min-width: 240px;">
+              <colgroup>
+                <col style="min-width: 25px;">
+                <col style="width: 115px;">
+                <col style="min-width: 25px;">
+                <col style="min-width: 25px;">
+                <col style="min-width: 25px;">
+                <col style="min-width: 25px;">
+              </colgroup>
+              <tbody>
+                <tr>
+                  <td colspan="1" rowspan="1">
+                    <p>
+                      <strong>Coefficient</strong>
+                    </p>
+                  </td>
+                  <td colspan="1" rowspan="1" colwidth="115">
+                    <p>
+                      <strong>À l'embauche</strong>
+                    </p>
+                  </td>
+                  <td colspan="1" rowspan="1">
+                    <p>
+                      <strong>Après 2 ans d'ancienneté</strong>
+                    </p>
+                  </td>
+                  <td colspan="1" rowspan="1">
+                    <p>
+                      <strong>Après 5 ans d'ancienneté</strong>
+                    </p>
+                  </td>
+                  <td colspan="1" rowspan="1">
+                    <p>
+                      <strong>Après 10 ans d'ancienneté</strong>
+                    </p>
+                  </td>
+                  <td colspan="1" rowspan="1">
+                    <p>
+                      <strong>Après 15 ans d'ancienneté</strong>
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="1" rowspan="1">
+                    <p>
+                      <strong>110 M <br>115 M <br>118 M <br>120 M </strong>
+                    </p>
+                  </td>
+                  <td colspan="1" rowspan="1" colwidth="115">
+                    <p>
+                      <span data-challenger-formula="smic_hourly" class="challenger">12,09 €</span> brut
+                    </p>
+                  </td>
+                  <td colspan="1" rowspan="1">
+                    <p>
+                      <span data-challenger-formula="smic_hourly" class="challenger">12,3318 €</span> brut
+                    </p>
+                  </td>
+                  <td colspan="1" rowspan="1">
+                    <p>
+                      <span data-challenger-formula="smic_hourly" class="challenger">12,5736 €</span> brut
+                    </p>
+                  </td>
+                  <td colspan="1" rowspan="1">
+                    <p>
+                      <span data-challenger-formula="smic_hourly" class="challenger">12,8154 €</span> brut
+                    </p>
+                  </td>
+                  <td colspan="1" rowspan="1">
+                    <p>
+                      <span data-challenger-formula="smic_hourly" class="challenger">13,0572 €</span> brut
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="1" rowspan="1">
+                    <p>
+                      <strong>128 M</strong>
+                    </p>
+                  </td>
+                  <td colspan="1" rowspan="1" colwidth="115">
+                    <p>
+                      <span data-challenger-formula="smic_hourly" class="challenger">12,12 €</span> brut
+                    </p>
+                  </td>
+                  <td colspan="1" rowspan="1">
+                    <p>
+                      <span data-challenger-formula="smic_hourly" class="challenger">12,3624 €</span> brut
+                    </p>
+                  </td>
+                  <td colspan="1" rowspan="1">
+                    <p>
+                      <span data-challenger-formula="smic_hourly" class="challenger">12,6048 €</span> brut
+                    </p>
+                  </td>
+                  <td colspan="1" rowspan="1">
+                    <p>
+                      <span data-challenger-formula="smic_hourly" class="challenger">12,8472 €</span> brut
+                    </p>
+                  </td>
+                  <td colspan="1" rowspan="1">
+                    <p>
+                      <span data-challenger-formula="smic_hourly" class="challenger">13,0896 €</span> brut
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="1" rowspan="1">
+                    <p>
+                      <strong>138 M</strong>
+                    </p>
+                  </td>
+                  <td colspan="1" rowspan="1" colwidth="115">
+                    <p>
+                      <span data-challenger-formula="smic_hourly" class="challenger">12,14 €</span> brut
+                    </p>
+                  </td>
+                  <td colspan="1" rowspan="1">
+                    <p>
+                      <span data-challenger-formula="smic_hourly" class="challenger">12,3828 €</span> brut
+                    </p>
+                  </td>
+                  <td colspan="1" rowspan="1">
+                    <p>
+                      <span data-challenger-formula="smic_hourly" class="challenger">12,6256 €</span> brut
+                    </p>
+                  </td>
+                  <td colspan="1" rowspan="1">
+                    <p>
+                      <span data-challenger-formula="smic_hourly" class="challenger">12,8684 €</span> brut
+                    </p>
+                  </td>
+                  <td colspan="1" rowspan="1">
+                    <p>
+                      <span data-challenger-formula="smic_hourly" class="challenger">13,1112 €</span> brut
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="1" rowspan="1">
+                    <p>
+                      <strong>150 M</strong>
+                    </p>
+                  </td>
+                  <td colspan="1" rowspan="1" colwidth="115">
+                    <p>
+                      <span data-challenger-formula="smic_hourly" class="challenger">12,43 €</span> brut
+                    </p>
+                  </td>
+                  <td colspan="1" rowspan="1">
+                    <p>
+                      <span data-challenger-formula="smic_hourly" class="challenger">12,6786 €</span> brut
+                    </p>
+                  </td>
+                  <td colspan="1" rowspan="1">
+                    <p>
+                      <span data-challenger-formula="smic_hourly" class="challenger">12,9272 €</span> brut
+                    </p>
+                  </td>
+                  <td colspan="1" rowspan="1">
+                    <p>
+                      <span data-challenger-formula="smic_hourly" class="challenger">13,1758 €</span> brut
+                    </p>
+                  </td>
+                  <td colspan="1" rowspan="1">
+                    <p>
+                      <span data-challenger-formula="smic_hourly" class="challenger">13,4244 €</span> brut
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+        `}
+          titleLevel={3}
+          extra={{
+            smicHourly: 12.31,
+          }}
+        ></DisplayContent>
+      );
+
+      expect(asFragment().firstChild).toMatchSnapshot();
+    });
+  });
 });

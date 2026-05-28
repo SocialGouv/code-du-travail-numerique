@@ -499,6 +499,8 @@ const DisplayContent = ({
         challengerState,
       })
     );
+    /*
+    // On garde ce code car on va vouloir afficher l'astérisque plus tard
     if (challengerState.substituted) {
       return (
         <>
@@ -509,6 +511,7 @@ const DisplayContent = ({
         </>
       );
     }
+     */
     return parsed;
   } catch (error) {
     console.error("Error parsing HTML content:", error);

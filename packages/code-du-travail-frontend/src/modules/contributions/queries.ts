@@ -93,6 +93,7 @@ export const fetchContributionBySlug = async (
       "url",
       "messageBlockGenericNoCDT",
       "infographics",
+      "smicValue",
     ],
     {
       index: elasticDocumentsIndex,

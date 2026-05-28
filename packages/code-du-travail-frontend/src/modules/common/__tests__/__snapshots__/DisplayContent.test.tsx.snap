@@ -584,6 +584,605 @@ exports[`DisplayContent Headings should replace span with class "title" and "sub
 
 exports[`DisplayContent Infographic should replace div with infographic class to Infographic component 1`] = `null`;
 
+exports[`DisplayContent SMIC challenger should replace low salary by the SMIC value 1`] = `
+<div
+  class="fr-table fr-mb-2w"
+>
+  <div
+    class="fr-table__wrapper"
+  >
+    <div
+      class="fr-table__container"
+    >
+      <div
+        class="fr-table__content"
+      >
+        <table>
+          <caption
+            class="fr-hidden"
+          >
+            
+                  
+          </caption>
+          <thead>
+            <tr>
+              <th
+                colspan="1"
+                rowspan="1"
+                scope="col"
+              >
+                <p>
+                  <strong>
+                    Coefficient
+                  </strong>
+                </p>
+              </th>
+              <th
+                colspan="1"
+                rowspan="1"
+                scope="col"
+              >
+                <p>
+                  <strong>
+                    À l'embauche
+                  </strong>
+                </p>
+              </th>
+              <th
+                colspan="1"
+                rowspan="1"
+                scope="col"
+              >
+                <p>
+                  <strong>
+                    Après 2 ans d'ancienneté
+                  </strong>
+                </p>
+              </th>
+              <th
+                colspan="1"
+                rowspan="1"
+                scope="col"
+              >
+                <p>
+                  <strong>
+                    Après 5 ans d'ancienneté
+                  </strong>
+                </p>
+              </th>
+              <th
+                colspan="1"
+                rowspan="1"
+                scope="col"
+              >
+                <p>
+                  <strong>
+                    Après 10 ans d'ancienneté
+                  </strong>
+                </p>
+              </th>
+              <th
+                colspan="1"
+                rowspan="1"
+                scope="col"
+              >
+                <p>
+                  <strong>
+                    Après 15 ans d'ancienneté
+                  </strong>
+                </p>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td
+                colspan="1"
+                rowspan="1"
+              >
+                
+                    
+                <p
+                  class="fr-mt-2w"
+                >
+                  
+                      
+                  <strong>
+                    110 M 
+                    <br />
+                    115 M 
+                    <br />
+                    118 M 
+                    <br />
+                    120 M 
+                  </strong>
+                  
+                    
+                </p>
+                
+                  
+              </td>
+              <td
+                colspan="1"
+                rowspan="1"
+              >
+                
+                    
+                <p
+                  class="fr-mt-2w"
+                >
+                  
+                      
+                  <span
+                    class="challenger"
+                  >
+                    12,31 €*
+                  </span>
+                   brut
+                    
+                </p>
+                
+                  
+              </td>
+              <td
+                colspan="1"
+                rowspan="1"
+              >
+                
+                    
+                <p
+                  class="fr-mt-2w"
+                >
+                  
+                      
+                  <span>
+                    12,3318 €
+                  </span>
+                   brut
+                    
+                </p>
+                
+                  
+              </td>
+              <td
+                colspan="1"
+                rowspan="1"
+              >
+                
+                    
+                <p
+                  class="fr-mt-2w"
+                >
+                  
+                      
+                  <span>
+                    12,5736 €
+                  </span>
+                   brut
+                    
+                </p>
+                
+                  
+              </td>
+              <td
+                colspan="1"
+                rowspan="1"
+              >
+                
+                    
+                <p
+                  class="fr-mt-2w"
+                >
+                  
+                      
+                  <span>
+                    12,8154 €
+                  </span>
+                   brut
+                    
+                </p>
+                
+                  
+              </td>
+              <td
+                colspan="1"
+                rowspan="1"
+              >
+                
+                    
+                <p
+                  class="fr-mt-2w"
+                >
+                  
+                      
+                  <span>
+                    13,0572 €
+                  </span>
+                   brut
+                    
+                </p>
+                
+                  
+              </td>
+            </tr>
+            <tr>
+              <td
+                colspan="1"
+                rowspan="1"
+              >
+                
+                    
+                <p
+                  class="fr-mt-2w"
+                >
+                  
+                      
+                  <strong>
+                    128 M
+                  </strong>
+                  
+                    
+                </p>
+                
+                  
+              </td>
+              <td
+                colspan="1"
+                rowspan="1"
+              >
+                
+                    
+                <p
+                  class="fr-mt-2w"
+                >
+                  
+                      
+                  <span
+                    class="challenger"
+                  >
+                    12,31 €*
+                  </span>
+                   brut
+                    
+                </p>
+                
+                  
+              </td>
+              <td
+                colspan="1"
+                rowspan="1"
+              >
+                
+                    
+                <p
+                  class="fr-mt-2w"
+                >
+                  
+                      
+                  <span>
+                    12,3624 €
+                  </span>
+                   brut
+                    
+                </p>
+                
+                  
+              </td>
+              <td
+                colspan="1"
+                rowspan="1"
+              >
+                
+                    
+                <p
+                  class="fr-mt-2w"
+                >
+                  
+                      
+                  <span>
+                    12,6048 €
+                  </span>
+                   brut
+                    
+                </p>
+                
+                  
+              </td>
+              <td
+                colspan="1"
+                rowspan="1"
+              >
+                
+                    
+                <p
+                  class="fr-mt-2w"
+                >
+                  
+                      
+                  <span>
+                    12,8472 €
+                  </span>
+                   brut
+                    
+                </p>
+                
+                  
+              </td>
+              <td
+                colspan="1"
+                rowspan="1"
+              >
+                
+                    
+                <p
+                  class="fr-mt-2w"
+                >
+                  
+                      
+                  <span>
+                    13,0896 €
+                  </span>
+                   brut
+                    
+                </p>
+                
+                  
+              </td>
+            </tr>
+            <tr>
+              <td
+                colspan="1"
+                rowspan="1"
+              >
+                
+                    
+                <p
+                  class="fr-mt-2w"
+                >
+                  
+                      
+                  <strong>
+                    138 M
+                  </strong>
+                  
+                    
+                </p>
+                
+                  
+              </td>
+              <td
+                colspan="1"
+                rowspan="1"
+              >
+                
+                    
+                <p
+                  class="fr-mt-2w"
+                >
+                  
+                      
+                  <span
+                    class="challenger"
+                  >
+                    12,31 €*
+                  </span>
+                   brut
+                    
+                </p>
+                
+                  
+              </td>
+              <td
+                colspan="1"
+                rowspan="1"
+              >
+                
+                    
+                <p
+                  class="fr-mt-2w"
+                >
+                  
+                      
+                  <span>
+                    12,3828 €
+                  </span>
+                   brut
+                    
+                </p>
+                
+                  
+              </td>
+              <td
+                colspan="1"
+                rowspan="1"
+              >
+                
+                    
+                <p
+                  class="fr-mt-2w"
+                >
+                  
+                      
+                  <span>
+                    12,6256 €
+                  </span>
+                   brut
+                    
+                </p>
+                
+                  
+              </td>
+              <td
+                colspan="1"
+                rowspan="1"
+              >
+                
+                    
+                <p
+                  class="fr-mt-2w"
+                >
+                  
+                      
+                  <span>
+                    12,8684 €
+                  </span>
+                   brut
+                    
+                </p>
+                
+                  
+              </td>
+              <td
+                colspan="1"
+                rowspan="1"
+              >
+                
+                    
+                <p
+                  class="fr-mt-2w"
+                >
+                  
+                      
+                  <span>
+                    13,1112 €
+                  </span>
+                   brut
+                    
+                </p>
+                
+                  
+              </td>
+            </tr>
+            <tr>
+              <td
+                colspan="1"
+                rowspan="1"
+              >
+                
+                    
+                <p
+                  class="fr-mt-2w"
+                >
+                  
+                      
+                  <strong>
+                    150 M
+                  </strong>
+                  
+                    
+                </p>
+                
+                  
+              </td>
+              <td
+                colspan="1"
+                rowspan="1"
+              >
+                
+                    
+                <p
+                  class="fr-mt-2w"
+                >
+                  
+                      
+                  <span>
+                    12,43 €
+                  </span>
+                   brut
+                    
+                </p>
+                
+                  
+              </td>
+              <td
+                colspan="1"
+                rowspan="1"
+              >
+                
+                    
+                <p
+                  class="fr-mt-2w"
+                >
+                  
+                      
+                  <span>
+                    12,6786 €
+                  </span>
+                   brut
+                    
+                </p>
+                
+                  
+              </td>
+              <td
+                colspan="1"
+                rowspan="1"
+              >
+                
+                    
+                <p
+                  class="fr-mt-2w"
+                >
+                  
+                      
+                  <span>
+                    12,9272 €
+                  </span>
+                   brut
+                    
+                </p>
+                
+                  
+              </td>
+              <td
+                colspan="1"
+                rowspan="1"
+              >
+                
+                    
+                <p
+                  class="fr-mt-2w"
+                >
+                  
+                      
+                  <span>
+                    13,1758 €
+                  </span>
+                   brut
+                    
+                </p>
+                
+                  
+              </td>
+              <td
+                colspan="1"
+                rowspan="1"
+              >
+                
+                    
+                <p
+                  class="fr-mt-2w"
+                >
+                  
+                      
+                  <span>
+                    13,4244 €
+                  </span>
+                   brut
+                    
+                </p>
+                
+                  
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`DisplayContent Tables should add thead to table if not present and move table into a Table element 1`] = `
 <div
   class="fr-table fr-mb-2w"
