@@ -716,9 +716,9 @@ exports[`DisplayContent SMIC challenger should replace low salary by the SMIC va
                   <span
                     class="challenger"
                   >
-                    12,31 €*
+                    12,31 €
                   </span>
-                   brut
+                   brut*
                     
                 </p>
                 
@@ -840,9 +840,9 @@ exports[`DisplayContent SMIC challenger should replace low salary by the SMIC va
                   <span
                     class="challenger"
                   >
-                    12,31 €*
+                    12,31 €
                   </span>
-                   brut
+                   brut*
                     
                 </p>
                 
@@ -964,9 +964,9 @@ exports[`DisplayContent SMIC challenger should replace low salary by the SMIC va
                   <span
                     class="challenger"
                   >
-                    12,31 €*
+                    12,31 €
                   </span>
-                   brut
+                   brut*
                     
                 </p>
                 
@@ -1699,6 +1699,31 @@ exports[`DisplayContent should keep whitespace in specific tag 1`] = `
   </em>
   de balise
 </p>
+`;
+
+exports[`DisplayContent should not put the * in alert (example) 1`] = `
+<div
+  aria-atomic="true"
+  aria-live="off"
+  class="fr-alert fr-alert--info fr-mt-2w fr-pb-2w fr-alert--sm"
+>
+  <p
+    class="fr-mt-2w"
+  >
+    <span
+      class="challenger"
+    >
+      1 600,30 €
+    </span>
+     brut mensuel (soit 
+    <span
+      class="challenger"
+    >
+      1 867,02 €
+    </span>
+     x 30 h ÷ 35 h).
+  </p>
+</div>
 `;
 
 exports[`DisplayContent should not remove space between strong and em tag in p tag 1`] = `
