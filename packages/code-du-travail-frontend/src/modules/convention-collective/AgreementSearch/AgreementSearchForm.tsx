@@ -24,6 +24,7 @@ type Props = {
   showNoAgreementOption?: boolean;
   noAgreementContent?: ReactNode;
   onRouteChange?: (route: AgreementRoute | undefined) => void;
+  onEnterpriseWithoutAgreement?: (hasNoAgreement: boolean) => void;
   error?: string;
   variant?: string | null;
   forcedRoute?: AgreementRoute;
@@ -48,6 +49,7 @@ export const AgreementSearchForm = ({
   showNoAgreementOption = false,
   noAgreementContent,
   onRouteChange,
+  onEnterpriseWithoutAgreement,
   error,
   variant,
   forcedRoute,
@@ -174,6 +176,11 @@ export const AgreementSearchForm = ({
           onAgreementSelect={(agreement, _enterprise) => {
             emitClickP2(trackingActionName);
             onAgreementSelect(agreement);
+            onEnterpriseWithoutAgreement?.(
+              !agreement &&
+                !!_enterprise &&
+                (_enterprise.conventions?.length ?? 0) === 0
+            );
           }}
           selectedAgreementAlert={selectedAgreementAlert}
           trackingActionName={trackingActionName}
