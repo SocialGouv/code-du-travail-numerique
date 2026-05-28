@@ -24,7 +24,7 @@ export const ui = {
       /Je ne souhaite pas renseigner ma convention collective\./
     ),
     regularButtonAgreement: byRole("button", {
-      name: /Non, je saisis ma convention collective/,
+      name: /Je saisis ma convention collective/,
     }),
     regularButtonEnterprise: byRole("button", {
       name: /Je cherche par entreprise/,

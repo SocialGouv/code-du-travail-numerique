@@ -1,6 +1,7 @@
 "use client";
 
 import { fr } from "@codegouvfr/react-dsfr";
+import { useEffect, useRef } from "react";
 import { ContributionAgreementContent } from "./ContributionAgreementContent";
 import { Contribution } from "./type";
 import BlueCard from "../common/BlueCard";
@@ -15,11 +16,23 @@ type Props = {
 export function ContributionAgreement({ contribution }: Props) {
   const { slug, relatedItems } = contribution;
   const { push } = useRouter();
+  const agreementTitleRef = useRef<HTMLParagraphElement>(null);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      agreementTitleRef.current?.focus();
+    }, 100);
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <>
       <BlueCard>
-        <p className={fr.cx("fr-h3", "fr-mt-1w")}>
+        <p
+          ref={agreementTitleRef}
+          className={fr.cx("fr-h3", "fr-mt-1w")}
+          tabIndex={-1}
+        >
           Votre convention collective
         </p>
         <div className={fr.cx("fr-card", "fr-card--sm", "fr-mt-2w")}>

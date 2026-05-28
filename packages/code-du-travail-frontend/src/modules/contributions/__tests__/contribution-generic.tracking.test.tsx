@@ -435,7 +435,7 @@ describe("<ContributionGeneric />", () => {
       expect(ui.generic.regularButtonNoAgreement.get()).toBeInTheDocument();
     });
 
-    it("bascule vers la saisie manuelle au clic sur 'Non, je saisis ma convention collective'", async () => {
+    it("bascule vers la saisie manuelle au clic sur 'Je saisis ma convention collective'", async () => {
       render(<ContributionGeneric contribution={contribution} />);
 
       fireEvent.click(ui.generic.regularButtonAgreement.get());
@@ -503,6 +503,62 @@ describe("<ContributionGeneric />", () => {
       fireEvent.click(ui.generic.buttonDisplayInfo.get());
 
       expect(pushMock).toHaveBeenCalledWith("/contribution/1388-my-contrib");
+    });
+
+    it("affiche le Code du travail quand l'entreprise sélectionnée n'a pas de convention collective", async () => {
+      render(<ContributionGeneric contribution={contribution} />);
+
+      await userEvent.type(
+        ccUi.searchByEnterprise.input.get(),
+        "bricomanie"
+      );
+      fireEvent.click(ccUi.searchByEnterprise.submitButton.get());
+      await waitFor(() =>
+        expect(byText("BRICOMANIE").get()).toBeInTheDocument()
+      );
+      fireEvent.click(byText("BRICOMANIE").get());
+
+      fireEvent.click(ui.generic.buttonDisplayInfo.get());
+
+      expect(ui.generic.enterpriseRequiredError.query()).not.toBeInTheDocument();
+      expect(ui.generic.missingRouteError.query()).not.toBeInTheDocument();
+      expect(pushMock).not.toHaveBeenCalled();
+      expect(document.querySelector("#cdt")).not.toHaveClass("fr-hidden");
+    });
+
+    it("supprime la convention collective du stockage et notifie le header au clic sur 'Afficher le Code du travail'", () => {
+      localStorage.setItem(
+        "convention",
+        JSON.stringify({ num: 1388, id: "1388", shortTitle: "Industrie du pétrole" })
+      );
+      const storageListener = jest.fn();
+      window.addEventListener("cdtn:agreement-storage", storageListener);
+
+      render(<ContributionGeneric contribution={contribution} />);
+
+      fireEvent.click(ui.generic.regularButtonNoAgreement.get());
+
+      expect(localStorage.getItem("convention")).toBeNull();
+      const lastDetail = (storageListener.mock.calls.at(-1)?.[0] as CustomEvent)
+        ?.detail;
+      expect(lastDetail).toBeNull();
+
+      window.removeEventListener("cdtn:agreement-storage", storageListener);
+    });
+
+    it("ne laisse jamais l'encart vide quand la variante regular_button se résout après le rendu initial (sans CC)", async () => {
+      setVariant(null);
+      const { rerender } = render(
+        <ContributionGeneric contribution={contribution} />
+      );
+
+      setVariant(ContributionAfficherInfoVariations.REGULAR_BUTTON);
+      rerender(<ContributionGeneric contribution={contribution} />);
+
+      await waitFor(() =>
+        expect(ccUi.searchByEnterprise.input.get()).toBeInTheDocument()
+      );
+      expect(ui.generic.buttonDisplayInfo.get()).toBeInTheDocument();
     });
   });
 });

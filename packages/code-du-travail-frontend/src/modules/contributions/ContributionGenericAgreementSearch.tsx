@@ -40,8 +40,7 @@ const MISSING_ROUTE_ERROR =
 const LEARN_MORE_URL =
   "https://code-du-travail-numerique-preprod.ovh.fabrique.social.gouv.fr/droit-du-travail";
 
-const REGULAR_BUTTON_AGREEMENT_LABEL =
-  "Non, je saisis ma convention collective";
+const REGULAR_BUTTON_AGREEMENT_LABEL = "Je saisis ma convention collective";
 const REGULAR_BUTTON_ENTERPRISE_LABEL = "Je cherche par entreprise";
 const REGULAR_BUTTON_NO_AGREEMENT_LABEL = "Afficher le Code du travail";
 
@@ -65,6 +64,8 @@ export function ContributionGenericAgreementSearch({
     AgreementRoute | undefined
   >(isRegularButtonVariant ? "enterprise" : undefined);
   const [showMissingRouteError, setShowMissingRouteError] = useState(false);
+  const [enterpriseHasNoAgreement, setEnterpriseHasNoAgreement] =
+    useState(false);
 
   const [forcedRoute, setForcedRoute] = useState<AgreementRoute | undefined>(
     isRegularButtonVariant ? "enterprise" : undefined
@@ -79,6 +80,17 @@ export function ContributionGenericAgreementSearch({
   useEffect(() => {
     setIsValid(isAgreementValid(contribution, selectedAgreement));
   }, [selectedAgreement]);
+
+  // La variante A/B se résout après le 1er rendu (Matomo / searchParams). Les
+  // initialiseurs useState ne se rejouent pas, donc on fixe ici la route une
+  // fois la variante regular_button connue pour ne jamais rendre un encart vide.
+  useEffect(() => {
+    if (isRegularButtonVariant && !selectedRoute) {
+      setSelectedRoute("enterprise");
+      setForcedRoute("enterprise");
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isRegularButtonVariant]);
 
   const selectedAgreementAlert = (agreement: Agreement) => {
     const isSupported = isAgreementSupported(contribution, agreement);
@@ -178,6 +190,10 @@ export function ContributionGenericAgreementSearch({
     }
     if (selectedRoute === "enterprise" && !selectedAgreement) {
       event.preventDefault();
+      if (enterpriseHasNoAgreement) {
+        onSkipToGeneric();
+        return;
+      }
       setEnterpriseRequireSearchSignal((c) => c + 1);
       return;
     }
@@ -212,6 +228,7 @@ export function ContributionGenericAgreementSearch({
 
   const onSkipToGeneric = () => {
     setShowMissingRouteError(false);
+    onAgreementSelect();
     emitClickP3(trackingActionName);
     onDisplayClick(false);
   };
@@ -274,7 +291,9 @@ export function ContributionGenericAgreementSearch({
           onRouteChange={(route) => {
             setSelectedRoute(route);
             setShowMissingRouteError(false);
+            setEnterpriseHasNoAgreement(false);
           }}
+          onEnterpriseWithoutAgreement={setEnterpriseHasNoAgreement}
           error={
             !isRegularButtonVariant && showMissingRouteError
               ? MISSING_ROUTE_ERROR
