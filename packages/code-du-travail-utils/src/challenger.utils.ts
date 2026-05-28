@@ -5,6 +5,8 @@ export type ChallengerFormula =
   | "smic_monthly_35h"
   | "smic_monthly_custom"
   | "smic_annual"
+  | "smic_annual_custom_monthly"
+  | "smic_annual_custom_week"
   | "smic_monthly_percent"
   | "smic_monthly_multiple";
 
@@ -24,6 +26,16 @@ export const CHALLENGER_FORMULAS: {
     paramLabel: "Nombre d'heures / semaine",
   },
   { value: "smic_annual", label: "SMIC annuel" },
+  {
+    value: "smic_annual_custom_monthly",
+    label: "SMIC annuel personnalisé (mois)",
+    paramLabel: "Nombre d'heures / mois",
+  },
+  {
+    value: "smic_annual_custom_week",
+    label: "SMIC annuel personnalisé (semaine)",
+    paramLabel: "Nombre d'heures / semaine",
+  },
   {
     value: "smic_monthly_percent",
     label: "% du SMIC mensuel",
@@ -60,6 +72,10 @@ export function computeChallengerReference(
       return isNaN(param) ? 0 : smicHourly * ((param * 52) / 12);
     case "smic_annual":
       return smicHourly * HOURS_PER_MONTH * 12;
+    case "smic_annual_custom_monthly":
+      return isNaN(param) ? 0 : smicHourly * param * 12;
+    case "smic_annual_custom_week":
+      return isNaN(param) ? 0 : smicHourly * param * 52;
     case "smic_monthly_percent":
       return isNaN(param) ? 0 : smicHourly * HOURS_PER_MONTH * (param / 100);
     case "smic_monthly_multiple":
