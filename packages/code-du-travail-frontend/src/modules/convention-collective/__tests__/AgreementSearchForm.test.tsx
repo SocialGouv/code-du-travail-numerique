@@ -22,7 +22,7 @@ jest.mock("next/navigation", () => ({
 }));
 
 jest.mock(
-  "../../enterprise/EnterpriseAgreementSearch/EnterpriseAgreementSearchInput"
+  "../../enterprise/EnterpriseAgreementSearch/EnterpriseAgreementSimulatorSearchInput"
 );
 
 describe("<PageContribution />", () => {

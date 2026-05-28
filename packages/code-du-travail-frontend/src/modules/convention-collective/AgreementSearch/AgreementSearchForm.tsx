@@ -4,7 +4,7 @@ import { ReactNode, useEffect, useState } from "react";
 import { AgreementSearchInput } from "./AgreementSearchInput";
 
 import { useContributionTracking } from "../../contributions/tracking";
-import { EnterpriseAgreementSearchInput } from "../../enterprise";
+import { EnterpriseAgreementSimulatorSearchInput } from "../../enterprise";
 import {
   Agreement,
   AgreementRoute,
@@ -85,7 +85,7 @@ export const AgreementSearchForm = ({
         />
       )}
       {selectedRoute === "enterprise" && (
-        <EnterpriseAgreementSearchInput
+        <EnterpriseAgreementSimulatorSearchInput
           onAgreementSelect={(agreement, _enterprise) => {
             emitClickP2(trackingActionName);
             onAgreementSelect(agreement);

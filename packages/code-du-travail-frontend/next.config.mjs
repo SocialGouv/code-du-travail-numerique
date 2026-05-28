@@ -61,6 +61,8 @@ const sentrySdkConfig = {
   automaticVercelMonitors: true,
 };
 
+const isDev = process.env.NODE_ENV === "development";
+
 const nextConfig = {
   // Issue with meta rendering : https://github.com/vercel/next.js/issues/79313
   htmlLimitedBots: /.*/,
@@ -71,7 +73,7 @@ const nextConfig = {
         ? { properties: ["data-testid"] }
         : false,
   },
-  reactCompiler: true,
+  reactCompiler: !isDev,
   staticPageGenerationTimeout: 60 * 5, // 5 minutes
   webpack: (config, { dev, isServer }) => {
     config.module.rules.push({
@@ -169,4 +171,6 @@ const moduleExports = {
   },
 };
 
-export default withSentryConfig(moduleExports, sentryConfig, sentrySdkConfig);
+export default isDev
+  ? moduleExports
+  : withSentryConfig(moduleExports, sentryConfig, sentrySdkConfig);

@@ -35,7 +35,7 @@ jest.mock("../../convention-collective/search", () => ({
 }));
 
 jest.mock(
-  "../../enterprise/EnterpriseAgreementSearch/EnterpriseAgreementSearchInput"
+  "../../enterprise/EnterpriseAgreementSearch/EnterpriseAgreementSimulatorSearchInput"
 );
 
 describe("<ContributionGeneric />", () => {

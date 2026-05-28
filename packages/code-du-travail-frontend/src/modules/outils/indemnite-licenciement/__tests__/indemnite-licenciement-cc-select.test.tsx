@@ -7,7 +7,7 @@ jest.mock(
   "../../../convention-collective/AgreementSearch/AgreementSearchInput"
 );
 jest.mock(
-  "../../../enterprise/EnterpriseAgreementSearch/EnterpriseAgreementSearchInput"
+  "../../../enterprise/EnterpriseAgreementSearch/EnterpriseAgreementSimulatorSearchInput"
 );
 
 describe("Indemnité licenciement - Sélection de CC", () => {

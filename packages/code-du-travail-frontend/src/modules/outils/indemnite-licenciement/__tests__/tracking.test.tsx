@@ -9,7 +9,7 @@ jest.mock("@socialgouv/matomo-next", () => ({
 }));
 
 jest.mock(
-  "../../../enterprise/EnterpriseAgreementSearch/EnterpriseAgreementSearchInput"
+  "../../../enterprise/EnterpriseAgreementSearch/EnterpriseAgreementSimulatorSearchInput"
 );
 jest.mock(
   "../../../convention-collective/AgreementSearch/AgreementSearchInput"

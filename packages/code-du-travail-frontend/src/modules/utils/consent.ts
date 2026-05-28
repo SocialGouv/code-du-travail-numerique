@@ -250,9 +250,14 @@ export const initConsent = (): void => {
   setupRouteChangeListener();
 };
 
+// Guard to ensure setupRouteChangeListener is only called once
+let routeChangeListenerSetUp = false;
+
 // Set up listener for route changes to reapply consent when navigating between pages
 const setupRouteChangeListener = (): void => {
   if (typeof window === "undefined") return;
+  if (routeChangeListenerSetUp) return;
+  routeChangeListenerSetUp = true;
 
   // Store the current path
   let currentPath = window.location.pathname;
@@ -261,7 +266,6 @@ const setupRouteChangeListener = (): void => {
   const handleRouteChange = (): void => {
     if (currentPath !== window.location.pathname) {
       // Update the current path
-      const previousPath = currentPath;
       currentPath = window.location.pathname;
       // Reapply consent based on the new path
       const consent = getStoredConsent();

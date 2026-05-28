@@ -32,7 +32,9 @@ export class EnterprisesAppController {
 
       const jsonResponse = await fetchEnterprises(query, postCodeArray);
 
+      console.log("API response : ", jsonResponse);
       const response = await populateAgreements(jsonResponse);
+      console.log("Response : ", response);
       return NextResponse.json(response, {
         status: 200,
         headers: {

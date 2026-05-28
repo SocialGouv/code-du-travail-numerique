@@ -34,6 +34,7 @@ export const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
   const modalRef = useRef<HTMLDivElement>(null);
   const resultsTitleRef = useRef<HTMLHeadingElement>(null);
   const noResultMessageRef = useRef<HTMLParagraphElement>(null);
+  const closeTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const [blockScroll, allowScroll] = useScrollBlock();
   const { isBelow } = useBreakpoints();
   const [pendingFocus, setPendingFocus] = useState(false);
@@ -71,15 +72,17 @@ export const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
     if (pendingRestoreFocus) return;
     if (pendingFocus && hasSearched && !isLoading) {
       setPendingFocus(false);
+      let focusTimer: ReturnType<typeof setTimeout>;
       if (results.length > 0) {
-        setTimeout(() => {
+        focusTimer = setTimeout(() => {
           resultsTitleRef.current?.focus();
         }, 100);
       } else {
-        setTimeout(() => {
+        focusTimer = setTimeout(() => {
           modalSearchRef.current?.focusInput();
         }, 100);
       }
+      return () => clearTimeout(focusTimer);
     }
   }, [
     pendingFocus,
@@ -113,7 +116,8 @@ export const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
       onClose();
 
       if (shouldFocusSearchButton) {
-        setTimeout(() => {
+        if (closeTimerRef.current) clearTimeout(closeTimerRef.current);
+        closeTimerRef.current = setTimeout(() => {
           const searchButton = document.getElementById(
             isBelow("lg")
               ? "fr-header-search-button"
