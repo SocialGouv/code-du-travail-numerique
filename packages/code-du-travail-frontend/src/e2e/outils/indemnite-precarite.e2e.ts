@@ -98,9 +98,7 @@ test.describe("Outil - Indemnité de Precarite", () => {
     await page.getByRole("button", { name: "Suivant" }).click();
 
     // Doit afficher le message de disqualification (saute par-dessus Rémunération)
-    await expect(
-      page.getByText("Vous n'avez pas droit à l'indemnité de précarité")
-    ).toBeVisible();
+    await expect(page.getByText("Aucune indemnité")).toBeVisible();
     await expect(
       page.getByText(
         "Ce type de contrat ne permet pas au salarié d'avoir droit à une prime de précarité."
