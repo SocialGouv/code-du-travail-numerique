@@ -34,13 +34,14 @@ describe("SimulateurIndemnitePrecarite", () => {
 
     describe("criteria.cddType = CDD dit de « mission ponctuelle ou occasionnelle »", () => {
       beforeEach(() => {
-        fireEvent.click(ui.cddType("CDD dit de « mission ponctuelle ou occasionnelle »").get());
+        fireEvent.click(
+          ui.cddType("CDD dit de « mission ponctuelle ou occasionnelle »").get()
+        );
         fireEvent.click(ui.next.get());
       });
 
       describe("criteria.hasEquivalentCdiRenewal = non", () => {
-        beforeEach(() => {
-        });
+        beforeEach(() => {});
 
         describe("typeRemuneration = amount", () => {
           beforeEach(() => {
@@ -77,24 +78,19 @@ describe("SimulateurIndemnitePrecarite", () => {
       });
 
       describe("finContratPeriodeDessai = Non", () => {
-        beforeEach(() => {
-        });
+        beforeEach(() => {});
 
         describe("propositionCDIFindeContrat = Non", () => {
-          beforeEach(() => {
-          });
+          beforeEach(() => {});
 
           describe("refusCDIFindeContrat = Non", () => {
-            beforeEach(() => {
-            });
+            beforeEach(() => {});
 
             describe("interruptionFauteGrave = Non", () => {
-              beforeEach(() => {
-              });
+              beforeEach(() => {});
 
               describe("refusRenouvellementAuto = Non", () => {
-                beforeEach(() => {
-                });
+                beforeEach(() => {});
 
                 describe("typeRemuneration = amount", () => {
                   beforeEach(() => {

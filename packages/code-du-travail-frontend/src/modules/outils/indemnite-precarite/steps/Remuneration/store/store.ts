@@ -38,12 +38,7 @@ const createRemunerationStore: StoreSliceWrapperIndemnitePrecarite<
       applyGenericValidation(get, set, "typeRemuneration", type);
 
       if (type === "mensuel") {
-        applyGenericValidation(
-          get,
-          set,
-          "dureeContrat",
-          DEFAULT_DUREE_CONTRAT
-        );
+        applyGenericValidation(get, set, "dureeContrat", DEFAULT_DUREE_CONTRAT);
         applyGenericValidation(
           get,
           set,

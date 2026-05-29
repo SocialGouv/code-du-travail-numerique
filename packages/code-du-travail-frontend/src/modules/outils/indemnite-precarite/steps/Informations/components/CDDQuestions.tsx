@@ -1,10 +1,7 @@
 import React from "react";
 import { fr } from "@codegouvfr/react-dsfr";
 import { CheckboxesQuestion } from "src/modules/outils/common/components/CheckboxesQuestion";
-import {
-  CddConditionKey,
-  InformationsStoreInput,
-} from "../store/types";
+import { CddConditionKey, InformationsStoreInput } from "../store/types";
 
 interface Props {
   input: InformationsStoreInput;

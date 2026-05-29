@@ -9,17 +9,14 @@ import { CDD_TYPES } from "../cddTypesFactory";
 
 export default function Agreement3127Informations() {
   const store = useContext(IndemnitePrecariteContext);
-  const {
-    criteria,
-    hasEquivalentCdiRenewal,
-    onConventionQuestionChange,
-  } = useIndemnitePrecariteStore(store, (state) => ({
-    criteria: state.informationsData.input.criteria,
-    hasEquivalentCdiRenewal:
-      state.informationsData.input.hasEquivalentCdiRenewal,
-    onConventionQuestionChange:
-      state.informationsFunction.onConventionQuestionChange,
-  }));
+  const { criteria, hasEquivalentCdiRenewal, onConventionQuestionChange } =
+    useIndemnitePrecariteStore(store, (state) => ({
+      criteria: state.informationsData.input.criteria,
+      hasEquivalentCdiRenewal:
+        state.informationsData.input.hasEquivalentCdiRenewal,
+      onConventionQuestionChange:
+        state.informationsFunction.onConventionQuestionChange,
+    }));
 
   if (criteria?.cddType !== CDD_TYPES.MISSION_PONCTUELLE) {
     return <></>;

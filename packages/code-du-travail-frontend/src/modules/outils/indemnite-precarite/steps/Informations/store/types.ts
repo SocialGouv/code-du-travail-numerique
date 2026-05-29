@@ -65,14 +65,8 @@ export type InformationsStoreData = {
 export type InformationsStoreFn = {
   onContractTypeChange: (contractType: ContractType) => void;
   onCriteriaChange: (criteria: Record<string, any>) => void;
-  onCDDQuestionChange: (
-    questionKey: CddConditionKey,
-    checked: boolean
-  ) => void;
-  onCTTQuestionChange: (
-    questionKey: CttConditionKey,
-    checked: boolean
-  ) => void;
+  onCDDQuestionChange: (questionKey: CddConditionKey, checked: boolean) => void;
+  onCTTQuestionChange: (questionKey: CttConditionKey, checked: boolean) => void;
   onConventionQuestionChange: (
     questionKey: AgreementConditionKey,
     checked: boolean

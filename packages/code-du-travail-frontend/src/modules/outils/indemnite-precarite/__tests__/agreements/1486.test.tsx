@@ -88,13 +88,18 @@ describe("SimulateurIndemnitePrecarite", () => {
 
     describe("criteria.cddType = Contrat d'intervention dans le secteur d'activité d'organisation des foires, salons et congrès", () => {
       beforeEach(() => {
-        fireEvent.click(ui.cddType("Contrat d'intervention dans le secteur d'activité d'organisation des foires, salons et congrès").get());
+        fireEvent.click(
+          ui
+            .cddType(
+              "Contrat d'intervention dans le secteur d'activité d'organisation des foires, salons et congrès"
+            )
+            .get()
+        );
         fireEvent.click(ui.next.get());
       });
 
       describe("criteria.hasCdiProposal = non", () => {
-        beforeEach(() => {
-        });
+        beforeEach(() => {});
 
         describe("typeRemuneration = amount", () => {
           beforeEach(() => {
@@ -131,24 +136,19 @@ describe("SimulateurIndemnitePrecarite", () => {
       });
 
       describe("finContratPeriodeDessai = Non", () => {
-        beforeEach(() => {
-        });
+        beforeEach(() => {});
 
         describe("propositionCDIFindeContrat = Non", () => {
-          beforeEach(() => {
-          });
+          beforeEach(() => {});
 
           describe("refusCDIFindeContrat = Non", () => {
-            beforeEach(() => {
-            });
+            beforeEach(() => {});
 
             describe("interruptionFauteGrave = Non", () => {
-              beforeEach(() => {
-              });
+              beforeEach(() => {});
 
               describe("refusRenouvellementAuto = Non", () => {
-                beforeEach(() => {
-                });
+                beforeEach(() => {});
 
                 describe("typeRemuneration = amount", () => {
                   beforeEach(() => {

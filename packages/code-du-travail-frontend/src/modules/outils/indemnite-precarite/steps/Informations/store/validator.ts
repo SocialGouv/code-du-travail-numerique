@@ -112,8 +112,7 @@ export const computeDisqualificationReason = (
   // 4. Conditions spécifiques aux conventions collectives
   if (agreement && input.criteria?.cddType) {
     const condition = AGREEMENT_CONDITIONS.find(
-      (c) =>
-        c.idcc === agreement.num && c.cddType === input.criteria?.cddType
+      (c) => c.idcc === agreement.num && c.cddType === input.criteria?.cddType
     );
     if (condition && input[condition.key] === true) {
       return {

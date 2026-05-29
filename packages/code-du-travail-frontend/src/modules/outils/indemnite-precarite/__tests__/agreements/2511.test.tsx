@@ -34,13 +34,14 @@ describe("SimulateurIndemnitePrecarite", () => {
 
     describe("criteria.cddType = CDD d'usage appelé « contrat d'intervention »", () => {
       beforeEach(() => {
-        fireEvent.click(ui.cddType("CDD d'usage appelé « contrat d'intervention »").get());
+        fireEvent.click(
+          ui.cddType("CDD d'usage appelé « contrat d'intervention »").get()
+        );
         fireEvent.click(ui.next.get());
       });
 
       describe("criteria.hasCdiRenewal = non", () => {
-        beforeEach(() => {
-        });
+        beforeEach(() => {});
 
         describe("typeRemuneration = amount", () => {
           beforeEach(() => {
@@ -77,24 +78,19 @@ describe("SimulateurIndemnitePrecarite", () => {
       });
 
       describe("finContratPeriodeDessai = Non", () => {
-        beforeEach(() => {
-        });
+        beforeEach(() => {});
 
         describe("propositionCDIFindeContrat = Non", () => {
-          beforeEach(() => {
-          });
+          beforeEach(() => {});
 
           describe("refusCDIFindeContrat = Non", () => {
-            beforeEach(() => {
-            });
+            beforeEach(() => {});
 
             describe("interruptionFauteGrave = Non", () => {
-              beforeEach(() => {
-              });
+              beforeEach(() => {});
 
               describe("refusRenouvellementAuto = Non", () => {
-                beforeEach(() => {
-                });
+                beforeEach(() => {});
 
                 describe("typeRemuneration = amount", () => {
                   beforeEach(() => {

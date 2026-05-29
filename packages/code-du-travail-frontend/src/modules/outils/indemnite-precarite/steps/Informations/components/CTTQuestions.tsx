@@ -1,10 +1,7 @@
 import React from "react";
 import { fr } from "@codegouvfr/react-dsfr";
 import { CheckboxesQuestion } from "src/modules/outils/common/components/CheckboxesQuestion";
-import {
-  CttConditionKey,
-  InformationsStoreInput,
-} from "../store/types";
+import { CttConditionKey, InformationsStoreInput } from "../store/types";
 import { AccessibleAlert } from "src/modules/outils/common/components/AccessibleAlert";
 
 interface Props {

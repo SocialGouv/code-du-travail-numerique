@@ -39,24 +39,19 @@ describe("SimulateurIndemnitePrecarite", () => {
       });
 
       describe("finContratPeriodeDessai = Non", () => {
-        beforeEach(() => {
-        });
+        beforeEach(() => {});
 
         describe("propositionCDIFindeContrat = Non", () => {
-          beforeEach(() => {
-          });
+          beforeEach(() => {});
 
           describe("refusCDIFindeContrat = Non", () => {
-            beforeEach(() => {
-            });
+            beforeEach(() => {});
 
             describe("interruptionFauteGrave = Non", () => {
-              beforeEach(() => {
-              });
+              beforeEach(() => {});
 
               describe("refusRenouvellementAuto = Non", () => {
-                beforeEach(() => {
-                });
+                beforeEach(() => {});
 
                 describe("typeRemuneration = amount", () => {
                   beforeEach(() => {

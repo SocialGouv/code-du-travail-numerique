@@ -143,9 +143,7 @@ const createInformationsStore: StoreSliceWrapperIndemnitePrecarite<
         })
       );
 
-      return reason
-        ? ValidationResponse.NotEligible
-        : ValidationResponse.Valid;
+      return reason ? ValidationResponse.NotEligible : ValidationResponse.Valid;
     },
   },
 });

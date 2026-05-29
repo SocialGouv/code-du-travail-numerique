@@ -98,7 +98,13 @@ describe("SimulateurIndemnitePrecarite", () => {
 
     describe("criteria.cddType = Contrat d'intervention dans le secteur de l'accueil événementiel", () => {
       beforeEach(() => {
-        fireEvent.click(ui.cddType("Contrat d'intervention dans le secteur de l'accueil événementiel").get());
+        fireEvent.click(
+          ui
+            .cddType(
+              "Contrat d'intervention dans le secteur de l'accueil événementiel"
+            )
+            .get()
+        );
         fireEvent.click(ui.next.get());
       });
 
@@ -135,24 +141,19 @@ describe("SimulateurIndemnitePrecarite", () => {
       });
 
       describe("finContratPeriodeDessai = Non", () => {
-        beforeEach(() => {
-        });
+        beforeEach(() => {});
 
         describe("propositionCDIFindeContrat = Non", () => {
-          beforeEach(() => {
-          });
+          beforeEach(() => {});
 
           describe("refusCDIFindeContrat = Non", () => {
-            beforeEach(() => {
-            });
+            beforeEach(() => {});
 
             describe("interruptionFauteGrave = Non", () => {
-              beforeEach(() => {
-              });
+              beforeEach(() => {});
 
               describe("refusRenouvellementAuto = Non", () => {
-                beforeEach(() => {
-                });
+                beforeEach(() => {});
 
                 describe("typeRemuneration = amount", () => {
                   beforeEach(() => {

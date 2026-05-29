@@ -37,8 +37,7 @@ const ResultStepComponent = () => {
     agreement: state.agreementData.input.agreement,
     totalSalary: state.resultData.totalSalary,
     calculateResult: state.resultFunction.calculateResult,
-    disqualificationReason:
-      state.informationsData.disqualificationReason,
+    disqualificationReason: state.informationsData.disqualificationReason,
   }));
 
   useEffect(() => {
