@@ -242,6 +242,7 @@ type Options = {
   infographics: ContributionInfographicFull[];
   disableLink: boolean;
   smicHourly?: number;
+  challengerAsterisk: boolean;
   challengerState?: { substituted: boolean };
 };
 const options = (params: Options): HTMLReactParserOptions => {
@@ -272,9 +273,28 @@ const options = (params: Options): HTMLReactParserOptions => {
             if (params.challengerState) {
               params.challengerState.substituted = true;
             }
+            const nextSibling = domNode.next;
+            if (
+              params.challengerAsterisk &&
+              nextSibling instanceof Text &&
+              nextSibling.data.includes("brut")
+            ) {
+              if (
+                !nextSibling.data.includes("brut*") &&
+                !nextSibling.data.includes("brut *")
+              ) {
+                nextSibling.data = nextSibling.data.replace("brut", "brut*");
+              }
+              return (
+                <span className="challenger">
+                  {formatChallengerEur(computedAmount)}
+                </span>
+              );
+            }
             return (
               <span className="challenger">
-                {formatChallengerEur(computedAmount)}*
+                {formatChallengerEur(computedAmount)}
+                {params.challengerAsterisk && "*"}
               </span>
             );
           }
@@ -344,7 +364,11 @@ const options = (params: Options): HTMLReactParserOptions => {
             <AccessibleAlert
               severity="info"
               small
-              description={renderChildren(domNode, true, options(params))}
+              description={renderChildren(
+                domNode,
+                true,
+                options({ ...params, challengerAsterisk: false })
+              )}
               className={["fr-mt-2w", "fr-pb-2w"]}
             />
           );
@@ -384,6 +408,7 @@ const options = (params: Options): HTMLReactParserOptions => {
                             disableLink: params.disableLink,
                             smicHourly: params.smicHourly,
                             challengerState: params.challengerState,
+                            challengerAsterisk: params.challengerAsterisk,
                           })
                         )}
                       </>
@@ -496,6 +521,7 @@ const DisplayContent = ({
         infographics: extra?.infographics ?? [],
         disableLink: extra?.disableLink ?? false,
         smicHourly: extra?.smicHourly,
+        challengerAsterisk: true,
         challengerState,
       })
     );

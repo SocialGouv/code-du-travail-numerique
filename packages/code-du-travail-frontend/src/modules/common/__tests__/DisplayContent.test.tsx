@@ -815,5 +815,141 @@ describe("DisplayContent", () => {
 
       expect(asFragment().firstChild).toMatchSnapshot();
     });
+
+    it("should put the * after brut", () => {
+      const { asFragment } = render(
+        <DisplayContent
+          content={`<p><span data-challenger-formula="smic_hourly" class="challenger">12,09 €</span> brut</p>`}
+          titleLevel={3}
+          extra={{
+            smicHourly: 12.31,
+          }}
+        ></DisplayContent>
+      );
+
+      expect(asFragment().firstChild).toMatchInlineSnapshot(`
+        <p
+          class="fr-mt-2w"
+        >
+          <span
+            class="challenger"
+          >
+            12,31 €
+          </span>
+           brut*
+        </p>
+      `);
+    });
+
+    it("should not put the * after brut if not challenged", () => {
+      const { asFragment } = render(
+        <DisplayContent
+          content={`<p><span data-challenger-formula="smic_hourly" class="challenger">13,09 €</span> brut</p>`}
+          titleLevel={3}
+          extra={{
+            smicHourly: 12.31,
+          }}
+        ></DisplayContent>
+      );
+
+      expect(asFragment().firstChild).toMatchInlineSnapshot(`
+        <p
+          class="fr-mt-2w"
+        >
+          <span>
+            13,09 €
+          </span>
+           brut
+        </p>
+      `);
+    });
+
+    it("should not put the * after brut if exist", () => {
+      const { asFragment } = render(
+        <DisplayContent
+          content={`<p><span data-challenger-formula="smic_hourly" class="challenger">12,09 €</span> brut*</p>`}
+          titleLevel={3}
+          extra={{
+            smicHourly: 12.31,
+          }}
+        ></DisplayContent>
+      );
+
+      expect(asFragment().firstChild).toMatchInlineSnapshot(`
+        <p
+          class="fr-mt-2w"
+        >
+          <span
+            class="challenger"
+          >
+            12,31 €
+          </span>
+           brut*
+        </p>
+      `);
+    });
+
+    it("should put the * after amount if no brut", () => {
+      const { asFragment } = render(
+        <DisplayContent
+          content={`<p><span data-challenger-formula="smic_hourly" class="challenger">12,09 €</span></p>`}
+          titleLevel={3}
+          extra={{
+            smicHourly: 12.31,
+          }}
+        ></DisplayContent>
+      );
+
+      expect(asFragment().firstChild).toMatchInlineSnapshot(`
+        <p
+          class="fr-mt-2w"
+        >
+          <span
+            class="challenger"
+          >
+            12,31 €*
+          </span>
+        </p>
+      `);
+    });
+
+    it("should not put the * after brut if exist with spacing", () => {
+      const { asFragment } = render(
+        <DisplayContent
+          content={`<p><span data-challenger-formula="smic_monthly_35h" class="challenger">1\u202f823,03 €</span> brut *</p>`}
+          titleLevel={3}
+          extra={{
+            smicHourly: 12.31,
+          }}
+        ></DisplayContent>
+      );
+
+      expect(asFragment().firstChild).toMatchInlineSnapshot(`
+        <p
+          class="fr-mt-2w"
+        >
+          <span
+            class="challenger"
+          >
+            1 867,02 €
+          </span>
+           brut *
+        </p>
+      `);
+    });
+  });
+
+  it("should not put the * in alert (example)", () => {
+    const { asFragment } = render(
+      <DisplayContent
+        content={`<div class="alert"><p><span data-challenger-formula="smic_monthly_custom" data-challenger-parameter="30" class="challenger">1 598,57 €</span> brut</strong> mensuel (soit <span data-challenger-formula="smic_monthly_35h" class="challenger">1\u202f865 €</span> x 30 h ÷ 35 h).</p></div>`}
+        titleLevel={3}
+        extra={{
+          smicHourly: 12.31,
+        }}
+      ></DisplayContent>
+    );
+
+    expect(asFragment().firstChild).toMatchSnapshot();
   });
 });
