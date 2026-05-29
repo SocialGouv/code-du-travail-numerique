@@ -28,6 +28,7 @@ export function ContributionAgreement({ contribution }: Props) {
   useEffect(() => {
     if (window.location.hash !== AGREEMENT_FOCUS_HASH) return;
     const timer = setTimeout(() => {
+      agreementTitleRef.current?.scrollIntoView({ behavior: "smooth" });
       agreementTitleRef.current?.focus();
     }, 100);
     return () => clearTimeout(timer);

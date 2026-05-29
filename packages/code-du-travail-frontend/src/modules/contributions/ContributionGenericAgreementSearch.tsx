@@ -254,7 +254,11 @@ export function ContributionGenericAgreementSearch({
 
   const onSkipToGeneric = () => {
     setShowMissingRouteError(false);
-    selectAgreementInternally();
+    // Contrairement aux bascules de route, « Afficher le Code du travail » est
+    // une réinitialisation : on efface la CC sans marquer la sélection comme
+    // interne, pour laisser l'effet de synchro ramener le formulaire à son état
+    // initial (recherche par entreprise) au lieu de garder l'ancienne CC affichée.
+    onAgreementSelect();
     emitClickP3(trackingActionName);
     onDisplayClick(false);
   };
