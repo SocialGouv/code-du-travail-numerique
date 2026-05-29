@@ -52,7 +52,9 @@ test.describe("Outil - Indemnité de Precarite", () => {
         hasText:
           "Comment souhaitez-vous indiquer la rémunération perçue pendant le contrat de travail",
       })
-      .getByText("En indiquant le montant total des rémunérations.")
+      .getByText(
+        "La rémunération totale brute perçue en € durant le contrat de travail"
+      )
       .click();
     await page.locator("#input-salaireTotal").fill("2000");
     await page.getByRole("button", { name: "Suivant" }).click();
@@ -88,7 +90,11 @@ test.describe("Outil - Indemnité de Precarite", () => {
       .click();
 
     // CDD type = saisonnier (radio, plus de dropdown)
-    await page.getByLabel("CDD saisonnier", { exact: true }).click();
+    await page
+      .locator("fieldset")
+      .filter({ hasText: "Quel est le type de CDD ?" })
+      .getByText("CDD saisonnier", { exact: true })
+      .click();
     await page.getByRole("button", { name: "Suivant" }).click();
 
     // Doit afficher le message de disqualification (saute par-dessus Rémunération)
