@@ -49,6 +49,44 @@ describe("<ContributionAgreement /> accessibilité", () => {
     });
   });
 
+  it("scrolle le titre dans la vue quand on arrive via le formulaire (hash)", async () => {
+    window.location.hash = AGREEMENT_FOCUS_HASH;
+    // `scrollIntoView` est mocké globalement (jsdom ne l'implémente pas) ;
+    // on repart d'un historique vide pour ne pas compter les appels d'autres tests.
+    const scrollSpy = jest
+      .spyOn(Element.prototype, "scrollIntoView")
+      .mockClear();
+
+    const { getByText } = render(
+      <ContributionAgreement contribution={contribution} />
+    );
+
+    const title = getByText("Votre convention collective");
+
+    // Le focus et le scroll sont posés dans le même effet : une fois le focus
+    // sur le titre, le scroll a forcément eu lieu.
+    await waitFor(() => {
+      expect(document.activeElement).toBe(title);
+    });
+    expect(scrollSpy).toHaveBeenCalledWith({ behavior: "smooth" });
+
+    scrollSpy.mockRestore();
+  });
+
+  it("ne scrolle pas lors d'une arrivée directe sans hash", async () => {
+    window.location.hash = "";
+    const scrollSpy = jest
+      .spyOn(Element.prototype, "scrollIntoView")
+      .mockClear();
+
+    render(<ContributionAgreement contribution={contribution} />);
+
+    await new Promise((resolve) => setTimeout(resolve, 200));
+    expect(scrollSpy).not.toHaveBeenCalled();
+
+    scrollSpy.mockRestore();
+  });
+
   it("ne vole pas le focus lors d'une arrivée directe sans hash (SEO/Google, lien partagé, reload)", async () => {
     window.location.hash = "";
 

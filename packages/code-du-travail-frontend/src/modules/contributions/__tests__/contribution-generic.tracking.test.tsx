@@ -555,6 +555,39 @@ describe("<ContributionGeneric />", () => {
       window.removeEventListener("cdtn:agreement-storage", storageListener);
     });
 
+    it("réinitialise la convention collective du formulaire au clic sur 'Afficher le Code du travail'", async () => {
+      mockAgreementSearch({
+        num: 1388,
+        shortTitle: "Industrie du pétrole",
+        id: "1388",
+      });
+
+      render(<ContributionGeneric contribution={contribution} />);
+
+      // L'usager saisit manuellement une convention collective.
+      fireEvent.click(ui.generic.regularButtonAgreement.get());
+      await userEvent.click(ccUi.searchByName.input.get());
+      await userEvent.type(ccUi.searchByName.input.get(), "1388");
+      await waitFor(() =>
+        expect(
+          ccUi.searchByName.autocompleteLines.IDCC1388.name.get()
+        ).toBeInTheDocument()
+      );
+      fireEvent.click(ccUi.searchByName.autocompleteLines.IDCC1388.name.get());
+      // La CC sélectionnée est bien affichée dans le formulaire.
+      expect(ccUi.searchByName.input.get()).toHaveValue(
+        "Industrie du pétrole (IDCC 1388)"
+      );
+
+      fireEvent.click(ui.generic.regularButtonNoAgreement.get());
+
+      // La CC n'est plus sélectionnée : le formulaire est revenu à son état
+      // initial (recherche par entreprise), la saisie de CC a disparu.
+      await waitFor(() => {
+        expect(ccUi.searchByName.input.query()).not.toBeInTheDocument();
+      });
+    });
+
     it("ne laisse jamais l'encart vide quand la variante regular_button se résout après le rendu initial (sans CC)", async () => {
       setVariant(null);
       const { rerender } = render(
