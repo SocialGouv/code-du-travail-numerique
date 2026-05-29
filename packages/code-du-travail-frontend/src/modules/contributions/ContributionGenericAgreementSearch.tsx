@@ -12,6 +12,7 @@ import {
   AgreementRoute,
 } from "src/modules/outils/indemnite-depart/types";
 import {
+  buildContributionAgreementPath,
   isAgreementSupported,
   isAgreementUnextended,
   isAgreementValid,
@@ -21,7 +22,7 @@ import Link from "../common/Link";
 import BlueCard from "../common/BlueCard";
 import { AgreementSearchForm } from "../convention-collective/AgreementSearch/AgreementSearchForm";
 import { AccessibleAlert } from "../outils/common/components/AccessibleAlert";
-import { ContributionAfficherInfoVariations } from "../config/abTests";
+import { getAfficherInfoVariantFlags } from "../config/abTests";
 import { useContributionTracking } from "./tracking";
 import { focusableTitle } from "../common/focusableTitle";
 import { AGREEMENT_FOCUS_HASH } from "./ContributionAgreement";
@@ -39,8 +40,7 @@ type Props = {
 const MISSING_ROUTE_ERROR =
   "Veuillez sélectionner l'une des options ci-dessus pour afficher les informations.";
 
-const LEARN_MORE_URL =
-  "https://code-du-travail-numerique-preprod.ovh.fabrique.social.gouv.fr/droit-du-travail";
+const LEARN_MORE_URL = "/droit-du-travail";
 
 const REGULAR_BUTTON_AGREEMENT_LABEL = "Je saisis ma convention collective";
 const REGULAR_BUTTON_ENTERPRISE_LABEL = "Je cherche par entreprise";
@@ -58,10 +58,10 @@ export function ContributionGenericAgreementSearch({
   const router = useRouter();
   const { slug, isNoCDT } = contribution;
   const [isValid, setIsValid] = useState(false);
-  const isOriginalVariant =
-    variant === ContributionAfficherInfoVariations.ORIGINAL;
-  const isRegularButtonVariant =
-    variant === ContributionAfficherInfoVariations.REGULAR_BUTTON;
+  const {
+    isOriginal: isOriginalVariant,
+    isRegularButton: isRegularButtonVariant,
+  } = getAfficherInfoVariantFlags(variant);
   const [selectedRoute, setSelectedRoute] = useState<
     AgreementRoute | undefined
   >(isRegularButtonVariant ? "enterprise" : undefined);
@@ -81,7 +81,7 @@ export function ContributionGenericAgreementSearch({
   // modification externe (header, autre onglet) dans l'effet de synchro de route.
   const internalSelectionRef = useRef(false);
 
-  const { emitClickP3 } = useContributionTracking(variant ?? undefined);
+  const { emitClickP3 } = useContributionTracking(variant);
 
   useEffect(() => {
     setIsValid(isAgreementValid(contribution, selectedAgreement));
@@ -175,29 +175,33 @@ export function ContributionGenericAgreementSearch({
     />
   );
 
-  const isButtonDisplayed =
-    isRegularButtonVariant || (isNoCDT && isValid) || !isNoCDT;
+  const isButtonDisplayed = isRegularButtonVariant || !isNoCDT || isValid;
 
   // Navigue vers la page CC en ajoutant le hash de focus : la cible n'est mise
   // en focus que lorsqu'on y arrive par cette action (cf. AGREEMENT_FOCUS_HASH).
   const navigateToAgreementPage = () => {
-    const path =
-      slug === "les-conges-pour-evenements-familiaux"
-        ? `/contribution/${slug}/${selectedAgreement?.slug || selectedAgreement?.num}`
-        : `/contribution/${selectedAgreement?.num}-${slug}`;
-    router.push(`${path}${AGREEMENT_FOCUS_HASH}`);
+    if (!selectedAgreement) return;
+    router.push(
+      `${buildContributionAgreementPath(slug, selectedAgreement)}${AGREEMENT_FOCUS_HASH}`
+    );
+  };
+
+  // Affiche le contenu ou navigue vers la page CC selon qu'une CC valide est
+  // sélectionnée ; sinon empêche l'action par défaut du bouton.
+  const displayOrNavigate = (event: React.MouseEvent<HTMLButtonElement>) => {
+    onDisplayClick(isValid && !!selectedAgreement);
+    if (isValid && selectedAgreement) {
+      navigateToAgreementPage();
+    } else {
+      event.preventDefault();
+    }
   };
 
   const handleDisplayClick: React.MouseEventHandler<HTMLButtonElement> = (
     event
   ) => {
     if (isOriginalVariant) {
-      onDisplayClick(isValid && !!selectedAgreement);
-      if (isValid && selectedAgreement) {
-        navigateToAgreementPage();
-      } else {
-        event.preventDefault();
-      }
+      displayOrNavigate(event);
       return;
     }
     if (!selectedRoute) {
@@ -225,12 +229,7 @@ export function ContributionGenericAgreementSearch({
       setAgreementRequireSearchSignal((c) => c + 1);
       return;
     }
-    onDisplayClick(isValid && !!selectedAgreement);
-    if (isValid && selectedAgreement) {
-      navigateToAgreementPage();
-    } else {
-      event.preventDefault();
-    }
+    displayOrNavigate(event);
   };
 
   // Toute sélection/effacement de CC déclenchée par le formulaire passe par ici
@@ -288,7 +287,7 @@ export function ContributionGenericAgreementSearch({
           href={LEARN_MORE_URL}
           target="_blank"
           rel="noopener noreferrer"
-          title="En savoir plus sur les conventions collectives (nouvelle fenêtre)"
+          title="En savoir plus sur les conventions collectives"
         >
           En savoir plus
         </Link>
@@ -336,48 +335,37 @@ export function ContributionGenericAgreementSearch({
           }
         />
         {isRegularButtonVariant && isButtonDisplayed && (
-          <>
-            <ButtonsGroup
-              className={fr.cx("fr-mt-3w")}
-              buttonsSize="medium"
-              inlineLayoutWhen="md and up"
-              buttons={[
-                {
-                  children: "Afficher les informations",
-                  priority: "primary",
-                  type: "button",
-                  onClick: handleDisplayClick,
-                },
-                {
-                  children:
-                    selectedRoute === "agreement"
-                      ? REGULAR_BUTTON_ENTERPRISE_LABEL
-                      : REGULAR_BUTTON_AGREEMENT_LABEL,
-                  priority: "secondary",
-                  type: "button",
-                  onClick:
-                    selectedRoute === "agreement"
-                      ? onSwitchToEnterpriseMode
-                      : onSwitchToAgreementMode,
-                },
-                {
-                  children: REGULAR_BUTTON_NO_AGREEMENT_LABEL,
-                  priority: "secondary",
-                  type: "button",
-                  onClick: onSkipToGeneric,
-                },
-              ]}
-            />
-            {showMissingRouteError && (
-              <p
-                className={fr.cx("fr-error-text", "fr-mt-1w")}
-                role="alert"
-                data-testid="missing-route-error"
-              >
-                {MISSING_ROUTE_ERROR}
-              </p>
-            )}
-          </>
+          <ButtonsGroup
+            className={fr.cx("fr-mt-3w")}
+            buttonsSize="medium"
+            inlineLayoutWhen="md and up"
+            buttons={[
+              {
+                children: "Afficher les informations",
+                priority: "primary",
+                type: "button",
+                onClick: handleDisplayClick,
+              },
+              {
+                children:
+                  selectedRoute === "agreement"
+                    ? REGULAR_BUTTON_ENTERPRISE_LABEL
+                    : REGULAR_BUTTON_AGREEMENT_LABEL,
+                priority: "secondary",
+                type: "button",
+                onClick:
+                  selectedRoute === "agreement"
+                    ? onSwitchToEnterpriseMode
+                    : onSwitchToAgreementMode,
+              },
+              {
+                children: REGULAR_BUTTON_NO_AGREEMENT_LABEL,
+                priority: "secondary",
+                type: "button",
+                onClick: onSkipToGeneric,
+              },
+            ]}
+          />
         )}
         {!isRegularButtonVariant && isButtonDisplayed && (
           <Button

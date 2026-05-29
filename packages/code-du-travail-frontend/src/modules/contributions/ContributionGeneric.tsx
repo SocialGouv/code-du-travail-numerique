@@ -4,7 +4,11 @@ import { Button } from "@codegouvfr/react-dsfr/Button";
 import { fr } from "@codegouvfr/react-dsfr";
 import { useABTestVariant } from "@socialgouv/matomo-next";
 import { useContributionTracking } from "./tracking";
-import { isAgreementSupported, isAgreementValid } from "./contributionUtils";
+import {
+  buildContributionAgreementPath,
+  isAgreementSupported,
+  isAgreementValid,
+} from "./contributionUtils";
 import { ContributionGenericContent } from "./ContributionGenericContent";
 import { Contribution } from "./type";
 import {
@@ -16,6 +20,7 @@ import { ContributionGenericAgreementSearch } from "./ContributionGenericAgreeme
 import {
   CONTRIBUTION_AFFICHER_INFO_TEST,
   ContributionAfficherInfoVariations,
+  getAfficherInfoVariantFlags,
 } from "../config/abTests";
 
 type Props = {
@@ -39,10 +44,10 @@ export function ContributionGeneric({ contribution }: Props) {
     variantOverride && ALLOWED_VARIANTS.has(variantOverride)
       ? variantOverride
       : matomoVariant;
-  const isOriginalVariant =
-    variant === ContributionAfficherInfoVariations.ORIGINAL;
-  const isRegularButtonVariant =
-    variant === ContributionAfficherInfoVariations.REGULAR_BUTTON;
+  const {
+    isOriginal: isOriginalVariant,
+    isRegularButton: isRegularButtonVariant,
+  } = getAfficherInfoVariantFlags(variant);
 
   const [displayGeneric, setDisplayGeneric] = useState(false);
 
@@ -83,11 +88,7 @@ export function ContributionGeneric({ contribution }: Props) {
 
     const storedAgreement = getAgreementFromLocalStorage();
     if (storedAgreement && isAgreementValid(contribution, storedAgreement)) {
-      const targetUrl =
-        slug === "les-conges-pour-evenements-familiaux"
-          ? `/contribution/${slug}/${storedAgreement.slug || storedAgreement.num}`
-          : `/contribution/${storedAgreement.num}-${slug}`;
-      router.replace(targetUrl);
+      router.replace(buildContributionAgreementPath(slug, storedAgreement));
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);

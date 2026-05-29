@@ -4,7 +4,7 @@ import { ReactNode, useEffect, useRef, useState } from "react";
 import { AgreementSearchInput } from "./AgreementSearchInput";
 
 import { useContributionTracking } from "../../contributions/tracking";
-import { ContributionAfficherInfoVariations } from "../../config/abTests";
+import { getAfficherInfoVariantFlags } from "../../config/abTests";
 import { EnterpriseAgreementSearchInput } from "../../enterprise";
 import {
   Agreement,
@@ -61,8 +61,8 @@ export const AgreementSearchForm = ({
   >(forcedRoute);
   const radioRefs = useRef<(HTMLInputElement | null)[]>([]);
 
-  const isRegularButtonVariant =
-    variant === ContributionAfficherInfoVariations.REGULAR_BUTTON;
+  const { isRegularButton: isRegularButtonVariant } =
+    getAfficherInfoVariantFlags(variant);
 
   useEffect(() => {
     if (forcedRoute && forcedRoute !== selectedRoute) {
@@ -89,9 +89,8 @@ export const AgreementSearchForm = ({
     }
   }, [error]);
 
-  const { emitClickP1, emitClickP2, emitClickP3 } = useContributionTracking(
-    variant ?? undefined
-  );
+  const { emitClickP1, emitClickP2, emitClickP3 } =
+    useContributionTracking(variant);
 
   const { emitSelectEvent } = useAgreementSearchTracking();
 
