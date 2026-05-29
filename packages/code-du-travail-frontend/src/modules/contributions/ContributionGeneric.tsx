@@ -77,6 +77,7 @@ export function ContributionGeneric({ contribution }: Props) {
   useEffect(() => {
     if (hash === "#retour") {
       setTimeout(() => {
+        personalizeTitleRef?.current?.scrollIntoView({ behavior: "smooth" });
         personalizeTitleRef?.current?.focus();
       }, 100);
     }
