@@ -21,6 +21,7 @@ import { Agreement } from "src/modules/outils/indemnite-depart/types";
 import { scrollToTop } from "src/modules/outils/common/utils";
 import { ApiGeoResult } from "./searchCities";
 import { AccessibleAlert } from "src/modules/outils/common/components/AccessibleAlert";
+import { focusableTitle } from "src/modules/common/focusableTitle";
 
 type Props = {
   widgetMode?: boolean;
@@ -237,7 +238,7 @@ export const EnterpriseAgreementSearchInput = ({
 
         <TitleTag
           ref={selectedConventionTitleRef}
-          className={fr.cx("fr-h4", "fr-mt-2w", "fr-mb-0")}
+          className={`${fr.cx("fr-h4", "fr-mt-2w", "fr-mb-0")} ${focusableTitle}`}
           tabIndex={-1}
         >
           Vous avez sélectionné la convention collective
@@ -444,7 +445,7 @@ export const EnterpriseAgreementSearchInput = ({
         <div className={fr.cx("fr-mt-2w")}>
           {enterprises && enterprises.length > 0 && !loading && (
             <TitleTag
-              className={fr.cx("fr-h5")}
+              className={`${fr.cx("fr-h5")} ${focusableTitle}`}
               tabIndex={-1}
               ref={resultRef}
               data-testid="result-title"

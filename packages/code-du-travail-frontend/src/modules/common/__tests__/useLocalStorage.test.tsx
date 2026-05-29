@@ -73,7 +73,11 @@ describe("useLocalStorageForAgreementOnPageLoad", () => {
   it("se synchronise en direct quand le header supprime la convention collective", () => {
     localStorage.setItem(
       "convention",
-      JSON.stringify({ num: 1388, id: "1388", shortTitle: "Industrie du pétrole" })
+      JSON.stringify({
+        num: 1388,
+        id: "1388",
+        shortTitle: "Industrie du pétrole",
+      })
     );
 
     const { getByTestId } = renderPageLoadApp();

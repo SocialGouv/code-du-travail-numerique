@@ -1,4 +1,4 @@
-import { fireEvent, render, waitFor } from "@testing-library/react";
+import { act, fireEvent, render, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { sendEvent, useABTestVariant } from "@socialgouv/matomo-next";
 import { mockAgreementSearch, ui } from "./ui";
@@ -7,6 +7,7 @@ import { byText } from "testing-library-selector";
 import { ContributionGeneric } from "../ContributionGeneric";
 import { Contribution } from "../type";
 import { ContributionAfficherInfoVariations } from "../../config/abTests";
+import { focusableTitle } from "../../common/focusableTitle";
 
 beforeEach(() => {
   localStorage.clear();
@@ -508,10 +509,7 @@ describe("<ContributionGeneric />", () => {
     it("affiche le Code du travail quand l'entreprise sélectionnée n'a pas de convention collective", async () => {
       render(<ContributionGeneric contribution={contribution} />);
 
-      await userEvent.type(
-        ccUi.searchByEnterprise.input.get(),
-        "bricomanie"
-      );
+      await userEvent.type(ccUi.searchByEnterprise.input.get(), "bricomanie");
       fireEvent.click(ccUi.searchByEnterprise.submitButton.get());
       await waitFor(() =>
         expect(byText("BRICOMANIE").get()).toBeInTheDocument()
@@ -520,16 +518,25 @@ describe("<ContributionGeneric />", () => {
 
       fireEvent.click(ui.generic.buttonDisplayInfo.get());
 
-      expect(ui.generic.enterpriseRequiredError.query()).not.toBeInTheDocument();
+      expect(
+        ui.generic.enterpriseRequiredError.query()
+      ).not.toBeInTheDocument();
       expect(ui.generic.missingRouteError.query()).not.toBeInTheDocument();
       expect(pushMock).not.toHaveBeenCalled();
-      expect(document.querySelector("#cdt")).not.toHaveClass("fr-hidden");
+      const cdt = document.querySelector("#cdt");
+      expect(cdt).not.toHaveClass("fr-hidden");
+      // Cible de focus « Code du travail » : anneau de focus visible.
+      expect(cdt?.className).toContain(focusableTitle);
     });
 
     it("supprime la convention collective du stockage et notifie le header au clic sur 'Afficher le Code du travail'", () => {
       localStorage.setItem(
         "convention",
-        JSON.stringify({ num: 1388, id: "1388", shortTitle: "Industrie du pétrole" })
+        JSON.stringify({
+          num: 1388,
+          id: "1388",
+          shortTitle: "Industrie du pétrole",
+        })
       );
       const storageListener = jest.fn();
       window.addEventListener("cdtn:agreement-storage", storageListener);
@@ -559,6 +566,78 @@ describe("<ContributionGeneric />", () => {
         expect(ccUi.searchByEnterprise.input.get()).toBeInTheDocument()
       );
       expect(ui.generic.buttonDisplayInfo.get()).toBeInTheDocument();
+    });
+
+    it("affiche la saisie manuelle de la convention quand une CC est déjà stockée au chargement", async () => {
+      localStorage.setItem(
+        "convention",
+        JSON.stringify({
+          num: 1388,
+          id: "1388",
+          shortTitle: "Industrie du pétrole",
+        })
+      );
+
+      render(<ContributionGeneric contribution={contribution} />);
+
+      await waitFor(() =>
+        expect(ccUi.searchByName.input.get()).toBeInTheDocument()
+      );
+      expect(ccUi.searchByEnterprise.input.query()).not.toBeInTheDocument();
+    });
+
+    it("bascule sur la saisie de la convention quand une CC est ajoutée via le header", async () => {
+      render(<ContributionGeneric contribution={contribution} />);
+
+      // Par défaut : recherche par entreprise.
+      expect(ccUi.searchByEnterprise.input.get()).toBeInTheDocument();
+      expect(ccUi.searchByName.input.query()).not.toBeInTheDocument();
+
+      // Simule l'ajout d'une CC depuis le header (localStorage + évènement).
+      act(() => {
+        const cc = {
+          num: 1388,
+          id: "1388",
+          shortTitle: "Industrie du pétrole",
+        };
+        localStorage.setItem("convention", JSON.stringify(cc));
+        window.dispatchEvent(
+          new CustomEvent("cdtn:agreement-storage", { detail: cc })
+        );
+      });
+
+      await waitFor(() =>
+        expect(ccUi.searchByName.input.get()).toBeInTheDocument()
+      );
+      expect(ccUi.searchByEnterprise.input.query()).not.toBeInTheDocument();
+    });
+
+    it("revient à la recherche par entreprise quand la CC est supprimée via le header", async () => {
+      localStorage.setItem(
+        "convention",
+        JSON.stringify({
+          num: 1388,
+          id: "1388",
+          shortTitle: "Industrie du pétrole",
+        })
+      );
+
+      render(<ContributionGeneric contribution={contribution} />);
+      await waitFor(() =>
+        expect(ccUi.searchByName.input.get()).toBeInTheDocument()
+      );
+
+      act(() => {
+        localStorage.removeItem("convention");
+        window.dispatchEvent(
+          new CustomEvent("cdtn:agreement-storage", { detail: null })
+        );
+      });
+
+      await waitFor(() =>
+        expect(ccUi.searchByEnterprise.input.get()).toBeInTheDocument()
+      );
+      expect(ccUi.searchByName.input.query()).not.toBeInTheDocument();
     });
   });
 });

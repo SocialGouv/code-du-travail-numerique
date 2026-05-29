@@ -2,6 +2,7 @@
 import { fr } from "@codegouvfr/react-dsfr";
 import { Enterprise } from "../types";
 import { useEffect, useRef } from "react";
+import { focusableTitle } from "src/modules/common/focusableTitle";
 
 type Props = {
   enterprise: Omit<Enterprise, "complements">;
@@ -24,7 +25,7 @@ export const EnterpriseAgreementSelectionDetail = ({
   return (
     <>
       <p
-        className={fr.cx("fr-h4", "fr-mt-2w", "fr-mb-0")}
+        className={`${fr.cx("fr-h4", "fr-mt-2w", "fr-mb-0")} ${focusableTitle}`}
         ref={titleRef}
         tabIndex={-1}
         id={"your-enterprise"}
