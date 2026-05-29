@@ -24,6 +24,7 @@ import { AccessibleAlert } from "../outils/common/components/AccessibleAlert";
 import { ContributionAfficherInfoVariations } from "../config/abTests";
 import { useContributionTracking } from "./tracking";
 import { focusableTitle } from "../common/focusableTitle";
+import { AGREEMENT_FOCUS_HASH } from "./ContributionAgreement";
 
 type Props = {
   onAgreementSelect: (agreement?: Agreement) => void;
@@ -177,17 +178,23 @@ export function ContributionGenericAgreementSearch({
   const isButtonDisplayed =
     isRegularButtonVariant || (isNoCDT && isValid) || !isNoCDT;
 
+  // Navigue vers la page CC en ajoutant le hash de focus : la cible n'est mise
+  // en focus que lorsqu'on y arrive par cette action (cf. AGREEMENT_FOCUS_HASH).
+  const navigateToAgreementPage = () => {
+    const path =
+      slug === "les-conges-pour-evenements-familiaux"
+        ? `/contribution/${slug}/${selectedAgreement?.slug || selectedAgreement?.num}`
+        : `/contribution/${selectedAgreement?.num}-${slug}`;
+    router.push(`${path}${AGREEMENT_FOCUS_HASH}`);
+  };
+
   const handleDisplayClick: React.MouseEventHandler<HTMLButtonElement> = (
     event
   ) => {
     if (isOriginalVariant) {
       onDisplayClick(isValid && !!selectedAgreement);
       if (isValid && selectedAgreement) {
-        router.push(
-          slug === "les-conges-pour-evenements-familiaux"
-            ? `/contribution/${slug}/${selectedAgreement?.slug || selectedAgreement?.num}`
-            : `/contribution/${selectedAgreement?.num}-${slug}`
-        );
+        navigateToAgreementPage();
       } else {
         event.preventDefault();
       }
@@ -220,11 +227,7 @@ export function ContributionGenericAgreementSearch({
     }
     onDisplayClick(isValid && !!selectedAgreement);
     if (isValid && selectedAgreement) {
-      router.push(
-        slug === "les-conges-pour-evenements-familiaux"
-          ? `/contribution/${slug}/${selectedAgreement?.slug || selectedAgreement?.num}`
-          : `/contribution/${selectedAgreement?.num}-${slug}`
-      );
+      navigateToAgreementPage();
     } else {
       event.preventDefault();
     }

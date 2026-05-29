@@ -14,12 +14,19 @@ type Props = {
   contribution: Contribution;
 };
 
+// Hash ajouté par le formulaire lorsqu'il navigue vers cette page : il signale
+// une arrivée « par action de l'usager » et déclenche le focus sur le titre.
+// Sans ce hash (arrivée directe SEO/Google, lien partagé, reload), on ne vole
+// pas le focus. Même principe que `#retour` côté page générique.
+export const AGREEMENT_FOCUS_HASH = "#votre-convention-collective";
+
 export function ContributionAgreement({ contribution }: Props) {
   const { slug, relatedItems } = contribution;
   const { push } = useRouter();
   const agreementTitleRef = useRef<HTMLParagraphElement>(null);
 
   useEffect(() => {
+    if (window.location.hash !== AGREEMENT_FOCUS_HASH) return;
     const timer = setTimeout(() => {
       agreementTitleRef.current?.focus();
     }, 100);
