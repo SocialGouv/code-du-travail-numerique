@@ -675,4 +675,50 @@ describe("<ContributionGeneric />", () => {
       expect(ccUi.searchByName.input.query()).not.toBeInTheDocument();
     });
   });
+
+  describe("retour sur le formulaire (#retour)", () => {
+    afterEach(() => {
+      window.location.hash = "";
+    });
+
+    const variants = [
+      { label: "original", value: ContributionAfficherInfoVariations.ORIGINAL },
+      {
+        label: "radio_button",
+        value: ContributionAfficherInfoVariations.RADIO_BUTTON,
+      },
+      {
+        label: "regular_button",
+        value: ContributionAfficherInfoVariations.REGULAR_BUTTON,
+      },
+    ];
+
+    it.each(variants)(
+      "scrolle et place le focus sur le titre « Personnalisez… » au retour (#retour) — variante $label",
+      async ({ value }) => {
+        setVariant(value);
+        window.location.hash = "#retour";
+        const scrollSpy = jest
+          .spyOn(Element.prototype, "scrollIntoView")
+          .mockClear();
+
+        const { getByText } = render(
+          <ContributionGeneric contribution={contribution} />
+        );
+
+        const title = getByText(
+          "Personnalisez la réponse avec votre convention collective"
+        );
+
+        // Le focus et le scroll sont posés dans le même effet : une fois le
+        // focus sur le titre, le scroll a forcément eu lieu.
+        await waitFor(() => {
+          expect(document.activeElement).toBe(title);
+        });
+        expect(scrollSpy).toHaveBeenCalledWith({ behavior: "smooth" });
+
+        scrollSpy.mockRestore();
+      }
+    );
+  });
 });
