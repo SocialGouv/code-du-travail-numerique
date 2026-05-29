@@ -3,6 +3,7 @@ import React from "react";
 
 import { ContributionAgreement } from "../ContributionAgreement";
 import { Contribution } from "../type";
+import { focusableTitle } from "../../common/focusableTitle";
 
 jest.mock("next/navigation", () => ({
   useRouter: () => ({ push: jest.fn() }),
@@ -31,6 +32,8 @@ describe("<ContributionAgreement /> accessibilité", () => {
 
     const title = getByText("Votre convention collective");
     expect(title).toHaveAttribute("tabindex", "-1");
+    // Anneau de focus visible même lors d'un focus programmatique.
+    expect(title.className).toContain(focusableTitle);
 
     await waitFor(() => {
       expect(document.activeElement).toBe(title);

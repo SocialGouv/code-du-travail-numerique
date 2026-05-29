@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Button } from "@codegouvfr/react-dsfr/Button";
 import { ButtonsGroup } from "@codegouvfr/react-dsfr/ButtonsGroup";
 import { fr } from "@codegouvfr/react-dsfr";
@@ -23,6 +23,7 @@ import { AgreementSearchForm } from "../convention-collective/AgreementSearch/Ag
 import { AccessibleAlert } from "../outils/common/components/AccessibleAlert";
 import { ContributionAfficherInfoVariations } from "../config/abTests";
 import { useContributionTracking } from "./tracking";
+import { focusableTitle } from "../common/focusableTitle";
 
 type Props = {
   onAgreementSelect: (agreement?: Agreement) => void;
@@ -74,6 +75,10 @@ export function ContributionGenericAgreementSearch({
     useState(0);
   const [agreementRequireSearchSignal, setAgreementRequireSearchSignal] =
     useState(0);
+  // Marque une modification de CC initiée depuis le formulaire lui-même
+  // (sélection entreprise/CC, bascule de route) pour la distinguer d'une
+  // modification externe (header, autre onglet) dans l'effet de synchro de route.
+  const internalSelectionRef = useRef(false);
 
   const { emitClickP3 } = useContributionTracking(variant ?? undefined);
 
@@ -81,16 +86,27 @@ export function ContributionGenericAgreementSearch({
     setIsValid(isAgreementValid(contribution, selectedAgreement));
   }, [selectedAgreement]);
 
-  // La variante A/B se résout après le 1er rendu (Matomo / searchParams). Les
-  // initialiseurs useState ne se rejouent pas, donc on fixe ici la route une
-  // fois la variante regular_button connue pour ne jamais rendre un encart vide.
+  // En variante regular_button, la route du formulaire suit la présence d'une
+  // convention collective : une CC connue (chargée du stockage ou ajoutée via le
+  // header) affiche la route « agreement » pour la montrer, sinon on retombe sur
+  // la recherche par entreprise (jamais d'encart vide). On ignore les sélections
+  // internes (CC/entreprise choisie dans le formulaire, bascule via les boutons)
+  // pour ne pas sortir l'usager de la route qu'il est en train d'utiliser.
+  // La variante A/B se résolvant après le 1er rendu, l'effet se rejoue aussi
+  // lorsque isRegularButtonVariant devient vrai.
   useEffect(() => {
-    if (isRegularButtonVariant && !selectedRoute) {
-      setSelectedRoute("enterprise");
-      setForcedRoute("enterprise");
+    if (!isRegularButtonVariant) return;
+    if (internalSelectionRef.current) {
+      internalSelectionRef.current = false;
+      return;
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isRegularButtonVariant]);
+    const nextRoute = selectedAgreement ? "agreement" : "enterprise";
+    // Synchro avec une source externe (variante A/B résolue après le 1er rendu,
+    // CC du header / autre onglet) : la route ne peut pas être dérivée au rendu.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setSelectedRoute(nextRoute);
+    setForcedRoute(nextRoute);
+  }, [isRegularButtonVariant, selectedAgreement]);
 
   const selectedAgreementAlert = (agreement: Agreement) => {
     const isSupported = isAgreementSupported(contribution, agreement);
@@ -214,21 +230,29 @@ export function ContributionGenericAgreementSearch({
     }
   };
 
+  // Toute sélection/effacement de CC déclenchée par le formulaire passe par ici
+  // afin que l'effet de synchro de route ne la confonde pas avec un changement
+  // externe (header) et ne réécrive pas la route choisie par l'usager.
+  const selectAgreementInternally = (agreement?: Agreement) => {
+    internalSelectionRef.current = true;
+    onAgreementSelect(agreement);
+  };
+
   const onSwitchToAgreementMode = () => {
-    onAgreementSelect();
+    selectAgreementInternally();
     setForcedRoute("agreement");
     setShowMissingRouteError(false);
   };
 
   const onSwitchToEnterpriseMode = () => {
-    onAgreementSelect();
+    selectAgreementInternally();
     setForcedRoute("enterprise");
     setShowMissingRouteError(false);
   };
 
   const onSkipToGeneric = () => {
     setShowMissingRouteError(false);
-    onAgreementSelect();
+    selectAgreementInternally();
     emitClickP3(trackingActionName);
     onDisplayClick(false);
   };
@@ -245,7 +269,7 @@ export function ContributionGenericAgreementSearch({
         <p
           ref={personalizeTitleRef}
           id="personalize-response-title"
-          className={fr.cx("fr-h3", "fr-mt-1w")}
+          className={`${fr.cx("fr-h3", "fr-mt-1w")} ${focusableTitle}`}
           role="heading"
           aria-level={2}
           tabIndex={-1}
@@ -269,7 +293,7 @@ export function ContributionGenericAgreementSearch({
       </p>
       <div>
         <AgreementSearchForm
-          onAgreementSelect={onAgreementSelect}
+          onAgreementSelect={selectAgreementInternally}
           selectedAgreementAlert={selectedAgreementAlert}
           defaultAgreement={selectedAgreement}
           trackingActionName={trackingActionName}

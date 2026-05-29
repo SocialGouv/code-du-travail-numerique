@@ -8,6 +8,7 @@ import BlueCard from "../common/BlueCard";
 import Button from "@codegouvfr/react-dsfr/Button";
 import { removeCCNumberFromSlug } from "../utils/removeCCNumberFromSlug";
 import { useRouter } from "next/navigation";
+import { focusableTitle } from "../common/focusableTitle";
 
 type Props = {
   contribution: Contribution;
@@ -30,7 +31,7 @@ export function ContributionAgreement({ contribution }: Props) {
       <BlueCard>
         <p
           ref={agreementTitleRef}
-          className={fr.cx("fr-h3", "fr-mt-1w")}
+          className={`${fr.cx("fr-h3", "fr-mt-1w")} ${focusableTitle}`}
           tabIndex={-1}
         >
           Votre convention collective
