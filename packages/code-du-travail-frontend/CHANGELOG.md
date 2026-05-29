@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.230.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.230.0...v4.230.1) (2026-05-29)
+
+
+### Bug Fixes
+
+* **contribution:** afficher l'astérisque sur le brut si pas déjà existant ([#7288](https://github.com/SocialGouv/code-du-travail-numerique/issues/7288)) ([365d9ae](https://github.com/SocialGouv/code-du-travail-numerique/commit/365d9ae82ef2f9e0df8e3f7f2b12c369ffc25b5a))
+* **contribution:** ajout à la whitelist des attributs du challenger SMIC ([f400fec](https://github.com/SocialGouv/code-du-travail-numerique/commit/f400fec4a2ae1e90e676f88d6e7de6edf453334f))
+* **contribution:** correction sur la valeur du SMIC mal renseignée ([8652efe](https://github.com/SocialGouv/code-du-travail-numerique/commit/8652efea348fa688560aa687a212be9648860a5c))
+
+
+
+
+
 # [4.230.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.229.0...v4.230.0) (2026-05-28)
 
 **Note:** Version bump only for package @cdt/frontend
