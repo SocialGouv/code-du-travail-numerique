@@ -503,7 +503,9 @@ describe("<ContributionGeneric />", () => {
 
       fireEvent.click(ui.generic.buttonDisplayInfo.get());
 
-      expect(pushMock).toHaveBeenCalledWith("/contribution/1388-my-contrib");
+      expect(pushMock).toHaveBeenCalledWith(
+        "/contribution/1388-my-contrib#votre-convention-collective"
+      );
     });
 
     it("affiche le Code du travail quand l'entreprise sélectionnée n'a pas de convention collective", async () => {

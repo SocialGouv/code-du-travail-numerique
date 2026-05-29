@@ -1,7 +1,10 @@
 import { render, waitFor } from "@testing-library/react";
 import React from "react";
 
-import { ContributionAgreement } from "../ContributionAgreement";
+import {
+  AGREEMENT_FOCUS_HASH,
+  ContributionAgreement,
+} from "../ContributionAgreement";
 import { Contribution } from "../type";
 import { focusableTitle } from "../../common/focusableTitle";
 
@@ -25,7 +28,13 @@ const contribution = {
 } as Partial<Contribution> as any;
 
 describe("<ContributionAgreement /> accessibilité", () => {
-  it("place le focus sur le titre 'Votre convention collective' au montage", async () => {
+  afterEach(() => {
+    window.location.hash = "";
+  });
+
+  it("place le focus sur le titre quand on arrive via le formulaire (hash) et lui donne un anneau de focus visible", async () => {
+    window.location.hash = AGREEMENT_FOCUS_HASH;
+
     const { getByText } = render(
       <ContributionAgreement contribution={contribution} />
     );
@@ -38,5 +47,19 @@ describe("<ContributionAgreement /> accessibilité", () => {
     await waitFor(() => {
       expect(document.activeElement).toBe(title);
     });
+  });
+
+  it("ne vole pas le focus lors d'une arrivée directe sans hash (SEO/Google, lien partagé, reload)", async () => {
+    window.location.hash = "";
+
+    const { getByText } = render(
+      <ContributionAgreement contribution={contribution} />
+    );
+
+    const title = getByText("Votre convention collective");
+    // Laisse passer le délai du setTimeout(100) de l'effet pour vérifier
+    // qu'aucun focus n'est posé.
+    await new Promise((resolve) => setTimeout(resolve, 200));
+    expect(document.activeElement).not.toBe(title);
   });
 });
