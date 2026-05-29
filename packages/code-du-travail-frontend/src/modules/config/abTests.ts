@@ -17,6 +17,17 @@ export enum ContributionAfficherInfoVariations {
 }
 
 /**
+ * Dérive les drapeaux de variante de l'A/B test « afficher les informations »
+ * à partir de la variante résolue (Matomo ou override d'URL). Centralisé ici
+ * pour éviter de répéter les comparaisons d'enum dans chaque composant.
+ */
+export const getAfficherInfoVariantFlags = (variant?: string | null) => ({
+  isOriginal: variant === ContributionAfficherInfoVariations.ORIGINAL,
+  isRegularButton:
+    variant === ContributionAfficherInfoVariations.REGULAR_BUTTON,
+});
+
+/**
  * Central place to register Matomo A/B tests.
  *
  * Keep this empty by default; add tests here when needed.
