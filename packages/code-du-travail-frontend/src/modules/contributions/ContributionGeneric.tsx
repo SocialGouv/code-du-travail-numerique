@@ -2,7 +2,6 @@
 import React, { useRef, useState, useEffect } from "react";
 import { Button } from "@codegouvfr/react-dsfr/Button";
 import { fr } from "@codegouvfr/react-dsfr";
-import { useABTestVariant } from "@socialgouv/matomo-next";
 import { useContributionTracking } from "./tracking";
 import {
   buildContributionAgreementPath,
@@ -18,7 +17,6 @@ import {
 import { useRouter, useSearchParams } from "next/navigation";
 import { ContributionGenericAgreementSearch } from "./ContributionGenericAgreementSearch";
 import {
-  CONTRIBUTION_AFFICHER_INFO_TEST,
   ContributionAfficherInfoVariations,
   getAfficherInfoVariantFlags,
 } from "../config/abTests";
@@ -38,7 +36,8 @@ export function ContributionGeneric({ contribution }: Props) {
   const personalizeTitleRef = useRef<HTMLParagraphElement>(null);
   const getTitle = () => `/contribution/${slug}`;
   const { slug, isNoCDT, relatedItems } = contribution;
-  const matomoVariant = useABTestVariant(CONTRIBUTION_AFFICHER_INFO_TEST);
+  // TEST scenario_a (DO NOT MERGE): variante figee en dur (au lieu de useABTestVariant)
+  const matomoVariant = ContributionAfficherInfoVariations.REGULAR_BUTTON;
   const variantOverride = searchParams?.get("ab") ?? null;
   const variant =
     variantOverride && ALLOWED_VARIANTS.has(variantOverride)
