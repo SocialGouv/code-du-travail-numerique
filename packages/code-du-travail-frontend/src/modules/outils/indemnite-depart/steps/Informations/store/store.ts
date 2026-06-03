@@ -239,7 +239,7 @@ const createCommonInformationsStore: StoreSlice<
               (v) =>
                 v.question.rule.nom ===
                 "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . assistante maternelle . type de licenciement"
-            )?.info === `'Non'`) ||
+            )?.info !== `'Oui'`) ||
           (agreement.num === 1404 &&
             publicodesInformations.find(
               (v) =>
@@ -285,7 +285,9 @@ const createCommonInformationsStore: StoreSlice<
           state.informationsData.error.errorEligibility = errorEligibility;
         })
       );
-      get().informationsFunction.onUpdateSalaryStepVisibility();
+      if (!errorEligibility) {
+        get().informationsFunction.onUpdateSalaryStepVisibility();
+      }
       return errorEligibility
         ? ValidationResponse.NotEligible
         : isValid

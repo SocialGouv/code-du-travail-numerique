@@ -132,4 +132,42 @@ describe("Indemnité conventionnel de licenciement pour la CC 3239", () => {
       }
     );
   });
+
+  describe("Assistant maternel est en inaptitude professionnelle", () => {
+    test.each`
+      seniorityRight | seniority | salary  | expectedCompensation
+      ${7 / 12}      | ${1}      | ${2000} | ${0}
+      ${8 / 12}      | ${8 / 12} | ${2000} | ${0}
+      ${9 / 12}      | ${9 / 12} | ${2000} | ${50}
+      ${9 / 12}      | ${2}      | ${2000} | ${50}
+      ${9 / 12}      | ${10}     | ${2000} | ${50}
+      ${9 / 12}      | ${12}     | ${2000} | ${50}
+    `(
+      "ancienneté: $seniority an, salaire de référence: $salary => $expectedCompensation €",
+      ({ seniority, seniorityRight, salary, expectedCompensation }) => {
+        const { result, missingArgs } = engine.setSituation(
+          {
+            "contrat salarié . convention collective": "'IDCC3239'",
+            "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
+              "oui",
+            "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle":
+              CatPro3239.assistantMaternel,
+            "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . assistante maternelle . type de licenciement": `'Non'`,
+            "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . assistante maternelle . type de licenciement . autres . total salaires":
+              salary,
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
+              seniority,
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
+              seniorityRight,
+            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+              salary,
+          },
+          "contrat salarié . indemnité de licenciement . résultat conventionnel"
+        );
+        expect(missingArgs).toEqual([]);
+        expect(result.unit?.numerators).toEqual(["€"]);
+        expect(result.value).toEqual(expectedCompensation);
+      }
+    );
+  });
 });
