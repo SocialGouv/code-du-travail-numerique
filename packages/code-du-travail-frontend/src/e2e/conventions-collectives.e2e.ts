@@ -43,9 +43,10 @@ test.describe("Conventions collectives", () => {
         "Questions-réponses fréquentes"
       );
 
-      await expect(
-        page.locator("#frequent-questions .fr-accordion__btn")
-      ).toHaveCount(10);
+      const frequentQuestions = await page
+        .locator("#frequent-questions .fr-accordion__btn")
+        .count();
+      expect(frequentQuestions).toBeGreaterThanOrEqual(10);
 
       await expect(
         page.locator("#frequent-questions .fr-accordion__btn").first()

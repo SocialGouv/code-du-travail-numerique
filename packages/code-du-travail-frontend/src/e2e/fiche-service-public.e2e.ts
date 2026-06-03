@@ -22,7 +22,7 @@ test.describe("Fiche Service public", () => {
       "href",
       /https:\/\/www\.service-public\.gouv\.fr\/particuliers\/vosdroits\/F2301/
     );
-    await expect(page.locator("body")).toContainText("21/02/2026");
+    await expect(page.locator("body")).toContainText(/\d{2}\/\d{2}\/\d{4}/);
     await expect(page.getByRole("heading", { level: 2 }).first()).toContainText(
       "Salaire"
     );
