@@ -26,8 +26,6 @@ function scanResult(events: ExtractedEvent[]): ScanResult {
     events,
     unresolved: [],
     configCalls: [],
-    frameworkAuto: [],
-    otherTracking: [],
     callsiteKeys: new Set(events.map((e) => `${e.file}:${e.line}`)),
   };
 }

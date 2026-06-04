@@ -1452,27 +1452,5 @@
       "file": "packages/code-du-travail-frontend/src/modules/config/MatomoAnalytics.tsx",
       "line": 41
     }
-  ],
-  "framework_auto_tracking": [
-    {
-      "installer": "trackAppRouter",
-      "auto_events": [
-        "trackPageView (changement de route SPA)",
-        "trackSiteSearch (searchKeyword)",
-        "AbTesting (A/B content tracking)",
-        "outlink / download (enableLinkTracking par défaut)"
-      ],
-      "file": "packages/code-du-travail-frontend/src/modules/config/MatomoAnalytics.tsx",
-      "line": 21
-    }
-  ],
-  "other_tracking": [
-    {
-      "system": "google-gtag",
-      "event": "conversion",
-      "detail": "DC-3048978/cdtn/arr_cdtn+unique",
-      "file": "packages/code-du-travail-frontend/src/modules/utils/consent.ts",
-      "line": 215
-    }
   ]
 }

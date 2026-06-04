@@ -6,15 +6,13 @@
 //   project   → chargement des fichiers source (frontend + enums modeles)
 //   enum-index / call-index → index syntaxiques pour résoudre les valeurs
 //   value-resolver → résolution category/action/name en valeurs concrètes
-//   scanner   → détection des callsites (sendEvent, push, gtag, trackAppRouter)
+//   scanner   → détection des callsites (sendEvent, push Matomo natif)
 //   aggregate → tri déterministe + comptages
 //
 // Events détectés :
 //   - sendEvent({ category, action, name? })            de @socialgouv/matomo-next
 //   - push(["trackEvent" | "trackSiteSearch" | ...])    events Matomo natifs
-//   - _paq.push([...]) / paq.push([...])
-//   - gtag("event", ...)                                conversions Google (SEA)
-//   - trackAppRouter({...})                             tracking auto matomo-next
+//   - _paq.push([...]) / paq.push([...])                + commandes de config
 //
 // `extractEvents()` renvoie le résultat en mémoire (utilisé par check-events.ts).
 // Lancé directement, le script écrit `events/events.extracted.json`.
@@ -65,7 +63,7 @@ function main(): void {
   fs.mkdirSync(path.dirname(OUTPUT_PATH), { recursive: true });
   fs.writeFileSync(OUTPUT_PATH, serializeExtraction(extraction));
   console.log(
-    `[extract-events] ${extraction.callsites} callsites · ${extraction.total_events} events (${extraction.unique_events} uniques) · ${extraction.unresolved_callsites} non résolus · ${extraction.matomo_config_calls.length} config · ${extraction.framework_auto_tracking.length} auto · ${extraction.other_tracking.length} autres`
+    `[extract-events] ${extraction.callsites} callsites · ${extraction.total_events} events (${extraction.unique_events} uniques) · ${extraction.unresolved_callsites} non résolus · ${extraction.matomo_config_calls.length} config`
   );
   console.log(
     `[extract-events] Écrit : ${path.relative(REPO_ROOT, OUTPUT_PATH)}`

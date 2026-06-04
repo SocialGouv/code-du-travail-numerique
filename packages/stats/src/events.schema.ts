@@ -44,24 +44,6 @@ export type MatomoConfigCall = {
   line: number;
 };
 
-// Tracking automatique installé via la lib (ex: trackAppRouter de matomo-next),
-// qui émet pageview / site search / outlink / A-B en interne, hors sendEvent.
-export type FrameworkAutoTracking = {
-  installer: string;
-  auto_events: string[];
-  file: string;
-  line: number;
-};
-
-// Tracking NON-Matomo détecté dans le code (ex: conversion Google gtag / SEA).
-export type OtherTracking = {
-  system: string;
-  event: string;
-  detail: string;
-  file: string;
-  line: number;
-};
-
 // Appel à sendEvent dont category/action n'ont pas pu être résolus.
 export type UnresolvedCall = {
   file: string;
@@ -80,8 +62,6 @@ export type EventsExtraction = {
   events: ExtractedEvent[];
   unresolved: UnresolvedCall[];
   matomo_config_calls: MatomoConfigCall[];
-  framework_auto_tracking: FrameworkAutoTracking[];
-  other_tracking: OtherTracking[];
 };
 
 export const EVENT_KEY = (e: { category: string; action: string }): string =>

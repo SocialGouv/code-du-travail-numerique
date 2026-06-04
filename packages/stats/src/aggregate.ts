@@ -20,26 +20,12 @@ export function buildExtraction(
   scan: ScanResult,
   scanRoot: string
 ): EventsExtraction {
-  const {
-    events,
-    unresolved,
-    configCalls,
-    frameworkAuto,
-    otherTracking,
-    callsiteKeys,
-  } = scan;
+  const { events, unresolved, configCalls, callsiteKeys } = scan;
 
   events.sort(byCatActionFileLine);
   configCalls.sort(
     (a, b) =>
       a.command.localeCompare(b.command) ||
-      a.file.localeCompare(b.file) ||
-      a.line - b.line
-  );
-  frameworkAuto.sort((a, b) => a.file.localeCompare(b.file) || a.line - b.line);
-  otherTracking.sort(
-    (a, b) =>
-      a.system.localeCompare(b.system) ||
       a.file.localeCompare(b.file) ||
       a.line - b.line
   );
@@ -56,8 +42,6 @@ export function buildExtraction(
     events,
     unresolved,
     matomo_config_calls: configCalls,
-    framework_auto_tracking: frameworkAuto,
-    other_tracking: otherTracking,
   };
 }
 

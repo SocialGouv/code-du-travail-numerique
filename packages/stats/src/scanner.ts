@@ -1,7 +1,5 @@
 // Parcourt les fichiers source et détecte chaque callsite de tracking :
 //   - sendEvent({ category, action, name? })
-//   - gtag("event", ...)                  conversions Google (SEA)
-//   - trackAppRouter({...})                auto-tracking matomo-next
 //   - push([cmd, ...]) / _paq.push([...])  events & config Matomo natifs
 // Produit les events (après expansion des enums) et les listes annexes.
 
@@ -10,9 +8,7 @@ import type { SourceFile } from "ts-morph";
 import * as path from "node:path";
 import type {
   ExtractedEvent,
-  FrameworkAutoTracking,
   MatomoConfigCall,
-  OtherTracking,
   Resolved,
   UnresolvedCall,
 } from "./events.schema";
@@ -25,8 +21,6 @@ export type ScanResult = {
   events: ExtractedEvent[];
   unresolved: UnresolvedCall[];
   configCalls: MatomoConfigCall[];
-  frameworkAuto: FrameworkAutoTracking[];
-  otherTracking: OtherTracking[];
   callsiteKeys: Set<string>;
 };
 
@@ -40,8 +34,6 @@ export function scanSourceFiles(
   const events: ExtractedEvent[] = [];
   const unresolved: UnresolvedCall[] = [];
   const configCalls: MatomoConfigCall[] = [];
-  const frameworkAuto: FrameworkAutoTracking[] = [];
-  const otherTracking: OtherTracking[] = [];
   const callsiteKeys = new Set<string>();
 
   function pushEvents(
@@ -118,54 +110,7 @@ export function scanSourceFiles(
         return;
       }
 
-      // ---- Cas 2 : gtag("event", "<type>", { send_to }) (Google SEA) ----
-      if (exprText === "gtag" || exprText.endsWith(".gtag")) {
-        if (args.length >= 2 && Node.isStringLiteral(args[0])) {
-          const kind = args[0].getLiteralValue();
-          if (kind === "event") {
-            const evt = resolveValues(args[1])[0]?.value ?? "<unknown>";
-            let detail = "";
-            if (args[2] && Node.isObjectLiteralExpression(args[2])) {
-              const sendTo = resolvePropertyValues(args[2], "send_to");
-              detail = sendTo?.[0]?.value ?? "";
-            }
-            otherTracking.push({
-              system: "google-gtag",
-              event: evt,
-              detail,
-              file: relFile,
-              line,
-            });
-          }
-        }
-        return;
-      }
-
-      // ---- Cas 3 : trackAppRouter({...}) (auto-tracking matomo-next) ----
-      if (
-        exprText === "trackAppRouter" ||
-        exprText.endsWith(".trackAppRouter")
-      ) {
-        const autoEvents = ["trackPageView (changement de route SPA)"];
-        if (args[0] && Node.isObjectLiteralExpression(args[0])) {
-          const cfg = args[0];
-          if (cfg.getProperty("searchKeyword"))
-            autoEvents.push("trackSiteSearch (searchKeyword)");
-          if (cfg.getProperty("abTests"))
-            autoEvents.push("AbTesting (A/B content tracking)");
-        }
-        // matomo-next active le link tracking par défaut (outlinks / downloads).
-        autoEvents.push("outlink / download (enableLinkTracking par défaut)");
-        frameworkAuto.push({
-          installer: "trackAppRouter",
-          auto_events: autoEvents,
-          file: relFile,
-          line,
-        });
-        return;
-      }
-
-      // ---- Cas 4 : push([cmd, ...]) / _paq.push([cmd, ...]) ----
+      // ---- Cas 2 : push([cmd, ...]) / _paq.push([cmd, ...]) ----
       if (!isMatomoPushCallee(exprText)) return;
       if (args.length === 0) return;
       const firstArg = args[0];
@@ -233,8 +178,6 @@ export function scanSourceFiles(
     events,
     unresolved,
     configCalls,
-    frameworkAuto,
-    otherTracking,
     callsiteKeys,
   };
 }
