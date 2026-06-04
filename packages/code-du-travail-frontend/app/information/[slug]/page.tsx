@@ -48,8 +48,6 @@ async function InformationPage(props) {
   return (
     <DsfrLayout>
       <Information
-        slug={params.slug}
-        dismissalProcess={information.dismissalProcess}
         date={information.date}
         title={information.title}
         breadcrumbs={information.breadcrumbs}
@@ -58,7 +56,6 @@ async function InformationPage(props) {
         contents={information.contents}
         references={information.references}
         relatedItems={data.relatedItems}
-        infography={information.infography}
       />
     </DsfrLayout>
   );
@@ -66,7 +63,6 @@ async function InformationPage(props) {
 
 const getInformation = async (slug: string) => {
   const information = await fetchInformation(slug, [
-    "dismissalProcess",
     "date",
     "breadcrumbs",
     "title",

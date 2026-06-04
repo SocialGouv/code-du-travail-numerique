@@ -7,16 +7,9 @@ import { AccordionWithAnchor } from "../common/AccordionWithAnchor";
 import { ContentPart } from "./content";
 import React from "react";
 import { RelatedItem } from "../documents";
-import {
-  EditoralContentReferenceBloc,
-  GraphicContentPart,
-} from "@socialgouv/cdtn-types/build/hasura/editorial-content";
+import { EditoralContentReferenceBloc } from "@socialgouv/cdtn-types/build/hasura/editorial-content";
 import { ContainerInformation } from "../layout/ContainerInformation";
-import { KeysToCamelCase } from "./type";
 import DisplayContent from "../common/DisplayContent";
-import { QuestionnaireWrapper } from "../outils/dismissal-process/questionnaire/QuestionnaireWrapper";
-import { BlueBlock } from "../common/BlueBlock";
-import DismissalProcessIcon from "../outils/dismissal-process/component/DismissalProcessIcon.svg";
 import { References } from "../common";
 
 type Props = {
@@ -28,9 +21,6 @@ type Props = {
   relatedItems: { items: RelatedItem[]; title: string }[];
   contents: EditorialContentBaseContentPart[];
   references?: EditoralContentReferenceBloc[];
-  slug: string;
-  infography?: KeysToCamelCase<GraphicContentPart>;
-  dismissalProcess?: boolean;
 };
 
 export const Information = ({
@@ -42,9 +32,6 @@ export const Information = ({
   contents,
   relatedItems,
   references,
-  slug,
-  dismissalProcess,
-  infography,
 }: Props) => {
   return (
     <ContainerInformation
@@ -53,28 +40,10 @@ export const Information = ({
       relatedItems={relatedItems}
       title={title}
       description={description}
-      infography={infography}
-      dismissalProcess={dismissalProcess}
       header={
         <>
           <h1>{title}</h1>
           <p className={fr.cx("fr-my-6w")}>Mis à jour le&nbsp;: {date}</p>
-
-          {dismissalProcess && (
-            <BlueBlock
-              id="info-situation"
-              title="Quelle est votre situation ?"
-              titleLevel="h2"
-              picto={DismissalProcessIcon}
-              className={fr.cx("fr-mb-6w")}
-            >
-              <QuestionnaireWrapper
-                name="dismissalProcess"
-                slug={slug}
-                className={fr.cx("fr-ml-md-15v")}
-              ></QuestionnaireWrapper>
-            </BlueBlock>
-          )}
         </>
       }
     >
