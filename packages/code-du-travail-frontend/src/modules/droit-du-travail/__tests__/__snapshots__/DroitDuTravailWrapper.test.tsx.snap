@@ -121,7 +121,7 @@ exports[`<DroitDuTravailWrapper /> renders correctly 1`] = `
         class="fr-grid-row fr-col-12 fr-col-md-8"
       >
         <h2>
-          Quels sont les textes à l'origine du droit du travail ?
+          Quels sont les textes à l'origine du droit du travail ?         
         </h2>
         <p
           class="fr-text--lg"

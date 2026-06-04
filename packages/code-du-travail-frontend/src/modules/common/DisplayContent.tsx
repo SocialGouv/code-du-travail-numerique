@@ -125,13 +125,17 @@ const getParserText = (node: any): string => {
 
 const getData = (el?: ChildNode) => {
   if (!el) return "";
-  if (el instanceof Text) {
-    return el.data;
+  // html-dom-parser@7+ bundles its own Text class so instanceof Text is unreliable;
+  // use duck typing via node.type instead.
+  if ((el as unknown as { type?: string }).type === "text") {
+    return (el as unknown as { data?: string }).data ?? "";
   } else {
     let str = "";
-    el.childNodes.forEach((node) => {
-      str += getData(node);
-    });
+    (el as unknown as { childNodes?: ChildNode[] }).childNodes?.forEach(
+      (node) => {
+        str += getData(node);
+      }
+    );
     return str;
   }
 };
@@ -276,14 +280,18 @@ const options = (params: Options): HTMLReactParserOptions => {
             const nextSibling = domNode.next;
             if (
               params.challengerAsterisk &&
-              nextSibling instanceof Text &&
-              nextSibling.data.includes("brut")
+              nextSibling &&
+              (nextSibling as unknown as { type?: string }).type === "text" &&
+              (nextSibling as unknown as { data?: string }).data?.includes(
+                "brut"
+              )
             ) {
+              const siblingData = nextSibling as unknown as { data: string };
               if (
-                !nextSibling.data.includes("brut*") &&
-                !nextSibling.data.includes("brut *")
+                !siblingData.data.includes("brut*") &&
+                !siblingData.data.includes("brut *")
               ) {
-                nextSibling.data = nextSibling.data.replace("brut", "brut*");
+                siblingData.data = siblingData.data.replace("brut", "brut*");
               }
               return (
                 <span className="challenger">
