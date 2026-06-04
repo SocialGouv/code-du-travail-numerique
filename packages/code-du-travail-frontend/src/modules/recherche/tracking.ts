@@ -7,7 +7,6 @@ import { generateSearchLink } from "./utils";
 
 enum MatomoSearchCategory {
   SEARCH = "search",
-  CANDIDATE_RESULTS = "candidateResults",
   SELECTED_SUGGESTION = "selectedSuggestion",
   NEXT_RESULT_PAGE = "nextResultPage",
   SELECT_RESULT = "selectResult",

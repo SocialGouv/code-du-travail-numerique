@@ -20,7 +20,8 @@ type Props = {
 
 export const AgreementSelectionModalContent = ({ onClose, isOpen }: Props) => {
   const { agreement, setAgreement, clearAgreement } = useAgreementStorageSync();
-  const { emitSelectEvent, emitConsultEvent } = useHeaderAgreementTracking();
+  const { emitHeaderSelectEvent, emitConsultEvent } =
+    useHeaderAgreementTracking();
   const [isEditing, setIsEditing] = useState(false);
   const [liveRegionMessage, setLiveRegionMessage] = useState("");
   const [focusTarget, setFocusTarget] = useState<"selected" | "title" | null>(
@@ -57,7 +58,7 @@ export const AgreementSelectionModalContent = ({ onClose, isOpen }: Props) => {
     setAgreement(nextAgreement);
     setIsEditing(false);
     setFocusTarget("selected");
-    emitSelectEvent(
+    emitHeaderSelectEvent(
       `idcc${nextAgreement.num}`,
       isCcSupportedByAnySimulator(nextAgreement.num)
     );

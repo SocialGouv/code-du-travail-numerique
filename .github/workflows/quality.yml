@@ -57,6 +57,7 @@ jobs:
             "@cdt/frontend",
             "@socialgouv/modeles-social",
             "@socialgouv/cdtn-utils",
+            "@socialgouv/cdtn-stats",
           ]
     steps:
       - uses: actions/cache@v4
@@ -88,6 +89,7 @@ jobs:
             "@cdt/frontend",
             "@socialgouv/modeles-social",
             "@socialgouv/cdtn-utils",
+            "@socialgouv/cdtn-stats",
           ]
     steps:
       - uses: actions/cache@v4
@@ -119,6 +121,7 @@ jobs:
             "@cdt/frontend",
             "@socialgouv/modeles-social",
             "@socialgouv/cdtn-utils",
+            "@socialgouv/cdtn-stats",
           ]
     steps:
       - uses: actions/cache@v4

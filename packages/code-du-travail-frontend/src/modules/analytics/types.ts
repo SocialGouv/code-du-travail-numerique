@@ -1,18 +1,14 @@
 import { IndemniteDepartType } from "../outils/indemnite-depart/types";
 
 export enum MatomoBaseEvent {
-  TRACK_EVENT = "trackEvent",
   OUTIL = "outil",
-  PAGE_INFORMATION = "page_information",
   WIDGET_SEARCH = "widget_search",
-  HEADER = "header",
   PAGE_HOME = "page_home",
   PAGE_MODELS = "page_modeles_de_documents",
   SELECT_RESULT = "selectResult",
 }
 
 export enum MatomoSearchAgreementCategory {
-  AGREEMENT_SEARCH_HELP = "cc_search_help",
   ENTERPRISE_SELECT = "enterprise_select",
   AGREEMENT_SELECT_P1 = "cc_select_p1",
   AGREEMENT_SELECT_P2 = "cc_select_p2",
@@ -24,22 +20,6 @@ export enum MatomoSearchAgreementCategory {
 }
 
 export enum MatomoSimulatorEvent {
-  CLICK_CALCUL_DETAIL = "click_calcul_detail",
-  CLICK_HELP_ANCIENNETE = "click_help_anciennete",
-  CLICK_HELP_CAT_PRO = "click_help_button_categorie_pro",
-  CLICK_HELP_ECHELON = "click_help_echelon",
-  CLICK_HELP_GROUPE = "click_help_groupe",
-  CLICK_HELP_NIVEAU = "click_help_niveau",
-  CLICK_HELP_CLASSE = "click_help_classe",
-  CLICK_HELP_POSITION = "click_help_position",
-  CLICK_HELP_COEFFICIENT = "click_help_coefficient",
-  SELECT_CAT_PRO = "select_value_categorie_pro",
-  SELECT_ECHELON = "select_value_echelon",
-  SELECT_GROUPE = "select_value_groupe",
-  SELECT_NIVEAU = "select_value_niveau",
-  SELECT_CLASSE = "select_value_classe",
-  SELECT_POSITION = "select_value_position",
-  SELECT_COEFFICIENT = "select_value_coefficient",
   CLICK_PRINT = "click_print",
   STEP_RESULT_INELIGIBLE = "results_ineligible",
   CLICK_NO_COMPANY = "click_je_n_ai_pas_d_entreprise",

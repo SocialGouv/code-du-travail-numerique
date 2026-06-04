@@ -19,7 +19,7 @@ export const useHeaderAgreementTracking = () => {
     });
   };
 
-  const emitSelectEvent = (idcc: string, isTreated: boolean) => {
+  const emitHeaderSelectEvent = (idcc: string, isTreated: boolean) => {
     sendEvent({
       category: TrackingHeaderAgreementCategory.HEADER_CC,
       action: isTreated
@@ -39,7 +39,7 @@ export const useHeaderAgreementTracking = () => {
 
   return {
     emitOpenModalEvent,
-    emitSelectEvent,
+    emitHeaderSelectEvent,
     emitConsultEvent,
   };
 };
