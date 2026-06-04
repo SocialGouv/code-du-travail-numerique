@@ -11,6 +11,10 @@
 //                  → représentée par un placeholder <...>.
 export type EventResolution = "literal" | "enum-param" | "dynamic";
 
+// Valeur résolue d'un champ category/action/name, avec sa provenance. Type
+// interne au pipeline d'extraction (n'apparaît pas dans le JSON de sortie).
+export type Resolved = { value: string; kind: EventResolution };
+
 // Un event Matomo (une combinaison category/action concrète). Un même appel
 // sendEvent peut produire plusieurs events si category ou action est un enum.
 export type ExtractedEvent = {
