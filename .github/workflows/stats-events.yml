@@ -8,12 +8,6 @@ name: Stats events
 
 on:
   pull_request:
-    paths:
-      - "packages/stats/**"
-      - "packages/code-du-travail-frontend/src/modules/**/*.ts"
-      - "packages/code-du-travail-frontend/src/modules/**/*.tsx"
-      - "packages/code-du-travail-modeles/src/publicodes/**/*.ts"
-      - ".github/workflows/stats-events.yml"
   workflow_dispatch:
 
 concurrency:
