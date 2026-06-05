@@ -504,7 +504,8 @@ describe("<ContributionGeneric />", () => {
       fireEvent.click(ui.generic.buttonDisplayInfo.get());
 
       expect(pushMock).toHaveBeenCalledWith(
-        "/contribution/1388-my-contrib#votre-convention-collective"
+        "/contribution/1388-my-contrib#votre-convention-collective",
+        { scroll: false }
       );
     });
 
