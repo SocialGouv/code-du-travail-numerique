@@ -107,9 +107,10 @@ export function ContributionGeneric({ contribution }: Props) {
         contribution={contribution}
         onAgreementSelect={(agreement) => {
           setSelectedAgreement(agreement);
-          if (!isRegularButtonVariant) {
-            setDisplayGeneric(false);
-          }
+          // Sélectionner une CC masque le Code du travail dans toutes les
+          // variantes (regular_button compris) ; il est réaffiché au besoin via
+          // « Afficher les informations ».
+          setDisplayGeneric(false);
           if (!agreement) return;
 
           if (isAgreementSupported(contribution, agreement)) {

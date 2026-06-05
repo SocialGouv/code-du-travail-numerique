@@ -109,7 +109,8 @@ describe("<ContributionLayout />", () => {
       fireEvent.click(ccUi.buttonDisplayInfo.get());
       expect(pushMock).toHaveBeenCalledTimes(1);
       expect(pushMock).toHaveBeenCalledWith(
-        "/contribution/3239-slug#votre-convention-collective"
+        "/contribution/3239-slug#votre-convention-collective",
+        { scroll: false }
       );
       expect(sendEvent).toHaveBeenCalledWith({
         action: "cc_select_traitée",
@@ -172,7 +173,8 @@ describe("<ContributionLayout />", () => {
       fireEvent.click(ccUi.buttonDisplayInfo.get());
       expect(pushMock).toHaveBeenCalledTimes(1);
       expect(pushMock).toHaveBeenCalledWith(
-        "/contribution/16-slug#votre-convention-collective"
+        "/contribution/16-slug#votre-convention-collective",
+        { scroll: false }
       );
 
       expect(ccUi.warning.nonTreatedAgreement.query()).not.toBeInTheDocument();
@@ -260,7 +262,8 @@ describe("<ContributionLayout />", () => {
       fireEvent.click(ccUi.buttonDisplayInfo.get());
       expect(pushMock).toHaveBeenCalledTimes(1);
       expect(pushMock).toHaveBeenCalledWith(
-        "/contribution/16-slug#votre-convention-collective"
+        "/contribution/16-slug#votre-convention-collective",
+        { scroll: false }
       );
 
       expect(ccUi.warning.nonTreatedAgreement.query()).not.toBeInTheDocument();

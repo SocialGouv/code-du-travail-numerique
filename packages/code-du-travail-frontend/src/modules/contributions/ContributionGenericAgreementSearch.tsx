@@ -179,10 +179,14 @@ export function ContributionGenericAgreementSearch({
 
   // Navigue vers la page CC en ajoutant le hash de focus : la cible n'est mise
   // en focus que lorsqu'on y arrive par cette action (cf. AGREEMENT_FOCUS_HASH).
+  // `scroll: false` : sans ça, Next réinitialise le scroll en haut de page à la
+  // navigation et écrase le défilement vers le titre « Votre convention
+  // collective » géré par la page CC — l'usager restait alors tout en haut.
   const navigateToAgreementPage = () => {
     if (!selectedAgreement) return;
     router.push(
-      `${buildContributionAgreementPath(slug, selectedAgreement)}${AGREEMENT_FOCUS_HASH}`
+      `${buildContributionAgreementPath(slug, selectedAgreement)}${AGREEMENT_FOCUS_HASH}`,
+      { scroll: false }
     );
   };
 
