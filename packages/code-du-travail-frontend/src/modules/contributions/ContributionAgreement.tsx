@@ -29,7 +29,9 @@ export function ContributionAgreement({ contribution }: Props) {
     if (window.location.hash !== AGREEMENT_FOCUS_HASH) return;
     const timer = setTimeout(() => {
       agreementTitleRef.current?.scrollIntoView({ behavior: "smooth" });
-      agreementTitleRef.current?.focus();
+      // preventScroll : laisse le défilement fluide ci-dessus se dérouler sans
+      // que la mise au focus ne le court-circuite par un saut instantané.
+      agreementTitleRef.current?.focus({ preventScroll: true });
     }, 100);
     return () => clearTimeout(timer);
   }, []);
