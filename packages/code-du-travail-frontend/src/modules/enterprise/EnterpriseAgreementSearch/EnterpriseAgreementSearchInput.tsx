@@ -16,6 +16,7 @@ import { CardTitleStyle } from "../../convention-collective/style";
 import { EnterpriseAgreementSelectionForm } from "./EnterpriseAgreementSelectionForm";
 import { EnterpriseAgreementSelectionDetail } from "./EnterpriseAgreementSelectionDetail";
 import { getEnterpriseAgreements } from "./utils";
+import { PartialAgreementCoverageAlert } from "./PartialAgreementCoverageAlert";
 import { useEnterpriseAgreementSearchTracking } from "./tracking";
 import { Agreement } from "src/modules/outils/indemnite-depart/types";
 import { scrollToTop } from "src/modules/outils/common/utils";
@@ -259,6 +260,10 @@ export const EnterpriseAgreementSearchInput = ({
             </Button>
           </div>
         </div>
+
+        {selectedEnterprise?.hasEstablishmentWithoutConvention && (
+          <PartialAgreementCoverageAlert />
+        )}
 
         {selectedAgreement && selectedAgreementAlert?.(selectedAgreement) && (
           <AccessibleAlert

@@ -2,6 +2,7 @@ import { ApiEnterpriseData } from "../types";
 import { IDCC_SPLIT, IDCC_MERGE } from "@socialgouv/cdtn-utils";
 import { Convention, EnterpriseApiResponse } from "./fetchEnterprises";
 import { fetchAgreements } from "./fetchAgreements";
+import { splitNoConventionCollective } from "./noConventionCollective";
 
 function conventionsToIdcc(conventions) {
   return conventions.flatMap(({ idcc }) => {
@@ -66,12 +67,14 @@ export const populateAgreements = async (
           ...(convention?.url ? { url: convention?.url } : {}),
         };
       });
-      const conventions = conventionsWithDuplicates.filter(
+      const dedupedConventions = conventionsWithDuplicates.filter(
         ({ num }, index) =>
           conventionsWithDuplicates.findIndex((item) => item.num === num) ===
           index
       );
-      return { ...entreprise, conventions };
+      const { conventions, hasEstablishmentWithoutConvention } =
+        splitNoConventionCollective(dedupedConventions);
+      return { ...entreprise, conventions, hasEstablishmentWithoutConvention };
     }
   );
   const entreprises = entreprisePromises

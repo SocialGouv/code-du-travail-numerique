@@ -4,6 +4,7 @@ import { Enterprise } from "../types";
 import RadioButtons from "@codegouvfr/react-dsfr/RadioButtons";
 import { EnterpriseAgreementSelectionDetail } from "./EnterpriseAgreementSelectionDetail";
 import { getEnterpriseAgreements } from "./utils";
+import { PartialAgreementCoverageAlert } from "./PartialAgreementCoverageAlert";
 import Button from "@codegouvfr/react-dsfr/Button";
 import { useEffect, useRef, useState } from "react";
 import { Agreement } from "src/modules/outils/indemnite-depart/types";
@@ -80,6 +81,9 @@ export const EnterpriseAgreementSelectionForm = ({
           },
         }))}
       />
+      {enterprise.hasEstablishmentWithoutConvention && agreements.length > 0 && (
+        <PartialAgreementCoverageAlert />
+      )}
       {agreement && !agreement.contributions && (
         <AccessibleAlert
           severity="info"

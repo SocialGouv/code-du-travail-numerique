@@ -12,6 +12,12 @@ export type MatchingEtablissement = {
 export type Enterprise = {
   activitePrincipale?: string;
   conventions: Agreement[];
+  /**
+   * Vrai si au moins un établissement de l'entité a déclaré « aucune
+   * convention collective » (IDCC sentinelle 9999). La sentinelle est
+   * retirée de `conventions` ; ce drapeau pilote l'affichage des bandeaux.
+   */
+  hasEstablishmentWithoutConvention?: boolean;
   etablissements: number;
   highlightLabel: string;
   label: string;

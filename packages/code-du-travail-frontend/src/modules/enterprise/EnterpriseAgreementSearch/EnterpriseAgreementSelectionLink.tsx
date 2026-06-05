@@ -7,6 +7,7 @@ import { css } from "@styled-system/css";
 import { useSearchParams } from "next/navigation";
 import { EnterpriseAgreementSelectionDetail } from "./EnterpriseAgreementSelectionDetail";
 import { getEnterpriseAgreements } from "./utils";
+import { PartialAgreementCoverageAlert } from "./PartialAgreementCoverageAlert";
 import { CardTitleStyle } from "../../convention-collective/style";
 import { useEnterpriseAgreementSearchTracking } from "./tracking";
 import { TrackingAgreementSearchAction } from "../../convention-collective/tracking";
@@ -103,6 +104,8 @@ export const EnterpriseAgreementSelectionLink = ({
           );
         }
       )}
+      {enterprise.hasEstablishmentWithoutConvention &&
+        enterprise.conventions.length > 0 && <PartialAgreementCoverageAlert />}
       <div className={fr.cx("fr-mt-2w")}>
         <Button
           linkProps={{

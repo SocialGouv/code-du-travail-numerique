@@ -146,13 +146,6 @@ const searchEnterprises = (searchParams: SearchParams): Enterprise[] => {
             slug: "2120-banque",
           },
           {
-            id: "9999",
-            num: 9999,
-            shortTitle: "___Sans convention collective___",
-            title: "___Sans convention collective___",
-            contributions: false,
-          },
-          {
             id: "2931",
             contributions: false,
             num: 2931,
