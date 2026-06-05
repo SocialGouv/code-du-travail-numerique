@@ -268,10 +268,6 @@ importers:
         version: 8.54.0(eslint@9.39.2)(typescript@5.9.3)
 
   packages/code-du-travail-utils:
-    dependencies:
-      react:
-        specifier: '>=19'
-        version: 19.2.3
     devDependencies:
       '@eslint/js':
         specifier: ^9.39.2
@@ -300,6 +296,9 @@ importers:
       prettier:
         specifier: ^3.8.1
         version: 3.8.1
+      react:
+        specifier: ~19.2.7
+        version: 19.2.7
       typescript:
         specifier: ^5.9.3
         version: 5.9.3
@@ -6818,10 +6817,6 @@ packages:
 
   react-property@2.0.2:
     resolution: {integrity: sha512-+PbtI3VuDV0l6CleQMsx2gtK0JZbZKbpdu5ynr+lbsuvtmgbNcS3VM0tuY2QjFNOcWxvXeHjDpy42RO+4U2rug==}
-
-  react@19.2.3:
-    resolution: {integrity: sha512-Ku/hhYbVjOQnXDZFv2+RibmLFGwFdeeKHFcOTlrt7xplBnya5OGn/hIRDsqDiSUcfORsDC7MPxwork8jBwsIWA==}
-    engines: {node: '>=0.10.0'}
 
   react@19.2.7:
     resolution: {integrity: sha512-HNe9WslTbXmFK8o8cmwgAeJFSBvt1bPdHCVKtaaV+WlAN36mpT4hcRpwbf3fY56ar2oIXzsBpOAiIRHAdY0OlQ==}
@@ -15285,8 +15280,6 @@ snapshots:
   react-is@19.2.7: {}
 
   react-property@2.0.2: {}
-
-  react@19.2.3: {}
 
   react@19.2.7: {}
 
