@@ -25,7 +25,10 @@ export const isNoConventionCollective = (
  */
 export const splitNoConventionCollective = (
   conventions: Agreement[]
-): { conventions: Agreement[]; hasEstablishmentWithoutConvention: boolean } => ({
+): {
+  conventions: Agreement[];
+  hasEstablishmentWithoutConvention: boolean;
+} => ({
   conventions: conventions.filter(
     (convention) => !isNoConventionCollective(convention)
   ),

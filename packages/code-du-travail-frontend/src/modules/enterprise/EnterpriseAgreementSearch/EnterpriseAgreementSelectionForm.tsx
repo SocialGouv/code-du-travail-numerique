@@ -81,9 +81,8 @@ export const EnterpriseAgreementSelectionForm = ({
           },
         }))}
       />
-      {enterprise.hasEstablishmentWithoutConvention && agreements.length > 0 && (
-        <PartialAgreementCoverageAlert />
-      )}
+      {enterprise.hasEstablishmentWithoutConvention &&
+        agreements.length > 0 && <PartialAgreementCoverageAlert />}
       {agreement && !agreement.contributions && (
         <AccessibleAlert
           severity="info"
