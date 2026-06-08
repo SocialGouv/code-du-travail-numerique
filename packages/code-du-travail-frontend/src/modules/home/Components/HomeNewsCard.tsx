@@ -1,9 +1,9 @@
 import { fr } from "@codegouvfr/react-dsfr";
-import { Card } from "@codegouvfr/react-dsfr/Card";
 import DisplayContent from "../../common/DisplayContent";
 import { HomeNewsCardItem } from "../queries";
 import { formatDateAsFrenchText } from "../../utils";
 import { css } from "@styled-system/css";
+import Link from "../../common/Link";
 
 export type HomeCardProps = HomeNewsCardItem;
 
@@ -13,34 +13,29 @@ export const HomeNewsCard = ({
   link,
   date,
 }: HomeCardProps) => (
-  <Card
-    border
-    desc={
-      <span className={contentLimited}>
-        <DisplayContent
-          content={description}
-          titleLevel={4}
-          extra={{ disableLink: true }}
-        />
-      </span>
-    }
-    horizontal
-    linkProps={{
-      href: link,
-    }}
-    size="medium"
-    title={title}
-    titleAs="h3"
-    enlargeLink
-    end={
-      <p className={fr.cx("fr-m-0", "fr-card__detail")}>
-        {formatDateAsFrenchText(date)}
-      </p>
-    }
-    classes={{
-      start: fr.cx("fr-mb-2w"),
-    }}
-  />
+  <div className={fr.cx("fr-card", "fr-enlarge-link", "fr-card--horizontal")}>
+    <div className={fr.cx("fr-card__body")}>
+      <div className={fr.cx("fr-card__content")}>
+        <h3 className={fr.cx("fr-card__title")}>
+          <Link href={link}>{title}</Link>
+        </h3>
+        <div className={fr.cx("fr-card__desc")}>
+          <span className={contentLimited}>
+            <DisplayContent
+              content={description}
+              titleLevel={4}
+              extra={{ disableLink: true }}
+            />
+          </span>
+        </div>
+        <div className={fr.cx("fr-card__end")}>
+          <p className={fr.cx("fr-m-0", "fr-card__detail")}>
+            {formatDateAsFrenchText(date)}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
 );
 
 const contentLimited = css({

@@ -6,17 +6,12 @@ import { Breadcrumb as BreadcrumbType } from "@socialgouv/cdtn-types";
 import Breadcrumb from "@codegouvfr/react-dsfr/Breadcrumb";
 import { Feedback } from "./feedback";
 import React from "react";
-import { GraphicContentPart } from "@socialgouv/cdtn-types/build/hasura/editorial-content";
-import { KeysToCamelCase } from "../informations/type";
-import { DownloadTile } from "../informations/components/DownloadTile";
 import { BreadcrumbListJsonLd } from "../seo/jsonld";
 
 type Props = ContainerRichProps & {
   currentPage: string;
   breadcrumbs: BreadcrumbType[];
   header: React.ReactNode;
-  infography?: KeysToCamelCase<GraphicContentPart>;
-  dismissalProcess?: boolean;
 };
 
 export const ContainerInformation = ({
@@ -27,8 +22,6 @@ export const ContainerInformation = ({
   description,
   breadcrumbs,
   currentPage,
-  infography,
-  dismissalProcess,
 }: Props) => {
   return (
     <div>
@@ -50,7 +43,6 @@ export const ContainerInformation = ({
         }))}
         className={fr.cx("fr-mb-2w", "fr-mt-2w")}
       />
-      {dismissalProcess && header}
       <div
         className={fr.cx(
           "fr-grid-row",
@@ -67,7 +59,7 @@ export const ContainerInformation = ({
             "fr-mb-md-0"
           )}
         >
-          {!dismissalProcess && header}
+          {header}
           {children}
           <Feedback />
         </div>
@@ -75,18 +67,6 @@ export const ContainerInformation = ({
         <div
           className={fr.cx("fr-col-12", "fr-col-offset-md-1", "fr-col-md-4")}
         >
-          {infography && (
-            <div className={fr.cx("fr-hidden", "fr-unhidden-md")}>
-              <div className={fr.cx("fr-mb-6w")}>
-                <DownloadTile
-                  filename={infography.fileUrl}
-                  filesize={infography.size}
-                  titleAs={"h2"}
-                />
-              </div>
-            </div>
-          )}
-
           <RelatedItems relatedItems={relatedItems} />
           <Share title={title} metaDescription={description} />
         </div>

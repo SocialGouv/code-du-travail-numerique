@@ -201,4 +201,37 @@ describe("Indemnité licenciement - CC 3239", () => {
       "Le retrait de l'enfant met fin au contrat de travail de l’assistant maternel"
     );
   });
+
+  test("vérifier le calcul pour un assistant maternelle avec inaptitude", async () => {
+    userAction.click(ui.information.inaptitude.oui.get());
+    await userAction.changeInputList(
+      ui.information.agreement3239.proCategory.get(),
+      "'Assistant maternel'"
+    );
+    userAction.setInput(ui.information.agreement3239.salaryInput.get(), "5000");
+    userAction.click(ui.next.get());
+    userAction.setInput(ui.seniority.startDate.get(), "01/01/2020");
+    userAction.setInput(ui.seniority.notificationDate.get(), "15/09/2024");
+    userAction.click(ui.next.get());
+    userAction.click(ui.absences.arretTravail.non.get());
+    userAction.click(ui.absences.hasAbsence.non.get());
+    userAction.click(ui.next.get());
+
+    expect(ui.result.resultat.get()).toHaveTextContent("125,00 €");
+
+    expect(ui.result.sources.queryAll()).toHaveLength(8);
+    expect(ui.result.source(0).get()).toHaveTextContent("Article 47-1");
+    expect(ui.result.source(1).get()).toHaveTextContent("Article 47-2");
+    expect(ui.result.source(2).get()).toHaveTextContent("Article 48-1-3-1-1");
+    expect(ui.result.source(3).get()).toHaveTextContent("Article 48-1-3-4");
+    expect(ui.result.source(4).get()).toHaveTextContent("Article 49");
+    expect(ui.result.source(5).get()).toHaveTextContent("Article 60");
+    expect(ui.result.source(6).get()).toHaveTextContent("Article 90-1");
+    expect(ui.result.source(7).get()).toHaveTextContent("Article 121-1");
+
+    expect(ui.result.notifications.queryAll()).toHaveLength(2);
+    expect(ui.result.notification(1).get()).toHaveTextContent(
+      "Le retrait de l'enfant met fin au contrat de travail de l’assistant maternel"
+    );
+  });
 });

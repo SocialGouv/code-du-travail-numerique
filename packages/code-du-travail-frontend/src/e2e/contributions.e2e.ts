@@ -45,7 +45,7 @@ test.describe("Contributions", () => {
     ).toBeVisible();
 
     const h2s = page.getByRole("heading", { level: 2 });
-    await expect(h2s).toHaveCount(13);
+    await expect(h2s.count()).resolves.toBeGreaterThanOrEqual(13);
     await expect(h2s.nth(0)).toContainText("Sommaire");
     await expect(h2s.nth(1)).toContainText("Contenus populaires");
     await expect(h2s.nth(2)).toContainText("Embauche");

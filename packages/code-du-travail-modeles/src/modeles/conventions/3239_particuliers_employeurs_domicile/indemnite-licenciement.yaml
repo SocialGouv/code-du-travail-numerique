@@ -36,7 +36,11 @@ contrat salarié . convention collective . particuliers employeurs et emploi à 
     bloquante: oui
 
 contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . assistante maternelle . type de licenciement . autres:
-  applicable si: type de licenciement = 'Non'
+  applicable si:
+    une de ces conditions:
+      - type de licenciement = 'Non'
+      - toutes ces conditions:
+          - contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle
   valeur: oui
 
 contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . assistante maternelle . type de licenciement . autres . total salaires:
@@ -56,7 +60,10 @@ contrat salarié . convention collective . particuliers employeurs et emploi à 
 
 contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . assistante maternelle . type de licenciement . autres . total salaires . résultat conventionnel:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
-  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 9 mois
+  applicable si:
+    toutes ces conditions:
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 9 mois
+      - contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle = non
   valeur: un quatre vingtième du total
   unité: €
   arrondi: 2 décimales
@@ -74,6 +81,30 @@ contrat salarié . convention collective . particuliers employeurs et emploi à 
       explanations:
         - "S : total des salaires perçus depuis l'engagement": contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . assistante maternelle . type de licenciement . autres . total salaires
       formula: 1/80 * S
+
+contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . assistante maternelle . type de licenciement . autres . total salaires . inaptitude . résultat conventionnel:
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  applicable si:
+    toutes ces conditions:
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 9 mois
+      - contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle
+  valeur: un quatre vingtième du total * 2
+  unité: €
+  arrondi: 2 décimales
+  références:
+    Article 47-1: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942116?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942116
+    Article 47-2: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942117?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942117
+    Article 48-1-3-1-1: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942139?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942139
+    Article 48-1-3-4: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942144?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942144
+    Article 49: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942151?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942151
+    Article 60: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942169?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942169
+    Article 90-1: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942236?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942236
+    Article 121-1: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942321?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942321
+  cdtn:
+    formule:
+      explanations:
+        - "S : total des salaires perçus depuis l'engagement": contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . assistante maternelle . type de licenciement . autres . total salaires
+      formula: (1/80 * S) * 2
 
 ## Salarié du particulier employeur
 contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . pe:

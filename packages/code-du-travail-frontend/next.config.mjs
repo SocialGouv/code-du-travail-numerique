@@ -94,6 +94,12 @@ const nextConfig = {
     "@codegouvfr/react-dsfr",
     "import-in-the-middle",
     "require-in-the-middle",
+    // html-react-parser@6 lib (CJS) depends on these ESM-only packages
+    "domhandler",
+    "domelementtype",
+    "htmlparser2",
+    // uuid@14+ ships ESM-only
+    "uuid",
   ],
 };
 

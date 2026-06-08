@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.230.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.230.1...v4.230.2) (2026-06-03)
+
+
+### Bug Fixes
+
+* **home:** correction html invalide sur les actualités ([#7292](https://github.com/SocialGouv/code-du-travail-numerique/issues/7292)) ([773e232](https://github.com/SocialGouv/code-du-travail-numerique/commit/773e23222aa8c125e0ee0abdf94ddfc8ecafb86c))
+* **search:** correction du widget qui n'ouvre plus la page de recherche ([#7294](https://github.com/SocialGouv/code-du-travail-numerique/issues/7294)) ([bb4aa60](https://github.com/SocialGouv/code-du-travail-numerique/commit/bb4aa60b9ee1e05f03309528a18565479716146f))
+* **search:** correction sur les keys props des résultats ([#7293](https://github.com/SocialGouv/code-du-travail-numerique/issues/7293)) ([52720e9](https://github.com/SocialGouv/code-du-travail-numerique/commit/52720e9526ebfc03396bdc2af632fe4300d2e166))
+* **test:** correction des tests unitaires suite aux modifications du 1er juin ([#7295](https://github.com/SocialGouv/code-du-travail-numerique/issues/7295)) ([2ca555e](https://github.com/SocialGouv/code-du-travail-numerique/commit/2ca555e777bdf7bed2737bed1a96183fa7405210))
+* **tools:** ajout su support de l'inaptitude pour les assistants maternels de la 3239 ([#7276](https://github.com/SocialGouv/code-du-travail-numerique/issues/7276)) ([f49e8e9](https://github.com/SocialGouv/code-du-travail-numerique/commit/f49e8e9bde841c298f3664970b63a1329c70866f))
+
+
+
+
+
 ## [4.230.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.230.0...v4.230.1) (2026-05-29)
 
 
