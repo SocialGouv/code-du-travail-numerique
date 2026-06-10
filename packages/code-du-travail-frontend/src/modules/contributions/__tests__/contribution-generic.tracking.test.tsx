@@ -365,8 +365,13 @@ describe("<ContributionGeneric />", () => {
       fireEvent.click(ccUi.radio.enterpriseSearchOption.get());
       await userEvent.click(ccUi.searchByEnterprise.input.get());
       await userEvent.type(ccUi.searchByEnterprise.input.get(), "carrefour");
-      await userEvent.click(ccUi.searchByEnterprise.submitButton.get());
+      await act(async () => {
+        await userEvent.click(ccUi.searchByEnterprise.submitButton.get());
+      });
 
+      await waitFor(() =>
+        expect(byText("CARREFOUR HYPERMARCHES").get()).toBeInTheDocument()
+      );
       fireEvent.click(byText("CARREFOUR HYPERMARCHES").get());
 
       expect(
@@ -513,7 +518,9 @@ describe("<ContributionGeneric />", () => {
       render(<ContributionGeneric contribution={contribution} />);
 
       await userEvent.type(ccUi.searchByEnterprise.input.get(), "bricomanie");
-      fireEvent.click(ccUi.searchByEnterprise.submitButton.get());
+      await act(async () => {
+        await userEvent.click(ccUi.searchByEnterprise.submitButton.get());
+      });
       await waitFor(() =>
         expect(byText("BRICOMANIE").get()).toBeInTheDocument()
       );
