@@ -1,14 +1,48 @@
-import { byText } from "testing-library-selector";
+import {
+  byLabelText,
+  byRole,
+  byTestId,
+  byText,
+} from "testing-library-selector";
 import { searchAgreement } from "../../convention-collective";
 
 export const ui = {
   generic: {
     buttonDisplayInfo: byText(/Afficher les informations$/),
-    linkDisplayInfo: byText(
-      "Afficher les informations sans sélectionner une convention collective"
+    buttonDisplayInfoWithoutCc: byText(
+      /Afficher les informations sans sélectionner une convention collective/
     ),
+    learnMoreLink: byRole("link", { name: /En savoir plus/ }),
     nonTreatedInfo: byText(
       /Cette réponse correspond à ce que prévoit le code du travail/
+    ),
+    missingRouteError: byText(
+      /Veuillez sélectionner l'une des options ci-dessus/
+    ),
+    noAgreementBanner: byTestId("no-agreement-banner"),
+    radioNoAgreement: byLabelText(
+      /Je ne souhaite pas renseigner ma convention collective\./
+    ),
+    regularButtonAgreement: byRole("button", {
+      name: /Je saisis ma convention collective/,
+    }),
+    regularButtonEnterprise: byRole("button", {
+      name: /Je cherche par entreprise/,
+    }),
+    regularButtonNoAgreement: byRole("button", {
+      name: /Afficher le Code du travail/,
+    }),
+    agreementRequiredError: byText(
+      /Veuillez sélectionner une convention collective/
+    ),
+    enterpriseRequiredError: byText(
+      /Le nom de l'entreprise doit être renseigné/
+    ),
+    enterpriseSelectionRequiredError: byText(
+      /Veuillez sélectionner une entreprise dans la liste/
+    ),
+    conventionSelectionRequiredError: byText(
+      /Veuillez sélectionner une convention collective/
     ),
   },
 };

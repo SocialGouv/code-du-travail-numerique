@@ -21,6 +21,7 @@ import { Agreement } from "src/modules/outils/indemnite-depart/types";
 import { scrollToTop } from "src/modules/outils/common/utils";
 import { ApiGeoResult } from "./searchCities";
 import { AccessibleAlert } from "src/modules/outils/common/components/AccessibleAlert";
+import { focusableTitle } from "src/modules/common/focusableTitle";
 
 type Props = {
   widgetMode?: boolean;
@@ -37,6 +38,7 @@ type Props = {
   isInSimulator?: boolean;
   canContinueSimulationIfNoAgreement?: boolean;
   onBackToPersonalize?: () => void;
+  requireSearchSignal?: number;
 };
 
 export const EnterpriseAgreementSearchInput = ({
@@ -52,6 +54,7 @@ export const EnterpriseAgreementSearchInput = ({
   isInSimulator,
   canContinueSimulationIfNoAgreement,
   onBackToPersonalize,
+  requireSearchSignal,
 }: Props) => {
   const [selectedAgreement, setSelectedAgreement] = useState<
     Agreement | undefined
@@ -67,7 +70,7 @@ export const EnterpriseAgreementSearchInput = ({
     emitNoEnterpriseSelectEvent,
   } = useEnterpriseAgreementSearchTracking();
 
-  const [search, setSearch] = useState<string | undefined>(defaultSearch);
+  const [search, setSearch] = useState<string>(defaultSearch ?? "");
   const [loading, setLoading] = useState<boolean>(false);
   const [location, setLocation] = useState<ApiGeoResult | undefined>(
     defaultLocation
@@ -77,8 +80,10 @@ export const EnterpriseAgreementSearchInput = ({
     Enterprise | undefined
   >(enterprise);
   const [error, setError] = useState("");
+  const [selectionRequired, setSelectionRequired] = useState(false);
   const resultRef = useRef<HTMLHeadingElement>(null);
   const selectedConventionTitleRef = useRef<HTMLParagraphElement>(null);
+  const searchInputRef = useRef<HTMLInputElement>(null);
   const TitleTag = `h${level}` as "h2" | "h3";
 
   const getStateMessage = () => {
@@ -200,6 +205,34 @@ export const EnterpriseAgreementSearchInput = ({
     }
   }, [enterprise]);
 
+  useEffect(() => {
+    if (!requireSearchSignal) return;
+    if (!search) {
+      setSelectionRequired(false);
+      setSearchState("required");
+      searchInputRef.current?.focus();
+      searchInputRef.current?.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+      });
+      return;
+    }
+    if (!selectedAgreement) {
+      setSelectionRequired(true);
+      setTimeout(() => {
+        resultRef.current?.scrollIntoView({
+          behavior: "smooth",
+          block: "center",
+        });
+      }, 0);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [requireSearchSignal]);
+
+  useEffect(() => {
+    if (selectedAgreement) setSelectionRequired(false);
+  }, [selectedAgreement]);
+
   if (
     onAgreementSelect &&
     selectedAgreement &&
@@ -216,7 +249,7 @@ export const EnterpriseAgreementSearchInput = ({
 
         <TitleTag
           ref={selectedConventionTitleRef}
-          className={fr.cx("fr-h4", "fr-mt-2w", "fr-mb-0")}
+          className={`${fr.cx("fr-h4", "fr-mt-2w", "fr-mb-0")} ${focusableTitle}`}
           tabIndex={-1}
         >
           Vous avez sélectionné la convention collective
@@ -282,40 +315,53 @@ export const EnterpriseAgreementSearchInput = ({
     );
   } else if (onAgreementSelect && selectedEnterprise) {
     return (
-      <EnterpriseAgreementSelectionForm
-        enterprise={selectedEnterprise}
-        selectedAgreement={selectedAgreement}
-        level={level}
-        goBack={() => {
-          setSelectedEnterprise(undefined);
-          setSelectedAgreement(undefined);
-          scrollToTop();
-          // Focus the "Personnalisez la réponse" title via callback
-          if (onBackToPersonalize) {
-            setTimeout(() => {
-              onBackToPersonalize();
-            }, 100);
+      <>
+        <EnterpriseAgreementSelectionForm
+          enterprise={selectedEnterprise}
+          selectedAgreement={selectedAgreement}
+          level={level}
+          goBack={() => {
+            setSelectedEnterprise(undefined);
+            setSelectedAgreement(undefined);
+            scrollToTop();
+            // Focus the "Personnalisez la réponse" title via callback
+            if (onBackToPersonalize) {
+              setTimeout(() => {
+                onBackToPersonalize();
+              }, 100);
+            }
+          }}
+          onAgreementSelect={(agreement) => {
+            setSelectedAgreement(agreement);
+            if (selectedEnterprise) {
+              emitSelectEnterpriseEvent(trackingActionName, {
+                label: selectedEnterprise.label,
+                siren: selectedEnterprise.siren,
+              });
+              emitSelectEnterpriseAgreementEvent(
+                `idcc${selectedEnterprise.conventions[0].num}`,
+                trackingActionName
+              );
+            } else {
+              emitNoEnterpriseSelectEvent();
+            }
+            onAgreementSelect(agreement, selectedEnterprise);
+          }}
+          isInSimulator={isInSimulator}
+          canContinueSimulationIfNoAgreement={
+            canContinueSimulationIfNoAgreement
           }
-        }}
-        onAgreementSelect={(agreement) => {
-          setSelectedAgreement(agreement);
-          if (selectedEnterprise) {
-            emitSelectEnterpriseEvent(trackingActionName, {
-              label: selectedEnterprise.label,
-              siren: selectedEnterprise.siren,
-            });
-            emitSelectEnterpriseAgreementEvent(
-              `idcc${selectedEnterprise.conventions[0].num}`,
-              trackingActionName
-            );
-          } else {
-            emitNoEnterpriseSelectEvent();
-          }
-          onAgreementSelect(agreement, selectedEnterprise);
-        }}
-        isInSimulator={isInSimulator}
-        canContinueSimulationIfNoAgreement={canContinueSimulationIfNoAgreement}
-      />
+        />
+        {selectionRequired && !selectedAgreement && (
+          <p
+            className={fr.cx("fr-error-text", "fr-mt-2w")}
+            role="alert"
+            data-testid="enterprise-convention-selection-required-error"
+          >
+            Veuillez sélectionner une convention collective
+          </p>
+        )}
+      </>
     );
   }
   return (
@@ -358,6 +404,7 @@ export const EnterpriseAgreementSearchInput = ({
           state={getInputState()}
           stateRelatedMessage={getStateMessage()}
           nativeInputProps={{
+            ref: searchInputRef,
             value: search,
             onChange: (event) => {
               setSearch(event.target.value);
@@ -409,7 +456,7 @@ export const EnterpriseAgreementSearchInput = ({
         <div className={fr.cx("fr-mt-2w")}>
           {enterprises && enterprises.length > 0 && !loading && (
             <TitleTag
-              className={fr.cx("fr-h5")}
+              className={`${fr.cx("fr-h5")} ${focusableTitle}`}
               tabIndex={-1}
               ref={resultRef}
               data-testid="result-title"
@@ -455,6 +502,15 @@ export const EnterpriseAgreementSearchInput = ({
               }
               severity="info"
             />
+          )}
+          {selectionRequired && !!enterprises?.length && !loading && (
+            <p
+              className={fr.cx("fr-error-text", "fr-mt-2w")}
+              role="alert"
+              data-testid="enterprise-selection-required-error"
+            >
+              Veuillez sélectionner une entreprise dans la liste ci-dessous
+            </p>
           )}
         </div>
         {!!enterprises?.length &&

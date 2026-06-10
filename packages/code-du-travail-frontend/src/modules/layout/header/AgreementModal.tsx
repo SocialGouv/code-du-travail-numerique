@@ -6,6 +6,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import useScrollBlock from "src/modules/utils/useScrollBlock";
 import { AgreementSelectionModalContent } from "src/modules/convention-collective/AgreementSelectionModal";
+import { focusableTitle } from "src/modules/common/focusableTitle";
 
 type Props = {
   isOpen: boolean;
@@ -156,7 +157,7 @@ export const AgreementModal = ({ isOpen, onClose }: Props) => {
 
           <h1
             id="agreement-modal-title"
-            className={`${fr.cx("fr-mb-2w", "fr-h4")} ${modalTitle}`}
+            className={`${fr.cx("fr-mb-2w", "fr-h4")} ${modalTitle} ${focusableTitle}`}
             tabIndex={-1}
           >
             Personnaliser mes réponses avec ma convention collective
