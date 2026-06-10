@@ -66,7 +66,7 @@ export const ReglesEntreprise = () => (
       </p>
       <p>
         Savez-vous si votre entreprise a signé un accord d’entreprise&nbsp;?{" "}
-        <Link href={"/outils/convention-collective"}>
+        <Link href={"/outils/convention-collective/entreprise"}>
           Cliquez ici pour vérifier si des accords existent pour votre
           établissement
         </Link>
@@ -101,7 +101,7 @@ export const ReglesEntreprise = () => (
         </p>
         <Button
           linkProps={{
-            href: "/outils/convention-collective",
+            href: "/outils/convention-collective/entreprise",
           }}
           iconId="ri-search-line"
           iconPosition="left"
