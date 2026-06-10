@@ -6,7 +6,8 @@ import { ReglesEntreprise } from "../../src/modules/quelles-regles-s-appliquent-
 export const metadata = generateDefaultMetadata({
   title:
     "Code du travail, convention, accord: quelles règles s'appliquent dans votre entreprise ?",
-  description: "Qu'est-ce que le droit du travail ?",
+  description:
+    "Salaire, primes, congés, télétravail : découvrez comment convention collective et accord d'entreprise complètent le Code du travail dans votre entreprise.",
   path: "/quelles-regles-s-appliquent-dans-votre-entreprise",
   overrideCanonical: `${SITE_URL}/quelles-regles-s-appliquent-dans-votre-entreprise`,
 });

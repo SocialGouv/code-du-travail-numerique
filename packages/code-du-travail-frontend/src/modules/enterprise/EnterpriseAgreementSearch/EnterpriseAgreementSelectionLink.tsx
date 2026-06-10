@@ -74,7 +74,7 @@ export const EnterpriseAgreementSelectionLink = ({
         </Button>
       </div>
       <p className={fr.cx("fr-h4", "fr-mt-2w", "fr-mb-0")}>
-        Convention collective
+        Convention{agreementPlurial} collective{agreementPlurial}
       </p>
       <p className={fr.cx("fr-my-2w")}>
         <i className={`ri-information-line ${iconColor}`} />
@@ -148,7 +148,7 @@ export const EnterpriseAgreementSelectionLink = ({
         }
       )}
       <p className={fr.cx("fr-h4", "fr-mt-2w", "fr-mb-0")}>
-        Accord d&apos;entreprise
+        Accord{accordCount > 1 ? "s" : ""} d&apos;entreprise
         {enterprise.etablissements > 1 && (
           <span
             className={fr.cx(
@@ -171,7 +171,7 @@ export const EnterpriseAgreementSelectionLink = ({
           }
           target="_blank"
         >
-          Les accords d&apos;entreprise, c&apos;est quoi&nbsp;?
+          L&apos;accord d&apos;entreprise, c&apos;est quoi&nbsp;?
         </Link>
       </p>
       <AccordsEntreprise
