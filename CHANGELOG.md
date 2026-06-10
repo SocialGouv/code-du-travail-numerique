@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.231.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.230.2...v4.231.0) (2026-06-10)
+
+
+### Features
+
+* **outils:** ajout des accords d'entreprise dans l'outil Trouver sa CC ([#7260](https://github.com/SocialGouv/code-du-travail-numerique/issues/7260)) ([f42d740](https://github.com/SocialGouv/code-du-travail-numerique/commit/f42d740fe7dfc99ceb608095fb02df82c113ea8b))
+
+
+
+
+
 ## [4.230.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.230.1...v4.230.2) (2026-06-03)
 
 
