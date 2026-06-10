@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.231.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.231.0...v4.231.1) (2026-06-10)
+
+
+### Bug Fixes
+
+* **contribution:** bloquer "Afficher les informations" sans CC sélectionnée ([#7232](https://github.com/SocialGouv/code-du-travail-numerique/issues/7232)) ([2ee520b](https://github.com/SocialGouv/code-du-travail-numerique/commit/2ee520b361aea4e68f321fa5ebf4bffa06f9fb1c))
+
+
+
+
+
 # [4.231.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.230.2...v4.231.0) (2026-06-10)
 
 **Note:** Version bump only for package @socialgouv/cdtn-utils
