@@ -3,7 +3,6 @@ import { fetchTool, FindAgreementLayout } from "../../../../src/modules/outils";
 import { notFound } from "next/navigation";
 import { generateDefaultMetadata } from "../../../../src/modules/common/metas";
 import { AgreementSearch } from "../../../../src/modules/convention-collective";
-import { agreementRelatedItems } from "../../../../src/modules/convention-collective/agreementRelatedItems";
 import { SITE_URL } from "../../../../src/config";
 
 export async function generateMetadata() {
@@ -21,10 +20,7 @@ async function FindAgreementByNamePage() {
   const tool = await getTool();
   return (
     <DsfrLayout>
-      <FindAgreementLayout
-        relatedItems={agreementRelatedItems}
-        description={tool.description}
-      >
+      <FindAgreementLayout description={tool.description}>
         <AgreementSearch />
       </FindAgreementLayout>
     </DsfrLayout>

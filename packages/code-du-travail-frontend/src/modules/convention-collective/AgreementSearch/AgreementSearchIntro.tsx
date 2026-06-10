@@ -24,15 +24,14 @@ export const AgreementSearchIntro = ({
     <>
       <div className={`${fr.cx("fr-mt-2w", "fr-ml-md-15v")}`}>
         <p className={Paragraph}>
-          La convention collective est un texte conclu au niveau d&apos;une
-          branche d&apos;activité (Ex&nbsp;: Transports routiers). Elle adapte
-          les règles du Code du travail sur des points précis, en fonction des
-          situations particulières de la branche (primes, congés, salaires
-          minima, préavis, prévoyance...)
+          La convention collective et les accords d’entreprise viennent
+          compléter le Code du travail pour l&apos;adapter aux réalités des
+          entreprises et des conditions de travail.
         </p>
-        <p className={`${fr.cx("fr-text--bold", "fr-mb-2w")} ${Paragraph}`}>
-          Vous pouvez retrouver le nom de votre convention collective sur votre
-          bulletin de paie ou sur votre contrat de travail.
+        <p className={`${fr.cx("fr-mb-2w")} ${Paragraph}`}>
+          La convention collective s’applique à toutes les entreprises et
+          salariés d&apos;un même secteur d’activité. L’accord d’entreprise
+          prévoit des règles propres à l&apos;entreprise et à leurs salariés.
         </p>
       </div>
       <div
@@ -58,11 +57,11 @@ export const AgreementSearchIntro = ({
           iconPosition="right"
           iconId="fr-icon-arrow-right-line"
           linkProps={{
-            href: `${navigationUrl}/convention`,
-            onClick: emitNavigateAgreementSearchEvent,
+            href: `${navigationUrl}/entreprise`,
+            onClick: emitNavigateEnterpriseSearchEvent,
           }}
         >
-          Je connais ma convention collective je la saisis
+          Je cherche mon entreprise
         </Button>
         <Button
           className={`${fr.cx(
@@ -74,12 +73,13 @@ export const AgreementSearchIntro = ({
           )}`}
           iconPosition="right"
           iconId="fr-icon-arrow-right-line"
+          priority="secondary"
           linkProps={{
-            href: `${navigationUrl}/entreprise`,
-            onClick: emitNavigateEnterpriseSearchEvent,
+            href: `${navigationUrl}/convention`,
+            onClick: emitNavigateAgreementSearchEvent,
           }}
         >
-          Je cherche mon entreprise pour trouver ma convention collective
+          Je cherche uniquement une convention collective
         </Button>
       </div>
     </>

@@ -12,6 +12,9 @@ import { useEnterpriseAgreementSearchTracking } from "./tracking";
 import { TrackingAgreementSearchAction } from "../../convention-collective/tracking";
 import { Agreement } from "src/modules/outils/indemnite-depart/types";
 import { AccessibleAlert } from "src/modules/outils/common/components/AccessibleAlert";
+import { AccordsEntreprise } from "./accords";
+import Link from "next/link";
+import { useEffect, useRef, useState } from "react";
 
 type Props = {
   enterprise: Omit<Enterprise, "complements">;
@@ -30,20 +33,61 @@ export const EnterpriseAgreementSelectionLink = ({
   const { emitSelectEnterpriseAgreementEvent } =
     useEnterpriseAgreementSearchTracking();
   const agreementPlurial = enterprise.conventions.length > 1 ? "s" : "";
+  const [accordCount, setAccordCount] = useState(0);
+  const titleRef = useRef<HTMLParagraphElement>(null);
+  useEffect(() => {
+    setTimeout(() => {
+      titleRef?.current?.focus();
+      titleRef?.current?.scrollIntoView({ behavior: "smooth" });
+    }, 100);
+  }, []);
+
   return (
     <>
+      <p
+        className={fr.cx("fr-h4", "fr-mt-2w", "fr-mb-0")}
+        ref={titleRef}
+        tabIndex={-1}
+        id={"your-enterprise"}
+      >
+        {`${enterprise.conventions.length} convention${agreementPlurial} collective${agreementPlurial} trouvée${agreementPlurial}`}{" "}
+        et{" "}
+        {`${accordCount} accord${accordCount > 1 ? "s" : ""} d'entreprise trouvé${accordCount > 1 ? "s" : ""}`}{" "}
+        pour&nbsp;:
+      </p>
       <EnterpriseAgreementSelectionDetail
         enterprise={enterprise}
         level={level}
+        hideTitle
       />
-      {enterprise.conventions.length > 0 && (
-        <p className={fr.cx("fr-h4", "fr-mt-2w", "fr-mb-0")}>
-          {enterprise.conventions.length} convention
-          {agreementPlurial} collective
-          {agreementPlurial} trouvée
-          {agreementPlurial}&nbsp;:
-        </p>
-      )}
+      <div className={fr.cx("fr-mt-2w")}>
+        <Button
+          linkProps={{
+            href: widgetMode
+              ? `/widgets/convention-collective?${searchParams?.toString()}`
+              : `/outils/convention-collective/entreprise?${searchParams?.toString()}`,
+          }}
+          priority="secondary"
+          iconId="fr-icon-arrow-left-line"
+        >
+          Précédent
+        </Button>
+      </div>
+      <p className={fr.cx("fr-h4", "fr-mt-2w", "fr-mb-0")}>
+        Convention collective
+      </p>
+      <p className={fr.cx("fr-my-2w")}>
+        <i className={`ri-information-line ${iconColor}`} />
+        <Link
+          className={fr.cx("fr-link", "fr-ml-1w")}
+          href={
+            "/quelles-regles-s-appliquent-dans-votre-entreprise#convention-collective"
+          }
+          target="_blank"
+        >
+          La convention collective, c&apos;est quoi&nbsp;?
+        </Link>
+      </p>
       {enterprise.conventions.length === 0 && (
         <AccessibleAlert
           title="Votre entreprise n'a pas renseigné de convention collective"
@@ -103,19 +147,44 @@ export const EnterpriseAgreementSelectionLink = ({
           );
         }
       )}
-      <div className={fr.cx("fr-mt-2w")}>
-        <Button
-          linkProps={{
-            href: widgetMode
-              ? `/widgets/convention-collective?${searchParams?.toString()}`
-              : `/outils/convention-collective/entreprise?${searchParams?.toString()}`,
-          }}
-          priority="secondary"
-          iconId="fr-icon-arrow-left-line"
+      <p className={fr.cx("fr-h4", "fr-mt-2w", "fr-mb-0")}>
+        Accord d&apos;entreprise
+        {enterprise.etablissements > 1 && (
+          <span
+            className={fr.cx(
+              "fr-badge",
+              "fr-badge--success",
+              "fr-badge--no-icon",
+              "fr-ml-2w"
+            )}
+          >
+            Beta, accords d&apos;établissement à venir
+          </span>
+        )}
+      </p>
+      <p className={fr.cx("fr-my-2w")}>
+        <i className={`ri-information-line ${iconColor}`} />
+        <Link
+          className={fr.cx("fr-link", "fr-ml-1w")}
+          href={
+            "/quelles-regles-s-appliquent-dans-votre-entreprise#accord-entreprise"
+          }
+          target="_blank"
         >
-          Précédent
-        </Button>
-      </div>
+          Les accords d&apos;entreprise, c&apos;est quoi&nbsp;?
+        </Link>
+      </p>
+      <AccordsEntreprise
+        onLoaded={setAccordCount}
+        siret={
+          enterprise.matchingEtablissement
+            ? enterprise.matchingEtablissement.siret
+            : enterprise.matchingEtablissementCount === 1 &&
+                enterprise.firstMatchingEtablissement
+              ? enterprise.firstMatchingEtablissement.siret
+              : enterprise.siret
+        }
+      />
     </>
   );
 };
@@ -140,3 +209,5 @@ const disabledTitle = css({
 const disabledContent = css({
   cursor: "not-allowed",
 });
+
+const iconColor = css({ color: "var(--text-action-high-blue-france)" });

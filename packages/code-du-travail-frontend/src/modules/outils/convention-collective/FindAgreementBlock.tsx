@@ -13,7 +13,7 @@ type Props = {
 
 export const FindAgreementBlock = ({
   children,
-  title = "Trouver sa convention collective",
+  title = "Trouver sa convention collective et ses accords d'entreprise",
   noBackground = false,
 }: Props) => {
   return (

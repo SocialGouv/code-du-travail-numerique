@@ -1,4 +1,4 @@
-import { render, waitFor } from "@testing-library/react";
+import { act, render, waitFor } from "@testing-library/react";
 import { UserAction } from "../../common/utils/UserAction";
 import IndemniteLicenciementSimulator from "../IndemniteLicenciementSimulator";
 import { ui } from "../../indemnite-depart/__tests__/ui";
@@ -8,9 +8,7 @@ jest.mock("@socialgouv/matomo-next", () => ({
   sendEvent: jest.fn(),
 }));
 
-jest.mock(
-  "../../../enterprise/EnterpriseAgreementSearch/EnterpriseAgreementSearchInput"
-);
+jest.mock("../../../enterprise/queries");
 jest.mock(
   "../../../convention-collective/AgreementSearch/AgreementSearchInput"
 );
@@ -126,7 +124,9 @@ describe("Indemnité licenciement - Tracking", () => {
     userAction.click(ui.introduction.startButton.get());
     userAction.click(ui.agreement.unknownAgreement.get());
     userAction.setInput(ui.agreement.agreementCompanyInput.get(), "carrefour");
-    userAction.click(ui.agreement.agreementCompanySearchButton.get());
+    await act(async () => {
+      userAction.click(ui.agreement.agreementCompanySearchButton.get());
+    });
     await waitFor(() => {
       userAction.click(ui.agreement.searchItem.carrefour.get());
     });
@@ -159,7 +159,9 @@ describe("Indemnité licenciement - Tracking", () => {
     userAction.click(ui.previous.get());
     userAction.click(ui.agreement.unknownAgreement.get());
     userAction.setInput(ui.agreement.agreementCompanyInput.get(), "carrefour");
-    userAction.click(ui.agreement.agreementCompanySearchButton.get());
+    await act(async () => {
+      userAction.click(ui.agreement.agreementCompanySearchButton.get());
+    });
     await waitFor(() => {
       userAction.click(ui.agreement.searchItem.carrefour.get());
     });

@@ -80,7 +80,6 @@ export const EnterpriseAgreementSearchInput = ({
   const resultRef = useRef<HTMLHeadingElement>(null);
   const selectedConventionTitleRef = useRef<HTMLParagraphElement>(null);
   const TitleTag = `h${level}` as "h2" | "h3";
-  const SubtitleTag = `h${level + 1}` as "h3" | "h4";
 
   const getStateMessage = () => {
     switch (searchState) {
@@ -161,6 +160,17 @@ export const EnterpriseAgreementSearchInput = ({
       setLoading(false);
     }
   };
+
+  const buildEntrepriseUrl = (enterprise: Enterprise) => {
+    if (
+      enterprise.matchingEtablissementCount === 1 &&
+      enterprise.firstMatchingEtablissement
+    ) {
+      return `/${widgetMode ? "widgets" : "outils"}/convention-collective/entreprise/${enterprise.firstMatchingEtablissement.siret}${getQueries()}`;
+    }
+    return `/${widgetMode ? "widgets" : "outils"}/convention-collective/entreprise/${enterprise.siret}${getQueries()}`;
+  };
+
   useEffect(() => {
     if (defaultSearch) {
       onSubmit();
@@ -459,7 +469,7 @@ export const EnterpriseAgreementSearchInput = ({
               linkProps={
                 !onAgreementSelect
                   ? {
-                      href: `/${widgetMode ? "widgets" : "outils"}/convention-collective/entreprise/${enterprise.siren}${getQueries()}`,
+                      href: buildEntrepriseUrl(enterprise),
                       onClick: () => {
                         emitSelectEnterpriseEvent(trackingActionName, {
                           label: enterprise.label,
@@ -502,7 +512,9 @@ export const EnterpriseAgreementSearchInput = ({
                   <>Activité&nbsp;: {enterprise.activitePrincipale}</>
                 ) : undefined
               }
-              end={<Badge>{`${enterprise.matching} établissements`}</Badge>}
+              end={
+                <Badge>{`${enterprise.matching} établissement${enterprise.matching > 1 ? "s" : ""}`}</Badge>
+              }
               size="large"
               title={enterprise.label}
               classes={{

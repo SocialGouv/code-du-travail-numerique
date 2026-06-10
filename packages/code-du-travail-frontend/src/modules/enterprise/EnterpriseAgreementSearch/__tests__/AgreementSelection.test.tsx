@@ -18,6 +18,10 @@ jest.mock("next/navigation", () => ({
   useSearchParams: jest.fn(),
 }));
 
+jest.mock("../accords", () => ({
+  AccordsEntreprise: () => null,
+}));
+
 const defaultEnterprise = {
   activitePrincipale:
     "Location-bail de propriété intellectuelle et de produits similaires, à l’exception des œuvres soumises à copyright",
@@ -27,11 +31,13 @@ const defaultEnterprise = {
   simpleLabel: "CARREFOUR PROXIMITE FRANCE (SHOPI-8 A HUIT)",
   matching: 1294,
   siren: "345130488",
+  siret: "34513048800013",
   address: "ZI ROUTE DE PARIS 14120 MONDEVILLE",
   firstMatchingEtablissement: {
     siret: "34513048800017",
     address: "ZI ROUTE DE PARIS 14120 MONDEVILLE",
   },
+  matchingEtablissementCount: 5,
   conventions: [
     {
       id: "2216",

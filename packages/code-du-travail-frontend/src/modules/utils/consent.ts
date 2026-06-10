@@ -19,7 +19,7 @@ export const CONSENT_VALIDITY_MS = 13 * 30 * 24 * 60 * 60 * 1000;
 
 // Default consent state (opt-out by default)
 export const DEFAULT_CONSENT: ConsentType = {
-  matomo: false,
+  matomo: true,
   sea: false,
   matomoHeatmap: false,
 };

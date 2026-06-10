@@ -9,7 +9,6 @@ import { notFound } from "next/navigation";
 import { generateDefaultMetadata } from "../../../../../src/modules/common/metas";
 import { EnterpriseAgreementSelectionLink } from "../../../../../src/modules/enterprise";
 import { searchEnterprises } from "../../../../../src/modules/enterprise/queries";
-import { agreementRelatedItems } from "../../../../../src/modules/convention-collective/agreementRelatedItems";
 import { SITE_URL } from "../../../../../src/config";
 
 export async function generateMetadata(props) {
@@ -36,10 +35,7 @@ async function AgreementSelectionPage(props) {
   return (
     <DsfrLayout>
       <meta name="robots" content="noindex,nofollow" />
-      <FindAgreementLayout
-        relatedItems={agreementRelatedItems}
-        description={tool.description}
-      >
+      <FindAgreementLayout description={tool.description}>
         <EnterpriseAgreementSelectionLink enterprise={enterprise} level={2} />
       </FindAgreementLayout>
     </DsfrLayout>

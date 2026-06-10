@@ -64,8 +64,10 @@ describe("populateAgreements", () => {
           highlightLabel: "DEPARTEMENT DE LA SEINE MARITIME",
           label: "DEPARTEMENT DE LA SEINE MARITIME",
           matching: 169,
+          matchingEtablissementCount: 5,
           simpleLabel: "DEPARTEMENT DE LA SEINE MARITIME",
           siren: "227605409",
+          siret: "22760540900019",
         },
       ],
     });
@@ -117,8 +119,10 @@ describe("populateAgreements", () => {
           highlightLabel: "DEPARTEMENT DE LA SEINE MARITIME",
           label: "DEPARTEMENT DE LA SEINE MARITIME",
           matching: 169,
+          matchingEtablissementCount: 5,
           simpleLabel: "DEPARTEMENT DE LA SEINE MARITIME",
           siren: "227605409",
+          siret: "22760540900019",
         },
       ],
     });
