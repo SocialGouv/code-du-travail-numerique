@@ -34,9 +34,7 @@ describe("SimulateurIndemnitePrecarite", () => {
 
     describe("criteria.cddType = Enquêteurs vacataires", () => {
       beforeEach(() => {
-        fireEvent.change(ui.cddType.get(), {
-          target: { value: "Enquêteurs vacataires" },
-        });
+        fireEvent.click(ui.cddType("Enquêteurs vacataires").get());
         fireEvent.click(ui.next.get());
       });
 
@@ -67,22 +65,41 @@ describe("SimulateurIndemnitePrecarite", () => {
       });
     });
 
+    describe("criteria.cddType = Contrat d'intervention - hasCdiProposal coché → disqualification", () => {
+      it("affiche le motif convention 1486 sur la page résultat", () => {
+        fireEvent.click(
+          ui
+            .cddType(
+              "Contrat d'intervention dans le secteur d'activité d'organisation des foires, salons et congrès"
+            )
+            .get()
+        );
+        fireEvent.click(ui.agreementQuestions.hasCdiProposal.get());
+        fireEvent.click(ui.next.get());
+
+        expect(ui.result.disqualificationTitle.get()).toBeInTheDocument();
+        expect(
+          screen.getByText(
+            /Selon votre convention collective, le salarié en contrat d'intervention/
+          )
+        ).toBeInTheDocument();
+      });
+    });
+
     describe("criteria.cddType = Contrat d'intervention dans le secteur d'activité d'organisation des foires, salons et congrès", () => {
       beforeEach(() => {
-        fireEvent.change(ui.cddType.get(), {
-          target: {
-            value:
-              "Contrat d'intervention dans le secteur d'activité d'organisation des foires, salons et congrès",
-          },
-        });
+        fireEvent.click(
+          ui
+            .cddType(
+              "Contrat d'intervention dans le secteur d'activité d'organisation des foires, salons et congrès"
+            )
+            .get()
+        );
         fireEvent.click(ui.next.get());
       });
 
       describe("criteria.hasCdiProposal = non", () => {
-        beforeEach(() => {
-          fireEvent.click(screen.getByTestId("hasCdiProposal-Non"));
-          fireEvent.click(ui.next.get());
-        });
+        beforeEach(() => {});
 
         describe("typeRemuneration = amount", () => {
           beforeEach(() => {
@@ -114,47 +131,24 @@ describe("SimulateurIndemnitePrecarite", () => {
 
     describe("criteria.cddType = Autres", () => {
       beforeEach(() => {
-        fireEvent.change(ui.cddType.get(), {
-          target: { value: "Autres" },
-        });
+        fireEvent.click(ui.cddType("Autres").get());
         fireEvent.click(ui.next.get());
       });
 
       describe("finContratPeriodeDessai = Non", () => {
-        beforeEach(() => {
-          fireEvent.click(ui.cddQuestions.finContratPeriodeDessai.non.get());
-          fireEvent.click(ui.next.get());
-        });
+        beforeEach(() => {});
 
         describe("propositionCDIFindeContrat = Non", () => {
-          beforeEach(() => {
-            fireEvent.click(
-              ui.cddQuestions.propositionCDIFindeContrat.non.get()
-            );
-            fireEvent.click(ui.next.get());
-          });
+          beforeEach(() => {});
 
           describe("refusCDIFindeContrat = Non", () => {
-            beforeEach(() => {
-              fireEvent.click(ui.cddQuestions.refusCDIFindeContrat.non.get());
-              fireEvent.click(ui.next.get());
-            });
+            beforeEach(() => {});
 
             describe("interruptionFauteGrave = Non", () => {
-              beforeEach(() => {
-                fireEvent.click(
-                  ui.cddQuestions.interruptionFauteGrave.non.get()
-                );
-                fireEvent.click(ui.next.get());
-              });
+              beforeEach(() => {});
 
               describe("refusRenouvellementAuto = Non", () => {
-                beforeEach(() => {
-                  fireEvent.click(
-                    ui.cddQuestions.refusRenouvellementAuto.non.get()
-                  );
-                  fireEvent.click(ui.next.get());
-                });
+                beforeEach(() => {});
 
                 describe("typeRemuneration = amount", () => {
                   beforeEach(() => {

@@ -20,7 +20,7 @@ describe("SimulateurIndemnitePrecarite - Bug selection type contrat", () => {
     );
   });
 
-  it("ne devrait pas afficher de message d'erreur après avoir changé de type de contrat", () => {
+  it("doit pouvoir changer de type de contrat après avoir sélectionné un CDD exclu, puis arriver au résultat", () => {
     fireEvent.click(ui.introduction.startButton.get());
 
     fireEvent.click(
@@ -30,16 +30,10 @@ describe("SimulateurIndemnitePrecarite - Bug selection type contrat", () => {
     );
     fireEvent.click(ui.next.get());
     fireEvent.click(ui.contractType.cdd.get());
-    fireEvent.change(ui.cddType.get(), {
-      target: { value: "CDD saisonnier" },
-    });
-    fireEvent.click(ui.next.get());
-    expect(ui.error.contractType.query()).toBeDefined();
+    fireEvent.click(ui.cddType("CDD saisonnier").get());
+
+    // Switch to CTT — must reset state and clear any disqualification
     fireEvent.click(ui.contractType.ctt.get());
-    fireEvent.click(ui.cttQuestions.cttFormation.non.get());
-    fireEvent.click(ui.cttQuestions.ruptureContratFauteGrave.non.get());
-    fireEvent.click(ui.cttQuestions.propositionCDIFinContrat.non.get());
-    fireEvent.click(ui.cttQuestions.refusSouplesse.non.get());
     fireEvent.click(ui.next.get());
     fireEvent.click(ui.remuneration.typeRemuneration.total.get());
     fireEvent.change(ui.remuneration.salaireTotal.get(), {
@@ -47,6 +41,6 @@ describe("SimulateurIndemnitePrecarite - Bug selection type contrat", () => {
     });
     fireEvent.click(ui.next.get());
     expect(ui.error.calculation.query()).toBeNull();
-    expect(ui.result.presentation.query()).toBeDefined();
+    expect(screen.getByText("Détail du calcul")).toBeInTheDocument();
   });
 });

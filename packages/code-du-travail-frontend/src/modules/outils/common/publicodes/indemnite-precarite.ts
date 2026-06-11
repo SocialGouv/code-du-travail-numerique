@@ -26,6 +26,9 @@ export const mapToPublicodesSituationForCalculationIndemnitePrecarite = (
   };
 };
 
+const toPublicodesYesNo = (value: boolean | undefined): string =>
+  value === true ? "'oui'" : "'non'";
+
 export const mapAgreementSpecificParametersToPublicodes = (
   informationsInput: InformationsStoreInput,
   ccn?: number
@@ -42,14 +45,14 @@ export const mapAgreementSpecificParametersToPublicodes = (
     case 1486: // Bureaux études techniques
       if (cddType === CDD_TYPES.INTERVENTION_FOIRES_SALONS) {
         additionalFields["contrat salarié . avec proposition cdi"] =
-          informationsInput.hasCdiProposal === "oui" ? "'oui'" : "'non'";
+          toPublicodesYesNo(informationsInput.hasCdiProposal);
       }
       break;
 
     case 1516: // Organismes formation
       if (cddType === CDD_TYPES.USAGE_1516) {
         additionalFields["contrat salarié . embauché en cdi"] =
-          informationsInput.hasCdiRenewal === "oui" ? "'oui'" : "'non'";
+          toPublicodesYesNo(informationsInput.hasCdiRenewal);
       }
       break;
 
@@ -60,7 +63,7 @@ export const mapAgreementSpecificParametersToPublicodes = (
     case 2511: // Sport
       if (cddType === CDD_TYPES.USAGE_INTERVENTION_2511) {
         additionalFields["contrat salarié . embauché en cdi"] =
-          informationsInput.hasCdiRenewal === "oui" ? "'oui'" : "'non'";
+          toPublicodesYesNo(informationsInput.hasCdiRenewal);
       }
       break;
 
@@ -68,10 +71,7 @@ export const mapAgreementSpecificParametersToPublicodes = (
       if (cddType === CDD_TYPES.MISSION_PONCTUELLE) {
         additionalFields[
           "contrat salarié . embauché en cdi sans interruption"
-        ] =
-          informationsInput.hasEquivalentCdiRenewal === "oui"
-            ? "'oui'"
-            : "'non'";
+        ] = toPublicodesYesNo(informationsInput.hasEquivalentCdiRenewal);
       }
       break;
 
