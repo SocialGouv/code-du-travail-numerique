@@ -1,4 +1,4 @@
-import { render, fireEvent, waitFor } from "@testing-library/react";
+import { act, render, fireEvent, waitFor } from "@testing-library/react";
 import { UserAction } from "../../common/utils/UserAction";
 import { CalculateurIndemniteLicenciement } from "../IndemniteLicenciementSimulator";
 import { ui } from "../../indemnite-depart/__tests__/ui";
@@ -6,9 +6,7 @@ import { ui } from "../../indemnite-depart/__tests__/ui";
 jest.mock(
   "../../../convention-collective/AgreementSearch/AgreementSearchInput"
 );
-jest.mock(
-  "../../../enterprise/EnterpriseAgreementSearch/EnterpriseAgreementSearchInput"
-);
+jest.mock("../../../enterprise/queries");
 
 describe("Indemnité licenciement - Sélection de CC", () => {
   beforeEach(() => {
@@ -35,7 +33,9 @@ describe("Indemnité licenciement - Sélection de CC", () => {
     fireEvent.change(ui.agreement.agreementCompanyInput.get(), {
       target: { value: "carrefour" },
     });
-    fireEvent.click(ui.agreement.agreementCompanySearchButton.get());
+    await act(async () => {
+      fireEvent.click(ui.agreement.agreementCompanySearchButton.get());
+    });
     await waitFor(() => {
       fireEvent.click(ui.agreement.searchItem.carrefour.get());
     });

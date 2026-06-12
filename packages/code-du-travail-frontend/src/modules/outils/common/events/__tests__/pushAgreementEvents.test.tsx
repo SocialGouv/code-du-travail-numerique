@@ -35,6 +35,9 @@ const enterprise: Enterprise = {
   matching: 272,
   simpleLabel: "MONOPRIX EXPLOITATION",
   siren: "552083297",
+  siret: "55208329700012",
+  address: "123 RUE DU BONHEUR 75000 PARIS",
+  matchingEtablissementCount: 0,
   complements: {
     liste_idcc: ["3239"],
   },
@@ -211,6 +214,9 @@ describe("Push agreement events on click next", () => {
             matching: 272,
             simpleLabel: "MONOPRIX EXPLOITATION",
             siren: "552083297",
+            siret: "55208329700012",
+            address: "123 RUE DU BONHEUR 75000 PARIS",
+            matchingEtablissementCount: 0,
             complements: {
               liste_idcc: ["9999"],
             },

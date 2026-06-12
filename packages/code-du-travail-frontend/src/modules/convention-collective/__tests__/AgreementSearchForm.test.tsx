@@ -1,4 +1,4 @@
-import { render, screen, waitFor } from "@testing-library/react";
+import { act, render, screen, waitFor } from "@testing-library/react";
 
 import { TrackingAgreementSearchAction } from "../tracking";
 import { ui } from "./ui";
@@ -21,9 +21,7 @@ jest.mock("next/navigation", () => ({
   usePathname: jest.fn(),
 }));
 
-jest.mock(
-  "../../enterprise/EnterpriseAgreementSearch/EnterpriseAgreementSearchInput"
-);
+jest.mock("../../enterprise/queries");
 
 describe("<PageContribution />", () => {
   let userAction: UserAction;
@@ -42,7 +40,11 @@ describe("<PageContribution />", () => {
       enterpriseUi.enterpriseAgreementSearch.input.get(),
       "carrefour"
     );
-    userAction.click(enterpriseUi.enterpriseAgreementSearch.submitButton.get());
+    await act(async () => {
+      userAction.click(
+        enterpriseUi.enterpriseAgreementSearch.submitButton.get()
+      );
+    });
     await waitFor(() => {
       expect(sendEvent).toHaveBeenCalledWith({
         action: "Trouver sa convention collective",
@@ -72,7 +74,11 @@ describe("<PageContribution />", () => {
       enterpriseUi.enterpriseAgreementSearch.input.get(),
       "bnp"
     );
-    userAction.click(enterpriseUi.enterpriseAgreementSearch.submitButton.get());
+    await act(async () => {
+      userAction.click(
+        enterpriseUi.enterpriseAgreementSearch.submitButton.get()
+      );
+    });
     await waitFor(() => {
       expect(sendEvent).toHaveBeenCalledWith({
         action: "Trouver sa convention collective",
@@ -101,7 +107,6 @@ describe("<PageContribution />", () => {
     );
     userAction = new UserAction();
     userAction.click(ui.radio.enterpriseSearchOption.get());
-    screen.debug();
     userAction.click(
       enterpriseUi.enterpriseAgreementSearch.childminder.title.get()
     );

@@ -115,7 +115,12 @@ export const EnterpriseAgreementSelectionForm = ({
                   </span>
                 )}
               </>
-            ) : undefined
+            ) : (
+              <span>
+                Vous pouvez consulter les dispositions générales du Code du
+                travail
+              </span>
+            )
           }
         />
       )}

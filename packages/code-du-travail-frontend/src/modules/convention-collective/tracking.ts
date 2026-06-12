@@ -3,6 +3,7 @@ import { sendEvent } from "@socialgouv/matomo-next";
 export enum TrackingAgreementSearchCategory {
   CC_SEARCH_TYPE_OF_USERS = "cc_search_type_of_users",
   ENTERPRISE_SEARCH = "enterprise_search",
+  ACCORD_ENTERPRISE_SEARCH = "accord_enterprise_search",
   VIEW_STEP = "view_step_Trouver sa convention collective",
   CC_SELECT_P1 = "cc_select_p1",
   CC_SELECT_P2 = "cc_select_p2",

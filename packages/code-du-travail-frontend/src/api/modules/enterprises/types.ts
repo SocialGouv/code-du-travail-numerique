@@ -7,6 +7,8 @@ export type ApiEnterpriseData = {
 export type MatchingEtablissement = {
   siret: string;
   address: string;
+  activitePrincipale?: string;
+  nomCommercial?: string;
 };
 
 export type Enterprise = {
@@ -24,6 +26,9 @@ export type Enterprise = {
   matching: number;
   simpleLabel: string;
   siren: string;
-  address?: string;
+  siret: string;
+  address: string;
   firstMatchingEtablissement?: MatchingEtablissement;
+  matchingEtablissement?: MatchingEtablissement;
+  matchingEtablissementCount: number;
 };

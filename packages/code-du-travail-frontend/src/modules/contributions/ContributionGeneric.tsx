@@ -1,28 +1,53 @@
 "use client";
 import React, { useRef, useState, useEffect } from "react";
+import { Button } from "@codegouvfr/react-dsfr/Button";
+import { fr } from "@codegouvfr/react-dsfr";
+import { useABTestVariant } from "@socialgouv/matomo-next";
 import { useContributionTracking } from "./tracking";
-import { isAgreementSupported, isAgreementValid } from "./contributionUtils";
+import {
+  buildContributionAgreementPath,
+  isAgreementSupported,
+  isAgreementValid,
+} from "./contributionUtils";
 import { ContributionGenericContent } from "./ContributionGenericContent";
 import { Contribution } from "./type";
 import {
   useLocalStorageForAgreementOnPageLoad,
   getAgreementFromLocalStorage,
 } from "../utils/useLocalStorage";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { ContributionGenericAgreementSearch } from "./ContributionGenericAgreementSearch";
-import { Button } from "@codegouvfr/react-dsfr/Button";
-import { fr } from "@codegouvfr/react-dsfr";
+import {
+  CONTRIBUTION_AFFICHER_INFO_TEST,
+  ContributionAfficherInfoVariations,
+  getAfficherInfoVariantFlags,
+} from "../config/abTests";
 
 type Props = {
   contribution: Contribution;
 };
 
+const ALLOWED_VARIANTS = new Set<string>(
+  Object.values(ContributionAfficherInfoVariations)
+);
+
 export function ContributionGeneric({ contribution }: Props) {
   const router = useRouter();
+  const searchParams = useSearchParams();
   const [hash, setHash] = useState("");
   const personalizeTitleRef = useRef<HTMLParagraphElement>(null);
   const getTitle = () => `/contribution/${slug}`;
   const { slug, isNoCDT, relatedItems } = contribution;
+  const matomoVariant = useABTestVariant(CONTRIBUTION_AFFICHER_INFO_TEST);
+  const variantOverride = searchParams?.get("ab") ?? null;
+  const variant =
+    variantOverride && ALLOWED_VARIANTS.has(variantOverride)
+      ? variantOverride
+      : matomoVariant;
+  const {
+    isOriginal: isOriginalVariant,
+    isRegularButton: isRegularButtonVariant,
+  } = getAfficherInfoVariantFlags(variant);
 
   const [displayGeneric, setDisplayGeneric] = useState(false);
 
@@ -35,7 +60,7 @@ export function ContributionGeneric({ contribution }: Props) {
     emitDisplayGeneralContent,
     emitDisplayGenericContent,
     emitClickP3,
-  } = useContributionTracking();
+  } = useContributionTracking(variant);
   const genericTitleRef = useRef<HTMLDivElement>(null);
 
   const scrollToTitle = () => {
@@ -52,6 +77,7 @@ export function ContributionGeneric({ contribution }: Props) {
   useEffect(() => {
     if (hash === "#retour") {
       setTimeout(() => {
+        personalizeTitleRef?.current?.scrollIntoView({ behavior: "smooth" });
         personalizeTitleRef?.current?.focus();
       }, 100);
     }
@@ -59,17 +85,20 @@ export function ContributionGeneric({ contribution }: Props) {
 
   useEffect(() => {
     if (window.location.hash === "#retour") return;
+    if (isRegularButtonVariant) return;
 
     const storedAgreement = getAgreementFromLocalStorage();
     if (storedAgreement && isAgreementValid(contribution, storedAgreement)) {
-      const targetUrl =
-        slug === "les-conges-pour-evenements-familiaux"
-          ? `/contribution/${slug}/${storedAgreement.slug || storedAgreement.num}`
-          : `/contribution/${storedAgreement.num}-${slug}`;
-      router.replace(targetUrl);
+      router.replace(buildContributionAgreementPath(slug, storedAgreement));
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  const showDisplayGenericButton =
+    isOriginalVariant &&
+    !isNoCDT &&
+    !isAgreementValid(contribution, selectedAgreement) &&
+    !displayGeneric;
 
   return (
     <>
@@ -78,6 +107,9 @@ export function ContributionGeneric({ contribution }: Props) {
         contribution={contribution}
         onAgreementSelect={(agreement) => {
           setSelectedAgreement(agreement);
+          // Sélectionner une CC masque le Code du travail dans toutes les
+          // variantes (regular_button compris) ; il est réaffiché au besoin via
+          // « Afficher les informations ».
           setDisplayGeneric(false);
           if (!agreement) return;
 
@@ -94,53 +126,59 @@ export function ContributionGeneric({ contribution }: Props) {
             scrollToTitle();
             if (selectedAgreement) {
               emitDisplayGeneralContent(getTitle());
-            } else {
-              emitDisplayGenericContent(getTitle());
             }
           } else {
+            if (isRegularButtonVariant) {
+              setDisplayGeneric(true);
+              scrollToTitle();
+            }
             emitDisplayAgreementContent(getTitle());
           }
         }}
         selectedAgreement={selectedAgreement}
         trackingActionName={getTitle()}
+        variant={variant}
       />
 
-      {!isNoCDT && !isAgreementValid(contribution, selectedAgreement) && (
-        <>
-          {!displayGeneric && (
-            <Button
-              className={fr.cx("fr-mb-6w")}
-              priority="tertiary no outline"
-              onClick={() => {
-                setDisplayGeneric(true);
-                scrollToTitle();
-                emitClickP3(getTitle());
-              }}
-            >
-              Afficher les informations sans sélectionner une convention
-              collective
-            </Button>
-          )}
-          <ContributionGenericContent
-            ref={genericTitleRef}
-            contribution={contribution}
-            relatedItems={relatedItems}
-            displayGeneric={displayGeneric}
-            alertText={
-              selectedAgreement &&
-              !isAgreementSupported(contribution, selectedAgreement) && (
-                <p>
-                  <strong>
-                    Cette réponse correspond à ce que prévoit le code du
-                    travail, elle ne tient pas compte des spécificités de la{" "}
-                    {selectedAgreement.shortTitle}
-                  </strong>
-                </p>
-              )
-            }
-          />
-        </>
-      )}
+      {!isNoCDT &&
+        (isRegularButtonVariant ||
+          !isAgreementValid(contribution, selectedAgreement)) && (
+          <>
+            {showDisplayGenericButton && (
+              <Button
+                className={fr.cx("fr-mb-6w")}
+                priority="tertiary no outline"
+                onClick={() => {
+                  setDisplayGeneric(true);
+                  scrollToTitle();
+                  emitClickP3(getTitle());
+                  emitDisplayGenericContent(getTitle());
+                }}
+              >
+                Afficher les informations sans sélectionner une convention
+                collective
+              </Button>
+            )}
+            <ContributionGenericContent
+              ref={genericTitleRef}
+              contribution={contribution}
+              relatedItems={relatedItems}
+              displayGeneric={displayGeneric}
+              alertText={
+                selectedAgreement &&
+                !isAgreementSupported(contribution, selectedAgreement) && (
+                  <p>
+                    <strong>
+                      Cette réponse correspond à ce que prévoit le code du
+                      travail, elle ne tient pas compte des spécificités de la{" "}
+                      {selectedAgreement.shortTitle}
+                    </strong>
+                  </p>
+                )
+              }
+            />
+          </>
+        )}
     </>
   );
 }

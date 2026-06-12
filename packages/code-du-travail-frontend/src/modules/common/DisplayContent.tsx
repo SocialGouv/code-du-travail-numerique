@@ -3,7 +3,6 @@ import parse, {
   domToReact,
   Element,
   HTMLReactParserOptions,
-  Text,
 } from "html-react-parser";
 import React, { ElementType, JSX } from "react";
 import { v4 as generateUUID } from "uuid";

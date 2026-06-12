@@ -6,6 +6,7 @@ import { ListWithArrow } from "../../common/ListWithArrow";
 import Link from "../../common/Link";
 import { ElasticAgreement } from "@socialgouv/cdtn-types";
 import { fr } from "@codegouvfr/react-dsfr";
+import { focusableTitle } from "../../common/focusableTitle";
 
 type Agreement = Pick<ElasticAgreement, "shortTitle" | "slug">;
 type Props = {
@@ -28,7 +29,7 @@ export const AgreementsSection = ({ letter, agreements }: Props) => {
         id={letter}
         ref={letterRef}
         tabIndex={-1}
-        className={fr.cx("fr-h3")}
+        className={`${fr.cx("fr-h3")} ${focusableTitle}`}
         role="heading"
         aria-level={3}
       >

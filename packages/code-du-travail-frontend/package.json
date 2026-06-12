@@ -1,6 +1,6 @@
 {
   "name": "@cdt/frontend",
-  "version": "4.230.2",
+  "version": "4.231.1",
   "description": "Code du travail frontend",
   "private": true,
   "homepage": "https://code-du-travail.beta.gouv.fr/",
@@ -41,6 +41,7 @@
     "@socialgouv/cdtn-elasticsearch": "^2.74.0",
     "@socialgouv/cdtn-types": "^2.74.0",
     "@socialgouv/cdtn-utils": "link:../code-du-travail-utils",
+    "@socialgouv/dila-api-client": "1.2.4",
     "@socialgouv/matomo-next": "^1.13.1",
     "@socialgouv/modeles-social": "link:../code-du-travail-modeles",
     "date-fns": "^4.4.0",

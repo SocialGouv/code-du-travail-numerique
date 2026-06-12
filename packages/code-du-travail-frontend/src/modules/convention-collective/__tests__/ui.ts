@@ -31,10 +31,10 @@ export const ui = {
   },
   searchAgreementIntro: {
     buttonSearchAgreement: byRole("link", {
-      name: "Je connais ma convention collective je la saisis",
+      name: "Je cherche uniquement une convention collective",
     }),
     buttonSearchEnterprise: byRole("link", {
-      name: "Je cherche mon entreprise pour trouver ma convention collective",
+      name: "Je cherche mon entreprise",
     }),
   },
   searchByName: {
