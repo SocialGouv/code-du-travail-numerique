@@ -191,4 +191,42 @@ describe("Trouver sa CC - recherche par nom d'entreprise CC", () => {
       ui.enterpriseAgreementSearch.buttonPrevious.query()
     ).toBeInTheDocument();
   });
+
+  it("Cas A : seul le code 9999 est retourné => bandeau « pas de CC renseignée », pas de bandeau partiel", async () => {
+    render(
+      <EnterpriseAgreementSelectionLink
+        enterprise={{
+          ...defaultEnterprise,
+          conventions: [],
+          hasEstablishmentWithoutConvention: true,
+        }}
+        level={2}
+      />
+    );
+
+    expect(ui.noConventionBanner.title.query()).toBeInTheDocument();
+    expect(ui.noConventionBanner.description.query()).toBeInTheDocument();
+    expect(ui.partialAgreementCoverageAlert.query()).not.toBeInTheDocument();
+    expect(
+      ui.enterpriseAgreementSelection.agreement.IDCC2216.link.query()
+    ).not.toBeInTheDocument();
+  });
+
+  it("Cas B : une CC officielle + un code 9999 => CC officielle affichée + bandeau partiel", async () => {
+    render(
+      <EnterpriseAgreementSelectionLink
+        enterprise={{
+          ...defaultEnterprise,
+          hasEstablishmentWithoutConvention: true,
+        }}
+        level={2}
+      />
+    );
+
+    expect(
+      ui.enterpriseAgreementSelection.agreement.IDCC2216.link.query()
+    ).toBeInTheDocument();
+    expect(ui.partialAgreementCoverageAlert.query()).toBeInTheDocument();
+    expect(ui.noConventionBanner.title.query()).not.toBeInTheDocument();
+  });
 });
