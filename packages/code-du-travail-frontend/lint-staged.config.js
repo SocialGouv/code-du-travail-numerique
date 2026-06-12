@@ -6,4 +6,7 @@ module.exports = {
   "*.{js,ts,tsx,jsx}": ["jest --bail --findRelatedTests"],
   "*.{js,ts,tsx,jsx}": [buildEslintCommand],
   "*.{js,ts,tsx,jsx,json,md}": ["pnpm format"],
+  // Régénère et re-stage la liste des events Matomo dès qu'un module change.
+  "src/modules/**/*.{ts,tsx}": () =>
+    "pnpm -F @socialgouv/cdtn-stats events:extract && git add ../stats/events/events.extracted.json",
 };

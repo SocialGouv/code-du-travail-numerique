@@ -1,0 +1,48 @@
+name: Stats events
+
+# Pipeline d'extraction des events Matomo :
+#  - drift-check : échoue si packages/code-du-travail-stats/events/events.extracted.json est
+#    désynchronisé avec le code (event Matomo ajouté, supprimé ou modifié sans
+#    avoir régénéré le fichier via `pnpm -F @socialgouv/cdtn-stats events:extract`).
+#  - unit-tests : tests unitaires des modules d'extraction (jest, sans services).
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: stats-events-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  drift-check:
+    name: Drift check (events.extracted.json synchronisé)
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+      - uses: pnpm/action-setup@v4
+        with:
+          run_install: false
+      - run: pnpm install --filter @socialgouv/cdtn-stats --frozen-lockfile
+      - run: pnpm -F @socialgouv/cdtn-stats events:check
+
+  unit-tests:
+    name: Tests unitaires (extraction)
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+      - uses: pnpm/action-setup@v4
+        with:
+          run_install: false
+      - run: pnpm install --filter @socialgouv/cdtn-stats --frozen-lockfile
+      - run: pnpm -F @socialgouv/cdtn-stats test
