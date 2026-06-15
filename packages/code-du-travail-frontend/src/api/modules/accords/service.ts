@@ -44,7 +44,7 @@ const fetchAllAccords = async (siret: string): Promise<ApiSearchResponse> => {
             facette: "SIRET_RAISON_SOCIALE",
           },
         ],
-        sort: "PERTINENCE",
+        sort: "DATE_DESC",
         fromAdvancedRecherche: false,
         secondSort: "ID",
         champs: [
