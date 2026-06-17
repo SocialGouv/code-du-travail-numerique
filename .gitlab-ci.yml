@@ -1,0 +1,102 @@
+# ============================================================================
+# code-du-travail-numerique (site public CDTN) — CI + CD sur GitLab PIC.
+#   build   : 1 image Next.js via BuildKit DinD mutualisé (ci-common). GitHub reste
+#             la source de vérité (ce dépôt PIC est un miroir + cible de déploiement).
+#   publish : chart Helm `charts/code-du-travail-numerique` en OCI (appVersion = sha).
+#   deploy  : DÉCLENCHE le pipeline cdtn-gitops (trigger multi-projet, CI_JOB_TOKEN +
+#             allowlist inbound côté gitops) en passant CHART_NAME/CHART_VERSION. Pas de
+#             token gitops ici.
+# Déploiement : Atlas v2 (zone dev) via ArgoCD synchronisant cdtn-gitops.
+# Voir docs/30-migrations/cdtn.md.
+#
+# ⚠ Secrets de build (ES/OAuth/Sentry) : le Dockerfile les monte en `--mount=type=secret`
+# MAIS chaque usage est gardé par `if [ -f /run/secrets/X ]` ⇒ build OK SANS secret (mounts
+# `type=secret` optionnels par défaut). ci-common ne passe pas de `--secret` → on construit
+# sans. Si `next build` exige des données ES au build (génération statique), revoir alors
+# (rendre les routes dynamiques, ou étendre ci-common pour les build-secrets).
+# ============================================================================
+
+include:
+  - project: socialgouv/produits-dnum/communs/ci-common
+    ref: main
+    file: templates/image-build.yml
+  - project: socialgouv/produits-dnum/communs/ci-common
+    ref: main
+    file: templates/publish-chart.yml
+
+variables:
+  CHART_DIR: charts/code-du-travail-numerique
+  CHART_VERSION: "0.0.0-sha.${CI_COMMIT_SHORT_SHA}"
+  # Build-args NEXT_PUBLIC_* (publics, bakés dans l'image). Valeurs dev par défaut, surchargeables
+  # en variables CI/CD. NEXT_PUBLIC_SITE_URL : à fixer au host réel après création de l'env Atlas.
+  NEXT_PUBLIC_ES_INDEX_PREFIX: "cdtn-dev"
+  NEXT_PUBLIC_SITE_URL: ""
+  NEXT_PUBLIC_BUCKET_URL: ""
+  NEXT_PUBLIC_BUCKET_FOLDER: "preview"
+  NEXT_PUBLIC_BUCKET_SITEMAP_FOLDER: "sitemap"
+  NEXT_PUBLIC_PIWIK_SITE_ID: "3"
+  NEXT_PUBLIC_PIWIK_URL: "https://matomo.fabrique.social.gouv.fr"
+  NEXT_PUBLIC_SENTRY_ENV: "dev"
+
+stages:
+  - build
+  - publish
+  - deploy
+
+workflow:
+  auto_cancel:
+    on_new_commit: interruptible
+  rules:
+    - if: $CI_COMMIT_BRANCH
+
+.build-rules: &build-rules
+  - if: $CI_COMMIT_BRANCH =~ /^(feat|fix|chore|migration)\//
+  - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+
+# ---------------------------------------------------------------------------
+# BUILD : 1 image via le backend DinD mutualisé (ci-common). cdtn = produit -> DinD.
+# ---------------------------------------------------------------------------
+build:
+  extends: .build-dind
+  interruptible: true
+  variables:
+    BUILD_IMAGE: "$CI_REGISTRY_IMAGE/app"
+    BUILD_TAGS: "sha-$CI_COMMIT_SHA,$CI_COMMIT_REF_SLUG"
+    BUILD_ARGS: |
+      NEXT_PUBLIC_IS_PREPRODUCTION_DEPLOYMENT=true
+      NEXT_PUBLIC_ENABLE_AB_TESTING=false
+      NEXT_PUBLIC_ES_INDEX_PREFIX=$NEXT_PUBLIC_ES_INDEX_PREFIX
+      NEXT_PUBLIC_SITE_URL=$NEXT_PUBLIC_SITE_URL
+      NEXT_PUBLIC_BUCKET_URL=$NEXT_PUBLIC_BUCKET_URL
+      NEXT_PUBLIC_BUCKET_FOLDER=$NEXT_PUBLIC_BUCKET_FOLDER
+      NEXT_PUBLIC_BUCKET_SITEMAP_FOLDER=$NEXT_PUBLIC_BUCKET_SITEMAP_FOLDER
+      NEXT_PUBLIC_PIWIK_SITE_ID=$NEXT_PUBLIC_PIWIK_SITE_ID
+      NEXT_PUBLIC_PIWIK_URL=$NEXT_PUBLIC_PIWIK_URL
+      NEXT_PUBLIC_COMMIT=$CI_COMMIT_SHA
+      NEXT_PUBLIC_SENTRY_ENV=$NEXT_PUBLIC_SENTRY_ENV
+  rules: *build-rules
+
+publish-chart:
+  extends: .publish-chart
+  needs: ["build"]
+  rules: *build-rules
+
+# ---------------------------------------------------------------------------
+# DEPLOY : déclenche cdtn-gitops (CI_JOB_TOKEN + allowlist inbound). Bump de la
+# dépendance `code-du-travail-numerique` du wrapper apps/cdtn-dev sur la branche par défaut.
+# ---------------------------------------------------------------------------
+deploy-dev:
+  stage: deploy
+  needs: ["publish-chart"]
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+  variables:
+    DEPLOY_ACTION: deploy
+    DEPLOY_ENV: cdtn-dev
+    CHART_NAME: code-du-travail-numerique
+  trigger:
+    project: socialgouv/produits-dnum/travail/cdtn/cdtn-gitops
+    branch: main
+    strategy: depend
+  environment:
+    name: dev
