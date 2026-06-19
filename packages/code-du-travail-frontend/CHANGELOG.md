@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.231.5](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.231.4...v4.231.5) (2026-06-19)
+
+
+### Bug Fixes
+
+* **e2e:** adapte les tests glossaire/header-search et fiabilise conventions-collectives ([#7319](https://github.com/SocialGouv/code-du-travail-numerique/issues/7319)) ([cb3bf71](https://github.com/SocialGouv/code-du-travail-numerique/commit/cb3bf71c5fae8b50bdd5450e22694c2612f6871a))
+* **enterprise:** découple l'affichage des accords de la recherche d'entreprise ([#7324](https://github.com/SocialGouv/code-du-travail-numerique/issues/7324)) ([813e2ea](https://github.com/SocialGouv/code-du-travail-numerique/commit/813e2ea5adee83bfcb20ea06afcf854fd15e4e75))
+* **redirects:** pointe la redirection canicule vers la page /information ([#7322](https://github.com/SocialGouv/code-du-travail-numerique/issues/7322)) ([f43da70](https://github.com/SocialGouv/code-du-travail-numerique/commit/f43da70265e960dae8f8ffeb9e92c23e97a4113e))
+* **redirects:** redirige l'ancienne fiche canicule désactivée vers la nouvelle page ([#7318](https://github.com/SocialGouv/code-du-travail-numerique/issues/7318)) ([8bba64a](https://github.com/SocialGouv/code-du-travail-numerique/commit/8bba64aa341fbd9c742692bafae52ece6b83a615))
+
+
+
+
+
 ## [4.231.4](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.231.3...v4.231.4) (2026-06-19)
 
 
