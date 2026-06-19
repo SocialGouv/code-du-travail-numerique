@@ -130,7 +130,7 @@ describe("populateAgreements", () => {
     });
   });
 
-  it("should drop the 9999 sentinel and flag the enterprise", async () => {
+  it("should drop the 9999 placeholder and flag the enterprise", async () => {
     (fetchAgreements as jest.Mock).mockResolvedValue({
       hits: {
         hits: [
@@ -189,7 +189,7 @@ describe("populateAgreements", () => {
     expect(enterprise.conventions.map(({ num }) => num)).toEqual([5021]);
   });
 
-  it("should flag an enterprise whose only convention is the 9999 sentinel", async () => {
+  it("should flag an enterprise whose only convention is the 9999 placeholder", async () => {
     (fetchAgreements as jest.Mock).mockResolvedValue({ hits: { hits: [] } });
 
     const result = await populateAgreements({

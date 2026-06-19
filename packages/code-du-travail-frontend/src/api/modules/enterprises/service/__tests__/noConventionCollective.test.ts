@@ -19,7 +19,7 @@ const officialB: Agreement = {
   title: "CC B",
   contributions: true,
 };
-const sentinel: Agreement = {
+const withoutConvention: Agreement = {
   num: NO_CONVENTION_COLLECTIVE_IDCC,
   id: "9999",
   shortTitle: "___Sans convention collective___",
@@ -28,15 +28,15 @@ const sentinel: Agreement = {
 };
 
 describe("isNoConventionCollective", () => {
-  it("détecte la sentinelle 9999", () => {
-    expect(isNoConventionCollective(sentinel)).toBe(true);
+  it("détecte le code 9999 « aucune convention collective »", () => {
+    expect(isNoConventionCollective(withoutConvention)).toBe(true);
   });
 
-  it("ne traite pas une convention officielle comme sentinelle", () => {
+  it("ne traite pas une convention officielle comme le code 9999", () => {
     expect(isNoConventionCollective(officialA)).toBe(false);
   });
 
-  it("ne traite pas la convention 9998 comme sentinelle", () => {
+  it("ne traite pas la convention 9998 comme le code 9999", () => {
     expect(isNoConventionCollective({ num: 9998 })).toBe(false);
   });
 });
@@ -49,16 +49,16 @@ describe("splitNoConventionCollective", () => {
     });
   });
 
-  it("uniquement la sentinelle => liste vide, drapeau vrai", () => {
-    expect(splitNoConventionCollective([sentinel])).toEqual({
+  it("uniquement le code 9999 => liste vide, drapeau vrai", () => {
+    expect(splitNoConventionCollective([withoutConvention])).toEqual({
       conventions: [],
       hasEstablishmentWithoutConvention: true,
     });
   });
 
-  it("conventions officielles + sentinelle => sentinelle retirée, drapeau vrai", () => {
+  it("conventions officielles + code 9999 => code 9999 retiré, drapeau vrai", () => {
     expect(
-      splitNoConventionCollective([officialA, sentinel, officialB])
+      splitNoConventionCollective([officialA, withoutConvention, officialB])
     ).toEqual({
       conventions: [officialA, officialB],
       hasEstablishmentWithoutConvention: true,

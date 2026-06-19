@@ -9,8 +9,8 @@ type Props = {
 /**
  * Bandeau affiché lorsqu'une entité possède au moins une convention
  * collective officielle ET au moins un établissement sans convention
- * renseignée (IDCC sentinelle 9999). La sentinelle n'est jamais affichée
- * comme une convention : ce bandeau la remplace.
+ * renseignée (code IDCC factice 9999). Ce code n'est jamais affiché
+ * comme une convention : ce bandeau le remplace.
  */
 export const PartialAgreementCoverageAlert = ({
   className = ["fr-mt-2w"],

@@ -1,7 +1,7 @@
 import { Agreement } from "src/modules/outils/indemnite-depart/types";
 
 /**
- * IDCC sentinelle renvoyée par l'annuaire des entreprises pour signifier
+ * Code IDCC factice renvoyé par l'annuaire des entreprises pour signifier
  * qu'un (ou plusieurs) établissement(s) de l'entité n'ont déclaré
  * « aucune convention collective ». Ce n'est pas une vraie convention.
  */
@@ -13,7 +13,7 @@ export const isNoConventionCollective = (
 
 /**
  * Normalise la liste des conventions d'une entreprise :
- * - retire la convention sentinelle 9999 de la liste affichée ;
+ * - retire le code IDCC factice 9999 de la liste affichée ;
  * - expose un booléen indiquant qu'au moins un établissement n'a pas
  *   de convention collective renseignée.
  *
