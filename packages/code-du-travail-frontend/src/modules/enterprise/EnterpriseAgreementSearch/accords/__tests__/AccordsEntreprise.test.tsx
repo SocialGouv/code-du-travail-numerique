@@ -13,6 +13,7 @@ jest.mock("@socialgouv/matomo-next", () => ({
 
 const mockFetch = (data: EntrepriseAccordsResponse) => {
   window.fetch = jest.fn().mockResolvedValue({
+    ok: true,
     json: jest.fn().mockResolvedValue(data),
   }) as unknown as typeof fetch;
 };
@@ -21,6 +22,14 @@ const mockFetchError = () => {
   window.fetch = jest
     .fn()
     .mockRejectedValue(new Error("Network error")) as unknown as typeof fetch;
+};
+
+const mockFetchHttpError = (status = 500) => {
+  window.fetch = jest.fn().mockResolvedValue({
+    ok: false,
+    status,
+    json: jest.fn().mockResolvedValue({ message: "Internal Server Error" }),
+  }) as unknown as typeof fetch;
 };
 
 const accordsData: EntrepriseAccordsResponse = {
@@ -58,6 +67,20 @@ describe("AccordsEntreprise", () => {
     expect(
       screen.getByText("Erreur lors du chargement des accords d'entreprise")
     ).toBeInTheDocument();
+  });
+
+  it("affiche une erreur (sans planter) si l'API renvoie une erreur HTTP, ex 500 PISTE", async () => {
+    mockFetchHttpError(500);
+    const onLoaded = jest.fn();
+    await act(async () => {
+      render(<AccordsEntreprise siret="12345678901234" onLoaded={onLoaded} />);
+    });
+    expect(
+      screen.getByText("Erreur lors du chargement des accords d'entreprise")
+    ).toBeInTheDocument();
+    // le compteur reste à 0 (et non `undefined`) pour ne pas corrompre
+    // le titre "X conventions ... et Y accords trouvés" du composant parent
+    expect(onLoaded).toHaveBeenCalledWith(0);
   });
 
   it("affiche un message si aucun accord n'est trouvé", async () => {
