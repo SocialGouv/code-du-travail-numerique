@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.231.3](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.231.2...v4.231.3) (2026-06-15)
+
+
+### Bug Fixes
+
+* ordonner les accords par date de signature ([#7313](https://github.com/SocialGouv/code-du-travail-numerique/issues/7313)) ([e93e032](https://github.com/SocialGouv/code-du-travail-numerique/commit/e93e032c80adc8266185bd937c72b76557af77e9))
+
+
+
+
+
+## [4.231.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.231.1...v4.231.2) (2026-06-15)
+
+**Note:** Version bump only for package @socialgouv/code-du-travail
+
+
+
+
+
 ## [4.231.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.231.0...v4.231.1) (2026-06-10)
 
 
