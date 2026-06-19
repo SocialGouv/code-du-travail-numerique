@@ -38,7 +38,19 @@ export const AccordsEntreprise = ({ siret, onLoaded }: Props) => {
     let ignore = false;
 
     fetch(`/api/enterprises/accords/${siret}`)
-      .then((res) => res.json() as Promise<EntrepriseAccordsResponse>)
+      .then((res) => {
+        // `fetch` ne rejette pas sur un statut HTTP d'erreur : sans ce contrôle,
+        // une réponse 500 (ex. API DILA/PISTE indisponible) serait parsée comme
+        // un succès et planterait le rendu. On bascule explicitement vers l'état
+        // d'erreur pour que la recherche d'entreprise (conventions collectives)
+        // reste affichée même si les accords sont indisponibles.
+        if (!res.ok) {
+          throw new Error(
+            `Échec du chargement des accords (HTTP ${res.status})`
+          );
+        }
+        return res.json() as Promise<EntrepriseAccordsResponse>;
+      })
       .then((data) => {
         if (!ignore) {
           emitShowAccords(data.total);
