@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.231.4](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.231.3...v4.231.4) (2026-06-19)
+
+
+### Bug Fixes
+
+* **contribution:** retrait de la canonical sur la générique ([#7316](https://github.com/SocialGouv/code-du-travail-numerique/issues/7316)) ([76b5b82](https://github.com/SocialGouv/code-du-travail-numerique/commit/76b5b82829d61381963c80afd19c6d8855ea1419))
+* **conventions-collectives:** normalise l'affichage du code IDCC 9999 ([#7303](https://github.com/SocialGouv/code-du-travail-numerique/issues/7303)) ([a8572fb](https://github.com/SocialGouv/code-du-travail-numerique/commit/a8572fb00dd7bdbda573b6bda9c2cfb3cb4710ec))
+
+
+
+
+
 ## [4.231.3](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.231.2...v4.231.3) (2026-06-15)
 
 
