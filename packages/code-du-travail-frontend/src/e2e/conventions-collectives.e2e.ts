@@ -46,6 +46,10 @@ test.describe("Conventions collectives", () => {
         "Questions-réponses fréquentes"
       );
 
+      await expect(
+        page.locator("#frequent-questions .fr-accordion__btn").first()
+      ).toBeVisible();
+
       const frequentQuestions = await page
         .locator("#frequent-questions .fr-accordion__btn")
         .count();
@@ -70,6 +74,10 @@ test.describe("Conventions collectives", () => {
       await expect(page.locator("#agreement-articles h2")).toHaveText(
         "Articles de la convention collective"
       );
+
+      await expect(
+        page.locator("#agreement-articles .fr-accordion__title").first()
+      ).toBeVisible();
 
       const articles = await page
         .locator("#agreement-articles .fr-accordion__title")
