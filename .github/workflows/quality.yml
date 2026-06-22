@@ -19,14 +19,15 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-      - name: Set up Node
-        uses: actions/setup-node@v4
-        with:
-          node-version-file: .node-version
       - name: Install pnpm
         uses: pnpm/action-setup@v4
         with:
           run_install: false
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+          cache: pnpm
       - name: Install dependencies
         run: |
           pnpm install --frozen-lockfile
@@ -41,11 +42,6 @@ jobs:
           ELASTICSEARCH_URL: ${{ secrets.ELASTICSEARCH_URL }}
           OAUTH_CLIENT_ID: ${{ secrets.OAUTH_CLIENT_ID }}
           OAUTH_CLIENT_SECRET: ${{ secrets.OAUTH_CLIENT_SECRET }}
-      - name: Cache build
-        uses: actions/cache@v4
-        with:
-          path: ./*
-          key: ${{ github.sha }}
 
   lint:
     name: Lint
@@ -63,21 +59,19 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-      - uses: actions/cache@v4
-        name: Restore build
-        with:
-          path: ./*
-          key: ${{ github.sha }}
-      - name: Set up Node
-        uses: actions/setup-node@v4
-        with:
-          node-version-file: .node-version
       - name: Install pnpm
         uses: pnpm/action-setup@v4
         with:
           run_install: false
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+          cache: pnpm
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
+      - name: Build workspace packages
+        run: pnpm --filter @socialgouv/cdtn-utils --filter @socialgouv/modeles-social build
       - name: Lint ${{ matrix.repositories }}
         run: |
           pnpm --filter ${{ matrix.repositories }} lint --quiet
@@ -98,19 +92,15 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-      - uses: actions/cache@v4
-        name: Restore build
-        with:
-          path: ./*
-          key: ${{ github.sha }}
-      - name: Set up Node
-        uses: actions/setup-node@v4
-        with:
-          node-version-file: .node-version
       - name: Install pnpm
         uses: pnpm/action-setup@v4
         with:
           run_install: false
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+          cache: pnpm
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
       - name: Code formatter checker for ${{ matrix.repositories }}
@@ -133,21 +123,19 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-      - uses: actions/cache@v4
-        name: Restore build
-        with:
-          path: ./*
-          key: ${{ github.sha }}
-      - name: Set up Node
-        uses: actions/setup-node@v4
-        with:
-          node-version-file: .node-version
       - name: Install pnpm
         uses: pnpm/action-setup@v4
         with:
           run_install: false
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+          cache: pnpm
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
+      - name: Build workspace packages
+        run: pnpm --filter @socialgouv/cdtn-utils --filter @socialgouv/modeles-social build
       - name: Type-check ${{ matrix.repositories }}
         run: |
           pnpm --filter ${{ matrix.repositories }} type-check
@@ -194,21 +182,19 @@ jobs:
           exit 1
       - name: Checkout repository
         uses: actions/checkout@v4
-      - name: Restore build
-        uses: actions/cache@v4
-        with:
-          path: ./*
-          key: ${{ github.sha }}
-      - name: Set up Node
-        uses: actions/setup-node@v4
-        with:
-          node-version-file: .node-version
       - name: Install pnpm
         uses: pnpm/action-setup@v4
         with:
           run_install: false
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+          cache: pnpm
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
+      - name: Build workspace packages
+        run: pnpm --filter @socialgouv/cdtn-utils --filter @socialgouv/modeles-social build
       - name: Test ${{ matrix.repositories }}
         run: |
           pnpm --filter ${{ matrix.repositories }} test
