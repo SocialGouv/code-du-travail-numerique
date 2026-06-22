@@ -76,6 +76,8 @@ jobs:
         uses: pnpm/action-setup@v4
         with:
           run_install: false
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
       - name: Lint ${{ matrix.repositories }}
         run: |
           pnpm --filter ${{ matrix.repositories }} lint --quiet
@@ -109,6 +111,8 @@ jobs:
         uses: pnpm/action-setup@v4
         with:
           run_install: false
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
       - name: Code formatter checker for ${{ matrix.repositories }}
         run: |
           pnpm --filter ${{ matrix.repositories }} format:check
@@ -142,6 +146,8 @@ jobs:
         uses: pnpm/action-setup@v4
         with:
           run_install: false
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
       - name: Type-check ${{ matrix.repositories }}
         run: |
           pnpm --filter ${{ matrix.repositories }} type-check
@@ -201,6 +207,8 @@ jobs:
         uses: pnpm/action-setup@v4
         with:
           run_install: false
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
       - name: Test ${{ matrix.repositories }}
         run: |
           pnpm --filter ${{ matrix.repositories }} test
