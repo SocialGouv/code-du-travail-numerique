@@ -34,52 +34,63 @@ export const getAccordsEntreprise = async (
 
 const fetchAllAccords = async (siret: string): Promise<ApiSearchResponse> => {
   const dila = new DilaApiClient();
-  const result: ApiSearchResponse = await dila.fetch({
-    path: "search",
-    params: {
-      recherche: {
-        filtres: [
-          {
-            valeurs: [siret],
-            facette: "SIRET_RAISON_SOCIALE",
-          },
-        ],
-        sort: "DATE_DESC",
-        fromAdvancedRecherche: false,
-        secondSort: "ID",
-        champs: [
-          {
-            typeChamp: "ALL",
-            criteres: [
-              {
-                typeRecherche: "EXACTE",
-                valeur: siret,
-                operateur: "ET",
-              },
-            ],
-            operateur: "ET",
-          },
-        ],
-        pageSize: 2,
-        operateur: "ET",
-        typePagination: "DEFAUT",
-        pageNumber: 1,
+  try {
+    const result: ApiSearchResponse = await dila.fetch({
+      path: "search",
+      params: {
+        recherche: {
+          filtres: [
+            {
+              valeurs: [siret],
+              facette: "SIRET_RAISON_SOCIALE",
+            },
+          ],
+          sort: "DATE_DESC",
+          fromAdvancedRecherche: false,
+          secondSort: "ID",
+          champs: [
+            {
+              typeChamp: "ALL",
+              criteres: [
+                {
+                  typeRecherche: "EXACTE",
+                  valeur: siret,
+                  operateur: "ET",
+                },
+              ],
+              operateur: "ET",
+            },
+          ],
+          pageSize: 2,
+          operateur: "ET",
+          typePagination: "DEFAUT",
+          pageNumber: 1,
+        },
+        fond: "ACCO",
       },
-      fond: "ACCO",
-    },
-    method: "POST",
-  });
-
-  return result;
+      method: "POST",
+    });
+    return result;
+  } catch (e) {
+    console.error("Fetch all accord failed for siret: ", siret);
+    console.error(e);
+    throw e;
+  }
 };
 
 const fetchAccord = async (accordId: string): Promise<ApiAccordResponse> => {
   const dila = new DilaApiClient();
-  const result: ApiEntrepriseAccordResponse = await dila.fetch({
-    path: "consult/acco",
-    params: { id: accordId },
-    method: "POST",
-  });
+  try {
+    const result: ApiEntrepriseAccordResponse = await dila.fetch({
+      path: "consult/acco",
+      params: { id: accordId },
+      method: "POST",
+    });
 
-  return result.acco;
+    return result.acco;
+  } catch (e) {
+    console.error("Fetch accord failed for id: ", accordId);
+    console.error(e);
+    throw e;
+  }
 };
