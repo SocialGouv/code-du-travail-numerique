@@ -27,7 +27,7 @@ export function ContributionAgreementContent({
   return (
     <div className={fr.cx("fr-grid-row", "fr-grid-row--gutters", "fr-mb-6w")}>
       <div
-        className={fr.cx("fr-col-12", "fr-col-md-8", "fr-mb-6w", "fr-mb-md-0")}
+        className={fr.cx("fr-col-12", "fr-col-lg-8", "fr-mb-6w", "fr-mb-md-0")}
       >
         <ContributionContent contribution={contribution} titleLevel={2} />
         {contribution.references.length > 0 && (

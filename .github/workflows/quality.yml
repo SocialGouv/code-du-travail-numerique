@@ -44,7 +44,7 @@ jobs:
       - name: Cache build
         uses: actions/cache@v4
         with:
-          path: ./*
+          path: .
           key: ${{ github.sha }}
 
   lint:
@@ -64,7 +64,7 @@ jobs:
       - uses: actions/cache@v4
         name: Restore build
         with:
-          path: ./*
+          path: .
           key: ${{ github.sha }}
       - name: Set up Node
         uses: actions/setup-node@v4
@@ -95,7 +95,7 @@ jobs:
       - uses: actions/cache@v4
         name: Restore build
         with:
-          path: ./*
+          path: .
           key: ${{ github.sha }}
       - name: Set up Node
         uses: actions/setup-node@v4
@@ -126,7 +126,7 @@ jobs:
       - uses: actions/cache@v4
         name: Restore build
         with:
-          path: ./*
+          path: .
           key: ${{ github.sha }}
       - name: Set up Node
         uses: actions/setup-node@v4
@@ -183,7 +183,7 @@ jobs:
       - name: Restore build
         uses: actions/cache@v4
         with:
-          path: ./*
+          path: .
           key: ${{ github.sha }}
       - name: Set up Node
         uses: actions/setup-node@v4

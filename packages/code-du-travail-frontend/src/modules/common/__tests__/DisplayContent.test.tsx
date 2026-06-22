@@ -974,19 +974,32 @@ describe("DisplayContent", () => {
         </p>
       `);
     });
+
+    it("should not put the * in alert (example)", () => {
+      const { asFragment } = render(
+        <DisplayContent
+          content={`<div class="alert"><p><span data-challenger-formula="smic_monthly_custom" data-challenger-parameter="30" class="challenger">1 598,57 €</span> brut</strong> mensuel (soit <span data-challenger-formula="smic_monthly_35h" class="challenger">1\u202f865 €</span> x 30 h ÷ 35 h).</p></div>`}
+          titleLevel={3}
+          extra={{
+            smicHourly: 12.31,
+          }}
+        ></DisplayContent>
+      );
+
+      expect(asFragment().firstChild).toMatchSnapshot();
+    });
   });
 
-  it("should not put the * in alert (example)", () => {
-    const { asFragment } = render(
-      <DisplayContent
-        content={`<div class="alert"><p><span data-challenger-formula="smic_monthly_custom" data-challenger-parameter="30" class="challenger">1 598,57 €</span> brut</strong> mensuel (soit <span data-challenger-formula="smic_monthly_35h" class="challenger">1\u202f865 €</span> x 30 h ÷ 35 h).</p></div>`}
-        titleLevel={3}
-        extra={{
-          smicHourly: 12.31,
-        }}
-      ></DisplayContent>
-    );
+  describe("Bon à savoir", () => {
+    it("should add an icon", () => {
+      const { asFragment } = render(
+        <DisplayContent
+          content={`<span class="good-to-know">Bon à savoir</span>`}
+          titleLevel={3}
+        ></DisplayContent>
+      );
 
-    expect(asFragment().firstChild).toMatchSnapshot();
+      expect(asFragment().firstChild).toMatchSnapshot();
+    });
   });
 });

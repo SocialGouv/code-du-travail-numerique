@@ -36,7 +36,7 @@ export const ContributionGenericContent = forwardRef<
           ref={ref}
           className={`${fr.cx(
             "fr-col-12",
-            "fr-col-md-8",
+            "fr-col-lg-8",
             "fr-mb-md-0",
             "fr-mt-2w",
             "fr-p-0",

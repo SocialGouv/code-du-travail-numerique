@@ -60,9 +60,7 @@ const mapToAccordion = (
         data-testid="contrib-accordion"
         items={items.map((item) => ({
           ...item,
-          ...(isParent
-            ? { id: slugify(item.title) }
-            : { id: slugify(item.title) + "_" + generateUUID() }),
+          ...{ id: slugify(item.title) + "_" + generateUUID() },
         }))}
         titleAs={`h${titleLevel}`}
       />
@@ -319,6 +317,27 @@ const options = (params: Options): HTMLReactParserOptions => {
             domNode
           );
         }
+        if (
+          domNode.name === "span" &&
+          domNode.attribs.class === "good-to-know"
+        ) {
+          return (
+            <span className={`${fr.cx("fr-mb-3w")} ${textWithIcon}`}>
+              <Image
+                src="/static/assets/img/good-to-know.svg"
+                alt=""
+                width={35}
+                height={35}
+                className={iconStyles}
+              />
+              {renderChildren(
+                domNode,
+                true,
+                options({ ...params, challengerAsterisk: false })
+              )}
+            </span>
+          );
+        }
         if (domNode.name === "details") {
           const items: any[] = [];
           let id = 0;
@@ -504,6 +523,16 @@ const options = (params: Options): HTMLReactParserOptions => {
 const infographieImage = css({
   display: "block",
   marginInline: "auto",
+});
+
+const textWithIcon = css({
+  display: "flex",
+  alignItems: "center",
+  gap: "0.5rem",
+});
+
+const iconStyles = css({
+  flexShrink: 0,
 });
 
 type Props = {
