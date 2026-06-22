@@ -72,9 +72,6 @@ jobs:
         run: pnpm install --frozen-lockfile
       - name: Build workspace packages
         run: pnpm --filter @socialgouv/cdtn-utils --filter @socialgouv/modeles-social build
-      - name: Generate styled-system (Panda CSS)
-        if: matrix.repositories == '@cdt/frontend'
-        run: pnpm --filter @cdt/frontend exec panda codegen
       - name: Lint ${{ matrix.repositories }}
         run: |
           pnpm --filter ${{ matrix.repositories }} lint --quiet
@@ -139,9 +136,6 @@ jobs:
         run: pnpm install --frozen-lockfile
       - name: Build workspace packages
         run: pnpm --filter @socialgouv/cdtn-utils --filter @socialgouv/modeles-social build
-      - name: Generate styled-system (Panda CSS)
-        if: matrix.repositories == '@cdt/frontend'
-        run: pnpm --filter @cdt/frontend exec panda codegen
       - name: Type-check ${{ matrix.repositories }}
         run: |
           pnpm --filter ${{ matrix.repositories }} type-check
@@ -201,9 +195,6 @@ jobs:
         run: pnpm install --frozen-lockfile
       - name: Build workspace packages
         run: pnpm --filter @socialgouv/cdtn-utils --filter @socialgouv/modeles-social build
-      - name: Generate styled-system (Panda CSS)
-        if: matrix.repositories == '@cdt/frontend'
-        run: pnpm --filter @cdt/frontend exec panda codegen
       - name: Test ${{ matrix.repositories }}
         run: |
           pnpm --filter ${{ matrix.repositories }} test
