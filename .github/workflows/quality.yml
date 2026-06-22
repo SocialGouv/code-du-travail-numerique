@@ -44,7 +44,7 @@ jobs:
       - name: Cache build
         uses: actions/cache@v4
         with:
-          path: .
+          path: ./*
           key: ${{ github.sha }}
 
   lint:
@@ -61,10 +61,12 @@ jobs:
             "@socialgouv/cdtn-utils",
           ]
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
       - uses: actions/cache@v4
         name: Restore build
         with:
-          path: .
+          path: ./*
           key: ${{ github.sha }}
       - name: Set up Node
         uses: actions/setup-node@v4
@@ -92,10 +94,12 @@ jobs:
             "@socialgouv/cdtn-utils",
           ]
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
       - uses: actions/cache@v4
         name: Restore build
         with:
-          path: .
+          path: ./*
           key: ${{ github.sha }}
       - name: Set up Node
         uses: actions/setup-node@v4
@@ -123,10 +127,12 @@ jobs:
             "@socialgouv/cdtn-utils",
           ]
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
       - uses: actions/cache@v4
         name: Restore build
         with:
-          path: .
+          path: ./*
           key: ${{ github.sha }}
       - name: Set up Node
         uses: actions/setup-node@v4
@@ -180,10 +186,12 @@ jobs:
           curl -s "http://localhost:9200/_cat/health?v" || true
           docker logs es || true
           exit 1
+      - name: Checkout repository
+        uses: actions/checkout@v4
       - name: Restore build
         uses: actions/cache@v4
         with:
-          path: .
+          path: ./*
           key: ${{ github.sha }}
       - name: Set up Node
         uses: actions/setup-node@v4
