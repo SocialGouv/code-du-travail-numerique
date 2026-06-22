@@ -99,7 +99,7 @@ function hasDetailsParent(domNode: Element) {
 
 const theadMaxRowspan = (tr: Element) => {
   const rowspans = tr.children.map((child) => {
-    if (child.type === "tag" && child.name === "td") {
+    if (child.type === "tag" && (child.name === "td" || child.name === "th")) {
       return parseInt(child.attribs["rowspan"] ?? -1);
     } else {
       return -1;
@@ -487,6 +487,8 @@ const options = (params: Options): HTMLReactParserOptions => {
           if (params.disableLink) {
             return <>{renderChildren(domNode, true, options(params))}</>;
           }
+          const attibsWithoutClass = { ...domNode.attribs };
+          delete attibsWithoutClass.class;
           return (
             <Link href={domNode.attribs.href} {...domNode.attribs}>
               {renderChildren(domNode, true, options(params))}
