@@ -630,679 +630,27 @@ exports[`DisplayContent SMIC challenger should not put the * in alert (example) 
 
 exports[`DisplayContent SMIC challenger should replace low salary by the SMIC value 1`] = `
 <div
-  class="fr-table fr-mb-2w"
+  class="fr-mb-1w fr-hidden-md"
 >
-  <div
-    class="fr-table__wrapper"
+  <button
+    class="fr-btn fr-btn--tertiary fr-btn--sm fr-icon-fullscreen-line fr-btn--icon-left"
+    type="button"
   >
-    <div
-      class="fr-table__container"
-    >
-      <div
-        class="fr-table__content"
-      >
-        <table>
-          <caption
-            class="fr-hidden"
-          >
-            
-                  
-          </caption>
-          <thead>
-            <tr>
-              <th
-                colspan="1"
-                rowspan="1"
-                scope="col"
-              >
-                <p>
-                  <strong>
-                    Coefficient
-                  </strong>
-                </p>
-              </th>
-              <th
-                colspan="1"
-                rowspan="1"
-                scope="col"
-              >
-                <p>
-                  <strong>
-                    À l'embauche
-                  </strong>
-                </p>
-              </th>
-              <th
-                colspan="1"
-                rowspan="1"
-                scope="col"
-              >
-                <p>
-                  <strong>
-                    Après 2 ans d'ancienneté
-                  </strong>
-                </p>
-              </th>
-              <th
-                colspan="1"
-                rowspan="1"
-                scope="col"
-              >
-                <p>
-                  <strong>
-                    Après 5 ans d'ancienneté
-                  </strong>
-                </p>
-              </th>
-              <th
-                colspan="1"
-                rowspan="1"
-                scope="col"
-              >
-                <p>
-                  <strong>
-                    Après 10 ans d'ancienneté
-                  </strong>
-                </p>
-              </th>
-              <th
-                colspan="1"
-                rowspan="1"
-                scope="col"
-              >
-                <p>
-                  <strong>
-                    Après 15 ans d'ancienneté
-                  </strong>
-                </p>
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td
-                colspan="1"
-                rowspan="1"
-              >
-                
-                    
-                <p
-                  class="fr-mt-2w"
-                >
-                  
-                      
-                  <strong>
-                    110 M 
-                    <br />
-                    115 M 
-                    <br />
-                    118 M 
-                    <br />
-                    120 M 
-                  </strong>
-                  
-                    
-                </p>
-                
-                  
-              </td>
-              <td
-                colspan="1"
-                rowspan="1"
-              >
-                
-                    
-                <p
-                  class="fr-mt-2w"
-                >
-                  
-                      
-                  <span
-                    class="challenger"
-                  >
-                    12,31 €
-                  </span>
-                   brut*
-                    
-                </p>
-                
-                  
-              </td>
-              <td
-                colspan="1"
-                rowspan="1"
-              >
-                
-                    
-                <p
-                  class="fr-mt-2w"
-                >
-                  
-                      
-                  <span>
-                    12,3318 €
-                  </span>
-                   brut
-                    
-                </p>
-                
-                  
-              </td>
-              <td
-                colspan="1"
-                rowspan="1"
-              >
-                
-                    
-                <p
-                  class="fr-mt-2w"
-                >
-                  
-                      
-                  <span>
-                    12,5736 €
-                  </span>
-                   brut
-                    
-                </p>
-                
-                  
-              </td>
-              <td
-                colspan="1"
-                rowspan="1"
-              >
-                
-                    
-                <p
-                  class="fr-mt-2w"
-                >
-                  
-                      
-                  <span>
-                    12,8154 €
-                  </span>
-                   brut
-                    
-                </p>
-                
-                  
-              </td>
-              <td
-                colspan="1"
-                rowspan="1"
-              >
-                
-                    
-                <p
-                  class="fr-mt-2w"
-                >
-                  
-                      
-                  <span>
-                    13,0572 €
-                  </span>
-                   brut
-                    
-                </p>
-                
-                  
-              </td>
-            </tr>
-            <tr>
-              <td
-                colspan="1"
-                rowspan="1"
-              >
-                
-                    
-                <p
-                  class="fr-mt-2w"
-                >
-                  
-                      
-                  <strong>
-                    128 M
-                  </strong>
-                  
-                    
-                </p>
-                
-                  
-              </td>
-              <td
-                colspan="1"
-                rowspan="1"
-              >
-                
-                    
-                <p
-                  class="fr-mt-2w"
-                >
-                  
-                      
-                  <span
-                    class="challenger"
-                  >
-                    12,31 €
-                  </span>
-                   brut*
-                    
-                </p>
-                
-                  
-              </td>
-              <td
-                colspan="1"
-                rowspan="1"
-              >
-                
-                    
-                <p
-                  class="fr-mt-2w"
-                >
-                  
-                      
-                  <span>
-                    12,3624 €
-                  </span>
-                   brut
-                    
-                </p>
-                
-                  
-              </td>
-              <td
-                colspan="1"
-                rowspan="1"
-              >
-                
-                    
-                <p
-                  class="fr-mt-2w"
-                >
-                  
-                      
-                  <span>
-                    12,6048 €
-                  </span>
-                   brut
-                    
-                </p>
-                
-                  
-              </td>
-              <td
-                colspan="1"
-                rowspan="1"
-              >
-                
-                    
-                <p
-                  class="fr-mt-2w"
-                >
-                  
-                      
-                  <span>
-                    12,8472 €
-                  </span>
-                   brut
-                    
-                </p>
-                
-                  
-              </td>
-              <td
-                colspan="1"
-                rowspan="1"
-              >
-                
-                    
-                <p
-                  class="fr-mt-2w"
-                >
-                  
-                      
-                  <span>
-                    13,0896 €
-                  </span>
-                   brut
-                    
-                </p>
-                
-                  
-              </td>
-            </tr>
-            <tr>
-              <td
-                colspan="1"
-                rowspan="1"
-              >
-                
-                    
-                <p
-                  class="fr-mt-2w"
-                >
-                  
-                      
-                  <strong>
-                    138 M
-                  </strong>
-                  
-                    
-                </p>
-                
-                  
-              </td>
-              <td
-                colspan="1"
-                rowspan="1"
-              >
-                
-                    
-                <p
-                  class="fr-mt-2w"
-                >
-                  
-                      
-                  <span
-                    class="challenger"
-                  >
-                    12,31 €
-                  </span>
-                   brut*
-                    
-                </p>
-                
-                  
-              </td>
-              <td
-                colspan="1"
-                rowspan="1"
-              >
-                
-                    
-                <p
-                  class="fr-mt-2w"
-                >
-                  
-                      
-                  <span>
-                    12,3828 €
-                  </span>
-                   brut
-                    
-                </p>
-                
-                  
-              </td>
-              <td
-                colspan="1"
-                rowspan="1"
-              >
-                
-                    
-                <p
-                  class="fr-mt-2w"
-                >
-                  
-                      
-                  <span>
-                    12,6256 €
-                  </span>
-                   brut
-                    
-                </p>
-                
-                  
-              </td>
-              <td
-                colspan="1"
-                rowspan="1"
-              >
-                
-                    
-                <p
-                  class="fr-mt-2w"
-                >
-                  
-                      
-                  <span>
-                    12,8684 €
-                  </span>
-                   brut
-                    
-                </p>
-                
-                  
-              </td>
-              <td
-                colspan="1"
-                rowspan="1"
-              >
-                
-                    
-                <p
-                  class="fr-mt-2w"
-                >
-                  
-                      
-                  <span>
-                    13,1112 €
-                  </span>
-                   brut
-                    
-                </p>
-                
-                  
-              </td>
-            </tr>
-            <tr>
-              <td
-                colspan="1"
-                rowspan="1"
-              >
-                
-                    
-                <p
-                  class="fr-mt-2w"
-                >
-                  
-                      
-                  <strong>
-                    150 M
-                  </strong>
-                  
-                    
-                </p>
-                
-                  
-              </td>
-              <td
-                colspan="1"
-                rowspan="1"
-              >
-                
-                    
-                <p
-                  class="fr-mt-2w"
-                >
-                  
-                      
-                  <span>
-                    12,43 €
-                  </span>
-                   brut
-                    
-                </p>
-                
-                  
-              </td>
-              <td
-                colspan="1"
-                rowspan="1"
-              >
-                
-                    
-                <p
-                  class="fr-mt-2w"
-                >
-                  
-                      
-                  <span>
-                    12,6786 €
-                  </span>
-                   brut
-                    
-                </p>
-                
-                  
-              </td>
-              <td
-                colspan="1"
-                rowspan="1"
-              >
-                
-                    
-                <p
-                  class="fr-mt-2w"
-                >
-                  
-                      
-                  <span>
-                    12,9272 €
-                  </span>
-                   brut
-                    
-                </p>
-                
-                  
-              </td>
-              <td
-                colspan="1"
-                rowspan="1"
-              >
-                
-                    
-                <p
-                  class="fr-mt-2w"
-                >
-                  
-                      
-                  <span>
-                    13,1758 €
-                  </span>
-                   brut
-                    
-                </p>
-                
-                  
-              </td>
-              <td
-                colspan="1"
-                rowspan="1"
-              >
-                
-                    
-                <p
-                  class="fr-mt-2w"
-                >
-                  
-                      
-                  <span>
-                    13,4244 €
-                  </span>
-                   brut
-                    
-                </p>
-                
-                  
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </div>
+    Voir le tableau en plein écran
+  </button>
 </div>
 `;
 
 exports[`DisplayContent Tables should add thead to table if not present and move table into a Table element 1`] = `
 <div
-  class="fr-table fr-mb-2w"
+  class="fr-mb-1w fr-hidden-md"
 >
-  <div
-    class="fr-table__wrapper"
+  <button
+    class="fr-btn fr-btn--tertiary fr-btn--sm fr-icon-fullscreen-line fr-btn--icon-left"
+    type="button"
   >
-    <div
-      class="fr-table__container"
-    >
-      <div
-        class="fr-table__content"
-      >
-        <table>
-          <caption
-            class="fr-hidden"
-          >
-            
-              
-          </caption>
-          <thead>
-            <tr>
-              <th
-                colspan="1"
-                rowspan="1"
-                scope="col"
-              />
-              <th
-                colspan="1"
-                rowspan="1"
-                scope="col"
-              >
-                <p>
-                  Titre 1
-                </p>
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td
-                colspan="1"
-                rowspan="1"
-              >
-                <p
-                  class="fr-mt-2w"
-                >
-                  Pour les 
-                  <strong>
-                    cadres
-                  </strong>
-                  , la prolongation ...
-                </p>
-              </td>
-              <td
-                colspan="1"
-                rowspan="1"
-              >
-                <ul
-                  class="fr-pl-5v"
-                >
-                  <li>
-                    <p
-                      class="fr-mb-0"
-                    >
-                      L’employeur et le salarié donnent par écrit ou par mail.
-                    </p>
-                  </li>
-                </ul>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </div>
+    Voir le tableau en plein écran
+  </button>
 </div>
 `;
 
@@ -1375,6 +723,16 @@ exports[`DisplayContent Tables should not change if thead is already present 1`]
 
 exports[`DisplayContent Tables should render correctly a table with multiple head lines 1`] = `
 <div>
+  <div
+    class="fr-mb-1w fr-hidden-md"
+  >
+    <button
+      class="fr-btn fr-btn--tertiary fr-btn--sm fr-icon-fullscreen-line fr-btn--icon-left"
+      type="button"
+    >
+      Voir le tableau en plein écran
+    </button>
+  </div>
   <div
     class="fr-table fr-mb-2w"
   >
@@ -1495,6 +853,197 @@ exports[`DisplayContent Tables should render correctly a table with multiple hea
       </div>
     </div>
   </div>
+  <style>
+    
+        .table-fullscreen-dialog {
+          position: fixed;
+          inset: 0;
+          width: 100dvw;
+          height: 100dvh;
+          max-width: 100dvw;
+          max-height: 100dvh;
+          margin: 0;
+          padding: 0;
+          border: none;
+          background: white;
+          z-index: 10000;
+          overflow: hidden;
+        }
+        .table-fullscreen-dialog::backdrop {
+          background: rgba(0, 0, 0, 0.5);
+        }
+        .table-fullscreen-inner {
+          display: flex;
+          flex-direction: column;
+          height: 100%;
+        }
+        .table-fullscreen-header {
+          display: flex;
+          justify-content: flex-end;
+          padding: 1rem;
+          flex-shrink: 0;
+        }
+        .table-fullscreen-content {
+          flex: 1;
+          overflow: auto;
+          padding: 0 1rem 1rem;
+        }
+        @media screen and (max-width: 767px) and (orientation: portrait) {
+          .table-fullscreen-content {
+            position: fixed;
+            width: 100dvh;
+            height: calc(100dvw - 3.5rem);
+            top: calc((100dvh - 100dvw) / 2 + 1.75rem);
+            left: calc((100dvw - 100dvh) / 2);
+            transform: rotate(90deg);
+            overflow: auto;
+            padding: 0.5rem;
+          }
+        }
+      
+  </style>
+  <dialog
+    class="table-fullscreen-dialog"
+  >
+    <div
+      class="table-fullscreen-inner"
+    >
+      <div
+        class="table-fullscreen-header"
+      >
+        <button
+          class="fr-btn fr-btn--close"
+          type="button"
+        >
+          Fermer
+        </button>
+      </div>
+      <div
+        class="table-fullscreen-content"
+      >
+        <div
+          class="fr-table fr-mb-2w"
+        >
+          <div
+            class="fr-table__wrapper"
+          >
+            <div
+              class="fr-table__container"
+            >
+              <div
+                class="fr-table__content"
+              >
+                <table>
+                  <caption
+                    class="fr-hidden"
+                  >
+                    
+      
+                  </caption>
+                  <thead>
+                    <tr>
+                      <th
+                        colspan="1"
+                        rowspan="2"
+                        scope="col"
+                      >
+                        <p>
+                          <strong>
+                            Nature du contrat de mission
+                          </strong>
+                        </p>
+                      </th>
+                      <th
+                        colspan="2"
+                        rowspan="1"
+                        scope="col"
+                      >
+                        <p>
+                          <strong>
+                            Durée maximale
+                          </strong>
+                        </p>
+                      </th>
+                    </tr>
+                    <tr>
+                      <th
+                        colspan="1"
+                        rowspan="1"
+                        scope="col"
+                      >
+                        <p>
+                          <strong>
+                            Contrat de date à date
+                          </strong>
+                        </p>
+                      </th>
+                      <th
+                        colspan="1"
+                        rowspan="1"
+                        scope="col"
+                      >
+                        <p>
+                          <strong>
+                            Contrat sans terme certain
+                          </strong>
+                        </p>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td
+                        colspan="1"
+                        rowspan="1"
+                      >
+                        
+        
+                        <p
+                          class="fr-mt-2w"
+                        >
+                          Remplacement d’un salarié absent ou dont le contrat de travail est suspendu
+                        </p>
+                        
+      
+                      </td>
+                      <td
+                        colspan="1"
+                        rowspan="1"
+                      >
+                        
+        
+                        <p
+                          class="fr-mt-2w"
+                        >
+                          18 mois
+                        </p>
+                        
+      
+                      </td>
+                      <td
+                        colspan="1"
+                        rowspan="1"
+                      >
+                        
+        
+                        <p
+                          class="fr-mt-2w"
+                        >
+                          Fin de l’absence
+                        </p>
+                        
+      
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
 </div>
 `;
 
@@ -1539,6 +1088,16 @@ exports[`DisplayContent Tables should replace td by th in thead 1`] = `
 
 exports[`DisplayContent Tables should skip colgroup 1`] = `
 <div>
+  <div
+    class="fr-mb-1w fr-hidden-md"
+  >
+    <button
+      class="fr-btn fr-btn--tertiary fr-btn--sm fr-icon-fullscreen-line fr-btn--icon-left"
+      type="button"
+    >
+      Voir le tableau en plein écran
+    </button>
+  </div>
   <div
     class="fr-table fr-mb-2w"
   >
@@ -1714,6 +1273,252 @@ exports[`DisplayContent Tables should skip colgroup 1`] = `
       </div>
     </div>
   </div>
+  <style>
+    
+        .table-fullscreen-dialog {
+          position: fixed;
+          inset: 0;
+          width: 100dvw;
+          height: 100dvh;
+          max-width: 100dvw;
+          max-height: 100dvh;
+          margin: 0;
+          padding: 0;
+          border: none;
+          background: white;
+          z-index: 10000;
+          overflow: hidden;
+        }
+        .table-fullscreen-dialog::backdrop {
+          background: rgba(0, 0, 0, 0.5);
+        }
+        .table-fullscreen-inner {
+          display: flex;
+          flex-direction: column;
+          height: 100%;
+        }
+        .table-fullscreen-header {
+          display: flex;
+          justify-content: flex-end;
+          padding: 1rem;
+          flex-shrink: 0;
+        }
+        .table-fullscreen-content {
+          flex: 1;
+          overflow: auto;
+          padding: 0 1rem 1rem;
+        }
+        @media screen and (max-width: 767px) and (orientation: portrait) {
+          .table-fullscreen-content {
+            position: fixed;
+            width: 100dvh;
+            height: calc(100dvw - 3.5rem);
+            top: calc((100dvh - 100dvw) / 2 + 1.75rem);
+            left: calc((100dvw - 100dvh) / 2);
+            transform: rotate(90deg);
+            overflow: auto;
+            padding: 0.5rem;
+          }
+        }
+      
+  </style>
+  <dialog
+    class="table-fullscreen-dialog"
+  >
+    <div
+      class="table-fullscreen-inner"
+    >
+      <div
+        class="table-fullscreen-header"
+      >
+        <button
+          class="fr-btn fr-btn--close"
+          type="button"
+        >
+          Fermer
+        </button>
+      </div>
+      <div
+        class="table-fullscreen-content"
+      >
+        <div
+          class="fr-table fr-mb-2w"
+        >
+          <div
+            class="fr-table__wrapper"
+          >
+            <div
+              class="fr-table__container"
+            >
+              <div
+                class="fr-table__content"
+              >
+                <table>
+                  <caption
+                    class="fr-hidden"
+                  >
+                    
+      
+                  </caption>
+                  <thead>
+                    <tr>
+                      <th
+                        colspan="1"
+                        rowspan="1"
+                        scope="col"
+                      >
+                        <p>
+                          Ancienneté 
+                        </p>
+                      </th>
+                      <th
+                        colspan="1"
+                        rowspan="1"
+                        scope="col"
+                      >
+                        <p>
+                          Jours de congés supplémentaires 
+                        </p>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td
+                        colspan="1"
+                        rowspan="1"
+                      >
+                        
+        
+                        <p
+                          class="fr-mt-2w"
+                        >
+                          à partir de 5 ans 
+                        </p>
+                        
+      
+                      </td>
+                      <td
+                        colspan="1"
+                        rowspan="1"
+                      >
+                        
+        
+                        <p
+                          class="fr-mt-2w"
+                        >
+                          1 
+                          <webcomponent-tooltip
+                            content="Jour%20effectivement%20travaill%C3%A9%20dans%20une%20entreprise%20ou%20une%20administration.%20On%20en%20compte%205%20par%20semaine."
+                          >
+                            jour ouvré
+                          </webcomponent-tooltip>
+                          
+        
+                        </p>
+                        
+      
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        colspan="1"
+                        rowspan="1"
+                      >
+                        
+        
+                        <p
+                          class="fr-mt-2w"
+                        >
+                          à partir de 10 ans 
+                        </p>
+                        
+      
+                      </td>
+                      <td
+                        colspan="1"
+                        rowspan="1"
+                      >
+                        
+        
+                        <p
+                          class="fr-mt-2w"
+                        >
+                          2 jours ouvrés
+                        </p>
+                        
+      
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        colspan="1"
+                        rowspan="1"
+                      >
+                        
+        
+                        <p
+                          class="fr-mt-2w"
+                        >
+                          à partir de 15 ans 
+                        </p>
+                        
+      
+                      </td>
+                      <td
+                        colspan="1"
+                        rowspan="1"
+                      >
+                        
+        
+                        <p
+                          class="fr-mt-2w"
+                        >
+                          3 jours ouvrés
+                        </p>
+                        
+      
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        colspan="1"
+                        rowspan="1"
+                      >
+                        
+        
+                        <p
+                          class="fr-mt-2w"
+                        >
+                          à partir de 20 ans 
+                        </p>
+                        
+      
+                      </td>
+                      <td
+                        colspan="1"
+                        rowspan="1"
+                      >
+                        
+        
+                        <p
+                          class="fr-mt-2w"
+                        >
+                          4 jours ouvrés
+                        </p>
+                        
+      
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
 </div>
 `;
 

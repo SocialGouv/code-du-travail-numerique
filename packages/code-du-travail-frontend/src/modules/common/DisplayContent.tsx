@@ -7,6 +7,7 @@ import parse, {
 import React, { ElementType, JSX } from "react";
 import { v4 as generateUUID } from "uuid";
 import { AccordionWithAnchor } from "./AccordionWithAnchor";
+import { TableFullscreenWrapper } from "./TableFullscreenWrapper";
 
 import { fr } from "@codegouvfr/react-dsfr";
 import Link from "./Link";
@@ -153,56 +154,58 @@ const mapTbody = (tbody: Element, params: Options) => {
   }
 
   return (
-    <div className={fr.cx("fr-table", "fr-mb-2w")}>
-      <div className={fr.cx("fr-table__wrapper")}>
-        <div className={fr.cx("fr-table__container")}>
-          <div className={fr.cx("fr-table__content")}>
-            <table>
-              {theadChildren.length > 0 && (
-                <>
-                  {theadChildren[0].children[0] && (
-                    <caption className={fr.cx("fr-hidden")}>
-                      {getData(theadChildren[0].childNodes[0] as any)}
-                    </caption>
-                  )}
-                  <thead>
-                    {theadChildren.map((child, rowIndex) => {
-                      return (
-                        <tr key={`tr-${rowIndex}`}>
-                          {domToReact(
-                            child.children.map((c) => {
-                              if (c instanceof Element && c.attribs) {
-                                return {
-                                  ...c,
-                                  name: "th",
-                                  attribs: {
-                                    ...c.attribs,
-                                    scope: "col",
-                                  },
-                                };
-                              } else {
-                                return {
-                                  ...c,
-                                  name: "th",
-                                };
+    <TableFullscreenWrapper>
+      <div className={fr.cx("fr-table", "fr-mb-2w")}>
+        <div className={fr.cx("fr-table__wrapper")}>
+          <div className={fr.cx("fr-table__container")}>
+            <div className={fr.cx("fr-table__content")}>
+              <table>
+                {theadChildren.length > 0 && (
+                  <>
+                    {theadChildren[0].children[0] && (
+                      <caption className={fr.cx("fr-hidden")}>
+                        {getData(theadChildren[0].childNodes[0] as any)}
+                      </caption>
+                    )}
+                    <thead>
+                      {theadChildren.map((child, rowIndex) => {
+                        return (
+                          <tr key={`tr-${rowIndex}`}>
+                            {domToReact(
+                              child.children.map((c) => {
+                                if (c instanceof Element && c.attribs) {
+                                  return {
+                                    ...c,
+                                    name: "th",
+                                    attribs: {
+                                      ...c.attribs,
+                                      scope: "col",
+                                    },
+                                  };
+                                } else {
+                                  return {
+                                    ...c,
+                                    name: "th",
+                                  };
+                                }
+                              }) as DOMNode[],
+                              {
+                                trim: true,
                               }
-                            }) as DOMNode[],
-                            {
-                              trim: true,
-                            }
-                          )}
-                        </tr>
-                      );
-                    })}
-                  </thead>
-                </>
-              )}
-              <tbody>{renderChildren(tbody, false, options(params))}</tbody>
-            </table>
+                            )}
+                          </tr>
+                        );
+                      })}
+                    </thead>
+                  </>
+                )}
+                <tbody>{renderChildren(tbody, false, options(params))}</tbody>
+              </table>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </TableFullscreenWrapper>
   );
 };
 
