@@ -7,6 +7,7 @@ import parse, {
 import React, { ElementType, JSX } from "react";
 import { v4 as generateUUID } from "uuid";
 import { AccordionWithAnchor } from "./AccordionWithAnchor";
+import { TableFullscreenWrapper } from "./TableFullscreenWrapper";
 
 import { fr } from "@codegouvfr/react-dsfr";
 import Link from "./Link";
@@ -60,9 +61,7 @@ const mapToAccordion = (
         data-testid="contrib-accordion"
         items={items.map((item) => ({
           ...item,
-          ...(isParent
-            ? { id: slugify(item.title) }
-            : { id: slugify(item.title) + "_" + generateUUID() }),
+          ...{ id: slugify(item.title) + "_" + generateUUID() },
         }))}
         titleAs={`h${titleLevel}`}
       />
@@ -155,56 +154,58 @@ const mapTbody = (tbody: Element, params: Options) => {
   }
 
   return (
-    <div className={fr.cx("fr-table", "fr-mb-2w")}>
-      <div className={fr.cx("fr-table__wrapper")}>
-        <div className={fr.cx("fr-table__container")}>
-          <div className={fr.cx("fr-table__content")}>
-            <table>
-              {theadChildren.length > 0 && (
-                <>
-                  {theadChildren[0].children[0] && (
-                    <caption className={fr.cx("fr-hidden")}>
-                      {getData(theadChildren[0].childNodes[0] as any)}
-                    </caption>
-                  )}
-                  <thead>
-                    {theadChildren.map((child, rowIndex) => {
-                      return (
-                        <tr key={`tr-${rowIndex}`}>
-                          {domToReact(
-                            child.children.map((c) => {
-                              if (c instanceof Element && c.attribs) {
-                                return {
-                                  ...c,
-                                  name: "th",
-                                  attribs: {
-                                    ...c.attribs,
-                                    scope: "col",
-                                  },
-                                };
-                              } else {
-                                return {
-                                  ...c,
-                                  name: "th",
-                                };
+    <TableFullscreenWrapper>
+      <div className={fr.cx("fr-table", "fr-mb-2w")}>
+        <div className={fr.cx("fr-table__wrapper")}>
+          <div className={fr.cx("fr-table__container")}>
+            <div className={fr.cx("fr-table__content")}>
+              <table>
+                {theadChildren.length > 0 && (
+                  <>
+                    {theadChildren[0].children[0] && (
+                      <caption className={fr.cx("fr-hidden")}>
+                        {getData(theadChildren[0].childNodes[0] as any)}
+                      </caption>
+                    )}
+                    <thead>
+                      {theadChildren.map((child, rowIndex) => {
+                        return (
+                          <tr key={`tr-${rowIndex}`}>
+                            {domToReact(
+                              child.children.map((c) => {
+                                if (c instanceof Element && c.attribs) {
+                                  return {
+                                    ...c,
+                                    name: "th",
+                                    attribs: {
+                                      ...c.attribs,
+                                      scope: "col",
+                                    },
+                                  };
+                                } else {
+                                  return {
+                                    ...c,
+                                    name: "th",
+                                  };
+                                }
+                              }) as DOMNode[],
+                              {
+                                trim: true,
                               }
-                            }) as DOMNode[],
-                            {
-                              trim: true,
-                            }
-                          )}
-                        </tr>
-                      );
-                    })}
-                  </thead>
-                </>
-              )}
-              <tbody>{renderChildren(tbody, false, options(params))}</tbody>
-            </table>
+                            )}
+                          </tr>
+                        );
+                      })}
+                    </thead>
+                  </>
+                )}
+                <tbody>{renderChildren(tbody, false, options(params))}</tbody>
+              </table>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </TableFullscreenWrapper>
   );
 };
 
@@ -317,6 +318,27 @@ const options = (params: Options): HTMLReactParserOptions => {
           return getHeadingElement(
             { ...params, titleLevel: headingTitleLevel },
             domNode
+          );
+        }
+        if (
+          domNode.name === "span" &&
+          domNode.attribs.class === "good-to-know"
+        ) {
+          return (
+            <span className={`${fr.cx("fr-mb-3w")} ${textWithIcon}`}>
+              <Image
+                src="/static/assets/img/good-to-know.svg"
+                alt=""
+                width={35}
+                height={35}
+                className={iconStyles}
+              />
+              {renderChildren(
+                domNode,
+                true,
+                options({ ...params, challengerAsterisk: false })
+              )}
+            </span>
           );
         }
         if (domNode.name === "details") {
@@ -504,6 +526,16 @@ const options = (params: Options): HTMLReactParserOptions => {
 const infographieImage = css({
   display: "block",
   marginInline: "auto",
+});
+
+const textWithIcon = css({
+  display: "flex",
+  alignItems: "center",
+  gap: "0.5rem",
+});
+
+const iconStyles = css({
+  flexShrink: 0,
 });
 
 type Props = {
