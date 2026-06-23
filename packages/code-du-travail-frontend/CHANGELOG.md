@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.232.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.231.5...v4.232.0) (2026-06-23)
+
+
+### Bug Fixes
+
+* **contribution:** erreur dans l'affichage des entêtes des tableaux ([#7325](https://github.com/SocialGouv/code-du-travail-numerique/issues/7325)) ([01930f1](https://github.com/SocialGouv/code-du-travail-numerique/commit/01930f1629cf3e61d1d184f54367ac699e58200d))
+
+
+### Features
+
+* **accord:** ajout de logs sur les erreurs d'API ([74847e9](https://github.com/SocialGouv/code-du-travail-numerique/commit/74847e9b470af59b1124c588f7affa70bbf8c98e))
+* **contribution:** ajout du type bon à savoir ([#7326](https://github.com/SocialGouv/code-du-travail-numerique/issues/7326)) ([a6ce182](https://github.com/SocialGouv/code-du-travail-numerique/commit/a6ce18246b3ffd480ce2a8a7b1053f6ce7390e68))
+
+
+
+
+
 ## [4.231.5](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.231.4...v4.231.5) (2026-06-19)
 
 
