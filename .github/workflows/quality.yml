@@ -46,7 +46,6 @@ jobs:
   lint:
     name: Lint
     runs-on: ubuntu-latest
-    needs: [build]
     strategy:
       fail-fast: false
       matrix:
@@ -79,7 +78,6 @@ jobs:
   format:
     name: Code formatter checker
     runs-on: ubuntu-latest
-    needs: [build]
     strategy:
       fail-fast: false
       matrix:
@@ -110,7 +108,6 @@ jobs:
   type-check:
     name: Check typescript types
     runs-on: ubuntu-latest
-    needs: [build]
     strategy:
       fail-fast: false
       matrix:
@@ -143,7 +140,6 @@ jobs:
   test:
     name: Test
     runs-on: ubuntu-latest
-    needs: [build]
     strategy:
       fail-fast: false
       matrix:
