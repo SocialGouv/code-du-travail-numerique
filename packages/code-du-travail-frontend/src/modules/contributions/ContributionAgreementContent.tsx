@@ -10,6 +10,7 @@ import { RelatedItems } from "../common/RelatedItems";
 import { RelatedItem } from "../documents";
 import { Share } from "../common/Share";
 import { Contribution } from "./type";
+import { css } from "@styled-system/css";
 
 type Props = {
   contribution: Contribution;
@@ -53,13 +54,6 @@ export function ContributionAgreementContent({
             />
           </Accordion>
         )}
-        <p className={fr.cx("fr-my-2w")}>
-          Consultez les questions-réponses fréquentes pour la convention
-          collective{" "}
-          <Link href={`/convention-collective/${contribution.ccnSlug}`}>
-            {contribution.ccnShortTitle}
-          </Link>
-        </p>
         {contribution.messageBlock && (
           <div className={fr.cx("fr-alert", "fr-alert--info", "fr-my-6w")}>
             <>
@@ -70,9 +64,28 @@ export function ContributionAgreementContent({
         )}
       </div>
       <div className={fr.cx("fr-col-12", "fr-col-md-4", "fr-p-md-3w")}>
+        <p className={`${fr.cx("fr-mb-6w")} ${p}`}>
+          <span
+            className={`${fr.cx("ri-arrow-right-line")} ${css({
+              color: "var(--artwork-minor-blue-cumulus)",
+            })}`}
+          />
+          <span>
+            Consultez les questions-réponses fréquentes pour la convention
+            collective{" "}
+            <Link href={`/convention-collective/${contribution.ccnSlug}`}>
+              {contribution.ccnShortTitle}
+            </Link>
+          </span>
+        </p>
         {relatedItems && <RelatedItems relatedItems={relatedItems} />}
         <Share title={title} metaDescription={metas.description} />
       </div>
     </div>
   );
 }
+
+const p = css({
+  display: "flex",
+  columnGap: ".5rem",
+});
