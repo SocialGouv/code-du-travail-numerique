@@ -10,6 +10,7 @@ import { ListWithArrow } from "../common/ListWithArrow";
 import { RelatedItems } from "../common/RelatedItems";
 import { RelatedItem } from "../documents";
 import { Contribution } from "./type";
+import { ContributionRating } from "./rating";
 import { focusableTitle } from "../common/focusableTitle";
 
 type Props = {
@@ -30,7 +31,14 @@ export const ContributionGenericContent = forwardRef<
 
   return (
     <>
-      <div className={fr.cx("fr-grid-row", "fr-grid-row--gutters", "fr-px-3v")}>
+      <div
+        className={fr.cx(
+          "fr-grid-row",
+          "fr-grid-row--gutters",
+          "fr-px-3v",
+          "fr-mb-6w"
+        )}
+      >
         <div
           tabIndex={-1}
           ref={ref}
@@ -84,6 +92,10 @@ export const ContributionGenericContent = forwardRef<
             !displayGeneric && "fr-hidden"
           )}
         >
+          <ContributionRating
+            contributionSlug={contribution.slug}
+            contributionTitle={contribution.title}
+          />
           <RelatedItems relatedItems={relatedItems} />
           <Share title={title} metaDescription={metas.description} />
         </div>
