@@ -1,6 +1,8 @@
 // Parcourt les fichiers source et détecte chaque callsite de tracking :
 //   - sendEvent({ category, action, name? })
 //   - push([cmd, ...]) / _paq.push([...])  events & config Matomo natifs
+//   - fetch(endpoint, { body: JSON.stringify({ category, action, ... }) })
+//     relais first-party (proxy serveur → Matomo, anti-adblock)
 // Produit les events (après expansion des enums) et les listes annexes.
 
 import { Node, SyntaxKind } from "ts-morph";
@@ -14,7 +16,11 @@ import type {
 } from "./events.schema";
 import type { Resolver } from "./value-resolver";
 import { worstKind } from "./text-utils";
-import { findContainingFunctionName, getEnumRefs } from "./ast-utils";
+import {
+  findContainingFunctionName,
+  getEnumRefs,
+  relayPayloadObject,
+} from "./ast-utils";
 import { EVENT_COMMANDS, isMatomoPushCallee } from "./matomo-commands";
 
 export type ScanResult = {
@@ -110,7 +116,41 @@ export function scanSourceFiles(
         return;
       }
 
-      // ---- Cas 2 : push([cmd, ...]) / _paq.push([cmd, ...]) ----
+      // ---- Cas 2 : relais first-party (fetch → proxy serveur → Matomo) ----
+      // Certains events n'utilisent PAS sendEvent : pour contourner les
+      // adblockers (qui bloquent `matomo.php` côté client), ils POSTent l'event
+      // vers une API first-party qui le relaie côté serveur. Signature reconnue :
+      // `fetch(endpoint, { …, body: JSON.stringify({ category, action, … }) })`
+      // dont le corps porte À LA FOIS `category` et `action` — le couple qui
+      // identifie un event et distingue un relais d'un POST d'API quelconque.
+      if (exprText === "fetch") {
+        if (args.length < 2) return;
+        const options = args[1];
+        if (!Node.isObjectLiteralExpression(options)) return;
+        const payload = relayPayloadObject(options);
+        if (!payload) return;
+        const cats = resolvePropertyValues(payload, "category");
+        const acts = resolvePropertyValues(payload, "action");
+        if (!cats || !acts) return;
+        const endpoint = resolveValues(args[0])[0];
+        const method =
+          endpoint && !endpoint.value.includes("<")
+            ? `relay:${endpoint.value}`
+            : "relay:fetch";
+        pushEvents(
+          cats,
+          acts,
+          resolveNamePattern(payload),
+          findContainingFunctionName(node),
+          relFile,
+          line,
+          getEnumRefs(payload),
+          method
+        );
+        return;
+      }
+
+      // ---- Cas 3 : push([cmd, ...]) / _paq.push([cmd, ...]) ----
       if (!isMatomoPushCallee(exprText)) return;
       if (args.length === 0) return;
       const firstArg = args[0];

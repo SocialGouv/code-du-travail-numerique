@@ -1,8 +1,8 @@
 {
   "scan_root": "packages/code-du-travail-frontend/src",
-  "callsites": 69,
-  "total_events": 107,
-  "unique_events": 98,
+  "callsites": 70,
+  "total_events": 108,
+  "unique_events": 99,
   "unresolved_callsites": 0,
   "events": [
     {
@@ -906,6 +906,17 @@
         "MatomoSearchCategory.NEXT_RESULT_PAGE"
       ],
       "tracking_method": "sendEvent"
+    },
+    {
+      "category": "notation_contribution",
+      "action": "validation_note",
+      "name_pattern": "<contributionTitle>",
+      "resolution": "literal",
+      "emit_function": "trackContributionRating",
+      "file": "packages/code-du-travail-frontend/src/modules/contributions/rating/tracking.ts",
+      "line": 34,
+      "enum_refs": [],
+      "tracking_method": "relay:/api/contribution-rating"
     },
     {
       "category": "outil",

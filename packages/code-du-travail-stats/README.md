@@ -30,9 +30,15 @@ simple égalité de chaîne.
   `trackContentImpression`, `trackContentInteraction`.
 - **Commandes de configuration** Matomo (push non-event : `setReferrerUrl`, `optUserOut`,
   `HeatmapSessionRecording::*`…) → listées à part dans `matomo_config_calls`.
+- **Relais first-party** `fetch(endpoint, { body: JSON.stringify({ category, action, … }) })` :
+  events qui contournent les adblockers en POSTant vers une API interne qui relaie vers Matomo
+  côté serveur (ex. `notation_contribution`/`validation_note` via `/api/contribution-rating`),
+  au lieu de `sendEvent`. Détectés quand le corps JSON porte **à la fois** `category` et
+  `action` ; le champ `tracking_method` vaut alors `relay:<endpoint>`.
 
 Quand `category` ou `action` est un **enum** (ou un paramètre typé enum), une ligne est produite
-**par valeur possible** (champ `resolution: "literal" | "enum-param"`).
+**par valeur possible** (champ `resolution: "literal" | "enum-param"`). Les constantes string de
+module (`const RATING_MATOMO_CATEGORY = "…"`) sont résolues comme des littéraux (cf. `const-index.ts`).
 
 ### Périmètre de scan
 

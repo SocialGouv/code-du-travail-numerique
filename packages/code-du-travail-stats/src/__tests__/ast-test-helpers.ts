@@ -6,6 +6,7 @@ import { Project, SyntaxKind } from "ts-morph";
 import type { Node, ObjectLiteralExpression, SourceFile } from "ts-morph";
 import { buildEnumIndex } from "../enum-index";
 import { buildCallIndex } from "../call-index";
+import { buildConstIndex } from "../const-index";
 import { createResolver } from "../value-resolver";
 import type { Resolver } from "../value-resolver";
 
@@ -26,7 +27,11 @@ export function makeResolver(code: string): {
 } {
   const { project, sf } = makeProject(code);
   const files = project.getSourceFiles();
-  const resolver = createResolver(buildEnumIndex(files), buildCallIndex(files));
+  const resolver = createResolver(
+    buildEnumIndex(files),
+    buildCallIndex(files),
+    buildConstIndex(files)
+  );
   return { sf, resolver };
 }
 
