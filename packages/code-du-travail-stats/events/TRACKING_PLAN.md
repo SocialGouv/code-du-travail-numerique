@@ -23,20 +23,20 @@ Les events sont regroupés par module, puis par catégorie Matomo.
 - [enterprise](#enterprise) — 11 events
 - [home](#home) — 8 events
 - [layout](#layout) — 9 events
-- [modeles-de-courriers](#modeles-de-courriers) — 1 events
+- [modeles-de-courriers](#modeles-de-courriers) — 1 event
 - [outils](#outils) — 45 events
 - [recherche](#recherche) — 11 events
-- [themes](#themes) — 1 events
+- [themes](#themes) — 1 event
 
 ## common
 
-### 📂 clic_share · 1 events
+### 📂 clic_share · 1 event
 
 | Action | Name |  | Code |
 | --- | --- | --- | --- |
 | `<currentPageUrl>` | `<socialNetwork>` | 🔀 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/common/tracking.ts#L29 "tracking.ts:29") |
 
-### 📂 selectRelated · 1 events
+### 📂 selectRelated · 1 event
 
 | Action | Name |  | Code |
 | --- | --- | --- | --- |
@@ -92,19 +92,19 @@ Les events sont regroupés par module, puis par catégorie Matomo.
 | `cc_select_unprocessed` | `<idcc>` | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/convention-collective/AgreementSelectionModal/tracking.ts#L23 "tracking.ts:23") |
 | `open_modal` | — | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/convention-collective/AgreementSelectionModal/tracking.ts#L16 "tracking.ts:16") |
 
-### 📂 outil · 1 events
+### 📂 outil · 1 event
 
 | Action | Name |  | Code |
 | --- | --- | --- | --- |
 | `view_step_Trouver sa convention collective` | `start` | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/convention-collective/tracking.ts#L27 "tracking.ts:27") |
 
-### 📂 pagecc_searchcc · 1 events
+### 📂 pagecc_searchcc · 1 event
 
 | Action | Name |  | Code |
 | --- | --- | --- | --- |
 | `<shortTitle>` | `<q>` | 🔀 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/convention-collective/LegiFranceSearch.tsx#L24 "LegiFranceSearch.tsx:24") |
 
-### 📂 view_step_cc_search_p1 · 1 events
+### 📂 view_step_cc_search_p1 · 1 event
 
 | Action | Name |  | Code |
 | --- | --- | --- | --- |
@@ -135,19 +135,19 @@ Les events sont regroupés par module, puis par catégorie Matomo.
 | `<action>` | `<idcc>` | 🔀 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/enterprise/EnterpriseAgreementSearch/tracking.ts#L36 "tracking.ts:36") |
 | `Trouver sa convention collective` | `<idcc>` | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/enterprise/EnterpriseAgreementSearch/tracking.ts#L36 "tracking.ts:36") |
 
-### 📂 enterprise_search · 1 events
+### 📂 enterprise_search · 1 event
 
 | Action | Name |  | Code |
 | --- | --- | --- | --- |
 | `<action>` | `<JSON.stringify({ query, apiGeoResult })>` | 🔀 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/enterprise/EnterpriseAgreementSearch/tracking.ts#L14 "tracking.ts:14") |
 
-### 📂 enterprise_select · 1 events
+### 📂 enterprise_select · 1 event
 
 | Action | Name |  | Code |
 | --- | --- | --- | --- |
 | `<action>` | `<JSON.stringify(enterprise)>` | 🔀 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/enterprise/EnterpriseAgreementSearch/tracking.ts#L28 "tracking.ts:28") |
 
-### 📂 view_step_cc_search_p2 · 1 events
+### 📂 view_step_cc_search_p2 · 1 event
 
 | Action | Name |  | Code |
 | --- | --- | --- | --- |
@@ -193,7 +193,7 @@ Les events sont regroupés par module, puis par catégorie Matomo.
 | `Les informations me semblent fausses.` | `<baseUrl>` | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/layout/feedback/tracking.ts#L59 "tracking.ts:59") |
 | `Les informations ne sont pas claires.` | `<baseUrl>` | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/layout/feedback/tracking.ts#L59 "tracking.ts:59") |
 
-### 📂 feedback_suggestion · 1 events
+### 📂 feedback_suggestion · 1 event
 
 | Action | Name |  | Code |
 | --- | --- | --- | --- |
@@ -201,7 +201,7 @@ Les events sont regroupés par module, puis par catégorie Matomo.
 
 ## modeles-de-courriers
 
-### 📂 page_modeles_de_documents · 1 events
+### 📂 page_modeles_de_documents · 1 event
 
 | Action | Name |  | Code |
 | --- | --- | --- | --- |
@@ -269,13 +269,13 @@ Les events sont regroupés par module, puis par catégorie Matomo.
 | `Comment_s_est_passée_la_simulation` | `<feedback>` | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/outils/indemnite-depart/feedback/tracking.tsx#L38 "tracking.tsx:38") |
 | `Facilité_utilisation_simulateur` | `<feedback>` | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/outils/indemnite-depart/feedback/tracking.tsx#L38 "tracking.tsx:38") |
 
-### 📂 feedback_suggestion · 1 events
+### 📂 feedback_suggestion · 1 event
 
 | Action | Name |  | Code |
 | --- | --- | --- | --- |
 | `<text>` | `<url.replace(/\?.*$/, "")>` | 🔀 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/outils/indemnite-depart/feedback/tracking.tsx#L50 "tracking.tsx:50") |
 
-### 📂 feedback_suggestion_rupture_co · 1 events
+### 📂 feedback_suggestion_rupture_co · 1 event
 
 | Action | Name |  | Code |
 | --- | --- | --- | --- |
@@ -301,13 +301,13 @@ Les events sont regroupés par module, puis par catégorie Matomo.
 
 ## recherche
 
-### 📂 _matomo_trackSiteSearch · 1 events
+### 📂 _matomo_trackSiteSearch · 1 event
 
 | Action | Name |  | Code |
 | --- | --- | --- | --- |
 | `<query>` | — | 🔀 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/recherche/tracking.ts#L193 "tracking.ts:193") |
 
-### 📂 nextResultPage · 1 events
+### 📂 nextResultPage · 1 event
 
 | Action | Name |  | Code |
 | --- | --- | --- | --- |
@@ -323,13 +323,13 @@ Les events sont regroupés par module, puis par catégorie Matomo.
 | `presearch` | `<name>` | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/recherche/tracking.ts#L143 "tracking.ts:143") |
 | `selectPresearchResult` | `<name>` | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/recherche/tracking.ts#L181 "tracking.ts:181") |
 
-### 📂 selectedSuggestion · 1 events
+### 📂 selectedSuggestion · 1 event
 
 | Action | Name |  | Code |
 | --- | --- | --- | --- |
 | `<query>` | `<suggestion>` | 🔀 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/recherche/tracking.ts#L112 "tracking.ts:112") |
 
-### 📂 selectResult · 1 events
+### 📂 selectResult · 1 event
 
 | Action | Name |  | Code |
 | --- | --- | --- | --- |
@@ -344,7 +344,7 @@ Les events sont regroupés par module, puis par catégorie Matomo.
 
 ## themes
 
-### 📂 selectResult · 1 events
+### 📂 selectResult · 1 event
 
 | Action | Name |  | Code |
 | --- | --- | --- | --- |

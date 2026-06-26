@@ -35,10 +35,16 @@ jobs:
       - name: Cloner le wiki
         # Préfère un PAT (secrets.WIKI_TOKEN) si la policy de l'org bloque le push
         # wiki via GITHUB_TOKEN ; sinon retombe sur le token de l'action.
+        # Si le wiki n'a jamais été initialisé, le clone échoue : on amorce alors
+        # un dépôt vierge avec la remote tokenisée pour que le push le crée.
         env:
           WIKI_TOKEN: ${{ secrets.WIKI_TOKEN || github.token }}
         run: |
-          git clone "https://x-access-token:${WIKI_TOKEN}@github.com/${GITHUB_REPOSITORY}.wiki.git" wiki
+          git clone "https://x-access-token:${WIKI_TOKEN}@github.com/${GITHUB_REPOSITORY}.wiki.git" wiki || {
+            echo "::warning::Wiki non clonable (probablement non initialisé) — tentative de création."
+            mkdir wiki && cd wiki && git init -b master
+            git remote add origin "https://x-access-token:${WIKI_TOKEN}@github.com/${GITHUB_REPOSITORY}.wiki.git"
+          }
 
       - name: Copier le plan de tracking
         run: cp "${SOURCE_DOC}" "wiki/${WIKI_PAGE}"
@@ -54,4 +60,5 @@ jobs:
             exit 0
           fi
           git commit -m "docs(tracking): synchronisation du plan de tracking (${GITHUB_SHA})"
-          git push
+          # -u origin HEAD : gère aussi le tout premier push (wiki fraîchement initialisé).
+          git push -u origin HEAD

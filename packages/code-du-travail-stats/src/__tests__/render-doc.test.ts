@@ -70,10 +70,31 @@ describe("renderTrackingPlan", () => {
     );
     expect(md).toContain("## enterprise");
     expect(md).not.toContain("<details>");
-    expect(md).toContain("### 📂 accord_enterprise_search · 1 events");
+    expect(md).toContain("### 📂 accord_enterprise_search · 1 event");
     expect(md).toContain(
       '| `click_accord` | `<url>` | 📌 | [↗](https://github.com/org/repo/blob/dev/packages/code-du-travail-frontend/src/modules/enterprise/EnterpriseAgreementSearch/accords/tracking.ts#L13 "tracking.ts:13") |'
     );
+  });
+
+  it("accorde le pluriel des comptages (1 event / N events)", () => {
+    const md = renderTrackingPlan(
+      extraction({
+        events: [
+          // enterprise : 2 events dans la même catégorie → pluriel.
+          ev({ category: "cat", action: "a", file: `${FRONT}/enterprise/t.ts` }),
+          ev({ category: "cat", action: "b", file: `${FRONT}/enterprise/t.ts` }),
+          // recherche : 1 seul event → singulier.
+          ev({ category: "cat", action: "c", file: `${FRONT}/recherche/t.ts` }),
+        ],
+      }),
+      OPTS
+    );
+    // Sommaire.
+    expect(md).toContain("- [enterprise](#enterprise) — 2 events");
+    expect(md).toContain("- [recherche](#recherche) — 1 event");
+    // Titres de catégorie.
+    expect(md).toContain("### 📂 cat · 2 events");
+    expect(md).toContain("### 📂 cat · 1 event");
   });
 
   it("encadre les valeurs <…> en code-span (sinon GitHub les masque)", () => {

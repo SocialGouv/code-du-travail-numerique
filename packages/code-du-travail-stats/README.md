@@ -44,6 +44,10 @@ Ce fichier est aussi **synchronisé automatiquement vers le wiki GitHub** (page
 
 > Le push wiki utilise `GITHUB_TOKEN`. Si la policy de l'org le bloque, ajouter un secret
 > `WIKI_TOKEN` (PAT avec accès au dépôt) : le workflow l'utilisera en priorité.
+>
+> Prérequis : le **wiki doit être activé** dans les réglages du dépôt. Le workflow tente de
+> créer la page au premier push ; si la policy de l'org refuse l'init par push, créer **une
+> page** manuellement une fois (via l'UI GitHub) pour amorcer le dépôt wiki.
 
 ## Ce qui est capturé
 

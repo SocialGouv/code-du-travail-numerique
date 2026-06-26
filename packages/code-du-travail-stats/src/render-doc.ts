@@ -84,6 +84,10 @@ function groupByModuleThenCategory(
 const sortedKeys = <V>(m: Map<string, V>): string[] =>
   [...m.keys()].sort((a, b) => a.localeCompare(b));
 
+// Compte lisible : « 1 event », « 3 events ».
+const plural = (n: number, word: string): string =>
+  `${n} ${word}${n > 1 ? "s" : ""}`;
+
 function eventTable(events: ExtractedEvent[], opts: RenderOptions): string {
   const header = "| Action | Name |  | Code |\n| --- | --- | --- | --- |";
   const rows = [...events]
@@ -137,7 +141,7 @@ export function renderTrackingPlan(
       (n, list) => n + list.length,
       0
     );
-    return `- [${mod}](#${anchor(mod)}) — ${count} events`;
+    return `- [${mod}](#${anchor(mod)}) — ${plural(count, "event")}`;
   });
   parts.push(["## Sommaire", "", ...toc].join("\n"));
 
@@ -150,7 +154,7 @@ export function renderTrackingPlan(
     for (const cat of sortedKeys(byCat)) {
       const list = byCat.get(cat)!;
       parts.push(
-        `### 📂 ${cat} · ${list.length} events\n\n${eventTable(list, opts)}`
+        `### 📂 ${cat} · ${plural(list.length, "event")}\n\n${eventTable(list, opts)}`
       );
     }
   }
