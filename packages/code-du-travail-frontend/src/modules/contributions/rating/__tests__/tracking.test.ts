@@ -1,12 +1,6 @@
-import {
-  trackContributionRating,
-  RATING_TRACKING_ENDPOINT,
-} from "../tracking";
+import { trackContributionRating, RATING_TRACKING_ENDPOINT } from "../tracking";
 import { getStoredConsent } from "../../../utils/consent";
-import {
-  RATING_MATOMO_CATEGORY,
-  RATING_MATOMO_ACTION,
-} from "../constants";
+import { RATING_MATOMO_CATEGORY, RATING_MATOMO_ACTION } from "../constants";
 
 jest.mock("../../../utils/consent", () => ({
   getStoredConsent: jest.fn(),

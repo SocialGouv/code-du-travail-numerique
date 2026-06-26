@@ -72,8 +72,14 @@ export class ContributionRatingController {
         });
       }
 
-      const name = asString((body as Record<string, unknown>).name, MAX_NAME_LENGTH);
-      const url = asString((body as Record<string, unknown>).url, MAX_URL_LENGTH);
+      const name = asString(
+        (body as Record<string, unknown>).name,
+        MAX_NAME_LENGTH
+      );
+      const url = asString(
+        (body as Record<string, unknown>).url,
+        MAX_URL_LENGTH
+      );
 
       await sendRatingEvent({
         category: RATING_MATOMO_CATEGORY,

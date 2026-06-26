@@ -41,8 +41,7 @@ export const trackContributionRating = async ({
         category: RATING_MATOMO_CATEGORY,
         action: RATING_MATOMO_ACTION,
         name: contributionTitle,
-        url:
-          typeof window !== "undefined" ? window.location.href : undefined,
+        url: typeof window !== "undefined" ? window.location.href : undefined,
         slug: contributionSlug,
         value,
         label: RATING_LABELS[value],

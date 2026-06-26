@@ -27,7 +27,8 @@ export const RATING_MAX_LABEL = RATING_LABELS[RATING_MAX];
 // Bloc de titre (cf. maquette Figma) : ligne d'accroche + question.
 export const RATING_WIDGET_INTRO = "Donnez votre avis !";
 export const RATING_WIDGET_TITLE = "Est-ce que le contenu de cette page est :";
-export const RATING_WIDGET_HINT = "Faites bouger le curseur pour noter la page.";
+export const RATING_WIDGET_HINT =
+  "Faites bouger le curseur pour noter la page.";
 export const RATING_CONFIRMATION_TEXT = "Merci !";
 
 // Nom accessible stable du curseur (ne change pas avec la valeur : la valeur

@@ -24,9 +24,7 @@ describe("ContributionRating", () => {
     render(<ContributionRating {...props} />);
 
     expect(screen.getByText("Neutre")).toBeInTheDocument();
-    expect(
-      screen.getByRole("button", { name: "Valider" })
-    ).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "Valider" })).toBeInTheDocument();
     expect(screen.queryByText("Merci !")).not.toBeInTheDocument();
   });
 
