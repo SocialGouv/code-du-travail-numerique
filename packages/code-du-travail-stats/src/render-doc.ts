@@ -27,17 +27,26 @@ function anchor(text: string): string {
     .replace(/\s+/g, "-");
 }
 
-// Échappe une valeur destinée à une cellule de tableau markdown : une seule
-// ligne, et le pipe protégé (y compris dans un code-span GitHub).
+// Protège les pipes (séparateurs de colonne, y compris dans un code-span) sans
+// recourir à un replace dont le motif de remplacement contient un backslash :
+// split/join évite le faux positif « échappement incomplet » de CodeQL et, à la
+// différence du backslash-escaping, ne double pas les backslashes de l'entrée
+// (indispensable dans un code-span où ils sont littéraux).
+const escapePipes = (s: string): string => s.split("|").join("\\|");
+
+// Échappe une valeur destinée à une cellule de tableau markdown en texte brut :
+// une seule ligne, backslash PUIS pipe protégés (l'ordre compte — un backslash
+// de l'entrée ne doit pas neutraliser l'échappement du pipe).
 function tableCell(value: string): string {
-  return compact(value).replace(/\|/g, "\\|");
+  return escapePipes(compact(value).replace(/\\/g, "\\\\"));
 }
 
 // Cellule en code-span (monospace). Indispensable pour les valeurs `<…>` :
 // sans backticks, GitHub les prend pour des balises HTML et les affiche VIDES.
-// Le backtick interne est neutralisé (il casserait le code-span).
+// Dans un code-span le backslash est littéral (on ne le double pas) ; seuls le
+// backtick (qui casserait le span) et le pipe sont neutralisés.
 function codeCell(value: string): string {
-  return "`" + tableCell(value).replace(/`/g, "'") + "`";
+  return "`" + escapePipes(compact(value).replace(/`/g, "'")) + "`";
 }
 
 // Cellule "Name" : code-span, ou tiret si absent.

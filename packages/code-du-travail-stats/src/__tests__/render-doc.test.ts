@@ -81,8 +81,16 @@ describe("renderTrackingPlan", () => {
       extraction({
         events: [
           // enterprise : 2 events dans la même catégorie → pluriel.
-          ev({ category: "cat", action: "a", file: `${FRONT}/enterprise/t.ts` }),
-          ev({ category: "cat", action: "b", file: `${FRONT}/enterprise/t.ts` }),
+          ev({
+            category: "cat",
+            action: "a",
+            file: `${FRONT}/enterprise/t.ts`,
+          }),
+          ev({
+            category: "cat",
+            action: "b",
+            file: `${FRONT}/enterprise/t.ts`,
+          }),
           // recherche : 1 seul event → singulier.
           ev({ category: "cat", action: "c", file: `${FRONT}/recherche/t.ts` }),
         ],
