@@ -9,9 +9,12 @@ test.describe("Conventions collectives", () => {
       );
 
       await page
-        .locator("#fr-header-main-navigation a", {
-          hasText: "Conventions collectives",
+        .getByRole("button", {
+          name: "Conventions collectives & Accords d'entreprise",
         })
+        .click();
+      await page
+        .getByRole("link", { name: "Voir toutes les conventions collectives" })
         .click();
 
       await expect(page).toHaveURL("/convention-collective");
@@ -43,6 +46,10 @@ test.describe("Conventions collectives", () => {
         "Questions-réponses fréquentes"
       );
 
+      await expect(
+        page.locator("#frequent-questions .fr-accordion__btn").first()
+      ).toBeVisible();
+
       const frequentQuestions = await page
         .locator("#frequent-questions .fr-accordion__btn")
         .count();
@@ -67,6 +74,10 @@ test.describe("Conventions collectives", () => {
       await expect(page.locator("#agreement-articles h2")).toHaveText(
         "Articles de la convention collective"
       );
+
+      await expect(
+        page.locator("#agreement-articles .fr-accordion__title").first()
+      ).toBeVisible();
 
       const articles = await page
         .locator("#agreement-articles .fr-accordion__title")

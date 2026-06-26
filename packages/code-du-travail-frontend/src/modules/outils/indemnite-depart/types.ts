@@ -18,7 +18,11 @@ export type StoreSlicePublicodes<T extends object, E extends object = T> = (
   options: { simulator: PublicodesSimulator; type: IndemniteDepartType }
 ) => T;
 
-export type AgreementRoute = "not-selected" | "agreement" | "enterprise";
+export type AgreementRoute =
+  | "not-selected"
+  | "agreement"
+  | "enterprise"
+  | "no-agreement";
 
 export const STORAGE_KEY_AGREEMENT = "convention";
 

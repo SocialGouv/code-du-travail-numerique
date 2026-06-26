@@ -17,6 +17,7 @@ export enum MatomoSearchAgreementCategory {
   PARCOURS_3 = "click_p3",
   ENTERPRISE_SEARCH = "enterprise_search",
   AGREEMENT_SEARCH_TYPE_OF_USERS = "cc_search_type_of_users",
+  ACCORD_ENTERPRISE_SEARCH = "accord_enterprise_search",
 }
 
 export enum MatomoSimulatorEvent {

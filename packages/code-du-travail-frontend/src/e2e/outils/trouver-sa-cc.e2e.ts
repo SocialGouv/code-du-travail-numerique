@@ -13,17 +13,17 @@ test.describe("Outil - Trouver sa convention collective", () => {
     await expectCanonicalUrlEqual(page, "/outils/convention-collective");
     await expectTitleAndMetaDescriptionEqual(
       page,
-      "Simulateur - Trouver sa convention collective - Code du travail numérique",
-      "Recherchez une convention collective par Entreprise, SIRET, Nom ou numéro IDCC"
+      "Simulateur - Trouver sa convention collective et ses accords d'entreprise - Code du travail numérique",
+      "Trouvez votre convention collective et les accords d’entreprise en saisissant le nom de votre entreprise, SIRET ou numéro IDCC."
     );
 
     await expect(page.getByRole("heading", { level: 1 })).toHaveText(
-      "Trouver sa convention collective"
+      "Trouver sa convention collective et ses accords d'entreprise"
     );
     await page.getByRole("heading", { level: 1 }).click();
 
     await page
-      .getByText("Je connais ma convention collective je la saisis")
+      .getByText("Je cherche uniquement une convention collective")
       .click();
 
     await page.waitForURL("**/convention-collective/convention");
@@ -54,22 +54,42 @@ test.describe("Outil - Trouver sa convention collective", () => {
     await expectIndexable(page);
     await expectTitleAndMetaDescriptionEqual(
       page,
-      "Simulateur - Trouver sa convention collective - Code du travail numérique",
-      "Recherchez une convention collective par Entreprise, SIRET, Nom ou numéro IDCC"
+      "Simulateur - Trouver sa convention collective et ses accords d'entreprise - Code du travail numérique",
+      "Trouvez votre convention collective et les accords d’entreprise en saisissant le nom de votre entreprise, SIRET ou numéro IDCC."
     );
 
     await expect(page.getByRole("heading", { level: 1 }).first()).toHaveText(
-      "Trouver sa convention collective"
+      "Trouver sa convention collective et ses accords d'entreprise"
     );
     await page.getByRole("heading", { level: 1 }).click();
 
-    await page
-      .getByText(
-        "Je cherche mon entreprise pour trouver ma convention collective"
-      )
-      .click();
+    await page.getByText("Je cherche mon entreprise").click();
     await expectUrlEqual(page, "/outils/convention-collective");
     await expectCanonicalUrlEqual(page, "/outils/convention-collective");
+
+    await page
+      .getByLabel("Nom de votre entreprise ou numéro Siren/Siret")
+      .fill("CARREFOUR BANQUE");
+    await page.getByTestId("locationSearchAutocomplete").clear();
+    await page.locator('button[type="submit"]').last().click();
+    await page.getByText("CARREFOUR BANQUE").first().click();
+    await expect(
+      page.getByText("2 conventions collectives trouvées")
+    ).toBeVisible();
+
+    const banqueLink = page.getByRole("link", { name: "Banque" }).first();
+    await expect(banqueLink).toHaveAttribute(
+      "href",
+      "/convention-collective/2120-banque"
+    );
+
+    await expect(page.getByText("accords d'entreprise trouvés")).toBeVisible();
+
+    // Go back and search CARREFOUR BANQUE
+    await page.getByText("Précédent").click();
+    await page
+      .getByLabel("Nom de votre entreprise ou numéro Siren/Siret")
+      .clear();
 
     // Search by SIRET
     await page
@@ -89,28 +109,7 @@ test.describe("Outil - Trouver sa convention collective", () => {
     await expectCanonicalUrlEqual(page, "/outils/convention-collective");
     await page.getByText("BOUILLON PIGALLE").click();
     await expect(
-      page.getByText("1 convention collective trouvée :")
+      page.getByText("1 convention collective trouvée")
     ).toBeVisible();
-
-    // Go back and search CARREFOUR BANQUE
-    await page.getByText("Précédent").click();
-    await page
-      .getByLabel("Nom de votre entreprise ou numéro Siren/Siret")
-      .clear();
-    await page
-      .getByLabel("Nom de votre entreprise ou numéro Siren/Siret")
-      .fill("CARREFOUR BANQUE");
-    await page.getByTestId("locationSearchAutocomplete").clear();
-    await page.locator('button[type="submit"]').last().click();
-    await page.getByText("CARREFOUR BANQUE").first().click();
-    await expect(
-      page.getByText("2 conventions collectives trouvées :")
-    ).toBeVisible();
-
-    const banqueLink = page.getByRole("link", { name: "Banque" }).first();
-    await expect(banqueLink).toHaveAttribute(
-      "href",
-      "/convention-collective/2120-banque"
-    );
   });
 });

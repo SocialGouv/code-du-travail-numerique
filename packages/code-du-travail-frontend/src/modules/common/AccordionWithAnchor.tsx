@@ -5,6 +5,7 @@ import React, { useCallback, useEffect, useRef, useState } from "react";
 import { slugify } from "@socialgouv/cdtn-utils";
 import Accordion from "@codegouvfr/react-dsfr/Accordion";
 import { fr } from "@codegouvfr/react-dsfr";
+import { v4 as generateUUID } from "uuid";
 
 export type Props = {
   className?: string;

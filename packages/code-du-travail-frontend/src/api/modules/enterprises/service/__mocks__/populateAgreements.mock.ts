@@ -30,11 +30,13 @@ export const populateAgreementsEnterpriseResponse: EnterpriseApiResponse = {
         address: "HOTEL DU DEPARTEMENT QUAI JEAN MOULIN 76100 ROUEN",
         siret: "22760540900019",
       },
+      matchingEtablissementCount: 5,
       highlightLabel: "DEPARTEMENT DE LA SEINE MARITIME",
       label: "DEPARTEMENT DE LA SEINE MARITIME",
       matching: 169,
       simpleLabel: "DEPARTEMENT DE LA SEINE MARITIME",
       siren: "227605409",
+      siret: "22760540900019",
     },
   ],
 };

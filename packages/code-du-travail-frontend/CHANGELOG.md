@@ -3,6 +3,91 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.232.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.231.5...v4.232.0) (2026-06-23)
+
+
+### Bug Fixes
+
+* **contribution:** erreur dans l'affichage des entêtes des tableaux ([#7325](https://github.com/SocialGouv/code-du-travail-numerique/issues/7325)) ([01930f1](https://github.com/SocialGouv/code-du-travail-numerique/commit/01930f1629cf3e61d1d184f54367ac699e58200d))
+
+
+### Features
+
+* **accord:** ajout de logs sur les erreurs d'API ([74847e9](https://github.com/SocialGouv/code-du-travail-numerique/commit/74847e9b470af59b1124c588f7affa70bbf8c98e))
+* **contribution:** ajout du type bon à savoir ([#7326](https://github.com/SocialGouv/code-du-travail-numerique/issues/7326)) ([a6ce182](https://github.com/SocialGouv/code-du-travail-numerique/commit/a6ce18246b3ffd480ce2a8a7b1053f6ce7390e68))
+
+
+
+
+
+## [4.231.5](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.231.4...v4.231.5) (2026-06-19)
+
+
+### Bug Fixes
+
+* **e2e:** adapte les tests glossaire/header-search et fiabilise conventions-collectives ([#7319](https://github.com/SocialGouv/code-du-travail-numerique/issues/7319)) ([cb3bf71](https://github.com/SocialGouv/code-du-travail-numerique/commit/cb3bf71c5fae8b50bdd5450e22694c2612f6871a))
+* **enterprise:** découple l'affichage des accords de la recherche d'entreprise ([#7324](https://github.com/SocialGouv/code-du-travail-numerique/issues/7324)) ([813e2ea](https://github.com/SocialGouv/code-du-travail-numerique/commit/813e2ea5adee83bfcb20ea06afcf854fd15e4e75))
+* **redirects:** pointe la redirection canicule vers la page /information ([#7322](https://github.com/SocialGouv/code-du-travail-numerique/issues/7322)) ([f43da70](https://github.com/SocialGouv/code-du-travail-numerique/commit/f43da70265e960dae8f8ffeb9e92c23e97a4113e))
+* **redirects:** redirige l'ancienne fiche canicule désactivée vers la nouvelle page ([#7318](https://github.com/SocialGouv/code-du-travail-numerique/issues/7318)) ([8bba64a](https://github.com/SocialGouv/code-du-travail-numerique/commit/8bba64aa341fbd9c742692bafae52ece6b83a615))
+
+
+
+
+
+## [4.231.4](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.231.3...v4.231.4) (2026-06-19)
+
+
+### Bug Fixes
+
+* **contribution:** retrait de la canonical sur la générique ([#7316](https://github.com/SocialGouv/code-du-travail-numerique/issues/7316)) ([76b5b82](https://github.com/SocialGouv/code-du-travail-numerique/commit/76b5b82829d61381963c80afd19c6d8855ea1419))
+* **conventions-collectives:** normalise l'affichage du code IDCC 9999 ([#7303](https://github.com/SocialGouv/code-du-travail-numerique/issues/7303)) ([a8572fb](https://github.com/SocialGouv/code-du-travail-numerique/commit/a8572fb00dd7bdbda573b6bda9c2cfb3cb4710ec))
+
+
+
+
+
+## [4.231.3](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.231.2...v4.231.3) (2026-06-15)
+
+
+### Bug Fixes
+
+* ordonner les accords par date de signature ([#7313](https://github.com/SocialGouv/code-du-travail-numerique/issues/7313)) ([e93e032](https://github.com/SocialGouv/code-du-travail-numerique/commit/e93e032c80adc8266185bd937c72b76557af77e9))
+
+
+
+
+
+## [4.231.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.231.1...v4.231.2) (2026-06-15)
+
+**Note:** Version bump only for package @cdt/frontend
+
+
+
+
+
+## [4.231.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.231.0...v4.231.1) (2026-06-10)
+
+
+### Bug Fixes
+
+* **accord:** corrections/améliorations mineurs sur la POC accords d'entreprise ([#7306](https://github.com/SocialGouv/code-du-travail-numerique/issues/7306)) ([9da21cb](https://github.com/SocialGouv/code-du-travail-numerique/commit/9da21cb05a600599ab5ba702096e675fa862a4f0))
+* **contribution:** bloquer "Afficher les informations" sans CC sélectionnée ([#7232](https://github.com/SocialGouv/code-du-travail-numerique/issues/7232)) ([2ee520b](https://github.com/SocialGouv/code-du-travail-numerique/commit/2ee520b361aea4e68f321fa5ebf4bffa06f9fb1c))
+
+
+
+
+
+# [4.231.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.230.2...v4.231.0) (2026-06-10)
+
+
+### Features
+
+* **outils:** ajout des accords d'entreprise dans l'outil Trouver sa CC ([#7260](https://github.com/SocialGouv/code-du-travail-numerique/issues/7260)) ([f42d740](https://github.com/SocialGouv/code-du-travail-numerique/commit/f42d740fe7dfc99ceb608095fb02df82c113ea8b))
+
+
+
+
+
 ## [4.230.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.230.1...v4.230.2) (2026-06-03)
 
 

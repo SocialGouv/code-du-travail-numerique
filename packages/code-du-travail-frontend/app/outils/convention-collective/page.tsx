@@ -5,7 +5,6 @@ import { notFound } from "next/navigation";
 import { generateDefaultMetadata } from "../../../src/modules/common/metas";
 import { ElasticTool } from "@socialgouv/cdtn-types";
 import { AgreementSearchIntro } from "../../../src/modules/convention-collective";
-import { agreementRelatedItems } from "../../../src/modules/convention-collective/agreementRelatedItems";
 import { SITE_URL } from "../../../src/config";
 
 export async function generateMetadata() {
@@ -23,10 +22,7 @@ async function FindAgreementPage() {
   const tool = await getTool();
   return (
     <DsfrLayout>
-      <FindAgreementLayout
-        relatedItems={agreementRelatedItems}
-        description={tool.description}
-      >
+      <FindAgreementLayout description={tool.description}>
         <AgreementSearchIntro />
       </FindAgreementLayout>
     </DsfrLayout>

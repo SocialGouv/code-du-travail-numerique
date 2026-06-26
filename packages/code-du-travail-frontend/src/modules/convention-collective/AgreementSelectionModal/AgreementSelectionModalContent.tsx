@@ -3,6 +3,7 @@
 import Button from "@codegouvfr/react-dsfr/Button";
 import { fr } from "@codegouvfr/react-dsfr";
 import { css } from "@styled-system/css";
+import { focusableTitle } from "src/modules/common/focusableTitle";
 import { useEffect, useRef, useState } from "react";
 import type { Agreement } from "src/modules/outils/indemnite-depart/types";
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
@@ -99,7 +100,7 @@ export const AgreementSelectionModalContent = ({ onClose, isOpen }: Props) => {
 
         <div className={selectedContainer}>
           <p
-            className={fr.cx("fr-mb-2w", "fr-text--bold", "fr-text--lg")}
+            className={`${fr.cx("fr-mb-2w", "fr-text--bold", "fr-text--lg")} ${focusableTitle}`}
             id="agreement-selection-label"
             ref={selectedLabelRef}
             tabIndex={-1}

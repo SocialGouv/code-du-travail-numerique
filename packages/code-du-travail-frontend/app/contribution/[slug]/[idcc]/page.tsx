@@ -15,7 +15,6 @@ export async function generateMetadata(props) {
     title: contribution.metas.title,
     description: contribution.metas.description,
     path: `/contribution/${params.slug}/${params.idcc}`,
-    overrideCanonical: `/contribution/${params.slug}`,
   });
 }
 

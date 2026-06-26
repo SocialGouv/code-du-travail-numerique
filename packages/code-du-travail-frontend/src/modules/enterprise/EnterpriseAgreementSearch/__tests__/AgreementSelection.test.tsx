@@ -18,6 +18,10 @@ jest.mock("next/navigation", () => ({
   useSearchParams: jest.fn(),
 }));
 
+jest.mock("../accords", () => ({
+  AccordsEntreprise: () => null,
+}));
+
 const defaultEnterprise = {
   activitePrincipale:
     "Location-bail de propriété intellectuelle et de produits similaires, à l’exception des œuvres soumises à copyright",
@@ -27,11 +31,13 @@ const defaultEnterprise = {
   simpleLabel: "CARREFOUR PROXIMITE FRANCE (SHOPI-8 A HUIT)",
   matching: 1294,
   siren: "345130488",
+  siret: "34513048800013",
   address: "ZI ROUTE DE PARIS 14120 MONDEVILLE",
   firstMatchingEtablissement: {
     siret: "34513048800017",
     address: "ZI ROUTE DE PARIS 14120 MONDEVILLE",
   },
+  matchingEtablissementCount: 5,
   conventions: [
     {
       id: "2216",
@@ -184,5 +190,43 @@ describe("Trouver sa CC - recherche par nom d'entreprise CC", () => {
     expect(
       ui.enterpriseAgreementSearch.buttonPrevious.query()
     ).toBeInTheDocument();
+  });
+
+  it("Cas A : seul le code 9999 est retourné => bandeau « pas de CC renseignée », pas de bandeau partiel", async () => {
+    render(
+      <EnterpriseAgreementSelectionLink
+        enterprise={{
+          ...defaultEnterprise,
+          conventions: [],
+          hasEstablishmentWithoutConvention: true,
+        }}
+        level={2}
+      />
+    );
+
+    expect(ui.noConventionBanner.title.query()).toBeInTheDocument();
+    expect(ui.noConventionBanner.description.query()).toBeInTheDocument();
+    expect(ui.partialAgreementCoverageAlert.query()).not.toBeInTheDocument();
+    expect(
+      ui.enterpriseAgreementSelection.agreement.IDCC2216.link.query()
+    ).not.toBeInTheDocument();
+  });
+
+  it("Cas B : une CC officielle + un code 9999 => CC officielle affichée + bandeau partiel", async () => {
+    render(
+      <EnterpriseAgreementSelectionLink
+        enterprise={{
+          ...defaultEnterprise,
+          hasEstablishmentWithoutConvention: true,
+        }}
+        level={2}
+      />
+    );
+
+    expect(
+      ui.enterpriseAgreementSelection.agreement.IDCC2216.link.query()
+    ).toBeInTheDocument();
+    expect(ui.partialAgreementCoverageAlert.query()).toBeInTheDocument();
+    expect(ui.noConventionBanner.title.query()).not.toBeInTheDocument();
   });
 });

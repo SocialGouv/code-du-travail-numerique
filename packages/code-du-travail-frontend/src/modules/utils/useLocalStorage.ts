@@ -20,10 +20,24 @@ export function useLocalStorageForAgreementOnPageLoad(): [
   Agreement | undefined,
   (a?: Agreement) => void,
 ] {
-  const [value, setValue] = useState(null);
+  const [value, setValue] = useState<Agreement | null>(null);
 
   useEffect(() => {
     updateValue(getAgreementFromLocalStorage());
+  }, []);
+
+  // Synchro temps réel avec le header : on écoute les changements de la CC
+  // (suppression/modification depuis le header ou un autre onglet) et on met à
+  // jour l'état local via le setter brut, sans réécrire en stockage pour éviter
+  // toute boucle de dispatch.
+  useEffect(() => {
+    const sync = () => setValue(getAgreementFromLocalStorage() ?? null);
+    window.addEventListener(AGREEMENT_STORAGE_EVENT, sync);
+    window.addEventListener("storage", sync);
+    return () => {
+      window.removeEventListener(AGREEMENT_STORAGE_EVENT, sync);
+      window.removeEventListener("storage", sync);
+    };
   }, []);
 
   const updateValue = useCallback(

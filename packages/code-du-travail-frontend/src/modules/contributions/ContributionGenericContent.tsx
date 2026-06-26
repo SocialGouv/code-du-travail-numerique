@@ -10,6 +10,7 @@ import { ListWithArrow } from "../common/ListWithArrow";
 import { RelatedItems } from "../common/RelatedItems";
 import { RelatedItem } from "../documents";
 import { Contribution } from "./type";
+import { focusableTitle } from "../common/focusableTitle";
 
 type Props = {
   contribution: Contribution;
@@ -33,14 +34,14 @@ export const ContributionGenericContent = forwardRef<
         <div
           tabIndex={-1}
           ref={ref}
-          className={fr.cx(
+          className={`${fr.cx(
             "fr-col-12",
-            "fr-col-md-8",
+            "fr-col-lg-8",
             "fr-mb-md-0",
             "fr-mt-2w",
             "fr-p-0",
             !displayGeneric && "fr-hidden"
-          )}
+          )} ${focusableTitle}`}
           id="cdt"
         >
           {alertText}
