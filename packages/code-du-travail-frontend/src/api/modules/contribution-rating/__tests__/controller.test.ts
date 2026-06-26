@@ -35,7 +35,10 @@ const mockSendRatingEvent = sendRatingEvent as jest.MockedFunction<
 
 const makeRequest = (body: unknown, contentLength?: string): Request =>
   ({
-    headers: { get: (k: string) => (k === "content-length" ? contentLength ?? null : null) },
+    headers: {
+      get: (k: string) =>
+        k === "content-length" ? (contentLength ?? null) : null,
+    },
     json: async () => {
       if (typeof body === "string") throw new Error("invalid json");
       return body;
