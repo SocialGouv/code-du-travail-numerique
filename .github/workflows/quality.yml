@@ -54,6 +54,7 @@ jobs:
             "@cdt/frontend",
             "@socialgouv/modeles-social",
             "@socialgouv/cdtn-utils",
+            "@socialgouv/cdtn-stats",
           ]
     steps:
       - name: Checkout repository
@@ -86,6 +87,7 @@ jobs:
             "@cdt/frontend",
             "@socialgouv/modeles-social",
             "@socialgouv/cdtn-utils",
+            "@socialgouv/cdtn-stats",
           ]
     steps:
       - name: Checkout repository
@@ -116,6 +118,7 @@ jobs:
             "@cdt/frontend",
             "@socialgouv/modeles-social",
             "@socialgouv/cdtn-utils",
+            "@socialgouv/cdtn-stats",
           ]
     steps:
       - name: Checkout repository
