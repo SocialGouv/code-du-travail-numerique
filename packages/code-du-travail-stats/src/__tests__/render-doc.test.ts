@@ -52,7 +52,7 @@ describe("renderTrackingPlan", () => {
     expect(md).toContain("**2** modules");
   });
 
-  it("groupe par module puis par catégorie avec une ligne de tableau par event", () => {
+  it("groupe par module puis par catégorie (tout affiché) avec une ligne par event", () => {
     const md = renderTrackingPlan(
       extraction({
         events: [
@@ -69,13 +69,22 @@ describe("renderTrackingPlan", () => {
       OPTS
     );
     expect(md).toContain("## enterprise");
-    expect(md).toContain("### accord_enterprise_search");
+    expect(md).not.toContain("<details>");
+    expect(md).toContain("### 📂 accord_enterprise_search · 1 events");
     expect(md).toContain(
-      "| click_accord | `<url>` | literal | [tracking.ts:13](https://github.com/org/repo/blob/dev/packages/code-du-travail-frontend/src/modules/enterprise/EnterpriseAgreementSearch/accords/tracking.ts#L13) |"
+      '| `click_accord` | `<url>` | 📌 | [↗](https://github.com/org/repo/blob/dev/packages/code-du-travail-frontend/src/modules/enterprise/EnterpriseAgreementSearch/accords/tracking.ts#L13 "tracking.ts:13") |'
     );
   });
 
-  it("affiche — quand le name est absent", () => {
+  it("encadre les valeurs <…> en code-span (sinon GitHub les masque)", () => {
+    const md = renderTrackingPlan(
+      extraction({ events: [ev({ action: "<query>", name_pattern: null })] }),
+      OPTS
+    );
+    expect(md).toContain("| `<query>` |");
+  });
+
+  it("marque 🔀 les valeurs variables et 📌 les fixes, et — quand le name est absent", () => {
     const md = renderTrackingPlan(
       extraction({
         events: [
@@ -84,7 +93,7 @@ describe("renderTrackingPlan", () => {
       }),
       OPTS
     );
-    expect(md).toContain("| noname | — | dynamic |");
+    expect(md).toContain("| `noname` | — | 🔀 |");
   });
 
   it("échappe les pipes dans la colonne name", () => {
@@ -92,7 +101,7 @@ describe("renderTrackingPlan", () => {
       extraction({ events: [ev({ action: "piped", name_pattern: "a|b" })] }),
       OPTS
     );
-    expect(md).toContain("| piped | `a\\|b` |");
+    expect(md).toContain("| `piped` | `a\\|b` |");
   });
 
   it("liste les modules dans le sommaire avec une ancre", () => {

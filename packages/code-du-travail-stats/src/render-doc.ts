@@ -3,7 +3,11 @@
 // → le markdown peut être drift-checké par simple égalité de chaîne, comme le
 // JSON. Les events sont regroupés par module/feature puis par catégorie Matomo.
 
-import type { EventsExtraction, ExtractedEvent } from "./events.schema";
+import type {
+  EventResolution,
+  EventsExtraction,
+  ExtractedEvent,
+} from "./events.schema";
 import { compact } from "./text-utils";
 import { moduleOf } from "./doc-modules";
 
@@ -29,17 +33,29 @@ function tableCell(value: string): string {
   return compact(value).replace(/\|/g, "\\|");
 }
 
-// Cellule "Name" : code-span, ou tiret si absent. Le backtick est neutralisé
-// (il casserait le code-span) et le pipe échappé.
-function nameCell(name: string | null): string {
-  if (name === null) return "—";
-  return "`" + tableCell(name).replace(/`/g, "'") + "`";
+// Cellule en code-span (monospace). Indispensable pour les valeurs `<…>` :
+// sans backticks, GitHub les prend pour des balises HTML et les affiche VIDES.
+// Le backtick interne est neutralisé (il casserait le code-span).
+function codeCell(value: string): string {
+  return "`" + tableCell(value).replace(/`/g, "'") + "`";
 }
 
-// Lien markdown vers la ligne de code émettrice (texte: fichier:ligne).
+// Cellule "Name" : code-span, ou tiret si absent.
+function nameCell(name: string | null): string {
+  return name === null ? "—" : codeCell(name);
+}
+
+// Lien markdown compact (↗) vers la ligne de code émettrice. Le `fichier:ligne`
+// est mis en title → visible au survol, sans alourdir le tableau.
 function sourceLink(file: string, line: number, opts: RenderOptions): string {
   const base = file.split("/").pop() ?? file;
-  return `[${base}:${line}](${opts.repoUrl}/blob/${opts.ref}/${file}#L${line})`;
+  return `[↗](${opts.repoUrl}/blob/${opts.ref}/${file}#L${line} "${base}:${line}")`;
+}
+
+// Repère métier de la valeur de l'event : variable (calculée à l'exécution) vs
+// fixe (littéral ou énuméré).
+function valueMark(resolution: EventResolution): string {
+  return resolution === "dynamic" ? "🔀" : "📌";
 }
 
 const byActionNameLine = (a: ExtractedEvent, b: ExtractedEvent) =>
@@ -69,12 +85,12 @@ const sortedKeys = <V>(m: Map<string, V>): string[] =>
   [...m.keys()].sort((a, b) => a.localeCompare(b));
 
 function eventTable(events: ExtractedEvent[], opts: RenderOptions): string {
-  const header = "| Action | Name | Type | Source |\n| --- | --- | --- | --- |";
+  const header = "| Action | Name |  | Code |\n| --- | --- | --- | --- |";
   const rows = [...events]
     .sort(byActionNameLine)
     .map(
       (e) =>
-        `| ${tableCell(e.action)} | ${nameCell(e.name_pattern)} | ${e.resolution} | ${sourceLink(e.file, e.line, opts)} |`
+        `| ${codeCell(e.action)} | ${nameCell(e.name_pattern)} | ${valueMark(e.resolution)} | ${sourceLink(e.file, e.line, opts)} |`
     );
   return [header, ...rows].join("\n");
 }
@@ -83,11 +99,13 @@ function legend(): string {
   return [
     "## Légende",
     "",
-    "- **Catégorie / Action** : les deux identifiants Matomo qui définissent l'event.",
-    "- **Name** : libellé ou détail optionnel transmis avec l'event (`—` si absent).",
-    "- **`<…>`** : valeur dynamique calculée à l'exécution (URL, requête saisie, titre d'outil…), non énumérable. Peut apparaître en Action comme en Name.",
-    "- **Type** : `literal` (valeur écrite en dur), `enum-param` (une ligne par valeur possible d'un enum), `dynamic` (valeur calculée à l'exécution).",
-    "- **Source** : lien vers la ligne de code qui émet l'event.",
+    "Les events sont regroupés par module, puis par catégorie Matomo.",
+    "",
+    "- **📌 / 🔀** (3ᵉ colonne) : 📌 = action **fixe** (event clairement identifié) ; 🔀 = action **calculée à l'exécution** (une famille d'events). Le *name*, lui, peut varier (`<…>`) dans les deux cas.",
+    "- **Action / catégorie** : les deux identifiants Matomo qui définissent l'event.",
+    "- **Name** : libellé ou détail transmis avec l'event (`—` si absent).",
+    "- **`<…>`** : emplacement d'une valeur calculée à l'exécution (URL, requête saisie, titre d'outil…), non énumérable.",
+    "- **Code** : lien ↗ vers la ligne qui émet l'event (le `fichier:ligne` s'affiche au survol).",
   ].join("\n");
 }
 
@@ -123,12 +141,17 @@ export function renderTrackingPlan(
   });
   parts.push(["## Sommaire", "", ...toc].join("\n"));
 
-  // Sections par module → catégorie → tableau.
+  // Sections par module → catégorie → tableau (tout affiché, sans repli).
+  // Le titre de module reste un `##` sans emoji pour garder des ancres GitHub
+  // valides (un emoji dans le titre casserait les liens du sommaire).
   for (const mod of modules) {
     parts.push(`## ${mod}`);
     const byCat = byModule.get(mod)!;
     for (const cat of sortedKeys(byCat)) {
-      parts.push(`### ${cat}\n\n${eventTable(byCat.get(cat)!, opts)}`);
+      const list = byCat.get(cat)!;
+      parts.push(
+        `### 📂 ${cat} · ${list.length} events\n\n${eventTable(list, opts)}`
+      );
     }
   }
 

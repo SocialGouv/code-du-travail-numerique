@@ -31,9 +31,11 @@ généré **à partir du JSON** dans `events/TRACKING_PLAN.md` :
 events.extracted.json   →   generate-doc   →   TRACKING_PLAN.md
 ```
 
-- Events regroupés **par module/feature** (déduit du chemin), puis par catégorie Matomo.
-- Colonnes orientées métier : `Action`, `Name`, `Type`, et un lien **Source** vers la ligne
-  de code (URL GitHub absolue sur la branche `dev`).
+- Events regroupés **par module/feature** (déduit du chemin), puis par catégorie Matomo
+  (titres `###`, tout affiché).
+- Colonnes orientées métier : `Action` et `Name` en code-span (les valeurs `<…>` seraient
+  sinon masquées par GitHub), un repère **📌 fixe / 🔀 variable**, et un lien **Code** ↗ vers
+  la ligne (URL GitHub absolue sur `dev`, `fichier:ligne` au survol).
 - Markdown **déterministe** (aucun timestamp), donc drift-checké comme le JSON.
 
 Ce fichier est aussi **synchronisé automatiquement vers le wiki GitHub** (page
