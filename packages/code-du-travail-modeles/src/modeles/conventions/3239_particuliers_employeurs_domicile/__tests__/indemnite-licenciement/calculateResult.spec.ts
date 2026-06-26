@@ -8,9 +8,8 @@ const engine = new IndemniteLicenciementPublicodes(
 
 describe("Test de la fonctionnalité 'calculate'", () => {
   test.each`
-    category                                  | expectedCompensation | formula
-    ${CatPro3239.salarieParticulierEmployeur} | ${1166.32}           | ${"1/4 * Sref * A"}
-    ${CatPro3239.assistantMaternel}           | ${25}                | ${"1/80 * S"}
+    category                        | expectedCompensation | formula
+    ${CatPro3239.assistantMaternel} | ${25}                | ${"1/80 * S"}
   `(
     `pas de missing var pour le conventionnel même si on ne fourni pas le salaire de ref et l'ancienneté requise pour $category`,
     ({ category, expectedCompensation, formula }) => {

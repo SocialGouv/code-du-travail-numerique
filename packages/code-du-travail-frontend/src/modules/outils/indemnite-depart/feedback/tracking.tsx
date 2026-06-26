@@ -15,16 +15,12 @@ export enum EVENT_ACTION {
   EASINESS = "Facilité_utilisation_simulateur",
   QUESTION_CLARITY = "Clarté_questions",
   RESULT_CLARITY = "Clarté_résultat",
-  SUGGESTION = "Suggestion",
 }
 
 export enum FEEDBACK_RESULT {
   NOT_GOOD = "pas_bien",
-  NOT_AT_ALL = "pas_du_tout",
   AVERAGE = "moyen",
   GOOD = "très_bien",
-  EASY = "facile",
-  YES = "oui",
   // New values for 5-point scale
   ONE = "1",
   TWO = "2",
