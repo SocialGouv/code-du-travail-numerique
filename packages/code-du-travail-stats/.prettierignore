@@ -1,0 +1,4 @@
+# Artefacts générés : doivent rester octet pour octet identiques à la sortie des
+# générateurs (events:extract / doc:generate), sinon les drift-checks échouent.
+# Prettier réaligne les tableaux markdown → ne pas l'appliquer ici.
+events/

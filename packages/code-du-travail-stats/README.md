@@ -22,6 +22,27 @@ aggregate      tri déterministe + comptages → events.extracted.json
 Le résultat est **déterministe** (events triés, aucun timestamp) : le drift-check est une
 simple égalité de chaîne.
 
+## Plan de tracking pour le métier (markdown)
+
+Le JSON est pensé pour l'outillage / l'IA. Pour le **métier**, un plan de tracking lisible est
+généré **à partir du JSON** dans `events/TRACKING_PLAN.md` :
+
+```
+events.extracted.json   →   generate-doc   →   TRACKING_PLAN.md
+```
+
+- Events regroupés **par module/feature** (déduit du chemin), puis par catégorie Matomo.
+- Colonnes orientées métier : `Action`, `Name`, `Type`, et un lien **Source** vers la ligne
+  de code (URL GitHub absolue sur la branche `dev`).
+- Markdown **déterministe** (aucun timestamp), donc drift-checké comme le JSON.
+
+Ce fichier est aussi **synchronisé automatiquement vers le wiki GitHub** (page
+`Plan de tracking Matomo`) à chaque merge sur `dev` par le workflow
+`.github/workflows/stats-events-wiki.yml`. Le métier consulte le wiki, jamais le repo.
+
+> Le push wiki utilise `GITHUB_TOKEN`. Si la policy de l'org le bloque, ajouter un secret
+> `WIKI_TOKEN` (PAT avec accès au dépôt) : le workflow l'utilisera en priorité.
+
 ## Ce qui est capturé
 
 - **`sendEvent({ category, action, name? })`** (de `@socialgouv/matomo-next`).
@@ -69,15 +90,22 @@ Le catalogue se limite aux events **écrits explicitement** dans le code. Sont e
 # Régénère events/events.extracted.json à partir du code
 pnpm -F @socialgouv/cdtn-stats events:extract
 
-# Drift-check : échoue (exit 1) si le fichier est désynchronisé du code
-pnpm -F @socialgouv/cdtn-stats events:check
+# Régénère events/TRACKING_PLAN.md à partir du JSON
+pnpm -F @socialgouv/cdtn-stats doc:generate
+
+# Drift-checks : échouent (exit 1) si un fichier est désynchronisé
+pnpm -F @socialgouv/cdtn-stats events:check   # JSON vs code
+pnpm -F @socialgouv/cdtn-stats doc:check      # markdown vs JSON
 
 # Tests unitaires du scanner
 pnpm -F @socialgouv/cdtn-stats test
 ```
 
-- **CI** : le workflow `.github/workflows/stats-events.yml` lance le drift-check sur **chaque**
-  PR (sans filtre de chemins : un event peut être ajouté depuis n'importe quel module).
+`events:check` + `doc:check` couvrent ensemble toute la chaîne `code → JSON → markdown`.
+
+- **CI** : le workflow `.github/workflows/stats-events.yml` lance les deux drift-checks sur
+  **chaque** PR (sans filtre de chemins : un event peut être ajouté depuis n'importe quel
+  module). `.github/workflows/stats-events-wiki.yml` pousse le markdown vers le wiki sur `dev`.
 - **Local** : un hook lint-staged régénère et re-stage automatiquement
-  `events/events.extracted.json` dès qu'un fichier `src/modules/**` change
-  (cf. `code-du-travail-frontend/lint-staged.config.js`).
+  `events/events.extracted.json` **puis** `events/TRACKING_PLAN.md` dès qu'un fichier
+  `src/modules/**` change (cf. `code-du-travail-frontend/lint-staged.config.js`).

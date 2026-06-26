@@ -1,0 +1,57 @@
+name: Stats events wiki
+
+# Synchronise le plan de tracking (events/TRACKING_PLAN.md) — déjà drift-checké
+# en PR par le workflow "Stats events" — vers le wiki GitHub du dépôt, à chaque
+# merge sur dev. Le métier consulte ainsi toujours la dernière version, sans
+# intervention manuelle. On copie tel quel le markdown committé (ses liens
+# "source" sont des URLs absolues, donc valides dans le wiki).
+
+on:
+  push:
+    branches: [dev]
+    paths:
+      - packages/code-du-travail-stats/events/TRACKING_PLAN.md
+      - .github/workflows/stats-events-wiki.yml
+  workflow_dispatch:
+
+concurrency:
+  group: stats-events-wiki
+  cancel-in-progress: true
+
+env:
+  # Le nom de fichier devient le titre de la page wiki : "Plan de tracking Matomo".
+  WIKI_PAGE: Plan-de-tracking-Matomo.md
+  SOURCE_DOC: packages/code-du-travail-stats/events/TRACKING_PLAN.md
+
+jobs:
+  sync:
+    name: Pousser TRACKING_PLAN.md vers le wiki
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Cloner le wiki
+        # Préfère un PAT (secrets.WIKI_TOKEN) si la policy de l'org bloque le push
+        # wiki via GITHUB_TOKEN ; sinon retombe sur le token de l'action.
+        env:
+          WIKI_TOKEN: ${{ secrets.WIKI_TOKEN || github.token }}
+        run: |
+          git clone "https://x-access-token:${WIKI_TOKEN}@github.com/${GITHUB_REPOSITORY}.wiki.git" wiki
+
+      - name: Copier le plan de tracking
+        run: cp "${SOURCE_DOC}" "wiki/${WIKI_PAGE}"
+
+      - name: Commit & push si la page a changé
+        working-directory: wiki
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "${WIKI_PAGE}"
+          if git diff --cached --quiet; then
+            echo "Wiki déjà à jour — rien à pousser."
+            exit 0
+          fi
+          git commit -m "docs(tracking): synchronisation du plan de tracking (${GITHUB_SHA})"
+          git push
