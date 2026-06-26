@@ -14,6 +14,8 @@ import type { ObjectLiteralExpression } from "ts-morph";
 import type { EventResolution, Resolved } from "./events.schema";
 import type { EnumIndex } from "./enum-index";
 import type { CallIndex } from "./call-index";
+import type { ConstIndex } from "./const-index";
+import { EMPTY_CONST_INDEX } from "./const-index";
 import { compact, dedupResolved, worstKind } from "./text-utils";
 import { functionNameOf } from "./ast-utils";
 
@@ -31,10 +33,32 @@ export type Resolver = {
 
 export function createResolver(
   enumIndex: EnumIndex,
-  callIndex: CallIndex
+  callIndex: CallIndex,
+  constIndex: ConstIndex = EMPTY_CONST_INDEX
 ): Resolver {
   const { enumMap, enumMembersByName } = enumIndex;
   const { callsByName, defsByName } = callIndex;
+  const { constStringValues } = constIndex;
+
+  // Vrai si `idNode` réfère à un paramètre d'une fonction englobante. Sert à ne
+  // PAS résoudre un paramètre via la table des constantes (un paramètre peut
+  // être homonyme d'une constante de module : le paramètre prime).
+  function isEnclosingParam(idNode: Node): boolean {
+    const name = idNode.getText();
+    let cur: Node | undefined = idNode.getParent();
+    while (cur) {
+      if (
+        Node.isArrowFunction(cur) ||
+        Node.isFunctionDeclaration(cur) ||
+        Node.isFunctionExpression(cur) ||
+        Node.isMethodDeclaration(cur)
+      ) {
+        if (cur.getParameters().some((p) => p.getName() === name)) return true;
+      }
+      cur = cur.getParent();
+    }
+    return false;
+  }
 
   // Un identifiant qui réfère à un paramètre typé enum → ses valeurs possibles.
   // Résolution purement syntaxique (annotation de type), sans type-checker.
@@ -175,6 +199,15 @@ export function createResolver(
       const members = paramEnumValues(node);
       if (members && members.length) {
         return members.map((v) => ({ value: v, kind: "enum-param" as const }));
+      }
+      // 3) constante string de module (`const NAME = "x"`). Exclut les
+      //    paramètres (un param prime sur une constante homonyme) et les noms
+      //    ambigus (même nom, valeurs différentes selon le fichier).
+      if (!isEnclosingParam(node)) {
+        const constVals = constStringValues.get(name);
+        if (constVals && constVals.size === 1) {
+          return [{ value: [...constVals][0], kind: "literal" }];
+        }
       }
       return [{ value: `<${name}>`, kind: "dynamic" }];
     }

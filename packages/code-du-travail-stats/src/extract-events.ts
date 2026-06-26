@@ -4,15 +4,17 @@
 // frontend CDTN. Câble les étapes (chacune dans son module) :
 //
 //   project   → chargement des fichiers source (frontend + enums modeles)
-//   enum-index / call-index → index syntaxiques pour résoudre les valeurs
+//   enum/call/const-index → index syntaxiques pour résoudre les valeurs
 //   value-resolver → résolution category/action/name en valeurs concrètes
-//   scanner   → détection des callsites (sendEvent, push Matomo natif)
+//   scanner   → détection des callsites (sendEvent, push Matomo natif, relais)
 //   aggregate → tri déterministe + comptages
 //
 // Events détectés :
 //   - sendEvent({ category, action, name? })            de @socialgouv/matomo-next
 //   - push(["trackEvent" | "trackSiteSearch" | ...])    events Matomo natifs
 //   - _paq.push([...]) / paq.push([...])                + commandes de config
+//   - fetch(endpoint, { body: JSON.stringify({ category, action, … }) })
+//     relais first-party (proxy serveur → Matomo, contournement adblock)
 //
 // `extractEvents()` renvoie le résultat en mémoire (utilisé par check-events.ts).
 // Lancé directement, le script écrit `events/events.extracted.json`.
@@ -32,6 +34,7 @@ import {
 } from "./project";
 import { buildEnumIndex } from "./enum-index";
 import { buildCallIndex } from "./call-index";
+import { buildConstIndex } from "./const-index";
 import { createResolver } from "./value-resolver";
 import { scanSourceFiles } from "./scanner";
 import { buildExtraction, serializeExtraction } from "./aggregate";
@@ -48,8 +51,11 @@ export function extractEvents(): EventsExtraction {
   const enumIndex = buildEnumIndex(enumFiles);
   // Index des appels/définitions construit sur les fichiers frontend seulement.
   const callIndex = buildCallIndex(eventFiles);
+  // Index des constantes string de module (pour les events qui passent par des
+  // `const` plutôt que des enums, ex: le relais first-party de notation).
+  const constIndex = buildConstIndex(eventFiles);
 
-  const resolver = createResolver(enumIndex, callIndex);
+  const resolver = createResolver(enumIndex, callIndex, constIndex);
   const scan = scanSourceFiles(eventFiles, resolver, REPO_ROOT);
 
   return buildExtraction(scan, path.relative(REPO_ROOT, FRONTEND_SRC));
