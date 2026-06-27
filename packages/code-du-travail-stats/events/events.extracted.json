@@ -929,12 +929,12 @@
       "resolution": "literal",
       "emit_function": "trackContributionRating",
       "file": "packages/code-du-travail-frontend/src/modules/contributions/rating/tracking.ts",
-      "line": 34,
+      "line": 56,
       "enum_refs": [
         "RatingMatomo.ACTION",
         "RatingMatomo.CATEGORY"
       ],
-      "tracking_method": "relay:/api/contribution-rating"
+      "tracking_method": "sendEvent"
     },
     {
       "category": "outil",
