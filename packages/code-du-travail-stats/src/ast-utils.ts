@@ -30,22 +30,6 @@ export function functionNameOf(fn: Node): string | null {
   return null;
 }
 
-// Objet passé à `body: JSON.stringify({...})` dans les options d'un `fetch`, ou
-// null si les options ne décrivent pas un tel corps. Sert à reconnaître les
-// relais de tracking first-party (proxy serveur → Matomo) qui n'utilisent pas
-// sendEvent mais POSTent l'event sérialisé en JSON.
-export function relayPayloadObject(
-  options: ObjectLiteralExpression
-): ObjectLiteralExpression | null {
-  const bodyProp = options.getProperty("body");
-  if (!bodyProp || !Node.isPropertyAssignment(bodyProp)) return null;
-  const init = bodyProp.getInitializer();
-  if (!init || !Node.isCallExpression(init)) return null;
-  if (init.getExpression().getText() !== "JSON.stringify") return null;
-  const arg = init.getArguments()[0];
-  return arg && Node.isObjectLiteralExpression(arg) ? arg : null;
-}
-
 // Références d'enums (`EnumName.MEMBER`) utilisées dans un objet event, triées.
 export function getEnumRefs(obj: ObjectLiteralExpression): string[] {
   const refs = new Set<string>();

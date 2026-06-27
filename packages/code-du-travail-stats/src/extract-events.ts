@@ -6,15 +6,13 @@
 //   project   → chargement des fichiers source (frontend + enums modeles)
 //   enum-index / call-index → index syntaxiques pour résoudre les valeurs
 //   value-resolver → résolution category/action/name en valeurs concrètes
-//   scanner   → détection des callsites (sendEvent, push Matomo natif, relais)
+//   scanner   → détection des callsites (sendEvent, push Matomo natif)
 //   aggregate → tri déterministe + comptages
 //
 // Events détectés :
 //   - sendEvent({ category, action, name? })            de @socialgouv/matomo-next
 //   - push(["trackEvent" | "trackSiteSearch" | ...])    events Matomo natifs
 //   - _paq.push([...]) / paq.push([...])                + commandes de config
-//   - fetch(endpoint, { body: JSON.stringify({ category, action, … }) })
-//     relais first-party (proxy serveur → Matomo, contournement adblock)
 //
 // `extractEvents()` renvoie le résultat en mémoire (utilisé par check-events.ts).
 // Lancé directement, le script écrit `events/events.extracted.json`.
