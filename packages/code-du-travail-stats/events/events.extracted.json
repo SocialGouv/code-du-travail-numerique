@@ -930,7 +930,10 @@
       "emit_function": "trackContributionRating",
       "file": "packages/code-du-travail-frontend/src/modules/contributions/rating/tracking.ts",
       "line": 34,
-      "enum_refs": [],
+      "enum_refs": [
+        "RatingMatomo.ACTION",
+        "RatingMatomo.CATEGORY"
+      ],
       "tracking_method": "relay:/api/contribution-rating"
     },
     {

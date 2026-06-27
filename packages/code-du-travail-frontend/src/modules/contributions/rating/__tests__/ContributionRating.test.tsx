@@ -17,15 +17,28 @@ const props = {
 
 beforeEach(() => {
   jest.clearAllMocks();
+  // Dédup persistante (localStorage) : on repart d'un état vierge à chaque test.
+  localStorage.clear();
 });
 
 describe("ContributionRating", () => {
-  it("affiche la position par défaut « Neutre » et le bouton Valider", () => {
+  it("affiche la position par défaut « Neutre » et le bouton Valider désactivé", () => {
     render(<ContributionRating {...props} />);
 
     expect(screen.getByText("Neutre")).toBeInTheDocument();
-    expect(screen.getByRole("button", { name: "Valider" })).toBeInTheDocument();
+    // Désactivé tant que l'usager n'a pas bougé le curseur (anti-soumission par
+    // défaut « Neutre »).
+    expect(screen.getByRole("button", { name: "Valider" })).toBeDisabled();
     expect(screen.queryByText("Merci !")).not.toBeInTheDocument();
+  });
+
+  it("active le bouton Valider une fois le curseur déplacé", () => {
+    render(<ContributionRating {...props} />);
+    expect(screen.getByRole("button", { name: "Valider" })).toBeDisabled();
+
+    fireEvent.change(screen.getByRole("slider"), { target: { value: "4" } });
+
+    expect(screen.getByRole("button", { name: "Valider" })).toBeEnabled();
   });
 
   it("met à jour le libellé visible et aria-valuetext au déplacement", () => {
@@ -38,6 +51,17 @@ describe("ContributionRating", () => {
 
     expect(slider).toHaveAttribute("aria-valuetext", "Compliqué");
     expect(screen.getByText("Compliqué")).toBeInTheDocument();
+  });
+
+  it("relie le curseur au texte d'aide via aria-describedby", () => {
+    render(<ContributionRating {...props} />);
+    const slider = screen.getByRole("slider");
+    const describedBy = slider.getAttribute("aria-describedby");
+
+    expect(describedBy).toBeTruthy();
+    expect(document.getElementById(describedBy as string)).toHaveTextContent(
+      "Faites bouger le curseur pour noter la page."
+    );
   });
 
   it("transmet la note au clic sur Valider, affiche « Merci ! » et déplace le focus", async () => {
@@ -62,18 +86,22 @@ describe("ContributionRating", () => {
     await waitFor(() => expect(confirmationParagraph).toHaveFocus());
   });
 
-  it("au remontage (reload), repart en idle et permet de renvoyer un event", async () => {
+  it("au remontage, conserve l'état « noté » (dédup persistante) et n'émet pas un 2e event", async () => {
     const { unmount } = render(<ContributionRating {...props} />);
+    fireEvent.change(screen.getByRole("slider"), { target: { value: "4" } });
     fireEvent.click(screen.getByRole("button", { name: "Valider" }));
     await screen.findByText("Merci !");
     expect(mockTrack).toHaveBeenCalledTimes(1);
     unmount();
 
+    // Rechargement simulé : la contribution est marquée notée en localStorage,
+    // on réaffiche directement la confirmation sans bouton « Valider ».
     render(<ContributionRating {...props} />);
 
-    // L'état n'est pas persisté : on revient au curseur + bouton « Valider ».
-    expect(screen.queryByText("Merci !")).not.toBeInTheDocument();
-    fireEvent.click(screen.getByRole("button", { name: "Valider" }));
-    expect(mockTrack).toHaveBeenCalledTimes(2);
+    expect(await screen.findByText("Merci !")).toBeInTheDocument();
+    expect(
+      screen.queryByRole("button", { name: "Valider" })
+    ).not.toBeInTheDocument();
+    expect(mockTrack).toHaveBeenCalledTimes(1);
   });
 });

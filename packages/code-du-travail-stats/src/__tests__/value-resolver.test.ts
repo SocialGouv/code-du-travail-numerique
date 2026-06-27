@@ -89,32 +89,6 @@ describe("resolveValues — templates", () => {
   });
 });
 
-describe("resolveValues — constantes string de module", () => {
-  it("identifiant = const string de module → sa valeur (literal)", () => {
-    expect(
-      resolveExpr(`const CAT = "notation_contribution"; const __expr = CAT;`)
-    ).toEqual([{ value: "notation_contribution", kind: "literal" }]);
-  });
-
-  it("const ambiguë (même nom, valeurs ≠) → dynamic", () => {
-    expect(
-      resolveExpr(`const X = "a"; const X = "b"; const __expr = X;`)
-    ).toEqual([{ value: "<X>", kind: "dynamic" }]);
-  });
-
-  it("un paramètre prime sur une const de module homonyme", () => {
-    const code = `
-      const action = "from_const";
-      function emit(action: string) { sendEvent({ category: "c", action }); }
-    `;
-    const { sf, resolver } = makeResolver(code);
-    const obj = firstObjectArg(sf, "sendEvent");
-    expect(resolver.resolvePropertyValues(obj, "action")).toEqual([
-      { value: "<action>", kind: "dynamic" },
-    ]);
-  });
-});
-
 describe("resolveValues — appels & inconnu", () => {
   it("appel de fonction → dynamic", () => {
     expect(resolveExpr(`const __expr = foo();`)).toEqual([

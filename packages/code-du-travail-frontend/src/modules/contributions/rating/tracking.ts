@@ -7,11 +7,7 @@
 // serveur effectue le fetch serveur->serveur invisible des adblockers.
 
 import { getStoredConsent } from "../../utils/consent";
-import {
-  RATING_MATOMO_ACTION,
-  RATING_MATOMO_CATEGORY,
-  RATING_LABELS,
-} from "./constants";
+import { RatingMatomo } from "./constants";
 
 export const RATING_TRACKING_ENDPOINT = "/api/contribution-rating";
 
@@ -31,20 +27,22 @@ export const trackContributionRating = async ({
   if (typeof window !== "undefined" && !getStoredConsent().matomo) return;
 
   try {
-    await fetch(RATING_TRACKING_ENDPOINT, {
+    // Endpoint en littéral (et non via une variable) pour rester repérable par
+    // l'extraction statique des events. On n'envoie ni l'URL ni les libellés :
+    // le serveur reconstruit une URL canonique à partir du slug (stable, non
+    // falsifiable) et n'a pas besoin du label.
+    await fetch("/api/contribution-rating", {
       method: "POST",
       // keepalive : laisse la requête se terminer même si le composant est
       // démonté juste après le clic (navigation immédiate).
       keepalive: true,
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        category: RATING_MATOMO_CATEGORY,
-        action: RATING_MATOMO_ACTION,
+        category: RatingMatomo.CATEGORY,
+        action: RatingMatomo.ACTION,
         name: contributionTitle,
-        url: typeof window !== "undefined" ? window.location.href : undefined,
         slug: contributionSlug,
         value,
-        label: RATING_LABELS[value],
       }),
     });
   } catch {

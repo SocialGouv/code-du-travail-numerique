@@ -2,7 +2,6 @@ import { scanSourceFiles } from "../scanner";
 import type { ScanResult } from "../scanner";
 import { buildEnumIndex } from "../enum-index";
 import { buildCallIndex } from "../call-index";
-import { buildConstIndex } from "../const-index";
 import { createResolver } from "../value-resolver";
 import { makeProject } from "./ast-test-helpers";
 
@@ -11,11 +10,7 @@ import { makeProject } from "./ast-test-helpers";
 function scan(code: string): ScanResult {
   const { project } = makeProject(code);
   const files = project.getSourceFiles();
-  const resolver = createResolver(
-    buildEnumIndex(files),
-    buildCallIndex(files),
-    buildConstIndex(files)
-  );
+  const resolver = createResolver(buildEnumIndex(files), buildCallIndex(files));
   return scanSourceFiles(files, resolver, "/");
 }
 
@@ -104,14 +99,14 @@ describe("scanSourceFiles — push Matomo natif", () => {
 
 describe("scanSourceFiles — relais first-party (fetch)", () => {
   it("extrait l'event d'un fetch dont le body JSON porte category + action", () => {
+    // Les valeurs viennent d'un enum (convention du projet pour rester
+    // résolvables), exactement comme l'event de notation réel.
     const res = scan(`
-      const ENDPOINT = "/api/contribution-rating";
-      const CAT = "notation_contribution";
-      const ACT = "validation_note";
+      enum M { CATEGORY = "notation_contribution", ACTION = "validation_note" }
       const track = (title: string) => {
-        fetch(ENDPOINT, {
+        fetch("/api/contribution-rating", {
           method: "POST",
-          body: JSON.stringify({ category: CAT, action: ACT, name: title }),
+          body: JSON.stringify({ category: M.CATEGORY, action: M.ACTION, name: title }),
         });
       };
     `);
@@ -139,7 +134,7 @@ describe("scanSourceFiles — relais first-party (fetch)", () => {
     expect(res.events).toHaveLength(0);
   });
 
-  it("endpoint non résoluble → tracking_method relay:fetch", () => {
+  it("endpoint non résoluble (variable) → tracking_method relay:fetch", () => {
     const res = scan(
       `fetch(buildUrl(), { body: JSON.stringify({ category: "c", action: "a" }) });`
     );

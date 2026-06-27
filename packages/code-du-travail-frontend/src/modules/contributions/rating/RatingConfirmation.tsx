@@ -11,9 +11,10 @@ type Props = {
 
 // Confirmation « Merci ! » conforme à la maquette : encart bordé vert, pastille
 // carrée verte avec ✓ blanc (cercle plein) + libellé gris. Le focus est déplacé
-// sur le `<p>` par le parent ; `aria-live` assure aussi l'annonce.
+// sur le `<p>` par le parent ; l'annonce vocale est assurée par la région
+// `aria-live` persistante qui entoure ce composant (cf. ContributionRating).
 export const RatingConfirmation = ({ messageRef }: Props) => (
-  <div aria-live="polite" className={wrap}>
+  <div className={wrap}>
     {/* `fr-m-0` (utilitaire DSFR `!important`) annule la marge de base du <p> :
         une marge Panda serait écrasée (DSFR `p {…}` est hors cascade layer). */}
     <p ref={messageRef} tabIndex={-1} className={`${fr.cx("fr-m-0")} ${chip}`}>

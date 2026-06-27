@@ -37,8 +37,12 @@ export const RATING_SLIDER_LABEL = "Notez la clarté du contenu de cette page";
 
 // Identifiants Matomo. Le proxy n'accepte QUE ce couple catégorie/action
 // (liste blanche anti-relais : impossible d'injecter un event arbitraire).
-export const RATING_MATOMO_CATEGORY = "notation_contribution";
-export const RATING_MATOMO_ACTION = "validation_note";
+// En enum (et non en `const`) pour rester résolvable par l'extraction statique
+// des events (`@socialgouv/cdtn-stats`), comme les autres events de tracking.
+export enum RatingMatomo {
+  CATEGORY = "notation_contribution",
+  ACTION = "validation_note",
+}
 
 export const isValidRatingValue = (value: unknown): value is number =>
   typeof value === "number" &&
