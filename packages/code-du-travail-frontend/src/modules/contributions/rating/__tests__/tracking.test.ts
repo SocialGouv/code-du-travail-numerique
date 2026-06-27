@@ -1,6 +1,6 @@
 import { trackContributionRating, RATING_TRACKING_ENDPOINT } from "../tracking";
 import { getStoredConsent } from "../../../utils/consent";
-import { RATING_MATOMO_CATEGORY, RATING_MATOMO_ACTION } from "../constants";
+import { RatingMatomo } from "../constants";
 
 jest.mock("../../../utils/consent", () => ({
   getStoredConsent: jest.fn(),
@@ -40,14 +40,17 @@ describe("rating/tracking", () => {
     expect(init.headers["Content-Type"]).toBe("application/json");
 
     const body = JSON.parse(init.body);
-    expect(body).toMatchObject({
-      category: RATING_MATOMO_CATEGORY,
-      action: RATING_MATOMO_ACTION,
+    expect(body).toEqual({
+      category: RatingMatomo.CATEGORY,
+      action: RatingMatomo.ACTION,
       name: "Congés payés",
       slug: "conges-payes-1234",
       value: 4,
-      label: "Clair",
     });
+    // L'URL et le libellé ne sont plus envoyés : l'URL canonique est
+    // reconstruite côté serveur depuis le slug.
+    expect(body.url).toBeUndefined();
+    expect(body.label).toBeUndefined();
   });
 
   it("n'émet rien si le consentement Matomo est refusé", async () => {

@@ -34,11 +34,12 @@ simple égalité de chaîne.
   events qui contournent les adblockers en POSTant vers une API interne qui relaie vers Matomo
   côté serveur (ex. `notation_contribution`/`validation_note` via `/api/contribution-rating`),
   au lieu de `sendEvent`. Détectés quand le corps JSON porte **à la fois** `category` et
-  `action` ; le champ `tracking_method` vaut alors `relay:<endpoint>`.
+  `action` ; le champ `tracking_method` vaut alors `relay:<endpoint>`. Comme pour `sendEvent`,
+  `category`/`action` doivent être résolvables statiquement : on utilise un **enum**
+  (cf. `RatingMatomo` dans `rating/constants.ts`), pas des valeurs calculées au runtime.
 
 Quand `category` ou `action` est un **enum** (ou un paramètre typé enum), une ligne est produite
-**par valeur possible** (champ `resolution: "literal" | "enum-param"`). Les constantes string de
-module (`const RATING_MATOMO_CATEGORY = "…"`) sont résolues comme des littéraux (cf. `const-index.ts`).
+**par valeur possible** (champ `resolution: "literal" | "enum-param"`).
 
 ### Périmètre de scan
 

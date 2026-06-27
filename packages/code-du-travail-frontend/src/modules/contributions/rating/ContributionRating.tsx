@@ -1,6 +1,6 @@
 "use client";
 
-import { useId, useRef, useState } from "react";
+import { useEffect, useId, useRef, useState } from "react";
 import { fr } from "@codegouvfr/react-dsfr";
 import { Button } from "@codegouvfr/react-dsfr/Button";
 import { css } from "@styled-system/css";
@@ -8,9 +8,9 @@ import { RatingIcon } from "./RatingIcon";
 import { RatingSlider } from "./RatingSlider";
 import { RatingConfirmation } from "./RatingConfirmation";
 import { trackContributionRating } from "./tracking";
+import { isContributionRated, markContributionRated } from "./storage";
 import {
   RATING_DEFAULT,
-  RATING_WIDGET_HINT,
   RATING_WIDGET_INTRO,
   RATING_WIDGET_TITLE,
 } from "./constants";
@@ -28,15 +28,30 @@ export const ContributionRating = ({
 }: Props) => {
   const headingId = useId();
   const [value, setValue] = useState(RATING_DEFAULT);
+  const [touched, setTouched] = useState(false);
   const [status, setStatus] = useState<Status>("idle");
   const messageRef = useRef<HTMLParagraphElement>(null);
+  // Garde synchrone : empêche un double-clic rapide d'émettre deux events avant
+  // que le re-render n'ait masqué le bouton (l'état `status` est asynchrone).
+  const submittingRef = useRef(false);
 
-  // Pas de persistance : l'état « noté » ne vit que le temps du rendu courant.
-  // Un rechargement de page repart donc en "idle" et permet de renvoyer un
-  // event (1 envoi par chargement, anti double-envoi seulement dans la vue).
+  // Dédup persistante : si cette contribution a déjà été notée, on affiche
+  // directement la confirmation. Vérifié APRÈS le montage (et non à
+  // l'initialisation de l'état) pour ne pas casser l'hydratation : le
+  // localStorage n'existe pas au rendu serveur.
+  useEffect(() => {
+    if (isContributionRated(contributionSlug)) setStatus("submitted");
+  }, [contributionSlug]);
+
+  const onChange = (next: number) => {
+    setTouched(true);
+    setValue(next);
+  };
 
   const onSubmit = () => {
-    if (status !== "idle") return; // garde anti double-submit dans la même vue
+    if (submittingRef.current || status !== "idle") return;
+    submittingRef.current = true;
+    markContributionRated(contributionSlug);
     setStatus("submitted");
     void trackContributionRating({
       contributionSlug,
@@ -64,19 +79,23 @@ export const ContributionRating = ({
         <span className={titleIntro}>{RATING_WIDGET_INTRO}</span>
         <span className={titleQuestion}>{RATING_WIDGET_TITLE}</span>
       </h2>
-      {/* Classe DSFR dédiée au texte d'aide (0.75rem, gris) : idiomatique et,
-          étant une classe, elle l'emporte sur la règle de base `p`. */}
-      <p className={fr.cx("fr-hint-text", "fr-mb-0")}>{RATING_WIDGET_HINT}</p>
-      <RatingSlider value={value} onChange={setValue} disabled={submitted} />
-      {submitted ? (
-        <RatingConfirmation messageRef={messageRef} />
-      ) : (
+      {/* Le texte d'aide est rendu et relié au curseur par RatingSlider (via le
+          groupe de messages DSFR ciblé par aria-describedby). */}
+      <RatingSlider value={value} onChange={onChange} disabled={submitted} />
+      {!submitted && (
         <div className={actions}>
-          <Button onClick={onSubmit} priority="secondary">
+          {/* Désactivé tant que l'usager n'a pas bougé le curseur : évite les
+              soumissions « Neutre » par défaut, non engagées. */}
+          <Button onClick={onSubmit} priority="secondary" disabled={!touched}>
             Valider
           </Button>
         </div>
       )}
+      {/* Région live persistante (présente dès le montage) pour que l'insertion
+          du « Merci ! » soit fiablement annoncée par les lecteurs d'écran. */}
+      <div aria-live="polite">
+        {submitted && <RatingConfirmation messageRef={messageRef} />}
+      </div>
     </section>
   );
 };
@@ -85,6 +104,8 @@ const widget = css({
   padding: "1.5rem",
   borderRadius: "0.5rem",
   backgroundColor: "var(--background-alt-blue-france)",
+  // Widget interactif : inutile (et disgracieux) à l'impression / en PDF.
+  "@media print": { display: "none" },
 });
 
 const icon = css({
