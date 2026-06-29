@@ -102,7 +102,7 @@ RUN --mount=type=cache,id=next-cache,target=/tmp/.next-cache \
 # Deploy (creates a production-ready deployment without dev dependencies)
 # Clean build-time caches (webpack/swc) from .next to keep the runner image lean
 # Ensure .next/cache/images exists for Next.js image optimization at runtime
-RUN pnpm --filter @cdt/frontend deploy --prod /app/deploy && \
+RUN pnpm --filter @cdt/frontend deploy --prod --legacy /app/deploy && \
   cp -r /app/packages/code-du-travail-frontend/.next /app/deploy/.next && \
   rm -rf /app/deploy/.next/cache/webpack /app/deploy/.next/cache/swc && \
   mkdir -p /app/deploy/.next/cache/images && \
