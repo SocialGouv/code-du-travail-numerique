@@ -57,13 +57,26 @@ export class DilaApiClient {
       },
       method,
     })
-      .then((r) => {
-        debug(`fetch route ${routeName} DONE => ${JSON.stringify(r)}`);
+      .then(async (r) => {
+        const responseBody = await r.text();
+
+        debug(
+          `fetch route ${routeName} DONE => ${JSON.stringify({
+            status: r.status,
+            statusText: r.statusText,
+            headers: Object.fromEntries(r.headers.entries()),
+            body: responseBody,
+          })}`
+        );
         if (r.status === 401 && this.globalToken) {
           this.globalToken = undefined;
           return this.fetch({ path, method, params });
         }
-        return r.json();
+        try {
+          return JSON.parse(responseBody);
+        } catch {
+          return responseBody;
+        }
       })
       .catch((error) => {
         debug(`fetch route ${routeName} ERROR => ${JSON.stringify(error)}`);
