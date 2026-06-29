@@ -28,7 +28,6 @@ export const ContributionRating = ({
 }: Props) => {
   const headingId = useId();
   const [value, setValue] = useState(RATING_DEFAULT);
-  const [touched, setTouched] = useState(false);
   const [status, setStatus] = useState<Status>("idle");
   const messageRef = useRef<HTMLParagraphElement>(null);
   // Garde synchrone : empêche un double-clic rapide d'émettre deux events avant
@@ -44,7 +43,6 @@ export const ContributionRating = ({
   }, [contributionSlug]);
 
   const onChange = (next: number) => {
-    setTouched(true);
     setValue(next);
   };
 
@@ -84,9 +82,7 @@ export const ContributionRating = ({
       <RatingSlider value={value} onChange={onChange} disabled={submitted} />
       {!submitted && (
         <div className={actions}>
-          {/* Désactivé tant que l'usager n'a pas bougé le curseur : évite les
-              soumissions « Neutre » par défaut, non engagées. */}
-          <Button onClick={onSubmit} priority="secondary" disabled={!touched}>
+          <Button onClick={onSubmit} priority="secondary">
             Valider
           </Button>
         </div>
@@ -102,7 +98,6 @@ export const ContributionRating = ({
 
 const widget = css({
   padding: "1.5rem",
-  borderRadius: "0.5rem",
   backgroundColor: "var(--background-alt-blue-france)",
   // Widget interactif : inutile (et disgracieux) à l'impression / en PDF.
   "@media print": { display: "none" },
