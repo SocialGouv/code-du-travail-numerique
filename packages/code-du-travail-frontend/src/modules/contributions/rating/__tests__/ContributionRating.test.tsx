@@ -22,23 +22,14 @@ beforeEach(() => {
 });
 
 describe("ContributionRating", () => {
-  it("affiche la position par défaut « Neutre » et le bouton Valider désactivé", () => {
+  it("affiche la position par défaut « Neutre » et le bouton Valider actif", () => {
     render(<ContributionRating {...props} />);
 
     expect(screen.getByText("Neutre")).toBeInTheDocument();
-    // Désactivé tant que l'usager n'a pas bougé le curseur (anti-soumission par
-    // défaut « Neutre »).
-    expect(screen.getByRole("button", { name: "Valider" })).toBeDisabled();
-    expect(screen.queryByText("Merci !")).not.toBeInTheDocument();
-  });
-
-  it("active le bouton Valider une fois le curseur déplacé", () => {
-    render(<ContributionRating {...props} />);
-    expect(screen.getByRole("button", { name: "Valider" })).toBeDisabled();
-
-    fireEvent.change(screen.getByRole("slider"), { target: { value: "4" } });
-
+    // Le bouton est actif d'emblée : l'usager peut valider la position par
+    // défaut « Neutre » sans avoir à bouger le curseur.
     expect(screen.getByRole("button", { name: "Valider" })).toBeEnabled();
+    expect(screen.queryByText("Merci !")).not.toBeInTheDocument();
   });
 
   it("met à jour le libellé visible et aria-valuetext au déplacement", () => {
