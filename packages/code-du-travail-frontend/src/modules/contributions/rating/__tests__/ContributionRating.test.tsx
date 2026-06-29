@@ -44,15 +44,12 @@ describe("ContributionRating", () => {
     expect(screen.getByText("Compliqué")).toBeInTheDocument();
   });
 
-  it("relie le curseur au texte d'aide via aria-describedby", () => {
+  it("affiche le texte d'aide sous la question", () => {
     render(<ContributionRating {...props} />);
-    const slider = screen.getByRole("slider");
-    const describedBy = slider.getAttribute("aria-describedby");
 
-    expect(describedBy).toBeTruthy();
-    expect(document.getElementById(describedBy as string)).toHaveTextContent(
-      "Faites bouger le curseur pour noter la page."
-    );
+    expect(
+      screen.getByText("Faites bouger le curseur pour noter la page.")
+    ).toBeInTheDocument();
   });
 
   it("transmet la note au clic sur Valider, affiche « Merci ! » et déplace le focus", async () => {

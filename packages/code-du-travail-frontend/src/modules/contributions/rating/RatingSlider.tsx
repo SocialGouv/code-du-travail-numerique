@@ -10,7 +10,6 @@ import {
   RATING_MIN_LABEL,
   RATING_SLIDER_LABEL,
   RATING_STEP,
-  RATING_WIDGET_HINT,
 } from "./constants";
 
 type Props = {
@@ -40,10 +39,8 @@ export const RatingSlider = ({ value, onChange, disabled }: Props) => {
       >
         {RATING_LABELS[value]}
       </span>
-      {/* Le hint passe par `stateRelatedMessage` : c'est le groupe de messages
-          DSFR que l'input cible via `aria-describedby` (DSFR écrase tout
-          `aria-describedby` passé en nativeInputProps). Il est ainsi relié au
-          curseur pour les lecteurs d'écran. */}
+      {/* Le texte d'aide n'est plus porté par le slider : il est affiché par
+          ContributionRating juste sous la question. */}
       <Range
         label={RATING_SLIDER_LABEL} // nom accessible stable, masqué visuellement
         classes={{ label: "fr-sr-only", output: hiddenOutput }}
@@ -53,7 +50,6 @@ export const RatingSlider = ({ value, onChange, disabled }: Props) => {
         max={RATING_MAX}
         step={RATING_STEP}
         disabled={disabled}
-        stateRelatedMessage={RATING_WIDGET_HINT}
         nativeInputProps={{
           value,
           onChange: (e) => onChange(Number(e.currentTarget.value)),

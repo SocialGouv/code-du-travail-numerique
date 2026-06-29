@@ -11,6 +11,7 @@ import { trackContributionRating } from "./tracking";
 import { isContributionRated, markContributionRated } from "./storage";
 import {
   RATING_DEFAULT,
+  RATING_WIDGET_HINT,
   RATING_WIDGET_INTRO,
   RATING_WIDGET_TITLE,
 } from "./constants";
@@ -77,8 +78,10 @@ export const ContributionRating = ({
         <span className={titleIntro}>{RATING_WIDGET_INTRO}</span>
         <span className={titleQuestion}>{RATING_WIDGET_TITLE}</span>
       </h2>
-      {/* Le texte d'aide est rendu et relié au curseur par RatingSlider (via le
-          groupe de messages DSFR ciblé par aria-describedby). */}
+      {/* Texte d'aide affiché juste sous la question. Classe DSFR dédiée
+          (0.75rem, gris) : étant une classe, elle l'emporte sur la règle de
+          base `p`. */}
+      <p className={fr.cx("fr-hint-text", "fr-mb-0")}>{RATING_WIDGET_HINT}</p>
       <RatingSlider value={value} onChange={onChange} disabled={submitted} />
       {!submitted && (
         <div className={actions}>
