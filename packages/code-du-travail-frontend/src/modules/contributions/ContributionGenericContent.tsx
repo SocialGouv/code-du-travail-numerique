@@ -87,7 +87,9 @@ export const ContributionGenericContent = forwardRef<
           className={fr.cx(
             "fr-col-12",
             "fr-col-md-4",
-            "fr-mt-6w",
+            // Aligne le haut de la colonne (widget de notation) sur le haut du
+            // texte principal (colonne de gauche, `fr-mt-2w`).
+            "fr-mt-2w",
             "fr-p-md-3w",
             !displayGeneric && "fr-hidden"
           )}
