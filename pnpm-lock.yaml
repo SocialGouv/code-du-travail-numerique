@@ -62,6 +62,9 @@ importers:
       debounce-promise:
         specifier: ^3.1.2
         version: 3.1.2
+      debug:
+        specifier: ^4.4.3
+        version: 4.4.3(supports-color@5.5.0)
       downshift:
         specifier: ^9.3.3
         version: 9.3.4(react@19.2.7)
@@ -89,6 +92,9 @@ importers:
       next:
         specifier: ~16.2.7
         version: 16.2.7(@babel/core@7.29.0)(@opentelemetry/api@1.9.1)(@playwright/test@1.60.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)(sass@1.100.0)
+      node-fetch:
+        specifier: ^2.6.6
+        version: 2.7.0(encoding@0.1.13)
       publicodes:
         specifier: 1.0.0-beta.60
         version: 1.0.0-beta.60(@types/mocha@9.1.1)
@@ -101,6 +107,9 @@ importers:
       sharp:
         specifier: ^0.34.5
         version: 0.34.5
+      simple-oauth2:
+        specifier: ^4.2.0
+        version: 4.3.0
       talisman:
         specifier: ^1.1.4
         version: 1.1.4
@@ -10658,7 +10667,7 @@ snapshots:
       debug: 4.4.3(supports-color@5.5.0)
       node-fetch: 2.7.0(encoding@0.1.13)
       p-all: 4.0.0
-      simple-oauth2: 4.3.0(supports-color@5.5.0)
+      simple-oauth2: 4.3.0
     transitivePeerDependencies:
       - encoding
       - supports-color
@@ -16203,7 +16212,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  simple-oauth2@4.3.0(supports-color@5.5.0):
+  simple-oauth2@4.3.0:
     dependencies:
       '@hapi/hoek': 9.3.0
       '@hapi/wreck': 17.2.0
