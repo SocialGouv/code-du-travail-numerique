@@ -1,5 +1,4 @@
 import { Agreement } from "src/modules/outils/indemnite-depart/types";
-import { EXCLUDED_CONTRACTS } from "../steps/Informations/store/validator";
 
 export const CDD_TYPES = {
   INTERVENTION_FOIRES_SALONS:
@@ -14,6 +13,16 @@ export const CDD_TYPES = {
   MISSION_PONCTUELLE: "CDD dit de « mission ponctuelle ou occasionnelle »",
   AUTRES: "Autres",
 } as const;
+
+// Contrats exclus de l'indemnité de précarité
+export const EXCLUDED_CONTRACTS = [
+  "CDD saisonnier",
+  "CDD conclu avec un jeune (mineur ou majeur) pendant ses vacances scolaires ou universitaires",
+  "CCD dans le cadre d'un congé de mobilité",
+  "Contrat unique d'insertion (CUI) ou Parcours emploi compétences (PEC)",
+  "Contrat de professionnalisation ou Contrat d'apprentissage",
+  "Contrat pour lequel l'employeur s'est engagé à assurer un complément de formation professionnelle au salarié",
+];
 
 export function getCddTypesForAgreement(agreement?: Agreement): string[] {
   const specificTypes: string[] = [];
@@ -50,5 +59,5 @@ export function getCddTypesForAgreement(agreement?: Agreement): string[] {
       break;
   }
 
-  return [CDD_TYPES.AUTRES, ...specificTypes, ...EXCLUDED_CONTRACTS];
+  return [...specificTypes, ...EXCLUDED_CONTRACTS, CDD_TYPES.AUTRES];
 }

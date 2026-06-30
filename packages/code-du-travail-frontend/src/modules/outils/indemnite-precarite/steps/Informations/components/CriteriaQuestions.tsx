@@ -1,9 +1,14 @@
 import React, { useContext } from "react";
-import { SelectQuestion } from "src/modules/outils/common/components/SelectQuestion";
+import { RadioQuestion } from "src/modules/outils/common/components/RadioQuestion";
 import { ContractType, CONTRACT_TYPE } from "../../../types";
 import { CDDQuestions } from "./CDDQuestions";
 import { CTTQuestions } from "./CTTQuestions";
-import { InformationsStoreInput, InformationsStoreError } from "../store/types";
+import {
+  CddConditionKey,
+  CttConditionKey,
+  InformationsStoreError,
+  InformationsStoreInput,
+} from "../store/types";
 import { getCddTypesForAgreement } from "../../../agreements/cddTypesFactory";
 import {
   IndemnitePrecariteContext,
@@ -15,8 +20,8 @@ interface Props {
   criteria: Record<string, any>;
   input: InformationsStoreInput;
   onChange: (criteria: Record<string, any>) => void;
-  onCDDQuestionChange: (questionKey: string, value: boolean) => void;
-  onCTTQuestionChange: (questionKey: string, value: boolean) => void;
+  onCDDQuestionChange: (key: CddConditionKey, checked: boolean) => void;
+  onCTTQuestionChange: (key: CttConditionKey, checked: boolean) => void;
   errors: InformationsStoreError;
 }
 
@@ -42,17 +47,18 @@ export const CriteriaQuestions: React.FC<Props> = ({
   if (contractType === CONTRACT_TYPE.CDD) {
     // Utiliser la factory pour obtenir les types de CDD selon la convention collective
     const cddTypes = getCddTypesForAgreement(agreement);
-    const cddTypeOptions: [string, string][] = cddTypes.map((type) => [
-      type,
-      type,
-    ]);
+    const cddTypeQuestions = cddTypes.map((type) => ({
+      label: type,
+      value: type,
+      id: `cddType-${type}`,
+    }));
 
     return (
       <>
-        <SelectQuestion
+        <RadioQuestion
           name="cddType"
           label="Quel est le type de CDD ?"
-          options={cddTypeOptions}
+          questions={cddTypeQuestions}
           selectedOption={criteria.cddType}
           onChangeSelectedOption={(value) =>
             handleCriteriaChange("cddType", value)
@@ -62,24 +68,14 @@ export const CriteriaQuestions: React.FC<Props> = ({
 
         {/* Questions spécifiques CDD si "Autres" est sélectionné */}
         {criteria.cddType === "Autres" && (
-          <CDDQuestions
-            input={input}
-            onChange={onCDDQuestionChange}
-            errors={errors}
-          />
+          <CDDQuestions input={input} onChange={onCDDQuestionChange} />
         )}
       </>
     );
   }
 
   if (contractType === CONTRACT_TYPE.CTT) {
-    return (
-      <CTTQuestions
-        input={input}
-        onChange={onCTTQuestionChange}
-        errors={errors}
-      />
-    );
+    return <CTTQuestions input={input} onChange={onCTTQuestionChange} />;
   }
 
   return null;

@@ -25,8 +25,6 @@ const InformationsStepComponent = () => {
     onCriteriaChange: state.informationsFunction.onCriteriaChange,
     onCDDQuestionChange: state.informationsFunction.onCDDQuestionChange,
     onCTTQuestionChange: state.informationsFunction.onCTTQuestionChange,
-    onConventionQuestionChange:
-      state.informationsFunction.onConventionQuestionChange,
     agreement: state.agreementData.input.agreement,
     contractType: state.informationsData.input.contractType,
     criteria: state.informationsData.input.criteria,
@@ -35,7 +33,6 @@ const InformationsStepComponent = () => {
 
   return (
     <div>
-      {/* Question sur le type de contrat */}
       <ContractTypeQuestion
         value={contractType}
         onChange={onContractTypeChange}
@@ -43,23 +40,24 @@ const InformationsStepComponent = () => {
       />
 
       {contractType && (
-        <CriteriaQuestions
-          contractType={contractType}
-          criteria={criteria}
-          input={input}
-          onChange={onCriteriaChange}
-          onCDDQuestionChange={onCDDQuestionChange}
-          onCTTQuestionChange={onCTTQuestionChange}
-          errors={errors}
-        />
-      )}
+        <>
+          <CriteriaQuestions
+            contractType={contractType}
+            criteria={criteria}
+            input={input}
+            onChange={onCriteriaChange}
+            onCDDQuestionChange={onCDDQuestionChange}
+            onCTTQuestionChange={onCTTQuestionChange}
+            errors={errors}
+          />
 
-      {/* Questions spécifiques aux conventions collectives */}
-      {agreement && (
-        <AgreementsInjector
-          idcc={agreement.num}
-          step={IndemnitePrecariteStepName.InfosGenerales}
-        />
+          {agreement && (
+            <AgreementsInjector
+              idcc={agreement.num}
+              step={IndemnitePrecariteStepName.InfosGenerales}
+            />
+          )}
+        </>
       )}
     </div>
   );

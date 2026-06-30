@@ -18,46 +18,40 @@ export const ui = {
       "contractType - Contrat de travail temporaire (Contrat d'intérim)"
     ),
   },
-  cddType: byTestId("cddType"),
+  cddType: (value: string) => byTestId(`cddType-${value}`),
   cttQuestions: {
-    cttFormation: {
-      oui: byTestId("cttFormation-Oui"),
-      non: byTestId("cttFormation-Non"),
-    },
-    ruptureContratFauteGrave: {
-      oui: byTestId("ruptureContratFauteGrave-Oui"),
-      non: byTestId("ruptureContratFauteGrave-Non"),
-    },
-    propositionCDIFinContrat: {
-      oui: byTestId("propositionCDIFinContrat-Oui"),
-      non: byTestId("propositionCDIFinContrat-Non"),
-    },
-    refusSouplesse: {
-      oui: byTestId("refusSouplesse-Oui"),
-      non: byTestId("refusSouplesse-Non"),
-    },
+    cttFormation: byTestId("cttQuestions-cttFormation-checkbox"),
+    ruptureContratFauteGrave: byTestId(
+      "cttQuestions-ruptureContratFauteGrave-checkbox"
+    ),
+    propositionCDIFinContrat: byTestId(
+      "cttQuestions-propositionCDIFinContrat-checkbox"
+    ),
+    refusSouplesse: byTestId("cttQuestions-refusSouplesse-checkbox"),
   },
   cddQuestions: {
-    finContratPeriodeDessai: {
-      oui: byTestId("finContratPeriodeDessai-Oui"),
-      non: byTestId("finContratPeriodeDessai-Non"),
-    },
-    propositionCDIFindeContrat: {
-      oui: byTestId("propositionCDIFindeContrat-Oui"),
-      non: byTestId("propositionCDIFindeContrat-Non"),
-    },
-    refusCDIFindeContrat: {
-      oui: byTestId("refusCDIFindeContrat-Oui"),
-      non: byTestId("refusCDIFindeContrat-Non"),
-    },
-    interruptionFauteGrave: {
-      oui: byTestId("interruptionFauteGrave-Oui"),
-      non: byTestId("interruptionFauteGrave-Non"),
-    },
-    refusRenouvellementAuto: {
-      oui: byTestId("refusRenouvellementAuto-Oui"),
-      non: byTestId("refusRenouvellementAuto-Non"),
-    },
+    finContratPeriodeDessai: byTestId(
+      "cddQuestions-finContratPeriodeDessai-checkbox"
+    ),
+    propositionCDIFindeContrat: byTestId(
+      "cddQuestions-propositionCDIFindeContrat-checkbox"
+    ),
+    refusCDIFindeContrat: byTestId(
+      "cddQuestions-refusCDIFindeContrat-checkbox"
+    ),
+    interruptionFauteGrave: byTestId(
+      "cddQuestions-interruptionFauteGrave-checkbox"
+    ),
+    refusRenouvellementAuto: byTestId(
+      "cddQuestions-refusRenouvellementAuto-checkbox"
+    ),
+  },
+  agreementQuestions: {
+    hasCdiProposal: byTestId("hasCdiProposal-hasCdiProposal-checkbox"),
+    hasCdiRenewal: byTestId("hasCdiRenewal-hasCdiRenewal-checkbox"),
+    hasEquivalentCdiRenewal: byTestId(
+      "hasEquivalentCdiRenewal-hasEquivalentCdiRenewal-checkbox"
+    ),
   },
   remuneration: {
     typeRemuneration: {
@@ -66,13 +60,14 @@ export const ui = {
     },
     salaireTotal: byTestId("salaireTotal"),
     salaireMensuel: (index: number) => byTestId(`salaireMensuel-${index}`),
-    addSalaire: byTestId("addSalaire"),
-    removeSalaire: (index: number) => byTestId(`removeSalaire-${index}`),
+    dureeContrat: byTestId("dureeContrat"),
   },
   result: {
     presentation: byText(
       "À partir des éléments que vous avez saisis, le montant de votre indemnité est estimé à"
     ),
+    disqualification: byTestId("disqualification-message"),
+    disqualificationTitle: byText("Aucune indemnité"),
   },
   next: byTestId("next-button"),
 };
