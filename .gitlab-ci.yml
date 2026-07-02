@@ -17,12 +17,12 @@
 # ============================================================================
 
 include:
-  - project: socialgouv/produits-dnum/communs/ci-common
+  - project: socialgouv/commun/studio-tech-commun/sdpsn-devops-ci-utils
     ref: main
-    file: templates/image-build.yml
-  - project: socialgouv/produits-dnum/communs/ci-common
+    file: ci-common/image-build.yml
+  - project: socialgouv/commun/studio-tech-commun/sdpsn-devops-ci-utils
     ref: main
-    file: templates/publish-chart.yml
+    file: ci-common/publish-chart.yml
 
 variables:
   CHART_DIR: charts/code-du-travail-numerique
