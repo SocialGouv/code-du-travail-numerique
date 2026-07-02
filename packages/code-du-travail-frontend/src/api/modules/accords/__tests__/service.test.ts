@@ -1,15 +1,20 @@
 import { getAccordsEntreprise } from "../service";
-import { DilaApiClient } from "@socialgouv/dila-api-client";
-
-jest.mock("@socialgouv/dila-api-client");
 
 const mockFetch = jest.fn();
 
+// Explicit factory instead of automock: the real @socialgouv/dila-api-client pulls
+// in @hapi/wreck and can perform real HTTP requests. Automocking it was flaky under
+// the full test suite — when the automock failed to apply, DilaApiClient.fetch hit
+// the network ("The content-type is not JSON compatible"). A factory never loads the
+// real module, keeping the test hermetic and deterministic.
+jest.mock("@socialgouv/dila-api-client", () => ({
+  DilaApiClient: jest.fn(() => ({
+    fetch: mockFetch,
+  })),
+}));
+
 beforeEach(() => {
   jest.clearAllMocks();
-  (DilaApiClient as jest.Mock).mockImplementation(() => ({
-    fetch: mockFetch,
-  }));
 });
 
 const mockSearchResponse = {
