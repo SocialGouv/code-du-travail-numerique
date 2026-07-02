@@ -11,6 +11,9 @@ concurrency:
 
 jobs:
   build-app:
+    permissions:
+      contents: read
+      id-token: write # OIDC identity for buildkit-operator /route auth
     environment: build-review
     outputs:
       tags: ${{ steps.meta.outputs.tags }}
@@ -39,21 +42,25 @@ jobs:
         id: env
         uses: socialgouv/kontinuous/.github/actions/env@v1
 
-      - name: 📦 Build and push Docker image for app
-        uses: socialgouv/workflows/actions/buildkit@v1
+      - name: 🔑 Login to registry
+        uses: docker/login-action@v4
         with:
+          registry: ${{ vars.REGISTRY_URL }}
+          username: ${{ secrets.REGISTRY_USERNAME }}
+          password: ${{ secrets.REGISTRY_PASSWORD }}
+
+      - name: 📦 Build and push Docker image for app
+        uses: socialgouv/buildkit-operator@v1
+        with:
+          buildd-url: ${{ vars.BUILDKIT_OPERATOR_BUILDD_URL }}
+          gateway-host: ${{ vars.BUILDKIT_OPERATOR_GATEWAY_HOST }}
+          ca: ${{ secrets.BUILDKIT_OPERATOR_CA }}
+          cert: ${{ secrets.BUILDKIT_OPERATOR_CERT }}
+          key: ${{ secrets.BUILDKIT_OPERATOR_KEY }}
           context: "."
-          dockerfile: "Dockerfile"
+          file: "Dockerfile"
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-          registry: "${{ vars.REGISTRY_URL }}"
-          registry-username: "${{ secrets.REGISTRY_USERNAME }}"
-          registry-password: "${{ secrets.REGISTRY_PASSWORD }}"
-          buildkit-cert-ca: "${{ secrets.BUILDKIT_CERT_CA }}"
-          buildkit-cert: "${{ secrets.BUILDKIT_CERT }}"
-          buildkit-cert-key: "${{ secrets.BUILDKIT_CERT_KEY }}"
-          buildkit-svc-count: ${{ vars.BUILDKIT_SVC_COUNT }}
-          buildkit-daemon-address: ${{ vars.BUILDKIT_DAEMON_ADDRESS }}
           secrets: |
             SENTRY_AUTH_TOKEN=${{ secrets.SENTRY_AUTH_TOKEN }}
             ELASTICSEARCH_TOKEN_API=${{ secrets.ELASTICSEARCH_TOKEN_API }}
@@ -80,6 +87,7 @@ jobs:
             NEXT_PUBLIC_ES_INDEX_PREFIX=cdtn-preprod
             NEXT_PUBLIC_BRANCH_NAME_SLUG=${{ steps.env.outputs.branchSlug32 }}
             NEXT_PUBLIC_ENABLE_AB_TESTING=false
+          push: true
 
   kontinuous:
     needs: [build-app]
