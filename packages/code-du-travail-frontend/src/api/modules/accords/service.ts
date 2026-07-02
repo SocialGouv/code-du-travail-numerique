@@ -1,4 +1,4 @@
-import { DilaApiClient } from "@socialgouv/dila-api-client";
+import { DilaApiClient } from "../../utils/dila-api-client";
 import {
   ApiAccordResponse,
   ApiEntrepriseAccordResponse,
@@ -70,6 +70,7 @@ const fetchAllAccords = async (siret: string): Promise<ApiSearchResponse> => {
       },
       method: "POST",
     });
+    console.log("Receive accord data : ", JSON.stringify(result));
     return result;
   } catch (e) {
     console.error("Fetch all accord failed for siret: ", siret);

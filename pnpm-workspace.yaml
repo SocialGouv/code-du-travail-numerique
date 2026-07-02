@@ -1,6 +1,16 @@
 packages:
   - packages/*
 
+allowBuilds:
+  '@parcel/watcher': true
+  '@sentry/cli': true
+  '@swc/core': true
+  es5-ext: true
+  esbuild: true
+  nx: true
+  sharp: true
+  unrs-resolver: true
+
 onlyBuiltDependencies:
   - "@parcel/watcher"
   - "@sentry/cli"
