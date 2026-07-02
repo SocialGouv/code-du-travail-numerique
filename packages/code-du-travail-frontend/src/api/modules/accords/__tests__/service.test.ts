@@ -1,8 +1,16 @@
 import { getAccordsEntreprise } from "../service";
-// jest.config.js redirects "@socialgouv/dila-api-client" to the stub in ./__mocks__
-// via moduleNameMapper, so the service uses the stub's DilaApiClient and no real
-// network call is possible. We import the same mock fn the service ends up calling.
-import { mockDilaFetch as mockFetch } from "./__mocks__/dila-api-client";
+
+// The DILA client is now a local module (../../utils/dila-api-client); it performs
+// real HTTP/OAuth requests, so it must be mocked here. It was previously mocked as
+// the "@socialgouv/dila-api-client" package — that stopped matching once the client
+// was vendored locally, letting the real fetch run ("401 Unauthorized").
+const mockFetch = jest.fn();
+
+jest.mock("../../../utils/dila-api-client", () => ({
+  DilaApiClient: jest.fn(() => ({
+    fetch: mockFetch,
+  })),
+}));
 
 beforeEach(() => {
   jest.clearAllMocks();
