@@ -1,17 +1,16 @@
 // Source de vérité partagée pour le widget de notation de la clarté d'une
 // contribution (#7333). Ce fichier ne doit PAS dépendre de React ni du DOM :
-// il est importé à la fois côté client (composants, tracking) et côté serveur
-// (le contrôleur du proxy l'utilise pour valider la catégorie/action reçues).
-
-export const RATING_STORAGE_KEY = "cdtn:contribution-rating:v1";
+// il est importé à la fois côté client (composants, slider) et côté serveur
+// (le contrôleur borne la note via RATING_MIN/RATING_MAX et émet l'event Matomo
+// avec le couple RatingMatomo.CATEGORY/ACTION).
 
 export const RATING_MIN = 1;
 export const RATING_MAX = 5;
 export const RATING_STEP = 1;
 export const RATING_DEFAULT = 3; // « Neutre » — position médiane
 
-// Valeur -> libellé textuel. Sert au libellé dynamique visible, à
-// `aria-valuetext` (lecteurs d'écran) et au nom d'event Matomo.
+// Valeur -> libellé textuel. Sert au libellé dynamique visible et à
+// `aria-valuetext` (lecteurs d'écran).
 // Libellés intermédiaires (2, 4) à confirmer depuis Figma.
 export const RATING_LABELS: Record<number, string> = {
   1: "Trop compliqué",
@@ -35,17 +34,10 @@ export const RATING_CONFIRMATION_TEXT = "Merci !";
 // courante est portée par `aria-valuetext`).
 export const RATING_SLIDER_LABEL = "Notez la clarté du contenu de cette page";
 
-// Identifiants Matomo. Le proxy n'accepte QUE ce couple catégorie/action
-// (liste blanche anti-relais : impossible d'injecter un event arbitraire).
-// En enum (et non en `const`) pour rester résolvable par l'extraction statique
-// des events (`@socialgouv/cdtn-stats`), comme les autres events de tracking.
+// Identité Matomo de l'event de notation, appartenant au serveur : le contrôleur
+// l'utilise pour émettre l'event lors du relai serveur->serveur. En enum (et non
+// en `const`) par cohérence avec les autres identifiants d'events du projet.
 export enum RatingMatomo {
   CATEGORY = "notation_contribution",
   ACTION = "validation_note",
 }
-
-export const isValidRatingValue = (value: unknown): value is number =>
-  typeof value === "number" &&
-  Number.isInteger(value) &&
-  value >= RATING_MIN &&
-  value <= RATING_MAX;

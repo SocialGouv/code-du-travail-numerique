@@ -30,25 +30,23 @@ const mockSendRatingEvent = sendRatingEvent as jest.MockedFunction<
   typeof sendRatingEvent
 >;
 
-// Le contrôleur lit `request.text()` (mesure de taille réelle) puis JSON.parse.
-const makeRequest = (body: unknown, rawOverride?: string): Request =>
+// Route API classique : le contrôleur lit `request.json()`. On simule aussi le
+// cas d'un JSON invalide (json() rejette).
+const makeRequest = (body: unknown, invalidJson = false): Request =>
   ({
-    text: async () =>
-      rawOverride ?? (typeof body === "string" ? body : JSON.stringify(body)),
+    json: async () => {
+      if (invalidJson) throw new SyntaxError("Unexpected token");
+      return body;
+    },
   }) as unknown as Request;
 
-const validBody = {
-  category: RatingMatomo.CATEGORY,
-  action: RatingMatomo.ACTION,
-  name: "Congés payés",
-  slug: "conges-payes",
-  value: 4,
-};
+// Le client n'envoie QUE la note : le slug de la contribution et la valeur.
+const validBody = { slug: "conges-payes", value: 4 };
 
 describe("ContributionRatingController.post()", () => {
   beforeEach(() => jest.clearAllMocks());
 
-  it("retourne 204 et relaie l'event (avec le slug) pour un body valide", async () => {
+  it("retourne 204 et relaie l'event (catégorie/action côté serveur) pour un body valide", async () => {
     mockSendRatingEvent.mockResolvedValue();
     const res = await new ContributionRatingController(
       makeRequest(validBody)
@@ -58,24 +56,23 @@ describe("ContributionRatingController.post()", () => {
     expect(mockSendRatingEvent).toHaveBeenCalledWith({
       category: RatingMatomo.CATEGORY,
       action: RatingMatomo.ACTION,
-      name: "Congés payés",
       value: 4,
       slug: "conges-payes",
     });
   });
 
-  it("rejette (400) une catégorie/action hors liste blanche, sans appeler le service", async () => {
+  it("rejette (400) une note hors bornes", async () => {
     const res = await new ContributionRatingController(
-      makeRequest({ ...validBody, category: "autre_categorie" })
+      makeRequest({ ...validBody, value: 9 })
     ).post();
 
     expect(res.status).toBe(400);
     expect(mockSendRatingEvent).not.toHaveBeenCalled();
   });
 
-  it("rejette (400) une note hors bornes", async () => {
+  it("rejette (400) une note non entière", async () => {
     const res = await new ContributionRatingController(
-      makeRequest({ ...validBody, value: 9 })
+      makeRequest({ ...validBody, value: 3.5 })
     ).post();
 
     expect(res.status).toBe(400);
@@ -91,18 +88,20 @@ describe("ContributionRatingController.post()", () => {
     expect(mockSendRatingEvent).not.toHaveBeenCalled();
   });
 
-  it("rejette (400) un JSON invalide", async () => {
+  it("rejette (400) un champ inattendu (schéma strict : « juste la note »)", async () => {
     const res = await new ContributionRatingController(
-      makeRequest("not-json")
+      makeRequest({ ...validBody, category: "autre_categorie" })
     ).post();
+
     expect(res.status).toBe(400);
+    expect(mockSendRatingEvent).not.toHaveBeenCalled();
   });
 
-  it("rejette (413) un corps trop volumineux (taille réelle, pas l'en-tête)", async () => {
+  it("rejette (400) un JSON invalide", async () => {
     const res = await new ContributionRatingController(
-      makeRequest(undefined, "x".repeat(5000))
+      makeRequest(undefined, true)
     ).post();
-    expect(res.status).toBe(413);
+    expect(res.status).toBe(400);
     expect(mockSendRatingEvent).not.toHaveBeenCalled();
   });
 

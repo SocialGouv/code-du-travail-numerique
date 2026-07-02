@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useId, useRef, useState } from "react";
+import { useId, useRef, useState } from "react";
 import { fr } from "@codegouvfr/react-dsfr";
 import { Button } from "@codegouvfr/react-dsfr/Button";
 import { css } from "@styled-system/css";
@@ -8,7 +8,6 @@ import { RatingIcon } from "./RatingIcon";
 import { RatingSlider } from "./RatingSlider";
 import { RatingConfirmation } from "./RatingConfirmation";
 import { trackContributionRating } from "./tracking";
-import { isContributionRated, markContributionRated } from "./storage";
 import {
   RATING_DEFAULT,
   RATING_WIDGET_HINT,
@@ -18,30 +17,20 @@ import {
 
 type Props = {
   contributionSlug: string;
-  contributionTitle: string;
 };
 
 type Status = "idle" | "submitted";
 
-export const ContributionRating = ({
-  contributionSlug,
-  contributionTitle,
-}: Props) => {
+export const ContributionRating = ({ contributionSlug }: Props) => {
   const headingId = useId();
   const [value, setValue] = useState(RATING_DEFAULT);
   const [status, setStatus] = useState<Status>("idle");
   const messageRef = useRef<HTMLParagraphElement>(null);
   // Garde synchrone : empêche un double-clic rapide d'émettre deux events avant
   // que le re-render n'ait masqué le bouton (l'état `status` est asynchrone).
+  // Pas de persistance (localStorage) : recharger la page ou revenir sur le site
+  // ré-affiche le widget notable (respect du RGPD, aucune trace côté client).
   const submittingRef = useRef(false);
-
-  // Dédup persistante : si cette contribution a déjà été notée, on affiche
-  // directement la confirmation. Vérifié APRÈS le montage (et non à
-  // l'initialisation de l'état) pour ne pas casser l'hydratation : le
-  // localStorage n'existe pas au rendu serveur.
-  useEffect(() => {
-    if (isContributionRated(contributionSlug)) setStatus("submitted");
-  }, [contributionSlug]);
 
   const onChange = (next: number) => {
     setValue(next);
@@ -50,11 +39,9 @@ export const ContributionRating = ({
   const onSubmit = () => {
     if (submittingRef.current || status !== "idle") return;
     submittingRef.current = true;
-    markContributionRated(contributionSlug);
     setStatus("submitted");
     void trackContributionRating({
       contributionSlug,
-      contributionTitle,
       value,
     }); // fire-and-forget
     // Focus sur le message de confirmation (timing calqué sur CopyButton).

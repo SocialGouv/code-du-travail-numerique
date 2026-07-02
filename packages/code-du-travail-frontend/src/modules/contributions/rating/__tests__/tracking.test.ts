@@ -1,6 +1,5 @@
 import { trackContributionRating, RATING_TRACKING_ENDPOINT } from "../tracking";
 import { getStoredConsent } from "../../../utils/consent";
-import { RatingMatomo } from "../constants";
 
 jest.mock("../../../utils/consent", () => ({
   getStoredConsent: jest.fn(),
@@ -23,11 +22,10 @@ describe("rating/tracking", () => {
     global.fetch = jest.fn().mockResolvedValue({ ok: true, status: 204 });
   });
 
-  it("POST l'event sur l'endpoint first-party avec le bon payload", async () => {
+  it("POST « juste la note » sur la route API first-party", async () => {
     consent(true);
 
     await trackContributionRating({
-      contributionTitle: "Congés payés",
       contributionSlug: "conges-payes-1234",
       value: 4,
     });
@@ -40,24 +38,18 @@ describe("rating/tracking", () => {
     expect(init.headers["Content-Type"]).toBe("application/json");
 
     const body = JSON.parse(init.body);
+    // Payload minimal : le slug de la contribution + la note. La catégorie/action
+    // Matomo et l'URL canonique sont ajoutées côté serveur.
     expect(body).toEqual({
-      category: RatingMatomo.CATEGORY,
-      action: RatingMatomo.ACTION,
-      name: "Congés payés",
       slug: "conges-payes-1234",
       value: 4,
     });
-    // L'URL et le libellé ne sont plus envoyés : l'URL canonique est
-    // reconstruite côté serveur depuis le slug.
-    expect(body.url).toBeUndefined();
-    expect(body.label).toBeUndefined();
   });
 
   it("n'émet rien si le consentement Matomo est refusé", async () => {
     consent(false);
 
     await trackContributionRating({
-      contributionTitle: "Congés payés",
       contributionSlug: "conges-payes-1234",
       value: 4,
     });
@@ -71,7 +63,6 @@ describe("rating/tracking", () => {
 
     await expect(
       trackContributionRating({
-        contributionTitle: "Congés payés",
         contributionSlug: "conges-payes-1234",
         value: 3,
       })

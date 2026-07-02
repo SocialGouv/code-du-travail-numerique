@@ -94,10 +94,7 @@ export const ContributionGenericContent = forwardRef<
             !displayGeneric && "fr-hidden"
           )}
         >
-          <ContributionRating
-            contributionSlug={contribution.slug}
-            contributionTitle={contribution.title}
-          />
+          <ContributionRating contributionSlug={contribution.slug} />
           <RelatedItems relatedItems={relatedItems} />
           <Share title={title} metaDescription={metas.description} />
         </div>

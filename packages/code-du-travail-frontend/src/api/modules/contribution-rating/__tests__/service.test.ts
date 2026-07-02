@@ -16,7 +16,6 @@ describe("contribution-rating service", () => {
     await sendRatingEvent({
       category: "notation_contribution",
       action: "validation_note",
-      name: "Congés payés",
       value: 4,
       slug: "conges-payes",
     });
@@ -34,7 +33,8 @@ describe("contribution-rating service", () => {
     expect(parsed.searchParams.get("send_image")).toBe("0");
     expect(parsed.searchParams.get("e_c")).toBe("notation_contribution");
     expect(parsed.searchParams.get("e_a")).toBe("validation_note");
-    expect(parsed.searchParams.get("e_n")).toBe("Congés payés");
+    // Nom d'event = slug (le titre n'est plus relayé par le client).
+    expect(parsed.searchParams.get("e_n")).toBe("conges-payes");
     expect(parsed.searchParams.get("e_v")).toBe("4");
   });
 
@@ -42,7 +42,6 @@ describe("contribution-rating service", () => {
     await sendRatingEvent({
       category: "notation_contribution",
       action: "validation_note",
-      name: "Congés payés",
       value: 4,
       slug: "conges-payes",
     });
@@ -58,7 +57,6 @@ describe("contribution-rating service", () => {
     await sendRatingEvent({
       category: "notation_contribution",
       action: "validation_note",
-      name: "Congés payés",
       value: 4,
       slug: "conges-payes",
     });
@@ -72,7 +70,6 @@ describe("contribution-rating service", () => {
     await sendRatingEvent({
       category: "notation_contribution",
       action: "validation_note",
-      name: "Congés payés",
       value: 3,
       slug: "conges-payes",
     });
@@ -88,7 +85,6 @@ describe("contribution-rating service", () => {
     await sendRatingEvent({
       category: "notation_contribution",
       action: "validation_note",
-      name: "x",
       value: 3,
       slug: "conges-payes",
     });
@@ -103,7 +99,6 @@ describe("contribution-rating service", () => {
       sendRatingEvent({
         category: "notation_contribution",
         action: "validation_note",
-        name: "x",
         value: 3,
         slug: "conges-payes",
       })

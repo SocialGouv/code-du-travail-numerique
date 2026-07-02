@@ -12,9 +12,9 @@ const MATOMO_TIMEOUT_MS = 3000;
 export type RatingEvent = {
   category: string;
   action: string;
-  name: string;
   value: number;
-  // Slug de la contribution : sert à construire l'URL canonique côté serveur.
+  // Slug de la contribution : sert à construire l'URL canonique côté serveur et
+  // de nom d'event lisible (`e_n`) dans les rapports Matomo.
   slug: string;
 };
 
@@ -34,7 +34,9 @@ export const sendRatingEvent = async (event: RatingEvent): Promise<void> => {
     rand: `${Date.now()}`,
     e_c: event.category,
     e_a: event.action,
-    e_n: event.name,
+    // Nom d'event = slug : identifiant lisible et stable de la contribution
+    // (le titre n'est plus relayé par le client → « juste la note »).
+    e_n: event.slug,
     e_v: `${event.value}`,
     url,
   });

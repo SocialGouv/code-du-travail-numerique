@@ -12,13 +12,10 @@ const mockTrack = trackContributionRating as jest.MockedFunction<
 
 const props = {
   contributionSlug: "conges-payes-1234",
-  contributionTitle: "Congés payés",
 };
 
 beforeEach(() => {
   jest.clearAllMocks();
-  // Dédup persistante (localStorage) : on repart d'un état vierge à chaque test.
-  localStorage.clear();
 });
 
 describe("ContributionRating", () => {
@@ -60,7 +57,6 @@ describe("ContributionRating", () => {
 
     expect(mockTrack).toHaveBeenCalledWith({
       contributionSlug: "conges-payes-1234",
-      contributionTitle: "Congés payés",
       value: 4,
     });
 
@@ -74,7 +70,7 @@ describe("ContributionRating", () => {
     await waitFor(() => expect(confirmationParagraph).toHaveFocus());
   });
 
-  it("au remontage, conserve l'état « noté » (dédup persistante) et n'émet pas un 2e event", async () => {
+  it("au remontage (rechargement), ré-affiche le widget notable (aucune persistance, RGPD-friendly)", async () => {
     const { unmount } = render(<ContributionRating {...props} />);
     fireEvent.change(screen.getByRole("slider"), { target: { value: "4" } });
     fireEvent.click(screen.getByRole("button", { name: "Valider" }));
@@ -82,14 +78,16 @@ describe("ContributionRating", () => {
     expect(mockTrack).toHaveBeenCalledTimes(1);
     unmount();
 
-    // Rechargement simulé : la contribution est marquée notée en localStorage,
-    // on réaffiche directement la confirmation sans bouton « Valider ».
+    // Rechargement simulé : aucune trace côté client (pas de localStorage), le
+    // widget repart de zéro et l'usager peut noter à nouveau.
     render(<ContributionRating {...props} />);
 
-    expect(await screen.findByText("Merci !")).toBeInTheDocument();
-    expect(
-      screen.queryByRole("button", { name: "Valider" })
-    ).not.toBeInTheDocument();
-    expect(mockTrack).toHaveBeenCalledTimes(1);
+    expect(screen.queryByText("Merci !")).not.toBeInTheDocument();
+    const validateButton = screen.getByRole("button", { name: "Valider" });
+    expect(validateButton).toBeInTheDocument();
+
+    fireEvent.click(validateButton);
+    await screen.findByText("Merci !");
+    expect(mockTrack).toHaveBeenCalledTimes(2);
   });
 });

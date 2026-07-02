@@ -79,10 +79,7 @@ export function ContributionAgreementContent({
             </Link>
           </span>
         </p>
-        <ContributionRating
-          contributionSlug={contribution.slug}
-          contributionTitle={contribution.title}
-        />
+        <ContributionRating contributionSlug={contribution.slug} />
         {relatedItems && <RelatedItems relatedItems={relatedItems} />}
         <Share title={title} metaDescription={metas.description} />
       </div>
