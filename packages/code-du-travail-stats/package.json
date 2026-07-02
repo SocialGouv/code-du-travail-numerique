@@ -12,8 +12,6 @@
   "scripts": {
     "events:extract": "tsx src/extract-events.ts",
     "events:check": "tsx src/check-events.ts",
-    "doc:generate": "tsx src/generate-doc.ts",
-    "doc:check": "tsx src/check-doc.ts",
     "test": "jest",
     "test:coverage": "jest --coverage",
     "type-check": "tsc --noEmit",

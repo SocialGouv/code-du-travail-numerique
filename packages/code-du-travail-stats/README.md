@@ -24,23 +24,28 @@ simple égalité de chaîne.
 
 ## Plan de tracking pour le métier (markdown)
 
-Le JSON est pensé pour l'outillage / l'IA. Pour le **métier**, un plan de tracking lisible est
-généré **à partir du JSON** dans `events/TRACKING_PLAN.md` :
+Le JSON est pensé pour l'outillage / l'IA. Pour le **métier**, un plan de tracking **rédigé**
+(prose + tableaux commentés) vit dans `events/TRACKING_PLAN.md` :
 
 ```
-events.extracted.json   →   generate-doc   →   TRACKING_PLAN.md
+events.extracted.json  +  code frontend   →   skill /tracking-plan   →   TRACKING_PLAN.md
 ```
 
-- Events regroupés **par module/feature** (déduit du chemin), puis par catégorie Matomo
-  (titres `###`, tout affiché).
-- Colonnes orientées métier : `Action` et `Name` en code-span (les valeurs `<…>` seraient
-  sinon masquées par GitHub), un repère **📌 fixe / 🔀 variable**, et un lien **Code** ↗ vers
-  la ligne (URL GitHub absolue sur `dev`, `fichier:ligne` au survol).
-- Markdown **déterministe** (aucun timestamp), donc drift-checké comme le JSON.
+- Ce document n'est **pas** produit par un algo : il est **rédigé par le skill Claude
+  `/tracking-plan`** (`.claude/skills/tracking-plan`). Le skill lit le catalogue
+  `events.extracted.json` **et** les modules frontend concernés (simulateurs et leurs étapes,
+  parcours convention collective p1/p2/p3, recherche entreprise) pour produire une explication
+  métier avec les vrais titres/étapes — ce qu'un rendu mécanique ne peut pas faire.
+- Comme il est rédigé (non déterministe), il **n'est pas drift-checké** : on le régénère via le
+  skill quand le tracking évolue. Seul le JSON (`events:check`) est vérifié en CI.
 
-Ce fichier est aussi **synchronisé automatiquement vers le wiki GitHub** (page
+Ce fichier est **synchronisé automatiquement vers le wiki GitHub** (page
 `Plan de tracking Matomo`) à chaque merge sur `dev` par le workflow
-`.github/workflows/stats-events-wiki.yml`. Le métier consulte le wiki, jamais le repo.
+`.github/workflows/stats-events-wiki.yml`. La sync **ne remplace pas** la page : elle met à jour
+uniquement le bloc délimité par les marqueurs
+`<!-- TRACKING_PLAN:START -->` / `<!-- TRACKING_PLAN:END -->` (helper
+`scripts/wiki-upsert.mjs`), préservant le titre et tout contenu manuel de la page. Le métier
+consulte le wiki, jamais le repo.
 
 > Le push wiki utilise `GITHUB_TOKEN`. Si la policy de l'org le bloque, ajouter un secret
 > `WIKI_TOKEN` (PAT avec accès au dépôt) : le workflow l'utilisera en priorité.
@@ -96,22 +101,21 @@ Le catalogue se limite aux events **écrits explicitement** dans le code. Sont e
 # Régénère events/events.extracted.json à partir du code
 pnpm -F @socialgouv/cdtn-stats events:extract
 
-# Régénère events/TRACKING_PLAN.md à partir du JSON
-pnpm -F @socialgouv/cdtn-stats doc:generate
-
-# Drift-checks : échouent (exit 1) si un fichier est désynchronisé
+# Drift-check : échoue (exit 1) si le JSON est désynchronisé du code
 pnpm -F @socialgouv/cdtn-stats events:check   # JSON vs code
-pnpm -F @socialgouv/cdtn-stats doc:check      # markdown vs JSON
 
 # Tests unitaires du scanner
 pnpm -F @socialgouv/cdtn-stats test
 ```
 
-`events:check` + `doc:check` couvrent ensemble toute la chaîne `code → JSON → markdown`.
+Le plan métier `events/TRACKING_PLAN.md` se **régénère via le skill Claude** `/tracking-plan`
+(il n'a pas de commande npm : c'est un document rédigé, pas un artefact déterministe).
 
-- **CI** : le workflow `.github/workflows/stats-events.yml` lance les deux drift-checks sur
+- **CI** : le workflow `.github/workflows/stats-events.yml` lance le drift-check du JSON sur
   **chaque** PR (sans filtre de chemins : un event peut être ajouté depuis n'importe quel
-  module). `.github/workflows/stats-events-wiki.yml` pousse le markdown vers le wiki sur `dev`.
+  module). `.github/workflows/stats-events-wiki.yml` pousse le markdown vers le wiki sur `dev`
+  (mise à jour du bloc entre marqueurs, cf. plus haut).
 - **Local** : un hook lint-staged régénère et re-stage automatiquement
-  `events/events.extracted.json` **puis** `events/TRACKING_PLAN.md` dès qu'un fichier
-  `src/modules/**` change (cf. `code-du-travail-frontend/lint-staged.config.js`).
+  `events/events.extracted.json` dès qu'un fichier `src/modules/**` change (cf.
+  `code-du-travail-frontend/lint-staged.config.js`). Après une évolution du tracking, pense à
+  régénérer le plan métier via `/tracking-plan`.

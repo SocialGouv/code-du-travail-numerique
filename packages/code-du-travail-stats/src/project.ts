@@ -20,18 +20,6 @@ export const OUTPUT_PATH = path.join(
   "events.extracted.json"
 );
 
-// Plan de tracking lisible par le métier, dérivé du JSON (cf. generate-doc.ts).
-// Committé et drift-checké comme le JSON, puis poussé vers le wiki GitHub.
-export const DOC_PATH = path.join(STATS_DIR, "events", "TRACKING_PLAN.md");
-
-// Base des liens "source" du markdown. On pointe sur une branche fixe (et non un
-// SHA) pour que le markdown reste déterministe : son contenu ne dépend que du
-// JSON, pas du commit courant. Les liens sont absolus → valides dans le repo ET
-// dans le wiki (où les liens relatifs ne résoudraient pas vers le code).
-export const REPO_URL =
-  "https://github.com/SocialGouv/code-du-travail-numerique";
-export const REPO_REF = "dev";
-
 // On scanne TOUT src/modules/**/*.{ts,tsx} (hors tests) : sendEvent peut être
 // appelé depuis n'importe quel module (stores zustand, composants inline...),
 // pas seulement dans les fichiers `tracking.ts`.

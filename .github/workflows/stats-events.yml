@@ -1,10 +1,13 @@
 name: Stats events
 
 # Pipeline d'extraction des events Matomo :
-#  - drift-check : échoue si un fichier généré est désynchronisé. Deux étapes dans le même job :
-#      * events.extracted.json vs code     (régénérer via `events:extract`)
-#      * events/TRACKING_PLAN.md vs JSON   (régénérer via `doc:generate`)
+#  - drift-check : échoue si `events.extracted.json` est désynchronisé du code
+#      (régénérer via `events:extract`).
 #  - unit-tests : tests unitaires des modules d'extraction (jest, sans services).
+#
+# Le plan de tracking métier (events/TRACKING_PLAN.md) n'est PLUS généré par un
+# algo : il est rédigé via le skill Claude `/tracking-plan` (cf.
+# .claude/skills/tracking-plan). Il n'est donc pas drift-checké ici.
 
 on:
   pull_request:
@@ -16,7 +19,7 @@ concurrency:
 
 jobs:
   drift-check:
-    name: Drift check (JSON + markdown synchronisés)
+    name: Drift check (JSON synchronisé avec le code)
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -30,7 +33,6 @@ jobs:
           run_install: false
       - run: pnpm install --filter @socialgouv/cdtn-stats --frozen-lockfile
       - run: pnpm -F @socialgouv/cdtn-stats events:check
-      - run: pnpm -F @socialgouv/cdtn-stats doc:check
 
   unit-tests:
     name: Tests unitaires (extraction)

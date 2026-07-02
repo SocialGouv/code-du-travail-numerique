@@ -1,366 +1,389 @@
-# Plan de tracking Matomo — CDTN
+<!-- Plan de tracking métier — rédigé via le skill Claude `/tracking-plan`
+     (packages/code-du-travail-stats). Ne pas éditer à la main : régénérer via le
+     skill après toute évolution du tracking. Source : events/events.extracted.json
+     (catalogue extrait du code) + lecture des modules frontend.
+     Repères : 📌 valeur fixe · 🔀 valeur variable (calculée au runtime).
+     Liens ↗ : code source sur la branche `dev`. -->
 
-> ⚠️ Fichier généré automatiquement à partir de `events.extracted.json` — ne pas éditer à la main.
-> Régénérer avec `pnpm -F @socialgouv/cdtn-stats doc:generate`.
+## Liste des events de tracking:
 
-**98** events uniques · **107** events au total · **10** modules.
+Ce document décrit les évènements Matomo **écrits explicitement dans le code** du site
+(`code.travail.gouv.fr`). Il est destiné au métier : pour **chaque** évènement, il explique
+**quand** il part et **pourquoi** on le mesure, puis en donne le contenu exact.
 
-## Légende
+**98** events uniques · **107** au total · **28** catégories Matomo. Couverture vérifiée
+exhaustivement face au catalogue extrait du code.
 
-Les events sont regroupés par module, puis par catégorie Matomo.
+#### tracking générique (automatique sur chaque page)
 
-- **📌 / 🔀** (3ᵉ colonne) : 📌 = action **fixe** (event clairement identifié) ; 🔀 = action **calculée à l'exécution** (une famille d'events). Le *name*, lui, peut varier (`<…>`) dans les deux cas.
-- **Action / catégorie** : les deux identifiants Matomo qui définissent l'event.
-- **Name** : libellé ou détail transmis avec l'event (`—` si absent).
-- **`<…>`** : emplacement d'une valeur calculée à l'exécution (URL, requête saisie, titre d'outil…), non énumérable.
-- **Code** : lien ↗ vers la ligne qui émet l'event (le `fichier:ligne` s'affiche au survol).
+Lors d'une visite sur une page du site, Matomo envoie par défaut un évènement de visite qui
+contient le nom de la page et son url. Cet évènement est **automatique** (géré par la librairie
+`matomo-next`) — il n'apparaît donc pas dans le catalogue des events « écrits dans le code ».
+
+Exemple d'information envoyée suite à une visite sur la page des thèmes :
 
-## Sommaire
+| Type        | Donnée                              | Info                                          |
+| ----------- | ----------------------------------- | --------------------------------------------- |
+| action_name | Thèmes - Code du travail numérique  | Titre de la page                              |
+| url         | https://code.travail.gouv.fr/themes | Lien vers la page                             |
+| urlref      | /                                   | Origine de l'utilisateur (ici la page d'accueil) |
 
-- [common](#common) — 2 events
-- [contributions](#contributions) — 8 events
-- [convention-collective](#convention-collective) — 11 events
-- [enterprise](#enterprise) — 11 events
-- [home](#home) — 8 events
-- [layout](#layout) — 9 events
-- [modeles-de-courriers](#modeles-de-courriers) — 1 event
-- [outils](#outils) — 45 events
-- [recherche](#recherche) — 11 events
-- [themes](#themes) — 1 event
+---
 
-## common
+### Outils
 
-### 📂 clic_share · 1 event
+#### Simulateurs
 
-| Action | Name |  | Code |
-| --- | --- | --- | --- |
-| `<currentPageUrl>` | `<socialNetwork>` | 🔀 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/common/tracking.ts#L29 "tracking.ts:29") |
+Simulateurs (à base de `SimulatorLayout`) qui émettent du tracking d'étapes, avec leurs étapes
+dans l'ordre. Le **titre** est celui utilisé dans l'action `view_step_<titre>` (en production,
+`tool.title` chargé en base ; libellés canoniques ci-dessous).
 
-### 📂 selectRelated · 1 event
+| Titre                                          | Étapes (`name`)                                              |
+| ---------------------------------------------- | ----------------------------------------------------------- |
+| Indemnité de licenciement                      | start, info_cc, infos, anciennete, absences, salaires, results |
+| Indemnité de rupture conventionnelle           | start, info_cc, infos, anciennete, absences, salaires, results |
+| Indemnités de précarité                        | start, info_cc, info_generales, remuneration, indemnite     |
+| Préavis de démission                           | start, info_cc, infos, results                              |
+| Préavis de licenciement                        | start, status, info_cc, infos, results                      |
+| Préavis de départ ou de mise à la retraite     | intro, origine, ccn, infos, anciennete, result              |
+| Heures d'absence pour rechercher un emploi     | start, info_cc, infos, results                              |
+| Trouver sa convention collective (outil dédié) | start (+ parcours convention collective, voir plus bas)     |
 
-| Action | Name |  | Code |
-| --- | --- | --- | --- |
-| `<JSON.stringify({ selection })>` | — | 🔀 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/common/tracking.ts#L22 "tracking.ts:22") |
+> Les étapes `infos` / `salaires` (indemnités de départ) et `infos` (préavis de licenciement)
+> peuvent être **masquées** selon les réponses ; l'event n'est alors pas envoyé.
+> Les outils `Procédure de licenciement` et `Simulateur d'embauche` (iframe URSSAF) n'émettent
+> **pas** de `view_step`.
 
-## contributions
+##### Évènements génériques sur les simulateurs
+
+Émis par `SimulatorLayout` pour tous les simulateurs.
+[↗ source](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/outils/common/components/SimulatorLayout/tracking.ts#L14 "SimulatorLayout/tracking.ts:14")
 
-### 📂 cc_search_type_of_users · 3 events
+###### Arrivée / affichage d'une étape
 
-| Action | Name |  | Code |
-| --- | --- | --- | --- |
-| `click_p1` | `<withVariant(path, variant)>` | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/contributions/tracking.ts#L64 "tracking.ts:64") |
-| `click_p2` | `<withVariant(path, variant)>` | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/contributions/tracking.ts#L72 "tracking.ts:72") |
-| `click_p3` | `<withVariant(path, variant)>` | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/contributions/tracking.ts#L80 "tracking.ts:80") |
+Émis à l'affichage de chaque étape : au chargement initial (première étape, `name = start`) puis
+à chaque avancée après « Commencer » / « Suivant ». Mesure la vue de chaque étape et la
+progression dans le tunnel.
+
+| Type     | Contenu                         | Détail                                                       |
+| -------- | ------------------------------- | ------------------------------------------------------------ |
+| category | outil                           |                                                              |
+| action   | view_step_`Nom du simulateur`   | Le suffixe est le titre du simulateur                        |
+| name     | Nom de l'étape (`start` en 1re) | Étape affichée                                               |
 
-### 📂 contribution · 3 events
+###### Étape précédente
 
-| Action | Name |  | Code |
-| --- | --- | --- | --- |
-| `click_afficher_les_informations_CC` | `<withVariant(path, variant)>` | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/contributions/tracking.ts#L40 "tracking.ts:40") |
-| `click_afficher_les_informations_générales` | `<withVariant(path, variant)>` | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/contributions/tracking.ts#L56 "tracking.ts:56") |
-| `click_afficher_les_informations_sans_CC` | `<withVariant(path, variant)>` | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/contributions/tracking.ts#L48 "tracking.ts:48") |
+Émis quand l'utilisateur clique sur « Précédent » pour revenir à l'étape antérieure. Mesure les
+retours en arrière dans le parcours.
+
+| Type     | Contenu                             | Détail                                          |
+| -------- | ----------------------------------- | ----------------------------------------------- |
+| category | outil                               |                                                 |
+| action   | click_previous_`Nom du simulateur`  | Le suffixe est le titre du simulateur           |
+| name     | Nom de l'étape                      | Étape ré-affichée                               |
 
-### 📂 outil · 2 events
+###### Impression du résultat
+
+Émis au clic sur « Imprimer le résultat » à la dernière étape, juste avant la boîte d'impression
+du navigateur. Mesure l'intention de conserver le résultat.
 
-| Action | Name |  | Code |
-| --- | --- | --- | --- |
-| `cc_select_non_traitée` | `<idcc.toString()>` | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/contributions/tracking.ts#L32 "tracking.ts:32") |
-| `cc_select_traitée` | `<idcc.toString()>` | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/contributions/tracking.ts#L24 "tracking.ts:24") |
+| Type     | Contenu             | Détail                              |
+| -------- | ------------------- | ----------------------------------- |
+| category | outil               |                                     |
+| action   | click_print         |                                     |
+| name     | `Nom du simulateur` | Titre du simulateur imprimé         |
+
+###### Résultat inéligible
 
-## convention-collective
-
-### 📂 cc_search_type_of_users · 2 events
-
-| Action | Name |  | Code |
-| --- | --- | --- | --- |
-| `click_p1` | `Trouver sa convention collective` | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/convention-collective/tracking.ts#L35 "tracking.ts:35") |
-| `click_p2` | `Trouver sa convention collective` | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/convention-collective/tracking.ts#L43 "tracking.ts:43") |
-
-### 📂 cc_select_p1 · 2 events
-
-| Action | Name |  | Code |
-| --- | --- | --- | --- |
-| `<action>` | `<idcc>` | 🔀 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/convention-collective/tracking.ts#L51 "tracking.ts:51") |
-| `Trouver sa convention collective` | `<idcc>` | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/convention-collective/tracking.ts#L51 "tracking.ts:51") |
-
-### 📂 header_cc · 4 events
-
-| Action | Name |  | Code |
-| --- | --- | --- | --- |
-| `cc_consult` | `<idcc>` | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/convention-collective/AgreementSelectionModal/tracking.ts#L33 "tracking.ts:33") |
-| `cc_select_processed` | `<idcc>` | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/convention-collective/AgreementSelectionModal/tracking.ts#L23 "tracking.ts:23") |
-| `cc_select_unprocessed` | `<idcc>` | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/convention-collective/AgreementSelectionModal/tracking.ts#L23 "tracking.ts:23") |
-| `open_modal` | — | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/convention-collective/AgreementSelectionModal/tracking.ts#L16 "tracking.ts:16") |
-
-### 📂 outil · 1 event
-
-| Action | Name |  | Code |
-| --- | --- | --- | --- |
-| `view_step_Trouver sa convention collective` | `start` | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/convention-collective/tracking.ts#L27 "tracking.ts:27") |
-
-### 📂 pagecc_searchcc · 1 event
-
-| Action | Name |  | Code |
-| --- | --- | --- | --- |
-| `<shortTitle>` | `<q>` | 🔀 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/convention-collective/LegiFranceSearch.tsx#L24 "LegiFranceSearch.tsx:24") |
-
-### 📂 view_step_cc_search_p1 · 1 event
-
-| Action | Name |  | Code |
-| --- | --- | --- | --- |
-| `back_step_cc_search_p1` | `Trouver sa convention collective` | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/convention-collective/tracking.ts#L59 "tracking.ts:59") |
-
-## enterprise
-
-### 📂 accord_enterprise_search · 4 events
-
-| Action | Name |  | Code |
-| --- | --- | --- | --- |
-| `click_accord` | `<url>` | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/enterprise/EnterpriseAgreementSearch/accords/tracking.ts#L13 "tracking.ts:13") |
-| `click_all_accords` | `<siret>` | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/enterprise/EnterpriseAgreementSearch/accords/tracking.ts#L21 "tracking.ts:21") |
-| `load_accords_failed` | `<siret>` | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/enterprise/EnterpriseAgreementSearch/accords/tracking.ts#L37 "tracking.ts:37") |
-| `show_accords` | `<String(count)>` | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/enterprise/EnterpriseAgreementSearch/accords/tracking.ts#L29 "tracking.ts:29") |
-
-### 📂 cc_search_type_of_users · 2 events
-
-| Action | Name |  | Code |
-| --- | --- | --- | --- |
-| `click_je_n_ai_pas_d_entreprise` | `Trouver sa convention collective` | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/enterprise/EnterpriseAgreementSearch/tracking.ts#L52 "tracking.ts:52") |
-| `select_je_n_ai_pas_d_entreprise` | `Trouver sa convention collective` | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/enterprise/EnterpriseAgreementSearch/tracking.ts#L59 "tracking.ts:59") |
-
-### 📂 cc_select_p2 · 2 events
-
-| Action | Name |  | Code |
-| --- | --- | --- | --- |
-| `<action>` | `<idcc>` | 🔀 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/enterprise/EnterpriseAgreementSearch/tracking.ts#L36 "tracking.ts:36") |
-| `Trouver sa convention collective` | `<idcc>` | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/enterprise/EnterpriseAgreementSearch/tracking.ts#L36 "tracking.ts:36") |
-
-### 📂 enterprise_search · 1 event
-
-| Action | Name |  | Code |
-| --- | --- | --- | --- |
-| `<action>` | `<JSON.stringify({ query, apiGeoResult })>` | 🔀 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/enterprise/EnterpriseAgreementSearch/tracking.ts#L14 "tracking.ts:14") |
-
-### 📂 enterprise_select · 1 event
-
-| Action | Name |  | Code |
-| --- | --- | --- | --- |
-| `<action>` | `<JSON.stringify(enterprise)>` | 🔀 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/enterprise/EnterpriseAgreementSearch/tracking.ts#L28 "tracking.ts:28") |
-
-### 📂 view_step_cc_search_p2 · 1 event
-
-| Action | Name |  | Code |
-| --- | --- | --- | --- |
-| `back_step_cc_search_p2` | `Trouver sa convention collective` | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/enterprise/EnterpriseAgreementSearch/tracking.ts#L44 "tracking.ts:44") |
-
-## home
-
-### 📂 page_home · 8 events
-
-| Action | Name |  | Code |
-| --- | --- | --- | --- |
-| `click_comprendre_le_droit_du_travail` | — | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/home/tracking.ts#L20 "tracking.ts:20") |
-| `click_question_action` | `<slug>` | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/home/tracking.ts#L27 "tracking.ts:27") |
-| `click_voir_tous_les_outils` | — | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/home/tracking.ts#L20 "tracking.ts:20") |
-| `click_voir_tous_les_themes` | — | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/home/tracking.ts#L20 "tracking.ts:20") |
-| `Click_voir_tous_modeles_de_documents` | — | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/home/tracking.ts#L20 "tracking.ts:20") |
-| `click_voir_toutes_les_actualites` | — | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/home/tracking.ts#L20 "tracking.ts:20") |
-| `click_voir_toutes_les_conventions_collectives` | — | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/home/tracking.ts#L20 "tracking.ts:20") |
-| `click_voir_toutes_les_fiches_pratiques` | — | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/home/tracking.ts#L20 "tracking.ts:20") |
-
-## layout
-
-### 📂 contact · 2 events
-
-| Action | Name |  | Code |
-| --- | --- | --- | --- |
-| `click_contact_sr_modale` | `<currentPathName>` | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/layout/footer/infos/tracking.ts#L24 "tracking.ts:24") |
-| `click_phone_number` | — | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/layout/footer/infos/tracking.ts#L17 "tracking.ts:17") |
-
-### 📂 feedback · 2 events
-
-| Action | Name |  | Code |
-| --- | --- | --- | --- |
-| `negative` | `<baseUrl>` | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/layout/feedback/tracking.ts#L39 "tracking.ts:39") |
-| `positive` | `<baseUrl>` | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/layout/feedback/tracking.ts#L29 "tracking.ts:29") |
-
-### 📂 feedback_category · 4 events
-
-| Action | Name |  | Code |
-| --- | --- | --- | --- |
-| `Cette page ne correspond pas à ma recherche ou à ma situation.` | `<baseUrl>` | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/layout/feedback/tracking.ts#L59 "tracking.ts:59") |
-| `Je ne suis pas satisfait de cette réglementation.` | `<baseUrl>` | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/layout/feedback/tracking.ts#L59 "tracking.ts:59") |
-| `Les informations me semblent fausses.` | `<baseUrl>` | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/layout/feedback/tracking.ts#L59 "tracking.ts:59") |
-| `Les informations ne sont pas claires.` | `<baseUrl>` | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/layout/feedback/tracking.ts#L59 "tracking.ts:59") |
-
-### 📂 feedback_suggestion · 1 event
-
-| Action | Name |  | Code |
-| --- | --- | --- | --- |
-| `<suggestion>` | `<baseUrl>` | 🔀 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/layout/feedback/tracking.ts#L49 "tracking.ts:49") |
-
-## modeles-de-courriers
-
-### 📂 page_modeles_de_documents · 1 event
-
-| Action | Name |  | Code |
-| --- | --- | --- | --- |
-| `type_CTRL_C` | `<slug>` | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/modeles-de-courriers/tracking.ts#L7 "tracking.ts:7") |
-
-## outils
-
-### 📂 cc_search_type_of_users · 4 events
-
-| Action | Name |  | Code |
-| --- | --- | --- | --- |
-| `click_p1` | `<simulatorTitle>` | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/outils/common/events/pushAgreementEvents.ts#L31 "pushAgreementEvents.ts:31") |
-| `click_p2` | `<simulatorTitle>` | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/outils/common/events/pushAgreementEvents.ts#L38 "pushAgreementEvents.ts:38") |
-| `click_p3` | `<simulatorTitle>` | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/outils/common/events/pushAgreementEvents.ts#L45 "pushAgreementEvents.ts:45") |
-| `select_je_n_ai_pas_d_entreprise` | `<simulatorTitle>` | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/outils/common/events/pushAgreementEvents.ts#L115 "pushAgreementEvents.ts:115") |
-
-### 📂 cc_select_p1 · 6 events
-
-| Action | Name |  | Code |
-| --- | --- | --- | --- |
-| `<simulatorTitle>` | `idcc<agreementNum>` | 🔀 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/outils/common/events/pushAgreementEvents.ts#L77 "pushAgreementEvents.ts:77") |
-| `HEURES_RECHERCHE_EMPLOI` | `idcc<agreementNum>` | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/outils/common/events/pushAgreementEvents.ts#L77 "pushAgreementEvents.ts:77") |
-| `INDEMNITE_PRECARITE` | `idcc<agreementNum>` | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/outils/common/events/pushAgreementEvents.ts#L77 "pushAgreementEvents.ts:77") |
-| `PREAVIS_DEMISSION` | `idcc<agreementNum>` | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/outils/common/events/pushAgreementEvents.ts#L77 "pushAgreementEvents.ts:77") |
-| `PREAVIS_LICENCIEMENT` | `idcc<agreementNum>` | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/outils/common/events/pushAgreementEvents.ts#L77 "pushAgreementEvents.ts:77") |
-| `PREAVIS_RETRAITE` | `idcc<agreementNum>` | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/outils/common/events/pushAgreementEvents.ts#L77 "pushAgreementEvents.ts:77") |
-
-### 📂 cc_select_p2 · 6 events
-
-| Action | Name |  | Code |
-| --- | --- | --- | --- |
-| `<simulatorTitle>` | `idcc<agreementNum>` | 🔀 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/outils/common/events/pushAgreementEvents.ts#L84 "pushAgreementEvents.ts:84") |
-| `HEURES_RECHERCHE_EMPLOI` | `idcc<agreementNum>` | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/outils/common/events/pushAgreementEvents.ts#L84 "pushAgreementEvents.ts:84") |
-| `INDEMNITE_PRECARITE` | `idcc<agreementNum>` | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/outils/common/events/pushAgreementEvents.ts#L84 "pushAgreementEvents.ts:84") |
-| `PREAVIS_DEMISSION` | `idcc<agreementNum>` | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/outils/common/events/pushAgreementEvents.ts#L84 "pushAgreementEvents.ts:84") |
-| `PREAVIS_LICENCIEMENT` | `idcc<agreementNum>` | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/outils/common/events/pushAgreementEvents.ts#L84 "pushAgreementEvents.ts:84") |
-| `PREAVIS_RETRAITE` | `idcc<agreementNum>` | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/outils/common/events/pushAgreementEvents.ts#L84 "pushAgreementEvents.ts:84") |
-
-### 📂 enterprise_select · 6 events
-
-| Action | Name |  | Code |
-| --- | --- | --- | --- |
-| `<simulatorTitle>` | `<JSON.stringify({ label: enterprise.label, siren: enterprise.siren, })>` | 🔀 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/outils/common/events/pushAgreementEvents.ts#L58 "pushAgreementEvents.ts:58") |
-| `HEURES_RECHERCHE_EMPLOI` | `<JSON.stringify({ label: enterprise.label, siren: enterprise.siren, })>` | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/outils/common/events/pushAgreementEvents.ts#L58 "pushAgreementEvents.ts:58") |
-| `INDEMNITE_PRECARITE` | `<JSON.stringify({ label: enterprise.label, siren: enterprise.siren, })>` | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/outils/common/events/pushAgreementEvents.ts#L58 "pushAgreementEvents.ts:58") |
-| `PREAVIS_DEMISSION` | `<JSON.stringify({ label: enterprise.label, siren: enterprise.siren, })>` | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/outils/common/events/pushAgreementEvents.ts#L58 "pushAgreementEvents.ts:58") |
-| `PREAVIS_LICENCIEMENT` | `<JSON.stringify({ label: enterprise.label, siren: enterprise.siren, })>` | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/outils/common/events/pushAgreementEvents.ts#L58 "pushAgreementEvents.ts:58") |
-| `PREAVIS_RETRAITE` | `<JSON.stringify({ label: enterprise.label, siren: enterprise.siren, })>` | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/outils/common/events/pushAgreementEvents.ts#L58 "pushAgreementEvents.ts:58") |
-
-### 📂 feedback_simulateurs · 4 events
-
-| Action | Name |  | Code |
-| --- | --- | --- | --- |
-| `Clarté_questions` | `<feedback>` | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/outils/indemnite-depart/feedback/tracking.tsx#L38 "tracking.tsx:38") |
-| `Clarté_résultat` | `<feedback>` | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/outils/indemnite-depart/feedback/tracking.tsx#L38 "tracking.tsx:38") |
-| `Comment_s_est_passée_la_simulation` | `<feedback>` | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/outils/indemnite-depart/feedback/tracking.tsx#L38 "tracking.tsx:38") |
-| `Facilité_utilisation_simulateur` | `<feedback>` | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/outils/indemnite-depart/feedback/tracking.tsx#L38 "tracking.tsx:38") |
-
-### 📂 feedback_simulateurs_rupture_co · 4 events
-
-| Action | Name |  | Code |
-| --- | --- | --- | --- |
-| `Clarté_questions` | `<feedback>` | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/outils/indemnite-depart/feedback/tracking.tsx#L38 "tracking.tsx:38") |
-| `Clarté_résultat` | `<feedback>` | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/outils/indemnite-depart/feedback/tracking.tsx#L38 "tracking.tsx:38") |
-| `Comment_s_est_passée_la_simulation` | `<feedback>` | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/outils/indemnite-depart/feedback/tracking.tsx#L38 "tracking.tsx:38") |
-| `Facilité_utilisation_simulateur` | `<feedback>` | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/outils/indemnite-depart/feedback/tracking.tsx#L38 "tracking.tsx:38") |
-
-### 📂 feedback_suggestion · 1 event
-
-| Action | Name |  | Code |
-| --- | --- | --- | --- |
-| `<text>` | `<url.replace(/\?.*$/, "")>` | 🔀 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/outils/indemnite-depart/feedback/tracking.tsx#L50 "tracking.tsx:50") |
-
-### 📂 feedback_suggestion_rupture_co · 1 event
-
-| Action | Name |  | Code |
-| --- | --- | --- | --- |
-| `<text>` | `<url.replace(/\?.*$/, "")>` | 🔀 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/outils/indemnite-depart/feedback/tracking.tsx#L50 "tracking.tsx:50") |
-
-### 📂 outil · 13 events
-
-| Action | Name |  | Code |
-| --- | --- | --- | --- |
-| `anciennete_moins_2_ans` | — | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/outils/preavis-retraite/steps/Seniority/store/store.ts#L46 "store.ts:46") |
-| `anciennete_plus_2_ans` | — | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/outils/preavis-retraite/steps/Seniority/store/store.ts#L46 "store.ts:46") |
-| `cc_select_non_traitée` | `<agreementNum.toString()>` | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/outils/common/events/pushAgreementEvents.ts#L106 "pushAgreementEvents.ts:106") |
-| `cc_select_traitée` | `<agreementNum.toString()>` | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/outils/common/events/pushAgreementEvents.ts#L100 "pushAgreementEvents.ts:100") |
-| `click_previous_<title>` | `<currentStepName>` | 🔀 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/outils/common/components/SimulatorLayout/tracking.ts#L14 "tracking.ts:14") |
-| `click_print` | `<simulatorTitle>` | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/outils/common/components/SimulatorLayout/tracking.ts#L24 "tracking.ts:24") |
-| `depart` | — | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/outils/preavis-retraite/steps/OriginStep/store/store.ts#L44 "store.ts:44") |
-| `mise` | — | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/outils/preavis-retraite/steps/OriginStep/store/store.ts#L44 "store.ts:44") |
-| `view_step_<title>` | `<currentStepName>` | 🔀 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/outils/common/components/SimulatorLayout/tracking.ts#L14 "tracking.ts:14") |
-| `view_step_Heures d'absence pour rechercher un emploi` | `user_blocked_info_cc` | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/outils/heures-recherche-emploi/events/useHeuresRechercheEmploiEventEmitter.tsx#L11 "useHeuresRechercheEmploiEventEmitter.tsx:11") |
-| `view_step_Indemnité de licenciement` | `results_ineligible` | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/outils/indemnite-licenciement/events/useIndemniteLicenciementEventEmitter.tsx#L13 "useIndemniteLicenciementEventEmitter.tsx:13") |
-| `view_step_Indemnité de rupture conventionnelle` | `results_ineligible` | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/outils/indemnite-rupture-conventionnelle/events/useRuptureCoEventEmitter.tsx#L13 "useRuptureCoEventEmitter.tsx:13") |
-| `view_step_Préavis de démission` | `user_blocked_info_cc` | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/outils/preavis-demission/events/usePreavisDemissionEventEmitter.tsx#L11 "usePreavisDemissionEventEmitter.tsx:11") |
-
-## recherche
-
-### 📂 _matomo_trackSiteSearch · 1 event
-
-| Action | Name |  | Code |
-| --- | --- | --- | --- |
-| `<query>` | — | 🔀 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/recherche/tracking.ts#L193 "tracking.ts:193") |
-
-### 📂 nextResultPage · 1 event
-
-| Action | Name |  | Code |
-| --- | --- | --- | --- |
-| `<query>` | — | 🔀 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/recherche/tracking.ts#L104 "tracking.ts:104") |
-
-### 📂 search · 5 events
-
-| Action | Name |  | Code |
-| --- | --- | --- | --- |
-| `clickSeeAllResults` | `<name>` | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/recherche/tracking.ts#L158 "tracking.ts:158") |
-| `fullsearch` | `<name>` | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/recherche/tracking.ts#L64 "tracking.ts:64") |
-| `fullsearch` | `<name>` | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/recherche/tracking.ts#L94 "tracking.ts:94") |
-| `presearch` | `<name>` | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/recherche/tracking.ts#L143 "tracking.ts:143") |
-| `selectPresearchResult` | `<name>` | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/recherche/tracking.ts#L181 "tracking.ts:181") |
-
-### 📂 selectedSuggestion · 1 event
-
-| Action | Name |  | Code |
-| --- | --- | --- | --- |
-| `<query>` | `<suggestion>` | 🔀 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/recherche/tracking.ts#L112 "tracking.ts:112") |
-
-### 📂 selectResult · 1 event
-
-| Action | Name |  | Code |
-| --- | --- | --- | --- |
-| `<JSON.stringify({ algo, url: formattedUrl, })>` | — | 🔀 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/recherche/tracking.ts#L45 "tracking.ts:45") |
-
-### 📂 widget_search · 2 events
-
-| Action | Name |  | Code |
-| --- | --- | --- | --- |
-| `click_logo` | — | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/recherche/tracking.ts#L122 "tracking.ts:122") |
-| `submit_search` | `<query>` | 📌 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/recherche/tracking.ts#L129 "tracking.ts:129") |
-
-## themes
-
-### 📂 selectResult · 1 event
-
-| Action | Name |  | Code |
-| --- | --- | --- | --- |
-| `<JSON.stringify({ url: externalUrl \|\| '/${getRouteBySource(source as keyof typ...>` | — | 🔀 | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/themes/tracking.ts#L14 "tracking.ts:14") |
-
-## Annexe — commandes de configuration Matomo
-
-Réglages Matomo poussés par le code (non comptés comme events).
-
-| Commande | Source |
-| --- | --- |
-| forgetCookieConsentGiven | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/utils/consent.ts#L119 "consent.ts:119") |
-| forgetUserOptOut | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/utils/consent.ts#L115 "consent.ts:115") |
-| HeatmapSessionRecording::disable | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/utils/consent.ts#L100 "consent.ts:100") |
-| HeatmapSessionRecording::enable | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/utils/consent.ts#L98 "consent.ts:98") |
-| optUserOut | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/utils/consent.ts#L118 "consent.ts:118") |
-| rememberCookieConsentGiven | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/utils/consent.ts#L116 "consent.ts:116") |
-| setCookieSameSite | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/config/MatomoAnalytics.tsx#L45 "MatomoAnalytics.tsx:45") |
-| setReferrerUrl | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/config/MatomoAnalytics.tsx#L41 "MatomoAnalytics.tsx:41") |
+Émis au calcul de l'étape « résultat » quand la simulation conclut à la **non-éligibilité**
+(ancienneté / informations / absences non satisfaites). Mesure le taux de simulations
+« non éligible ». Concerne les deux simulateurs d'indemnité.
+[↗ licenciement](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/outils/indemnite-licenciement/events/useIndemniteLicenciementEventEmitter.tsx#L13 "useIndemniteLicenciementEventEmitter.tsx:13") ·
+[↗ rupture conventionnelle](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/outils/indemnite-rupture-conventionnelle/events/useRuptureCoEventEmitter.tsx#L13 "useRuptureCoEventEmitter.tsx:13")
+
+| Type     | Contenu                                                                              | Détail                        |
+| -------- | ----------------------------------------------------------------------------------- | ----------------------------- |
+| category | outil                                                                               |                               |
+| action   | view_step_Indemnité de licenciement · view_step_Indemnité de rupture conventionnelle | Simulateur concerné          |
+| name     | results_ineligible                                                                  | L'utilisateur est inéligible  |
+
+###### Spécifique « Préavis de retraite »
+
+Deux étapes envoient le choix de l'utilisateur, au clic sur « Suivant ».
+[↗ origine](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/outils/preavis-retraite/steps/OriginStep/store/store.ts#L44 "OriginStep/store.ts:44") ·
+[↗ ancienneté](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/outils/preavis-retraite/steps/Seniority/store/store.ts#L46 "Seniority/store.ts:46")
+
+| Type     | Contenu                                          | Détail                                                       |
+| -------- | ------------------------------------------------ | ------------------------------------------------------------ |
+| category | outil                                            |                                                              |
+| action   | mise · depart                                    | Étape origine : mise à la retraite (employeur) ou départ volontaire |
+| action   | anciennete_plus_2_ans · anciennete_moins_2_ans   | Étape ancienneté : plus / moins de 2 ans d'ancienneté déclarés |
+| name     | —                                                |                                                              |
+
+##### Étape pour renseigner sa convention collective
+
+Cette étape n'est pas présente sur tous les simulateurs. Les events sont de **deux natures** :
+ceux envoyés **sur l'action de l'utilisateur** (parcours entreprise), et ceux envoyés **au clic
+sur « suivant »** (non envoyés en cas d'erreur de saisie). Trois parcours :
+
+ * **p1** : je connais ma convention collective (je la saisis) → route `agreement`
+ * **p2** : je ne la connais pas (je recherche mon entreprise) → route `enterprise`
+ * **p3** : je ne souhaite pas la renseigner (je passe l'étape) → route `not-selected`
+
+> ⚠️ En parcours **p1**, la recherche par mots-clés de la convention **n'émet aucun event** (le
+> tracking de saisie n'est pas branché sur cette étape). Le seul event portant une requête JSON
+> `{"query":…}` est `enterprise_search` du parcours p2. Le debounce de 300 ms ne concerne que
+> l'appel API, pas les events.
+
+**Émis sur l'action de l'utilisateur** (parcours p2 uniquement)
+[↗ source](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/enterprise/EnterpriseAgreementSearch/tracking.ts#L14 "EnterpriseAgreementSearch/tracking.ts:14")
+
+1. **Recherche d'une entreprise** — émis à la soumission du formulaire (saisie non vide). Mesure
+   les recherches d'entreprise.
+
+| Type     | Contenu               | Détail                                                     |
+| -------- | --------------------- | --------------------------------------------------------- |
+| category | enterprise_search     | Recherche d'une entreprise (p2)                           |
+| action   | `Nom du simulateur`   | Titre du simulateur (contexte appelant)                   |
+| name     | `{"query":"odon","apiGeoResult":…}` | JSON : requête saisie + localisation         |
+
+2. **Sélection d'une entreprise** — émis au clic sur une carte entreprise (ou auto-sélection si
+   convention unique). Identifie l'entreprise choisie.
+
+| Type     | Contenu             | Détail                                       |
+| -------- | ------------------- | -------------------------------------------- |
+| category | enterprise_select   |                                              |
+| action   | `Nom du simulateur` | Titre du simulateur                          |
+| name     | `{"label":"…","siren":"…"}` | Entreprise sélectionnée              |
+
+3. **Convention déduite de l'entreprise** — émis quand la CC rattachée à l'entreprise est
+   retenue. Mesure la sélection effective via le parcours entreprise.
+
+| Type     | Contenu             | Détail                                   |
+| -------- | ------------------- | ---------------------------------------- |
+| category | cc_select_p2        |                                          |
+| action   | `Nom du simulateur` | Titre du simulateur                      |
+| name     | `idcc<num>`         | IDCC de la convention, préfixé `idcc`    |
+
+**Émis au clic sur « suivant »** (tous parcours, via `pushAgreementEvents`)
+[↗ source](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/outils/common/events/pushAgreementEvents.ts#L25 "pushAgreementEvents.ts:25")
+
+1. **Choix du parcours** (toujours envoyé) — indique quel parcours l'utilisateur a suivi.
+   Mesure la répartition p1/p2/p3.
+
+| Type     | Contenu                            | Détail                                   |
+| -------- | ---------------------------------- | ---------------------------------------- |
+| category | cc_search_type_of_users            |                                          |
+| action   | click_p1 · click_p2 · click_p3     | p1 = par nom de CC · p2 = par entreprise · p3 = sans CC |
+| name     | `Nom du simulateur`                | Titre du simulateur                      |
+
+2. **Entreprise retenue, parcours p2** (si une entreprise a été renseignée)
+
+| Type     | Contenu             | Détail                             |
+| -------- | ------------------- | ---------------------------------- |
+| category | enterprise_select   |                                    |
+| action   | `Nom du simulateur` | Titre du simulateur                |
+| name     | `{"label":"…","siren":"…"}` | Entreprise sélectionnée    |
+
+3. **Choix de la convention collective** — émis quand une CC a été effectivement sélectionnée.
+
+| Type     | Contenu                        | Détail                                    |
+| -------- | ------------------------------ | ----------------------------------------- |
+| category | cc_select_p1 · cc_select_p2    | Selon le parcours (p1 = saisie, p2 = entreprise) |
+| action   | `Nom du simulateur`            | Titre du simulateur                       |
+| name     | `idcc<num>`                    | IDCC choisi, préfixé `idcc`               |
+
+4. **Support de la convention collective** — indique si la CC choisie est **prise en charge**
+   par le simulateur (calcul/contenu spécifique disponible). Sert à prioriser les CC à traiter.
+
+| Type     | Contenu                                     | Détail                                       |
+| -------- | ------------------------------------------- | -------------------------------------------- |
+| category | outil                                       |                                              |
+| action   | cc_select_traitée · cc_select_non_traitée   | CC prise en charge ou non par le simulateur  |
+| name     | `<num>`                                     | Numéro IDCC **brut** (sans préfixe `idcc`)   |
+
+5. **« Je n'ai pas d'entreprise »** (particulier employeur / assistant maternel) — coché dans le
+   parcours entreprise ; repère les utilisateurs sans entreprise identifiable.
+
+| Type     | Contenu                          | Détail                              |
+| -------- | -------------------------------- | ----------------------------------- |
+| category | cc_search_type_of_users          |                                     |
+| action   | select_je_n_ai_pas_d_entreprise  |                                     |
+| name     | `Nom du simulateur`              | Titre du simulateur                 |
+
+6. **Convention collective bloquante** — émis quand la CC saisie n'est pas prise en charge et
+   **bloque** la poursuite : l'utilisateur est renvoyé vers la consultation de sa CC. Seuls
+   **Préavis de démission** et **Heures d'absence pour rechercher un emploi** l'émettent. Mesure
+   le volume d'utilisateurs bloqués faute de CC traitée.
+
+| Type     | Contenu                                                                               | Détail                    |
+| -------- | ------------------------------------------------------------------------------------ | ------------------------- |
+| category | outil                                                                                |                           |
+| action   | view_step_Préavis de démission · view_step_Heures d'absence pour rechercher un emploi | Simulateur concerné       |
+| name     | user_blocked_info_cc                                                                 |                           |
+
+##### Avis sur les simulateurs (feedback)
+
+Questionnaires de satisfaction affichés après le résultat (simulateurs d'indemnités de départ).
+Les catégories `…_rupture_co` sont la variante du simulateur de rupture conventionnelle.
+[↗ source](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/outils/indemnite-depart/feedback/tracking.tsx#L38 "indemnite-depart/feedback/tracking.tsx:38")
+
+| Catégorie                       | Action                          | Name (📌/🔀)         | Quand / pourquoi |
+| ------------------------------- | ------------------------------- | -------------------- | ---------------- |
+| feedback_simulateurs · feedback_simulateurs_rupture_co | Comment_s_est_passée_la_simulation | 📌 `<feedback>` (pas_bien / moyen / très_bien) | 1er questionnaire (smileys) à l'envoi, si un smiley est choisi. Satisfaction globale. |
+| feedback_simulateurs · feedback_simulateurs_rupture_co | Facilité_utilisation_simulateur | 📌 note 1 à 5 | Questionnaire détaillé, si la question « utilisation du simulateur » est notée. |
+| feedback_simulateurs · feedback_simulateurs_rupture_co | Clarté_questions | 📌 note 1 à 5 | Questionnaire détaillé, si la question « informations et instructions » est notée. |
+| feedback_simulateurs · feedback_simulateurs_rupture_co | Clarté_résultat | 📌 note 1 à 5 | Questionnaire détaillé, si la question « explications du résultat » est notée. |
+| feedback_suggestion · feedback_suggestion_rupture_co | `<texte libre>` | 🔀 `<url sans query>` | Envoi du questionnaire détaillé, si le commentaire libre est renseigné. Verbatim qualitatif. |
+
+---
+
+### Recherche
+
+Barre de recherche (modale / accueil), page de résultats `/recherche` et widget embarqué.
+[↗ source](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/recherche/tracking.ts#L94 "recherche/tracking.ts")
+
+| Catégorie              | Action                | Name (📌/🔀)                          | Quand / pourquoi |
+| ---------------------- | --------------------- | ------------------------------------- | ---------------- |
+| search                 | presearch             | 📌 `{"query":…,"class":…,"definition":…}` | À chaque pré-recherche instantanée (modale / accueil), une fois les résultats reçus. Volume et nature des recherches instantanées. |
+| search                 | fullsearch            | 📌 `{"query":…,"class":…}`             | Au chargement de `/recherche`, au plus une fois par couple {query, class}. Recherche complète aboutie. |
+| search                 | selectPresearchResult | 📌 `{"algo":…,"queryClass":…,"url":…}` | Au clic sur une carte de résultat de pré-recherche. Pertinence des suggestions instantanées. |
+| search                 | clickSeeAllResults    | 📌 `{"query":…,"class":…}`             | Au clic sur « Voir tous les résultats », avant la navigation vers `/recherche`. Passage pré-recherche → recherche complète. |
+| selectResult           | `{"algo":…,"url":…}`  | 📌 —                                  | Au clic sur une carte de résultat de la page `/recherche` (documents + « Pour aller plus loin »). Clics sortants. |
+| selectedSuggestion     | `<query>`             | 🔀 `<suggestion>`                     | Au choix d'une suggestion d'autocomplétion. Usage et pertinence de l'autocomplétion. |
+| _matomo_trackSiteSearch (natif) | `<query>`    | 🔀 —                                  | Recherche interne native Matomo : à la pré-recherche (modale/accueil) et automatiquement à la visite de `/recherche`. |
+| widget_search          | submit_search         | 📌 `<query>`                          | À la soumission du formulaire du widget embarqué (sites partenaires). |
+| widget_search          | click_logo            | 📌 —                                  | Au clic sur le logo CDTN du widget embarqué (ouverture du site). |
+
+> **Définis mais non branchés en production aujourd'hui** (aucun déclencheur utilisateur réel) :
+> `search / fullsearch` en [recherche/tracking.ts:64](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/recherche/tracking.ts#L64) (variante non dédupliquée) et
+> `nextResultPage` (pagination) en [recherche/tracking.ts:104](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/recherche/tracking.ts#L104).
+
+---
+
+### Accueil
+
+Clics sur les boutons « voir tout » et les questions guidées de la page d'accueil.
+[↗ source](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/home/tracking.ts#L20 "home/tracking.ts")
+
+| Catégorie | Action (📌, name = —)                          | Quand / pourquoi |
+| --------- | --------------------------------------------- | ---------------- |
+| page_home | click_comprendre_le_droit_du_travail          | Bouton « Comprendre le droit du travail » → `/droit-du-travail`. |
+| page_home | click_voir_tous_les_outils                    | Bouton « Voir tous les simulateurs » → `/outils`. |
+| page_home | click_voir_tous_les_themes                    | Bouton « Voir tous les thèmes » → `/themes`. |
+| page_home | Click_voir_tous_modeles_de_documents          | Bouton « Parcourir les modèles » → `/modeles-de-courriers`. |
+| page_home | click_voir_toutes_les_actualites              | Bouton « Lire toutes les actualités » → `/actualite`. |
+| page_home | click_voir_toutes_les_conventions_collectives | Bouton « Voir toutes les conventions collectives » → `/convention-collective`. |
+| page_home | click_voir_toutes_les_fiches_pratiques        | Bouton « Voir toutes les fiches pratiques » → `/contribution`. |
+| page_home | click_question_action (name = `<slug>`)       | Clic sur un lien de la section « De la question à l'action » ; le `name` = slug de la ressource ciblée. |
+
+---
+
+### Thèmes
+
+| Catégorie    | Action                  | Name (🔀) | Quand / pourquoi | Code |
+| ------------ | ----------------------- | --------- | ---------------- | ---- |
+| selectResult | `{"url":"<url cliquée>"}` | —       | Au clic sur une carte de document/résultat lié d'une page thème ; l'action porte l'URL cible (externe ou route interne). | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/themes/tracking.ts#L14 "themes/tracking.ts:14") |
+
+---
+
+### Contributions (fiches pratiques)
+
+Encart de personnalisation par convention collective en tête d'une contribution.
+[↗ source](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/contributions/tracking.ts#L24 "contributions/tracking.ts")
+
+| Catégorie    | Action                                    | Name (📌)                     | Quand / pourquoi |
+| ------------ | ----------------------------------------- | ----------------------------- | ---------------- |
+| outil        | cc_select_traitée                         | `<idcc>`                      | CC sélectionnée **prise en charge** par la contribution (contenu dédié disponible). |
+| outil        | cc_select_non_traitée                     | `<idcc>`                      | CC sélectionnée **non prise en charge** (l'usager verra la réponse générale). |
+| contribution | click_afficher_les_informations_CC        | `<withVariant(path,variant)>` | « Afficher les informations » avec une CC valide et traitée → page dédiée à la CC. |
+| contribution | click_afficher_les_informations_générales | `<withVariant(path,variant)>` | « Afficher les informations » avec une CC **non** traitée → informations générales. |
+| contribution | click_afficher_les_informations_sans_CC   | `<withVariant(path,variant)>` | « Afficher sans sélectionner de CC » → contenu générique (émis avec `click_p3`). |
+| cc_search_type_of_users | click_p1 · click_p2 · click_p3 | `<withVariant(path,variant)>` | Parcours de choix de CC : par nom (p1), par entreprise (p2), sans CC (p3). |
+
+---
+
+### Convention collective (recherche & consultation dédiées)
+
+En dehors des simulateurs : l'outil « Trouver sa convention collective », la recherche
+entreprise/accords et la modale de sélection de l'en-tête.
+
+**Outil « Trouver sa convention collective »**
+[↗ source](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/convention-collective/tracking.ts#L27 "convention-collective/tracking.ts")
+
+| Catégorie               | Action                                | Name (📌)                          | Quand / pourquoi |
+| ----------------------- | ------------------------------------- | ---------------------------------- | ---------------- |
+| outil                   | view_step_Trouver sa convention collective | start                         | Affichage de l'écran d'intro de l'outil. |
+| cc_search_type_of_users | click_p1                              | Trouver sa convention collective   | « Je cherche uniquement une convention collective » → `/convention`. |
+| cc_search_type_of_users | click_p2                              | Trouver sa convention collective   | « Je cherche mon entreprise » → `/entreprise`. |
+| cc_select_p1            | `Nom du contexte`                     | `<idcc>`                           | Sélection d'une CC dans l'autocomplétion (action = « Trouver sa convention collective » sur la page dédiée, ou titre du simulateur si réutilisé). |
+| view_step_cc_search_p1  | back_step_cc_search_p1                | Trouver sa convention collective   | Clic « Précédent » de l'écran de recherche par CC. |
+
+**Recherche entreprise & accords** (parcours p2)
+[↗ recherche](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/enterprise/EnterpriseAgreementSearch/tracking.ts#L14 "EnterpriseAgreementSearch/tracking.ts") ·
+[↗ accords](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/enterprise/EnterpriseAgreementSearch/accords/tracking.ts#L13 "accords/tracking.ts")
+
+| Catégorie               | Action                          | Name (📌/🔀)                      | Quand / pourquoi |
+| ----------------------- | ------------------------------- | --------------------------------- | ---------------- |
+| enterprise_search       | `Nom du contexte`               | 🔀 `{"query":…,"apiGeoResult":…}` | Soumission du formulaire de recherche d'entreprise. |
+| enterprise_select       | `Nom du contexte`               | 🔀 `{"label":…,"siren":…}`        | Sélection d'une entreprise (ou auto-sélection si convention unique). |
+| cc_select_p2            | `Nom du contexte`               | 🔀 `idcc<num>`                    | Validation de la CC rattachée à l'entreprise. |
+| view_step_cc_search_p2  | back_step_cc_search_p2          | 📌 Trouver sa convention collective | Clic « Précédent » à l'étape recherche par entreprise. |
+| cc_search_type_of_users | click_je_n_ai_pas_d_entreprise  | 📌 Trouver sa convention collective | Carte « assistants maternels / particuliers employeurs » en mode lien → fiche CC 3239 (clic sortant). |
+| cc_search_type_of_users | select_je_n_ai_pas_d_entreprise | 📌 Trouver sa convention collective | Même option en mode simulateur (sélection intégrée au parcours). |
+| accord_enterprise_search | click_accord                   | 📌 `<url>`                        | Clic sur une carte d'accord d'entreprise (Légifrance). |
+| accord_enterprise_search | click_all_accords              | 📌 `<siret>`                      | « Voir tous les accords sur Légifrance ». |
+| accord_enterprise_search | show_accords                   | 📌 `<count>`                      | Chargement réussi des accords ; `name` = nombre trouvé. |
+| accord_enterprise_search | load_accords_failed            | 📌 `<siret>`                      | Échec de l'appel API des accords (incident). |
+
+**Modale de sélection CC (en-tête)** (`header_cc`)
+[↗ source](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/convention-collective/AgreementSelectionModal/tracking.ts#L16 "AgreementSelectionModal/tracking.ts")
+
+| Catégorie      | Action                | Name (📌)  | Quand / pourquoi |
+| -------------- | --------------------- | ---------- | ---------------- |
+| header_cc      | open_modal            | —          | Ouverture de la modale CC depuis le header. |
+| header_cc      | cc_select_processed   | `<idcc>`   | Enregistrement d'une CC **prise en charge** par au moins un simulateur. |
+| header_cc      | cc_select_unprocessed | `<idcc>`   | Enregistrement d'une CC **non** prise en charge (avertissement affiché). |
+| header_cc      | cc_consult            | `<idcc>`   | Clic pour consulter la page de la CC déjà enregistrée. |
+| pagecc_searchcc | `<shortTitle>`       | 🔀 `<q>`   | Soumission du formulaire de recherche Légifrance depuis une page de CC. |
+
+---
+
+### Modèles de courriers
+
+| Catégorie                | Action      | Name (📌) | Quand / pourquoi | Code |
+| ------------------------ | ----------- | --------- | ---------------- | ---- |
+| page_modeles_de_documents | type_CTRL_C | `<slug>` | Copie d'un modèle (bouton « Copier le modèle » ou raccourci Ctrl/Cmd+C). Mesure les courriers les plus copiés. | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/modeles-de-courriers/tracking.ts#L7 "modeles-de-courriers/tracking.ts:7") |
+
+---
+
+### Avis & contact (bas de page)
+
+Bandeau « Cette page vous a-t-elle été utile ? » et modale de contact du footer.
+[↗ feedback](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/layout/feedback/tracking.ts#L29 "layout/feedback/tracking.ts") ·
+[↗ contact](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/layout/footer/infos/tracking.ts#L17 "layout/footer/infos/tracking.ts")
+
+| Catégorie         | Action                  | Name (📌/🔀)         | Quand / pourquoi |
+| ----------------- | ----------------------- | -------------------- | ---------------- |
+| feedback          | positive                | 📌 `<baseUrl>`       | Clic sur « Oui » (page utile). |
+| feedback          | negative                | 📌 `<baseUrl>`       | Clic sur « Non » ; ouvre le formulaire de précision. |
+| feedback_category | `<motif de feedback>`   | 📌 `<baseUrl>`       | À l'envoi, un event par motif coché (4 motifs prédéfinis, parcours négatif). |
+| feedback_suggestion | `<suggestion>`        | 🔀 `<baseUrl>`       | À l'envoi, si un texte libre est saisi (parcours positif ou négatif). Verbatim (500 car. max). |
+| contact           | click_contact_sr_modale | 📌 `<currentPathName>` | Ouverture de la modale « Besoin de plus d'informations ? » (renseignement). |
+| contact           | click_phone_number      | 📌 —                 | Clic sur le numéro de téléphone du service de renseignement. |
+
+Les 4 motifs possibles de `feedback_category` (un event par case cochée) :
+
+- `Les informations ne sont pas claires.`
+- `Les informations me semblent fausses.`
+- `Cette page ne correspond pas à ma recherche ou à ma situation.`
+- `Je ne suis pas satisfait de cette réglementation.`
+
+---
+
+### Partage & contenus liés (commun)
+
+| Catégorie     | Action                | Name (🔀)                       | Quand / pourquoi | Code |
+| ------------- | --------------------- | ------------------------------- | ---------------- | ---- |
+| clic_share    | `<url de la page>`    | `<réseau>` (facebook, twitter, linkedin, email, whatsapp, copier) | Clic sur un bouton du bloc « Partager la page ». Quels contenus, via quels canaux. | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/common/tracking.ts#L29 "common/tracking.ts:29") |
+| selectRelated | `{"selection":"<url>"}` | —                             | Clic sur un lien de la rubrique « contenus liés » en bas de page. | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/common/tracking.ts#L22 "common/tracking.ts:22") |

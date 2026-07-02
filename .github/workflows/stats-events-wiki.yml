@@ -1,10 +1,13 @@
 name: Stats events wiki
 
-# Synchronise le plan de tracking (events/TRACKING_PLAN.md) — déjà drift-checké
-# en PR par le workflow "Stats events" — vers le wiki GitHub du dépôt, à chaque
-# merge sur dev. Le métier consulte ainsi toujours la dernière version, sans
-# intervention manuelle. On copie tel quel le markdown committé (ses liens
-# "source" sont des URLs absolues, donc valides dans le wiki).
+# Synchronise le plan de tracking (events/TRACKING_PLAN.md, rédigé via le skill
+# `/tracking-plan`) vers le wiki GitHub du dépôt, à chaque merge sur dev. Le
+# métier consulte ainsi toujours la dernière version, sans intervention manuelle.
+#
+# La page n'est PAS écrasée : le helper `scripts/wiki-upsert.mjs` met à jour
+# uniquement le bloc délimité par `<!-- TRACKING_PLAN:START/END -->`, préservant
+# le titre et tout contenu manuel ajouté autour. Les liens "source" du markdown
+# sont des URLs absolues, donc valides dans le wiki.
 
 on:
   push:
@@ -21,7 +24,10 @@ concurrency:
 env:
   # Le nom de fichier devient le titre de la page wiki : "Plan de tracking Matomo".
   WIKI_PAGE: Plan-de-tracking-Matomo.md
+  # Titre H1 posé sur la page si elle doit être créée (bloc entre marqueurs).
+  WIKI_TITLE: Plan de tracking Matomo
   SOURCE_DOC: packages/code-du-travail-stats/events/TRACKING_PLAN.md
+  WIKI_UPSERT: packages/code-du-travail-stats/scripts/wiki-upsert.mjs
 
 jobs:
   sync:
@@ -46,8 +52,11 @@ jobs:
             git remote add origin "https://x-access-token:${WIKI_TOKEN}@github.com/${GITHUB_REPOSITORY}.wiki.git"
           }
 
-      - name: Copier le plan de tracking
-        run: cp "${SOURCE_DOC}" "wiki/${WIKI_PAGE}"
+      - name: Mettre à jour le bloc du plan de tracking (sans écraser la page)
+        # `node` est préinstallé sur ubuntu-latest ; le helper n'a aucune
+        # dépendance. Il remplace uniquement le bloc entre marqueurs et préserve
+        # le reste de la page wiki.
+        run: node "${WIKI_UPSERT}" "${SOURCE_DOC}" "wiki/${WIKI_PAGE}" "${WIKI_TITLE}"
 
       - name: Commit & push si la page a changé
         working-directory: wiki

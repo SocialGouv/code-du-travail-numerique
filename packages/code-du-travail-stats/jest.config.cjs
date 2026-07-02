@@ -11,8 +11,6 @@ module.exports = {
     "!src/project.ts",
     "!src/extract-events.ts",
     "!src/check-events.ts",
-    "!src/generate-doc.ts",
-    "!src/check-doc.ts",
     "!src/events.schema.ts",
   ],
 };
