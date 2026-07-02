@@ -29,6 +29,13 @@ const customJestConfig = {
   testTimeout: 20000,
   silent: true,
   moduleNameMapper: {
+    // Redirect the DILA API client to a test stub at resolution time. Mocking it with
+    // jest.mock() was flaky under the full parallel suite — the mock intermittently
+    // failed to intercept and DilaApiClient.fetch made a real network call. A
+    // moduleNameMapper redirect never loads the real module, so no network call is
+    // possible (only the accords service imports it). See the stub for details.
+    "^@socialgouv/dila-api-client$":
+      "<rootDir>/src/api/modules/accords/__tests__/__mocks__/dila-api-client.ts",
     // html-react-parser@6 ships TypeScript source in src/ but jest resolves to it instead of lib/
     // Force CJS compiled output to avoid ESM/TS parse errors in node environment tests
     "^html-react-parser$":
