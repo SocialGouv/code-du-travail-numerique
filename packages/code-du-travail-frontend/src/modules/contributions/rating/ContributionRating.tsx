@@ -67,7 +67,10 @@ export const ContributionRating = ({ contributionSlug }: Props) => {
       </h2>
       {/* Texte d'aide affiché juste sous la question. Classe DSFR dédiée
           (0.75rem, gris) : étant une classe, elle l'emporte sur la règle de
-          base `p`. */}
+          base `p`. Non relié au curseur via aria-describedby : DSFR écrase
+          l'aria-describedby de l'input (il pointe sur son propre groupe de
+          messages) ; l'instruction est de toute façon portée pour les lecteurs
+          d'écran par le nom accessible explicite du curseur (RATING_SLIDER_LABEL). */}
       <p className={fr.cx("fr-hint-text", "fr-mb-0")}>{RATING_WIDGET_HINT}</p>
       <RatingSlider value={value} onChange={onChange} disabled={submitted} />
       {!submitted && (
@@ -87,7 +90,8 @@ export const ContributionRating = ({ contributionSlug }: Props) => {
 };
 
 const widget = css({
-  padding: "1.5rem",
+  // Carré bleu : 16px haut/bas, 8px gauche/droite (maquette).
+  padding: "1rem 0.5rem",
   backgroundColor: "var(--background-alt-blue-france)",
   // Widget interactif : inutile (et disgracieux) à l'impression / en PDF.
   "@media print": { display: "none" },
