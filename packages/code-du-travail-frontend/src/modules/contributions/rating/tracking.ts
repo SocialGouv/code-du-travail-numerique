@@ -49,8 +49,10 @@ export const trackContributionRating = async ({
   value,
 }: RatingTrackingPayload): Promise<void> => {
   // Cohérence avec le tracking existant (opt-out) : on n'émet rien si l'usager
-  // a refusé Matomo. L'UX (confirmation) reste, elle, active.
-  if (typeof window !== "undefined" && !getStoredConsent().matomo) return;
+  // a refusé Matomo. On sort aussi côté serveur (pas de `window`) — le `||`
+  // court-circuite avant getStoredConsent (qui lit le stockage client, absent en
+  // SSR). L'UX (confirmation) reste, elle, active.
+  if (typeof window === "undefined" || !getStoredConsent().matomo) return;
 
   try {
     // category/action en enum → résolus statiquement par l'extraction. Le `name`
