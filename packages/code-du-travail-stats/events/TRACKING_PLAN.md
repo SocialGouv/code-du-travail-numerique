@@ -319,7 +319,7 @@ et c'est le **serveur** qui relaie l'event vers Matomo. La `category`/`action` s
 serveur ; le **slug** de la contribution sert de nom d'event (`e_n`) et de clé d'URL canonique,
 et la **note (1 à 5)** est transmise en **valeur** de l'event (`e_v`).
 
-[↗ source](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/contributions/rating/tracking.ts#L59 "rating/tracking.ts")
+[↗ source](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/contributions/rating/tracking.ts#L61 "rating/tracking.ts")
 
 | Catégorie             | Action          | Name (🔀)             | Quand / pourquoi |
 | --------------------- | --------------- | --------------------- | ---------------- |
