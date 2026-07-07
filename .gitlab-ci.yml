@@ -95,7 +95,7 @@ deploy-dev:
     DEPLOY_ENV: cdtn-dev
     CHART_NAME: code-du-travail-numerique
   trigger:
-    project: socialgouv/produits-dnum/travail/cdtn/cdtn-gitops
+    project: socialgouv/produits-dnum/citoyens/cdtn/cdtn-gitops
     branch: main
     strategy: depend
   environment:
