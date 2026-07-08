@@ -4,10 +4,23 @@ import { fr } from "@codegouvfr/react-dsfr";
 
 type Props = {
   children: React.ReactNode;
+  // Callback optionnel déclenché à l'ouverture du plein écran. Le composant est
+  // générique : il ne connaît pas le contexte (contribution, etc.). L'appelant
+  // fournit ce callback pour gérer l'event de son côté ; s'il est absent, la
+  // fonctionnalité est désactivée (comportement par défaut).
+  onOpenFullscreen?: () => void;
 };
 
-export const TableFullscreenWrapper = ({ children }: Props) => {
+export const TableFullscreenWrapper = ({
+  children,
+  onOpenFullscreen,
+}: Props) => {
   const dialogRef = useRef<HTMLDialogElement>(null);
+
+  const openFullscreen = () => {
+    onOpenFullscreen?.();
+    dialogRef.current?.showModal();
+  };
 
   return (
     <>
@@ -21,7 +34,7 @@ export const TableFullscreenWrapper = ({ children }: Props) => {
             "fr-icon-fullscreen-line",
             "fr-btn--icon-left"
           )}
-          onClick={() => dialogRef.current?.showModal()}
+          onClick={openFullscreen}
         >
           Voir le tableau en plein écran
         </button>
@@ -63,6 +76,12 @@ export const TableFullscreenWrapper = ({ children }: Props) => {
           padding: 0 1rem 1rem;
         }
         @media screen and (max-width: 767px) and (orientation: portrait) {
+          .table-fullscreen-header {
+            position: fixed;
+            top: 0;
+            right: 0;
+            z-index: 10001;
+          }
           .table-fullscreen-content {
             position: fixed;
             width: 100dvh;

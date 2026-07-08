@@ -11,7 +11,7 @@ Ce document décrit les évènements Matomo **écrits explicitement dans le code
 (`code.travail.gouv.fr`). Il est destiné au métier : pour **chaque** évènement, il explique
 **quand** il part et **pourquoi** on le mesure, puis en donne le contenu exact.
 
-**98** events uniques · **107** au total · **28** catégories Matomo. Couverture vérifiée
+**99** events uniques · **108** au total · **28** catégories Matomo. Couverture vérifiée
 exhaustivement face au catalogue extrait du code.
 
 #### tracking générique (automatique sur chaque page)
@@ -289,7 +289,8 @@ Clics sur les boutons « voir tout » et les questions guidées de la page d'acc
 
 ### Contributions (fiches pratiques)
 
-Encart de personnalisation par convention collective en tête d'une contribution.
+Encart de personnalisation par convention collective en tête d'une contribution, plus
+l'agrandissement des tableaux du contenu.
 [↗ source](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/contributions/tracking.ts#L24 "contributions/tracking.ts")
 
 | Catégorie    | Action                                    | Name (📌)                     | Quand / pourquoi |
@@ -299,6 +300,7 @@ Encart de personnalisation par convention collective en tête d'une contribution
 | contribution | click_afficher_les_informations_CC        | `<withVariant(path,variant)>` | « Afficher les informations » avec une CC valide et traitée → page dédiée à la CC. |
 | contribution | click_afficher_les_informations_générales | `<withVariant(path,variant)>` | « Afficher les informations » avec une CC **non** traitée → informations générales. |
 | contribution | click_afficher_les_informations_sans_CC   | `<withVariant(path,variant)>` | « Afficher sans sélectionner de CC » → contenu générique (émis avec `click_p3`). |
+| contribution | btn_table_fullscreen                      | `<slug>`                      | Clic sur « Voir le tableau en plein écran » pour agrandir un tableau du contenu (bouton affiché sur mobile) ; `name` = slug de la contribution. |
 | cc_search_type_of_users | click_p1 · click_p2 · click_p3 | `<withVariant(path,variant)>` | Parcours de choix de CC : par nom (p1), par entreprise (p2), sans CC (p3). |
 
 ---

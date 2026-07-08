@@ -16,6 +16,10 @@ export enum TrackingAgreementSearchAction {
   CLICK_P3 = "click_p3",
 }
 
+export enum TrackingContributionAction {
+  BTN_TABLE_FULLSCREEN = "btn_table_fullscreen",
+}
+
 const withVariant = (name: string, variant?: string | null) =>
   variant ? `${name}|variant=${variant}` : name;
 
@@ -84,6 +88,14 @@ export const useContributionTracking = (variant?: string | null) => {
     });
   };
 
+  const emitClickTableFullscreen = (slug: string) => {
+    sendEvent({
+      category: TrackingContributionCategory.CONTRIBUTION,
+      action: TrackingContributionAction.BTN_TABLE_FULLSCREEN,
+      name: slug,
+    });
+  };
+
   return {
     emitAgreementTreatedEvent,
     emitAgreementUntreatedEvent,
@@ -93,5 +105,6 @@ export const useContributionTracking = (variant?: string | null) => {
     emitClickP1,
     emitClickP2,
     emitClickP3,
+    emitClickTableFullscreen,
   };
 };
