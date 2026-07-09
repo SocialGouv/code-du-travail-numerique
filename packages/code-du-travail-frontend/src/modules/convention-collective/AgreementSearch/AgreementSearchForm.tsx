@@ -27,6 +27,7 @@ type Props = {
   error?: string;
   enterpriseRequireSearchSignal?: number;
   agreementRequireSearchSignal?: number;
+  showWhatIsAgreementLink?: boolean;
 };
 
 const AGREEMENT_LABEL =
@@ -50,6 +51,7 @@ export const AgreementSearchForm = ({
   error,
   enterpriseRequireSearchSignal,
   agreementRequireSearchSignal,
+  showWhatIsAgreementLink = false,
 }: Props) => {
   const [selectedRoute, setSelectedRoute] = useState<
     AgreementRoute | undefined
@@ -168,6 +170,7 @@ export const AgreementSearchForm = ({
           level={level}
           onBackToPersonalize={onBackToPersonalize}
           requireSearchSignal={enterpriseRequireSearchSignal}
+          showWhatIsAgreementLink={showWhatIsAgreementLink}
         />
       )}
       {selectedRoute === "no-agreement" && noAgreementContent}

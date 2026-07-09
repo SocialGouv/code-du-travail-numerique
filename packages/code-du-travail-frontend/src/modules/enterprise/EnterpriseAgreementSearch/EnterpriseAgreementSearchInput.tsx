@@ -23,6 +23,7 @@ import { scrollToTop } from "src/modules/outils/common/utils";
 import { ApiGeoResult } from "./searchCities";
 import { AccessibleAlert } from "src/modules/outils/common/components/AccessibleAlert";
 import { focusableTitle } from "src/modules/common/focusableTitle";
+import { WhatIsAgreementLink } from "../../convention-collective/WhatIsAgreementLink";
 
 type Props = {
   widgetMode?: boolean;
@@ -40,6 +41,7 @@ type Props = {
   canContinueSimulationIfNoAgreement?: boolean;
   onBackToPersonalize?: () => void;
   requireSearchSignal?: number;
+  showWhatIsAgreementLink?: boolean;
 };
 
 export const EnterpriseAgreementSearchInput = ({
@@ -56,6 +58,7 @@ export const EnterpriseAgreementSearchInput = ({
   canContinueSimulationIfNoAgreement,
   onBackToPersonalize,
   requireSearchSignal,
+  showWhatIsAgreementLink = false,
 }: Props) => {
   const [selectedAgreement, setSelectedAgreement] = useState<
     Agreement | undefined
@@ -255,6 +258,7 @@ export const EnterpriseAgreementSearchInput = ({
         >
           Vous avez sélectionné la convention collective
         </TitleTag>
+        {showWhatIsAgreementLink && <WhatIsAgreementLink />}
         <div
           className={fr.cx(
             "fr-my-2w",
@@ -325,6 +329,7 @@ export const EnterpriseAgreementSearchInput = ({
           enterprise={selectedEnterprise}
           selectedAgreement={selectedAgreement}
           level={level}
+          showWhatIsAgreementLink={showWhatIsAgreementLink}
           goBack={() => {
             setSelectedEnterprise(undefined);
             setSelectedAgreement(undefined);

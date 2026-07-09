@@ -264,14 +264,33 @@ describe("<ContributionGeneric />", () => {
     expect(sendEvent).toHaveBeenCalledTimes(1);
   });
 
-  it("affiche le lien « La convention collective, c'est quoi ? » (mise en page moteur accords d'entreprise)", () => {
+  it("affiche le lien « La convention collective, c'est quoi ? » uniquement une fois la convention affichée via la recherche entreprise", async () => {
     render(<ContributionGeneric contribution={contribution} />);
 
     const link = byRole("link", {
       name: /La convention collective, c'est quoi/,
-    }).get();
-    expect(link).toBeInTheDocument();
-    expect(link).toHaveAttribute(
+    });
+
+    // Tant qu'on n'a pas atteint l'écran de sélection de la convention via la
+    // recherche entreprise, le lien ne doit pas être affiché.
+    expect(link.query()).not.toBeInTheDocument();
+
+    await userEvent.click(ccUi.radio.enterpriseSearchOption.get());
+    await userEvent.click(ccUi.searchByEnterprise.input.get());
+    await userEvent.type(ccUi.searchByEnterprise.input.get(), "carrefour");
+    await act(async () => {
+      await userEvent.click(ccUi.searchByEnterprise.submitButton.get());
+    });
+    await waitFor(() => {
+      fireEvent.click(
+        ccUi.searchByEnterprise.resultLines.carrefour.title.get()
+      );
+    });
+
+    expect(
+      byText(/Vous avez sélectionné la convention collective/).query()
+    ).toBeInTheDocument();
+    expect(link.get()).toHaveAttribute(
       "href",
       "/quelles-regles-s-appliquent-dans-votre-entreprise#convention-collective"
     );

@@ -20,7 +20,6 @@ import { Contribution } from "./type";
 import Link from "../common/Link";
 import BlueCard from "../common/BlueCard";
 import { AgreementSearchForm } from "../convention-collective/AgreementSearch/AgreementSearchForm";
-import { WhatIsAgreementLink } from "../convention-collective/WhatIsAgreementLink";
 import { AccessibleAlert } from "../outils/common/components/AccessibleAlert";
 import { useContributionTracking } from "./tracking";
 import { focusableTitle } from "../common/focusableTitle";
@@ -219,7 +218,6 @@ export function ContributionGenericAgreementSearch({
           Personnalisez la réponse avec votre convention collective
         </p>
       </div>
-      <WhatIsAgreementLink />
       <p className={fr.cx("fr-text--sm", "fr-mb-2w")}>
         La convention collective prévoit des règles spécifiques à votre secteur
         d&apos;activité, qui peuvent être plus avantageuses que le Code du
@@ -241,6 +239,7 @@ export function ContributionGenericAgreementSearch({
           defaultAgreement={selectedAgreement}
           trackingActionName={trackingActionName}
           level={3}
+          showWhatIsAgreementLink
           onBackToPersonalize={() => {
             const personalizeTitle = document.getElementById(
               "personalize-response-title"
