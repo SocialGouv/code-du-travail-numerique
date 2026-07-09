@@ -9,17 +9,13 @@ export enum TrackingContributionCategory {
 
 export enum TrackingAgreementSearchAction {
   CLICK_DISPLAY_AGREEMENT_CONTENT = "click_afficher_les_informations_CC",
-  CLICK_DISPLAY_GENERIC_CONTENT = "click_afficher_les_informations_sans_CC",
   CLICK_DISPLAY_GENERAL_CONTENT = "click_afficher_les_informations_générales",
   CLICK_P1 = "click_p1",
   CLICK_P2 = "click_p2",
   CLICK_P3 = "click_p3",
 }
 
-const withVariant = (name: string, variant?: string | null) =>
-  variant ? `${name}|variant=${variant}` : name;
-
-export const useContributionTracking = (variant?: string | null) => {
+export const useContributionTracking = () => {
   const emitAgreementTreatedEvent = (idcc: number) => {
     sendEvent({
       category: TrackingContributionCategory.TOOL,
@@ -40,15 +36,7 @@ export const useContributionTracking = (variant?: string | null) => {
     sendEvent({
       category: TrackingContributionCategory.CONTRIBUTION,
       action: TrackingAgreementSearchAction.CLICK_DISPLAY_AGREEMENT_CONTENT,
-      name: withVariant(path, variant),
-    });
-  };
-
-  const emitDisplayGenericContent = (path: string) => {
-    sendEvent({
-      category: TrackingContributionCategory.CONTRIBUTION,
-      action: TrackingAgreementSearchAction.CLICK_DISPLAY_GENERIC_CONTENT,
-      name: withVariant(path, variant),
+      name: path,
     });
   };
 
@@ -56,7 +44,7 @@ export const useContributionTracking = (variant?: string | null) => {
     sendEvent({
       category: TrackingContributionCategory.CONTRIBUTION,
       action: TrackingAgreementSearchAction.CLICK_DISPLAY_GENERAL_CONTENT,
-      name: withVariant(path, variant),
+      name: path,
     });
   };
 
@@ -64,7 +52,7 @@ export const useContributionTracking = (variant?: string | null) => {
     sendEvent({
       category: TrackingContributionCategory.CC_SEARCH_TYPE_OF_USERS,
       action: TrackingAgreementSearchAction.CLICK_P1,
-      name: withVariant(path, variant),
+      name: path,
     });
   };
 
@@ -72,7 +60,7 @@ export const useContributionTracking = (variant?: string | null) => {
     sendEvent({
       category: TrackingContributionCategory.CC_SEARCH_TYPE_OF_USERS,
       action: TrackingAgreementSearchAction.CLICK_P2,
-      name: withVariant(path, variant),
+      name: path,
     });
   };
 
@@ -80,7 +68,7 @@ export const useContributionTracking = (variant?: string | null) => {
     sendEvent({
       category: TrackingContributionCategory.CC_SEARCH_TYPE_OF_USERS,
       action: TrackingAgreementSearchAction.CLICK_P3,
-      name: withVariant(path, variant),
+      name: path,
     });
   };
 
@@ -88,7 +76,6 @@ export const useContributionTracking = (variant?: string | null) => {
     emitAgreementTreatedEvent,
     emitAgreementUntreatedEvent,
     emitDisplayAgreementContent,
-    emitDisplayGenericContent,
     emitDisplayGeneralContent,
     emitClickP1,
     emitClickP2,

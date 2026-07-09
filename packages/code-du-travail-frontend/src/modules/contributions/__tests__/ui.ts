@@ -9,9 +9,6 @@ import { searchAgreement } from "../../convention-collective";
 export const ui = {
   generic: {
     buttonDisplayInfo: byText(/Afficher les informations$/),
-    buttonDisplayInfoWithoutCc: byText(
-      /Afficher les informations sans sélectionner une convention collective/
-    ),
     learnMoreLink: byRole("link", { name: /En savoir plus/ }),
     nonTreatedInfo: byText(
       /Cette réponse correspond à ce que prévoit le code du travail/
@@ -23,15 +20,6 @@ export const ui = {
     radioNoAgreement: byLabelText(
       /Je ne souhaite pas renseigner ma convention collective\./
     ),
-    regularButtonAgreement: byRole("button", {
-      name: /Je saisis ma convention collective/,
-    }),
-    regularButtonEnterprise: byRole("button", {
-      name: /Je cherche par entreprise/,
-    }),
-    regularButtonNoAgreement: byRole("button", {
-      name: /Afficher le Code du travail/,
-    }),
     agreementRequiredError: byText(
       /Veuillez sélectionner une convention collective/
     ),
