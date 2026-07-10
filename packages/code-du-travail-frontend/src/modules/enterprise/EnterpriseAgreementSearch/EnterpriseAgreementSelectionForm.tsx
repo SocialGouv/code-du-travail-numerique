@@ -63,7 +63,9 @@ export const EnterpriseAgreementSelectionForm = ({
             <>{agreements.length} conventions collectives trouvées&nbsp;:</>
           ))}
       </div>
-      {showWhatIsAgreementLink && !!agreements.length && <WhatIsAgreementLink />}
+      {showWhatIsAgreementLink && !!agreements.length && (
+        <WhatIsAgreementLink />
+      )}
       <RadioButtons
         className={fr.cx("fr-mt-2w")}
         name="convention-collective"
