@@ -154,7 +154,7 @@ const mapTbody = (tbody: Element, params: Options) => {
   }
 
   return (
-    <TableFullscreenWrapper>
+    <TableFullscreenWrapper onOpenFullscreen={params.onTableFullscreen}>
       <div className={fr.cx("fr-table", "fr-mb-2w")}>
         <div className={fr.cx("fr-table__wrapper")}>
           <div className={fr.cx("fr-table__container")}>
@@ -248,6 +248,7 @@ type Options = {
   smicHourly?: number;
   challengerAsterisk: boolean;
   challengerState?: { substituted: boolean };
+  onTableFullscreen?: () => void;
 };
 const options = (params: Options): HTMLReactParserOptions => {
   const { titleLevel } = params;
@@ -438,6 +439,7 @@ const options = (params: Options): HTMLReactParserOptions => {
                             smicHourly: params.smicHourly,
                             challengerState: params.challengerState,
                             challengerAsterisk: params.challengerAsterisk,
+                            onTableFullscreen: params.onTableFullscreen,
                           })
                         )}
                       </>
@@ -545,6 +547,7 @@ type Props = {
     infographics?: ContributionInfographicFull[];
     disableLink?: boolean;
     smicHourly?: number;
+    onTableFullscreen?: () => void;
   };
 };
 
@@ -564,6 +567,7 @@ const DisplayContent = ({
         smicHourly: extra?.smicHourly,
         challengerAsterisk: true,
         challengerState,
+        onTableFullscreen: extra?.onTableFullscreen,
       })
     );
     /*

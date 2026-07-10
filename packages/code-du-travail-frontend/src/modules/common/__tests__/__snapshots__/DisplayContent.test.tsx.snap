@@ -889,6 +889,12 @@ exports[`DisplayContent Tables should render correctly a table with multiple hea
           padding: 0 1rem 1rem;
         }
         @media screen and (max-width: 767px) and (orientation: portrait) {
+          .table-fullscreen-header {
+            position: fixed;
+            top: 0;
+            right: 0;
+            z-index: 10001;
+          }
           .table-fullscreen-content {
             position: fixed;
             width: 100dvh;
@@ -1309,6 +1315,12 @@ exports[`DisplayContent Tables should skip colgroup 1`] = `
           padding: 0 1rem 1rem;
         }
         @media screen and (max-width: 767px) and (orientation: portrait) {
+          .table-fullscreen-header {
+            position: fixed;
+            top: 0;
+            right: 0;
+            z-index: 10001;
+          }
           .table-fullscreen-content {
             position: fixed;
             width: 100dvh;
