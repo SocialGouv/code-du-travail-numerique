@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "react-dsfr update-icons && panda codegenv && next dev",
     "lint": "pnpm codegen && eslint .",
-    "precommit": "lint-staged",
+    "precommit": "lint-staged --concurrent 1",
     "start": "next start",
     "tsup": "tsup",
     "codegen": "pnpm tsup && node dist/prebuild-cli.js && react-dsfr update-icons && panda codegen && next typegen",

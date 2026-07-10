@@ -10,6 +10,7 @@ import { ListWithArrow } from "../common/ListWithArrow";
 import { RelatedItems } from "../common/RelatedItems";
 import { RelatedItem } from "../documents";
 import { Contribution } from "./type";
+import { ContributionRating } from "./rating";
 import { focusableTitle } from "../common/focusableTitle";
 
 type Props = {
@@ -30,7 +31,14 @@ export const ContributionGenericContent = forwardRef<
 
   return (
     <>
-      <div className={fr.cx("fr-grid-row", "fr-grid-row--gutters", "fr-px-3v")}>
+      <div
+        className={fr.cx(
+          "fr-grid-row",
+          "fr-grid-row--gutters",
+          "fr-px-3v",
+          "fr-mb-6w"
+        )}
+      >
         <div
           tabIndex={-1}
           ref={ref}
@@ -79,11 +87,14 @@ export const ContributionGenericContent = forwardRef<
           className={fr.cx(
             "fr-col-12",
             "fr-col-md-4",
-            "fr-mt-6w",
+            // Aligne le haut de la colonne (widget de notation) sur le haut du
+            // texte principal (colonne de gauche, `fr-mt-2w`).
+            "fr-mt-2w",
             "fr-p-md-3w",
             !displayGeneric && "fr-hidden"
           )}
         >
+          <ContributionRating contributionSlug={contribution.slug} />
           <RelatedItems relatedItems={relatedItems} />
           <Share title={title} metaDescription={metas.description} />
         </div>
