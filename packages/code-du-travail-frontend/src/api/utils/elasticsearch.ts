@@ -36,3 +36,4 @@ const prefixIndex = BRANCH_NAME_SLUG?.startsWith("linked")
   : `${ES_INDEX_PREFIX}-${CDTN_ADMIN_VERSION}`;
 export const elasticDocumentsIndex = `${prefixIndex}_documents`;
 export const elasticSuggestionsIndex = `${prefixIndex}_suggestions`;
+export const elasticAccordsIndex = `${prefixIndex}_accords`;
