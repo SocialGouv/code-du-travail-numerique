@@ -36,6 +36,23 @@ export type AccordResponse = {
   themes?: string[];
 };
 
+// Document tel que stocké dans l'index Elasticsearch `accords`
+// (cf. accordMapping / packages/code-du-travail-frontend/src/api/utils/elasticsearch.ts).
+// Les dates sont des chaînes au format "yyyy-MM-dd".
+export interface EsAccordDocument {
+  id: string;
+  title: string;
+  siret: string;
+  dateMaj?: string;
+  dateDepot?: string;
+  dateEffet?: string;
+  dateFin?: string;
+  dateDiffusion?: string;
+  conformeVersionIntegrale?: boolean;
+  themes?: string[];
+  signataires?: string[];
+}
+
 export interface ApiEntrepriseAccordResponse {
   acco: ApiAccordResponse;
 }
