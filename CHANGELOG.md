@@ -3,6 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.233.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.232.0...v4.233.0) (2026-07-10)
+
+
+### Bug Fixes
+
+* **accord:** utilisation des accords dans l'ES à la place de l'API Legifrance ([#7381](https://github.com/SocialGouv/code-du-travail-numerique/issues/7381)) ([7cb5330](https://github.com/SocialGouv/code-du-travail-numerique/commit/7cb5330923cbb9e9bf5267144bbd9399ae2d2009))
+* ajout de logs sur la recherche DILA ([1443956](https://github.com/SocialGouv/code-du-travail-numerique/commit/1443956c779cd9d4b0ec7c22466daaee44863bb1))
+* **contribution:** correction sur le bouton pour fermer le fullscreen sur un tableau ([#7373](https://github.com/SocialGouv/code-du-travail-numerique/issues/7373)) ([c37cf8e](https://github.com/SocialGouv/code-du-travail-numerique/commit/c37cf8e01a745d89a146a7f6434b4405c1f5cb6d))
+* correctif suite au passage en pnpm 11 ([99a0516](https://github.com/SocialGouv/code-du-travail-numerique/commit/99a05164d9bd5a8d2b99e32f8835b5c6538ece65))
+* correctif suite au passage en pnpm 11 ([2a6f4bb](https://github.com/SocialGouv/code-du-travail-numerique/commit/2a6f4bb41b679e645686d2253676cc338723fc03))
+* **rc:** pas de minimum d'ancienneté pour le particulier employeur ([#7314](https://github.com/SocialGouv/code-du-travail-numerique/issues/7314)) ([8ec06b3](https://github.com/SocialGouv/code-du-travail-numerique/commit/8ec06b31a2fe3b4c29064933abec25869994623e))
+
+
+### Features
+
+* add static event extraction and drift-check system ([#7300](https://github.com/SocialGouv/code-du-travail-numerique/issues/7300)) ([4ca95a7](https://github.com/SocialGouv/code-du-travail-numerique/commit/4ca95a7c6dd2d57c436efaf3e406d0a09d1dfcaa))
+* **contributions:** ajout d'un widget de notation ([#7344](https://github.com/SocialGouv/code-du-travail-numerique/issues/7344)) ([8278fcd](https://github.com/SocialGouv/code-du-travail-numerique/commit/8278fcdd94182f47bda41d4de5f915bab6530efc))
+* generate tracking plan documentation from events ([#7343](https://github.com/SocialGouv/code-du-travail-numerique/issues/7343)) ([919718f](https://github.com/SocialGouv/code-du-travail-numerique/commit/919718f365715ff9eb738b3d59bb342b27b6e219))
+
+
+
+
+
 # [4.232.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.231.5...v4.232.0) (2026-06-23)
 
 

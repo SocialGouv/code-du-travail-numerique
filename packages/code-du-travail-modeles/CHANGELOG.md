@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.233.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.232.0...v4.233.0) (2026-07-10)
+
+
+### Bug Fixes
+
+* **rc:** pas de minimum d'ancienneté pour le particulier employeur ([#7314](https://github.com/SocialGouv/code-du-travail-numerique/issues/7314)) ([8ec06b3](https://github.com/SocialGouv/code-du-travail-numerique/commit/8ec06b31a2fe3b4c29064933abec25869994623e))
+
+
+
+
+
 # [4.232.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.231.5...v4.232.0) (2026-06-23)
 
 **Note:** Version bump only for package @socialgouv/modeles-social

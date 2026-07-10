@@ -1,6 +1,6 @@
 {
   "name": "@cdt/frontend",
-  "version": "4.232.0",
+  "version": "4.233.0",
   "description": "Code du travail frontend",
   "private": true,
   "homepage": "https://code-du-travail.beta.gouv.fr/",
@@ -47,6 +47,7 @@
     "@socialgouv/modeles-social": "link:../code-du-travail-modeles",
     "date-fns": "^4.4.0",
     "debounce-promise": "^3.1.2",
+    "debug": "^4.4.3",
     "downshift": "^9.3.3",
     "fuse.js": "^7.4.0",
     "fuzzball": "^2.2.6",
@@ -56,17 +57,16 @@
     "lodash.deburr": "^4.1.0",
     "memoizee": "^0.4.17",
     "next": "~16.2.7",
+    "node-fetch": "^2.6.6",
     "publicodes": "1.0.0-beta.60",
     "react": "~19.2.7",
     "react-dom": "~19.2.7",
     "sharp": "^0.34.5",
+    "simple-oauth2": "^4.2.0",
     "talisman": "^1.1.4",
     "uuid": "^14.0.0",
     "xss": "^1.0.15",
-    "zustand": "^5.0.14",
-    "debug": "^4.4.3",
-    "node-fetch": "^2.6.6",
-    "simple-oauth2": "^4.2.0"
+    "zustand": "^5.0.14"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.11.3",
