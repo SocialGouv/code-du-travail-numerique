@@ -38,9 +38,10 @@ describe("rating/tracking", () => {
     expect(init.headers["Content-Type"]).toBe("application/json");
 
     const body = JSON.parse(init.body);
-    // Payload minimal : le slug de la contribution + la note. La catégorie/action
-    // Matomo et l'URL canonique sont ajoutées côté serveur.
+    // Payload minimal : la source du contenu, son slug + la note. La
+    // catégorie/action Matomo et l'URL canonique sont ajoutées côté serveur.
     expect(body).toEqual({
+      source: "contributions",
       slug: "conges-payes-1234",
       value: 4,
     });

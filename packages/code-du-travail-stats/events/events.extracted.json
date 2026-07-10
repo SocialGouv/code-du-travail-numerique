@@ -929,10 +929,11 @@
       "resolution": "literal",
       "emit_function": "trackContributionRating",
       "file": "packages/code-du-travail-frontend/src/modules/contributions/rating/tracking.ts",
-      "line": 61,
+      "line": 69,
       "enum_refs": [
         "RatingMatomo.ACTION",
-        "RatingMatomo.CATEGORY"
+        "RatingMatomo.CATEGORY",
+        "SOURCES.CONTRIBUTIONS"
       ],
       "tracking_method": "sendEvent"
     },

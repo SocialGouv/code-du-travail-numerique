@@ -40,8 +40,8 @@ const makeRequest = (body: unknown, invalidJson = false): Request =>
     },
   }) as unknown as Request;
 
-// Le client n'envoie QUE la note : le slug de la contribution et la valeur.
-const validBody = { slug: "conges-payes", value: 4 };
+// Le client envoie la source du contenu, son slug et la note.
+const validBody = { source: "contributions", slug: "conges-payes", value: 4 };
 
 describe("ContributionRatingController.post()", () => {
   beforeEach(() => jest.clearAllMocks());
@@ -56,10 +56,19 @@ describe("ContributionRatingController.post()", () => {
     expect(mockSendRatingEvent).toHaveBeenCalledWith({
       category: RatingMatomo.CATEGORY,
       action: RatingMatomo.ACTION,
-      contentType: "contribution",
+      source: "contributions",
       value: 4,
       slug: "conges-payes",
     });
+  });
+
+  it("rejette (400) une source inconnue (anti-injection d'URL)", async () => {
+    const res = await new ContributionRatingController(
+      makeRequest({ ...validBody, source: "evil" })
+    ).post();
+
+    expect(res.status).toBe(400);
+    expect(mockSendRatingEvent).not.toHaveBeenCalled();
   });
 
   it("rejette (400) une note hors bornes", async () => {

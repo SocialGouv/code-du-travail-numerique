@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { captureException } from "@sentry/nextjs";
+import { routeBySource, SourceKeys } from "@socialgouv/cdtn-utils";
 import { InvalidQueryError } from "../../utils";
 import {
   RATING_MAX,
@@ -12,19 +13,21 @@ import { sendRatingEvent } from "./service";
 // car il pilote l'URL canonique construite côté serveur (anti-injection).
 const SLUG_RE = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 
-// Type de contenu noté, propriété du serveur (jamais fourni par le client) :
-// préfixe le chemin canonique (URL + nom d'event Matomo) pour désambiguïser deux
-// slugs identiques portés par des types de contenu différents.
-const CONTENT_TYPE = "contribution";
+// Source du contenu noté : validée contre l'allowlist des sources CDTN connues
+// (les clés de `routeBySource`). Le client choisit ainsi parmi un ensemble fermé
+// de types (~19), jamais une valeur libre — l'URL/le nom d'event canoniques
+// restent donc à l'abri de toute injection.
+const isContentSource = (value: unknown): value is SourceKeys =>
+  typeof value === "string" && value in routeBySource;
 
-// Corps attendu : uniquement la notation (le slug de la contribution notée et la
-// note). La catégorie/action Matomo appartiennent au serveur : le client n'a pas
-// à les fournir (route API classique, pas un relai d'event arbitraire).
-type RatingBody = { slug: string; value: number };
+// Corps attendu : la source du contenu noté, son slug et la note. La
+// catégorie/action Matomo appartiennent au serveur : le client n'a pas à les
+// fournir (route API classique, pas un relai d'event arbitraire).
+type RatingBody = { source: SourceKeys; slug: string; value: number };
 
 // Clés autorisées : on refuse tout champ inattendu (équivalent d'un schéma
-// « strict » : le client ne relaie que « juste la note »).
-const ALLOWED_KEYS = ["slug", "value"];
+// « strict » : le client ne relaie que la source, le slug et la note).
+const ALLOWED_KEYS = ["source", "slug", "value"];
 
 const jsonError = (status: number, message: string): NextResponse =>
   NextResponse.json(
@@ -48,7 +51,10 @@ const parseRatingBody = (body: unknown): RatingBody => {
     throw invalidQuery({ keys: Object.keys(record) });
   }
 
-  const { slug, value } = record;
+  const { source, slug, value } = record;
+  if (!isContentSource(source)) {
+    throw invalidQuery({ source });
+  }
   if (typeof slug !== "string" || !SLUG_RE.test(slug)) {
     throw invalidQuery({ slug });
   }
@@ -61,7 +67,7 @@ const parseRatingBody = (body: unknown): RatingBody => {
     throw invalidQuery({ value });
   }
 
-  return { slug, value };
+  return { source, slug, value };
 };
 
 export class ContributionRatingController {
@@ -75,7 +81,7 @@ export class ContributionRatingController {
     try {
       const body: unknown = await this.request.json().catch(() => undefined);
 
-      const { slug, value } = parseRatingBody(body);
+      const { source, slug, value } = parseRatingBody(body);
 
       // Relai best-effort vers Matomo (serveur->serveur, invisible des
       // adblockers). Un échec (Matomo lent/down) ne doit ni renvoyer 500 au
@@ -84,7 +90,7 @@ export class ContributionRatingController {
         await sendRatingEvent({
           category: RatingMatomo.CATEGORY,
           action: RatingMatomo.ACTION,
-          contentType: CONTENT_TYPE,
+          source,
           value,
           slug,
         });
