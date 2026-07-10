@@ -34,6 +34,7 @@ export function ContributionGeneric({ contribution }: Props) {
     emitAgreementTreatedEvent,
     emitAgreementUntreatedEvent,
     emitDisplayAgreementContent,
+    emitDisplayGenericContent,
     emitDisplayGeneralContent,
   } = useContributionTracking();
   const genericTitleRef = useRef<HTMLDivElement>(null);
@@ -93,6 +94,11 @@ export function ContributionGeneric({ contribution }: Props) {
             scrollToTitle();
             if (selectedAgreement) {
               emitDisplayGeneralContent(getTitle());
+            } else {
+              // Aucune CC sélectionnée : l'usager affiche le Code du travail
+              // (dernière option « Je ne souhaite pas renseigner… » ou entreprise
+              // sans convention).
+              emitDisplayGenericContent(getTitle());
             }
           } else {
             emitDisplayAgreementContent(getTitle());

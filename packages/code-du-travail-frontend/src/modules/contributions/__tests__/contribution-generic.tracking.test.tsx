@@ -260,8 +260,14 @@ describe("<ContributionGeneric />", () => {
     });
 
     fireEvent.click(ui.generic.buttonDisplayInfo.get());
-    // No additional event is emitted: click_p3 already captures the intent
-    expect(sendEvent).toHaveBeenCalledTimes(1);
+    // Afficher le Code du travail sans CC émet l'évènement d'affichage dédié
+    // (en plus du click_p3 déjà émis à la sélection de la dernière option).
+    expect(sendEvent).toHaveBeenCalledTimes(2);
+    expect(sendEvent).toHaveBeenLastCalledWith({
+      action: "click_afficher_les_informations_sans_CC",
+      category: "contribution",
+      name: "/contribution/my-contrib",
+    });
   });
 
   it("affiche le lien « La convention collective, c'est quoi ? » uniquement une fois la convention affichée via la recherche entreprise", async () => {

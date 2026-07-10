@@ -10,6 +10,7 @@ export enum TrackingContributionCategory {
 
 export enum TrackingAgreementSearchAction {
   CLICK_DISPLAY_AGREEMENT_CONTENT = "click_afficher_les_informations_CC",
+  CLICK_DISPLAY_GENERIC_CONTENT = "click_afficher_les_informations_sans_CC",
   CLICK_DISPLAY_GENERAL_CONTENT = "click_afficher_les_informations_générales",
   CLICK_P1 = "click_p1",
   CLICK_P2 = "click_p2",
@@ -41,6 +42,14 @@ export const useContributionTracking = () => {
     sendEvent({
       category: TrackingContributionCategory.CONTRIBUTION,
       action: TrackingAgreementSearchAction.CLICK_DISPLAY_AGREEMENT_CONTENT,
+      name: path,
+    });
+  };
+
+  const emitDisplayGenericContent = (path: string) => {
+    sendEvent({
+      category: TrackingContributionCategory.CONTRIBUTION,
+      action: TrackingAgreementSearchAction.CLICK_DISPLAY_GENERIC_CONTENT,
       name: path,
     });
   };
@@ -89,6 +98,7 @@ export const useContributionTracking = () => {
     emitAgreementTreatedEvent,
     emitAgreementUntreatedEvent,
     emitDisplayAgreementContent,
+    emitDisplayGenericContent,
     emitDisplayGeneralContent,
     emitClickP1,
     emitClickP2,
