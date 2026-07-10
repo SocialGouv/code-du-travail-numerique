@@ -1,5 +1,6 @@
 import { sendEvent } from "@socialgouv/matomo-next";
 import { MatomoAgreementEvent } from "../analytics";
+import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
 
 export enum TrackingContributionCategory {
   TOOL = "outil",
@@ -92,7 +93,7 @@ export const useContributionTracking = (variant?: string | null) => {
     sendEvent({
       category: TrackingContributionCategory.CONTRIBUTION,
       action: TrackingContributionAction.BTN_TABLE_FULLSCREEN,
-      name: slug,
+      name: `${getRouteBySource(SOURCES.CONTRIBUTIONS)}/${slug}`,
     });
   };
 

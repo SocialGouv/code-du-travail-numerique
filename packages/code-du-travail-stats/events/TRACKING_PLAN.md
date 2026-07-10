@@ -294,13 +294,13 @@ l'agrandissement des tableaux du contenu.
 [↗ source](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/contributions/tracking.ts#L24 "contributions/tracking.ts")
 
 | Catégorie    | Action                                    | Name (📌)                     | Quand / pourquoi |
-| ------------ | ----------------------------------------- | ----------------------------- | ---------------- |
+| ------------ | ----------------------------------------- |-------------------------------| ---------------- |
 | outil        | cc_select_traitée                         | `<idcc>`                      | CC sélectionnée **prise en charge** par la contribution (contenu dédié disponible). |
 | outil        | cc_select_non_traitée                     | `<idcc>`                      | CC sélectionnée **non prise en charge** (l'usager verra la réponse générale). |
 | contribution | click_afficher_les_informations_CC        | `<withVariant(path,variant)>` | « Afficher les informations » avec une CC valide et traitée → page dédiée à la CC. |
 | contribution | click_afficher_les_informations_générales | `<withVariant(path,variant)>` | « Afficher les informations » avec une CC **non** traitée → informations générales. |
 | contribution | click_afficher_les_informations_sans_CC   | `<withVariant(path,variant)>` | « Afficher sans sélectionner de CC » → contenu générique (émis avec `click_p3`). |
-| contribution | btn_table_fullscreen                      | `<slug>`                      | Clic sur « Voir le tableau en plein écran » pour agrandir un tableau du contenu (bouton affiché sur mobile) ; `name` = slug de la contribution. |
+| contribution | btn_table_fullscreen                      | `contribution/<slug>`         | Clic sur « Voir le tableau en plein écran » pour agrandir un tableau du contenu (bouton affiché sur mobile) ; `name` = slug de la contribution. |
 | cc_search_type_of_users | click_p1 · click_p2 · click_p3 | `<withVariant(path,variant)>` | Parcours de choix de CC : par nom (p1), par entreprise (p2), sans CC (p3). |
 
 ---
