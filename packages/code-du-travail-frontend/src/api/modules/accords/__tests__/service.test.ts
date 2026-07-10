@@ -1,4 +1,4 @@
-import { getAccordsEntreprise } from "../service";
+import { getAccordsEntrepriseFromDila } from "../service";
 
 // The DILA client is now a local module (../../utils/dila-api-client); it performs
 // real HTTP/OAuth requests, so it must be mocked here. It was previously mocked as
@@ -69,13 +69,13 @@ const mockAccordDetail = {
   },
 };
 
-describe("getAccordsEntreprise", () => {
+describe("getAccordsEntrepriseFromDila", () => {
   it("retourne les accords formatés pour un siret donné", async () => {
     mockFetch
       .mockResolvedValueOnce(mockSearchResponse)
       .mockResolvedValueOnce(mockAccordDetail);
 
-    const result = await getAccordsEntreprise("12345678901234");
+    const result = await getAccordsEntrepriseFromDila("12345678901234");
 
     expect(result).toEqual({
       total: 1,
@@ -106,7 +106,7 @@ describe("getAccordsEntreprise", () => {
       .mockResolvedValueOnce(mockSearchResponse)
       .mockResolvedValueOnce(accordWithDateFin);
 
-    const result = await getAccordsEntreprise("12345678901234");
+    const result = await getAccordsEntrepriseFromDila("12345678901234");
 
     expect(result.accords[0].dateFin).toBe("31/12/2025");
   });
@@ -117,7 +117,7 @@ describe("getAccordsEntreprise", () => {
       results: [],
     });
 
-    const result = await getAccordsEntreprise("00000000000000");
+    const result = await getAccordsEntrepriseFromDila("00000000000000");
 
     expect(result).toEqual({ total: 0, accords: [] });
   });
@@ -127,7 +127,7 @@ describe("getAccordsEntreprise", () => {
       .mockResolvedValueOnce(mockSearchResponse)
       .mockResolvedValueOnce(mockAccordDetail);
 
-    await getAccordsEntreprise("12345678901234");
+    await getAccordsEntrepriseFromDila("12345678901234");
 
     expect(mockFetch).toHaveBeenNthCalledWith(1, {
       path: "search",
@@ -151,7 +151,7 @@ describe("getAccordsEntreprise", () => {
       .mockResolvedValueOnce(mockSearchResponse)
       .mockResolvedValueOnce(mockAccordDetail);
 
-    await getAccordsEntreprise("12345678901234");
+    await getAccordsEntrepriseFromDila("12345678901234");
 
     expect(mockFetch).toHaveBeenNthCalledWith(2, {
       path: "consult/acco",
