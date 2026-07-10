@@ -11,7 +11,7 @@ Ce document décrit les évènements Matomo **écrits explicitement dans le code
 (`code.travail.gouv.fr`). Il est destiné au métier : pour **chaque** évènement, il explique
 **quand** il part et **pourquoi** on le mesure, puis en donne le contenu exact.
 
-**98** events uniques · **107** au total · **28** catégories Matomo. Couverture vérifiée
+**100** events uniques · **109** au total · **29** catégories Matomo. Couverture vérifiée
 exhaustivement face au catalogue extrait du code.
 
 #### tracking générique (automatique sur chaque page)
@@ -289,17 +289,43 @@ Clics sur les boutons « voir tout » et les questions guidées de la page d'acc
 
 ### Contributions (fiches pratiques)
 
-Encart de personnalisation par convention collective en tête d'une contribution.
+Encart de personnalisation par convention collective en tête d'une contribution, plus
+l'agrandissement des tableaux du contenu.
 [↗ source](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/contributions/tracking.ts#L24 "contributions/tracking.ts")
 
 | Catégorie    | Action                                    | Name (📌)                     | Quand / pourquoi |
-| ------------ | ----------------------------------------- | ----------------------------- | ---------------- |
+| ------------ | ----------------------------------------- |-------------------------------| ---------------- |
 | outil        | cc_select_traitée                         | `<idcc>`                      | CC sélectionnée **prise en charge** par la contribution (contenu dédié disponible). |
 | outil        | cc_select_non_traitée                     | `<idcc>`                      | CC sélectionnée **non prise en charge** (l'usager verra la réponse générale). |
 | contribution | click_afficher_les_informations_CC        | `<withVariant(path,variant)>` | « Afficher les informations » avec une CC valide et traitée → page dédiée à la CC. |
 | contribution | click_afficher_les_informations_générales | `<withVariant(path,variant)>` | « Afficher les informations » avec une CC **non** traitée → informations générales. |
 | contribution | click_afficher_les_informations_sans_CC   | `<withVariant(path,variant)>` | « Afficher sans sélectionner de CC » → contenu générique (émis avec `click_p3`). |
+| contribution | btn_table_fullscreen                      | `contribution/<slug>`         | Clic sur « Voir le tableau en plein écran » pour agrandir un tableau du contenu (bouton affiché sur mobile) ; `name` = slug de la contribution. |
 | cc_search_type_of_users | click_p1 · click_p2 · click_p3 | `<withVariant(path,variant)>` | Parcours de choix de CC : par nom (p1), par entreprise (p2), sans CC (p3). |
+
+---
+
+### Notation de la clarté d'une contribution
+
+Widget affiché en bas de chaque contribution : l'usager note la **clarté du contenu** de la
+page à l'aide d'un curseur de 1 (« Trop compliqué ») à 5 (« Très clair »), puis clique sur
+« Valider ». L'event part **au clic sur « Valider »** (une seule fois par affichage du widget ;
+aucune persistance côté client, recharger la page ré-affiche le widget). Il n'est émis que si
+l'usager a accepté Matomo (opt-out).
+
+Particularité technique : pour **contourner les bloqueurs de publicité** (qui filtrent
+`matomo.php` côté navigateur), le client fait un POST same-origin vers `/api/contribution-rating`
+et c'est le **serveur** qui relaie l'event vers Matomo. La `category`/`action` sont posées côté
+serveur ; le nom d'event (`e_n`) et la clé d'URL canonique sont le **slug** de la contribution
+**préfixé de son type de contenu** (`contribution/<slug>`) — le type désambiguïse deux slugs
+identiques portés par des types différents — et la **note (1 à 5)** est transmise en **valeur** de
+l'event (`e_v`).
+
+[↗ source](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/contributions/rating/tracking.ts#L61 "rating/tracking.ts")
+
+| Catégorie             | Action          | Name (🔀)             | Quand / pourquoi |
+| --------------------- | --------------- | --------------------- | ---------------- |
+| notation_contribution | validation_note | `contribution/<slug>` | Au clic sur « Valider » du widget de notation en bas d'une contribution. Le nom d'event préfixe le slug de son type de contenu (`contribution/…`) pour désambiguïser deux slugs identiques de types différents. Mesure la clarté perçue du contenu ; la note **1 à 5** (1 = Trop compliqué … 5 = Très clair) voyage dans la **valeur** de l'event. |
 
 ---
 

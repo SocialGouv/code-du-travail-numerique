@@ -10,6 +10,7 @@ import { RelatedItems } from "../common/RelatedItems";
 import { RelatedItem } from "../documents";
 import { Share } from "../common/Share";
 import { Contribution } from "./type";
+import { ContributionRating } from "./rating";
 import { css } from "@styled-system/css";
 
 type Props = {
@@ -78,6 +79,7 @@ export function ContributionAgreementContent({
             </Link>
           </span>
         </p>
+        <ContributionRating contributionSlug={contribution.slug} />
         {relatedItems && <RelatedItems relatedItems={relatedItems} />}
         <Share title={title} metaDescription={metas.description} />
       </div>

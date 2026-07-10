@@ -1,5 +1,8 @@
 const path = require("path");
 
+// `next lint` a été supprimé dans Next 16 ; on invoque directement ESLint
+// (flat config `eslint.config.mjs`), comme le script `lint` du package. Les
+// chemins absolus fournis par lint-staged sont passés tels quels à ESLint.
 const buildEslintCommand = (filenames) =>
   `eslint --fix ${filenames.map((file) => `"${file}"`).join(" ")}`;
 
@@ -14,12 +17,14 @@ const eventsCatalog = path.resolve(
 
 module.exports = {
   "**/*.ts?(x)": () => "tsc -p tsconfig.json --noEmit",
+  // `--passWithNoTests` : `--findRelatedTests` sort en erreur (code 1) quand un
+  // fichier staged n'a aucun test associé (ex. un fichier de config) — ce qui
+  // ferait échouer le commit à tort.
+  // `--testPathIgnorePatterns` : exclut les tests `*.es.test.ts` / `*.script.test.ts`
+  // (comme le script `test:frontend`), qui exigent un vrai Elasticsearch et
+  // échouent donc en local — sans ça, `--findRelatedTests` peut les embarquer.
   "*.{js,ts,tsx,jsx}": [
-    // Exclut les tests ES (*.es.test.ts) et de scripts (*.script.test.ts) qui
-    // nécessitent une vraie Elasticsearch — même exclusion que le script CI
-    // `test:frontend`. `--findRelatedTests` doit rester en dernier pour que
-    // lint-staged lui accole les fichiers stagés.
-    "jest --bail --testPathIgnorePatterns='.*\\.es\\.test\\.ts$|.*\\.script\\.test\\.ts$' --findRelatedTests",
+    "jest --bail --passWithNoTests --testPathIgnorePatterns='.*\\.es\\.test\\.ts$|.*\\.script\\.test\\.ts$' --findRelatedTests",
     buildEslintCommand,
   ],
   "*.{js,ts,tsx,jsx,json,md}": ["pnpm format"],

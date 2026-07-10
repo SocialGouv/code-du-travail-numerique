@@ -1,8 +1,8 @@
 {
   "scan_root": "packages/code-du-travail-frontend/src",
-  "callsites": 68,
-  "total_events": 106,
-  "unique_events": 97,
+  "callsites": 70,
+  "total_events": 108,
+  "unique_events": 99,
   "unresolved_callsites": 0,
   "events": [
     {
@@ -94,7 +94,7 @@
       "resolution": "literal",
       "emit_function": "emitClickP1",
       "file": "packages/code-du-travail-frontend/src/modules/contributions/tracking.ts",
-      "line": 52,
+      "line": 57,
       "enum_refs": [
         "TrackingAgreementSearchAction.CLICK_P1",
         "TrackingContributionCategory.CC_SEARCH_TYPE_OF_USERS"
@@ -137,7 +137,7 @@
       "resolution": "literal",
       "emit_function": "emitClickP2",
       "file": "packages/code-du-travail-frontend/src/modules/contributions/tracking.ts",
-      "line": 60,
+      "line": 65,
       "enum_refs": [
         "TrackingAgreementSearchAction.CLICK_P2",
         "TrackingContributionCategory.CC_SEARCH_TYPE_OF_USERS"
@@ -180,7 +180,7 @@
       "resolution": "literal",
       "emit_function": "emitClickP3",
       "file": "packages/code-du-travail-frontend/src/modules/contributions/tracking.ts",
-      "line": 68,
+      "line": 73,
       "enum_refs": [
         "TrackingAgreementSearchAction.CLICK_P3",
         "TrackingContributionCategory.CC_SEARCH_TYPE_OF_USERS"
@@ -481,12 +481,27 @@
     },
     {
       "category": "contribution",
+      "action": "btn_table_fullscreen",
+      "name_pattern": "<getRouteBySource(SOURCES.CONTRIBUTIONS)>/<slug>",
+      "resolution": "literal",
+      "emit_function": "emitClickTableFullscreen",
+      "file": "packages/code-du-travail-frontend/src/modules/contributions/tracking.ts",
+      "line": 81,
+      "enum_refs": [
+        "SOURCES.CONTRIBUTIONS",
+        "TrackingContributionAction.BTN_TABLE_FULLSCREEN",
+        "TrackingContributionCategory.CONTRIBUTION"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "contribution",
       "action": "click_afficher_les_informations_CC",
       "name_pattern": "<path>",
       "resolution": "literal",
       "emit_function": "emitDisplayAgreementContent",
       "file": "packages/code-du-travail-frontend/src/modules/contributions/tracking.ts",
-      "line": 36,
+      "line": 41,
       "enum_refs": [
         "TrackingAgreementSearchAction.CLICK_DISPLAY_AGREEMENT_CONTENT",
         "TrackingContributionCategory.CONTRIBUTION"
@@ -500,7 +515,7 @@
       "resolution": "literal",
       "emit_function": "emitDisplayGeneralContent",
       "file": "packages/code-du-travail-frontend/src/modules/contributions/tracking.ts",
-      "line": 44,
+      "line": 49,
       "enum_refs": [
         "TrackingAgreementSearchAction.CLICK_DISPLAY_GENERAL_CONTENT",
         "TrackingContributionCategory.CONTRIBUTION"
@@ -894,6 +909,21 @@
       "tracking_method": "sendEvent"
     },
     {
+      "category": "notation_contribution",
+      "action": "validation_note",
+      "name_pattern": "<contributionSlug>",
+      "resolution": "literal",
+      "emit_function": "trackContributionRating",
+      "file": "packages/code-du-travail-frontend/src/modules/contributions/rating/tracking.ts",
+      "line": 69,
+      "enum_refs": [
+        "RatingMatomo.ACTION",
+        "RatingMatomo.CATEGORY",
+        "SOURCES.CONTRIBUTIONS"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
       "category": "outil",
       "action": "anciennete_moins_2_ans",
       "name_pattern": null,
@@ -930,7 +960,7 @@
       "resolution": "literal",
       "emit_function": "emitAgreementUntreatedEvent",
       "file": "packages/code-du-travail-frontend/src/modules/contributions/tracking.ts",
-      "line": 28,
+      "line": 33,
       "enum_refs": [
         "MatomoAgreementEvent.CC_UNTREATED",
         "TrackingContributionCategory.TOOL"
@@ -958,7 +988,7 @@
       "resolution": "literal",
       "emit_function": "emitAgreementTreatedEvent",
       "file": "packages/code-du-travail-frontend/src/modules/contributions/tracking.ts",
-      "line": 20,
+      "line": 25,
       "enum_refs": [
         "MatomoAgreementEvent.CC_TREATED",
         "TrackingContributionCategory.TOOL"

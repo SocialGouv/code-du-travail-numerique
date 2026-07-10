@@ -2,7 +2,6 @@
 import React from "react";
 import { css } from "@styled-system/css";
 import { fr } from "@codegouvfr/react-dsfr";
-import { Feedback } from "../layout/feedback";
 import Breadcrumb from "@codegouvfr/react-dsfr/Breadcrumb";
 import { Contribution } from "./type";
 import { SourceData } from "../layout/SourceData";
@@ -96,10 +95,6 @@ export function ContributionLayout({ contribution }: Props) {
       ) : (
         <ContributionAgreement contribution={contribution} />
       )}
-
-      <div className={fr.cx("fr-col-12", "fr-col-md-8", "fr-my-6w")}>
-        <Feedback />
-      </div>
     </>
   );
 }
