@@ -56,6 +56,7 @@ describe("ContributionRatingController.post()", () => {
     expect(mockSendRatingEvent).toHaveBeenCalledWith({
       category: RatingMatomo.CATEGORY,
       action: RatingMatomo.ACTION,
+      contentType: "contribution",
       value: 4,
       slug: "conges-payes",
     });

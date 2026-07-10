@@ -316,14 +316,16 @@ l'usager a accepté Matomo (opt-out).
 Particularité technique : pour **contourner les bloqueurs de publicité** (qui filtrent
 `matomo.php` côté navigateur), le client fait un POST same-origin vers `/api/contribution-rating`
 et c'est le **serveur** qui relaie l'event vers Matomo. La `category`/`action` sont posées côté
-serveur ; le **slug** de la contribution sert de nom d'event (`e_n`) et de clé d'URL canonique,
-et la **note (1 à 5)** est transmise en **valeur** de l'event (`e_v`).
+serveur ; le nom d'event (`e_n`) et la clé d'URL canonique sont le **slug** de la contribution
+**préfixé de son type de contenu** (`contribution/<slug>`) — le type désambiguïse deux slugs
+identiques portés par des types différents — et la **note (1 à 5)** est transmise en **valeur** de
+l'event (`e_v`).
 
 [↗ source](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/contributions/rating/tracking.ts#L61 "rating/tracking.ts")
 
 | Catégorie             | Action          | Name (🔀)             | Quand / pourquoi |
 | --------------------- | --------------- | --------------------- | ---------------- |
-| notation_contribution | validation_note | `<slug contribution>` | Au clic sur « Valider » du widget de notation en bas d'une contribution. Mesure la clarté perçue du contenu ; la note **1 à 5** (1 = Trop compliqué … 5 = Très clair) voyage dans la **valeur** de l'event. |
+| notation_contribution | validation_note | `contribution/<slug>` | Au clic sur « Valider » du widget de notation en bas d'une contribution. Le nom d'event préfixe le slug de son type de contenu (`contribution/…`) pour désambiguïser deux slugs identiques de types différents. Mesure la clarté perçue du contenu ; la note **1 à 5** (1 = Trop compliqué … 5 = Très clair) voyage dans la **valeur** de l'event. |
 
 ---
 

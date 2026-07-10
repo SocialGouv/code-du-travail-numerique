@@ -16,6 +16,7 @@ describe("contribution-rating service", () => {
     await sendRatingEvent({
       category: "notation_contribution",
       action: "validation_note",
+      contentType: "contribution",
       value: 4,
       slug: "conges-payes",
     });
@@ -33,8 +34,9 @@ describe("contribution-rating service", () => {
     expect(parsed.searchParams.get("send_image")).toBe("0");
     expect(parsed.searchParams.get("e_c")).toBe("notation_contribution");
     expect(parsed.searchParams.get("e_a")).toBe("validation_note");
-    // Nom d'event = slug (le titre n'est plus relayé par le client).
-    expect(parsed.searchParams.get("e_n")).toBe("conges-payes");
+    // Nom d'event = « type/slug » : le type de contenu préfixe le slug pour
+    // désambiguïser deux slugs identiques de types différents.
+    expect(parsed.searchParams.get("e_n")).toBe("contribution/conges-payes");
     expect(parsed.searchParams.get("e_v")).toBe("4");
   });
 
@@ -42,6 +44,7 @@ describe("contribution-rating service", () => {
     await sendRatingEvent({
       category: "notation_contribution",
       action: "validation_note",
+      contentType: "contribution",
       value: 4,
       slug: "conges-payes",
     });
@@ -57,6 +60,7 @@ describe("contribution-rating service", () => {
     await sendRatingEvent({
       category: "notation_contribution",
       action: "validation_note",
+      contentType: "contribution",
       value: 4,
       slug: "conges-payes",
     });
@@ -70,6 +74,7 @@ describe("contribution-rating service", () => {
     await sendRatingEvent({
       category: "notation_contribution",
       action: "validation_note",
+      contentType: "contribution",
       value: 3,
       slug: "conges-payes",
     });
@@ -85,6 +90,7 @@ describe("contribution-rating service", () => {
     await sendRatingEvent({
       category: "notation_contribution",
       action: "validation_note",
+      contentType: "contribution",
       value: 3,
       slug: "conges-payes",
     });
@@ -99,6 +105,7 @@ describe("contribution-rating service", () => {
       sendRatingEvent({
         category: "notation_contribution",
         action: "validation_note",
+        contentType: "contribution",
         value: 3,
         slug: "conges-payes",
       })

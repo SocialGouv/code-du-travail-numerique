@@ -12,6 +12,11 @@ import { sendRatingEvent } from "./service";
 // car il pilote l'URL canonique construite côté serveur (anti-injection).
 const SLUG_RE = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 
+// Type de contenu noté, propriété du serveur (jamais fourni par le client) :
+// préfixe le chemin canonique (URL + nom d'event Matomo) pour désambiguïser deux
+// slugs identiques portés par des types de contenu différents.
+const CONTENT_TYPE = "contribution";
+
 // Corps attendu : uniquement la notation (le slug de la contribution notée et la
 // note). La catégorie/action Matomo appartiennent au serveur : le client n'a pas
 // à les fournir (route API classique, pas un relai d'event arbitraire).
@@ -79,6 +84,7 @@ export class ContributionRatingController {
         await sendRatingEvent({
           category: RatingMatomo.CATEGORY,
           action: RatingMatomo.ACTION,
+          contentType: CONTENT_TYPE,
           value,
           slug,
         });

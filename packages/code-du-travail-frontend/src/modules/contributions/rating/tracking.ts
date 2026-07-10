@@ -56,8 +56,8 @@ export const trackContributionRating = async ({
 
   try {
     // category/action en enum → résolus statiquement par l'extraction. Le `name`
-    // documente l'`e_n` réel (le slug, posé côté serveur). `slug`/`value` sont
-    // les seules données réellement transmises.
+    // documente l'`e_n` réel (le slug ; le serveur le préfixe du type de contenu,
+    // cf. controller/service). `slug`/`value` sont les seules données transmises.
     await firstPartyMatomo.sendEvent({
       category: RatingMatomo.CATEGORY,
       action: RatingMatomo.ACTION,

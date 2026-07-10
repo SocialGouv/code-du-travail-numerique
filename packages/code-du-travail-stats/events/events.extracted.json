@@ -1,8 +1,8 @@
 {
   "scan_root": "packages/code-du-travail-frontend/src",
-  "callsites": 70,
-  "total_events": 108,
-  "unique_events": 99,
+  "callsites": 71,
+  "total_events": 109,
+  "unique_events": 100,
   "unresolved_callsites": 0,
   "events": [
     {

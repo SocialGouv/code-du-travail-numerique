@@ -13,17 +13,26 @@ export type RatingEvent = {
   category: string;
   action: string;
   value: number;
-  // Slug de la contribution : sert à construire l'URL canonique côté serveur et
-  // de nom d'event lisible (`e_n`) dans les rapports Matomo.
+  // Type de contenu noté (ex. « contribution »). Préfixe le chemin canonique :
+  // deux contenus de types différents peuvent porter le même slug, le type les
+  // désambiguïse dans les rapports Matomo. Propriété du serveur (jamais fourni
+  // par le client) → cf. controller.
+  contentType: string;
+  // Slug du contenu : combiné au type de contenu pour construire le chemin
+  // canonique (URL + nom d'event lisible `e_n`) dans les rapports Matomo.
   slug: string;
 };
 
 export const sendRatingEvent = async (event: RatingEvent): Promise<void> => {
-  // URL canonique construite à partir du slug validé : clé de regroupement
+  // Chemin canonique « type/slug » : identité stable et lisible du contenu noté,
+  // partagée par l'URL et le nom d'event. Le type de contenu préfixe le slug pour
+  // éviter les collisions entre deux slugs identiques de types différents.
+  const path = `${event.contentType}/${event.slug}`;
+  // URL canonique construite à partir du chemin validé : clé de regroupement
   // Matomo stable même si le titre change, et impossible à détourner depuis le
   // client (on n'utilise jamais une URL fournie par lui → pas d'injection ni de
   // fuite de query string).
-  const url = `${SITE_URL}/contribution/${event.slug}`;
+  const url = `${SITE_URL}/${path}`;
 
   const params = new URLSearchParams({
     idsite: PIWIK_SITE_ID,
@@ -34,9 +43,11 @@ export const sendRatingEvent = async (event: RatingEvent): Promise<void> => {
     rand: `${Date.now()}`,
     e_c: event.category,
     e_a: event.action,
-    // Nom d'event = slug : identifiant lisible et stable de la contribution
-    // (le titre n'est plus relayé par le client → « juste la note »).
-    e_n: event.slug,
+    // Nom d'event = « type/slug » : identifiant lisible et stable du contenu,
+    // préfixé du type de contenu pour désambiguïser deux slugs identiques de
+    // types différents (le titre n'est plus relayé par le client → « juste la
+    // note »).
+    e_n: path,
     e_v: `${event.value}`,
     url,
   });
