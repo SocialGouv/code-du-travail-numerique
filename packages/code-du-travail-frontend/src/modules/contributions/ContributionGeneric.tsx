@@ -3,6 +3,7 @@ import React, { useRef, useState, useEffect } from "react";
 import { useContributionTracking } from "./tracking";
 import {
   buildContributionAgreementPath,
+  hasVisitedCcPage,
   isAgreementSupported,
   isAgreementValid,
 } from "./contributionUtils";
@@ -61,6 +62,10 @@ export function ContributionGeneric({ contribution }: Props) {
 
   useEffect(() => {
     if (window.location.hash === "#retour") return;
+    // L'usager a déjà consulté la page CC de cette fiche : il est revenu
+    // volontairement sur la générique (fil d'Ariane, « Modifier », lien). On ne
+    // le renvoie pas vers la CC, sinon il ne peut jamais revenir en arrière.
+    if (hasVisitedCcPage(slug)) return;
 
     const storedAgreement = getAgreementFromLocalStorage();
     if (storedAgreement && isAgreementValid(contribution, storedAgreement)) {

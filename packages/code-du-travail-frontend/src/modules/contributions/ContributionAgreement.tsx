@@ -9,6 +9,7 @@ import Button from "@codegouvfr/react-dsfr/Button";
 import { removeCCNumberFromSlug } from "../utils/removeCCNumberFromSlug";
 import { useRouter } from "next/navigation";
 import { focusableTitle } from "../common/focusableTitle";
+import { markCcPageVisited } from "./contributionUtils";
 
 type Props = {
   contribution: Contribution;
@@ -24,6 +25,13 @@ export function ContributionAgreement({ contribution }: Props) {
   const { slug, relatedItems } = contribution;
   const { push } = useRouter();
   const agreementTitleRef = useRef<HTMLParagraphElement>(null);
+
+  // Mémorise (le temps de la session) que l'usager a consulté la page CC de
+  // cette fiche, pour que la fiche générique cesse de l'y renvoyer
+  // automatiquement quand il revient en arrière (fil d'Ariane, « Modifier »).
+  useEffect(() => {
+    markCcPageVisited(removeCCNumberFromSlug(slug));
+  }, [slug]);
 
   useEffect(() => {
     if (window.location.hash !== AGREEMENT_FOCUS_HASH) return;
