@@ -5,7 +5,6 @@ import parse, {
   HTMLReactParserOptions,
 } from "html-react-parser";
 import React, { ElementType, JSX } from "react";
-import { v4 as generateUUID } from "uuid";
 import { AccordionWithAnchor } from "./AccordionWithAnchor";
 import { TableFullscreenWrapper } from "./TableFullscreenWrapper";
 
@@ -47,10 +46,23 @@ const mapItem = (params: Options, domNode: Element, summary: Element) => ({
     trim: true,
   }),
 });
+// Génère un id déterministe et unique à partir du titre de l'accordéon.
+// La première occurrence d'un slug garde le slug « propre » (ex: `mon-titre`)
+// pour préserver le lien par ancre (#mon-titre). Les collisions suivantes sont
+// suffixées (`mon-titre-2`, `mon-titre-3`, ...). Le registre `usedIds` est
+// partagé sur toute la durée du parsing pour garantir l'unicité dans le DOM.
+const makeUniqueAccordionId = (title: string, usedIds: Map<string, number>) => {
+  const base = slugify(title);
+  const count = usedIds.get(base) ?? 0;
+  usedIds.set(base, count + 1);
+  return count === 0 ? base : `${base}-${count + 1}`;
+};
+
 const mapToAccordion = (
   titleLevel: numberLevel,
   isParent: boolean,
-  items: any[]
+  items: any[],
+  usedIds: Map<string, number>
 ) => {
   const props = titleLevel <= 6 ? { titleLevel } : {};
 
@@ -61,7 +73,7 @@ const mapToAccordion = (
         data-testid="contrib-accordion"
         items={items.map((item) => ({
           ...item,
-          ...{ id: slugify(item.title) + "_" + generateUUID() },
+          ...{ id: makeUniqueAccordionId(item.title, usedIds) },
         }))}
         titleAs={`h${titleLevel}`}
       />
@@ -139,14 +151,14 @@ const getData = (el?: ChildNode) => {
 };
 
 const mapTbody = (tbody: Element, params: Options) => {
-  let theadChildren: Element[] = [];
+  const theadChildren: Element[] = [];
   const firstLine = getFirstElementChild(tbody);
 
   if (firstLine) {
-    let maxRowspan = theadMaxRowspan(firstLine);
+    const maxRowspan = theadMaxRowspan(firstLine);
     theadChildren.push(firstLine);
     for (let i = 1; i < maxRowspan; i++) {
-      let child = getFirstElementChild(tbody);
+      const child = getFirstElementChild(tbody);
       if (child) {
         theadChildren.push(child);
       }
@@ -249,6 +261,9 @@ type Options = {
   challengerAsterisk: boolean;
   challengerState?: { substituted: boolean };
   onTableFullscreen?: () => void;
+  // Registre partagé des ids d'accordéon déjà attribués, pour garantir
+  // des ids uniques et déterministes (cf. makeUniqueAccordionId).
+  usedIds: Map<string, number>;
 };
 const options = (params: Options): HTMLReactParserOptions => {
   const { titleLevel } = params;
@@ -369,7 +384,8 @@ const options = (params: Options): HTMLReactParserOptions => {
             mapToAccordion(
               accordionTitleLevel,
               !hasDetailsParent(domNode),
-              items
+              items,
+              params.usedIds
             )
           ) : (
             <></>
@@ -440,6 +456,7 @@ const options = (params: Options): HTMLReactParserOptions => {
                             challengerState: params.challengerState,
                             challengerAsterisk: params.challengerAsterisk,
                             onTableFullscreen: params.onTableFullscreen,
+                            usedIds: params.usedIds,
                           })
                         )}
                       </>
@@ -568,6 +585,7 @@ const DisplayContent = ({
         challengerAsterisk: true,
         challengerState,
         onTableFullscreen: extra?.onTableFullscreen,
+        usedIds: new Map(),
       })
     );
     /*
