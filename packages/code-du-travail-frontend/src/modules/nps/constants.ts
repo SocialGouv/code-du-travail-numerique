@@ -13,14 +13,8 @@ export const NPS_SCALE: number[] = Array.from(
 );
 
 // Contenu (cf. spec / maquette Figma).
-export const NPS_INTRO = "Donnez votre avis !";
-export const NPS_QUESTION =
-  "Recommanderiez-vous le code du travail numérique à un proche ?";
 export const NPS_LABEL_MIN = "Pas du tout";
 export const NPS_LABEL_MAX = "Absolument";
-export const NPS_SUBMIT_LABEL = "Valider";
-// Libellé de l'icône « main » flottante (bouton d'ouverture volontaire).
-export const NPS_HAND_LABEL = "Donnez votre avis";
 
 // Persistance anti-resollicitation.
 // Cookie posé à la validation → plus de sollicitation pendant 2 semaines.

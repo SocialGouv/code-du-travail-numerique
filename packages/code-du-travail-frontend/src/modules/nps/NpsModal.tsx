@@ -5,7 +5,7 @@ import { createModal } from "@codegouvfr/react-dsfr/Modal";
 import { css } from "@styled-system/css";
 import { NpsScale } from "./NpsScale";
 import { NpsIcon } from "./NpsIcon";
-import { NPS_INTRO, NPS_QUESTION, NPS_SUBMIT_LABEL } from "./constants";
+import { fr } from "@codegouvfr/react-dsfr";
 
 // Instance de modale DSFR (portail + focus-trap + bouton « Fermer » en haut à
 // droite + Échap gérés nativement). Déclarée au niveau module (id unique).
@@ -44,7 +44,7 @@ export const NpsModalView = ({
       title={
         <span className={titleRow}>
           <NpsIcon className={icon} />
-          <span>{NPS_INTRO}</span>
+          <span>Donnez votre avis&nbsp;!</span>
         </span>
       }
       size="large"
@@ -55,7 +55,7 @@ export const NpsModalView = ({
       // la validation (cookie + tracking, cf. NpsWidget) passe par onSubmit du form.
       buttons={[
         {
-          children: NPS_SUBMIT_LABEL,
+          children: "Valider",
           priority: "primary",
           disabled: value === null,
           nativeButtonProps: { type: "submit", form: formId },
@@ -74,8 +74,8 @@ export const NpsModalView = ({
         {/* Desktop : indentation pour aligner question + échelle sous le texte du
             titre (à droite de l'icône). Mobile : pleine largeur. */}
         <div className={content}>
-          <p id={questionId} className={question}>
-            {NPS_QUESTION}
+          <p id={questionId} className={fr.cx("fr-text--xl", "fr-text--bold")}>
+            Recommanderiez-vous le code du travail numérique à un proche&nbsp;?
           </p>
           <NpsScale
             value={value}
@@ -101,9 +101,4 @@ const icon = css({
 
 const content = css({
   lg: { paddingLeft: CONTENT_INDENT },
-});
-
-const question = css({
-  fontWeight: "bold",
-  marginBottom: "1.5rem",
 });

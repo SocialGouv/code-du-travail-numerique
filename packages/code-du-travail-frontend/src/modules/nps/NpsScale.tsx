@@ -10,6 +10,7 @@ import {
   NPS_MIN,
   NPS_SCALE,
 } from "./constants";
+import Button from "@codegouvfr/react-dsfr/Button";
 
 type Props = {
   value: number | null;
@@ -67,7 +68,7 @@ export const NpsScale = ({ value, onSelect, groupLabelId }: Props) => {
   };
 
   return (
-    <div>
+    <div className={outer}>
       <span id={hintId} className={fr.cx("fr-sr-only")}>
         Sélectionnez une note de 0 à 10, puis validez.
       </span>
@@ -90,22 +91,25 @@ export const NpsScale = ({ value, onSelect, groupLabelId }: Props) => {
                 ? `, ${NPS_LABEL_MAX}`
                 : "";
           return (
-            <button
+            <Button
               key={note}
               type="button"
-              role="radio"
+              nativeButtonProps={{
+                role: "radio",
+                tabIndex: index === activeIndex ? 0 : -1,
+                onKeyDown: (event) => onKeyDown(event, index),
+              }}
               aria-checked={selected}
               aria-label={`Note ${note} sur 10${pole}`}
-              tabIndex={index === activeIndex ? 0 : -1}
               ref={(el) => {
                 radiosRef.current[index] = el;
               }}
               onClick={() => onSelect(note)}
-              onKeyDown={(event) => onKeyDown(event, index)}
-              className={`${buttonBase} ${selected ? buttonSelected : buttonDefault}`}
+              className={buttonBase}
+              priority={selected ? "primary" : "secondary"}
             >
               {note}
-            </button>
+            </Button>
           );
         })}
       </div>
@@ -117,69 +121,41 @@ export const NpsScale = ({ value, onSelect, groupLabelId }: Props) => {
   );
 };
 
+// Desktop : le conteneur se réduit à la largeur du bloc de boutons et se centre.
+// La ligne de labels (en space-between dessous) s'aligne alors sur ses bords,
+// donc « Pas du tout » sous le 0 et « Absolument » sous le 10. Mobile : pleine
+// largeur (le flex-wrap des boutons a besoin d'une largeur pour se répartir).
+const outer = css({
+  lg: { width: "max-content", marginInline: "auto" },
+});
+
 const grid = css({
   // Mobile : boutons centrés, répartis sur plusieurs lignes (flex wrap).
   display: "flex",
   flexWrap: "wrap",
   justifyContent: "center",
-  gap: "0.5rem",
+  gap: "8px",
   // Desktop : une seule ligne de 11 boutons (grille).
   lg: {
     display: "grid",
-    gridTemplateColumns: "repeat(11, 1fr)",
+    gap: "8px",
+    gridTemplateColumns: "repeat(11, max-content)",
+    justifyContent: "center",
   },
 });
 
-// !important (suffixe `!` Panda) sur les propriétés visuelles : le DSFR pose un
-// reset sur l'élément <button> HORS cascade layer, qui écraserait sinon nos
-// règles `@layer utilities` quelle que soit leur spécificité (cf. même piège
-// documenté dans ContributionRating.tsx). L'`!important` layered l'emporte bien
-// sur une déclaration normale non-layered.
 const buttonBase = css({
   // Cible tactile minimale 48×48px (WCAG 2.5.5 / RGAA).
   minHeight: "3rem",
   // Mobile : largeur fixe (carré 48px) pour des boutons uniformes et centrés.
   width: "3rem",
-  padding: "0.5rem",
-  borderWidth: "1px!",
-  borderStyle: "solid!",
-  // Coins droits (pas d'arrondi).
-  borderRadius: "0!",
-  fontWeight: "500",
-  cursor: "pointer",
-  // Indicateur de focus clavier visible (WCAG 2.4.7), couleur de focus DSFR.
-  _focusVisible: {
-    outline: "2px solid #0a76f6!",
-    outlineOffset: "2px!",
-  },
   // Desktop : la grille (colonnes 1fr) pilote la largeur.
   lg: { width: "auto" },
-});
-
-// Variantes MUTUELLEMENT EXCLUSIVES (jamais composées ensemble) : deux règles
-// `!important` sur la même propriété se départageraient sinon selon l'ordre de
-// sortie de Panda, pas selon l'ordre des classes. En les rendant exclusives, la
-// couleur de fond ne rentre jamais en conflit.
-const buttonDefault = css({
-  color: "var(--text-action-high-blue-france)!",
-  backgroundColor: "var(--background-default-grey)!",
-  borderColor: "var(--border-action-high-blue-france)!",
-  _hover: { backgroundColor: "var(--background-alt-blue-france)!" },
-});
-
-// Bouton sélectionné : mis en évidence (fond bleu plein, texte inversé).
-const buttonSelected = css({
-  color: "var(--text-inverted-blue-france)!",
-  backgroundColor: "var(--background-action-high-blue-france)!",
-  borderColor: "var(--background-action-high-blue-france)!",
-  _hover: { backgroundColor: "var(--background-action-high-blue-france)!" },
 });
 
 // « Pas du tout » au-dessus de la grille : mobile uniquement.
 const labelAbove = css({
   display: "block",
-  fontSize: "0.875rem",
-  color: "var(--text-mention-grey)",
   marginBottom: "0.5rem",
   lg: { display: "none" },
 });
@@ -194,8 +170,6 @@ const labelsBelow = css({
 // est déjà affiché au-dessus).
 const labelMin = css({
   display: "none",
-  fontSize: "0.875rem",
-  color: "var(--text-mention-grey)",
   lg: { display: "block" },
 });
 
@@ -203,6 +177,4 @@ const labelMin = css({
 const labelMax = css({
   display: "block",
   marginLeft: "auto",
-  fontSize: "0.875rem",
-  color: "var(--text-mention-grey)",
 });

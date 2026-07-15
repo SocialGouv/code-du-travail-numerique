@@ -1,7 +1,6 @@
 "use client";
 
 import { css } from "@styled-system/css";
-import { NPS_HAND_LABEL } from "./constants";
 
 // Icône « main » flottante, présente sur toutes les pages (desktop + mobile),
 // sur le modèle du bouton « Donner votre avis » de mon-entreprise.urssaf.fr :
@@ -21,7 +20,7 @@ export const NpsHand = ({ onOpen, expanded = false }: Props) => (
     onClick={onOpen}
     aria-haspopup="dialog"
     aria-expanded={expanded}
-    aria-label={NPS_HAND_LABEL}
+    aria-label={"Donnez votre avis"}
   >
     <img
       className={handImg}
