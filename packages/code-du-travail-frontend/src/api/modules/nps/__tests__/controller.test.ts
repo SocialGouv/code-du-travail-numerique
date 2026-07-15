@@ -30,8 +30,16 @@ const mockSendNpsEvent = sendNpsEvent as jest.MockedFunction<
   typeof sendNpsEvent
 >;
 
-const makeRequest = (body: unknown, invalidJson = false): Request =>
+const makeRequest = (
+  body: unknown,
+  invalidJson = false,
+  userAgent: string | null = "jest-UA"
+): Request =>
   ({
+    headers: {
+      get: (name: string) =>
+        name.toLowerCase() === "user-agent" ? userAgent : null,
+    },
     json: async () => {
       if (invalidJson) throw new SyntaxError("Unexpected token");
       return body;
@@ -56,6 +64,7 @@ describe("NpsController.post()", () => {
       score: 9,
       trigger: NpsTrigger.EXIT_INTENT,
       slug: "contribution/conges-payes",
+      userAgent: "jest-UA",
     });
   });
 

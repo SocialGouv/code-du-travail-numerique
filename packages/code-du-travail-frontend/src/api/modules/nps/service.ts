@@ -17,12 +17,17 @@ export type NpsScoreEvent = {
   slug: string;
   // Note 0-10.
   score: number;
+  // User-Agent du visiteur : transmis pour que Matomo identifie un vrai
+  // navigateur. Sans lui, la requête serveur part avec l'UA par défaut de Node,
+  // que Matomo peut classer « bot » et donc ne pas comptabiliser.
+  userAgent?: string;
 };
 
 export const sendNpsEvent = async ({
   trigger,
   slug,
   score,
+  userAgent,
 }: NpsScoreEvent): Promise<void> => {
   // URL canonique reconstruite à partir du slug validé : clé de regroupement
   // Matomo stable, jamais une URL brute fournie par le client (pas d'injection
@@ -44,9 +49,12 @@ export const sendNpsEvent = async ({
     url,
   });
 
-  // Anonymisé : aucun `_id` (visiteur), aucun `cip` (IP), aucun cookie.
+  // Anonymisé : aucun `_id` (visiteur), aucun `cip` (IP), aucun cookie. On
+  // transmet en revanche le `User-Agent` du visiteur (device detection + évite le
+  // classement « bot » qui exclurait l'event des rapports).
   const response = await fetch(`${PIWIK_URL}/matomo.php?${params.toString()}`, {
     signal: AbortSignal.timeout(MATOMO_TIMEOUT_MS),
+    headers: userAgent ? { "User-Agent": userAgent } : undefined,
   });
   if (!response.ok) {
     throw new Error(`Matomo tracking failed: ${response.status}`);
