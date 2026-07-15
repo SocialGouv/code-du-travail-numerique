@@ -880,6 +880,110 @@
       "tracking_method": "sendEvent"
     },
     {
+      "category": "nps_popin_displayed",
+      "action": "copy",
+      "name_pattern": "<toEventName(pagePath)>",
+      "resolution": "enum-param",
+      "emit_function": "useNpsEvents",
+      "file": "packages/code-du-travail-frontend/src/modules/nps/tracking.ts",
+      "line": 19,
+      "enum_refs": [
+        "NpsEvent.DISPLAYED"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "nps_popin_displayed",
+      "action": "download",
+      "name_pattern": "<toEventName(pagePath)>",
+      "resolution": "enum-param",
+      "emit_function": "useNpsEvents",
+      "file": "packages/code-du-travail-frontend/src/modules/nps/tracking.ts",
+      "line": 19,
+      "enum_refs": [
+        "NpsEvent.DISPLAYED"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "nps_popin_displayed",
+      "action": "exit_intent",
+      "name_pattern": "<toEventName(pagePath)>",
+      "resolution": "enum-param",
+      "emit_function": "useNpsEvents",
+      "file": "packages/code-du-travail-frontend/src/modules/nps/tracking.ts",
+      "line": 19,
+      "enum_refs": [
+        "NpsEvent.DISPLAYED"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "nps_popin_displayed",
+      "action": "main",
+      "name_pattern": "<toEventName(pagePath)>",
+      "resolution": "enum-param",
+      "emit_function": "useNpsEvents",
+      "file": "packages/code-du-travail-frontend/src/modules/nps/tracking.ts",
+      "line": 19,
+      "enum_refs": [
+        "NpsEvent.DISPLAYED"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "nps_popin_refusal",
+      "action": "copy",
+      "name_pattern": "<toEventName(pagePath)>",
+      "resolution": "enum-param",
+      "emit_function": "useNpsEvents",
+      "file": "packages/code-du-travail-frontend/src/modules/nps/tracking.ts",
+      "line": 29,
+      "enum_refs": [
+        "NpsEvent.REFUSAL"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "nps_popin_refusal",
+      "action": "download",
+      "name_pattern": "<toEventName(pagePath)>",
+      "resolution": "enum-param",
+      "emit_function": "useNpsEvents",
+      "file": "packages/code-du-travail-frontend/src/modules/nps/tracking.ts",
+      "line": 29,
+      "enum_refs": [
+        "NpsEvent.REFUSAL"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "nps_popin_refusal",
+      "action": "exit_intent",
+      "name_pattern": "<toEventName(pagePath)>",
+      "resolution": "enum-param",
+      "emit_function": "useNpsEvents",
+      "file": "packages/code-du-travail-frontend/src/modules/nps/tracking.ts",
+      "line": 29,
+      "enum_refs": [
+        "NpsEvent.REFUSAL"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "nps_popin_refusal",
+      "action": "main",
+      "name_pattern": "<toEventName(pagePath)>",
+      "resolution": "enum-param",
+      "emit_function": "useNpsEvents",
+      "file": "packages/code-du-travail-frontend/src/modules/nps/tracking.ts",
+      "line": 29,
+      "enum_refs": [
+        "NpsEvent.REFUSAL"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
       "category": "outil",
       "action": "anciennete_moins_2_ans",
       "name_pattern": null,

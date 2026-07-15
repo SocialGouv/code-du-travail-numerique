@@ -335,6 +335,30 @@ de `note_1`, de `note_2`, …).
 
 ---
 
+### Indicateur NPS (recommandation du site)
+
+Widget « Donnez votre avis ! » proposé sur **toutes les pages** (desktop + mobile). Une icône
+« main » flottante l'ouvre à la demande ; il peut aussi s'afficher **automatiquement** (sortie de
+page vers le haut, ou clic « Télécharger »/« Copier » sur un modèle de courrier). L'usager note de
+**0 à 10** sa propension à recommander le site, puis valide. Deux events Matomo mesurent le **cycle
+de vie de la modale** (affichage, refus) : ils portent le **déclencheur** en `action` et le
+**chemin de la page** en `name`. Émis via le `sendEvent` standard (soumis à l'opt-out Matomo).
+[↗ source](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/nps/tracking.ts#L19 "nps/tracking.ts:19")
+
+| Catégorie           | Action (📌)                            | Name (🔀)            | Quand / pourquoi |
+| ------------------- | -------------------------------------- | -------------------- | ---------------- |
+| nps_popin_displayed | exit_intent · download · copy · main   | `<page_type/slug>`   | À l'affichage de la modale. L'action donne le déclencheur : sortie de page (`exit_intent`), clic « Télécharger » (`download`) ou « Copier » (`copy`) sur un modèle de courrier, ou clic sur l'icône « main » (`main`). Mesure le volume de sollicitations et leur canal. |
+| nps_popin_refusal   | exit_intent · download · copy · main   | `<page_type/slug>`   | Au clic sur « Fermer » **sans** avoir validé de note (même déclencheur en `action`). Mesure le taux d'abandon de la modale. |
+
+> **La note (0 à 10) n'est pas un event Matomo côté client** : au clic sur « Valider », le score
+> part vers l'**API proxy interne** `/api/nps` (POST same-origin — contourne les bloqueurs et
+> permettra de router la donnée ailleurs demain). Le serveur relaie alors vers Matomo un event
+> **`nps_submitted`** (catégorie posée **en dur** côté serveur) : `action` = le déclencheur,
+> `name` = `page_type/slug`, **valeur** = la note. N'étant pas un `sendEvent` client, il
+> n'apparaît pas dans le catalogue extrait du code.
+
+---
+
 ### Convention collective (recherche & consultation dédiées)
 
 En dehors des simulateurs : l'outil « Trouver sa convention collective » et la recherche
