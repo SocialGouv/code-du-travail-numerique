@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.233.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.233.0...v4.233.1) (2026-07-15)
+
+
+### Bug Fixes
+
+* **actualite:** mauvais niveaux dans le heading ([d1a35dd](https://github.com/SocialGouv/code-du-travail-numerique/commit/d1a35ddeb93b681bf034f99b125293f63b625da7))
+* **e2e:** correction sur l'ancre des accordéons ([de80599](https://github.com/SocialGouv/code-du-travail-numerique/commit/de805993dac8dce83e1c0ad1d98f756a5146eed7))
+
+
+
+
+
 # [4.233.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.232.0...v4.233.0) (2026-07-10)
 
 
