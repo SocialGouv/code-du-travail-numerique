@@ -5,7 +5,6 @@ import { mockAgreementSearch, ui } from "./ui";
 import { ui as ccUi } from "../../convention-collective/__tests__/ui";
 import { byRole, byText } from "testing-library-selector";
 import { ContributionGeneric } from "../ContributionGeneric";
-import { markCcPageVisited } from "../contributionUtils";
 import { Contribution } from "../type";
 
 beforeEach(() => {
@@ -411,54 +410,6 @@ describe("<ContributionGeneric />", () => {
         ui.generic.conventionSelectionRequiredError.query()
       ).toBeInTheDocument();
       expect(pushMock).not.toHaveBeenCalled();
-    });
-  });
-
-  describe("auto-redirection vers la page CC (anti-boucle)", () => {
-    const validAgreement = {
-      id: "1388",
-      num: 1388,
-      slug: "1388-industrie-du-petrole",
-      shortTitle: "Industrie du pétrole",
-    };
-
-    afterEach(() => {
-      window.location.hash = "";
-      sessionStorage.clear();
-      replaceMock.mockClear();
-    });
-
-    it("redirige vers la page CC à la première arrivée quand une convention valide est enregistrée", async () => {
-      localStorage.setItem("convention", JSON.stringify(validAgreement));
-
-      render(<ContributionGeneric contribution={contribution} />);
-
-      await waitFor(() =>
-        expect(replaceMock).toHaveBeenCalledWith(
-          "/contribution/1388-my-contrib"
-        )
-      );
-    });
-
-    it("ne redirige PAS vers la page CC si l'usager a déjà consulté cette page CC (retour via fil d'Ariane / Modifier)", async () => {
-      localStorage.setItem("convention", JSON.stringify(validAgreement));
-      // La page CC de cette fiche a déjà été vue durant la session.
-      markCcPageVisited("my-contrib");
-
-      render(<ContributionGeneric contribution={contribution} />);
-
-      await new Promise((resolve) => setTimeout(resolve, 150));
-      expect(replaceMock).not.toHaveBeenCalled();
-    });
-
-    it("ne redirige pas non plus quand on arrive avec le hash #retour", async () => {
-      window.location.hash = "#retour";
-      localStorage.setItem("convention", JSON.stringify(validAgreement));
-
-      render(<ContributionGeneric contribution={contribution} />);
-
-      await new Promise((resolve) => setTimeout(resolve, 150));
-      expect(replaceMock).not.toHaveBeenCalled();
     });
   });
 

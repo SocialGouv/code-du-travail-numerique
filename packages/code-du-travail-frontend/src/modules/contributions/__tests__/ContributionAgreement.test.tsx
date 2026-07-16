@@ -8,7 +8,6 @@ import {
 } from "../ContributionAgreement";
 import { Contribution } from "../type";
 import { focusableTitle } from "../../common/focusableTitle";
-import { hasVisitedCcPage } from "../contributionUtils";
 import { isExternalArrival } from "../externalArrival";
 import { ui } from "./ui";
 import { ui as ccUi } from "../../convention-collective/__tests__/ui";
@@ -64,22 +63,6 @@ beforeEach(() => {
   isExternalArrivalMock.mockReset();
   isExternalArrivalMock.mockReturnValue(false);
   window.localStorage.clear();
-});
-
-describe("<ContributionAgreement /> retour vers la fiche générique", () => {
-  afterEach(() => {
-    window.location.hash = "";
-    sessionStorage.clear();
-  });
-
-  it("marque la page CC comme consultée (pour désactiver l'auto-redirection au retour)", () => {
-    // slug "0016-slug" -> fiche générique "slug"
-    expect(hasVisitedCcPage("slug")).toBe(false);
-
-    render(<ContributionAgreement contribution={contribution} />);
-
-    expect(hasVisitedCcPage("slug")).toBe(true);
-  });
 });
 
 describe("<ContributionAgreement /> accessibilité", () => {
@@ -194,7 +177,6 @@ describe("<ContributionAgreement /> réinitialisation à l'arrivée externe (#73
 
   afterEach(() => {
     window.location.hash = "";
-    sessionStorage.clear();
   });
 
   it("affiche le bloc de sélection réinitialisé et masque le contenu", async () => {

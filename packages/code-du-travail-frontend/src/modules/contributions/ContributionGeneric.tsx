@@ -2,9 +2,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import { useContributionTracking } from "./tracking";
 import {
-  buildContributionAgreementPath,
   GENERIC_CONTENT_HASH,
-  hasVisitedCcPage,
   isAgreementSupported,
   isAgreementValid,
 } from "./contributionUtils";
@@ -14,7 +12,6 @@ import {
   useLocalStorageForAgreementOnPageLoad,
   getAgreementFromLocalStorage,
 } from "../utils/useLocalStorage";
-import { useRouter } from "next/navigation";
 import { ContributionGenericAgreementSearch } from "./ContributionGenericAgreementSearch";
 import { AgreementRoute } from "src/modules/outils/indemnite-depart/types";
 
@@ -23,7 +20,6 @@ type Props = {
 };
 
 export function ContributionGeneric({ contribution }: Props) {
-  const router = useRouter();
   const [hash, setHash] = useState("");
   const personalizeTitleRef = useRef<HTMLParagraphElement>(null);
   const getTitle = () => `/contribution/${slug}`;
@@ -77,23 +73,6 @@ export function ContributionGeneric({ contribution }: Props) {
       }, 100);
     }
   }, [hash]);
-
-  useEffect(() => {
-    if (window.location.hash === "#retour") return;
-    // Arrivée « réponse Code du travail » demandée : ne jamais renvoyer vers
-    // la page CC (même logique que #retour).
-    if (window.location.hash === GENERIC_CONTENT_HASH) return;
-    // L'usager a déjà consulté la page CC de cette fiche : il est revenu
-    // volontairement sur la générique (fil d'Ariane, « Modifier », lien). On ne
-    // le renvoie pas vers la CC, sinon il ne peut jamais revenir en arrière.
-    if (hasVisitedCcPage(slug)) return;
-
-    const storedAgreement = getAgreementFromLocalStorage();
-    if (storedAgreement && isAgreementValid(contribution, storedAgreement)) {
-      router.replace(buildContributionAgreementPath(slug, storedAgreement));
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
 
   return (
     <>

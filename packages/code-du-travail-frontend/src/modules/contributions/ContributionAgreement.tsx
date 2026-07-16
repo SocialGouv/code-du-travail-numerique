@@ -14,7 +14,6 @@ import {
   GENERIC_CONTENT_HASH,
   buildContributionAgreementPath,
   isAgreementSupported,
-  markCcPageVisited,
 } from "./contributionUtils";
 import { isExternalArrival } from "./externalArrival";
 import { ContributionGenericAgreementSearch } from "./ContributionGenericAgreementSearch";
@@ -84,13 +83,6 @@ export function ContributionAgreement({ contribution, genericInfos }: Props) {
     isNoCDT: genericInfos?.type === "generic-no-cdt",
     messageBlockGenericNoCDT: genericInfos?.messageBlockGenericNoCDT,
   };
-
-  // Mémorise (le temps de la session) que l'usager a consulté la page CC de
-  // cette fiche, pour que la fiche générique cesse de l'y renvoyer
-  // automatiquement quand il revient en arrière (fil d'Ariane, « Modifier »).
-  useEffect(() => {
-    markCcPageVisited(genericSlug);
-  }, [genericSlug]);
 
   useEffect(() => {
     if (genericInfos && isExternalArrival()) {
