@@ -14,7 +14,6 @@ import { Button } from "@codegouvfr/react-dsfr/Button";
 import { ToggleSwitch } from "@codegouvfr/react-dsfr/ToggleSwitch";
 import { fr } from "@codegouvfr/react-dsfr";
 import Link from "../common/Link";
-import { useAgreementModal } from "../convention-collective/AgreementSelectionModal";
 import { useSearchModal } from "../recherche/modal/SearchModalContext";
 
 type Props = {
@@ -26,9 +25,7 @@ export const CookieConsentDSFR = ({ heatmapEnabled, adsEnabled }: Props) => {
   const [consent, setConsent] = useState<ConsentType>(DEFAULT_CONSENT);
   const [showBanner, setShowBanner] = useState(false);
   const [showModal, setShowModal] = useState(false);
-  const { isOpen: isAgreementModalOpen } = useAgreementModal();
-  const { isOpen: isSearchModalOpen } = useSearchModal();
-  const isAnyModalOpen = isAgreementModalOpen || isSearchModalOpen;
+  const { isOpen: isAnyModalOpen } = useSearchModal();
 
   useEffect(() => {
     setConsent(getStoredConsent());

@@ -11,7 +11,7 @@ Ce document décrit les évènements Matomo **écrits explicitement dans le code
 (`code.travail.gouv.fr`). Il est destiné au métier : pour **chaque** évènement, il explique
 **quand** il part et **pourquoi** on le mesure, puis en donne le contenu exact.
 
-**100** events uniques · **109** au total · **29** catégories Matomo. Couverture vérifiée
+**96** events uniques · **105** au total · **29** catégories Matomo. Couverture vérifiée
 exhaustivement face au catalogue extrait du code.
 
 #### tracking générique (automatique sur chaque page)
@@ -331,8 +331,8 @@ l'event (`e_v`).
 
 ### Convention collective (recherche & consultation dédiées)
 
-En dehors des simulateurs : l'outil « Trouver sa convention collective », la recherche
-entreprise/accords et la modale de sélection de l'en-tête.
+En dehors des simulateurs : l'outil « Trouver sa convention collective » et la recherche
+entreprise/accords.
 
 **Outil « Trouver sa convention collective »**
 [↗ source](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/convention-collective/tracking.ts#L27 "convention-collective/tracking.ts")
@@ -362,15 +362,11 @@ entreprise/accords et la modale de sélection de l'en-tête.
 | accord_enterprise_search | show_accords                   | 📌 `<count>`                      | Chargement réussi des accords ; `name` = nombre trouvé. |
 | accord_enterprise_search | load_accords_failed            | 📌 `<siret>`                      | Échec de l'appel API des accords (incident). |
 
-**Modale de sélection CC (en-tête)** (`header_cc`)
-[↗ source](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/convention-collective/AgreementSelectionModal/tracking.ts#L16 "AgreementSelectionModal/tracking.ts")
+**Recherche Légifrance sur une page de CC**
+[↗ source](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/convention-collective/LegiFranceSearch.tsx#L24 "convention-collective/LegiFranceSearch.tsx")
 
-| Catégorie      | Action                | Name (📌)  | Quand / pourquoi |
+| Catégorie      | Action                | Name (🔀)  | Quand / pourquoi |
 | -------------- | --------------------- | ---------- | ---------------- |
-| header_cc      | open_modal            | —          | Ouverture de la modale CC depuis le header. |
-| header_cc      | cc_select_processed   | `<idcc>`   | Enregistrement d'une CC **prise en charge** par au moins un simulateur. |
-| header_cc      | cc_select_unprocessed | `<idcc>`   | Enregistrement d'une CC **non** prise en charge (avertissement affiché). |
-| header_cc      | cc_consult            | `<idcc>`   | Clic pour consulter la page de la CC déjà enregistrée. |
 | pagecc_searchcc | `<shortTitle>`       | 🔀 `<q>`   | Soumission du formulaire de recherche Légifrance depuis une page de CC. |
 
 ---
