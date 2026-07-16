@@ -32,8 +32,16 @@ const mockSendRatingEvent = sendRatingEvent as jest.MockedFunction<
 
 // Route API classique : le contrôleur lit `request.json()`. On simule aussi le
 // cas d'un JSON invalide (json() rejette).
-const makeRequest = (body: unknown, invalidJson = false): Request =>
+const makeRequest = (
+  body: unknown,
+  invalidJson = false,
+  userAgent: string | null = "jest-UA"
+): Request =>
   ({
+    headers: {
+      get: (name: string) =>
+        name.toLowerCase() === "user-agent" ? userAgent : null,
+    },
     json: async () => {
       if (invalidJson) throw new SyntaxError("Unexpected token");
       return body;
@@ -59,6 +67,7 @@ describe("ContributionRatingController.post()", () => {
       source: "contributions",
       value: 4,
       slug: "conges-payes",
+      userAgent: "jest-UA",
     });
   });
 

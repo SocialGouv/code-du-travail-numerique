@@ -87,6 +87,37 @@ describe("contribution-rating service", () => {
     expect(parsed.searchParams.get("uid")).toBeNull();
   });
 
+  it("transmet le User-Agent du visiteur à Matomo", async () => {
+    await sendRatingEvent({
+      category: "notation_contribution",
+      action: "validation_note",
+      source: "contributions",
+      value: 4,
+      slug: "conges-payes",
+      userAgent: "UA-navigateur",
+    });
+
+    const init = (global.fetch as jest.Mock).mock.calls[0][1] as RequestInit;
+    // UA forwardé : sans lui, Matomo classe la requête serveur en « bot » et
+    // n'enregistre pas l'event (cause du bug initial, cf. #7384).
+    expect((init.headers as Record<string, string>)["User-Agent"]).toBe(
+      "UA-navigateur"
+    );
+  });
+
+  it("sans userAgent : pas de header User-Agent", async () => {
+    await sendRatingEvent({
+      category: "notation_contribution",
+      action: "validation_note",
+      source: "contributions",
+      value: 4,
+      slug: "conges-payes",
+    });
+
+    const init = (global.fetch as jest.Mock).mock.calls[0][1] as RequestInit;
+    expect(init.headers).toBeUndefined();
+  });
+
   it("borne le relai par un timeout (signal d'abort)", async () => {
     await sendRatingEvent({
       category: "notation_contribution",

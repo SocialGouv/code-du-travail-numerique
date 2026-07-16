@@ -86,6 +86,9 @@ export class ContributionRatingController {
       // Relai best-effort vers Matomo (serveur->serveur, invisible des
       // adblockers). Un échec (Matomo lent/down) ne doit ni renvoyer 500 au
       // client fire-and-forget, ni inonder Sentry : on loggue simplement.
+      // On transmet le User-Agent du visiteur pour que Matomo voie un vrai
+      // navigateur (l'UA par défaut de Node serait classé « bot » → event ignoré).
+      const userAgent = this.request.headers.get("user-agent") ?? undefined;
       try {
         await sendRatingEvent({
           category: RatingMatomo.CATEGORY,
@@ -93,6 +96,7 @@ export class ContributionRatingController {
           source,
           value,
           slug,
+          userAgent,
         });
       } catch (relayError) {
         console.warn("[contribution-rating] relai Matomo échoué:", relayError);
