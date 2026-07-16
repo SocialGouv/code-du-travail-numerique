@@ -7,6 +7,14 @@ import {
 import { searchAgreement } from "../../convention-collective";
 
 export const ui = {
+  cdtAnswerTitle: byRole("heading", {
+    level: 2,
+    name: /Réponse d'après le Code du Travail/,
+  }),
+  branchAnswerTitle: byRole("heading", {
+    level: 2,
+    name: /Réponse pour les entreprises de la branche/,
+  }),
   generic: {
     buttonDisplayInfo: byText(/Afficher les informations$/),
     learnMoreLink: byRole("link", { name: /En savoir plus/ }),

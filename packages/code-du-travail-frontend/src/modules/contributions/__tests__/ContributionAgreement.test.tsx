@@ -1,5 +1,6 @@
-import { render, waitFor } from "@testing-library/react";
+import { fireEvent, render, screen, waitFor } from "@testing-library/react";
 import React from "react";
+import userEvent from "@testing-library/user-event";
 
 import {
   AGREEMENT_FOCUS_HASH,
@@ -8,14 +9,37 @@ import {
 import { Contribution } from "../type";
 import { focusableTitle } from "../../common/focusableTitle";
 import { hasVisitedCcPage } from "../contributionUtils";
+import { isExternalArrival } from "../externalArrival";
+import { ui } from "./ui";
+import { ui as ccUi } from "../../convention-collective/__tests__/ui";
+import { searchAgreement } from "../../convention-collective";
+import type { GenericContributionInfos } from "../queries";
+
+const pushMock = jest.fn();
 
 jest.mock("next/navigation", () => ({
-  useRouter: () => ({ push: jest.fn() }),
+  useRouter: () => ({ push: pushMock }),
 }));
 
 jest.mock("../ContributionAgreementContent", () => ({
   ContributionAgreementContent: () => <div>contenu convention</div>,
 }));
+
+jest.mock("../externalArrival", () => ({
+  isExternalArrival: jest.fn(() => false),
+}));
+
+jest.mock("../../convention-collective/search", () => ({
+  searchAgreement: jest.fn(),
+}));
+
+jest.mock("@socialgouv/matomo-next", () => ({
+  sendEvent: jest.fn(),
+}));
+
+const isExternalArrivalMock = isExternalArrival as jest.MockedFunction<
+  typeof isExternalArrival
+>;
 
 const contribution = {
   slug: "0016-slug",
@@ -27,6 +51,20 @@ const contribution = {
   title: "Titre",
   metas: { title: "Titre", description: "desc" },
 } as Partial<Contribution> as any;
+
+const genericInfos: GenericContributionInfos = {
+  ccSupported: ["0016", "3239"],
+  ccUnextended: ["0029"],
+  type: "content",
+  messageBlockGenericNoCDT: "message No CDT",
+} as GenericContributionInfos;
+
+beforeEach(() => {
+  pushMock.mockClear();
+  isExternalArrivalMock.mockReset();
+  isExternalArrivalMock.mockReturnValue(false);
+  window.localStorage.clear();
+});
 
 describe("<ContributionAgreement /> retour vers la fiche générique", () => {
   afterEach(() => {
@@ -116,5 +154,220 @@ describe("<ContributionAgreement /> accessibilité", () => {
     // qu'aucun focus n'est posé.
     await new Promise((resolve) => setTimeout(resolve, 200));
     expect(document.activeElement).not.toBe(title);
+  });
+});
+
+describe("<ContributionAgreement /> réinitialisation à l'arrivée externe (#7361)", () => {
+  const renderReset = () =>
+    render(
+      <ContributionAgreement
+        contribution={contribution}
+        genericInfos={genericInfos}
+      />
+    );
+
+  const getContentWrapper = (rendering: ReturnType<typeof render>) =>
+    rendering.getByText("contenu convention").parentElement as HTMLElement;
+
+  const selectAgreement = async (agreement: {
+    id: string;
+    num: number;
+    shortTitle: string;
+    slug: string;
+  }) => {
+    (searchAgreement as jest.Mock).mockImplementation(() =>
+      Promise.resolve([
+        {
+          ...agreement,
+          url: "https://www.legifrance.gouv.fr/affichIDCC.do",
+          title: agreement.shortTitle,
+        },
+      ])
+    );
+    fireEvent.click(ccUi.radio.agreementSearchOption.get());
+    await userEvent.click(ccUi.searchByName.input.get());
+    await userEvent.type(ccUi.searchByName.input.get(), String(agreement.num));
+    fireEvent.click(
+      await screen.findByText(`${agreement.shortTitle} (IDCC ${agreement.num})`)
+    );
+  };
+
+  afterEach(() => {
+    window.location.hash = "";
+    sessionStorage.clear();
+  });
+
+  it("affiche le bloc de sélection réinitialisé et masque le contenu", async () => {
+    isExternalArrivalMock.mockReturnValue(true);
+
+    const rendering = renderReset();
+
+    expect(
+      rendering.getByText(
+        "Personnalisez la réponse avec votre convention collective"
+      )
+    ).toBeInTheDocument();
+    expect(
+      rendering.queryByText("Votre convention collective")
+    ).not.toBeInTheDocument();
+    expect(getContentWrapper(rendering).className).toContain("fr-hidden");
+    // Aucun des 3 boutons radio n'est pré-sélectionné.
+    expect(
+      (ccUi.radio.agreementSearchOption.get() as HTMLInputElement).checked
+    ).toBe(false);
+    expect(
+      (ccUi.radio.enterpriseSearchOption.get() as HTMLInputElement).checked
+    ).toBe(false);
+    expect(
+      (ui.generic.radioNoAgreement.get() as HTMLInputElement).checked
+    ).toBe(false);
+  });
+
+  it("ignore la CC du localStorage, même celle de la page (toujours réinitialiser)", async () => {
+    isExternalArrivalMock.mockReturnValue(true);
+    window.localStorage.setItem(
+      "convention",
+      JSON.stringify({
+        id: "0016",
+        num: 16,
+        shortTitle: "Transports routiers",
+        slug: "16-transports-routiers",
+      })
+    );
+
+    renderReset();
+
+    await new Promise((resolve) => setTimeout(resolve, 100));
+    expect(
+      (ccUi.radio.agreementSearchOption.get() as HTMLInputElement).checked
+    ).toBe(false);
+    expect(
+      (ccUi.radio.enterpriseSearchOption.get() as HTMLInputElement).checked
+    ).toBe(false);
+    expect(
+      (ui.generic.radioNoAgreement.get() as HTMLInputElement).checked
+    ).toBe(false);
+  });
+
+  it("bascule sur place en état résultat quand la CC de la page est choisie", async () => {
+    isExternalArrivalMock.mockReturnValue(true);
+
+    const rendering = renderReset();
+    await selectAgreement({
+      id: "0016",
+      num: 16,
+      shortTitle: "Transports routiers et activités auxiliaires du transport",
+      slug: "16-transports-routiers-et-activites-auxiliaires-du-transport",
+    });
+
+    fireEvent.click(ccUi.buttonDisplayInfo.get());
+
+    expect(pushMock).not.toHaveBeenCalled();
+    const title = rendering.getByText("Votre convention collective");
+    expect(title).toBeInTheDocument();
+    expect(getContentWrapper(rendering).className).not.toContain("fr-hidden");
+    // La CC choisie est persistée pour le reste du site (header inclus).
+    expect(
+      JSON.parse(window.localStorage.getItem("convention") as string).num
+    ).toBe(16);
+    // Focus déplacé sur le titre du bloc résultat.
+    await waitFor(() => {
+      expect(document.activeElement).toBe(title);
+    });
+  });
+
+  it("navigue vers la page de l'autre CC quand une CC traitée différente est choisie", async () => {
+    isExternalArrivalMock.mockReturnValue(true);
+
+    renderReset();
+    await selectAgreement({
+      id: "3239",
+      num: 3239,
+      shortTitle: "Particuliers employeurs et emploi à domicile",
+      slug: "3239-particuliers-employeurs-et-emploi-a-domicile",
+    });
+
+    fireEvent.click(ccUi.buttonDisplayInfo.get());
+
+    expect(pushMock).toHaveBeenCalledWith(
+      "/contribution/3239-slug#votre-convention-collective",
+      { scroll: false }
+    );
+  });
+
+  it("navigue vers la fiche générique (#cdt) quand une CC non traitée est choisie", async () => {
+    isExternalArrivalMock.mockReturnValue(true);
+
+    renderReset();
+    await selectAgreement({
+      id: "1388",
+      num: 1388,
+      shortTitle: "Industrie du pétrole",
+      slug: "1388-industrie-du-petrole",
+    });
+
+    fireEvent.click(ccUi.buttonDisplayInfo.get());
+
+    expect(pushMock).toHaveBeenCalledWith("/contribution/slug#cdt", {
+      scroll: false,
+    });
+    // La CC non traitée reste persistée : la générique pré-cochera la 1re
+    // option avec cette CC et affichera l'alerte dédiée.
+    expect(
+      JSON.parse(window.localStorage.getItem("convention") as string).num
+    ).toBe(1388);
+  });
+
+  it("navigue vers la fiche générique (#cdt) avec « je ne souhaite pas renseigner ma CC »", async () => {
+    isExternalArrivalMock.mockReturnValue(true);
+    window.localStorage.setItem(
+      "convention",
+      JSON.stringify({ id: "0016", num: 16 })
+    );
+
+    renderReset();
+    fireEvent.click(ui.generic.radioNoAgreement.get());
+    // Le choix explicite « sans CC » efface la CC stockée.
+    expect(window.localStorage.getItem("convention")).toBeNull();
+
+    fireEvent.click(ccUi.buttonDisplayInfo.get());
+
+    expect(pushMock).toHaveBeenCalledWith("/contribution/slug#cdt", {
+      scroll: false,
+    });
+  });
+
+  it("affiche l'erreur sans choix de radio et ne navigue pas", async () => {
+    isExternalArrivalMock.mockReturnValue(true);
+
+    renderReset();
+    fireEvent.click(ccUi.buttonDisplayInfo.get());
+
+    expect(ui.generic.missingRouteError.query()).toBeInTheDocument();
+    expect(pushMock).not.toHaveBeenCalled();
+  });
+
+  it("garde l'état résultat pour une arrivée interne", () => {
+    isExternalArrivalMock.mockReturnValue(false);
+
+    const rendering = renderReset();
+
+    expect(
+      rendering.getByText("Votre convention collective")
+    ).toBeInTheDocument();
+    expect(getContentWrapper(rendering).className).not.toContain("fr-hidden");
+  });
+
+  it("garde l'état résultat sans les infos de la fiche générique (fetch en échec)", () => {
+    isExternalArrivalMock.mockReturnValue(true);
+
+    const rendering = render(
+      <ContributionAgreement contribution={contribution} />
+    );
+
+    expect(
+      rendering.getByText("Votre convention collective")
+    ).toBeInTheDocument();
+    expect(getContentWrapper(rendering).className).not.toContain("fr-hidden");
   });
 });

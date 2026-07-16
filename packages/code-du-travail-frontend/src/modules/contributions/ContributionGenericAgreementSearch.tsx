@@ -11,6 +11,7 @@ import {
   AgreementRoute,
 } from "src/modules/outils/indemnite-depart/types";
 import {
+  AGREEMENT_FOCUS_HASH,
   buildContributionAgreementPath,
   isAgreementSupported,
   isAgreementUnextended,
@@ -23,7 +24,6 @@ import { AgreementSearchForm } from "../convention-collective/AgreementSearch/Ag
 import { AccessibleAlert } from "../outils/common/components/AccessibleAlert";
 import { useContributionTracking } from "./tracking";
 import { focusableTitle } from "../common/focusableTitle";
-import { AGREEMENT_FOCUS_HASH } from "./ContributionAgreement";
 
 type Props = {
   onAgreementSelect: (agreement?: Agreement) => void;
@@ -32,6 +32,16 @@ type Props = {
   selectedAgreement?: Agreement;
   trackingActionName: string;
   personalizeTitleRef: React.RefObject<HTMLParagraphElement | null>;
+  /**
+   * IDCC (4 chiffres, ex. « 0675 ») de la page contribution personnalisée qui
+   * héberge le bloc. Quand la CC sélectionnée correspond, on ne navigue pas
+   * (pousser la même URL ne remonterait pas la page) : `onSameAgreementSelect`
+   * bascule la page en état résultat sur place.
+   */
+  currentIdcc?: string;
+  onSameAgreementSelect?: () => void;
+  /** Route pré-cochée à l'arrivée (retour depuis une page CC via #cdt). */
+  defaultRoute?: AgreementRoute;
 };
 
 const MISSING_ROUTE_ERROR =
@@ -46,6 +56,9 @@ export function ContributionGenericAgreementSearch({
   selectedAgreement,
   trackingActionName,
   personalizeTitleRef,
+  currentIdcc,
+  onSameAgreementSelect,
+  defaultRoute,
 }: Props) {
   const router = useRouter();
   const { slug, isNoCDT } = contribution;
@@ -143,6 +156,14 @@ export function ContributionGenericAgreementSearch({
   // collective » géré par la page CC — l'usager restait alors tout en haut.
   const navigateToAgreementPage = () => {
     if (!selectedAgreement) return;
+    if (
+      currentIdcc &&
+      onSameAgreementSelect &&
+      selectedAgreement.num === parseInt(currentIdcc, 10)
+    ) {
+      onSameAgreementSelect();
+      return;
+    }
     router.push(
       `${buildContributionAgreementPath(slug, selectedAgreement)}${AGREEMENT_FOCUS_HASH}`,
       { scroll: false }
@@ -237,6 +258,7 @@ export function ContributionGenericAgreementSearch({
           onAgreementSelect={onAgreementSelect}
           selectedAgreementAlert={selectedAgreementAlert}
           defaultAgreement={selectedAgreement}
+          defaultRoute={defaultRoute}
           trackingActionName={trackingActionName}
           level={3}
           showWhatIsAgreementLink

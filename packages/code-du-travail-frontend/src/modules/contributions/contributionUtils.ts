@@ -3,6 +3,18 @@ import { Agreement } from "src/modules/outils/indemnite-depart/types";
 
 const CONGES_EVENEMENTS_FAMILIAUX_SLUG = "les-conges-pour-evenements-familiaux";
 
+// Hash ajouté par le formulaire lorsqu'il navigue vers la page CC : il signale
+// une arrivée « par action de l'usager » et déclenche le focus sur le titre.
+// Sans ce hash (arrivée directe SEO/Google, lien partagé, reload), on ne vole
+// pas le focus. Même principe que `#retour` côté page générique.
+export const AGREEMENT_FOCUS_HASH = "#votre-convention-collective";
+
+// Hash ajouté lorsqu'une page CC renvoie vers la fiche générique pour afficher
+// la réponse « Code du travail » (option « je ne souhaite pas renseigner ma
+// CC » ou CC non traitée) : la générique affiche alors directement le contenu
+// en gardant le choix de l'usager coché. Correspond à l'id du bloc de contenu.
+export const GENERIC_CONTENT_HASH = "#cdt";
+
 /**
  * Construit l'URL de la page contribution spécifique à une convention
  * collective. La contribution « congés pour événements familiaux » utilise une

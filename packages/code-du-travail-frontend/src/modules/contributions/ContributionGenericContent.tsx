@@ -49,6 +49,7 @@ export const ContributionGenericContent = forwardRef<
           )} ${focusableTitle}`}
           id="cdt"
         >
+          <h2>Réponse d&apos;après le Code du Travail</h2>
           {alertText}
           <ContributionContent contribution={contribution} titleLevel={2} />
           {contribution.references.length > 0 && (

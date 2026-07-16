@@ -29,6 +29,10 @@ export function ContributionAgreementContent({
       <div
         className={fr.cx("fr-col-12", "fr-col-lg-8", "fr-mb-6w", "fr-mb-md-0")}
       >
+        <h2>
+          Réponse pour les entreprises de la branche :{" "}
+          {contribution.ccnShortTitle}
+        </h2>
         <ContributionContent contribution={contribution} titleLevel={2} />
         {contribution.references.length > 0 && (
           <Accordion

@@ -1,4 +1,10 @@
-import { act, fireEvent, render, RenderResult } from "@testing-library/react";
+import {
+  act,
+  fireEvent,
+  render,
+  RenderResult,
+  waitFor,
+} from "@testing-library/react";
 import React from "react";
 import userEvent from "@testing-library/user-event";
 
@@ -96,6 +102,23 @@ describe("<ContributionLayout />", () => {
     const ccLink = rendering.getByRole("link", { name: "Nom de la CC" });
     expect(ccLink).toHaveAttribute("href", "/convention-collective/cc-slug");
   });
+  it("should display the branch H2 above the answer on a CC-specific contribution", () => {
+    rendering = render(
+      <ContributionLayout
+        contribution={{
+          ...contribution,
+          idcc: "0029",
+          isGeneric: false,
+          ccnSlug: "cc-slug",
+          ccnShortTitle: "Nom de la CC",
+        }}
+      />
+    );
+    const heading = ui.branchAnswerTitle.get();
+    expect(heading.textContent).toBe(
+      "Réponse pour les entreprises de la branche : Nom de la CC"
+    );
+  });
   describe("base", () => {
     beforeEach(async () => {
       window.localStorage.clear();
@@ -128,6 +151,11 @@ describe("<ContributionLayout />", () => {
 
       expect(rendering.getByText("my content")).toBeInTheDocument();
       expect(pushMock).not.toHaveBeenCalled();
+      // H2 « Code du travail » au-dessus de la réponse, visible avec elle.
+      expect(ui.cdtAnswerTitle.get()).toBeInTheDocument();
+      expect(
+        rendering.container.querySelector("#cdt")?.className
+      ).not.toContain("fr-hidden");
     });
 
     it("should display an error when clicking 'Afficher les informations' without selecting any radio option", async () => {
@@ -332,6 +360,80 @@ describe("<ContributionLayout />", () => {
       expect(ccUi.buttonDisplayInfo.query()).not.toBeInTheDocument();
       expect(ccUi.warning.title.query()).toBeInTheDocument();
       expect(ccUi.warning.noCdtUnextendedAgreement.query()).toBeInTheDocument();
+    });
+  });
+
+  describe("arrivée #cdt depuis une page CC", () => {
+    beforeEach(() => {
+      window.localStorage.clear();
+      window.location.hash = "#cdt";
+    });
+
+    afterEach(() => {
+      window.location.hash = "";
+      sessionStorage.clear();
+    });
+
+    it("affiche la réponse Code du travail avec « je ne souhaite pas renseigner » cochée (storage vide)", async () => {
+      rendering = render(<ContributionLayout contribution={contribution} />);
+
+      await waitFor(() => {
+        expect(
+          (ui.generic.radioNoAgreement.get() as HTMLInputElement).checked
+        ).toBe(true);
+      });
+      expect(
+        rendering.container.querySelector("#cdt")?.className
+      ).not.toContain("fr-hidden");
+      expect(ui.cdtAnswerTitle.get()).toBeInTheDocument();
+      // Pré-cochage automatique : aucun événement Matomo (pas une action usager).
+      expect(sendEvent).not.toHaveBeenCalled();
+      expect(replaceMock).not.toHaveBeenCalled();
+    });
+
+    it("affiche la réponse avec la CC non traitée pré-remplie et son alerte (storage avec CC non traitée)", async () => {
+      window.localStorage.setItem(
+        "convention",
+        JSON.stringify({
+          id: "1388",
+          num: 1388,
+          shortTitle: "Industrie du pétrole",
+          slug: "1388-industrie-du-petrole",
+          title: "Convention collective nationale de l'industrie du pétrole",
+        })
+      );
+
+      rendering = render(<ContributionLayout contribution={contribution} />);
+
+      await waitFor(() => {
+        expect(
+          (ccUi.radio.agreementSearchOption.get() as HTMLInputElement).checked
+        ).toBe(true);
+      });
+      expect(
+        rendering.container.querySelector("#cdt")?.className
+      ).not.toContain("fr-hidden");
+      expect(ui.generic.nonTreatedInfo.query()).toBeInTheDocument();
+      expect(replaceMock).not.toHaveBeenCalled();
+    });
+
+    it("ne redirige jamais vers la page CC, même avec une CC valide en storage", async () => {
+      window.localStorage.setItem(
+        "convention",
+        JSON.stringify({
+          id: "0016",
+          num: 16,
+          shortTitle:
+            "Transports routiers et activités auxiliaires du transport",
+          slug: "16-transports-routiers-et-activites-auxiliaires-du-transport",
+          title: "Convention collective nationale des transports routiers",
+        })
+      );
+
+      render(<ContributionLayout contribution={contribution} />);
+
+      await new Promise((resolve) => setTimeout(resolve, 100));
+      expect(replaceMock).not.toHaveBeenCalled();
     });
   });
 

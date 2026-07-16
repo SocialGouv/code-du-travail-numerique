@@ -3,6 +3,7 @@ import React, { useRef, useState, useEffect } from "react";
 import { useContributionTracking } from "./tracking";
 import {
   buildContributionAgreementPath,
+  GENERIC_CONTENT_HASH,
   hasVisitedCcPage,
   isAgreementSupported,
   isAgreementValid,
@@ -15,6 +16,7 @@ import {
 } from "../utils/useLocalStorage";
 import { useRouter } from "next/navigation";
 import { ContributionGenericAgreementSearch } from "./ContributionGenericAgreementSearch";
+import { AgreementRoute } from "src/modules/outils/indemnite-depart/types";
 
 type Props = {
   contribution: Contribution;
@@ -28,6 +30,7 @@ export function ContributionGeneric({ contribution }: Props) {
   const { slug, isNoCDT, relatedItems } = contribution;
 
   const [displayGeneric, setDisplayGeneric] = useState(false);
+  const [defaultRoute, setDefaultRoute] = useState<AgreementRoute>();
 
   const [selectedAgreement, setSelectedAgreement] =
     useLocalStorageForAgreementOnPageLoad();
@@ -52,6 +55,21 @@ export function ContributionGeneric({ contribution }: Props) {
   }, []);
 
   useEffect(() => {
+    if (window.location.hash !== GENERIC_CONTENT_HASH) return;
+    // Arrivée depuis une page CC (option « je ne souhaite pas renseigner » ou
+    // CC non traitée) : on affiche directement la réponse Code du travail en
+    // conservant le choix de l'usager coché. Avec une CC en stockage (non
+    // traitée), l'effet defaultAgreement du formulaire pré-coche la première
+    // option et préremplit la CC ; sans CC, on pré-coche la dernière option.
+
+    setDisplayGeneric(true);
+    if (!getAgreementFromLocalStorage()) {
+      setDefaultRoute("no-agreement");
+    }
+    scrollToTitle();
+  }, []);
+
+  useEffect(() => {
     if (hash === "#retour") {
       setTimeout(() => {
         personalizeTitleRef?.current?.scrollIntoView({ behavior: "smooth" });
@@ -62,6 +80,9 @@ export function ContributionGeneric({ contribution }: Props) {
 
   useEffect(() => {
     if (window.location.hash === "#retour") return;
+    // Arrivée « réponse Code du travail » demandée : ne jamais renvoyer vers
+    // la page CC (même logique que #retour).
+    if (window.location.hash === GENERIC_CONTENT_HASH) return;
     // L'usager a déjà consulté la page CC de cette fiche : il est revenu
     // volontairement sur la générique (fil d'Ariane, « Modifier », lien). On ne
     // le renvoie pas vers la CC, sinon il ne peut jamais revenir en arrière.
@@ -111,6 +132,7 @@ export function ContributionGeneric({ contribution }: Props) {
         }}
         selectedAgreement={selectedAgreement}
         trackingActionName={getTitle()}
+        defaultRoute={defaultRoute}
       />
 
       {!isNoCDT && !isAgreementValid(contribution, selectedAgreement) && (

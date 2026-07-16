@@ -17,6 +17,12 @@ type Props = {
     agreement?: Agreement
   ) => NonNullable<ReactNode> | undefined;
   defaultAgreement?: Agreement;
+  /**
+   * Route pré-cochée au montage. Simple pré-cochage (pas une action usager) :
+   * n'émet aucun événement Matomo et n'appelle pas `onAgreementSelect`.
+   * `defaultAgreement` est prioritaire (il pré-coche la route « agreement »).
+   */
+  defaultRoute?: AgreementRoute;
   trackingActionName: string;
   level: 2 | 3;
   onBackToPersonalize?: () => void;
@@ -41,6 +47,7 @@ export const AgreementSearchForm = ({
   onAgreementSelect,
   selectedAgreementAlert,
   defaultAgreement,
+  defaultRoute,
   trackingActionName,
   level,
   onBackToPersonalize,
@@ -57,6 +64,19 @@ export const AgreementSearchForm = ({
     AgreementRoute | undefined
   >(undefined);
   const radioRefs = useRef<(HTMLInputElement | null)[]>([]);
+
+  // Pré-cochage : ce n'est pas une action de l'usager, on ne passe donc pas
+  // par onSelect*Route (pas d'event, pas d'effacement de CC). Le parent peut
+  // fournir la route après son propre effet de montage (lecture du hash), d'où
+  // la dépendance ; on n'écrase jamais un choix déjà fait par l'usager.
+  // L'effet defaultAgreement ci-dessous garde la priorité.
+  useEffect(() => {
+    if (defaultRoute && !selectedRoute && !defaultAgreement) {
+      setSelectedRoute(defaultRoute);
+      onRouteChange?.(defaultRoute);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [defaultRoute]);
 
   useEffect(() => {
     if (defaultAgreement && !selectedRoute) {

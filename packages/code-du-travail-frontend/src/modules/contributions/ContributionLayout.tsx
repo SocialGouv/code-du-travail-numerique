@@ -9,12 +9,16 @@ import { ContributionGeneric } from "./ContributionGeneric";
 import { ContributionAgreement } from "./ContributionAgreement";
 import { BreadcrumbListJsonLd } from "../seo/jsonld";
 import { removeCCNumberFromSlug } from "../utils/removeCCNumberFromSlug";
+// Import de type uniquement : queries.ts embarque le client Elasticsearch
+// (serveur), il ne doit pas entrer dans le bundle client.
+import type { GenericContributionInfos } from "./queries";
 
 type Props = {
   contribution: Contribution;
+  genericInfos?: GenericContributionInfos;
 };
 
-export function ContributionLayout({ contribution }: Props) {
+export function ContributionLayout({ contribution, genericInfos }: Props) {
   const { date, title, isGeneric, isFicheSP } = contribution;
 
   const genericSlug = !isGeneric
@@ -93,7 +97,10 @@ export function ContributionLayout({ contribution }: Props) {
       {isGeneric ? (
         <ContributionGeneric contribution={contribution} />
       ) : (
-        <ContributionAgreement contribution={contribution} />
+        <ContributionAgreement
+          contribution={contribution}
+          genericInfos={genericInfos}
+        />
       )}
     </>
   );
