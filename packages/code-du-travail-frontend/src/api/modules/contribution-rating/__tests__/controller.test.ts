@@ -32,8 +32,16 @@ const mockSendRatingEvent = sendRatingEvent as jest.MockedFunction<
 
 // Route API classique : le contrôleur lit `request.json()`. On simule aussi le
 // cas d'un JSON invalide (json() rejette).
-const makeRequest = (body: unknown, invalidJson = false): Request =>
+const makeRequest = (
+  body: unknown,
+  invalidJson = false,
+  userAgent: string | null = "jest-UA"
+): Request =>
   ({
+    headers: {
+      get: (name: string) =>
+        name.toLowerCase() === "user-agent" ? userAgent : null,
+    },
     json: async () => {
       if (invalidJson) throw new SyntaxError("Unexpected token");
       return body;
@@ -53,12 +61,14 @@ describe("ContributionRatingController.post()", () => {
     ).post();
 
     expect(res.status).toBe(204);
+    // La note voyage en chaîne dans l'action (« note_4 »), pas en `e_v` :
+    // Matomo compte les occurrences par note au lieu d'additionner les valeurs.
     expect(mockSendRatingEvent).toHaveBeenCalledWith({
       category: RatingMatomo.CATEGORY,
-      action: RatingMatomo.ACTION,
+      action: "note_4",
       source: "contributions",
-      value: 4,
       slug: "conges-payes",
+      userAgent: "jest-UA",
     });
   });
 

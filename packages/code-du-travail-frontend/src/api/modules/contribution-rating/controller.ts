@@ -6,6 +6,7 @@ import {
   RATING_MAX,
   RATING_MIN,
   RatingMatomo,
+  ratingActionForValue,
 } from "../../../modules/contributions/rating/constants";
 import { sendRatingEvent } from "./service";
 
@@ -86,13 +87,20 @@ export class ContributionRatingController {
       // Relai best-effort vers Matomo (serveur->serveur, invisible des
       // adblockers). Un échec (Matomo lent/down) ne doit ni renvoyer 500 au
       // client fire-and-forget, ni inonder Sentry : on loggue simplement.
+      // On transmet le User-Agent du visiteur pour que Matomo voie un vrai
+      // navigateur (l'UA par défaut de Node serait classé « bot » → event ignoré).
+      const userAgent = this.request.headers.get("user-agent") ?? undefined;
       try {
+        // La note voyage en chaîne dans l'action (« note_4 ») : Matomo compte
+        // alors les occurrences par note au lieu d'additionner des `e_v`.
+        // Ensemble fermé note_1..note_5 : `value` est validée entière et bornée
+        // RATING_MIN/RATING_MAX par parseRatingBody (pas d'injection).
         await sendRatingEvent({
           category: RatingMatomo.CATEGORY,
-          action: RatingMatomo.ACTION,
+          action: ratingActionForValue(value),
           source,
-          value,
           slug,
+          userAgent,
         });
       } catch (relayError) {
         console.warn("[contribution-rating] relai Matomo échoué:", relayError);

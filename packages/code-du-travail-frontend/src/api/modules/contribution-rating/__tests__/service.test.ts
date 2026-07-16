@@ -15,9 +15,8 @@ describe("contribution-rating service", () => {
   it("appelle matomo.php avec les paramètres de tracking attendus", async () => {
     await sendRatingEvent({
       category: "notation_contribution",
-      action: "validation_note",
+      action: "note_4",
       source: "contributions",
-      value: 4,
       slug: "conges-payes",
     });
 
@@ -33,20 +32,21 @@ describe("contribution-rating service", () => {
     expect(parsed.searchParams.get("apiv")).toBe("1");
     expect(parsed.searchParams.get("send_image")).toBe("0");
     expect(parsed.searchParams.get("e_c")).toBe("notation_contribution");
-    expect(parsed.searchParams.get("e_a")).toBe("validation_note");
+    // La note voyage en chaîne dans l'action : Matomo compte les occurrences
+    // de chaque note (pas de `e_v` numérique, qui serait additionné).
+    expect(parsed.searchParams.get("e_a")).toBe("note_4");
     // Nom d'event = « route/slug » : la route de la source (getRouteBySource)
     // préfixe le slug pour désambiguïser deux slugs identiques de sources
     // différentes ; SOURCES.CONTRIBUTIONS → « contribution ».
     expect(parsed.searchParams.get("e_n")).toBe("contribution/conges-payes");
-    expect(parsed.searchParams.get("e_v")).toBe("4");
+    expect(parsed.searchParams.get("e_v")).toBeNull();
   });
 
   it("construit une URL canonique stable à partir du slug (jamais d'URL client)", async () => {
     await sendRatingEvent({
       category: "notation_contribution",
-      action: "validation_note",
+      action: "note_4",
       source: "contributions",
-      value: 4,
       slug: "conges-payes",
     });
 
@@ -60,9 +60,8 @@ describe("contribution-rating service", () => {
   it("n'émet pas d'action_name (pas de pageview/action fantôme)", async () => {
     await sendRatingEvent({
       category: "notation_contribution",
-      action: "validation_note",
+      action: "note_4",
       source: "contributions",
-      value: 4,
       slug: "conges-payes",
     });
 
@@ -74,9 +73,8 @@ describe("contribution-rating service", () => {
   it("reste anonyme : aucun identifiant visiteur ni IP", async () => {
     await sendRatingEvent({
       category: "notation_contribution",
-      action: "validation_note",
+      action: "note_3",
       source: "contributions",
-      value: 3,
       slug: "conges-payes",
     });
 
@@ -87,12 +85,40 @@ describe("contribution-rating service", () => {
     expect(parsed.searchParams.get("uid")).toBeNull();
   });
 
+  it("transmet le User-Agent du visiteur à Matomo", async () => {
+    await sendRatingEvent({
+      category: "notation_contribution",
+      action: "note_4",
+      source: "contributions",
+      slug: "conges-payes",
+      userAgent: "UA-navigateur",
+    });
+
+    const init = (global.fetch as jest.Mock).mock.calls[0][1] as RequestInit;
+    // UA forwardé : sans lui, Matomo classe la requête serveur en « bot » et
+    // n'enregistre pas l'event (cause du bug initial, cf. #7384).
+    expect((init.headers as Record<string, string>)["User-Agent"]).toBe(
+      "UA-navigateur"
+    );
+  });
+
+  it("sans userAgent : pas de header User-Agent", async () => {
+    await sendRatingEvent({
+      category: "notation_contribution",
+      action: "note_4",
+      source: "contributions",
+      slug: "conges-payes",
+    });
+
+    const init = (global.fetch as jest.Mock).mock.calls[0][1] as RequestInit;
+    expect(init.headers).toBeUndefined();
+  });
+
   it("borne le relai par un timeout (signal d'abort)", async () => {
     await sendRatingEvent({
       category: "notation_contribution",
-      action: "validation_note",
+      action: "note_3",
       source: "contributions",
-      value: 3,
       slug: "conges-payes",
     });
 
@@ -105,9 +131,8 @@ describe("contribution-rating service", () => {
     await expect(
       sendRatingEvent({
         category: "notation_contribution",
-        action: "validation_note",
+        action: "note_3",
         source: "contributions",
-        value: 3,
         slug: "conges-payes",
       })
     ).rejects.toThrow("Matomo tracking failed: 500");

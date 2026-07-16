@@ -12,8 +12,10 @@ const MATOMO_TIMEOUT_MS = 3000;
 
 export type RatingEvent = {
   category: string;
+  // Action portant la note en chaîne (« note_1 » … « note_5 », construite par le
+  // contrôleur via `ratingActionForValue`) : pas de `e_v` numérique, Matomo
+  // compte ainsi les occurrences de chaque note au lieu d'en faire la somme.
   action: string;
-  value: number;
   // Source CDTN du contenu noté (ex. `SOURCES.CONTRIBUTIONS`). Mappée vers sa
   // route canonique (`contribution`, `fiche-service-public`, …) qui préfixe le
   // chemin : deux contenus de sources différentes peuvent porter le même slug,
@@ -23,6 +25,10 @@ export type RatingEvent = {
   // Slug du contenu : combiné à la route de la source pour construire le chemin
   // canonique (URL + nom d'event lisible `e_n`) dans les rapports Matomo.
   slug: string;
+  // User-Agent du visiteur : transmis pour que Matomo identifie un vrai
+  // navigateur. Sans lui, la requête serveur part avec l'UA par défaut de Node,
+  // que Matomo peut classer « bot » et donc ne pas comptabiliser.
+  userAgent?: string;
 };
 
 export const sendRatingEvent = async (event: RatingEvent): Promise<void> => {
@@ -52,15 +58,17 @@ export const sendRatingEvent = async (event: RatingEvent): Promise<void> => {
     // de sources différentes (le titre n'est plus relayé par le client → « juste
     // la note »).
     e_n: path,
-    e_v: `${event.value}`,
     url,
   });
 
-  // Anonymisé : aucun `_id` (visiteur), aucun `cip` (IP), aucun cookie.
+  // Anonymisé : aucun `_id` (visiteur), aucun `cip` (IP), aucun cookie. On
+  // transmet en revanche le `User-Agent` du visiteur (device detection + évite le
+  // classement « bot » qui exclurait l'event des rapports).
   // Pas de `action_name` : on n'émet qu'un event custom (e_*), pas un pageview ;
   // l'ajouter créerait une action/pageview fantôme dans les rapports.
   const response = await fetch(`${PIWIK_URL}/matomo.php?${params.toString()}`, {
     signal: AbortSignal.timeout(MATOMO_TIMEOUT_MS),
+    headers: event.userAgent ? { "User-Agent": event.userAgent } : undefined,
   });
   if (!response.ok) {
     throw new Error(`Matomo tracking failed: ${response.status}`);

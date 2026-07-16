@@ -866,14 +866,14 @@
     },
     {
       "category": "notation_contribution",
-      "action": "validation_note",
+      "action": "note_<value>",
       "name_pattern": "<contributionSlug>",
-      "resolution": "literal",
+      "resolution": "dynamic",
       "emit_function": "trackContributionRating",
       "file": "packages/code-du-travail-frontend/src/modules/contributions/rating/tracking.ts",
-      "line": 69,
+      "line": 72,
       "enum_refs": [
-        "RatingMatomo.ACTION",
+        "RatingMatomo.ACTION_PREFIX",
         "RatingMatomo.CATEGORY",
         "SOURCES.CONTRIBUTIONS"
       ],

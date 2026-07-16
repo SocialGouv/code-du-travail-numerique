@@ -318,14 +318,20 @@ Particularité technique : pour **contourner les bloqueurs de publicité** (qui 
 et c'est le **serveur** qui relaie l'event vers Matomo. La `category`/`action` sont posées côté
 serveur ; le nom d'event (`e_n`) et la clé d'URL canonique sont le **slug** de la contribution
 **préfixé de son type de contenu** (`contribution/<slug>`) — le type désambiguïse deux slugs
-identiques portés par des types différents — et la **note (1 à 5)** est transmise en **valeur** de
-l'event (`e_v`).
+identiques portés par des types différents.
+
+La **note voyage dans l'action** de l'event, en clair : `note_1` … `note_5`. Elle n'est
+volontairement **pas** envoyée en valeur numérique (`e_v`) : Matomo **additionne** les valeurs
+dans ses rapports, alors que la lecture métier attendue est le **décompte de chaque note par
+contenu**. Dans Matomo : rapport Événements → « Noms d'événements » → une ligne par contenu
+(`contribution/<slug>`), puis le détail par action donne la **répartition des notes** (combien
+de `note_1`, de `note_2`, …).
 
 [↗ source](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/contributions/rating/tracking.ts#L61 "rating/tracking.ts")
 
-| Catégorie             | Action          | Name (🔀)             | Quand / pourquoi |
-| --------------------- | --------------- | --------------------- | ---------------- |
-| notation_contribution | validation_note | `contribution/<slug>` | Au clic sur « Valider » du widget de notation en bas d'une contribution. Le nom d'event préfixe le slug de son type de contenu (`contribution/…`) pour désambiguïser deux slugs identiques de types différents. Mesure la clarté perçue du contenu ; la note **1 à 5** (1 = Trop compliqué … 5 = Très clair) voyage dans la **valeur** de l'event. |
+| Catégorie             | Action (🔀)      | Name (🔀)             | Quand / pourquoi |
+| --------------------- | ---------------- | --------------------- | ---------------- |
+| notation_contribution | `note_<value>`   | `contribution/<slug>` | Au clic sur « Valider » du widget de notation en bas d'une contribution. Le nom d'event préfixe le slug de son type de contenu (`contribution/…`) pour désambiguïser deux slugs identiques de types différents. Mesure la clarté perçue du contenu ; la note **1 à 5** (1 = Trop compliqué … 5 = Très clair) voyage **en chaîne dans l'action** (`note_1` … `note_5`) afin que Matomo compte les occurrences de chaque note au lieu d'en faire la somme. |
 
 ---
 
