@@ -86,6 +86,9 @@ export const EnterpriseAgreementSearchInput = ({
   const [error, setError] = useState("");
   const [selectionRequired, setSelectionRequired] = useState(false);
   const resultRef = useRef<HTMLHeadingElement>(null);
+  // Le focus n'est déplacé sur les résultats que pour une recherche
+  // initiée par l'utilisateur (jamais pour la recherche automatique)
+  const shouldFocusResultsRef = useRef(false);
   const selectedConventionTitleRef = useRef<HTMLParagraphElement>(null);
   const searchInputRef = useRef<HTMLInputElement>(null);
   const TitleTag = `h${level}` as "h2" | "h3";
@@ -140,7 +143,7 @@ export const EnterpriseAgreementSearchInput = ({
       (base64String ? "&cp=" + base64String : "")
     );
   };
-  const onSubmit = async () => {
+  const onSubmit = async (focusResults = true) => {
     if (!search) {
       setSearchState("required");
       return;
@@ -150,6 +153,7 @@ export const EnterpriseAgreementSearchInput = ({
       search,
       location
     );
+    shouldFocusResultsRef.current = focusResults;
     setLoading(true);
     try {
       const result = await searchEnterprises({
@@ -182,7 +186,9 @@ export const EnterpriseAgreementSearchInput = ({
 
   useEffect(() => {
     if (defaultSearch) {
-      onSubmit();
+      // Recherche automatique (retour via « Précédent » ou lien direct) :
+      // ne pas déplacer le focus pour ne pas interrompre une saisie en cours
+      onSubmit(false);
     }
   }, [defaultSearch]);
   useEffect(() => {
@@ -194,7 +200,10 @@ export const EnterpriseAgreementSearchInput = ({
     }
   }, [selectedEnterprise]);
   useEffect(() => {
-    resultRef.current?.focus();
+    if (shouldFocusResultsRef.current) {
+      shouldFocusResultsRef.current = false;
+      resultRef.current?.focus();
+    }
   }, [enterprises]);
 
   useEffect(() => {
