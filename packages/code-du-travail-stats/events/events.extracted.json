@@ -90,11 +90,11 @@
     {
       "category": "cc_search_type_of_users",
       "action": "click_p1",
-      "name_pattern": "<withVariant(path, variant)>",
+      "name_pattern": "<path>",
       "resolution": "literal",
       "emit_function": "emitClickP1",
       "file": "packages/code-du-travail-frontend/src/modules/contributions/tracking.ts",
-      "line": 69,
+      "line": 66,
       "enum_refs": [
         "TrackingAgreementSearchAction.CLICK_P1",
         "TrackingContributionCategory.CC_SEARCH_TYPE_OF_USERS"
@@ -133,11 +133,11 @@
     {
       "category": "cc_search_type_of_users",
       "action": "click_p2",
-      "name_pattern": "<withVariant(path, variant)>",
+      "name_pattern": "<path>",
       "resolution": "literal",
       "emit_function": "emitClickP2",
       "file": "packages/code-du-travail-frontend/src/modules/contributions/tracking.ts",
-      "line": 77,
+      "line": 74,
       "enum_refs": [
         "TrackingAgreementSearchAction.CLICK_P2",
         "TrackingContributionCategory.CC_SEARCH_TYPE_OF_USERS"
@@ -176,11 +176,11 @@
     {
       "category": "cc_search_type_of_users",
       "action": "click_p3",
-      "name_pattern": "<withVariant(path, variant)>",
+      "name_pattern": "<path>",
       "resolution": "literal",
       "emit_function": "emitClickP3",
       "file": "packages/code-du-travail-frontend/src/modules/contributions/tracking.ts",
-      "line": 85,
+      "line": 82,
       "enum_refs": [
         "TrackingAgreementSearchAction.CLICK_P3",
         "TrackingContributionCategory.CC_SEARCH_TYPE_OF_USERS"
@@ -486,7 +486,7 @@
       "resolution": "literal",
       "emit_function": "emitClickTableFullscreen",
       "file": "packages/code-du-travail-frontend/src/modules/contributions/tracking.ts",
-      "line": 93,
+      "line": 90,
       "enum_refs": [
         "SOURCES.CONTRIBUTIONS",
         "TrackingContributionAction.BTN_TABLE_FULLSCREEN",
@@ -497,11 +497,11 @@
     {
       "category": "contribution",
       "action": "click_afficher_les_informations_CC",
-      "name_pattern": "<withVariant(path, variant)>",
+      "name_pattern": "<path>",
       "resolution": "literal",
       "emit_function": "emitDisplayAgreementContent",
       "file": "packages/code-du-travail-frontend/src/modules/contributions/tracking.ts",
-      "line": 45,
+      "line": 42,
       "enum_refs": [
         "TrackingAgreementSearchAction.CLICK_DISPLAY_AGREEMENT_CONTENT",
         "TrackingContributionCategory.CONTRIBUTION"
@@ -511,11 +511,11 @@
     {
       "category": "contribution",
       "action": "click_afficher_les_informations_générales",
-      "name_pattern": "<withVariant(path, variant)>",
+      "name_pattern": "<path>",
       "resolution": "literal",
       "emit_function": "emitDisplayGeneralContent",
       "file": "packages/code-du-travail-frontend/src/modules/contributions/tracking.ts",
-      "line": 61,
+      "line": 58,
       "enum_refs": [
         "TrackingAgreementSearchAction.CLICK_DISPLAY_GENERAL_CONTENT",
         "TrackingContributionCategory.CONTRIBUTION"
@@ -525,11 +525,11 @@
     {
       "category": "contribution",
       "action": "click_afficher_les_informations_sans_CC",
-      "name_pattern": "<withVariant(path, variant)>",
+      "name_pattern": "<path>",
       "resolution": "literal",
       "emit_function": "emitDisplayGenericContent",
       "file": "packages/code-du-travail-frontend/src/modules/contributions/tracking.ts",
-      "line": 53,
+      "line": 50,
       "enum_refs": [
         "TrackingAgreementSearchAction.CLICK_DISPLAY_GENERIC_CONTENT",
         "TrackingContributionCategory.CONTRIBUTION"
@@ -974,7 +974,7 @@
       "resolution": "literal",
       "emit_function": "emitAgreementUntreatedEvent",
       "file": "packages/code-du-travail-frontend/src/modules/contributions/tracking.ts",
-      "line": 37,
+      "line": 34,
       "enum_refs": [
         "MatomoAgreementEvent.CC_UNTREATED",
         "TrackingContributionCategory.TOOL"
@@ -1002,7 +1002,7 @@
       "resolution": "literal",
       "emit_function": "emitAgreementTreatedEvent",
       "file": "packages/code-du-travail-frontend/src/modules/contributions/tracking.ts",
-      "line": 29,
+      "line": 26,
       "enum_refs": [
         "MatomoAgreementEvent.CC_TREATED",
         "TrackingContributionCategory.TOOL"

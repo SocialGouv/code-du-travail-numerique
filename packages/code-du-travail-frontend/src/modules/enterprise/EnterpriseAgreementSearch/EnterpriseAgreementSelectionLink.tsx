@@ -9,6 +9,7 @@ import { EnterpriseAgreementSelectionDetail } from "./EnterpriseAgreementSelecti
 import { getEnterpriseAgreements } from "./utils";
 import { PartialAgreementCoverageAlert } from "./PartialAgreementCoverageAlert";
 import { CardTitleStyle } from "../../convention-collective/style";
+import { WhatIsAgreementLink } from "../../convention-collective/WhatIsAgreementLink";
 import { useEnterpriseAgreementSearchTracking } from "./tracking";
 import { TrackingAgreementSearchAction } from "../../convention-collective/tracking";
 import { Agreement } from "src/modules/outils/indemnite-depart/types";
@@ -77,18 +78,7 @@ export const EnterpriseAgreementSelectionLink = ({
       <p className={fr.cx("fr-h4", "fr-mt-2w", "fr-mb-0")}>
         Convention{agreementPlurial} collective{agreementPlurial}
       </p>
-      <p className={fr.cx("fr-my-2w")}>
-        <i className={`ri-information-line ${iconColor}`} />
-        <Link
-          className={fr.cx("fr-link", "fr-ml-1w")}
-          href={
-            "/quelles-regles-s-appliquent-dans-votre-entreprise#convention-collective"
-          }
-          target="_blank"
-        >
-          La convention collective, c&apos;est quoi&nbsp;?
-        </Link>
-      </p>
+      <WhatIsAgreementLink />
       {enterprise.conventions.length === 0 && (
         <AccessibleAlert
           title="Votre entreprise n'a pas renseigné de convention collective"

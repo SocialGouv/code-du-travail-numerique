@@ -7,6 +7,7 @@ import {
 } from "../ContributionAgreement";
 import { Contribution } from "../type";
 import { focusableTitle } from "../../common/focusableTitle";
+import { hasVisitedCcPage } from "../contributionUtils";
 
 jest.mock("next/navigation", () => ({
   useRouter: () => ({ push: jest.fn() }),
@@ -26,6 +27,22 @@ const contribution = {
   title: "Titre",
   metas: { title: "Titre", description: "desc" },
 } as Partial<Contribution> as any;
+
+describe("<ContributionAgreement /> retour vers la fiche générique", () => {
+  afterEach(() => {
+    window.location.hash = "";
+    sessionStorage.clear();
+  });
+
+  it("marque la page CC comme consultée (pour désactiver l'auto-redirection au retour)", () => {
+    // slug "0016-slug" -> fiche générique "slug"
+    expect(hasVisitedCcPage("slug")).toBe(false);
+
+    render(<ContributionAgreement contribution={contribution} />);
+
+    expect(hasVisitedCcPage("slug")).toBe(true);
+  });
+});
 
 describe("<ContributionAgreement /> accessibilité", () => {
   afterEach(() => {

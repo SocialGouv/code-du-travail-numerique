@@ -21,10 +21,7 @@ export enum TrackingContributionAction {
   BTN_TABLE_FULLSCREEN = "btn_table_fullscreen",
 }
 
-const withVariant = (name: string, variant?: string | null) =>
-  variant ? `${name}|variant=${variant}` : name;
-
-export const useContributionTracking = (variant?: string | null) => {
+export const useContributionTracking = () => {
   const emitAgreementTreatedEvent = (idcc: number) => {
     sendEvent({
       category: TrackingContributionCategory.TOOL,
@@ -45,7 +42,7 @@ export const useContributionTracking = (variant?: string | null) => {
     sendEvent({
       category: TrackingContributionCategory.CONTRIBUTION,
       action: TrackingAgreementSearchAction.CLICK_DISPLAY_AGREEMENT_CONTENT,
-      name: withVariant(path, variant),
+      name: path,
     });
   };
 
@@ -53,7 +50,7 @@ export const useContributionTracking = (variant?: string | null) => {
     sendEvent({
       category: TrackingContributionCategory.CONTRIBUTION,
       action: TrackingAgreementSearchAction.CLICK_DISPLAY_GENERIC_CONTENT,
-      name: withVariant(path, variant),
+      name: path,
     });
   };
 
@@ -61,7 +58,7 @@ export const useContributionTracking = (variant?: string | null) => {
     sendEvent({
       category: TrackingContributionCategory.CONTRIBUTION,
       action: TrackingAgreementSearchAction.CLICK_DISPLAY_GENERAL_CONTENT,
-      name: withVariant(path, variant),
+      name: path,
     });
   };
 
@@ -69,7 +66,7 @@ export const useContributionTracking = (variant?: string | null) => {
     sendEvent({
       category: TrackingContributionCategory.CC_SEARCH_TYPE_OF_USERS,
       action: TrackingAgreementSearchAction.CLICK_P1,
-      name: withVariant(path, variant),
+      name: path,
     });
   };
 
@@ -77,7 +74,7 @@ export const useContributionTracking = (variant?: string | null) => {
     sendEvent({
       category: TrackingContributionCategory.CC_SEARCH_TYPE_OF_USERS,
       action: TrackingAgreementSearchAction.CLICK_P2,
-      name: withVariant(path, variant),
+      name: path,
     });
   };
 
@@ -85,7 +82,7 @@ export const useContributionTracking = (variant?: string | null) => {
     sendEvent({
       category: TrackingContributionCategory.CC_SEARCH_TYPE_OF_USERS,
       action: TrackingAgreementSearchAction.CLICK_P3,
-      name: withVariant(path, variant),
+      name: path,
     });
   };
 

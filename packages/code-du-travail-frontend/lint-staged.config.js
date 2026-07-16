@@ -1,8 +1,19 @@
+const path = require("path");
+
 // `next lint` a été supprimé dans Next 16 ; on invoque directement ESLint
 // (flat config `eslint.config.mjs`), comme le script `lint` du package. Les
 // chemins absolus fournis par lint-staged sont passés tels quels à ESLint.
 const buildEslintCommand = (filenames) =>
   `eslint --fix ${filenames.map((file) => `"${file}"`).join(" ")}`;
+
+// Chemin absolu du catalogue d'events régénéré par cdtn-stats. lint-staged
+// exécute les tâches depuis la racine du dépôt, donc un chemin relatif au
+// package (`../code-du-travail-stats/...`) sort du dépôt et fait échouer le
+// `git add`. On résout depuis __dirname pour être robuste au cwd.
+const eventsCatalog = path.resolve(
+  __dirname,
+  "../code-du-travail-stats/events/events.extracted.json"
+);
 
 module.exports = {
   "**/*.ts?(x)": () => "tsc -p tsconfig.json --noEmit",
@@ -20,6 +31,8 @@ module.exports = {
   // Régénère et re-stage le catalogue des events Matomo (JSON) dès qu'un module
   // change. Le plan de tracking métier (events/TRACKING_PLAN.md) n'est plus
   // généré par un algo : le régénérer via le skill Claude `/tracking-plan`.
-  "src/modules/**/*.{ts,tsx}": () =>
-    "pnpm -F @socialgouv/cdtn-stats events:extract && git add ../code-du-travail-stats/events/events.extracted.json",
+  "src/modules/**/*.{ts,tsx}": () => [
+    "pnpm -F @socialgouv/cdtn-stats events:extract",
+    `git add "${eventsCatalog}"`,
+  ],
 };
