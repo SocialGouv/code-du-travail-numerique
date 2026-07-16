@@ -1,17 +1,14 @@
 import { fr } from "@codegouvfr/react-dsfr";
 import Button from "@codegouvfr/react-dsfr/Button";
 import { css } from "@styled-system/css";
-import { HeaderAgreementButton } from "./HeaderAgreementButton";
 
 type HeaderSearchProps = {
   onSearchClick: () => void;
-  onAgreementClick: () => void;
   isSearchOpen?: boolean;
 };
 
 export const HeaderSearchV2 = ({
   onSearchClick,
-  onAgreementClick,
   isSearchOpen,
 }: HeaderSearchProps) => {
   return (
@@ -22,25 +19,19 @@ export const HeaderSearchV2 = ({
         "fr-unhidden-lg"
       )} ${toolsStyle}`}
     >
-      <div className={toolsRow}>
-        <Button
-          id="fr-header-search-button-desktop"
-          aria-controls="search-modal"
-          aria-expanded={isSearchOpen}
-          aria-haspopup="dialog"
-          onClick={onSearchClick}
-          iconId="fr-icon-search-line"
-          iconPosition="right"
-          className={buttonStyle}
-          type="button"
-        >
-          Rechercher
-        </Button>
-        <HeaderAgreementButton
-          id="fr-header-agreement-button-desktop"
-          onClick={onAgreementClick}
-        />
-      </div>
+      <Button
+        id="fr-header-search-button-desktop"
+        aria-controls="search-modal"
+        aria-expanded={isSearchOpen}
+        aria-haspopup="dialog"
+        onClick={onSearchClick}
+        iconId="fr-icon-search-line"
+        iconPosition="right"
+        className={buttonStyle}
+        type="button"
+      >
+        Rechercher
+      </Button>
     </div>
   );
 };
@@ -51,13 +42,6 @@ const toolsStyle = css({
   flexWrap: "nowrap",
   justifyContent: "flex-end",
   flexShrink: 0,
-});
-
-const toolsRow = css({
-  display: "flex",
-  alignItems: "center",
-  gap: "0.5rem",
-  flexWrap: "nowrap",
 });
 
 const buttonStyle = css({

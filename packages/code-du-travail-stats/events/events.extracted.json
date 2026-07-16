@@ -1,8 +1,8 @@
 {
   "scan_root": "packages/code-du-travail-frontend/src",
-  "callsites": 71,
-  "total_events": 109,
-  "unique_events": 100,
+  "callsites": 68,
+  "total_events": 105,
+  "unique_events": 96,
   "unresolved_callsites": 0,
   "events": [
     {
@@ -849,64 +849,6 @@
       "file": "packages/code-du-travail-frontend/src/modules/outils/indemnite-depart/feedback/tracking.tsx",
       "line": 50,
       "enum_refs": [],
-      "tracking_method": "sendEvent"
-    },
-    {
-      "category": "header_cc",
-      "action": "cc_consult",
-      "name_pattern": "<idcc>",
-      "resolution": "literal",
-      "emit_function": "emitConsultEvent",
-      "file": "packages/code-du-travail-frontend/src/modules/convention-collective/AgreementSelectionModal/tracking.ts",
-      "line": 33,
-      "enum_refs": [
-        "TrackingHeaderAgreementAction.CC_CONSULT",
-        "TrackingHeaderAgreementCategory.HEADER_CC"
-      ],
-      "tracking_method": "sendEvent"
-    },
-    {
-      "category": "header_cc",
-      "action": "cc_select_processed",
-      "name_pattern": "<idcc>",
-      "resolution": "literal",
-      "emit_function": "emitHeaderSelectEvent",
-      "file": "packages/code-du-travail-frontend/src/modules/convention-collective/AgreementSelectionModal/tracking.ts",
-      "line": 23,
-      "enum_refs": [
-        "TrackingHeaderAgreementAction.CC_TREATED",
-        "TrackingHeaderAgreementAction.CC_UNTREATED",
-        "TrackingHeaderAgreementCategory.HEADER_CC"
-      ],
-      "tracking_method": "sendEvent"
-    },
-    {
-      "category": "header_cc",
-      "action": "cc_select_unprocessed",
-      "name_pattern": "<idcc>",
-      "resolution": "literal",
-      "emit_function": "emitHeaderSelectEvent",
-      "file": "packages/code-du-travail-frontend/src/modules/convention-collective/AgreementSelectionModal/tracking.ts",
-      "line": 23,
-      "enum_refs": [
-        "TrackingHeaderAgreementAction.CC_TREATED",
-        "TrackingHeaderAgreementAction.CC_UNTREATED",
-        "TrackingHeaderAgreementCategory.HEADER_CC"
-      ],
-      "tracking_method": "sendEvent"
-    },
-    {
-      "category": "header_cc",
-      "action": "open_modal",
-      "name_pattern": null,
-      "resolution": "literal",
-      "emit_function": "emitOpenModalEvent",
-      "file": "packages/code-du-travail-frontend/src/modules/convention-collective/AgreementSelectionModal/tracking.ts",
-      "line": 16,
-      "enum_refs": [
-        "TrackingHeaderAgreementAction.OPEN_MODAL",
-        "TrackingHeaderAgreementCategory.HEADER_CC"
-      ],
       "tracking_method": "sendEvent"
     },
     {

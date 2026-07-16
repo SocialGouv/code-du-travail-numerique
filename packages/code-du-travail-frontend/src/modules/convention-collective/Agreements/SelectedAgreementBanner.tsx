@@ -4,7 +4,7 @@ import { fr } from "@codegouvfr/react-dsfr";
 import { css } from "@styled-system/css";
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
 import Link from "src/modules/common/Link";
-import { useAgreementStorageSync } from "../AgreementSelectionModal/useAgreementStorageSync";
+import { useAgreementStorageSync } from "./useAgreementStorageSync";
 
 export const SelectedAgreementBanner = () => {
   const { agreement } = useAgreementStorageSync();
