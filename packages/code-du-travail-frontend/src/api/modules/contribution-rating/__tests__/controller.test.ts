@@ -61,11 +61,12 @@ describe("ContributionRatingController.post()", () => {
     ).post();
 
     expect(res.status).toBe(204);
+    // La note voyage en chaîne dans l'action (« note_4 »), pas en `e_v` :
+    // Matomo compte les occurrences par note au lieu d'additionner les valeurs.
     expect(mockSendRatingEvent).toHaveBeenCalledWith({
       category: RatingMatomo.CATEGORY,
-      action: RatingMatomo.ACTION,
+      action: "note_4",
       source: "contributions",
-      value: 4,
       slug: "conges-payes",
       userAgent: "jest-UA",
     });

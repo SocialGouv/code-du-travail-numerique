@@ -22,7 +22,7 @@ export const RATING_TRACKING_ENDPOINT = "/api/contribution-rating";
 const firstPartyMatomo = {
   sendEvent: async (event: {
     category: RatingMatomo;
-    action: RatingMatomo;
+    action: string;
     name: string;
     value: number;
     source: SourceKeys;
@@ -62,13 +62,16 @@ export const trackContributionRating = async ({
   if (typeof window === "undefined" || !getStoredConsent().matomo) return;
 
   try {
-    // category/action en enum → résolus statiquement par l'extraction. Le `name`
+    // category (enum) et action (template sur l'enum ACTION_PREFIX) → résolus
+    // statiquement par l'extraction en « note_<value> ». L'action porte la note
+    // en chaîne (le serveur la reconstruit via `ratingActionForValue`, seul
+    // propriétaire de l'event réel — ici elle documente le catalogue). Le `name`
     // documente l'`e_n` réel (le slug ; le serveur le préfixe de la route de la
     // source, cf. controller/service). La notation vit sur les contributions →
     // source = SOURCES.CONTRIBUTIONS.
     await firstPartyMatomo.sendEvent({
       category: RatingMatomo.CATEGORY,
-      action: RatingMatomo.ACTION,
+      action: `${RatingMatomo.ACTION_PREFIX}${value}`,
       name: contributionSlug,
       source: SOURCES.CONTRIBUTIONS,
       value,

@@ -37,7 +37,15 @@ export const RATING_SLIDER_LABEL = "Notez la clarté du contenu de cette page";
 // Identité Matomo de l'event de notation, appartenant au serveur : le contrôleur
 // l'utilise pour émettre l'event lors du relai serveur->serveur. En enum (et non
 // en `const`) par cohérence avec les autres identifiants d'events du projet.
+// La note est portée par l'ACTION en chaîne (« note_1 » … « note_5 ») et non par
+// la valeur numérique `e_v` : Matomo additionne les `e_v` dans ses rapports,
+// alors qu'on veut compter les occurrences de chaque note par contenu.
 export enum RatingMatomo {
   CATEGORY = "notation_contribution",
-  ACTION = "validation_note",
+  ACTION_PREFIX = "note_",
 }
+
+// Action Matomo d'une note : ensemble fermé « note_1 » … « note_5 » (la note est
+// bornée RATING_MIN/RATING_MAX par le contrôleur avant l'appel — pas d'injection).
+export const ratingActionForValue = (value: number): string =>
+  `${RatingMatomo.ACTION_PREFIX}${value}`;

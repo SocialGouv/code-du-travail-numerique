@@ -12,8 +12,10 @@ const MATOMO_TIMEOUT_MS = 3000;
 
 export type RatingEvent = {
   category: string;
+  // Action portant la note en chaîne (« note_1 » … « note_5 », construite par le
+  // contrôleur via `ratingActionForValue`) : pas de `e_v` numérique, Matomo
+  // compte ainsi les occurrences de chaque note au lieu d'en faire la somme.
   action: string;
-  value: number;
   // Source CDTN du contenu noté (ex. `SOURCES.CONTRIBUTIONS`). Mappée vers sa
   // route canonique (`contribution`, `fiche-service-public`, …) qui préfixe le
   // chemin : deux contenus de sources différentes peuvent porter le même slug,
@@ -56,7 +58,6 @@ export const sendRatingEvent = async (event: RatingEvent): Promise<void> => {
     // de sources différentes (le titre n'est plus relayé par le client → « juste
     // la note »).
     e_n: path,
-    e_v: `${event.value}`,
     url,
   });
 
