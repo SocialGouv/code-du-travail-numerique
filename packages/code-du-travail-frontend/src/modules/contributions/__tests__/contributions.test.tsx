@@ -116,8 +116,51 @@ describe("<ContributionLayout />", () => {
     );
     const heading = ui.branchAnswerTitle.get();
     expect(heading.textContent).toBe(
-      "Réponse pour les entreprises de la branche : Nom de la CC"
+      "Votre réponse pour la convention : Nom de la CC"
     );
+  });
+  it("hiérarchise les titres : un seul h2 (la réponse), tout le reste en h3", () => {
+    rendering = render(
+      <ContributionLayout
+        contribution={{
+          ...contribution,
+          idcc: "0029",
+          isGeneric: false,
+          ccnSlug: "cc-slug",
+          ccnShortTitle: "Nom de la CC",
+          content: '<span class="title">Ma section</span><p>texte</p>',
+          references: [{ title: "Article 1", url: "https://exemple.test" }],
+          messageBlock: "Un message d'attention",
+          relatedItems: [
+            {
+              title: "Articles liés",
+              items: [
+                { title: "Un lien", url: "/lien", source: "contributions" },
+              ],
+            },
+          ],
+        }}
+      />
+    );
+    // Un seul h2 : le titre de la réponse. Tout le reste descend en h3.
+    const h2s = rendering.getAllByRole("heading", { level: 2 });
+    expect(h2s).toHaveLength(1);
+    expect(h2s[0].textContent).toContain("Votre réponse pour la convention");
+    // Contenu, Références et Attention passent en h3.
+    const contentHeading = rendering.getByRole("heading", {
+      level: 3,
+      name: "Ma section",
+    });
+    expect(contentHeading).toBeInTheDocument();
+    // …mais conservent la taille visuelle du niveau parent (fr-h2) : le design
+    // ne bouge pas.
+    expect(contentHeading.className).toContain("fr-h2");
+    expect(
+      rendering.getByRole("heading", { level: 3, name: "Références" })
+    ).toBeInTheDocument();
+    expect(
+      rendering.getByRole("heading", { level: 3, name: "Attention" })
+    ).toBeInTheDocument();
   });
   describe("base", () => {
     beforeEach(async () => {

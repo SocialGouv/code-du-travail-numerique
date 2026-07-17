@@ -55,7 +55,7 @@ export const ContributionGenericContent = forwardRef<
           {contribution.references.length > 0 && (
             <Accordion
               label="Références"
-              titleAs="h2"
+              titleAs="h3"
               className={fr.cx("fr-mt-6w")}
             >
               <ListWithArrow
@@ -76,7 +76,7 @@ export const ContributionGenericContent = forwardRef<
           )}
           {contribution.messageBlock && (
             <div className={fr.cx("fr-alert", "fr-alert--info", "fr-mt-6w")}>
-              <h2 className={fr.cx("fr-h5")}>Attention</h2>
+              <h3 className={fr.cx("fr-h5")}>Attention</h3>
               <Html>{contribution.messageBlock}</Html>
             </div>
           )}
@@ -92,8 +92,8 @@ export const ContributionGenericContent = forwardRef<
             !displayGeneric && "fr-hidden"
           )}
         >
-          <ContributionRating contributionSlug={contribution.slug} />
-          <RelatedItems relatedItems={relatedItems} />
+          <ContributionRating contributionSlug={contribution.slug} level={3} />
+          <RelatedItems relatedItems={relatedItems} level={3} />
         </div>
       </div>
     </>

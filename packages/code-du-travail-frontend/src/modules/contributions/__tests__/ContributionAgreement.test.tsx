@@ -77,7 +77,9 @@ describe("<ContributionAgreement /> accessibilité", () => {
       <ContributionAgreement contribution={contribution} />
     );
 
-    const title = getByText("Votre convention collective");
+    const title = getByText(
+      "Réponse personnalisée pour la convention collective"
+    );
     expect(title).toHaveAttribute("tabindex", "-1");
     // Anneau de focus visible même lors d'un focus programmatique.
     expect(title.className).toContain(focusableTitle);
@@ -99,7 +101,9 @@ describe("<ContributionAgreement /> accessibilité", () => {
       <ContributionAgreement contribution={contribution} />
     );
 
-    const title = getByText("Votre convention collective");
+    const title = getByText(
+      "Réponse personnalisée pour la convention collective"
+    );
 
     // Le focus et le scroll sont posés dans le même effet : une fois le focus
     // sur le titre, le scroll a forcément eu lieu.
@@ -132,7 +136,9 @@ describe("<ContributionAgreement /> accessibilité", () => {
       <ContributionAgreement contribution={contribution} />
     );
 
-    const title = getByText("Votre convention collective");
+    const title = getByText(
+      "Réponse personnalisée pour la convention collective"
+    );
     // Laisse passer le délai du setTimeout(100) de l'effet pour vérifier
     // qu'aucun focus n'est posé.
     await new Promise((resolve) => setTimeout(resolve, 200));
@@ -149,8 +155,8 @@ describe("<ContributionAgreement /> réinitialisation à l'arrivée externe (#73
       />
     );
 
-  const getContentWrapper = (rendering: ReturnType<typeof render>) =>
-    rendering.getByText("contenu convention").parentElement as HTMLElement;
+  const getContent = (rendering: ReturnType<typeof render>) =>
+    rendering.getByText("contenu convention");
 
   const selectAgreement = async (agreement: {
     id: string;
@@ -179,7 +185,7 @@ describe("<ContributionAgreement /> réinitialisation à l'arrivée externe (#73
     window.location.hash = "";
   });
 
-  it("affiche le bloc de sélection réinitialisé et masque le contenu", async () => {
+  it("affiche le bloc de sélection réinitialisé en gardant le contenu visible", async () => {
     isExternalArrivalMock.mockReturnValue(true);
 
     const rendering = renderReset();
@@ -190,9 +196,12 @@ describe("<ContributionAgreement /> réinitialisation à l'arrivée externe (#73
       )
     ).toBeInTheDocument();
     expect(
-      rendering.queryByText("Votre convention collective")
+      rendering.queryByText(
+        "Réponse personnalisée pour la convention collective"
+      )
     ).not.toBeInTheDocument();
-    expect(getContentWrapper(rendering).className).toContain("fr-hidden");
+    // Arrivée externe (Google) : la réponse de la CC reste visible.
+    expect(getContent(rendering)).toBeVisible();
     // Aucun des 3 boutons radio n'est pré-sélectionné.
     expect(
       (ccUi.radio.agreementSearchOption.get() as HTMLInputElement).checked
@@ -245,9 +254,11 @@ describe("<ContributionAgreement /> réinitialisation à l'arrivée externe (#73
     fireEvent.click(ccUi.buttonDisplayInfo.get());
 
     expect(pushMock).not.toHaveBeenCalled();
-    const title = rendering.getByText("Votre convention collective");
+    const title = rendering.getByText(
+      "Réponse personnalisée pour la convention collective"
+    );
     expect(title).toBeInTheDocument();
-    expect(getContentWrapper(rendering).className).not.toContain("fr-hidden");
+    expect(getContent(rendering)).toBeVisible();
     // La CC choisie est persistée pour le reste du site (header inclus).
     expect(
       JSON.parse(window.localStorage.getItem("convention") as string).num
@@ -335,9 +346,47 @@ describe("<ContributionAgreement /> réinitialisation à l'arrivée externe (#73
     const rendering = renderReset();
 
     expect(
-      rendering.getByText("Votre convention collective")
+      rendering.getByText("Réponse personnalisée pour la convention collective")
     ).toBeInTheDocument();
-    expect(getContentWrapper(rendering).className).not.toContain("fr-hidden");
+    expect(getContent(rendering)).toBeVisible();
+  });
+
+  it("affiche la CC de la page et le bouton « Réinitialiser » en arrivée interne", () => {
+    isExternalArrivalMock.mockReturnValue(false);
+
+    const rendering = renderReset();
+
+    expect(
+      rendering.getByText("Transports routiers (IDCC 0016)")
+    ).toBeInTheDocument();
+    expect(
+      rendering.getByRole("button", { name: "Réinitialiser" })
+    ).toBeInTheDocument();
+  });
+
+  it("« Réinitialiser » réaffiche le bloc à 3 radios en gardant le contenu visible", () => {
+    isExternalArrivalMock.mockReturnValue(false);
+
+    const rendering = renderReset();
+
+    fireEvent.click(rendering.getByRole("button", { name: "Réinitialiser" }));
+
+    expect(
+      rendering.getByText(
+        "Personnalisez la réponse avec votre convention collective"
+      )
+    ).toBeInTheDocument();
+    expect(
+      rendering.queryByText(
+        "Réponse personnalisée pour la convention collective"
+      )
+    ).not.toBeInTheDocument();
+    // La réponse reste visible après réinitialisation.
+    expect(getContent(rendering)).toBeVisible();
+    // Aucun radio pré-coché après réinitialisation.
+    expect(
+      (ccUi.radio.agreementSearchOption.get() as HTMLInputElement).checked
+    ).toBe(false);
   });
 
   it("garde l'état résultat sans les infos de la fiche générique (fetch en échec)", () => {
@@ -348,8 +397,8 @@ describe("<ContributionAgreement /> réinitialisation à l'arrivée externe (#73
     );
 
     expect(
-      rendering.getByText("Votre convention collective")
+      rendering.getByText("Réponse personnalisée pour la convention collective")
     ).toBeInTheDocument();
-    expect(getContentWrapper(rendering).className).not.toContain("fr-hidden");
+    expect(getContent(rendering)).toBeVisible();
   });
 });

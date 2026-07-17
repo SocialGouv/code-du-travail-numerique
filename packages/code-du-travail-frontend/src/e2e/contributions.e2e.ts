@@ -103,8 +103,14 @@ test.describe("Contributions", () => {
     await expect(
       page.getByRole("heading", {
         level: 2,
-        name: "Réponse pour les entreprises de la branche : Maisons à succursales de vente au détail d'habillement",
+        name: "Votre réponse pour la convention : Maisons à succursales de vente au détail d'habillement",
       })
+    ).toBeVisible();
+
+    // Navigation interne : le bloc est en état « sélectionné » (bouton
+    // « Réinitialiser »), la réponse est visible.
+    await expect(
+      page.getByRole("button", { name: "Réinitialiser" })
     ).toBeVisible();
 
     await expect(page.locator("body")).toContainText(
@@ -155,19 +161,22 @@ test.describe("Contributions", () => {
         "Personnalisez la réponse avec votre convention collective"
       )
     ).toBeVisible();
+    // Le bloc « résumé + Réinitialiser » (donc le libellé « (IDCC 0675) »)
+    // n'est pas affiché tant qu'on n'a pas confirmé/choisi une CC.
     await expect(
       page.getByText(
         "Maisons à succursales de vente au détail d'habillement (IDCC 0675)"
       )
     ).toBeHidden();
-    // Le contenu personnalisé est masqué tant qu'aucun choix n'est fait.
+    // Arrivée externe (Google) : la réponse de la CC reste affichée, seul le
+    // bloc de sélection est présenté en haut.
     await expect(
       page
         .getByText(
           /Les conditions de renouvellement de la période d.essai varient/
         )
         .first()
-    ).toBeHidden();
+    ).toBeVisible();
     // Aucun des 3 boutons radio n'est pré-sélectionné.
     await expect(
       page.getByLabel(
@@ -204,7 +213,9 @@ test.describe("Contributions", () => {
         "Maisons à succursales de vente au détail d'habillement (IDCC 0675)"
       )
     ).toBeVisible();
-    await expect(page.getByRole("button", { name: "Modifier" })).toBeVisible();
+    await expect(
+      page.getByRole("button", { name: "Réinitialiser" })
+    ).toBeVisible();
     await expect(
       page
         .getByText(

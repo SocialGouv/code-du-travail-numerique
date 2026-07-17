@@ -13,7 +13,7 @@ export const ui = {
   }),
   branchAnswerTitle: byRole("heading", {
     level: 2,
-    name: /Réponse pour les entreprises de la branche/,
+    name: /Votre réponse pour la convention/,
   }),
   generic: {
     buttonDisplayInfo: byText(/Afficher les informations$/),

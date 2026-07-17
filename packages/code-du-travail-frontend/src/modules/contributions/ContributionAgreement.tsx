@@ -7,7 +7,6 @@ import { Contribution } from "./type";
 import BlueCard from "../common/BlueCard";
 import Button from "@codegouvfr/react-dsfr/Button";
 import { removeCCNumberFromSlug } from "../utils/removeCCNumberFromSlug";
-import { useRouter } from "next/navigation";
 import { focusableTitle } from "../common/focusableTitle";
 import {
   AGREEMENT_FOCUS_HASH,
@@ -18,6 +17,7 @@ import {
 import { isExternalArrival } from "./externalArrival";
 import { ContributionGenericAgreementSearch } from "./ContributionGenericAgreementSearch";
 import { useContributionTracking } from "./tracking";
+import { useRouter } from "next/navigation";
 import {
   removeAgreementFromLocalStorage,
   saveAgreementToLocalStorage,
@@ -39,6 +39,13 @@ type Props = {
   genericInfos?: GenericContributionInfos;
 };
 
+// Deux présentations du bloc de personnalisation sur une page CC :
+// - "selection" : bloc à 3 radios réinitialisé, réponse masquée (choix explicite
+//   requis) — état d'une arrivée externe (moteur de recherche, accès direct).
+// - "selected" : résumé de la CC de la page + bouton « Réinitialiser », réponse
+//   visible — état d'une navigation interne.
+type Mode = "selection" | "selected";
+
 export function ContributionAgreement({ contribution, genericInfos }: Props) {
   const { slug, relatedItems } = contribution;
   const { push } = useRouter();
@@ -46,12 +53,11 @@ export function ContributionAgreement({ contribution, genericInfos }: Props) {
   const personalizeTitleRef = useRef<HTMLParagraphElement>(null);
   const genericSlug = removeCCNumberFromSlug(slug);
 
-  // Arrivée externe (moteur de recherche, accès direct) : l'usager doit se
-  // positionner explicitement avant de consulter la réponse — le bloc de
-  // sélection remplace la carte résultat et le contenu est masqué (il reste
-  // dans le DOM pour le SEO, comme le contenu générique avec displayGeneric).
-  // Le SSR rend toujours l'état résultat ; la bascule se fait après hydratation.
-  const [displaySelection, setDisplaySelection] = useState(false);
+  // Le SSR rend toujours l'état résultat ("selected") ; seule une arrivée
+  // externe bascule en "selection" après hydratation. Dans les deux cas la
+  // réponse de la CC reste visible (cf. plus bas) : le bloc de sélection en haut
+  // sert uniquement à changer de CC.
+  const [mode, setMode] = useState<Mode>("selected");
   // Sélection locale au bloc : jamais initialisée depuis le localStorage, la
   // réinitialisation devant ignorer un choix antérieur (même pour cette CC).
   const [selectedAgreement, setSelectedAgreement] = useState<
@@ -88,8 +94,7 @@ export function ContributionAgreement({ contribution, genericInfos }: Props) {
     if (genericInfos && isExternalArrival()) {
       // Réinitialisation (#7361) : choix explicite requis avant d'afficher la
       // réponse personnalisée.
-
-      setDisplaySelection(true);
+      setMode("selection");
     }
     // Détection à effectuer une seule fois, au montage.
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -109,9 +114,22 @@ export function ContributionAgreement({ contribution, genericInfos }: Props) {
     return () => clearTimeout(timer);
   }, []);
 
+  // Réinitialisation à la demande de l'usager (bouton « Réinitialiser ») : on
+  // repasse au bloc à 3 radios vierge (aucune CC pré-cochée) et on masque la
+  // réponse, puis on met le focus sur le titre du bloc de sélection.
+  const resetToSelection = () => {
+    setSelectedAgreement(undefined);
+    removeAgreementFromLocalStorage();
+    setMode("selection");
+    setTimeout(() => {
+      personalizeTitleRef.current?.scrollIntoView({ behavior: "smooth" });
+      personalizeTitleRef.current?.focus({ preventScroll: true });
+    }, 100);
+  };
+
   return (
     <>
-      {displaySelection ? (
+      {mode === "selection" ? (
         <ContributionGenericAgreementSearch
           contribution={genericLikeContribution}
           personalizeTitleRef={personalizeTitleRef}
@@ -121,7 +139,7 @@ export function ContributionAgreement({ contribution, genericInfos }: Props) {
           onSameAgreementSelect={() => {
             // La CC choisie est celle de la page : bascule sur place en état
             // résultat (naviguer vers la même URL ne remonterait pas la page).
-            setDisplaySelection(false);
+            setMode("selected");
             focusAgreementTitle();
           }}
           onAgreementSelect={(agreement) => {
@@ -166,7 +184,7 @@ export function ContributionAgreement({ contribution, genericInfos }: Props) {
             className={`${fr.cx("fr-h3", "fr-mt-1w")} ${focusableTitle}`}
             tabIndex={-1}
           >
-            Votre convention collective
+            Réponse personnalisée pour la convention collective
           </p>
           <div className={fr.cx("fr-card", "fr-card--sm", "fr-mt-2w")}>
             <div className={fr.cx("fr-card__body")}>
@@ -178,26 +196,25 @@ export function ContributionAgreement({ contribution, genericInfos }: Props) {
             </div>
           </div>
           <Button
-            title="Modifier la convention collective sélectionnée"
+            title="Réinitialiser la convention collective sélectionnée"
             className={fr.cx("fr-mt-2w")}
-            onClick={() => {
-              push(`/contribution/${genericSlug}#retour`);
-            }}
+            onClick={resetToSelection}
             priority="secondary"
             iconId="fr-icon-arrow-go-back-line"
             iconPosition="right"
           >
-            Modifier
+            Réinitialiser
           </Button>
         </BlueCard>
       )}
 
-      <div className={displaySelection ? fr.cx("fr-hidden") : undefined}>
-        <ContributionAgreementContent
-          contribution={contribution}
-          relatedItems={relatedItems}
-        />
-      </div>
+      {/* La réponse de la CC reste toujours affichée, y compris à l'arrivée
+          externe (SEO / lien Google) : le bloc de sélection en haut permet
+          seulement de confirmer ou changer de convention collective. */}
+      <ContributionAgreementContent
+        contribution={contribution}
+        relatedItems={relatedItems}
+      />
     </>
   );
 }
