@@ -40,10 +40,11 @@ type Props = {
 };
 
 // Deux présentations du bloc de personnalisation sur une page CC :
-// - "selection" : bloc à 3 radios réinitialisé, réponse masquée (choix explicite
-//   requis) — état d'une arrivée externe (moteur de recherche, accès direct).
-// - "selected" : résumé de la CC de la page + bouton « Réinitialiser », réponse
-//   visible — état d'une navigation interne.
+// - "selection" : bloc à 3 radios réinitialisé (arrivée externe, ou après un
+//   clic sur « Réinitialiser »).
+// - "selected" : résumé de la CC de la page + bouton « Réinitialiser » (arrivée
+//   interne, ou après avoir choisi la CC de la page).
+// La visibilité de la réponse est portée séparément par `hideContent`.
 type Mode = "selection" | "selected";
 
 export function ContributionAgreement({ contribution, genericInfos }: Props) {
@@ -54,10 +55,14 @@ export function ContributionAgreement({ contribution, genericInfos }: Props) {
   const genericSlug = removeCCNumberFromSlug(slug);
 
   // Le SSR rend toujours l'état résultat ("selected") ; seule une arrivée
-  // externe bascule en "selection" après hydratation. Dans les deux cas la
-  // réponse de la CC reste visible (cf. plus bas) : le bloc de sélection en haut
-  // sert uniquement à changer de CC.
+  // externe bascule en "selection" après hydratation. À l'arrivée (externe ou
+  // interne) la réponse de la CC reste visible ; seul un clic explicite sur
+  // « Réinitialiser » la masque (cf. `hideContent`).
   const [mode, setMode] = useState<Mode>("selected");
+  // Masque la réponse UNIQUEMENT après un clic sur « Réinitialiser » : l'usager
+  // a explicitement demandé à repartir de zéro. Une arrivée externe (Google)
+  // garde au contraire la réponse affichée.
+  const [hideContent, setHideContent] = useState(false);
   // Sélection locale au bloc : jamais initialisée depuis le localStorage, la
   // réinitialisation devant ignorer un choix antérieur (même pour cette CC).
   const [selectedAgreement, setSelectedAgreement] = useState<
@@ -115,12 +120,13 @@ export function ContributionAgreement({ contribution, genericInfos }: Props) {
   }, []);
 
   // Réinitialisation à la demande de l'usager (bouton « Réinitialiser ») : on
-  // repasse au bloc à 3 radios vierge (aucune CC pré-cochée) et on masque la
+  // repasse au bloc à 3 radios vierge (aucune CC pré-cochée), on masque la
   // réponse, puis on met le focus sur le titre du bloc de sélection.
   const resetToSelection = () => {
     setSelectedAgreement(undefined);
     removeAgreementFromLocalStorage();
     setMode("selection");
+    setHideContent(true);
     setTimeout(() => {
       personalizeTitleRef.current?.scrollIntoView({ behavior: "smooth" });
       personalizeTitleRef.current?.focus({ preventScroll: true });
@@ -139,7 +145,9 @@ export function ContributionAgreement({ contribution, genericInfos }: Props) {
           onSameAgreementSelect={() => {
             // La CC choisie est celle de la page : bascule sur place en état
             // résultat (naviguer vers la même URL ne remonterait pas la page).
+            // On réaffiche la réponse (masquée si on venait de « Réinitialiser »).
             setMode("selected");
+            setHideContent(false);
             focusAgreementTitle();
           }}
           onAgreementSelect={(agreement) => {
@@ -208,13 +216,15 @@ export function ContributionAgreement({ contribution, genericInfos }: Props) {
         </BlueCard>
       )}
 
-      {/* La réponse de la CC reste toujours affichée, y compris à l'arrivée
-          externe (SEO / lien Google) : le bloc de sélection en haut permet
-          seulement de confirmer ou changer de convention collective. */}
-      <ContributionAgreementContent
-        contribution={contribution}
-        relatedItems={relatedItems}
-      />
+      {/* La réponse reste affichée à l'arrivée (externe comme interne) ; elle
+          n'est masquée qu'après un clic sur « Réinitialiser » (`hideContent`).
+          Elle demeure dans le DOM (SEO) via `fr-hidden`. */}
+      <div className={hideContent ? fr.cx("fr-hidden") : undefined}>
+        <ContributionAgreementContent
+          contribution={contribution}
+          relatedItems={relatedItems}
+        />
+      </div>
     </>
   );
 }

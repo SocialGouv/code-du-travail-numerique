@@ -200,8 +200,11 @@ describe("<ContributionAgreement /> réinitialisation à l'arrivée externe (#73
         "Réponse personnalisée pour la convention collective"
       )
     ).not.toBeInTheDocument();
-    // Arrivée externe (Google) : la réponse de la CC reste visible.
-    expect(getContent(rendering)).toBeVisible();
+    // Arrivée externe (Google) : la réponse de la CC reste visible (non masquée,
+    // contrairement à un clic sur « Réinitialiser »).
+    expect(getContent(rendering).parentElement?.className).not.toContain(
+      "fr-hidden"
+    );
     // Aucun des 3 boutons radio n'est pré-sélectionné.
     expect(
       (ccUi.radio.agreementSearchOption.get() as HTMLInputElement).checked
@@ -364,7 +367,7 @@ describe("<ContributionAgreement /> réinitialisation à l'arrivée externe (#73
     ).toBeInTheDocument();
   });
 
-  it("« Réinitialiser » réaffiche le bloc à 3 radios, garde le contenu visible et y place le focus", async () => {
+  it("« Réinitialiser » réaffiche le bloc à 3 radios, masque le contenu et y place le focus", async () => {
     isExternalArrivalMock.mockReturnValue(false);
 
     const rendering = renderReset();
@@ -381,8 +384,12 @@ describe("<ContributionAgreement /> réinitialisation à l'arrivée externe (#73
         "Réponse personnalisée pour la convention collective"
       )
     ).not.toBeInTheDocument();
-    // La réponse reste visible après réinitialisation.
-    expect(getContent(rendering)).toBeVisible();
+    // « Réinitialiser » masque la réponse (choix explicite de repartir de zéro).
+    // jsdom n'applique pas la CSS DSFR : on contrôle la classe `fr-hidden` du
+    // conteneur plutôt que la visibilité calculée.
+    expect(getContent(rendering).parentElement?.className).toContain(
+      "fr-hidden"
+    );
     // Aucun radio pré-coché après réinitialisation.
     expect(
       (ccUi.radio.agreementSearchOption.get() as HTMLInputElement).checked

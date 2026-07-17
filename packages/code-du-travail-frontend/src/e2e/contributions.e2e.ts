@@ -233,7 +233,7 @@ test.describe("Contributions", () => {
     );
   });
 
-  test("depuis une page CC (navigation interne), « Réinitialiser » ramène au bloc de sélection en gardant la réponse et y place le focus", async ({
+  test("depuis une page CC (navigation interne), « Réinitialiser » ramène au bloc de sélection, masque la réponse et y place le focus", async ({
     page,
     baseURL,
   }) => {
@@ -255,7 +255,8 @@ test.describe("Contributions", () => {
 
     await page.getByRole("button", { name: "Réinitialiser" }).click();
 
-    // On repasse au bloc de sélection à 3 radios ; la réponse reste affichée.
+    // On repasse au bloc de sélection à 3 radios ; « Réinitialiser » masque la
+    // réponse (contrairement à une arrivée externe, où elle reste affichée).
     await expect(
       page.getByText(
         "Personnalisez la réponse avec votre convention collective"
@@ -266,7 +267,7 @@ test.describe("Contributions", () => {
         "Maisons à succursales de vente au détail d'habillement (IDCC 0675)"
       )
     ).toBeHidden();
-    await expect(answerTitle).toBeVisible();
+    await expect(answerTitle).toBeHidden();
 
     // Le focus est déplacé sur le titre du bloc de sélection (accessibilité).
     await expect(page.locator("#personalize-response-title")).toBeFocused();
