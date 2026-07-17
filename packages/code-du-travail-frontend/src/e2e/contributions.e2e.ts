@@ -223,7 +223,62 @@ test.describe("Contributions", () => {
         )
         .first()
     ).toBeVisible();
+    // Le focus est déplacé sur le titre du bloc résultat (accessibilité).
+    await expect(
+      page.getByText("Réponse personnalisée pour la convention collective")
+    ).toBeFocused();
     // Pas de navigation : on reste sur la même URL.
+    expect(page.url()).toContain(
+      "/contribution/675-la-periode-dessai-peut-elle-etre-renouvelee"
+    );
+  });
+
+  test("depuis une page CC (navigation interne), « Réinitialiser » ramène au bloc de sélection en gardant la réponse et y place le focus", async ({
+    page,
+    baseURL,
+  }) => {
+    // Arrivée interne : le bloc est en état « résumé » (bouton « Réinitialiser »).
+    await page.goto(
+      "/contribution/675-la-periode-dessai-peut-elle-etre-renouvelee",
+      { referer: baseURL }
+    );
+    await expect(
+      page.getByText(
+        "Maisons à succursales de vente au détail d'habillement (IDCC 0675)"
+      )
+    ).toBeVisible();
+    const answerTitle = page.getByRole("heading", {
+      level: 2,
+      name: "Votre réponse pour la convention : Maisons à succursales de vente au détail d'habillement",
+    });
+    await expect(answerTitle).toBeVisible();
+
+    await page.getByRole("button", { name: "Réinitialiser" }).click();
+
+    // On repasse au bloc de sélection à 3 radios ; la réponse reste affichée.
+    await expect(
+      page.getByText(
+        "Personnalisez la réponse avec votre convention collective"
+      )
+    ).toBeVisible();
+    await expect(
+      page.getByText(
+        "Maisons à succursales de vente au détail d'habillement (IDCC 0675)"
+      )
+    ).toBeHidden();
+    await expect(answerTitle).toBeVisible();
+
+    // Le focus est déplacé sur le titre du bloc de sélection (accessibilité).
+    await expect(page.locator("#personalize-response-title")).toBeFocused();
+
+    // Aucun radio n'est pré-coché après réinitialisation.
+    await expect(
+      page.getByLabel(
+        "Je sais quelle est ma convention collective et je la saisis."
+      )
+    ).not.toBeChecked();
+
+    // « Réinitialiser » ne navigue pas : on reste sur la même URL.
     expect(page.url()).toContain(
       "/contribution/675-la-periode-dessai-peut-elle-etre-renouvelee"
     );

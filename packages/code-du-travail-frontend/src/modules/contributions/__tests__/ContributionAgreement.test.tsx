@@ -364,7 +364,7 @@ describe("<ContributionAgreement /> réinitialisation à l'arrivée externe (#73
     ).toBeInTheDocument();
   });
 
-  it("« Réinitialiser » réaffiche le bloc à 3 radios en gardant le contenu visible", () => {
+  it("« Réinitialiser » réaffiche le bloc à 3 radios, garde le contenu visible et y place le focus", async () => {
     isExternalArrivalMock.mockReturnValue(false);
 
     const rendering = renderReset();
@@ -387,6 +387,12 @@ describe("<ContributionAgreement /> réinitialisation à l'arrivée externe (#73
     expect(
       (ccUi.radio.agreementSearchOption.get() as HTMLInputElement).checked
     ).toBe(false);
+    // Le focus est déplacé sur le titre du bloc de sélection.
+    await waitFor(() => {
+      expect(document.activeElement).toBe(
+        document.getElementById("personalize-response-title")
+      );
+    });
   });
 
   it("garde l'état résultat sans les infos de la fiche générique (fetch en échec)", () => {
