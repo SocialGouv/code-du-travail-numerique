@@ -5,6 +5,7 @@ import { fr } from "@codegouvfr/react-dsfr";
 import Breadcrumb from "@codegouvfr/react-dsfr/Breadcrumb";
 import { Contribution } from "./type";
 import { SourceData } from "../layout/SourceData";
+import { ThemeTags } from "../common/ThemeTags";
 import { ContributionGeneric } from "./ContributionGeneric";
 import { ContributionAgreement } from "./ContributionAgreement";
 import { BreadcrumbListJsonLd } from "../seo/jsonld";
@@ -90,6 +91,7 @@ export function ContributionLayout({ contribution }: Props) {
           <p>Mis à jour le&nbsp;: {contribution.date}</p>
         )}
       </div>
+      <ThemeTags breadcrumbs={contribution.breadcrumbs} />
       {isGeneric ? (
         <ContributionGeneric contribution={contribution} />
       ) : (

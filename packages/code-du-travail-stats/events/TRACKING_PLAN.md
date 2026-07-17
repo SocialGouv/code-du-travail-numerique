@@ -409,9 +409,10 @@ Les 4 motifs possibles de `feedback_category` (un event par case cochée) :
 
 ---
 
-### Partage & contenus liés (commun)
+### Partage, contenus liés & tags de thème (commun)
 
-| Catégorie     | Action                | Name (🔀)                       | Quand / pourquoi | Code |
-| ------------- | --------------------- | ------------------------------- | ---------------- | ---- |
-| clic_share    | `<url de la page>`    | `<réseau>` (facebook, twitter, linkedin, email, whatsapp, copier) | Clic sur un bouton du bloc « Partager la page ». Quels contenus, via quels canaux. | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/common/tracking.ts#L29 "common/tracking.ts:29") |
-| selectRelated | `{"selection":"<url>"}` | —                             | Clic sur un lien de la rubrique « contenus liés » en bas de page. | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/common/tracking.ts#L22 "common/tracking.ts:22") |
+| Catégorie      | Action                | Name (🔀)                       | Quand / pourquoi | Code |
+| -------------- | --------------------- | ------------------------------- | ---------------- | ---- |
+| clic_share     | `<url de la page>`    | `<réseau>` (facebook, twitter, linkedin, email, whatsapp, copier) | Clic sur un bouton du bloc « Partager la page ». Quels contenus, via quels canaux. | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/common/tracking.ts#L30 "common/tracking.ts:30") |
+| selectRelated  | `{"selection":"<url>"}` | —                             | Clic sur un lien de la rubrique « contenus liés » en bas de page. | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/common/tracking.ts#L23 "common/tracking.ts:23") |
+| clic_tag_theme | `<url de la page>`    | `<slug du thème>` (ex. `/themes/conges-et-repos`) | Clic sur un des tags de thème (thème racine ou sous-thème) affichés sous le titre des contributions, fiches service-public et fiches ministère du travail ; mesure l'usage de ce point d'entrée vers la navigation par thème. | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/common/tracking.ts#L38 "common/tracking.ts:38") |

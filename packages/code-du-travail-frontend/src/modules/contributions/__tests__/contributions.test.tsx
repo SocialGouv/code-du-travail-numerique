@@ -1,4 +1,10 @@
-import { act, fireEvent, render, RenderResult } from "@testing-library/react";
+import {
+  act,
+  fireEvent,
+  render,
+  RenderResult,
+  within,
+} from "@testing-library/react";
 import React from "react";
 import userEvent from "@testing-library/user-event";
 
@@ -73,6 +79,38 @@ describe("<ContributionLayout />", () => {
     expect(
       rendering.getByText("Mis à jour le : 05/12/2023")
     ).toBeInTheDocument();
+  });
+  it("should render theme tags linking to the root theme and sub theme", () => {
+    rendering = render(
+      <ContributionLayout
+        contribution={{
+          ...contribution,
+          breadcrumbs: [
+            {
+              label: "Embauche et contrat de travail",
+              position: 1,
+              slug: "/themes/embauche-et-contrat-de-travail",
+            },
+            {
+              label: "Période d’essai",
+              position: 2,
+              slug: "/themes/periode-dessai",
+            },
+          ],
+        }}
+      />
+    );
+    const tagsGroup = rendering.container.querySelector("ul.fr-tags-group");
+    expect(tagsGroup).toBeInTheDocument();
+    const tags = within(tagsGroup as HTMLElement).getAllByRole("link");
+    expect(tags).toHaveLength(2);
+    expect(tags[0]).toHaveTextContent("Embauche et contrat de travail");
+    expect(tags[0]).toHaveAttribute(
+      "href",
+      "/themes/embauche-et-contrat-de-travail"
+    );
+    expect(tags[1]).toHaveTextContent("Période d’essai");
+    expect(tags[1]).toHaveAttribute("href", "/themes/periode-dessai");
   });
   it("should render title with cc short name if contribution with CC", () => {
     rendering = render(

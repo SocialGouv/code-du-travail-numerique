@@ -1,8 +1,8 @@
 {
   "scan_root": "packages/code-du-travail-frontend/src",
-  "callsites": 68,
-  "total_events": 105,
-  "unique_events": 96,
+  "callsites": 69,
+  "total_events": 106,
+  "unique_events": 97,
   "unresolved_callsites": 0,
   "events": [
     {
@@ -445,9 +445,22 @@
       "resolution": "dynamic",
       "emit_function": "emitClickShare",
       "file": "packages/code-du-travail-frontend/src/modules/common/tracking.ts",
-      "line": 29,
+      "line": 30,
       "enum_refs": [
         "CommonCategory.CLICK_SHARE"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "clic_tag_theme",
+      "action": "<currentPageUrl>",
+      "name_pattern": "<themeSlug>",
+      "resolution": "dynamic",
+      "emit_function": "emitClickThemeTag",
+      "file": "packages/code-du-travail-frontend/src/modules/common/tracking.ts",
+      "line": 38,
+      "enum_refs": [
+        "CommonCategory.CLICK_THEME_TAG"
       ],
       "tracking_method": "sendEvent"
     },
@@ -1332,7 +1345,7 @@
       "resolution": "dynamic",
       "emit_function": "emitSelectRelated",
       "file": "packages/code-du-travail-frontend/src/modules/common/tracking.ts",
-      "line": 22,
+      "line": 23,
       "enum_refs": [
         "CommonCategory.SELECTED_RELATED",
         "JSON.stringify"

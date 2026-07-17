@@ -1,4 +1,4 @@
-import { render } from "@testing-library/react";
+import { render, within } from "@testing-library/react";
 import { FicheMinistereTravail } from "../ficheMinistereTravail";
 
 const ficheMTData = {
@@ -75,6 +75,39 @@ describe("Content fiche MT", () => {
     expect(
       getAllByRole("heading", { level: 2 })[2].parentElement
     ).toHaveTextContent("Anchor content 3");
+  });
+
+  test("should show theme tags linking to the root theme and sub theme", () => {
+    const { container } = render(
+      <FicheMinistereTravail
+        date={ficheMTData.date}
+        metaDescription={ficheMTData.description}
+        breadcrumbs={[
+          { label: "Embauche", position: 1, slug: "/themes/embauche" },
+          {
+            label: "Contrats de travail",
+            position: 2,
+            slug: "/themes/contrats-de-travail",
+          },
+        ]}
+        sections={ficheMTData.sections}
+        url={ficheMTData.url}
+        highlight={ficheMTData.highlight}
+        title={ficheMTData.title}
+        intro={ficheMTData.intro}
+        relatedItems={[]}
+      />
+    );
+
+    // Le fil d'ariane affiche les mêmes libellés : on cible le groupe de tags
+    const tagsGroup = container.querySelector("ul.fr-tags-group");
+    expect(tagsGroup).toBeInTheDocument();
+    const tags = within(tagsGroup as HTMLElement).getAllByRole("link");
+    expect(tags).toHaveLength(2);
+    expect(tags[0]).toHaveTextContent("Embauche");
+    expect(tags[0]).toHaveAttribute("href", "/themes/embauche");
+    expect(tags[1]).toHaveTextContent("Contrats de travail");
+    expect(tags[1]).toHaveAttribute("href", "/themes/contrats-de-travail");
   });
 
   test("should transform h3 to h2 in highlight", () => {

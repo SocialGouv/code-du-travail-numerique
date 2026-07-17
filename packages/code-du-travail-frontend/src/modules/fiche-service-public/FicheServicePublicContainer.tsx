@@ -4,6 +4,7 @@ import { RelatedItem } from "../documents";
 import { ElasticFicheServicePublic } from "./queries";
 import { ContainerRichWithBreadcrumbs } from "../layout/ContainerRichWithBreadcrumbs";
 import { SourceData } from "../layout/SourceData";
+import { ThemeTags } from "../common/ThemeTags";
 import "../../../public/static/fiches-mt.css";
 import { FicheServicePublic } from "./builder";
 import { ReferenceList } from "../common/ReferencesList";
@@ -47,6 +48,8 @@ export function FicheServicePublicContainer({
         source={{ url, name: "Fiche service-public.gouv.fr" }}
         updatedAt={date}
       />
+
+      <ThemeTags breadcrumbs={breadcrumbs} />
 
       <div className={fr.cx("fr-mb-5w")}>
         <FicheServicePublic data={raw.children} />

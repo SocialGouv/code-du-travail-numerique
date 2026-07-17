@@ -5,6 +5,7 @@ import { sendEvent } from "@socialgouv/matomo-next";
 enum CommonCategory {
   SELECTED_RELATED = "selectRelated",
   CLICK_SHARE = "clic_share",
+  CLICK_THEME_TAG = "clic_tag_theme",
 }
 
 type SocialNetwork =
@@ -33,8 +34,17 @@ export const useCommonTracking = () => {
     });
   };
 
+  const emitClickThemeTag = (themeSlug: string) => {
+    sendEvent({
+      category: CommonCategory.CLICK_THEME_TAG,
+      action: currentPageUrl,
+      name: themeSlug,
+    });
+  };
+
   return {
     emitSelectRelated,
     emitClickShare,
+    emitClickThemeTag,
   };
 };
