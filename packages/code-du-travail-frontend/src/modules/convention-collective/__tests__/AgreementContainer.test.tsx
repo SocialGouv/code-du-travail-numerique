@@ -138,7 +138,8 @@ describe("AgreementContainer", () => {
     expect(screen.getByTestId("mock-agreement-articles")).toBeInTheDocument();
     expect(screen.getByTestId("mock-agreement-search")).toBeInTheDocument();
     expect(screen.getByTestId("mock-related-items")).toBeInTheDocument();
-    expect(screen.getByTestId("mock-share")).toBeInTheDocument();
+    // Le bloc de partage n'est plus affiché sur les pages convention collective
+    expect(screen.queryByTestId("mock-share")).not.toBeInTheDocument();
     expect(screen.getByTestId("mock-feedback")).toBeInTheDocument();
 
     // Utiliser data-testid pour le lien vers Légifrance au lieu du texte

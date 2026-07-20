@@ -1,6 +1,5 @@
 import { fr } from "@codegouvfr/react-dsfr";
 import { RelatedItems } from "../common/RelatedItems";
-import { Share } from "../common/Share";
 import { RelatedItem } from "../documents";
 import { Feedback } from "./feedback";
 import { WhatsNewLink } from "./whatsnew";
@@ -18,10 +17,8 @@ export type ContainerRichProps = {
 export const ContainerRich = ({
   children,
   relatedItems,
-  title,
   showFeedback = true,
   showWhatsNewLink = false,
-  description,
 }: ContainerRichProps) => {
   return (
     <div
@@ -42,7 +39,6 @@ export const ContainerRich = ({
       <div className={fr.cx("fr-col-12", "fr-col-offset-md-1", "fr-col-md-4")}>
         {showWhatsNewLink && <WhatsNewLink />}
         <RelatedItems relatedItems={relatedItems} />
-        <Share title={title} metaDescription={description} />
       </div>
     </div>
   );

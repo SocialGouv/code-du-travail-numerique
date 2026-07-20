@@ -23,6 +23,7 @@ export const NewsContainer = ({ news }: Props) => (
     title={news.title}
     description={news.meta_description}
     showFeedback={false}
+    showShare
   >
     <h1 className={fr.cx("fr-mb-6w")}>{news.title}</h1>
     <p className={fr.cx("fr-text--lg")}>{formatDateAsFrenchText(news.date)}</p>

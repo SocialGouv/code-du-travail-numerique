@@ -4,7 +4,6 @@ import React, { useEffect } from "react";
 import { MailElasticDocument } from "@socialgouv/cdtn-types";
 import { Feedback } from "../layout/feedback";
 import { RelatedItems } from "../common/RelatedItems";
-import { Share } from "../common/Share";
 import { fr } from "@codegouvfr/react-dsfr";
 import { DownloadTile } from "./components/DownloadTile";
 import { CopyButton } from "./components/CopyButton";
@@ -40,7 +39,6 @@ export const LetterModel = ({
   slug,
   relatedItems,
   title,
-  metaDescription,
   intro,
   date,
 }: LetterModelProps) => {
@@ -112,7 +110,6 @@ export const LetterModel = ({
             <CopyButton slug={slug} />
           </div>
           <RelatedItems relatedItems={relatedItems} />
-          <Share title={title} metaDescription={metaDescription} />
         </div>
       </div>
     </>

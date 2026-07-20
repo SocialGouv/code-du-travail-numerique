@@ -1,7 +1,6 @@
 "use client";
 import React, { forwardRef, ReactNode } from "react";
 import { fr } from "@codegouvfr/react-dsfr";
-import { Share } from "../common/Share";
 import { ContributionContent } from "./ContributionContent";
 import Html from "../common/Html";
 import Link from "../common/Link";
@@ -27,8 +26,6 @@ export const ContributionGenericContent = forwardRef<
   HTMLParagraphElement,
   Props
 >(({ contribution, alertText, relatedItems, displayGeneric }, ref) => {
-  const { title, metas } = contribution;
-
   return (
     <>
       <div
@@ -96,7 +93,6 @@ export const ContributionGenericContent = forwardRef<
         >
           <ContributionRating contributionSlug={contribution.slug} />
           <RelatedItems relatedItems={relatedItems} />
-          <Share title={title} metaDescription={metas.description} />
         </div>
       </div>
     </>

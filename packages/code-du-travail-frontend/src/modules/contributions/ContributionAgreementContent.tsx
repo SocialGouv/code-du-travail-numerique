@@ -8,7 +8,6 @@ import Accordion from "@codegouvfr/react-dsfr/Accordion";
 import { ListWithArrow } from "../common/ListWithArrow";
 import { RelatedItems } from "../common/RelatedItems";
 import { RelatedItem } from "../documents";
-import { Share } from "../common/Share";
 import { Contribution } from "./type";
 import { ContributionRating } from "./rating";
 import { css } from "@styled-system/css";
@@ -25,7 +24,6 @@ export function ContributionAgreementContent({
   contribution,
   relatedItems,
 }: Props) {
-  const { title, metas } = contribution;
   return (
     <div className={fr.cx("fr-grid-row", "fr-grid-row--gutters", "fr-mb-6w")}>
       <div
@@ -81,7 +79,6 @@ export function ContributionAgreementContent({
         </p>
         <ContributionRating contributionSlug={contribution.slug} />
         {relatedItems && <RelatedItems relatedItems={relatedItems} />}
-        <Share title={title} metaDescription={metas.description} />
       </div>
     </div>
   );
