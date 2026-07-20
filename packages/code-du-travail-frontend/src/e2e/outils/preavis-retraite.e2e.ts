@@ -260,7 +260,11 @@ test.describe("Outil - Préavis de retraite", () => {
     await page
       .getByLabel("Nom de votre entreprise ou numéro Siren/Siret")
       .fill("CARREFOUR BANQUE");
-    await page.locator('button[type="submit"]').last().click();
+    await page
+      .locator('button[type="submit"]')
+      .filter({ visible: true })
+      .last()
+      .click();
     await page.getByText("CARREFOUR BANQUE").first().click();
     await expect(
       page.getByText("2 conventions collectives trouvées")
@@ -301,7 +305,11 @@ test.describe("Outil - Préavis de retraite", () => {
     await locationInput.press("ArrowDown");
     await locationInput.press("Enter");
 
-    await page.locator('button[type="submit"]').last().click();
+    await page
+      .locator('button[type="submit"]')
+      .filter({ visible: true })
+      .last()
+      .click();
     await page
       .getByText("BOURSORAMA (BOURSORAMA - BOURSORAMA BANQUE - BOURSOBANK)")
       .click();

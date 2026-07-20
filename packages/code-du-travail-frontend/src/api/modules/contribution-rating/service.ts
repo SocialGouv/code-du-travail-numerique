@@ -1,6 +1,6 @@
 import { getRouteBySource, SourceKeys } from "@socialgouv/cdtn-utils";
 import { PIWIK_SITE_ID, PIWIK_URL, SITE_URL } from "../../../config";
-import { MATOMO_TIMEOUT_MS } from "../";
+import { MATOMO_TIMEOUT_MS } from "../constants";
 
 // Relai serveur->serveur vers l'API de tracking Matomo (`matomo.php`).
 // C'est cet endpoint que les adblockers bloquent côté client ; l'exécuter
