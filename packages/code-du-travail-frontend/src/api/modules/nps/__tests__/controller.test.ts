@@ -75,9 +75,6 @@ describe("NpsController.post()", () => {
     ["score manquant", { trigger: "copy", slug: "a" }],
     ["trigger manquant", { score: 5, slug: "a" }],
     ["slug manquant", { score: 5, trigger: "copy" }],
-    ["slug avec query", { score: 5, trigger: "copy", slug: "a?x=1" }],
-    ["slug avec double slash", { score: 5, trigger: "copy", slug: "a//b" }],
-    ["slug avec slash initial", { score: 5, trigger: "copy", slug: "/a" }],
     ["clé inattendue", { score: 5, trigger: "copy", slug: "a", event: "x" }],
   ])("retourne 400 (%s) sans relayer", async (_label, body) => {
     const res = await new NpsController(makeRequest(body)).post();

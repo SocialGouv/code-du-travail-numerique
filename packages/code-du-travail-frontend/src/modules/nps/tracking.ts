@@ -5,7 +5,6 @@
 // common, feedback…). L'envoi du SCORE n'est PAS du tracking : il passe par
 // l'API proxy interne (cf. sendNpsScore.ts).
 
-import { useCallback } from "react";
 import { sendEvent } from "@socialgouv/matomo-next";
 import { NpsEvent, NpsTrigger } from "./constants";
 
@@ -14,24 +13,21 @@ import { NpsEvent, NpsTrigger } from "./constants";
 const toEventName = (pagePath: string): string => pagePath.replace(/^\/+/, "");
 
 export const useNpsEvents = () => {
-  const trackDisplayed = useCallback(
-    (trigger: NpsTrigger, pagePath: string) => {
-      sendEvent({
-        category: NpsEvent.DISPLAYED,
-        action: trigger,
-        name: toEventName(pagePath),
-      });
-    },
-    []
-  );
+  const trackDisplayed = (trigger: NpsTrigger, pagePath: string) => {
+    sendEvent({
+      category: NpsEvent.DISPLAYED,
+      action: trigger,
+      name: toEventName(pagePath),
+    });
+  };
 
-  const trackRefusal = useCallback((trigger: NpsTrigger, pagePath: string) => {
+  const trackRefusal = (trigger: NpsTrigger, pagePath: string) => {
     sendEvent({
       category: NpsEvent.REFUSAL,
       action: trigger,
       name: toEventName(pagePath),
     });
-  }, []);
+  };
 
   return { trackDisplayed, trackRefusal };
 };

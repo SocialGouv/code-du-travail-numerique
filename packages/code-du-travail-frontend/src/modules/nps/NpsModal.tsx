@@ -17,11 +17,6 @@ export const npsModal = createModal({
 const NpsModalComponent =
   npsModal.Component as unknown as React.ComponentType<any>;
 
-// Largeur de l'icône (2.5rem) + gouttière (1rem) : sert à la fois à l'espacement
-// icône↔titre et à l'indentation du contenu en desktop (pour aligner question +
-// échelle sous le texte du titre, à droite de l'icône).
-const CONTENT_INDENT = "3.5rem";
-
 type Props = {
   value: number | null;
   onSelect: (value: number) => void;
@@ -100,5 +95,5 @@ const icon = css({
 });
 
 const content = css({
-  lg: { paddingLeft: CONTENT_INDENT },
+  lg: { paddingLeft: "3.5rem" },
 });

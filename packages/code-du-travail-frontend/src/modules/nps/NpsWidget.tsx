@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useId, useRef, useState } from "react";
+import { useEffect, useId, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import { useIsModalOpen } from "@codegouvfr/react-dsfr/Modal/useIsModalOpen";
 import { npsModal, NpsModalView } from "./NpsModal";
@@ -64,42 +64,36 @@ export const NpsWidget = () => {
 
   // Ouverture « cœur » : prépare l'état, ouvre la modale, émet l'affichage.
   // Les gardes (cookie/session) sont à la charge de l'appelant.
-  const openModal = useCallback(
-    (trigger: NpsTrigger) => {
-      // Modale déjà ouverte : ne pas ré-ouvrir ni ré-émettre `nps_popin_displayed`
-      // (ex. exit-intent qui se redéclenche alors que la modale est visible).
-      if (openRef.current) return;
-      openRef.current = true;
-      triggerRef.current = trigger;
-      submittedRef.current = false;
-      setValue(null);
-      npsModal.open();
-      trackDisplayed(trigger, pathname);
-    },
-    [pathname, trackDisplayed]
-  );
+  const openModal = (trigger: NpsTrigger) => {
+    // Modale déjà ouverte : ne pas ré-ouvrir ni ré-émettre `nps_popin_displayed`
+    // (ex. exit-intent qui se redéclenche alors que la modale est visible).
+    if (openRef.current) return;
+    openRef.current = true;
+    triggerRef.current = trigger;
+    submittedRef.current = false;
+    setValue(null);
+    npsModal.open();
+    trackDisplayed(trigger, pathname);
+  };
 
   // Déclencheurs automatiques (exit-intent, Télécharger, Copier) : bloqués si
   // déjà répondu (cookie 2 semaines) ou déjà affichés dans la session (1×/session).
-  const openFromAuto = useCallback(
-    (trigger: NpsTrigger) => {
-      if (hasAnsweredNps() || wasNpsShownThisSession()) return;
-      markNpsShownThisSession();
-      openModal(trigger);
-    },
-    [openModal]
-  );
+  const openFromAuto = (trigger: NpsTrigger) => {
+    if (hasAnsweredNps() || wasNpsShownThisSession()) return;
+    markNpsShownThisSession();
+    openModal(trigger);
+  };
 
   useNpsTriggers(openFromAuto);
 
   // Clic volontaire sur la main : non soumis à la règle « 1×/session ». Garde de
   // sécurité sur le cookie (la main n'est de toute façon pas rendue si répondu).
-  const openFromHand = useCallback(() => {
+  const openFromHand = () => {
     if (hasAnsweredNps()) return;
     openModal(NpsTrigger.MAIN);
-  }, [openModal]);
+  };
 
-  const onSubmit = useCallback(() => {
+  const onSubmit = () => {
     if (value === null || submittedRef.current) return;
     submittedRef.current = true;
     // Cookie posé : plus de sollicitation pendant 2 semaines. La main disparaît.
@@ -113,7 +107,7 @@ export const NpsWidget = () => {
     });
     // La modale se ferme via DSFR (bouton footer). Pas de message de
     // confirmation (décision produit).
-  }, [value, pathname]);
+  };
 
   return (
     <>

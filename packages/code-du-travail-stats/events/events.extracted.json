@@ -1,8 +1,8 @@
 {
   "scan_root": "packages/code-du-travail-frontend/src",
-  "callsites": 68,
-  "total_events": 105,
-  "unique_events": 96,
+  "callsites": 70,
+  "total_events": 111,
+  "unique_events": 102,
   "unresolved_callsites": 0,
   "events": [
     {
@@ -884,9 +884,9 @@
       "action": "copy",
       "name_pattern": "<toEventName(pagePath)>",
       "resolution": "enum-param",
-      "emit_function": "useNpsEvents",
+      "emit_function": "trackDisplayed",
       "file": "packages/code-du-travail-frontend/src/modules/nps/tracking.ts",
-      "line": 19,
+      "line": 17,
       "enum_refs": [
         "NpsEvent.DISPLAYED"
       ],
@@ -897,9 +897,9 @@
       "action": "download",
       "name_pattern": "<toEventName(pagePath)>",
       "resolution": "enum-param",
-      "emit_function": "useNpsEvents",
+      "emit_function": "trackDisplayed",
       "file": "packages/code-du-travail-frontend/src/modules/nps/tracking.ts",
-      "line": 19,
+      "line": 17,
       "enum_refs": [
         "NpsEvent.DISPLAYED"
       ],
@@ -910,9 +910,9 @@
       "action": "exit_intent",
       "name_pattern": "<toEventName(pagePath)>",
       "resolution": "enum-param",
-      "emit_function": "useNpsEvents",
+      "emit_function": "trackDisplayed",
       "file": "packages/code-du-travail-frontend/src/modules/nps/tracking.ts",
-      "line": 19,
+      "line": 17,
       "enum_refs": [
         "NpsEvent.DISPLAYED"
       ],
@@ -923,9 +923,9 @@
       "action": "main",
       "name_pattern": "<toEventName(pagePath)>",
       "resolution": "enum-param",
-      "emit_function": "useNpsEvents",
+      "emit_function": "trackDisplayed",
       "file": "packages/code-du-travail-frontend/src/modules/nps/tracking.ts",
-      "line": 19,
+      "line": 17,
       "enum_refs": [
         "NpsEvent.DISPLAYED"
       ],
@@ -933,38 +933,12 @@
     },
     {
       "category": "nps_popin_refusal",
-      "action": "copy",
+      "action": "<trigger>",
       "name_pattern": "<toEventName(pagePath)>",
-      "resolution": "enum-param",
-      "emit_function": "useNpsEvents",
+      "resolution": "dynamic",
+      "emit_function": "trackRefusal",
       "file": "packages/code-du-travail-frontend/src/modules/nps/tracking.ts",
-      "line": 29,
-      "enum_refs": [
-        "NpsEvent.REFUSAL"
-      ],
-      "tracking_method": "sendEvent"
-    },
-    {
-      "category": "nps_popin_refusal",
-      "action": "download",
-      "name_pattern": "<toEventName(pagePath)>",
-      "resolution": "enum-param",
-      "emit_function": "useNpsEvents",
-      "file": "packages/code-du-travail-frontend/src/modules/nps/tracking.ts",
-      "line": 29,
-      "enum_refs": [
-        "NpsEvent.REFUSAL"
-      ],
-      "tracking_method": "sendEvent"
-    },
-    {
-      "category": "nps_popin_refusal",
-      "action": "exit_intent",
-      "name_pattern": "<toEventName(pagePath)>",
-      "resolution": "enum-param",
-      "emit_function": "useNpsEvents",
-      "file": "packages/code-du-travail-frontend/src/modules/nps/tracking.ts",
-      "line": 29,
+      "line": 25,
       "enum_refs": [
         "NpsEvent.REFUSAL"
       ],
@@ -974,10 +948,10 @@
       "category": "nps_popin_refusal",
       "action": "main",
       "name_pattern": "<toEventName(pagePath)>",
-      "resolution": "enum-param",
-      "emit_function": "useNpsEvents",
+      "resolution": "literal",
+      "emit_function": "trackRefusal",
       "file": "packages/code-du-travail-frontend/src/modules/nps/tracking.ts",
-      "line": 29,
+      "line": 25,
       "enum_refs": [
         "NpsEvent.REFUSAL"
       ],

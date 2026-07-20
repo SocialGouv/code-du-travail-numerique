@@ -4,21 +4,13 @@ import { z } from "zod";
 import { NPS_MAX, NPS_MIN, NpsTrigger } from "../../../modules/nps/constants";
 import { sendNpsEvent } from "./service";
 
-// Slug = chemin de page sans slash initial (`contribution/mon-slug`), charset
-// strict : il pilote l'URL canonique reconstruite côté serveur (anti-injection,
-// pas de query string ni de caractère spécial). Segments non vides séparés par un
-// unique `/` (pas de slash en tête/fin, pas de `//`) ; chaîne vide autorisée
-// (page d'accueil). Le tiret est en fin de classe (littéral, pas d'intervalle).
-const SLUG_RE = /^(?:[a-zA-Z0-9_-]+(?:\/[a-zA-Z0-9_-]+)*)?$/;
-const SLUG_MAX_LENGTH = 512;
-
 // Corps attendu : uniquement la note, le déclencheur et le slug. L'identité de
 // l'event (catégorie Matomo) appartient au serveur (mise en dur, cf. service).
 // `strictObject` : tout champ inattendu est rejeté.
 const npsBodySchema = z.strictObject({
   score: z.number().int().min(NPS_MIN).max(NPS_MAX),
   trigger: z.enum(NpsTrigger),
-  slug: z.string().max(SLUG_MAX_LENGTH).regex(SLUG_RE),
+  slug: z.string(),
 });
 
 const jsonError = (status: number, message: string): NextResponse =>
