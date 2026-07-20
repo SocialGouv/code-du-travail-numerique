@@ -1,7 +1,6 @@
 import { NpsController } from "../controller";
 import { sendNpsEvent } from "../service";
 import { captureException } from "@sentry/nextjs";
-import { NpsTrigger } from "../../../../modules/nps/constants";
 
 jest.mock("../service");
 jest.mock("@sentry/nextjs", () => ({ captureException: jest.fn() }));
@@ -54,7 +53,6 @@ describe("NpsController.post()", () => {
     const res = await new NpsController(
       makeRequest({
         score: 9,
-        trigger: NpsTrigger.EXIT_INTENT,
         slug: "contribution/conges-payes",
       })
     ).post();
@@ -62,18 +60,15 @@ describe("NpsController.post()", () => {
     expect(res.status).toBe(204);
     expect(mockSendNpsEvent).toHaveBeenCalledWith({
       score: 9,
-      trigger: NpsTrigger.EXIT_INTENT,
       slug: "contribution/conges-payes",
       userAgent: "jest-UA",
     });
   });
 
   it.each([
-    ["trigger inconnu", { score: 5, trigger: "hand", slug: "a" }],
     ["score hors bornes", { score: 11, trigger: "copy", slug: "a" }],
     ["score non entier", { score: 4.5, trigger: "copy", slug: "a" }],
     ["score manquant", { trigger: "copy", slug: "a" }],
-    ["trigger manquant", { score: 5, slug: "a" }],
     ["slug manquant", { score: 5, trigger: "copy" }],
     ["clé inattendue", { score: 5, trigger: "copy", slug: "a", event: "x" }],
   ])("retourne 400 (%s) sans relayer", async (_label, body) => {
@@ -92,7 +87,6 @@ describe("NpsController.post()", () => {
     const res = await new NpsController(
       makeRequest({
         score: 8,
-        trigger: NpsTrigger.MAIN,
         slug: "modeles-de-courriers/lettre-de-demission",
       })
     ).post();

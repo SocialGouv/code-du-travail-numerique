@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { captureException } from "@sentry/nextjs";
 import { z } from "zod";
-import { NPS_MAX, NPS_MIN, NpsTrigger } from "../../../modules/nps/constants";
+import { NPS_MAX, NPS_MIN } from "../../../modules/nps/constants";
 import { sendNpsEvent } from "./service";
 
 // Corps attendu : uniquement la note, le déclencheur et le slug. L'identité de
@@ -9,7 +9,6 @@ import { sendNpsEvent } from "./service";
 // `strictObject` : tout champ inattendu est rejeté.
 const npsBodySchema = z.strictObject({
   score: z.number().int().min(NPS_MIN).max(NPS_MAX),
-  trigger: z.enum(NpsTrigger),
   slug: z.string(),
 });
 

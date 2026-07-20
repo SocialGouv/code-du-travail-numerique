@@ -3,13 +3,7 @@
 import { useId, useRef } from "react";
 import { fr } from "@codegouvfr/react-dsfr";
 import { css } from "@styled-system/css";
-import {
-  NPS_LABEL_MAX,
-  NPS_LABEL_MIN,
-  NPS_MAX,
-  NPS_MIN,
-  NPS_SCALE,
-} from "./constants";
+import { NPS_MAX, NPS_MIN, NPS_SCALE } from "./constants";
 import Button from "@codegouvfr/react-dsfr/Button";
 
 type Props = {
@@ -72,7 +66,7 @@ export const NpsScale = ({ value, onSelect, groupLabelId }: Props) => {
       <span id={hintId} className={fr.cx("fr-sr-only")}>
         Sélectionnez une note de 0 à 10, puis validez.
       </span>
-      <span className={labelAbove}>{NPS_LABEL_MIN}</span>
+      <span className={labelAbove}>Pas du tout</span>
       <div
         className={grid}
         role="radiogroup"
@@ -86,9 +80,9 @@ export const NpsScale = ({ value, onSelect, groupLabelId }: Props) => {
           // lecteur d'écran lors du parcours des radios).
           const pole =
             note === NPS_MIN
-              ? `, ${NPS_LABEL_MIN}`
+              ? `, Pas du tout`
               : note === NPS_MAX
-                ? `, ${NPS_LABEL_MAX}`
+                ? `, Absolument`
                 : "";
           return (
             <Button
@@ -114,8 +108,8 @@ export const NpsScale = ({ value, onSelect, groupLabelId }: Props) => {
         })}
       </div>
       <div className={labelsBelow}>
-        <span className={labelMin}>{NPS_LABEL_MIN}</span>
-        <span className={labelMax}>{NPS_LABEL_MAX}</span>
+        <span className={labelMin}>Pas du tout</span>
+        <span className={labelMax}>Absolument</span>
       </div>
     </div>
   );

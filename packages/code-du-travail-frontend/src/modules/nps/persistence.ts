@@ -4,13 +4,16 @@
 // et flag de session « déjà affiché ». Aucune donnée personnelle : de simples
 // drapeaux booléens.
 
-import { safeGetItem, safeSetItem } from "../utils/storage";
 import {
   NPS_COOKIE_MAX_AGE_DAYS,
   NPS_COOKIE_NAME,
   NPS_HAND_DISMISSED_KEY,
   NPS_SESSION_KEY,
 } from "./constants";
+import {
+  safeGetSessionItem,
+  safeSetSessionItem,
+} from "../utils/session.storage";
 
 // Cookie posé à la validation : tant qu'il est présent, plus aucune
 // sollicitation (déclencheurs désactivés). Écriture via `document.cookie` (même
@@ -33,32 +36,17 @@ export const markNpsAnswered = (): void => {
 // seule fois par session (répondu ou non). sessionStorage plutôt que
 // localStorage : remis à zéro à chaque nouvelle session de navigation.
 export const wasNpsShownThisSession = (): boolean => {
-  try {
-    return (
-      typeof window !== "undefined" &&
-      window.sessionStorage.getItem(NPS_SESSION_KEY) === "1"
-    );
-  } catch {
-    return false;
-  }
+  return safeGetSessionItem(NPS_SESSION_KEY) === "1";
 };
 
 export const markNpsShownThisSession = (): void => {
-  try {
-    if (typeof window !== "undefined") {
-      window.sessionStorage.setItem(NPS_SESSION_KEY, "1");
-    }
-  } catch {
-    // sessionStorage indisponible (mode privé strict, quota) : sans gravité,
-    // au pire la modale pourra se réafficher une fois de plus dans la session.
-  }
+  safeSetSessionItem(NPS_SESSION_KEY, "1");
 };
 
 // Main « congédiée » : l'usager a ouvert la modale via la main puis l'a fermée
-// sans noter → la main disparaît définitivement (localStorage, persistant
-// au-delà de la session, contrairement au flag de session ci-dessus).
+// sans noter → la main disparaît pendant la session.
 export const isNpsHandDismissed = (): boolean =>
-  safeGetItem(NPS_HAND_DISMISSED_KEY) === "1";
+  safeGetSessionItem(NPS_HAND_DISMISSED_KEY) === "1";
 
 export const markNpsHandDismissed = (): void =>
-  safeSetItem(NPS_HAND_DISMISSED_KEY, "1");
+  safeSetSessionItem(NPS_HAND_DISMISSED_KEY, "1");

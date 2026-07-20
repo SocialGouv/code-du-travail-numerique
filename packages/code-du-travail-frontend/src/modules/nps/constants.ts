@@ -12,10 +12,6 @@ export const NPS_SCALE: number[] = Array.from(
   (_, i) => NPS_MIN + i
 );
 
-// Contenu (cf. spec / maquette Figma).
-export const NPS_LABEL_MIN = "Pas du tout";
-export const NPS_LABEL_MAX = "Absolument";
-
 // Persistance anti-resollicitation.
 // Cookie posé à la validation → plus de sollicitation pendant 2 semaines.
 export const NPS_COOKIE_NAME = "cdtn-nps-answered";
@@ -27,6 +23,8 @@ export const NPS_SESSION_KEY = "cdtn-nps-shown";
 // définitivement (localStorage, pas de date d'expiration).
 export const NPS_HAND_DISMISSED_KEY = "cdtn-nps-hand-dismissed";
 
+export const NPS_CATEGORY = "nps";
+
 // Déclencheur ayant provoqué l'affichage → relayé dans l'action Matomo.
 export enum NpsTrigger {
   EXIT_INTENT = "exit_intent",
@@ -34,12 +32,4 @@ export enum NpsTrigger {
   COPY = "copy",
   // Clic volontaire sur l'icône « main » (présente sur toutes les pages).
   MAIN = "main",
-}
-
-// Type d'event → relayé dans la catégorie Matomo (les champs action/name/value
-// étant déjà alloués au trigger, au chemin de page et à la note).
-export enum NpsEvent {
-  DISPLAYED = "nps_popin_displayed",
-  REFUSAL = "nps_popin_refusal",
-  SUBMITTED = "nps_submitted",
 }

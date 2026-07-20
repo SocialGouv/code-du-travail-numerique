@@ -1,7 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { NpsScale } from "../NpsScale";
-import { NPS_LABEL_MAX, NPS_LABEL_MIN } from "../constants";
 
 describe("NpsScale", () => {
   it("expose un radiogroup de 11 radios (0 à 10) et les deux libellés visuels", () => {
@@ -13,17 +12,17 @@ describe("NpsScale", () => {
         screen.getByRole("radio", { name: new RegExp(`Note ${note} sur 10`) })
       ).toBeInTheDocument();
     }
-    expect(screen.getAllByText(NPS_LABEL_MIN).length).toBeGreaterThanOrEqual(1);
-    expect(screen.getByText(NPS_LABEL_MAX)).toBeInTheDocument();
+    expect(screen.getAllByText("Pas du tout").length).toBeGreaterThanOrEqual(1);
+    expect(screen.getByText("Absolument")).toBeInTheDocument();
   });
 
   it("précise le sens des bornes dans le nom accessible", () => {
     render(<NpsScale value={null} onSelect={jest.fn()} groupLabelId="q" />);
     expect(
-      screen.getByRole("radio", { name: `Note 0 sur 10, ${NPS_LABEL_MIN}` })
+      screen.getByRole("radio", { name: `Note 0 sur 10, Pas du tout` })
     ).toBeInTheDocument();
     expect(
-      screen.getByRole("radio", { name: `Note 10 sur 10, ${NPS_LABEL_MAX}` })
+      screen.getByRole("radio", { name: `Note 10 sur 10, Absolument` })
     ).toBeInTheDocument();
   });
 

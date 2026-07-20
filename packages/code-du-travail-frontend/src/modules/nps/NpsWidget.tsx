@@ -101,7 +101,6 @@ export const NpsWidget = () => {
     setHandHidden(true);
     // Envoi du score via l'API proxy (pas du tracking Matomo, cf. sendNpsScore).
     void sendNpsScore({
-      trigger: triggerRef.current ?? NpsTrigger.EXIT_INTENT,
       pagePath: pathname,
       score: value,
     });

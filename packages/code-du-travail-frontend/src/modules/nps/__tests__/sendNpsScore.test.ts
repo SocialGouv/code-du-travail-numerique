@@ -12,7 +12,6 @@ describe("sendNpsScore", () => {
 
   it("POST /api/nps avec { score, trigger, slug } (slug = chemin sans slash initial)", async () => {
     await sendNpsScore({
-      trigger: NpsTrigger.MAIN,
       pagePath: "/contribution/conges-payes",
       score: 8,
     });
@@ -27,7 +26,6 @@ describe("sendNpsScore", () => {
     expect(init.keepalive).toBe(true);
     expect(JSON.parse(init.body as string)).toEqual({
       score: 8,
-      trigger: NpsTrigger.MAIN,
       slug: "contribution/conges-payes",
     });
   });
@@ -35,7 +33,7 @@ describe("sendNpsScore", () => {
   it("est fire-and-forget : ne rejette pas si le fetch échoue", async () => {
     mockFetch.mockRejectedValueOnce(new Error("network"));
     await expect(
-      sendNpsScore({ trigger: NpsTrigger.COPY, pagePath: "/a", score: 0 })
+      sendNpsScore({ pagePath: "/a", score: 0 })
     ).resolves.toBeUndefined();
   });
 });

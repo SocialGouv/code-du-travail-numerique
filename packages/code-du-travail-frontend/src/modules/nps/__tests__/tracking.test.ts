@@ -2,7 +2,7 @@
 import { renderHook } from "@testing-library/react";
 import { sendEvent } from "@socialgouv/matomo-next";
 import { useNpsEvents } from "../tracking";
-import { NpsEvent, NpsTrigger } from "../constants";
+import { NPS_CATEGORY, NpsTrigger } from "../constants";
 
 jest.mock("@socialgouv/matomo-next", () => ({ sendEvent: jest.fn() }));
 
@@ -18,8 +18,8 @@ describe("useNpsEvents", () => {
       "/contribution/conges-payes"
     );
     expect(mockSendEvent).toHaveBeenCalledWith({
-      category: NpsEvent.DISPLAYED,
-      action: NpsTrigger.EXIT_INTENT,
+      category: NPS_CATEGORY,
+      action: `display_${NpsTrigger.EXIT_INTENT}`,
       name: "contribution/conges-payes",
     });
   });
@@ -31,8 +31,8 @@ describe("useNpsEvents", () => {
       "/modeles-de-courriers/lettre-de-demission"
     );
     expect(mockSendEvent).toHaveBeenCalledWith({
-      category: NpsEvent.REFUSAL,
-      action: NpsTrigger.MAIN,
+      category: NPS_CATEGORY,
+      action: `refusal_${NpsTrigger.MAIN}`,
       name: "modeles-de-courriers/lettre-de-demission",
     });
   });

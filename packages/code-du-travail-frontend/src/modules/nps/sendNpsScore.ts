@@ -1,19 +1,8 @@
 "use client";
 
-// Envoi du score NPS via notre API proxy interne (`/api/nps`). Ce n'est PAS du
-// tracking : c'est la remontée d'une donnée métier (la note explicitement donnée
-// par l'usager au clic sur « Valider »). L'API proxy centralise cet envoi et
-// permettra demain de router le score ailleurs (autre backend, base de
-// données…) sans toucher au client. Indépendant du consentement Matomo (feedback
-// volontaire de l'usager, pas du suivi comportemental).
-
-import { NpsTrigger } from "./constants";
-
 export const NPS_ENDPOINT = "/api/nps";
 
 type SendNpsScoreInput = {
-  // Déclencheur ayant amené l'usager à noter (exit_intent / download / copy / main).
-  trigger: NpsTrigger;
   // Chemin de la page où la note a été donnée (pathname, avec slash initial).
   pagePath: string;
   // Note 0-10.
@@ -21,7 +10,6 @@ type SendNpsScoreInput = {
 };
 
 export const sendNpsScore = async ({
-  trigger,
   pagePath,
   score,
 }: SendNpsScoreInput): Promise<void> => {
@@ -38,7 +26,7 @@ export const sendNpsScore = async ({
       // après (fermeture immédiate de la modale à la validation).
       keepalive: true,
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ score, trigger, slug }),
+      body: JSON.stringify({ score, slug }),
     });
   } catch {
     // Fire-and-forget : un échec ne doit jamais casser l'UI.

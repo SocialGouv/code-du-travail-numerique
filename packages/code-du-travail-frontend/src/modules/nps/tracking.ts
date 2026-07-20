@@ -6,7 +6,7 @@
 // l'API proxy interne (cf. sendNpsScore.ts).
 
 import { sendEvent } from "@socialgouv/matomo-next";
-import { NpsEvent, NpsTrigger } from "./constants";
+import { NPS_CATEGORY, NpsTrigger } from "./constants";
 
 // Nom d'event Matomo = chemin sans le slash initial (`contribution/mon-slug`) :
 // type de page + slug.
@@ -15,16 +15,16 @@ const toEventName = (pagePath: string): string => pagePath.replace(/^\/+/, "");
 export const useNpsEvents = () => {
   const trackDisplayed = (trigger: NpsTrigger, pagePath: string) => {
     sendEvent({
-      category: NpsEvent.DISPLAYED,
-      action: trigger,
+      category: NPS_CATEGORY,
+      action: `display_${trigger}`,
       name: toEventName(pagePath),
     });
   };
 
   const trackRefusal = (trigger: NpsTrigger, pagePath: string) => {
     sendEvent({
-      category: NpsEvent.REFUSAL,
-      action: trigger,
+      category: NPS_CATEGORY,
+      action: `refusal_${trigger}`,
       name: toEventName(pagePath),
     });
   };

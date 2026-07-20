@@ -1,14 +1,12 @@
-import { NpsEvent, NpsTrigger } from "../../../modules/nps/constants";
+import { NPS_CATEGORY } from "../../../modules/nps/constants";
 import { PIWIK_SITE_ID, PIWIK_URL, SITE_URL } from "../../../config";
-import { MATOMO_TIMEOUT_MS } from "../";
+import { MATOMO_TIMEOUT_MS } from "../constants";
 
 // Relai serveur->serveur vers l'API de tracking Matomo (`matomo.php`).
 // C'est cet endpoint que les adblockers bloquent côté client ; l'exécuter côté
 // serveur le rend invisible des bloqueurs. Calqué sur
 // src/api/modules/contribution-rating/service.ts.
 export type NpsScoreEvent = {
-  // Déclencheur ayant amené l'usager à noter (validé par le controller).
-  trigger: NpsTrigger;
   // Chemin de la page sans slash initial (`contribution/mon-slug`), validé par
   // le controller (charset strict, sans query string). Sert au nom d'event et à
   // l'URL canonique.
@@ -22,7 +20,6 @@ export type NpsScoreEvent = {
 };
 
 export const sendNpsEvent = async ({
-  trigger,
   slug,
   score,
   userAgent,
@@ -40,10 +37,9 @@ export const sendNpsEvent = async ({
     // `rand` casse le cache HTTP côté Matomo ; pas besoin d'aléa crypto ici.
     rand: `${Date.now()}`,
     // Catégorie en dur : cette API ne relaie QUE la soumission d'une note NPS.
-    e_c: NpsEvent.SUBMITTED,
-    e_a: trigger,
+    e_c: NPS_CATEGORY,
+    e_a: `score_${score}`,
     e_n: slug,
-    e_v: `${score}`,
     url,
   });
 

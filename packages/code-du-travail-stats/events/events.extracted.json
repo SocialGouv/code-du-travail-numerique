@@ -1,8 +1,8 @@
 {
   "scan_root": "packages/code-du-travail-frontend/src",
   "callsites": 70,
-  "total_events": 111,
-  "unique_events": 102,
+  "total_events": 107,
+  "unique_events": 98,
   "unresolved_callsites": 0,
   "events": [
     {
@@ -15,6 +15,28 @@
       "line": 193,
       "enum_refs": [],
       "tracking_method": "push:trackSiteSearch"
+    },
+    {
+      "category": "<NPS_CATEGORY>",
+      "action": "display_<trigger>",
+      "name_pattern": "<toEventName(pagePath)>",
+      "resolution": "dynamic",
+      "emit_function": "trackDisplayed",
+      "file": "packages/code-du-travail-frontend/src/modules/nps/tracking.ts",
+      "line": 17,
+      "enum_refs": [],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "<NPS_CATEGORY>",
+      "action": "refusal_<trigger>",
+      "name_pattern": "<toEventName(pagePath)>",
+      "resolution": "dynamic",
+      "emit_function": "trackRefusal",
+      "file": "packages/code-du-travail-frontend/src/modules/nps/tracking.ts",
+      "line": 25,
+      "enum_refs": [],
+      "tracking_method": "sendEvent"
     },
     {
       "category": "accord_enterprise_search",
@@ -876,84 +898,6 @@
         "RatingMatomo.ACTION_PREFIX",
         "RatingMatomo.CATEGORY",
         "SOURCES.CONTRIBUTIONS"
-      ],
-      "tracking_method": "sendEvent"
-    },
-    {
-      "category": "nps_popin_displayed",
-      "action": "copy",
-      "name_pattern": "<toEventName(pagePath)>",
-      "resolution": "enum-param",
-      "emit_function": "trackDisplayed",
-      "file": "packages/code-du-travail-frontend/src/modules/nps/tracking.ts",
-      "line": 17,
-      "enum_refs": [
-        "NpsEvent.DISPLAYED"
-      ],
-      "tracking_method": "sendEvent"
-    },
-    {
-      "category": "nps_popin_displayed",
-      "action": "download",
-      "name_pattern": "<toEventName(pagePath)>",
-      "resolution": "enum-param",
-      "emit_function": "trackDisplayed",
-      "file": "packages/code-du-travail-frontend/src/modules/nps/tracking.ts",
-      "line": 17,
-      "enum_refs": [
-        "NpsEvent.DISPLAYED"
-      ],
-      "tracking_method": "sendEvent"
-    },
-    {
-      "category": "nps_popin_displayed",
-      "action": "exit_intent",
-      "name_pattern": "<toEventName(pagePath)>",
-      "resolution": "enum-param",
-      "emit_function": "trackDisplayed",
-      "file": "packages/code-du-travail-frontend/src/modules/nps/tracking.ts",
-      "line": 17,
-      "enum_refs": [
-        "NpsEvent.DISPLAYED"
-      ],
-      "tracking_method": "sendEvent"
-    },
-    {
-      "category": "nps_popin_displayed",
-      "action": "main",
-      "name_pattern": "<toEventName(pagePath)>",
-      "resolution": "enum-param",
-      "emit_function": "trackDisplayed",
-      "file": "packages/code-du-travail-frontend/src/modules/nps/tracking.ts",
-      "line": 17,
-      "enum_refs": [
-        "NpsEvent.DISPLAYED"
-      ],
-      "tracking_method": "sendEvent"
-    },
-    {
-      "category": "nps_popin_refusal",
-      "action": "<trigger>",
-      "name_pattern": "<toEventName(pagePath)>",
-      "resolution": "dynamic",
-      "emit_function": "trackRefusal",
-      "file": "packages/code-du-travail-frontend/src/modules/nps/tracking.ts",
-      "line": 25,
-      "enum_refs": [
-        "NpsEvent.REFUSAL"
-      ],
-      "tracking_method": "sendEvent"
-    },
-    {
-      "category": "nps_popin_refusal",
-      "action": "main",
-      "name_pattern": "<toEventName(pagePath)>",
-      "resolution": "literal",
-      "emit_function": "trackRefusal",
-      "file": "packages/code-du-travail-frontend/src/modules/nps/tracking.ts",
-      "line": 25,
-      "enum_refs": [
-        "NpsEvent.REFUSAL"
       ],
       "tracking_method": "sendEvent"
     },
