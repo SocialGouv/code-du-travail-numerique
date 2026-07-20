@@ -1,6 +1,11 @@
 "use client";
 
-import { css } from "@styled-system/css";
+import { useEffect, useState } from "react";
+import { css, cx } from "@styled-system/css";
+
+// Délai avant le salut automatique unique : laisse le temps de lire la page
+// avant d'attirer discrètement l'attention sur la main.
+const AUTO_WAVE_DELAY_MS = 30_000;
 
 // Icône « main » flottante, présente sur toutes les pages (desktop + mobile),
 // sur le modèle du bouton « Donner votre avis » de mon-entreprise.urssaf.fr :
@@ -12,24 +17,36 @@ type Props = {
   expanded?: boolean;
 };
 
-export const NpsHand = ({ onOpen, expanded = false }: Props) => (
-  // Keyframe `nps-hand-wiggle` définie globalement dans panda.config.ts.
-  <button
-    type="button"
-    className={handButton}
-    onClick={onOpen}
-    aria-haspopup="dialog"
-    aria-expanded={expanded}
-    aria-label={"Donnez votre avis"}
-  >
-    <img
-      className={handImg}
-      src="/static/assets/img/emoj-wave.png"
-      alt=""
-      aria-hidden="true"
-    />
-  </button>
-);
+export const NpsHand = ({ onOpen, expanded = false }: Props) => {
+  // Salut automatique déclenché une seule fois, 30 s après l'apparition de la
+  // main (ce composant n'est monté que lorsque la main est visible, cf.
+  // NpsWidget). La classe reste ensuite posée : l'animation, en une itération,
+  // ne rejoue pas d'elle-même.
+  const [autoWave, setAutoWave] = useState(false);
+  useEffect(() => {
+    const timer = setTimeout(() => setAutoWave(true), AUTO_WAVE_DELAY_MS);
+    return () => clearTimeout(timer);
+  }, []);
+
+  return (
+    // Keyframe `nps-hand-wiggle` définie globalement dans panda.config.ts.
+    <button
+      type="button"
+      className={handButton}
+      onClick={onOpen}
+      aria-haspopup="dialog"
+      aria-expanded={expanded}
+      aria-label={"Donnez votre avis"}
+    >
+      <img
+        className={cx(handImg, autoWave && handImgAutoWave)}
+        src="/static/assets/img/emoj-wave.png"
+        alt=""
+        aria-hidden="true"
+      />
+    </button>
+  );
+};
 
 // Onglet compact ancré au bord droit : seule la main est visible, en permanence.
 const handButton = css({
@@ -66,4 +83,14 @@ const handImg = css({
   height: "28px",
   width: "28px",
   flexShrink: 0,
+});
+
+// Salut automatique : une seule itération du même keyframe que le survol. Le
+// survol (`&:hover img`, plus spécifique) reste prioritaire s'il intervient.
+// Respecte `prefers-reduced-motion` : pas d'animation si l'usager la refuse
+// (WCAG 2.3.3), comme pour le survol.
+const handImgAutoWave = css({
+  "@media (prefers-reduced-motion: no-preference)": {
+    animation: "nps-hand-wiggle 2.5s ease 0s 1",
+  },
 });
