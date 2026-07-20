@@ -1,13 +1,11 @@
 import { NpsEvent, NpsTrigger } from "../../../modules/nps/constants";
 import { PIWIK_SITE_ID, PIWIK_URL, SITE_URL } from "../../../config";
+import { MATOMO_TIMEOUT_MS } from "../";
 
 // Relai serveur->serveur vers l'API de tracking Matomo (`matomo.php`).
 // C'est cet endpoint que les adblockers bloquent côté client ; l'exécuter côté
 // serveur le rend invisible des bloqueurs. Calqué sur
 // src/api/modules/contribution-rating/service.ts.
-
-const MATOMO_TIMEOUT_MS = 3000;
-
 export type NpsScoreEvent = {
   // Déclencheur ayant amené l'usager à noter (validé par le controller).
   trigger: NpsTrigger;

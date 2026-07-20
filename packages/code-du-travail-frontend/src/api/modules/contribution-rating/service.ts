@@ -1,15 +1,11 @@
 import { getRouteBySource, SourceKeys } from "@socialgouv/cdtn-utils";
 import { PIWIK_SITE_ID, PIWIK_URL, SITE_URL } from "../../../config";
+import { MATOMO_TIMEOUT_MS } from "../";
 
 // Relai serveur->serveur vers l'API de tracking Matomo (`matomo.php`).
 // C'est cet endpoint que les adblockers bloquent côté client ; l'exécuter
 // côté serveur le rend invisible des bloqueurs. Calqué sur le style de
 // `src/api/modules/stats/service.ts` (fetch direct vers PIWIK_URL).
-
-// Délai max du relai. Au-delà on abandonne : le client est en fire-and-forget,
-// rien ne doit retenir la fonction serverless si Matomo est lent/injoignable.
-const MATOMO_TIMEOUT_MS = 3000;
-
 export type RatingEvent = {
   category: string;
   // Action portant la note en chaîne (« note_1 » … « note_5 », construite par le
