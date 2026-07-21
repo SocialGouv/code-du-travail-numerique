@@ -89,7 +89,7 @@ describe("<ContributionGeneric />", () => {
     expect(sendEvent.mock.calls).toEqual([
       [
         {
-          action: "/contribution/my-contrib",
+          action: "/contribution/my-contrib/intern",
           category: "cc_select_p1",
           name: "idcc1388",
         },
@@ -98,7 +98,7 @@ describe("<ContributionGeneric />", () => {
         {
           action: "click_p1",
           category: "cc_search_type_of_users",
-          name: "/contribution/my-contrib",
+          name: "/contribution/my-contrib/intern",
         },
       ],
       [
@@ -114,7 +114,7 @@ describe("<ContributionGeneric />", () => {
     expect(sendEvent).toHaveBeenLastCalledWith({
       action: "click_afficher_les_informations_CC",
       category: "contribution",
-      name: "/contribution/my-contrib",
+      name: "/contribution/my-contrib/intern",
     });
   });
 
@@ -146,7 +146,7 @@ describe("<ContributionGeneric />", () => {
     expect(sendEvent.mock.calls).toEqual([
       [
         {
-          action: "/contribution/my-contrib",
+          action: "/contribution/my-contrib/intern",
           category: "cc_select_p1",
           name: "idcc16",
         },
@@ -155,7 +155,7 @@ describe("<ContributionGeneric />", () => {
         {
           action: "click_p1",
           category: "cc_search_type_of_users",
-          name: "/contribution/my-contrib",
+          name: "/contribution/my-contrib/intern",
         },
       ],
       [
@@ -171,7 +171,7 @@ describe("<ContributionGeneric />", () => {
     expect(sendEvent).toHaveBeenLastCalledWith({
       action: "click_afficher_les_informations_générales",
       category: "contribution",
-      name: "/contribution/my-contrib",
+      name: "/contribution/my-contrib/intern",
     });
   });
 
@@ -200,21 +200,21 @@ describe("<ContributionGeneric />", () => {
     expect(sendEvent.mock.calls).toEqual([
       [
         {
-          action: "/contribution/my-contrib",
+          action: "/contribution/my-contrib/intern",
           category: "enterprise_search",
           name: '{"query":"carrefour"}',
         },
       ],
       [
         {
-          action: "/contribution/my-contrib",
+          action: "/contribution/my-contrib/intern",
           category: "enterprise_select",
           name: '{"label":"CARREFOUR PROXIMITE FRANCE (SHOPI-8 A HUIT)","siren":"345130488"}',
         },
       ],
       [
         {
-          action: "/contribution/my-contrib",
+          action: "/contribution/my-contrib/intern",
           category: "cc_select_p2",
           name: "idcc2216",
         },
@@ -223,7 +223,7 @@ describe("<ContributionGeneric />", () => {
         {
           action: "click_p2",
           category: "cc_search_type_of_users",
-          name: "/contribution/my-contrib",
+          name: "/contribution/my-contrib/intern",
         },
       ],
       [
@@ -256,7 +256,7 @@ describe("<ContributionGeneric />", () => {
     expect(sendEvent).toHaveBeenLastCalledWith({
       action: "click_p3",
       category: "cc_search_type_of_users",
-      name: "/contribution/my-contrib",
+      name: "/contribution/my-contrib/intern",
     });
 
     fireEvent.click(ui.generic.buttonDisplayInfo.get());
@@ -266,20 +266,22 @@ describe("<ContributionGeneric />", () => {
     expect(sendEvent).toHaveBeenLastCalledWith({
       action: "click_afficher_les_informations_sans_CC",
       category: "contribution",
-      name: "/contribution/my-contrib",
+      name: "/contribution/my-contrib/intern",
     });
   });
 
-  it("affiche le lien « La convention collective, c'est quoi ? » uniquement une fois la convention affichée via la recherche entreprise", async () => {
+  it("affiche le lien « La convention collective, c'est quoi ? » dès l'arrivée, en haut de la façade (et sans le dupliquer dans le flux entreprise)", async () => {
     render(<ContributionGeneric contribution={contribution} />);
 
     const link = byRole("link", {
       name: /La convention collective, c'est quoi/,
     });
 
-    // Tant qu'on n'a pas atteint l'écran de sélection de la convention via la
-    // recherche entreprise, le lien ne doit pas être affiché.
-    expect(link.query()).not.toBeInTheDocument();
+    // Le lien est affiché d'emblée en haut du bloc de personnalisation.
+    expect(link.get()).toHaveAttribute(
+      "href",
+      "/quelles-regles-s-appliquent-dans-votre-entreprise#convention-collective"
+    );
 
     await userEvent.click(ccUi.radio.enterpriseSearchOption.get());
     await userEvent.click(ccUi.searchByEnterprise.input.get());
@@ -296,10 +298,9 @@ describe("<ContributionGeneric />", () => {
     expect(
       byText(/Vous avez sélectionné la convention collective/).query()
     ).toBeInTheDocument();
-    expect(link.get()).toHaveAttribute(
-      "href",
-      "/quelles-regles-s-appliquent-dans-votre-entreprise#convention-collective"
-    );
+    // Le lien n'est pas dupliqué dans le flux « recherche entreprise » : il
+    // reste unique (celui du haut de la façade).
+    expect(link.getAll()).toHaveLength(1);
   });
 
   describe("sélection de CC et erreurs inline", () => {
@@ -324,7 +325,7 @@ describe("<ContributionGeneric />", () => {
       expect(sendEvent).toHaveBeenCalledWith({
         action: "click_p1",
         category: "cc_search_type_of_users",
-        name: "/contribution/my-contrib",
+        name: "/contribution/my-contrib/intern",
       });
     });
 

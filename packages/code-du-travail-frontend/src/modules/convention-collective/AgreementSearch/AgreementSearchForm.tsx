@@ -34,7 +34,12 @@ type Props = {
   enterpriseRequireSearchSignal?: number;
   agreementRequireSearchSignal?: number;
   showWhatIsAgreementLink?: boolean;
+  /** Légende (label) du groupe de radios. Défaut : question générique. */
+  legend?: ReactNode;
 };
+
+const DEFAULT_LEGEND =
+  "Quel est le nom de la convention collective applicable ?";
 
 const AGREEMENT_LABEL =
   "Je sais quelle est ma convention collective et je la saisis.";
@@ -59,6 +64,7 @@ export const AgreementSearchForm = ({
   enterpriseRequireSearchSignal,
   agreementRequireSearchSignal,
   showWhatIsAgreementLink = false,
+  legend = DEFAULT_LEGEND,
 }: Props) => {
   const [selectedRoute, setSelectedRoute] = useState<
     AgreementRoute | undefined
@@ -119,7 +125,7 @@ export const AgreementSearchForm = ({
   return (
     <>
       <RadioButtons
-        legend="Quel est le nom de la convention collective applicable ?"
+        legend={legend}
         state={error ? "error" : "default"}
         stateRelatedMessage={error}
         options={[

@@ -157,9 +157,7 @@ test.describe("Contributions", () => {
     );
 
     await expect(
-      page.getByText(
-        "Personnalisez la réponse avec votre convention collective"
-      )
+      page.getByText("Vérifiez votre convention collective")
     ).toBeVisible();
     // Le bloc « résumé + Réinitialiser » (donc le libellé « (IDCC 0675) »)
     // n'est pas affiché tant qu'on n'a pas confirmé/choisi une CC.
@@ -258,9 +256,7 @@ test.describe("Contributions", () => {
     // On repasse au bloc de sélection à 3 radios ; « Réinitialiser » masque la
     // réponse (contrairement à une arrivée externe, où elle reste affichée).
     await expect(
-      page.getByText(
-        "Personnalisez la réponse avec votre convention collective"
-      )
+      page.getByText("Vérifiez votre convention collective")
     ).toBeVisible();
     await expect(
       page.getByText(
@@ -270,7 +266,7 @@ test.describe("Contributions", () => {
     await expect(answerTitle).toBeHidden();
 
     // Le focus est déplacé sur le titre du bloc de sélection (accessibilité).
-    await expect(page.locator("#personalize-response-title")).toBeFocused();
+    await expect(page.locator("#verify-agreement-title")).toBeFocused();
 
     // Aucun radio n'est pré-coché après réinitialisation.
     await expect(
@@ -293,9 +289,7 @@ test.describe("Contributions", () => {
     );
 
     await expect(
-      page.getByText(
-        "Personnalisez la réponse avec votre convention collective"
-      )
+      page.getByText("Vérifiez votre convention collective")
     ).toBeVisible();
 
     await page

@@ -191,9 +191,7 @@ describe("<ContributionAgreement /> réinitialisation à l'arrivée externe (#73
     const rendering = renderReset();
 
     expect(
-      rendering.getByText(
-        "Personnalisez la réponse avec votre convention collective"
-      )
+      rendering.getByText("Vérifiez votre convention collective")
     ).toBeInTheDocument();
     expect(
       rendering.queryByText(
@@ -375,9 +373,7 @@ describe("<ContributionAgreement /> réinitialisation à l'arrivée externe (#73
     fireEvent.click(rendering.getByRole("button", { name: "Réinitialiser" }));
 
     expect(
-      rendering.getByText(
-        "Personnalisez la réponse avec votre convention collective"
-      )
+      rendering.getByText("Vérifiez votre convention collective")
     ).toBeInTheDocument();
     expect(
       rendering.queryByText(
@@ -394,10 +390,10 @@ describe("<ContributionAgreement /> réinitialisation à l'arrivée externe (#73
     expect(
       (ccUi.radio.agreementSearchOption.get() as HTMLInputElement).checked
     ).toBe(false);
-    // Le focus est déplacé sur le titre du bloc de sélection.
+    // Le focus est déplacé sur le titre du bloc de sélection (« Vérifiez… »).
     await waitFor(() => {
       expect(document.activeElement).toBe(
-        document.getElementById("personalize-response-title")
+        document.getElementById("verify-agreement-title")
       );
     });
   });
