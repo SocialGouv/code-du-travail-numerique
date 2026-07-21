@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.235.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.234.0...v4.235.0) (2026-07-21)
+
+
+### Features
+
+* **nps:** ajout du NPS score sur le site ([#7382](https://github.com/SocialGouv/code-du-travail-numerique/issues/7382)) ([81dee30](https://github.com/SocialGouv/code-du-travail-numerique/commit/81dee30aca23e9389f0abe025b38ef34123967c4))
+
+
+
+
+
 # [4.234.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.233.1...v4.234.0) (2026-07-20)
 
 
