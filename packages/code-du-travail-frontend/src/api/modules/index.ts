@@ -10,3 +10,4 @@ export * from "./items";
 export * from "./idcc";
 export * from "./glossary";
 export * from "./enterprises";
+export * from "./constants";

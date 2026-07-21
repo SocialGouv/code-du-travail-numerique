@@ -12,6 +12,8 @@ import { RelatedItem } from "../documents";
 import { useModeleEvents } from "./tracking";
 import Breadcrumb from "@codegouvfr/react-dsfr/Breadcrumb";
 import { BreadcrumbListJsonLd } from "../seo/jsonld";
+import { notifyNpsTrigger } from "../nps/triggerBus";
+import { NpsTrigger } from "../nps/constants";
 
 export type LetterModelProps = Pick<
   MailElasticDocument,
@@ -45,9 +47,14 @@ export const LetterModel = ({
   const trackCopy = useModeleEvents(slug);
 
   useEffect(() => {
-    document.addEventListener("copy", trackCopy);
+    const onCopy = () => {
+      trackCopy();
+      // Déclencheur NPS : copie du contenu (Ctrl+C) sur un modèle de courrier.
+      notifyNpsTrigger(NpsTrigger.COPY);
+    };
+    document.addEventListener("copy", onCopy);
     return () => {
-      document.removeEventListener("copy", trackCopy);
+      document.removeEventListener("copy", onCopy);
     };
   }, [trackCopy]);
 
@@ -98,7 +105,12 @@ export const LetterModel = ({
           className={fr.cx("fr-col-12", "fr-col-offset-lg-1", "fr-col-lg-4")}
         >
           <div className={fr.cx("fr-hidden", "fr-unhidden-lg")}>
-            <div className={fr.cx("fr-mb-6w")}>
+            {/* onClickCapture : le clic sur le lien de téléchargement bulle
+                jusqu'ici et arme le déclencheur NPS (modèles de courrier). */}
+            <div
+              className={fr.cx("fr-mb-6w")}
+              onClickCapture={() => notifyNpsTrigger(NpsTrigger.DOWNLOAD)}
+            >
               <DownloadTile
                 filename={filename}
                 filesize={filesize}

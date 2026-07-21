@@ -71,7 +71,11 @@ test.describe("Outil - Trouver sa convention collective", () => {
       .getByLabel("Nom de votre entreprise ou numéro Siren/Siret")
       .fill("CARREFOUR BANQUE");
     await page.getByTestId("locationSearchAutocomplete").clear();
-    await page.locator('button[type="submit"]').last().click();
+    await page
+      .locator('button[type="submit"]')
+      .filter({ visible: true })
+      .last()
+      .click();
     await page.getByText("CARREFOUR BANQUE").first().click();
     await expect(
       page.getByText("2 conventions collectives trouvées")
@@ -103,7 +107,11 @@ test.describe("Outil - Trouver sa convention collective", () => {
       .waitFor({ timeout: 15_000 });
     await locationInput.press("ArrowDown");
     await locationInput.press("Enter");
-    await page.locator('button[type="submit"]').last().click();
+    await page
+      .locator('button[type="submit"]')
+      .filter({ visible: true })
+      .last()
+      .click();
 
     await expectUrlEqual(page, "/outils/convention-collective/entreprise");
     await expectCanonicalUrlEqual(page, "/outils/convention-collective");
