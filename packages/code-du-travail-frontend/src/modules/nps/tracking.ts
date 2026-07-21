@@ -29,5 +29,15 @@ export const useNpsEvents = () => {
     });
   };
 
-  return { trackDisplayed, trackRefusal };
+  // Opt-out explicite (« Ne pas répondre ») : distinct du refus « simple »
+  // (fermeture/Échap/overlay) pour mesurer à part les coupures de session.
+  const trackOptOut = (trigger: NpsTrigger, pagePath: string) => {
+    sendEvent({
+      category: NPS_CATEGORY,
+      action: `optout_${trigger}`,
+      name: toEventName(pagePath),
+    });
+  };
+
+  return { trackDisplayed, trackRefusal, trackOptOut };
 };

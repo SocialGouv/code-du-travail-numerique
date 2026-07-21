@@ -1,8 +1,8 @@
 {
   "scan_root": "packages/code-du-travail-frontend/src",
-  "callsites": 70,
-  "total_events": 107,
-  "unique_events": 98,
+  "callsites": 71,
+  "total_events": 108,
+  "unique_events": 99,
   "unresolved_callsites": 0,
   "events": [
     {
@@ -24,6 +24,17 @@
       "emit_function": "trackDisplayed",
       "file": "packages/code-du-travail-frontend/src/modules/nps/tracking.ts",
       "line": 17,
+      "enum_refs": [],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "<NPS_CATEGORY>",
+      "action": "optout_<trigger>",
+      "name_pattern": "<toEventName(pagePath)>",
+      "resolution": "dynamic",
+      "emit_function": "trackOptOut",
+      "file": "packages/code-du-travail-frontend/src/modules/nps/tracking.ts",
+      "line": 35,
       "enum_refs": [],
       "tracking_method": "sendEvent"
     },

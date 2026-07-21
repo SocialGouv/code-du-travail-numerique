@@ -7,10 +7,10 @@ import { npsModal, NpsModalView } from "./NpsModal";
 import { NpsHand } from "./NpsHand";
 import { NpsTrigger } from "./constants";
 import {
+  dismissNpsForSession,
   hasAnsweredNps,
   isNpsHandDismissed,
   markNpsAnswered,
-  markNpsHandDismissed,
   markNpsShownThisSession,
   wasNpsShownThisSession,
 } from "./persistence";
@@ -30,6 +30,9 @@ export const NpsWidget = () => {
   // Distingue une fermeture après validation d'une fermeture « refus » : évite
   // d'émettre `nps_popin_refusal` quand on ferme nous-mêmes après validation.
   const submittedRef = useRef(false);
+  // Idem pour l'opt-out (« Ne pas répondre ») : cet event est émis par onOptOut,
+  // on ne veut pas que onConceal émette en plus un refus « simple ».
+  const optedOutRef = useRef(false);
   // Modale déjà ouverte : évite qu'un nouveau déclencheur (ex. exit-intent alors
   // que la main a déjà ouvert la modale) ne la ré-ouvre / ré-émette l'affichage.
   const openRef = useRef(false);
@@ -43,20 +46,16 @@ export const NpsWidget = () => {
     if (hasAnsweredNps() || isNpsHandDismissed()) setHandHidden(true);
   }, []);
 
-  const { trackDisplayed, trackRefusal } = useNpsEvents();
+  const { trackDisplayed, trackRefusal, trackOptOut } = useNpsEvents();
 
   const isModalOpen = useIsModalOpen(npsModal, {
     onConceal: () => {
       openRef.current = false;
-      // Fermeture sans validation (bouton « Fermer », Échap, overlay) = refus.
-      if (!submittedRef.current && triggerRef.current) {
+      // Fermeture « simple » (bouton « Fermer », Échap, overlay), sans validation
+      // ni opt-out = refus. La main reste affichée : l'usager peut encore répondre
+      // plus tard ; seul « Ne pas répondre » la fait disparaître (cf. onOptOut).
+      if (!submittedRef.current && !optedOutRef.current && triggerRef.current) {
         trackRefusal(triggerRef.current, pathname);
-        // Fermer la modale ouverte par la main sans noter → la main disparaît
-        // définitivement.
-        if (triggerRef.current === NpsTrigger.MAIN) {
-          markNpsHandDismissed();
-          setHandHidden(true);
-        }
       }
       setValue(null);
     },
@@ -71,6 +70,7 @@ export const NpsWidget = () => {
     openRef.current = true;
     triggerRef.current = trigger;
     submittedRef.current = false;
+    optedOutRef.current = false;
     setValue(null);
     npsModal.open();
     trackDisplayed(trigger, pathname);
@@ -108,12 +108,24 @@ export const NpsWidget = () => {
     // confirmation (décision produit).
   };
 
+  // « Ne pas répondre » : refus explicite. Émet l'opt-out, coupe toute
+  // sollicitation NPS pour le reste de la session (main + déclencheurs auto) et
+  // fait disparaître la main. La modale se ferme via DSFR (aria-controls du
+  // bouton footer) ; `optedOutRef` évite un double event dans onConceal.
+  const onOptOut = () => {
+    optedOutRef.current = true;
+    if (triggerRef.current) trackOptOut(triggerRef.current, pathname);
+    dismissNpsForSession();
+    setHandHidden(true);
+  };
+
   return (
     <>
       <NpsModalView
         value={value}
         onSelect={setValue}
         onSubmit={onSubmit}
+        onOptOut={onOptOut}
         questionId={questionId}
       />
       {mounted && !handHidden && (

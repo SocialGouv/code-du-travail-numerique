@@ -43,10 +43,19 @@ export const markNpsShownThisSession = (): void => {
   safeSetSessionItem(NPS_SESSION_KEY, "1");
 };
 
-// Main « congédiée » : l'usager a ouvert la modale via la main puis l'a fermée
-// sans noter → la main disparaît pendant la session.
+// Main « congédiée » : l'usager a explicitement refusé via « Ne pas répondre »
+// → la main disparaît pour le reste de la session.
 export const isNpsHandDismissed = (): boolean =>
   safeGetSessionItem(NPS_HAND_DISMISSED_KEY) === "1";
 
 export const markNpsHandDismissed = (): void =>
   safeSetSessionItem(NPS_HAND_DISMISSED_KEY, "1");
+
+// Opt-out volontaire (bouton « Ne pas répondre ») : coupe toute sollicitation
+// NPS pour le reste de la session — la main ET les déclencheurs automatiques.
+// Portée session (sessionStorage), pas le cookie 2 semaines : l'usager n'a pas
+// répondu, on ne le bloque que sur cette session de navigation.
+export const dismissNpsForSession = (): void => {
+  markNpsHandDismissed();
+  markNpsShownThisSession();
+};

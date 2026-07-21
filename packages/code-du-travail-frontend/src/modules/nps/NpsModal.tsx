@@ -21,6 +21,9 @@ type Props = {
   value: number | null;
   onSelect: (value: number) => void;
   onSubmit: () => void;
+  // Refus explicite : fait disparaître la main et coupe les sollicitations de
+  // la session (cf. NpsWidget).
+  onOptOut: () => void;
   // Id de la question, réutilisé pour labelliser le groupe de boutons.
   questionId: string;
 };
@@ -29,6 +32,7 @@ export const NpsModalView = ({
   value,
   onSelect,
   onSubmit,
+  onOptOut,
   questionId,
 }: Props) => {
   const formId = useId();
@@ -43,12 +47,20 @@ export const NpsModalView = ({
         </span>
       }
       size="large"
-      // Bouton « Valider » aligné à droite en bas (footer DSFR). Le footer est un
-      // nœud DOM séparé du contenu : on l'associe au <form> via l'attribut HTML
-      // `form` (soumission hors-DOM standard) plutôt qu'un onClick. Désactivé
-      // tant qu'aucune note n'est choisie. DSFR ferme la modale via aria-controls ;
-      // la validation (cookie + tracking, cf. NpsWidget) passe par onSubmit du form.
+      // Footer DSFR (nœud DOM séparé du contenu). Deux actions :
+      //  - « Ne pas répondre » (secondaire, à gauche) : refus explicite, géré par
+      //    onClick ; DSFR ferme la modale via aria-controls.
+      //  - « Valider » (primaire, à droite) : associé au <form> via l'attribut
+      //    HTML `form` (soumission hors-DOM standard) plutôt qu'un onClick, et
+      //    désactivé tant qu'aucune note n'est choisie. La validation (cookie +
+      //    tracking, cf. NpsWidget) passe par onSubmit du form.
       buttons={[
+        {
+          children: "Ne pas répondre",
+          priority: "secondary",
+          onClick: onOptOut,
+          nativeButtonProps: { type: "button" },
+        },
         {
           children: "Valider",
           priority: "primary",

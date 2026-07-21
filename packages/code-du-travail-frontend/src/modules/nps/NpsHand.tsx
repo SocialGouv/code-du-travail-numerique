@@ -5,7 +5,7 @@ import { css, cx } from "@styled-system/css";
 
 // Délai avant le salut automatique unique : laisse le temps de lire la page
 // avant d'attirer discrètement l'attention sur la main.
-const AUTO_WAVE_DELAY_MS = 30_000;
+const AUTO_WAVE_DELAY_MS = 20_000;
 
 // Icône « main » flottante, présente sur toutes les pages (desktop + mobile),
 // sur le modèle du bouton « Donner votre avis » de mon-entreprise.urssaf.fr :
