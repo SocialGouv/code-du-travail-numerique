@@ -30,7 +30,7 @@ const hasFlagCookie = (name: string): boolean => {
 };
 
 const setFlagCookie = (name: string, maxAgeDays: number): void => {
-  if (typeof document === "undefined" || typeof window === "undefined") return;
+  if (typeof document === "undefined") return;
   // max-age ≤ 0 supprimerait le cookie au lieu de le poser : on ne pose rien
   // (warn plutôt que throw : ne pas casser un handler de clic en production
   // pour une constante mal configurée).
