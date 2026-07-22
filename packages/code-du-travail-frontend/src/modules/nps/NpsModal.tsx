@@ -21,8 +21,8 @@ type Props = {
   value: number | null;
   onSelect: (value: number) => void;
   onSubmit: () => void;
-  // Refus explicite : fait disparaître la main et coupe les sollicitations de
-  // la session (cf. NpsWidget).
+  // Refus explicite : fait disparaître la main et coupe les sollicitations
+  // pendant 1 jour (cf. NpsWidget).
   onOptOut: () => void;
   // Id de la question, réutilisé pour labelliser le groupe de boutons.
   questionId: string;

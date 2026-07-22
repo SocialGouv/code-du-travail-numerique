@@ -19,9 +19,10 @@ export const NPS_COOKIE_MAX_AGE_DAYS = 14;
 // Flag de session : les déclencheurs automatiques ne s'arment qu'une fois par
 // session (que l'usager ait répondu ou non).
 export const NPS_SESSION_KEY = "cdtn-nps-shown";
-// Flag persistant : la « main » a été fermée sans notation → elle disparaît
-// définitivement (localStorage, pas de date d'expiration).
-export const NPS_HAND_DISMISSED_KEY = "cdtn-nps-hand-dismissed";
+// Cookie posé au clic sur « Ne pas répondre » → plus aucune sollicitation
+// (main + déclencheurs automatiques) pendant 1 jour, tous onglets confondus.
+export const NPS_OPTOUT_COOKIE_NAME = "cdtn-nps-optout";
+export const NPS_OPTOUT_COOKIE_MAX_AGE_DAYS = 1;
 
 export const NPS_CATEGORY = "nps";
 

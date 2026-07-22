@@ -355,7 +355,7 @@ sur un modèle de courrier) ou `main` (clic sur l'icône).
 | --------- | -------------------- | ------------------ | ---------------- |
 | nps       | `display_<trigger>`  | `<page_type/slug>` | À l'affichage de la modale, quel qu'en soit le déclencheur. Mesure le volume de sollicitations et leur canal (`<trigger>`). |
 | nps       | `refusal_<trigger>`  | `<page_type/slug>` | À la fermeture « simple » (bouton « Fermer », Échap, clic hors modale) **sans** valider ni cliquer « Ne pas répondre ». La « main » **reste** affichée : l'usager peut encore répondre plus tard. Mesure l'abandon ponctuel de la modale. |
-| nps       | `optout_<trigger>`   | `<page_type/slug>` | Au clic sur **« Ne pas répondre »** : refus explicite. Fait **disparaître la main** et coupe toute sollicitation NPS pour le reste de la **session** (déclencheurs automatiques compris). Mesure les opt-out volontaires, à distinguer du refus « simple » ci-dessus. |
+| nps       | `optout_<trigger>`   | `<page_type/slug>` | Au clic sur **« Ne pas répondre »** : refus explicite. Fait **disparaître la main** et coupe toute sollicitation NPS pendant **1 jour**, tous onglets confondus (cookie ; déclencheurs automatiques compris). Mesure les opt-out volontaires, à distinguer du refus « simple » ci-dessus. |
 
 > **La note (0 à 10) n'est pas un event Matomo côté client** : au clic sur « Valider », le score
 > part vers l'**API proxy interne** `/api/nps` (POST same-origin — contourne les bloqueurs et

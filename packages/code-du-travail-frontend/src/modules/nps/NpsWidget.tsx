@@ -7,10 +7,10 @@ import { npsModal, NpsModalView } from "./NpsModal";
 import { NpsHand } from "./NpsHand";
 import { NpsTrigger } from "./constants";
 import {
-  dismissNpsForSession,
   hasAnsweredNps,
-  isNpsHandDismissed,
+  hasOptedOutNps,
   markNpsAnswered,
+  markNpsOptedOut,
   markNpsShownThisSession,
   wasNpsShownThisSession,
 } from "./persistence";
@@ -37,13 +37,13 @@ export const NpsWidget = () => {
   // que la main a déjà ouvert la modale) ne la ré-ouvre / ré-émette l'affichage.
   const openRef = useRef(false);
 
-  // La main dépend du cookie/localStorage : on ne la rend qu'après montage pour
-  // éviter tout écart d'hydratation (le serveur ne connaît pas ces valeurs).
+  // La main dépend des cookies : on ne la rend qu'après montage pour éviter
+  // tout écart d'hydratation (le serveur ne connaît pas ces valeurs).
   const [mounted, setMounted] = useState(false);
   const [handHidden, setHandHidden] = useState(false);
   useEffect(() => {
     setMounted(true);
-    if (hasAnsweredNps() || isNpsHandDismissed()) setHandHidden(true);
+    if (hasAnsweredNps() || hasOptedOutNps()) setHandHidden(true);
   }, []);
 
   const { trackDisplayed, trackRefusal, trackOptOut } = useNpsEvents();
@@ -77,9 +77,11 @@ export const NpsWidget = () => {
   };
 
   // Déclencheurs automatiques (exit-intent, Télécharger, Copier) : bloqués si
-  // déjà répondu (cookie 2 semaines) ou déjà affichés dans la session (1×/session).
+  // déjà répondu (cookie 2 semaines), opt-out (cookie 1 jour) ou déjà affichés
+  // dans la session (1×/session).
   const openFromAuto = (trigger: NpsTrigger) => {
-    if (hasAnsweredNps() || wasNpsShownThisSession()) return;
+    if (hasAnsweredNps() || hasOptedOutNps() || wasNpsShownThisSession())
+      return;
     markNpsShownThisSession();
     openModal(trigger);
   };
@@ -87,9 +89,14 @@ export const NpsWidget = () => {
   useNpsTriggers(openFromAuto);
 
   // Clic volontaire sur la main : non soumis à la règle « 1×/session ». Garde de
-  // sécurité sur le cookie (la main n'est de toute façon pas rendue si répondu).
+  // sécurité sur les cookies : la main n'est normalement pas rendue si répondu ou
+  // opt-out, mais un onglet resté ouvert peut l'afficher encore alors que le
+  // cookie a été posé depuis un autre onglet → on la masque au clic.
   const openFromHand = () => {
-    if (hasAnsweredNps()) return;
+    if (hasAnsweredNps() || hasOptedOutNps()) {
+      setHandHidden(true);
+      return;
+    }
     openModal(NpsTrigger.MAIN);
   };
 
@@ -109,13 +116,14 @@ export const NpsWidget = () => {
   };
 
   // « Ne pas répondre » : refus explicite. Émet l'opt-out, coupe toute
-  // sollicitation NPS pour le reste de la session (main + déclencheurs auto) et
-  // fait disparaître la main. La modale se ferme via DSFR (aria-controls du
-  // bouton footer) ; `optedOutRef` évite un double event dans onConceal.
+  // sollicitation NPS pendant 1 jour, tous onglets confondus (cookie — main +
+  // déclencheurs auto), et fait disparaître la main. La modale se ferme via DSFR
+  // (aria-controls du bouton footer) ; `optedOutRef` évite un double event dans
+  // onConceal.
   const onOptOut = () => {
     optedOutRef.current = true;
     if (triggerRef.current) trackOptOut(triggerRef.current, pathname);
-    dismissNpsForSession();
+    markNpsOptedOut();
     setHandHidden(true);
   };
 
