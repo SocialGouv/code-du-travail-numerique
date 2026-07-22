@@ -20,7 +20,7 @@ export const ContributionContent = ({ contribution, titleLevel }: Props) => {
       ) : (
         <DisplayContent
           content={contribution.content}
-          // Le contenu s'affiche sous un titre de section (« Votre réponse… » /
+          // Le contenu s'affiche sous un titre de section (« Réponse… » /
           // « Réponse d'après le Code du Travail ») de niveau `titleLevel`. Ses
           // titres descendent donc d'un cran (h{titleLevel + 1}) tout en gardant
           // la taille visuelle du niveau parent (visualOffset -1) : l'apparence

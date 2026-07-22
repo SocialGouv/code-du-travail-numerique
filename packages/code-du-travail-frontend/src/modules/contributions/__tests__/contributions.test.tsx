@@ -116,7 +116,7 @@ describe("<ContributionLayout />", () => {
     );
     const heading = ui.branchAnswerTitle.get();
     expect(heading.textContent).toBe(
-      "Votre réponse pour la convention : Nom de la CC"
+      "Réponse pour la convention : Nom de la CC"
     );
   });
   it("hiérarchise les titres : un seul h2 (la réponse), tout le reste en h3", () => {
@@ -145,7 +145,7 @@ describe("<ContributionLayout />", () => {
     // Un seul h2 : le titre de la réponse. Tout le reste descend en h3.
     const h2s = rendering.getAllByRole("heading", { level: 2 });
     expect(h2s).toHaveLength(1);
-    expect(h2s[0].textContent).toContain("Votre réponse pour la convention");
+    expect(h2s[0].textContent).toContain("Réponse pour la convention");
     // Contenu, Références et Attention passent en h3.
     const contentHeading = rendering.getByRole("heading", {
       level: 3,

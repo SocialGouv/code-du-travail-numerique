@@ -103,7 +103,7 @@ test.describe("Contributions", () => {
     await expect(
       page.getByRole("heading", {
         level: 2,
-        name: "Votre réponse pour la convention : Maisons à succursales de vente au détail d'habillement",
+        name: "Réponse pour la convention : Maisons à succursales de vente au détail d'habillement",
       })
     ).toBeVisible();
 
