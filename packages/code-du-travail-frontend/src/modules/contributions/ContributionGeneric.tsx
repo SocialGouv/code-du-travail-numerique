@@ -25,10 +25,7 @@ export function ContributionGeneric({ contribution }: Props) {
   const router = useRouter();
   const [hash, setHash] = useState("");
   const personalizeTitleRef = useRef<HTMLParagraphElement>(null);
-  // Suffixe `/intern` : les events de la fiche générique relèvent du parcours
-  // interne (parcours classique), à distinguer du parcours externe des pages CC
-  // (suffixe `/extern`, cf. ContributionAgreement).
-  const getTitle = () => `/contribution/${slug}/intern`;
+  const getTitle = () => `/contribution/${slug}`;
   const { slug, isNoCDT, relatedItems } = contribution;
 
   const [displayGeneric, setDisplayGeneric] = useState(false);

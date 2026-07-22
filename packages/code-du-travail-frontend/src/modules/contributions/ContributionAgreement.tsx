@@ -72,14 +72,11 @@ export function ContributionAgreement({ contribution, genericInfos }: Props) {
   } = useContributionTracking();
 
   // Chemin réel de la page (arbre classique `{num}-{slug}` et arbre « congés »)
-  // pour les actions Matomo émises par le bloc de sélection. Suffixe `/extern` :
-  // ce bloc n'apparaît que dans le parcours externe (arrivée sur une page CC
-  // depuis l'extérieur), à distinguer du parcours interne de la fiche
-  // générique (suffixe `/intern`).
-  const trackingActionName = `${buildContributionAgreementPath(genericSlug, {
+  // pour les actions Matomo émises par le bloc de sélection.
+  const trackingActionName = buildContributionAgreementPath(genericSlug, {
     num: parseInt(contribution.idcc, 10),
     slug: contribution.ccnSlug,
-  })}/extern`;
+  });
 
   // Fiche « générique » hybride pour le bloc de sélection : il raisonne sur la
   // fiche générique frère (slug de navigation + classification des CC).

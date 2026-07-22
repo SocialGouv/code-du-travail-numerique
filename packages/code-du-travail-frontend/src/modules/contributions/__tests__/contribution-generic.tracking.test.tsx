@@ -89,7 +89,7 @@ describe("<ContributionGeneric />", () => {
     expect(sendEvent.mock.calls).toEqual([
       [
         {
-          action: "/contribution/my-contrib/intern",
+          action: "/contribution/my-contrib",
           category: "cc_select_p1",
           name: "idcc1388",
         },
@@ -98,7 +98,7 @@ describe("<ContributionGeneric />", () => {
         {
           action: "click_p1",
           category: "cc_search_type_of_users",
-          name: "/contribution/my-contrib/intern",
+          name: "/contribution/my-contrib",
         },
       ],
       [
@@ -114,7 +114,7 @@ describe("<ContributionGeneric />", () => {
     expect(sendEvent).toHaveBeenLastCalledWith({
       action: "click_afficher_les_informations_CC",
       category: "contribution",
-      name: "/contribution/my-contrib/intern",
+      name: "/contribution/my-contrib",
     });
   });
 
@@ -146,7 +146,7 @@ describe("<ContributionGeneric />", () => {
     expect(sendEvent.mock.calls).toEqual([
       [
         {
-          action: "/contribution/my-contrib/intern",
+          action: "/contribution/my-contrib",
           category: "cc_select_p1",
           name: "idcc16",
         },
@@ -155,7 +155,7 @@ describe("<ContributionGeneric />", () => {
         {
           action: "click_p1",
           category: "cc_search_type_of_users",
-          name: "/contribution/my-contrib/intern",
+          name: "/contribution/my-contrib",
         },
       ],
       [
@@ -171,7 +171,7 @@ describe("<ContributionGeneric />", () => {
     expect(sendEvent).toHaveBeenLastCalledWith({
       action: "click_afficher_les_informations_générales",
       category: "contribution",
-      name: "/contribution/my-contrib/intern",
+      name: "/contribution/my-contrib",
     });
   });
 
@@ -200,21 +200,21 @@ describe("<ContributionGeneric />", () => {
     expect(sendEvent.mock.calls).toEqual([
       [
         {
-          action: "/contribution/my-contrib/intern",
+          action: "/contribution/my-contrib",
           category: "enterprise_search",
           name: '{"query":"carrefour"}',
         },
       ],
       [
         {
-          action: "/contribution/my-contrib/intern",
+          action: "/contribution/my-contrib",
           category: "enterprise_select",
           name: '{"label":"CARREFOUR PROXIMITE FRANCE (SHOPI-8 A HUIT)","siren":"345130488"}',
         },
       ],
       [
         {
-          action: "/contribution/my-contrib/intern",
+          action: "/contribution/my-contrib",
           category: "cc_select_p2",
           name: "idcc2216",
         },
@@ -223,7 +223,7 @@ describe("<ContributionGeneric />", () => {
         {
           action: "click_p2",
           category: "cc_search_type_of_users",
-          name: "/contribution/my-contrib/intern",
+          name: "/contribution/my-contrib",
         },
       ],
       [
@@ -256,7 +256,7 @@ describe("<ContributionGeneric />", () => {
     expect(sendEvent).toHaveBeenLastCalledWith({
       action: "click_p3",
       category: "cc_search_type_of_users",
-      name: "/contribution/my-contrib/intern",
+      name: "/contribution/my-contrib",
     });
 
     fireEvent.click(ui.generic.buttonDisplayInfo.get());
@@ -266,7 +266,7 @@ describe("<ContributionGeneric />", () => {
     expect(sendEvent).toHaveBeenLastCalledWith({
       action: "click_afficher_les_informations_sans_CC",
       category: "contribution",
-      name: "/contribution/my-contrib/intern",
+      name: "/contribution/my-contrib",
     });
   });
 
@@ -325,7 +325,7 @@ describe("<ContributionGeneric />", () => {
       expect(sendEvent).toHaveBeenCalledWith({
         action: "click_p1",
         category: "cc_search_type_of_users",
-        name: "/contribution/my-contrib/intern",
+        name: "/contribution/my-contrib",
       });
     });
 
