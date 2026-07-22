@@ -5,9 +5,13 @@ jest.mock("../service");
 jest.mock("@sentry/nextjs", () => ({ captureException: jest.fn() }));
 jest.mock("next/server", () => ({
   NextResponse: {
+    // Comme le vrai NextResponse.json, le mock pose Content-Type par défaut.
     json: (body: unknown, init?: ResponseInit) => ({
       status: init?.status ?? 200,
-      headers: new Map(Object.entries(init?.headers ?? {})),
+      headers: new Map<string, string>([
+        ["Content-Type", "application/json"],
+        ...Object.entries(init?.headers ?? {}),
+      ]),
       json: async () => body,
     }),
   },
@@ -62,11 +66,26 @@ describe("AccordsEnterpriseAppController", () => {
       expect(body).toHaveProperty("message");
     });
 
-    it("retourne 500 si le siret est vide", async () => {
+    it("retourne 400 si le siret est vide", async () => {
       const controller = new AccordsEnterpriseAppController("");
       const response = await controller.get();
 
-      expect(response.status).toBe(500);
+      expect(response.status).toBe(400);
+      expect(mockGetAccordsEntreprise).not.toHaveBeenCalled();
+    });
+
+    it.each([
+      ["une tentative de path traversal", "../evil"],
+      ["13 chiffres (un de moins que 14)", "1234567890123"],
+      ["15 chiffres (un de plus que 14)", "123456789012345"],
+      ["14 caractères dont une lettre", "1234567890123a"],
+      ["14 chiffres avec des espaces autour", " 12345678901234 "],
+      ["un SIREN (9 chiffres)", "123456789"],
+    ])("retourne 400 pour %s", async (_label, siret) => {
+      const controller = new AccordsEnterpriseAppController(siret);
+      const response = await controller.get();
+
+      expect(response.status).toBe(400);
       expect(mockGetAccordsEntreprise).not.toHaveBeenCalled();
     });
 
