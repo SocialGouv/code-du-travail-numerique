@@ -231,7 +231,7 @@ test.describe("Contributions", () => {
     );
   });
 
-  test("depuis une page CC (navigation interne), « Réinitialiser » ramène au bloc de sélection, masque la réponse et y place le focus", async ({
+  test("depuis une page CC (navigation interne), « Réinitialiser » supprime la CC mémorisée et renvoie vers la fiche générique", async ({
     page,
     baseURL,
   }) => {
@@ -245,28 +245,28 @@ test.describe("Contributions", () => {
         "Maisons à succursales de vente au détail d'habillement (IDCC 0675)"
       )
     ).toBeVisible();
-    const answerTitle = page.getByRole("heading", {
-      level: 2,
-      name: "Votre réponse pour la convention : Maisons à succursales de vente au détail d'habillement",
-    });
-    await expect(answerTitle).toBeVisible();
 
     await page.getByRole("button", { name: "Réinitialiser" }).click();
 
-    // On repasse au bloc de sélection à 3 radios ; « Réinitialiser » masque la
-    // réponse (contrairement à une arrivée externe, où elle reste affichée).
-    await expect(
-      page.getByText("Vérifiez votre convention collective")
-    ).toBeVisible();
+    // Navigation vers la fiche générique, avec le hash #retour qui scrolle et
+    // met le focus sur le bloc de personnalisation.
+    await page.waitForURL(
+      "**/contribution/la-periode-dessai-peut-elle-etre-renouvelee#retour"
+    );
     await expect(
       page.getByText(
-        "Maisons à succursales de vente au détail d'habillement (IDCC 0675)"
+        "Personnalisez la réponse avec votre convention collective"
       )
-    ).toBeHidden();
-    await expect(answerTitle).toBeHidden();
+    ).toBeVisible();
 
-    // Le focus est déplacé sur le titre du bloc de sélection (accessibilité).
-    await expect(page.locator("#verify-agreement-title")).toBeFocused();
+    // La CC mémorisée est effacée pour tout le site (header inclus).
+    const stored = await page.evaluate(() =>
+      window.localStorage.getItem("convention")
+    );
+    expect(stored).toBeNull();
+
+    // Le focus est déplacé sur le titre du bloc de personnalisation (a11y).
+    await expect(page.locator("#personalize-response-title")).toBeFocused();
 
     // Aucun radio n'est pré-coché après réinitialisation.
     await expect(
@@ -274,11 +274,6 @@ test.describe("Contributions", () => {
         "Je sais quelle est ma convention collective et je la saisis."
       )
     ).not.toBeChecked();
-
-    // « Réinitialiser » ne navigue pas : on reste sur la même URL.
-    expect(page.url()).toContain(
-      "/contribution/675-la-periode-dessai-peut-elle-etre-renouvelee"
-    );
   });
 
   test("depuis une contribution CC réinitialisée, « je ne souhaite pas renseigner » mène à la réponse Code du travail", async ({

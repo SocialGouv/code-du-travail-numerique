@@ -365,36 +365,23 @@ describe("<ContributionAgreement /> réinitialisation à l'arrivée externe (#73
     ).toBeInTheDocument();
   });
 
-  it("« Réinitialiser » réaffiche le bloc à 3 radios, masque le contenu et y place le focus", async () => {
+  it("« Réinitialiser » supprime la CC du localStorage et renvoie vers la fiche générique (#retour)", async () => {
     isExternalArrivalMock.mockReturnValue(false);
+    window.localStorage.setItem(
+      "convention",
+      JSON.stringify({ id: "0016", num: 16 })
+    );
 
     const rendering = renderReset();
 
     fireEvent.click(rendering.getByRole("button", { name: "Réinitialiser" }));
 
-    expect(
-      rendering.getByText("Vérifiez votre convention collective")
-    ).toBeInTheDocument();
-    expect(
-      rendering.queryByText(
-        "Réponse personnalisée pour la convention collective"
-      )
-    ).not.toBeInTheDocument();
-    // « Réinitialiser » masque la réponse (choix explicite de repartir de zéro).
-    // jsdom n'applique pas la CSS DSFR : on contrôle la classe `fr-hidden` du
-    // conteneur plutôt que la visibilité calculée.
-    expect(getContent(rendering).parentElement?.className).toContain(
-      "fr-hidden"
-    );
-    // Aucun radio pré-coché après réinitialisation.
-    expect(
-      (ccUi.radio.agreementSearchOption.get() as HTMLInputElement).checked
-    ).toBe(false);
-    // Le focus est déplacé sur le titre du bloc de sélection (« Vérifiez… »).
-    await waitFor(() => {
-      expect(document.activeElement).toBe(
-        document.getElementById("verify-agreement-title")
-      );
+    // La CC mémorisée est effacée pour tout le site (header inclus).
+    expect(window.localStorage.getItem("convention")).toBeNull();
+    // Navigation vers la fiche générique ; #retour y scrolle et met le focus
+    // sur le bloc de personnalisation.
+    expect(pushMock).toHaveBeenCalledWith("/contribution/slug#retour", {
+      scroll: false,
     });
   });
 

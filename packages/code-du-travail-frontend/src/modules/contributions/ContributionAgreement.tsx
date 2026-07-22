@@ -40,11 +40,10 @@ type Props = {
 };
 
 // Deux présentations du bloc de personnalisation sur une page CC :
-// - "selection" : bloc à 3 radios réinitialisé (arrivée externe, ou après un
-//   clic sur « Réinitialiser »).
+// - "selection" : bloc à 3 radios réinitialisé (arrivée externe uniquement).
 // - "selected" : résumé de la CC de la page + bouton « Réinitialiser » (arrivée
-//   interne, ou après avoir choisi la CC de la page).
-// La visibilité de la réponse est portée séparément par `hideContent`.
+//   interne, ou après avoir choisi la CC de la page). Le bouton « Réinitialiser »
+//   ne bascule pas sur place : il renvoie vers la fiche générique.
 type Mode = "selection" | "selected";
 
 export function ContributionAgreement({ contribution, genericInfos }: Props) {
@@ -55,14 +54,9 @@ export function ContributionAgreement({ contribution, genericInfos }: Props) {
   const genericSlug = removeCCNumberFromSlug(slug);
 
   // Le SSR rend toujours l'état résultat ("selected") ; seule une arrivée
-  // externe bascule en "selection" après hydratation. À l'arrivée (externe ou
-  // interne) la réponse de la CC reste visible ; seul un clic explicite sur
-  // « Réinitialiser » la masque (cf. `hideContent`).
+  // externe bascule en "selection" après hydratation. La réponse de la CC
+  // reste visible dans tous les cas (« Réinitialiser » quitte la page).
   const [mode, setMode] = useState<Mode>("selected");
-  // Masque la réponse UNIQUEMENT après un clic sur « Réinitialiser » : l'usager
-  // a explicitement demandé à repartir de zéro. Une arrivée externe (Google)
-  // garde au contraire la réponse affichée.
-  const [hideContent, setHideContent] = useState(false);
   // Sélection locale au bloc : jamais initialisée depuis le localStorage, la
   // réinitialisation devant ignorer un choix antérieur (même pour cette CC).
   const [selectedAgreement, setSelectedAgreement] = useState<
@@ -80,8 +74,8 @@ export function ContributionAgreement({ contribution, genericInfos }: Props) {
   // Chemin réel de la page (arbre classique `{num}-{slug}` et arbre « congés »)
   // pour les actions Matomo émises par le bloc de sélection. Suffixe `/extern` :
   // ce bloc n'apparaît que dans le parcours externe (arrivée sur une page CC
-  // depuis l'extérieur ou après « Réinitialiser »), à distinguer du parcours
-  // interne de la fiche générique (suffixe `/intern`).
+  // depuis l'extérieur), à distinguer du parcours interne de la fiche
+  // générique (suffixe `/intern`).
   const trackingActionName = `${buildContributionAgreementPath(genericSlug, {
     num: parseInt(contribution.idcc, 10),
     slug: contribution.ccnSlug,
@@ -123,17 +117,12 @@ export function ContributionAgreement({ contribution, genericInfos }: Props) {
   }, []);
 
   // Réinitialisation à la demande de l'usager (bouton « Réinitialiser ») : on
-  // repasse au bloc à 3 radios vierge (aucune CC pré-cochée), on masque la
-  // réponse, puis on met le focus sur le titre du bloc de sélection.
-  const resetToSelection = () => {
-    setSelectedAgreement(undefined);
+  // supprime la CC mémorisée puis on renvoie vers la fiche générique. Le hash
+  // #retour y déclenche le défilement et la mise au focus du bloc de
+  // personnalisation ; `scroll: false` laisse ce défilement fluide opérer.
+  const resetToGeneric = () => {
     removeAgreementFromLocalStorage();
-    setMode("selection");
-    setHideContent(true);
-    setTimeout(() => {
-      personalizeTitleRef.current?.scrollIntoView({ behavior: "smooth" });
-      personalizeTitleRef.current?.focus({ preventScroll: true });
-    }, 100);
+    push(`/contribution/${genericSlug}#retour`, { scroll: false });
   };
 
   return (
@@ -149,9 +138,7 @@ export function ContributionAgreement({ contribution, genericInfos }: Props) {
           onSameAgreementSelect={() => {
             // La CC choisie est celle de la page : bascule sur place en état
             // résultat (naviguer vers la même URL ne remonterait pas la page).
-            // On réaffiche la réponse (masquée si on venait de « Réinitialiser »).
             setMode("selected");
-            setHideContent(false);
             focusAgreementTitle();
           }}
           onAgreementSelect={(agreement) => {
@@ -210,7 +197,7 @@ export function ContributionAgreement({ contribution, genericInfos }: Props) {
           <Button
             title="Réinitialiser la convention collective sélectionnée"
             className={fr.cx("fr-mt-2w")}
-            onClick={resetToSelection}
+            onClick={resetToGeneric}
             priority="secondary"
             iconId="fr-icon-arrow-go-back-line"
             iconPosition="right"
@@ -220,15 +207,12 @@ export function ContributionAgreement({ contribution, genericInfos }: Props) {
         </BlueCard>
       )}
 
-      {/* La réponse reste affichée à l'arrivée (externe comme interne) ; elle
-          n'est masquée qu'après un clic sur « Réinitialiser » (`hideContent`).
-          Elle demeure dans le DOM (SEO) via `fr-hidden`. */}
-      <div className={hideContent ? fr.cx("fr-hidden") : undefined}>
-        <ContributionAgreementContent
-          contribution={contribution}
-          relatedItems={relatedItems}
-        />
-      </div>
+      {/* La réponse reste affichée dans tous les cas (arrivée externe comme
+          interne) : « Réinitialiser » renvoie vers la fiche générique. */}
+      <ContributionAgreementContent
+        contribution={contribution}
+        relatedItems={relatedItems}
+      />
     </>
   );
 }
