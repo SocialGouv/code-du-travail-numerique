@@ -276,6 +276,49 @@ test.describe("Contributions", () => {
     ).not.toBeChecked();
   });
 
+  test("arriver sur la fiche générique avec une CC traitée mémorisée redirige vers la page CC", async ({
+    page,
+    baseURL,
+  }) => {
+    // Mémorise une CC traitée en la sélectionnant depuis la fiche générique.
+    await page.goto(
+      "/contribution/la-periode-dessai-peut-elle-etre-renouvelee"
+    );
+    await page
+      .getByLabel(
+        "Je sais quelle est ma convention collective et je la saisis."
+      )
+      .check({ force: true });
+    await page.getByTestId("AgreementSearchAutocomplete").fill("675");
+    await page
+      .getByText(
+        "Maisons à succursales de vente au détail d'habillement (IDCC 675)"
+      )
+      .click();
+    await page
+      .getByRole("button", { name: "Afficher les informations" })
+      .click();
+    await page.waitForURL(
+      "**/contribution/675-la-periode-dessai-peut-elle-etre-renouvelee**"
+    );
+
+    // Revenir sur la fiche générique : la CC mémorisée et traitée redirige
+    // directement vers la page personnalisée (sans empiler la générique dans
+    // l'historique).
+    await page.goto(
+      "/contribution/la-periode-dessai-peut-elle-etre-renouvelee",
+      { referer: baseURL }
+    );
+    await page.waitForURL(
+      "**/contribution/675-la-periode-dessai-peut-elle-etre-renouvelee"
+    );
+    await expect(
+      page.getByText(
+        "Maisons à succursales de vente au détail d'habillement (IDCC 0675)"
+      )
+    ).toBeVisible();
+  });
+
   test("depuis une contribution CC réinitialisée, « je ne souhaite pas renseigner » mène à la réponse Code du travail", async ({
     page,
   }) => {

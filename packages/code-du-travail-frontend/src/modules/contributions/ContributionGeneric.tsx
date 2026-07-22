@@ -2,10 +2,12 @@
 import React, { useRef, useState, useEffect } from "react";
 import { useContributionTracking } from "./tracking";
 import {
+  buildContributionAgreementPath,
   GENERIC_CONTENT_HASH,
   isAgreementSupported,
   isAgreementValid,
 } from "./contributionUtils";
+import { useRouter } from "next/navigation";
 import { ContributionGenericContent } from "./ContributionGenericContent";
 import { Contribution } from "./type";
 import {
@@ -20,6 +22,7 @@ type Props = {
 };
 
 export function ContributionGeneric({ contribution }: Props) {
+  const router = useRouter();
   const [hash, setHash] = useState("");
   const personalizeTitleRef = useRef<HTMLParagraphElement>(null);
   // Suffixe `/intern` : les events de la fiche générique relèvent du parcours
@@ -76,6 +79,24 @@ export function ContributionGeneric({ contribution }: Props) {
       }, 100);
     }
   }, [hash]);
+
+  // Auto-redirection : arriver sur la fiche générique avec une CC mémorisée et
+  // traitée renvoie directement vers la page CC correspondante (`replace` :
+  // la générique ne s'empile pas dans l'historique). Pas de boucle possible :
+  // « Réinitialiser » (page CC) efface la CC avant de renvoyer ici, et les
+  // hash #retour / #cdt expriment une demande explicite de la fiche générique
+  // (retour au formulaire / réponse Code du travail) : on ne redirige pas.
+  useEffect(() => {
+    if (window.location.hash === "#retour") return;
+    if (window.location.hash === GENERIC_CONTENT_HASH) return;
+
+    const storedAgreement = getAgreementFromLocalStorage();
+    if (storedAgreement && isAgreementValid(contribution, storedAgreement)) {
+      router.replace(buildContributionAgreementPath(slug, storedAgreement));
+    }
+    // Détection à effectuer une seule fois, au montage.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <>

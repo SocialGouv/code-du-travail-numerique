@@ -459,7 +459,7 @@ describe("<ContributionLayout />", () => {
       expect(replaceMock).not.toHaveBeenCalled();
     });
 
-    it("ne redirige jamais vers la page CC, même avec une CC valide en storage", async () => {
+    it("ne redirige pas vers la page CC (hash #cdt), même avec une CC valide en storage", async () => {
       window.localStorage.setItem(
         "convention",
         JSON.stringify({
@@ -479,27 +479,89 @@ describe("<ContributionLayout />", () => {
     });
   });
 
-  describe("arrivée avec une CC enregistrée", () => {
-    // La sélection de CC dans le header a été supprimée : la fiche générique
-    // ne redirige plus automatiquement vers la page CC, l'usager se
-    // positionne explicitement via le formulaire.
-    it("ne redirige plus automatiquement vers la page CC, même avec une CC valide en storage", async () => {
+  describe("arrivée avec une CC enregistrée (auto-redirection)", () => {
+    // Une CC mémorisée et traitée renvoie directement vers la page CC. Pas de
+    // boucle : « Réinitialiser » (page CC) efface la CC avant de revenir sur
+    // la générique, et les hash #retour / #cdt désactivent la redirection.
+    const validAgreement = {
+      id: "0016",
+      num: 16,
+      shortTitle: "Transports routiers et activités auxiliaires du transport",
+      slug: "16-transports-routiers-et-activites-auxiliaires-du-transport",
+      title:
+        "Convention collective nationale des transports routiers et activités auxiliaires du transport du 21 décembre 1950",
+    };
+
+    beforeEach(() => {
+      window.localStorage.clear();
+    });
+
+    afterEach(() => {
+      window.location.hash = "";
+      window.localStorage.clear();
+    });
+
+    it("redirige vers la page CC quand une CC traitée est en storage", async () => {
+      window.localStorage.setItem("convention", JSON.stringify(validAgreement));
+
+      render(<ContributionLayout contribution={contribution} />);
+
+      await waitFor(() => {
+        expect(replaceMock).toHaveBeenCalledWith("/contribution/16-slug");
+      });
+    });
+
+    it("ne redirige pas quand la CC en storage n'est pas traitée", async () => {
       window.localStorage.setItem(
         "convention",
         JSON.stringify({
-          id: "0016",
-          num: 16,
-          shortTitle:
-            "Transports routiers et activités auxiliaires du transport",
-          slug: "16-transports-routiers-et-activites-auxiliaires-du-transport",
-          title:
-            "Convention collective nationale des transports routiers et activités auxiliaires du transport du 21 décembre 1950",
+          id: "1388",
+          num: 1388,
+          shortTitle: "Industrie du pétrole",
+          slug: "1388-industrie-du-petrole",
+          title: "Convention collective nationale de l'industrie du pétrole",
         })
       );
+
       render(<ContributionLayout contribution={contribution} />);
+
       await new Promise((resolve) => setTimeout(resolve, 100));
       expect(replaceMock).not.toHaveBeenCalled();
-      window.localStorage.clear();
+    });
+
+    it("ne redirige pas quand la CC en storage est non étendue", async () => {
+      window.localStorage.setItem(
+        "convention",
+        JSON.stringify({
+          id: "0029",
+          num: 29,
+          shortTitle: "Hospitalisation privée",
+          slug: "29-hospitalisation-privee",
+          title: "Convention collective nationale des établissements privés",
+        })
+      );
+
+      render(<ContributionLayout contribution={contribution} />);
+
+      await new Promise((resolve) => setTimeout(resolve, 100));
+      expect(replaceMock).not.toHaveBeenCalled();
+    });
+
+    it("ne redirige pas avec le hash #retour (retour depuis « Réinitialiser »)", async () => {
+      window.localStorage.setItem("convention", JSON.stringify(validAgreement));
+      window.location.hash = "#retour";
+
+      render(<ContributionLayout contribution={contribution} />);
+
+      await new Promise((resolve) => setTimeout(resolve, 100));
+      expect(replaceMock).not.toHaveBeenCalled();
+    });
+
+    it("ne redirige pas sans CC en storage", async () => {
+      render(<ContributionLayout contribution={contribution} />);
+
+      await new Promise((resolve) => setTimeout(resolve, 100));
+      expect(replaceMock).not.toHaveBeenCalled();
     });
   });
 });
