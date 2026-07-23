@@ -27,6 +27,7 @@ export const Infographie = ({ infographic }: Params) => {
       <ThemeTags breadcrumbs={infographic.breadcrumbs} />
       <ArticleJsonLd
         title={infographic.title}
+        datePublished={infographic.date}
         breadcrumbs={infographic.breadcrumbs}
       />
       {infographic.description.length > 0 && (

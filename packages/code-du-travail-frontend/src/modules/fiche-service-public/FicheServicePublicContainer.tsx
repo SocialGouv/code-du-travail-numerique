@@ -51,7 +51,11 @@ export function FicheServicePublicContainer({
       />
 
       <ThemeTags breadcrumbs={breadcrumbs} />
-      <ArticleJsonLd title={title} breadcrumbs={breadcrumbs} />
+      <ArticleJsonLd
+        title={title}
+        datePublished={date}
+        breadcrumbs={breadcrumbs}
+      />
 
       <div className={fr.cx("fr-mb-5w")}>
         <FicheServicePublic data={raw.children} />

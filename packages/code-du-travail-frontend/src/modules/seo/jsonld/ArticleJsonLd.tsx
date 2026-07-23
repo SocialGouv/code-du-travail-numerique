@@ -8,9 +8,11 @@ import { buildContentThemeJsonLd, JSON_LD_IDS } from "./builders";
 
 export function ArticleJsonLd({
   title,
+  datePublished,
   breadcrumbs,
 }: {
   title: string;
+  datePublished?: string;
   breadcrumbs: BreadcrumbType[];
 }) {
   const pathname = usePathname() || "/";
@@ -29,6 +31,7 @@ export function ArticleJsonLd({
       data={buildContentThemeJsonLd({
         name: title,
         url: pathname,
+        datePublished,
         themes: themes.map(({ label, slug }) => ({ label, slug })),
       })}
     />

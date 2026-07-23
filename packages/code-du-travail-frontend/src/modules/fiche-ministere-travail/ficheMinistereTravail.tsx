@@ -54,7 +54,11 @@ export function FicheMinistereTravail({
       />
 
       <ThemeTags breadcrumbs={breadcrumbs} />
-      <ArticleJsonLd title={title} breadcrumbs={breadcrumbs} />
+      <ArticleJsonLd
+        title={title}
+        datePublished={date}
+        breadcrumbs={breadcrumbs}
+      />
 
       <div className={fr.cx("fr-mb-5w")}>
         <Html>{intro}</Html>

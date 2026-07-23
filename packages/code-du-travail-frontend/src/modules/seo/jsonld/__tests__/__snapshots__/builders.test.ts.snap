@@ -27,7 +27,7 @@ exports[`jsonld builders buildBreadcrumbListJsonLd() 1`] = `
 }
 `;
 
-exports[`jsonld builders buildContentThemeJsonLd() tags le contenu par thème et sous-thème 1`] = `
+exports[`jsonld builders buildContentThemeJsonLd() construit un Article daté, rattaché au site et thématisé 1`] = `
 {
   "@context": "https://schema.org",
   "@type": "Article",
@@ -44,8 +44,16 @@ exports[`jsonld builders buildContentThemeJsonLd() tags le contenu par thème et
     },
   ],
   "articleSection": "Rupture du contrat",
+  "author": {
+    "@id": "http://api.url/#government-organization",
+  },
+  "dateModified": "2024-05-29",
+  "datePublished": "2024-05-29",
   "headline": "Le préavis de licenciement",
   "inLanguage": "fr-FR",
+  "isPartOf": {
+    "@id": "http://api.url/#website",
+  },
   "keywords": [
     "Rupture du contrat",
     "Licenciement",

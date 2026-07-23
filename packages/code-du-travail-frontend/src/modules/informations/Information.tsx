@@ -51,7 +51,11 @@ export const Information = ({
     >
       <div className={fr.cx("fr-mb-6w")} id="contenu">
         <ThemeTags breadcrumbs={breadcrumbs} />
-        <ArticleJsonLd title={title} breadcrumbs={breadcrumbs} />
+        <ArticleJsonLd
+          title={title}
+          datePublished={date}
+          breadcrumbs={breadcrumbs}
+        />
         {intro && <DisplayContent content={intro} titleLevel={2} />}
         {contents.length === 1 ? (
           <>

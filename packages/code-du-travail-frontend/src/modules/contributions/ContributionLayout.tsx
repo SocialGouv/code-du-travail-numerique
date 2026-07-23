@@ -96,7 +96,11 @@ export function ContributionLayout({ contribution, genericInfos }: Props) {
         )}
       </div>
       <ThemeTags breadcrumbs={contribution.breadcrumbs} />
-      <ArticleJsonLd title={title} breadcrumbs={contribution.breadcrumbs} />
+      <ArticleJsonLd
+        title={title}
+        datePublished={date}
+        breadcrumbs={contribution.breadcrumbs}
+      />
       {isGeneric ? (
         <ContributionGeneric contribution={contribution} />
       ) : (

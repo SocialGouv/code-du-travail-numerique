@@ -68,7 +68,11 @@ export const LetterModel = ({
           href: slug,
         }))}
       />
-      <ArticleJsonLd title={title} breadcrumbs={breadcrumbs} />
+      <ArticleJsonLd
+        title={title}
+        datePublished={date}
+        breadcrumbs={breadcrumbs}
+      />
       <Breadcrumb
         currentPageLabel={title}
         homeLinkProps={{

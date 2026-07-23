@@ -45,16 +45,27 @@ describe("jsonld builders", () => {
     expect(jsonld).toMatchSnapshot();
   });
 
-  it("buildContentThemeJsonLd() tags le contenu par thème et sous-thème", () => {
+  it("buildContentThemeJsonLd() construit un Article daté, rattaché au site et thématisé", () => {
     const jsonld = buildContentThemeJsonLd({
       name: "Le préavis de licenciement",
       url: "/fiche-ministere-travail/le-preavis",
+      datePublished: "29/05/2024",
       themes: [
         { label: "Rupture du contrat", slug: "/themes/rupture-du-contrat" },
         { label: "Licenciement", slug: "/themes/licenciement" },
       ],
     });
     expect(jsonld["@type"]).toBe("Article");
+    // Rattachement au graphe du site (éditeur / auteur / site).
+    expect(jsonld.isPartOf).toEqual({ "@id": JSON_LD_ENTITY_IDS.website });
+    expect(jsonld.author).toEqual({ "@id": JSON_LD_ENTITY_IDS.organization });
+    expect(jsonld.publisher).toEqual({
+      "@id": JSON_LD_ENTITY_IDS.organization,
+    });
+    // Date FR convertie en ISO 8601.
+    expect(jsonld.datePublished).toBe("2024-05-29");
+    expect(jsonld.dateModified).toBe("2024-05-29");
+    // Thème / sous-thème (titres complets).
     expect(jsonld.articleSection).toBe("Rupture du contrat");
     expect(jsonld.keywords).toEqual(["Rupture du contrat", "Licenciement"]);
     expect(jsonld.about).toEqual([
@@ -70,6 +81,17 @@ describe("jsonld builders", () => {
       },
     ]);
     expect(jsonld).toMatchSnapshot();
+  });
+
+  it("buildContentThemeJsonLd() omet la date quand le format est inattendu", () => {
+    const jsonld = buildContentThemeJsonLd({
+      name: "Sans date",
+      url: "/information/sans-date",
+      datePublished: "pas une date",
+      themes: [{ label: "Congés", slug: "/themes/conges" }],
+    });
+    expect(jsonld.datePublished).toBeUndefined();
+    expect(jsonld.dateModified).toBeUndefined();
   });
 
   it("buildNewsArticleJsonLd()", () => {
