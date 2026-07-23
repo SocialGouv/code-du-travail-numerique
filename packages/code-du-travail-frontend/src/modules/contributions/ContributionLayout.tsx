@@ -8,7 +8,7 @@ import { SourceData } from "../layout/SourceData";
 import { ThemeTags } from "../common/ThemeTags";
 import { ContributionGeneric } from "./ContributionGeneric";
 import { ContributionAgreement } from "./ContributionAgreement";
-import { BreadcrumbListJsonLd } from "../seo/jsonld";
+import { ArticleJsonLd, BreadcrumbListJsonLd } from "../seo/jsonld";
 import { removeCCNumberFromSlug } from "../utils/removeCCNumberFromSlug";
 // Import de type uniquement : queries.ts embarque le client Elasticsearch
 // (serveur), il ne doit pas entrer dans le bundle client.
@@ -96,6 +96,7 @@ export function ContributionLayout({ contribution, genericInfos }: Props) {
         )}
       </div>
       <ThemeTags breadcrumbs={contribution.breadcrumbs} />
+      <ArticleJsonLd title={title} breadcrumbs={contribution.breadcrumbs} />
       {isGeneric ? (
         <ContributionGeneric contribution={contribution} />
       ) : (

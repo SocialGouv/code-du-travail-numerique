@@ -27,6 +27,37 @@ exports[`jsonld builders buildBreadcrumbListJsonLd() 1`] = `
 }
 `;
 
+exports[`jsonld builders buildContentThemeJsonLd() tags le contenu par thème et sous-thème 1`] = `
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "Rupture du contrat",
+      "url": "http://api.url/themes/rupture-du-contrat",
+    },
+    {
+      "@type": "Thing",
+      "name": "Licenciement",
+      "url": "http://api.url/themes/licenciement",
+    },
+  ],
+  "articleSection": "Rupture du contrat",
+  "headline": "Le préavis de licenciement",
+  "inLanguage": "fr-FR",
+  "keywords": [
+    "Rupture du contrat",
+    "Licenciement",
+  ],
+  "mainEntityOfPage": "http://api.url/fiche-ministere-travail/le-preavis",
+  "publisher": {
+    "@id": "http://api.url/#government-organization",
+  },
+  "url": "http://api.url/fiche-ministere-travail/le-preavis",
+}
+`;
+
 exports[`jsonld builders buildGovernmentOrganizationJsonLd() 1`] = `
 {
   "@context": "https://schema.org",

@@ -3,5 +3,6 @@ export * from "./builders";
 export * from "./GovernmentOrganizationJsonLd";
 export * from "./WebSiteJsonLd";
 export * from "./BreadcrumbListJsonLd";
+export * from "./ArticleJsonLd";
 export * from "./LegislationJsonLd";
 export * from "./NewsArticleJsonLd";

@@ -5,6 +5,7 @@ import TagsGroup, { TagsGroupProps } from "@codegouvfr/react-dsfr/TagsGroup";
 import { TagProps } from "@codegouvfr/react-dsfr/Tag";
 import { Breadcrumb as BreadcrumbType } from "@socialgouv/cdtn-types";
 import { useCommonTracking } from "./tracking";
+import { THEME_TAG_SHORT_TITLES } from "./themeTagShortTitles";
 
 type Props = {
   breadcrumbs: BreadcrumbType[];
@@ -19,7 +20,7 @@ export const ThemeTags = ({ breadcrumbs }: Props) => {
   if (!rootTheme || !subTheme) return null;
 
   const themeToTag = (theme: BreadcrumbType): TagProps => ({
-    children: theme.label,
+    children: THEME_TAG_SHORT_TITLES[theme.label] ?? theme.label,
     linkProps: {
       href: theme.slug,
       onClick: () => emitClickThemeTag(theme.slug),

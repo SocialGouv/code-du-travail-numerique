@@ -6,6 +6,7 @@ export const JSON_LD_IDS = {
   breadcrumbs: "jsonld-breadcrumbs",
   legislation: "jsonld-legislation",
   newsArticle: "jsonld-news-article",
+  article: "jsonld-article",
 } as const;
 
 export const JSON_LD_ENTITY_IDS = {
@@ -80,6 +81,47 @@ export function buildBreadcrumbListJsonLd({
       name: item.label,
       item: toAbsoluteUrl(item.href),
     })),
+  };
+}
+
+export type ContentThemeItem = {
+  label: string;
+  slug: string;
+};
+
+// Tags de contenu (schema.org) : rattache le contenu à son thème / sous-thème
+// via `about` et `keywords`, indépendamment du fil d'Ariane (BreadcrumbList).
+// Les libellés utilisés ici sont les titres COMPLETS (pas les libellés
+// raccourcis réservés à l'affichage des tags).
+export function buildContentThemeJsonLd({
+  name,
+  url,
+  themes,
+}: {
+  name: string;
+  url: string;
+  themes: ContentThemeItem[];
+}): Record<string, unknown> {
+  const absoluteUrl = toAbsoluteUrl(url);
+  const rootTheme = themes[0];
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: name,
+    url: absoluteUrl,
+    mainEntityOfPage: absoluteUrl,
+    ...(rootTheme ? { articleSection: rootTheme.label } : {}),
+    about: themes.map((theme) => ({
+      "@type": "Thing",
+      name: theme.label,
+      url: toAbsoluteUrl(theme.slug),
+    })),
+    keywords: themes.map((theme) => theme.label),
+    inLanguage: "fr-FR",
+    publisher: {
+      "@id": JSON_LD_ENTITY_IDS.organization,
+    },
   };
 }
 

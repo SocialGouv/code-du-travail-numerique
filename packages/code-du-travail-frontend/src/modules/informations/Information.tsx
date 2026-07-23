@@ -11,6 +11,8 @@ import { EditoralContentReferenceBloc } from "@socialgouv/cdtn-types/build/hasur
 import { ContainerInformation } from "../layout/ContainerInformation";
 import DisplayContent from "../common/DisplayContent";
 import { References } from "../common";
+import { ThemeTags } from "../common/ThemeTags";
+import { ArticleJsonLd } from "../seo/jsonld";
 
 type Props = {
   date: string;
@@ -48,6 +50,8 @@ export const Information = ({
       }
     >
       <div className={fr.cx("fr-mb-6w")} id="contenu">
+        <ThemeTags breadcrumbs={breadcrumbs} />
+        <ArticleJsonLd title={title} breadcrumbs={breadcrumbs} />
         {intro && <DisplayContent content={intro} titleLevel={2} />}
         {contents.length === 1 ? (
           <>

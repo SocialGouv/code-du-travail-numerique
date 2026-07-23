@@ -8,6 +8,7 @@ import { ContentParser } from "./ContentParser";
 import { ElasticFicheTravailEmploiSection } from "@socialgouv/cdtn-types";
 import { SourceData } from "../layout/SourceData";
 import { ThemeTags } from "../common/ThemeTags";
+import { ArticleJsonLd } from "../seo/jsonld";
 import Html from "../common/Html";
 import "../../../public/static/fiches-mt.css";
 import { normalizeHeadingsToH2 } from "./utils";
@@ -53,6 +54,7 @@ export function FicheMinistereTravail({
       />
 
       <ThemeTags breadcrumbs={breadcrumbs} />
+      <ArticleJsonLd title={title} breadcrumbs={breadcrumbs} />
 
       <div className={fr.cx("fr-mb-5w")}>
         <Html>{intro}</Html>

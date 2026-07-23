@@ -5,6 +5,7 @@ import { ElasticFicheServicePublic } from "./queries";
 import { ContainerRichWithBreadcrumbs } from "../layout/ContainerRichWithBreadcrumbs";
 import { SourceData } from "../layout/SourceData";
 import { ThemeTags } from "../common/ThemeTags";
+import { ArticleJsonLd } from "../seo/jsonld";
 import "../../../public/static/fiches-mt.css";
 import { FicheServicePublic } from "./builder";
 import { ReferenceList } from "../common/ReferencesList";
@@ -50,6 +51,7 @@ export function FicheServicePublicContainer({
       />
 
       <ThemeTags breadcrumbs={breadcrumbs} />
+      <ArticleJsonLd title={title} breadcrumbs={breadcrumbs} />
 
       <div className={fr.cx("fr-mb-5w")}>
         <FicheServicePublic data={raw.children} />

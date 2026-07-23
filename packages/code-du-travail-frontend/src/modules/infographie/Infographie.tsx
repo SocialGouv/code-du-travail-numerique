@@ -5,6 +5,8 @@ import { fr } from "@codegouvfr/react-dsfr";
 import { DownloadInfographicTile, InfographicElement } from "./component";
 import DisplayContent from "../common/DisplayContent";
 import { References } from "../common";
+import { ThemeTags } from "../common/ThemeTags";
+import { ArticleJsonLd } from "../seo/jsonld";
 import { css } from "@styled-system/css";
 
 type Params = {
@@ -22,6 +24,11 @@ export const Infographie = ({ infographic }: Params) => {
       }))}
     >
       <h1 className={fr.cx("fr-mb-3w")}>{infographic.title}</h1>
+      <ThemeTags breadcrumbs={infographic.breadcrumbs} />
+      <ArticleJsonLd
+        title={infographic.title}
+        breadcrumbs={infographic.breadcrumbs}
+      />
       {infographic.description.length > 0 && (
         <div className={`${fr.cx("fr-text--lg")} ${description}`}>
           <DisplayContent titleLevel={2} content={infographic.description} />

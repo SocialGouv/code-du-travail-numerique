@@ -11,7 +11,8 @@ import { LetterModelContent } from "./components/LetterModelContent";
 import { RelatedItem } from "../documents";
 import { useModeleEvents } from "./tracking";
 import Breadcrumb from "@codegouvfr/react-dsfr/Breadcrumb";
-import { BreadcrumbListJsonLd } from "../seo/jsonld";
+import { ArticleJsonLd, BreadcrumbListJsonLd } from "../seo/jsonld";
+import { ThemeTags } from "../common/ThemeTags";
 import { notifyNpsTrigger } from "../nps/triggerBus";
 import { NpsTrigger } from "../nps/constants";
 
@@ -67,6 +68,7 @@ export const LetterModel = ({
           href: slug,
         }))}
       />
+      <ArticleJsonLd title={title} breadcrumbs={breadcrumbs} />
       <Breadcrumb
         currentPageLabel={title}
         homeLinkProps={{
@@ -88,6 +90,7 @@ export const LetterModel = ({
       >
         <div className={fr.cx("fr-col-12", "fr-col-lg-7")}>
           <h1 className={fr.cx("fr-mb-6w")}>{title}</h1>
+          <ThemeTags breadcrumbs={breadcrumbs} />
           <LetterModelContent
             slug={slug}
             date={date}

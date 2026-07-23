@@ -47,6 +47,30 @@ describe("<ThemeTags />", () => {
     expect(links[0]).toHaveTextContent("Congés et repos");
   });
 
+  it("should display the shortened title for long themes while keeping the full label link", () => {
+    const { getByText, queryByText } = render(
+      <ThemeTags
+        breadcrumbs={[
+          {
+            label: "Épargne salariale, participation et interessement",
+            position: 1,
+            slug: "/themes/epargne-salariale",
+          },
+        ]}
+      />
+    );
+
+    // Le tag affiche le libellé raccourci...
+    expect(getByText("Épargne salariale")).toHaveAttribute(
+      "href",
+      "/themes/epargne-salariale"
+    );
+    // ...et jamais le libellé complet.
+    expect(
+      queryByText("Épargne salariale, participation et interessement")
+    ).not.toBeInTheDocument();
+  });
+
   it("should render nothing when there is no breadcrumb", () => {
     const { container } = render(<ThemeTags breadcrumbs={[]} />);
 
