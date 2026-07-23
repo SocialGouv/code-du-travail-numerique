@@ -6,7 +6,7 @@ jest.mock("@socialgouv/matomo-next", () => ({
   sendEvent: jest.fn(),
 }));
 jest.mock("next/navigation", () => ({
-  usePathname: () => "/ma-page",
+  usePathname: () => "/contribution/mon-slug",
 }));
 
 const breadcrumbs = [
@@ -84,9 +84,12 @@ describe("<ThemeTags />", () => {
     getByText("Congés pour événement familial").click();
 
     expect(sendEvent).toHaveBeenCalledWith({
-      category: "clic_tag_theme",
-      action: "http://api.url/ma-page",
-      name: "/themes/conges-pour-evenement-familial",
+      category: "contribution",
+      action: "clic_tag_theme",
+      name: JSON.stringify({
+        slug: "mon-slug",
+        theme: "themes/conges-pour-evenement-familial",
+      }),
     });
   });
 });

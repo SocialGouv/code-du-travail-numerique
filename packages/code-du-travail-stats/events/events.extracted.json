@@ -50,6 +50,20 @@
       "tracking_method": "sendEvent"
     },
     {
+      "category": "<source>",
+      "action": "clic_tag_theme",
+      "name_pattern": "<JSON.stringify({ slug: rest.join(\"/\"), theme: toEventName(themeSlug), })>",
+      "resolution": "dynamic",
+      "emit_function": "emitClickThemeTag",
+      "file": "packages/code-du-travail-frontend/src/modules/common/tracking.ts",
+      "line": 46,
+      "enum_refs": [
+        "CommonCategory.CLICK_THEME_TAG",
+        "JSON.stringify"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
       "category": "accord_enterprise_search",
       "action": "click_accord",
       "name_pattern": "<url>",
@@ -478,22 +492,9 @@
       "resolution": "dynamic",
       "emit_function": "emitClickShare",
       "file": "packages/code-du-travail-frontend/src/modules/common/tracking.ts",
-      "line": 30,
+      "line": 36,
       "enum_refs": [
         "CommonCategory.CLICK_SHARE"
-      ],
-      "tracking_method": "sendEvent"
-    },
-    {
-      "category": "clic_tag_theme",
-      "action": "<currentPageUrl>",
-      "name_pattern": "<themeSlug>",
-      "resolution": "dynamic",
-      "emit_function": "emitClickThemeTag",
-      "file": "packages/code-du-travail-frontend/src/modules/common/tracking.ts",
-      "line": 38,
-      "enum_refs": [
-        "CommonCategory.CLICK_THEME_TAG"
       ],
       "tracking_method": "sendEvent"
     },
@@ -1378,7 +1379,7 @@
       "resolution": "dynamic",
       "emit_function": "emitSelectRelated",
       "file": "packages/code-du-travail-frontend/src/modules/common/tracking.ts",
-      "line": 23,
+      "line": 29,
       "enum_refs": [
         "CommonCategory.SELECTED_RELATED",
         "JSON.stringify"

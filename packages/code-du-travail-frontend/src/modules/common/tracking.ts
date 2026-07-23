@@ -16,8 +16,14 @@ type SocialNetwork =
   | "whatsapp"
   | "copier";
 
+// Slug d'event Matomo = chemin sans le slash initial (`themes/mon-slug`,
+// `contribution/mon-slug`) : type de page + slug, sans l'URL complète.
+// Harmonisé avec les autres events récents (cf. nps/tracking.ts).
+const toEventName = (path: string): string => path.replace(/^\/+/, "");
+
 export const useCommonTracking = () => {
-  const currentPageUrl = (SITE_URL + usePathname()) as string;
+  const pathname = usePathname() ?? "";
+  const currentPageUrl = (SITE_URL + pathname) as string;
 
   const emitSelectRelated = (selection: string | undefined) => {
     sendEvent({
@@ -35,10 +41,17 @@ export const useCommonTracking = () => {
   };
 
   const emitClickThemeTag = (themeSlug: string) => {
+    // pathname "/contribution/mon-slug" → source (type de page) + slug du contenu.
+    const [, source = "", ...rest] = pathname.split("/");
     sendEvent({
-      category: CommonCategory.CLICK_THEME_TAG,
-      action: currentPageUrl,
-      name: themeSlug,
+      // category = source de la page (contribution, information, …) ;
+      // action = clic_tag_theme ; name = { slug de la page, thème cliqué }.
+      category: source,
+      action: CommonCategory.CLICK_THEME_TAG,
+      name: JSON.stringify({
+        slug: rest.join("/"),
+        theme: toEventName(themeSlug),
+      }),
     });
   };
 
