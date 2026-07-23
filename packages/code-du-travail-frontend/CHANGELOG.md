@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.236.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.235.0...v4.236.0) (2026-07-23)
+
+
+### Bug Fixes
+
+* **nps:** ne plus afficher pendant un jour la fenêtre du NPS si l'utilisateur clique sur ne pas répondre ([#7406](https://github.com/SocialGouv/code-du-travail-numerique/issues/7406)) ([f6afbc5](https://github.com/SocialGouv/code-du-travail-numerique/commit/f6afbc5f3e85a880ffaff772d8683dde34379fe7))
+
+
+### Features
+
+* **contribution:** réinitialise la modale CC à l'arrivée externe et ajoute le nom de la CC en H2 ([#7389](https://github.com/SocialGouv/code-du-travail-numerique/issues/7389)) ([fea16ea](https://github.com/SocialGouv/code-du-travail-numerique/commit/fea16ea6f085b8c46b9cc1c501d8474f9ecb5933))
+
+
+
+
+
 # [4.235.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.234.0...v4.235.0) (2026-07-21)
 
 
