@@ -65,6 +65,34 @@ const formatContribution = (
   };
 };
 
+// Champs du document générique nécessaires au bloc de sélection de CC : les
+// documents conventionnels ne portent pas ccSupported/ccUnextended/type, seul
+// le document générique frère permet de classifier une CC choisie par l'usager.
+export type GenericContributionInfos = Pick<
+  ContributionElasticDocument,
+  "ccSupported" | "ccUnextended" | "type" | "messageBlockGenericNoCDT"
+>;
+
+export const fetchGenericContributionInfos = async (
+  genericSlug: string
+): Promise<GenericContributionInfos | undefined> =>
+  fetchDocument<
+    GenericContributionInfos,
+    keyof DocumentElasticResult<GenericContributionInfos>
+  >(["ccSupported", "ccUnextended", "type", "messageBlockGenericNoCDT"], {
+    index: elasticDocumentsIndex,
+    query: {
+      bool: {
+        filter: [
+          { term: { source: SOURCES.CONTRIBUTIONS } },
+          { term: { slug: genericSlug } },
+          { term: { isPublished: true } },
+        ],
+      },
+    },
+    size: 1,
+  });
+
 export const fetchContributionBySlug = async (
   slug: string
 ): Promise<Contribution | undefined> => {

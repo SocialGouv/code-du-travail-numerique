@@ -241,9 +241,16 @@ function renderChildren(
 
 const getHeadingElement = (params: Options, domNode) => {
   const titleLevel = params.titleLevel;
+  const offset = params.visualOffset ?? 0;
   const Tag = ("h" + titleLevel) as ElementType;
+  // Le tag porte le niveau sémantique. Quand un décalage visuel est demandé
+  // (contenu placé sous un titre de section), on force la taille DSFR du niveau
+  // « parent » via `fr-h{n}` pour que l'apparence ne change pas malgré le tag
+  // plus profond.
+  const visualLevel = Math.min(6, Math.max(2, titleLevel + offset));
+  const sizeClass = offset !== 0 ? ` fr-h${visualLevel}` : "";
   return titleLevel <= 6 ? (
-    <Tag className={fr.cx("fr-mt-2w")}>
+    <Tag className={`${fr.cx("fr-mt-2w")}${sizeClass}`}>
       {renderChildren(domNode, false, options(params))}
     </Tag>
   ) : (
@@ -255,6 +262,11 @@ const getHeadingElement = (params: Options, domNode) => {
 
 type Options = {
   titleLevel: numberLevel;
+  // Décalage entre le niveau sémantique (tag `h{titleLevel}`) et la taille
+  // visuelle appliquée (`fr-h{titleLevel + visualOffset}`). 0 = comportement
+  // historique (taille par défaut du tag). Négatif = titres plus profonds mais
+  // conservant l'apparence du niveau parent.
+  visualOffset?: number;
   infographics: ContributionInfographicFull[];
   disableLink: boolean;
   smicHourly?: number;
@@ -450,6 +462,7 @@ const options = (params: Options): HTMLReactParserOptions => {
                           xssWrapper(infographic.transcription),
                           options({
                             titleLevel,
+                            visualOffset: params.visualOffset,
                             infographics: params.infographics,
                             disableLink: params.disableLink,
                             smicHourly: params.smicHourly,
@@ -560,6 +573,9 @@ const iconStyles = css({
 type Props = {
   content: string;
   titleLevel: numberLevel;
+  // cf. Options.visualOffset : conserve la taille visuelle du niveau parent
+  // tout en descendant le niveau sémantique des titres du contenu.
+  visualOffset?: number;
   extra?: {
     infographics?: ContributionInfographicFull[];
     disableLink?: boolean;
@@ -571,6 +587,7 @@ type Props = {
 const DisplayContent = ({
   content,
   titleLevel,
+  visualOffset,
   extra,
 }: Props): string | JSX.Element | JSX.Element[] => {
   try {
@@ -579,6 +596,7 @@ const DisplayContent = ({
       xssWrapper(content),
       options({
         titleLevel,
+        visualOffset,
         infographics: extra?.infographics ?? [],
         disableLink: extra?.disableLink ?? false,
         smicHourly: extra?.smicHourly,

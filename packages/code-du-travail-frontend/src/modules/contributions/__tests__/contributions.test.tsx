@@ -1,4 +1,10 @@
-import { act, fireEvent, render, RenderResult } from "@testing-library/react";
+import {
+  act,
+  fireEvent,
+  render,
+  RenderResult,
+  waitFor,
+} from "@testing-library/react";
 import React from "react";
 import userEvent from "@testing-library/user-event";
 
@@ -96,6 +102,66 @@ describe("<ContributionLayout />", () => {
     const ccLink = rendering.getByRole("link", { name: "Nom de la CC" });
     expect(ccLink).toHaveAttribute("href", "/convention-collective/cc-slug");
   });
+  it("should display the branch H2 above the answer on a CC-specific contribution", () => {
+    rendering = render(
+      <ContributionLayout
+        contribution={{
+          ...contribution,
+          idcc: "0029",
+          isGeneric: false,
+          ccnSlug: "cc-slug",
+          ccnShortTitle: "Nom de la CC",
+        }}
+      />
+    );
+    const heading = ui.branchAnswerTitle.get();
+    expect(heading.textContent).toBe(
+      "Réponse pour la convention : Nom de la CC"
+    );
+  });
+  it("hiérarchise les titres : un seul h2 (la réponse), tout le reste en h3", () => {
+    rendering = render(
+      <ContributionLayout
+        contribution={{
+          ...contribution,
+          idcc: "0029",
+          isGeneric: false,
+          ccnSlug: "cc-slug",
+          ccnShortTitle: "Nom de la CC",
+          content: '<span class="title">Ma section</span><p>texte</p>',
+          references: [{ title: "Article 1", url: "https://exemple.test" }],
+          messageBlock: "Un message d'attention",
+          relatedItems: [
+            {
+              title: "Articles liés",
+              items: [
+                { title: "Un lien", url: "/lien", source: "contributions" },
+              ],
+            },
+          ],
+        }}
+      />
+    );
+    // Un seul h2 : le titre de la réponse. Tout le reste descend en h3.
+    const h2s = rendering.getAllByRole("heading", { level: 2 });
+    expect(h2s).toHaveLength(1);
+    expect(h2s[0].textContent).toContain("Réponse pour la convention");
+    // Contenu, Références et Attention passent en h3.
+    const contentHeading = rendering.getByRole("heading", {
+      level: 3,
+      name: "Ma section",
+    });
+    expect(contentHeading).toBeInTheDocument();
+    // …mais conservent la taille visuelle du niveau parent (fr-h2) : le design
+    // ne bouge pas.
+    expect(contentHeading.className).toContain("fr-h2");
+    expect(
+      rendering.getByRole("heading", { level: 3, name: "Références" })
+    ).toBeInTheDocument();
+    expect(
+      rendering.getByRole("heading", { level: 3, name: "Attention" })
+    ).toBeInTheDocument();
+  });
   describe("base", () => {
     beforeEach(async () => {
       window.localStorage.clear();
@@ -128,6 +194,11 @@ describe("<ContributionLayout />", () => {
 
       expect(rendering.getByText("my content")).toBeInTheDocument();
       expect(pushMock).not.toHaveBeenCalled();
+      // H2 « Code du travail » au-dessus de la réponse, visible avec elle.
+      expect(ui.cdtAnswerTitle.get()).toBeInTheDocument();
+      expect(
+        rendering.container.querySelector("#cdt")?.className
+      ).not.toContain("fr-hidden");
     });
 
     it("should display an error when clicking 'Afficher les informations' without selecting any radio option", async () => {
@@ -335,25 +406,34 @@ describe("<ContributionLayout />", () => {
     });
   });
 
-  describe("auto-redirect from header CC", () => {
-    it("should redirect to CC-specific page when a valid agreement is in localStorage", () => {
-      window.localStorage.setItem(
-        "convention",
-        JSON.stringify({
-          id: "0016",
-          num: 16,
-          shortTitle:
-            "Transports routiers et activités auxiliaires du transport",
-          slug: "16-transports-routiers-et-activites-auxiliaires-du-transport",
-          title:
-            "Convention collective nationale des transports routiers et activités auxiliaires du transport du 21 décembre 1950",
-        })
-      );
-      render(<ContributionLayout contribution={contribution} />);
-      expect(replaceMock).toHaveBeenCalledWith("/contribution/16-slug");
+  describe("arrivée #cdt depuis une page CC", () => {
+    beforeEach(() => {
+      window.localStorage.clear();
+      window.location.hash = "#cdt";
     });
 
-    it("should not redirect when agreement is unsupported", () => {
+    afterEach(() => {
+      window.location.hash = "";
+    });
+
+    it("affiche la réponse Code du travail avec « je ne souhaite pas renseigner » cochée (storage vide)", async () => {
+      rendering = render(<ContributionLayout contribution={contribution} />);
+
+      await waitFor(() => {
+        expect(
+          (ui.generic.radioNoAgreement.get() as HTMLInputElement).checked
+        ).toBe(true);
+      });
+      expect(
+        rendering.container.querySelector("#cdt")?.className
+      ).not.toContain("fr-hidden");
+      expect(ui.cdtAnswerTitle.get()).toBeInTheDocument();
+      // Pré-cochage automatique : aucun événement Matomo (pas une action usager).
+      expect(sendEvent).not.toHaveBeenCalled();
+      expect(replaceMock).not.toHaveBeenCalled();
+    });
+
+    it("affiche la réponse avec la CC non traitée pré-remplie et son alerte (storage avec CC non traitée)", async () => {
       window.localStorage.setItem(
         "convention",
         JSON.stringify({
@@ -364,11 +444,92 @@ describe("<ContributionLayout />", () => {
           title: "Convention collective nationale de l'industrie du pétrole",
         })
       );
-      render(<ContributionLayout contribution={contribution} />);
+
+      rendering = render(<ContributionLayout contribution={contribution} />);
+
+      await waitFor(() => {
+        expect(
+          (ccUi.radio.agreementSearchOption.get() as HTMLInputElement).checked
+        ).toBe(true);
+      });
+      expect(
+        rendering.container.querySelector("#cdt")?.className
+      ).not.toContain("fr-hidden");
+      expect(ui.generic.nonTreatedInfo.query()).toBeInTheDocument();
       expect(replaceMock).not.toHaveBeenCalled();
     });
 
-    it("should not redirect when agreement is unextended", () => {
+    it("ne redirige pas vers la page CC (hash #cdt), même avec une CC valide en storage", async () => {
+      window.localStorage.setItem(
+        "convention",
+        JSON.stringify({
+          id: "0016",
+          num: 16,
+          shortTitle:
+            "Transports routiers et activités auxiliaires du transport",
+          slug: "16-transports-routiers-et-activites-auxiliaires-du-transport",
+          title: "Convention collective nationale des transports routiers",
+        })
+      );
+
+      render(<ContributionLayout contribution={contribution} />);
+
+      await new Promise((resolve) => setTimeout(resolve, 100));
+      expect(replaceMock).not.toHaveBeenCalled();
+    });
+  });
+
+  describe("arrivée avec une CC enregistrée (auto-redirection)", () => {
+    // Une CC mémorisée et traitée renvoie directement vers la page CC. Pas de
+    // boucle : « Réinitialiser » (page CC) efface la CC avant de revenir sur
+    // la générique, et les hash #retour / #cdt désactivent la redirection.
+    const validAgreement = {
+      id: "0016",
+      num: 16,
+      shortTitle: "Transports routiers et activités auxiliaires du transport",
+      slug: "16-transports-routiers-et-activites-auxiliaires-du-transport",
+      title:
+        "Convention collective nationale des transports routiers et activités auxiliaires du transport du 21 décembre 1950",
+    };
+
+    beforeEach(() => {
+      window.localStorage.clear();
+    });
+
+    afterEach(() => {
+      window.location.hash = "";
+      window.localStorage.clear();
+    });
+
+    it("redirige vers la page CC quand une CC traitée est en storage", async () => {
+      window.localStorage.setItem("convention", JSON.stringify(validAgreement));
+
+      render(<ContributionLayout contribution={contribution} />);
+
+      await waitFor(() => {
+        expect(replaceMock).toHaveBeenCalledWith("/contribution/16-slug");
+      });
+    });
+
+    it("ne redirige pas quand la CC en storage n'est pas traitée", async () => {
+      window.localStorage.setItem(
+        "convention",
+        JSON.stringify({
+          id: "1388",
+          num: 1388,
+          shortTitle: "Industrie du pétrole",
+          slug: "1388-industrie-du-petrole",
+          title: "Convention collective nationale de l'industrie du pétrole",
+        })
+      );
+
+      render(<ContributionLayout contribution={contribution} />);
+
+      await new Promise((resolve) => setTimeout(resolve, 100));
+      expect(replaceMock).not.toHaveBeenCalled();
+    });
+
+    it("ne redirige pas quand la CC en storage est non étendue", async () => {
       window.localStorage.setItem(
         "convention",
         JSON.stringify({
@@ -379,32 +540,27 @@ describe("<ContributionLayout />", () => {
           title: "Convention collective nationale des établissements privés",
         })
       );
+
       render(<ContributionLayout contribution={contribution} />);
+
+      await new Promise((resolve) => setTimeout(resolve, 100));
       expect(replaceMock).not.toHaveBeenCalled();
     });
 
-    it("should not redirect when hash is #retour", () => {
-      window.localStorage.setItem(
-        "convention",
-        JSON.stringify({
-          id: "0016",
-          num: 16,
-          shortTitle:
-            "Transports routiers et activités auxiliaires du transport",
-          slug: "16-transports-routiers-et-activites-auxiliaires-du-transport",
-          title:
-            "Convention collective nationale des transports routiers et activités auxiliaires du transport du 21 décembre 1950",
-        })
-      );
+    it("ne redirige pas avec le hash #retour (retour depuis « Réinitialiser »)", async () => {
+      window.localStorage.setItem("convention", JSON.stringify(validAgreement));
       window.location.hash = "#retour";
+
       render(<ContributionLayout contribution={contribution} />);
+
+      await new Promise((resolve) => setTimeout(resolve, 100));
       expect(replaceMock).not.toHaveBeenCalled();
-      window.location.hash = "";
     });
 
-    it("should not redirect when no agreement is in localStorage", () => {
-      window.localStorage.clear();
+    it("ne redirige pas sans CC en storage", async () => {
       render(<ContributionLayout contribution={contribution} />);
+
+      await new Promise((resolve) => setTimeout(resolve, 100));
       expect(replaceMock).not.toHaveBeenCalled();
     });
   });
