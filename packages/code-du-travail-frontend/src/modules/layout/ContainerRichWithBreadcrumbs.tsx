@@ -12,6 +12,7 @@ import { WhatsNewLink } from "./whatsnew";
 type Props = ContainerRichProps & {
   currentPage: string;
   breadcrumbs: BreadcrumbType[];
+  showShare?: boolean;
 };
 
 export const ContainerRichWithBreadcrumbs = ({
@@ -23,6 +24,7 @@ export const ContainerRichWithBreadcrumbs = ({
   currentPage,
   showFeedback = true,
   showWhatsNewLink = false,
+  showShare = false,
 }: Props) => {
   return (
     <div>
@@ -69,7 +71,7 @@ export const ContainerRichWithBreadcrumbs = ({
         >
           {showWhatsNewLink && <WhatsNewLink />}
           <RelatedItems relatedItems={relatedItems} />
-          <Share title={title} metaDescription={description} />
+          {showShare && <Share title={title} metaDescription={description} />}
         </div>
       </div>
     </div>

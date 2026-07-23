@@ -54,6 +54,8 @@ jobs:
         run: GH_TOKEN=${GITHUB_TOKEN} pnpm lerna version --force-publish --yes --conventional-commits --create-release github
         env:
           GITHUB_TOKEN: ${{ steps.token.outputs.token }}
+          # Skip husky pre-commit: parallel lint-staged races on .git/index.lock during the release commit
+          HUSKY: 0
       - name: Rebase master to dev
         run: |
           git config --global user.name "${NAME}"

@@ -1,9 +1,38 @@
+const path = require("path");
+
+// `next lint` a été supprimé dans Next 16 ; on invoque directement ESLint
+// (flat config `eslint.config.mjs`), comme le script `lint` du package. Les
+// chemins absolus fournis par lint-staged sont passés tels quels à ESLint.
 const buildEslintCommand = (filenames) =>
-  `next lint --fix --file ${filenames.map((file) => file.split(process.cwd())[1]).join(" --file ")}`;
+  `eslint --fix ${filenames.map((file) => `"${file}"`).join(" ")}`;
+
+// Chemin absolu du catalogue d'events régénéré par cdtn-stats. lint-staged
+// exécute les tâches depuis la racine du dépôt, donc un chemin relatif au
+// package (`../code-du-travail-stats/...`) sort du dépôt et fait échouer le
+// `git add`. On résout depuis __dirname pour être robuste au cwd.
+const eventsCatalog = path.resolve(
+  __dirname,
+  "../code-du-travail-stats/events/events.extracted.json"
+);
 
 module.exports = {
   "**/*.ts?(x)": () => "tsc -p tsconfig.json --noEmit",
-  "*.{js,ts,tsx,jsx}": ["jest --bail --findRelatedTests"],
-  "*.{js,ts,tsx,jsx}": [buildEslintCommand],
+  // `--passWithNoTests` : `--findRelatedTests` sort en erreur (code 1) quand un
+  // fichier staged n'a aucun test associé (ex. un fichier de config) — ce qui
+  // ferait échouer le commit à tort.
+  // `--testPathIgnorePatterns` : exclut les tests `*.es.test.ts` / `*.script.test.ts`
+  // (comme le script `test:frontend`), qui exigent un vrai Elasticsearch et
+  // échouent donc en local — sans ça, `--findRelatedTests` peut les embarquer.
+  "*.{js,ts,tsx,jsx}": [
+    "jest --bail --passWithNoTests --testPathIgnorePatterns='.*\\.es\\.test\\.ts$|.*\\.script\\.test\\.ts$' --findRelatedTests",
+    buildEslintCommand,
+  ],
   "*.{js,ts,tsx,jsx,json,md}": ["pnpm format"],
+  // Régénère et re-stage le catalogue des events Matomo (JSON) dès qu'un module
+  // change. Le plan de tracking métier (events/TRACKING_PLAN.md) n'est plus
+  // généré par un algo : le régénérer via le skill Claude `/tracking-plan`.
+  "src/modules/**/*.{ts,tsx}": () => [
+    "pnpm -F @socialgouv/cdtn-stats events:extract",
+    `git add "${eventsCatalog}"`,
+  ],
 };

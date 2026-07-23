@@ -4,7 +4,7 @@
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
-  "version": "4.230.2",
+  "version": "4.236.0",
   "main": "build/index.js",
   "module": "build/index.js",
   "types": "build/index.d.ts",
@@ -43,11 +43,9 @@
     "jest": "^30.4.2",
     "lint-staged": "^16.2.7",
     "prettier": "^3.8.1",
+    "react": "~19.2.7",
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.54.0"
-  },
-  "peerDependencies": {
-    "react": ">=19"
   },
   "lint-staged": {
     "*.ts": [

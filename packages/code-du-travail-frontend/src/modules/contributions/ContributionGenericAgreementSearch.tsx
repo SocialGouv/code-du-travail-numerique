@@ -1,21 +1,18 @@
 "use client";
-import React, { useEffect, useState } from "react";
-import { Button } from "@codegouvfr/react-dsfr/Button";
+import React from "react";
 import { fr } from "@codegouvfr/react-dsfr";
 import Image from "next/image";
 import AgreementSearch from "../convention-collective/AgreementSearch.svg";
-import { useRouter } from "next/navigation";
 
-import { Agreement } from "src/modules/outils/indemnite-depart/types";
 import {
-  isAgreementSupported,
-  isAgreementUnextended,
-  isAgreementValid,
-} from "./contributionUtils";
+  Agreement,
+  AgreementRoute,
+} from "src/modules/outils/indemnite-depart/types";
 import { Contribution } from "./type";
-import Link from "../common/Link";
 import BlueCard from "../common/BlueCard";
-import { AgreementSearchForm } from "../convention-collective/AgreementSearch/AgreementSearchForm";
+import { focusableTitle } from "../common/focusableTitle";
+import { WhatIsAgreementLink } from "../convention-collective/WhatIsAgreementLink";
+import { AgreementSearchFormBlock } from "./AgreementSearchFormBlock";
 
 type Props = {
   onAgreementSelect: (agreement?: Agreement) => void;
@@ -24,8 +21,22 @@ type Props = {
   selectedAgreement?: Agreement;
   trackingActionName: string;
   personalizeTitleRef: React.RefObject<HTMLParagraphElement | null>;
+  /**
+   * IDCC (4 chiffres, ex. « 0675 ») de la page contribution personnalisée qui
+   * héberge le bloc. Quand la CC sélectionnée correspond, on ne navigue pas
+   * (pousser la même URL ne remonterait pas la page) : `onSameAgreementSelect`
+   * bascule la page en état résultat sur place.
+   */
+  currentIdcc?: string;
+  onSameAgreementSelect?: () => void;
+  /** Route pré-cochée à l'arrivée (retour depuis une page CC via #cdt). */
+  defaultRoute?: AgreementRoute;
 };
 
+// Façade « parcours interne » (fiche générique) : présentation « Personnalisez
+// la réponse… ». Toute la mécanique du formulaire vit dans
+// AgreementSearchFormBlock, partagée avec la façade « parcours externe »
+// (ContributionPersonalizedAgreementSearch).
 export function ContributionGenericAgreementSearch({
   contribution,
   onAgreementSelect,
@@ -33,63 +44,10 @@ export function ContributionGenericAgreementSearch({
   selectedAgreement,
   trackingActionName,
   personalizeTitleRef,
+  currentIdcc,
+  onSameAgreementSelect,
+  defaultRoute,
 }: Props) {
-  const router = useRouter();
-  const { slug } = contribution;
-  const [isValid, setIsValid] = useState(false);
-
-  useEffect(() => {
-    setIsValid(isAgreementValid(contribution, selectedAgreement));
-  }, [selectedAgreement]);
-
-  const selectedAgreementAlert = (agreement: Agreement) => {
-    const isSupported = isAgreementSupported(contribution, agreement);
-    const isUnextended = isAgreementUnextended(contribution, agreement);
-    if (contribution.isNoCDT) {
-      if (isUnextended && agreement.url)
-        return (
-          <>
-            Les dispositions de cette convention n’ont pas été étendues. Cela
-            signifie qu&apos;elles ne s&apos;appliquent qu&apos;aux entreprises
-            adhérentes à l&apos;une des organisations signataires de
-            l&apos;accord. Dans ce contexte, nous ne sommes pas en mesure
-            d&apos;identifier si cette règle s&apos;applique ou non au sein de
-            votre entreprise. Vous pouvez toutefois consulter la convention
-            collective{" "}
-            <Link
-              target="_blank"
-              href={agreement.url}
-              rel="noopener noreferrer"
-              title="Lien vers la convention collective"
-            >
-              ici
-            </Link>{" "}
-            dans le cas où elle s&apos;applique à votre situation.
-          </>
-        );
-      if (!isSupported && agreement.url)
-        return (
-          <>
-            Nous vous invitons à consulter votre convention collective qui peut
-            prévoir une réponse. Vous pouvez consulter votre convention
-            collective{" "}
-            <Link
-              target="_blank"
-              href={agreement.url}
-              rel="noopener noreferrer"
-              title="Lien vers la convention collective"
-            >
-              ici
-            </Link>
-            .
-            <br />
-            {contribution.messageBlockGenericNoCDT}
-          </>
-        );
-    }
-    if (!isSupported)
-      return <>Vous pouvez consulter les informations générales ci-dessous.</>;
-  };
   return (
     <BlueCard>
       <div className={fr.cx("fr-grid-row")}>
@@ -102,7 +60,7 @@ export function ContributionGenericAgreementSearch({
         <p
           ref={personalizeTitleRef}
           id="personalize-response-title"
-          className={fr.cx("fr-h3", "fr-mt-1w")}
+          className={`${fr.cx("fr-h3", "fr-mt-1w")} ${focusableTitle}`}
           role="heading"
           aria-level={2}
           tabIndex={-1}
@@ -110,41 +68,20 @@ export function ContributionGenericAgreementSearch({
           Personnalisez la réponse avec votre convention collective
         </p>
       </div>
-      <div>
-        <AgreementSearchForm
-          onAgreementSelect={onAgreementSelect}
-          selectedAgreementAlert={selectedAgreementAlert}
-          defaultAgreement={selectedAgreement}
-          trackingActionName={trackingActionName}
-          level={3}
-          onBackToPersonalize={() => {
-            const personalizeTitle = document.getElementById(
-              "personalize-response-title"
-            );
-            personalizeTitle?.focus();
-          }}
-        />
-        {((contribution.isNoCDT && isValid) || !contribution.isNoCDT) && (
-          <Button
-            className={fr.cx("fr-mt-2w")}
-            type="button"
-            onClick={(event) => {
-              onDisplayClick(isValid && !!selectedAgreement);
-              if (isValid && selectedAgreement) {
-                router.push(
-                  slug === "les-conges-pour-evenements-familiaux"
-                    ? `/contribution/${slug}/${selectedAgreement?.slug || selectedAgreement?.num}`
-                    : `/contribution/${selectedAgreement?.num}-${slug}`
-                );
-              } else {
-                event.preventDefault();
-              }
-            }}
-          >
-            Afficher les informations
-          </Button>
-        )}
-      </div>
+      <WhatIsAgreementLink />
+      <AgreementSearchFormBlock
+        contribution={contribution}
+        onAgreementSelect={onAgreementSelect}
+        onDisplayClick={onDisplayClick}
+        selectedAgreement={selectedAgreement}
+        trackingActionName={trackingActionName}
+        currentIdcc={currentIdcc}
+        onSameAgreementSelect={onSameAgreementSelect}
+        defaultRoute={defaultRoute}
+        onBackToPersonalizeFocus={() => {
+          document.getElementById("personalize-response-title")?.focus();
+        }}
+      />
     </BlueCard>
   );
 }

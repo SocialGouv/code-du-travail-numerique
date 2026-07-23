@@ -1,9 +1,9 @@
-import { fireEvent, render, waitFor } from "@testing-library/react";
+import { act, fireEvent, render, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { sendEvent } from "@socialgouv/matomo-next";
 import { mockAgreementSearch, ui } from "./ui";
 import { ui as ccUi } from "../../convention-collective/__tests__/ui";
-import { byText } from "testing-library-selector";
+import { byRole, byText } from "testing-library-selector";
 import { ContributionGeneric } from "../ContributionGeneric";
 import { Contribution } from "../type";
 
@@ -24,6 +24,7 @@ const replaceMock = jest.fn();
 jest.mock("next/navigation", () => ({
   redirect: jest.fn(),
   usePathname: jest.fn(),
+  useSearchParams: jest.fn(() => new URLSearchParams()),
   useRouter: () => ({
     push: pushMock,
     replace: replaceMock,
@@ -34,9 +35,7 @@ jest.mock("../../convention-collective/search", () => ({
   searchAgreement: jest.fn(),
 }));
 
-jest.mock(
-  "../../enterprise/EnterpriseAgreementSearch/EnterpriseAgreementSearchInput"
-);
+jest.mock("../../enterprise/queries");
 
 describe("<ContributionGeneric />", () => {
   beforeEach(() => {
@@ -183,7 +182,9 @@ describe("<ContributionGeneric />", () => {
     await userEvent.click(ccUi.radio.enterpriseSearchOption.get());
     await userEvent.click(ccUi.searchByEnterprise.input.get());
     await userEvent.type(ccUi.searchByEnterprise.input.get(), "carrefour");
-    await userEvent.click(ccUi.searchByEnterprise.submitButton.get());
+    await act(async () => {
+      await userEvent.click(ccUi.searchByEnterprise.submitButton.get());
+    });
     await waitFor(() => {
       fireEvent.click(
         ccUi.searchByEnterprise.resultLines.carrefour.title.get()
@@ -235,13 +236,33 @@ describe("<ContributionGeneric />", () => {
     ]);
   });
 
-  it("afficher les infos - sans CC", async () => {
+  it("afficher les infos - sans radio sélectionné : le clic sur le bouton principal est bloqué et n'envoie aucun évènement", async () => {
     expect(sendEvent).toHaveBeenCalledTimes(0);
 
     render(<ContributionGeneric contribution={contribution} />);
     expect(ui.generic.buttonDisplayInfo.get()).toBeInTheDocument();
     fireEvent.click(ui.generic.buttonDisplayInfo.get());
+    expect(ui.generic.missingRouteError.query()).toBeInTheDocument();
+    expect(sendEvent).toHaveBeenCalledTimes(0);
+  });
+
+  it("voir les infos générales via l'option « Je ne souhaite pas renseigner ma convention collective »", () => {
+    expect(sendEvent).toHaveBeenCalledTimes(0);
+
+    render(<ContributionGeneric contribution={contribution} />);
+
+    fireEvent.click(ui.generic.radioNoAgreement.get());
     expect(sendEvent).toHaveBeenCalledTimes(1);
+    expect(sendEvent).toHaveBeenLastCalledWith({
+      action: "click_p3",
+      category: "cc_search_type_of_users",
+      name: "/contribution/my-contrib",
+    });
+
+    fireEvent.click(ui.generic.buttonDisplayInfo.get());
+    // Afficher le Code du travail sans CC émet l'évènement d'affichage dédié
+    // (en plus du click_p3 déjà émis à la sélection de la dernière option).
+    expect(sendEvent).toHaveBeenCalledTimes(2);
     expect(sendEvent).toHaveBeenLastCalledWith({
       action: "click_afficher_les_informations_sans_CC",
       category: "contribution",
@@ -249,18 +270,177 @@ describe("<ContributionGeneric />", () => {
     });
   });
 
-  it("voir les infos générales", () => {
-    expect(sendEvent).toHaveBeenCalledTimes(0);
-
+  it("affiche le lien « La convention collective, c'est quoi ? » dès l'arrivée, en haut de la façade (et sans le dupliquer dans le flux entreprise)", async () => {
     render(<ContributionGeneric contribution={contribution} />);
 
-    fireEvent.click(ui.generic.linkDisplayInfo.get());
+    const link = byRole("link", {
+      name: /La convention collective, c'est quoi/,
+    });
 
-    expect(sendEvent).toHaveBeenCalledTimes(1);
-    expect(sendEvent).toHaveBeenCalledWith({
-      action: "click_p3",
-      category: "cc_search_type_of_users",
-      name: "/contribution/my-contrib",
+    // Le lien est affiché d'emblée en haut du bloc de personnalisation.
+    expect(link.get()).toHaveAttribute(
+      "href",
+      "/quelles-regles-s-appliquent-dans-votre-entreprise#convention-collective"
+    );
+
+    await userEvent.click(ccUi.radio.enterpriseSearchOption.get());
+    await userEvent.click(ccUi.searchByEnterprise.input.get());
+    await userEvent.type(ccUi.searchByEnterprise.input.get(), "carrefour");
+    await act(async () => {
+      await userEvent.click(ccUi.searchByEnterprise.submitButton.get());
+    });
+    await waitFor(() => {
+      fireEvent.click(
+        ccUi.searchByEnterprise.resultLines.carrefour.title.get()
+      );
+    });
+
+    expect(
+      byText(/Vous avez sélectionné la convention collective/).query()
+    ).toBeInTheDocument();
+    // Le lien n'est pas dupliqué dans le flux « recherche entreprise » : il
+    // reste unique (celui du haut de la façade).
+    expect(link.getAll()).toHaveLength(1);
+  });
+
+  describe("sélection de CC et erreurs inline", () => {
+    it("émet click_p1 quand on sélectionne une CC traitée", async () => {
+      mockAgreementSearch({
+        num: 1388,
+        shortTitle: "Industrie du pétrole",
+        id: "1388",
+      });
+
+      render(<ContributionGeneric contribution={contribution} />);
+      fireEvent.click(ccUi.radio.agreementSearchOption.get());
+      await userEvent.click(ccUi.searchByName.input.get());
+      await userEvent.type(ccUi.searchByName.input.get(), "1388");
+      await waitFor(() =>
+        expect(
+          ccUi.searchByName.autocompleteLines.IDCC1388.name.get()
+        ).toBeInTheDocument()
+      );
+      fireEvent.click(ccUi.searchByName.autocompleteLines.IDCC1388.name.get());
+
+      expect(sendEvent).toHaveBeenCalledWith({
+        action: "click_p1",
+        category: "cc_search_type_of_users",
+        name: "/contribution/my-contrib",
+      });
+    });
+
+    it("affiche le message d'erreur sous les radios quand on clique 'Afficher les informations' sans rien sélectionner", () => {
+      render(<ContributionGeneric contribution={contribution} />);
+
+      expect(ui.generic.missingRouteError.query()).not.toBeInTheDocument();
+
+      fireEvent.click(ui.generic.buttonDisplayInfo.get());
+
+      expect(ui.generic.missingRouteError.query()).toBeInTheDocument();
+      expect(pushMock).not.toHaveBeenCalled();
+    });
+
+    it("affiche une erreur inline sur la recherche de convention quand on clique 'Afficher les informations' sans avoir choisi de CC", () => {
+      render(<ContributionGeneric contribution={contribution} />);
+
+      fireEvent.click(ccUi.radio.agreementSearchOption.get());
+      expect(ui.generic.agreementRequiredError.query()).not.toBeInTheDocument();
+
+      fireEvent.click(ui.generic.buttonDisplayInfo.get());
+
+      expect(ui.generic.agreementRequiredError.query()).toBeInTheDocument();
+      expect(pushMock).not.toHaveBeenCalled();
+    });
+
+    it("affiche une erreur inline sur la recherche d'entreprise quand on clique 'Afficher les informations' sans avoir saisi d'entreprise", () => {
+      render(<ContributionGeneric contribution={contribution} />);
+
+      fireEvent.click(ccUi.radio.enterpriseSearchOption.get());
+      expect(
+        ui.generic.enterpriseRequiredError.query()
+      ).not.toBeInTheDocument();
+
+      fireEvent.click(ui.generic.buttonDisplayInfo.get());
+
+      expect(ui.generic.enterpriseRequiredError.query()).toBeInTheDocument();
+      expect(pushMock).not.toHaveBeenCalled();
+    });
+
+    it("affiche une erreur de sélection quand on a cherché une entreprise sans en choisir une", async () => {
+      render(<ContributionGeneric contribution={contribution} />);
+
+      fireEvent.click(ccUi.radio.enterpriseSearchOption.get());
+      await userEvent.click(ccUi.searchByEnterprise.input.get());
+      await userEvent.type(ccUi.searchByEnterprise.input.get(), "carrefour");
+      await userEvent.click(ccUi.searchByEnterprise.submitButton.get());
+
+      expect(
+        ui.generic.enterpriseSelectionRequiredError.query()
+      ).not.toBeInTheDocument();
+
+      fireEvent.click(ui.generic.buttonDisplayInfo.get());
+
+      expect(
+        ui.generic.enterpriseSelectionRequiredError.query()
+      ).toBeInTheDocument();
+      expect(pushMock).not.toHaveBeenCalled();
+    });
+
+    it("affiche une erreur de sélection quand l'entreprise a plusieurs conventions et qu'aucune n'est choisie", async () => {
+      render(<ContributionGeneric contribution={contribution} />);
+
+      fireEvent.click(ccUi.radio.enterpriseSearchOption.get());
+      await userEvent.click(ccUi.searchByEnterprise.input.get());
+      await userEvent.type(ccUi.searchByEnterprise.input.get(), "carrefour");
+      await act(async () => {
+        await userEvent.click(ccUi.searchByEnterprise.submitButton.get());
+      });
+
+      await waitFor(() =>
+        expect(byText("CARREFOUR HYPERMARCHES").get()).toBeInTheDocument()
+      );
+      fireEvent.click(byText("CARREFOUR HYPERMARCHES").get());
+
+      expect(
+        ui.generic.conventionSelectionRequiredError.query()
+      ).not.toBeInTheDocument();
+
+      fireEvent.click(ui.generic.buttonDisplayInfo.get());
+
+      expect(
+        ui.generic.conventionSelectionRequiredError.query()
+      ).toBeInTheDocument();
+      expect(pushMock).not.toHaveBeenCalled();
+    });
+  });
+
+  describe("retour sur le formulaire (#retour)", () => {
+    afterEach(() => {
+      window.location.hash = "";
+    });
+
+    it("scrolle et place le focus sur le titre « Personnalisez… » au retour (#retour)", async () => {
+      window.location.hash = "#retour";
+      const scrollSpy = jest
+        .spyOn(Element.prototype, "scrollIntoView")
+        .mockClear();
+
+      const { getByText } = render(
+        <ContributionGeneric contribution={contribution} />
+      );
+
+      const title = getByText(
+        "Personnalisez la réponse avec votre convention collective"
+      );
+
+      // Le focus et le scroll sont posés dans le même effet : une fois le
+      // focus sur le titre, le scroll a forcément eu lieu.
+      await waitFor(() => {
+        expect(document.activeElement).toBe(title);
+      });
+      expect(scrollSpy).toHaveBeenCalledWith({ behavior: "smooth" });
+
+      scrollSpy.mockRestore();
     });
   });
 });

@@ -1,7 +1,6 @@
 "use client";
 import React, { forwardRef, ReactNode } from "react";
 import { fr } from "@codegouvfr/react-dsfr";
-import { Share } from "../common/Share";
 import { ContributionContent } from "./ContributionContent";
 import Html from "../common/Html";
 import Link from "../common/Link";
@@ -10,6 +9,8 @@ import { ListWithArrow } from "../common/ListWithArrow";
 import { RelatedItems } from "../common/RelatedItems";
 import { RelatedItem } from "../documents";
 import { Contribution } from "./type";
+import { ContributionRating } from "./rating";
+import { focusableTitle } from "../common/focusableTitle";
 
 type Props = {
   contribution: Contribution;
@@ -25,30 +26,36 @@ export const ContributionGenericContent = forwardRef<
   HTMLParagraphElement,
   Props
 >(({ contribution, alertText, relatedItems, displayGeneric }, ref) => {
-  const { title, metas } = contribution;
-
   return (
     <>
-      <div className={fr.cx("fr-grid-row", "fr-grid-row--gutters", "fr-px-3v")}>
+      <div
+        className={fr.cx(
+          "fr-grid-row",
+          "fr-grid-row--gutters",
+          "fr-px-3v",
+          "fr-mb-6w"
+        )}
+      >
         <div
           tabIndex={-1}
           ref={ref}
-          className={fr.cx(
+          className={`${fr.cx(
             "fr-col-12",
-            "fr-col-md-8",
+            "fr-col-lg-8",
             "fr-mb-md-0",
             "fr-mt-2w",
             "fr-p-0",
             !displayGeneric && "fr-hidden"
-          )}
+          )} ${focusableTitle}`}
           id="cdt"
         >
+          <h2>Réponse d&apos;après le Code du Travail</h2>
           {alertText}
           <ContributionContent contribution={contribution} titleLevel={2} />
           {contribution.references.length > 0 && (
             <Accordion
               label="Références"
-              titleAs="h2"
+              titleAs="h3"
               className={fr.cx("fr-mt-6w")}
             >
               <ListWithArrow
@@ -69,7 +76,7 @@ export const ContributionGenericContent = forwardRef<
           )}
           {contribution.messageBlock && (
             <div className={fr.cx("fr-alert", "fr-alert--info", "fr-mt-6w")}>
-              <h2 className={fr.cx("fr-h5")}>Attention</h2>
+              <h3 className={fr.cx("fr-h5")}>Attention</h3>
               <Html>{contribution.messageBlock}</Html>
             </div>
           )}
@@ -78,13 +85,15 @@ export const ContributionGenericContent = forwardRef<
           className={fr.cx(
             "fr-col-12",
             "fr-col-md-4",
-            "fr-mt-6w",
+            // Aligne le haut de la colonne (widget de notation) sur le haut du
+            // texte principal (colonne de gauche, `fr-mt-2w`).
+            "fr-mt-2w",
             "fr-p-md-3w",
             !displayGeneric && "fr-hidden"
           )}
         >
-          <RelatedItems relatedItems={relatedItems} />
-          <Share title={title} metaDescription={metas.description} />
+          <ContributionRating contributionSlug={contribution.slug} level={3} />
+          <RelatedItems relatedItems={relatedItems} level={3} />
         </div>
       </div>
     </>

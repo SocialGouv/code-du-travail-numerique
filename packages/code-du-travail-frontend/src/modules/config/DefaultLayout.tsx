@@ -17,7 +17,7 @@ import {
 import { usePathname } from "next/navigation";
 import { MatomoAnalytics } from "./MatomoAnalytics";
 import { SearchModalProvider } from "../recherche/modal/SearchModalContext";
-import { AgreementModalProvider } from "../convention-collective/AgreementSelectionModal";
+import { NpsWidget } from "../nps";
 import { NonceProvider } from "./NonceContext";
 import { GovernmentOrganizationJsonLd, WebSiteJsonLd } from "../seo/jsonld";
 
@@ -74,15 +74,14 @@ export default function DefaultLayout({
             defaultColorScheme={defaultColorScheme}
           >
             <SearchModalProvider>
-              <AgreementModalProvider>
-                {children}
-                {showCookieBanner && !isWidgetPage && (
-                  <ConsentManager
-                    adsEnabled={isAdsEnabled()}
-                    heatmapEnabled={isHeatmapEnabled()}
-                  />
-                )}
-              </AgreementModalProvider>
+              {children}
+              {showCookieBanner && !isWidgetPage && (
+                <ConsentManager
+                  adsEnabled={isAdsEnabled()}
+                  heatmapEnabled={isHeatmapEnabled()}
+                />
+              )}
+              {!isWidgetPage && <NpsWidget />}
             </SearchModalProvider>
           </DsfrProvider>
           <MatomoAnalytics heatmapEnabled={heatMapEnabled} />

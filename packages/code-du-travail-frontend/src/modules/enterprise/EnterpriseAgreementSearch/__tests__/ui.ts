@@ -37,7 +37,6 @@ export const ui = {
         }),
         ccList: {
           idcc2120: byText("Banque IDCC 2120"),
-          idcc9999: byText("___Sans convention collective___ IDCC 9999"),
           idcc2931: byText("Activités de marchés financiers IDCC 2931"),
         },
       },
@@ -52,6 +51,15 @@ export const ui = {
         "Nous n'avons pas de réponse pour cette convention collective"
       ),
     },
+  },
+  partialAgreementCoverageAlert: byTestId("partial-agreement-coverage-alert"),
+  noConventionBanner: {
+    title: byText(
+      "Votre entreprise n'a pas renseigné de convention collective"
+    ),
+    description: byText(
+      "Pour plus d'informations, veuillez vous rapprocher de votre entreprise."
+    ),
   },
   enterpriseAgreementSelection: {
     carrefour: {

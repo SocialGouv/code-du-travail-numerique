@@ -4,10 +4,12 @@ import { Enterprise } from "../types";
 import RadioButtons from "@codegouvfr/react-dsfr/RadioButtons";
 import { EnterpriseAgreementSelectionDetail } from "./EnterpriseAgreementSelectionDetail";
 import { getEnterpriseAgreements } from "./utils";
+import { PartialAgreementCoverageAlert } from "./PartialAgreementCoverageAlert";
 import Button from "@codegouvfr/react-dsfr/Button";
 import { useEffect, useRef, useState } from "react";
 import { Agreement } from "src/modules/outils/indemnite-depart/types";
 import { AccessibleAlert } from "src/modules/outils/common/components/AccessibleAlert";
+import { WhatIsAgreementLink } from "../../convention-collective/WhatIsAgreementLink";
 
 type Props = {
   isInSimulator?: boolean;
@@ -17,6 +19,7 @@ type Props = {
   goBack: () => void;
   onAgreementSelect?: (agreement?: Agreement) => void;
   level: 2 | 3;
+  showWhatIsAgreementLink?: boolean;
 };
 
 export const EnterpriseAgreementSelectionForm = ({
@@ -27,6 +30,7 @@ export const EnterpriseAgreementSelectionForm = ({
   canContinueSimulationIfNoAgreement,
   isInSimulator,
   level,
+  showWhatIsAgreementLink = false,
 }: Props) => {
   const [agreement, setAgreement] = useState<Agreement | undefined>(
     selectedAgreement
@@ -59,6 +63,9 @@ export const EnterpriseAgreementSelectionForm = ({
             <>{agreements.length} conventions collectives trouvées&nbsp;:</>
           ))}
       </div>
+      {showWhatIsAgreementLink && !!agreements.length && (
+        <WhatIsAgreementLink />
+      )}
       <RadioButtons
         className={fr.cx("fr-mt-2w")}
         name="convention-collective"
@@ -80,6 +87,8 @@ export const EnterpriseAgreementSelectionForm = ({
           },
         }))}
       />
+      {enterprise.hasEstablishmentWithoutConvention &&
+        agreements.length > 0 && <PartialAgreementCoverageAlert />}
       {agreement && !agreement.contributions && (
         <AccessibleAlert
           severity="info"
@@ -112,7 +121,12 @@ export const EnterpriseAgreementSelectionForm = ({
                   </span>
                 )}
               </>
-            ) : undefined
+            ) : (
+              <span>
+                Vous pouvez consulter les dispositions générales du Code du
+                travail
+              </span>
+            )
           }
         />
       )}

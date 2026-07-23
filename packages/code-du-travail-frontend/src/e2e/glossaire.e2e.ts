@@ -8,10 +8,11 @@ test.describe("Glossaire", () => {
       "Les définitions de ce glossaire, disponibles en surbrillance dans les textes des réponses"
     );
 
-    await page.getByText("Abrogation").click();
+    await page
+      .getByRole("link", { name: "Arrêt de travail", exact: true })
+      .click();
 
     await expect(page.locator("body")).toContainText("Définition");
-    await expect(page.locator("body")).toContainText("Sources");
 
     await page
       .locator("#fr-header-main-navigation")

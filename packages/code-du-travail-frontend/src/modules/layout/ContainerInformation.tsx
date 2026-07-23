@@ -1,6 +1,5 @@
 import { fr } from "@codegouvfr/react-dsfr";
 import { RelatedItems } from "../common/RelatedItems";
-import { Share } from "../common/Share";
 import { ContainerRichProps } from "./ContainerRich";
 import { Breadcrumb as BreadcrumbType } from "@socialgouv/cdtn-types";
 import Breadcrumb from "@codegouvfr/react-dsfr/Breadcrumb";
@@ -18,8 +17,6 @@ export const ContainerInformation = ({
   header,
   children,
   relatedItems,
-  title,
-  description,
   breadcrumbs,
   currentPage,
 }: Props) => {
@@ -68,7 +65,6 @@ export const ContainerInformation = ({
           className={fr.cx("fr-col-12", "fr-col-offset-md-1", "fr-col-md-4")}
         >
           <RelatedItems relatedItems={relatedItems} />
-          <Share title={title} metaDescription={description} />
         </div>
       </div>
     </div>

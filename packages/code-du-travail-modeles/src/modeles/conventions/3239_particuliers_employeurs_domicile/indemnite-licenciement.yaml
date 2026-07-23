@@ -2,10 +2,6 @@ contrat salarié . convention collective . particuliers employeurs et emploi à 
   applicable si: indemnité de licenciement
   valeur: oui
 
-contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . résultat légal doit être calculé:
-  remplace: contrat salarié . indemnité de licenciement . résultat légal doit être ignoré
-  valeur: oui
-
 contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle:
   titre: Catégorie professionnelle
   description: La catégorie professionnelle du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>.
@@ -19,6 +15,10 @@ contrat salarié . convention collective . particuliers employeurs et emploi à 
 # Assistant maternel
 contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . assistante maternelle:
   applicable si: catégorie professionnelle = 'Assistant maternel'
+  valeur: oui
+
+contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . assistante maternelle . résultat légal doit être calculé:
+  remplace: contrat salarié . indemnité de licenciement . résultat légal doit être ignoré
   valeur: oui
 
 contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . assistante maternelle . type de licenciement:

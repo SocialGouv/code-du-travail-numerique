@@ -14,6 +14,19 @@ export default defineConfig({
         xl: "1248px",
         "2xl": "1536px",
       },
+      keyframes: {
+        // Salut de la main du widget NPS (cf. modules/nps/NpsHand.tsx).
+        "nps-hand-wiggle": {
+          "0%": { transform: "rotate(0deg)" },
+          "10%": { transform: "rotate(14deg)" },
+          "20%": { transform: "rotate(-8deg)" },
+          "30%": { transform: "rotate(14deg)" },
+          "40%": { transform: "rotate(-8deg)" },
+          "50%": { transform: "rotate(14deg)" },
+          "60%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(0deg)" },
+        },
+      },
     },
   },
   globalCss: {

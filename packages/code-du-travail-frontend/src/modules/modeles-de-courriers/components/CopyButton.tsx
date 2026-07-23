@@ -5,6 +5,8 @@ import { Button } from "@codegouvfr/react-dsfr/Button";
 import { useState, useRef } from "react";
 import { css } from "@styled-system/css";
 import { useModeleEvents } from "../tracking";
+import { notifyNpsTrigger } from "../../nps/triggerBus";
+import { NpsTrigger } from "../../nps/constants";
 
 export const CopyButton = ({ slug }: { slug: string }) => {
   const [isCopied, setCopied] = useState(false);
@@ -17,6 +19,8 @@ export const CopyButton = ({ slug }: { slug: string }) => {
       navigator?.clipboard?.writeText(elementsByClassName.innerText);
       setCopied(true);
       trackCopy();
+      // Déclencheur NPS (modèles de courrier uniquement).
+      notifyNpsTrigger(NpsTrigger.COPY);
       // Focus the "Modèle copié" message for screen readers
       setTimeout(() => {
         modelCopiedRef.current?.focus();

@@ -11,8 +11,13 @@ import Link from "./Link";
 
 export const RelatedItems = ({
   relatedItems = [],
+  // Niveau de titre (aria-level) du bloc « Articles liés ». 2 par défaut
+  // (pages où il vit directement sous le h1) ; 3 quand il est imbriqué sous un
+  // titre de section (fiches contribution).
+  level = 2,
 }: {
   relatedItems: { items: RelatedItem[]; title: string }[];
+  level?: 2 | 3;
 }) => {
   const { emitSelectRelated } = useCommonTracking();
   if (relatedItems.length === 0) {
@@ -28,7 +33,7 @@ export const RelatedItems = ({
               <div
                 className={fr.cx("fr-mb-2w", "fr-text--lead")}
                 role="heading"
-                aria-level={2}
+                aria-level={level}
               >
                 <strong>{title}&nbsp;:</strong>
               </div>

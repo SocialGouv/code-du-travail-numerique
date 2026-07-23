@@ -3,11 +3,10 @@ import parse, {
   domToReact,
   Element,
   HTMLReactParserOptions,
-  Text,
 } from "html-react-parser";
 import React, { ElementType, JSX } from "react";
-import { v4 as generateUUID } from "uuid";
 import { AccordionWithAnchor } from "./AccordionWithAnchor";
+import { TableFullscreenWrapper } from "./TableFullscreenWrapper";
 
 import { fr } from "@codegouvfr/react-dsfr";
 import Link from "./Link";
@@ -47,10 +46,23 @@ const mapItem = (params: Options, domNode: Element, summary: Element) => ({
     trim: true,
   }),
 });
+// Génère un id déterministe et unique à partir du titre de l'accordéon.
+// La première occurrence d'un slug garde le slug « propre » (ex: `mon-titre`)
+// pour préserver le lien par ancre (#mon-titre). Les collisions suivantes sont
+// suffixées (`mon-titre-2`, `mon-titre-3`, ...). Le registre `usedIds` est
+// partagé sur toute la durée du parsing pour garantir l'unicité dans le DOM.
+const makeUniqueAccordionId = (title: string, usedIds: Map<string, number>) => {
+  const base = slugify(title);
+  const count = usedIds.get(base) ?? 0;
+  usedIds.set(base, count + 1);
+  return count === 0 ? base : `${base}-${count + 1}`;
+};
+
 const mapToAccordion = (
   titleLevel: numberLevel,
   isParent: boolean,
-  items: any[]
+  items: any[],
+  usedIds: Map<string, number>
 ) => {
   const props = titleLevel <= 6 ? { titleLevel } : {};
 
@@ -61,9 +73,7 @@ const mapToAccordion = (
         data-testid="contrib-accordion"
         items={items.map((item) => ({
           ...item,
-          ...(isParent
-            ? { id: slugify(item.title) }
-            : { id: slugify(item.title) + "_" + generateUUID() }),
+          ...{ id: makeUniqueAccordionId(item.title, usedIds) },
         }))}
         titleAs={`h${titleLevel}`}
       />
@@ -100,7 +110,7 @@ function hasDetailsParent(domNode: Element) {
 
 const theadMaxRowspan = (tr: Element) => {
   const rowspans = tr.children.map((child) => {
-    if (child.type === "tag" && child.name === "td") {
+    if (child.type === "tag" && (child.name === "td" || child.name === "th")) {
       return parseInt(child.attribs["rowspan"] ?? -1);
     } else {
       return -1;
@@ -141,14 +151,14 @@ const getData = (el?: ChildNode) => {
 };
 
 const mapTbody = (tbody: Element, params: Options) => {
-  let theadChildren: Element[] = [];
+  const theadChildren: Element[] = [];
   const firstLine = getFirstElementChild(tbody);
 
   if (firstLine) {
-    let maxRowspan = theadMaxRowspan(firstLine);
+    const maxRowspan = theadMaxRowspan(firstLine);
     theadChildren.push(firstLine);
     for (let i = 1; i < maxRowspan; i++) {
-      let child = getFirstElementChild(tbody);
+      const child = getFirstElementChild(tbody);
       if (child) {
         theadChildren.push(child);
       }
@@ -156,56 +166,58 @@ const mapTbody = (tbody: Element, params: Options) => {
   }
 
   return (
-    <div className={fr.cx("fr-table", "fr-mb-2w")}>
-      <div className={fr.cx("fr-table__wrapper")}>
-        <div className={fr.cx("fr-table__container")}>
-          <div className={fr.cx("fr-table__content")}>
-            <table>
-              {theadChildren.length > 0 && (
-                <>
-                  {theadChildren[0].children[0] && (
-                    <caption className={fr.cx("fr-hidden")}>
-                      {getData(theadChildren[0].childNodes[0] as any)}
-                    </caption>
-                  )}
-                  <thead>
-                    {theadChildren.map((child, rowIndex) => {
-                      return (
-                        <tr key={`tr-${rowIndex}`}>
-                          {domToReact(
-                            child.children.map((c) => {
-                              if (c instanceof Element && c.attribs) {
-                                return {
-                                  ...c,
-                                  name: "th",
-                                  attribs: {
-                                    ...c.attribs,
-                                    scope: "col",
-                                  },
-                                };
-                              } else {
-                                return {
-                                  ...c,
-                                  name: "th",
-                                };
+    <TableFullscreenWrapper onOpenFullscreen={params.onTableFullscreen}>
+      <div className={fr.cx("fr-table", "fr-mb-2w")}>
+        <div className={fr.cx("fr-table__wrapper")}>
+          <div className={fr.cx("fr-table__container")}>
+            <div className={fr.cx("fr-table__content")}>
+              <table>
+                {theadChildren.length > 0 && (
+                  <>
+                    {theadChildren[0].children[0] && (
+                      <caption className={fr.cx("fr-hidden")}>
+                        {getData(theadChildren[0].childNodes[0] as any)}
+                      </caption>
+                    )}
+                    <thead>
+                      {theadChildren.map((child, rowIndex) => {
+                        return (
+                          <tr key={`tr-${rowIndex}`}>
+                            {domToReact(
+                              child.children.map((c) => {
+                                if (c instanceof Element && c.attribs) {
+                                  return {
+                                    ...c,
+                                    name: "th",
+                                    attribs: {
+                                      ...c.attribs,
+                                      scope: "col",
+                                    },
+                                  };
+                                } else {
+                                  return {
+                                    ...c,
+                                    name: "th",
+                                  };
+                                }
+                              }) as DOMNode[],
+                              {
+                                trim: true,
                               }
-                            }) as DOMNode[],
-                            {
-                              trim: true,
-                            }
-                          )}
-                        </tr>
-                      );
-                    })}
-                  </thead>
-                </>
-              )}
-              <tbody>{renderChildren(tbody, false, options(params))}</tbody>
-            </table>
+                            )}
+                          </tr>
+                        );
+                      })}
+                    </thead>
+                  </>
+                )}
+                <tbody>{renderChildren(tbody, false, options(params))}</tbody>
+              </table>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </TableFullscreenWrapper>
   );
 };
 
@@ -229,9 +241,16 @@ function renderChildren(
 
 const getHeadingElement = (params: Options, domNode) => {
   const titleLevel = params.titleLevel;
+  const offset = params.visualOffset ?? 0;
   const Tag = ("h" + titleLevel) as ElementType;
+  // Le tag porte le niveau sémantique. Quand un décalage visuel est demandé
+  // (contenu placé sous un titre de section), on force la taille DSFR du niveau
+  // « parent » via `fr-h{n}` pour que l'apparence ne change pas malgré le tag
+  // plus profond.
+  const visualLevel = Math.min(6, Math.max(2, titleLevel + offset));
+  const sizeClass = offset !== 0 ? ` fr-h${visualLevel}` : "";
   return titleLevel <= 6 ? (
-    <Tag className={fr.cx("fr-mt-2w")}>
+    <Tag className={`${fr.cx("fr-mt-2w")}${sizeClass}`}>
       {renderChildren(domNode, false, options(params))}
     </Tag>
   ) : (
@@ -243,11 +262,20 @@ const getHeadingElement = (params: Options, domNode) => {
 
 type Options = {
   titleLevel: numberLevel;
+  // Décalage entre le niveau sémantique (tag `h{titleLevel}`) et la taille
+  // visuelle appliquée (`fr-h{titleLevel + visualOffset}`). 0 = comportement
+  // historique (taille par défaut du tag). Négatif = titres plus profonds mais
+  // conservant l'apparence du niveau parent.
+  visualOffset?: number;
   infographics: ContributionInfographicFull[];
   disableLink: boolean;
   smicHourly?: number;
   challengerAsterisk: boolean;
   challengerState?: { substituted: boolean };
+  onTableFullscreen?: () => void;
+  // Registre partagé des ids d'accordéon déjà attribués, pour garantir
+  // des ids uniques et déterministes (cf. makeUniqueAccordionId).
+  usedIds: Map<string, number>;
 };
 const options = (params: Options): HTMLReactParserOptions => {
   const { titleLevel } = params;
@@ -320,6 +348,27 @@ const options = (params: Options): HTMLReactParserOptions => {
             domNode
           );
         }
+        if (
+          domNode.name === "span" &&
+          domNode.attribs.class === "good-to-know"
+        ) {
+          return (
+            <span className={`${fr.cx("fr-mb-3w")} ${textWithIcon}`}>
+              <Image
+                src="/static/assets/img/good-to-know.svg"
+                alt=""
+                width={35}
+                height={35}
+                className={iconStyles}
+              />
+              {renderChildren(
+                domNode,
+                true,
+                options({ ...params, challengerAsterisk: false })
+              )}
+            </span>
+          );
+        }
         if (domNode.name === "details") {
           const items: any[] = [];
           let id = 0;
@@ -347,7 +396,8 @@ const options = (params: Options): HTMLReactParserOptions => {
             mapToAccordion(
               accordionTitleLevel,
               !hasDetailsParent(domNode),
-              items
+              items,
+              params.usedIds
             )
           ) : (
             <></>
@@ -412,11 +462,14 @@ const options = (params: Options): HTMLReactParserOptions => {
                           xssWrapper(infographic.transcription),
                           options({
                             titleLevel,
+                            visualOffset: params.visualOffset,
                             infographics: params.infographics,
                             disableLink: params.disableLink,
                             smicHourly: params.smicHourly,
                             challengerState: params.challengerState,
                             challengerAsterisk: params.challengerAsterisk,
+                            onTableFullscreen: params.onTableFullscreen,
+                            usedIds: params.usedIds,
                           })
                         )}
                       </>
@@ -488,6 +541,8 @@ const options = (params: Options): HTMLReactParserOptions => {
           if (params.disableLink) {
             return <>{renderChildren(domNode, true, options(params))}</>;
           }
+          const attibsWithoutClass = { ...domNode.attribs };
+          delete attibsWithoutClass.class;
           return (
             <Link href={domNode.attribs.href} {...domNode.attribs}>
               {renderChildren(domNode, true, options(params))}
@@ -505,19 +560,34 @@ const infographieImage = css({
   marginInline: "auto",
 });
 
+const textWithIcon = css({
+  display: "flex",
+  alignItems: "center",
+  gap: "0.5rem",
+});
+
+const iconStyles = css({
+  flexShrink: 0,
+});
+
 type Props = {
   content: string;
   titleLevel: numberLevel;
+  // cf. Options.visualOffset : conserve la taille visuelle du niveau parent
+  // tout en descendant le niveau sémantique des titres du contenu.
+  visualOffset?: number;
   extra?: {
     infographics?: ContributionInfographicFull[];
     disableLink?: boolean;
     smicHourly?: number;
+    onTableFullscreen?: () => void;
   };
 };
 
 const DisplayContent = ({
   content,
   titleLevel,
+  visualOffset,
   extra,
 }: Props): string | JSX.Element | JSX.Element[] => {
   try {
@@ -526,11 +596,14 @@ const DisplayContent = ({
       xssWrapper(content),
       options({
         titleLevel,
+        visualOffset,
         infographics: extra?.infographics ?? [],
         disableLink: extra?.disableLink ?? false,
         smicHourly: extra?.smicHourly,
         challengerAsterisk: true,
         challengerState,
+        onTableFullscreen: extra?.onTableFullscreen,
+        usedIds: new Map(),
       })
     );
     /*

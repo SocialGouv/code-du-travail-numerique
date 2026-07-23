@@ -1,7 +1,7 @@
 "use client";
 import { fr } from "@codegouvfr/react-dsfr";
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
-import { createElement, ReactNode, useState } from "react";
+import { createElement, ReactNode, useEffect, useRef, useState } from "react";
 
 import { Autocomplete } from "../../common/Autocomplete";
 import { searchAgreement } from "../search";
@@ -12,30 +12,36 @@ type Props = {
   onSearch?: (query: string, value?: Agreement[]) => void;
   onAgreementSelect?: (agreement?: Agreement) => void;
   lineAsLink?: boolean;
-  autocompleteId?: string;
   selectedAgreementAlert?: (
     agreement?: Agreement
   ) => NonNullable<ReactNode> | undefined;
   defaultAgreement?: Agreement;
   level: 2 | 3;
   emitSearchQueryEvent?: (query: string) => void;
+  requireSearchSignal?: number;
 };
 
 export const AgreementSearchInput = ({
   onSearch,
   onAgreementSelect,
   lineAsLink,
-  autocompleteId,
   selectedAgreementAlert,
   defaultAgreement,
   level,
   emitSearchQueryEvent,
+  requireSearchSignal,
 }: Props) => {
   const [selectedAgreement, setSelectedAgreement] = useState(defaultAgreement);
   const [searchState, setSearchState] = useState<
-    "noSearch" | "lowSearch" | "notFoundSearch" | "errorSearch" | "fullSearch"
+    | "noSearch"
+    | "lowSearch"
+    | "notFoundSearch"
+    | "errorSearch"
+    | "fullSearch"
+    | "required"
   >("noSearch");
   const [error, setError] = useState("");
+  const containerRef = useRef<HTMLDivElement>(null);
   const getStateMessage = () => {
     switch (searchState) {
       case "lowSearch":
@@ -53,6 +59,8 @@ export const AgreementSearchInput = ({
             sur votre bulletin de paie
           </>
         );
+      case "required":
+        return <>Veuillez sélectionner une convention collective</>;
       case "errorSearch":
         return <>{error}</>;
     }
@@ -63,9 +71,23 @@ export const AgreementSearchInput = ({
         return "info";
       case "errorSearch":
       case "notFoundSearch":
+      case "required":
         return "error";
     }
   };
+
+  useEffect(() => {
+    if (!requireSearchSignal) return;
+    if (selectedAgreement) return;
+    setSearchState("required");
+    const input = containerRef.current?.querySelector("input");
+    input?.focus();
+    containerRef.current?.scrollIntoView({
+      behavior: "smooth",
+      block: "center",
+    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [requireSearchSignal]);
   return (
     <>
       {createElement(
@@ -75,10 +97,10 @@ export const AgreementSearchInput = ({
         },
         "Précisez et sélectionnez votre convention collective"
       )}
-      <div className={fr.cx("fr-mt-2w")}>
+      <div className={fr.cx("fr-mt-2w")} ref={containerRef}>
         <div className={fr.cx("fr-col-12")}>
           <Autocomplete<Agreement>
-            id={autocompleteId ?? "agreement-search-autocomplete"}
+            id="agreement-search-autocomplete"
             defaultValue={selectedAgreement}
             dataTestId="AgreementSearchAutocomplete"
             hintText="Ex : transport routier ou 1486"
@@ -92,6 +114,11 @@ export const AgreementSearchInput = ({
             stateRelatedMessage={getStateMessage()}
             onChange={(agreement) => {
               setSelectedAgreement(agreement);
+              if (agreement) {
+                setSearchState((prev) =>
+                  prev === "required" ? "noSearch" : prev
+                );
+              }
               if (onAgreementSelect) onAgreementSelect(agreement);
             }}
             displayLabel={(item) => {

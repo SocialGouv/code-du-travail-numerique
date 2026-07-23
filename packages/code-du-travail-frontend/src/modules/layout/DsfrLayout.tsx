@@ -7,9 +7,6 @@ import { Footer } from "./footer";
 import { Header } from "./header";
 import { SkipLinks } from "./SkipLinks";
 import { useSearchModal } from "../recherche/modal/SearchModalContext";
-import { useAgreementModal } from "../convention-collective/AgreementSelectionModal";
-import { AgreementModal } from "./header/AgreementModal";
-import { usePathname } from "next/navigation";
 
 type Props = {
   children: ReactNode;
@@ -18,33 +15,24 @@ type Props = {
 
 export const DsfrLayout = ({ children, container = "fr-container" }: Props) => {
   const { isOpen, closeModal, openModal } = useSearchModal();
-  const { isOpen: isAgreementOpen, closeModal: closeAgreementModal } =
-    useAgreementModal();
-  const pathname = usePathname() || "";
-
-  const isAnyModalOpen = isOpen || isAgreementOpen;
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       if ((event.metaKey || event.ctrlKey) && event.key === "k") {
         event.preventDefault();
 
-        // Keep search + agreement mutually exclusive
-        if (isAgreementOpen) {
-          closeAgreementModal();
-        }
         if (!isOpen) openModal();
       }
     };
 
     document.addEventListener("keydown", handleKeyDown);
     return () => document.removeEventListener("keydown", handleKeyDown);
-  }, [isOpen, openModal, isAgreementOpen, closeAgreementModal]);
+  }, [isOpen, openModal]);
 
   return (
     <>
       <PolyfillComponent />
-      <div inert={isAnyModalOpen}>
+      <div inert={isOpen}>
         <SkipLinks />
       </div>
       {isOpen && (
@@ -56,28 +44,18 @@ export const DsfrLayout = ({ children, container = "fr-container" }: Props) => {
           }}
         />
       )}
-      <div
-        style={
-          isAgreementOpen
-            ? { position: "relative", zIndex: 0 }
-            : isOpen
-              ? { position: "relative", zIndex: 1000 }
-              : undefined
-        }
-        inert={isAgreementOpen}
-      >
+      <div style={isOpen ? { position: "relative", zIndex: 1000 } : undefined}>
         <Header />
       </div>
-      <AgreementModal isOpen={isAgreementOpen} onClose={closeAgreementModal} />
       <main
         className={`${container} ${printStyle}`}
         id="main"
         role="main"
-        inert={isAnyModalOpen}
+        inert={isOpen}
       >
         {children}
       </main>
-      <Footer inert={isAnyModalOpen} />
+      <Footer inert={isOpen} />
     </>
   );
 };

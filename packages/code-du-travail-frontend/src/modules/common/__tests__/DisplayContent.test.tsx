@@ -428,6 +428,43 @@ describe("DisplayContent", () => {
       expect(baseElement.firstChild).toMatchSnapshot();
     });
 
+    it(`should render correctly a table with th elements having rowspan in tbody`, () => {
+      const { container } = render(
+        <DisplayContent
+          content={`<div data-type="detailsContent"><table style="min-width: 150px;"><colgroup><col style="min-width: 25px;"><col style="min-width: 25px;"><col style="min-width: 25px;"><col style="min-width: 25px;"><col style="min-width: 25px;"><col style="min-width: 25px;"></colgroup><tbody><tr><th colspan="1" rowspan="2"><p><strong>Année d'exécution du contrat</strong></p></th><th colspan="1" rowspan="2"><p><strong>Moins de 18 ans</strong></p></th><th colspan="2" rowspan="1"><p><strong>De 18 à moins de 21 ans</strong></p></th><th colspan="2" rowspan="1"><p><strong>21 ans et plus</strong></p></th></tr><tr><th colspan="1" rowspan="1"><p><strong>Niveaux de formation II et III préparés</strong></p></th><th colspan="1" rowspan="1"><p><strong>Niveau de formation I préparé</strong></p></th><th colspan="1" rowspan="1"><p><strong>Niveaux de formation II et III préparés</strong></p></th><th colspan="1" rowspan="1"><p><strong>Niveau de formation I préparé</strong></p></th></tr><tr><td colspan="1" rowspan="1"><p>1ère année</p></td><td colspan="1" rowspan="1"><p>616,12 € brut</p></td><td colspan="1" rowspan="1"><p>802,82 € brut</p></td><td colspan="1" rowspan="1"><p>896,17 € brut</p></td><td colspan="1" rowspan="1"><p>55 %</p></td><td colspan="1" rowspan="1"><p>65 %</p></td></tr></tbody></table></div>`}
+          titleLevel={3}
+        ></DisplayContent>
+      );
+
+      const thead = container.querySelector("thead");
+      expect(thead).not.toBeNull();
+
+      const theadRows = thead!.querySelectorAll("tr");
+      expect(theadRows).toHaveLength(2);
+
+      // First thead row: "Année d'exécution du contrat", "Moins de 18 ans", "De 18 à moins de 21 ans", "21 ans et plus"
+      const firstRowHeaders = theadRows[0].querySelectorAll("th");
+      expect(firstRowHeaders).toHaveLength(4);
+      expect(firstRowHeaders[0].textContent).toContain(
+        "Année d'exécution du contrat"
+      );
+      expect(firstRowHeaders[1].textContent).toContain("Moins de 18 ans");
+
+      // Second thead row: the 4 sub-headers under "De 18 à moins de 21 ans" and "21 ans et plus"
+      const secondRowHeaders = theadRows[1].querySelectorAll("th");
+      expect(secondRowHeaders).toHaveLength(4);
+      expect(secondRowHeaders[0].textContent).toContain(
+        "Niveaux de formation II et III préparés"
+      );
+
+      // Data rows should be in tbody, not thead
+      const tbody = container.querySelector("tbody");
+      expect(tbody).not.toBeNull();
+      const tbodyRows = tbody!.querySelectorAll("tr");
+      expect(tbodyRows).toHaveLength(1);
+      expect(tbodyRows[0].textContent).toContain("1ère année");
+    });
+
     it("should skip colgroup", () => {
       const { baseElement } = render(
         <DisplayContent
@@ -937,19 +974,32 @@ describe("DisplayContent", () => {
         </p>
       `);
     });
+
+    it("should not put the * in alert (example)", () => {
+      const { asFragment } = render(
+        <DisplayContent
+          content={`<div class="alert"><p><span data-challenger-formula="smic_monthly_custom" data-challenger-parameter="30" class="challenger">1 598,57 €</span> brut</strong> mensuel (soit <span data-challenger-formula="smic_monthly_35h" class="challenger">1\u202f865 €</span> x 30 h ÷ 35 h).</p></div>`}
+          titleLevel={3}
+          extra={{
+            smicHourly: 12.31,
+          }}
+        ></DisplayContent>
+      );
+
+      expect(asFragment().firstChild).toMatchSnapshot();
+    });
   });
 
-  it("should not put the * in alert (example)", () => {
-    const { asFragment } = render(
-      <DisplayContent
-        content={`<div class="alert"><p><span data-challenger-formula="smic_monthly_custom" data-challenger-parameter="30" class="challenger">1 598,57 €</span> brut</strong> mensuel (soit <span data-challenger-formula="smic_monthly_35h" class="challenger">1\u202f865 €</span> x 30 h ÷ 35 h).</p></div>`}
-        titleLevel={3}
-        extra={{
-          smicHourly: 12.31,
-        }}
-      ></DisplayContent>
-    );
+  describe("Bon à savoir", () => {
+    it("should add an icon", () => {
+      const { asFragment } = render(
+        <DisplayContent
+          content={`<span class="good-to-know">Bon à savoir</span>`}
+          titleLevel={3}
+        ></DisplayContent>
+      );
 
-    expect(asFragment().firstChild).toMatchSnapshot();
+      expect(asFragment().firstChild).toMatchSnapshot();
+    });
   });
 });

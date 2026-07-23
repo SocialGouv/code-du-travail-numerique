@@ -1,5 +1,6 @@
 import { sendEvent } from "@socialgouv/matomo-next";
 import { MatomoAgreementEvent } from "../analytics";
+import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
 
 export enum TrackingContributionCategory {
   TOOL = "outil",
@@ -14,6 +15,10 @@ export enum TrackingAgreementSearchAction {
   CLICK_P1 = "click_p1",
   CLICK_P2 = "click_p2",
   CLICK_P3 = "click_p3",
+}
+
+export enum TrackingContributionAction {
+  BTN_TABLE_FULLSCREEN = "btn_table_fullscreen",
 }
 
 export const useContributionTracking = () => {
@@ -81,14 +86,23 @@ export const useContributionTracking = () => {
     });
   };
 
+  const emitClickTableFullscreen = (slug: string) => {
+    sendEvent({
+      category: TrackingContributionCategory.CONTRIBUTION,
+      action: TrackingContributionAction.BTN_TABLE_FULLSCREEN,
+      name: `${getRouteBySource(SOURCES.CONTRIBUTIONS)}/${slug}`,
+    });
+  };
+
   return {
     emitAgreementTreatedEvent,
     emitAgreementUntreatedEvent,
     emitDisplayAgreementContent,
-    emitDisplayGeneralContent,
     emitDisplayGenericContent,
+    emitDisplayGeneralContent,
     emitClickP1,
     emitClickP2,
     emitClickP3,
+    emitClickTableFullscreen,
   };
 };

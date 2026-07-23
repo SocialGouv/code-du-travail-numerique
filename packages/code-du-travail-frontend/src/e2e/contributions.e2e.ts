@@ -69,9 +69,10 @@ test.describe("Contributions", () => {
     );
 
     await page
-      .getByRole("button", {
-        name: "Afficher les informations sans sélectionner une convention collective",
-      })
+      .getByLabel("Je ne souhaite pas renseigner ma convention collective.")
+      .check({ force: true });
+    await page
+      .getByRole("button", { name: "Afficher les informations" })
       .click();
     await expect(
       page.getByText(
@@ -83,14 +84,33 @@ test.describe("Contributions", () => {
     await expect(page.locator("body")).toContainText("L1221-21");
   });
 
-  test("je vois une page contribution pour une CC", async ({ page }) => {
+  test("je vois une page contribution pour une CC", async ({
+    page,
+    baseURL,
+  }) => {
+    // referer interne : une arrivée externe réinitialise le bloc de sélection
+    // (cf. test dédié) ; ici on vérifie le comportement en navigation interne.
     await page.goto(
-      "/contribution/675-la-periode-dessai-peut-elle-etre-renouvelee"
+      "/contribution/675-la-periode-dessai-peut-elle-etre-renouvelee",
+      { referer: baseURL }
     );
     await expect(
       page.getByText(
         "Maisons à succursales de vente au détail d'habillement (IDCC 0675)"
       )
+    ).toBeVisible();
+
+    await expect(
+      page.getByRole("heading", {
+        level: 2,
+        name: "Réponse pour la convention : Maisons à succursales de vente au détail d'habillement",
+      })
+    ).toBeVisible();
+
+    // Navigation interne : le bloc est en état « sélectionné » (bouton
+    // « Réinitialiser »), la réponse est visible.
+    await expect(
+      page.getByRole("button", { name: "Réinitialiser" })
     ).toBeVisible();
 
     await expect(page.locator("body")).toContainText(
@@ -118,10 +138,223 @@ test.describe("Contributions", () => {
 
   test("je vois une contribution avec un accordéon ouvert", async ({
     page,
+    baseURL,
   }) => {
     await page.goto(
-      "/contribution/3248-combien-de-fois-le-contrat-de-travail-peut-il-etre-renouvele#cdd"
+      "/contribution/3248-combien-de-fois-le-contrat-de-travail-peut-il-etre-renouvele#cdd",
+      { referer: baseURL }
     );
     await expect(page.locator('[aria-expanded="true"]')).toContainText("CDD");
+  });
+
+  test("une arrivée externe sur une contribution CC réinitialise le bloc de sélection", async ({
+    page,
+  }) => {
+    // Pas de referer : simule une arrivée depuis un moteur de recherche ou un
+    // accès direct.
+    await page.goto(
+      "/contribution/675-la-periode-dessai-peut-elle-etre-renouvelee"
+    );
+
+    await expect(
+      page.getByText("Vérifiez votre convention collective")
+    ).toBeVisible();
+    // Le bloc « résumé + Réinitialiser » (donc le libellé « (IDCC 0675) »)
+    // n'est pas affiché tant qu'on n'a pas confirmé/choisi une CC.
+    await expect(
+      page.getByText(
+        "Maisons à succursales de vente au détail d'habillement (IDCC 0675)"
+      )
+    ).toBeHidden();
+    // Arrivée externe (Google) : la réponse de la CC reste affichée, seul le
+    // bloc de sélection est présenté en haut.
+    await expect(
+      page
+        .getByText(
+          /Les conditions de renouvellement de la période d.essai varient/
+        )
+        .first()
+    ).toBeVisible();
+    // Aucun des 3 boutons radio n'est pré-sélectionné.
+    await expect(
+      page.getByLabel(
+        "Je sais quelle est ma convention collective et je la saisis."
+      )
+    ).not.toBeChecked();
+    await expect(
+      page.getByLabel(
+        "Je cherche mon entreprise pour trouver ma convention collective."
+      )
+    ).not.toBeChecked();
+    await expect(
+      page.getByLabel("Je ne souhaite pas renseigner ma convention collective.")
+    ).not.toBeChecked();
+
+    // L'usager choisit la CC de la page : bascule en état résultat sur place.
+    await page
+      .getByLabel(
+        "Je sais quelle est ma convention collective et je la saisis."
+      )
+      .check({ force: true });
+    await page.getByTestId("AgreementSearchAutocomplete").fill("675");
+    await page
+      .getByText(
+        "Maisons à succursales de vente au détail d'habillement (IDCC 675)"
+      )
+      .click();
+    await page
+      .getByRole("button", { name: "Afficher les informations" })
+      .click();
+
+    await expect(
+      page.getByText(
+        "Maisons à succursales de vente au détail d'habillement (IDCC 0675)"
+      )
+    ).toBeVisible();
+    await expect(
+      page.getByRole("button", { name: "Réinitialiser" })
+    ).toBeVisible();
+    await expect(
+      page
+        .getByText(
+          /Les conditions de renouvellement de la période d.essai varient/
+        )
+        .first()
+    ).toBeVisible();
+    // Le focus est déplacé sur le titre du bloc résultat (accessibilité).
+    await expect(
+      page.getByText("Réponse personnalisée pour la convention collective")
+    ).toBeFocused();
+    // Pas de navigation : on reste sur la même URL.
+    expect(page.url()).toContain(
+      "/contribution/675-la-periode-dessai-peut-elle-etre-renouvelee"
+    );
+  });
+
+  test("depuis une page CC (navigation interne), « Réinitialiser » supprime la CC mémorisée et renvoie vers la fiche générique", async ({
+    page,
+    baseURL,
+  }) => {
+    // Arrivée interne : le bloc est en état « résumé » (bouton « Réinitialiser »).
+    await page.goto(
+      "/contribution/675-la-periode-dessai-peut-elle-etre-renouvelee",
+      { referer: baseURL }
+    );
+    await expect(
+      page.getByText(
+        "Maisons à succursales de vente au détail d'habillement (IDCC 0675)"
+      )
+    ).toBeVisible();
+
+    await page.getByRole("button", { name: "Réinitialiser" }).click();
+
+    // Navigation vers la fiche générique, avec le hash #retour qui scrolle et
+    // met le focus sur le bloc de personnalisation.
+    await page.waitForURL(
+      "**/contribution/la-periode-dessai-peut-elle-etre-renouvelee#retour"
+    );
+    await expect(
+      page.getByText(
+        "Personnalisez la réponse avec votre convention collective"
+      )
+    ).toBeVisible();
+
+    // La CC mémorisée est effacée pour tout le site (header inclus).
+    const stored = await page.evaluate(() =>
+      window.localStorage.getItem("convention")
+    );
+    expect(stored).toBeNull();
+
+    // Le focus est déplacé sur le titre du bloc de personnalisation (a11y).
+    await expect(page.locator("#personalize-response-title")).toBeFocused();
+
+    // Aucun radio n'est pré-coché après réinitialisation.
+    await expect(
+      page.getByLabel(
+        "Je sais quelle est ma convention collective et je la saisis."
+      )
+    ).not.toBeChecked();
+  });
+
+  test("arriver sur la fiche générique avec une CC traitée mémorisée redirige vers la page CC", async ({
+    page,
+    baseURL,
+  }) => {
+    // Mémorise une CC traitée en la sélectionnant depuis la fiche générique.
+    await page.goto(
+      "/contribution/la-periode-dessai-peut-elle-etre-renouvelee"
+    );
+    await page
+      .getByLabel(
+        "Je sais quelle est ma convention collective et je la saisis."
+      )
+      .check({ force: true });
+    await page.getByTestId("AgreementSearchAutocomplete").fill("675");
+    await page
+      .getByText(
+        "Maisons à succursales de vente au détail d'habillement (IDCC 675)"
+      )
+      .click();
+    await page
+      .getByRole("button", { name: "Afficher les informations" })
+      .click();
+    await page.waitForURL(
+      "**/contribution/675-la-periode-dessai-peut-elle-etre-renouvelee**"
+    );
+
+    // Revenir sur la fiche générique : la CC mémorisée et traitée redirige
+    // directement vers la page personnalisée (sans empiler la générique dans
+    // l'historique).
+    await page.goto(
+      "/contribution/la-periode-dessai-peut-elle-etre-renouvelee",
+      { referer: baseURL }
+    );
+    await page.waitForURL(
+      "**/contribution/675-la-periode-dessai-peut-elle-etre-renouvelee"
+    );
+    await expect(
+      page.getByText(
+        "Maisons à succursales de vente au détail d'habillement (IDCC 0675)"
+      )
+    ).toBeVisible();
+  });
+
+  test("depuis une contribution CC réinitialisée, « je ne souhaite pas renseigner » mène à la réponse Code du travail", async ({
+    page,
+  }) => {
+    await page.goto(
+      "/contribution/675-la-periode-dessai-peut-elle-etre-renouvelee"
+    );
+
+    await expect(
+      page.getByText("Vérifiez votre convention collective")
+    ).toBeVisible();
+
+    await page
+      .getByLabel("Je ne souhaite pas renseigner ma convention collective.")
+      .check({ force: true });
+    await page
+      .getByRole("button", { name: "Afficher les informations" })
+      .click();
+
+    await page.waitForURL(
+      "**/contribution/la-periode-dessai-peut-elle-etre-renouvelee#cdt"
+    );
+    // Le choix reste coché et la réponse générique est affichée avec son H2.
+    await expect(
+      page.getByLabel("Je ne souhaite pas renseigner ma convention collective.")
+    ).toBeChecked();
+    await expect(
+      page.getByRole("heading", {
+        level: 2,
+        name: "Réponse d'après le Code du Travail",
+      })
+    ).toBeVisible();
+    await expect(
+      page.getByText(
+        "La convention collective ou l’accord de branche étendu prévoit le renouvellement de la période d’essai",
+        { exact: false }
+      )
+    ).toBeVisible();
   });
 });

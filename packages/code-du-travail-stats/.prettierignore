@@ -1,0 +1,6 @@
+# On n'applique pas Prettier à `events/` :
+#  - events.extracted.json : artefact généré par `events:extract`, doit rester
+#    octet pour octet identique à sa sortie sinon le drift-check échoue.
+#  - TRACKING_PLAN.md : plan de tracking métier rédigé via le skill Claude
+#    `/tracking-plan` ; Prettier réaligne les tableaux markdown → ne pas y toucher.
+events/

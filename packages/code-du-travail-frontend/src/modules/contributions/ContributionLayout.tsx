@@ -2,7 +2,6 @@
 import React from "react";
 import { css } from "@styled-system/css";
 import { fr } from "@codegouvfr/react-dsfr";
-import { Feedback } from "../layout/feedback";
 import Breadcrumb from "@codegouvfr/react-dsfr/Breadcrumb";
 import { Contribution } from "./type";
 import { SourceData } from "../layout/SourceData";
@@ -10,12 +9,16 @@ import { ContributionGeneric } from "./ContributionGeneric";
 import { ContributionAgreement } from "./ContributionAgreement";
 import { BreadcrumbListJsonLd } from "../seo/jsonld";
 import { removeCCNumberFromSlug } from "../utils/removeCCNumberFromSlug";
+// Import de type uniquement : queries.ts embarque le client Elasticsearch
+// (serveur), il ne doit pas entrer dans le bundle client.
+import type { GenericContributionInfos } from "./queries";
 
 type Props = {
   contribution: Contribution;
+  genericInfos?: GenericContributionInfos;
 };
 
-export function ContributionLayout({ contribution }: Props) {
+export function ContributionLayout({ contribution, genericInfos }: Props) {
   const { date, title, isGeneric, isFicheSP } = contribution;
 
   const genericSlug = !isGeneric
@@ -94,12 +97,11 @@ export function ContributionLayout({ contribution }: Props) {
       {isGeneric ? (
         <ContributionGeneric contribution={contribution} />
       ) : (
-        <ContributionAgreement contribution={contribution} />
+        <ContributionAgreement
+          contribution={contribution}
+          genericInfos={genericInfos}
+        />
       )}
-
-      <div className={fr.cx("fr-col-12", "fr-col-md-8", "fr-my-6w")}>
-        <Feedback />
-      </div>
     </>
   );
 }

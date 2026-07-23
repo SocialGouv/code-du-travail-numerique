@@ -98,6 +98,9 @@ const nextConfig = {
     "domhandler",
     "domelementtype",
     "htmlparser2",
+    "entities",
+    "dom-serializer",
+    "domutils",
     // uuid@14+ ships ESM-only
     "uuid",
   ],

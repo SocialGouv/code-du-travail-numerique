@@ -1,17 +1,21 @@
 "use client";
 import React, { useRef, useState, useEffect } from "react";
 import { useContributionTracking } from "./tracking";
-import { isAgreementSupported, isAgreementValid } from "./contributionUtils";
+import {
+  buildContributionAgreementPath,
+  GENERIC_CONTENT_HASH,
+  isAgreementSupported,
+  isAgreementValid,
+} from "./contributionUtils";
+import { useRouter } from "next/navigation";
 import { ContributionGenericContent } from "./ContributionGenericContent";
 import { Contribution } from "./type";
 import {
   useLocalStorageForAgreementOnPageLoad,
   getAgreementFromLocalStorage,
 } from "../utils/useLocalStorage";
-import { useRouter } from "next/navigation";
 import { ContributionGenericAgreementSearch } from "./ContributionGenericAgreementSearch";
-import { Button } from "@codegouvfr/react-dsfr/Button";
-import { fr } from "@codegouvfr/react-dsfr";
+import { AgreementRoute } from "src/modules/outils/indemnite-depart/types";
 
 type Props = {
   contribution: Contribution;
@@ -25,6 +29,7 @@ export function ContributionGeneric({ contribution }: Props) {
   const { slug, isNoCDT, relatedItems } = contribution;
 
   const [displayGeneric, setDisplayGeneric] = useState(false);
+  const [defaultRoute, setDefaultRoute] = useState<AgreementRoute>();
 
   const [selectedAgreement, setSelectedAgreement] =
     useLocalStorageForAgreementOnPageLoad();
@@ -32,9 +37,8 @@ export function ContributionGeneric({ contribution }: Props) {
     emitAgreementTreatedEvent,
     emitAgreementUntreatedEvent,
     emitDisplayAgreementContent,
-    emitDisplayGeneralContent,
     emitDisplayGenericContent,
-    emitClickP3,
+    emitDisplayGeneralContent,
   } = useContributionTracking();
   const genericTitleRef = useRef<HTMLDivElement>(null);
 
@@ -50,24 +54,44 @@ export function ContributionGeneric({ contribution }: Props) {
   }, []);
 
   useEffect(() => {
+    if (window.location.hash !== GENERIC_CONTENT_HASH) return;
+    // Arrivée depuis une page CC (option « je ne souhaite pas renseigner » ou
+    // CC non traitée) : on affiche directement la réponse Code du travail en
+    // conservant le choix de l'usager coché. Avec une CC en stockage (non
+    // traitée), l'effet defaultAgreement du formulaire pré-coche la première
+    // option et préremplit la CC ; sans CC, on pré-coche la dernière option.
+
+    setDisplayGeneric(true);
+    if (!getAgreementFromLocalStorage()) {
+      setDefaultRoute("no-agreement");
+    }
+    scrollToTitle();
+  }, []);
+
+  useEffect(() => {
     if (hash === "#retour") {
       setTimeout(() => {
+        personalizeTitleRef?.current?.scrollIntoView({ behavior: "smooth" });
         personalizeTitleRef?.current?.focus();
       }, 100);
     }
   }, [hash]);
 
+  // Auto-redirection : arriver sur la fiche générique avec une CC mémorisée et
+  // traitée renvoie directement vers la page CC correspondante (`replace` :
+  // la générique ne s'empile pas dans l'historique). Pas de boucle possible :
+  // « Réinitialiser » (page CC) efface la CC avant de renvoyer ici, et les
+  // hash #retour / #cdt expriment une demande explicite de la fiche générique
+  // (retour au formulaire / réponse Code du travail) : on ne redirige pas.
   useEffect(() => {
     if (window.location.hash === "#retour") return;
+    if (window.location.hash === GENERIC_CONTENT_HASH) return;
 
     const storedAgreement = getAgreementFromLocalStorage();
     if (storedAgreement && isAgreementValid(contribution, storedAgreement)) {
-      const targetUrl =
-        slug === "les-conges-pour-evenements-familiaux"
-          ? `/contribution/${slug}/${storedAgreement.slug || storedAgreement.num}`
-          : `/contribution/${storedAgreement.num}-${slug}`;
-      router.replace(targetUrl);
+      router.replace(buildContributionAgreementPath(slug, storedAgreement));
     }
+    // Détection à effectuer une seule fois, au montage.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -78,6 +102,8 @@ export function ContributionGeneric({ contribution }: Props) {
         contribution={contribution}
         onAgreementSelect={(agreement) => {
           setSelectedAgreement(agreement);
+          // Sélectionner une CC masque le Code du travail ; il est réaffiché au
+          // besoin via « Afficher les informations ».
           setDisplayGeneric(false);
           if (!agreement) return;
 
@@ -95,6 +121,9 @@ export function ContributionGeneric({ contribution }: Props) {
             if (selectedAgreement) {
               emitDisplayGeneralContent(getTitle());
             } else {
+              // Aucune CC sélectionnée : l'usager affiche le Code du travail
+              // (dernière option « Je ne souhaite pas renseigner… » ou entreprise
+              // sans convention).
               emitDisplayGenericContent(getTitle());
             }
           } else {
@@ -103,43 +132,28 @@ export function ContributionGeneric({ contribution }: Props) {
         }}
         selectedAgreement={selectedAgreement}
         trackingActionName={getTitle()}
+        defaultRoute={defaultRoute}
       />
 
       {!isNoCDT && !isAgreementValid(contribution, selectedAgreement) && (
-        <>
-          {!displayGeneric && (
-            <Button
-              className={fr.cx("fr-mb-6w")}
-              priority="tertiary no outline"
-              onClick={() => {
-                setDisplayGeneric(true);
-                scrollToTitle();
-                emitClickP3(getTitle());
-              }}
-            >
-              Afficher les informations sans sélectionner une convention
-              collective
-            </Button>
-          )}
-          <ContributionGenericContent
-            ref={genericTitleRef}
-            contribution={contribution}
-            relatedItems={relatedItems}
-            displayGeneric={displayGeneric}
-            alertText={
-              selectedAgreement &&
-              !isAgreementSupported(contribution, selectedAgreement) && (
-                <p>
-                  <strong>
-                    Cette réponse correspond à ce que prévoit le code du
-                    travail, elle ne tient pas compte des spécificités de la{" "}
-                    {selectedAgreement.shortTitle}
-                  </strong>
-                </p>
-              )
-            }
-          />
-        </>
+        <ContributionGenericContent
+          ref={genericTitleRef}
+          contribution={contribution}
+          relatedItems={relatedItems}
+          displayGeneric={displayGeneric}
+          alertText={
+            selectedAgreement &&
+            !isAgreementSupported(contribution, selectedAgreement) && (
+              <p>
+                <strong>
+                  Cette réponse correspond à ce que prévoit le code du travail,
+                  elle ne tient pas compte des spécificités de la{" "}
+                  {selectedAgreement.shortTitle}
+                </strong>
+              </p>
+            )
+          }
+        />
       )}
     </>
   );

@@ -1,0 +1,1517 @@
+{
+  "scan_root": "packages/code-du-travail-frontend/src",
+  "callsites": 71,
+  "total_events": 108,
+  "unique_events": 99,
+  "unresolved_callsites": 0,
+  "events": [
+    {
+      "category": "_matomo_trackSiteSearch",
+      "action": "<query>",
+      "name_pattern": null,
+      "resolution": "dynamic",
+      "emit_function": "useSearchTracking",
+      "file": "packages/code-du-travail-frontend/src/modules/recherche/tracking.ts",
+      "line": 193,
+      "enum_refs": [],
+      "tracking_method": "push:trackSiteSearch"
+    },
+    {
+      "category": "<NPS_CATEGORY>",
+      "action": "display_<trigger>",
+      "name_pattern": "<toEventName(pagePath)>",
+      "resolution": "dynamic",
+      "emit_function": "trackDisplayed",
+      "file": "packages/code-du-travail-frontend/src/modules/nps/tracking.ts",
+      "line": 17,
+      "enum_refs": [],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "<NPS_CATEGORY>",
+      "action": "optout_<trigger>",
+      "name_pattern": "<toEventName(pagePath)>",
+      "resolution": "dynamic",
+      "emit_function": "trackOptOut",
+      "file": "packages/code-du-travail-frontend/src/modules/nps/tracking.ts",
+      "line": 35,
+      "enum_refs": [],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "<NPS_CATEGORY>",
+      "action": "refusal_<trigger>",
+      "name_pattern": "<toEventName(pagePath)>",
+      "resolution": "dynamic",
+      "emit_function": "trackRefusal",
+      "file": "packages/code-du-travail-frontend/src/modules/nps/tracking.ts",
+      "line": 25,
+      "enum_refs": [],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "accord_enterprise_search",
+      "action": "click_accord",
+      "name_pattern": "<url>",
+      "resolution": "literal",
+      "emit_function": "emitClickAccord",
+      "file": "packages/code-du-travail-frontend/src/modules/enterprise/EnterpriseAgreementSearch/accords/tracking.ts",
+      "line": 13,
+      "enum_refs": [
+        "TrackingAccordEntrepriseSearchAction.CLICK_ACCORD",
+        "TrackingAgreementSearchCategory.ACCORD_ENTERPRISE_SEARCH"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "accord_enterprise_search",
+      "action": "click_all_accords",
+      "name_pattern": "<siret>",
+      "resolution": "literal",
+      "emit_function": "emitClickSeeAll",
+      "file": "packages/code-du-travail-frontend/src/modules/enterprise/EnterpriseAgreementSearch/accords/tracking.ts",
+      "line": 21,
+      "enum_refs": [
+        "TrackingAccordEntrepriseSearchAction.CLICK_ALL_ACCORDS",
+        "TrackingAgreementSearchCategory.ACCORD_ENTERPRISE_SEARCH"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "accord_enterprise_search",
+      "action": "load_accords_failed",
+      "name_pattern": "<siret>",
+      "resolution": "literal",
+      "emit_function": "emitLoadAccordsFailed",
+      "file": "packages/code-du-travail-frontend/src/modules/enterprise/EnterpriseAgreementSearch/accords/tracking.ts",
+      "line": 37,
+      "enum_refs": [
+        "TrackingAccordEntrepriseSearchAction.LOAD_ACCORDS_FAILED",
+        "TrackingAgreementSearchCategory.ACCORD_ENTERPRISE_SEARCH"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "accord_enterprise_search",
+      "action": "show_accords",
+      "name_pattern": "<String(count)>",
+      "resolution": "literal",
+      "emit_function": "emitShowAccords",
+      "file": "packages/code-du-travail-frontend/src/modules/enterprise/EnterpriseAgreementSearch/accords/tracking.ts",
+      "line": 29,
+      "enum_refs": [
+        "TrackingAccordEntrepriseSearchAction.SHOW_ACCORDS",
+        "TrackingAgreementSearchCategory.ACCORD_ENTERPRISE_SEARCH"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "cc_search_type_of_users",
+      "action": "click_je_n_ai_pas_d_entreprise",
+      "name_pattern": "Trouver sa convention collective",
+      "resolution": "literal",
+      "emit_function": "emitNoEnterpriseClickEvent",
+      "file": "packages/code-du-travail-frontend/src/modules/enterprise/EnterpriseAgreementSearch/tracking.ts",
+      "line": 52,
+      "enum_refs": [
+        "TrackingAgreementSearchAction.AGREEMENT_SEARCH",
+        "TrackingAgreementSearchAction.CLICK_NO_COMPANY",
+        "TrackingAgreementSearchCategory.CC_SEARCH_TYPE_OF_USERS"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "cc_search_type_of_users",
+      "action": "click_p1",
+      "name_pattern": "<path>",
+      "resolution": "literal",
+      "emit_function": "emitClickP1",
+      "file": "packages/code-du-travail-frontend/src/modules/contributions/tracking.ts",
+      "line": 66,
+      "enum_refs": [
+        "TrackingAgreementSearchAction.CLICK_P1",
+        "TrackingContributionCategory.CC_SEARCH_TYPE_OF_USERS"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "cc_search_type_of_users",
+      "action": "click_p1",
+      "name_pattern": "Trouver sa convention collective",
+      "resolution": "literal",
+      "emit_function": "emitNavigateAgreementSearchEvent",
+      "file": "packages/code-du-travail-frontend/src/modules/convention-collective/tracking.ts",
+      "line": 35,
+      "enum_refs": [
+        "TrackingAgreementSearchAction.AGREEMENT_SEARCH",
+        "TrackingAgreementSearchAction.CLICK_P1",
+        "TrackingAgreementSearchCategory.CC_SEARCH_TYPE_OF_USERS"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "cc_search_type_of_users",
+      "action": "click_p1",
+      "name_pattern": "<simulatorTitle>",
+      "resolution": "literal",
+      "emit_function": "emitParcoursTypeEvent",
+      "file": "packages/code-du-travail-frontend/src/modules/outils/common/events/pushAgreementEvents.ts",
+      "line": 31,
+      "enum_refs": [
+        "MatomoSearchAgreementCategory.AGREEMENT_SEARCH_TYPE_OF_USERS",
+        "MatomoSearchAgreementCategory.PARCOURS_1"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "cc_search_type_of_users",
+      "action": "click_p2",
+      "name_pattern": "<path>",
+      "resolution": "literal",
+      "emit_function": "emitClickP2",
+      "file": "packages/code-du-travail-frontend/src/modules/contributions/tracking.ts",
+      "line": 74,
+      "enum_refs": [
+        "TrackingAgreementSearchAction.CLICK_P2",
+        "TrackingContributionCategory.CC_SEARCH_TYPE_OF_USERS"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "cc_search_type_of_users",
+      "action": "click_p2",
+      "name_pattern": "Trouver sa convention collective",
+      "resolution": "literal",
+      "emit_function": "emitNavigateEnterpriseSearchEvent",
+      "file": "packages/code-du-travail-frontend/src/modules/convention-collective/tracking.ts",
+      "line": 43,
+      "enum_refs": [
+        "TrackingAgreementSearchAction.AGREEMENT_SEARCH",
+        "TrackingAgreementSearchAction.CLICK_P2",
+        "TrackingAgreementSearchCategory.CC_SEARCH_TYPE_OF_USERS"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "cc_search_type_of_users",
+      "action": "click_p2",
+      "name_pattern": "<simulatorTitle>",
+      "resolution": "literal",
+      "emit_function": "emitParcoursTypeEvent",
+      "file": "packages/code-du-travail-frontend/src/modules/outils/common/events/pushAgreementEvents.ts",
+      "line": 38,
+      "enum_refs": [
+        "MatomoSearchAgreementCategory.AGREEMENT_SEARCH_TYPE_OF_USERS",
+        "MatomoSearchAgreementCategory.PARCOURS_2"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "cc_search_type_of_users",
+      "action": "click_p3",
+      "name_pattern": "<path>",
+      "resolution": "literal",
+      "emit_function": "emitClickP3",
+      "file": "packages/code-du-travail-frontend/src/modules/contributions/tracking.ts",
+      "line": 82,
+      "enum_refs": [
+        "TrackingAgreementSearchAction.CLICK_P3",
+        "TrackingContributionCategory.CC_SEARCH_TYPE_OF_USERS"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "cc_search_type_of_users",
+      "action": "click_p3",
+      "name_pattern": "<simulatorTitle>",
+      "resolution": "literal",
+      "emit_function": "emitParcoursTypeEvent",
+      "file": "packages/code-du-travail-frontend/src/modules/outils/common/events/pushAgreementEvents.ts",
+      "line": 45,
+      "enum_refs": [
+        "MatomoSearchAgreementCategory.AGREEMENT_SEARCH_TYPE_OF_USERS",
+        "MatomoSearchAgreementCategory.PARCOURS_3"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "cc_search_type_of_users",
+      "action": "select_je_n_ai_pas_d_entreprise",
+      "name_pattern": "Trouver sa convention collective",
+      "resolution": "literal",
+      "emit_function": "emitNoEnterpriseSelectEvent",
+      "file": "packages/code-du-travail-frontend/src/modules/enterprise/EnterpriseAgreementSearch/tracking.ts",
+      "line": 59,
+      "enum_refs": [
+        "TrackingAgreementSearchAction.AGREEMENT_SEARCH",
+        "TrackingAgreementSearchAction.SELECT_NO_COMPANY",
+        "TrackingAgreementSearchCategory.CC_SEARCH_TYPE_OF_USERS"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "cc_search_type_of_users",
+      "action": "select_je_n_ai_pas_d_entreprise",
+      "name_pattern": "<simulatorTitle>",
+      "resolution": "literal",
+      "emit_function": "emitNoEnterpriseSelectEvent",
+      "file": "packages/code-du-travail-frontend/src/modules/outils/common/events/pushAgreementEvents.ts",
+      "line": 115,
+      "enum_refs": [
+        "MatomoSearchAgreementCategory.AGREEMENT_SEARCH_TYPE_OF_USERS",
+        "MatomoSimulatorEvent.SELECT_NO_COMPANY"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "cc_select_p1",
+      "action": "<action>",
+      "name_pattern": "<idcc>",
+      "resolution": "dynamic",
+      "emit_function": "emitSelectEvent",
+      "file": "packages/code-du-travail-frontend/src/modules/convention-collective/tracking.ts",
+      "line": 51,
+      "enum_refs": [
+        "TrackingAgreementSearchCategory.CC_SELECT_P1"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "cc_select_p1",
+      "action": "<simulatorTitle>",
+      "name_pattern": "idcc<agreementNum>",
+      "resolution": "dynamic",
+      "emit_function": "emitAgreementSelectEvent",
+      "file": "packages/code-du-travail-frontend/src/modules/outils/common/events/pushAgreementEvents.ts",
+      "line": 77,
+      "enum_refs": [
+        "MatomoSearchAgreementCategory.AGREEMENT_SELECT_P1"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "cc_select_p1",
+      "action": "HEURES_RECHERCHE_EMPLOI",
+      "name_pattern": "idcc<agreementNum>",
+      "resolution": "literal",
+      "emit_function": "emitAgreementSelectEvent",
+      "file": "packages/code-du-travail-frontend/src/modules/outils/common/events/pushAgreementEvents.ts",
+      "line": 77,
+      "enum_refs": [
+        "MatomoSearchAgreementCategory.AGREEMENT_SELECT_P1"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "cc_select_p1",
+      "action": "INDEMNITE_PRECARITE",
+      "name_pattern": "idcc<agreementNum>",
+      "resolution": "literal",
+      "emit_function": "emitAgreementSelectEvent",
+      "file": "packages/code-du-travail-frontend/src/modules/outils/common/events/pushAgreementEvents.ts",
+      "line": 77,
+      "enum_refs": [
+        "MatomoSearchAgreementCategory.AGREEMENT_SELECT_P1"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "cc_select_p1",
+      "action": "PREAVIS_DEMISSION",
+      "name_pattern": "idcc<agreementNum>",
+      "resolution": "literal",
+      "emit_function": "emitAgreementSelectEvent",
+      "file": "packages/code-du-travail-frontend/src/modules/outils/common/events/pushAgreementEvents.ts",
+      "line": 77,
+      "enum_refs": [
+        "MatomoSearchAgreementCategory.AGREEMENT_SELECT_P1"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "cc_select_p1",
+      "action": "PREAVIS_LICENCIEMENT",
+      "name_pattern": "idcc<agreementNum>",
+      "resolution": "literal",
+      "emit_function": "emitAgreementSelectEvent",
+      "file": "packages/code-du-travail-frontend/src/modules/outils/common/events/pushAgreementEvents.ts",
+      "line": 77,
+      "enum_refs": [
+        "MatomoSearchAgreementCategory.AGREEMENT_SELECT_P1"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "cc_select_p1",
+      "action": "PREAVIS_RETRAITE",
+      "name_pattern": "idcc<agreementNum>",
+      "resolution": "literal",
+      "emit_function": "emitAgreementSelectEvent",
+      "file": "packages/code-du-travail-frontend/src/modules/outils/common/events/pushAgreementEvents.ts",
+      "line": 77,
+      "enum_refs": [
+        "MatomoSearchAgreementCategory.AGREEMENT_SELECT_P1"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "cc_select_p1",
+      "action": "Trouver sa convention collective",
+      "name_pattern": "<idcc>",
+      "resolution": "literal",
+      "emit_function": "emitSelectEvent",
+      "file": "packages/code-du-travail-frontend/src/modules/convention-collective/tracking.ts",
+      "line": 51,
+      "enum_refs": [
+        "TrackingAgreementSearchCategory.CC_SELECT_P1"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "cc_select_p2",
+      "action": "<action>",
+      "name_pattern": "<idcc>",
+      "resolution": "dynamic",
+      "emit_function": "emitSelectEnterpriseAgreementEvent",
+      "file": "packages/code-du-travail-frontend/src/modules/enterprise/EnterpriseAgreementSearch/tracking.ts",
+      "line": 36,
+      "enum_refs": [
+        "TrackingAgreementSearchCategory.CC_SELECT_P2"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "cc_select_p2",
+      "action": "<simulatorTitle>",
+      "name_pattern": "idcc<agreementNum>",
+      "resolution": "dynamic",
+      "emit_function": "emitAgreementSelectEvent",
+      "file": "packages/code-du-travail-frontend/src/modules/outils/common/events/pushAgreementEvents.ts",
+      "line": 84,
+      "enum_refs": [
+        "MatomoSearchAgreementCategory.AGREEMENT_SELECT_P2"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "cc_select_p2",
+      "action": "HEURES_RECHERCHE_EMPLOI",
+      "name_pattern": "idcc<agreementNum>",
+      "resolution": "literal",
+      "emit_function": "emitAgreementSelectEvent",
+      "file": "packages/code-du-travail-frontend/src/modules/outils/common/events/pushAgreementEvents.ts",
+      "line": 84,
+      "enum_refs": [
+        "MatomoSearchAgreementCategory.AGREEMENT_SELECT_P2"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "cc_select_p2",
+      "action": "INDEMNITE_PRECARITE",
+      "name_pattern": "idcc<agreementNum>",
+      "resolution": "literal",
+      "emit_function": "emitAgreementSelectEvent",
+      "file": "packages/code-du-travail-frontend/src/modules/outils/common/events/pushAgreementEvents.ts",
+      "line": 84,
+      "enum_refs": [
+        "MatomoSearchAgreementCategory.AGREEMENT_SELECT_P2"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "cc_select_p2",
+      "action": "PREAVIS_DEMISSION",
+      "name_pattern": "idcc<agreementNum>",
+      "resolution": "literal",
+      "emit_function": "emitAgreementSelectEvent",
+      "file": "packages/code-du-travail-frontend/src/modules/outils/common/events/pushAgreementEvents.ts",
+      "line": 84,
+      "enum_refs": [
+        "MatomoSearchAgreementCategory.AGREEMENT_SELECT_P2"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "cc_select_p2",
+      "action": "PREAVIS_LICENCIEMENT",
+      "name_pattern": "idcc<agreementNum>",
+      "resolution": "literal",
+      "emit_function": "emitAgreementSelectEvent",
+      "file": "packages/code-du-travail-frontend/src/modules/outils/common/events/pushAgreementEvents.ts",
+      "line": 84,
+      "enum_refs": [
+        "MatomoSearchAgreementCategory.AGREEMENT_SELECT_P2"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "cc_select_p2",
+      "action": "PREAVIS_RETRAITE",
+      "name_pattern": "idcc<agreementNum>",
+      "resolution": "literal",
+      "emit_function": "emitAgreementSelectEvent",
+      "file": "packages/code-du-travail-frontend/src/modules/outils/common/events/pushAgreementEvents.ts",
+      "line": 84,
+      "enum_refs": [
+        "MatomoSearchAgreementCategory.AGREEMENT_SELECT_P2"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "cc_select_p2",
+      "action": "Trouver sa convention collective",
+      "name_pattern": "<idcc>",
+      "resolution": "literal",
+      "emit_function": "emitSelectEnterpriseAgreementEvent",
+      "file": "packages/code-du-travail-frontend/src/modules/enterprise/EnterpriseAgreementSearch/tracking.ts",
+      "line": 36,
+      "enum_refs": [
+        "TrackingAgreementSearchCategory.CC_SELECT_P2"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "clic_share",
+      "action": "<currentPageUrl>",
+      "name_pattern": "<socialNetwork>",
+      "resolution": "dynamic",
+      "emit_function": "emitClickShare",
+      "file": "packages/code-du-travail-frontend/src/modules/common/tracking.ts",
+      "line": 29,
+      "enum_refs": [
+        "CommonCategory.CLICK_SHARE"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "contact",
+      "action": "click_contact_sr_modale",
+      "name_pattern": "<currentPathName>",
+      "resolution": "literal",
+      "emit_function": "emitModalIsOpened",
+      "file": "packages/code-du-travail-frontend/src/modules/layout/footer/infos/tracking.ts",
+      "line": 24,
+      "enum_refs": [
+        "MatomoNeedMoreInfoEventSecondary.CONTACT",
+        "MatomoNeedMoreInfoEventTertiary.CLICK_CONTACT_MODAL"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "contact",
+      "action": "click_phone_number",
+      "name_pattern": null,
+      "resolution": "literal",
+      "emit_function": "emitTrackNumber",
+      "file": "packages/code-du-travail-frontend/src/modules/layout/footer/infos/tracking.ts",
+      "line": 17,
+      "enum_refs": [
+        "MatomoNeedMoreInfoEventSecondary.CONTACT",
+        "MatomoNeedMoreInfoEventTertiary.CLICK_PHONE_NUMBER"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "contribution",
+      "action": "btn_table_fullscreen",
+      "name_pattern": "<getRouteBySource(SOURCES.CONTRIBUTIONS)>/<slug>",
+      "resolution": "literal",
+      "emit_function": "emitClickTableFullscreen",
+      "file": "packages/code-du-travail-frontend/src/modules/contributions/tracking.ts",
+      "line": 90,
+      "enum_refs": [
+        "SOURCES.CONTRIBUTIONS",
+        "TrackingContributionAction.BTN_TABLE_FULLSCREEN",
+        "TrackingContributionCategory.CONTRIBUTION"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "contribution",
+      "action": "click_afficher_les_informations_CC",
+      "name_pattern": "<path>",
+      "resolution": "literal",
+      "emit_function": "emitDisplayAgreementContent",
+      "file": "packages/code-du-travail-frontend/src/modules/contributions/tracking.ts",
+      "line": 42,
+      "enum_refs": [
+        "TrackingAgreementSearchAction.CLICK_DISPLAY_AGREEMENT_CONTENT",
+        "TrackingContributionCategory.CONTRIBUTION"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "contribution",
+      "action": "click_afficher_les_informations_générales",
+      "name_pattern": "<path>",
+      "resolution": "literal",
+      "emit_function": "emitDisplayGeneralContent",
+      "file": "packages/code-du-travail-frontend/src/modules/contributions/tracking.ts",
+      "line": 58,
+      "enum_refs": [
+        "TrackingAgreementSearchAction.CLICK_DISPLAY_GENERAL_CONTENT",
+        "TrackingContributionCategory.CONTRIBUTION"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "contribution",
+      "action": "click_afficher_les_informations_sans_CC",
+      "name_pattern": "<path>",
+      "resolution": "literal",
+      "emit_function": "emitDisplayGenericContent",
+      "file": "packages/code-du-travail-frontend/src/modules/contributions/tracking.ts",
+      "line": 50,
+      "enum_refs": [
+        "TrackingAgreementSearchAction.CLICK_DISPLAY_GENERIC_CONTENT",
+        "TrackingContributionCategory.CONTRIBUTION"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "enterprise_search",
+      "action": "<action>",
+      "name_pattern": "<JSON.stringify({ query, apiGeoResult })>",
+      "resolution": "dynamic",
+      "emit_function": "emitEnterpriseAgreementSearchInputEvent",
+      "file": "packages/code-du-travail-frontend/src/modules/enterprise/EnterpriseAgreementSearch/tracking.ts",
+      "line": 14,
+      "enum_refs": [
+        "JSON.stringify",
+        "TrackingAgreementSearchCategory.ENTERPRISE_SEARCH"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "enterprise_select",
+      "action": "<action>",
+      "name_pattern": "<JSON.stringify(enterprise)>",
+      "resolution": "dynamic",
+      "emit_function": "emitSelectEnterpriseEvent",
+      "file": "packages/code-du-travail-frontend/src/modules/enterprise/EnterpriseAgreementSearch/tracking.ts",
+      "line": 28,
+      "enum_refs": [
+        "JSON.stringify",
+        "TrackingAgreementSearchCategory.CC_ENTERPRISE_SELECT"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "enterprise_select",
+      "action": "<simulatorTitle>",
+      "name_pattern": "<JSON.stringify({ label: enterprise.label, siren: enterprise.siren, })>",
+      "resolution": "dynamic",
+      "emit_function": "emitEnterpriseSelectEvent",
+      "file": "packages/code-du-travail-frontend/src/modules/outils/common/events/pushAgreementEvents.ts",
+      "line": 58,
+      "enum_refs": [
+        "JSON.stringify",
+        "MatomoSearchAgreementCategory.ENTERPRISE_SELECT"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "enterprise_select",
+      "action": "HEURES_RECHERCHE_EMPLOI",
+      "name_pattern": "<JSON.stringify({ label: enterprise.label, siren: enterprise.siren, })>",
+      "resolution": "literal",
+      "emit_function": "emitEnterpriseSelectEvent",
+      "file": "packages/code-du-travail-frontend/src/modules/outils/common/events/pushAgreementEvents.ts",
+      "line": 58,
+      "enum_refs": [
+        "JSON.stringify",
+        "MatomoSearchAgreementCategory.ENTERPRISE_SELECT"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "enterprise_select",
+      "action": "INDEMNITE_PRECARITE",
+      "name_pattern": "<JSON.stringify({ label: enterprise.label, siren: enterprise.siren, })>",
+      "resolution": "literal",
+      "emit_function": "emitEnterpriseSelectEvent",
+      "file": "packages/code-du-travail-frontend/src/modules/outils/common/events/pushAgreementEvents.ts",
+      "line": 58,
+      "enum_refs": [
+        "JSON.stringify",
+        "MatomoSearchAgreementCategory.ENTERPRISE_SELECT"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "enterprise_select",
+      "action": "PREAVIS_DEMISSION",
+      "name_pattern": "<JSON.stringify({ label: enterprise.label, siren: enterprise.siren, })>",
+      "resolution": "literal",
+      "emit_function": "emitEnterpriseSelectEvent",
+      "file": "packages/code-du-travail-frontend/src/modules/outils/common/events/pushAgreementEvents.ts",
+      "line": 58,
+      "enum_refs": [
+        "JSON.stringify",
+        "MatomoSearchAgreementCategory.ENTERPRISE_SELECT"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "enterprise_select",
+      "action": "PREAVIS_LICENCIEMENT",
+      "name_pattern": "<JSON.stringify({ label: enterprise.label, siren: enterprise.siren, })>",
+      "resolution": "literal",
+      "emit_function": "emitEnterpriseSelectEvent",
+      "file": "packages/code-du-travail-frontend/src/modules/outils/common/events/pushAgreementEvents.ts",
+      "line": 58,
+      "enum_refs": [
+        "JSON.stringify",
+        "MatomoSearchAgreementCategory.ENTERPRISE_SELECT"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "enterprise_select",
+      "action": "PREAVIS_RETRAITE",
+      "name_pattern": "<JSON.stringify({ label: enterprise.label, siren: enterprise.siren, })>",
+      "resolution": "literal",
+      "emit_function": "emitEnterpriseSelectEvent",
+      "file": "packages/code-du-travail-frontend/src/modules/outils/common/events/pushAgreementEvents.ts",
+      "line": 58,
+      "enum_refs": [
+        "JSON.stringify",
+        "MatomoSearchAgreementCategory.ENTERPRISE_SELECT"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "feedback",
+      "action": "negative",
+      "name_pattern": "<baseUrl>",
+      "resolution": "literal",
+      "emit_function": "emitNegativeFeedback",
+      "file": "packages/code-du-travail-frontend/src/modules/layout/feedback/tracking.ts",
+      "line": 39,
+      "enum_refs": [
+        "FeedbackActionEvent.NEGATIVE",
+        "FeedbackCategoryEvent.FEEDBACK"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "feedback",
+      "action": "positive",
+      "name_pattern": "<baseUrl>",
+      "resolution": "literal",
+      "emit_function": "emitPositiveFeedback",
+      "file": "packages/code-du-travail-frontend/src/modules/layout/feedback/tracking.ts",
+      "line": 29,
+      "enum_refs": [
+        "FeedbackActionEvent.POSITIVE",
+        "FeedbackCategoryEvent.FEEDBACK"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "feedback_category",
+      "action": "Cette page ne correspond pas à ma recherche ou à ma situation.",
+      "name_pattern": "<baseUrl>",
+      "resolution": "enum-param",
+      "emit_function": "emitFeedbackCategory",
+      "file": "packages/code-du-travail-frontend/src/modules/layout/feedback/tracking.ts",
+      "line": 59,
+      "enum_refs": [
+        "FeedbackCategoryEvent.FEEDBACK_CATEGORY"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "feedback_category",
+      "action": "Je ne suis pas satisfait de cette réglementation.",
+      "name_pattern": "<baseUrl>",
+      "resolution": "enum-param",
+      "emit_function": "emitFeedbackCategory",
+      "file": "packages/code-du-travail-frontend/src/modules/layout/feedback/tracking.ts",
+      "line": 59,
+      "enum_refs": [
+        "FeedbackCategoryEvent.FEEDBACK_CATEGORY"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "feedback_category",
+      "action": "Les informations me semblent fausses.",
+      "name_pattern": "<baseUrl>",
+      "resolution": "enum-param",
+      "emit_function": "emitFeedbackCategory",
+      "file": "packages/code-du-travail-frontend/src/modules/layout/feedback/tracking.ts",
+      "line": 59,
+      "enum_refs": [
+        "FeedbackCategoryEvent.FEEDBACK_CATEGORY"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "feedback_category",
+      "action": "Les informations ne sont pas claires.",
+      "name_pattern": "<baseUrl>",
+      "resolution": "enum-param",
+      "emit_function": "emitFeedbackCategory",
+      "file": "packages/code-du-travail-frontend/src/modules/layout/feedback/tracking.ts",
+      "line": 59,
+      "enum_refs": [
+        "FeedbackCategoryEvent.FEEDBACK_CATEGORY"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "feedback_simulateurs",
+      "action": "Clarté_questions",
+      "name_pattern": "<feedback>",
+      "resolution": "enum-param",
+      "emit_function": "trackFeedback",
+      "file": "packages/code-du-travail-frontend/src/modules/outils/indemnite-depart/feedback/tracking.tsx",
+      "line": 38,
+      "enum_refs": [],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "feedback_simulateurs",
+      "action": "Clarté_résultat",
+      "name_pattern": "<feedback>",
+      "resolution": "enum-param",
+      "emit_function": "trackFeedback",
+      "file": "packages/code-du-travail-frontend/src/modules/outils/indemnite-depart/feedback/tracking.tsx",
+      "line": 38,
+      "enum_refs": [],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "feedback_simulateurs",
+      "action": "Comment_s_est_passée_la_simulation",
+      "name_pattern": "<feedback>",
+      "resolution": "enum-param",
+      "emit_function": "trackFeedback",
+      "file": "packages/code-du-travail-frontend/src/modules/outils/indemnite-depart/feedback/tracking.tsx",
+      "line": 38,
+      "enum_refs": [],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "feedback_simulateurs",
+      "action": "Facilité_utilisation_simulateur",
+      "name_pattern": "<feedback>",
+      "resolution": "enum-param",
+      "emit_function": "trackFeedback",
+      "file": "packages/code-du-travail-frontend/src/modules/outils/indemnite-depart/feedback/tracking.tsx",
+      "line": 38,
+      "enum_refs": [],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "feedback_simulateurs_rupture_co",
+      "action": "Clarté_questions",
+      "name_pattern": "<feedback>",
+      "resolution": "enum-param",
+      "emit_function": "trackFeedback",
+      "file": "packages/code-du-travail-frontend/src/modules/outils/indemnite-depart/feedback/tracking.tsx",
+      "line": 38,
+      "enum_refs": [],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "feedback_simulateurs_rupture_co",
+      "action": "Clarté_résultat",
+      "name_pattern": "<feedback>",
+      "resolution": "enum-param",
+      "emit_function": "trackFeedback",
+      "file": "packages/code-du-travail-frontend/src/modules/outils/indemnite-depart/feedback/tracking.tsx",
+      "line": 38,
+      "enum_refs": [],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "feedback_simulateurs_rupture_co",
+      "action": "Comment_s_est_passée_la_simulation",
+      "name_pattern": "<feedback>",
+      "resolution": "enum-param",
+      "emit_function": "trackFeedback",
+      "file": "packages/code-du-travail-frontend/src/modules/outils/indemnite-depart/feedback/tracking.tsx",
+      "line": 38,
+      "enum_refs": [],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "feedback_simulateurs_rupture_co",
+      "action": "Facilité_utilisation_simulateur",
+      "name_pattern": "<feedback>",
+      "resolution": "enum-param",
+      "emit_function": "trackFeedback",
+      "file": "packages/code-du-travail-frontend/src/modules/outils/indemnite-depart/feedback/tracking.tsx",
+      "line": 38,
+      "enum_refs": [],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "feedback_suggestion",
+      "action": "<suggestion>",
+      "name_pattern": "<baseUrl>",
+      "resolution": "dynamic",
+      "emit_function": "emitFeedbackSuggestion",
+      "file": "packages/code-du-travail-frontend/src/modules/layout/feedback/tracking.ts",
+      "line": 49,
+      "enum_refs": [
+        "FeedbackCategoryEvent.FEEDBACK_SUGGESTION"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "feedback_suggestion",
+      "action": "<text>",
+      "name_pattern": "<url.replace(/\\?.*$/, \"\")>",
+      "resolution": "dynamic",
+      "emit_function": "trackFeedbackText",
+      "file": "packages/code-du-travail-frontend/src/modules/outils/indemnite-depart/feedback/tracking.tsx",
+      "line": 50,
+      "enum_refs": [],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "feedback_suggestion_rupture_co",
+      "action": "<text>",
+      "name_pattern": "<url.replace(/\\?.*$/, \"\")>",
+      "resolution": "dynamic",
+      "emit_function": "trackFeedbackText",
+      "file": "packages/code-du-travail-frontend/src/modules/outils/indemnite-depart/feedback/tracking.tsx",
+      "line": 50,
+      "enum_refs": [],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "nextResultPage",
+      "action": "<query>",
+      "name_pattern": null,
+      "resolution": "dynamic",
+      "emit_function": "useSearchTracking",
+      "file": "packages/code-du-travail-frontend/src/modules/recherche/tracking.ts",
+      "line": 104,
+      "enum_refs": [
+        "MatomoSearchCategory.NEXT_RESULT_PAGE"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "notation_contribution",
+      "action": "note_<value>",
+      "name_pattern": "<contributionSlug>",
+      "resolution": "dynamic",
+      "emit_function": "trackContributionRating",
+      "file": "packages/code-du-travail-frontend/src/modules/contributions/rating/tracking.ts",
+      "line": 72,
+      "enum_refs": [
+        "RatingMatomo.ACTION_PREFIX",
+        "RatingMatomo.CATEGORY",
+        "SOURCES.CONTRIBUTIONS"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "outil",
+      "action": "anciennete_moins_2_ans",
+      "name_pattern": null,
+      "resolution": "literal",
+      "emit_function": "onNextStep",
+      "file": "packages/code-du-travail-frontend/src/modules/outils/preavis-retraite/steps/Seniority/store/store.ts",
+      "line": 46,
+      "enum_refs": [
+        "MatomoBaseEvent.OUTIL",
+        "MatomoRetirementEvent.ANCIENNETE_MOINS_2_ANS",
+        "MatomoRetirementEvent.ANCIENNETE_PLUS_2_ANS"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "outil",
+      "action": "anciennete_plus_2_ans",
+      "name_pattern": null,
+      "resolution": "literal",
+      "emit_function": "onNextStep",
+      "file": "packages/code-du-travail-frontend/src/modules/outils/preavis-retraite/steps/Seniority/store/store.ts",
+      "line": 46,
+      "enum_refs": [
+        "MatomoBaseEvent.OUTIL",
+        "MatomoRetirementEvent.ANCIENNETE_MOINS_2_ANS",
+        "MatomoRetirementEvent.ANCIENNETE_PLUS_2_ANS"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "outil",
+      "action": "cc_select_non_traitée",
+      "name_pattern": "<idcc.toString()>",
+      "resolution": "literal",
+      "emit_function": "emitAgreementUntreatedEvent",
+      "file": "packages/code-du-travail-frontend/src/modules/contributions/tracking.ts",
+      "line": 34,
+      "enum_refs": [
+        "MatomoAgreementEvent.CC_UNTREATED",
+        "TrackingContributionCategory.TOOL"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "outil",
+      "action": "cc_select_non_traitée",
+      "name_pattern": "<agreementNum.toString()>",
+      "resolution": "literal",
+      "emit_function": "emitAgreementTreatedEvent",
+      "file": "packages/code-du-travail-frontend/src/modules/outils/common/events/pushAgreementEvents.ts",
+      "line": 106,
+      "enum_refs": [
+        "MatomoAgreementEvent.CC_UNTREATED",
+        "MatomoBaseEvent.OUTIL"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "outil",
+      "action": "cc_select_traitée",
+      "name_pattern": "<idcc.toString()>",
+      "resolution": "literal",
+      "emit_function": "emitAgreementTreatedEvent",
+      "file": "packages/code-du-travail-frontend/src/modules/contributions/tracking.ts",
+      "line": 26,
+      "enum_refs": [
+        "MatomoAgreementEvent.CC_TREATED",
+        "TrackingContributionCategory.TOOL"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "outil",
+      "action": "cc_select_traitée",
+      "name_pattern": "<agreementNum.toString()>",
+      "resolution": "literal",
+      "emit_function": "emitAgreementTreatedEvent",
+      "file": "packages/code-du-travail-frontend/src/modules/outils/common/events/pushAgreementEvents.ts",
+      "line": 100,
+      "enum_refs": [
+        "MatomoAgreementEvent.CC_TREATED",
+        "MatomoBaseEvent.OUTIL"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "outil",
+      "action": "click_previous_<title>",
+      "name_pattern": "<currentStepName>",
+      "resolution": "dynamic",
+      "emit_function": "emitNextPreviousEvent",
+      "file": "packages/code-du-travail-frontend/src/modules/outils/common/components/SimulatorLayout/tracking.ts",
+      "line": 14,
+      "enum_refs": [
+        "MatomoActionEvent.CLICK_PREVIOUS",
+        "MatomoActionEvent.VIEW_STEP",
+        "MatomoBaseEvent.OUTIL"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "outil",
+      "action": "click_print",
+      "name_pattern": "<simulatorTitle>",
+      "resolution": "literal",
+      "emit_function": "emitPrintEvent",
+      "file": "packages/code-du-travail-frontend/src/modules/outils/common/components/SimulatorLayout/tracking.ts",
+      "line": 24,
+      "enum_refs": [
+        "MatomoBaseEvent.OUTIL",
+        "MatomoSimulatorEvent.CLICK_PRINT"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "outil",
+      "action": "depart",
+      "name_pattern": null,
+      "resolution": "literal",
+      "emit_function": "onNextStep",
+      "file": "packages/code-du-travail-frontend/src/modules/outils/preavis-retraite/steps/OriginStep/store/store.ts",
+      "line": 44,
+      "enum_refs": [
+        "MatomoBaseEvent.OUTIL",
+        "MatomoRetirementEvent.DEPART_RETRAITE",
+        "MatomoRetirementEvent.MISE_RETRAITE"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "outil",
+      "action": "mise",
+      "name_pattern": null,
+      "resolution": "literal",
+      "emit_function": "onNextStep",
+      "file": "packages/code-du-travail-frontend/src/modules/outils/preavis-retraite/steps/OriginStep/store/store.ts",
+      "line": 44,
+      "enum_refs": [
+        "MatomoBaseEvent.OUTIL",
+        "MatomoRetirementEvent.DEPART_RETRAITE",
+        "MatomoRetirementEvent.MISE_RETRAITE"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "outil",
+      "action": "view_step_<title>",
+      "name_pattern": "<currentStepName>",
+      "resolution": "dynamic",
+      "emit_function": "emitNextPreviousEvent",
+      "file": "packages/code-du-travail-frontend/src/modules/outils/common/components/SimulatorLayout/tracking.ts",
+      "line": 14,
+      "enum_refs": [
+        "MatomoActionEvent.CLICK_PREVIOUS",
+        "MatomoActionEvent.VIEW_STEP",
+        "MatomoBaseEvent.OUTIL"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "outil",
+      "action": "view_step_Heures d'absence pour rechercher un emploi",
+      "name_pattern": "user_blocked_info_cc",
+      "resolution": "literal",
+      "emit_function": "useHeuresRechercheEmploiEventEmitter",
+      "file": "packages/code-du-travail-frontend/src/modules/outils/heures-recherche-emploi/events/useHeuresRechercheEmploiEventEmitter.tsx",
+      "line": 11,
+      "enum_refs": [
+        "MatomoActionEvent.HEURES_RECHERCHE_EMPLOI",
+        "MatomoAgreementEvent.CC_BLOCK_USER",
+        "TrackingContributionCategory.TOOL"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "outil",
+      "action": "view_step_Indemnité de licenciement",
+      "name_pattern": "results_ineligible",
+      "resolution": "literal",
+      "emit_function": "useIndemniteLicenciementEventEmitter",
+      "file": "packages/code-du-travail-frontend/src/modules/outils/indemnite-licenciement/events/useIndemniteLicenciementEventEmitter.tsx",
+      "line": 13,
+      "enum_refs": [
+        "MatomoActionEvent.INDEMNITE_LICENCIEMENT",
+        "MatomoBaseEvent.OUTIL",
+        "MatomoSimulatorEvent.STEP_RESULT_INELIGIBLE"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "outil",
+      "action": "view_step_Indemnité de rupture conventionnelle",
+      "name_pattern": "results_ineligible",
+      "resolution": "literal",
+      "emit_function": "useRuptureCoEventEmitter",
+      "file": "packages/code-du-travail-frontend/src/modules/outils/indemnite-rupture-conventionnelle/events/useRuptureCoEventEmitter.tsx",
+      "line": 13,
+      "enum_refs": [
+        "MatomoActionEvent.RUPTURE_CONVENTIONNELLE",
+        "MatomoBaseEvent.OUTIL",
+        "MatomoSimulatorEvent.STEP_RESULT_INELIGIBLE"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "outil",
+      "action": "view_step_Préavis de démission",
+      "name_pattern": "user_blocked_info_cc",
+      "resolution": "literal",
+      "emit_function": "usePreavisDemissionEventEmitter",
+      "file": "packages/code-du-travail-frontend/src/modules/outils/preavis-demission/events/usePreavisDemissionEventEmitter.tsx",
+      "line": 11,
+      "enum_refs": [
+        "MatomoActionEvent.PREAVIS_DEMISSION",
+        "MatomoAgreementEvent.CC_BLOCK_USER",
+        "TrackingContributionCategory.TOOL"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "outil",
+      "action": "view_step_Trouver sa convention collective",
+      "name_pattern": "start",
+      "resolution": "literal",
+      "emit_function": "emitViewStepEvent",
+      "file": "packages/code-du-travail-frontend/src/modules/convention-collective/tracking.ts",
+      "line": 27,
+      "enum_refs": [
+        "TrackingAgreementSearchAction.AGREEMENT_SEARCH"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "page_home",
+      "action": "click_comprendre_le_droit_du_travail",
+      "name_pattern": null,
+      "resolution": "literal",
+      "emit_function": "emitHomeClickButtonEvent",
+      "file": "packages/code-du-travail-frontend/src/modules/home/tracking.ts",
+      "line": 20,
+      "enum_refs": [
+        "MatomoHomeCategory.PAGE_HOME"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "page_home",
+      "action": "click_question_action",
+      "name_pattern": "<slug>",
+      "resolution": "literal",
+      "emit_function": "emitQuestionActionEvent",
+      "file": "packages/code-du-travail-frontend/src/modules/home/tracking.ts",
+      "line": 27,
+      "enum_refs": [
+        "MatomoHomeCategory.PAGE_HOME",
+        "MatomoHomeEvent.CLICK_DE_LA_QUESTION_A_LACTION"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "page_home",
+      "action": "click_voir_tous_les_outils",
+      "name_pattern": null,
+      "resolution": "literal",
+      "emit_function": "emitHomeClickButtonEvent",
+      "file": "packages/code-du-travail-frontend/src/modules/home/tracking.ts",
+      "line": 20,
+      "enum_refs": [
+        "MatomoHomeCategory.PAGE_HOME"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "page_home",
+      "action": "click_voir_tous_les_themes",
+      "name_pattern": null,
+      "resolution": "literal",
+      "emit_function": "emitHomeClickButtonEvent",
+      "file": "packages/code-du-travail-frontend/src/modules/home/tracking.ts",
+      "line": 20,
+      "enum_refs": [
+        "MatomoHomeCategory.PAGE_HOME"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "page_home",
+      "action": "Click_voir_tous_modeles_de_documents",
+      "name_pattern": null,
+      "resolution": "literal",
+      "emit_function": "emitHomeClickButtonEvent",
+      "file": "packages/code-du-travail-frontend/src/modules/home/tracking.ts",
+      "line": 20,
+      "enum_refs": [
+        "MatomoHomeCategory.PAGE_HOME"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "page_home",
+      "action": "click_voir_toutes_les_actualites",
+      "name_pattern": null,
+      "resolution": "literal",
+      "emit_function": "emitHomeClickButtonEvent",
+      "file": "packages/code-du-travail-frontend/src/modules/home/tracking.ts",
+      "line": 20,
+      "enum_refs": [
+        "MatomoHomeCategory.PAGE_HOME"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "page_home",
+      "action": "click_voir_toutes_les_conventions_collectives",
+      "name_pattern": null,
+      "resolution": "literal",
+      "emit_function": "emitHomeClickButtonEvent",
+      "file": "packages/code-du-travail-frontend/src/modules/home/tracking.ts",
+      "line": 20,
+      "enum_refs": [
+        "MatomoHomeCategory.PAGE_HOME"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "page_home",
+      "action": "click_voir_toutes_les_fiches_pratiques",
+      "name_pattern": null,
+      "resolution": "literal",
+      "emit_function": "emitHomeClickButtonEvent",
+      "file": "packages/code-du-travail-frontend/src/modules/home/tracking.ts",
+      "line": 20,
+      "enum_refs": [
+        "MatomoHomeCategory.PAGE_HOME"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "page_modeles_de_documents",
+      "action": "type_CTRL_C",
+      "name_pattern": "<slug>",
+      "resolution": "literal",
+      "emit_function": "useModeleEvents",
+      "file": "packages/code-du-travail-frontend/src/modules/modeles-de-courriers/tracking.ts",
+      "line": 7,
+      "enum_refs": [
+        "MatomoActionEvent.TYPE_CTRL_C",
+        "MatomoBaseEvent.PAGE_MODELS"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "pagecc_searchcc",
+      "action": "<shortTitle>",
+      "name_pattern": "<q>",
+      "resolution": "dynamic",
+      "emit_function": "LegiFranceSearch",
+      "file": "packages/code-du-travail-frontend/src/modules/convention-collective/LegiFranceSearch.tsx",
+      "line": 24,
+      "enum_refs": [],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "search",
+      "action": "clickSeeAllResults",
+      "name_pattern": "<name>",
+      "resolution": "literal",
+      "emit_function": "useSearchTracking",
+      "file": "packages/code-du-travail-frontend/src/modules/recherche/tracking.ts",
+      "line": 158,
+      "enum_refs": [
+        "MatomoSearchAction.CLICK_SEE_ALL_RESULTS",
+        "MatomoSearchCategory.SEARCH"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "search",
+      "action": "fullsearch",
+      "name_pattern": "<name>",
+      "resolution": "literal",
+      "emit_function": "useSearchTracking",
+      "file": "packages/code-du-travail-frontend/src/modules/recherche/tracking.ts",
+      "line": 64,
+      "enum_refs": [
+        "MatomoSearchAction.FULL_SEARCH",
+        "MatomoSearchCategory.SEARCH"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "search",
+      "action": "fullsearch",
+      "name_pattern": "<name>",
+      "resolution": "literal",
+      "emit_function": "useSearchTracking",
+      "file": "packages/code-du-travail-frontend/src/modules/recherche/tracking.ts",
+      "line": 94,
+      "enum_refs": [
+        "MatomoSearchAction.FULL_SEARCH",
+        "MatomoSearchCategory.SEARCH"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "search",
+      "action": "presearch",
+      "name_pattern": "<name>",
+      "resolution": "literal",
+      "emit_function": "useSearchTracking",
+      "file": "packages/code-du-travail-frontend/src/modules/recherche/tracking.ts",
+      "line": 143,
+      "enum_refs": [
+        "MatomoSearchAction.PRESEARCH",
+        "MatomoSearchCategory.SEARCH"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "search",
+      "action": "selectPresearchResult",
+      "name_pattern": "<name>",
+      "resolution": "literal",
+      "emit_function": "useSearchTracking",
+      "file": "packages/code-du-travail-frontend/src/modules/recherche/tracking.ts",
+      "line": 181,
+      "enum_refs": [
+        "MatomoSearchAction.SELECT_PRESEARCH_RESULT",
+        "MatomoSearchCategory.SEARCH"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "selectedSuggestion",
+      "action": "<query>",
+      "name_pattern": "<suggestion>",
+      "resolution": "dynamic",
+      "emit_function": "useSearchTracking",
+      "file": "packages/code-du-travail-frontend/src/modules/recherche/tracking.ts",
+      "line": 112,
+      "enum_refs": [
+        "MatomoSearchCategory.SELECTED_SUGGESTION"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "selectRelated",
+      "action": "<JSON.stringify({ selection })>",
+      "name_pattern": null,
+      "resolution": "dynamic",
+      "emit_function": "emitSelectRelated",
+      "file": "packages/code-du-travail-frontend/src/modules/common/tracking.ts",
+      "line": 22,
+      "enum_refs": [
+        "CommonCategory.SELECTED_RELATED",
+        "JSON.stringify"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "selectResult",
+      "action": "<JSON.stringify({ algo, url: formattedUrl, })>",
+      "name_pattern": null,
+      "resolution": "dynamic",
+      "emit_function": "useSearchTracking",
+      "file": "packages/code-du-travail-frontend/src/modules/recherche/tracking.ts",
+      "line": 45,
+      "enum_refs": [
+        "JSON.stringify",
+        "MatomoSearchCategory.SELECT_RESULT"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "selectResult",
+      "action": "<JSON.stringify({ url: externalUrl || `/${getRouteBySource(source as keyof typ...>",
+      "name_pattern": null,
+      "resolution": "dynamic",
+      "emit_function": "emitDocumentClickButtonEvent",
+      "file": "packages/code-du-travail-frontend/src/modules/themes/tracking.ts",
+      "line": 14,
+      "enum_refs": [
+        "JSON.stringify",
+        "MatomoThemeCategory.SELECT_RESULT"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "view_step_cc_search_p1",
+      "action": "back_step_cc_search_p1",
+      "name_pattern": "Trouver sa convention collective",
+      "resolution": "literal",
+      "emit_function": "emitPreviousEvent",
+      "file": "packages/code-du-travail-frontend/src/modules/convention-collective/tracking.ts",
+      "line": 59,
+      "enum_refs": [
+        "TrackingAgreementSearchAction.AGREEMENT_SEARCH",
+        "TrackingAgreementSearchAction.BACK_STEP_P1",
+        "TrackingAgreementSearchCategory.VIEW_STEP_CC_SEARCH_P1"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "view_step_cc_search_p2",
+      "action": "back_step_cc_search_p2",
+      "name_pattern": "Trouver sa convention collective",
+      "resolution": "literal",
+      "emit_function": "emitPreviousEvent",
+      "file": "packages/code-du-travail-frontend/src/modules/enterprise/EnterpriseAgreementSearch/tracking.ts",
+      "line": 44,
+      "enum_refs": [
+        "TrackingAgreementSearchAction.AGREEMENT_SEARCH",
+        "TrackingAgreementSearchAction.BACK_STEP_P2",
+        "TrackingAgreementSearchCategory.VIEW_STEP_CC_SEARCH_P2"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "widget_search",
+      "action": "click_logo",
+      "name_pattern": null,
+      "resolution": "literal",
+      "emit_function": "useSearchTracking",
+      "file": "packages/code-du-travail-frontend/src/modules/recherche/tracking.ts",
+      "line": 122,
+      "enum_refs": [
+        "MatomoBaseEvent.WIDGET_SEARCH",
+        "MatomoWidgetEvent.CLICK_LOGO"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "widget_search",
+      "action": "submit_search",
+      "name_pattern": "<query>",
+      "resolution": "literal",
+      "emit_function": "useSearchTracking",
+      "file": "packages/code-du-travail-frontend/src/modules/recherche/tracking.ts",
+      "line": 129,
+      "enum_refs": [
+        "MatomoBaseEvent.WIDGET_SEARCH",
+        "MatomoWidgetEvent.SUBMIT_SEARCH"
+      ],
+      "tracking_method": "sendEvent"
+    }
+  ],
+  "unresolved": [],
+  "matomo_config_calls": [
+    {
+      "command": "forgetCookieConsentGiven",
+      "args": [],
+      "file": "packages/code-du-travail-frontend/src/modules/utils/consent.ts",
+      "line": 119
+    },
+    {
+      "command": "forgetUserOptOut",
+      "args": [],
+      "file": "packages/code-du-travail-frontend/src/modules/utils/consent.ts",
+      "line": 115
+    },
+    {
+      "command": "HeatmapSessionRecording::disable",
+      "args": [],
+      "file": "packages/code-du-travail-frontend/src/modules/utils/consent.ts",
+      "line": 100
+    },
+    {
+      "command": "HeatmapSessionRecording::enable",
+      "args": [],
+      "file": "packages/code-du-travail-frontend/src/modules/utils/consent.ts",
+      "line": 98
+    },
+    {
+      "command": "optUserOut",
+      "args": [],
+      "file": "packages/code-du-travail-frontend/src/modules/utils/consent.ts",
+      "line": 118
+    },
+    {
+      "command": "rememberCookieConsentGiven",
+      "args": [],
+      "file": "packages/code-du-travail-frontend/src/modules/utils/consent.ts",
+      "line": 116
+    },
+    {
+      "command": "setCookieSameSite",
+      "args": [
+        "None"
+      ],
+      "file": "packages/code-du-travail-frontend/src/modules/config/MatomoAnalytics.tsx",
+      "line": 45
+    },
+    {
+      "command": "setReferrerUrl",
+      "args": [
+        "<referrerUrl>"
+      ],
+      "file": "packages/code-du-travail-frontend/src/modules/config/MatomoAnalytics.tsx",
+      "line": 41
+    }
+  ]
+}
