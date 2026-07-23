@@ -1,6 +1,6 @@
 "use client";
 
-import { useId, useRef, useState } from "react";
+import { ElementType, useId, useRef, useState } from "react";
 import { fr } from "@codegouvfr/react-dsfr";
 import { Button } from "@codegouvfr/react-dsfr/Button";
 import { css } from "@styled-system/css";
@@ -17,12 +17,17 @@ import {
 
 type Props = {
   contributionSlug: string;
+  // Niveau de titre du widget. 2 par défaut ; 3 quand il est imbriqué sous un
+  // titre de section (fiches contribution). La taille visuelle vit sur les
+  // <span> enfants, elle est donc indépendante du niveau.
+  level?: 2 | 3;
 };
 
 type Status = "idle" | "submitted";
 
-export const ContributionRating = ({ contributionSlug }: Props) => {
+export const ContributionRating = ({ contributionSlug, level = 2 }: Props) => {
   const headingId = useId();
+  const Heading = `h${level}` as ElementType;
   const [value, setValue] = useState(RATING_DEFAULT);
   const [status, setStatus] = useState<Status>("idle");
   const messageRef = useRef<HTMLParagraphElement>(null);
@@ -61,10 +66,10 @@ export const ContributionRating = ({ contributionSlug }: Props) => {
           (`@layer utilities`) posée sur le <h2> lui-même serait toujours
           écrasée. DSFR ne cible pas les <span>, eux reçoivent bien notre style.
           La marge basse passe par `fr-mb-1v` (utilitaire DSFR `!important`). */}
-      <h2 id={headingId} className={fr.cx("fr-mb-1v")}>
+      <Heading id={headingId} className={fr.cx("fr-mb-1v")}>
         <span className={titleIntro}>{RATING_WIDGET_INTRO}</span>
         <span className={titleQuestion}>{RATING_WIDGET_TITLE}</span>
-      </h2>
+      </Heading>
       {/* Texte d'aide affiché juste sous la question. Classe DSFR dédiée
           (0.75rem, gris) : étant une classe, elle l'emporte sur la règle de
           base `p`. Non relié au curseur via aria-describedby : DSFR écrase

@@ -3,18 +3,19 @@ import React, { useRef, useState, useEffect } from "react";
 import { useContributionTracking } from "./tracking";
 import {
   buildContributionAgreementPath,
-  hasVisitedCcPage,
+  GENERIC_CONTENT_HASH,
   isAgreementSupported,
   isAgreementValid,
 } from "./contributionUtils";
+import { useRouter } from "next/navigation";
 import { ContributionGenericContent } from "./ContributionGenericContent";
 import { Contribution } from "./type";
 import {
   useLocalStorageForAgreementOnPageLoad,
   getAgreementFromLocalStorage,
 } from "../utils/useLocalStorage";
-import { useRouter } from "next/navigation";
 import { ContributionGenericAgreementSearch } from "./ContributionGenericAgreementSearch";
+import { AgreementRoute } from "src/modules/outils/indemnite-depart/types";
 
 type Props = {
   contribution: Contribution;
@@ -28,6 +29,7 @@ export function ContributionGeneric({ contribution }: Props) {
   const { slug, isNoCDT, relatedItems } = contribution;
 
   const [displayGeneric, setDisplayGeneric] = useState(false);
+  const [defaultRoute, setDefaultRoute] = useState<AgreementRoute>();
 
   const [selectedAgreement, setSelectedAgreement] =
     useLocalStorageForAgreementOnPageLoad();
@@ -52,6 +54,21 @@ export function ContributionGeneric({ contribution }: Props) {
   }, []);
 
   useEffect(() => {
+    if (window.location.hash !== GENERIC_CONTENT_HASH) return;
+    // Arrivée depuis une page CC (option « je ne souhaite pas renseigner » ou
+    // CC non traitée) : on affiche directement la réponse Code du travail en
+    // conservant le choix de l'usager coché. Avec une CC en stockage (non
+    // traitée), l'effet defaultAgreement du formulaire pré-coche la première
+    // option et préremplit la CC ; sans CC, on pré-coche la dernière option.
+
+    setDisplayGeneric(true);
+    if (!getAgreementFromLocalStorage()) {
+      setDefaultRoute("no-agreement");
+    }
+    scrollToTitle();
+  }, []);
+
+  useEffect(() => {
     if (hash === "#retour") {
       setTimeout(() => {
         personalizeTitleRef?.current?.scrollIntoView({ behavior: "smooth" });
@@ -60,17 +77,21 @@ export function ContributionGeneric({ contribution }: Props) {
     }
   }, [hash]);
 
+  // Auto-redirection : arriver sur la fiche générique avec une CC mémorisée et
+  // traitée renvoie directement vers la page CC correspondante (`replace` :
+  // la générique ne s'empile pas dans l'historique). Pas de boucle possible :
+  // « Réinitialiser » (page CC) efface la CC avant de renvoyer ici, et les
+  // hash #retour / #cdt expriment une demande explicite de la fiche générique
+  // (retour au formulaire / réponse Code du travail) : on ne redirige pas.
   useEffect(() => {
     if (window.location.hash === "#retour") return;
-    // L'usager a déjà consulté la page CC de cette fiche : il est revenu
-    // volontairement sur la générique (fil d'Ariane, « Modifier », lien). On ne
-    // le renvoie pas vers la CC, sinon il ne peut jamais revenir en arrière.
-    if (hasVisitedCcPage(slug)) return;
+    if (window.location.hash === GENERIC_CONTENT_HASH) return;
 
     const storedAgreement = getAgreementFromLocalStorage();
     if (storedAgreement && isAgreementValid(contribution, storedAgreement)) {
       router.replace(buildContributionAgreementPath(slug, storedAgreement));
     }
+    // Détection à effectuer une seule fois, au montage.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -111,6 +132,7 @@ export function ContributionGeneric({ contribution }: Props) {
         }}
         selectedAgreement={selectedAgreement}
         trackingActionName={getTitle()}
+        defaultRoute={defaultRoute}
       />
 
       {!isNoCDT && !isAgreementValid(contribution, selectedAgreement) && (

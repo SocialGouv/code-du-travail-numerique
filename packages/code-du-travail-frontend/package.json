@@ -1,6 +1,6 @@
 {
   "name": "@cdt/frontend",
-  "version": "4.233.1",
+  "version": "4.236.0",
   "description": "Code du travail frontend",
   "private": true,
   "homepage": "https://code-du-travail.beta.gouv.fr/",
@@ -66,6 +66,7 @@
     "talisman": "^1.1.4",
     "uuid": "^14.0.0",
     "xss": "^1.0.15",
+    "zod": "^4.3.6",
     "zustand": "^5.0.14"
   },
   "devDependencies": {

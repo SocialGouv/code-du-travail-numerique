@@ -50,7 +50,8 @@ describe("<Information />", () => {
       )
     ).toBeInTheDocument();
     const heading2 = getAllByRole("heading", { level: 2 });
-    expect(heading2).toHaveLength(5);
+    // Le bloc « Partager la page » (role heading niveau 2) n'est plus affiché
+    expect(heading2).toHaveLength(4);
     expect(heading2[0]).toHaveTextContent("Quelle situation ou pathologie ?");
     expect(heading2[1]).toHaveTextContent(
       "Retour en présentiel et mesures d'accompagnement"

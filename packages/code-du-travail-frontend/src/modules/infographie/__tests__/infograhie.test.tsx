@@ -34,7 +34,8 @@ describe("infographie", () => {
       "Titre de la description"
     );
     const h2 = getAllByRole("heading", { level: 2 });
-    expect(h2).toHaveLength(5);
+    // Le bloc « Partager la page » (role heading niveau 2) n'est plus affiché
+    expect(h2).toHaveLength(4);
     expect(h2[0]).toHaveTextContent("Télécharger l'infographie");
     expect(getByText("Description de l'infographie")).toBeInTheDocument();
     const downloadLink = getAllByRole("link", {

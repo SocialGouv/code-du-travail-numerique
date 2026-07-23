@@ -335,6 +335,38 @@ de `note_1`, de `note_2`, …).
 
 ---
 
+### Indicateur NPS (recommandation du site)
+
+Widget « Donnez votre avis ! » proposé sur **toutes les pages** (desktop + mobile). Une icône
+« main » flottante l'ouvre à la demande — elle **s'agite automatiquement une fois**, ~20 s après
+son apparition, pour attirer l'œil sans être intrusive. La modale peut aussi s'ouvrir
+**automatiquement** (sortie de page vers le haut, ou clic « Télécharger »/« Copier » sur un modèle
+de courrier), **une seule fois par session**. L'usager note de **0 à 10** sa propension à
+recommander le site, puis valide.
+
+Trois events Matomo, tous de catégorie **`nps`**, suivent le **cycle de vie de la modale**
+(affichage, refus « simple », opt-out). Ils portent le **déclencheur** en suffixe d'`action` et le
+**chemin de la page** en `name`, et sont émis via le `sendEvent` standard (soumis à l'opt-out
+Matomo). Le déclencheur `<trigger>` vaut `exit_intent` (sortie de page), `download` / `copy` (clic
+sur un modèle de courrier) ou `main` (clic sur l'icône).
+[↗ source](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/nps/tracking.ts#L17 "nps/tracking.ts:17")
+
+| Catégorie | Action (🔀)          | Name (🔀)          | Quand / pourquoi |
+| --------- | -------------------- | ------------------ | ---------------- |
+| nps       | `display_<trigger>`  | `<page_type/slug>` | À l'affichage de la modale, quel qu'en soit le déclencheur. Mesure le volume de sollicitations et leur canal (`<trigger>`). |
+| nps       | `refusal_<trigger>`  | `<page_type/slug>` | À la fermeture « simple » (bouton « Fermer », Échap, clic hors modale) **sans** valider ni cliquer « Ne pas répondre ». La « main » **reste** affichée : l'usager peut encore répondre plus tard. Mesure l'abandon ponctuel de la modale. |
+| nps       | `optout_<trigger>`   | `<page_type/slug>` | Au clic sur **« Ne pas répondre »** : refus explicite. Fait **disparaître la main** et coupe toute sollicitation NPS pendant **1 jour**, tous onglets confondus (cookie ; déclencheurs automatiques compris). Mesure les opt-out volontaires, à distinguer du refus « simple » ci-dessus. |
+
+> **La note (0 à 10) n'est pas un event Matomo côté client** : au clic sur « Valider », le score
+> part vers l'**API proxy interne** `/api/nps` (POST same-origin — contourne les bloqueurs et
+> permettra de router la donnée ailleurs demain). Le serveur relaie alors vers Matomo un event de
+> catégorie **`nps`** (posée **en dur** côté serveur) : `action` = **`score_<0..10>`** — la note
+> voyage **en chaîne dans l'action** (comme la notation de contribution) pour être **comptée** et
+> non sommée par Matomo —, `name` = `page_type/slug`. N'étant pas un `sendEvent` client, il
+> n'apparaît pas dans le catalogue extrait du code.
+
+---
+
 ### Convention collective (recherche & consultation dédiées)
 
 En dehors des simulateurs : l'outil « Trouver sa convention collective » et la recherche

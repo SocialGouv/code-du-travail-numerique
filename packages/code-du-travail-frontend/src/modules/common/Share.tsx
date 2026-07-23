@@ -12,9 +12,12 @@ import Link from "./Link";
 type Props = {
   title: string;
   metaDescription: string;
+  // Niveau de titre (aria-level) du bloc « Partager la page ». 2 par défaut ;
+  // 3 quand il est imbriqué sous un titre de section (fiches contribution).
+  level?: 2 | 3;
 };
 
-export const Share = ({ title, metaDescription }: Props) => {
+export const Share = ({ title, metaDescription, level = 2 }: Props) => {
   const [isUrlCopied, setUrlCopied] = useState(false);
   const { emitClickShare } = useCommonTracking();
   const linkCopiedRef = useRef<HTMLParagraphElement>(null);
@@ -30,7 +33,7 @@ export const Share = ({ title, metaDescription }: Props) => {
 
   return (
     <div className={`${fr.cx("fr-follow__social")} ${hideOnPrint}`}>
-      <div className={fr.cx("fr-mb-2w")} role="heading" aria-level={2}>
+      <div className={fr.cx("fr-mb-2w")} role="heading" aria-level={level}>
         <span>Partager la page</span>
       </div>
       <ul className={fr.cx("fr-btns-group")}>

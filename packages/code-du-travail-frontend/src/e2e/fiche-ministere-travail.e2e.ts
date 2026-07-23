@@ -12,7 +12,7 @@ test.describe("Page Ministère du travail", () => {
     await expect(
       page.getByRole("link", { name: "Fiche Ministère du travail" })
     ).toHaveAttribute("href", /https:\/\/travail-emploi\.gouv\.fr/);
-    await expect(page.getByRole("heading", { level: 2 })).toHaveCount(12);
+    await expect(page.getByRole("heading", { level: 2 })).toHaveCount(11);
     await expect(page.getByRole("heading", { level: 2 }).first()).toContainText(
       /Qu.est-ce qu.une entreprise d.insertion/
     );

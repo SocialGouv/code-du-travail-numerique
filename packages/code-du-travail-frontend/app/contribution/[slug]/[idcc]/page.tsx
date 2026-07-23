@@ -5,6 +5,7 @@ import { generateDefaultMetadata } from "../../../../src/modules/common/metas";
 import {
   ContributionLayout,
   fetchContributionBySlug,
+  fetchGenericContributionInfos,
 } from "../../../../src/modules/contributions";
 
 export async function generateMetadata(props) {
@@ -20,7 +21,12 @@ export async function generateMetadata(props) {
 
 async function ContributionByAgreement(props) {
   const params = await props.params;
-  const contribution = await fetchContribution(params.slug, params.idcc);
+  // Infos du document générique frère (cf. page /contribution/[slug]) : ici le
+  // slug générique est directement le segment de route.
+  const [contribution, genericInfos] = await Promise.all([
+    fetchContribution(params.slug, params.idcc),
+    fetchGenericContributionInfos(params.slug),
+  ]);
 
   if (/^\d+$/.test(params.idcc) && contribution.ccnSlug) {
     permanentRedirect(`/contribution/${params.slug}/${contribution.ccnSlug}`);
@@ -28,7 +34,10 @@ async function ContributionByAgreement(props) {
 
   return (
     <DsfrLayout>
-      <ContributionLayout contribution={contribution} />
+      <ContributionLayout
+        contribution={contribution}
+        genericInfos={genericInfos}
+      />
     </DsfrLayout>
   );
 }

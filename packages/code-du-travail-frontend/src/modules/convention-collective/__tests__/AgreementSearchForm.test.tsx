@@ -116,4 +116,32 @@ describe("<PageContribution />", () => {
       name: "Trouver sa convention collective",
     });
   });
+
+  it("should preselect the defaultRoute radio without emitting any event nor clearing the agreement", async () => {
+    (sendEvent as jest.Mock).mockClear();
+    const onAgreementSelect = jest.fn();
+
+    render(
+      <AgreementSearchForm
+        trackingActionName={TrackingAgreementSearchAction.AGREEMENT_SEARCH}
+        onAgreementSelect={onAgreementSelect}
+        level={2}
+        showNoAgreementOption
+        defaultRoute="no-agreement"
+      />
+    );
+
+    await waitFor(() => {
+      expect(
+        (
+          screen.getByLabelText(
+            /Je ne souhaite pas renseigner ma convention collective\./
+          ) as HTMLInputElement
+        ).checked
+      ).toBe(true);
+    });
+    // Pré-cochage automatique : pas une action de l'usager.
+    expect(sendEvent).not.toHaveBeenCalled();
+    expect(onAgreementSelect).not.toHaveBeenCalled();
+  });
 });

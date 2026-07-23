@@ -8,7 +8,6 @@ import Accordion from "@codegouvfr/react-dsfr/Accordion";
 import { ListWithArrow } from "../common/ListWithArrow";
 import { RelatedItems } from "../common/RelatedItems";
 import { RelatedItem } from "../documents";
-import { Share } from "../common/Share";
 import { Contribution } from "./type";
 import { ContributionRating } from "./rating";
 import { css } from "@styled-system/css";
@@ -25,17 +24,17 @@ export function ContributionAgreementContent({
   contribution,
   relatedItems,
 }: Props) {
-  const { title, metas } = contribution;
   return (
     <div className={fr.cx("fr-grid-row", "fr-grid-row--gutters", "fr-mb-6w")}>
       <div
         className={fr.cx("fr-col-12", "fr-col-lg-8", "fr-mb-6w", "fr-mb-md-0")}
       >
+        <h2>Réponse pour la convention : {contribution.ccnShortTitle}</h2>
         <ContributionContent contribution={contribution} titleLevel={2} />
         {contribution.references.length > 0 && (
           <Accordion
             label="Références"
-            titleAs="h2"
+            titleAs="h3"
             className={fr.cx("fr-mt-6w")}
           >
             <ListWithArrow
@@ -58,7 +57,7 @@ export function ContributionAgreementContent({
         {contribution.messageBlock && (
           <div className={fr.cx("fr-alert", "fr-alert--info", "fr-my-6w")}>
             <>
-              <h2 className={fr.cx("fr-h5")}>Attention</h2>
+              <h3 className={fr.cx("fr-h5")}>Attention</h3>
               <Html>{contribution.messageBlock}</Html>
             </>
           </div>
@@ -79,9 +78,8 @@ export function ContributionAgreementContent({
             </Link>
           </span>
         </p>
-        <ContributionRating contributionSlug={contribution.slug} />
-        {relatedItems && <RelatedItems relatedItems={relatedItems} />}
-        <Share title={title} metaDescription={metas.description} />
+        <ContributionRating contributionSlug={contribution.slug} level={3} />
+        {relatedItems && <RelatedItems relatedItems={relatedItems} level={3} />}
       </div>
     </div>
   );

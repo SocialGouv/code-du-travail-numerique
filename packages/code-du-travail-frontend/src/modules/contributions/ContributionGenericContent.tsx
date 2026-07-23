@@ -1,7 +1,6 @@
 "use client";
 import React, { forwardRef, ReactNode } from "react";
 import { fr } from "@codegouvfr/react-dsfr";
-import { Share } from "../common/Share";
 import { ContributionContent } from "./ContributionContent";
 import Html from "../common/Html";
 import Link from "../common/Link";
@@ -27,8 +26,6 @@ export const ContributionGenericContent = forwardRef<
   HTMLParagraphElement,
   Props
 >(({ contribution, alertText, relatedItems, displayGeneric }, ref) => {
-  const { title, metas } = contribution;
-
   return (
     <>
       <div
@@ -52,12 +49,13 @@ export const ContributionGenericContent = forwardRef<
           )} ${focusableTitle}`}
           id="cdt"
         >
+          <h2>Réponse d&apos;après le Code du Travail</h2>
           {alertText}
           <ContributionContent contribution={contribution} titleLevel={2} />
           {contribution.references.length > 0 && (
             <Accordion
               label="Références"
-              titleAs="h2"
+              titleAs="h3"
               className={fr.cx("fr-mt-6w")}
             >
               <ListWithArrow
@@ -78,7 +76,7 @@ export const ContributionGenericContent = forwardRef<
           )}
           {contribution.messageBlock && (
             <div className={fr.cx("fr-alert", "fr-alert--info", "fr-mt-6w")}>
-              <h2 className={fr.cx("fr-h5")}>Attention</h2>
+              <h3 className={fr.cx("fr-h5")}>Attention</h3>
               <Html>{contribution.messageBlock}</Html>
             </div>
           )}
@@ -94,9 +92,8 @@ export const ContributionGenericContent = forwardRef<
             !displayGeneric && "fr-hidden"
           )}
         >
-          <ContributionRating contributionSlug={contribution.slug} />
-          <RelatedItems relatedItems={relatedItems} />
-          <Share title={title} metaDescription={metas.description} />
+          <ContributionRating contributionSlug={contribution.slug} level={3} />
+          <RelatedItems relatedItems={relatedItems} level={3} />
         </div>
       </div>
     </>
