@@ -59,7 +59,7 @@ exports[`<LetterModel /> affiche un modèle de document 1`] = `
         Mon modele
       </h1>
       <div
-        class="fr-mt-6w fr-mb-6w"
+        class="fr-mt-2w fr-mb-4w"
       >
         <p
           class="fr-mb-2w"

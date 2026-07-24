@@ -15,7 +15,7 @@ type Props = {
 // l'ordre (date → tags) et le rythme d'espacement pour qu'ils soient identiques
 // partout (modèles, infos, infographies, fiches, contributions).
 export const ContentMeta = ({ breadcrumbs, date, source }: Props) => (
-  <div className={fr.cx("fr-mt-6w", "fr-mb-6w")}>
+  <div className={fr.cx("fr-mt-2w", "fr-mb-4w")}>
     {date &&
       (source ? (
         <SourceData
