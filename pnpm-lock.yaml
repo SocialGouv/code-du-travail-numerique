@@ -51,8 +51,8 @@ importers:
         specifier: 1.2.4
         version: 1.2.4(encoding@0.1.13)(supports-color@5.5.0)
       '@socialgouv/matomo-next':
-        specifier: ^1.13.1
-        version: 1.13.1(next@16.2.7(@babel/core@7.29.0)(@opentelemetry/api@1.9.1)(@playwright/test@1.60.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)(sass@1.100.0))(react@19.2.7)
+        specifier: ^1.14.2
+        version: 1.14.2(next@16.2.7(@babel/core@7.29.0)(@opentelemetry/api@1.9.1)(@playwright/test@1.60.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)(sass@1.100.0))(react@19.2.7)
       '@socialgouv/modeles-social':
         specifier: link:../code-du-travail-modeles
         version: link:../code-du-travail-modeles
@@ -2784,8 +2784,8 @@ packages:
   '@socialgouv/dila-api-client@1.2.4':
     resolution: {integrity: sha512-mG7uXvwAHjPNme2X/3uYBCEffNQlOJiFT7/oscoHv5qWZ/QRyiBKjFeAQsHiEJfAnyyt8PFuruZWqWIvmMCIMQ==}
 
-  '@socialgouv/matomo-next@1.13.1':
-    resolution: {integrity: sha512-X1772JUsZmGVFfE+rG2k+eWelW1HcEUqq6J8YxviKX4nRDh/jS0Royjft1vKMYPEEdTLrLJK/gvIftq6Rwk+ng==}
+  '@socialgouv/matomo-next@1.14.2':
+    resolution: {integrity: sha512-K7blGIQdkV9+ihxxtR/ABxeMsTTet/MiIluPW7BMkBBmoTOhWKzIfxzjc1MrLvZHC5aInCLeuNdW8hRMi4jkog==}
     engines: {node: '>=24.0.0', pnpm: '>=10.0.0'}
     peerDependencies:
       next: '>= 13.0.0'
@@ -10675,7 +10675,7 @@ snapshots:
       - encoding
       - supports-color
 
-  '@socialgouv/matomo-next@1.13.1(next@16.2.7(@babel/core@7.29.0)(@opentelemetry/api@1.9.1)(@playwright/test@1.60.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)(sass@1.100.0))(react@19.2.7)':
+  '@socialgouv/matomo-next@1.14.2(next@16.2.7(@babel/core@7.29.0)(@opentelemetry/api@1.9.1)(@playwright/test@1.60.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)(sass@1.100.0))(react@19.2.7)':
     dependencies:
       next: 16.2.7(@babel/core@7.29.0)(@opentelemetry/api@1.9.1)(@playwright/test@1.60.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)(sass@1.100.0)
       react: 19.2.7
