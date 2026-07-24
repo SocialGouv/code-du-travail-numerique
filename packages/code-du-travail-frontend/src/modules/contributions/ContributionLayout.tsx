@@ -4,8 +4,7 @@ import { css } from "@styled-system/css";
 import { fr } from "@codegouvfr/react-dsfr";
 import Breadcrumb from "@codegouvfr/react-dsfr/Breadcrumb";
 import { Contribution } from "./type";
-import { SourceData } from "../layout/SourceData";
-import { ThemeTags } from "../common/ThemeTags";
+import { ContentMeta } from "../common/ContentMeta";
 import { ContributionGeneric } from "./ContributionGeneric";
 import { ContributionAgreement } from "./ContributionAgreement";
 import { ArticleJsonLd, BreadcrumbListJsonLd } from "../seo/jsonld";
@@ -82,20 +81,15 @@ export function ContributionLayout({ contribution, genericInfos }: Props) {
           </span>
         )}
       </h1>
-      <div className={fr.cx("fr-mt-6w")}>
-        {isFicheSP ? (
-          <SourceData
-            source={{
-              url: contribution.url,
-              name: "Fiche service-public.gouv.fr",
-            }}
-            updatedAt={date}
-          />
-        ) : (
-          <p>Mis à jour le&nbsp;: {contribution.date}</p>
-        )}
-      </div>
-      <ThemeTags breadcrumbs={contribution.breadcrumbs} />
+      <ContentMeta
+        date={date}
+        breadcrumbs={contribution.breadcrumbs}
+        source={
+          isFicheSP
+            ? { url: contribution.url, name: "Fiche service-public.gouv.fr" }
+            : undefined
+        }
+      />
       <ArticleJsonLd
         title={title}
         datePublished={date}

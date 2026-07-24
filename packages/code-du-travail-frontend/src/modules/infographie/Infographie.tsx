@@ -5,7 +5,7 @@ import { fr } from "@codegouvfr/react-dsfr";
 import { DownloadInfographicTile, InfographicElement } from "./component";
 import DisplayContent from "../common/DisplayContent";
 import { References } from "../common";
-import { ThemeTags } from "../common/ThemeTags";
+import { ContentMeta } from "../common/ContentMeta";
 import { ArticleJsonLd } from "../seo/jsonld";
 import { css } from "@styled-system/css";
 
@@ -23,8 +23,8 @@ export const Infographie = ({ infographic }: Params) => {
         linkProps: { href: slug },
       }))}
     >
-      <h1 className={fr.cx("fr-mb-3w")}>{infographic.title}</h1>
-      <ThemeTags breadcrumbs={infographic.breadcrumbs} />
+      <h1 className={fr.cx("fr-mb-0")}>{infographic.title}</h1>
+      <ContentMeta breadcrumbs={infographic.breadcrumbs} />
       <ArticleJsonLd
         title={infographic.title}
         datePublished={infographic.date}

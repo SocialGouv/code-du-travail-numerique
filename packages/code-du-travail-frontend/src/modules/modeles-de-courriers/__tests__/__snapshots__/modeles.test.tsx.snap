@@ -54,16 +54,20 @@ exports[`<LetterModel /> affiche un modèle de document 1`] = `
       class="fr-col-12 fr-col-lg-7"
     >
       <h1
-        class="fr-mb-6w"
+        class="fr-mb-0"
       >
         Mon modele
       </h1>
-      <p
-        class="fr-mb-6w"
+      <div
+        class="fr-mt-6w fr-mb-6w"
       >
-        Mis à jour le : 
-        12/02/2020
-      </p>
+        <p
+          class="fr-mb-2w"
+        >
+          Mis à jour le : 
+          12/02/2020
+        </p>
+      </div>
       <div
         class="fr-highlight fr-mb-6w"
       >

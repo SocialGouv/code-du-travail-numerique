@@ -3,8 +3,7 @@ import { fr } from "@codegouvfr/react-dsfr";
 import { RelatedItem } from "../documents";
 import { ElasticFicheServicePublic } from "./queries";
 import { ContainerRichWithBreadcrumbs } from "../layout/ContainerRichWithBreadcrumbs";
-import { SourceData } from "../layout/SourceData";
-import { ThemeTags } from "../common/ThemeTags";
+import { ContentMeta } from "../common/ContentMeta";
 import { ArticleJsonLd } from "../seo/jsonld";
 import "../../../public/static/fiches-mt.css";
 import { FicheServicePublic } from "./builder";
@@ -43,14 +42,13 @@ export function FicheServicePublicContainer({
       title={title}
       description={metaDescription}
     >
-      <h1 className={fr.cx("fr-mb-6w")}>{title}</h1>
+      <h1 className={fr.cx("fr-mb-0")}>{title}</h1>
 
-      <SourceData
+      <ContentMeta
+        date={date}
         source={{ url, name: "Fiche service-public.gouv.fr" }}
-        updatedAt={date}
+        breadcrumbs={breadcrumbs}
       />
-
-      <ThemeTags breadcrumbs={breadcrumbs} />
       <ArticleJsonLd
         title={title}
         datePublished={date}

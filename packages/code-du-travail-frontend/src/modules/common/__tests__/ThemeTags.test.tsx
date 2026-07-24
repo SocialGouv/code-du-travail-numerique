@@ -71,6 +71,28 @@ describe("<ThemeTags />", () => {
     ).not.toBeInTheDocument();
   });
 
+  it("should shorten a theme even when the ES label uses a typographic apostrophe", () => {
+    const { getByText, queryByText } = render(
+      <ThemeTags
+        breadcrumbs={[
+          {
+            // U+2019 (’) comme dans les libellés ingérés depuis Elasticsearch.
+            label: "Temps d’équivalence, astreintes et temps d’habillage",
+            position: 1,
+            slug: "/themes/temps-de-travail",
+          },
+        ]}
+      />
+    );
+
+    expect(
+      getByText("Temps d'équivalence, astreinte et habillage")
+    ).toBeInTheDocument();
+    expect(
+      queryByText("Temps d’équivalence, astreintes et temps d’habillage")
+    ).not.toBeInTheDocument();
+  });
+
   it("should render nothing when there is no breadcrumb", () => {
     const { container } = render(<ThemeTags breadcrumbs={[]} />);
 

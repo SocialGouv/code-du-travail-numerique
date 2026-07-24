@@ -1,11 +1,10 @@
 "use client";
 import React from "react";
-import { fr } from "@codegouvfr/react-dsfr";
 import TagsGroup, { TagsGroupProps } from "@codegouvfr/react-dsfr/TagsGroup";
 import { TagProps } from "@codegouvfr/react-dsfr/Tag";
 import { Breadcrumb as BreadcrumbType } from "@socialgouv/cdtn-types";
 import { useCommonTracking } from "./tracking";
-import { THEME_TAG_SHORT_TITLES } from "./themeTagShortTitles";
+import { getThemeTagShortTitle } from "./themeTagShortTitles";
 
 type Props = {
   breadcrumbs: BreadcrumbType[];
@@ -20,7 +19,7 @@ export const ThemeTags = ({ breadcrumbs }: Props) => {
   if (!rootTheme || !subTheme) return null;
 
   const themeToTag = (theme: BreadcrumbType): TagProps => ({
-    children: THEME_TAG_SHORT_TITLES[theme.label] ?? theme.label,
+    children: getThemeTagShortTitle(theme.label),
     linkProps: {
       href: theme.slug,
       onClick: () => emitClickThemeTag(theme.slug),
@@ -32,5 +31,7 @@ export const ThemeTags = ({ breadcrumbs }: Props) => {
       ? [themeToTag(rootTheme)]
       : [themeToTag(rootTheme), themeToTag(subTheme)];
 
-  return <TagsGroup className={fr.cx("fr-mt-2w")} tags={tags} />;
+  // L'espacement est piloté par le composant parent (ContentMeta) pour un rythme
+  // homogène titre → date → tags sur toutes les pages de contenu.
+  return <TagsGroup tags={tags} />;
 };
