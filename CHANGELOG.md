@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.236.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.236.0...v4.236.1) (2026-07-24)
+
+
+### Bug Fixes
+
+* **nps:** couper les sollicitations auto 24h à la fermeture simple du popup, main conservée ([#7416](https://github.com/SocialGouv/code-du-travail-numerique/issues/7416)) ([d74ec6b](https://github.com/SocialGouv/code-du-travail-numerique/commit/d74ec6b2b36c29b8ccd46807f0fe145d1d98bdb9))
+
+
+
+
+
 # [4.236.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.235.0...v4.236.0) (2026-07-23)
 
 
