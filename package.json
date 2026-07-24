@@ -42,7 +42,7 @@
   },
   "devDependencies": {
     "husky": "~9.1.7",
-    "lerna": "~9.0.3"
+    "lerna": "~9.0.7"
   },
   "engines": {
     "node": ">= 24",
