@@ -13,6 +13,7 @@ type Props = {
   onChangeSelectedOption: (value: string) => void;
   selectedOption: string | undefined;
   autoFocus?: boolean;
+  placeholder?: string;
 };
 
 export const SelectQuestion = ({
@@ -24,6 +25,7 @@ export const SelectQuestion = ({
   onChangeSelectedOption,
   selectedOption,
   autoFocus = false,
+  placeholder = "Sélectionnez une option",
 }: Props) => {
   const [optionsArray, setOptionsArray] = React.useState<[string, string][]>(
     []
@@ -99,7 +101,7 @@ export const SelectQuestion = ({
       className={defaultSelectStyle}
     >
       <option value="" disabled>
-        Sélectionnez une option
+        {placeholder}
       </option>
       {optionsArray.map(([key, label]) => (
         <option key={key} value={key}>

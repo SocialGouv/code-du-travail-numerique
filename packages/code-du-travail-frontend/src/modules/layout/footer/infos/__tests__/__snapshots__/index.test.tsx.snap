@@ -90,120 +90,115 @@ exports[`<NeedMoreInfo /> should match snapshot 1`] = `
                 >
                   Contacter nos services en région
                 </h1>
-                <div>
-                  <fieldset
-                    aria-labelledby="fr-fieldset-radio-_r_2_-legend fr-fieldset-radio-_r_2_-messages"
-                    class="fr-fieldset"
-                    id="fr-fieldset-radio-_r_2_"
+                <div
+                  class="fr-stepper fr-mb-2w"
+                >
+                  <h2
+                    class="fr-stepper__title"
                   >
-                    <legend
-                      class="fr-fieldset__legend fr-text--regular"
-                      id="fr-fieldset-radio-_r_2_-legend"
+                    Précisez votre question
+                    <span
+                      class="fr-stepper__state"
                     >
-                      <p>
-                        Précisez votre question
-                      </p>
-                    </legend>
-                    <div
-                      class="fr-fieldset__content"
+                      Étape 
+                      1
+                       sur 
+                      2
+                    </span>
+                  </h2>
+                  <div
+                    class="fr-stepper__steps"
+                    data-fr-current-step="1"
+                    data-fr-steps="2"
+                  />
+                </div>
+                <div
+                  aria-atomic="true"
+                  aria-live="off"
+                  class="fr-alert fr-alert--info fr-alert--sm"
+                >
+                  <p>
+                    Nous répondons uniquement aux questions portant sur le droit du travail.
+                  </p>
+                </div>
+                <div
+                  class="fr-mt-3w"
+                >
+                  <div
+                    aria-describedby="contact-theme-help"
+                    class="fr-select-group [&>select]:w_fit-content! [&>select]:max-w_282px!"
+                    id="fr-select-group-_r_2_"
+                  >
+                    <label
+                      class="fr-label"
+                      for="input-contact-theme"
                     >
-                      <div
-                        class="fr-radio-group"
+                      <span>
+                        Quel thème concerne votre question ?
+                      </span>
+                    </label>
+                    <select
+                      aria-describedby="select-_r_4_-desc"
+                      class="fr-select"
+                      data-testid="contact-theme"
+                      id="input-contact-theme"
+                      required=""
+                    >
+                      <option
+                        disabled=""
+                        value=""
                       >
-                        <input
-                          data-testid="contact-theme-Question de droit du travail dans le secteur privé"
-                          id="fr-fieldset-radio-_r_2_-0"
-                          name="radio-name-_r_3_"
-                          required=""
-                          type="radio"
-                        />
-                        <label
-                          class="fr-label"
-                          for="fr-fieldset-radio-_r_2_-0"
-                        >
-                          Question de droit du travail dans le secteur privé
-                        </label>
-                      </div>
-                      <div
-                        class="fr-radio-group"
+                        Sélectionner un thème
+                      </option>
+                      <option
+                        value="secteur-prive"
                       >
-                        <input
-                          data-testid="contact-theme-Indemnisation de l'arrêt de travail ou invalidité"
-                          id="fr-fieldset-radio-_r_2_-1"
-                          name="radio-name-_r_3_"
-                          required=""
-                          type="radio"
-                        />
-                        <label
-                          class="fr-label"
-                          for="fr-fieldset-radio-_r_2_-1"
-                        >
-                          Indemnisation de l'arrêt de travail ou invalidité
-                        </label>
-                      </div>
-                      <div
-                        class="fr-radio-group"
+                        Question de droit du travail dans le secteur privé
+                      </option>
+                      <option
+                        value="indemnisation-arret"
                       >
-                        <input
-                          data-testid="contact-theme-Cotisations sur salaire"
-                          id="fr-fieldset-radio-_r_2_-2"
-                          name="radio-name-_r_3_"
-                          required=""
-                          type="radio"
-                        />
-                        <label
-                          class="fr-label"
-                          for="fr-fieldset-radio-_r_2_-2"
-                        >
-                          Cotisations sur salaire
-                        </label>
-                      </div>
-                      <div
-                        class="fr-radio-group"
+                        Indemnisation de l'arrêt de travail ou invalidité
+                      </option>
+                      <option
+                        value="cotisations-salaire"
                       >
-                        <input
-                          data-testid="contact-theme-Secteur public"
-                          id="fr-fieldset-radio-_r_2_-3"
-                          name="radio-name-_r_3_"
-                          required=""
-                          type="radio"
-                        />
-                        <label
-                          class="fr-label"
-                          for="fr-fieldset-radio-_r_2_-3"
-                        >
-                          Secteur public
-                        </label>
-                      </div>
-                      <div
-                        class="fr-radio-group"
+                        Cotisations sur salaire
+                      </option>
+                      <option
+                        value="secteur-public"
                       >
-                        <input
-                          data-testid="contact-theme-Autorisation de travail d'un étranger"
-                          id="fr-fieldset-radio-_r_2_-4"
-                          name="radio-name-_r_3_"
-                          required=""
-                          type="radio"
-                        />
-                        <label
-                          class="fr-label"
-                          for="fr-fieldset-radio-_r_2_-4"
-                        >
-                          Autorisation de travail d'un étranger
-                        </label>
-                      </div>
-                    </div>
+                        Secteur public
+                      </option>
+                      <option
+                        value="autorisation-travail-etranger"
+                      >
+                        Autorisation de travail d'un étranger
+                      </option>
+                    </select>
                     <div
+                      aria-live="polite"
                       class="fr-messages-group"
-                      id="fr-fieldset-radio-_r_2_-messages"
-                    />
-                  </fieldset>
+                      id="input-contact-theme-messages-group"
+                    >
+                      <p
+                        class="fr-info-text"
+                        id="select-_r_4_-desc"
+                      >
+                        <span
+                          id="contact-theme-help"
+                        >
+                          Si vous souhaitez aborder plusieurs sujets, sélectionnez le plus important pour vous.
+                        </span>
+                      </p>
+                    </div>
+                  </div>
                 </div>
                 <div
                   class="fr-mt-4w"
                 >
                   <p
-                    class="fr-text--bold fr-mb-1w"
+                    class="fr-text--lead fr-text--bold fr-mb-2w"
                   >
                     Questions les plus fréquentes
                   </p>
@@ -211,8 +206,12 @@ exports[`<NeedMoreInfo /> should match snapshot 1`] = `
                     class="li-s_none pl_0 m_0"
                   >
                     <li
-                      class="fr-mb-1w"
+                      class="d_flex ai_center gap_0.5rem pt_0.75rem pb_0.75rem bd-b_1px_solid_var(--border-default-grey) [&:first-child]:bd-t_1px_solid_var(--border-default-grey)"
                     >
+                      <span
+                        aria-hidden="true"
+                        class="fr-icon-arrow-right-line flex-sh_0 c_var(--text-action-high-blue-france)"
+                      />
                       <a
                         class="fr-link"
                         href="/contribution/outils/indemnite-licenciement"
@@ -221,8 +220,12 @@ exports[`<NeedMoreInfo /> should match snapshot 1`] = `
                       </a>
                     </li>
                     <li
-                      class="fr-mb-1w"
+                      class="d_flex ai_center gap_0.5rem pt_0.75rem pb_0.75rem bd-b_1px_solid_var(--border-default-grey) [&:first-child]:bd-t_1px_solid_var(--border-default-grey)"
                     >
+                      <span
+                        aria-hidden="true"
+                        class="fr-icon-arrow-right-line flex-sh_0 c_var(--text-action-high-blue-france)"
+                      />
                       <a
                         class="fr-link"
                         href="/outils/indemnite-precarite"
@@ -231,8 +234,12 @@ exports[`<NeedMoreInfo /> should match snapshot 1`] = `
                       </a>
                     </li>
                     <li
-                      class="fr-mb-1w"
+                      class="d_flex ai_center gap_0.5rem pt_0.75rem pb_0.75rem bd-b_1px_solid_var(--border-default-grey) [&:first-child]:bd-t_1px_solid_var(--border-default-grey)"
                     >
+                      <span
+                        aria-hidden="true"
+                        class="fr-icon-arrow-right-line flex-sh_0 c_var(--text-action-high-blue-france)"
+                      />
                       <a
                         class="fr-link"
                         href="/contribution/quelle-est-la-duree-du-preavis-en-cas-de-demission"
@@ -241,8 +248,12 @@ exports[`<NeedMoreInfo /> should match snapshot 1`] = `
                       </a>
                     </li>
                     <li
-                      class="fr-mb-1w"
+                      class="d_flex ai_center gap_0.5rem pt_0.75rem pb_0.75rem bd-b_1px_solid_var(--border-default-grey) [&:first-child]:bd-t_1px_solid_var(--border-default-grey)"
                     >
+                      <span
+                        aria-hidden="true"
+                        class="fr-icon-arrow-right-line flex-sh_0 c_var(--text-action-high-blue-france)"
+                      />
                       <a
                         class="fr-link"
                         href="/contribution/en-cas-darret-maladie-du-salarie-lemployeur-doit-il-assurer-le-maintien-de-salaire"
@@ -251,8 +262,12 @@ exports[`<NeedMoreInfo /> should match snapshot 1`] = `
                       </a>
                     </li>
                     <li
-                      class="fr-mb-1w"
+                      class="d_flex ai_center gap_0.5rem pt_0.75rem pb_0.75rem bd-b_1px_solid_var(--border-default-grey) [&:first-child]:bd-t_1px_solid_var(--border-default-grey)"
                     >
+                      <span
+                        aria-hidden="true"
+                        class="fr-icon-arrow-right-line flex-sh_0 c_var(--text-action-high-blue-france)"
+                      />
                       <a
                         class="fr-link"
                         href="/contribution/heures-supplementaires"
@@ -272,12 +287,22 @@ exports[`<NeedMoreInfo /> should match snapshot 1`] = `
                   <li>
                     <button
                       aria-disabled="true"
-                      class="fr-btn"
+                      class="fr-btn fr-icon-arrow-right-line fr-btn--icon-right"
                       disabled=""
-                      id="fr-button-_r_4_"
+                      id="fr-button-_r_5_"
                       type="button"
                     >
                       Suivant
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      aria-controls="more-info-modal"
+                      class="fr-btn fr-btn--secondary"
+                      id="fr-button-_r_6_"
+                      type="button"
+                    >
+                      Fermer
                     </button>
                   </li>
                 </ul>

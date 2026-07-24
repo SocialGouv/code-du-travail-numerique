@@ -48,7 +48,18 @@ export const isOffScopeTheme = (theme: ThemeKey): theme is OffScopeThemeKey =>
 export const SRDT_PHONE = {
   display: "0 806 000 126",
   href: "tel:0806000126",
+  // Tarification (numéro banalisé 0806) affichée dans le badge du bloc numéro.
+  tarification: ["Service gratuit", "+ prix appel"],
 } as const;
+
+// Limites de compétence rappelées sous le numéro (écran résultat téléphone).
+// Contenu repris de la maquette Figma (absent du wording de l'issue #7370).
+export const SRDT_PHONE_CAVEATS = [
+  "les demandes d'intervention en entreprise",
+  "la constitution des dossiers prud'homaux",
+  "les calculs de droit au chômage",
+  "vous renseigner sur les cotisations sociales",
+];
 
 const ExternalLink = ({
   href,

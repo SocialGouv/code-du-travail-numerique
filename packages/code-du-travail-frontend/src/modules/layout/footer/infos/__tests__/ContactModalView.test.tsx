@@ -18,8 +18,11 @@ jest.mock("../tracking", () => ({
 const getSuivant = () =>
   screen.queryByRole("button", { name: "Suivant", hidden: true });
 
-const selectTheme = (label: string) =>
-  fireEvent.click(screen.getByLabelText(label));
+// Le thème se choisit désormais via un <select> (data-testid="contact-theme").
+const selectTheme = (value: string) =>
+  fireEvent.change(screen.getByTestId("contact-theme"), {
+    target: { value },
+  });
 
 describe("<ContactModalView />", () => {
   beforeEach(() => {
@@ -31,13 +34,13 @@ describe("<ContactModalView />", () => {
     render(<ContactModalView />);
     expect(getSuivant()).toBeDisabled();
 
-    selectTheme("Question de droit du travail dans le secteur privé");
+    selectTheme("secteur-prive");
     expect(getSuivant()).not.toBeDisabled();
   });
 
   it("affiche le numéro de téléphone cliquable pour le secteur privé", () => {
     render(<ContactModalView />);
-    selectTheme("Question de droit du travail dans le secteur privé");
+    selectTheme("secteur-prive");
     fireEvent.click(getSuivant()!);
 
     expect(emitSelectTheme).toHaveBeenCalledWith("secteur-prive");
@@ -57,7 +60,7 @@ describe("<ContactModalView />", () => {
 
   it("affiche un message d'erreur avec liens en nouvel onglet pour un thème hors périmètre", () => {
     render(<ContactModalView />);
-    selectTheme("Secteur public");
+    selectTheme("secteur-public");
     fireEvent.click(getSuivant()!);
 
     expect(emitSelectTheme).toHaveBeenCalledWith("secteur-public");
