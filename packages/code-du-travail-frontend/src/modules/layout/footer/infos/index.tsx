@@ -3,15 +3,11 @@
 import { fr } from "@codegouvfr/react-dsfr";
 import { Button } from "@codegouvfr/react-dsfr/Button";
 import { css } from "@styled-system/css";
-import { createModal } from "@codegouvfr/react-dsfr/Modal";
 import { useIsModalOpen } from "@codegouvfr/react-dsfr/Modal/useIsModalOpen";
 import { useNeedMoreInfoEvents } from "./tracking";
 import { useEffect } from "react";
-
-export const needMoreInfoModal = createModal({
-  id: "more-info-modal",
-  isOpenedByDefault: false,
-});
+import { needMoreInfoModal } from "./contactModal";
+import { ContactModalView } from "./ContactModalView";
 
 export const NeedMoreInfo = () => {
   const isOpen = useIsModalOpen(needMoreInfoModal);
@@ -40,19 +36,18 @@ export const NeedMoreInfo = () => {
             </p>
             <div className={buttonContainer}>
               <Button
-                linkProps={{
-                  href: "/besoin-plus-informations",
-                }}
+                onClick={() => needMoreInfoModal.open()}
                 iconId="fr-icon-chat-3-line"
                 iconPosition="right"
                 priority="secondary"
               >
-                Trouver les services près de chez moi
+                Contacter nos services en région
               </Button>
             </div>
           </div>
         </div>
       </div>
+      <ContactModalView />
     </div>
   );
 };

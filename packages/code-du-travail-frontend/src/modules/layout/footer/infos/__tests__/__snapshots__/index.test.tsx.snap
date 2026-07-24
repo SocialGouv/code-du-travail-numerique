@@ -30,17 +30,263 @@ exports[`<NeedMoreInfo /> should match snapshot 1`] = `
           <div
             class="d_flex jc_center"
           >
-            <a
+            <button
               class="fr-btn fr-btn--secondary fr-icon-chat-3-line fr-btn--icon-right"
-              href="/besoin-plus-informations"
               id="fr-button-_r_0_"
             >
-              Trouver les services près de chez moi
-            </a>
+              Contacter nos services en région
+            </button>
           </div>
         </div>
       </div>
     </div>
+    <button
+      aria-controls="more-info-modal"
+      aria-hidden="true"
+      class="fr-btn fr-hidden"
+      data-fr-opened="false"
+      id="more-info-modal-hidden-control-button"
+      tabindex="-1"
+      type="button"
+    >
+       
+    </button>
+    <dialog
+      aria-labelledby="fr-modal-title-more-info-modal"
+      class="fr-modal"
+      data-fr-concealing-backdrop="true"
+      id="more-info-modal"
+    >
+      <div
+        class="fr-container fr-container--fluid fr-container-md"
+      >
+        <div
+          class="fr-grid-row fr-grid-row--center"
+        >
+          <div
+            class="fr-col-12 fr-col-md-10 fr-col-lg-8"
+          >
+            <div
+              class="fr-modal__body"
+            >
+              <div
+                class="fr-modal__header"
+              >
+                <button
+                  aria-controls="more-info-modal"
+                  class="fr-btn--close fr-btn"
+                  title="Fermer"
+                  type="button"
+                >
+                  Fermer
+                </button>
+              </div>
+              <div
+                class="fr-modal__content"
+              >
+                <h1
+                  class="fr-modal__title"
+                  id="fr-modal-title-more-info-modal"
+                >
+                  Contacter nos services en région
+                </h1>
+                <div>
+                  <fieldset
+                    aria-labelledby="fr-fieldset-radio-_r_2_-legend fr-fieldset-radio-_r_2_-messages"
+                    class="fr-fieldset"
+                    id="fr-fieldset-radio-_r_2_"
+                  >
+                    <legend
+                      class="fr-fieldset__legend fr-text--regular"
+                      id="fr-fieldset-radio-_r_2_-legend"
+                    >
+                      <p>
+                        Précisez votre question
+                      </p>
+                    </legend>
+                    <div
+                      class="fr-fieldset__content"
+                    >
+                      <div
+                        class="fr-radio-group"
+                      >
+                        <input
+                          data-testid="contact-theme-Question de droit du travail dans le secteur privé"
+                          id="fr-fieldset-radio-_r_2_-0"
+                          name="radio-name-_r_3_"
+                          required=""
+                          type="radio"
+                        />
+                        <label
+                          class="fr-label"
+                          for="fr-fieldset-radio-_r_2_-0"
+                        >
+                          Question de droit du travail dans le secteur privé
+                        </label>
+                      </div>
+                      <div
+                        class="fr-radio-group"
+                      >
+                        <input
+                          data-testid="contact-theme-Indemnisation de l'arrêt de travail ou invalidité"
+                          id="fr-fieldset-radio-_r_2_-1"
+                          name="radio-name-_r_3_"
+                          required=""
+                          type="radio"
+                        />
+                        <label
+                          class="fr-label"
+                          for="fr-fieldset-radio-_r_2_-1"
+                        >
+                          Indemnisation de l'arrêt de travail ou invalidité
+                        </label>
+                      </div>
+                      <div
+                        class="fr-radio-group"
+                      >
+                        <input
+                          data-testid="contact-theme-Cotisations sur salaire"
+                          id="fr-fieldset-radio-_r_2_-2"
+                          name="radio-name-_r_3_"
+                          required=""
+                          type="radio"
+                        />
+                        <label
+                          class="fr-label"
+                          for="fr-fieldset-radio-_r_2_-2"
+                        >
+                          Cotisations sur salaire
+                        </label>
+                      </div>
+                      <div
+                        class="fr-radio-group"
+                      >
+                        <input
+                          data-testid="contact-theme-Secteur public"
+                          id="fr-fieldset-radio-_r_2_-3"
+                          name="radio-name-_r_3_"
+                          required=""
+                          type="radio"
+                        />
+                        <label
+                          class="fr-label"
+                          for="fr-fieldset-radio-_r_2_-3"
+                        >
+                          Secteur public
+                        </label>
+                      </div>
+                      <div
+                        class="fr-radio-group"
+                      >
+                        <input
+                          data-testid="contact-theme-Autorisation de travail d'un étranger"
+                          id="fr-fieldset-radio-_r_2_-4"
+                          name="radio-name-_r_3_"
+                          required=""
+                          type="radio"
+                        />
+                        <label
+                          class="fr-label"
+                          for="fr-fieldset-radio-_r_2_-4"
+                        >
+                          Autorisation de travail d'un étranger
+                        </label>
+                      </div>
+                    </div>
+                    <div
+                      class="fr-messages-group"
+                      id="fr-fieldset-radio-_r_2_-messages"
+                    />
+                  </fieldset>
+                </div>
+                <div
+                  class="fr-mt-4w"
+                >
+                  <p
+                    class="fr-text--bold fr-mb-1w"
+                  >
+                    Questions les plus fréquentes
+                  </p>
+                  <ul
+                    class="li-s_none pl_0 m_0"
+                  >
+                    <li
+                      class="fr-mb-1w"
+                    >
+                      <a
+                        class="fr-link"
+                        href="/contribution/outils/indemnite-licenciement"
+                      >
+                        Calculer l'indemnité de licenciement
+                      </a>
+                    </li>
+                    <li
+                      class="fr-mb-1w"
+                    >
+                      <a
+                        class="fr-link"
+                        href="/outils/indemnite-precarite"
+                      >
+                        Calculer l'indemnité de précarité
+                      </a>
+                    </li>
+                    <li
+                      class="fr-mb-1w"
+                    >
+                      <a
+                        class="fr-link"
+                        href="/contribution/quelle-est-la-duree-du-preavis-en-cas-de-demission"
+                      >
+                        Quelle est la durée du préavis en cas de démission ?
+                      </a>
+                    </li>
+                    <li
+                      class="fr-mb-1w"
+                    >
+                      <a
+                        class="fr-link"
+                        href="/contribution/en-cas-darret-maladie-du-salarie-lemployeur-doit-il-assurer-le-maintien-de-salaire"
+                      >
+                        En cas d'arrêt maladie, quel maintien de salaire ?
+                      </a>
+                    </li>
+                    <li
+                      class="fr-mb-1w"
+                    >
+                      <a
+                        class="fr-link"
+                        href="/contribution/heures-supplementaires"
+                      >
+                        Quelle rémunération ou repos compensateur des heures supplémentaires ?
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div
+                class="fr-modal__footer"
+              >
+                <ul
+                  class="fr-btns-group fr-btns-group--right fr-btns-group--inline-reverse fr-btns-group--inline-lg fr-btns-group--icon-left"
+                >
+                  <li>
+                    <button
+                      aria-disabled="true"
+                      class="fr-btn"
+                      disabled=""
+                      id="fr-button-_r_4_"
+                      type="button"
+                    >
+                      Suivant
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </dialog>
   </div>
 </div>
 `;
