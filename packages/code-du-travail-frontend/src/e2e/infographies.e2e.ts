@@ -63,8 +63,10 @@ test.describe("Pages infographies", () => {
     await expect(page.getByRole("heading", { level: 1 })).toHaveText(
       "Que se passe-t-il en cas d'abandon de poste ?"
     );
+    // Le thème « Abandon de poste » apparaît à la fois dans le fil d'Ariane et
+    // dans le tag de thème sous le titre : on cible le premier lien (fil d'Ariane).
     await expect(
-      page.getByRole("link", { name: /Abandon de poste/ })
+      page.getByRole("link", { name: /Abandon de poste/ }).first()
     ).toBeVisible();
     await expect(
       page.getByText(
