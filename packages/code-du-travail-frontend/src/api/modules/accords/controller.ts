@@ -1,7 +1,11 @@
 import { NextResponse } from "next/server";
-import { InvalidQueryError } from "../../utils";
+import { z } from "zod";
 import { captureException } from "@sentry/nextjs";
 import { getAccordsEntreprise } from "./service";
+
+// Un SIRET : exactement 14 chiffres (la clé de Luhn n'est pas vérifiée ici,
+// un SIRET inexistant renvoie simplement zéro accord).
+const siretSchema = z.string().regex(/^\d{14}$/);
 
 export class AccordsEnterpriseAppController {
   private siret: string;
@@ -12,34 +16,18 @@ export class AccordsEnterpriseAppController {
 
   public async get(): Promise<NextResponse> {
     try {
-      if (!this.siret || typeof this.siret !== "string") {
-        throw new InvalidQueryError({
-          message: "Invalid query",
-          name: "INVALID_QUERY",
-          cause: { siret: this.siret },
-        });
+      const parsed = siretSchema.safeParse(this.siret);
+      if (!parsed.success) {
+        return NextResponse.json({ message: "Invalid siret" }, { status: 400 });
       }
 
-      const response = await getAccordsEntreprise(this.siret);
+      const response = await getAccordsEntreprise(parsed.data);
 
-      return NextResponse.json(response, {
-        status: 200,
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
+      return NextResponse.json(response, { status: 200 });
     } catch (error) {
       console.error(error);
       captureException(error);
-      return NextResponse.json(
-        { message: error.toString() },
-        {
-          status: 500,
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      );
+      return NextResponse.json({ message: String(error) }, { status: 500 });
     }
   }
 }

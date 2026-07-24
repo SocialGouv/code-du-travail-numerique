@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { captureException } from "@sentry/nextjs";
 import { routeBySource, SourceKeys } from "@socialgouv/cdtn-utils";
-import { InvalidQueryError } from "../../utils";
+import { z } from "zod";
 import {
   RATING_MAX,
   RATING_MIN,
@@ -24,52 +24,17 @@ const isContentSource = (value: unknown): value is SourceKeys =>
 // Corps attendu : la source du contenu noté, son slug et la note. La
 // catégorie/action Matomo appartiennent au serveur : le client n'a pas à les
 // fournir (route API classique, pas un relai d'event arbitraire).
-type RatingBody = { source: SourceKeys; slug: string; value: number };
-
-// Clés autorisées : on refuse tout champ inattendu (équivalent d'un schéma
-// « strict » : le client ne relaie que la source, le slug et la note).
-const ALLOWED_KEYS = ["source", "slug", "value"];
+// `strictObject` : tout champ inattendu est rejeté.
+const ratingBodySchema = z.strictObject({
+  source: z.custom<SourceKeys>(isContentSource, {
+    error: "source inconnue : doit être une source CDTN (clé de routeBySource)",
+  }),
+  slug: z.string().regex(SLUG_RE),
+  value: z.number().int().min(RATING_MIN).max(RATING_MAX),
+});
 
 const jsonError = (status: number, message: string): NextResponse =>
-  NextResponse.json(
-    { message },
-    { status, headers: { "Content-Type": "application/json" } }
-  );
-
-const invalidQuery = (cause: unknown): InvalidQueryError =>
-  new InvalidQueryError({
-    name: "INVALID_QUERY",
-    message: "Invalid rating payload",
-    cause,
-  });
-
-// Validation manuelle (comme les autres controllers, sans dépendance de schéma).
-const parseRatingBody = (body: unknown): RatingBody => {
-  if (typeof body !== "object" || body === null) throw invalidQuery({ body });
-
-  const record = body as Record<string, unknown>;
-  if (Object.keys(record).some((key) => !ALLOWED_KEYS.includes(key))) {
-    throw invalidQuery({ keys: Object.keys(record) });
-  }
-
-  const { source, slug, value } = record;
-  if (!isContentSource(source)) {
-    throw invalidQuery({ source });
-  }
-  if (typeof slug !== "string" || !SLUG_RE.test(slug)) {
-    throw invalidQuery({ slug });
-  }
-  if (
-    typeof value !== "number" ||
-    !Number.isInteger(value) ||
-    value < RATING_MIN ||
-    value > RATING_MAX
-  ) {
-    throw invalidQuery({ value });
-  }
-
-  return { source, slug, value };
-};
+  NextResponse.json({ message }, { status });
 
 export class ContributionRatingController {
   private request: Request;
@@ -82,7 +47,11 @@ export class ContributionRatingController {
     try {
       const body: unknown = await this.request.json().catch(() => undefined);
 
-      const { source, slug, value } = parseRatingBody(body);
+      const parsed = ratingBodySchema.safeParse(body);
+      if (!parsed.success) {
+        return jsonError(400, "Invalid rating payload");
+      }
+      const { source, slug, value } = parsed.data;
 
       // Relai best-effort vers Matomo (serveur->serveur, invisible des
       // adblockers). Un échec (Matomo lent/down) ne doit ni renvoyer 500 au
@@ -94,7 +63,7 @@ export class ContributionRatingController {
         // La note voyage en chaîne dans l'action (« note_4 ») : Matomo compte
         // alors les occurrences par note au lieu d'additionner des `e_v`.
         // Ensemble fermé note_1..note_5 : `value` est validée entière et bornée
-        // RATING_MIN/RATING_MAX par parseRatingBody (pas d'injection).
+        // RATING_MIN/RATING_MAX par le schéma zod (pas d'injection).
         await sendRatingEvent({
           category: RatingMatomo.CATEGORY,
           action: ratingActionForValue(value),
@@ -108,9 +77,6 @@ export class ContributionRatingController {
 
       return new NextResponse(null, { status: 204 });
     } catch (error) {
-      if (error instanceof InvalidQueryError) {
-        return jsonError(400, error.message);
-      }
       // Erreur inattendue (bug interne) : on capture pour investigation.
       console.error(error);
       captureException(error);
