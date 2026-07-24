@@ -4,10 +4,10 @@ import { css } from "@styled-system/css";
 import { fr } from "@codegouvfr/react-dsfr";
 import Breadcrumb from "@codegouvfr/react-dsfr/Breadcrumb";
 import { Contribution } from "./type";
-import { SourceData } from "../layout/SourceData";
+import { ContentMeta } from "../common/ContentMeta";
 import { ContributionGeneric } from "./ContributionGeneric";
 import { ContributionAgreement } from "./ContributionAgreement";
-import { BreadcrumbListJsonLd } from "../seo/jsonld";
+import { ArticleJsonLd, BreadcrumbListJsonLd } from "../seo/jsonld";
 import { removeCCNumberFromSlug } from "../utils/removeCCNumberFromSlug";
 // Import de type uniquement : queries.ts embarque le client Elasticsearch
 // (serveur), il ne doit pas entrer dans le bundle client.
@@ -81,19 +81,20 @@ export function ContributionLayout({ contribution, genericInfos }: Props) {
           </span>
         )}
       </h1>
-      <div className={fr.cx("fr-mt-6w")}>
-        {isFicheSP ? (
-          <SourceData
-            source={{
-              url: contribution.url,
-              name: "Fiche service-public.gouv.fr",
-            }}
-            updatedAt={date}
-          />
-        ) : (
-          <p>Mis à jour le&nbsp;: {contribution.date}</p>
-        )}
-      </div>
+      <ContentMeta
+        date={date}
+        breadcrumbs={contribution.breadcrumbs}
+        source={
+          isFicheSP
+            ? { url: contribution.url, name: "Fiche service-public.gouv.fr" }
+            : undefined
+        }
+      />
+      <ArticleJsonLd
+        title={title}
+        datePublished={date}
+        breadcrumbs={contribution.breadcrumbs}
+      />
       {isGeneric ? (
         <ContributionGeneric contribution={contribution} />
       ) : (

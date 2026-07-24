@@ -6,6 +6,7 @@ export const JSON_LD_IDS = {
   breadcrumbs: "jsonld-breadcrumbs",
   legislation: "jsonld-legislation",
   newsArticle: "jsonld-news-article",
+  article: "jsonld-article",
 } as const;
 
 export const JSON_LD_ENTITY_IDS = {
@@ -80,6 +81,67 @@ export function buildBreadcrumbListJsonLd({
       name: item.label,
       item: toAbsoluteUrl(item.href),
     })),
+  };
+}
+
+export type ContentThemeItem = {
+  label: string;
+  slug: string;
+};
+
+// Convertit une date FR `JJ/MM/AAAA` (format d'affichage du site) en ISO 8601
+// `AAAA-MM-JJ` attendu par schema.org. Tolère aussi une date déjà ISO. Renvoie
+// undefined si le format n'est pas reconnu → jamais de date invalide émise.
+function toIsoDate(date?: string): string | undefined {
+  const value = date?.trim();
+  if (!value) return undefined;
+  const frMatch = /^(\d{2})\/(\d{2})\/(\d{4})$/.exec(value);
+  if (frMatch) {
+    const [, day, month, year] = frMatch;
+    return `${year}-${month}-${day}`;
+  }
+  return /^\d{4}-\d{2}-\d{2}/.test(value) ? value : undefined;
+}
+
+// Article schema.org représentant une page de contenu éditorial. Rattaché au
+// site (`isPartOf`) et à son éditeur/auteur (le Code du travail numérique), daté
+// (`datePublished`/`dateModified`), et décrit par son thème / sous-thème via
+// `about`, `articleSection` et `keywords`. Complète le `BreadcrumbList` (le fil
+// d'Ariane) sans le remplacer. Les libellés sont les titres COMPLETS (le libellé
+// raccourci ne sert qu'à l'affichage des tags).
+export function buildContentThemeJsonLd({
+  name,
+  url,
+  datePublished,
+  themes,
+}: {
+  name: string;
+  url: string;
+  datePublished?: string;
+  themes: ContentThemeItem[];
+}): Record<string, unknown> {
+  const absoluteUrl = toAbsoluteUrl(url);
+  const rootTheme = themes[0];
+  const isoDate = toIsoDate(datePublished);
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: name,
+    url: absoluteUrl,
+    mainEntityOfPage: absoluteUrl,
+    inLanguage: "fr-FR",
+    isPartOf: { "@id": JSON_LD_ENTITY_IDS.website },
+    author: { "@id": JSON_LD_ENTITY_IDS.organization },
+    publisher: { "@id": JSON_LD_ENTITY_IDS.organization },
+    ...(isoDate ? { datePublished: isoDate, dateModified: isoDate } : {}),
+    ...(rootTheme ? { articleSection: rootTheme.label } : {}),
+    about: themes.map((theme) => ({
+      "@type": "Thing",
+      name: theme.label,
+      url: toAbsoluteUrl(theme.slug),
+    })),
+    keywords: themes.map((theme) => theme.label),
   };
 }
 
