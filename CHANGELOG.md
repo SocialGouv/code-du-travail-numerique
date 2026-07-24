@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.236.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.236.1...v4.236.2) (2026-07-24)
+
+
+### Bug Fixes
+
+* **ci:** retry du publish npm pour absorber le 409 Sigstore/Rekor ([#7420](https://github.com/SocialGouv/code-du-travail-numerique/issues/7420)) ([91041c2](https://github.com/SocialGouv/code-du-travail-numerique/commit/91041c2bd8dd21b0f808b081ef5acbafa397fc5e))
+
+
+
+
+
 ## [4.236.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.236.0...v4.236.1) (2026-07-24)
 
 
