@@ -34,9 +34,7 @@ describe("SimulateurIndemnitePrecarite", () => {
 
     describe("criteria.cddType = CDD d'optimisation linéaire", () => {
       beforeEach(() => {
-        fireEvent.change(ui.cddType.get(), {
-          target: { value: "CDD d'optimisation linéaire" },
-        });
+        fireEvent.click(ui.cddType("CDD d'optimisation linéaire").get());
         fireEvent.click(ui.next.get());
       });
 
@@ -68,9 +66,7 @@ describe("SimulateurIndemnitePrecarite", () => {
 
     describe("criteria.cddType = CDD d'animation commerciale", () => {
       beforeEach(() => {
-        fireEvent.change(ui.cddType.get(), {
-          target: { value: "CDD d'animation commerciale" },
-        });
+        fireEvent.click(ui.cddType("CDD d'animation commerciale").get());
         fireEvent.click(ui.next.get());
       });
 
@@ -102,12 +98,13 @@ describe("SimulateurIndemnitePrecarite", () => {
 
     describe("criteria.cddType = Contrat d'intervention dans le secteur de l'accueil événementiel", () => {
       beforeEach(() => {
-        fireEvent.change(ui.cddType.get(), {
-          target: {
-            value:
-              "Contrat d'intervention dans le secteur de l'accueil événementiel",
-          },
-        });
+        fireEvent.click(
+          ui
+            .cddType(
+              "Contrat d'intervention dans le secteur de l'accueil événementiel"
+            )
+            .get()
+        );
         fireEvent.click(ui.next.get());
       });
 
@@ -139,47 +136,24 @@ describe("SimulateurIndemnitePrecarite", () => {
 
     describe("criteria.cddType = Autres", () => {
       beforeEach(() => {
-        fireEvent.change(ui.cddType.get(), {
-          target: { value: "Autres" },
-        });
+        fireEvent.click(ui.cddType("Autres").get());
         fireEvent.click(ui.next.get());
       });
 
       describe("finContratPeriodeDessai = Non", () => {
-        beforeEach(() => {
-          fireEvent.click(ui.cddQuestions.finContratPeriodeDessai.non.get());
-          fireEvent.click(ui.next.get());
-        });
+        beforeEach(() => {});
 
         describe("propositionCDIFindeContrat = Non", () => {
-          beforeEach(() => {
-            fireEvent.click(
-              ui.cddQuestions.propositionCDIFindeContrat.non.get()
-            );
-            fireEvent.click(ui.next.get());
-          });
+          beforeEach(() => {});
 
           describe("refusCDIFindeContrat = Non", () => {
-            beforeEach(() => {
-              fireEvent.click(ui.cddQuestions.refusCDIFindeContrat.non.get());
-              fireEvent.click(ui.next.get());
-            });
+            beforeEach(() => {});
 
             describe("interruptionFauteGrave = Non", () => {
-              beforeEach(() => {
-                fireEvent.click(
-                  ui.cddQuestions.interruptionFauteGrave.non.get()
-                );
-                fireEvent.click(ui.next.get());
-              });
+              beforeEach(() => {});
 
               describe("refusRenouvellementAuto = Non", () => {
-                beforeEach(() => {
-                  fireEvent.click(
-                    ui.cddQuestions.refusRenouvellementAuto.non.get()
-                  );
-                  fireEvent.click(ui.next.get());
-                });
+                beforeEach(() => {});
 
                 describe("typeRemuneration = amount", () => {
                   beforeEach(() => {

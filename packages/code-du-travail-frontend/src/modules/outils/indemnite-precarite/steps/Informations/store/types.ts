@@ -5,6 +5,30 @@ import {
   PublicodesSimulator,
 } from "@socialgouv/modeles-social";
 
+export type CddConditionKey =
+  | "finContratPeriodeDessai"
+  | "propositionCDIFindeContrat"
+  | "refusCDIFindeContrat"
+  | "interruptionFauteGrave"
+  | "refusRenouvellementAuto";
+
+export type CttConditionKey =
+  | "cttFormation"
+  | "ruptureContratFauteGrave"
+  | "propositionCDIFinContrat"
+  | "refusSouplesse";
+
+export type AgreementConditionKey =
+  | "hasCdiProposal"
+  | "hasCdiRenewal"
+  | "hasEquivalentCdiRenewal";
+
+export type DisqualificationReason =
+  | { kind: "excludedCddType"; subtype: string }
+  | { kind: "cddCondition"; key: CddConditionKey }
+  | { kind: "cttCondition"; key: CttConditionKey }
+  | { kind: "agreementCondition"; idcc: number; key: AgreementConditionKey };
+
 export type InformationsStoreInput = {
   contractType?: ContractType;
   criteria: Record<string, any>;
@@ -20,29 +44,14 @@ export type InformationsStoreInput = {
   propositionCDIFinContrat?: boolean;
   refusSouplesse?: boolean;
   // Questions spécifiques aux conventions collectives
-  hasCdiProposal?: string; // "oui" | "non"
-  hasCdiRenewal?: string; // "oui" | "non"
-  hasEquivalentCdiRenewal?: string; // "oui" | "non"
+  hasCdiProposal?: boolean;
+  hasCdiRenewal?: boolean;
+  hasEquivalentCdiRenewal?: boolean;
 };
 
 export type InformationsStoreError = {
   contractType?: string;
   criteria?: Record<string, string>;
-  // Erreurs CDD
-  finContratPeriodeDessai?: string;
-  propositionCDIFindeContrat?: string;
-  refusCDIFindeContrat?: string;
-  interruptionFauteGrave?: string;
-  refusRenouvellementAuto?: string;
-  // Erreurs CTT
-  cttFormation?: string;
-  ruptureContratFauteGrave?: string;
-  propositionCDIFinContrat?: string;
-  refusSouplesse?: string;
-  // Erreurs spécifiques aux conventions collectives
-  hasCdiProposal?: string;
-  hasCdiRenewal?: string;
-  hasEquivalentCdiRenewal?: string;
 };
 
 export type InformationsStoreData = {
@@ -50,14 +59,18 @@ export type InformationsStoreData = {
   error: InformationsStoreError;
   hasBeenSubmit: boolean;
   isStepValid: boolean;
+  disqualificationReason?: DisqualificationReason;
 };
 
 export type InformationsStoreFn = {
   onContractTypeChange: (contractType: ContractType) => void;
   onCriteriaChange: (criteria: Record<string, any>) => void;
-  onCDDQuestionChange: (questionKey: string, value: boolean) => void;
-  onCTTQuestionChange: (questionKey: string, value: boolean) => void;
-  onConventionQuestionChange: (questionKey: string, value: string) => void;
+  onCDDQuestionChange: (questionKey: CddConditionKey, checked: boolean) => void;
+  onCTTQuestionChange: (questionKey: CttConditionKey, checked: boolean) => void;
+  onConventionQuestionChange: (
+    questionKey: AgreementConditionKey,
+    checked: boolean
+  ) => void;
   onNextStep: () => ValidationResponse;
 };
 

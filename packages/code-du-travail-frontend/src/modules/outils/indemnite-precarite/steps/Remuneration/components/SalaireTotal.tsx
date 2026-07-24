@@ -18,7 +18,7 @@ export const SalaireTotal: React.FC<Props> = ({ value, onChange, error }) => {
   return (
     <div className={fr.cx("fr-mb-3w")}>
       <Input
-        label="Quelle est la rémunération totale brute perçue en € durant le contrat de travail ?"
+        label="Montant brut total en €"
         nativeInputProps={
           {
             id: "input-salaireTotal",
@@ -27,6 +27,8 @@ export const SalaireTotal: React.FC<Props> = ({ value, onChange, error }) => {
             step: "1000",
             value: value || "",
             onChange: handleChange,
+            onWheel: (e: React.WheelEvent<HTMLInputElement>) =>
+              e.currentTarget.blur(),
             "data-testid": "salaireTotal",
           } as any
         }

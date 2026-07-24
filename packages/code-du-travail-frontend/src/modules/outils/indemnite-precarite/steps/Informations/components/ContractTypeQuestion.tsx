@@ -19,18 +19,9 @@ export const ContractTypeQuestion: React.FC<Props> = ({
 
   return (
     <RadioButtons
-      legend="Quel est le type du contrat de travail ?"
+      legend="Quel est le type de contrat de travail ?"
       name="contractType"
       options={[
-        {
-          label: "Contrat à durée déterminée (CDD)",
-          nativeInputProps: {
-            value: CONTRACT_TYPE.CDD,
-            checked: value === CONTRACT_TYPE.CDD,
-            onChange: () => handleChange(CONTRACT_TYPE.CDD),
-            "data-testid": "contractType - Contrat à durée déterminée (CDD)",
-          } as any,
-        },
         {
           label: "Contrat de travail temporaire (Contrat d'intérim)",
           nativeInputProps: {
@@ -39,6 +30,15 @@ export const ContractTypeQuestion: React.FC<Props> = ({
             onChange: () => handleChange(CONTRACT_TYPE.CTT),
             "data-testid":
               "contractType - Contrat de travail temporaire (Contrat d'intérim)",
+          } as any,
+        },
+        {
+          label: "Contrat à durée déterminée (CDD)",
+          nativeInputProps: {
+            value: CONTRACT_TYPE.CDD,
+            checked: value === CONTRACT_TYPE.CDD,
+            onChange: () => handleChange(CONTRACT_TYPE.CDD),
+            "data-testid": "contractType - Contrat à durée déterminée (CDD)",
           } as any,
         },
       ]}

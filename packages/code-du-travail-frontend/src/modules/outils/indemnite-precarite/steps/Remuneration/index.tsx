@@ -3,7 +3,6 @@ import {
   IndemnitePrecariteContext,
   useIndemnitePrecariteStore,
 } from "../store";
-import { fr } from "@codegouvfr/react-dsfr";
 import {
   TypeRemunerationQuestion,
   SalaireTotal,
@@ -17,30 +16,32 @@ const RemunerationStepComponent = () => {
     typeRemuneration,
     salaire,
     salaires,
+    dureeContrat,
     onTypeRemunerationChange,
     onSalaireChange,
     onSalairesChange,
+    onDureeContratChange,
   } = useIndemnitePrecariteStore(store, (state) => ({
     errors: state.remunerationData.error,
     typeRemuneration: state.remunerationData.input.typeRemuneration,
     salaire: state.remunerationData.input.salaire,
     salaires: state.remunerationData.input.salaires,
+    dureeContrat: state.remunerationData.input.dureeContrat,
     onTypeRemunerationChange:
       state.remunerationFunction.onTypeRemunerationChange,
     onSalaireChange: state.remunerationFunction.onSalaireChange,
     onSalairesChange: state.remunerationFunction.onSalairesChange,
+    onDureeContratChange: state.remunerationFunction.onDureeContratChange,
   }));
 
   return (
     <div>
-      {/* Question sur le type de rémunération */}
       <TypeRemunerationQuestion
         value={typeRemuneration}
         onChange={onTypeRemunerationChange}
         error={errors.typeRemuneration}
       />
 
-      {/* Saisie du montant total */}
       {typeRemuneration === "total" && (
         <SalaireTotal
           value={salaire}
@@ -49,11 +50,13 @@ const RemunerationStepComponent = () => {
         />
       )}
 
-      {/* Saisie des salaires mensuels */}
       <SalairesMensuels
         salaires={salaires}
-        onChange={onSalairesChange}
+        dureeContrat={dureeContrat}
+        onSalairesChange={onSalairesChange}
+        onDureeContratChange={onDureeContratChange}
         error={errors.salaires}
+        dureeError={errors.dureeContrat}
         visible={typeRemuneration === "mensuel"}
       />
     </div>
