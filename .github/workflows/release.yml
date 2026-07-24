@@ -70,7 +70,26 @@ jobs:
           NAME: ${{ secrets.SOCIALGROOVYBOT_NAME }}
           EMAIL: ${{ secrets.SOCIALGROOVYBOT_EMAIL }}
       - name: Deploy to npm
-        run: pnpm lerna publish from-package --yes
+        # `lerna publish from-package` est idempotent : il ignore les versions déjà
+        # présentes sur le registre. On retente donc le publish pour absorber les
+        # erreurs transitoires du transparency log Sigstore/Rekor
+        # (TLOG_CREATE_ENTRY_ERROR 409 « an equivalent entry already exists »),
+        # provoquées par les soumissions de provenance concurrentes lors du
+        # trusted publishing OIDC. Au 2e essai, seul le paquet en échec est
+        # republié : plus de soumission Rekor concurrente, donc plus de course.
+        run: |
+          set -uo pipefail
+          attempt=0
+          max_attempts=3
+          until pnpm lerna publish from-package --yes; do
+            attempt=$((attempt + 1))
+            if [ "$attempt" -ge "$max_attempts" ]; then
+              echo "::error::Échec du publish npm après ${max_attempts} tentatives"
+              exit 1
+            fi
+            echo "::warning::Tentative de publish npm ${attempt} en échec (probable 409 transparency log Sigstore/Rekor) ; nouvelle tentative dans 20s..."
+            sleep 20
+          done
       - name: Extract latest changelog section
         id: changelog
         shell: bash
