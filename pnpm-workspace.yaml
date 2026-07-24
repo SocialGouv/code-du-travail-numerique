@@ -11,6 +11,9 @@ allowBuilds:
   sharp: true
   unrs-resolver: true
 
+minimumReleaseAgeExclude:
+  - '@socialgouv/matomo-next'
+
 onlyBuiltDependencies:
   - "@parcel/watcher"
   - "@sentry/cli"
