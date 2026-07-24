@@ -8,8 +8,10 @@ import { NpsHand } from "./NpsHand";
 import { NpsTrigger } from "./constants";
 import {
   hasAnsweredNps,
+  hasClosedNps,
   hasOptedOutNps,
   markNpsAnswered,
+  markNpsClosed,
   markNpsOptedOut,
   markNpsShownThisSession,
   wasNpsShownThisSession,
@@ -52,10 +54,12 @@ export const NpsWidget = () => {
     onConceal: () => {
       openRef.current = false;
       // Fermeture « simple » (bouton « Fermer », Échap, overlay), sans validation
-      // ni opt-out = refus. La main reste affichée : l'usager peut encore répondre
-      // plus tard ; seul « Ne pas répondre » la fait disparaître (cf. onOptOut).
+      // ni opt-out = refus. On coupe les déclencheurs automatiques pendant 1 jour
+      // (cookie), mais la main reste affichée : l'usager peut encore répondre plus
+      // tard ; seul « Ne pas répondre » la fait disparaître (cf. onOptOut).
       if (!submittedRef.current && !optedOutRef.current && triggerRef.current) {
         trackRefusal(triggerRef.current, pathname);
+        markNpsClosed();
       }
       setValue(null);
     },
@@ -77,10 +81,15 @@ export const NpsWidget = () => {
   };
 
   // Déclencheurs automatiques (exit-intent, Télécharger, Copier) : bloqués si
-  // déjà répondu (cookie 2 semaines), opt-out (cookie 1 jour) ou déjà affichés
-  // dans la session (1×/session).
+  // déjà répondu (cookie 2 semaines), opt-out (cookie 1 jour), fermeture simple
+  // (cookie 1 jour, main conservée) ou déjà affichés dans la session (1×/session).
   const openFromAuto = (trigger: NpsTrigger) => {
-    if (hasAnsweredNps() || hasOptedOutNps() || wasNpsShownThisSession())
+    if (
+      hasAnsweredNps() ||
+      hasOptedOutNps() ||
+      hasClosedNps() ||
+      wasNpsShownThisSession()
+    )
       return;
     markNpsShownThisSession();
     openModal(trigger);
