@@ -429,8 +429,9 @@ Bandeau « Cette page vous a-t-elle été utile ? » et modale de contact du foo
 | feedback          | negative                | 📌 `<baseUrl>`       | Clic sur « Non » ; ouvre le formulaire de précision. |
 | feedback_category | `<motif de feedback>`   | 📌 `<baseUrl>`       | À l'envoi, un event par motif coché (4 motifs prédéfinis, parcours négatif). |
 | feedback_suggestion | `<suggestion>`        | 🔀 `<baseUrl>`       | À l'envoi, si un texte libre est saisi (parcours positif ou négatif). Verbatim (500 car. max). |
-| contact           | click_contact_sr_modale | 📌 `<currentPathName>` | Ouverture de la modale « Besoin de plus d'informations ? » (renseignement). |
-| contact           | click_phone_number      | 📌 —                 | Clic sur le numéro de téléphone du service de renseignement. |
+| contact           | click_contact_sr_modale | 📌 `<currentPathName>` | Ouverture de la modale « Contacter nos services en région » depuis le bloc footer (questionnaire de pré-qualification SRDT). `name` = page d'origine. |
+| contact           | select_theme_contact_sr | 📌 `<theme>`          | Clic sur « Suivant » à l'écran « Précisez votre question » ; `name` = thème choisi (secteur-prive, secteur-public, cotisations-salaire, indemnisation-arret, autorisation-travail-etranger). Mesure la répartition des demandes et le hors-périmètre. |
+| contact           | click_phone_number      | 📌 —                 | Clic sur le numéro 0 806 000 126 affiché à l'écran résultat pour le thème « droit du travail secteur privé ». |
 
 Les 4 motifs possibles de `feedback_category` (un event par case cochée) :
 
