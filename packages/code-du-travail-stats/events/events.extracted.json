@@ -1503,7 +1503,7 @@
         "None"
       ],
       "file": "packages/code-du-travail-frontend/src/modules/config/MatomoAnalytics.tsx",
-      "line": 45
+      "line": 50
     },
     {
       "command": "setReferrerUrl",
@@ -1511,7 +1511,7 @@
         "<referrerUrl>"
       ],
       "file": "packages/code-du-travail-frontend/src/modules/config/MatomoAnalytics.tsx",
-      "line": 41
+      "line": 46
     }
   ]
 }
