@@ -1,4 +1,5 @@
 import { render } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import { ThemeTags } from "../ThemeTags";
 import { sendEvent } from "@socialgouv/matomo-next";
 
@@ -9,6 +10,10 @@ jest.mock("next/navigation", () => ({
   usePathname: () => "/contribution/mon-slug",
 }));
 
+// L'ordre du tableau (racine → sous-thème le plus profond) porte la hiérarchie.
+// `position` est l'ordre du thème parmi ses frères, pas sa profondeur : des
+// valeurs non croissantes ([3, 1, 3]) sont donc réalistes et n'affectent pas
+// la sélection, qui repose uniquement sur l'ordre du tableau.
 const breadcrumbs = [
   { label: "Congés et repos", position: 3, slug: "/themes/conges-et-repos" },
   { label: "Congés", position: 1, slug: "/themes/conges" },
@@ -99,11 +104,11 @@ describe("<ThemeTags />", () => {
     expect(container).toBeEmptyDOMElement();
   });
 
-  it("should track the click on a tag", () => {
+  it("should track the click on a tag", async () => {
     jest.resetAllMocks();
 
     const { getByText } = render(<ThemeTags breadcrumbs={breadcrumbs} />);
-    getByText("Congés pour événement familial").click();
+    await userEvent.click(getByText("Congés pour événement familial"));
 
     expect(sendEvent).toHaveBeenCalledWith({
       category: "contribution",

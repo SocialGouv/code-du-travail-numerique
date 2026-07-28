@@ -13,7 +13,11 @@ type Props = {
 export const ThemeTags = ({ breadcrumbs }: Props) => {
   const { emitClickThemeTag } = useCommonTracking();
 
-  // breadcrumbs est ordonné du thème racine au sous-thème le plus profond
+  // Contrat : breadcrumbs est fourni dans l'ordre racine → sous-thème le plus
+  // profond, comme le fil d'Ariane DSFR et le JSON-LD qui le consomment aussi
+  // dans l'ordre du tableau (cf. ContainerWithBreadcrumbs, ArticleJsonLd).
+  // NB : le champ `position` est l'ordre d'un thème parmi ses frères, pas sa
+  // profondeur — on ne peut donc pas trier dessus pour retrouver la hiérarchie.
   const rootTheme = breadcrumbs[0];
   const subTheme = breadcrumbs[breadcrumbs.length - 1];
   if (!rootTheme || !subTheme) return null;
@@ -26,8 +30,9 @@ export const ThemeTags = ({ breadcrumbs }: Props) => {
     },
   });
 
+  // Un seul niveau de thème → un seul tag ; sinon racine + sous-thème.
   const tags: TagsGroupProps["tags"] =
-    rootTheme.slug === subTheme.slug
+    breadcrumbs.length === 1
       ? [themeToTag(rootTheme)]
       : [themeToTag(rootTheme), themeToTag(subTheme)];
 
