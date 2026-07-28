@@ -19,6 +19,7 @@ export enum TrackingAgreementSearchAction {
 
 export enum TrackingContributionAction {
   BTN_TABLE_FULLSCREEN = "btn_table_fullscreen",
+  CONTENT_VIEWED = "reponse_consultee",
 }
 
 export const useContributionTracking = () => {
@@ -94,6 +95,18 @@ export const useContributionTracking = () => {
     });
   };
 
+  // Émis une fois par page quand l'utilisateur a réellement consulté le bloc
+  // réponse (titre entré dans le haut de l'écran + ~10 s de présence, onglet
+  // actif). Sert d'indicateur « la réponse a bien été vue » notamment sur les
+  // arrivées directes via une convention collective.
+  const emitContentViewed = (slug: string) => {
+    sendEvent({
+      category: TrackingContributionCategory.CONTRIBUTION,
+      action: TrackingContributionAction.CONTENT_VIEWED,
+      name: `${getRouteBySource(SOURCES.CONTRIBUTIONS)}/${slug}`,
+    });
+  };
+
   return {
     emitAgreementTreatedEvent,
     emitAgreementUntreatedEvent,
@@ -104,5 +117,6 @@ export const useContributionTracking = () => {
     emitClickP2,
     emitClickP3,
     emitClickTableFullscreen,
+    emitContentViewed,
   };
 };

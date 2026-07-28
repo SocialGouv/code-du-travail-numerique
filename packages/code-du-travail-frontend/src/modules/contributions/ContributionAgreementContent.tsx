@@ -1,7 +1,9 @@
 "use client";
-import React from "react";
+import React, { useRef } from "react";
 import { fr } from "@codegouvfr/react-dsfr";
 import { ContributionContent } from "./ContributionContent";
+import { useContributionTracking } from "./tracking";
+import { useContentViewTracking } from "./useContentViewTracking";
 import Html from "../common/Html";
 import Link from "../common/Link";
 import Accordion from "@codegouvfr/react-dsfr/Accordion";
@@ -24,12 +26,18 @@ export function ContributionAgreementContent({
   contribution,
   relatedItems,
 }: Props) {
+  const { emitContentViewed } = useContributionTracking();
+  const titleRef = useRef<HTMLHeadingElement>(null);
+  useContentViewTracking(titleRef, () => emitContentViewed(contribution.slug));
+
   return (
     <div className={fr.cx("fr-grid-row", "fr-grid-row--gutters", "fr-mb-6w")}>
       <div
         className={fr.cx("fr-col-12", "fr-col-lg-8", "fr-mb-6w", "fr-mb-md-0")}
       >
-        <h2>Réponse pour la convention : {contribution.ccnShortTitle}</h2>
+        <h2 ref={titleRef}>
+          Réponse pour la convention : {contribution.ccnShortTitle}
+        </h2>
         <ContributionContent contribution={contribution} titleLevel={2} />
         {contribution.references.length > 0 && (
           <Accordion
