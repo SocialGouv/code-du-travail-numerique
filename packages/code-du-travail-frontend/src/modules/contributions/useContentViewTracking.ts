@@ -1,4 +1,4 @@
-import { useEffect, useRef, type RefObject } from "react";
+import { useEffect, useRef, useState } from "react";
 
 type Options = {
   /** Durée de présence continue (onglet actif) avant de considérer le contenu comme consulté. */
@@ -25,23 +25,28 @@ type Options = {
  * - Il repart de zéro si l'utilisateur remonte au-dessus du bloc réponse.
  * - Il continue de tourner si le titre sort par le haut (= lecture du contenu).
  *
- * NOTE : `ref` doit être un `RefObject` stable dont le `.current` est renseigné
- * dès le montage (typiquement `useRef` posé sur un élément rendu sans condition
- * dans le même composant). L'effet ne se relance que sur `enabled`/`dwellMs`/
- * `topBandRatio` : un ref peuplé tardivement ne serait pas pris en compte.
+ * Renvoie un **ref callback** à poser sur l'élément à observer
+ * (`<h2 ref={useContentViewTracking(...)} />`). L'observation se (re)configure
+ * quand le nœud s'attache/se détache réellement — pas de dépendance fragile sur
+ * `ref.current`.
  */
 export function useContentViewTracking<T extends Element>(
-  ref: RefObject<T | null>,
   onView: () => void,
   { dwellMs = 10_000, topBandRatio = 0.25, enabled = true }: Options = {}
-) {
-  // On garde la dernière closure `onView` sans relancer l'effet à chaque rendu.
+): (node: T | null) => void {
+  // On garde la dernière closure `onView` sans relancer l'effet d'observation.
   const onViewRef = useRef(onView);
-  onViewRef.current = onView;
+  useEffect(() => {
+    onViewRef.current = onView;
+  }, [onView]);
+
+  // Le nœud est stocké en state (via le ref callback renvoyé) : l'effet se
+  // relance quand le nœud change, ce qui en fait une vraie dépendance.
+  const [node, setNode] = useState<T | null>(null);
 
   useEffect(() => {
-    const el = ref.current;
-    if (!enabled || !el || typeof IntersectionObserver === "undefined") return;
+    if (!enabled || !node || typeof IntersectionObserver === "undefined")
+      return;
 
     let fired = false;
     let armed = false;
@@ -49,12 +54,6 @@ export function useContentViewTracking<T extends Element>(
     let accumulatedMs = 0;
     let startedAt: number | null = null;
     let timer: ReturnType<typeof setTimeout> | undefined;
-
-    function cleanup() {
-      observer.disconnect();
-      document.removeEventListener("visibilitychange", onVisibilityChange);
-      if (timer) clearTimeout(timer);
-    }
 
     const fire = () => {
       if (fired) return;
@@ -64,6 +63,9 @@ export function useContentViewTracking<T extends Element>(
     };
 
     const resume = () => {
+      // `startedAt !== null` empêche de ré-armer un timer DÉJÀ en cours (double
+      // intersection). Après un `pause()`, `startedAt` repasse à `null`, donc la
+      // reprise fonctionne bien — c'est le temps déjà cumulé qui est conservé.
       if (fired || startedAt !== null) return;
       const remaining = dwellMs - accumulatedMs;
       if (remaining <= 0) {
@@ -125,9 +127,18 @@ export function useContentViewTracking<T extends Element>(
       }
     );
 
-    observer.observe(el);
+    // `observer` est déclaré avant `cleanup`, donc pas de zone morte temporelle.
+    function cleanup() {
+      observer.disconnect();
+      document.removeEventListener("visibilitychange", onVisibilityChange);
+      if (timer) clearTimeout(timer);
+    }
+
+    observer.observe(node);
     document.addEventListener("visibilitychange", onVisibilityChange);
 
     return cleanup;
-  }, [ref, dwellMs, topBandRatio, enabled]);
+  }, [node, enabled, dwellMs, topBandRatio]);
+
+  return setNode;
 }

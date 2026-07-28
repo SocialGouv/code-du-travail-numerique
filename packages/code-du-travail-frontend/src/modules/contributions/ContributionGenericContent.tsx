@@ -1,5 +1,5 @@
 "use client";
-import React, { forwardRef, ReactNode, useRef } from "react";
+import React, { forwardRef, ReactNode } from "react";
 import { fr } from "@codegouvfr/react-dsfr";
 import { ContributionContent } from "./ContributionContent";
 import { useContributionTracking } from "./tracking";
@@ -29,11 +29,11 @@ export const ContributionGenericContent = forwardRef<
   Props
 >(({ contribution, alertText, relatedItems, displayGeneric }, ref) => {
   const { emitContentViewed } = useContributionTracking();
-  const titleRef = useRef<HTMLHeadingElement>(null);
   // N'observe que quand le bloc générique est réellement affiché.
-  useContentViewTracking(titleRef, () => emitContentViewed(contribution.slug), {
-    enabled: displayGeneric,
-  });
+  const titleRef = useContentViewTracking<HTMLHeadingElement>(
+    () => emitContentViewed(contribution.slug),
+    { enabled: displayGeneric }
+  );
 
   return (
     <>
