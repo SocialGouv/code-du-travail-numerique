@@ -20,14 +20,21 @@ describe("useContentViewTracking", () => {
   let visibilityValue: DocumentVisibilityState;
 
   const renderTracking = (
-    options?: Parameters<typeof useContentViewTracking>[2]
+    options?: Parameters<typeof useContentViewTracking>[1]
   ) => {
-    const ref = { current: document.createElement("h2") };
     const onView = jest.fn();
+    const node = document.createElement("h2");
     const view = renderHook(() =>
-      useContentViewTracking(ref, onView, { dwellMs: DWELL, ...options })
+      useContentViewTracking<HTMLElement>(onView, {
+        dwellMs: DWELL,
+        ...options,
+      })
     );
-    return { onView, ...view };
+    // Le hook renvoie un ref callback : on attache le nœud pour poser l'observer.
+    act(() => {
+      view.result.current(node);
+    });
+    return { onView, node, ...view };
   };
 
   const fireIO = (isIntersecting: boolean, top = 100) => {
@@ -96,11 +103,26 @@ describe("useContentViewTracking", () => {
     expect(onView).toHaveBeenCalledTimes(1);
   });
 
-  it("n'émet pas si le contenu n'est jamais entré dans la bande haute", () => {
+  it("n'émet pas tant que le titre reste sous la bande (non intersecté, top > 0)", () => {
     const { onView } = renderTracking();
 
-    // Titre visible mais sous la bande (top > bande) → pas de décompte.
+    // Titre visible mais sous la bande → jamais armé, pas de décompte.
     fireIO(false, 500);
+    advance(DWELL * 3);
+    expect(onView).not.toHaveBeenCalled();
+
+    // Contraste : une vraie entrée dans la bande (isIntersecting) arme bien.
+    fireIO(true);
+    advance(DWELL);
+    expect(onView).toHaveBeenCalledTimes(1);
+  });
+
+  it("ignore un passage au-dessus (top < 0) tant que le titre n'a jamais été armé", () => {
+    const { onView } = renderTracking();
+
+    // top < 0 mais aucune entrée préalable dans la bande : le garde `armed`
+    // doit empêcher tout décompte (sinon un scroll rapide compterait à tort).
+    fireIO(false, -50);
     advance(DWELL * 3);
     expect(onView).not.toHaveBeenCalled();
   });

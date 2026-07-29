@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef } from "react";
+import React from "react";
 import { fr } from "@codegouvfr/react-dsfr";
 import { ContributionContent } from "./ContributionContent";
 import { useContributionTracking } from "./tracking";
@@ -27,8 +27,9 @@ export function ContributionAgreementContent({
   relatedItems,
 }: Props) {
   const { emitContentViewed } = useContributionTracking();
-  const titleRef = useRef<HTMLHeadingElement>(null);
-  useContentViewTracking(titleRef, () => emitContentViewed(contribution.slug));
+  const titleRef = useContentViewTracking<HTMLHeadingElement>(() =>
+    emitContentViewed(contribution.slug)
+  );
 
   return (
     <div className={fr.cx("fr-grid-row", "fr-grid-row--gutters", "fr-mb-6w")}>
