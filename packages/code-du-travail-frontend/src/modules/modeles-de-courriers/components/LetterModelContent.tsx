@@ -11,7 +11,7 @@ import { AccessibleAlert } from "src/modules/outils/common/components/Accessible
 
 export type LetterModelContentProps = Pick<
   MailElasticDocument,
-  "date" | "intro" | "title" | "filesize" | "filename" | "html" | "slug"
+  "intro" | "title" | "filesize" | "filename" | "html" | "slug"
 > & {
   extension: string;
 };
@@ -24,11 +24,9 @@ export const LetterModelContent = ({
   slug,
   title,
   intro,
-  date,
 }: LetterModelContentProps) => {
   return (
     <>
-      <p className={fr.cx("fr-mb-6w")}>Mis à jour le&nbsp;: {date}</p>
       {intro && (
         <div className={fr.cx("fr-highlight", "fr-mb-6w")}>
           <DisplayContent
