@@ -141,7 +141,7 @@
       "resolution": "literal",
       "emit_function": "emitClickP1",
       "file": "packages/code-du-travail-frontend/src/modules/contributions/tracking.ts",
-      "line": 66,
+      "line": 67,
       "enum_refs": [
         "TrackingAgreementSearchAction.CLICK_P1",
         "TrackingContributionCategory.CC_SEARCH_TYPE_OF_USERS"
@@ -184,7 +184,7 @@
       "resolution": "literal",
       "emit_function": "emitClickP2",
       "file": "packages/code-du-travail-frontend/src/modules/contributions/tracking.ts",
-      "line": 74,
+      "line": 75,
       "enum_refs": [
         "TrackingAgreementSearchAction.CLICK_P2",
         "TrackingContributionCategory.CC_SEARCH_TYPE_OF_USERS"
@@ -227,7 +227,7 @@
       "resolution": "literal",
       "emit_function": "emitClickP3",
       "file": "packages/code-du-travail-frontend/src/modules/contributions/tracking.ts",
-      "line": 82,
+      "line": 83,
       "enum_refs": [
         "TrackingAgreementSearchAction.CLICK_P3",
         "TrackingContributionCategory.CC_SEARCH_TYPE_OF_USERS"
@@ -533,7 +533,7 @@
       "resolution": "literal",
       "emit_function": "emitClickTableFullscreen",
       "file": "packages/code-du-travail-frontend/src/modules/contributions/tracking.ts",
-      "line": 90,
+      "line": 91,
       "enum_refs": [
         "SOURCES.CONTRIBUTIONS",
         "TrackingContributionAction.BTN_TABLE_FULLSCREEN",
@@ -548,7 +548,7 @@
       "resolution": "literal",
       "emit_function": "emitDisplayAgreementContent",
       "file": "packages/code-du-travail-frontend/src/modules/contributions/tracking.ts",
-      "line": 42,
+      "line": 43,
       "enum_refs": [
         "TrackingAgreementSearchAction.CLICK_DISPLAY_AGREEMENT_CONTENT",
         "TrackingContributionCategory.CONTRIBUTION"
@@ -562,7 +562,7 @@
       "resolution": "literal",
       "emit_function": "emitDisplayGeneralContent",
       "file": "packages/code-du-travail-frontend/src/modules/contributions/tracking.ts",
-      "line": 58,
+      "line": 59,
       "enum_refs": [
         "TrackingAgreementSearchAction.CLICK_DISPLAY_GENERAL_CONTENT",
         "TrackingContributionCategory.CONTRIBUTION"
@@ -576,9 +576,24 @@
       "resolution": "literal",
       "emit_function": "emitDisplayGenericContent",
       "file": "packages/code-du-travail-frontend/src/modules/contributions/tracking.ts",
-      "line": 50,
+      "line": 51,
       "enum_refs": [
         "TrackingAgreementSearchAction.CLICK_DISPLAY_GENERIC_CONTENT",
+        "TrackingContributionCategory.CONTRIBUTION"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "contribution",
+      "action": "reponse_consultee",
+      "name_pattern": "<getRouteBySource(SOURCES.CONTRIBUTIONS)>/<slug>",
+      "resolution": "literal",
+      "emit_function": "emitContentViewed",
+      "file": "packages/code-du-travail-frontend/src/modules/contributions/tracking.ts",
+      "line": 103,
+      "enum_refs": [
+        "SOURCES.CONTRIBUTIONS",
+        "TrackingContributionAction.CONTENT_VIEWED",
         "TrackingContributionCategory.CONTRIBUTION"
       ],
       "tracking_method": "sendEvent"
@@ -963,7 +978,7 @@
       "resolution": "literal",
       "emit_function": "emitAgreementUntreatedEvent",
       "file": "packages/code-du-travail-frontend/src/modules/contributions/tracking.ts",
-      "line": 34,
+      "line": 35,
       "enum_refs": [
         "MatomoAgreementEvent.CC_UNTREATED",
         "TrackingContributionCategory.TOOL"
@@ -991,7 +1006,7 @@
       "resolution": "literal",
       "emit_function": "emitAgreementTreatedEvent",
       "file": "packages/code-du-travail-frontend/src/modules/contributions/tracking.ts",
-      "line": 26,
+      "line": 27,
       "enum_refs": [
         "MatomoAgreementEvent.CC_TREATED",
         "TrackingContributionCategory.TOOL"
@@ -1517,7 +1532,7 @@
         "None"
       ],
       "file": "packages/code-du-travail-frontend/src/modules/config/MatomoAnalytics.tsx",
-      "line": 45
+      "line": 50
     },
     {
       "command": "setReferrerUrl",
@@ -1525,7 +1540,7 @@
         "<referrerUrl>"
       ],
       "file": "packages/code-du-travail-frontend/src/modules/config/MatomoAnalytics.tsx",
-      "line": 41
+      "line": 46
     }
   ]
 }

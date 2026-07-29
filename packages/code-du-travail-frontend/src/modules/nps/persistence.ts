@@ -5,6 +5,8 @@
 // Aucune donnée personnelle : de simples drapeaux booléens.
 
 import {
+  NPS_CLOSED_COOKIE_MAX_AGE_DAYS,
+  NPS_CLOSED_COOKIE_NAME,
   NPS_COOKIE_MAX_AGE_DAYS,
   NPS_COOKIE_NAME,
   NPS_OPTOUT_COOKIE_MAX_AGE_DAYS,
@@ -74,3 +76,12 @@ export const hasOptedOutNps = (): boolean =>
 
 export const markNpsOptedOut = (): void =>
   setFlagCookie(NPS_OPTOUT_COOKIE_NAME, NPS_OPTOUT_COOKIE_MAX_AGE_DAYS);
+
+// Fermeture « simple » de la modale (Fermer / Échap / overlay) : coupe les
+// déclencheurs automatiques pendant 1 jour (comme l'opt-out) mais SANS masquer la
+// main — l'usager peut encore répondre volontairement plus tard.
+export const hasClosedNps = (): boolean =>
+  hasFlagCookie(NPS_CLOSED_COOKIE_NAME);
+
+export const markNpsClosed = (): void =>
+  setFlagCookie(NPS_CLOSED_COOKIE_NAME, NPS_CLOSED_COOKIE_MAX_AGE_DAYS);

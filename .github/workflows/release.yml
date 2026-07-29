@@ -70,7 +70,35 @@ jobs:
           NAME: ${{ secrets.SOCIALGROOVYBOT_NAME }}
           EMAIL: ${{ secrets.SOCIALGROOVYBOT_EMAIL }}
       - name: Deploy to npm
-        run: pnpm lerna publish from-package --yes
+        # `lerna publish from-package` est idempotent : il interroge le registre
+        # (packument) et ignore les versions déjà publiées.
+        #
+        # Avec le trusted publishing OIDC, npm génère la provenance : chaque paquet
+        # est signé et une entrée est écrite dans le transparency log Sigstore/Rekor.
+        # Le client sigstore rejoue son POST Rekor sur aléa réseau ; si l'entrée a
+        # déjà été committée mais que la réponse s'est perdue, le POST rejoué reçoit
+        # un 409 « an equivalent entry already exists ». Or sigstore code en dur
+        # `fetchOnConflict: false` (vérifié de 4.0.0 à 5.0.0), donc ce 409 devient un
+        # TLOG_CREATE_ENTRY_ERROR fatal au lieu d'être absorbé. Aucune montée de
+        # version ne corrige ce comportement (lerna 9.0.x -> libnpmpublish 11.1.2
+        # -> sigstore ^4, fetchOnConflict:false partout).
+        #
+        # Parade : on retente le publish. Chaque tentative re-signe avec une clé
+        # éphémère neuve -> nouvelle entrée Rekor non conflictuelle. Grâce à
+        # l'idempotence de from-package, seul le paquet en échec est republié.
+        run: |
+          set -uo pipefail
+          attempt=0
+          max_attempts=3
+          until pnpm lerna publish from-package --yes; do
+            attempt=$((attempt + 1))
+            if [ "$attempt" -ge "$max_attempts" ]; then
+              echo "::error::Échec du publish npm après ${max_attempts} tentatives"
+              exit 1
+            fi
+            echo "::warning::Tentative de publish npm ${attempt} en échec (probable 409 transparency log Sigstore/Rekor) ; nouvelle tentative dans 20s..."
+            sleep 20
+          done
       - name: Extract latest changelog section
         id: changelog
         shell: bash
