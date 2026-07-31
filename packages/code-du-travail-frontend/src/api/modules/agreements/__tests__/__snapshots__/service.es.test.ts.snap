@@ -634,7 +634,7 @@ exports[`Agreements getBySlugAgreements 1`] = `
   "date_publi": "1976-04-01T00:00:00.000Z",
   "description": "Retrouvez les questions-réponses les plus fréquentes organisées par thème et élaborées par le ministère du Travail concernant cette convention collective.",
   "effectif": 134889,
-  "id": "KALICONT000005635886",
+  "id": "0843",
   "metaDescription": "Idcc 0843 : Boulangerie-pâtisserie (entreprises artisanales)",
   "num": 843,
   "shortTitle": "Boulangerie-pâtisserie (entreprises artisanales)",
