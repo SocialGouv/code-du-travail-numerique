@@ -419,9 +419,9 @@ entreprise/accords.
 
 ### Avis & contact (bas de page)
 
-Bandeau « Cette page vous a-t-elle été utile ? » et modale de contact du footer.
+Bandeau « Cette page vous a-t-elle été utile ? » et parcours de contact du footer.
 [↗ feedback](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/layout/feedback/tracking.ts#L29 "layout/feedback/tracking.ts") ·
-[↗ contact](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/layout/footer/infos/tracking.ts#L17 "layout/footer/infos/tracking.ts")
+[↗ contact](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/besoin-plus-informations/tracking.ts#L19 "besoin-plus-informations/tracking.ts")
 
 | Catégorie         | Action                  | Name (📌/🔀)         | Quand / pourquoi |
 | ----------------- | ----------------------- | -------------------- | ---------------- |
@@ -429,7 +429,7 @@ Bandeau « Cette page vous a-t-elle été utile ? » et modale de contact du foo
 | feedback          | negative                | 📌 `<baseUrl>`       | Clic sur « Non » ; ouvre le formulaire de précision. |
 | feedback_category | `<motif de feedback>`   | 📌 `<baseUrl>`       | À l'envoi, un event par motif coché (4 motifs prédéfinis, parcours négatif). |
 | feedback_suggestion | `<suggestion>`        | 🔀 `<baseUrl>`       | À l'envoi, si un texte libre est saisi (parcours positif ou négatif). Verbatim (500 car. max). |
-| contact           | click_contact_sr_modale | 📌 `<currentPathName>` | Ouverture de la modale « Contacter nos services en région » depuis le bloc footer (questionnaire de pré-qualification SRDT). `name` = page d'origine. |
+| contact           | click_contact_sr_modale | 📌 `<currentPathName>` | Clic sur « Contacter nos services en région » dans le bloc footer, qui mène à la page du questionnaire de pré-qualification SRDT (`/besoin-plus-informations`). `name` = page d'origine. Le libellé de l'action est historique : le parcours était une modale, il est désormais sur une page. |
 | contact           | select_theme_contact_sr | 📌 `<theme>`          | Clic sur « Suivant » à l'écran « Précisez votre question » ; `name` = thème choisi (secteur-prive, secteur-public, cotisations-salaire, indemnisation-arret, autorisation-travail-etranger). Mesure la répartition des demandes et le hors-périmètre. |
 | contact           | click_phone_number      | 📌 —                 | Clic sur le numéro 0 806 000 126 affiché à l'écran résultat pour le thème « droit du travail secteur privé ». |
 

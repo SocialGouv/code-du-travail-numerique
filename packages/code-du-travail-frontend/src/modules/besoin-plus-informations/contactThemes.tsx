@@ -78,29 +78,36 @@ const ExternalLink = ({
   </Link>
 );
 
-// Messages affichés quand le thème sélectionné ne relève pas des SRDT. Rendus
-// comme ReactNode car ils embarquent des liens de redirection (nouvel onglet).
+// Titre de l'erreur affichée quand le thème choisi ne relève pas des SRDT.
+// Sert aussi de message d'erreur sous le champ (suffixé d'un point).
+export const OFF_SCOPE_ERROR_TITLE = "Nous ne traitons pas ces demandes";
+
+// Erreur affichée quand l'usager valide sans avoir choisi de thème. Le bouton
+// « Suivant » reste actionnable : un bouton grisé n'explique pas ce qui bloque
+// et sort du parcours au clavier.
+export const MISSING_THEME_ERROR = "Sélectionnez un thème pour continuer.";
+
+// Rappel du périmètre, commun à tous les thèmes hors périmètre. Il précède le
+// message de redirection propre au thème choisi.
+export const OFF_SCOPE_INTRO =
+  "Nous traitons uniquement les questions concernant le droit du travail, donc pour les salariés et les entreprises du privé.";
+
+// Redirections affichées quand le thème sélectionné ne relève pas des SRDT.
+// Rendues comme ReactNode car elles embarquent des liens (nouvel onglet).
 export const OFF_SCOPE_THEME_MESSAGES: Record<OffScopeThemeKey, ReactNode> = {
   "secteur-public": (
     <>
-      Votre demande concerne le secteur public : elle ne relève pas des services
-      de renseignements en droit du travail. Pour obtenir des informations,
-      consultez le site{" "}
-      <ExternalLink href="https://www.service-public.fr">
-        service-public.fr
-      </ExternalLink>
-      , le site{" "}
+      Pour vous renseigner sur les droits des fonctionnaires et contractuels,
+      consultez le{" "}
       <ExternalLink href="https://www.fonction-publique.gouv.fr">
-        fonction-publique.gouv.fr
+        portail de la fonction publique
       </ExternalLink>
-      , ou rapprochez-vous de vos organisations syndicales.
+      .
     </>
   ),
   "autorisation-travail-etranger": (
     <>
-      Votre demande concerne la main-d&apos;œuvre étrangère : elle ne relève pas
-      des services de renseignements en droit du travail. Pour obtenir des
-      informations, contactez le{" "}
+      Pour vous renseigner sur la main-d&apos;œuvre étrangère, contactez le{" "}
       <Link href="tel:0806001620">0 806 001 620</Link> ou rendez-vous sur la
       plateforme régionale accessible sur{" "}
       <ExternalLink href="https://administration-etrangers-en-france.gouv.fr">
@@ -111,9 +118,8 @@ export const OFF_SCOPE_THEME_MESSAGES: Record<OffScopeThemeKey, ReactNode> = {
   ),
   "indemnisation-arret": (
     <>
-      Votre demande ne relève pas des services de renseignements en droit du
-      travail. Pour obtenir des informations, rapprochez-vous de votre caisse
-      d&apos;assurance maladie ou rendez-vous sur le site internet{" "}
+      Pour vous renseigner, rapprochez-vous de votre caisse d&apos;assurance
+      maladie ou rendez-vous sur le site{" "}
       <ExternalLink href="https://www.ameli.fr/assure/adresses-et-contacts/un-autre-sujet">
         ameli.fr
       </ExternalLink>
@@ -122,8 +128,7 @@ export const OFF_SCOPE_THEME_MESSAGES: Record<OffScopeThemeKey, ReactNode> = {
   ),
   "cotisations-salaire": (
     <>
-      Votre demande ne relève pas des services de renseignements en droit du
-      travail. Pour obtenir des informations, rapprochez-vous de l&apos;
+      Pour vous renseigner, rapprochez-vous de l&apos;
       <ExternalLink href="https://www.urssaf.fr/accueil/contacter-urssaf.html">
         URSSAF
       </ExternalLink>
@@ -134,7 +139,7 @@ export const OFF_SCOPE_THEME_MESSAGES: Record<OffScopeThemeKey, ReactNode> = {
 
 // Questions les plus fréquentes, affichées à l'écran 1 pour permettre à
 // l'usager de trouver sa réponse avant de contacter les services. Liens internes
-// CDTN (navigation client-side).
+// CDTN (navigation client-side). Liste et libellés fixés par l'issue #7370.
 export const FREQUENT_QUESTIONS: { label: string; href: string }[] = [
   {
     label: "Calculer l'indemnité de licenciement",

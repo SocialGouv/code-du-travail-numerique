@@ -490,8 +490,8 @@
       "name_pattern": "<currentPathName>",
       "resolution": "literal",
       "emit_function": "emitModalIsOpened",
-      "file": "packages/code-du-travail-frontend/src/modules/layout/footer/infos/tracking.ts",
-      "line": 25,
+      "file": "packages/code-du-travail-frontend/src/modules/besoin-plus-informations/tracking.ts",
+      "line": 29,
       "enum_refs": [
         "MatomoNeedMoreInfoEventSecondary.CONTACT",
         "MatomoNeedMoreInfoEventTertiary.CLICK_CONTACT_MODAL"
@@ -504,8 +504,8 @@
       "name_pattern": null,
       "resolution": "literal",
       "emit_function": "emitTrackNumber",
-      "file": "packages/code-du-travail-frontend/src/modules/layout/footer/infos/tracking.ts",
-      "line": 18,
+      "file": "packages/code-du-travail-frontend/src/modules/besoin-plus-informations/tracking.ts",
+      "line": 20,
       "enum_refs": [
         "MatomoNeedMoreInfoEventSecondary.CONTACT",
         "MatomoNeedMoreInfoEventTertiary.CLICK_PHONE_NUMBER"
@@ -518,8 +518,8 @@
       "name_pattern": "<theme>",
       "resolution": "literal",
       "emit_function": "emitSelectTheme",
-      "file": "packages/code-du-travail-frontend/src/modules/layout/footer/infos/tracking.ts",
-      "line": 33,
+      "file": "packages/code-du-travail-frontend/src/modules/besoin-plus-informations/tracking.ts",
+      "line": 37,
       "enum_refs": [
         "MatomoNeedMoreInfoEventSecondary.CONTACT",
         "MatomoNeedMoreInfoEventTertiary.SELECT_THEME"

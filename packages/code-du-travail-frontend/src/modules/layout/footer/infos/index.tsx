@@ -3,19 +3,10 @@
 import { fr } from "@codegouvfr/react-dsfr";
 import { Button } from "@codegouvfr/react-dsfr/Button";
 import { css } from "@styled-system/css";
-import { useIsModalOpen } from "@codegouvfr/react-dsfr/Modal/useIsModalOpen";
-import { useNeedMoreInfoEvents } from "./tracking";
-import { useEffect } from "react";
-import { needMoreInfoModal } from "./contactModal";
-import { ContactModalView } from "./ContactModalView";
+import { useNeedMoreInfoEvents } from "src/modules/besoin-plus-informations/tracking";
 
 export const NeedMoreInfo = () => {
-  const isOpen = useIsModalOpen(needMoreInfoModal);
   const { emitModalIsOpened } = useNeedMoreInfoEvents();
-
-  useEffect(() => {
-    if (isOpen) emitModalIsOpened();
-  }, [isOpen, emitModalIsOpened]);
 
   return (
     <div className={mainContainer} id="more-info">
@@ -36,7 +27,10 @@ export const NeedMoreInfo = () => {
             </p>
             <div className={buttonContainer}>
               <Button
-                onClick={() => needMoreInfoModal.open()}
+                linkProps={{
+                  href: "/besoin-plus-informations",
+                  onClick: emitModalIsOpened,
+                }}
                 iconId="fr-icon-chat-3-line"
                 iconPosition="right"
                 priority="secondary"
@@ -47,7 +41,6 @@ export const NeedMoreInfo = () => {
           </div>
         </div>
       </div>
-      <ContactModalView />
     </div>
   );
 };
