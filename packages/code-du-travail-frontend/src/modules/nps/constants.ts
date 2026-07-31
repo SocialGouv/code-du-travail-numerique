@@ -20,14 +20,14 @@ export const NPS_COOKIE_MAX_AGE_DAYS = 14;
 // session (que l'usager ait répondu ou non).
 export const NPS_SESSION_KEY = "cdtn-nps-shown";
 // Cookie posé au clic sur « Ne pas répondre » → plus aucune sollicitation
-// (main + déclencheurs automatiques) pendant 1 jour, tous onglets confondus.
+// (main + déclencheurs automatiques) pendant 7 jours, tous onglets confondus.
 export const NPS_OPTOUT_COOKIE_NAME = "cdtn-nps-optout";
-export const NPS_OPTOUT_COOKIE_MAX_AGE_DAYS = 1;
+export const NPS_OPTOUT_COOKIE_MAX_AGE_DAYS = 7;
 // Cookie posé à la fermeture « simple » (Fermer / Échap / overlay) → plus de
-// déclencheur automatique (exit-intent, Télécharger, Copier) pendant 1 jour, tous
+// déclencheur automatique (exit-intent, Télécharger, Copier) pendant 7 jours, tous
 // onglets confondus. La main reste accessible (contrairement à l'opt-out).
 export const NPS_CLOSED_COOKIE_NAME = "cdtn-nps-closed";
-export const NPS_CLOSED_COOKIE_MAX_AGE_DAYS = 1;
+export const NPS_CLOSED_COOKIE_MAX_AGE_DAYS = 7;
 
 export const NPS_CATEGORY = "nps";
 
