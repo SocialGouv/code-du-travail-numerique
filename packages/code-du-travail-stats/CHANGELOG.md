@@ -3,6 +3,45 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.238.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.237.0...v4.238.0) (2026-07-29)
+
+
+### Features
+
+* **contribution:** ajout d'un event pour suivre la completion d'une contribution ([#7426](https://github.com/SocialGouv/code-du-travail-numerique/issues/7426)) ([7ac5adf](https://github.com/SocialGouv/code-du-travail-numerique/commit/7ac5adff9f98aac044cf0b47283f2c653ded98a7))
+* **themes:** ajout des tags thème et sous-thème en haut des pages `contribution` ([#7393](https://github.com/SocialGouv/code-du-travail-numerique/issues/7393)) ([5e1f658](https://github.com/SocialGouv/code-du-travail-numerique/commit/5e1f6587cf1d72b9aef45aedb0de7cfd2fe3ffb9))
+
+
+
+
+
+# [4.237.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.236.2...v4.237.0) (2026-07-27)
+
+
+### Features
+
+* **matomo:** nettoie les urls trackées via cleanUrl ([#7409](https://github.com/SocialGouv/code-du-travail-numerique/issues/7409)) ([#7414](https://github.com/SocialGouv/code-du-travail-numerique/issues/7414)) ([975ec14](https://github.com/SocialGouv/code-du-travail-numerique/commit/975ec14c2c49a4862c31568f891ddd4ba3c9983a))
+
+
+
+
+
+## [4.236.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.236.1...v4.236.2) (2026-07-24)
+
+**Note:** Version bump only for package @socialgouv/cdtn-stats
+
+
+
+
+
+## [4.236.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.236.0...v4.236.1) (2026-07-24)
+
+**Note:** Version bump only for package @socialgouv/cdtn-stats
+
+
+
+
+
 # [4.236.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.235.0...v4.236.0) (2026-07-23)
 
 

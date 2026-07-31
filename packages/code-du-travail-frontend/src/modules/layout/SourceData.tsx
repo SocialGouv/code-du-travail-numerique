@@ -8,10 +8,11 @@ type Props = {
     name: string;
   };
   updatedAt: string;
+  className?: string;
 };
 
-export const SourceData = ({ source, updatedAt }: Props) => (
-  <p>
+export const SourceData = ({ source, updatedAt, className }: Props) => (
+  <p className={className}>
     Source&nbsp;:{" "}
     <Link href={source.url} target="_blank" rel="noopener noreferrer">
       {source.name}

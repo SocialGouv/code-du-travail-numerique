@@ -3,6 +3,61 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.238.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.237.0...v4.238.0) (2026-07-29)
+
+
+### Bug Fixes
+
+* **contribution:** prise en compte des retours sur le tracking des contributions ([#7427](https://github.com/SocialGouv/code-du-travail-numerique/issues/7427)) ([65487c9](https://github.com/SocialGouv/code-du-travail-numerique/commit/65487c93f1096f9dcc436f4c8626d1b3eb0c21e2))
+
+
+### Features
+
+* **contribution:** ajout d'un event pour suivre la completion d'une contribution ([#7426](https://github.com/SocialGouv/code-du-travail-numerique/issues/7426)) ([7ac5adf](https://github.com/SocialGouv/code-du-travail-numerique/commit/7ac5adff9f98aac044cf0b47283f2c653ded98a7))
+* **themes:** ajout des tags thème et sous-thème en haut des pages `contribution` ([#7393](https://github.com/SocialGouv/code-du-travail-numerique/issues/7393)) ([5e1f658](https://github.com/SocialGouv/code-du-travail-numerique/commit/5e1f6587cf1d72b9aef45aedb0de7cfd2fe3ffb9))
+
+
+
+
+
+# [4.237.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.236.2...v4.237.0) (2026-07-27)
+
+
+### Bug Fixes
+
+* **api:** utilisation de zod pour valider les entrées des APIs ([#7407](https://github.com/SocialGouv/code-du-travail-numerique/issues/7407)) ([c7e857c](https://github.com/SocialGouv/code-du-travail-numerique/commit/c7e857c6be427596c5de079637cd4b78d4471511))
+
+
+### Features
+
+* **matomo:** nettoie les urls trackées via cleanUrl ([#7409](https://github.com/SocialGouv/code-du-travail-numerique/issues/7409)) ([#7414](https://github.com/SocialGouv/code-du-travail-numerique/issues/7414)) ([975ec14](https://github.com/SocialGouv/code-du-travail-numerique/commit/975ec14c2c49a4862c31568f891ddd4ba3c9983a))
+
+
+
+
+
+## [4.236.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.236.1...v4.236.2) (2026-07-24)
+
+
+### Bug Fixes
+
+* **ci:** retry du publish npm pour absorber le 409 Sigstore/Rekor ([#7420](https://github.com/SocialGouv/code-du-travail-numerique/issues/7420)) ([91041c2](https://github.com/SocialGouv/code-du-travail-numerique/commit/91041c2bd8dd21b0f808b081ef5acbafa397fc5e))
+
+
+
+
+
+## [4.236.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.236.0...v4.236.1) (2026-07-24)
+
+
+### Bug Fixes
+
+* **nps:** couper les sollicitations auto 24h à la fermeture simple du popup, main conservée ([#7416](https://github.com/SocialGouv/code-du-travail-numerique/issues/7416)) ([d74ec6b](https://github.com/SocialGouv/code-du-travail-numerique/commit/d74ec6b2b36c29b8ccd46807f0fe145d1d98bdb9))
+
+
+
+
+
 # [4.236.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.235.0...v4.236.0) (2026-07-23)
 
 

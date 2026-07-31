@@ -24,6 +24,11 @@ function MatomoComponent({ heatmapEnabled }: MatomoComponentProps) {
       pathname,
       searchParams,
       excludeUrlsPatterns: [WIDGETS_PATH],
+      // Retire les query params (?src_url=, utm_*, ...) et fragments (#...) des
+      // URLs remontées à Matomo pour ne pas fragmenter les stats de pages vues.
+      // Les query params sont conservés sur les routes de recherche (/recherche)
+      // pour préserver le trackSiteSearch.
+      cleanUrl: true,
       enableHeatmapSessionRecording: heatmapEnabled && consent.matomoHeatmap,
       enableHeartBeatTimer: heatmapEnabled && consent.matomo,
 
