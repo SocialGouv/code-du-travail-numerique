@@ -40,7 +40,7 @@ describe("persistence NPS — cookie de fermeture « simple » (cdtn-nps-closed)
     delete (document as { cookie?: unknown }).cookie;
   });
 
-  it("markNpsClosed pose le cookie cdtn-nps-closed avec max-age = 1 jour", () => {
+  it("markNpsClosed pose le cookie cdtn-nps-closed avec max-age = 7 jours", () => {
     markNpsClosed();
     expect(writes).toHaveLength(1);
     const raw = writes[0];

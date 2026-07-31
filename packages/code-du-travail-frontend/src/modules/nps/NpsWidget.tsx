@@ -54,7 +54,7 @@ export const NpsWidget = () => {
     onConceal: () => {
       openRef.current = false;
       // Fermeture « simple » (bouton « Fermer », Échap, overlay), sans validation
-      // ni opt-out = refus. On coupe les déclencheurs automatiques pendant 1 jour
+      // ni opt-out = refus. On coupe les déclencheurs automatiques pendant 7 jours
       // (cookie), mais la main reste affichée : l'usager peut encore répondre plus
       // tard ; seul « Ne pas répondre » la fait disparaître (cf. onOptOut).
       if (!submittedRef.current && !optedOutRef.current && triggerRef.current) {
@@ -81,8 +81,8 @@ export const NpsWidget = () => {
   };
 
   // Déclencheurs automatiques (exit-intent, Télécharger, Copier) : bloqués si
-  // déjà répondu (cookie 2 semaines), opt-out (cookie 1 jour), fermeture simple
-  // (cookie 1 jour, main conservée) ou déjà affichés dans la session (1×/session).
+  // déjà répondu (cookie 2 semaines), opt-out (cookie 7 jours), fermeture simple
+  // (cookie 7 jours, main conservée) ou déjà affichés dans la session (1×/session).
   const openFromAuto = (trigger: NpsTrigger) => {
     if (
       hasAnsweredNps() ||
@@ -125,7 +125,7 @@ export const NpsWidget = () => {
   };
 
   // « Ne pas répondre » : refus explicite. Émet l'opt-out, coupe toute
-  // sollicitation NPS pendant 1 jour, tous onglets confondus (cookie — main +
+  // sollicitation NPS pendant 7 jours, tous onglets confondus (cookie — main +
   // déclencheurs auto), et fait disparaître la main. La modale se ferme via DSFR
   // (aria-controls du bouton footer) ; `optedOutRef` évite un double event dans
   // onConceal.
