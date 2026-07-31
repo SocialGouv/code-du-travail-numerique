@@ -20,6 +20,7 @@ export enum TrackingAgreementSearchAction {
 export enum TrackingContributionAction {
   BTN_TABLE_FULLSCREEN = "btn_table_fullscreen",
   CONTENT_VIEWED = "reponse_consultee",
+  CLICK_AGREEMENT_DECLINATION = "clic_declinaison_cc",
 }
 
 export const useContributionTracking = () => {
@@ -107,6 +108,17 @@ export const useContributionTracking = () => {
     });
   };
 
+  // Clic sur un lien de l'accordéon « Votre réponse en fonction de votre
+  // convention collective » (fiche générique). `name` = chemin de la page CC
+  // atteinte, sans le slash initial (`contribution/44-mon-slug`).
+  const emitClickAgreementDeclination = (href: string) => {
+    sendEvent({
+      category: TrackingContributionCategory.CONTRIBUTION,
+      action: TrackingContributionAction.CLICK_AGREEMENT_DECLINATION,
+      name: href.replace(/^\/+/, ""),
+    });
+  };
+
   return {
     emitAgreementTreatedEvent,
     emitAgreementUntreatedEvent,
@@ -118,5 +130,6 @@ export const useContributionTracking = () => {
     emitClickP3,
     emitClickTableFullscreen,
     emitContentViewed,
+    emitClickAgreementDeclination,
   };
 };

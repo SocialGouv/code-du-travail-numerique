@@ -5,8 +5,10 @@ import {
   byText,
 } from "testing-library-selector";
 import { searchAgreement } from "../../convention-collective";
+import { AGREEMENT_DECLINATIONS_LABEL } from "../ContributionAgreementDeclinations";
 
 export const ui = {
+  agreementDeclinationsLabel: AGREEMENT_DECLINATIONS_LABEL,
   cdtAnswerTitle: byRole("heading", {
     level: 2,
     name: /Réponse d'après le Code du Travail/,

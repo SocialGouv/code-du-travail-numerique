@@ -290,7 +290,8 @@ Clics sur les boutons « voir tout » et les questions guidées de la page d'acc
 ### Contributions (fiches pratiques)
 
 Encart de personnalisation par convention collective en tête d'une contribution,
-l'agrandissement des tableaux du contenu, et un indicateur de **consultation effective de la
+l'agrandissement des tableaux du contenu, la liste des **déclinaisons par convention
+collective** de la fiche générique, et un indicateur de **consultation effective de la
 réponse** (le contenu a réellement été vu, pas seulement la page chargée).
 [↗ source](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/contributions/tracking.ts#L24 "contributions/tracking.ts")
 
@@ -302,6 +303,7 @@ réponse** (le contenu a réellement été vu, pas seulement la page chargée).
 | contribution | click_afficher_les_informations_générales | `<withVariant(path,variant)>` | « Afficher les informations » avec une CC **non** traitée → informations générales. |
 | contribution | click_afficher_les_informations_sans_CC   | `<withVariant(path,variant)>` | « Afficher sans sélectionner de CC » → contenu générique (émis avec `click_p3`). |
 | contribution | btn_table_fullscreen                      | `contribution/<slug>`         | Clic sur « Voir le tableau en plein écran » pour agrandir un tableau du contenu (bouton affiché sur mobile) ; `name` = slug de la contribution. |
+| contribution | clic_declinaison_cc                       | `contribution/<num>-<slug>`   | Clic sur une convention collective listée dans l'accordéon « Votre réponse en fonction de votre convention collective », affiché sur la fiche générique sous « Références ». Ce bloc existe d'abord pour le **maillage interne / SEO** (les liens sont dans le HTML servi, sans interaction) ; l'event mesure son usage réel par les usagers. `name` = chemin de la page CC atteinte. |
 | contribution | reponse_consultee                         | `contribution/<slug>`         | Réponse **réellement consultée** : le titre du bloc réponse (h2) est entré dans le haut de l'écran **et** y est resté ~10 s en continu, onglet actif ; émis **une seule fois** par page. Indicateur clé de la consultation du contenu, notamment sur les arrivées directes via une convention collective. |
 | cc_search_type_of_users | click_p1 · click_p2 · click_p3 | `<withVariant(path,variant)>` | Parcours de choix de CC : par nom (p1), par entreprise (p2), sans CC (p3). |
 

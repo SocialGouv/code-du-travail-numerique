@@ -3,7 +3,7 @@ import React from "react";
 import { css } from "@styled-system/css";
 import { fr } from "@codegouvfr/react-dsfr";
 import Breadcrumb from "@codegouvfr/react-dsfr/Breadcrumb";
-import { Contribution } from "./type";
+import { AgreementDeclination, Contribution } from "./type";
 import { ContentMeta } from "../common/ContentMeta";
 import { ContributionGeneric } from "./ContributionGeneric";
 import { ContributionAgreement } from "./ContributionAgreement";
@@ -16,9 +16,16 @@ import type { GenericContributionInfos } from "./queries";
 type Props = {
   contribution: Contribution;
   genericInfos?: GenericContributionInfos;
+  // Déclinaisons par convention collective, résolues côté serveur. Vide sur une
+  // page CC : seule la fiche générique affiche la liste.
+  agreementDeclinations?: AgreementDeclination[];
 };
 
-export function ContributionLayout({ contribution, genericInfos }: Props) {
+export function ContributionLayout({
+  contribution,
+  genericInfos,
+  agreementDeclinations = [],
+}: Props) {
   const { date, title, isGeneric, isFicheSP } = contribution;
 
   const genericSlug = !isGeneric
@@ -96,7 +103,10 @@ export function ContributionLayout({ contribution, genericInfos }: Props) {
         breadcrumbs={contribution.breadcrumbs}
       />
       {isGeneric ? (
-        <ContributionGeneric contribution={contribution} />
+        <ContributionGeneric
+          contribution={contribution}
+          agreementDeclinations={agreementDeclinations}
+        />
       ) : (
         <ContributionAgreement
           contribution={contribution}
