@@ -81,15 +81,16 @@ describe("<ContactJourney />", () => {
 
     const alert = screen.getByTestId("contact-error-result");
     expect(alert).toHaveTextContent("Nous ne traitons pas ces demandes");
+    // Wording de l'issue #7370, repris tel quel.
     expect(alert).toHaveTextContent(
-      /Nous traitons uniquement les questions concernant le droit du travail/
+      /Votre demande concerne le secteur public.+elle ne relève pas des services de renseignements en droit du travail/
     );
     expect(alert).toHaveTextContent(
-      /droits des fonctionnaires et contractuels/
+      /rapprochez-vous de vos organisations syndicales/
     );
 
     const externalLink = within(alert).getByRole("link", {
-      name: /portail de la fonction publique/,
+      name: /fonction-publique\.gouv\.fr/,
     });
     expect(externalLink).toHaveAttribute(
       "href",
@@ -103,6 +104,72 @@ describe("<ContactJourney />", () => {
     ).not.toBeInTheDocument();
     expect(getThemeSelect()).toBeInTheDocument();
     expect(getSuivant()).toBeInTheDocument();
+  });
+
+  // Wording de l'issue #7370 pour les trois autres thèmes hors périmètre.
+  it.each([
+    [
+      "autorisation-travail-etranger",
+      /Votre demande concerne la main-d'œuvre étrangère/,
+      "administration-etrangers-en-france.gouv.fr",
+      "https://administration-etrangers-en-france.gouv.fr",
+    ],
+    [
+      "indemnisation-arret",
+      /rapprochez-vous de votre caisse d'assurance maladie/,
+      "ameli.fr",
+      "https://www.ameli.fr/assure/adresses-et-contacts/un-autre-sujet",
+    ],
+    [
+      "cotisations-salaire",
+      /Votre demande ne relève pas des services de renseignements en droit du travail/,
+      "URSSAF",
+      "https://www.urssaf.fr/accueil/contacter-urssaf.html",
+    ],
+  ])("redirige le thème hors périmètre « %s »", (theme, text, link, href) => {
+    render(<ContactJourney />);
+    selectTheme(theme);
+    fireEvent.click(getSuivant()!);
+
+    const alert = screen.getByTestId("contact-error-result");
+    expect(alert).toHaveTextContent(text as RegExp);
+
+    const externalLink = within(alert).getByRole("link", {
+      name: link as string,
+    });
+    expect(externalLink).toHaveAttribute("href", href as string);
+    expect(externalLink).toHaveAttribute("target", "_blank");
+
+    expect(
+      screen.queryByTestId("contact-phone-result")
+    ).not.toBeInTheDocument();
+  });
+
+  it("place « Suivant » avant les questions fréquentes, qui s'ouvrent dans un nouvel onglet", () => {
+    render(<ContactJourney />);
+
+    const heading = screen.getByText("Questions les plus fréquentes");
+    // Node.compareDocumentPosition : le bouton précède le bloc dans le DOM.
+    expect(
+      getSuivant()!.compareDocumentPosition(heading) &
+        Node.DOCUMENT_POSITION_FOLLOWING
+    ).toBeTruthy();
+
+    const links = within(heading.parentElement as HTMLElement).getAllByRole(
+      "link"
+    );
+    expect(links).toHaveLength(5);
+    links.forEach((link) => {
+      expect(link).toHaveAttribute("target", "_blank");
+      expect(link).toHaveAttribute("rel", expect.stringContaining("noopener"));
+    });
+
+    // Les questions fréquentes ne suivent pas l'usager sur l'écran résultat.
+    selectTheme("secteur-prive");
+    fireEvent.click(getSuivant()!);
+    expect(
+      screen.queryByText("Questions les plus fréquentes")
+    ).not.toBeInTheDocument();
   });
 
   it("efface l'erreur hors périmètre dès qu'un nouveau thème est choisi", () => {

@@ -58,8 +58,11 @@ test.describe("Page Contacter nos services en région", () => {
     const alert = page.locator(errorAlert);
     await expect(alert).toBeVisible();
     await expect(alert).toContainText("Nous ne traitons pas ces demandes");
+    await expect(alert).toContainText(
+      "Votre demande concerne le secteur public"
+    );
     await expect(
-      alert.getByRole("link", { name: /portail de la fonction publique/ })
+      alert.getByRole("link", { name: /fonction-publique\.gouv\.fr/ })
     ).toHaveAttribute("target", "_blank");
 
     // Le parcours ne continue pas : on reste sur le choix du thème.

@@ -14,6 +14,9 @@ type Props = {
   selectedOption: string | undefined;
   autoFocus?: boolean;
   placeholder?: string;
+  // Style de largeur du champ. Remplace `defaultSelectStyle` (et ne s'y ajoute
+  // pas) : cf. le commentaire dans `styles/select.ts`.
+  selectStyle?: string;
 };
 
 export const SelectQuestion = ({
@@ -26,6 +29,7 @@ export const SelectQuestion = ({
   selectedOption,
   autoFocus = false,
   placeholder = "Sélectionnez une option",
+  selectStyle = defaultSelectStyle,
 }: Props) => {
   const [optionsArray, setOptionsArray] = React.useState<[string, string][]>(
     []
@@ -98,7 +102,7 @@ export const SelectQuestion = ({
           )
         )
       }
-      className={defaultSelectStyle}
+      className={selectStyle}
     >
       <option value="" disabled>
         {placeholder}

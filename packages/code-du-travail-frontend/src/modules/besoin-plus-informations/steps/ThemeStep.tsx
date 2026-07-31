@@ -1,15 +1,12 @@
 import { fr } from "@codegouvfr/react-dsfr";
-import Link from "src/modules/common/Link";
-import { ListWithArrow } from "src/modules/common/ListWithArrow";
 import { SelectQuestion } from "src/modules/outils/common/components/SelectQuestion";
 import { AccessibleAlert } from "src/modules/outils/common/components/AccessibleAlert";
+import { wideSelectStyle } from "src/modules/outils/common/styles/select";
 import { ContactStepper } from "../ContactStepper";
 import {
   CONTACT_THEMES,
-  FREQUENT_QUESTIONS,
   MISSING_THEME_ERROR,
   OFF_SCOPE_ERROR_TITLE,
-  OFF_SCOPE_INTRO,
   OFF_SCOPE_THEME_MESSAGES,
   OffScopeThemeKey,
   ThemeKey,
@@ -27,9 +24,9 @@ type Props = {
   error: ThemeStepError | undefined;
 };
 
-// Écran 1 : choix du thème de la question, précédé du rappel de périmètre et
-// suivi des questions les plus fréquentes, pour permettre à l'usager de trouver
-// sa réponse avant de contacter les services.
+// Écran 1 : choix du thème de la question, précédé du rappel de périmètre. Le
+// bouton de validation et les questions les plus fréquentes sont rendus après,
+// par le parcours.
 export const ThemeStep = ({ selectedTheme, onSelectTheme, error }: Props) => (
   <>
     <ContactStepper current={1} title="Précisez votre question" />
@@ -39,12 +36,9 @@ export const ThemeStep = ({ selectedTheme, onSelectTheme, error }: Props) => (
         data-testid="contact-error-result"
         title={OFF_SCOPE_ERROR_TITLE}
         description={
-          <>
-            <p className={fr.cx("fr-mb-2w")}>{OFF_SCOPE_INTRO}</p>
-            <p className={fr.cx("fr-mb-0")}>
-              {OFF_SCOPE_THEME_MESSAGES[error.theme]}
-            </p>
-          </>
+          <p className={fr.cx("fr-mb-0")}>
+            {OFF_SCOPE_THEME_MESSAGES[error.theme]}
+          </p>
         }
       />
     ) : (
@@ -57,9 +51,12 @@ export const ThemeStep = ({ selectedTheme, onSelectTheme, error }: Props) => (
     <div className={fr.cx("fr-mt-3w")}>
       <SelectQuestion
         name="contact-theme"
-        label="Quel thème concerne votre question ?"
+        label="Sur quel thème porte votre question ?"
         placeholder="Sélectionner un thème"
         subLabel="Si vous souhaitez aborder plusieurs sujets, sélectionnez le plus important pour vous."
+        // « Question de droit du travail dans le secteur privé » dépasse le
+        // plafond de 282px des simulateurs et serait tronqué.
+        selectStyle={wideSelectStyle}
         error={
           error?.kind === "off-scope"
             ? `${OFF_SCOPE_ERROR_TITLE}.`
@@ -72,25 +69,6 @@ export const ThemeStep = ({ selectedTheme, onSelectTheme, error }: Props) => (
         )}
         selectedOption={selectedTheme}
         onChangeSelectedOption={(value) => onSelectTheme(value as ThemeKey)}
-      />
-    </div>
-    <div className={fr.cx("fr-mt-4w")}>
-      <p className={fr.cx("fr-text--lead", "fr-text--bold", "fr-mb-2w")}>
-        {"Questions les plus fréquentes"}
-      </p>
-      <ListWithArrow
-        withSeparators
-        items={FREQUENT_QUESTIONS.map((question) => (
-          // « fr-raw-link » retire le soulignement que le DSFR applique à tout
-          // [href] : dans cette liste, la flèche porte déjà l'affordance.
-          <Link
-            key={question.href}
-            className={fr.cx("fr-raw-link")}
-            href={question.href}
-          >
-            {question.label}
-          </Link>
-        ))}
       />
     </div>
   </>

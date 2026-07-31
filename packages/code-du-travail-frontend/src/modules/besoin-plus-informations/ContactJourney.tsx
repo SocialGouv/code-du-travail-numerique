@@ -7,6 +7,7 @@ import { css } from "@styled-system/css";
 import { scrollToTop } from "src/modules/outils/common/utils";
 import { ThemeStep, ThemeStepError } from "./steps/ThemeStep";
 import { ResultStep } from "./steps/ResultStep";
+import { FrequentQuestions } from "./FrequentQuestions";
 import { isOffScopeTheme, ThemeKey } from "./contactThemes";
 import { useNeedMoreInfoEvents } from "./tracking";
 
@@ -79,7 +80,15 @@ export const ContactJourney = () => {
           <ResultStep />
         )}
       </div>
-      <div className={fr.cx("fr-mt-4w")}>
+      {/* L'action passe avant les questions fréquentes : reléguée sous la
+          liste, elle n'était plus lue comme la suite du parcours. « Suivant »
+          est aligné à droite, en fin de formulaire ; « Précédent » reste à
+          gauche, du côté d'où l'on revient. */}
+      <div
+        className={fr.cx("fr-mt-4w", "fr-grid-row", {
+          "fr-grid-row--right": step === "question",
+        })}
+      >
         {step === "question" ? (
           <Button
             onClick={onNext}
@@ -104,6 +113,7 @@ export const ContactJourney = () => {
           </Button>
         )}
       </div>
+      {step === "question" && <FrequentQuestions />}
     </div>
   );
 };

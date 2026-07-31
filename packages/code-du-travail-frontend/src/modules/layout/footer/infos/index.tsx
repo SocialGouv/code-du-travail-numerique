@@ -21,9 +21,9 @@ export const NeedMoreInfo = () => {
               Besoin de plus d&apos;informations ?
             </div>
             <p className={paragraph}>
-              Les services du ministère du Travail en région informent,
-              conseillent et orientent les salariés et les employeurs du secteur
-              privé sur leurs questions en droit du travail.
+              Les services du ministère du Travail en région informent et
+              orientent les salariés et employeurs du secteur privé sur leurs
+              questions en droit du travail.
             </p>
             <div className={buttonContainer}>
               <Button

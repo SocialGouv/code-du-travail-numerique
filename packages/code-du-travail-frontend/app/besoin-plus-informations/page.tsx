@@ -5,7 +5,7 @@ import { BesoinPlusInformations } from "../../src/modules/besoin-plus-informatio
 export const metadata = generateDefaultMetadata({
   title: "Contacter nos services en région",
   description:
-    "Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.",
+    "Les services du ministère du Travail en région informent et orientent les salariés et employeurs du secteur privé sur leurs questions en droit du travail.",
   path: "/besoin-plus-informations",
 });
 
