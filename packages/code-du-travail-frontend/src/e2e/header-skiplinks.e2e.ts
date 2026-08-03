@@ -31,7 +31,7 @@ test.describe("Header", () => {
 
     await page.keyboard.press("Tab");
     await expect(page.locator(":focus")).toHaveText(
-      "Trouver les services près de chez moi"
+      "Contacter nos services en région"
     );
   });
 });

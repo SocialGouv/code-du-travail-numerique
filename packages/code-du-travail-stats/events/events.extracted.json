@@ -1,8 +1,8 @@
 {
   "scan_root": "packages/code-du-travail-frontend/src",
-  "callsites": 73,
-  "total_events": 110,
-  "unique_events": 101,
+  "callsites": 74,
+  "total_events": 111,
+  "unique_events": 102,
   "unresolved_callsites": 0,
   "events": [
     {
@@ -504,8 +504,8 @@
       "name_pattern": "<currentPathName>",
       "resolution": "literal",
       "emit_function": "emitModalIsOpened",
-      "file": "packages/code-du-travail-frontend/src/modules/layout/footer/infos/tracking.ts",
-      "line": 24,
+      "file": "packages/code-du-travail-frontend/src/modules/besoin-plus-informations/tracking.ts",
+      "line": 29,
       "enum_refs": [
         "MatomoNeedMoreInfoEventSecondary.CONTACT",
         "MatomoNeedMoreInfoEventTertiary.CLICK_CONTACT_MODAL"
@@ -518,11 +518,25 @@
       "name_pattern": null,
       "resolution": "literal",
       "emit_function": "emitTrackNumber",
-      "file": "packages/code-du-travail-frontend/src/modules/layout/footer/infos/tracking.ts",
-      "line": 17,
+      "file": "packages/code-du-travail-frontend/src/modules/besoin-plus-informations/tracking.ts",
+      "line": 20,
       "enum_refs": [
         "MatomoNeedMoreInfoEventSecondary.CONTACT",
         "MatomoNeedMoreInfoEventTertiary.CLICK_PHONE_NUMBER"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "contact",
+      "action": "select_theme_contact_sr",
+      "name_pattern": "<theme>",
+      "resolution": "literal",
+      "emit_function": "emitSelectTheme",
+      "file": "packages/code-du-travail-frontend/src/modules/besoin-plus-informations/tracking.ts",
+      "line": 37,
+      "enum_refs": [
+        "MatomoNeedMoreInfoEventSecondary.CONTACT",
+        "MatomoNeedMoreInfoEventTertiary.SELECT_THEME"
       ],
       "tracking_method": "sendEvent"
     },
