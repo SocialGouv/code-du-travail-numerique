@@ -29,7 +29,7 @@ exports[`<Footer /> should match snapshot 1`] = `
             <p
               class="c_var(--text-action-high-blue-france)"
             >
-              Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
+              Les services du ministère du Travail en région informent et orientent les salariés et employeurs du secteur privé sur leurs questions en droit du travail.
             </p>
             <div
               class="d_flex jc_center"
@@ -39,7 +39,7 @@ exports[`<Footer /> should match snapshot 1`] = `
                 href="/besoin-plus-informations"
                 id="fr-button-_r_0_"
               >
-                Trouver les services près de chez moi
+                Contacter nos services en région
               </a>
             </div>
           </div>

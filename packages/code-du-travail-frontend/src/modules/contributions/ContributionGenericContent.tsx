@@ -2,6 +2,8 @@
 import React, { forwardRef, ReactNode } from "react";
 import { fr } from "@codegouvfr/react-dsfr";
 import { ContributionContent } from "./ContributionContent";
+import { useContributionTracking } from "./tracking";
+import { useContentViewTracking } from "./useContentViewTracking";
 import Html from "../common/Html";
 import Link from "../common/Link";
 import Accordion from "@codegouvfr/react-dsfr/Accordion";
@@ -26,6 +28,13 @@ export const ContributionGenericContent = forwardRef<
   HTMLParagraphElement,
   Props
 >(({ contribution, alertText, relatedItems, displayGeneric }, ref) => {
+  const { emitContentViewed } = useContributionTracking();
+  // N'observe que quand le bloc générique est réellement affiché.
+  const titleRef = useContentViewTracking<HTMLHeadingElement>(
+    () => emitContentViewed(contribution.slug),
+    { enabled: displayGeneric }
+  );
+
   return (
     <>
       <div
@@ -49,7 +58,7 @@ export const ContributionGenericContent = forwardRef<
           )} ${focusableTitle}`}
           id="cdt"
         >
-          <h2>Réponse d&apos;après le Code du Travail</h2>
+          <h2 ref={titleRef}>Réponse d&apos;après le Code du Travail</h2>
           {alertText}
           <ContributionContent contribution={contribution} titleLevel={2} />
           {contribution.references.length > 0 && (

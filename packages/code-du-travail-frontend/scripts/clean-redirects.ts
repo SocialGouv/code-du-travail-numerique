@@ -27,8 +27,12 @@ interface Redirection {
   permanent: boolean;
 }
 
-const LOG_DIR = path.join(__dirname, "./logs");
-const REDIRECTIONS_FILE = path.join(__dirname, "../redirects.json");
+// Résolus depuis la racine du package : ce fichier est exécuté compilé depuis
+// `dist/` (pnpm clean:redirects) mais lu depuis `scripts/` par les tests, et
+// `__dirname` diffère donc entre les deux.
+const PACKAGE_ROOT = path.join(__dirname, "..");
+const LOG_DIR = path.join(PACKAGE_ROOT, "scripts", "logs");
+const REDIRECTIONS_FILE = path.join(PACKAGE_ROOT, "redirects.json");
 
 const exclusionSources = ["/widget.html", "/health"];
 const botKeywords = [
@@ -91,6 +95,16 @@ const main = () => {
     .readdirSync(LOG_DIR)
     .filter((file) => file.endsWith(".json"));
 
+  // Sans logs, aucune redirection ne paraît utilisée et le fichier serait vidé
+  // de bout en bout. On refuse d'écrire plutôt que de supprimer par erreur.
+  if (logFiles.length === 0) {
+    console.error(
+      `Aucun fichier de logs dans ${LOG_DIR}. Téléchargez-les depuis Grafana (cf. en-tête de ce script) avant de relancer.\nredirects.json est laissé intact.`
+    );
+    process.exitCode = 1;
+    return;
+  }
+
   const allLogs = logFiles.flatMap((file) =>
     readJsonFile<LogEntry[]>(path.join(LOG_DIR, file))
   );
@@ -115,4 +129,9 @@ const main = () => {
   );
 };
 
-main();
+// Ne s'exécute qu'en invocation directe (`pnpm clean:redirects`). Le test
+// importe `extract` depuis ce module : sans ce garde, l'import suffisait à
+// lancer main() et à réécrire redirects.json.
+if (require.main === module) {
+  main();
+}

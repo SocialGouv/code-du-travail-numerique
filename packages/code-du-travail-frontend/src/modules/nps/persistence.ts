@@ -1,10 +1,12 @@
 "use client";
 
 // Persistance côté client du widget NPS : cookies « déjà répondu » (2 semaines)
-// et « ne pas répondre » (1 jour), plus flag de session « déjà affiché ».
+// et « ne pas répondre » (7 jours), plus flag de session « déjà affiché ».
 // Aucune donnée personnelle : de simples drapeaux booléens.
 
 import {
+  NPS_CLOSED_COOKIE_MAX_AGE_DAYS,
+  NPS_CLOSED_COOKIE_NAME,
   NPS_COOKIE_MAX_AGE_DAYS,
   NPS_COOKIE_NAME,
   NPS_OPTOUT_COOKIE_MAX_AGE_DAYS,
@@ -66,7 +68,7 @@ export const markNpsShownThisSession = (): void => {
 };
 
 // Opt-out volontaire (bouton « Ne pas répondre ») : coupe toute sollicitation
-// NPS — main ET déclencheurs automatiques — pendant 1 jour. Cookie et non
+// NPS — main ET déclencheurs automatiques — pendant 7 jours. Cookie et non
 // sessionStorage : le sessionStorage est propre à chaque onglet, un nouvel
 // onglet re-sollicitait l'usager qui venait pourtant de refuser.
 export const hasOptedOutNps = (): boolean =>
@@ -74,3 +76,12 @@ export const hasOptedOutNps = (): boolean =>
 
 export const markNpsOptedOut = (): void =>
   setFlagCookie(NPS_OPTOUT_COOKIE_NAME, NPS_OPTOUT_COOKIE_MAX_AGE_DAYS);
+
+// Fermeture « simple » de la modale (Fermer / Échap / overlay) : coupe les
+// déclencheurs automatiques pendant 7 jours (comme l'opt-out) mais SANS masquer la
+// main — l'usager peut encore répondre volontairement plus tard.
+export const hasClosedNps = (): boolean =>
+  hasFlagCookie(NPS_CLOSED_COOKIE_NAME);
+
+export const markNpsClosed = (): void =>
+  setFlagCookie(NPS_CLOSED_COOKIE_NAME, NPS_CLOSED_COOKIE_MAX_AGE_DAYS);

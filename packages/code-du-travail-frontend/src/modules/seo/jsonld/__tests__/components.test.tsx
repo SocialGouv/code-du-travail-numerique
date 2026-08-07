@@ -1,6 +1,7 @@
 import React from "react";
 import { render } from "@testing-library/react";
 import {
+  ArticleJsonLd,
   BreadcrumbListJsonLd,
   GovernmentOrganizationJsonLd,
   LegislationJsonLd,
@@ -69,6 +70,32 @@ describe("jsonld components", () => {
     ) as HTMLScriptElement | null;
     expect(script).not.toBeNull();
     expect(script?.textContent).toContain("Legislation");
+  });
+
+  it("ArticleJsonLd tags le contenu avec thème + sous-thème", () => {
+    (usePathname as unknown as jest.Mock).mockReturnValue("/fiche/le-preavis");
+    render(
+      <ArticleJsonLd
+        title="Le préavis"
+        breadcrumbs={[
+          {
+            label: "Rupture du contrat",
+            position: 1,
+            slug: "/themes/rupture-du-contrat",
+          },
+          { label: "Licenciement", position: 2, slug: "/themes/licenciement" },
+        ]}
+      />
+    );
+
+    const script = document.querySelector(
+      `script#${JSON_LD_IDS.article}`
+    ) as HTMLScriptElement | null;
+
+    expect(script).not.toBeNull();
+    expect(script?.textContent).toContain("Article");
+    expect(script?.textContent).toContain("Licenciement");
+    expect(script?.textContent).toContain("/fiche/le-preavis");
   });
 
   it("NewsArticleJsonLd renders a JSON-LD script", () => {

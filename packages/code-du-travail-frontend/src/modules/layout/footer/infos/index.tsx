@@ -3,23 +3,10 @@
 import { fr } from "@codegouvfr/react-dsfr";
 import { Button } from "@codegouvfr/react-dsfr/Button";
 import { css } from "@styled-system/css";
-import { createModal } from "@codegouvfr/react-dsfr/Modal";
-import { useIsModalOpen } from "@codegouvfr/react-dsfr/Modal/useIsModalOpen";
-import { useNeedMoreInfoEvents } from "./tracking";
-import { useEffect } from "react";
-
-export const needMoreInfoModal = createModal({
-  id: "more-info-modal",
-  isOpenedByDefault: false,
-});
+import { useNeedMoreInfoEvents } from "src/modules/besoin-plus-informations/tracking";
 
 export const NeedMoreInfo = () => {
-  const isOpen = useIsModalOpen(needMoreInfoModal);
   const { emitModalIsOpened } = useNeedMoreInfoEvents();
-
-  useEffect(() => {
-    if (isOpen) emitModalIsOpened();
-  }, [isOpen, emitModalIsOpened]);
 
   return (
     <div className={mainContainer} id="more-info">
@@ -34,20 +21,21 @@ export const NeedMoreInfo = () => {
               Besoin de plus d&apos;informations ?
             </div>
             <p className={paragraph}>
-              Les services du ministère du Travail en région informent,
-              conseillent et orientent les salariés et les employeurs du secteur
-              privé sur leurs questions en droit du travail.
+              Les services du ministère du Travail en région informent et
+              orientent les salariés et employeurs du secteur privé sur leurs
+              questions en droit du travail.
             </p>
             <div className={buttonContainer}>
               <Button
                 linkProps={{
                   href: "/besoin-plus-informations",
+                  onClick: emitModalIsOpened,
                 }}
                 iconId="fr-icon-chat-3-line"
                 iconPosition="right"
                 priority="secondary"
               >
-                Trouver les services près de chez moi
+                Contacter nos services en région
               </Button>
             </div>
           </div>

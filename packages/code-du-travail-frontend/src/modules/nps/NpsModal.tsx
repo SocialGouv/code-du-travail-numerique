@@ -22,7 +22,7 @@ type Props = {
   onSelect: (value: number) => void;
   onSubmit: () => void;
   // Refus explicite : fait disparaître la main et coupe les sollicitations
-  // pendant 1 jour (cf. NpsWidget).
+  // pendant 7 jours (cf. NpsWidget).
   onOptOut: () => void;
   // Id de la question, réutilisé pour labelliser le groupe de boutons.
   questionId: string;

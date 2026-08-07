@@ -6,7 +6,8 @@ import { AccordionWithAnchor } from "../common/AccordionWithAnchor";
 import { ContainerRichWithBreadcrumbs } from "../layout/ContainerRichWithBreadcrumbs";
 import { ContentParser } from "./ContentParser";
 import { ElasticFicheTravailEmploiSection } from "@socialgouv/cdtn-types";
-import { SourceData } from "../layout/SourceData";
+import { ContentMeta } from "../common/ContentMeta";
+import { ArticleJsonLd } from "../seo/jsonld";
 import Html from "../common/Html";
 import "../../../public/static/fiches-mt.css";
 import { normalizeHeadingsToH2 } from "./utils";
@@ -44,11 +45,17 @@ export function FicheMinistereTravail({
       title={title}
       description={metaDescription}
     >
-      <h1 className={fr.cx("fr-mb-6w")}>{title}</h1>
+      <h1 className={fr.cx("fr-mb-0")}>{title}</h1>
 
-      <SourceData
+      <ContentMeta
+        date={date}
         source={{ url, name: "Fiche Ministère du travail" }}
-        updatedAt={date}
+        breadcrumbs={breadcrumbs}
+      />
+      <ArticleJsonLd
+        title={title}
+        datePublished={date}
+        breadcrumbs={breadcrumbs}
       />
 
       <div className={fr.cx("fr-mb-5w")}>

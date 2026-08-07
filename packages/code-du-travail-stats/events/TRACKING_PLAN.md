@@ -11,7 +11,7 @@ Ce document décrit les évènements Matomo **écrits explicitement dans le code
 (`code.travail.gouv.fr`). Il est destiné au métier : pour **chaque** évènement, il explique
 **quand** il part et **pourquoi** on le mesure, puis en donne le contenu exact.
 
-**96** events uniques · **105** au total · **29** catégories Matomo. Couverture vérifiée
+**102** events uniques · **111** au total · **31** catégories Matomo. Couverture vérifiée
 exhaustivement face au catalogue extrait du code.
 
 #### tracking générique (automatique sur chaque page)
@@ -289,8 +289,9 @@ Clics sur les boutons « voir tout » et les questions guidées de la page d'acc
 
 ### Contributions (fiches pratiques)
 
-Encart de personnalisation par convention collective en tête d'une contribution, plus
-l'agrandissement des tableaux du contenu.
+Encart de personnalisation par convention collective en tête d'une contribution,
+l'agrandissement des tableaux du contenu, et un indicateur de **consultation effective de la
+réponse** (le contenu a réellement été vu, pas seulement la page chargée).
 [↗ source](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/contributions/tracking.ts#L24 "contributions/tracking.ts")
 
 | Catégorie    | Action                                    | Name (📌)                     | Quand / pourquoi |
@@ -301,6 +302,7 @@ l'agrandissement des tableaux du contenu.
 | contribution | click_afficher_les_informations_générales | `<withVariant(path,variant)>` | « Afficher les informations » avec une CC **non** traitée → informations générales. |
 | contribution | click_afficher_les_informations_sans_CC   | `<withVariant(path,variant)>` | « Afficher sans sélectionner de CC » → contenu générique (émis avec `click_p3`). |
 | contribution | btn_table_fullscreen                      | `contribution/<slug>`         | Clic sur « Voir le tableau en plein écran » pour agrandir un tableau du contenu (bouton affiché sur mobile) ; `name` = slug de la contribution. |
+| contribution | reponse_consultee                         | `contribution/<slug>`         | Réponse **réellement consultée** : le titre du bloc réponse (h2) est entré dans le haut de l'écran **et** y est resté ~10 s en continu, onglet actif ; émis **une seule fois** par page. Indicateur clé de la consultation du contenu, notamment sur les arrivées directes via une convention collective. |
 | cc_search_type_of_users | click_p1 · click_p2 · click_p3 | `<withVariant(path,variant)>` | Parcours de choix de CC : par nom (p1), par entreprise (p2), sans CC (p3). |
 
 ---
@@ -354,8 +356,8 @@ sur un modèle de courrier) ou `main` (clic sur l'icône).
 | Catégorie | Action (🔀)          | Name (🔀)          | Quand / pourquoi |
 | --------- | -------------------- | ------------------ | ---------------- |
 | nps       | `display_<trigger>`  | `<page_type/slug>` | À l'affichage de la modale, quel qu'en soit le déclencheur. Mesure le volume de sollicitations et leur canal (`<trigger>`). |
-| nps       | `refusal_<trigger>`  | `<page_type/slug>` | À la fermeture « simple » (bouton « Fermer », Échap, clic hors modale) **sans** valider ni cliquer « Ne pas répondre ». La « main » **reste** affichée : l'usager peut encore répondre plus tard. Mesure l'abandon ponctuel de la modale. |
-| nps       | `optout_<trigger>`   | `<page_type/slug>` | Au clic sur **« Ne pas répondre »** : refus explicite. Fait **disparaître la main** et coupe toute sollicitation NPS pendant **1 jour**, tous onglets confondus (cookie ; déclencheurs automatiques compris). Mesure les opt-out volontaires, à distinguer du refus « simple » ci-dessus. |
+| nps       | `refusal_<trigger>`  | `<page_type/slug>` | À la fermeture « simple » (bouton « Fermer », Échap, clic hors modale) **sans** valider ni cliquer « Ne pas répondre ». Coupe les **déclencheurs automatiques** pendant **7 jours**, tous onglets confondus (cookie), mais la « main » **reste** affichée : l'usager peut encore répondre plus tard. Mesure l'abandon ponctuel de la modale. |
+| nps       | `optout_<trigger>`   | `<page_type/slug>` | Au clic sur **« Ne pas répondre »** : refus explicite. Fait **disparaître la main** et coupe toute sollicitation NPS pendant **7 jours**, tous onglets confondus (cookie ; déclencheurs automatiques compris). Mesure les opt-out volontaires, à distinguer du refus « simple » ci-dessus. |
 
 > **La note (0 à 10) n'est pas un event Matomo côté client** : au clic sur « Valider », le score
 > part vers l'**API proxy interne** `/api/nps` (POST same-origin — contourne les bloqueurs et
@@ -419,9 +421,9 @@ entreprise/accords.
 
 ### Avis & contact (bas de page)
 
-Bandeau « Cette page vous a-t-elle été utile ? » et modale de contact du footer.
+Bandeau « Cette page vous a-t-elle été utile ? » et parcours de contact du footer.
 [↗ feedback](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/layout/feedback/tracking.ts#L29 "layout/feedback/tracking.ts") ·
-[↗ contact](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/layout/footer/infos/tracking.ts#L17 "layout/footer/infos/tracking.ts")
+[↗ contact](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/besoin-plus-informations/tracking.ts#L19 "besoin-plus-informations/tracking.ts")
 
 | Catégorie         | Action                  | Name (📌/🔀)         | Quand / pourquoi |
 | ----------------- | ----------------------- | -------------------- | ---------------- |
@@ -429,8 +431,9 @@ Bandeau « Cette page vous a-t-elle été utile ? » et modale de contact du foo
 | feedback          | negative                | 📌 `<baseUrl>`       | Clic sur « Non » ; ouvre le formulaire de précision. |
 | feedback_category | `<motif de feedback>`   | 📌 `<baseUrl>`       | À l'envoi, un event par motif coché (4 motifs prédéfinis, parcours négatif). |
 | feedback_suggestion | `<suggestion>`        | 🔀 `<baseUrl>`       | À l'envoi, si un texte libre est saisi (parcours positif ou négatif). Verbatim (500 car. max). |
-| contact           | click_contact_sr_modale | 📌 `<currentPathName>` | Ouverture de la modale « Besoin de plus d'informations ? » (renseignement). |
-| contact           | click_phone_number      | 📌 —                 | Clic sur le numéro de téléphone du service de renseignement. |
+| contact           | click_contact_sr_modale | 📌 `<currentPathName>` | Clic sur « Contacter nos services en région » dans le bloc footer, qui mène à la page du questionnaire de pré-qualification SRDT (`/besoin-plus-informations`). `name` = page d'origine. Le libellé de l'action est historique : le parcours était une modale, il est désormais sur une page. |
+| contact           | select_theme_contact_sr | 📌 `<theme>`          | Clic sur « Suivant » à l'écran « Précisez votre question » ; `name` = thème choisi (secteur-prive, secteur-public, cotisations-salaire, indemnisation-arret, autorisation-travail-etranger). Mesure la répartition des demandes et le hors-périmètre. |
+| contact           | click_phone_number      | 📌 —                 | Clic sur le numéro 0 806 000 126 affiché à l'écran résultat pour le thème « droit du travail secteur privé ». |
 
 Les 4 motifs possibles de `feedback_category` (un event par case cochée) :
 
@@ -441,9 +444,10 @@ Les 4 motifs possibles de `feedback_category` (un event par case cochée) :
 
 ---
 
-### Partage & contenus liés (commun)
+### Partage, contenus liés & tags de thème (commun)
 
-| Catégorie     | Action                | Name (🔀)                       | Quand / pourquoi | Code |
-| ------------- | --------------------- | ------------------------------- | ---------------- | ---- |
-| clic_share    | `<url de la page>`    | `<réseau>` (facebook, twitter, linkedin, email, whatsapp, copier) | Clic sur un bouton du bloc « Partager la page ». Quels contenus, via quels canaux. | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/common/tracking.ts#L29 "common/tracking.ts:29") |
-| selectRelated | `{"selection":"<url>"}` | —                             | Clic sur un lien de la rubrique « contenus liés » en bas de page. | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/common/tracking.ts#L22 "common/tracking.ts:22") |
+| Catégorie      | Action                | Name (🔀)                       | Quand / pourquoi | Code |
+| -------------- | --------------------- | ------------------------------- | ---------------- | ---- |
+| clic_share     | `<url de la page>`    | `<réseau>` (facebook, twitter, linkedin, email, whatsapp, copier) | Clic sur un bouton du bloc « Partager la page ». Quels contenus, via quels canaux. | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/common/tracking.ts#L30 "common/tracking.ts:30") |
+| selectRelated  | `{"selection":"<url>"}` | —                             | Clic sur un lien de la rubrique « contenus liés » en bas de page. | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/common/tracking.ts#L23 "common/tracking.ts:23") |
+| `<source>` (ex. `contribution`, `information`, …) | clic_tag_theme | `{"slug":"<slug page>","theme":"<slug thème>"}` (ex. `{"slug":"mon-slug","theme":"themes/conges-et-repos"}`) | Clic sur un des tags de thème (thème racine ou sous-thème) affichés sous le titre des contributions, fiches service-public, fiches ministère du travail, fiches infos, infographies et modèles de courrier. **Catégorie = source de la page** ; `name` = JSON `{slug de la page, thème cliqué}` en slugs, jamais l'URL complète. Mesure l'usage de ce point d'entrée vers la navigation par thème. | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/common/tracking.ts#L43 "common/tracking.ts:43") |
