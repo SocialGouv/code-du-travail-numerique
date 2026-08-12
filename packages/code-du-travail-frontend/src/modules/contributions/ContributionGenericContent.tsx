@@ -70,7 +70,12 @@ export const ContributionGenericContent = forwardRef<
             )} ${focusableTitle}`}
             id="cdt"
           >
-            <h2 ref={titleRef}>Réponse d&apos;après le Code du Travail</h2>
+            {/* Même gabarit que le rappel de CC de la page conventionnelle :
+                H6 (20 px, gras) pour rester cohérent d'une page à l'autre
+                (#7439). Le niveau sémantique h2 reste inchangé. */}
+            <h2 ref={titleRef} className={fr.cx("fr-h6")}>
+              Réponse d&apos;après le Code du Travail
+            </h2>
             {alertText}
             <ContributionContent contribution={contribution} titleLevel={2} />
             {contribution.references.length > 0 && (
