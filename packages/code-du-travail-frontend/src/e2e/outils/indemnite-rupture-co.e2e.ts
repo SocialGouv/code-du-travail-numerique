@@ -1,5 +1,10 @@
 import { test, expect } from "@playwright/test";
 import { formatToEuro } from "../helpers/format";
+import { contractDates } from "../helpers/dates";
+
+// 24 ans d'ancienneté, moins les 2 mois d'absence saisis plus bas : le montant
+// attendu ci-dessous en découle.
+const { startDate, endDate } = contractDates({ years: 24 });
 
 test.describe("Outil - Indemnité de rupture conventionnelle", () => {
   test("Calcul de l'indemnité de rupture conventionnelle", async ({ page }) => {
@@ -18,8 +23,8 @@ test.describe("Outil - Indemnité de rupture conventionnelle", () => {
     await page.getByRole("button", { name: "Suivant" }).click();
 
     // Dates
-    await page.locator("#dateEntree").fill("2001-01-01");
-    await page.locator("#dateSortie").fill("2025-01-01");
+    await page.locator("#dateEntree").fill(startDate);
+    await page.locator("#dateSortie").fill(endDate);
     await page.getByRole("button", { name: "Suivant" }).click();
 
     // Absences
