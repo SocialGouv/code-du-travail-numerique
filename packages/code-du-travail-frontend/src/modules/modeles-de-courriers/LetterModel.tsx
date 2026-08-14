@@ -10,8 +10,8 @@ import { CopyButton } from "./components/CopyButton";
 import { LetterModelContent } from "./components/LetterModelContent";
 import { RelatedItem } from "../documents";
 import { useModeleEvents } from "./tracking";
-import Breadcrumb from "@codegouvfr/react-dsfr/Breadcrumb";
-import { ArticleJsonLd, BreadcrumbListJsonLd } from "../seo/jsonld";
+import { Breadcrumbs, fromDocumentBreadcrumbs } from "../layout/breadcrumb";
+import { ArticleJsonLd } from "../seo/jsonld";
 import { ContentMeta } from "../common/ContentMeta";
 import { notifyNpsTrigger } from "../nps/triggerBus";
 import { NpsTrigger } from "../nps/constants";
@@ -61,27 +61,14 @@ export const LetterModel = ({
 
   return (
     <>
-      <BreadcrumbListJsonLd
-        currentPageLabel={title}
-        items={breadcrumbs.map(({ label, slug }) => ({
-          label,
-          href: slug,
-        }))}
-      />
       <ArticleJsonLd
         title={title}
         datePublished={date}
         breadcrumbs={breadcrumbs}
       />
-      <Breadcrumb
+      <Breadcrumbs
         currentPageLabel={title}
-        homeLinkProps={{
-          href: "/",
-        }}
-        segments={breadcrumbs.map(({ label, slug }) => ({
-          label: <>{label}</>,
-          linkProps: { href: slug },
-        }))}
+        segments={fromDocumentBreadcrumbs(breadcrumbs)}
         className={fr.cx("fr-mb-2w", "fr-mt-2w")}
       />
       <div

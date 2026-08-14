@@ -2,25 +2,16 @@
 
 import React from "react";
 import { fr } from "@codegouvfr/react-dsfr";
-import Breadcrumb from "@codegouvfr/react-dsfr/Breadcrumb";
 import { Introduction, Origins, Hierarchy } from "./index";
 import { Container } from "../layout/Container";
-import { BreadcrumbListJsonLd } from "../seo/jsonld";
+import { Breadcrumbs } from "../layout/breadcrumb";
 
 export const DroitDuTravailWrapper = () => {
   return (
     <>
       <div className={fr.cx("fr-container")}>
-        <BreadcrumbListJsonLd
-          currentPageLabel={"Le droit du travail"}
-          items={[]}
-        />
-        <Breadcrumb
-          currentPageLabel={"Le droit du travail"}
-          homeLinkProps={{
-            href: "/",
-          }}
-          segments={[]}
+        <Breadcrumbs
+          currentPageLabel="Le droit du travail"
           className={fr.cx("fr-mb-2w", "fr-mt-2w")}
         />
       </div>
