@@ -1,6 +1,18 @@
 /** @jest-environment node */
 
-import { fetchContributionBySlug, fetchContributions } from "../queries";
+import {
+  fetchAgreementDeclinations,
+  fetchContributionBySlug,
+  fetchContributions,
+} from "../queries";
+
+// `ccSupported` / `ccUnextended` portent l'IDCC sur 4 chiffres (zéros de tête),
+// qui est aussi la valeur du champ `id` des documents « convention collective ».
+const BOULANGERIE_PATISSERIE = "0843";
+const BANQUE = "2120";
+// Le document générique se liste lui-même dans `ccSupported` (idcc « 0000 ») :
+// aucun accord ne porte cet identifiant, il n'apparaît donc pas dans la liste.
+const GENERIC = "0000";
 
 describe("Contributions", () => {
   it("Récupération de toutes les contributions", async () => {
@@ -182,5 +194,62 @@ describe("Contributions", () => {
         "Quand le salarié a-t-il droit à une prime d’ancienneté ? Quel est son montant ?",
       type: "content",
     });
+  });
+});
+
+describe("Déclinaisons par convention collective", () => {
+  it("Aucune CC traitée : pas de déclinaison", async () => {
+    const result = await fetchAgreementDeclinations({
+      slug: "la-periode-dessai",
+      ccSupported: [],
+      ccUnextended: [],
+    });
+    expect(result).toEqual([]);
+  });
+
+  it("Les CC traitées sont résolues et triées par nom court", async () => {
+    const result = await fetchAgreementDeclinations({
+      slug: "la-periode-dessai",
+      ccSupported: [GENERIC, BOULANGERIE_PATISSERIE, BANQUE],
+      ccUnextended: [],
+    });
+    expect(result).toEqual([
+      {
+        shortTitle: "Banque",
+        href: "/contribution/2120-la-periode-dessai",
+      },
+      {
+        shortTitle: "Boulangerie-pâtisserie (entreprises artisanales)",
+        href: "/contribution/843-la-periode-dessai",
+      },
+    ]);
+  });
+
+  it("Les CC non étendues sont exclues", async () => {
+    const result = await fetchAgreementDeclinations({
+      slug: "la-periode-dessai",
+      ccSupported: [BOULANGERIE_PATISSERIE, BANQUE],
+      ccUnextended: [BANQUE],
+    });
+    expect(result).toEqual([
+      {
+        shortTitle: "Boulangerie-pâtisserie (entreprises artisanales)",
+        href: "/contribution/843-la-periode-dessai",
+      },
+    ]);
+  });
+
+  it("La contribution « congés pour événements familiaux » garde son arborescence par CC", async () => {
+    const result = await fetchAgreementDeclinations({
+      slug: "les-conges-pour-evenements-familiaux",
+      ccSupported: [BANQUE],
+      ccUnextended: [],
+    });
+    expect(result).toEqual([
+      {
+        shortTitle: "Banque",
+        href: "/contribution/les-conges-pour-evenements-familiaux/2120-banque",
+      },
+    ]);
   });
 });

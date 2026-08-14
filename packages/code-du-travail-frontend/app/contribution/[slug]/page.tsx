@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { generateDefaultMetadata } from "../../../src/modules/common/metas";
 import {
   ContributionLayout,
+  fetchAgreementDeclinations,
   fetchContributionBySlug,
   fetchGenericContributionInfos,
 } from "../../../src/modules/contributions";
@@ -29,11 +30,17 @@ async function Contribution(props) {
   const genericInfos = !contribution.isGeneric
     ? await fetchGenericContributionInfos(removeCCNumberFromSlug(params.slug))
     : undefined;
+  // Maillage interne (#7355) : seule la fiche générique liste ses déclinaisons
+  // par convention collective ; les pages CC renvoient déjà vers la générique.
+  const agreementDeclinations = contribution.isGeneric
+    ? await fetchAgreementDeclinations(contribution)
+    : [];
   return (
     <DsfrLayout>
       <ContributionLayout
         contribution={contribution}
         genericInfos={genericInfos}
+        agreementDeclinations={agreementDeclinations}
       />
     </DsfrLayout>
   );

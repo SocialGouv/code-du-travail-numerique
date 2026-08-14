@@ -12,7 +12,7 @@ export const WhatIsAgreementLink = () => (
       href="/quelles-regles-s-appliquent-dans-votre-entreprise#convention-collective"
       target="_blank"
     >
-      La convention collective, c&apos;est quoi&nbsp;?
+      {"La convention collective, c'est quoi\u00a0?"}
     </Link>
   </p>
 );

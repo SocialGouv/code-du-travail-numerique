@@ -1,5 +1,6 @@
 "use client";
 import React, { useRef, useState, useEffect } from "react";
+import { fr } from "@codegouvfr/react-dsfr";
 import { useContributionTracking } from "./tracking";
 import {
   buildContributionAgreementPath,
@@ -9,7 +10,8 @@ import {
 } from "./contributionUtils";
 import { useRouter } from "next/navigation";
 import { ContributionGenericContent } from "./ContributionGenericContent";
-import { Contribution } from "./type";
+import { ContributionAgreementDeclinations } from "./ContributionAgreementDeclinations";
+import { AgreementDeclination, Contribution } from "./type";
 import {
   useLocalStorageForAgreementOnPageLoad,
   getAgreementFromLocalStorage,
@@ -19,9 +21,13 @@ import { AgreementRoute } from "src/modules/outils/indemnite-depart/types";
 
 type Props = {
   contribution: Contribution;
+  agreementDeclinations: AgreementDeclination[];
 };
 
-export function ContributionGeneric({ contribution }: Props) {
+export function ContributionGeneric({
+  contribution,
+  agreementDeclinations,
+}: Props) {
   const router = useRouter();
   const [hash, setHash] = useState("");
   const personalizeTitleRef = useRef<HTMLParagraphElement>(null);
@@ -135,12 +141,25 @@ export function ContributionGeneric({ contribution }: Props) {
         defaultRoute={defaultRoute}
       />
 
+      {/* Contribution sans réponse Code du travail : le bloc de contenu
+          générique n'est pas rendu, la liste des déclinaisons par CC est donc
+          affichée directement sous le formulaire de sélection. Elle ferme alors
+          la page : `fr-mb-6w` reprend la marge basse que porte habituellement
+          le bloc générique, sans quoi l'accordéon colle au pied de page. */}
+      {isNoCDT && (
+        <ContributionAgreementDeclinations
+          items={agreementDeclinations}
+          className={fr.cx("fr-mt-6w", "fr-mb-6w")}
+        />
+      )}
+
       {!isNoCDT && !isAgreementValid(contribution, selectedAgreement) && (
         <ContributionGenericContent
           ref={genericTitleRef}
           contribution={contribution}
           relatedItems={relatedItems}
           displayGeneric={displayGeneric}
+          agreementDeclinations={agreementDeclinations}
           alertText={
             selectedAgreement &&
             !isAgreementSupported(contribution, selectedAgreement) && (

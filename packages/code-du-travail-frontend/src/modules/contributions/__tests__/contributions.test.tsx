@@ -195,6 +195,157 @@ describe("<ContributionLayout />", () => {
       rendering.getByRole("heading", { level: 3, name: "Attention" })
     ).toBeInTheDocument();
   });
+  describe("déclinaisons par convention collective", () => {
+    const agreementDeclinations = [
+      { shortTitle: "Banque", href: "/contribution/2120-slug" },
+      {
+        shortTitle: "Industries chimiques et connexes",
+        href: "/contribution/44-slug",
+      },
+    ];
+
+    beforeEach(() => {
+      window.localStorage.clear();
+    });
+
+    it("liste les déclinaisons sous « Références » sur la fiche générique", () => {
+      rendering = render(
+        <ContributionLayout
+          contribution={{
+            ...contribution,
+            references: [{ title: "Article 1", url: "https://exemple.test" }],
+          }}
+          agreementDeclinations={agreementDeclinations}
+        />
+      );
+
+      const accordionTitle = rendering.getByRole("heading", {
+        level: 3,
+        name: ui.agreementDeclinationsLabel,
+      });
+      expect(accordionTitle).toBeInTheDocument();
+      // L'accordéon « Références » le précède dans le flux du document.
+      const referencesTitle = rendering.getByRole("heading", {
+        level: 3,
+        name: "Références",
+      });
+      expect(
+        referencesTitle.compareDocumentPosition(accordionTitle) &
+          Node.DOCUMENT_POSITION_FOLLOWING
+      ).toBeTruthy();
+
+      expect(rendering.getByRole("link", { name: "Banque" })).toHaveAttribute(
+        "href",
+        "/contribution/2120-slug"
+      );
+      expect(
+        rendering.getByRole("link", {
+          name: "Industries chimiques et connexes",
+        })
+      ).toHaveAttribute("href", "/contribution/44-slug");
+    });
+
+    it("rend les liens sans interaction, l'accordéon restant replié", () => {
+      rendering = render(
+        <ContributionLayout
+          contribution={contribution}
+          agreementDeclinations={agreementDeclinations}
+        />
+      );
+
+      expect(
+        rendering.getByRole("button", { name: ui.agreementDeclinationsLabel })
+      ).toHaveAttribute("aria-expanded", "false");
+      expect(
+        rendering.getByRole("link", { name: "Banque" })
+      ).toBeInTheDocument();
+    });
+
+    it("liste les déclinaisons sur une contribution sans réponse Code du travail", () => {
+      rendering = render(
+        <ContributionLayout
+          contribution={{ ...contribution, isNoCDT: true }}
+          agreementDeclinations={agreementDeclinations}
+        />
+      );
+
+      const accordionTitle = rendering.getByRole("heading", {
+        level: 3,
+        name: ui.agreementDeclinationsLabel,
+      });
+      expect(accordionTitle).toBeInTheDocument();
+      expect(
+        rendering.getByRole("link", { name: "Banque" })
+      ).toBeInTheDocument();
+      // L'accordéon ferme la page dans ce cas : sans marge basse, il colle au
+      // pied de page.
+      expect(accordionTitle.closest("section")?.className).toContain(
+        "fr-mb-6w"
+      );
+    });
+
+    it("n'affiche pas l'accordéon sur une page convention collective", () => {
+      rendering = render(
+        <ContributionLayout
+          contribution={{
+            ...contribution,
+            idcc: "0029",
+            isGeneric: false,
+            ccnSlug: "cc-slug",
+            ccnShortTitle: "Nom de la CC",
+          }}
+        />
+      );
+
+      expect(
+        rendering.queryByRole("heading", {
+          name: ui.agreementDeclinationsLabel,
+        })
+      ).not.toBeInTheDocument();
+    });
+
+    it("n'affiche pas d'accordéon vide quand aucune CC n'est traitée", () => {
+      rendering = render(
+        <ContributionLayout
+          contribution={contribution}
+          agreementDeclinations={[]}
+        />
+      );
+
+      expect(
+        rendering.queryByRole("heading", {
+          name: ui.agreementDeclinationsLabel,
+        })
+      ).not.toBeInTheDocument();
+    });
+
+    it("conserve la hiérarchie des titres : un seul h2 sur la fiche générique", () => {
+      rendering = render(
+        <ContributionLayout
+          contribution={{
+            ...contribution,
+            references: [{ title: "Article 1", url: "https://exemple.test" }],
+            messageBlock: "Un message d'attention",
+          }}
+          agreementDeclinations={agreementDeclinations}
+        />
+      );
+
+      // L'accordéon n'introduit pas de niveau 2 supplémentaire : la fiche
+      // générique en compte deux (le bloc de personnalisation et la réponse).
+      const h2s = rendering.getAllByRole("heading", { level: 2 });
+      expect(h2s.map((h2) => h2.textContent)).toEqual([
+        "Personnalisez la réponse avec votre convention collective",
+        "Réponse d'après le Code du Travail",
+      ]);
+      expect(
+        rendering.getByRole("heading", {
+          level: 3,
+          name: ui.agreementDeclinationsLabel,
+        })
+      ).toBeInTheDocument();
+    });
+  });
   describe("base", () => {
     beforeEach(async () => {
       window.localStorage.clear();

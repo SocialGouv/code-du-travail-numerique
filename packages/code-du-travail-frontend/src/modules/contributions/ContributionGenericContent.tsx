@@ -10,7 +10,8 @@ import Accordion from "@codegouvfr/react-dsfr/Accordion";
 import { ListWithArrow } from "../common/ListWithArrow";
 import { RelatedItems } from "../common/RelatedItems";
 import { RelatedItem } from "../documents";
-import { Contribution } from "./type";
+import { ContributionAgreementDeclinations } from "./ContributionAgreementDeclinations";
+import { AgreementDeclination, Contribution } from "./type";
 import { ContributionRating } from "./rating";
 import { focusableTitle } from "../common/focusableTitle";
 
@@ -22,91 +23,110 @@ type Props = {
     title: string;
   }[];
   displayGeneric: boolean;
+  agreementDeclinations: AgreementDeclination[];
 };
 
 export const ContributionGenericContent = forwardRef<
   HTMLParagraphElement,
   Props
->(({ contribution, alertText, relatedItems, displayGeneric }, ref) => {
-  const { emitContentViewed } = useContributionTracking();
-  // N'observe que quand le bloc générique est réellement affiché.
-  const titleRef = useContentViewTracking<HTMLHeadingElement>(
-    () => emitContentViewed(contribution.slug),
-    { enabled: displayGeneric }
-  );
+>(
+  (
+    {
+      contribution,
+      alertText,
+      relatedItems,
+      displayGeneric,
+      agreementDeclinations,
+    },
+    ref
+  ) => {
+    const { emitContentViewed } = useContributionTracking();
+    // N'observe que quand le bloc générique est réellement affiché.
+    const titleRef = useContentViewTracking<HTMLHeadingElement>(
+      () => emitContentViewed(contribution.slug),
+      { enabled: displayGeneric }
+    );
 
-  return (
-    <>
-      <div
-        className={fr.cx(
-          "fr-grid-row",
-          "fr-grid-row--gutters",
-          "fr-px-3v",
-          "fr-mb-6w"
-        )}
-      >
-        <div
-          tabIndex={-1}
-          ref={ref}
-          className={`${fr.cx(
-            "fr-col-12",
-            "fr-col-lg-8",
-            "fr-mb-md-0",
-            "fr-mt-2w",
-            "fr-p-0",
-            !displayGeneric && "fr-hidden"
-          )} ${focusableTitle}`}
-          id="cdt"
-        >
-          <h2 ref={titleRef}>Réponse d&apos;après le Code du Travail</h2>
-          {alertText}
-          <ContributionContent contribution={contribution} titleLevel={2} />
-          {contribution.references.length > 0 && (
-            <Accordion
-              label="Références"
-              titleAs="h3"
-              className={fr.cx("fr-mt-6w")}
-            >
-              <ListWithArrow
-                items={contribution.references.map(({ title, url }) => {
-                  return (
-                    <Link
-                      key={title}
-                      href={url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {title}
-                    </Link>
-                  );
-                })}
-              />
-            </Accordion>
-          )}
-          {contribution.messageBlock && (
-            <div className={fr.cx("fr-alert", "fr-alert--info", "fr-mt-6w")}>
-              <h3 className={fr.cx("fr-h5")}>Attention</h3>
-              <Html>{contribution.messageBlock}</Html>
-            </div>
-          )}
-        </div>
+    return (
+      <>
         <div
           className={fr.cx(
-            "fr-col-12",
-            "fr-col-md-4",
-            // Aligne le haut de la colonne (widget de notation) sur le haut du
-            // texte principal (colonne de gauche, `fr-mt-2w`).
-            "fr-mt-2w",
-            "fr-p-md-3w",
-            !displayGeneric && "fr-hidden"
+            "fr-grid-row",
+            "fr-grid-row--gutters",
+            "fr-px-3v",
+            "fr-mb-6w"
           )}
         >
-          <ContributionRating contributionSlug={contribution.slug} level={3} />
-          <RelatedItems relatedItems={relatedItems} level={3} />
+          <div
+            tabIndex={-1}
+            ref={ref}
+            className={`${fr.cx(
+              "fr-col-12",
+              "fr-col-lg-8",
+              "fr-mb-md-0",
+              "fr-mt-2w",
+              "fr-p-0",
+              !displayGeneric && "fr-hidden"
+            )} ${focusableTitle}`}
+            id="cdt"
+          >
+            <h2 ref={titleRef}>Réponse d&apos;après le Code du Travail</h2>
+            {alertText}
+            <ContributionContent contribution={contribution} titleLevel={2} />
+            {contribution.references.length > 0 && (
+              <Accordion
+                label="Références"
+                titleAs="h3"
+                className={fr.cx("fr-mt-6w")}
+              >
+                <ListWithArrow
+                  items={contribution.references.map(({ title, url }) => {
+                    return (
+                      <Link
+                        key={title}
+                        href={url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {title}
+                      </Link>
+                    );
+                  })}
+                />
+              </Accordion>
+            )}
+            <ContributionAgreementDeclinations
+              items={agreementDeclinations}
+              className={fr.cx("fr-mt-6w")}
+            />
+            {contribution.messageBlock && (
+              <div className={fr.cx("fr-alert", "fr-alert--info", "fr-mt-6w")}>
+                <h3 className={fr.cx("fr-h5")}>Attention</h3>
+                <Html>{contribution.messageBlock}</Html>
+              </div>
+            )}
+          </div>
+          <div
+            className={fr.cx(
+              "fr-col-12",
+              "fr-col-md-4",
+              // Aligne le haut de la colonne (widget de notation) sur le haut du
+              // texte principal (colonne de gauche, `fr-mt-2w`).
+              "fr-mt-2w",
+              "fr-p-md-3w",
+              !displayGeneric && "fr-hidden"
+            )}
+          >
+            <ContributionRating
+              contributionSlug={contribution.slug}
+              level={3}
+            />
+            <RelatedItems relatedItems={relatedItems} level={3} />
+          </div>
         </div>
-      </div>
-    </>
-  );
-});
+      </>
+    );
+  }
+);
 
 ContributionGenericContent.displayName = "ContributionGenericContent";

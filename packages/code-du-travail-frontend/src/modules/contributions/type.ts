@@ -45,6 +45,14 @@ export type ContributionRelatedItems = {
   items: RelatedItem[];
 };
 
+// Lien vers la déclinaison d'une contribution pour une convention collective.
+// Construit côté serveur (cf. fetchAgreementDeclinations) et transmis tel quel
+// aux composants client : il ne contient que des valeurs sérialisables.
+export type AgreementDeclination = {
+  shortTitle: string;
+  href: string;
+};
+
 export type Contribution = ContributionElasticDocument & {
   isGeneric: boolean;
   isNoCDT: boolean;
