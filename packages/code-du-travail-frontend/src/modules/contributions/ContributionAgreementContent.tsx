@@ -36,7 +36,10 @@ export function ContributionAgreementContent({
       <div
         className={fr.cx("fr-col-12", "fr-col-lg-8", "fr-mb-6w", "fr-mb-md-0")}
       >
-        <h2 ref={titleRef}>
+        {/* Rappel de la CC, pas un titre de section : taille H6 (20 px, gras)
+            pour éviter l'effet « gros titre » quand le nom de la CC est long
+            (#7439). Le niveau sémantique h2 reste inchangé. */}
+        <h2 ref={titleRef} className={fr.cx("fr-h6")}>
           Réponse pour la convention : {contribution.ccnShortTitle}
         </h2>
         <ContributionContent contribution={contribution} titleLevel={2} />

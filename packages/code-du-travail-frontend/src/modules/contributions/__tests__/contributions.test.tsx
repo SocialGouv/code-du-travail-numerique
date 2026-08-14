@@ -152,6 +152,26 @@ describe("<ContributionLayout />", () => {
       "Réponse pour la convention : Nom de la CC"
     );
   });
+  // #7439 : le rappel de la CC garde son niveau h2 mais adopte la taille H6
+  // (20 px, gras) pour ne pas produire un pavé de titre quand le nom est long.
+  it("rend le rappel de la CC au gabarit H6", () => {
+    rendering = render(
+      <ContributionLayout
+        contribution={{
+          ...contribution,
+          idcc: "0029",
+          isGeneric: false,
+          ccnSlug: "cc-slug",
+          ccnShortTitle: "Nom de la CC",
+        }}
+      />
+    );
+    expect(ui.branchAnswerTitle.get().className).toContain("fr-h6");
+  });
+  it("rend le titre de la réponse Code du travail au même gabarit H6", () => {
+    rendering = render(<ContributionLayout contribution={contribution} />);
+    expect(ui.cdtAnswerTitle.get().className).toContain("fr-h6");
+  });
   it("hiérarchise les titres : un seul h2 (la réponse), tout le reste en h3", () => {
     rendering = render(
       <ContributionLayout
