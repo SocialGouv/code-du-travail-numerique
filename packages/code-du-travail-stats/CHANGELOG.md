@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.240.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.239.0...v4.240.0) (2026-08-14)
+
+
+### Features
+
+* **contributions:** ajout des liens des pages personnalisées dans la générique ([#7434](https://github.com/SocialGouv/code-du-travail-numerique/issues/7434)) ([1113ad7](https://github.com/SocialGouv/code-du-travail-numerique/commit/1113ad74e6e9c082881173686e767b286df15604))
+
+
+
+
+
 # [4.239.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.238.0...v4.239.0) (2026-08-03)
 
 
