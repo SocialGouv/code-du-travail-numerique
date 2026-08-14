@@ -10,6 +10,7 @@ import { FrequentQuestions } from "./FrequentQuestions";
 import { AgreementArticles } from "./AgreementArticles";
 import { LegiFranceSearch } from "./LegiFranceSearch";
 import { ContainerRichWithBreadcrumbs } from "../layout/ContainerRichWithBreadcrumbs";
+import { fromDocumentBreadcrumbs } from "../layout/breadcrumb";
 import { getIdConvention } from "./utils";
 import Link from "../common/Link";
 
@@ -22,13 +23,11 @@ export function AgreementContainer({ agreement, relatedItems }: Props) {
   return (
     <ContainerRichWithBreadcrumbs
       currentPage={agreement.shortTitle}
-      breadcrumbs={[
-        {
-          label: "Convention collective",
-          slug: "/convention-collective",
-          position: 0,
-        },
-        ...agreement.breadcrumbs,
+      breadcrumbSegments={[
+        // Libellé écrit en dur : `labelBySource[SOURCES.CCN]` vaut
+        // « Conventions collectives », au pluriel.
+        { label: "Convention collective", href: "/convention-collective" },
+        ...fromDocumentBreadcrumbs(agreement.breadcrumbs),
       ]}
       relatedItems={relatedItems}
       title={agreement.shortTitle}

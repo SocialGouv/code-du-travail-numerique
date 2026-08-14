@@ -11,6 +11,7 @@ import { ArticleJsonLd } from "../seo/jsonld";
 import Html from "../common/Html";
 import "../../../public/static/fiches-mt.css";
 import { normalizeHeadingsToH2 } from "./utils";
+import { fromDocumentBreadcrumbs } from "../layout/breadcrumb";
 
 type Props = {
   relatedItems: { items: RelatedItem[]; title: string }[];
@@ -40,7 +41,7 @@ export function FicheMinistereTravail({
   return (
     <ContainerRichWithBreadcrumbs
       currentPage={title}
-      breadcrumbs={breadcrumbs}
+      breadcrumbSegments={fromDocumentBreadcrumbs(breadcrumbs)}
       relatedItems={relatedItems}
       title={title}
       description={metaDescription}
