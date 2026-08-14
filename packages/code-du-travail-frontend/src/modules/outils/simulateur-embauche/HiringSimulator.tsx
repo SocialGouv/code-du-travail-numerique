@@ -5,6 +5,8 @@ import { createRef, memo, useEffect, useState } from "react";
 import { RelatedItem } from "../../documents";
 import * as Sentry from "@sentry/nextjs";
 import { ContainerSimulatorLight } from "../../layout/ContainerSimulatorLight";
+import { listingSegment } from "../../layout/breadcrumb";
+import { SOURCES } from "@socialgouv/cdtn-utils";
 
 type Props = {
   relatedItems: {
@@ -85,7 +87,7 @@ const HiringSimulator = memo(function HiringSimulator({
       relatedItems={relatedItems}
       title={breadcrumbTitle}
       description={description}
-      segments={[{ label: "Simulateurs", linkProps: { href: "/outils" } }]}
+      breadcrumbSegments={[listingSegment(SOURCES.TOOLS)]}
     >
       <h1 id="simulateur-embauche">{title}</h1>
       <Highlight size="lg" className={fr.cx("fr-mb-12v")}>

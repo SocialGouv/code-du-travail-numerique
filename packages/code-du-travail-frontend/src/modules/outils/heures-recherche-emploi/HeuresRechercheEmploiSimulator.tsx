@@ -16,6 +16,8 @@ import StepResult from "./steps/Result";
 import StepInformations from "./steps/Informations";
 import StepAgreement from "./steps/Agreement";
 import { useHeuresRechercheEmploiEventEmitter } from "./events/useHeuresRechercheEmploiEventEmitter";
+import { listingSegment } from "../../layout/breadcrumb";
+import { SOURCES } from "@socialgouv/cdtn-utils";
 
 enum HeuresRechercheEmploiStepName {
   Intro = "start",
@@ -65,7 +67,7 @@ const HeuresRechercheEmploiSimulator = ({
     <ContainerSimulator
       relatedItems={relatedItems}
       title={displayTitle}
-      segments={[{ label: "Simulateurs", linkProps: { href: "/outils" } }]}
+      breadcrumbSegments={[listingSegment(SOURCES.TOOLS)]}
     >
       <CalculateurHeuresRechercheEmploi title={title} />
     </ContainerSimulator>

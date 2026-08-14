@@ -6,6 +6,7 @@ import { DownloadInfographicTile, InfographicElement } from "./component";
 import DisplayContent from "../common/DisplayContent";
 import { References } from "../common";
 import { ContentMeta } from "../common/ContentMeta";
+import { fromDocumentBreadcrumbs } from "../layout/breadcrumb";
 import { ArticleJsonLd } from "../seo/jsonld";
 import { css } from "@styled-system/css";
 
@@ -18,10 +19,7 @@ export const Infographie = ({ infographic }: Params) => {
       relatedItems={infographic.relatedItems}
       title={infographic.title}
       description={infographic.description}
-      segments={infographic.breadcrumbs.map(({ label, slug }) => ({
-        label: <>{label}</>,
-        linkProps: { href: slug },
-      }))}
+      breadcrumbSegments={fromDocumentBreadcrumbs(infographic.breadcrumbs)}
     >
       <h1 className={fr.cx("fr-mb-0")}>{infographic.title}</h1>
       <ContentMeta breadcrumbs={infographic.breadcrumbs} />

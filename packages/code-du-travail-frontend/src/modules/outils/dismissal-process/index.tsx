@@ -2,6 +2,8 @@ import React from "react";
 import { RelatedItem } from "../../documents";
 import { ContainerSimulatorLight } from "../../layout/ContainerSimulatorLight";
 import { DismissalProcess } from "./DismissalProcess";
+import { listingSegment } from "../../layout/breadcrumb";
+import { SOURCES } from "@socialgouv/cdtn-utils";
 
 type Props = {
   relatedItems: {
@@ -17,7 +19,7 @@ export const DismissalProcessPage = ({ title, relatedItems }: Props) => {
       relatedItems={relatedItems}
       title={title}
       description={""}
-      segments={[{ label: "Simulateurs", linkProps: { href: "/outils" } }]}
+      breadcrumbSegments={[listingSegment(SOURCES.TOOLS)]}
     >
       <h1>{title}</h1>
       <DismissalProcess />

@@ -22,7 +22,6 @@ export const Agreements = ({ firstLettersAgreements }: Props) => {
       title="Votre convention collective"
       description="Retrouvez les questions/réponses fréquentes organisées par thème pour votre convention collective"
       relatedItems={[]}
-      segments={[]}
     >
       <h1 id="convention-collective" className={fr.cx("fr-mt-0", "fr-mb-6w")}>
         Votre convention collective

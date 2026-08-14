@@ -22,6 +22,8 @@ import {
   StepResultat,
 } from "./steps";
 import { PublicodesSimulator } from "@socialgouv/modeles-social";
+import { listingSegment } from "../../layout/breadcrumb";
+import { SOURCES } from "@socialgouv/cdtn-utils";
 
 const steps: Step<IndemnitePrecariteStepName>[] = [
   {
@@ -69,7 +71,7 @@ const IndemnitePrecariteSimulator = ({
     <ContainerSimulator
       relatedItems={relatedItems}
       title={displayTitle}
-      segments={[{ label: "Simulateurs", linkProps: { href: "/outils" } }]}
+      breadcrumbSegments={[listingSegment(SOURCES.TOOLS)]}
     >
       <CalculateurIndemnitePrecarite title={title} />
     </ContainerSimulator>

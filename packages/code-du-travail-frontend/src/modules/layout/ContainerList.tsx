@@ -1,29 +1,22 @@
 import { fr } from "@codegouvfr/react-dsfr";
-import { Breadcrumb, BreadcrumbProps } from "@codegouvfr/react-dsfr/Breadcrumb";
-import { BreadcrumbListJsonLd } from "../seo/jsonld";
-import { getPathFromBreadcrumbLinkProps } from "./breadcrumbLinkProps";
+import { Breadcrumbs, BreadcrumbSegment } from "./breadcrumb";
 
 type Props = {
   title: string;
   children: React.ReactNode;
-} & Partial<Pick<BreadcrumbProps, "segments">>;
+  breadcrumbSegments?: BreadcrumbSegment[];
+};
 
-export const ContainerList = ({ children, title, segments = [] }: Props) => {
+export const ContainerList = ({
+  children,
+  title,
+  breadcrumbSegments = [],
+}: Props) => {
   return (
     <div className={fr.cx("fr-grid-row")}>
-      <BreadcrumbListJsonLd
+      <Breadcrumbs
         currentPageLabel={title}
-        items={segments.map((segment) => ({
-          label: String(segment.label),
-          href: getPathFromBreadcrumbLinkProps(segment.linkProps),
-        }))}
-      />
-      <Breadcrumb
-        currentPageLabel={title}
-        homeLinkProps={{
-          href: "/",
-        }}
-        segments={segments}
+        segments={breadcrumbSegments}
         className={fr.cx("fr-mb-2v")}
       />
       <div className={fr.cx("fr-col-12", "fr-mb-4w", "fr-mb-md-12w")}>

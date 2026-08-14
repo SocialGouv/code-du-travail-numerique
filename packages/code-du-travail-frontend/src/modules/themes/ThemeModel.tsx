@@ -4,6 +4,7 @@ import { fr } from "@codegouvfr/react-dsfr";
 import React from "react";
 import { ThemeElasticDocument } from "@socialgouv/cdtn-types/build/elastic/theme";
 import { ContainerList } from "../layout/ContainerList";
+import { fromDocumentBreadcrumbs } from "../layout/breadcrumb";
 import Button from "@codegouvfr/react-dsfr/Button";
 import { css } from "@styled-system/css";
 import Card from "@codegouvfr/react-dsfr/Card";
@@ -24,10 +25,7 @@ export const ThemeModel = ({ theme }: Props) => {
   return (
     <ContainerList
       title={theme.title}
-      segments={theme.breadcrumbs.map((breadcrumb) => ({
-        label: breadcrumb.label,
-        linkProps: { href: breadcrumb.slug },
-      }))}
+      breadcrumbSegments={fromDocumentBreadcrumbs(theme.breadcrumbs)}
     >
       <h1 id="themes" className={fr.cx("fr-mt-0", "fr-mb-6w")}>
         {theme.title}

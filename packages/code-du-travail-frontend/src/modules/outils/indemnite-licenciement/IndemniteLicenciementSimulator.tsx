@@ -15,6 +15,8 @@ import { useIndemniteLicenciementEventEmitter } from "./events/useIndemniteLicen
 import StepSalaires from "../indemnite-depart/steps/Salaires";
 import { EVENT_CATEGORY } from "../indemnite-depart/feedback/tracking";
 import StepAbsences from "../indemnite-depart/steps/Absences/components";
+import { listingSegment } from "../../layout/breadcrumb";
+import { SOURCES } from "@socialgouv/cdtn-utils";
 
 const steps: Step<IndemniteDepartStepName>[] = [
   {
@@ -74,7 +76,7 @@ const IndemniteLicenciementSimulator = ({
     <ContainerSimulator
       relatedItems={relatedItems}
       title={displayTitle}
-      segments={[{ label: "Simulateurs", linkProps: { href: "/outils" } }]}
+      breadcrumbSegments={[listingSegment(SOURCES.TOOLS)]}
     >
       <CalculateurIndemniteLicenciement title={title} />
     </ContainerSimulator>

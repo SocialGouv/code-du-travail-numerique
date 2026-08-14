@@ -1,10 +1,8 @@
 import { fr } from "@codegouvfr/react-dsfr";
-import { Breadcrumb, BreadcrumbProps } from "@codegouvfr/react-dsfr/Breadcrumb";
 import { ReactNode } from "react";
 import { SummaryNavigation } from "./SummaryNavigation";
 import { css } from "@styled-system/css";
-import { BreadcrumbListJsonLd } from "../seo/jsonld";
-import { getPathFromBreadcrumbLinkProps } from "./breadcrumbLinkProps";
+import { Breadcrumbs, BreadcrumbSegment } from "./breadcrumb";
 
 type SidebarSection = {
   id: string;
@@ -16,7 +14,7 @@ type Props = {
   description: string;
   children: ReactNode;
   sidebarSections: SidebarSection[];
-  breadcrumbSegments: BreadcrumbProps["segments"];
+  breadcrumbSegments?: BreadcrumbSegment[];
 };
 
 export const ContainerWithNav = ({
@@ -28,18 +26,8 @@ export const ContainerWithNav = ({
 }: Props) => {
   return (
     <div className={fr.cx("fr-grid-row", "fr-mb-12w")}>
-      <BreadcrumbListJsonLd
+      <Breadcrumbs
         currentPageLabel={title}
-        items={breadcrumbSegments.map((segment) => ({
-          label: String(segment.label),
-          href: getPathFromBreadcrumbLinkProps(segment.linkProps),
-        }))}
-      />
-      <Breadcrumb
-        currentPageLabel={title}
-        homeLinkProps={{
-          href: "/",
-        }}
         segments={breadcrumbSegments}
         className={fr.cx("fr-mb-2v")}
       />

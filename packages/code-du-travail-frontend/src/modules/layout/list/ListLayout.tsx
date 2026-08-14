@@ -13,7 +13,7 @@ import { slugify, SourceKeys } from "@socialgouv/cdtn-utils";
 import { cleanHash } from "../../utils";
 import { fr } from "@codegouvfr/react-dsfr";
 import { Breadcrumb } from "@socialgouv/cdtn-types";
-import { BreadcrumbProps } from "@codegouvfr/react-dsfr/Breadcrumb";
+import { BreadcrumbSegment } from "../breadcrumb";
 
 export type Item = {
   title: string;
@@ -34,7 +34,7 @@ type Props = {
   source: SourceKeys;
   data: Data;
   popularSlugs: string[];
-  breadcrumbSegments?: BreadcrumbProps["segments"];
+  breadcrumbSegments?: BreadcrumbSegment[];
 };
 
 const SCROLL_DELAY_MS = 100;
