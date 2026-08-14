@@ -210,7 +210,7 @@ describe("<ContributionGeneric />", () => {
       byText(/Vous avez sélectionné la convention collective/).query()
     ).toBeInTheDocument();
 
-    expect(sendEvent).toHaveBeenCalledTimes(5);
+    expect(sendEvent).toHaveBeenCalledTimes(6);
     // @ts-ignore
     expect(sendEvent.mock.calls).toEqual([
       [
@@ -246,6 +246,16 @@ describe("<ContributionGeneric />", () => {
           action: "cc_select_non_traitée",
           category: "outil",
           name: "2216",
+        },
+      ],
+      // Le nombre de CC trouvées pour l'entreprise part depuis un `useEffect`,
+      // donc après les events émis dans les gestionnaires de clic : il ferme la
+      // séquence. Carrefour Proximité n'a qu'une convention, d'où `name: "1"`.
+      [
+        {
+          action: "show_agreements",
+          category: "cc_enterprise_search",
+          name: "1",
         },
       ],
     ]);

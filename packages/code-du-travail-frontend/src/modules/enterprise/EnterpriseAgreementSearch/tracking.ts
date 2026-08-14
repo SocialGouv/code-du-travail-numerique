@@ -5,6 +5,10 @@ import {
 } from "../../convention-collective/tracking";
 import { ApiGeoResult } from "./searchCities";
 
+export enum TrackingEnterpriseAgreementSearchAction {
+  SHOW_AGREEMENTS = "show_agreements",
+}
+
 export const useEnterpriseAgreementSearchTracking = () => {
   const emitEnterpriseAgreementSearchInputEvent = (
     action: string,
@@ -29,6 +33,19 @@ export const useEnterpriseAgreementSearchTracking = () => {
       category: TrackingAgreementSearchCategory.CC_ENTERPRISE_SELECT,
       action: action,
       name: JSON.stringify(enterprise),
+    });
+  };
+
+  // Émis à l'affichage des conventions collectives d'une entreprise, quel que
+  // soit le parcours (simulateurs, contributions, page dédiée, widget) et y
+  // compris quand l'entreprise n'en déclare aucune (`name` vaut alors "0").
+  // Équivalent de `show_accords` côté accords d'entreprise : on n'envoie que le
+  // nombre, ni SIRET ni liste d'IDCC.
+  const emitShowAgreements = (count: number) => {
+    sendEvent({
+      category: TrackingAgreementSearchCategory.CC_ENTERPRISE_SEARCH,
+      action: TrackingEnterpriseAgreementSearchAction.SHOW_AGREEMENTS,
+      name: String(count),
     });
   };
 
@@ -66,6 +83,7 @@ export const useEnterpriseAgreementSearchTracking = () => {
   return {
     emitEnterpriseAgreementSearchInputEvent,
     emitSelectEnterpriseEvent,
+    emitShowAgreements,
     emitSelectEnterpriseAgreementEvent,
     emitPreviousEvent,
     emitNoEnterpriseClickEvent,

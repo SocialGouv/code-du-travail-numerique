@@ -72,6 +72,7 @@ export const EnterpriseAgreementSearchInput = ({
     emitNoEnterpriseClickEvent,
     emitSelectEnterpriseAgreementEvent,
     emitNoEnterpriseSelectEvent,
+    emitShowAgreements,
   } = useEnterpriseAgreementSearchTracking();
 
   const [search, setSearch] = useState<string>(defaultSearch ?? "");
@@ -91,6 +92,11 @@ export const EnterpriseAgreementSearchInput = ({
   const shouldFocusResultsRef = useRef(false);
   const selectedConventionTitleRef = useRef<HTMLParagraphElement>(null);
   const searchInputRef = useRef<HTMLInputElement>(null);
+  // Dernier SIRET pour lequel `show_agreements` a été émis : le composant se
+  // re-rend à chaque changement de radio et `selectedEnterprise` est re-posé
+  // par l'effet miroir de la prop `enterprise`, sans quoi l'event partirait
+  // plusieurs fois pour une même entreprise.
+  const trackedAgreementsSiretRef = useRef<string | undefined>(undefined);
   const TitleTag = `h${level}` as "h2" | "h3";
 
   const getStateMessage = () => {
@@ -198,6 +204,17 @@ export const EnterpriseAgreementSearchInput = ({
       );
       setSelectedAgreement(enterpriseAgreement);
     }
+  }, [selectedEnterprise]);
+  // On se branche sur `selectedEnterprise` plutôt que sur le formulaire de
+  // sélection : celui-ci est court-circuité dès qu'une convention est
+  // sélectionnée (cf. l'effet d'auto-sélection ci-dessus pour les entreprises
+  // à une seule CC). Ici on capte uniformément les cas 0, 1 et N conventions.
+  useEffect(() => {
+    const siret = selectedEnterprise?.siret;
+    if (!siret || trackedAgreementsSiretRef.current === siret) return;
+    trackedAgreementsSiretRef.current = siret;
+    emitShowAgreements(selectedEnterprise.conventions?.length ?? 0);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedEnterprise]);
   useEffect(() => {
     if (shouldFocusResultsRef.current) {
