@@ -68,6 +68,13 @@ test.describe("Contributions", () => {
       "Renouvellement de la période d'essai : comment faire ? quelles conditions ? "
     );
 
+    // Le fil d'Ariane remonte vers la page qui regroupe les fiches pratiques (#7378).
+    await expect(
+      page
+        .getByRole("navigation", { name: /vous êtes ici/i })
+        .getByRole("link", { name: "Fiches pratiques" })
+    ).toHaveAttribute("href", "/contribution");
+
     await page
       .getByLabel("Je ne souhaite pas renseigner ma convention collective.")
       .check({ force: true });

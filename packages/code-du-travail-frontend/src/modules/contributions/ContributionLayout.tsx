@@ -7,7 +7,8 @@ import { ContentMeta } from "../common/ContentMeta";
 import { ContributionGeneric } from "./ContributionGeneric";
 import { ContributionAgreement } from "./ContributionAgreement";
 import { ArticleJsonLd } from "../seo/jsonld";
-import { Breadcrumbs, fromDocumentBreadcrumbs } from "../layout/breadcrumb";
+import { Breadcrumbs, listingSegment } from "../layout/breadcrumb";
+import { SOURCES } from "@socialgouv/cdtn-utils";
 import { removeCCNumberFromSlug } from "../utils/removeCCNumberFromSlug";
 // Import de type uniquement : queries.ts embarque le client Elasticsearch
 // (serveur), il ne doit pas entrer dans le bundle client.
@@ -38,8 +39,11 @@ export function ContributionLayout({
     ? `${contribution.ccnShortTitle} (IDCC ${contribution.idcc})`
     : title;
 
+  // Le fil d'Ariane remonte vers la page qui regroupe les fiches pratiques, et
+  // non plus vers la chaîne de thèmes : celle-ci est portée par les tags
+  // cliquables de ContentMeta, juste sous le titre.
   const breadcrumbSegments = [
-    ...fromDocumentBreadcrumbs(contribution.breadcrumbs),
+    listingSegment(SOURCES.CONTRIBUTIONS),
     // Sur les pages CC de l'expérimentation, le fil intercale la fiche
     // générique avant la convention collective.
     ...(hasNewBreadcrumb

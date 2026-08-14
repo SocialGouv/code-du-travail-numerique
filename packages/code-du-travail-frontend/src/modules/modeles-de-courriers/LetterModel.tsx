@@ -10,7 +10,8 @@ import { CopyButton } from "./components/CopyButton";
 import { LetterModelContent } from "./components/LetterModelContent";
 import { RelatedItem } from "../documents";
 import { useModeleEvents } from "./tracking";
-import { Breadcrumbs, fromDocumentBreadcrumbs } from "../layout/breadcrumb";
+import { Breadcrumbs, listingSegment } from "../layout/breadcrumb";
+import { SOURCES } from "@socialgouv/cdtn-utils";
 import { ArticleJsonLd } from "../seo/jsonld";
 import { ContentMeta } from "../common/ContentMeta";
 import { notifyNpsTrigger } from "../nps/triggerBus";
@@ -66,9 +67,11 @@ export const LetterModel = ({
         datePublished={date}
         breadcrumbs={breadcrumbs}
       />
+      {/* Remonte vers la page qui regroupe les modèles : la chaîne de thèmes
+          est portée par les tags de ContentMeta, sous le titre. */}
       <Breadcrumbs
         currentPageLabel={title}
-        segments={fromDocumentBreadcrumbs(breadcrumbs)}
+        segments={[listingSegment(SOURCES.LETTERS)]}
         className={fr.cx("fr-mb-2w", "fr-mt-2w")}
       />
       <div

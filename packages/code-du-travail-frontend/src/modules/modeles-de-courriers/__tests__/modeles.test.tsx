@@ -1,5 +1,5 @@
 import { sendEvent } from "@socialgouv/matomo-next";
-import { fireEvent, render } from "@testing-library/react";
+import { fireEvent, render, within } from "@testing-library/react";
 import { LetterModel } from "../LetterModel";
 
 jest.mock("@socialgouv/matomo-next", () => {
@@ -138,5 +138,60 @@ describe("<LetterModel />", () => {
     fireEvent.keyDown(container, { key: "c", shitKey: true });
 
     expect(sendEvent).toHaveBeenCalledTimes(0);
+  });
+
+  describe("fil d'Ariane", () => {
+    const renderWithThemes = () =>
+      render(
+        <LetterModel
+          breadcrumbs={[
+            {
+              label: "Départ de l'entreprise",
+              position: 1,
+              slug: "/themes/depart",
+            },
+          ]}
+          title="Mon modele"
+          slug={"mon-modele"}
+          date={"12/02/2020"}
+          intro={"Ceci est mon intro"}
+          relatedItems={[]}
+          metaDescription={"ma méta description"}
+          filesize={10}
+          filename={"mon-fichier.txt"}
+          extension={"txt"}
+          html="<p>Le modèle</p>"
+        />
+      );
+
+    it("remonte vers la page qui regroupe les modèles, pas vers le thème", () => {
+      const { getByRole } = renderWithThemes();
+      const nav = getByRole("navigation");
+
+      expect(
+        within(nav).getByRole("link", { name: "Modèles de documents" })
+      ).toHaveAttribute("href", "/modeles-de-courriers");
+      expect(
+        within(nav).queryByRole("link", { name: "Départ de l'entreprise" })
+      ).toBeNull();
+    });
+
+    it("décrit le même chemin dans le JSON-LD", () => {
+      const { container } = renderWithThemes();
+      const jsonLd = container.querySelector(
+        "#jsonld-breadcrumbs"
+      )?.textContent;
+
+      expect(jsonLd).not.toContain("[object Object]");
+      expect(JSON.parse(jsonLd ?? "{}").itemListElement).toEqual([
+        expect.objectContaining({ position: 1, name: "Accueil" }),
+        expect.objectContaining({
+          position: 2,
+          name: "Modèles de documents",
+          item: "http://api.url/modeles-de-courriers",
+        }),
+        expect.objectContaining({ position: 3, name: "Mon modele" }),
+      ]);
+    });
   });
 });
