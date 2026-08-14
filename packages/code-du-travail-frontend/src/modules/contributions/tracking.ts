@@ -1,5 +1,6 @@
 import { sendEvent } from "@socialgouv/matomo-next";
 import { MatomoAgreementEvent } from "../analytics";
+import { toEventName } from "../analytics/eventName";
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
 
 export enum TrackingContributionCategory {
@@ -110,12 +111,13 @@ export const useContributionTracking = () => {
 
   // Clic sur un lien de l'accordéon « Votre réponse en fonction de votre
   // convention collective » (fiche générique). `name` = chemin de la page CC
-  // atteinte, sans le slash initial (`contribution/44-mon-slug`).
+  // atteinte, sous la même forme que les events ci-dessus qui le construisent
+  // depuis `getRouteBySource` (`contribution/44-mon-slug`).
   const emitClickAgreementDeclination = (href: string) => {
     sendEvent({
       category: TrackingContributionCategory.CONTRIBUTION,
       action: TrackingContributionAction.CLICK_AGREEMENT_DECLINATION,
-      name: href.replace(/^\/+/, ""),
+      name: toEventName(href),
     });
   };
 

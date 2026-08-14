@@ -7,10 +7,7 @@
 
 import { sendEvent } from "@socialgouv/matomo-next";
 import { NPS_CATEGORY, NpsTrigger } from "./constants";
-
-// Nom d'event Matomo = chemin sans le slash initial (`contribution/mon-slug`) :
-// type de page + slug.
-const toEventName = (pagePath: string): string => pagePath.replace(/^\/+/, "");
+import { toEventName } from "../analytics/eventName";
 
 export const useNpsEvents = () => {
   const trackDisplayed = (trigger: NpsTrigger, pagePath: string) => {

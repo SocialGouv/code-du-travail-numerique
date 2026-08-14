@@ -1,5 +1,7 @@
 "use client";
 
+import { toEventName } from "../analytics/eventName";
+
 export const NPS_ENDPOINT = "/api/nps";
 
 type SendNpsScoreInput = {
@@ -15,9 +17,10 @@ export const sendNpsScore = async ({
 }: SendNpsScoreInput): Promise<void> => {
   if (typeof window === "undefined") return;
 
-  // slug = chemin sans le slash initial (`contribution/mon-slug`). L'identité de
-  // l'event (nps_submitted) est posée en dur côté API.
-  const slug = pagePath.replace(/^\/+/, "");
+  // slug = chemin sans le slash initial (`contribution/mon-slug`), même forme
+  // que le `name` des events NPS. L'identité de l'event (nps_submitted) est
+  // posée en dur côté API.
+  const slug = toEventName(pagePath);
 
   try {
     await fetch(NPS_ENDPOINT, {
