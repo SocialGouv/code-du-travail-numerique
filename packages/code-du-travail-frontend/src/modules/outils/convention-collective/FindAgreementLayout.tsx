@@ -2,6 +2,8 @@
 import { ReactNode } from "react";
 import { FindAgreementBlock } from "./FindAgreementBlock";
 import { ContainerSimulatorLight } from "../../layout/ContainerSimulatorLight";
+import { listingSegment } from "../../layout/breadcrumb";
+import { SOURCES } from "@socialgouv/cdtn-utils";
 
 type Props = {
   children: ReactNode;
@@ -14,7 +16,7 @@ export const FindAgreementLayout = ({ children, description }: Props) => {
       relatedItems={[]}
       title="Trouver sa convention collective et ses accords d'entreprise"
       description={description}
-      segments={[{ label: "Simulateurs", linkProps: { href: "/outils" } }]}
+      breadcrumbSegments={[listingSegment(SOURCES.TOOLS)]}
     >
       <FindAgreementBlock>{children}</FindAgreementBlock>
     </ContainerSimulatorLight>

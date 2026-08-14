@@ -51,7 +51,7 @@ export const SearchPageClient: React.FC<SearchPageClientProps> = ({
   }, [query, emitFullsearchEventOnce, klass]);
 
   return (
-    <ContainerWithBreadcrumbs currentPage="Recherche" breadcrumbs={[]}>
+    <ContainerWithBreadcrumbs currentPage="Recherche">
       <h1 className={fr.cx("fr-mt-0", "fr-mb-3w")}>Recherche</h1>
 
       <div className={fr.cx("fr-grid-row", "fr-grid-row--gutters", "fr-mb-5w")}>

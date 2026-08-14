@@ -5,7 +5,7 @@ import { ContainerWithBreadcrumbs } from "../layout/ContainerWithBreadcrumbs";
 
 export const IntegrationPageContent = () => {
   return (
-    <ContainerWithBreadcrumbs currentPage="Intégration" breadcrumbs={[]}>
+    <ContainerWithBreadcrumbs currentPage="Intégration">
       <h1
         className={fr.cx("fr-h2", "fr-mb-4w")}
         data-testid="integration-page-title"

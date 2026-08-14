@@ -19,6 +19,8 @@ import StepResult from "./steps/Result";
 import StepInformations from "./steps/Informations";
 import StepAgreement from "./steps/Agreement";
 import { usePreavisDemissionEventEmitter } from "./events/usePreavisDemissionEventEmitter";
+import { listingSegment } from "../../layout/breadcrumb";
+import { SOURCES } from "@socialgouv/cdtn-utils";
 
 enum PreavisDemissionStepName {
   Intro = "start",
@@ -68,7 +70,7 @@ const PreavisDemissionSimulator = ({
     <ContainerSimulator
       relatedItems={relatedItems}
       title={displayTitle}
-      segments={[{ label: "Simulateurs", linkProps: { href: "/outils" } }]}
+      breadcrumbSegments={[listingSegment(SOURCES.TOOLS)]}
     >
       <CalculateurPreavisDemission title={title} />
     </ContainerSimulator>

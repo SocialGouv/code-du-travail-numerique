@@ -1,28 +1,17 @@
 import Link from "../common/Link";
 import Button from "@codegouvfr/react-dsfr/Button";
 import { fr } from "@codegouvfr/react-dsfr";
-import { BreadcrumbListJsonLd } from "../seo/jsonld";
-import Breadcrumb from "@codegouvfr/react-dsfr/Breadcrumb";
+import { Breadcrumbs } from "../layout/breadcrumb";
 import React from "react";
 import { Container } from "../layout/Container";
 
 export const ReglesEntreprise = () => (
   <>
     <div className={fr.cx("fr-container")}>
-      <BreadcrumbListJsonLd
+      <Breadcrumbs
         currentPageLabel={
           "Code du travail, convention, accord: quelles règles s'appliquent dans votre entreprise ?"
         }
-        items={[]}
-      />
-      <Breadcrumb
-        currentPageLabel={
-          "Code du travail, convention, accord: quelles règles s'appliquent dans votre entreprise ?"
-        }
-        homeLinkProps={{
-          href: "/",
-        }}
-        segments={[]}
         className={fr.cx("fr-mb-2w", "fr-mt-2w")}
       />
     </div>

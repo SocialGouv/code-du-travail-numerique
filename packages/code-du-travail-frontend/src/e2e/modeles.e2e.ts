@@ -107,6 +107,13 @@ test.describe("Modèles de documents", () => {
       "/modeles-de-courriers/rupture-du-contrat-en-periode-dessai-a-linitiative-du-salarie"
     );
 
+    // Le fil d'Ariane remonte vers la page qui regroupe les modèles (#7378).
+    await expect(
+      page
+        .getByRole("navigation", { name: /vous êtes ici/i })
+        .getByRole("link", { name: "Modèles de documents" })
+    ).toHaveAttribute("href", "/modeles-de-courriers");
+
     await page.getByText("Objet : Rupture de la période d’essai").click();
 
     const downloadPromise = page.waitForEvent("download");

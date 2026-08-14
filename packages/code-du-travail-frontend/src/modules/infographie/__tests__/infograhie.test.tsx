@@ -1,5 +1,5 @@
 import React from "react";
-import { render } from "@testing-library/react";
+import { render, within } from "@testing-library/react";
 import { Infographie } from "../Infographie";
 import { Infographic } from "../type";
 
@@ -64,5 +64,66 @@ describe("infographie", () => {
       "src",
       "http://localhost/bucket.url/preview/default/ruptureconventionnelle.svg"
     );
+  });
+
+  describe("fil d'Ariane", () => {
+    const withThemes: Infographic = {
+      references: [],
+      date: "14/08/2024",
+      meta_title: "Meta titre",
+      description: "",
+      pdf: { filename: "info.pdf", sizeOctet: "4720000" },
+      svgFilename: "ruptureconventionnelle.svg",
+      transcription: "",
+      meta_description: "",
+      breadcrumbs: [
+        {
+          label: "Départ de l'entreprise",
+          position: 1,
+          slug: "/themes/depart",
+        },
+      ],
+      relatedItems: [],
+      title: "Titre de la description",
+    };
+
+    it("remonte vers la page qui regroupe les infographies, pas vers le thème", () => {
+      const { getByRole, queryByRole } = render(
+        <Infographie infographic={withThemes} />
+      );
+      const nav = getByRole("navigation");
+
+      expect(
+        within(nav).getByRole("link", { name: "Infographies" })
+      ).toHaveAttribute("href", "/infographie");
+      expect(
+        within(nav).queryByRole("link", { name: "Départ de l'entreprise" })
+      ).toBeNull();
+      // Le thème reste accessible, mais via les tags sous le titre.
+      expect(
+        queryByRole("link", { name: "Départ de l'entreprise" })
+      ).toBeInTheDocument();
+    });
+
+    it("décrit le même chemin dans le JSON-LD, sans ReactNode sérialisé", () => {
+      const { container } = render(<Infographie infographic={withThemes} />);
+      const jsonLd = container.querySelector(
+        "#jsonld-breadcrumbs"
+      )?.textContent;
+
+      expect(jsonLd).not.toContain("[object Object]");
+      expect(JSON.parse(jsonLd ?? "{}").itemListElement).toEqual([
+        expect.objectContaining({ position: 1, name: "Accueil" }),
+        expect.objectContaining({
+          position: 2,
+          name: "Infographies",
+          item: "http://api.url/infographie",
+        }),
+        expect.objectContaining({
+          position: 3,
+          name: "Titre de la description",
+        }),
+      ]);
+    });
   });
 });

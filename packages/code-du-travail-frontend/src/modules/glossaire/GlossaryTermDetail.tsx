@@ -3,6 +3,7 @@ import React from "react";
 import { Container } from "../layout/Container";
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
 import { ContainerWithBreadcrumbs } from "../layout/ContainerWithBreadcrumbs";
+import { listingSegment } from "../layout/breadcrumb";
 import { List } from "../common/List";
 import Link from "../common/Link";
 
@@ -20,13 +21,7 @@ export const GlossaryTermDetail = ({
   return (
     <ContainerWithBreadcrumbs
       currentPage={term}
-      breadcrumbs={[
-        {
-          label: "Glossaire",
-          slug: `/${getRouteBySource(SOURCES.GLOSSARY)}`,
-          position: 1,
-        },
-      ]}
+      breadcrumbSegments={[listingSegment(SOURCES.GLOSSARY)]}
     >
       <Container>
         <h1 id="glossary-term">{term}</h1>

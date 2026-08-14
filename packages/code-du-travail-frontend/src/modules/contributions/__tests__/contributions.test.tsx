@@ -768,4 +768,110 @@ describe("<ContributionLayout />", () => {
       expect(replaceMock).not.toHaveBeenCalled();
     });
   });
+
+  describe("fil d'Ariane", () => {
+    const withThemes = {
+      ...contribution,
+      breadcrumbs: [
+        { label: "Congés et repos", position: 3, slug: "/themes/conges" },
+        { label: "Congés", position: 1, slug: "/themes/conges-payes" },
+      ],
+    };
+
+    // Le fil d'Ariane et son JSON-LD sont assertés dans le même test : c'est ce
+    // qui empêche les deux de diverger à nouveau.
+    const readBreadcrumb = (rendering: RenderResult) => {
+      const nav = rendering.getByRole("navigation");
+      const jsonLd = JSON.parse(
+        rendering.container.querySelector("#jsonld-breadcrumbs")?.textContent ??
+          "{}"
+      );
+      return {
+        links: within(nav)
+          .getAllByRole("link")
+          .map((link) => [link.textContent, link.getAttribute("href")]),
+        current: within(nav).getByText(
+          (_, el) => el?.getAttribute("aria-current") === "page"
+        ).textContent,
+        jsonLdNames: jsonLd.itemListElement.map(({ name }) => name),
+      };
+    };
+
+    it("remonte vers les fiches pratiques, pas vers les thèmes, sur une fiche générique", () => {
+      const breadcrumb = readBreadcrumb(
+        render(<ContributionLayout contribution={withThemes} />)
+      );
+
+      expect(breadcrumb.links).toEqual([
+        ["Accueil", "/"],
+        ["Fiches pratiques", "/contribution"],
+      ]);
+      expect(breadcrumb.current).toBe(
+        "La période d’essai peut-elle être renouvelée ?"
+      );
+      expect(breadcrumb.jsonLdNames).toEqual([
+        "Accueil",
+        "Fiches pratiques",
+        "La période d’essai peut-elle être renouvelée ?",
+      ]);
+    });
+
+    it("fait de même sur une page par convention collective", () => {
+      const breadcrumb = readBreadcrumb(
+        render(
+          <ContributionLayout
+            contribution={{
+              ...withThemes,
+              isGeneric: false,
+              slug: "1234-une-question",
+              idcc: "1234",
+              ccnShortTitle: "Ma convention",
+            }}
+          />
+        )
+      );
+
+      expect(breadcrumb.links).toEqual([
+        ["Accueil", "/"],
+        ["Fiches pratiques", "/contribution"],
+      ]);
+      expect(breadcrumb.jsonLdNames).toEqual([
+        "Accueil",
+        "Fiches pratiques",
+        "La période d’essai peut-elle être renouvelée ?",
+      ]);
+    });
+
+    it("intercale la fiche générique sur les pages CC de l'expérimentation congés familiaux", () => {
+      const breadcrumb = readBreadcrumb(
+        render(
+          <ContributionLayout
+            contribution={{
+              ...withThemes,
+              isGeneric: false,
+              slug: "1234-les-conges-pour-evenements-familiaux",
+              idcc: "1234",
+              ccnShortTitle: "Ma convention",
+            }}
+          />
+        )
+      );
+
+      expect(breadcrumb.links).toEqual([
+        ["Accueil", "/"],
+        ["Fiches pratiques", "/contribution"],
+        [
+          "La période d’essai peut-elle être renouvelée ?",
+          "/contribution/les-conges-pour-evenements-familiaux",
+        ],
+      ]);
+      expect(breadcrumb.current).toBe("Ma convention (IDCC 1234)");
+      expect(breadcrumb.jsonLdNames).toEqual([
+        "Accueil",
+        "Fiches pratiques",
+        "La période d’essai peut-elle être renouvelée ?",
+        "Ma convention (IDCC 1234)",
+      ]);
+    });
+  });
 });

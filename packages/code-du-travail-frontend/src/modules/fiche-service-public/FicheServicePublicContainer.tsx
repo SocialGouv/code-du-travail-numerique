@@ -10,6 +10,7 @@ import { FicheServicePublic } from "./builder";
 import { ReferenceList } from "../common/ReferencesList";
 import { FicheSPData } from "./builder/type";
 import { AccordionWithAnchor } from "../common/AccordionWithAnchor";
+import { fromDocumentBreadcrumbs } from "../layout/breadcrumb";
 
 type Props = {
   relatedItems: { items: RelatedItem[]; title: string }[];
@@ -37,7 +38,7 @@ export function FicheServicePublicContainer({
   return (
     <ContainerRichWithBreadcrumbs
       currentPage={title}
-      breadcrumbs={breadcrumbs}
+      breadcrumbSegments={fromDocumentBreadcrumbs(breadcrumbs)}
       relatedItems={relatedItems}
       title={title}
       description={metaDescription}
