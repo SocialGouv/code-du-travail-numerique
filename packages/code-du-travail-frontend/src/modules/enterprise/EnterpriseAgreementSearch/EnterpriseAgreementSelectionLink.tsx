@@ -32,17 +32,26 @@ export const EnterpriseAgreementSelectionLink = ({
   level,
 }: Props) => {
   const searchParams = useSearchParams();
-  const { emitSelectEnterpriseAgreementEvent } =
+  const { emitSelectEnterpriseAgreementEvent, emitShowAgreements } =
     useEnterpriseAgreementSearchTracking();
   const agreementPlurial = enterprise.conventions.length > 1 ? "s" : "";
   const [accordCount, setAccordCount] = useState(0);
   const titleRef = useRef<HTMLParagraphElement>(null);
+  // Cf. EnterpriseAgreementSearchInput : garde par SIRET pour n'émettre
+  // `show_agreements` qu'une fois par entreprise affichée.
+  const trackedAgreementsSiretRef = useRef<string | undefined>(undefined);
   useEffect(() => {
     setTimeout(() => {
       titleRef?.current?.focus();
       titleRef?.current?.scrollIntoView({ behavior: "smooth" });
     }, 100);
   }, []);
+  useEffect(() => {
+    if (trackedAgreementsSiretRef.current === enterprise.siret) return;
+    trackedAgreementsSiretRef.current = enterprise.siret;
+    emitShowAgreements(enterprise.conventions?.length ?? 0);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [enterprise.siret]);
 
   return (
     <>

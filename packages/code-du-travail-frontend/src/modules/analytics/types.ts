@@ -18,6 +18,7 @@ export enum MatomoSearchAgreementCategory {
   ENTERPRISE_SEARCH = "enterprise_search",
   AGREEMENT_SEARCH_TYPE_OF_USERS = "cc_search_type_of_users",
   ACCORD_ENTERPRISE_SEARCH = "accord_enterprise_search",
+  CC_ENTERPRISE_SEARCH = "cc_enterprise_search",
 }
 
 export enum MatomoSimulatorEvent {

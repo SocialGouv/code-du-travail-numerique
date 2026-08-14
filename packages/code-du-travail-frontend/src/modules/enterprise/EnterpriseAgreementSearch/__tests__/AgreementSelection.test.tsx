@@ -86,6 +86,9 @@ describe("Trouver sa CC - recherche par nom d'entreprise CC", () => {
     expect(
       ui.enterpriseAgreementSelection.agreement.IDCC2216.link.query()
     ).not.toHaveAttribute("target", "_blank");
+    // Le montage émet déjà `show_agreements` (nombre de CC trouvées) : on
+    // repart de zéro pour n'observer que ce que déclenche le clic.
+    (sendEvent as jest.Mock).mockClear();
     userAction.click(
       ui.enterpriseAgreementSelection.agreement.IDCC2216.link.get()
     );

@@ -11,7 +11,7 @@ Ce document décrit les évènements Matomo **écrits explicitement dans le code
 (`code.travail.gouv.fr`). Il est destiné au métier : pour **chaque** évènement, il explique
 **quand** il part et **pourquoi** on le mesure, puis en donne le contenu exact.
 
-**102** events uniques · **111** au total · **31** catégories Matomo. Couverture vérifiée
+**103** events uniques · **112** au total · **32** catégories Matomo. Couverture vérifiée
 exhaustivement face au catalogue extrait du code.
 
 #### tracking générique (automatique sur chaque page)
@@ -395,6 +395,7 @@ entreprise/accords.
 | ----------------------- | ------------------------------- | --------------------------------- | ---------------- |
 | enterprise_search       | `Nom du contexte`               | 🔀 `{"query":…,"apiGeoResult":…}` | Soumission du formulaire de recherche d'entreprise. |
 | enterprise_select       | `Nom du contexte`               | 🔀 `{"label":…,"siren":…}`        | Sélection d'une entreprise (ou auto-sélection si convention unique). |
+| cc_enterprise_search    | show_agreements                 | 📌 `<count>`                      | Affichage des conventions collectives d'une entreprise ; `name` = nombre trouvé, **`"0"` compris** quand l'entreprise n'en déclare aucune. Émis une seule fois par entreprise, sur tous les parcours (simulateurs, contributions, page dédiée, widget). Mesure la distribution 0 / 1 / N CC par entreprise et le taux d'échec de la recherche par SIRET, que les events au clic ci-dessus ne captent pas (ils ignorent les abandons). |
 | cc_select_p2            | `Nom du contexte`               | 🔀 `idcc<num>`                    | Validation de la CC rattachée à l'entreprise. |
 | view_step_cc_search_p2  | back_step_cc_search_p2          | 📌 Trouver sa convention collective | Clic « Précédent » à l'étape recherche par entreprise. |
 | cc_search_type_of_users | click_je_n_ai_pas_d_entreprise  | 📌 Trouver sa convention collective | Carte « assistants maternels / particuliers employeurs » en mode lien → fiche CC 3239 (clic sortant). |
