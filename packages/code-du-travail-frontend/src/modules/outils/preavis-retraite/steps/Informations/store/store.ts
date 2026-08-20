@@ -67,13 +67,18 @@ const createCommonInformationsStore: StoreSliceWrapperPreavisRetraite<
                   info: undefined,
                 },
               ];
+              state.informationsData.input.hasNoMissingQuestions = false;
             })
           );
           return true;
         }
         set(
           produce((state: InformationsStoreSlice) => {
-            state.informationsData.input = initialState.input;
+            state.informationsData.input = {
+              ...initialState.input,
+              // aucune question publicodes à poser : il ne manque plus rien
+              hasNoMissingQuestions: true,
+            };
             state.informationsData.error = initialState.error;
           })
         );
@@ -180,15 +185,20 @@ const createCommonInformationsStore: StoreSliceWrapperPreavisRetraite<
       const state = get().informationsData.input;
       const originDepartState = get().originDepartData.input;
       const { isValid, errorState } = validateStep(state, originDepartState);
+      const canProceed =
+        isValid && get().informationsData.input.hasNoMissingQuestions;
       set(
         produce((state: InformationsStoreSlice) => {
-          state.informationsData.hasBeenSubmit = isValid ? false : true;
-          state.informationsData.isStepValid =
-            isValid && get().informationsData.input.hasNoMissingQuestions;
+          // hasBeenSubmit reste à true tant que l'étape bloque, sinon plus rien
+          // ne recalculerait isStepValid et le bouton resterait grisé
+          state.informationsData.hasBeenSubmit = !canProceed;
+          state.informationsData.isStepValid = canProceed;
           state.informationsData.error = errorState;
         })
       );
-      return isValid ? ValidationResponse.Valid : ValidationResponse.NotValid;
+      return canProceed
+        ? ValidationResponse.Valid
+        : ValidationResponse.NotValid;
     },
   },
 });

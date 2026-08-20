@@ -91,6 +91,7 @@ const createCommonInformationsStore: StoreSlice<
                     info: undefined,
                   },
                 ];
+                state.informationsData.input.hasNoMissingQuestions = false;
                 if (type === IndemniteDepartType.RUPTURE_CONVENTIONNELLE) {
                   state.informationsData.input.isStepHidden = false;
                 }
@@ -104,6 +105,8 @@ const createCommonInformationsStore: StoreSlice<
             state.informationsData.input = {
               ...initialState(type).input,
               licenciementInaptitude: licenciementInaptitude,
+              // aucune question publicodes à poser : il ne manque plus rien
+              hasNoMissingQuestions: true,
             };
             state.informationsData.error = initialState(type).error;
           })
@@ -276,11 +279,15 @@ const createCommonInformationsStore: StoreSlice<
             : state.blockingNotification;
       }
 
+      const canProceed =
+        isValid && get().informationsData.input.hasNoMissingQuestions;
+
       set(
         produce((state: CommonInformationsStoreSlice) => {
-          state.informationsData.hasBeenSubmit = isValid ? false : true;
-          state.informationsData.isStepValid =
-            isValid && get().informationsData.input.hasNoMissingQuestions;
+          // hasBeenSubmit reste à true tant que l'étape bloque, sinon plus rien
+          // ne recalculerait isStepValid et le bouton resterait grisé
+          state.informationsData.hasBeenSubmit = !canProceed;
+          state.informationsData.isStepValid = canProceed;
           state.informationsData.error = errorState;
           state.informationsData.error.errorEligibility = errorEligibility;
         })
@@ -290,7 +297,7 @@ const createCommonInformationsStore: StoreSlice<
       }
       return errorEligibility
         ? ValidationResponse.NotEligible
-        : isValid
+        : canProceed
           ? ValidationResponse.Valid
           : ValidationResponse.NotValid;
     },
