@@ -2,6 +2,7 @@ import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
 import { CalculateurIndemnitePrecarite } from "../IndemnitePrecariteSimulator";
 import { ui } from "./ui";
+import { ISSUE_CONTRAT } from "../types";
 
 /**
  * Les options de l'étape « Type de contrat » dépendent de la convention
@@ -62,5 +63,30 @@ describe("SimulateurIndemnitePrecarite - changement de convention collective", (
     fireEvent.click(ui.next.get());
 
     expect(ui.ctt.get()).not.toBeChecked();
+  });
+
+  it("revenir sur l'étape convention collective sans rien changer préserve la saisie", () => {
+    fireEvent.click(
+      screen.getByText(
+        "Je ne souhaite pas renseigner ma convention collective (je passe l'étape)."
+      )
+    );
+    fireEvent.click(ui.next.get());
+
+    fireEvent.click(ui.cddRemplacement.get());
+    fireEvent.click(ui.next.get());
+    fireEvent.click(ui.finALaDatePrevue.oui.get());
+    fireEvent.click(ui.issueContrat(ISSUE_CONTRAT.AUTRE).get());
+
+    fireEvent.click(screen.getByTestId("previous-button"));
+    fireEvent.click(screen.getByTestId("previous-button"));
+    fireEvent.click(ui.next.get());
+
+    expect(ui.cddRemplacement.get()).toBeChecked();
+
+    fireEvent.click(ui.next.get());
+
+    expect(ui.finALaDatePrevue.oui.get()).toBeChecked();
+    expect(ui.issueContrat(ISSUE_CONTRAT.AUTRE).get()).toBeChecked();
   });
 });
