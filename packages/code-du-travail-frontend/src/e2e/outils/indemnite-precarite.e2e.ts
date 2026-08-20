@@ -34,21 +34,24 @@ test.describe("Outil - Indemnité de Precarite", () => {
     await page.getByRole("button", { name: "Suivant" }).click();
 
     // Type de contrat
-    await expect(
-      page.getByText("Quel est le type du contrat de travail")
-    ).toBeVisible();
     await page
-      .getByTestId("contractType-contrat-travail-temporaire")
-      .click({ force: true });
+      .locator("fieldset")
+      .filter({ hasText: "Quel est le type du contrat de travail" })
+      .getByText("Contrat de travail temporaire (CTT)")
+      .click();
     await page.getByRole("button", { name: "Suivant" }).click();
 
     // Terme du contrat
-    await expect(
-      page.getByText("a-t-il pris fin à la date initialement prévue")
-    ).toBeVisible();
-    await page.getByTestId("finALaDatePrevue-oui").click({ force: true });
-    await expect(page.getByText("Quelle a été l'issue du")).toBeVisible();
-    await page.getByTestId("issueContrat-autre").click({ force: true });
+    await page
+      .locator("fieldset")
+      .filter({ hasText: "a-t-il pris fin à la date initialement prévue" })
+      .getByText("Oui", { exact: true })
+      .click();
+    await page
+      .locator("fieldset")
+      .filter({ hasText: "Quelle a été l'issue du" })
+      .getByText("Autre", { exact: true })
+      .click();
     await page.getByRole("button", { name: "Suivant" }).click();
 
     // Rémunération
@@ -85,7 +88,11 @@ test.describe("Outil - Indemnité de Precarite", () => {
       .click();
     await page.getByRole("button", { name: "Suivant" }).click();
 
-    await page.getByTestId("contractType-autres").click({ force: true });
+    await page
+      .locator("fieldset")
+      .filter({ hasText: "Quel est le type du contrat de travail" })
+      .getByText("Autres", { exact: true })
+      .click();
     await page.getByRole("button", { name: "Suivant" }).click();
 
     await expect(
