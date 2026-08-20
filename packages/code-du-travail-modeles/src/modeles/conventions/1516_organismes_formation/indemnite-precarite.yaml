@@ -1,10 +1,7 @@
-contrat salarié . convention collective . organismes de formation . type de cdd CDD d'usage:
-  applicable si: type de cdd = 'CDD d'usage'
+contrat salarié . convention collective . organismes de formation . type de cdd CDD d'usage pour les formateurs:
+  applicable si: type de cdd = 'usage formateurs'
 
-contrat salarié . convention collective . organismes de formation . type de cdd CDD d'usage . embauché en cdi non:
-  applicable si: embauché en cdi = 'non'
-
-contrat salarié . convention collective . organismes de formation . type de cdd CDD d'usage . embauché en cdi non . résultat conventionnel:
+contrat salarié . convention collective . organismes de formation . type de cdd CDD d'usage pour les formateurs . résultat conventionnel:
   valeur:
     produit:
       assiette: contrat salarié . salaire de référence

@@ -29,7 +29,9 @@ describe("Test de la fonctionnalité 'calculate'", () => {
         formula: "4/100 * S",
         explanations: ["S : Salaires renseignés (3000 €)"],
       },
-      situation: { "contrat salarié . type de cdd": "'Enquêteurs vacataires'" },
+      situation: {
+        "contrat salarié . type de cdd": "'usage enquêteurs vacataires'",
+      },
     },
     {
       expectedResult: { expectedValue: 180, unit: "€" },
@@ -54,9 +56,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
         explanations: ["S : Salaires renseignés (3000 €)"],
       },
       situation: {
-        "contrat salarié . type de cdd":
-          "'Contrat d'intervention dans le secteur d'activité d'organisation des foires, salons et congrès'",
-        "contrat salarié . avec proposition cdi": "'non'",
+        "contrat salarié . type de cdd": "'usage intervention évènementiel'",
       },
     },
     {
@@ -90,16 +90,9 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       const result = engine.calculate({
         "contrat salarié . convention collective": "'IDCC1486'",
         "contrat salarié . salaire de référence": "3000",
-        "contrat salarié . contractType": "'CDD'",
-        "contrat salarié . finContratPeriodeDessai": "non",
-        "contrat salarié . propositionCDIFindeContrat": "non",
-        "contrat salarié . refusCDIFindeContrat": "non",
-        "contrat salarié . interruptionFauteGrave": "non",
-        "contrat salarié . refusRenouvellementAuto": "non",
-        "contrat salarié . cttFormation": "non",
-        "contrat salarié . ruptureContratFauteGrave": "non",
-        "contrat salarié . propositionCDIFinContrat": "non",
-        "contrat salarié . refusSouplesse": "non",
+        "contrat salarié . type de contrat": "'CDD'",
+        "contrat salarié . fin à la date prévue": "'oui'",
+        "contrat salarié . issue du contrat": "'autre'",
         ...situation,
       });
       expect(result).toFormulaBeEqual(

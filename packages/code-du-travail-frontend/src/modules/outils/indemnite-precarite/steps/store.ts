@@ -4,9 +4,13 @@ import { shallow } from "zustand/shallow";
 import { createContext } from "react";
 import { createAgreementStore, AgreementStoreSlice } from "./Agreement/store";
 import {
-  createInformationsStore,
-  InformationsStoreSlice,
-} from "./Informations/store";
+  createTypeContratStore,
+  TypeContratStoreSlice,
+} from "./TypeContrat/store";
+import {
+  createTermeContratStore,
+  TermeContratStoreSlice,
+} from "./TermeContrat/store";
 import {
   createRemunerationStore,
   RemunerationStoreSlice,
@@ -22,7 +26,8 @@ export type StoreSliceWrapperIndemnitePrecarite<
 ) => T;
 
 export type MainStore = AgreementStoreSlice &
-  InformationsStoreSlice &
+  TypeContratStoreSlice &
+  TermeContratStoreSlice &
   RemunerationStoreSlice &
   ResultStoreSlice;
 
@@ -38,7 +43,8 @@ const createRootSlice = (
   get: StoreApi<MainStore>["getState"]
 ) => ({
   ...createAgreementStore(set, get),
-  ...createInformationsStore(set, get),
+  ...createTypeContratStore(set, get),
+  ...createTermeContratStore(set, get),
   ...createRemunerationStore(set, get),
   ...createResultStore(set, get),
 });

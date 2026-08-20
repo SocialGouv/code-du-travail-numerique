@@ -24,6 +24,25 @@ describe("Test de la fonctionnalité 'calculate'", () => {
         formula: "1/10 * S",
         explanations: ["S : Salaires renseignés (3000 €)"],
       },
+      situation: { "contrat salarié . type de cdd": "'usage convoyeurs'" },
+    },
+    {
+      expectedResult: { expectedValue: 300, unit: "€" },
+      expectedReferences: [
+        {
+          article: "Article L1243-8 du code du travail",
+          url: "https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006901219&cidTexte=LEGITEXT000006072050&dateTexte=20080501",
+        },
+        {
+          article: "Article L1243-9 du code du travail",
+          url: "https://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=0FA35871C82B78139407AE9BD9480D9B.tplgfr31s_2?idArticle=LEGIARTI000006901220&cidTexte=LEGITEXT000006072050&dateTexte=20080501&categorieLien=id&oldAction=&nbResultRech=",
+        },
+      ],
+      expectedNotifications: [],
+      expectedFormula: {
+        formula: "1/10 * S",
+        explanations: ["S : Salaires renseignés (3000 €)"],
+      },
       situation: { "contrat salarié . type de cdd": "'Autres'" },
     },
   ])(
@@ -38,16 +57,9 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       const result = engine.calculate({
         "contrat salarié . convention collective": "'IDCC1090'",
         "contrat salarié . salaire de référence": "3000",
-        "contrat salarié . contractType": "'CDD'",
-        "contrat salarié . finContratPeriodeDessai": "non",
-        "contrat salarié . propositionCDIFindeContrat": "non",
-        "contrat salarié . refusCDIFindeContrat": "non",
-        "contrat salarié . interruptionFauteGrave": "non",
-        "contrat salarié . refusRenouvellementAuto": "non",
-        "contrat salarié . cttFormation": "non",
-        "contrat salarié . ruptureContratFauteGrave": "non",
-        "contrat salarié . propositionCDIFinContrat": "non",
-        "contrat salarié . refusSouplesse": "non",
+        "contrat salarié . type de contrat": "'CDD'",
+        "contrat salarié . fin à la date prévue": "'oui'",
+        "contrat salarié . issue du contrat": "'autre'",
         ...situation,
       });
       expect(result).toFormulaBeEqual(

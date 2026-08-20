@@ -3,19 +3,23 @@ import { IndemnitePrecaritePublicodes } from "../../../../publicodes/IndemnitePr
 const engine = new IndemnitePrecaritePublicodes(modelsIndemnitePrecarite);
 
 describe("Test de la fonctionnalité 'calculate'", () => {
-  test("Vérifier que pour le légal on a pas de préavis", () => {
+  test("Vérifier que le CDD générique donne 10% de la rémunération brute", () => {
     const result = engine.calculate({
-      "contrat salarié . contractType": "'CDD'",
+      "contrat salarié . type de contrat": "'CDD'",
       "contrat salarié . type de cdd": "'Autres'",
-      "contrat salarié . finContratPeriodeDessai": "non",
-      "contrat salarié . propositionCDIFindeContrat": "non",
-      "contrat salarié . refusCDIFindeContrat": "non",
-      "contrat salarié . interruptionFauteGrave": "non",
-      "contrat salarié . refusRenouvellementAuto": "non",
-      "contrat salarié . cttFormation": "non",
-      "contrat salarié . ruptureContratFauteGrave": "non",
-      "contrat salarié . propositionCDIFinContrat": "non",
-      "contrat salarié . refusSouplesse": "non",
+      "contrat salarié . fin à la date prévue": "'oui'",
+      "contrat salarié . issue du contrat": "'autre'",
+      "contrat salarié . salaire de référence": "3000",
+    });
+    expect(result).toResultBeEqual(300, "€");
+  });
+
+  test("Vérifier que le CTT générique donne 10% de la rémunération brute", () => {
+    const result = engine.calculate({
+      "contrat salarié . type de contrat": "'CTT'",
+      "contrat salarié . type de cdd": "'Autres'",
+      "contrat salarié . fin à la date prévue": "'non'",
+      "contrat salarié . issue du contrat": "'autre'",
       "contrat salarié . salaire de référence": "3000",
     });
     expect(result).toResultBeEqual(300, "€");

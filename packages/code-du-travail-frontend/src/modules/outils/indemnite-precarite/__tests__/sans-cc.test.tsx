@@ -1,7 +1,8 @@
 import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
 import { CalculateurIndemnitePrecarite } from "../IndemnitePrecariteSimulator";
-import { ui } from "./ui";
+import { fillContractSteps, fillRemunerationTotal, ui } from "./ui";
+import { ISSUE_CONTRAT } from "../types";
 
 beforeEach(() => {
   Object.defineProperty(window, "localStorage", {
@@ -27,258 +28,202 @@ beforeEach(() => {
 });
 
 describe("SimulateurIndemnitePrecarite - Sans Convention Collective", () => {
-  describe("Étape 3/5 - informations générales", () => {
-    it("devrait afficher une erreur si aucun type de contrat n'est sélectionné", () => {
-      fireEvent.click(ui.next.get());
-
-      expect(
-        screen.getByText("Veuillez sélectionner un type de contrat")
-      ).toBeInTheDocument();
-    });
-
-    it("Scénario CDD avec sous-type exclu (saisonnier) → résultat avec motif de disqualification", () => {
-      fireEvent.click(ui.contractType.cdd.get());
-
-      expect(ui.contractType.cdd.get()).toBeChecked();
-
-      fireEvent.click(ui.cddType("CDD saisonnier").get());
-      fireEvent.click(ui.next.get());
-
-      expect(ui.result.disqualificationTitle.get()).toBeInTheDocument();
+  describe("Étape 3/6 - Type de contrat", () => {
+    it("propose uniquement les options génériques", () => {
+      expect(ui.cddRemplacement.get()).toBeInTheDocument();
+      expect(ui.ctt.get()).toBeInTheDocument();
+      expect(ui.autres.get()).toBeInTheDocument();
       expect(
         screen.getByText(
-          "Ce type de contrat ne permet pas au salarié d'avoir droit à une prime de précarité."
+          "Le motif de l'embauche en CDD est obligatoirement indiqué dans le contrat de travail."
         )
       ).toBeInTheDocument();
     });
 
-    it("Scénario CDD Autres + condition cochée → résultat avec motif de disqualification", () => {
-      fireEvent.click(ui.contractType.cdd.get());
-      fireEvent.click(ui.cddType("Autres").get());
-
-      fireEvent.click(ui.cddQuestions.finContratPeriodeDessai.get());
+    it("affiche une erreur si aucun type de contrat n'est sélectionné", () => {
       fireEvent.click(ui.next.get());
 
-      expect(ui.result.disqualificationTitle.get()).toBeInTheDocument();
-      expect(
-        screen.getByText(
-          /Lorsque le CDD a été rompu pendant la période d'essai/
-        )
-      ).toBeInTheDocument();
+      expect(ui.error.contractType.get()).toBeInTheDocument();
     });
 
-    it("Scénario CDD complet sans disqualification", () => {
-      fireEvent.click(ui.contractType.cdd.get());
-      fireEvent.click(ui.cddType("Autres").get());
-
+    it("« Autres » mène au résultat avec la liste des contrats exclus", () => {
+      fireEvent.click(ui.autres.get());
       fireEvent.click(ui.next.get());
 
+      expect(ui.result.noIndemnity.get()).toBeInTheDocument();
+      expect(ui.result.noIndemnityMessage.get()).toBeInTheDocument();
+      expect(ui.result.excludedContracts.get()).toBeInTheDocument();
+      expect(screen.getByText("CDD saisonnier")).toBeInTheDocument();
       expect(
-        screen.getByText(
-          "Comment souhaitez-vous indiquer la rémunération perçue pendant le contrat de travail ?"
-        )
-      ).toBeInTheDocument();
-    });
-
-    it("Scénario CTT sans disqualification", () => {
-      fireEvent.click(ui.contractType.ctt.get());
-
-      expect(ui.contractType.ctt.get()).toBeChecked();
-
-      fireEvent.click(ui.next.get());
-
-      expect(
-        screen.getByText(
-          "Comment souhaitez-vous indiquer la rémunération perçue pendant le contrat de travail ?"
-        )
-      ).toBeInTheDocument();
-    });
-
-    it("Scénario CTT avec condition cochée → résultat avec motif", () => {
-      fireEvent.click(ui.contractType.ctt.get());
-
-      fireEvent.click(ui.cttQuestions.cttFormation.get());
-      fireEvent.click(ui.next.get());
-
-      expect(ui.result.disqualificationTitle.get()).toBeInTheDocument();
-    });
-
-    it("Toggle off : cocher puis décocher → parcours normal", () => {
-      fireEvent.click(ui.contractType.cdd.get());
-      fireEvent.click(ui.cddType("Autres").get());
-
-      // Coche puis décoche : aucune disqualification
-      fireEvent.click(ui.cddQuestions.finContratPeriodeDessai.get());
-      fireEvent.click(ui.cddQuestions.finContratPeriodeDessai.get());
-
-      fireEvent.click(ui.next.get());
-
-      expect(
-        screen.getByText(
-          "Comment souhaitez-vous indiquer la rémunération perçue pendant le contrat de travail ?"
-        )
+        screen.getByText("CDD dans le cadre d'un congé de mobilité")
       ).toBeInTheDocument();
     });
   });
 
-  describe("Étape 4/5 - Rémunération", () => {
-    beforeEach(() => {
-      fireEvent.click(ui.contractType.cdd.get());
-      fireEvent.click(ui.cddType("Autres").get());
-
+  describe("Étape 4/6 - Terme du contrat", () => {
+    it("n'affiche l'issue du contrat qu'après la première question", () => {
+      fireEvent.click(ui.cddRemplacement.get());
       fireEvent.click(ui.next.get());
+
+      expect(ui.issueContrat(ISSUE_CONTRAT.AUTRE).query()).toBeNull();
+
+      fireEvent.click(ui.finALaDatePrevue.oui.get());
+
+      expect(ui.issueContrat(ISSUE_CONTRAT.AUTRE).get()).toBeInTheDocument();
     });
 
-    describe("Scénario où il complète le montant total des salaires à l'étape rémunération", () => {
-      it("devrait permettre de sélectionner le montant total et saisir un montant", () => {
-        fireEvent.click(ui.remuneration.typeRemuneration.total.get());
+    it("affiche une erreur si les questions ne sont pas renseignées", () => {
+      fireEvent.click(ui.cddRemplacement.get());
+      fireEvent.click(ui.next.get());
+      fireEvent.click(ui.next.get());
 
-        expect(ui.remuneration.typeRemuneration.total.get()).toBeChecked();
-
-        expect(ui.remuneration.salaireTotal.get()).toBeInTheDocument();
-
-        fireEvent.change(ui.remuneration.salaireTotal.get(), {
-          target: { value: "25000" },
-        });
-
-        expect(ui.remuneration.salaireTotal.get()).toHaveValue(25000);
-      });
-
-      it("devrait afficher une erreur si le montant total n'est pas renseigné", () => {
-        fireEvent.click(ui.remuneration.typeRemuneration.total.get());
-        fireEvent.click(ui.next.get());
-
-        expect(
-          screen.getByText(
-            "Veuillez saisir un montant total valide supérieur à 0"
-          )
-        ).toBeInTheDocument();
-      });
-
-      it("devrait permettre de naviguer vers l'étape suivante avec un montant valide", () => {
-        fireEvent.click(ui.remuneration.typeRemuneration.total.get());
-        fireEvent.change(ui.remuneration.salaireTotal.get(), {
-          target: { value: "25000" },
-        });
-
-        fireEvent.click(ui.next.get());
-
-        expect(screen.getByText("Détail du calcul")).toBeInTheDocument();
-      });
+      expect(ui.error.finALaDatePrevue.get()).toBeInTheDocument();
     });
 
-    describe("Scénario où on fait la somme de salaires mensuels à l'étape rémunération", () => {
-      it("devrait permettre de sélectionner le type salaire mensuel", () => {
-        fireEvent.click(ui.remuneration.typeRemuneration.mensuel.get());
+    it("propose les issues du chemin CDD quand le contrat va à son terme", () => {
+      fireEvent.click(ui.cddRemplacement.get());
+      fireEvent.click(ui.next.get());
+      fireEvent.click(ui.finALaDatePrevue.oui.get());
 
-        expect(ui.remuneration.typeRemuneration.mensuel.get()).toBeChecked();
+      expect(
+        ui.issueContrat(ISSUE_CONTRAT.EMBAUCHE_CDI).get()
+      ).toBeInTheDocument();
+      expect(
+        ui.issueContrat(ISSUE_CONTRAT.REFUS_CDI_EQUIVALENT).get()
+      ).toBeInTheDocument();
+      expect(ui.issueContrat(ISSUE_CONTRAT.REFUS_SOUPLESSE).query()).toBeNull();
+    });
 
-        expect(ui.remuneration.dureeContrat.get()).toBeInTheDocument();
-        expect(ui.remuneration.salaireMensuel(1).get()).toBeInTheDocument();
-        expect(ui.remuneration.salaireMensuel(2).get()).toBeInTheDocument();
-      });
+    it("propose les issues du chemin CTT quand le contrat va à son terme", () => {
+      fireEvent.click(ui.ctt.get());
+      fireEvent.click(ui.next.get());
+      fireEvent.click(ui.finALaDatePrevue.oui.get());
 
-      it("devrait permettre de changer la durée du contrat et ajuster le nombre d'inputs", () => {
-        fireEvent.click(ui.remuneration.typeRemuneration.mensuel.get());
+      expect(
+        ui.issueContrat(ISSUE_CONTRAT.REFUS_SOUPLESSE).get()
+      ).toBeInTheDocument();
+      expect(
+        ui.issueContrat(ISSUE_CONTRAT.REFUS_CDI_EQUIVALENT).query()
+      ).toBeNull();
+    });
 
-        expect(ui.remuneration.salaireMensuel(1).get()).toBeInTheDocument();
-        expect(ui.remuneration.salaireMensuel(2).get()).toBeInTheDocument();
-        expect(
-          ui.remuneration.salaireMensuel(3).query()
-        ).not.toBeInTheDocument();
+    it("propose les issues de rupture anticipée quand le contrat a été rompu", () => {
+      fireEvent.click(ui.cddRemplacement.get());
+      fireEvent.click(ui.next.get());
+      fireEvent.click(ui.finALaDatePrevue.non.get());
 
-        fireEvent.change(ui.remuneration.dureeContrat.get(), {
-          target: { value: "3" },
-        });
+      expect(
+        ui.issueContrat(ISSUE_CONTRAT.FORCE_MAJEURE).get()
+      ).toBeInTheDocument();
+      expect(
+        ui.issueContrat(ISSUE_CONTRAT.FAUTE_GRAVE).get()
+      ).toBeInTheDocument();
+      expect(
+        ui.issueContrat(ISSUE_CONTRAT.INITIATIVE_SALARIE).get()
+      ).toBeInTheDocument();
+    });
 
-        expect(ui.remuneration.salaireMensuel(3).get()).toBeInTheDocument();
-        expect(
-          ui.remuneration.salaireMensuel(4).query()
-        ).not.toBeInTheDocument();
+    it("réinitialise l'issue quand la première question change", () => {
+      fireEvent.click(ui.cddRemplacement.get());
+      fireEvent.click(ui.next.get());
+      fireEvent.click(ui.finALaDatePrevue.oui.get());
+      fireEvent.click(ui.issueContrat(ISSUE_CONTRAT.AUTRE).get());
 
-        fireEvent.change(ui.remuneration.dureeContrat.get(), {
-          target: { value: "2" },
-        });
+      expect(ui.issueContrat(ISSUE_CONTRAT.AUTRE).get()).toBeChecked();
 
-        expect(
-          ui.remuneration.salaireMensuel(3).query()
-        ).not.toBeInTheDocument();
-      });
+      fireEvent.click(ui.finALaDatePrevue.non.get());
 
-      it("devrait afficher une erreur si aucun salaire mensuel n'est renseigné", () => {
-        fireEvent.click(ui.remuneration.typeRemuneration.mensuel.get());
-        fireEvent.click(ui.next.get());
-
-        expect(
-          screen.getByText(
-            "Tous les salaires mensuels doivent être renseignés et supérieurs à 0"
-          )
-        ).toBeInTheDocument();
-      });
-
-      it("devrait permettre de naviguer vers l'étape suivante avec des salaires valides", () => {
-        fireEvent.click(ui.remuneration.typeRemuneration.mensuel.get());
-        fireEvent.change(ui.remuneration.salaireMensuel(1).get(), {
-          target: { value: "2500" },
-        });
-        fireEvent.change(ui.remuneration.salaireMensuel(2).get(), {
-          target: { value: "2600" },
-        });
-
-        fireEvent.click(ui.next.get());
-
-        expect(screen.getByText("Détail du calcul")).toBeInTheDocument();
-      });
+      expect(ui.issueContrat(ISSUE_CONTRAT.AUTRE).get()).not.toBeChecked();
     });
   });
 
-  describe("Étape 5/5 - Résultat", () => {
+  describe("Étape 5/6 - Rémunération", () => {
     beforeEach(() => {
-      fireEvent.click(ui.contractType.ctt.get());
-
-      fireEvent.click(ui.next.get());
+      fillContractSteps();
     });
-    it("devrait permettre un parcours avec salaires mensuels", () => {
-      expect(
-        screen.getByText(
-          "Comment souhaitez-vous indiquer la rémunération perçue pendant le contrat de travail ?"
-        )
-      ).toBeInTheDocument();
 
+    it("calcule l'indemnité à partir du montant total", () => {
+      fillRemunerationTotal(3000);
+
+      expect(ui.result.amount.get()).toHaveTextContent("300,00");
+    });
+
+    it("calcule l'indemnité à partir des salaires mensuels", () => {
       fireEvent.click(ui.remuneration.typeRemuneration.mensuel.get());
       fireEvent.change(ui.remuneration.dureeContrat.get(), {
-        target: { value: "3" },
+        target: { value: "2" },
       });
       fireEvent.change(ui.remuneration.salaireMensuel(1).get(), {
-        target: { value: "2500" },
+        target: { value: "1000" },
       });
       fireEvent.change(ui.remuneration.salaireMensuel(2).get(), {
-        target: { value: "2600" },
+        target: { value: "2000" },
       });
-      fireEvent.change(ui.remuneration.salaireMensuel(3).get(), {
-        target: { value: "2700" },
-      });
-
       fireEvent.click(ui.next.get());
 
+      expect(ui.result.amount.get()).toHaveTextContent("300,00");
+    });
+  });
+
+  describe("Étape 6/6 - Résultat", () => {
+    it("affiche le détail du calcul et les références légales", () => {
+      fillContractSteps();
+      fillRemunerationTotal(3000);
+
+      expect(ui.result.amount.get()).toHaveTextContent("300,00");
       expect(screen.getByText("Détail du calcul")).toBeInTheDocument();
-      expect(screen.getByText("780,00 €")).toBeInTheDocument();
+      expect(screen.getByTestId("situation-type-contrat")).toHaveTextContent(
+        "CDD de remplacement ou d'accroissement temporaire d'activité"
+      );
+      expect(
+        screen.queryAllByText(/Article L1243-8 du code du travail/)[0]
+      ).toBeInTheDocument();
     });
 
-    it("devrait permettre un parcours avec montant total", () => {
-      expect(
-        screen.getByText(
-          "Comment souhaitez-vous indiquer la rémunération perçue pendant le contrat de travail ?"
-        )
-      ).toBeInTheDocument();
-      fireEvent.click(ui.remuneration.typeRemuneration.total.get());
-      fireEvent.change(ui.remuneration.salaireTotal.get(), {
-        target: { value: "15000" },
+    it.each([
+      ["oui" as const, ISSUE_CONTRAT.EMBAUCHE_CDI],
+      ["oui" as const, ISSUE_CONTRAT.REFUS_CDI_EQUIVALENT],
+      ["non" as const, ISSUE_CONTRAT.FORCE_MAJEURE],
+      ["non" as const, ISSUE_CONTRAT.FAUTE_GRAVE],
+      ["non" as const, ISSUE_CONTRAT.INITIATIVE_SALARIE],
+    ])(
+      "n'accorde pas d'indemnité (CDD, fin à la date prévue = %s, issue = %s)",
+      (finALaDatePrevue, issueContrat) => {
+        fillContractSteps({ finALaDatePrevue, issueContrat });
+
+        expect(ui.result.noIndemnityMessage.get()).toBeInTheDocument();
+        expect(ui.result.excludedContracts.query()).toBeNull();
+      }
+    );
+
+    it.each([
+      ["oui" as const, ISSUE_CONTRAT.EMBAUCHE_CDI],
+      ["oui" as const, ISSUE_CONTRAT.REFUS_SOUPLESSE],
+      ["non" as const, ISSUE_CONTRAT.INITIATIVE_SALARIE],
+    ])(
+      "n'accorde pas d'indemnité (CTT, fin à la date prévue = %s, issue = %s)",
+      (finALaDatePrevue, issueContrat) => {
+        fillContractSteps({
+          contractOptionId: "contrat-travail-temporaire",
+          finALaDatePrevue,
+          issueContrat,
+        });
+
+        expect(ui.result.noIndemnityMessage.get()).toBeInTheDocument();
+      }
+    );
+
+    it("permet de revenir à l'étape « Terme du contrat » après une disqualification", () => {
+      fillContractSteps({
+        finALaDatePrevue: "non",
+        issueContrat: ISSUE_CONTRAT.FAUTE_GRAVE,
       });
 
-      fireEvent.click(ui.next.get());
-      expect(screen.getByText("Détail du calcul")).toBeInTheDocument();
-      expect(screen.getByText("1 500,00 €")).toBeInTheDocument();
+      expect(ui.result.noIndemnityMessage.get()).toBeInTheDocument();
+
+      fireEvent.click(screen.getByTestId("previous-button"));
+
+      expect(ui.finALaDatePrevue.non.get()).toBeChecked();
     });
   });
 });

@@ -29,9 +29,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
         explanations: ["S : Salaires renseignés (3000 €)"],
       },
       situation: {
-        "contrat salarié . type de cdd":
-          "'CDD d'usage appelé « contrat d'intervention »'",
-        "contrat salarié . embauché en cdi": "'non'",
+        "contrat salarié . type de cdd": "'usage intervention sport'",
       },
     },
     {
@@ -65,16 +63,9 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       const result = engine.calculate({
         "contrat salarié . convention collective": "'IDCC2511'",
         "contrat salarié . salaire de référence": "3000",
-        "contrat salarié . contractType": "'CDD'",
-        "contrat salarié . finContratPeriodeDessai": "non",
-        "contrat salarié . propositionCDIFindeContrat": "non",
-        "contrat salarié . refusCDIFindeContrat": "non",
-        "contrat salarié . interruptionFauteGrave": "non",
-        "contrat salarié . refusRenouvellementAuto": "non",
-        "contrat salarié . cttFormation": "non",
-        "contrat salarié . ruptureContratFauteGrave": "non",
-        "contrat salarié . propositionCDIFinContrat": "non",
-        "contrat salarié . refusSouplesse": "non",
+        "contrat salarié . type de contrat": "'CDD'",
+        "contrat salarié . fin à la date prévue": "'oui'",
+        "contrat salarié . issue du contrat": "'autre'",
         ...situation,
       });
       expect(result).toFormulaBeEqual(

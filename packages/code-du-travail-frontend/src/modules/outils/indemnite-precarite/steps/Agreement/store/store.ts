@@ -3,7 +3,8 @@ import { produce } from "immer";
 import { PublicodesSimulator } from "@socialgouv/modeles-social";
 import { AgreementStoreData, AgreementStoreSlice } from "./types";
 import { validateStep } from "./validator";
-import { InformationsStoreSlice } from "../../Informations/store";
+import { TypeContratStoreSlice } from "../../TypeContrat/store";
+import { TermeContratStoreSlice } from "../../TermeContrat/store";
 import { captureException } from "@sentry/nextjs";
 import {
   getAgreementFromLocalStorage,
@@ -27,9 +28,34 @@ const initialState: Omit<AgreementStoreData, "publicodes"> = {
   isStepValid: true,
 };
 
+type DownstreamSlices = TypeContratStoreSlice & TermeContratStoreSlice;
+
+/**
+ * Les options de l'étape « Type de contrat » dépendent de la convention
+ * collective : changer de CC doit repartir d'une saisie vierge.
+ */
+const resetDownstreamSteps = (
+  set: StoreApi<AgreementStoreSlice & DownstreamSlices>["setState"]
+) => {
+  set(
+    produce((state: DownstreamSlices) => {
+      state.typeContratData.input.contractOptionId = undefined;
+      state.typeContratData.error = {};
+      state.typeContratData.hasBeenSubmit = false;
+      state.typeContratData.isStepValid = true;
+      state.termeContratData.input.finALaDatePrevue = undefined;
+      state.termeContratData.input.issueContrat = undefined;
+      state.termeContratData.error = {};
+      state.termeContratData.hasBeenSubmit = false;
+      state.termeContratData.isStepValid = true;
+      state.termeContratData.ineligibility = undefined;
+    })
+  );
+};
+
 const createAgreementStore: StoreSliceWrapperIndemnitePrecarite<
   AgreementStoreSlice,
-  InformationsStoreSlice
+  DownstreamSlices
 > = (set, get) => ({
   agreementData: {
     ...initialState,
@@ -96,10 +122,12 @@ const createAgreementStore: StoreSliceWrapperIndemnitePrecarite<
           state.agreementData.input.hasNoEnterpriseSelected = false;
         })
       );
+      resetDownstreamSteps(set);
       applyGenericValidation(get, set, "route", value);
     },
     onAgreementChange: (agreement, enterprise) => {
       try {
+        resetDownstreamSteps(set);
         applyGenericValidation(get, set, "agreement", agreement);
         applyGenericValidation(get, set, "enterprise", enterprise);
         if (agreement) {

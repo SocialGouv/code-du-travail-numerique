@@ -6,9 +6,14 @@ import { formatCurrency } from "src/modules/outils/common/utils/formatCurrency";
 type Props = {
   remuneration: number;
   agreement?: Agreement;
+  contractTypeLabel?: string;
 };
 
-const Situation: React.FC<Props> = ({ remuneration, agreement }) => {
+const Situation: React.FC<Props> = ({
+  remuneration,
+  agreement,
+  contractTypeLabel,
+}) => {
   return (
     <>
       <h4 className={fr.cx("fr-h5", "fr-mb-0")}>Les éléments saisis</h4>
@@ -19,6 +24,11 @@ const Situation: React.FC<Props> = ({ remuneration, agreement }) => {
             <strong>
               {agreement.shortTitle || agreement.title} (IDCC {agreement.num})
             </strong>
+          </li>
+        )}
+        {contractTypeLabel && (
+          <li data-testid="situation-type-contrat">
+            Type de contrat&nbsp;: <strong>{contractTypeLabel}</strong>
           </li>
         )}
         <li data-testid="remuneration-input">

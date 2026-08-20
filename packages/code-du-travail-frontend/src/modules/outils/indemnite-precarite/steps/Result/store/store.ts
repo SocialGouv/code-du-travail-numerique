@@ -4,7 +4,8 @@ import * as Sentry from "@sentry/nextjs";
 import { StoreSliceWrapperIndemnitePrecarite } from "../../store";
 import { ResultStoreData, ResultStoreSlice } from "./types";
 import { AgreementStoreSlice } from "../../Agreement/store";
-import { InformationsStoreSlice } from "../../Informations/store";
+import { TypeContratStoreSlice } from "../../TypeContrat/store";
+import { TermeContratStoreSlice } from "../../TermeContrat/store";
 import { RemunerationStoreSlice } from "../../Remuneration/store";
 import {
   References,
@@ -13,10 +14,9 @@ import {
   PublicodesIndemnitePrecariteResult,
   Formula,
 } from "@socialgouv/modeles-social";
-import {
-  mapToPublicodesSituationForCalculationIndemnitePrecarite,
-  mapAgreementSpecificParametersToPublicodes,
-} from "../../../../common/publicodes/indemnite-precarite";
+import { mapToPublicodesSituationForCalculationIndemnitePrecarite } from "../../../../common/publicodes/indemnite-precarite";
+import { findContractOption } from "../../../agreements";
+import { CONTRACT_FAMILY } from "../../../types";
 
 const initialState: ResultStoreData = {
   result: undefined,
@@ -29,7 +29,10 @@ const initialState: ResultStoreData = {
 
 const createResultStore: StoreSliceWrapperIndemnitePrecarite<
   ResultStoreSlice,
-  AgreementStoreSlice & InformationsStoreSlice & RemunerationStoreSlice
+  AgreementStoreSlice &
+    TypeContratStoreSlice &
+    TermeContratStoreSlice &
+    RemunerationStoreSlice
 > = (set, get) => ({
   resultData: {
     ...initialState,
@@ -72,21 +75,21 @@ const createResultStore: StoreSliceWrapperIndemnitePrecarite<
         }, 0);
       }
 
-      const conventionSpecificParams =
-        mapAgreementSpecificParametersToPublicodes(
-          state.informationsData.input,
-          agreement?.num
-        );
-
-      const additionalFields = {
-        "contrat salarié . type de cdd": `'${state.informationsData.input.criteria?.cddType ?? "Autres"}'`,
-        ...conventionSpecificParams,
-      };
+      const contractOption = findContractOption(
+        state.typeContratData.input.contractOptionId,
+        agreement
+      );
+      const termeInput = state.termeContratData.input;
 
       const situation =
         mapToPublicodesSituationForCalculationIndemnitePrecarite(
           totalSalary,
-          additionalFields,
+          {
+            family: contractOption?.family ?? CONTRACT_FAMILY.CDD,
+            typeCdd: contractOption?.typeCdd ?? "Autres",
+            finALaDatePrevue: termeInput.finALaDatePrevue,
+            issueContrat: termeInput.issueContrat,
+          },
           agreement?.num
         );
 

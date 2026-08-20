@@ -7,6 +7,10 @@ type Question = {
   label: string;
   value: string;
   id: string;
+  /** Précision affichée sous l'option (infobulle DSFR). */
+  hint?: string;
+  /** `data-testid` de l'option ; par défaut `${name}-${label}`. */
+  testId?: string;
 };
 
 type Props = {
@@ -69,13 +73,14 @@ export function RadioQuestion({
         legend={<Html as="p">{label}</Html>}
         options={questions.map((question, index) => ({
           label: question.label,
+          hintText: question.hint,
           id: question.id,
           nativeInputProps: {
             checked: selectedOption === question.value,
             onChange: () => onChange(question.value, index),
             autoFocus: autoFocus && index === 0,
             required: true,
-            "data-testid": `${name}-${question.label}`,
+            "data-testid": question.testId ?? `${name}-${question.label}`,
             ref: (el: HTMLInputElement | null) => {
               radioRefs.current[index] = el;
             },

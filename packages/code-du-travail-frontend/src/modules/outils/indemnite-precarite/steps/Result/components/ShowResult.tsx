@@ -9,7 +9,7 @@ type Props = {
 };
 
 const ShowResult: React.FC<Props> = ({ result, notifications }: Props) => {
-  if (!result) return null;
+  if (result === undefined) return null;
 
   return (
     <>

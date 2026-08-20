@@ -1,94 +1,98 @@
 import { IndemnitePrecaritePublicodes } from "../../../../publicodes/IndemnitePrecaritePublicodes";
+import { INDEMNITE_PRECARITE_INELIGIBILITY_MESSAGE } from "../../ineligibility-indemnite-precarite";
 
 const engine = new IndemnitePrecaritePublicodes(modelsIndemnitePrecarite);
 
-describe("Test de la fonctionnalité inéligibilité du 'calculate'", () => {
-  const defaultSituation = {
-    "contrat salarié . contractType": "'CDD'",
-    "contrat salarié . type de cdd": "'Autres'",
-    "contrat salarié . finContratPeriodeDessai": "non",
-    "contrat salarié . propositionCDIFindeContrat": "non",
-    "contrat salarié . refusCDIFindeContrat": "non",
-    "contrat salarié . interruptionFauteGrave": "non",
-    "contrat salarié . refusRenouvellementAuto": "non",
-    "contrat salarié . cttFormation": "non",
-    "contrat salarié . ruptureContratFauteGrave": "non",
-    "contrat salarié . propositionCDIFinContrat": "non",
-    "contrat salarié . refusSouplesse": "non",
-  };
+const situationDeBase = {
+  "contrat salarié . type de contrat": "'CDD'",
+  "contrat salarié . type de cdd": "'Autres'",
+  "contrat salarié . salaire de référence": "3000",
+};
+
+describe("Inéligibilité à l'indemnité de précarité", () => {
+  test.each([
+    // Type de contrat exclu (étape 3, option « Autres »)
+    {
+      cas: "type de contrat exclu",
+      situation: { "contrat salarié . type de contrat": "'Exclu'" },
+    },
+    // Contrat allé à son terme
+    {
+      cas: "embauche en CDI à l'issue du contrat",
+      situation: {
+        "contrat salarié . fin à la date prévue": "'oui'",
+        "contrat salarié . issue du contrat": "'embauche cdi'",
+      },
+    },
+    {
+      cas: "refus d'un CDI équivalent",
+      situation: {
+        "contrat salarié . fin à la date prévue": "'oui'",
+        "contrat salarié . issue du contrat": "'refus cdi équivalent'",
+      },
+    },
+    {
+      cas: "refus de la souplesse prévue au contrat de mission",
+      situation: {
+        "contrat salarié . fin à la date prévue": "'oui'",
+        "contrat salarié . issue du contrat": "'refus souplesse'",
+      },
+    },
+    // Rupture anticipée
+    {
+      cas: "rupture anticipée pour force majeure",
+      situation: {
+        "contrat salarié . fin à la date prévue": "'non'",
+        "contrat salarié . issue du contrat": "'force majeure'",
+      },
+    },
+    {
+      cas: "rupture anticipée pour faute grave",
+      situation: {
+        "contrat salarié . fin à la date prévue": "'non'",
+        "contrat salarié . issue du contrat": "'faute grave'",
+      },
+    },
+    {
+      cas: "rupture anticipée à l'initiative du salarié",
+      situation: {
+        "contrat salarié . fin à la date prévue": "'non'",
+        "contrat salarié . issue du contrat": "'initiative salarié'",
+      },
+    },
+  ])("Pas d'indemnité : $cas", ({ situation }) => {
+    const result = engine.calculate({ ...situationDeBase, ...situation });
+    expect(result).toIneligibilityBeEqual(
+      INDEMNITE_PRECARITE_INELIGIBILITY_MESSAGE
+    );
+  });
+
   test.each([
     {
+      cas: "contrat allé à son terme avec une autre issue",
       situation: {
-        "contrat salarié . finContratPeriodeDessai": "oui",
+        "contrat salarié . fin à la date prévue": "'oui'",
+        "contrat salarié . issue du contrat": "'autre'",
       },
-      expectedIneligibility:
-        "Lorsque le CDD a été rompu pendant la période d’essai, le salarié en CDD n’a pas le droit à une prime de précarité.",
     },
     {
+      cas: "rupture anticipée avec une autre issue",
       situation: {
-        "contrat salarié . propositionCDIFindeContrat": "oui",
+        "contrat salarié . fin à la date prévue": "'non'",
+        "contrat salarié . issue du contrat": "'autre'",
       },
-      expectedIneligibility:
-        "Le salarié en CDD qui est immédiatement embauché dans l’entreprise en CDI, sans interruption, sur un même poste ou sur un poste différent, n’a pas le droit à une prime de précarité.",
     },
-    {
-      situation: {
-        "contrat salarié . refusCDIFindeContrat": "oui",
-      },
-      expectedIneligibility:
-        "Le salarié en CDD qui refuse un CDI pour occuper le même emploi ou un emploi similaire dans l’entreprise avec une rémunération au moins équivalente, n’a pas le droit à une prime de précarité.",
-    },
-    {
-      situation: {
-        "contrat salarié . interruptionFauteGrave": "oui",
-      },
-      expectedIneligibility:
-        "Lorsque le CDD est rompu de manière anticipée à l’initiative du salarié, pour faute grave, pour faute lourde ou en cas de force majeure, le salarié en CDD n’a pas le droit à une prime de précarité.",
-    },
-    {
-      situation: {
-        "contrat salarié . refusRenouvellementAuto": "oui",
-      },
-      expectedIneligibility:
-        "Le salarié en CDD qui refuse le renouvellement de son CDD alors que son contrat prévoyait dès l’origine son renouvellement et ses modalités de renouvellement n’a pas le droit à une prime de précarité.",
-    },
-    {
-      situation: {
-        "contrat salarié . contractType": "'CTT'",
-        "contrat salarié . cttFormation": "oui",
-      },
-      expectedIneligibility:
-        "Ce type de contrat ne permet pas au salarié d’avoir droit à une prime de précarité.",
-    },
-    {
-      situation: {
-        "contrat salarié . contractType": "'CTT'",
-        "contrat salarié . ruptureContratFauteGrave": "oui",
-      },
-      expectedIneligibility:
-        "Lorsque le contrat de travail temporaire (contrat d'intérim) est rompu de manière anticipée à l’initiative du salarié, pour faute grave du salarié ou en cas de force majeure, le salarié n’a pas le droit à une prime de précarité.",
-    },
-    {
-      situation: {
-        "contrat salarié . contractType": "'CTT'",
-        "contrat salarié . propositionCDIFinContrat": "oui",
-      },
-      expectedIneligibility:
-        "Le salarié en contrat de travail temporaire (contrat d'intérim) qui est immédiatement embauché en CDI au sein de l’entreprise dans laquelle il effectuait sa mission n’a pas le droit à une prime de précarité.",
-    },
-    {
-      situation: {
-        "contrat salarié . contractType": "'CTT'",
-        "contrat salarié . refusSouplesse": "oui",
-      },
-      expectedIneligibility:
-        "Le salarié en contrat d'intérim qui refuse la mise en œuvre de la souplesse prévue dans son contrat n’a pas le droit à une prime de précarité.",
-    },
-  ])(
-    "Vérifier l'inéligibilité pour: $situation",
-    ({ situation, expectedIneligibility }) => {
-      const result = engine.calculate({ ...defaultSituation, ...situation });
-      expect(result).toIneligibilityBeEqual(expectedIneligibility);
-    }
-  );
+  ])("Indemnité due : $cas", ({ situation }) => {
+    const result = engine.calculate({ ...situationDeBase, ...situation });
+    expect(result).toResultBeEqual(300, "€");
+  });
+
+  test("Les issues d'un contrat allé à son terme ne disqualifient pas une rupture anticipée", () => {
+    const result = engine.calculate({
+      ...situationDeBase,
+      "contrat salarié . fin à la date prévue": "'non'",
+      "contrat salarié . issue du contrat": "'embauche cdi'",
+    });
+    expect(result).toResultBeEqual(300, "€");
+  });
 });

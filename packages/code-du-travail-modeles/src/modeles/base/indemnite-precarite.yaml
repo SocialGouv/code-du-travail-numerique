@@ -1,19 +1,48 @@
-contrat salarié . contractType:
+contrat salarié . type de contrat:
+  titre: Quel est le type du contrat de travail ?
+  cdtn:
+    type: liste
+    valeurs:
+      CDD de remplacement ou d'accroissement temporaire d'activité: "'CDD'"
+      Contrat de travail temporaire (CTT): "'CTT'"
+      Autres: "'Exclu'"
+
+contrat salarié . type de cdd:
   titre: Quel est le type de CDD ?
   cdtn:
     type: liste
     valeurs:
-      Autres: "'CDD'"
-      Enquêteurs vacataires: "'CTT'"
-contrat salarié . finContratPeriodeDessai: non
-contrat salarié . propositionCDIFindeContrat: non
-contrat salarié . refusCDIFindeContrat: non
-contrat salarié . interruptionFauteGrave: non
-contrat salarié . refusRenouvellementAuto: non
-contrat salarié . cttFormation: non
-contrat salarié . ruptureContratFauteGrave: non
-contrat salarié . propositionCDIFinContrat: non
-contrat salarié . refusSouplesse: non
+      Autres: "'Autres'"
+      CDD d'usage conclu avec les convoyeurs de véhicules: "'usage convoyeurs'"
+      CDD d'usage pour les enquêteurs vacataires: "'usage enquêteurs vacataires'"
+      CDD d'usage / CDD d'intervention pour le secteur évènementiel: "'usage intervention évènementiel'"
+      CDD d'usage pour les formateurs: "'usage formateurs'"
+      CDD d'usage / CDD d'extra: "'usage extra'"
+      CDD d'optimisation linéaire: "'optimisation linéaire'"
+      CDD d'animation commerciale: "'animation commerciale'"
+      CDD d'usage / contrat d'intervention: "'usage intervention sport'"
+      CDD d'usage / CDD de mission ponctuelle ou occasionnelle: "'usage mission ponctuelle'"
+
+contrat salarié . fin à la date prévue:
+  titre: Le contrat a-t-il pris fin à la date initialement prévue (pas de rupture anticipée) ?
+  cdtn:
+    type: liste
+    valeurs:
+      Oui: "'oui'"
+      Non: "'non'"
+
+contrat salarié . issue du contrat:
+  titre: Quelle a été l'issue du contrat ?
+  cdtn:
+    type: liste
+    valeurs:
+      Le salarié a été immédiatement embauché en CDI: "'embauche cdi'"
+      Le salarié a refusé un CDI équivalent: "'refus cdi équivalent'"
+      Refus de la mise en œuvre de la souplesse prévue au contrat de mission: "'refus souplesse'"
+      Rupture anticipée pour force majeure: "'force majeure'"
+      Rupture anticipée pour faute grave du salarié: "'faute grave'"
+      Rupture anticipée à l'initiative du salarié: "'initiative salarié'"
+      Autre: "'autre'"
 
 contrat salarié . salaire de référence:
   unité: €
@@ -36,42 +65,3 @@ contrat salarié . résultat légal:
 
 contrat salarié . convention collective . résultat conventionnel:
   valeur: 0
-
-contrat salarié . type de cdd:
-  titre: Quel est le type de CDD ?
-  cdtn:
-    type: liste
-    valeurs:
-      Autres: "'Autres'"
-      Enquêteurs vacataires: "'Enquêteurs vacataires'"
-      Contrat d'intervention dans le secteur d'activité d'organisation des foires, salons et congrès: "'Contrat d'intervention dans le secteur d'activité d'organisation des foires, salons et congrès'"
-      CDD d'usage: "'CDD d'usage'"
-      CDD d'optimisation linéaire: "'CDD d'optimisation linéaire'"
-      CDD d'animation commerciale: "'CDD d'animation commerciale'"
-      Contrat d'intervention dans le secteur de l'accueil événementiel: "'Contrat d'intervention dans le secteur de l'accueil événementiel'"
-      CDD d'usage appelé « contrat d'intervention »: "'CDD d'usage appelé « contrat d'intervention »'"
-      CDD dit de « mission ponctuelle ou occasionnelle »: "'CDD dit de « mission ponctuelle ou occasionnelle »'"
-
-contrat salarié . avec proposition cdi:
-  titre: À la fin du CDD, le salarié a-t-il reçu une proposition de CDI ?
-  cdtn:
-    type: liste
-    valeurs:
-      non: "'non'"
-      oui: "'oui'"
-
-contrat salarié . embauché en cdi:
-  titre: À la fin du CDD, le salarié a-t-il été immédiatement embauché en CDI ?
-  cdtn:
-    type: liste
-    valeurs:
-      non: "'non'"
-      oui: "'oui'"
-
-contrat salarié . embauché en cdi sans interruption:
-  titre: À la fin du CDD, le salarié a-t-il été immédiatement embauché en CDI, sans interruption, sur un même poste ou sur un poste différent ?
-  cdtn:
-    type: liste
-    valeurs:
-      non: "'non'"
-      oui: "'oui'"
