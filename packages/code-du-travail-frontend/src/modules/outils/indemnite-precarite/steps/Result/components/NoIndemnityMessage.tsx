@@ -21,14 +21,21 @@ const CONTRATS_EXCLUS = [
 ];
 
 type Props = {
+  /** Message renvoyé par le modèle publicodes. */
+  message?: string;
   /** Affiche la liste des contrats exclus par le code du travail. */
   showExcludedContracts?: boolean;
 };
 
-const NoIndemnityMessage: React.FC<Props> = ({ showExcludedContracts }) => (
+const NoIndemnityMessage: React.FC<Props> = ({
+  message,
+  showExcludedContracts,
+}) => (
   <div data-testid="no-indemnity-message">
     <h3 className={fr.cx("fr-mt-3w", "fr-h3")}>Indemnité de précarité</h3>
-    <p className={fr.cx("fr-mb-3w", "fr-pr-md-2v")}>{NO_INDEMNITY_MESSAGE}</p>
+    <p className={fr.cx("fr-mb-3w", "fr-pr-md-2v")}>
+      {message ?? NO_INDEMNITY_MESSAGE}
+    </p>
 
     {showExcludedContracts && (
       <div data-testid="excluded-contracts">

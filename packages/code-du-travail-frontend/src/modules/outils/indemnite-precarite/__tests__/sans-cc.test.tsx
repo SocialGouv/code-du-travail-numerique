@@ -148,6 +148,15 @@ describe("SimulateurIndemnitePrecarite - Sans Convention Collective", () => {
       expect(ui.result.amount.get()).toHaveTextContent("300,00");
     });
 
+    it("calcule l'indemnité pour un CTT allé à son terme", () => {
+      fireEvent.click(screen.getByTestId("previous-button"));
+      fireEvent.click(screen.getByTestId("previous-button"));
+      fillContractSteps({ contractOptionId: "contrat-travail-temporaire" });
+      fillRemunerationTotal(3000);
+
+      expect(ui.result.amount.get()).toHaveTextContent("300,00");
+    });
+
     it("calcule l'indemnité à partir des salaires mensuels", () => {
       fireEvent.click(ui.remuneration.typeRemuneration.mensuel.get());
       fireEvent.change(ui.remuneration.dureeContrat.get(), {

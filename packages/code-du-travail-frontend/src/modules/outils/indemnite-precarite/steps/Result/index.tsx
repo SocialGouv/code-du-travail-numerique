@@ -61,7 +61,10 @@ const ResultStepComponent = () => {
   if (hasNoIndemnity) {
     return (
       <div className={fr.cx("fr-col-md-8", "fr-col-12", "fr-mb-6w")}>
-        <NoIndemnityMessage showExcludedContracts={isExcludedContract} />
+        <NoIndemnityMessage
+          message={ineligibility}
+          showExcludedContracts={isExcludedContract}
+        />
       </div>
     );
   }
