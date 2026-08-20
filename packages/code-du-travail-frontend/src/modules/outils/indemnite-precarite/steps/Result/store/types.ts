@@ -8,8 +8,6 @@ export type ResultStoreData = {
   resultReferences?: References[];
   resultFormula?: Formula;
   totalSalary?: number;
-  indemnityName?: string;
-  calculationSummary?: Record<string, any>;
 };
 
 export type ResultStoreFn = {

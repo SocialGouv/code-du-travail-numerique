@@ -16,7 +16,7 @@ const CTT: ContractOption = {
   typeCdd: TYPE_CDD.AUTRES,
 };
 
-export const AUTRES_CONTRATS: ContractOption = {
+const AUTRES_CONTRATS: ContractOption = {
   id: "autres",
   label: "Autres",
   family: CONTRACT_FAMILY.EXCLU,

@@ -1,5 +1,6 @@
 import { formatIdcc } from "@socialgouv/modeles-social";
 import {
+  CONTRACT_FAMILY,
   ContractFamily,
   FinALaDatePrevue,
   IssueContrat,
@@ -12,6 +13,13 @@ export type IndemnitePrecariteSituationInput = {
   issueContrat?: IssueContrat;
 };
 
+/** Valeur attendue par le modèle pour `contrat salarié . type de contrat`. */
+const TYPE_CONTRAT_PUBLICODES: Record<ContractFamily, string> = {
+  [CONTRACT_FAMILY.CDD]: "CDD",
+  [CONTRACT_FAMILY.CTT]: "CTT",
+  [CONTRACT_FAMILY.EXCLU]: "Exclu",
+};
+
 /**
  * Situation minimale permettant au modèle de trancher l'éligibilité, sans
  * connaître la rémunération. Elle est construite dès l'étape « Terme du
@@ -22,22 +30,24 @@ export const mapToPublicodesSituationForEligibilityIndemnitePrecarite = ({
   typeCdd,
   finALaDatePrevue,
   issueContrat,
-}: IndemnitePrecariteSituationInput): Record<string, string | undefined> => ({
-  "contrat salarié . type de contrat": `'${family === "EXCLU" ? "Exclu" : family}'`,
+}: IndemnitePrecariteSituationInput): Record<string, string> => ({
+  "contrat salarié . type de contrat": `'${TYPE_CONTRAT_PUBLICODES[family]}'`,
   "contrat salarié . type de cdd": `'${typeCdd}'`,
-  "contrat salarié . fin à la date prévue": finALaDatePrevue
-    ? `'${finALaDatePrevue}'`
-    : undefined,
-  "contrat salarié . issue du contrat": issueContrat
-    ? `'${issueContrat}'`
-    : undefined,
+  // Les réponses de l'étape « Terme du contrat » manquent tant qu'elle n'a pas
+  // été validée : on omet la clé plutôt que d'envoyer `undefined` au moteur.
+  ...(finALaDatePrevue
+    ? { "contrat salarié . fin à la date prévue": `'${finALaDatePrevue}'` }
+    : {}),
+  ...(issueContrat
+    ? { "contrat salarié . issue du contrat": `'${issueContrat}'` }
+    : {}),
 });
 
 export const mapToPublicodesSituationForCalculationIndemnitePrecarite = (
   salaireDeReference: number,
   input: IndemnitePrecariteSituationInput,
   ccn?: number
-): Record<string, string | undefined> => ({
+): Record<string, string> => ({
   "contrat salarié . convention collective": ccn
     ? `'IDCC${formatIdcc(ccn)}'`
     : "''",

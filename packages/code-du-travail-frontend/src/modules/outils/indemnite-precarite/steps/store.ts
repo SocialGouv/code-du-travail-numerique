@@ -31,13 +31,6 @@ export type MainStore = AgreementStoreSlice &
   RemunerationStoreSlice &
   ResultStoreSlice;
 
-export type StepData<T, U> = {
-  input: T;
-  error: U;
-  hasBeenSubmit: boolean;
-  isStepValid: boolean;
-};
-
 const createRootSlice = (
   set: StoreApi<MainStore>["setState"],
   get: StoreApi<MainStore>["getState"]
