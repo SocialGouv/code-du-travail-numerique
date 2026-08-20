@@ -11,7 +11,6 @@ const CDD_CONVENTIONNELS: { idcc: string; typeCdd: string }[] = [
   { idcc: "1486", typeCdd: "usage enquêteurs vacataires" },
   { idcc: "1486", typeCdd: "usage intervention évènementiel" },
   { idcc: "1516", typeCdd: "usage formateurs" },
-  { idcc: "1979", typeCdd: "usage extra" },
   { idcc: "2098", typeCdd: "usage intervention évènementiel" },
   { idcc: "2098", typeCdd: "optimisation linéaire" },
   { idcc: "2098", typeCdd: "animation commerciale" },

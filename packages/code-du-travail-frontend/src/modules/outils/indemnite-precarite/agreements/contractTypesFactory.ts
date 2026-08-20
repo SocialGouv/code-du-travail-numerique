@@ -62,14 +62,6 @@ const AGREEMENT_CONTRACT_OPTIONS: Record<number, ContractOption[]> = {
       typeCdd: TYPE_CDD.USAGE_FORMATEURS,
     },
   ],
-  1979: [
-    {
-      id: "1979-usage-extra",
-      label: "CDD d'usage / CDD d'extra",
-      family: CONTRACT_FAMILY.CDD,
-      typeCdd: TYPE_CDD.USAGE_EXTRA,
-    },
-  ],
   2098: [
     {
       id: "2098-usage-intervention-evenementiel",

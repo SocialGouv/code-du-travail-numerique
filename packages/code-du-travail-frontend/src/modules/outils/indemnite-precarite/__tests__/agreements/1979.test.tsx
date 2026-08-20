@@ -39,10 +39,4 @@ describe("SimulateurIndemnitePrecarite - IDCC 1979", () => {
     expectReference("Article L1243-8 du code du travail");
     expectReference("Article L1243-9 du code du travail");
   });
-
-  it("affiche l'indemnité conventionnelle — cas conventionnel : CDD d'usage / CDD d'extra", () => {
-    runJourney({ contractOptionId: "1979-usage-extra" });
-
-    expect(ui.result.amount.get()).toHaveTextContent("300,00");
-  });
 });

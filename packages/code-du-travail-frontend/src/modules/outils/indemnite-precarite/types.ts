@@ -40,7 +40,6 @@ export const TYPE_CDD = {
   USAGE_ENQUETEURS_VACATAIRES: "usage enquêteurs vacataires",
   USAGE_INTERVENTION_EVENEMENTIEL: "usage intervention évènementiel",
   USAGE_FORMATEURS: "usage formateurs",
-  USAGE_EXTRA: "usage extra",
   OPTIMISATION_LINEAIRE: "optimisation linéaire",
   ANIMATION_COMMERCIALE: "animation commerciale",
   USAGE_INTERVENTION_SPORT: "usage intervention sport",
