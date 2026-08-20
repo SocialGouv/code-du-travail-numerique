@@ -100,6 +100,17 @@ test.describe("Outil - Indemnité de Precarite", () => {
         "Il n'y a pas d'indemnité de précarité dans cette situation"
       )
     ).toBeVisible();
-    await expect(page.getByTestId("excluded-contracts")).toBeVisible();
+    // `data-testid` est supprimé en build production (reactRemoveProperties) :
+    // on s'appuie sur le texte, comme le reste des tests e2e.
+    await expect(page.getByText("n’est pas due en cas de")).toBeVisible();
+    await expect(
+      page.getByRole("listitem").filter({ hasText: "CDD saisonnier" }).first()
+    ).toBeVisible();
+    await expect(
+      page
+        .getByRole("listitem")
+        .filter({ hasText: "CDD dans le cadre d'un congé de mobilité" })
+        .first()
+    ).toBeVisible();
   });
 });
