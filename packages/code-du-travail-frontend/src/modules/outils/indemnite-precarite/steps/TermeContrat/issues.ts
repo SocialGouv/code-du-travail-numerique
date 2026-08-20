@@ -48,7 +48,6 @@ const ISSUES_TERME_CTT: IssueOption[] = [
       "Le salarié a été immédiatement embauché en CDI dans l'entreprise utilisatrice",
   },
   {
-    // TODO métier : le libellé de l'infobulle reste à préciser (issue #7142).
     value: ISSUE_CONTRAT.REFUS_SOUPLESSE,
     label:
       "Refus de la mise en œuvre de la souplesse prévue au contrat de mission",
