@@ -8,8 +8,17 @@ const engine = new IndemnitePrecaritePublicodes(
 describe("Test de la fonctionnalité 'calculate'", () => {
   test.each([
     {
-      expectedResult: { expectedValue: 180, unit: "€" },
+      expectedResult: { expectedValue: 300, unit: "€" },
       expectedReferences: [
+        {
+          article:
+            "Article 4.1 de l'accord du 20 septembre 2002 relatif aux dispositions spécifiques à l'accueil événementiel",
+          url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000028460654/?idConteneur=KALICONT000005635550",
+        },
+        {
+          article: "Article L1243-4 du code du travail",
+          url: "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000024026880",
+        },
         {
           article: "Article L1243-8 du code du travail",
           url: "https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006901219&cidTexte=LEGITEXT000006072050&dateTexte=20080501",
@@ -18,10 +27,14 @@ describe("Test de la fonctionnalité 'calculate'", () => {
           article: "Article L1243-9 du code du travail",
           url: "https://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=0FA35871C82B78139407AE9BD9480D9B.tplgfr31s_2?idArticle=LEGIARTI000006901220&cidTexte=LEGITEXT000006072050&dateTexte=20080501&categorieLien=id&oldAction=&nbResultRech=",
         },
+        {
+          article: "Article L1243-10 du code du travail",
+          url: "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006901221",
+        },
       ],
       expectedNotifications: [],
       expectedFormula: {
-        formula: "6/100 * S",
+        formula: "1/10 * S",
         explanations: ["S : Salaires renseignés (3000 €)"],
       },
       situation: {
@@ -34,7 +47,11 @@ describe("Test de la fonctionnalité 'calculate'", () => {
         {
           article:
             "Article 9 de l'accord du 10 mai 2010 relatif à l'activité d'optimisation de linéaires",
-          url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000023105275&cidTexte=KALITEXT000023105252&dateTexte=20190918",
+          url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000023105275/?idConteneur=KALICONT000005635550",
+        },
+        {
+          article: "Article L1243-4 du code du travail",
+          url: "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000024026880",
         },
         {
           article: "Article L1243-8 du code du travail",
@@ -43,6 +60,10 @@ describe("Test de la fonctionnalité 'calculate'", () => {
         {
           article: "Article L1243-9 du code du travail",
           url: "https://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=0FA35871C82B78139407AE9BD9480D9B.tplgfr31s_2?idArticle=LEGIARTI000006901220&cidTexte=LEGITEXT000006072050&dateTexte=20080501&categorieLien=id&oldAction=&nbResultRech=",
+        },
+        {
+          article: "Article L1243-10 du code du travail",
+          url: "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006901221",
         },
       ],
       expectedNotifications: [],
@@ -57,8 +78,12 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedReferences: [
         {
           article:
-            "Article 9 de l'accord du 13 février 2006 Activités de l'animation commerciale",
-          url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=793A05966FD38DF94E5C833A2BA3BAA6.tplgfr35s_3?idArticle=KALIARTI000005853800&cidTexte=KALITEXT000005680889&dateTexte=29990101&categorieLien=id",
+            "Article 9 de l'avenant du 13 février 2006 relatif à l'animation commerciale",
+          url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005853800/?idConteneur=KALICONT000005635550",
+        },
+        {
+          article: "Article L1243-4 du code du travail",
+          url: "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000024026880",
         },
         {
           article: "Article L1243-8 du code du travail",
@@ -67,6 +92,10 @@ describe("Test de la fonctionnalité 'calculate'", () => {
         {
           article: "Article L1243-9 du code du travail",
           url: "https://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=0FA35871C82B78139407AE9BD9480D9B.tplgfr31s_2?idArticle=LEGIARTI000006901220&cidTexte=LEGITEXT000006072050&dateTexte=20080501&categorieLien=id&oldAction=&nbResultRech=",
+        },
+        {
+          article: "Article L1243-10 du code du travail",
+          url: "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006901221",
         },
       ],
       expectedNotifications: [],

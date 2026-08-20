@@ -43,7 +43,14 @@ describe("SimulateurIndemnitePrecarite - IDCC 2098", () => {
   it("affiche l'indemnité conventionnelle — cas conventionnel : CDD d'usage / CDD d'intervention pour le secteur évènementiel", () => {
     runJourney({ contractOptionId: "2098-usage-intervention-evenementiel" });
 
-    expect(ui.result.amount.get()).toHaveTextContent("180,00");
+    expect(ui.result.amount.get()).toHaveTextContent("300,00");
+    expectReference(
+      "Article 4.1 de l'accord du 20 septembre 2002 relatif aux dispositions spécifiques à l'accueil événementiel"
+    );
+    expectReference("Article L1243-4 du code du travail");
+    expectReference("Article L1243-8 du code du travail");
+    expectReference("Article L1243-9 du code du travail");
+    expectReference("Article L1243-10 du code du travail");
   });
 
   it("affiche l'indemnité conventionnelle — cas conventionnel : CDD d'optimisation linéaire", () => {
@@ -53,6 +60,10 @@ describe("SimulateurIndemnitePrecarite - IDCC 2098", () => {
     expectReference(
       "Article 9 de l'accord du 10 mai 2010 relatif à l'activité d'optimisation de linéaires"
     );
+    expectReference("Article L1243-4 du code du travail");
+    expectReference("Article L1243-8 du code du travail");
+    expectReference("Article L1243-9 du code du travail");
+    expectReference("Article L1243-10 du code du travail");
   });
 
   it("affiche l'indemnité conventionnelle — cas conventionnel : CDD d'animation commerciale", () => {
@@ -60,7 +71,11 @@ describe("SimulateurIndemnitePrecarite - IDCC 2098", () => {
 
     expect(ui.result.amount.get()).toHaveTextContent("300,00");
     expectReference(
-      "Article 9 de l'accord du 13 février 2006 Activités de l'animation commerciale"
+      "Article 9 de l'avenant du 13 février 2006 relatif à l'animation commerciale"
     );
+    expectReference("Article L1243-4 du code du travail");
+    expectReference("Article L1243-8 du code du travail");
+    expectReference("Article L1243-9 du code du travail");
+    expectReference("Article L1243-10 du code du travail");
   });
 });
