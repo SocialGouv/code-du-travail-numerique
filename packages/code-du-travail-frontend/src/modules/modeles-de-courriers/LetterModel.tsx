@@ -10,8 +10,9 @@ import { CopyButton } from "./components/CopyButton";
 import { LetterModelContent } from "./components/LetterModelContent";
 import { RelatedItem } from "../documents";
 import { useModeleEvents } from "./tracking";
-import Breadcrumb from "@codegouvfr/react-dsfr/Breadcrumb";
-import { ArticleJsonLd, BreadcrumbListJsonLd } from "../seo/jsonld";
+import { Breadcrumbs, listingSegment } from "../layout/breadcrumb";
+import { SOURCES } from "@socialgouv/cdtn-utils";
+import { ArticleJsonLd } from "../seo/jsonld";
 import { ContentMeta } from "../common/ContentMeta";
 import { notifyNpsTrigger } from "../nps/triggerBus";
 import { NpsTrigger } from "../nps/constants";
@@ -61,27 +62,16 @@ export const LetterModel = ({
 
   return (
     <>
-      <BreadcrumbListJsonLd
-        currentPageLabel={title}
-        items={breadcrumbs.map(({ label, slug }) => ({
-          label,
-          href: slug,
-        }))}
-      />
       <ArticleJsonLd
         title={title}
         datePublished={date}
         breadcrumbs={breadcrumbs}
       />
-      <Breadcrumb
+      {/* Remonte vers la page qui regroupe les modèles : la chaîne de thèmes
+          est portée par les tags de ContentMeta, sous le titre. */}
+      <Breadcrumbs
         currentPageLabel={title}
-        homeLinkProps={{
-          href: "/",
-        }}
-        segments={breadcrumbs.map(({ label, slug }) => ({
-          label: <>{label}</>,
-          linkProps: { href: slug },
-        }))}
+        segments={[listingSegment(SOURCES.LETTERS)]}
         className={fr.cx("fr-mb-2w", "fr-mt-2w")}
       />
       <div

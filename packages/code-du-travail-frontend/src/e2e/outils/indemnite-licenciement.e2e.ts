@@ -1,5 +1,10 @@
 import { test, expect } from "@playwright/test";
 import { formatToEuro } from "../helpers/format";
+import { contractDates } from "../helpers/dates";
+
+// 23 ans et 5 mois d'ancienneté, moins les 2 mois d'absence saisis plus bas :
+// le montant attendu ci-dessous en découle.
+const { startDate, endDate } = contractDates({ years: 23, months: 5 });
 
 test.describe("Outil - Indemnité de licenciement", () => {
   test("Calcul de l'indemnité de licenciement", async ({ page }) => {
@@ -22,9 +27,9 @@ test.describe("Outil - Indemnité de licenciement", () => {
     await page.getByRole("button", { name: "Suivant" }).click();
 
     // Dates
-    await page.locator("#dateEntree").fill("2003-01-01");
-    await page.locator("#dateNotification").fill("2026-06-01");
-    await page.locator("#dateSortie").fill("2026-06-01");
+    await page.locator("#dateEntree").fill(startDate);
+    await page.locator("#dateNotification").fill(endDate);
+    await page.locator("#dateSortie").fill(endDate);
     await page.getByRole("button", { name: "Suivant" }).click();
 
     // Absences

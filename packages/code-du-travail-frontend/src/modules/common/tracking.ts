@@ -1,6 +1,7 @@
 import { usePathname } from "next/navigation";
 import { SITE_URL } from "../../config";
 import { sendEvent } from "@socialgouv/matomo-next";
+import { toEventName } from "../analytics/eventName";
 
 enum CommonCategory {
   SELECTED_RELATED = "selectRelated",
@@ -15,11 +16,6 @@ type SocialNetwork =
   | "email"
   | "whatsapp"
   | "copier";
-
-// Slug d'event Matomo = chemin sans le slash initial (`themes/mon-slug`,
-// `contribution/mon-slug`) : type de page + slug, sans l'URL complète.
-// Harmonisé avec les autres events récents (cf. nps/tracking.ts).
-const toEventName = (path: string): string => path.replace(/^\/+/, "");
 
 export const useCommonTracking = () => {
   const pathname = usePathname() ?? "";

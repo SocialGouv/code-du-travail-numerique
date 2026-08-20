@@ -14,7 +14,7 @@ type Props = {
 
 export function NewsList({ news, totalPages, currentPage }: Props) {
   return (
-    <ContainerWithBreadcrumbs currentPage={"Actualités"} breadcrumbs={[]}>
+    <ContainerWithBreadcrumbs currentPage={"Actualités"}>
       <h1 id="actualites" className={fr.cx("fr-mt-0", "fr-mb-6w")}>
         Actualités
       </h1>

@@ -68,6 +68,13 @@ test.describe("Contributions", () => {
       "Renouvellement de la période d'essai : comment faire ? quelles conditions ? "
     );
 
+    // Le fil d'Ariane remonte vers la page qui regroupe les fiches pratiques (#7378).
+    await expect(
+      page
+        .getByRole("navigation", { name: /vous êtes ici/i })
+        .getByRole("link", { name: "Fiches pratiques" })
+    ).toHaveAttribute("href", "/contribution");
+
     await page
       .getByLabel("Je ne souhaite pas renseigner ma convention collective.")
       .check({ force: true });
@@ -82,6 +89,49 @@ test.describe("Contributions", () => {
     ).toBeVisible();
     await expect(page.locator("body")).toContainText("Références");
     await expect(page.locator("body")).toContainText("L1221-21");
+  });
+
+  const CONTRIBUTION_SLUG = "la-periode-dessai-peut-elle-etre-renouvelee";
+  const AGREEMENT_DECLINATIONS_LABEL =
+    "Votre réponse en fonction de votre convention collective";
+
+  test("le HTML servi contient les liens vers les déclinaisons par CC", async ({
+    request,
+  }) => {
+    // Maillage interne (#7355) : les liens doivent être dans la réponse du
+    // serveur, sans exécution de JavaScript ni ouverture de l'accordéon.
+    const response = await request.get(`/contribution/${CONTRIBUTION_SLUG}`);
+    expect(response.ok()).toBe(true);
+    const html = await response.text();
+
+    expect(html).toContain(AGREEMENT_DECLINATIONS_LABEL);
+    const declinationLinks = html.match(
+      new RegExp(`href="/contribution/\\d+-${CONTRIBUTION_SLUG}"`, "g")
+    );
+    expect(declinationLinks?.length ?? 0).toBeGreaterThan(0);
+  });
+
+  test("je peux ouvrir les déclinaisons par CC depuis la réponse générique", async ({
+    page,
+  }) => {
+    await page.goto(`/contribution/${CONTRIBUTION_SLUG}`);
+    await page
+      .getByLabel("Je ne souhaite pas renseigner ma convention collective.")
+      .check({ force: true });
+    await page
+      .getByRole("button", { name: "Afficher les informations" })
+      .click();
+
+    const accordion = page.getByRole("button", {
+      name: AGREEMENT_DECLINATIONS_LABEL,
+    });
+    await expect(accordion).toHaveAttribute("aria-expanded", "false");
+    await accordion.click();
+
+    const declinations = page.locator(
+      `a[href^="/contribution/"][href$="-${CONTRIBUTION_SLUG}"]`
+    );
+    await expect(declinations.first()).toBeVisible();
   });
 
   test("je vois une page contribution pour une CC", async ({

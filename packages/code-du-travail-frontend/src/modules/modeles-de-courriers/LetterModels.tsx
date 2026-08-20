@@ -18,7 +18,7 @@ export const LetterModels = ({ modeles }: Props) => {
   const [selectedTheme, setTheme] = useState<string>("");
 
   return (
-    <ContainerList title="Modèles de documents" segments={[]}>
+    <ContainerList title="Modèles de documents">
       <h1 id="modeles" className={fr.cx("fr-mt-0", "fr-mb-6w")}>
         Modèles de documents
       </h1>

@@ -1,17 +1,15 @@
 import { fr } from "@codegouvfr/react-dsfr";
+import { Breadcrumbs, BreadcrumbSegment } from "./breadcrumb";
 import { RelatedItems } from "../common/RelatedItems";
 import { Share } from "../common/Share";
 import { ContainerRichProps } from "./ContainerRich";
-import { Breadcrumb as BreadcrumbType } from "@socialgouv/cdtn-types";
-import Breadcrumb from "@codegouvfr/react-dsfr/Breadcrumb";
 import { Feedback } from "./feedback";
 import React from "react";
-import { BreadcrumbListJsonLd } from "../seo/jsonld";
 import { WhatsNewLink } from "./whatsnew";
 
 type Props = ContainerRichProps & {
   currentPage: string;
-  breadcrumbs: BreadcrumbType[];
+  breadcrumbSegments?: BreadcrumbSegment[];
   showShare?: boolean;
 };
 
@@ -20,7 +18,7 @@ export const ContainerRichWithBreadcrumbs = ({
   relatedItems,
   title,
   description,
-  breadcrumbs,
+  breadcrumbSegments = [],
   currentPage,
   showFeedback = true,
   showWhatsNewLink = false,
@@ -28,22 +26,9 @@ export const ContainerRichWithBreadcrumbs = ({
 }: Props) => {
   return (
     <div>
-      <BreadcrumbListJsonLd
+      <Breadcrumbs
         currentPageLabel={currentPage}
-        items={breadcrumbs.map(({ label, slug }) => ({
-          label,
-          href: slug,
-        }))}
-      />
-      <Breadcrumb
-        currentPageLabel={currentPage}
-        homeLinkProps={{
-          href: "/",
-        }}
-        segments={breadcrumbs.map(({ label, slug }) => ({
-          label: <>{label}</>,
-          linkProps: { href: slug },
-        }))}
+        segments={breadcrumbSegments}
         className={fr.cx("fr-mb-2w", "fr-mt-2w")}
       />
       <div

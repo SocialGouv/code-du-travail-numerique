@@ -31,12 +31,9 @@ async function Theme(props) {
         data={subThemes}
         popularSlugs={[]}
         breadcrumbSegments={[
-          {
-            label: "Thèmes",
-            linkProps: {
-              href: "/themes",
-            },
-          },
+          // Libellé écrit en dur : `labelBySource[SOURCES.THEMES]` vaut
+          // « Themes », sans accent.
+          { label: "Thèmes", href: "/themes" },
         ]}
       />
     </DsfrLayout>

@@ -17,10 +17,10 @@ export const IntegrationDetailPageContent = ({
   return (
     <ContainerList
       title={widget.shortTitle}
-      segments={[
+      breadcrumbSegments={[
         {
           label: "Intégrer les contenus du Code du travail numérique",
-          linkProps: { href: "/integration" },
+          href: "/integration",
         },
       ]}
     >

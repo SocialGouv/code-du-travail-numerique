@@ -97,7 +97,7 @@ export function ContributionPersonalizedAgreementSearch({
       <hr className={fr.cx("fr-mt-2w")} />
 
       <p className={fr.cx("fr-h6", "fr-mb-1v")} role="heading" aria-level={3}>
-        Ce n&apos;est pas la bonne convention&nbsp;?
+        {"Ce n'est pas la bonne convention\u00a0?"}
       </p>
 
       <AgreementSearchFormBlock

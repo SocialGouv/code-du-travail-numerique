@@ -1,8 +1,8 @@
 {
   "scan_root": "packages/code-du-travail-frontend/src",
-  "callsites": 74,
-  "total_events": 111,
-  "unique_events": 102,
+  "callsites": 76,
+  "total_events": 113,
+  "unique_events": 104,
   "unresolved_callsites": 0,
   "events": [
     {
@@ -23,7 +23,7 @@
       "resolution": "dynamic",
       "emit_function": "trackDisplayed",
       "file": "packages/code-du-travail-frontend/src/modules/nps/tracking.ts",
-      "line": 17,
+      "line": 14,
       "enum_refs": [],
       "tracking_method": "sendEvent"
     },
@@ -34,7 +34,7 @@
       "resolution": "dynamic",
       "emit_function": "trackOptOut",
       "file": "packages/code-du-travail-frontend/src/modules/nps/tracking.ts",
-      "line": 35,
+      "line": 32,
       "enum_refs": [],
       "tracking_method": "sendEvent"
     },
@@ -45,7 +45,7 @@
       "resolution": "dynamic",
       "emit_function": "trackRefusal",
       "file": "packages/code-du-travail-frontend/src/modules/nps/tracking.ts",
-      "line": 25,
+      "line": 22,
       "enum_refs": [],
       "tracking_method": "sendEvent"
     },
@@ -56,7 +56,7 @@
       "resolution": "dynamic",
       "emit_function": "emitClickThemeTag",
       "file": "packages/code-du-travail-frontend/src/modules/common/tracking.ts",
-      "line": 46,
+      "line": 42,
       "enum_refs": [
         "CommonCategory.CLICK_THEME_TAG",
         "JSON.stringify"
@@ -120,13 +120,27 @@
       "tracking_method": "sendEvent"
     },
     {
+      "category": "cc_enterprise_search",
+      "action": "show_agreements",
+      "name_pattern": "<String(count)>",
+      "resolution": "literal",
+      "emit_function": "emitShowAgreements",
+      "file": "packages/code-du-travail-frontend/src/modules/enterprise/EnterpriseAgreementSearch/tracking.ts",
+      "line": 45,
+      "enum_refs": [
+        "TrackingAgreementSearchCategory.CC_ENTERPRISE_SEARCH",
+        "TrackingEnterpriseAgreementSearchAction.SHOW_AGREEMENTS"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
       "category": "cc_search_type_of_users",
       "action": "click_je_n_ai_pas_d_entreprise",
       "name_pattern": "Trouver sa convention collective",
       "resolution": "literal",
       "emit_function": "emitNoEnterpriseClickEvent",
       "file": "packages/code-du-travail-frontend/src/modules/enterprise/EnterpriseAgreementSearch/tracking.ts",
-      "line": 52,
+      "line": 69,
       "enum_refs": [
         "TrackingAgreementSearchAction.AGREEMENT_SEARCH",
         "TrackingAgreementSearchAction.CLICK_NO_COMPANY",
@@ -141,7 +155,7 @@
       "resolution": "literal",
       "emit_function": "emitClickP1",
       "file": "packages/code-du-travail-frontend/src/modules/contributions/tracking.ts",
-      "line": 67,
+      "line": 69,
       "enum_refs": [
         "TrackingAgreementSearchAction.CLICK_P1",
         "TrackingContributionCategory.CC_SEARCH_TYPE_OF_USERS"
@@ -155,7 +169,7 @@
       "resolution": "literal",
       "emit_function": "emitNavigateAgreementSearchEvent",
       "file": "packages/code-du-travail-frontend/src/modules/convention-collective/tracking.ts",
-      "line": 35,
+      "line": 36,
       "enum_refs": [
         "TrackingAgreementSearchAction.AGREEMENT_SEARCH",
         "TrackingAgreementSearchAction.CLICK_P1",
@@ -184,7 +198,7 @@
       "resolution": "literal",
       "emit_function": "emitClickP2",
       "file": "packages/code-du-travail-frontend/src/modules/contributions/tracking.ts",
-      "line": 75,
+      "line": 77,
       "enum_refs": [
         "TrackingAgreementSearchAction.CLICK_P2",
         "TrackingContributionCategory.CC_SEARCH_TYPE_OF_USERS"
@@ -198,7 +212,7 @@
       "resolution": "literal",
       "emit_function": "emitNavigateEnterpriseSearchEvent",
       "file": "packages/code-du-travail-frontend/src/modules/convention-collective/tracking.ts",
-      "line": 43,
+      "line": 44,
       "enum_refs": [
         "TrackingAgreementSearchAction.AGREEMENT_SEARCH",
         "TrackingAgreementSearchAction.CLICK_P2",
@@ -227,7 +241,7 @@
       "resolution": "literal",
       "emit_function": "emitClickP3",
       "file": "packages/code-du-travail-frontend/src/modules/contributions/tracking.ts",
-      "line": 83,
+      "line": 85,
       "enum_refs": [
         "TrackingAgreementSearchAction.CLICK_P3",
         "TrackingContributionCategory.CC_SEARCH_TYPE_OF_USERS"
@@ -255,7 +269,7 @@
       "resolution": "literal",
       "emit_function": "emitNoEnterpriseSelectEvent",
       "file": "packages/code-du-travail-frontend/src/modules/enterprise/EnterpriseAgreementSearch/tracking.ts",
-      "line": 59,
+      "line": 76,
       "enum_refs": [
         "TrackingAgreementSearchAction.AGREEMENT_SEARCH",
         "TrackingAgreementSearchAction.SELECT_NO_COMPANY",
@@ -284,7 +298,7 @@
       "resolution": "dynamic",
       "emit_function": "emitSelectEvent",
       "file": "packages/code-du-travail-frontend/src/modules/convention-collective/tracking.ts",
-      "line": 51,
+      "line": 52,
       "enum_refs": [
         "TrackingAgreementSearchCategory.CC_SELECT_P1"
       ],
@@ -375,7 +389,7 @@
       "resolution": "literal",
       "emit_function": "emitSelectEvent",
       "file": "packages/code-du-travail-frontend/src/modules/convention-collective/tracking.ts",
-      "line": 51,
+      "line": 52,
       "enum_refs": [
         "TrackingAgreementSearchCategory.CC_SELECT_P1"
       ],
@@ -388,7 +402,7 @@
       "resolution": "dynamic",
       "emit_function": "emitSelectEnterpriseAgreementEvent",
       "file": "packages/code-du-travail-frontend/src/modules/enterprise/EnterpriseAgreementSearch/tracking.ts",
-      "line": 36,
+      "line": 53,
       "enum_refs": [
         "TrackingAgreementSearchCategory.CC_SELECT_P2"
       ],
@@ -479,7 +493,7 @@
       "resolution": "literal",
       "emit_function": "emitSelectEnterpriseAgreementEvent",
       "file": "packages/code-du-travail-frontend/src/modules/enterprise/EnterpriseAgreementSearch/tracking.ts",
-      "line": 36,
+      "line": 53,
       "enum_refs": [
         "TrackingAgreementSearchCategory.CC_SELECT_P2"
       ],
@@ -492,7 +506,7 @@
       "resolution": "dynamic",
       "emit_function": "emitClickShare",
       "file": "packages/code-du-travail-frontend/src/modules/common/tracking.ts",
-      "line": 36,
+      "line": 32,
       "enum_refs": [
         "CommonCategory.CLICK_SHARE"
       ],
@@ -547,10 +561,24 @@
       "resolution": "literal",
       "emit_function": "emitClickTableFullscreen",
       "file": "packages/code-du-travail-frontend/src/modules/contributions/tracking.ts",
-      "line": 91,
+      "line": 93,
       "enum_refs": [
         "SOURCES.CONTRIBUTIONS",
         "TrackingContributionAction.BTN_TABLE_FULLSCREEN",
+        "TrackingContributionCategory.CONTRIBUTION"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "contribution",
+      "action": "clic_declinaison_cc",
+      "name_pattern": "<toEventName(href)>",
+      "resolution": "literal",
+      "emit_function": "emitClickAgreementDeclination",
+      "file": "packages/code-du-travail-frontend/src/modules/contributions/tracking.ts",
+      "line": 117,
+      "enum_refs": [
+        "TrackingContributionAction.CLICK_AGREEMENT_DECLINATION",
         "TrackingContributionCategory.CONTRIBUTION"
       ],
       "tracking_method": "sendEvent"
@@ -562,7 +590,7 @@
       "resolution": "literal",
       "emit_function": "emitDisplayAgreementContent",
       "file": "packages/code-du-travail-frontend/src/modules/contributions/tracking.ts",
-      "line": 43,
+      "line": 45,
       "enum_refs": [
         "TrackingAgreementSearchAction.CLICK_DISPLAY_AGREEMENT_CONTENT",
         "TrackingContributionCategory.CONTRIBUTION"
@@ -576,7 +604,7 @@
       "resolution": "literal",
       "emit_function": "emitDisplayGeneralContent",
       "file": "packages/code-du-travail-frontend/src/modules/contributions/tracking.ts",
-      "line": 59,
+      "line": 61,
       "enum_refs": [
         "TrackingAgreementSearchAction.CLICK_DISPLAY_GENERAL_CONTENT",
         "TrackingContributionCategory.CONTRIBUTION"
@@ -590,7 +618,7 @@
       "resolution": "literal",
       "emit_function": "emitDisplayGenericContent",
       "file": "packages/code-du-travail-frontend/src/modules/contributions/tracking.ts",
-      "line": 51,
+      "line": 53,
       "enum_refs": [
         "TrackingAgreementSearchAction.CLICK_DISPLAY_GENERIC_CONTENT",
         "TrackingContributionCategory.CONTRIBUTION"
@@ -604,7 +632,7 @@
       "resolution": "literal",
       "emit_function": "emitContentViewed",
       "file": "packages/code-du-travail-frontend/src/modules/contributions/tracking.ts",
-      "line": 103,
+      "line": 105,
       "enum_refs": [
         "SOURCES.CONTRIBUTIONS",
         "TrackingContributionAction.CONTENT_VIEWED",
@@ -619,7 +647,7 @@
       "resolution": "dynamic",
       "emit_function": "emitEnterpriseAgreementSearchInputEvent",
       "file": "packages/code-du-travail-frontend/src/modules/enterprise/EnterpriseAgreementSearch/tracking.ts",
-      "line": 14,
+      "line": 18,
       "enum_refs": [
         "JSON.stringify",
         "TrackingAgreementSearchCategory.ENTERPRISE_SEARCH"
@@ -633,7 +661,7 @@
       "resolution": "dynamic",
       "emit_function": "emitSelectEnterpriseEvent",
       "file": "packages/code-du-travail-frontend/src/modules/enterprise/EnterpriseAgreementSearch/tracking.ts",
-      "line": 28,
+      "line": 32,
       "enum_refs": [
         "JSON.stringify",
         "TrackingAgreementSearchCategory.CC_ENTERPRISE_SELECT"
@@ -992,7 +1020,7 @@
       "resolution": "literal",
       "emit_function": "emitAgreementUntreatedEvent",
       "file": "packages/code-du-travail-frontend/src/modules/contributions/tracking.ts",
-      "line": 35,
+      "line": 37,
       "enum_refs": [
         "MatomoAgreementEvent.CC_UNTREATED",
         "TrackingContributionCategory.TOOL"
@@ -1020,7 +1048,7 @@
       "resolution": "literal",
       "emit_function": "emitAgreementTreatedEvent",
       "file": "packages/code-du-travail-frontend/src/modules/contributions/tracking.ts",
-      "line": 27,
+      "line": 29,
       "enum_refs": [
         "MatomoAgreementEvent.CC_TREATED",
         "TrackingContributionCategory.TOOL"
@@ -1182,7 +1210,7 @@
       "resolution": "literal",
       "emit_function": "emitViewStepEvent",
       "file": "packages/code-du-travail-frontend/src/modules/convention-collective/tracking.ts",
-      "line": 27,
+      "line": 28,
       "enum_refs": [
         "TrackingAgreementSearchAction.AGREEMENT_SEARCH"
       ],
@@ -1408,7 +1436,7 @@
       "resolution": "dynamic",
       "emit_function": "emitSelectRelated",
       "file": "packages/code-du-travail-frontend/src/modules/common/tracking.ts",
-      "line": 29,
+      "line": 25,
       "enum_refs": [
         "CommonCategory.SELECTED_RELATED",
         "JSON.stringify"
@@ -1450,7 +1478,7 @@
       "resolution": "literal",
       "emit_function": "emitPreviousEvent",
       "file": "packages/code-du-travail-frontend/src/modules/convention-collective/tracking.ts",
-      "line": 59,
+      "line": 60,
       "enum_refs": [
         "TrackingAgreementSearchAction.AGREEMENT_SEARCH",
         "TrackingAgreementSearchAction.BACK_STEP_P1",
@@ -1465,7 +1493,7 @@
       "resolution": "literal",
       "emit_function": "emitPreviousEvent",
       "file": "packages/code-du-travail-frontend/src/modules/enterprise/EnterpriseAgreementSearch/tracking.ts",
-      "line": 44,
+      "line": 61,
       "enum_refs": [
         "TrackingAgreementSearchAction.AGREEMENT_SEARCH",
         "TrackingAgreementSearchAction.BACK_STEP_P2",

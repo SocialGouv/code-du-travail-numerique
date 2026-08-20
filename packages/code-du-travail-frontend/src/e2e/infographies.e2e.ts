@@ -63,10 +63,19 @@ test.describe("Pages infographies", () => {
     await expect(page.getByRole("heading", { level: 1 })).toHaveText(
       "Que se passe-t-il en cas d'abandon de poste ?"
     );
-    // Le thème « Abandon de poste » apparaît à la fois dans le fil d'Ariane et
-    // dans le tag de thème sous le titre : on cible le premier lien (fil d'Ariane).
+    // Le fil d'Ariane remonte vers la page qui regroupe les infographies (#7378).
+    const breadcrumb = page.getByRole("navigation", { name: /vous êtes ici/i });
     await expect(
-      page.getByRole("link", { name: /Abandon de poste/ }).first()
+      breadcrumb.getByRole("link", { name: "Infographies" })
+    ).toHaveAttribute("href", "/infographie");
+    await expect(
+      breadcrumb.getByRole("link", { name: /Abandon de poste/ })
+    ).toHaveCount(0);
+    // Le thème reste atteignable, mais par le tag sous le titre.
+    await expect(
+      page.locator("ul.fr-tags-group").getByRole("link", {
+        name: /Abandon de poste/,
+      })
     ).toBeVisible();
     await expect(
       page.getByText(

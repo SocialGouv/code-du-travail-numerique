@@ -73,7 +73,12 @@ describe("<ContributionGeneric />", () => {
     });
     expect(sendEvent).toHaveBeenCalledTimes(0);
 
-    render(<ContributionGeneric contribution={contribution} />);
+    render(
+      <ContributionGeneric
+        contribution={contribution}
+        agreementDeclinations={[]}
+      />
+    );
     fireEvent.click(ccUi.radio.agreementSearchOption.get());
     await userEvent.click(ccUi.searchByName.input.get());
     await userEvent.type(ccUi.searchByName.input.get(), "1388");
@@ -126,7 +131,12 @@ describe("<ContributionGeneric />", () => {
     });
     expect(sendEvent).toHaveBeenCalledTimes(0);
 
-    render(<ContributionGeneric contribution={contribution} />);
+    render(
+      <ContributionGeneric
+        contribution={contribution}
+        agreementDeclinations={[]}
+      />
+    );
     fireEvent.click(ccUi.radio.agreementSearchOption.get());
     await userEvent.click(ccUi.searchByName.input.get());
     await userEvent.type(ccUi.searchByName.input.get(), "16");
@@ -178,7 +188,12 @@ describe("<ContributionGeneric />", () => {
   it("je ne connais pas ma CC", async () => {
     expect(sendEvent).toHaveBeenCalledTimes(0);
 
-    render(<ContributionGeneric contribution={contribution} />);
+    render(
+      <ContributionGeneric
+        contribution={contribution}
+        agreementDeclinations={[]}
+      />
+    );
     await userEvent.click(ccUi.radio.enterpriseSearchOption.get());
     await userEvent.click(ccUi.searchByEnterprise.input.get());
     await userEvent.type(ccUi.searchByEnterprise.input.get(), "carrefour");
@@ -195,7 +210,7 @@ describe("<ContributionGeneric />", () => {
       byText(/Vous avez sélectionné la convention collective/).query()
     ).toBeInTheDocument();
 
-    expect(sendEvent).toHaveBeenCalledTimes(5);
+    expect(sendEvent).toHaveBeenCalledTimes(6);
     // @ts-ignore
     expect(sendEvent.mock.calls).toEqual([
       [
@@ -233,13 +248,28 @@ describe("<ContributionGeneric />", () => {
           name: "2216",
         },
       ],
+      // Le nombre de CC trouvées pour l'entreprise part depuis un `useEffect`,
+      // donc après les events émis dans les gestionnaires de clic : il ferme la
+      // séquence. Carrefour Proximité n'a qu'une convention, d'où `name: "1"`.
+      [
+        {
+          action: "show_agreements",
+          category: "cc_enterprise_search",
+          name: "1",
+        },
+      ],
     ]);
   });
 
   it("afficher les infos - sans radio sélectionné : le clic sur le bouton principal est bloqué et n'envoie aucun évènement", async () => {
     expect(sendEvent).toHaveBeenCalledTimes(0);
 
-    render(<ContributionGeneric contribution={contribution} />);
+    render(
+      <ContributionGeneric
+        contribution={contribution}
+        agreementDeclinations={[]}
+      />
+    );
     expect(ui.generic.buttonDisplayInfo.get()).toBeInTheDocument();
     fireEvent.click(ui.generic.buttonDisplayInfo.get());
     expect(ui.generic.missingRouteError.query()).toBeInTheDocument();
@@ -249,7 +279,12 @@ describe("<ContributionGeneric />", () => {
   it("voir les infos générales via l'option « Je ne souhaite pas renseigner ma convention collective »", () => {
     expect(sendEvent).toHaveBeenCalledTimes(0);
 
-    render(<ContributionGeneric contribution={contribution} />);
+    render(
+      <ContributionGeneric
+        contribution={contribution}
+        agreementDeclinations={[]}
+      />
+    );
 
     fireEvent.click(ui.generic.radioNoAgreement.get());
     expect(sendEvent).toHaveBeenCalledTimes(1);
@@ -271,7 +306,12 @@ describe("<ContributionGeneric />", () => {
   });
 
   it("affiche le lien « La convention collective, c'est quoi ? » dès l'arrivée, en haut de la façade (et sans le dupliquer dans le flux entreprise)", async () => {
-    render(<ContributionGeneric contribution={contribution} />);
+    render(
+      <ContributionGeneric
+        contribution={contribution}
+        agreementDeclinations={[]}
+      />
+    );
 
     const link = byRole("link", {
       name: /La convention collective, c'est quoi/,
@@ -311,7 +351,12 @@ describe("<ContributionGeneric />", () => {
         id: "1388",
       });
 
-      render(<ContributionGeneric contribution={contribution} />);
+      render(
+        <ContributionGeneric
+          contribution={contribution}
+          agreementDeclinations={[]}
+        />
+      );
       fireEvent.click(ccUi.radio.agreementSearchOption.get());
       await userEvent.click(ccUi.searchByName.input.get());
       await userEvent.type(ccUi.searchByName.input.get(), "1388");
@@ -330,7 +375,12 @@ describe("<ContributionGeneric />", () => {
     });
 
     it("affiche le message d'erreur sous les radios quand on clique 'Afficher les informations' sans rien sélectionner", () => {
-      render(<ContributionGeneric contribution={contribution} />);
+      render(
+        <ContributionGeneric
+          contribution={contribution}
+          agreementDeclinations={[]}
+        />
+      );
 
       expect(ui.generic.missingRouteError.query()).not.toBeInTheDocument();
 
@@ -341,7 +391,12 @@ describe("<ContributionGeneric />", () => {
     });
 
     it("affiche une erreur inline sur la recherche de convention quand on clique 'Afficher les informations' sans avoir choisi de CC", () => {
-      render(<ContributionGeneric contribution={contribution} />);
+      render(
+        <ContributionGeneric
+          contribution={contribution}
+          agreementDeclinations={[]}
+        />
+      );
 
       fireEvent.click(ccUi.radio.agreementSearchOption.get());
       expect(ui.generic.agreementRequiredError.query()).not.toBeInTheDocument();
@@ -353,7 +408,12 @@ describe("<ContributionGeneric />", () => {
     });
 
     it("affiche une erreur inline sur la recherche d'entreprise quand on clique 'Afficher les informations' sans avoir saisi d'entreprise", () => {
-      render(<ContributionGeneric contribution={contribution} />);
+      render(
+        <ContributionGeneric
+          contribution={contribution}
+          agreementDeclinations={[]}
+        />
+      );
 
       fireEvent.click(ccUi.radio.enterpriseSearchOption.get());
       expect(
@@ -367,7 +427,12 @@ describe("<ContributionGeneric />", () => {
     });
 
     it("affiche une erreur de sélection quand on a cherché une entreprise sans en choisir une", async () => {
-      render(<ContributionGeneric contribution={contribution} />);
+      render(
+        <ContributionGeneric
+          contribution={contribution}
+          agreementDeclinations={[]}
+        />
+      );
 
       fireEvent.click(ccUi.radio.enterpriseSearchOption.get());
       await userEvent.click(ccUi.searchByEnterprise.input.get());
@@ -387,7 +452,12 @@ describe("<ContributionGeneric />", () => {
     });
 
     it("affiche une erreur de sélection quand l'entreprise a plusieurs conventions et qu'aucune n'est choisie", async () => {
-      render(<ContributionGeneric contribution={contribution} />);
+      render(
+        <ContributionGeneric
+          contribution={contribution}
+          agreementDeclinations={[]}
+        />
+      );
 
       fireEvent.click(ccUi.radio.enterpriseSearchOption.get());
       await userEvent.click(ccUi.searchByEnterprise.input.get());
@@ -426,7 +496,10 @@ describe("<ContributionGeneric />", () => {
         .mockClear();
 
       const { getByText } = render(
-        <ContributionGeneric contribution={contribution} />
+        <ContributionGeneric
+          contribution={contribution}
+          agreementDeclinations={[]}
+        />
       );
 
       const title = getByText(

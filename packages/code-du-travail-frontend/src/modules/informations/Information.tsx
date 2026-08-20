@@ -13,6 +13,7 @@ import DisplayContent from "../common/DisplayContent";
 import { References } from "../common";
 import { ContentMeta } from "../common/ContentMeta";
 import { ArticleJsonLd } from "../seo/jsonld";
+import { fromDocumentBreadcrumbs } from "../layout/breadcrumb";
 
 type Props = {
   date: string;
@@ -38,7 +39,7 @@ export const Information = ({
   return (
     <ContainerInformation
       currentPage={title}
-      breadcrumbs={breadcrumbs}
+      breadcrumbSegments={fromDocumentBreadcrumbs(breadcrumbs)}
       relatedItems={relatedItems}
       title={title}
       description={description}

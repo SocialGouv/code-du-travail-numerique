@@ -152,6 +152,26 @@ describe("<ContributionLayout />", () => {
       "Réponse pour la convention : Nom de la CC"
     );
   });
+  // #7439 : le rappel de la CC garde son niveau h2 mais adopte la taille H6
+  // (20 px, gras) pour ne pas produire un pavé de titre quand le nom est long.
+  it("rend le rappel de la CC au gabarit H6", () => {
+    rendering = render(
+      <ContributionLayout
+        contribution={{
+          ...contribution,
+          idcc: "0029",
+          isGeneric: false,
+          ccnSlug: "cc-slug",
+          ccnShortTitle: "Nom de la CC",
+        }}
+      />
+    );
+    expect(ui.branchAnswerTitle.get().className).toContain("fr-h6");
+  });
+  it("rend le titre de la réponse Code du travail au même gabarit H6", () => {
+    rendering = render(<ContributionLayout contribution={contribution} />);
+    expect(ui.cdtAnswerTitle.get().className).toContain("fr-h6");
+  });
   it("hiérarchise les titres : un seul h2 (la réponse), tout le reste en h3", () => {
     rendering = render(
       <ContributionLayout
@@ -194,6 +214,157 @@ describe("<ContributionLayout />", () => {
     expect(
       rendering.getByRole("heading", { level: 3, name: "Attention" })
     ).toBeInTheDocument();
+  });
+  describe("déclinaisons par convention collective", () => {
+    const agreementDeclinations = [
+      { shortTitle: "Banque", href: "/contribution/2120-slug" },
+      {
+        shortTitle: "Industries chimiques et connexes",
+        href: "/contribution/44-slug",
+      },
+    ];
+
+    beforeEach(() => {
+      window.localStorage.clear();
+    });
+
+    it("liste les déclinaisons sous « Références » sur la fiche générique", () => {
+      rendering = render(
+        <ContributionLayout
+          contribution={{
+            ...contribution,
+            references: [{ title: "Article 1", url: "https://exemple.test" }],
+          }}
+          agreementDeclinations={agreementDeclinations}
+        />
+      );
+
+      const accordionTitle = rendering.getByRole("heading", {
+        level: 3,
+        name: ui.agreementDeclinationsLabel,
+      });
+      expect(accordionTitle).toBeInTheDocument();
+      // L'accordéon « Références » le précède dans le flux du document.
+      const referencesTitle = rendering.getByRole("heading", {
+        level: 3,
+        name: "Références",
+      });
+      expect(
+        referencesTitle.compareDocumentPosition(accordionTitle) &
+          Node.DOCUMENT_POSITION_FOLLOWING
+      ).toBeTruthy();
+
+      expect(rendering.getByRole("link", { name: "Banque" })).toHaveAttribute(
+        "href",
+        "/contribution/2120-slug"
+      );
+      expect(
+        rendering.getByRole("link", {
+          name: "Industries chimiques et connexes",
+        })
+      ).toHaveAttribute("href", "/contribution/44-slug");
+    });
+
+    it("rend les liens sans interaction, l'accordéon restant replié", () => {
+      rendering = render(
+        <ContributionLayout
+          contribution={contribution}
+          agreementDeclinations={agreementDeclinations}
+        />
+      );
+
+      expect(
+        rendering.getByRole("button", { name: ui.agreementDeclinationsLabel })
+      ).toHaveAttribute("aria-expanded", "false");
+      expect(
+        rendering.getByRole("link", { name: "Banque" })
+      ).toBeInTheDocument();
+    });
+
+    it("liste les déclinaisons sur une contribution sans réponse Code du travail", () => {
+      rendering = render(
+        <ContributionLayout
+          contribution={{ ...contribution, isNoCDT: true }}
+          agreementDeclinations={agreementDeclinations}
+        />
+      );
+
+      const accordionTitle = rendering.getByRole("heading", {
+        level: 3,
+        name: ui.agreementDeclinationsLabel,
+      });
+      expect(accordionTitle).toBeInTheDocument();
+      expect(
+        rendering.getByRole("link", { name: "Banque" })
+      ).toBeInTheDocument();
+      // L'accordéon ferme la page dans ce cas : sans marge basse, il colle au
+      // pied de page.
+      expect(accordionTitle.closest("section")?.className).toContain(
+        "fr-mb-6w"
+      );
+    });
+
+    it("n'affiche pas l'accordéon sur une page convention collective", () => {
+      rendering = render(
+        <ContributionLayout
+          contribution={{
+            ...contribution,
+            idcc: "0029",
+            isGeneric: false,
+            ccnSlug: "cc-slug",
+            ccnShortTitle: "Nom de la CC",
+          }}
+        />
+      );
+
+      expect(
+        rendering.queryByRole("heading", {
+          name: ui.agreementDeclinationsLabel,
+        })
+      ).not.toBeInTheDocument();
+    });
+
+    it("n'affiche pas d'accordéon vide quand aucune CC n'est traitée", () => {
+      rendering = render(
+        <ContributionLayout
+          contribution={contribution}
+          agreementDeclinations={[]}
+        />
+      );
+
+      expect(
+        rendering.queryByRole("heading", {
+          name: ui.agreementDeclinationsLabel,
+        })
+      ).not.toBeInTheDocument();
+    });
+
+    it("conserve la hiérarchie des titres : un seul h2 sur la fiche générique", () => {
+      rendering = render(
+        <ContributionLayout
+          contribution={{
+            ...contribution,
+            references: [{ title: "Article 1", url: "https://exemple.test" }],
+            messageBlock: "Un message d'attention",
+          }}
+          agreementDeclinations={agreementDeclinations}
+        />
+      );
+
+      // L'accordéon n'introduit pas de niveau 2 supplémentaire : la fiche
+      // générique en compte deux (le bloc de personnalisation et la réponse).
+      const h2s = rendering.getAllByRole("heading", { level: 2 });
+      expect(h2s.map((h2) => h2.textContent)).toEqual([
+        "Personnalisez la réponse avec votre convention collective",
+        "Réponse d'après le Code du Travail",
+      ]);
+      expect(
+        rendering.getByRole("heading", {
+          level: 3,
+          name: ui.agreementDeclinationsLabel,
+        })
+      ).toBeInTheDocument();
+    });
   });
   describe("base", () => {
     beforeEach(async () => {
@@ -595,6 +766,112 @@ describe("<ContributionLayout />", () => {
 
       await new Promise((resolve) => setTimeout(resolve, 100));
       expect(replaceMock).not.toHaveBeenCalled();
+    });
+  });
+
+  describe("fil d'Ariane", () => {
+    const withThemes = {
+      ...contribution,
+      breadcrumbs: [
+        { label: "Congés et repos", position: 3, slug: "/themes/conges" },
+        { label: "Congés", position: 1, slug: "/themes/conges-payes" },
+      ],
+    };
+
+    // Le fil d'Ariane et son JSON-LD sont assertés dans le même test : c'est ce
+    // qui empêche les deux de diverger à nouveau.
+    const readBreadcrumb = (rendering: RenderResult) => {
+      const nav = rendering.getByRole("navigation");
+      const jsonLd = JSON.parse(
+        rendering.container.querySelector("#jsonld-breadcrumbs")?.textContent ??
+          "{}"
+      );
+      return {
+        links: within(nav)
+          .getAllByRole("link")
+          .map((link) => [link.textContent, link.getAttribute("href")]),
+        current: within(nav).getByText(
+          (_, el) => el?.getAttribute("aria-current") === "page"
+        ).textContent,
+        jsonLdNames: jsonLd.itemListElement.map(({ name }) => name),
+      };
+    };
+
+    it("remonte vers les fiches pratiques, pas vers les thèmes, sur une fiche générique", () => {
+      const breadcrumb = readBreadcrumb(
+        render(<ContributionLayout contribution={withThemes} />)
+      );
+
+      expect(breadcrumb.links).toEqual([
+        ["Accueil", "/"],
+        ["Fiches pratiques", "/contribution"],
+      ]);
+      expect(breadcrumb.current).toBe(
+        "La période d’essai peut-elle être renouvelée ?"
+      );
+      expect(breadcrumb.jsonLdNames).toEqual([
+        "Accueil",
+        "Fiches pratiques",
+        "La période d’essai peut-elle être renouvelée ?",
+      ]);
+    });
+
+    it("fait de même sur une page par convention collective", () => {
+      const breadcrumb = readBreadcrumb(
+        render(
+          <ContributionLayout
+            contribution={{
+              ...withThemes,
+              isGeneric: false,
+              slug: "1234-une-question",
+              idcc: "1234",
+              ccnShortTitle: "Ma convention",
+            }}
+          />
+        )
+      );
+
+      expect(breadcrumb.links).toEqual([
+        ["Accueil", "/"],
+        ["Fiches pratiques", "/contribution"],
+      ]);
+      expect(breadcrumb.jsonLdNames).toEqual([
+        "Accueil",
+        "Fiches pratiques",
+        "La période d’essai peut-elle être renouvelée ?",
+      ]);
+    });
+
+    it("intercale la fiche générique sur les pages CC de l'expérimentation congés familiaux", () => {
+      const breadcrumb = readBreadcrumb(
+        render(
+          <ContributionLayout
+            contribution={{
+              ...withThemes,
+              isGeneric: false,
+              slug: "1234-les-conges-pour-evenements-familiaux",
+              idcc: "1234",
+              ccnShortTitle: "Ma convention",
+            }}
+          />
+        )
+      );
+
+      expect(breadcrumb.links).toEqual([
+        ["Accueil", "/"],
+        ["Fiches pratiques", "/contribution"],
+        [
+          "La période d’essai peut-elle être renouvelée ?",
+          "/contribution/les-conges-pour-evenements-familiaux",
+        ],
+      ]);
+      expect(breadcrumb.current).toBe("Ma convention (IDCC 1234)");
+      expect(breadcrumb.jsonLdNames).toEqual([
+        "Accueil",
+        "Fiches pratiques",
+        "La période d’essai peut-elle être renouvelée ?",
+        "Ma convention (IDCC 1234)",
+      ]);
     });
   });
 });

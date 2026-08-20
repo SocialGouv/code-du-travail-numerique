@@ -16,6 +16,8 @@ import StepResult from "./steps/Result";
 import StepAgreement from "./steps/Agreement";
 import StepStatus from "./steps/Status";
 import StepInformations from "./steps/Informations";
+import { listingSegment } from "../../layout/breadcrumb";
+import { SOURCES } from "@socialgouv/cdtn-utils";
 
 enum PreavisLicenciementStepName {
   Intro = "start",
@@ -71,7 +73,7 @@ const PreavisLicenciementSimulator = ({
     <ContainerSimulator
       relatedItems={relatedItems}
       title={displayTitle}
-      segments={[{ label: "Simulateurs", linkProps: { href: "/outils" } }]}
+      breadcrumbSegments={[listingSegment(SOURCES.TOOLS)]}
     >
       <CalculateurPreavisLicenciement title={title} />
     </ContainerSimulator>

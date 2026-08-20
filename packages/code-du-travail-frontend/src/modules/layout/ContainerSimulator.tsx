@@ -1,40 +1,29 @@
 import { fr } from "@codegouvfr/react-dsfr";
-import { Breadcrumb, BreadcrumbProps } from "@codegouvfr/react-dsfr/Breadcrumb";
 
 import { RelatedItems } from "../common/RelatedItems";
 import { RelatedItem } from "../documents";
 import { Feedback } from "./feedback";
 import { css } from "@styled-system/css";
-import { BreadcrumbListJsonLd } from "../seo/jsonld";
-import { getPathFromBreadcrumbLinkProps } from "./breadcrumbLinkProps";
+import { Breadcrumbs, BreadcrumbSegment } from "./breadcrumb";
 
 type Props = {
   relatedItems: { items: RelatedItem[]; title: string }[];
   title: string;
   children: React.ReactNode;
-} & Pick<BreadcrumbProps, "segments">;
+  breadcrumbSegments?: BreadcrumbSegment[];
+};
 
 export const ContainerSimulator = ({
   children,
   relatedItems,
   title,
-  segments = [],
+  breadcrumbSegments = [],
 }: Props) => {
   return (
     <div className={`${fr.cx("fr-grid-row")} ${printOnlySpace}`}>
-      <BreadcrumbListJsonLd
+      <Breadcrumbs
         currentPageLabel={title}
-        items={segments.map((segment) => ({
-          label: String(segment.label),
-          href: getPathFromBreadcrumbLinkProps(segment.linkProps),
-        }))}
-      />
-      <Breadcrumb
-        currentPageLabel={title}
-        homeLinkProps={{
-          href: "/",
-        }}
-        segments={segments}
+        segments={breadcrumbSegments}
         className={fr.cx("fr-mb-2v")}
       />
       <div className={fr.cx("fr-col-12")}>

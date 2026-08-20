@@ -12,7 +12,7 @@ type ToolsListProps = {
 
 export const ToolsList = ({ tools, externalTools }: ToolsListProps) => {
   return (
-    <ContainerWithBreadcrumbs currentPage="Simulateurs" breadcrumbs={[]}>
+    <ContainerWithBreadcrumbs currentPage="Simulateurs">
       <h1 id="tools" className={fr.cx("fr-mt-0", "fr-mb-6w")}>
         Simulateurs
       </h1>
