@@ -29,6 +29,7 @@ const ResultStepComponent = () => {
     calculateResult,
     resultFormula,
     contractOptionId,
+    finALaDatePrevue,
     ineligibility,
   } = useIndemnitePrecariteStore(store, (state) => ({
     result: state.resultData.result,
@@ -41,6 +42,7 @@ const ResultStepComponent = () => {
     totalSalary: state.resultData.totalSalary,
     calculateResult: state.resultFunction.calculateResult,
     contractOptionId: state.typeContratData.input.contractOptionId,
+    finALaDatePrevue: state.termeContratData.input.finALaDatePrevue,
     ineligibility:
       state.typeContratData.ineligibility ??
       state.termeContratData.ineligibility,
@@ -93,6 +95,7 @@ const ResultStepComponent = () => {
       <Situation
         agreement={agreement}
         contractTypeLabel={contractOption?.label}
+        finALaDatePrevue={finALaDatePrevue}
         remuneration={totalSalary ?? 0}
       />
       <FormulaInterpreter formula={resultFormula} />

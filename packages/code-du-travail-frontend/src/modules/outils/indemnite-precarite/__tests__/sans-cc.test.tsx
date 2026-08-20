@@ -184,9 +184,25 @@ describe("SimulateurIndemnitePrecarite - Sans Convention Collective", () => {
       expect(screen.getByTestId("situation-type-contrat")).toHaveTextContent(
         "CDD de remplacement ou d'accroissement temporaire d'activité"
       );
+      expect(screen.getByTestId("situation-terme-contrat")).toHaveTextContent(
+        "Le contrat a pris fin à la date initialement prévue"
+      );
       expect(
         screen.queryAllByText(/Article L1243-8 du code du travail/)[0]
       ).toBeInTheDocument();
+    });
+
+    it("récapitule une rupture anticipée non disqualifiante", () => {
+      fillContractSteps({
+        finALaDatePrevue: "non",
+        issueContrat: ISSUE_CONTRAT.AUTRE,
+      });
+      fillRemunerationTotal(3000);
+
+      expect(ui.result.amount.get()).toHaveTextContent("300,00");
+      expect(screen.getByTestId("situation-terme-contrat")).toHaveTextContent(
+        "Le contrat a été rompu de manière anticipée"
+      );
     });
 
     it.each([
