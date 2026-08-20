@@ -44,7 +44,13 @@ describe("SimulateurIndemnitePrecarite - IDCC 1486", () => {
     runJourney({ contractOptionId: "1486-usage-enqueteurs-vacataires" });
 
     expect(ui.result.amount.get()).toHaveTextContent("120,00");
-    expectReference("Article 53 de l'annexe relative aux enquêteurs");
+    expectReference(
+      "Article 53 de l'accord du 16 décembre 1991 relatif aux enquêteurs"
+    );
+    expectReference("Article L1243-4 du code du travail");
+    expectReference("Article L1243-8 du code du travail");
+    expectReference("Article L1243-9 du code du travail");
+    expectReference("Article L1243-10 du code du travail");
   });
 
   it("affiche l'indemnité conventionnelle — cas conventionnel : CDD d'usage / CDD d'intervention pour le secteur évènementiel", () => {
@@ -52,7 +58,11 @@ describe("SimulateurIndemnitePrecarite - IDCC 1486", () => {
 
     expect(ui.result.amount.get()).toHaveTextContent("180,00");
     expectReference(
-      "Contrat d'intervention à durée déterminée de l'accord du 5 juillet 2001"
+      "Chapitre III de l'accord du 5 juillet 2001 relatif au statut des salariés du secteur d'activité d'organisation des foires, salons et congrès"
     );
+    expectReference("Article L1243-4 du code du travail");
+    expectReference("Article L1243-8 du code du travail");
+    expectReference("Article L1243-9 du code du travail");
+    expectReference("Article L1243-10 du code du travail");
   });
 });

@@ -12,8 +12,12 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedReferences: [
         {
           article:
-            "Article 53 de l'annexe relative aux enquêteurs - Accord du 16 décembre 1991",
-          url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=7625C278F6496D100BB4EC20B6D7BAA7.tplgfr25s_3?idArticle=KALIARTI000005851356&cidTexte=KALITEXT000005679885&dateTexte=29990101&categorieLien=id",
+            "Article 53 de l'accord du 16 décembre 1991 relatif aux enquêteurs",
+          url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005851356/?idConteneur=KALICONT000005635173",
+        },
+        {
+          article: "Article L1243-4 du code du travail",
+          url: "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000024026880",
         },
         {
           article: "Article L1243-8 du code du travail",
@@ -22,6 +26,10 @@ describe("Test de la fonctionnalité 'calculate'", () => {
         {
           article: "Article L1243-9 du code du travail",
           url: "https://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=0FA35871C82B78139407AE9BD9480D9B.tplgfr31s_2?idArticle=LEGIARTI000006901220&cidTexte=LEGITEXT000006072050&dateTexte=20080501&categorieLien=id&oldAction=&nbResultRech=",
+        },
+        {
+          article: "Article L1243-10 du code du travail",
+          url: "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006901221",
         },
       ],
       expectedNotifications: [],
@@ -38,8 +46,12 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedReferences: [
         {
           article:
-            "Chapitre III : Contrat d'intervention à durée déterminée de l'accord du 5 juillet 2001 relatif au statut des salariés du secteur d'activité d'organisation des foires, salons et congrès",
-          url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005851689&cidTexte=KALITEXT000005679946&dateTexte=20190918",
+            "Chapitre III de l'accord du 5 juillet 2001 relatif au statut des salariés du secteur d'activité d'organisation des foires, salons et congrès",
+          url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005851689/?idConteneur=KALICONT000005635173",
+        },
+        {
+          article: "Article L1243-4 du code du travail",
+          url: "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000024026880",
         },
         {
           article: "Article L1243-8 du code du travail",
@@ -48,6 +60,10 @@ describe("Test de la fonctionnalité 'calculate'", () => {
         {
           article: "Article L1243-9 du code du travail",
           url: "https://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=0FA35871C82B78139407AE9BD9480D9B.tplgfr31s_2?idArticle=LEGIARTI000006901220&cidTexte=LEGITEXT000006072050&dateTexte=20080501&categorieLien=id&oldAction=&nbResultRech=",
+        },
+        {
+          article: "Article L1243-10 du code du travail",
+          url: "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006901221",
         },
       ],
       expectedNotifications: [],

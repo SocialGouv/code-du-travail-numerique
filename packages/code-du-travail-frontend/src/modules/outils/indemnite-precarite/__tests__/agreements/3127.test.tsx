@@ -45,7 +45,11 @@ describe("SimulateurIndemnitePrecarite - IDCC 3127", () => {
 
     expect(ui.result.amount.get()).toHaveTextContent("300,00");
     expectReference(
-      "Article 2.5 de la section 1 du Chapitre I de la Partie 2 de la convention collective"
+      "Point 2.5 de la section 1 du chapitre Ier de la partie 2 de la convention collective"
     );
+    expectReference("Article L1243-4 du code du travail");
+    expectReference("Article L1243-8 du code du travail");
+    expectReference("Article L1243-9 du code du travail");
+    expectReference("Article L1243-10 du code du travail");
   });
 });

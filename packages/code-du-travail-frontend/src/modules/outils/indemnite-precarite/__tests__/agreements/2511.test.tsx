@@ -44,6 +44,10 @@ describe("SimulateurIndemnitePrecarite - IDCC 2511", () => {
     runJourney({ contractOptionId: "2511-usage-intervention" });
 
     expect(ui.result.amount.get()).toHaveTextContent("300,00");
-    expectReference("Article 4.7 de la convention collective");
+    expectReference("Article 4.7.2 de la convention collective");
+    expectReference("Article L1243-4 du code du travail");
+    expectReference("Article L1243-8 du code du travail");
+    expectReference("Article L1243-9 du code du travail");
+    expectReference("Article L1243-10 du code du travail");
   });
 });

@@ -44,6 +44,10 @@ describe("SimulateurIndemnitePrecarite - IDCC 1516", () => {
     runJourney({ contractOptionId: "1516-usage-formateurs" });
 
     expect(ui.result.amount.get()).toHaveTextContent("180,00");
-    expectReference("Article 5 de la convention collective");
+    expectReference("Article 5.4.3 de la convention collective");
+    expectReference("Article L1243-4 du code du travail");
+    expectReference("Article L1243-8 du code du travail");
+    expectReference("Article L1243-9 du code du travail");
+    expectReference("Article L1243-10 du code du travail");
   });
 });
