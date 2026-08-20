@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.241.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.240.0...v4.241.0) (2026-08-20)
+
+
+### Features
+
+* **matomo:** event sur le nombre de conventions collectives trouvées ([#7428](https://github.com/SocialGouv/code-du-travail-numerique/issues/7428)) ([#7442](https://github.com/SocialGouv/code-du-travail-numerique/issues/7442)) ([8726c89](https://github.com/SocialGouv/code-du-travail-numerique/commit/8726c8944deb7a254f12de9056215063df9887a8))
+
+
+
+
+
 # [4.240.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.239.0...v4.240.0) (2026-08-14)
 
 

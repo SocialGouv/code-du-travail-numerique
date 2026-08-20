@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.241.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.240.0...v4.241.0) (2026-08-20)
+
+
+### Bug Fixes
+
+* **outils:** bouton Suivant grisé au retour sur l'étape Informations ([#7445](https://github.com/SocialGouv/code-du-travail-numerique/issues/7445)) ([8a9328d](https://github.com/SocialGouv/code-du-travail-numerique/commit/8a9328d6cf2d3671aa07bee548d37e6da49df0b9))
+
+
+### Features
+
+* **matomo:** event sur le nombre de conventions collectives trouvées ([#7428](https://github.com/SocialGouv/code-du-travail-numerique/issues/7428)) ([#7442](https://github.com/SocialGouv/code-du-travail-numerique/issues/7442)) ([8726c89](https://github.com/SocialGouv/code-du-travail-numerique/commit/8726c8944deb7a254f12de9056215063df9887a8))
+* **seo:** nouveau fil d'Ariane des contenus natifs et refacto du composant ([#7378](https://github.com/SocialGouv/code-du-travail-numerique/issues/7378)) ([#7443](https://github.com/SocialGouv/code-du-travail-numerique/issues/7443)) ([67dd1da](https://github.com/SocialGouv/code-du-travail-numerique/commit/67dd1da9fdd61fe25a53aa513eea802a05516b51))
+
+
+
+
+
 # [4.240.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.239.0...v4.240.0) (2026-08-14)
 
 

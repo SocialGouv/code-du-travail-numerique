@@ -110,4 +110,6 @@ export const ui = {
     echelon: byTestId("situation-Échelon"),
   },
   next: byText("Suivant"),
+  previous: byText("Précédent"),
+  activeStep: byTestId("stepper"),
 };
