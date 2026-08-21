@@ -187,9 +187,16 @@ describe("SimulateurIndemnitePrecarite - Sans Convention Collective", () => {
       expect(screen.getByTestId("situation-terme-contrat")).toHaveTextContent(
         "Le contrat a pris fin à la date initialement prévue"
       );
-      expect(
-        screen.queryAllByText(/Article L1243-8 du code du travail/)[0]
-      ).toBeInTheDocument();
+      [
+        "Article L1243-4 du code du travail",
+        "Article L1243-8 du code du travail",
+        "Article L1243-9 du code du travail",
+        "Article L1243-10 du code du travail",
+      ].forEach((reference) => {
+        expect(
+          screen.queryAllByText(new RegExp(reference))[0]
+        ).toBeInTheDocument();
+      });
     });
 
     it("récapitule une rupture anticipée non disqualifiante", () => {

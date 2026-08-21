@@ -36,8 +36,10 @@ describe("SimulateurIndemnitePrecarite - IDCC 2098", () => {
     runJourney();
 
     expect(ui.result.amount.get()).toHaveTextContent("300,00");
+    expectReference("Article L1243-4 du code du travail");
     expectReference("Article L1243-8 du code du travail");
     expectReference("Article L1243-9 du code du travail");
+    expectReference("Article L1243-10 du code du travail");
   });
 
   it("affiche l'indemnité conventionnelle — cas conventionnel : CDD d'usage / CDD d'intervention pour le secteur évènementiel", () => {
