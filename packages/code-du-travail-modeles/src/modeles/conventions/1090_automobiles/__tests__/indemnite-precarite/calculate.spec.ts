@@ -8,11 +8,11 @@ const engine = new IndemnitePrecaritePublicodes(
 describe("Test de la fonctionnalité 'calculate'", () => {
   test.each([
     {
-      expectedResult: { expectedValue: 180, unit: "€" },
+      expectedResult: { expectedValue: 300, unit: "€" },
       expectedReferences: [
         {
           article: "Article 1.10 e) 2) de la convention collective",
-          url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000038569467/?idConteneur=KALICONT000005635191",
+          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000038569467/?idConteneur=KALICONT000005635191",
         },
         {
           article: "Article L1243-4 du code du travail",
@@ -33,7 +33,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       ],
       expectedNotifications: [],
       expectedFormula: {
-        formula: "6/100 * S",
+        formula: "1/10 * S",
         explanations: ["S : Salaires renseignés (3000 €)"],
       },
       situation: { "contrat salarié . type de cdd": "'usage convoyeurs'" },

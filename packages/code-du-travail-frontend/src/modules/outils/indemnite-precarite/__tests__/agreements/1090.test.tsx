@@ -43,7 +43,7 @@ describe("SimulateurIndemnitePrecarite - IDCC 1090", () => {
   it("affiche l'indemnité conventionnelle — cas conventionnel : CDD d'usage convoyeurs de véhicules", () => {
     runJourney({ contractOptionId: "1090-usage-convoyeurs" });
 
-    expect(ui.result.amount.get()).toHaveTextContent("180,00");
+    expect(ui.result.amount.get()).toHaveTextContent("300,00");
     expectReference("Article 1.10 e) 2) de la convention collective");
     expectReference("Article L1243-4 du code du travail");
     expectReference("Article L1243-8 du code du travail");
