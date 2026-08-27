@@ -128,8 +128,10 @@ describe("Indemnité de mise à la retraite (article L1237-7)", () => {
         modelsIndemniteLicenciement
       );
       const base = situation({ dateEntree, miseALaRetraite: "oui" });
-      const baseLicenciement = { ...base };
-      delete baseLicenciement[MISE_A_LA_RETRAITE];
+      const baseLicenciement: Record<string, string | undefined> =
+        Object.fromEntries(
+          Object.entries(base).filter(([key]) => key !== MISE_A_LA_RETRAITE)
+        );
 
       const resultRetraite = retraite.calculate(base);
       const resultLicenciement = licenciement.calculate({
