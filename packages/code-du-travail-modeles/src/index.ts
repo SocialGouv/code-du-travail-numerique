@@ -6,4 +6,5 @@ export { default as preavisDemissionModeles } from "./modeles/modeles-preavis-de
 export { default as indemnitePrecariteModeles } from "./modeles/modeles-indemnite-precarite.json";
 export { default as preavisLicenciementModeles } from "./modeles/modeles-preavis-licenciement.json";
 export { default as heuresRechercheEmploiModeles } from "./modeles/modeles-heures-recherche-emploi.json";
+export { default as indemniteRetraiteModeles } from "./modeles/modeles-indemnite-retraite.json";
 export * from "./publicodes";
