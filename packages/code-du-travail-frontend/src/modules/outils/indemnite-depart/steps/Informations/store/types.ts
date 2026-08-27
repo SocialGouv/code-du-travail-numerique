@@ -5,6 +5,7 @@ import {
 } from "@socialgouv/modeles-social";
 import { ValidationResponse } from "src/modules/outils/common/components/SimulatorLayout/types";
 import { OuiNon } from "../../../common";
+import { OriginRetraite } from "../../../types";
 
 export type Question = {
   name: string;
@@ -21,6 +22,8 @@ export type PublicodesInformation = {
 export type CommonInformationsStoreInput = {
   showLicenciementInaptitude?: boolean;
   licenciementInaptitude?: OuiNon;
+  showOriginRetraite?: boolean;
+  originRetraite?: OriginRetraite;
   publicodesInformations: Array<PublicodesInformation>;
   isStepHidden: boolean;
   isStepSalaryHidden: boolean;
@@ -31,6 +34,7 @@ export type CommonInformationsStoreInput = {
 
 export type CommonInformationsStoreError = {
   errorLicenciementInaptitude?: string;
+  errorOriginRetraite?: string;
   errorInformations: Record<string, string>;
   errorEligibility?: string;
   errorPublicodes?: string;
@@ -45,6 +49,7 @@ export type CommonInformationsStoreData = {
 
 export type CommonInformationsStoreFn = {
   onChangeLicenciementInaptitude: (value: OuiNon) => void;
+  onChangeOriginRetraite: (value: OriginRetraite) => void;
   onInformationsChange: (
     questionKey: string,
     value: string,

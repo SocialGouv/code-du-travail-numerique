@@ -48,6 +48,7 @@ export enum MatomoActionEvent {
   PREAVIS_LICENCIEMENT = "view_step_Préavis de licenciement",
   INDEMNITE_LICENCIEMENT = `view_step_${IndemniteDepartType.LICENCIEMENT}`,
   RUPTURE_CONVENTIONNELLE = `view_step_${IndemniteDepartType.RUPTURE_CONVENTIONNELLE}`,
+  INDEMNITE_RETRAITE = `view_step_${IndemniteDepartType.RETRAITE}`,
   VIEW_STEP = "view_step",
   CLICK_PREVIOUS = "click_previous",
   TYPE_CTRL_C = "type_CTRL_C",

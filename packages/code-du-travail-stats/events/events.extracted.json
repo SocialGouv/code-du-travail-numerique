@@ -1,8 +1,8 @@
 {
   "scan_root": "packages/code-du-travail-frontend/src",
-  "callsites": 76,
-  "total_events": 113,
-  "unique_events": 104,
+  "callsites": 77,
+  "total_events": 114,
+  "unique_events": 105,
   "unresolved_callsites": 0,
   "events": [
     {
@@ -1155,6 +1155,21 @@
         "MatomoActionEvent.HEURES_RECHERCHE_EMPLOI",
         "MatomoAgreementEvent.CC_BLOCK_USER",
         "TrackingContributionCategory.TOOL"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "outil",
+      "action": "view_step_Indemnité de départ ou de mise à la retraite",
+      "name_pattern": "results_ineligible",
+      "resolution": "literal",
+      "emit_function": "useIndemniteRetraiteEventEmitter",
+      "file": "packages/code-du-travail-frontend/src/modules/outils/indemnite-retraite/events/useIndemniteRetraiteEventEmitter.tsx",
+      "line": 13,
+      "enum_refs": [
+        "MatomoActionEvent.INDEMNITE_RETRAITE",
+        "MatomoBaseEvent.OUTIL",
+        "MatomoSimulatorEvent.STEP_RESULT_INELIGIBLE"
       ],
       "tracking_method": "sendEvent"
     },
