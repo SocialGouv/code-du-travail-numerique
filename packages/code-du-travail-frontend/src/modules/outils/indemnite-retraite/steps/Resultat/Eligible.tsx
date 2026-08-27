@@ -20,6 +20,7 @@ import Link from "src/modules/common/Link";
 import { fr } from "@codegouvfr/react-dsfr";
 import {
   CONTRIBUTION_INDEMNITE_RETRAITE,
+  getContributionFiscaleUrl,
   getForMoreInfoMessage,
 } from "./utils";
 
@@ -75,7 +76,7 @@ export default function Eligible() {
           Ce montant peut être exonéré d&apos;impôt sur le revenu et de
           cotisations sociales sous certaines conditions,{" "}
           <Link
-            href={CONTRIBUTION_INDEMNITE_RETRAITE}
+            href={getContributionFiscaleUrl(true)}
             target="_blank"
             rel="noopener noreferrer"
             title="L'indemnité de mise à la retraite est-elle soumise à cotisations et imposable ?"
@@ -89,7 +90,7 @@ export default function Eligible() {
           sociales (sauf en cas de départ à la retraite dans le cadre d&apos;un
           plan de sauvegarde de l&apos;emploi),{" "}
           <Link
-            href={CONTRIBUTION_INDEMNITE_RETRAITE}
+            href={getContributionFiscaleUrl(false)}
             target="_blank"
             rel="noopener noreferrer"
             title="L'indemnité de départ à la retraite est-elle soumise à cotisations et imposable ?"
