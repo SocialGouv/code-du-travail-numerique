@@ -22,6 +22,8 @@ import { CommonSituationStoreSlice } from "../../../situationStore";
 import { ValidationResponse } from "src/modules/outils/common/components/SimulatorLayout/types";
 import { OuiNon } from "../../../common";
 import { OriginRetraite } from "../../../types";
+import { MatomoBaseEvent, MatomoRetirementEvent } from "src/modules/analytics";
+import { sendEvent } from "@socialgouv/matomo-next";
 
 const initialState = (
   type: IndemniteDepartType
@@ -298,6 +300,16 @@ const createCommonInformationsStore: StoreSlice<
 
       const canProceed =
         isValid && get().informationsData.input.hasNoMissingQuestions;
+
+      if (canProceed && state.showOriginRetraite) {
+        sendEvent({
+          category: MatomoBaseEvent.OUTIL,
+          action:
+            state.originRetraite === "mise-retraite"
+              ? MatomoRetirementEvent.MISE_RETRAITE
+              : MatomoRetirementEvent.DEPART_RETRAITE,
+        });
+      }
 
       set(
         produce((state: CommonInformationsStoreSlice) => {

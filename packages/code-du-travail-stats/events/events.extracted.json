@@ -1,7 +1,7 @@
 {
   "scan_root": "packages/code-du-travail-frontend/src",
-  "callsites": 77,
-  "total_events": 114,
+  "callsites": 78,
+  "total_events": 116,
   "unique_events": 105,
   "unresolved_callsites": 0,
   "events": [
@@ -1104,8 +1104,38 @@
       "name_pattern": null,
       "resolution": "literal",
       "emit_function": "onNextStep",
+      "file": "packages/code-du-travail-frontend/src/modules/outils/indemnite-depart/steps/Informations/store/store.ts",
+      "line": 305,
+      "enum_refs": [
+        "MatomoBaseEvent.OUTIL",
+        "MatomoRetirementEvent.DEPART_RETRAITE",
+        "MatomoRetirementEvent.MISE_RETRAITE"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "outil",
+      "action": "depart",
+      "name_pattern": null,
+      "resolution": "literal",
+      "emit_function": "onNextStep",
       "file": "packages/code-du-travail-frontend/src/modules/outils/preavis-retraite/steps/OriginStep/store/store.ts",
       "line": 44,
+      "enum_refs": [
+        "MatomoBaseEvent.OUTIL",
+        "MatomoRetirementEvent.DEPART_RETRAITE",
+        "MatomoRetirementEvent.MISE_RETRAITE"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "outil",
+      "action": "mise",
+      "name_pattern": null,
+      "resolution": "literal",
+      "emit_function": "onNextStep",
+      "file": "packages/code-du-travail-frontend/src/modules/outils/indemnite-depart/steps/Informations/store/store.ts",
+      "line": 305,
       "enum_refs": [
         "MatomoBaseEvent.OUTIL",
         "MatomoRetirementEvent.DEPART_RETRAITE",
