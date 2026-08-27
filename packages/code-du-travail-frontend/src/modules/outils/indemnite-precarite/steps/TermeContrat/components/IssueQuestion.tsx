@@ -4,7 +4,7 @@ import { IssueContrat } from "../../../types";
 import { IssueOption } from "../issues";
 
 type Props = {
-  contractLabel: string;
+  label: string;
   options: IssueOption[];
   value?: IssueContrat;
   onChange: (value: IssueContrat) => void;
@@ -12,7 +12,7 @@ type Props = {
 };
 
 export const IssueQuestion: React.FC<Props> = ({
-  contractLabel,
+  label,
   options,
   value,
   onChange,
@@ -20,7 +20,7 @@ export const IssueQuestion: React.FC<Props> = ({
 }) => (
   <RadioQuestion
     name="issueContrat"
-    label={`Quelle a été l'issue du <strong>${contractLabel}</strong>&nbsp;?`}
+    label={label}
     questions={options.map((option) => ({
       label: option.label,
       value: option.value,

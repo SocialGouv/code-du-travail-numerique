@@ -10,7 +10,6 @@ import { RemunerationStoreSlice } from "../../Remuneration/store";
 import {
   References,
   Notification,
-  supportedCcn,
   PublicodesIndemnitePrecariteResult,
   Formula,
 } from "@socialgouv/modeles-social";
@@ -21,7 +20,6 @@ import { CONTRACT_FAMILY } from "../../../types";
 const initialState: ResultStoreData = {
   result: undefined,
   calculationError: undefined,
-  isAgreementSupported: false,
   resultNotifications: undefined,
   resultReferences: undefined,
   resultFormula: undefined,
@@ -42,10 +40,6 @@ const createResultStore: StoreSliceWrapperIndemnitePrecarite<
       const state = get();
       const agreement = state.agreementData.input.agreement;
       const publicodes = state.agreementData.publicodes;
-
-      const isAgreementSupported = !!supportedCcn.find(
-        ({ idcc }) => idcc === agreement?.num
-      );
 
       if (!publicodes) {
         console.warn("Publicodes is not defined");
@@ -124,7 +118,6 @@ const createResultStore: StoreSliceWrapperIndemnitePrecarite<
 
           state.resultData.result = amount;
           state.resultData.totalSalary = totalSalary;
-          state.resultData.isAgreementSupported = isAgreementSupported;
           state.resultData.resultNotifications = resultNotifications;
           state.resultData.resultReferences = resultReferences;
           state.resultData.resultFormula = resultFormula;

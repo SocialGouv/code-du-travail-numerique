@@ -3,7 +3,6 @@ import { Formula, Notification, References } from "@socialgouv/modeles-social";
 export type ResultStoreData = {
   result?: number;
   calculationError?: string;
-  isAgreementSupported?: boolean;
   resultNotifications?: Notification[];
   resultReferences?: References[];
   resultFormula?: Formula;

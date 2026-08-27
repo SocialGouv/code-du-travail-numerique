@@ -5,7 +5,11 @@ import {
   useIndemnitePrecariteStore,
 } from "../store";
 import { IssueQuestion, TermeQuestion } from "./components";
-import { contractLabel, getIssueOptions } from "./issues";
+import {
+  contractLabel,
+  getIssueOptions,
+  getIssueQuestionLabel,
+} from "./issues";
 import { findContractOption } from "../../agreements";
 import { CONTRACT_FAMILY } from "../../types";
 
@@ -44,7 +48,7 @@ const TermeContratStepComponent = () => {
       {input.finALaDatePrevue && (
         <div className={fr.cx("fr-mt-3w")}>
           <IssueQuestion
-            contractLabel={label}
+            label={getIssueQuestionLabel(family, input.finALaDatePrevue)}
             options={getIssueOptions(family, input.finALaDatePrevue)}
             value={input.issueContrat}
             onChange={onIssueContratChange}

@@ -21,6 +21,15 @@ export const CONTRACT_FAMILY = {
 export type ContractFamily =
   (typeof CONTRACT_FAMILY)[keyof typeof CONTRACT_FAMILY];
 
+/**
+ * Le salarié intérimaire perçoit une indemnité de fin de mission
+ * (article L1251-32), pas l'indemnité de précarité du CDD.
+ */
+export const indemniteLabel = (family: ContractFamily): string =>
+  family === CONTRACT_FAMILY.CTT
+    ? "Indemnité de fin de mission"
+    : "Indemnité de précarité";
+
 export type ContractOption = {
   /** Identifiant stable de l'option, utilisé comme valeur du radio. */
   id: string;
@@ -46,14 +55,21 @@ export const TYPE_CDD = {
   USAGE_MISSION_PONCTUELLE: "usage mission ponctuelle",
 } as const;
 
-/** Réponses possibles à la question « Quelle a été l'issue du contrat ? ». */
+/**
+ * Réponses possibles à la seconde question de l'étape « Terme du contrat ».
+ * Les trois premières concernent un contrat allé à son terme, les suivantes une
+ * rupture anticipée. Les valeurs sont celles attendues par le modèle publicodes.
+ */
 export const ISSUE_CONTRAT = {
   EMBAUCHE_CDI: "embauche cdi",
   REFUS_CDI_EQUIVALENT: "refus cdi équivalent",
   REFUS_SOUPLESSE: "refus souplesse",
+  PERIODE_ESSAI: "période d'essai",
   FORCE_MAJEURE: "force majeure",
   FAUTE_GRAVE: "faute grave",
-  INITIATIVE_SALARIE: "initiative salarié",
+  EMBAUCHE_CDI_AUTRE_ENTREPRISE: "embauche cdi autre entreprise",
+  INAPTITUDE: "inaptitude",
+  COMMUN_ACCORD: "commun accord",
   AUTRE: "autre",
 } as const;
 

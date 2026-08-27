@@ -1,17 +1,28 @@
 import { Agreement } from "src/modules/outils/indemnite-depart/types";
 import { CONTRACT_FAMILY, ContractOption, TYPE_CDD } from "../types";
 
+const HINT_MOTIF_CDD =
+  "Vous trouverez le motif d'embauche en CDD dans le contrat de travail.";
+
 const CDD_REMPLACEMENT: ContractOption = {
-  id: "cdd-remplacement-accroissement",
-  label: "CDD de remplacement ou d'accroissement temporaire d'activité",
-  hint: "Le motif de l'embauche en CDD est obligatoirement indiqué dans le contrat de travail.",
+  id: "cdd-remplacement",
+  label: "CDD de remplacement",
+  hint: HINT_MOTIF_CDD,
+  family: CONTRACT_FAMILY.CDD,
+  typeCdd: TYPE_CDD.AUTRES,
+};
+
+const CDD_ACCROISSEMENT: ContractOption = {
+  id: "cdd-accroissement",
+  label: "CDD d'accroissement temporaire d'activité",
+  hint: HINT_MOTIF_CDD,
   family: CONTRACT_FAMILY.CDD,
   typeCdd: TYPE_CDD.AUTRES,
 };
 
 const CTT: ContractOption = {
   id: "contrat-travail-temporaire",
-  label: "Contrat de travail temporaire (CTT)",
+  label: "Contrat de travail temporaire (intérimaire)",
   family: CONTRACT_FAMILY.CTT,
   typeCdd: TYPE_CDD.AUTRES,
 };
@@ -110,7 +121,13 @@ export function getContractOptions(agreement?: Agreement): ContractOption[] {
   const agreementOptions = agreement
     ? (AGREEMENT_CONTRACT_OPTIONS[agreement.num] ?? [])
     : [];
-  return [CDD_REMPLACEMENT, CTT, ...agreementOptions, AUTRES_CONTRATS];
+  return [
+    CDD_REMPLACEMENT,
+    CDD_ACCROISSEMENT,
+    CTT,
+    ...agreementOptions,
+    AUTRES_CONTRATS,
+  ];
 }
 
 export function findContractOption(

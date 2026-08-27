@@ -31,13 +31,14 @@ describe("SimulateurIndemnitePrecarite - Sans Convention Collective", () => {
   describe("Étape 3/6 - Type de contrat", () => {
     it("propose uniquement les options génériques", () => {
       expect(ui.cddRemplacement.get()).toBeInTheDocument();
+      expect(ui.cddAccroissement.get()).toBeInTheDocument();
       expect(ui.ctt.get()).toBeInTheDocument();
       expect(ui.autres.get()).toBeInTheDocument();
       expect(
-        screen.getByText(
-          "Le motif de l'embauche en CDD est obligatoirement indiqué dans le contrat de travail."
+        screen.queryAllByText(
+          "Vous trouverez le motif d'embauche en CDD dans le contrat de travail."
         )
-      ).toBeInTheDocument();
+      ).toHaveLength(2);
     });
 
     it("affiche une erreur si aucun type de contrat n'est sélectionné", () => {
@@ -56,6 +57,9 @@ describe("SimulateurIndemnitePrecarite - Sans Convention Collective", () => {
       expect(screen.getByText("CDD saisonnier")).toBeInTheDocument();
       expect(
         screen.getByText("CDD dans le cadre d'un congé de mobilité")
+      ).toBeInTheDocument();
+      expect(
+        screen.getByText("Article L1243-10 du code du travail")
       ).toBeInTheDocument();
     });
   });
@@ -86,6 +90,11 @@ describe("SimulateurIndemnitePrecarite - Sans Convention Collective", () => {
       fireEvent.click(ui.finALaDatePrevue.oui.get());
 
       expect(
+        screen.getByText("Le salarié a-t-il été dans l'une des situations", {
+          exact: false,
+        })
+      ).toBeInTheDocument();
+      expect(
         ui.issueContrat(ISSUE_CONTRAT.EMBAUCHE_CDI).get()
       ).toBeInTheDocument();
       expect(
@@ -107,20 +116,33 @@ describe("SimulateurIndemnitePrecarite - Sans Convention Collective", () => {
       ).toBeNull();
     });
 
-    it("propose les issues de rupture anticipée quand le contrat a été rompu", () => {
+    it("propose les cadres de rupture anticipée du CDD", () => {
       fireEvent.click(ui.cddRemplacement.get());
       fireEvent.click(ui.next.get());
       fireEvent.click(ui.finALaDatePrevue.non.get());
 
+      [
+        ISSUE_CONTRAT.PERIODE_ESSAI,
+        ISSUE_CONTRAT.FORCE_MAJEURE,
+        ISSUE_CONTRAT.FAUTE_GRAVE,
+        ISSUE_CONTRAT.EMBAUCHE_CDI_AUTRE_ENTREPRISE,
+        ISSUE_CONTRAT.INAPTITUDE,
+        ISSUE_CONTRAT.COMMUN_ACCORD,
+        ISSUE_CONTRAT.AUTRE,
+      ].forEach((issue) => {
+        expect(ui.issueContrat(issue).get()).toBeInTheDocument();
+      });
+    });
+
+    it("ne propose pas la rupture d'un commun accord pour un CTT", () => {
+      fireEvent.click(ui.ctt.get());
+      fireEvent.click(ui.next.get());
+      fireEvent.click(ui.finALaDatePrevue.non.get());
+
       expect(
-        ui.issueContrat(ISSUE_CONTRAT.FORCE_MAJEURE).get()
+        ui.issueContrat(ISSUE_CONTRAT.INAPTITUDE).get()
       ).toBeInTheDocument();
-      expect(
-        ui.issueContrat(ISSUE_CONTRAT.FAUTE_GRAVE).get()
-      ).toBeInTheDocument();
-      expect(
-        ui.issueContrat(ISSUE_CONTRAT.INITIATIVE_SALARIE).get()
-      ).toBeInTheDocument();
+      expect(ui.issueContrat(ISSUE_CONTRAT.COMMUN_ACCORD).query()).toBeNull();
     });
 
     it("réinitialise l'issue quand la première question change", () => {
@@ -180,9 +202,10 @@ describe("SimulateurIndemnitePrecarite - Sans Convention Collective", () => {
       fillRemunerationTotal(3000);
 
       expect(ui.result.amount.get()).toHaveTextContent("300,00");
+      expect(screen.getByText("Indemnité de précarité")).toBeInTheDocument();
       expect(screen.getByText("Détail du calcul")).toBeInTheDocument();
       expect(screen.getByTestId("situation-type-contrat")).toHaveTextContent(
-        "CDD de remplacement ou d'accroissement temporaire d'activité"
+        "CDD de remplacement"
       );
       expect(screen.getByTestId("situation-terme-contrat")).toHaveTextContent(
         "Le contrat a pris fin à la date initialement prévue"
@@ -197,6 +220,34 @@ describe("SimulateurIndemnitePrecarite - Sans Convention Collective", () => {
           screen.queryAllByText(new RegExp(reference))[0]
         ).toBeInTheDocument();
       });
+    });
+
+    it("parle d'indemnité de fin de mission et des articles L1251 pour un CTT", () => {
+      fillContractSteps({ contractOptionId: "contrat-travail-temporaire" });
+      fillRemunerationTotal(2000);
+
+      expect(ui.result.amount.get()).toHaveTextContent("200,00");
+      expect(
+        screen.getByText("Indemnité de fin de mission")
+      ).toBeInTheDocument();
+      expect(
+        screen.getByText("Article L1251-32 du code du travail")
+      ).toBeInTheDocument();
+      expect(
+        screen.getByText("Article L1251-33 du code du travail")
+      ).toBeInTheDocument();
+      expect(
+        screen.queryByText("Article L1243-8 du code du travail")
+      ).toBeNull();
+    });
+
+    it("affiche le bloc d'alerte sur le taux applicable", () => {
+      fillContractSteps();
+      fillRemunerationTotal(3000);
+
+      expect(screen.getByTestId("warning-title")).toHaveTextContent(
+        "Attention, il peut exister un autre montant applicable à votre situation."
+      );
     });
 
     it("récapitule une rupture anticipée non disqualifiante", () => {
@@ -215,9 +266,12 @@ describe("SimulateurIndemnitePrecarite - Sans Convention Collective", () => {
     it.each([
       ["oui" as const, ISSUE_CONTRAT.EMBAUCHE_CDI],
       ["oui" as const, ISSUE_CONTRAT.REFUS_CDI_EQUIVALENT],
+      ["non" as const, ISSUE_CONTRAT.PERIODE_ESSAI],
       ["non" as const, ISSUE_CONTRAT.FORCE_MAJEURE],
       ["non" as const, ISSUE_CONTRAT.FAUTE_GRAVE],
-      ["non" as const, ISSUE_CONTRAT.INITIATIVE_SALARIE],
+      ["non" as const, ISSUE_CONTRAT.EMBAUCHE_CDI_AUTRE_ENTREPRISE],
+      ["non" as const, ISSUE_CONTRAT.INAPTITUDE],
+      ["non" as const, ISSUE_CONTRAT.COMMUN_ACCORD],
     ])(
       "n'accorde pas d'indemnité (CDD, fin à la date prévue = %s, issue = %s)",
       (finALaDatePrevue, issueContrat) => {
@@ -225,15 +279,19 @@ describe("SimulateurIndemnitePrecarite - Sans Convention Collective", () => {
 
         expect(ui.result.noIndemnityMessage.get()).toBeInTheDocument();
         expect(ui.result.excludedContracts.query()).toBeNull();
+        expect(
+          screen.getByText("Article L1243-10 du code du travail")
+        ).toBeInTheDocument();
       }
     );
 
     it.each([
       ["oui" as const, ISSUE_CONTRAT.EMBAUCHE_CDI],
       ["oui" as const, ISSUE_CONTRAT.REFUS_SOUPLESSE],
-      ["non" as const, ISSUE_CONTRAT.INITIATIVE_SALARIE],
+      ["non" as const, ISSUE_CONTRAT.PERIODE_ESSAI],
+      ["non" as const, ISSUE_CONTRAT.INAPTITUDE],
     ])(
-      "n'accorde pas d'indemnité (CTT, fin à la date prévue = %s, issue = %s)",
+      "n'accorde pas d'indemnité de fin de mission (CTT, fin à la date prévue = %s, issue = %s)",
       (finALaDatePrevue, issueContrat) => {
         fillContractSteps({
           contractOptionId: "contrat-travail-temporaire",
@@ -241,7 +299,13 @@ describe("SimulateurIndemnitePrecarite - Sans Convention Collective", () => {
           issueContrat,
         });
 
-        expect(ui.result.noIndemnityMessage.get()).toBeInTheDocument();
+        expect(ui.result.noFinDeMissionMessage.get()).toBeInTheDocument();
+        expect(
+          screen.getByText("Article L1251-33 du code du travail")
+        ).toBeInTheDocument();
+        expect(
+          screen.queryByText("Article L1243-10 du code du travail")
+        ).toBeNull();
       }
     );
 

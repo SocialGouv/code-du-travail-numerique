@@ -1,7 +1,10 @@
 import { fireEvent } from "@testing-library/react";
 import { byTestId, byText } from "testing-library-selector";
+import {
+  INDEMNITE_FIN_MISSION_INELIGIBILITY_MESSAGE,
+  INDEMNITE_PRECARITE_INELIGIBILITY_MESSAGE,
+} from "@socialgouv/modeles-social";
 import { FinALaDatePrevue, ISSUE_CONTRAT, IssueContrat } from "../types";
-import { NO_INDEMNITY_MESSAGE } from "../steps/Result/components";
 
 export const ui = {
   error: {
@@ -14,7 +17,8 @@ export const ui = {
   },
   /** Étape 3 : `optionId` provient de `getContractOptions`. */
   contractType: (optionId: string) => byTestId(`contractType-${optionId}`),
-  cddRemplacement: byTestId("contractType-cdd-remplacement-accroissement"),
+  cddRemplacement: byTestId("contractType-cdd-remplacement"),
+  cddAccroissement: byTestId("contractType-cdd-accroissement"),
   ctt: byTestId("contractType-contrat-travail-temporaire"),
   autres: byTestId("contractType-autres"),
   /** Étape 4 */
@@ -39,8 +43,10 @@ export const ui = {
       /À partir des éléments que vous avez saisis, le montant de votre indemnité est estimé à/
     ),
     noIndemnity: byTestId("no-indemnity-message"),
-    noIndemnityMessage: byText(NO_INDEMNITY_MESSAGE),
+    noIndemnityMessage: byText(INDEMNITE_PRECARITE_INELIGIBILITY_MESSAGE),
+    noFinDeMissionMessage: byText(INDEMNITE_FIN_MISSION_INELIGIBILITY_MESSAGE),
     excludedContracts: byTestId("excluded-contracts"),
+    title: (label: string) => byText(label),
   },
   next: byTestId("next-button"),
 };
@@ -63,7 +69,7 @@ export const startSimulator = () => {
  * si la situation saisie ne donne pas droit à l'indemnité).
  */
 export const fillContractSteps = ({
-  contractOptionId = "cdd-remplacement-accroissement",
+  contractOptionId = "cdd-remplacement",
   finALaDatePrevue = "oui",
   issueContrat = ISSUE_CONTRAT.AUTRE,
 }: JourneyOptions = {}) => {
@@ -93,9 +99,12 @@ const ISSUES_DISQUALIFIANTES: Record<FinALaDatePrevue, IssueContrat[]> = {
     ISSUE_CONTRAT.REFUS_SOUPLESSE,
   ],
   non: [
+    ISSUE_CONTRAT.PERIODE_ESSAI,
     ISSUE_CONTRAT.FORCE_MAJEURE,
     ISSUE_CONTRAT.FAUTE_GRAVE,
-    ISSUE_CONTRAT.INITIATIVE_SALARIE,
+    ISSUE_CONTRAT.EMBAUCHE_CDI_AUTRE_ENTREPRISE,
+    ISSUE_CONTRAT.INAPTITUDE,
+    ISSUE_CONTRAT.COMMUN_ACCORD,
   ],
 };
 

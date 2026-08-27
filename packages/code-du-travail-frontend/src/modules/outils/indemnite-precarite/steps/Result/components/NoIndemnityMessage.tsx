@@ -1,8 +1,8 @@
 import { fr } from "@codegouvfr/react-dsfr";
 import React from "react";
-
-export const NO_INDEMNITY_MESSAGE =
-  "Il n'y a pas d'indemnité de précarité dans cette situation";
+import { References } from "@socialgouv/modeles-social";
+import ReferenceJuridiques from "src/modules/outils/preavis-licenciement/steps/Result/components/ReferenceJuridiques";
+import { ContractFamily, indemniteLabel } from "../../../types";
 
 /**
  * Contrats pour lesquels le code du travail ne prévoit aucune indemnité de
@@ -23,19 +23,22 @@ const CONTRATS_EXCLUS = [
 type Props = {
   /** Message renvoyé par le modèle publicodes. */
   message?: string;
+  family: ContractFamily;
+  /** Références juridiques du régime applicable, renvoyées par le modèle. */
+  references: References[];
   /** Affiche la liste des contrats exclus par le code du travail. */
   showExcludedContracts?: boolean;
 };
 
 const NoIndemnityMessage: React.FC<Props> = ({
   message,
+  family,
+  references,
   showExcludedContracts,
 }) => (
   <div data-testid="no-indemnity-message">
-    <h3 className={fr.cx("fr-mt-3w", "fr-h3")}>Indemnité de précarité</h3>
-    <p className={fr.cx("fr-mb-3w", "fr-pr-md-2v")}>
-      {message ?? NO_INDEMNITY_MESSAGE}
-    </p>
+    <h3 className={fr.cx("fr-mt-3w", "fr-h3")}>{indemniteLabel(family)}</h3>
+    {message && <p className={fr.cx("fr-mb-3w", "fr-pr-md-2v")}>{message}</p>}
 
     {showExcludedContracts && (
       <div data-testid="excluded-contracts">
@@ -49,6 +52,8 @@ const NoIndemnityMessage: React.FC<Props> = ({
         </ul>
       </div>
     )}
+
+    <ReferenceJuridiques references={references} />
   </div>
 );
 

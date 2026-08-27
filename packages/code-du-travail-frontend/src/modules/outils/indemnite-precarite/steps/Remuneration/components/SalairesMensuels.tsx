@@ -70,6 +70,7 @@ export const SalairesMensuels: React.FC<Props> = ({
 
       <Input
         label="Durée du contrat en mois"
+        hintText="Les mois incomplets doivent également être comptabilisés."
         nativeInputProps={
           {
             type: "number",
@@ -93,7 +94,7 @@ export const SalairesMensuels: React.FC<Props> = ({
       {salaires.map((salaire, index) => (
         <Input
           key={index}
-          label={`Montant brut, mois ${index + 1}`}
+          label={`Montant mensuel brut en euros, mois ${index + 1}`}
           nativeInputProps={
             {
               type: "number",
@@ -113,8 +114,8 @@ export const SalairesMensuels: React.FC<Props> = ({
       ))}
 
       <p className={fr.cx("fr-text--light", "fr-text--sm")}>
-        Majorations, indemnités, primes et accessoires compris sauf les
-        remboursements de frais et l&apos;indemnité compensatrice de congés
+        Majorations de salaire, indemnités, primes et accessoires compris sauf
+        les remboursements de frais et l&apos;indemnité compensatrice de congés
         payés.
       </p>
     </div>

@@ -18,7 +18,7 @@ export const SalaireTotal: React.FC<Props> = ({ value, onChange, error }) => {
   return (
     <div className={fr.cx("fr-mb-3w")}>
       <Input
-        label="Montant brut total en €"
+        label="Totalité de la rémunération brute perçue en euros"
         nativeInputProps={
           {
             id: "input-salaireTotal",
@@ -39,8 +39,8 @@ export const SalaireTotal: React.FC<Props> = ({ value, onChange, error }) => {
         }}
       />
       <p className={fr.cx("fr-text--light", "fr-mt-1w", "fr-text--sm")}>
-        Majorations, indemnités, primes et accessoires compris sauf les
-        remboursements de frais et l&apos;indemnité compensatrice de congés
+        Majorations de salaire, indemnités, primes et accessoires compris sauf
+        les remboursements de frais et l&apos;indemnité compensatrice de congés
         payés.
       </p>
     </div>

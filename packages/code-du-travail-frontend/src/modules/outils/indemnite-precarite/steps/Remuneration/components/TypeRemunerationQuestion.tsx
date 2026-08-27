@@ -21,7 +21,7 @@ export const TypeRemunerationQuestion: React.FC<Props> = ({
         options={[
           {
             label:
-              "La rémunération totale brute perçue en € durant le contrat de travail",
+              "Montant total de la rémunération brute perçue depuis le début du contrat de travail",
             nativeInputProps: {
               value: "total",
               checked: value === "total",
@@ -30,8 +30,7 @@ export const TypeRemunerationQuestion: React.FC<Props> = ({
             } as any,
           },
           {
-            label:
-              "Les salaires mensuels bruts en € perçus durant le contrat de travail",
+            label: "Montant du salaire brut perçu par mois",
             nativeInputProps: {
               value: "mensuel",
               checked: value === "mensuel",

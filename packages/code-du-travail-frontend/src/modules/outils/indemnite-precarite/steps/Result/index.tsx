@@ -13,15 +13,16 @@ import {
 import FormulaInterpreter from "src/modules/outils/common/components/FormulaInterpreter";
 import { AccessibleAlert } from "src/modules/outils/common/components/AccessibleAlert";
 import ReferenceJuridiques from "src/modules/outils/preavis-licenciement/steps/Result/components/ReferenceJuridiques";
+import { getIndemnitePrecariteIneligibilityReferences } from "@socialgouv/modeles-social";
 import { findContractOption } from "../../agreements";
 import { CONTRACT_FAMILY } from "../../types";
+import { mapToPublicodesSituationForEligibilityIndemnitePrecarite } from "../../../common/publicodes/indemnite-precarite";
 
 const ResultStepComponent = () => {
   const store = useContext(IndemnitePrecariteContext);
   const {
     result,
     calculationError,
-    isAgreementSupported,
     resultNotifications,
     resultReferences,
     agreement,
@@ -34,7 +35,6 @@ const ResultStepComponent = () => {
   } = useIndemnitePrecariteStore(store, (state) => ({
     result: state.resultData.result,
     calculationError: state.resultData.calculationError,
-    isAgreementSupported: state.resultData.isAgreementSupported,
     resultNotifications: state.resultData.resultNotifications,
     resultReferences: state.resultData.resultReferences,
     resultFormula: state.resultData.resultFormula,
@@ -49,9 +49,10 @@ const ResultStepComponent = () => {
   }));
 
   const contractOption = findContractOption(contractOptionId, agreement);
+  const family = contractOption?.family ?? CONTRACT_FAMILY.CDD;
   // La liste des contrats exclus n'est montrée qu'aux usagers ayant choisi
   // « Autres » à l'étape « Type de contrat » (issue #7142).
-  const isExcludedContract = contractOption?.family === CONTRACT_FAMILY.EXCLU;
+  const isExcludedContract = family === CONTRACT_FAMILY.EXCLU;
   const hasNoIndemnity = !!ineligibility;
 
   useEffect(() => {
@@ -65,6 +66,13 @@ const ResultStepComponent = () => {
       <div className={fr.cx("fr-col-md-8", "fr-col-12", "fr-mb-6w")}>
         <NoIndemnityMessage
           message={ineligibility}
+          family={family}
+          references={getIndemnitePrecariteIneligibilityReferences(
+            mapToPublicodesSituationForEligibilityIndemnitePrecarite({
+              family,
+              typeCdd: contractOption?.typeCdd ?? "Autres",
+            })
+          )}
           showExcludedContracts={isExcludedContract}
         />
       </div>
@@ -84,12 +92,13 @@ const ResultStepComponent = () => {
 
   return (
     <div className={fr.cx("fr-col-md-8", "fr-col-12", "fr-mb-6w")}>
-      <ShowResult result={result} notifications={resultNotifications} />
-
-      <Warning
-        agreement={agreement}
-        isAgreementSupported={isAgreementSupported || false}
+      <ShowResult
+        result={result}
+        notifications={resultNotifications}
+        family={family}
       />
+
+      <Warning />
 
       <h3 className={fr.cx("fr-h4", "fr-mt-4w")}>Détail du calcul</h3>
       <Situation
