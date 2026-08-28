@@ -128,10 +128,17 @@ describe("SimulateurIndemnitePrecarite - Sans Convention Collective", () => {
         ISSUE_CONTRAT.EMBAUCHE_CDI_AUTRE_ENTREPRISE,
         ISSUE_CONTRAT.INAPTITUDE,
         ISSUE_CONTRAT.COMMUN_ACCORD,
-        ISSUE_CONTRAT.AUTRE,
       ].forEach((issue) => {
         expect(ui.issueContrat(issue).get()).toBeInTheDocument();
       });
+    });
+
+    it("ne propose pas « Autre » en cas de rupture anticipée", () => {
+      fireEvent.click(ui.cddRemplacement.get());
+      fireEvent.click(ui.next.get());
+      fireEvent.click(ui.finALaDatePrevue.non.get());
+
+      expect(ui.issueContrat(ISSUE_CONTRAT.AUTRE).query()).toBeNull();
     });
 
     it("ne propose pas la rupture d'un commun accord pour un CTT", () => {
@@ -154,6 +161,7 @@ describe("SimulateurIndemnitePrecarite - Sans Convention Collective", () => {
       expect(ui.issueContrat(ISSUE_CONTRAT.AUTRE).get()).toBeChecked();
 
       fireEvent.click(ui.finALaDatePrevue.non.get());
+      fireEvent.click(ui.finALaDatePrevue.oui.get());
 
       expect(ui.issueContrat(ISSUE_CONTRAT.AUTRE).get()).not.toBeChecked();
     });
@@ -247,19 +255,6 @@ describe("SimulateurIndemnitePrecarite - Sans Convention Collective", () => {
 
       expect(screen.getByTestId("warning-title")).toHaveTextContent(
         "Attention, il peut exister un autre montant applicable à votre situation."
-      );
-    });
-
-    it("récapitule une rupture anticipée non disqualifiante", () => {
-      fillContractSteps({
-        finALaDatePrevue: "non",
-        issueContrat: ISSUE_CONTRAT.AUTRE,
-      });
-      fillRemunerationTotal(3000);
-
-      expect(ui.result.amount.get()).toHaveTextContent("300,00");
-      expect(screen.getByTestId("situation-terme-contrat")).toHaveTextContent(
-        "Le contrat a été rompu de manière anticipée"
       );
     });
 

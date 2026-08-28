@@ -92,30 +92,24 @@ export const fillRemunerationTotal = (montant: number) => {
   fireEvent.click(ui.next.get());
 };
 
-const ISSUES_DISQUALIFIANTES: Record<FinALaDatePrevue, IssueContrat[]> = {
-  oui: [
-    ISSUE_CONTRAT.EMBAUCHE_CDI,
-    ISSUE_CONTRAT.REFUS_CDI_EQUIVALENT,
-    ISSUE_CONTRAT.REFUS_SOUPLESSE,
-  ],
-  non: [
-    ISSUE_CONTRAT.PERIODE_ESSAI,
-    ISSUE_CONTRAT.FORCE_MAJEURE,
-    ISSUE_CONTRAT.FAUTE_GRAVE,
-    ISSUE_CONTRAT.EMBAUCHE_CDI_AUTRE_ENTREPRISE,
-    ISSUE_CONTRAT.INAPTITUDE,
-    ISSUE_CONTRAT.COMMUN_ACCORD,
-  ],
-};
+const ISSUES_DISQUALIFIANTES_A_TERME: IssueContrat[] = [
+  ISSUE_CONTRAT.EMBAUCHE_CDI,
+  ISSUE_CONTRAT.REFUS_CDI_EQUIVALENT,
+  ISSUE_CONTRAT.REFUS_SOUPLESSE,
+];
 
-/** Une situation disqualifiante envoie directement à l'écran de résultat. */
+/**
+ * Une situation disqualifiante envoie directement à l'écran de résultat. Toute
+ * rupture anticipée en fait partie : ses cadres sont tous exclusifs.
+ */
 export const isDisqualifying = ({
   contractOptionId,
   finALaDatePrevue = "oui",
   issueContrat = ISSUE_CONTRAT.AUTRE,
 }: JourneyOptions): boolean =>
   contractOptionId === "autres" ||
-  ISSUES_DISQUALIFIANTES[finALaDatePrevue].includes(issueContrat);
+  finALaDatePrevue === "non" ||
+  ISSUES_DISQUALIFIANTES_A_TERME.includes(issueContrat);
 
 /** Parcours nominal complet, de l'introduction au résultat. */
 export const runJourney = (

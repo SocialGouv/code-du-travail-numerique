@@ -38,6 +38,11 @@ const ISSUE_AUTRE: IssueOption = {
   label: "Autre",
 };
 
+/**
+ * Les listes de rupture anticipée sont exhaustives : elles couvrent tous les
+ * cadres de rupture prévus, et aucun n'ouvre droit à l'indemnité. Elles ne
+ * proposent donc volontairement pas d'option « Autre ».
+ */
 const ISSUES_RUPTURE_ANTICIPEE_CDD: IssueOption[] = [
   ISSUE_PERIODE_ESSAI,
   ISSUE_FORCE_MAJEURE,
@@ -48,7 +53,6 @@ const ISSUES_RUPTURE_ANTICIPEE_CDD: IssueOption[] = [
     value: ISSUE_CONTRAT.COMMUN_ACCORD,
     label: "Rupture d'un commun accord entre l'employeur et le salarié",
   },
-  ISSUE_AUTRE,
 ];
 
 const ISSUES_RUPTURE_ANTICIPEE_CTT: IssueOption[] = [
@@ -60,7 +64,6 @@ const ISSUES_RUPTURE_ANTICIPEE_CTT: IssueOption[] = [
   },
   ISSUE_INAPTITUDE,
   ISSUE_EMBAUCHE_CDI_AUTRE_ENTREPRISE,
-  ISSUE_AUTRE,
 ];
 
 const ISSUES_TERME_CDD: IssueOption[] = [

@@ -107,33 +107,24 @@ describe("Inéligibilité à l'indemnité de précarité (CDD)", () => {
     );
   });
 
-  test.each([
-    {
-      cas: "contrat allé à son terme avec une autre issue",
-      situation: {
-        "contrat salarié . fin à la date prévue": "'oui'",
-        "contrat salarié . issue du contrat": "'autre'",
-      },
-    },
-    {
-      cas: "rupture anticipée avec une autre issue",
-      situation: {
-        "contrat salarié . fin à la date prévue": "'non'",
-        "contrat salarié . issue du contrat": "'autre'",
-      },
-    },
-  ])("Indemnité due : $cas", ({ situation }) => {
-    const result = engine.calculate({ ...situationCdd, ...situation });
+  test("Indemnité due : contrat allé à son terme avec une autre issue", () => {
+    const result = engine.calculate({
+      ...situationCdd,
+      "contrat salarié . fin à la date prévue": "'oui'",
+      "contrat salarié . issue du contrat": "'autre'",
+    });
     expect(result).toResultBeEqual(300, "€");
   });
 
-  test("Les issues d'un contrat allé à son terme ne disqualifient pas une rupture anticipée", () => {
+  test("Toute rupture anticipée disqualifie, quelle qu'en soit l'issue", () => {
     const result = engine.calculate({
       ...situationCdd,
       "contrat salarié . fin à la date prévue": "'non'",
-      "contrat salarié . issue du contrat": "'embauche cdi'",
+      "contrat salarié . issue du contrat": "'autre'",
     });
-    expect(result).toResultBeEqual(300, "€");
+    expect(result).toIneligibilityBeEqual(
+      INDEMNITE_PRECARITE_INELIGIBILITY_MESSAGE
+    );
   });
 });
 
@@ -174,10 +165,10 @@ describe("Inéligibilité à l'indemnité de fin de mission (CTT)", () => {
     );
   });
 
-  test("Une autre issue ouvre droit à l'indemnité de fin de mission", () => {
+  test("Un contrat allé à son terme avec une autre issue ouvre droit à l'indemnité de fin de mission", () => {
     const result = engine.calculate({
       ...situationCtt,
-      "contrat salarié . fin à la date prévue": "'non'",
+      "contrat salarié . fin à la date prévue": "'oui'",
       "contrat salarié . issue du contrat": "'autre'",
     });
     expect(result).toResultBeEqual(300, "€");

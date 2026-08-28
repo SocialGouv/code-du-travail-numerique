@@ -24,20 +24,6 @@ const ISSUES_INELIGIBLES_A_TERME = [
   "'refus souplesse'",
 ];
 
-/**
- * Issues du contrat qui privent le salarié de l'indemnité en cas de rupture
- * anticipée. `'autre'` n'y figure pas : une rupture anticipée à l'initiative de
- * l'employeur, hors faute grave et force majeure, ouvre droit à l'indemnité.
- */
-const ISSUES_INELIGIBLES_RUPTURE_ANTICIPEE = [
-  "'période d'essai'",
-  "'force majeure'",
-  "'faute grave'",
-  "'embauche cdi autre entreprise'",
-  "'inaptitude'",
-  "'commun accord'",
-];
-
 const REFERENCE_CDD: References = {
   article: "Article L1243-10 du code du travail",
   url: "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006901221",
@@ -84,11 +70,10 @@ export class IneligibilityLegalIndemnitePrecarite implements IIneligibility {
       return message;
     }
 
-    if (
-      finALaDatePrevue === "'non'" &&
-      issue &&
-      ISSUES_INELIGIBLES_RUPTURE_ANTICIPEE.includes(issue)
-    ) {
+    // Les cadres de rupture anticipée proposés à l'usager sont exhaustifs et
+    // aucun n'ouvre droit à l'indemnité : une rupture anticipée disqualifie
+    // toujours, quelle qu'en soit l'issue.
+    if (finALaDatePrevue === "'non'" && issue) {
       return message;
     }
 
