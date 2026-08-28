@@ -190,6 +190,45 @@ describe("Event show_agreements", () => {
     });
   });
 
+  // Le parcours simulateur passe `isInSimulator` et
+  // `canContinueSimulationIfNoAgreement` (cf. CommonAgreementStep) : ces props
+  // changent le rendu — avec moins de deux conventions, le composant
+  // court-circuite le formulaire de sélection. Le comptage doit partir malgré
+  // ce court-circuit.
+  describe("<EnterpriseAgreementSearchInput isInSimulator /> (simulateurs)", () => {
+    const renderInSimulator = async (enterprise: unknown) =>
+      act(async () =>
+        render(
+          <EnterpriseAgreementSearchInput
+            enterprise={enterprise as never}
+            onAgreementSelect={jest.fn()}
+            trackingActionName="Indemnité de licenciement"
+            isInSimulator
+            canContinueSimulationIfNoAgreement
+            level={3}
+          />
+        )
+      );
+
+    it("émet le nombre de conventions collectives affichées", async () => {
+      await renderInSimulator(enterpriseWithTwoAgreements);
+
+      expect(showAgreementsEvents()).toEqual([showAgreementsEvent(2)]);
+    });
+
+    it("émet 1 pour une convention unique, malgré le court-circuit du formulaire", async () => {
+      await renderInSimulator(enterpriseWithOneAgreement);
+
+      expect(showAgreementsEvents()).toEqual([showAgreementsEvent(1)]);
+    });
+
+    it("émet 0 quand l'entreprise n'a déclaré aucune convention collective", async () => {
+      await renderInSimulator(enterpriseWithoutAgreement);
+
+      expect(showAgreementsEvents()).toEqual([showAgreementsEvent(0)]);
+    });
+  });
+
   describe("<EnterpriseAgreementSelectionLink /> (page dédiée et widget)", () => {
     it("émet le nombre de conventions collectives au montage", async () => {
       await act(async () => {
