@@ -69,7 +69,11 @@ test.describe("Outil - Indemnité de Precarite", () => {
     await page.getByRole("button", { name: "Suivant" }).click();
 
     // Résultat : un intérimaire perçoit une indemnité de fin de mission
-    await expect(page.getByText("Indemnité de fin de mission")).toBeVisible();
+    // Le titre du résultat, et non le lien de contenu associé qui porte le
+    // même libellé dans la colonne de droite.
+    await expect(
+      page.getByRole("heading", { name: "Indemnité de fin de mission" })
+    ).toBeVisible();
     await expect(page.getByText("Détail du calcul")).toBeVisible();
     await expect(page.getByText("200,00 €")).toBeVisible();
     await expect(
