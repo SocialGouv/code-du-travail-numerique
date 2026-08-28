@@ -1,67 +1,48 @@
 "use client";
 
-import { usePathname } from "next/navigation";
-import { sendEvent } from "@socialgouv/matomo-next";
+import { useTracking } from "../../analytics/events/useTracking";
 
-enum FeedbackCategoryEvent {
-  FEEDBACK = "feedback",
-  FEEDBACK_SUGGESTION = "feedback_suggestion",
-  FEEDBACK_CATEGORY = "feedback_category",
+// Motifs du parcours « cette page ne m'a pas été utile ».
+//
+// L'ancien schéma envoyait la PHRASE FRANÇAISE complète comme action Matomo
+// (`Les informations me semblent fausses.`) : accents, espaces et point final se
+// retrouvaient encodés dans les URLs de tracking et les exports CSV, et le
+// moindre ajustement de libellé cassait la série. La clé stable devient la
+// donnée envoyée, la phrase reste l'affaire de l'UI.
+export enum FeedbackReason {
+  UNCLEAR = "unclear",
+  UNRELATED = "unrelated",
+  UNSATISFIED = "unsatisfied",
+  WRONG = "wrong",
 }
 
-enum FeedbackActionEvent {
-  POSITIVE = "positive",
-  NEGATIVE = "negative",
-}
-
-export enum FeedbackActionChoiceValue {
-  "unclear" = "Les informations ne sont pas claires.",
-  "unrelated" = "Cette page ne correspond pas à ma recherche ou à ma situation.",
-  "unsatisfied" = "Je ne suis pas satisfait de cette réglementation.",
-  "wrong" = "Les informations me semblent fausses.",
-}
+export const FEEDBACK_REASON_LABELS: Readonly<Record<FeedbackReason, string>> =
+  {
+    [FeedbackReason.UNCLEAR]: "Les informations ne sont pas claires.",
+    [FeedbackReason.UNRELATED]:
+      "Cette page ne correspond pas à ma recherche ou à ma situation.",
+    [FeedbackReason.UNSATISFIED]:
+      "Je ne suis pas satisfait de cette réglementation.",
+    [FeedbackReason.WRONG]: "Les informations me semblent fausses.",
+  };
 
 export const useFeedbackEvents = () => {
-  const baseUrl = usePathname();
+  const { track } = useTracking();
 
   const emitPositiveFeedback = () => {
-    if (baseUrl) {
-      sendEvent({
-        category: FeedbackCategoryEvent.FEEDBACK,
-        action: FeedbackActionEvent.POSITIVE,
-        name: baseUrl,
-      });
-    }
+    track("submit_feedback_positive");
   };
 
   const emitNegativeFeedback = () => {
-    if (baseUrl) {
-      sendEvent({
-        category: FeedbackCategoryEvent.FEEDBACK,
-        action: FeedbackActionEvent.NEGATIVE,
-        name: baseUrl,
-      });
-    }
+    track("submit_feedback_negative");
   };
 
   const emitFeedbackSuggestion = (suggestion: string) => {
-    if (baseUrl) {
-      sendEvent({
-        category: FeedbackCategoryEvent.FEEDBACK_SUGGESTION,
-        action: suggestion,
-        name: baseUrl,
-      });
-    }
+    track("submit_feedback_comment", { comment: suggestion });
   };
 
-  const emitFeedbackCategory = (category: FeedbackActionChoiceValue) => {
-    if (baseUrl) {
-      sendEvent({
-        category: FeedbackCategoryEvent.FEEDBACK_CATEGORY,
-        action: category,
-        name: baseUrl,
-      });
-    }
+  const emitFeedbackCategory = (reason: FeedbackReason) => {
+    track("submit_feedback_reason", { reason });
   };
 
   return {

@@ -1,4 +1,4 @@
-import { MatomoHomeEvent, useHomeTracking } from "./tracking";
+import { HomeShortcutTarget, useHomeTracking } from "./tracking";
 import { HomeCardItem } from "./queries";
 import { HomeButton, HomeCard, SectionContainer } from "./Components";
 import { fr } from "@codegouvfr/react-dsfr";
@@ -20,9 +20,7 @@ export const Contributions = ({ items }: Props) => {
           buttonLink="/contribution"
           buttonText="Voir toutes les fiches pratiques"
           onButtonClick={() => {
-            emitHomeClickButtonEvent(
-              MatomoHomeEvent.CLICK_VOIR_TOUTES_LES_FICHES
-            );
+            emitHomeClickButtonEvent(HomeShortcutTarget.CONTRIBUTIONS);
           }}
         />
       }

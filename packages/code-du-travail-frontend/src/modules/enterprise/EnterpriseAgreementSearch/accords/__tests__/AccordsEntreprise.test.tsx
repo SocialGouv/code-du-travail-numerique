@@ -4,12 +4,20 @@ import React from "react";
 import { AccordsEntreprise } from "../index";
 import { EntrepriseAccordsResponse } from "../../../../../api/modules/accords/types";
 import { sendEvent } from "@socialgouv/matomo-next";
-import { TrackingAccordEntrepriseSearchAction } from "../tracking";
-import { TrackingAgreementSearchCategory } from "../../../../convention-collective/tracking";
+import { usePathname } from "next/navigation";
 
 jest.mock("@socialgouv/matomo-next", () => ({
   sendEvent: jest.fn(),
 }));
+
+// La catégorie et le chemin de l'event sont déduits de la route courante : les
+// accords d'entreprise s'affichent depuis une page de convention collective.
+const PAGE = "/convention-collective/1486";
+const PATH = "convention-collective/1486";
+
+beforeEach(() => {
+  (usePathname as jest.Mock).mockReturnValue(PAGE);
+});
 
 const mockFetch = (data: EntrepriseAccordsResponse) => {
   window.fetch = jest.fn().mockResolvedValue({
@@ -162,9 +170,10 @@ describe("AccordsEntreprise", () => {
         );
       });
       expect(sendEvent).toHaveBeenCalledWith({
-        category: TrackingAgreementSearchCategory.ACCORD_ENTERPRISE_SEARCH,
-        action: TrackingAccordEntrepriseSearchAction.SHOW_ACCORDS,
-        name: "2",
+        category: "convention-collective",
+        action: "show_enterprise_accords",
+        name: `{"path":"${PATH}","count":2}`,
+        value: 2,
       });
     });
 
@@ -175,10 +184,16 @@ describe("AccordsEntreprise", () => {
           <AccordsEntreprise siret="12345678901234" onLoaded={() => {}} />
         );
       });
+      // Le seau zéro : c'est lui que l'ancien schéma perdait — `name: "0"` est
+      // falsy en PHP, Matomo comptait l'event et jetait le nom (76 % des
+      // show_accords arrivaient sans nom en production). Dans l'enveloppe JSON
+      // il survit. `value: 0` seule ne suffirait pas : Matomo ne l'enregistre
+      // pas davantage (matomo-org/matomo#11204).
       expect(sendEvent).toHaveBeenCalledWith({
-        category: TrackingAgreementSearchCategory.ACCORD_ENTERPRISE_SEARCH,
-        action: TrackingAccordEntrepriseSearchAction.SHOW_ACCORDS,
-        name: "0",
+        category: "convention-collective",
+        action: "show_enterprise_accords",
+        name: `{"path":"${PATH}","count":0}`,
+        value: 0,
       });
     });
 
@@ -190,9 +205,9 @@ describe("AccordsEntreprise", () => {
         );
       });
       expect(sendEvent).toHaveBeenCalledWith({
-        category: TrackingAgreementSearchCategory.ACCORD_ENTERPRISE_SEARCH,
-        action: TrackingAccordEntrepriseSearchAction.LOAD_ACCORDS_FAILED,
-        name: "12345678901234",
+        category: "convention-collective",
+        action: "load_enterprise_accords_failed",
+        name: `{"path":"${PATH}","siret":"12345678901234"}`,
       });
     });
 
@@ -209,9 +224,9 @@ describe("AccordsEntreprise", () => {
       });
       await userEvent.click(link);
       expect(sendEvent).toHaveBeenCalledWith({
-        category: TrackingAgreementSearchCategory.ACCORD_ENTERPRISE_SEARCH,
-        action: TrackingAccordEntrepriseSearchAction.CLICK_ALL_ACCORDS,
-        name: "12345678901234",
+        category: "convention-collective",
+        action: "click_all_enterprise_accords",
+        name: `{"path":"${PATH}","siret":"12345678901234"}`,
       });
     });
 
@@ -228,9 +243,9 @@ describe("AccordsEntreprise", () => {
       });
       await userEvent.click(cardLink);
       expect(sendEvent).toHaveBeenCalledWith({
-        category: TrackingAgreementSearchCategory.ACCORD_ENTERPRISE_SEARCH,
-        action: TrackingAccordEntrepriseSearchAction.CLICK_ACCORD,
-        name: "ACCORD_1",
+        category: "convention-collective",
+        action: "click_enterprise_accord",
+        name: `{"path":"${PATH}","target":"ACCORD_1"}`,
       });
     });
   });

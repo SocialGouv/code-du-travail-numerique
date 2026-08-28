@@ -4,7 +4,7 @@ import Button from "@codegouvfr/react-dsfr/Button";
 import { EnterpriseAgreementSearchInput } from "./EnterpriseAgreementSearchInput";
 import { useSearchParams } from "next/navigation";
 import { useEnterpriseAgreementSearchTracking } from "./tracking";
-import { TrackingAgreementSearchAction } from "../../convention-collective/tracking";
+import { AGREEMENT_SEARCH_TOOL } from "../../convention-collective/tracking";
 
 type Props = {
   widgetMode?: boolean;
@@ -22,7 +22,7 @@ export const EnterpriseAgreementSearch = ({ widgetMode = false }: Props) => {
         widgetMode={widgetMode}
         defaultSearch={defaultSearch}
         defaultLocation={defaultLocation}
-        trackingActionName={TrackingAgreementSearchAction.AGREEMENT_SEARCH}
+        trackingActionName={AGREEMENT_SEARCH_TOOL}
         level={2}
       />
       {!widgetMode && (

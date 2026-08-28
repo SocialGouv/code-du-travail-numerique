@@ -58,7 +58,7 @@ export const NpsWidget = () => {
       // (cookie), mais la main reste affichée : l'usager peut encore répondre plus
       // tard ; seul « Ne pas répondre » la fait disparaître (cf. onOptOut).
       if (!submittedRef.current && !optedOutRef.current && triggerRef.current) {
-        trackRefusal(triggerRef.current, pathname);
+        trackRefusal(triggerRef.current);
         markNpsClosed();
       }
       setValue(null);
@@ -77,7 +77,7 @@ export const NpsWidget = () => {
     optedOutRef.current = false;
     setValue(null);
     npsModal.open();
-    trackDisplayed(trigger, pathname);
+    trackDisplayed(trigger);
   };
 
   // Déclencheurs automatiques (exit-intent, Télécharger, Copier) : bloqués si
@@ -131,7 +131,7 @@ export const NpsWidget = () => {
   // onConceal.
   const onOptOut = () => {
     optedOutRef.current = true;
-    if (triggerRef.current) trackOptOut(triggerRef.current, pathname);
+    if (triggerRef.current) trackOptOut(triggerRef.current);
     markNpsOptedOut();
     setHandHidden(true);
   };

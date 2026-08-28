@@ -10,6 +10,14 @@ jest.mock("@socialgouv/matomo-next", () => ({
   sendEvent: jest.fn(),
 }));
 
+// La catégorie et le chemin de l'event viennent de la route courante : on se
+// place sur la fiche générique, d'où partent les liens de déclinaison.
+jest.mock("next/navigation", () => ({
+  usePathname: () => "/contribution/la-periode-dessai",
+}));
+
+const PATH = "contribution/la-periode-dessai";
+
 const items: AgreementDeclination[] = [
   {
     shortTitle: "Banque",
@@ -68,10 +76,12 @@ describe("<ContributionAgreementDeclinations />", () => {
 
     getByText("Banque").click();
 
+    // `path` = la fiche générique d'où part le clic, `target` = la page de
+    // convention atteinte. L'ancien schéma n'avait que la seconde.
     expect(sendEvent).toHaveBeenCalledWith({
       category: "contribution",
-      action: "clic_declinaison_cc",
-      name: "contribution/2120-la-periode-dessai",
+      action: "click_agreement_declination",
+      name: `{"path":"${PATH}","target":"contribution/2120-la-periode-dessai"}`,
     });
   });
 });

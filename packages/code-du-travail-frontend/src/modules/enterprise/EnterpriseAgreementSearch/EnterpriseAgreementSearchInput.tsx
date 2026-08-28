@@ -375,7 +375,7 @@ export const EnterpriseAgreementSearchInput = ({
                 siren: selectedEnterprise.siren,
               });
               emitSelectEnterpriseAgreementEvent(
-                `idcc${selectedEnterprise.conventions[0].num}`,
+                selectedEnterprise.conventions[0].num,
                 trackingActionName
               );
             } else {
@@ -583,7 +583,7 @@ export const EnterpriseAgreementSearchInput = ({
                             siren: enterprise.siren,
                           });
                           emitSelectEnterpriseAgreementEvent(
-                            `idcc${enterprise.conventions[0].num}`,
+                            enterprise.conventions[0].num,
                             trackingActionName
                           );
                           onAgreementSelect(

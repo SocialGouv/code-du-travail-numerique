@@ -1,4 +1,4 @@
-import { MatomoHomeEvent, useHomeTracking } from "./tracking";
+import { HomeShortcutTarget, useHomeTracking } from "./tracking";
 import { HomeNewsCardItem } from "./queries";
 import { HomeButton, SectionContainer } from "./Components";
 import { fr } from "@codegouvfr/react-dsfr";
@@ -21,9 +21,7 @@ export const News = ({ items }: Props) => {
           buttonLink="/actualite"
           buttonText="Lire toutes les actualités"
           onButtonClick={() => {
-            emitHomeClickButtonEvent(
-              MatomoHomeEvent.CLICK_VOIR_TOUTES_LES_ACTUALITES
-            );
+            emitHomeClickButtonEvent(HomeShortcutTarget.ACTUALITES);
           }}
         />
       }

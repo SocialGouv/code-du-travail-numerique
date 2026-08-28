@@ -1,66 +1,44 @@
-import { sendEvent } from "@socialgouv/matomo-next";
+import { useTracking } from "../analytics/events/useTracking";
+import { toEventName } from "../analytics/eventName";
 
-export enum TrackingAgreementSearchCategory {
-  CC_SEARCH_TYPE_OF_USERS = "cc_search_type_of_users",
-  ENTERPRISE_SEARCH = "enterprise_search",
-  ACCORD_ENTERPRISE_SEARCH = "accord_enterprise_search",
-  CC_ENTERPRISE_SEARCH = "cc_enterprise_search",
-  VIEW_STEP = "view_step_Trouver sa convention collective",
-  CC_SELECT_P1 = "cc_select_p1",
-  CC_SELECT_P2 = "cc_select_p2",
-  CC_ENTERPRISE_SELECT = "enterprise_select",
-  VIEW_STEP_CC_SEARCH_P1 = "view_step_cc_search_p1",
-  VIEW_STEP_CC_SEARCH_P2 = "view_step_cc_search_p2",
-}
-
-export enum TrackingAgreementSearchAction {
-  AGREEMENT_SEARCH = "Trouver sa convention collective",
-  CLICK_P1 = "click_p1",
-  CLICK_P2 = "click_p2",
-  BACK_STEP_P1 = "back_step_cc_search_p1",
-  BACK_STEP_P2 = "back_step_cc_search_p2",
-  CLICK_NO_COMPANY = "click_je_n_ai_pas_d_entreprise",
-  SELECT_NO_COMPANY = "select_je_n_ai_pas_d_entreprise",
-}
+// Contexte du parcours « trouver sa convention collective » quand il est joué
+// sur sa page dédiée (`/outils/convention-collective`). Le même composant est
+// aussi monté dans les simulateurs et dans les contributions, qui passent alors
+// leur propre contexte.
+export const AGREEMENT_SEARCH_TOOL = "Trouver sa convention collective";
 
 export const useAgreementSearchTracking = () => {
+  const { track } = useTracking();
+
   const emitViewStepEvent = () => {
-    sendEvent({
-      category: "outil",
-      action: `view_step_${TrackingAgreementSearchAction.AGREEMENT_SEARCH}`,
-      name: "start",
-    });
+    track("view_step", { simulator: AGREEMENT_SEARCH_TOOL, step: "start" });
   };
 
+  // p1 : « je connais ma convention collective » -> route `agreement`.
   const emitNavigateAgreementSearchEvent = (): undefined => {
-    sendEvent({
-      category: TrackingAgreementSearchCategory.CC_SEARCH_TYPE_OF_USERS,
-      action: TrackingAgreementSearchAction.CLICK_P1,
-      name: TrackingAgreementSearchAction.AGREEMENT_SEARCH,
-    });
+    track("select_agreement_path_p1", { context: AGREEMENT_SEARCH_TOOL });
   };
 
+  // p2 : « je ne la connais pas, je cherche mon entreprise » -> route `enterprise`.
   const emitNavigateEnterpriseSearchEvent = (): undefined => {
-    sendEvent({
-      category: TrackingAgreementSearchCategory.CC_SEARCH_TYPE_OF_USERS,
-      action: TrackingAgreementSearchAction.CLICK_P2,
-      name: TrackingAgreementSearchAction.AGREEMENT_SEARCH,
-    });
+    track("select_agreement_path_p2", { context: AGREEMENT_SEARCH_TOOL });
   };
 
-  const emitSelectEvent = (idcc: string, action: string) => {
-    sendEvent({
-      category: TrackingAgreementSearchCategory.CC_SELECT_P1,
-      action: action,
-      name: idcc,
-    });
+  // `idcc` est le NUMÉRO brut de la convention. L'ancien schéma envoyait
+  // « idcc1486 » côté simulateurs et « 1486 » côté contributions pour la même
+  // information : le préfixe devient inutile une fois la donnée nommée par sa
+  // clé de payload.
+  const emitSelectEvent = (idcc: number, context: string) => {
+    track("select_agreement_p1", { idcc, context: toEventName(context) });
   };
 
+  // « Précédent » depuis l'écran de recherche par nom de convention. L'ancien
+  // schéma en faisait une CATÉGORIE Matomo nommée `view_step_cc_search_p1` —
+  // une catégorie qui décrivait une action, l'anomalie la plus nette de
+  // l'ancien schéma.
   const emitPreviousEvent = () => {
-    sendEvent({
-      category: TrackingAgreementSearchCategory.VIEW_STEP_CC_SEARCH_P1,
-      action: TrackingAgreementSearchAction.BACK_STEP_P1,
-      name: TrackingAgreementSearchAction.AGREEMENT_SEARCH,
+    track("click_previous_step_agreement_p1", {
+      context: AGREEMENT_SEARCH_TOOL,
     });
   };
 

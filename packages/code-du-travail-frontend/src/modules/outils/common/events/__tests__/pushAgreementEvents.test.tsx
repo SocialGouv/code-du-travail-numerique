@@ -1,3 +1,4 @@
+/** @jest-environment jsdom */
 import { sendEvent } from "@socialgouv/matomo-next";
 import { Agreement } from "src/modules/outils/indemnite-depart/types";
 import {
@@ -5,12 +6,6 @@ import {
   pushAgreementEvents,
 } from "../pushAgreementEvents";
 import { Enterprise } from "src/modules/enterprise";
-import {
-  MatomoBaseEvent,
-  MatomoSearchAgreementCategory,
-  MatomoAgreementEvent,
-  MatomoSimulatorEvent,
-} from "src/modules/analytics";
 
 jest.mock("@socialgouv/matomo-next", () => ({
   sendEvent: jest.fn(),
@@ -43,24 +38,35 @@ const enterprise: Enterprise = {
   },
 };
 
+const SIMULATOR = "Préavis de retraite";
+const SIMULATOR_PATH = "outils/preavis-retraite";
+
+// Émis depuis un store zustand : `sendPageEvent` lit la route sur
+// `window.location`, pas via `usePathname()`.
+const name = (payload: Record<string, unknown>): string =>
+  JSON.stringify({ path: SIMULATOR_PATH, ...payload });
+
 describe("Push agreement events on click next", () => {
   beforeEach(() => {
-    const ma = sendEvent as jest.MockedFunction<typeof sendEvent>;
-    ma.mockReset();
+    window.history.pushState({}, "", `/${SIMULATOR_PATH}`);
+    (sendEvent as jest.MockedFunction<typeof sendEvent>).mockReset();
   });
 
+  // Tous ces events prennent la catégorie de la PAGE (`outil`), là où l'ancien
+  // schéma répartissait la même étape de parcours sur quatre catégories
+  // différentes : `cc_search_type_of_users`, `cc_select_p1`, `cc_select_p2`,
+  // `enterprise_select` et `outil`.
   describe("user without agreement selected", () => {
-    const data: ConventionCollective = {
-      route: "not-selected",
-    };
-    it("should send a search type of users matomo event", () => {
-      const pageTitle = "Préavis de retraite";
-      pushAgreementEvents(pageTitle, data, false, false);
+    const data: ConventionCollective = { route: "not-selected" };
+
+    it("envoie le parcours p3", () => {
+      pushAgreementEvents(SIMULATOR, data, false, false);
+
       expect(sendEvent).toHaveBeenCalledTimes(1);
       expect(sendEvent).toHaveBeenCalledWith({
-        category: MatomoSearchAgreementCategory.AGREEMENT_SEARCH_TYPE_OF_USERS,
-        action: "click_p3",
-        name: pageTitle,
+        category: "outil",
+        action: "select_agreement_path_p3",
+        name: name({ context: SIMULATOR }),
       });
     });
   });
@@ -70,87 +76,73 @@ describe("Push agreement events on click next", () => {
       route: "agreement",
       selected: agreement,
     };
-    describe("agreement not treated", () => {
-      it("should send matomo events", () => {
-        const pageTitle = "Préavis de retraite";
-        pushAgreementEvents(pageTitle, data, false, false);
-        expect(sendEvent).toHaveBeenCalledTimes(3);
-        expect(sendEvent).toHaveBeenNthCalledWith(1, {
-          category:
-            MatomoSearchAgreementCategory.AGREEMENT_SEARCH_TYPE_OF_USERS,
-          action: "click_p1",
-          name: pageTitle,
-        });
-        expect(sendEvent).toHaveBeenNthCalledWith(2, {
-          category: MatomoSearchAgreementCategory.AGREEMENT_SELECT_P1,
-          action: pageTitle,
-          name: `idcc${agreement.num.toString()}`,
-        });
-        expect(sendEvent).toHaveBeenNthCalledWith(3, {
-          category: MatomoBaseEvent.OUTIL,
-          action: MatomoAgreementEvent.CC_UNTREATED,
-          name: agreement.num.toString(),
-        });
+
+    it("envoie parcours p1, sélection de CC et support, CC non traitée", () => {
+      pushAgreementEvents(SIMULATOR, data, false, false);
+
+      expect(sendEvent).toHaveBeenCalledTimes(3);
+      expect(sendEvent).toHaveBeenNthCalledWith(1, {
+        category: "outil",
+        action: "select_agreement_path_p1",
+        name: name({ context: SIMULATOR }),
+      });
+      expect(sendEvent).toHaveBeenNthCalledWith(2, {
+        category: "outil",
+        action: "select_agreement_p1",
+        name: name({ context: SIMULATOR, idcc: agreement.num }),
+      });
+      expect(sendEvent).toHaveBeenNthCalledWith(3, {
+        category: "outil",
+        action: "select_agreement_unsupported",
+        name: name({ context: SIMULATOR, idcc: agreement.num }),
       });
     });
-    describe("agreement treated", () => {
-      it("should send matomo events", () => {
-        const pageTitle = "Préavis de retraite";
-        pushAgreementEvents(pageTitle, data, true, false);
-        expect(sendEvent).toHaveBeenCalledTimes(3);
-        expect(sendEvent).toHaveBeenNthCalledWith(1, {
-          category:
-            MatomoSearchAgreementCategory.AGREEMENT_SEARCH_TYPE_OF_USERS,
-          action: "click_p1",
-          name: pageTitle,
-        });
-        expect(sendEvent).toHaveBeenNthCalledWith(2, {
-          category: MatomoSearchAgreementCategory.AGREEMENT_SELECT_P1,
-          action: pageTitle,
-          name: `idcc${agreement.num.toString()}`,
-        });
-        expect(sendEvent).toHaveBeenNthCalledWith(3, {
-          category: MatomoBaseEvent.OUTIL,
-          action: MatomoAgreementEvent.CC_TREATED,
-          name: agreement.num.toString(),
-        });
+
+    it("distingue une CC prise en charge", () => {
+      pushAgreementEvents(SIMULATOR, data, true, false);
+
+      expect(sendEvent).toHaveBeenNthCalledWith(3, {
+        category: "outil",
+        action: "select_agreement_supported",
+        name: name({ context: SIMULATOR, idcc: agreement.num }),
       });
     });
   });
 
   describe("user with enterprise selected", () => {
     const data: ConventionCollective = {
-      enterprise: enterprise,
+      enterprise,
       route: "enterprise",
       selected: agreement,
     };
 
-    it("should send matomo events", () => {
-      const pageTitle = "Préavis de retraite";
-      pushAgreementEvents(pageTitle, data, false, false);
+    it("envoie parcours p2, entreprise, sélection de CC et support", () => {
+      pushAgreementEvents(SIMULATOR, data, false, false);
+
       expect(sendEvent).toHaveBeenCalledTimes(4);
       expect(sendEvent).toHaveBeenNthCalledWith(1, {
-        category: MatomoSearchAgreementCategory.AGREEMENT_SEARCH_TYPE_OF_USERS,
-        action: "click_p2",
-        name: pageTitle,
+        category: "outil",
+        action: "select_agreement_path_p2",
+        name: name({ context: SIMULATOR }),
       });
       expect(sendEvent).toHaveBeenNthCalledWith(2, {
-        category: MatomoSearchAgreementCategory.ENTERPRISE_SELECT,
-        action: pageTitle,
-        name: JSON.stringify({
+        category: "outil",
+        action: "select_enterprise",
+        name: name({
+          context: SIMULATOR,
           label: enterprise.label,
           siren: enterprise.siren,
         }),
       });
       expect(sendEvent).toHaveBeenNthCalledWith(3, {
-        category: MatomoSearchAgreementCategory.AGREEMENT_SELECT_P2,
-        action: pageTitle,
-        name: `idcc${agreement.num.toString()}`,
+        category: "outil",
+        action: "select_agreement_p2",
+        name: name({ context: SIMULATOR, idcc: agreement.num }),
       });
       expect(sendEvent).toHaveBeenNthCalledWith(4, {
-        category: MatomoBaseEvent.OUTIL,
-        action: MatomoAgreementEvent.CC_UNTREATED,
-        name: agreement.num.toString(),
+        category: "outil",
+        action: "select_agreement_unsupported",
+        name: name({ context: SIMULATOR, idcc: agreement.num }),
       });
     });
   });
@@ -162,95 +154,41 @@ describe("Push agreement events on click next", () => {
       selected: agreement,
     };
 
-    it("should send matomo events", () => {
-      const pageTitle = "Préavis de retraite";
-      pushAgreementEvents(pageTitle, data, false, true);
+    it("ajoute l'event « je n'ai pas d'entreprise »", () => {
+      pushAgreementEvents(SIMULATOR, data, false, true);
+
       expect(sendEvent).toHaveBeenCalledTimes(4);
-      expect(sendEvent).toHaveBeenNthCalledWith(1, {
-        category: MatomoSearchAgreementCategory.AGREEMENT_SEARCH_TYPE_OF_USERS,
-        action: "click_p2",
-        name: pageTitle,
-      });
-      expect(sendEvent).toHaveBeenNthCalledWith(2, {
-        category: MatomoSearchAgreementCategory.AGREEMENT_SELECT_P2,
-        action: pageTitle,
-        name: `idcc${agreement.num.toString()}`,
-      });
-      expect(sendEvent).toHaveBeenNthCalledWith(3, {
-        category: MatomoBaseEvent.OUTIL,
-        action: MatomoAgreementEvent.CC_UNTREATED,
-        name: agreement.num.toString(),
-      });
       expect(sendEvent).toHaveBeenNthCalledWith(4, {
-        category: MatomoSearchAgreementCategory.AGREEMENT_SEARCH_TYPE_OF_USERS,
-        action: MatomoSimulatorEvent.SELECT_NO_COMPANY,
-        name: pageTitle,
+        category: "outil",
+        action: "select_no_enterprise",
+        name: name({ context: SIMULATOR }),
       });
     });
   });
 
-  describe("not tracking", () => {
-    it("should not send matomo events if agreement is 9999", () => {
-      const agreement9999: Agreement = {
-        id: "AGREEMENT_ID",
-        num: 9999,
-        shortTitle: "?",
-        slug: "/convention/9999",
-        title: "?",
-        contributions: false,
-      };
-      const pageTitle = "Blabla";
+  describe("convention 9999 (non identifiée)", () => {
+    const agreement9999: Agreement = {
+      id: "AGREEMENT_ID",
+      num: 9999,
+      shortTitle: "?",
+      slug: "/convention/9999",
+      title: "?",
+      contributions: false,
+    };
+
+    it("émet quand même le parcours (le filtrage 9999 est en amont)", () => {
       pushAgreementEvents(
-        pageTitle,
+        SIMULATOR,
         {
-          enterprise: {
-            activitePrincipale:
-              "Commerce de détail en magasin non spécialisé à prédominance alimentaire",
-            conventions: [agreement9999],
-            etablissements: 335,
-            highlightLabel:
-              "<b><u>MONOPRIX</u></b> EXPLOITATION, PAR ABREVIATION MPX",
-            label: "MONOPRIX EXPLOITATION, PAR ABREVIATION MPX",
-            matching: 272,
-            simpleLabel: "MONOPRIX EXPLOITATION",
-            siren: "552083297",
-            siret: "55208329700012",
-            address: "123 RUE DU BONHEUR 75000 PARIS",
-            matchingEtablissementCount: 0,
-            complements: {
-              liste_idcc: ["9999"],
-            },
-          },
+          enterprise: { ...enterprise, conventions: [agreement9999] },
           route: "enterprise",
           selected: agreement9999,
         },
         false,
         false
       );
+
       expect(sendEvent).toHaveBeenCalledTimes(4);
-      expect(sendEvent).toHaveBeenNthCalledWith(1, {
-        category: MatomoSearchAgreementCategory.AGREEMENT_SEARCH_TYPE_OF_USERS,
-        action: "click_p2",
-        name: pageTitle,
-      });
-      expect(sendEvent).toHaveBeenNthCalledWith(2, {
-        category: MatomoSearchAgreementCategory.ENTERPRISE_SELECT,
-        action: pageTitle,
-        name: JSON.stringify({
-          label: enterprise.label,
-          siren: enterprise.siren,
-        }),
-      });
-      expect(sendEvent).toHaveBeenNthCalledWith(3, {
-        category: MatomoSearchAgreementCategory.AGREEMENT_SELECT_P2,
-        action: pageTitle,
-        name: "idcc9999",
-      });
-      expect(sendEvent).toHaveBeenNthCalledWith(4, {
-        category: MatomoBaseEvent.OUTIL,
-        action: MatomoAgreementEvent.CC_UNTREATED,
-        name: "9999",
-      });
     });
   });
 });

@@ -8,6 +8,11 @@ jest.mock("@socialgouv/matomo-next", () => {
     sendEvent: jest.fn(),
   };
 });
+jest.mock("next/navigation", () => ({
+  usePathname: () => "/contribution/ma-page",
+}));
+
+const PATH = "contribution/ma-page";
 const items = [
   {
     items: [
@@ -62,10 +67,12 @@ describe("<RelatedItems />", () => {
     const { getByText } = render(<RelatedItems relatedItems={items} />);
     getByText(/événements familiaux/).click();
 
+    // L'ancien schéma glissait un JSON dans l'ACTION sous une catégorie
+    // `selectRelated`. La cible passe en payload, l'action redevient un verbe.
     expect(sendEvent).toHaveBeenCalledWith({
-      category: "selectRelated",
-      action:
-        '{"selection":"contribution/les-conges-pour-evenements-familiaux"}',
+      category: "contribution",
+      action: "click_related_content",
+      name: `{"path":"${PATH}","target":"contribution/les-conges-pour-evenements-familiaux"}`,
     });
   });
   it("should track related items clicks for external link", async () => {
@@ -73,17 +80,20 @@ describe("<RelatedItems />", () => {
     const { getByText } = render(<RelatedItems relatedItems={items} />);
     getByText(/événements familiaux/).click();
 
+    // L'ancien schéma glissait un JSON dans l'ACTION sous une catégorie
+    // `selectRelated`. La cible passe en payload, l'action redevient un verbe.
     expect(sendEvent).toHaveBeenCalledWith({
-      category: "selectRelated",
-      action:
-        '{"selection":"contribution/les-conges-pour-evenements-familiaux"}',
+      category: "contribution",
+      action: "click_related_content",
+      name: `{"path":"${PATH}","target":"contribution/les-conges-pour-evenements-familiaux"}`,
     });
 
     getByText(/compte formation/).click();
 
     expect(sendEvent).toHaveBeenCalledWith({
-      category: "selectRelated",
-      action: '{"selection":"https://www.moncompteformation.gouv.fr"}',
+      category: "contribution",
+      action: "click_related_content",
+      name: `{"path":"${PATH}","target":"https://www.moncompteformation.gouv.fr"}`,
     });
   });
 });

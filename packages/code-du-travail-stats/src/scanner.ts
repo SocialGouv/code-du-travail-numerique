@@ -1,6 +1,8 @@
 // Parcourt les fichiers source et détecte chaque callsite de tracking :
-//   - sendEvent({ category, action, name? })
-//   - push([cmd, ...]) / _paq.push([...])  events & config Matomo natifs
+//   - track(action, payload?, value?)          socle normalisé (hooks React)
+//   - sendPageEvent(action, payload?, value?)  socle normalisé (hors React)
+//   - sendEvent({ category, action, name? })   appel Matomo brut
+//   - push([cmd, ...]) / _paq.push([...])      events & config Matomo natifs
 // Produit les events (après expansion des enums) et les listes annexes.
 
 import { Node, SyntaxKind } from "ts-morph";
@@ -24,6 +26,54 @@ export type ScanResult = {
   callsiteKeys: Set<string>;
 };
 
+// Émetteurs du socle normalisé (`modules/analytics/events`). Ils ne reçoivent
+// PAS de catégorie : elle est déduite de la route courante au runtime, ce qui
+// est justement ce qui rend la convention impossible à contourner.
+const SOCLE_EMITTERS = new Set(["track", "sendPageEvent"]);
+
+// Placeholder de la catégorie pour ces émetteurs : le type de page n'est
+// connaissable qu'à l'exécution. Les valeurs possibles sont l'enum PageCategory.
+const PAGE_CATEGORY_PLACEHOLDER = "<PageCategory>";
+
+// `track` est un nom courant : on ne le traite comme un émetteur que si le
+// fichier importe réellement le socle. Sans ce garde-fou, n'importe quelle
+// fonction locale nommée `track` polluerait le catalogue.
+function importsTrackingSocle(sf: SourceFile): boolean {
+  return sf
+    .getImportDeclarations()
+    .some((decl) =>
+      decl.getModuleSpecifierValue().includes("analytics/events")
+    );
+}
+
+// Décrit la FORME du payload plutôt que ses valeurs : `{path, simulator, step}`.
+// C'est ce dont le plan de tracking a besoin — quelles informations voyagent —
+// et ça reste stable quand une valeur runtime change.
+// L'ordre reproduit celui de la sérialisation : `path` en tête, le reste trié.
+function payloadShape(node: Node | undefined): string | null {
+  if (!node) return "{path}";
+  if (!Node.isObjectLiteralExpression(node)) {
+    return `<${node.getText().slice(0, 80)}>`;
+  }
+
+  const keys: string[] = [];
+  for (const prop of node.getProperties()) {
+    if (Node.isPropertyAssignment(prop)) {
+      keys.push(prop.getName().replace(/^["']|["']$/g, ""));
+    } else if (Node.isShorthandPropertyAssignment(prop)) {
+      keys.push(prop.getName());
+    } else if (Node.isSpreadAssignment(prop)) {
+      keys.push("...");
+    }
+  }
+
+  // `path` est toujours présent, que l'appelant le passe ou non : le socle
+  // l'injecte depuis la route courante. On le remet donc en tête sans se
+  // demander s'il figure dans l'appel.
+  const rest = keys.filter((key) => key !== "path").sort();
+  return `{${["path", ...rest].join(", ")}}`;
+}
+
 export function scanSourceFiles(
   eventFiles: SourceFile[],
   resolver: Resolver,
@@ -44,7 +94,8 @@ export function scanSourceFiles(
     relFile: string,
     line: number,
     enumRefs: string[],
-    trackingMethod: string
+    trackingMethod: string,
+    hasValue = false
   ): void {
     callsiteKeys.add(`${relFile}:${line}`);
     for (const cat of cats) {
@@ -59,12 +110,15 @@ export function scanSourceFiles(
           line,
           enum_refs: enumRefs,
           tracking_method: trackingMethod,
+          has_value: hasValue,
         });
       }
     }
   }
 
   for (const sf of eventFiles) {
+    const hasSocleImport = importsTrackingSocle(sf);
+
     sf.forEachDescendant((node) => {
       if (!Node.isCallExpression(node)) return;
       const expr = node.getExpression();
@@ -72,6 +126,38 @@ export function scanSourceFiles(
       const line = node.getStartLineNumber();
       const relFile = path.relative(repoRoot, sf.getFilePath());
       const args = node.getArguments();
+
+      // ---- Cas 0 : socle normalisé — track(action, payload?, value?) ----
+      // La catégorie n'est pas dans l'appel : elle vient de la route courante.
+      // C'est le cœur de la normalisation — un appelant ne PEUT pas se tromper
+      // de catégorie — mais ça la rend, par construction, non résoluble
+      // statiquement : elle est notée `<PageCategory>`.
+      if (hasSocleImport && SOCLE_EMITTERS.has(exprText)) {
+        if (args.length === 0) {
+          unresolved.push({
+            file: relFile,
+            line,
+            reason: `${exprText} appelé sans action`,
+          });
+          return;
+        }
+
+        const acts = resolveValues(args[0]);
+        pushEvents(
+          [{ value: PAGE_CATEGORY_PLACEHOLDER, kind: "dynamic" }],
+          acts,
+          payloadShape(args[1]),
+          findContainingFunctionName(node),
+          relFile,
+          line,
+          Node.isObjectLiteralExpression(args[1] as Node)
+            ? getEnumRefs(args[1] as never)
+            : [],
+          exprText,
+          args.length > 2
+        );
+        return;
+      }
 
       // ---- Cas 1 : sendEvent({ category, action, name? }) ----
       if (exprText === "sendEvent" || exprText.endsWith(".sendEvent")) {

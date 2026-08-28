@@ -5,8 +5,8 @@ import { NumberedScaleQuestionnaireItem } from "./NumberedScaleQuestionnaireItem
 import { QuestionnaireText } from "./QuestionnaireText";
 import React, { forwardRef, useState, useEffect, useRef } from "react";
 import {
-  EVENT_ACTION,
-  EVENT_CATEGORY,
+  FEEDBACK_QUESTION,
+  SIMULATOR_FEEDBACK_CONTEXT,
   FEEDBACK_RESULT,
   useFeedbackEvents,
 } from "./tracking";
@@ -15,7 +15,7 @@ import { usePathname } from "next/navigation";
 
 type QuestionnaireAdvancedProps = {
   onClick: () => void;
-  category: EVENT_CATEGORY;
+  category: SIMULATOR_FEEDBACK_CONTEXT;
 };
 
 export const QuestionnaireAdvanced = forwardRef<
@@ -90,16 +90,24 @@ export const QuestionnaireAdvanced = forwardRef<
 
     // Envoi des données si validation OK
     if (statusSimulator) {
-      trackFeedback(EVENT_ACTION.EASINESS, statusSimulator, category);
+      trackFeedback(FEEDBACK_QUESTION.EASINESS, statusSimulator, category);
     }
     if (statusQuestion) {
-      trackFeedback(EVENT_ACTION.QUESTION_CLARITY, statusQuestion, category);
+      trackFeedback(
+        FEEDBACK_QUESTION.QUESTION_CLARITY,
+        statusQuestion,
+        category
+      );
     }
     if (statusExplanation) {
-      trackFeedback(EVENT_ACTION.RESULT_CLARITY, statusExplanation, category);
+      trackFeedback(
+        FEEDBACK_QUESTION.RESULT_CLARITY,
+        statusExplanation,
+        category
+      );
     }
     if (feedbackText && path) {
-      trackFeedbackText(feedbackText, path, category);
+      trackFeedbackText(feedbackText, category);
     }
 
     onClick();

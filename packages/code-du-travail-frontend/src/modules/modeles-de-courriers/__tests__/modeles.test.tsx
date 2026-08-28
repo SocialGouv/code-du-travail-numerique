@@ -1,4 +1,5 @@
 import { sendEvent } from "@socialgouv/matomo-next";
+import { usePathname } from "next/navigation";
 import { fireEvent, render, within } from "@testing-library/react";
 import { LetterModel } from "../LetterModel";
 
@@ -7,6 +8,18 @@ jest.mock("@socialgouv/matomo-next", () => {
     sendEvent: jest.fn(),
   };
 });
+
+// La catégorie et le chemin de l'event viennent de la route courante : le slug
+// du modèle n'a plus besoin d'être passé à l'émetteur, il EST le chemin. On ne
+// surcharge `usePathname` que dans les tests de tracking, pour ne pas déplacer
+// les snapshots pour une raison sans rapport.
+const PAGE = "/modeles-de-courriers/mon-modele";
+
+const COPY_EVENT = {
+  category: "modeles-de-courriers",
+  action: "copy_letter_template",
+  name: '{"path":"modeles-de-courriers/mon-modele"}',
+};
 
 Object.assign(navigator, {
   clipboard: {
@@ -42,6 +55,7 @@ describe("<LetterModel />", () => {
     expect(container).toMatchSnapshot();
   });
   it("envoi un event quand on déclenche une copie", () => {
+    (usePathname as jest.Mock).mockReturnValue(PAGE);
     const { container } = render(
       <LetterModel
         breadcrumbs={[]}
@@ -59,13 +73,10 @@ describe("<LetterModel />", () => {
     );
 
     fireEvent.copy(container);
-    expect(sendEvent).toHaveBeenCalledWith({
-      category: "page_modeles_de_documents",
-      action: "type_CTRL_C",
-      name: "mon-modele",
-    });
+    expect(sendEvent).toHaveBeenCalledWith(COPY_EVENT);
   });
   it("should send matomo event when firing copy event", () => {
+    (usePathname as jest.Mock).mockReturnValue(PAGE);
     const { container } = render(
       <LetterModel
         breadcrumbs={[]}
@@ -83,14 +94,11 @@ describe("<LetterModel />", () => {
     );
 
     fireEvent.copy(container);
-    expect(sendEvent).toHaveBeenCalledWith({
-      category: "page_modeles_de_documents",
-      action: "type_CTRL_C",
-      name: "mon-modele",
-    });
+    expect(sendEvent).toHaveBeenCalledWith(COPY_EVENT);
   });
 
   it("doit envoyer un event et appeler la méthode writeText de clipboard", async () => {
+    (usePathname as jest.Mock).mockReturnValue(PAGE);
     const { getAllByTestId } = render(
       <LetterModel
         breadcrumbs={[]}
@@ -109,11 +117,7 @@ describe("<LetterModel />", () => {
 
     getAllByTestId("copy-button")[0].click();
 
-    expect(sendEvent).toHaveBeenCalledWith({
-      category: "page_modeles_de_documents",
-      action: "type_CTRL_C",
-      name: "mon-modele",
-    });
+    expect(sendEvent).toHaveBeenCalledWith(COPY_EVENT);
     expect(navigator.clipboard.writeText).toHaveBeenCalled();
   });
 

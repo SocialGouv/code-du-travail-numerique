@@ -1,13 +1,5 @@
-import { usePathname } from "next/navigation";
-import { SITE_URL } from "../../config";
-import { sendEvent } from "@socialgouv/matomo-next";
+import { useTracking } from "../analytics/events/useTracking";
 import { toEventName } from "../analytics/eventName";
-
-enum CommonCategory {
-  SELECTED_RELATED = "selectRelated",
-  CLICK_SHARE = "clic_share",
-  CLICK_THEME_TAG = "clic_tag_theme",
-}
 
 type SocialNetwork =
   | "facebook"
@@ -17,37 +9,26 @@ type SocialNetwork =
   | "whatsapp"
   | "copier";
 
+// Events communs à tous les types de page : partage, contenus liés, tags de
+// thème. La catégorie (type de page) et le chemin sont injectés par
+// `useTracking` — ces émetteurs n'ont donc plus besoin de `usePathname` ni de
+// reconstruire une URL.
 export const useCommonTracking = () => {
-  const pathname = usePathname() ?? "";
-  const currentPageUrl = (SITE_URL + pathname) as string;
+  const { track } = useTracking();
 
   const emitSelectRelated = (selection: string | undefined) => {
-    sendEvent({
-      category: CommonCategory.SELECTED_RELATED,
-      action: JSON.stringify({ selection }),
-    });
+    track("click_related_content", { target: selection });
   };
 
   const emitClickShare = (socialNetwork: SocialNetwork) => {
-    sendEvent({
-      category: CommonCategory.CLICK_SHARE,
-      action: currentPageUrl,
-      name: socialNetwork,
-    });
+    track("click_share", { network: socialNetwork });
   };
 
-  const emitClickThemeTag = (themeSlug: string) => {
-    // pathname "/contribution/mon-slug" → source (type de page) + slug du contenu.
-    const [, source = "", ...rest] = pathname.split("/");
-    sendEvent({
-      // category = source de la page (contribution, information, …) ;
-      // action = clic_tag_theme ; name = { slug de la page, thème cliqué }.
-      category: source,
-      action: CommonCategory.CLICK_THEME_TAG,
-      name: JSON.stringify({
-        slug: rest.join("/"),
-        theme: toEventName(themeSlug),
-      }),
+  // `themeSlug` est optionnel : un tag peut être rendu avant que son thème soit
+  // résolu, et on préfère un event sans la clé `theme` à pas d'event du tout.
+  const emitClickThemeTag = (themeSlug?: string) => {
+    track("click_theme_tag", {
+      theme: themeSlug ? toEventName(themeSlug) : undefined,
     });
   };
 

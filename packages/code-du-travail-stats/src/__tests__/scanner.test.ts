@@ -96,3 +96,82 @@ describe("scanSourceFiles — push Matomo natif", () => {
     ]);
   });
 });
+
+// Le socle normalisé (`modules/analytics/events`) n'expose PAS la catégorie à
+// l'appelant : elle est déduite de la route courante au runtime. C'est ce qui
+// rend la convention impossible à contourner par oubli, et c'est aussi ce qui
+// la rend non résoluble statiquement.
+describe("scanSourceFiles — socle normalisé (track / sendPageEvent)", () => {
+  const withSocle = (body: string) =>
+    `import { useTracking } from "src/modules/analytics/events/useTracking";\n${body}`;
+
+  it("extrait l'action et la forme du payload", () => {
+    const res = scan(
+      withSocle(
+        `const emit = () => { track("click_share", { network: "facebook" }); };`
+      )
+    );
+
+    expect(res.events).toHaveLength(1);
+    expect(res.events[0]).toMatchObject({
+      category: "<PageCategory>",
+      action: "click_share",
+      name_pattern: "{path, network}",
+      resolution: "dynamic",
+      emit_function: "emit",
+      tracking_method: "track",
+      has_value: false,
+    });
+  });
+
+  it("ordonne les clés du payload comme la sérialisation : path puis alphabétique", () => {
+    const res = scan(
+      withSocle(`track("view_step", { step: "s", simulator: "x" });`)
+    );
+
+    expect(res.events[0].name_pattern).toBe("{path, simulator, step}");
+  });
+
+  it("suppose le path même quand l'appelant ne passe aucun payload", () => {
+    const res = scan(withSocle(`track("view_answer");`));
+
+    expect(res.events[0].name_pattern).toBe("{path}");
+  });
+
+  it("repère les events qui renseignent la value Matomo", () => {
+    const res = scan(
+      withSocle(`track("show_enterprise_accords", { count }, count);`)
+    );
+
+    expect(res.events[0].has_value).toBe(true);
+  });
+
+  it("reconnaît sendPageEvent, l'émetteur hors React", () => {
+    const res = scan(
+      `import { sendPageEvent } from "src/modules/analytics/events";
+       sendPageEvent("select_agreement_p1", { idcc, context });`
+    );
+
+    expect(res.events[0]).toMatchObject({
+      category: "<PageCategory>",
+      action: "select_agreement_p1",
+      name_pattern: "{path, context, idcc}",
+      tracking_method: "sendPageEvent",
+    });
+  });
+
+  // `track` est un nom courant : sans ce garde-fou, n'importe quelle fonction
+  // locale ainsi nommée polluerait le catalogue.
+  it("ignore un track() d'un fichier qui n'importe pas le socle", () => {
+    const res = scan(`track("pas_un_event", { foo: 1 });`);
+
+    expect(res.events).toHaveLength(0);
+  });
+
+  it("relève un appel sans action comme non résolu", () => {
+    const res = scan(withSocle(`track();`));
+
+    expect(res.events).toHaveLength(0);
+    expect(res.unresolved[0].reason).toContain("sans action");
+  });
+});

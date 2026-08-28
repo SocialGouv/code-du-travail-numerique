@@ -1,7 +1,8 @@
 import { fireEvent, render } from "@testing-library/react";
 import { Feedback } from "..";
 import { sendEvent } from "@socialgouv/matomo-next";
-import { EVENT_CATEGORY } from "../tracking";
+import { usePathname } from "next/navigation";
+import { SIMULATOR_FEEDBACK_CONTEXT } from "../tracking";
 import { ui } from "./ui";
 
 jest.mock("@socialgouv/matomo-next", () => {
@@ -10,9 +11,18 @@ jest.mock("@socialgouv/matomo-next", () => {
   };
 });
 
+// La catégorie et le chemin viennent de la route courante : le questionnaire
+// s'affiche après le résultat d'un simulateur.
+const PAGE = "/outils/indemnite-licenciement";
+const PATH = "outils/indemnite-licenciement";
+const SIMULATEUR = SIMULATOR_FEEDBACK_CONTEXT.indemniteLicenciement;
+
 describe("Etant donné un composant Feedback", () => {
   beforeEach(() => {
-    render(<Feedback category={EVENT_CATEGORY.indemniteLicenciement} />);
+    (usePathname as jest.Mock).mockReturnValue(PAGE);
+    render(
+      <Feedback category={SIMULATOR_FEEDBACK_CONTEXT.indemniteLicenciement} />
+    );
   });
   test("Vérification que l'introduction s'affiche", () => {
     expect(ui.introduction.title.query()).toBeInTheDocument();
@@ -44,9 +54,9 @@ describe("Etant donné un composant Feedback", () => {
       });
       test("Vérification du tracking et que le 2e questionnaire s'affiche", () => {
         expect(sendEvent).toHaveBeenCalledWith({
-          category: "feedback_simulateurs",
-          action: "Comment_s_est_passée_la_simulation",
-          name: "moyen",
+          category: "outil",
+          action: "submit_simulator_feedback_global",
+          name: `{"path":"${PATH}","answer":"moyen","simulator":"${SIMULATEUR}"}`,
         });
 
         expect(ui.questionnaire2.simulator.title.query()).toBeInTheDocument();
@@ -105,24 +115,29 @@ describe("Etant donné un composant Feedback", () => {
         });
         test("Vérification du tracking et que la fin du questionnaire s'affiche", () => {
           expect(sendEvent).toHaveBeenCalledWith({
-            category: "feedback_simulateurs",
-            action: "Comment_s_est_passée_la_simulation",
-            name: "moyen",
+            category: "outil",
+            action: "submit_simulator_feedback_global",
+            name: `{"path":"${PATH}","answer":"moyen","simulator":"${SIMULATEUR}"}`,
+          });
+          // Les questions notées renseignent aussi `value`, pour obtenir la
+          // moyenne dans Matomo sans perdre la distribution portée par le payload.
+          expect(sendEvent).toHaveBeenCalledWith({
+            category: "outil",
+            action: "submit_simulator_feedback_easiness",
+            name: `{"path":"${PATH}","answer":"1","simulator":"${SIMULATEUR}"}`,
+            value: 1,
           });
           expect(sendEvent).toHaveBeenCalledWith({
-            category: "feedback_simulateurs",
-            action: "Facilité_utilisation_simulateur",
-            name: "1",
+            category: "outil",
+            action: "submit_simulator_feedback_question_clarity",
+            name: `{"path":"${PATH}","answer":"3","simulator":"${SIMULATEUR}"}`,
+            value: 3,
           });
           expect(sendEvent).toHaveBeenCalledWith({
-            category: "feedback_simulateurs",
-            action: "Clarté_questions",
-            name: "3",
-          });
-          expect(sendEvent).toHaveBeenCalledWith({
-            category: "feedback_simulateurs",
-            action: "Clarté_résultat",
-            name: "5",
+            category: "outil",
+            action: "submit_simulator_feedback_result_clarity",
+            name: `{"path":"${PATH}","answer":"5","simulator":"${SIMULATEUR}"}`,
+            value: 5,
           });
           expect(ui.questionnaireEnd.title.query()).toBeInTheDocument();
           expect(ui.questionnaireEnd.description.query()).toBeInTheDocument();

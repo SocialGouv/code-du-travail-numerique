@@ -27,4 +27,5 @@ export type {
 export { serializeEventPayload } from "./payload";
 export type { EventPayload, EventPayloadValue } from "./payload";
 export { buildPageEvent } from "./buildPageEvent";
+export { sendPageEvent } from "./sendPageEvent";
 export type { PageEvent, PageEventInput } from "./buildPageEvent";

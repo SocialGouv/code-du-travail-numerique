@@ -55,7 +55,7 @@ const replaceMock = jest.fn();
 
 jest.mock("next/navigation", () => ({
   redirect: jest.fn(),
-  usePathname: jest.fn(),
+  usePathname: jest.fn(() => "/contribution/slug"),
   useSearchParams: jest.fn(() => new URLSearchParams()),
   useRouter: () => ({
     push: pushMock,
@@ -382,9 +382,9 @@ describe("<ContributionLayout />", () => {
         { scroll: false }
       );
       expect(sendEvent).toHaveBeenCalledWith({
-        action: "cc_select_traitée",
-        category: "outil",
-        name: "3239",
+        category: "contribution",
+        action: "select_agreement_supported",
+        name: '{"path":"contribution/slug","idcc":3239}',
       });
     });
 
@@ -453,9 +453,9 @@ describe("<ContributionLayout />", () => {
 
       expect(ccUi.warning.nonTreatedAgreement.query()).not.toBeInTheDocument();
       expect(sendEvent).toHaveBeenCalledWith({
-        action: "cc_select_traitée",
-        category: "outil",
-        name: "16",
+        category: "contribution",
+        action: "select_agreement_supported",
+        name: '{"path":"contribution/slug","idcc":16}',
       });
     });
 
@@ -486,9 +486,9 @@ describe("<ContributionLayout />", () => {
       expect(ccUi.warning.title.query()).toBeInTheDocument();
       expect(ccUi.warning.nonTreatedAgreement.query()).toBeInTheDocument();
       expect(sendEvent).toHaveBeenCalledWith({
-        action: "cc_select_non_traitée",
-        category: "outil",
-        name: "1388",
+        category: "contribution",
+        action: "select_agreement_unsupported",
+        name: '{"path":"contribution/slug","idcc":1388}',
       });
       fireEvent.click(ccUi.buttonDisplayInfo.get());
       expect(pushMock).not.toHaveBeenCalled();
@@ -542,9 +542,9 @@ describe("<ContributionLayout />", () => {
 
       expect(ccUi.warning.nonTreatedAgreement.query()).not.toBeInTheDocument();
       expect(sendEvent).toHaveBeenCalledWith({
-        action: "cc_select_traitée",
-        category: "outil",
-        name: "16",
+        category: "contribution",
+        action: "select_agreement_supported",
+        name: '{"path":"contribution/slug","idcc":16}',
       });
     });
 
@@ -576,9 +576,9 @@ describe("<ContributionLayout />", () => {
         rendering.getByText(new RegExp(contribution.messageBlockGenericNoCDT))
       ).toBeInTheDocument();
       expect(sendEvent).toHaveBeenCalledWith({
-        action: "cc_select_non_traitée",
-        category: "outil",
-        name: "1388",
+        category: "contribution",
+        action: "select_agreement_unsupported",
+        name: '{"path":"contribution/slug","idcc":1388}',
       });
     });
 

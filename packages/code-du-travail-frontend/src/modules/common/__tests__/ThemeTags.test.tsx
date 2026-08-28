@@ -110,11 +110,13 @@ describe("<ThemeTags />", () => {
     const { getByText } = render(<ThemeTags breadcrumbs={breadcrumbs} />);
     await userEvent.click(getByText("Congés pour événement familial"));
 
+    // Le slug de la page n'a plus besoin d'être reconstruit à la main : le
+    // `path` est injecté depuis la route courante.
     expect(sendEvent).toHaveBeenCalledWith({
       category: "contribution",
-      action: "clic_tag_theme",
+      action: "click_theme_tag",
       name: JSON.stringify({
-        slug: "mon-slug",
+        path: "contribution/mon-slug",
         theme: "themes/conges-pour-evenement-familial",
       }),
     });

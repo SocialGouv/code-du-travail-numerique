@@ -9,8 +9,8 @@ import { validateStep } from "./validator";
 import { StoreSliceWrapperPreavisRetraite } from "../../store";
 import { InformationsStoreSlice } from "../../Informations/store";
 import { ValidationResponse } from "src/modules/outils/common/components/SimulatorLayout/types";
-import { MatomoBaseEvent, MatomoRetirementEvent } from "src/modules/analytics";
-import { sendEvent } from "@socialgouv/matomo-next";
+import { sendPageEvent } from "src/modules/analytics/events";
+import { SimulatorTitle } from "src/modules/outils/common/events/simulators";
 
 const initialState: OriginDepartStoreData = {
   input: {},
@@ -41,12 +41,15 @@ const createOriginDepartStore: StoreSliceWrapperPreavisRetraite<
         })
       );
 
-      sendEvent({
-        category: MatomoBaseEvent.OUTIL,
-        action:
+      // Émis depuis un store zustand, hors rendu React : d'où `sendPageEvent`
+      // (non-hook). L'origine du départ était l'ACTION Matomo (`mise` / `depart`,
+      // sans catégorie de page) ; elle devient une clé de payload.
+      sendPageEvent("select_retirement_origin", {
+        simulator: SimulatorTitle.PREAVIS_RETRAITE,
+        origin:
           get().originDepartData.input.originDepart === "mise-retraite"
-            ? MatomoRetirementEvent.MISE_RETRAITE
-            : MatomoRetirementEvent.DEPART_RETRAITE,
+            ? "mise-retraite"
+            : "depart-retraite",
       });
 
       return isValid ? ValidationResponse.Valid : ValidationResponse.NotValid;

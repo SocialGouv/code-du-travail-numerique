@@ -17,6 +17,8 @@ jest.mock("uuid", () => ({
 
 jest.mock("next/navigation", () => ({
   redirect: jest.fn(),
+  // Le tracking déduit sa catégorie et son chemin de la route courante.
+  usePathname: () => "/outils/convention-collective",
 }));
 
 // Mock the search function

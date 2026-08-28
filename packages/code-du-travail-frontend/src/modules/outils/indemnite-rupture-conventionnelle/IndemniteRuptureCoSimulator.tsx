@@ -12,7 +12,7 @@ import {
 import { Step } from "../common/components/SimulatorLayout/types";
 import { IndemniteDepartType } from "../indemnite-depart/types";
 import StepSalaires from "../indemnite-depart/steps/Salaires";
-import { EVENT_CATEGORY } from "../indemnite-depart/feedback/tracking";
+import { SIMULATOR_FEEDBACK_CONTEXT } from "../indemnite-depart/feedback/tracking";
 import StepAbsences from "../indemnite-depart/steps/Absences/components";
 import { listingSegment } from "../../layout/breadcrumb";
 import { SOURCES } from "@socialgouv/cdtn-utils";
@@ -92,7 +92,7 @@ export const CalculateurIndemniteRuptureCo = ({
       title={title}
       tool={IndemniteDepartType.RUPTURE_CONVENTIONNELLE}
       steps={steps}
-      feedbackPopup={EVENT_CATEGORY.ruptureConventionnelle}
+      feedbackPopup={SIMULATOR_FEEDBACK_CONTEXT.ruptureConventionnelle}
     />
   );
 };

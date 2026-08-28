@@ -1,27 +1,27 @@
 "use client";
 
 // Envoi de la note via une route API first-party (`/api/contribution-rating`)
-// qui relaie côté serveur vers Matomo. On n'appelle PAS le `sendEvent` de
-// @socialgouv/matomo-next : il taperait `matomo.php` côté client, ce que les
-// adblockers bloquent. Un POST same-origin passe, puis le serveur effectue le
-// fetch serveur->serveur invisible des adblockers.
+// qui relaie côté serveur vers Matomo. On n'appelle PAS `sendEvent` /
+// `useTracking` : ils taperaient `matomo.php` côté client, ce que les adblockers
+// bloquent. Un POST same-origin passe, puis le serveur effectue le fetch
+// serveur->serveur invisible des bloqueurs.
 
 import { SOURCES, SourceKeys } from "@socialgouv/cdtn-utils";
+import { rateContentAction } from "../../analytics/events";
 import { getStoredConsent } from "../../utils/consent";
-import { RatingMatomo } from "./constants";
 
 export const RATING_TRACKING_ENDPOINT = "/api/contribution-rating";
 
 // Relai first-party exposant une méthode `sendEvent` de même forme que
 // @socialgouv/matomo-next : l'extraction statique des events (`cdtn-stats`) le
-// catalogue donc via sa règle `.sendEvent` existante — SANS règle dédiée —
-// alors qu'il POST en réalité vers notre API interne (contournement adblock).
-// `category`/`action` (enum → résolus statiquement) servent au catalogue ; seuls
-// `source`, `slug` et `value` partent réellement sur le réseau, le serveur étant
-// seul propriétaire de category/action et de l'URL canonique (cf. controller/service).
+// catalogue donc via sa règle `.sendEvent` existante — SANS règle dédiée — alors
+// qu'il POST en réalité vers notre API interne (contournement adblock).
+// `category`/`action` servent au catalogue ; seuls `source`, `slug` et `value`
+// partent réellement sur le réseau, le serveur étant seul propriétaire de
+// l'identité de l'event et de l'URL canonique (cf. controller/service).
 const firstPartyMatomo = {
   sendEvent: async (event: {
-    category: RatingMatomo;
+    category: string;
     action: string;
     name: string;
     value: number;
@@ -35,8 +35,8 @@ const firstPartyMatomo = {
       keepalive: true,
       headers: { "Content-Type": "application/json" },
       // Payload minimal : la source du contenu, son slug et la note. Le serveur
-      // ajoute category/action, mappe la source vers sa route et reconstruit
-      // l'URL canonique (anti-injection : source validée contre l'allowlist).
+      // construit l'event via le socle commun et reconstruit l'URL canonique
+      // (anti-injection : source validée contre l'allowlist).
       body: JSON.stringify({
         source: event.source,
         slug: event.slug,
@@ -55,24 +55,22 @@ export const trackContributionRating = async ({
   contributionSlug,
   value,
 }: RatingTrackingPayload): Promise<void> => {
-  // Cohérence avec le tracking existant (opt-out) : on n'émet rien si l'usager
-  // a refusé Matomo. On sort aussi côté serveur (pas de `window`) — le `||`
+  // Cohérence avec le reste du tracking (opt-out) : on n'émet rien si l'usager a
+  // refusé Matomo. On sort aussi côté serveur (pas de `window`) — le `||`
   // court-circuite avant getStoredConsent (qui lit le stockage client, absent en
   // SSR). L'UX (confirmation) reste, elle, active.
   if (typeof window === "undefined" || !getStoredConsent().matomo) return;
 
   try {
-    // category (enum) et action (template sur l'enum ACTION_PREFIX) → résolus
-    // statiquement par l'extraction en « note_<value> ». L'action porte la note
-    // en chaîne (le serveur la reconstruit via `ratingActionForValue`, seul
-    // propriétaire de l'event réel — ici elle documente le catalogue). Le `name`
-    // documente l'`e_n` réel (le slug ; le serveur le préfixe de la route de la
-    // source, cf. controller/service). La notation vit sur les contributions →
-    // source = SOURCES.CONTRIBUTIONS.
+    // La catégorie réelle est déduite côté serveur du type de page ; on
+    // documente ici la valeur attendue pour la contribution, seul type de
+    // contenu portant aujourd'hui le widget de notation. Le `name` documente
+    // l'enveloppe JSON que le serveur construira. La notation vit sur les
+    // contributions → source = SOURCES.CONTRIBUTIONS.
     await firstPartyMatomo.sendEvent({
-      category: RatingMatomo.CATEGORY,
-      action: `${RatingMatomo.ACTION_PREFIX}${value}`,
-      name: contributionSlug,
+      category: "contribution",
+      action: rateContentAction(value),
+      name: JSON.stringify({ path: `contribution/${contributionSlug}` }),
       source: SOURCES.CONTRIBUTIONS,
       value,
       slug: contributionSlug,

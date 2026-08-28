@@ -1,6 +1,7 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import { LegiFranceSearch } from "../LegiFranceSearch";
 import { sendEvent } from "@socialgouv/matomo-next";
+import { usePathname } from "next/navigation";
 
 jest.mock("@socialgouv/matomo-next", () => ({
   sendEvent: jest.fn(),
@@ -12,8 +13,13 @@ describe("LegiFranceSearch", () => {
     shortTitle: "Test Convention",
   };
 
+  // Le formulaire Légifrance s'affiche sur la page d'une convention collective.
+  const PAGE = "/convention-collective/1234";
+  const PATH = "convention-collective/1234";
+
   beforeEach(() => {
     jest.clearAllMocks();
+    (usePathname as jest.Mock).mockReturnValue(PAGE);
   });
 
   it("should render the search form", () => {
@@ -48,10 +54,13 @@ describe("LegiFranceSearch", () => {
     fireEvent.change(input, { target: { value: "test query" } });
     fireEvent.submit(form);
 
+    // Le titre court de la convention était l'ACTION dans l'ancien schéma, ce
+    // qui créait une action Matomo par convention (~500 valeurs, au plafond de
+    // troncature). Il passe en payload.
     expect(sendEvent).toHaveBeenCalledWith({
-      category: "pagecc_searchcc",
-      action: "Test Convention",
-      name: "test query",
+      category: "convention-collective",
+      action: "search_legifrance",
+      name: `{"path":"${PATH}","agreement":"Test Convention","query":"test query"}`,
     });
   });
 

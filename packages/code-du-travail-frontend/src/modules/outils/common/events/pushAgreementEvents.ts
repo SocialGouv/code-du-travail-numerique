@@ -1,12 +1,6 @@
-import { sendEvent } from "@socialgouv/matomo-next";
 import { Enterprise } from "src/modules/enterprise";
+import { sendPageEvent } from "src/modules/analytics/events";
 import { Agreement, AgreementRoute } from "../../indemnite-depart/types";
-import {
-  MatomoSearchAgreementCategory,
-  MatomoBaseEvent,
-  MatomoAgreementEvent,
-  MatomoSimulatorEvent,
-} from "src/modules/analytics";
 
 export interface ConventionCollective {
   route: AgreementRoute;
@@ -15,76 +9,60 @@ export interface ConventionCollective {
   hasNoEnterprise?: boolean;
 }
 
-// Chaque event est émis via un émetteur dédié dont la category/action sont des
-// littéraux (membres d'enum), branche par branche. Objectif : rendre les events
-// extractibles statiquement (cf. @socialgouv/cdtn-stats) — auparavant l'action
-// du parcours et la catégorie de sélection passaient par des variables runtime
-// (`parcours!`, `agreementSelect`), invisibles pour un scan AST ou un grep.
+// Émis depuis les stores zustand des simulateurs, hors de tout rendu React :
+// d'où `sendPageEvent` (non-hook) plutôt que `useTracking`.
+//
+// Chaque event garde un émetteur dédié dont l'action est un littéral, branche
+// par branche, pour rester extractible statiquement (cf. @socialgouv/cdtn-stats).
+// Faire passer l'action par une variable runtime la rendrait invisible d'un scan
+// AST et ferait remonter le call site en `unresolved`.
 
-// Event "type d'utilisateur" : click_p1 / click_p2 / click_p3 selon le parcours.
+// Parcours suivi par l'usager pour renseigner sa convention.
 const emitParcoursTypeEvent = (
   route: AgreementRoute,
-  simulatorTitle: string
+  simulator: string
 ): void => {
   switch (route) {
     case "agreement":
-      sendEvent({
-        category: MatomoSearchAgreementCategory.AGREEMENT_SEARCH_TYPE_OF_USERS,
-        action: MatomoSearchAgreementCategory.PARCOURS_1,
-        name: simulatorTitle,
-      });
+      sendPageEvent("select_agreement_path_p1", { context: simulator });
       break;
     case "enterprise":
-      sendEvent({
-        category: MatomoSearchAgreementCategory.AGREEMENT_SEARCH_TYPE_OF_USERS,
-        action: MatomoSearchAgreementCategory.PARCOURS_2,
-        name: simulatorTitle,
-      });
+      sendPageEvent("select_agreement_path_p2", { context: simulator });
       break;
     case "not-selected":
-      sendEvent({
-        category: MatomoSearchAgreementCategory.AGREEMENT_SEARCH_TYPE_OF_USERS,
-        action: MatomoSearchAgreementCategory.PARCOURS_3,
-        name: simulatorTitle,
-      });
+      sendPageEvent("select_agreement_path_p3", { context: simulator });
       break;
   }
 };
 
 const emitEnterpriseSelectEvent = (
-  simulatorTitle: string,
+  simulator: string,
   enterprise: Enterprise
 ): void => {
-  sendEvent({
-    category: MatomoSearchAgreementCategory.ENTERPRISE_SELECT,
-    action: simulatorTitle,
-    name: JSON.stringify({
-      label: enterprise.label,
-      siren: enterprise.siren,
-    }),
+  sendPageEvent("select_enterprise", {
+    context: simulator,
+    label: enterprise.label,
+    siren: enterprise.siren,
   });
 };
 
-// Event de sélection de la convention : cc_select_p1 (parcours par nom de CC)
-// ou cc_select_p2 (parcours par entreprise). Pas d'event pour "not-selected".
+// Sélection effective de la convention. Le parcours "not-selected" n'en émet pas.
 const emitAgreementSelectEvent = (
   route: AgreementRoute,
-  simulatorTitle: string,
+  simulator: string,
   agreementNum: number
 ): void => {
   switch (route) {
     case "agreement":
-      sendEvent({
-        category: MatomoSearchAgreementCategory.AGREEMENT_SELECT_P1,
-        action: simulatorTitle,
-        name: `idcc${agreementNum}`,
+      sendPageEvent("select_agreement_p1", {
+        context: simulator,
+        idcc: agreementNum,
       });
       break;
     case "enterprise":
-      sendEvent({
-        category: MatomoSearchAgreementCategory.AGREEMENT_SELECT_P2,
-        action: simulatorTitle,
-        name: `idcc${agreementNum}`,
+      sendPageEvent("select_agreement_p2", {
+        context: simulator,
+        idcc: agreementNum,
       });
       break;
     case "not-selected":
@@ -92,34 +70,32 @@ const emitAgreementSelectEvent = (
   }
 };
 
+// La convention retenue est-elle prise en charge par le simulateur (calcul ou
+// contenu dédié disponible) ? Sert à prioriser les CC à traiter.
 const emitAgreementTreatedEvent = (
   isAgreementTreated: boolean,
+  simulator: string,
   agreementNum: number
 ): void => {
   if (isAgreementTreated) {
-    sendEvent({
-      category: MatomoBaseEvent.OUTIL,
-      action: MatomoAgreementEvent.CC_TREATED,
-      name: agreementNum.toString(),
+    sendPageEvent("select_agreement_supported", {
+      context: simulator,
+      idcc: agreementNum,
     });
   } else {
-    sendEvent({
-      category: MatomoBaseEvent.OUTIL,
-      action: MatomoAgreementEvent.CC_UNTREATED,
-      name: agreementNum.toString(),
+    sendPageEvent("select_agreement_unsupported", {
+      context: simulator,
+      idcc: agreementNum,
     });
   }
 };
 
-const emitNoEnterpriseSelectEvent = (simulatorTitle: string): void => {
-  sendEvent({
-    category: MatomoSearchAgreementCategory.AGREEMENT_SEARCH_TYPE_OF_USERS,
-    action: MatomoSimulatorEvent.SELECT_NO_COMPANY,
-    name: simulatorTitle,
-  });
+// « Je n'ai pas d'entreprise » : particulier employeur, assistant maternel.
+const emitNoEnterpriseSelectEvent = (simulator: string): void => {
+  sendPageEvent("select_no_enterprise", { context: simulator });
 };
 
-// Seuls les parcours "agreement" (P1) et "enterprise" (P2) émettent un event de
+// Seuls les parcours "agreement" (p1) et "enterprise" (p2) émettent un event de
 // sélection de convention. "not-selected" n'en a pas.
 const hasAgreementSelectParcours = (route: AgreementRoute): boolean =>
   route === "agreement" || route === "enterprise";
@@ -142,7 +118,11 @@ export const pushAgreementEvents = (
   }
   if (values.selected && hasAgreementSelectParcours(values.route)) {
     emitAgreementSelectEvent(values.route, simulatorTitle, values.selected.num);
-    emitAgreementTreatedEvent(isAgreementTreated, values.selected.num);
+    emitAgreementTreatedEvent(
+      isAgreementTreated,
+      simulatorTitle,
+      values.selected.num
+    );
   }
   if (hasNoEnterpriseSelected) {
     emitNoEnterpriseSelectEvent(simulatorTitle);

@@ -1,4 +1,5 @@
 import { sendEvent } from "@socialgouv/matomo-next";
+import { usePathname } from "next/navigation";
 import {
   fireEvent,
   getAllByRole,
@@ -7,6 +8,13 @@ import {
 } from "@testing-library/react";
 import { ThemeModel } from "../ThemeModel";
 import { SOURCES } from "@socialgouv/cdtn-utils";
+
+// La catégorie et le chemin de l'event viennent de la route courante. On ne
+// surcharge `usePathname` que dans les tests de tracking : le mock global de
+// `jest.setup.js` renvoie "/", et le changer pour tout le fichier déplacerait
+// le fil d'Ariane des snapshots pour une raison sans rapport.
+const PAGE = "/themes/conges-et-repos";
+const PATH = "themes/conges-et-repos";
 
 jest.mock("@socialgouv/matomo-next", () => {
   return {
@@ -77,6 +85,7 @@ const dataThemeWithExternalRef = {
 
 describe("<ThemeModel />", () => {
   it("validation du contenu de la page d'un thème", () => {
+    (usePathname as jest.Mock).mockReturnValue(PAGE);
     const { container } = render(<ThemeModel theme={dataTheme} />);
     const subThemesList = getAllByRole(container, "list")[1];
     const subThemes = getAllByRole(subThemesList, "listitem");
@@ -100,9 +109,12 @@ describe("<ThemeModel />", () => {
 
     fireEvent.click(getByRole(document1Title, "link"));
 
+    // L'ancien schéma glissait un JSON dans l'ACTION. La cible passe en
+    // payload, sous la même clé `target` que les résultats de recherche.
     expect(sendEvent).toHaveBeenCalledWith({
-      category: "selectResult",
-      action: `{"url":"/convention-collective/document_1"}`,
+      category: "themes",
+      action: "select_result",
+      name: `{"path":"${PATH}","target":"convention-collective/document_1"}`,
     });
   });
 
@@ -112,6 +124,7 @@ describe("<ThemeModel />", () => {
   });
 
   it("utilise l'URL externe pour les références avec source 'external'", () => {
+    (usePathname as jest.Mock).mockReturnValue(PAGE);
     const { container } = render(
       <ThemeModel theme={dataThemeWithExternalRef as any} />
     );
@@ -135,8 +148,9 @@ describe("<ThemeModel />", () => {
     fireEvent.click(getByRole(externalDocumentTitle, "link"));
 
     expect(sendEvent).toHaveBeenCalledWith({
-      category: "selectResult",
-      action: `{"url":"https://example.com/document"}`,
+      category: "themes",
+      action: "select_result",
+      name: `{"path":"${PATH}","target":"https://example.com/document"}`,
     });
   });
 });

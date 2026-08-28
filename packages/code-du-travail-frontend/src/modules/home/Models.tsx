@@ -1,4 +1,4 @@
-import { MatomoHomeEvent, useHomeTracking } from "./tracking";
+import { HomeShortcutTarget, useHomeTracking } from "./tracking";
 import { HomeCardItem } from "./queries";
 import { HomeButton, SectionContainer, TemplateHomeCard } from "./Components";
 import { fr } from "@codegouvfr/react-dsfr";
@@ -21,9 +21,7 @@ export const Models = ({ items }: Props) => {
           buttonLink="/modeles-de-courriers"
           buttonText="Parcourir les modèles"
           onButtonClick={() => {
-            emitHomeClickButtonEvent(
-              MatomoHomeEvent.CLICK_VOIR_TOUS_LES_MODELES
-            );
+            emitHomeClickButtonEvent(HomeShortcutTarget.MODELES_DE_COURRIERS);
           }}
         />
       }

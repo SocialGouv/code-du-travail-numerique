@@ -2,7 +2,7 @@
 
 import { fr } from "@codegouvfr/react-dsfr";
 import { HomeButton } from "./Components";
-import { MatomoHomeEvent, useHomeTracking } from "./tracking";
+import { HomeShortcutTarget, useHomeTracking } from "./tracking";
 import { CardWithArrow } from "./Components/CardWithArrow";
 import { css } from "@styled-system/css";
 
@@ -122,9 +122,7 @@ export const ComprendreLeDroitDuTravail = () => {
         buttonLink="/droit-du-travail"
         buttonText="Comprendre le droit du travail"
         onButtonClick={() => {
-          emitHomeClickButtonEvent(
-            MatomoHomeEvent.CLICK_COMPRENDRE_DROIT_DU_TRAVAIL
-          );
+          emitHomeClickButtonEvent(HomeShortcutTarget.DROIT_DU_TRAVAIL);
         }}
       />
     </div>

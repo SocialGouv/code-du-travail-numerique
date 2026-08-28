@@ -1,4 +1,4 @@
-import { MatomoHomeEvent, useHomeTracking } from "./tracking";
+import { HomeShortcutTarget, useHomeTracking } from "./tracking";
 import { HomeCardItem } from "./queries";
 import { HomeButton, HomeCard, SectionContainer } from "./Components";
 import { fr } from "@codegouvfr/react-dsfr";
@@ -22,7 +22,7 @@ export const Agreements = ({ items }: Props) => {
           buttonText="Voir toutes les conventions collectives"
           onButtonClick={() => {
             emitHomeClickButtonEvent(
-              MatomoHomeEvent.CLICK_VOIR_TOUTES_LES_CONVENTIONS_COLLECTIVES
+              HomeShortcutTarget.CONVENTIONS_COLLECTIVES
             );
           }}
         />

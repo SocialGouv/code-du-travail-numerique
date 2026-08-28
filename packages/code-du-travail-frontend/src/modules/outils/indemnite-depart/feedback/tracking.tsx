@@ -1,20 +1,20 @@
-import { sendEvent } from "@socialgouv/matomo-next";
+import { useTracking } from "src/modules/analytics/events/useTracking";
 
-export enum EVENT_CATEGORY {
-  indemniteLicenciement = "feedback_simulateurs",
-  ruptureConventionnelle = "feedback_simulateurs_rupture_co",
+// L'ancien schéma dupliquait toute la famille de catégories pour la rupture
+// conventionnelle (`feedback_simulateurs` / `feedback_simulateurs_rupture_co`,
+// `feedback_suggestion` / `feedback_suggestion_rupture_co`). Le simulateur
+// devient une clé de payload : une seule action par question, quel que soit le
+// simulateur.
+export enum SIMULATOR_FEEDBACK_CONTEXT {
+  indemniteLicenciement = "Indemnité de licenciement",
+  ruptureConventionnelle = "Indemnité de rupture conventionnelle",
 }
 
-export enum EVENT_SUGGESTION {
-  indemniteLicenciement = "feedback_suggestion",
-  ruptureConventionnelle = "feedback_suggestion_rupture_co",
-}
-
-export enum EVENT_ACTION {
-  GLOBAL = "Comment_s_est_passée_la_simulation",
-  EASINESS = "Facilité_utilisation_simulateur",
-  QUESTION_CLARITY = "Clarté_questions",
-  RESULT_CLARITY = "Clarté_résultat",
+export enum FEEDBACK_QUESTION {
+  GLOBAL = "global",
+  EASINESS = "easiness",
+  QUESTION_CLARITY = "question_clarity",
+  RESULT_CLARITY = "result_clarity",
 }
 
 export enum FEEDBACK_RESULT {
@@ -29,32 +29,53 @@ export enum FEEDBACK_RESULT {
   FIVE = "5",
 }
 
+// Les questions notées 1 à 5 renseignent aussi `value`, pour obtenir la moyenne
+// dans Matomo. La réponse reste dans le payload : `value` n'est jamais le seul
+// porteur d'une information (Matomo ne conserve pas une value de 0, et
+// n'expose que des sommes et des moyennes).
+const numericAnswer = (feedback: FEEDBACK_RESULT): number | undefined => {
+  const parsed = Number(feedback);
+  return Number.isFinite(parsed) ? parsed : undefined;
+};
+
 export const useFeedbackEvents = () => {
+  const { track } = useTracking();
+
+  // Une branche par question, avec l'action en littéral, plutôt qu'une table de
+  // correspondance : l'extraction statique des events (@socialgouv/cdtn-stats)
+  // lit l'AST, et une action passée par un index de map lui apparaît comme une
+  // valeur runtime — les quatre questions disparaîtraient du catalogue au profit
+  // d'une seule ligne `<ACTION_BY_QUESTION[question]>`. Même motif que
+  // `pushAgreementEvents`.
   const trackFeedback = (
-    event: EVENT_ACTION,
+    question: FEEDBACK_QUESTION,
     feedback: FEEDBACK_RESULT,
-    category: EVENT_CATEGORY
+    simulator: SIMULATOR_FEEDBACK_CONTEXT
   ) => {
-    sendEvent({
-      category: category,
-      action: event,
-      name: feedback,
-    });
+    const payload = { simulator, answer: feedback };
+    const value = numericAnswer(feedback);
+
+    switch (question) {
+      case FEEDBACK_QUESTION.GLOBAL:
+        track("submit_simulator_feedback_global", payload, value);
+        break;
+      case FEEDBACK_QUESTION.EASINESS:
+        track("submit_simulator_feedback_easiness", payload, value);
+        break;
+      case FEEDBACK_QUESTION.QUESTION_CLARITY:
+        track("submit_simulator_feedback_question_clarity", payload, value);
+        break;
+      case FEEDBACK_QUESTION.RESULT_CLARITY:
+        track("submit_simulator_feedback_result_clarity", payload, value);
+        break;
+    }
   };
 
   const trackFeedbackText = (
     text: string,
-    url: string,
-    category: EVENT_CATEGORY
+    simulator: SIMULATOR_FEEDBACK_CONTEXT
   ) => {
-    sendEvent({
-      category:
-        category === EVENT_CATEGORY.indemniteLicenciement
-          ? EVENT_SUGGESTION.indemniteLicenciement
-          : EVENT_SUGGESTION.ruptureConventionnelle,
-      action: text,
-      name: url.replace(/\?.*$/, ""),
-    });
+    track("submit_simulator_feedback_comment", { simulator, comment: text });
   };
 
   return {

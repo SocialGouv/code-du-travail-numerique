@@ -18,6 +18,8 @@ const pushMock = jest.fn();
 
 jest.mock("next/navigation", () => ({
   useRouter: () => ({ push: pushMock }),
+  // Le tracking déduit sa catégorie et son chemin de la route courante.
+  usePathname: () => "/contribution/1388-ma-contribution",
 }));
 
 jest.mock("../ContributionAgreementContent", () => ({

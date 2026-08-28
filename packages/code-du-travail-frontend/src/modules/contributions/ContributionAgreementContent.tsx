@@ -28,7 +28,7 @@ export function ContributionAgreementContent({
 }: Props) {
   const { emitContentViewed } = useContributionTracking();
   const titleRef = useContentViewTracking<HTMLHeadingElement>(() =>
-    emitContentViewed(contribution.slug)
+    emitContentViewed()
   );
 
   return (

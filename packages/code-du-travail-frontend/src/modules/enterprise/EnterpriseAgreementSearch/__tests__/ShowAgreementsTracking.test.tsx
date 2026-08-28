@@ -4,13 +4,27 @@ import { sendEvent } from "@socialgouv/matomo-next";
 
 import { EnterpriseAgreementSearchInput } from "../EnterpriseAgreementSearchInput";
 import { EnterpriseAgreementSelectionLink } from "../EnterpriseAgreementSelectionLink";
-import { TrackingEnterpriseAgreementSearchAction } from "../tracking";
-import { TrackingAgreementSearchCategory } from "../../../convention-collective/tracking";
+import { usePathname } from "next/navigation";
 import { UserAction } from "src/modules/outils/common/utils/UserAction";
 
 jest.mock("@socialgouv/matomo-next", () => ({
   sendEvent: jest.fn(),
 }));
+
+// La catégorie et le chemin viennent de la route courante.
+const PAGE = "/outils/convention-collective";
+const PATH = "outils/convention-collective";
+
+// Event attendu pour un nombre de conventions donné. `count` est dans le payload
+// JSON ET dans `value` : le payload fait foi (Matomo jette un nom falsy comme
+// "0" et n'enregistre pas une value de 0), `value` n'est qu'un doublon
+// d'agrégation.
+const showAgreementsEvent = (count: number) => ({
+  category: "outil",
+  action: "show_enterprise_agreements",
+  name: `{"path":"${PATH}","count":${count}}`,
+  value: count,
+});
 
 jest.mock("uuid", () => ({
   v4: jest.fn(() => ""),
@@ -19,6 +33,7 @@ jest.mock("uuid", () => ({
 jest.mock("next/navigation", () => ({
   redirect: jest.fn(),
   useSearchParams: jest.fn(),
+  usePathname: jest.fn(),
 }));
 
 jest.mock("../accords", () => ({
@@ -76,14 +91,12 @@ const enterpriseWithoutAgreement = buildEnterprise("11111111100011", []);
 const showAgreementsEvents = () =>
   (sendEvent as jest.Mock).mock.calls
     .map(([event]) => event)
-    .filter(
-      (event) =>
-        event.action === TrackingEnterpriseAgreementSearchAction.SHOW_AGREEMENTS
-    );
+    .filter((event) => event.action === "show_enterprise_agreements");
 
 describe("Event show_agreements", () => {
   beforeEach(() => {
     (sendEvent as jest.Mock).mockClear();
+    (usePathname as jest.Mock).mockReturnValue(PAGE);
   });
 
   describe("<EnterpriseAgreementSearchInput /> (simulateurs et contributions)", () => {
@@ -102,32 +115,20 @@ describe("Event show_agreements", () => {
     it("émet le nombre de conventions collectives affichées", async () => {
       await renderInput(enterpriseWithTwoAgreements);
 
-      expect(showAgreementsEvents()).toEqual([
-        {
-          category: TrackingAgreementSearchCategory.CC_ENTERPRISE_SEARCH,
-          action: TrackingEnterpriseAgreementSearchAction.SHOW_AGREEMENTS,
-          name: "2",
-        },
-      ]);
+      expect(showAgreementsEvents()).toEqual([showAgreementsEvent(2)]);
     });
 
     it("émet 0 quand l'entreprise n'a déclaré aucune convention collective", async () => {
       await renderInput(enterpriseWithoutAgreement);
 
-      expect(showAgreementsEvents()).toEqual([
-        {
-          category: TrackingAgreementSearchCategory.CC_ENTERPRISE_SEARCH,
-          action: TrackingEnterpriseAgreementSearchAction.SHOW_AGREEMENTS,
-          name: "0",
-        },
-      ]);
+      expect(showAgreementsEvents()).toEqual([showAgreementsEvent(0)]);
     });
 
     it("émet 1 pour une entreprise à convention unique, malgré l'auto-sélection", async () => {
       await renderInput(enterpriseWithOneAgreement);
 
       expect(showAgreementsEvents()).toHaveLength(1);
-      expect(showAgreementsEvents()[0].name).toBe("1");
+      expect(showAgreementsEvents()[0]).toEqual(showAgreementsEvent(1));
     });
 
     it("n'émet pas de doublon quand l'usager change de convention collective", async () => {
@@ -153,10 +154,7 @@ describe("Event show_agreements", () => {
       expect(
         (sendEvent as jest.Mock).mock.calls
           .map(([event]) => event)
-          .filter(
-            (event) =>
-              event.category === TrackingAgreementSearchCategory.CC_SELECT_P2
-          )
+          .filter((event) => event.action === "select_agreement_p2")
       ).toHaveLength(2);
       expect(showAgreementsEvents()).toHaveLength(1);
     });
@@ -185,9 +183,9 @@ describe("Event show_agreements", () => {
         );
       });
 
-      expect(showAgreementsEvents().map(({ name }) => name)).toEqual([
-        "2",
-        "0",
+      expect(showAgreementsEvents()).toEqual([
+        showAgreementsEvent(2),
+        showAgreementsEvent(0),
       ]);
     });
   });
@@ -203,13 +201,7 @@ describe("Event show_agreements", () => {
         );
       });
 
-      expect(showAgreementsEvents()).toEqual([
-        {
-          category: TrackingAgreementSearchCategory.CC_ENTERPRISE_SEARCH,
-          action: TrackingEnterpriseAgreementSearchAction.SHOW_AGREEMENTS,
-          name: "2",
-        },
-      ]);
+      expect(showAgreementsEvents()).toEqual([showAgreementsEvent(2)]);
     });
 
     it("émet 0 quand l'entreprise n'a déclaré aucune convention collective", async () => {
@@ -222,13 +214,7 @@ describe("Event show_agreements", () => {
         );
       });
 
-      expect(showAgreementsEvents()).toEqual([
-        {
-          category: TrackingAgreementSearchCategory.CC_ENTERPRISE_SEARCH,
-          action: TrackingEnterpriseAgreementSearchAction.SHOW_AGREEMENTS,
-          name: "0",
-        },
-      ]);
+      expect(showAgreementsEvents()).toEqual([showAgreementsEvent(0)]);
     });
   });
 });

@@ -1,6 +1,6 @@
 import { HomeTileItem } from "./queries";
 import { HomeButton, SectionContainer } from "./Components";
-import { MatomoHomeEvent, useHomeTracking } from "./tracking";
+import { HomeShortcutTarget, useHomeTracking } from "./tracking";
 import { fr } from "@codegouvfr/react-dsfr";
 import { ToolTile } from "../outils/page-principale/ToolTile";
 
@@ -20,9 +20,7 @@ export const Tools = (props: Props) => {
           buttonLink="/outils"
           buttonText="Voir tous les simulateurs"
           onButtonClick={() => {
-            emitHomeClickButtonEvent(
-              MatomoHomeEvent.CLICK_VOIR_TOUS_LES_OUTILS
-            );
+            emitHomeClickButtonEvent(HomeShortcutTarget.OUTILS);
           }}
         />
       }

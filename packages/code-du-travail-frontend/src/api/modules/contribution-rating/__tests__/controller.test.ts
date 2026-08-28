@@ -1,7 +1,6 @@
 import { ContributionRatingController } from "../controller";
 import { sendRatingEvent } from "../service";
 import { captureException } from "@sentry/nextjs";
-import { RatingMatomo } from "../../../../modules/contributions/rating/constants";
 
 jest.mock("../service");
 jest.mock("@sentry/nextjs", () => ({ captureException: jest.fn() }));
@@ -61,13 +60,13 @@ describe("ContributionRatingController.post()", () => {
     ).post();
 
     expect(res.status).toBe(204);
-    // La note voyage en chaîne dans l'action (« note_4 »), pas en `e_v` :
-    // Matomo compte les occurrences par note au lieu d'additionner les valeurs.
+    // Le contrôleur ne décide plus de l'identité Matomo de l'event : il valide
+    // et transmet. C'est le service qui construit category/action/name via le
+    // socle commun, exactement comme les hooks client.
     expect(mockSendRatingEvent).toHaveBeenCalledWith({
-      category: RatingMatomo.CATEGORY,
-      action: "note_4",
       source: "contributions",
       slug: "conges-payes",
+      value: 4,
       userAgent: "jest-UA",
     });
   });

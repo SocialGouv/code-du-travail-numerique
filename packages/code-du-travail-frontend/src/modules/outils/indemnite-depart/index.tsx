@@ -10,7 +10,7 @@ import { PublicodesSimulator } from "@socialgouv/modeles-social";
 import { Step } from "../common/components/SimulatorLayout/types";
 import { SimulatorLayout } from "../common/components/SimulatorLayout";
 import { Feedback } from "./feedback";
-import { EVENT_CATEGORY } from "./feedback/tracking";
+import { SIMULATOR_FEEDBACK_CONTEXT } from "./feedback/tracking";
 
 type SimulateurProps = CalculateurIndemniteProps & {
   title: string;
@@ -119,7 +119,7 @@ type CalculateurIndemniteProps = {
   title: string;
   tool: IndemniteDepartType;
   steps: Step<IndemniteDepartStepName>[];
-  feedbackPopup?: EVENT_CATEGORY;
+  feedbackPopup?: SIMULATOR_FEEDBACK_CONTEXT;
 };
 
 export const CalculateurIndemnite = ({

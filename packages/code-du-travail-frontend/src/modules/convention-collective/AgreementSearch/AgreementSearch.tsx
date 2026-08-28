@@ -18,10 +18,7 @@ export const AgreementSearch = () => {
         lineAsLink
         onAgreementSelect={(agreement) => {
           if (agreement) {
-            emitSelectEvent(
-              `idcc${agreement.num}`,
-              "Trouver sa convention collective"
-            );
+            emitSelectEvent(agreement.num, "Trouver sa convention collective");
           }
         }}
         level={2}

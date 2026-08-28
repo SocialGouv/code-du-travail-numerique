@@ -2,7 +2,7 @@ import React, { useCallback, useState } from "react";
 import { fr } from "@codegouvfr/react-dsfr";
 import Input from "@codegouvfr/react-dsfr/Input";
 import Button from "@codegouvfr/react-dsfr/Button";
-import { sendEvent } from "@socialgouv/matomo-next";
+import { useTracking } from "../analytics/events/useTracking";
 import { css } from "@styled-system/css";
 import { AccessibleAlert } from "../outils/common/components/AccessibleAlert";
 
@@ -12,6 +12,7 @@ type Props = {
 };
 
 export function LegiFranceSearch({ idcc, shortTitle }: Props) {
+  const { track } = useTracking();
   const [query, setQuery] = useState("");
 
   const handleSubmit = useCallback(
@@ -21,7 +22,10 @@ export function LegiFranceSearch({ idcc, shortTitle }: Props) {
       const q = query.trim();
       if (!q) return;
 
-      sendEvent({ category: "pagecc_searchcc", action: shortTitle, name: q });
+      // Recherche Légifrance depuis une page de convention. Le titre court de
+      // la CC était l'ACTION dans l'ancien schéma, ce qui créait une action par
+      // convention (~500 valeurs, au plafond de troncature Matomo).
+      track("search_legifrance", { agreement: shortTitle, query: q });
 
       const params = new URLSearchParams({
         rawQuery: q,

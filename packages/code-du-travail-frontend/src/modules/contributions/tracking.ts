@@ -1,124 +1,68 @@
-import { sendEvent } from "@socialgouv/matomo-next";
-import { MatomoAgreementEvent } from "../analytics";
+import { useTracking } from "../analytics/events/useTracking";
 import { toEventName } from "../analytics/eventName";
-import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
-
-export enum TrackingContributionCategory {
-  TOOL = "outil",
-  CONTRIBUTION = "contribution",
-  CC_SEARCH_TYPE_OF_USERS = "cc_search_type_of_users",
-}
-
-export enum TrackingAgreementSearchAction {
-  CLICK_DISPLAY_AGREEMENT_CONTENT = "click_afficher_les_informations_CC",
-  CLICK_DISPLAY_GENERIC_CONTENT = "click_afficher_les_informations_sans_CC",
-  CLICK_DISPLAY_GENERAL_CONTENT = "click_afficher_les_informations_générales",
-  CLICK_P1 = "click_p1",
-  CLICK_P2 = "click_p2",
-  CLICK_P3 = "click_p3",
-}
-
-export enum TrackingContributionAction {
-  BTN_TABLE_FULLSCREEN = "btn_table_fullscreen",
-  CONTENT_VIEWED = "reponse_consultee",
-  CLICK_AGREEMENT_DECLINATION = "clic_declinaison_cc",
-}
 
 export const useContributionTracking = () => {
+  const { track } = useTracking();
+
+  // La convention choisie est-elle prise en charge par la contribution (contenu
+  // dédié disponible) ? Sert à prioriser les CC à traiter.
   const emitAgreementTreatedEvent = (idcc: number) => {
-    sendEvent({
-      category: TrackingContributionCategory.TOOL,
-      action: MatomoAgreementEvent.CC_TREATED,
-      name: idcc.toString(),
-    });
+    track("select_agreement_supported", { idcc });
   };
 
   const emitAgreementUntreatedEvent = (idcc: number) => {
-    sendEvent({
-      category: TrackingContributionCategory.TOOL,
-      action: MatomoAgreementEvent.CC_UNTREATED,
-      name: idcc.toString(),
+    track("select_agreement_unsupported", { idcc });
+  };
+
+  // « Afficher les informations » : `target` = la page ATTEINTE, le `path`
+  // injecté portant déjà la page de départ.
+  const emitDisplayAgreementContent = (target: string) => {
+    track("click_show_agreement_content", { target: toEventName(target) });
+  };
+
+  const emitDisplayGenericContent = (target: string) => {
+    track("click_show_content_without_agreement", {
+      target: toEventName(target),
     });
   };
 
-  const emitDisplayAgreementContent = (path: string) => {
-    sendEvent({
-      category: TrackingContributionCategory.CONTRIBUTION,
-      action: TrackingAgreementSearchAction.CLICK_DISPLAY_AGREEMENT_CONTENT,
-      name: path,
-    });
+  const emitDisplayGeneralContent = (target: string) => {
+    track("click_show_general_content", { target: toEventName(target) });
   };
 
-  const emitDisplayGenericContent = (path: string) => {
-    sendEvent({
-      category: TrackingContributionCategory.CONTRIBUTION,
-      action: TrackingAgreementSearchAction.CLICK_DISPLAY_GENERIC_CONTENT,
-      name: path,
-    });
+  // Parcours de choix de convention. `context` identifie l'endroit d'où part le
+  // parcours — une contribution ou un simulateur : le même composant de
+  // recherche de CC est monté dans les deux.
+  const emitClickP1 = (context: string) => {
+    track("select_agreement_path_p1", { context: toEventName(context) });
   };
 
-  const emitDisplayGeneralContent = (path: string) => {
-    sendEvent({
-      category: TrackingContributionCategory.CONTRIBUTION,
-      action: TrackingAgreementSearchAction.CLICK_DISPLAY_GENERAL_CONTENT,
-      name: path,
-    });
+  const emitClickP2 = (context: string) => {
+    track("select_agreement_path_p2", { context: toEventName(context) });
   };
 
-  const emitClickP1 = (path: string) => {
-    sendEvent({
-      category: TrackingContributionCategory.CC_SEARCH_TYPE_OF_USERS,
-      action: TrackingAgreementSearchAction.CLICK_P1,
-      name: path,
-    });
+  const emitClickP3 = (context: string) => {
+    track("select_agreement_path_p3", { context: toEventName(context) });
   };
 
-  const emitClickP2 = (path: string) => {
-    sendEvent({
-      category: TrackingContributionCategory.CC_SEARCH_TYPE_OF_USERS,
-      action: TrackingAgreementSearchAction.CLICK_P2,
-      name: path,
-    });
+  // Le slug de la contribution n'a plus besoin d'être passé : ces deux events se
+  // produisent sur la page de la contribution elle-même, donc dans le `path`.
+  const emitClickTableFullscreen = () => {
+    track("click_table_fullscreen");
   };
 
-  const emitClickP3 = (path: string) => {
-    sendEvent({
-      category: TrackingContributionCategory.CC_SEARCH_TYPE_OF_USERS,
-      action: TrackingAgreementSearchAction.CLICK_P3,
-      name: path,
-    });
+  // Réponse RÉELLEMENT consultée : le titre du bloc réponse est entré dans le
+  // haut de l'écran et y est resté ~10 s, onglet actif. Émis une seule fois par
+  // page. Indicateur clé sur les arrivées directes via une convention.
+  const emitContentViewed = () => {
+    track("view_answer");
   };
 
-  const emitClickTableFullscreen = (slug: string) => {
-    sendEvent({
-      category: TrackingContributionCategory.CONTRIBUTION,
-      action: TrackingContributionAction.BTN_TABLE_FULLSCREEN,
-      name: `${getRouteBySource(SOURCES.CONTRIBUTIONS)}/${slug}`,
-    });
-  };
-
-  // Émis une fois par page quand l'utilisateur a réellement consulté le bloc
-  // réponse (titre entré dans le haut de l'écran + ~10 s de présence, onglet
-  // actif). Sert d'indicateur « la réponse a bien été vue » notamment sur les
-  // arrivées directes via une convention collective.
-  const emitContentViewed = (slug: string) => {
-    sendEvent({
-      category: TrackingContributionCategory.CONTRIBUTION,
-      action: TrackingContributionAction.CONTENT_VIEWED,
-      name: `${getRouteBySource(SOURCES.CONTRIBUTIONS)}/${slug}`,
-    });
-  };
-
-  // Clic sur un lien de l'accordéon « Votre réponse en fonction de votre
-  // convention collective » (fiche générique). `name` = chemin de la page CC
-  // atteinte, sous la même forme que les events ci-dessus qui le construisent
-  // depuis `getRouteBySource` (`contribution/44-mon-slug`).
+  // Clic sur une convention listée dans l'accordéon « Votre réponse en fonction
+  // de votre convention collective » de la fiche générique. Ce bloc existe
+  // d'abord pour le maillage interne ; l'event mesure son usage réel.
   const emitClickAgreementDeclination = (href: string) => {
-    sendEvent({
-      category: TrackingContributionCategory.CONTRIBUTION,
-      action: TrackingContributionAction.CLICK_AGREEMENT_DECLINATION,
-      name: toEventName(href),
-    });
+    track("click_agreement_declination", { target: toEventName(href) });
   };
 
   return {

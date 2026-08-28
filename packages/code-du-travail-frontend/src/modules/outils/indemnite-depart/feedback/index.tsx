@@ -3,12 +3,12 @@ import { useEffect, useRef, useState } from "react";
 import { Questionnaire } from "./Questionnaire";
 import { QuestionnaireAdvanced } from "./QuestionnaireAdvanced";
 import { QuestionnaireEnd } from "./QuestionnaireEnd";
-import { EVENT_CATEGORY } from "./tracking";
+import { SIMULATOR_FEEDBACK_CONTEXT } from "./tracking";
 import { fr } from "@codegouvfr/react-dsfr";
 import { css } from "@styled-system/css";
 
 type Props = {
-  category: EVENT_CATEGORY;
+  category: SIMULATOR_FEEDBACK_CONTEXT;
 };
 
 export const Feedback = ({ category }: Props) => {

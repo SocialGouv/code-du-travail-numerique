@@ -7,8 +7,10 @@ jest.mock("@socialgouv/matomo-next", () => {
     sendEvent: jest.fn(),
   };
 });
+// Le partage vit sur toutes les pages de contenu : on se place sur une
+// contribution pour vérifier que la catégorie suit le type de page.
 jest.mock("next/navigation", () => ({
-  usePathname: () => "/my-page",
+  usePathname: () => "/contribution/my-page",
 }));
 
 describe("<Share />", () => {
@@ -38,10 +40,13 @@ describe("<Share />", () => {
       const link = getByText(linkText);
       link.click();
 
+      // L'ancien schéma faisait de l'URL complète l'ACTION et du réseau le nom,
+      // sous une catégorie `clic_share` qui décrivait l'interaction. Désormais :
+      // catégorie = type de page, action = interaction, contexte en payload.
       expect(sendEvent).toHaveBeenCalledWith({
-        category: "clic_share",
-        action: "http://api.url/my-page",
-        name: event,
+        category: "contribution",
+        action: "click_share",
+        name: `{"path":"contribution/my-page","network":"${event}"}`,
       });
     }
   );

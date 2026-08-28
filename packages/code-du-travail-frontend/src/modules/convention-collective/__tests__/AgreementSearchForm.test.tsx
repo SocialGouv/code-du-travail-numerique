@@ -1,9 +1,10 @@
 import { act, render, screen, waitFor } from "@testing-library/react";
 
-import { TrackingAgreementSearchAction } from "../tracking";
+import { AGREEMENT_SEARCH_TOOL } from "../tracking";
 import { ui } from "./ui";
 import { ui as enterpriseUi } from "../../enterprise/EnterpriseAgreementSearch/__tests__/ui";
 import { sendEvent } from "@socialgouv/matomo-next";
+import { usePathname } from "next/navigation";
 import { AgreementSearchForm } from "../AgreementSearch/AgreementSearchForm";
 import { UserAction } from "src/modules/outils/common/utils/UserAction";
 
@@ -14,6 +15,14 @@ jest.mock("@socialgouv/matomo-next", () => ({
 jest.mock("uuid", () => ({
   v4: jest.fn(() => ""),
 }));
+
+// La catégorie et le chemin de l'event sont déduits de la route courante : on
+// place les tests sur la page réelle de l'outil.
+const PAGE = "/outils/convention-collective";
+const PATH = "outils/convention-collective";
+beforeEach(() => {
+  (usePathname as jest.Mock).mockReturnValue(PAGE);
+});
 
 jest.mock("next/navigation", () => ({
   redirect: jest.fn(),
@@ -29,7 +38,7 @@ describe("<PageContribution />", () => {
   it("should track when searching by enterprise name", async () => {
     render(
       <AgreementSearchForm
-        trackingActionName={TrackingAgreementSearchAction.AGREEMENT_SEARCH}
+        trackingActionName={AGREEMENT_SEARCH_TOOL}
         onAgreementSelect={() => {}}
         level={2}
       />
@@ -47,9 +56,9 @@ describe("<PageContribution />", () => {
     });
     await waitFor(() => {
       expect(sendEvent).toHaveBeenCalledWith({
-        action: "Trouver sa convention collective",
-        category: "enterprise_search",
-        name: '{"query":"carrefour"}',
+        category: "outil",
+        action: "search_enterprise",
+        name: `{"path":"${PATH}","context":"${AGREEMENT_SEARCH_TOOL}","query":"carrefour"}`,
       });
     });
     expect(
@@ -63,7 +72,7 @@ describe("<PageContribution />", () => {
   it("should track when searching by enterprise with multiple agreements", async () => {
     render(
       <AgreementSearchForm
-        trackingActionName={TrackingAgreementSearchAction.AGREEMENT_SEARCH}
+        trackingActionName={AGREEMENT_SEARCH_TOOL}
         onAgreementSelect={() => {}}
         level={2}
       />
@@ -81,9 +90,9 @@ describe("<PageContribution />", () => {
     });
     await waitFor(() => {
       expect(sendEvent).toHaveBeenCalledWith({
-        action: "Trouver sa convention collective",
-        category: "enterprise_search",
-        name: '{"query":"bnp"}',
+        category: "outil",
+        action: "search_enterprise",
+        name: `{"path":"${PATH}","context":"${AGREEMENT_SEARCH_TOOL}","query":"bnp"}`,
       });
     });
     expect(
@@ -100,7 +109,7 @@ describe("<PageContribution />", () => {
   it("should track when selecting agreement 3239", () => {
     render(
       <AgreementSearchForm
-        trackingActionName={TrackingAgreementSearchAction.AGREEMENT_SEARCH}
+        trackingActionName={AGREEMENT_SEARCH_TOOL}
         onAgreementSelect={() => {}}
         level={2}
       />
@@ -111,9 +120,9 @@ describe("<PageContribution />", () => {
       enterpriseUi.enterpriseAgreementSearch.childminder.title.get()
     );
     expect(sendEvent).toHaveBeenCalledWith({
-      action: "select_je_n_ai_pas_d_entreprise",
-      category: "cc_search_type_of_users",
-      name: "Trouver sa convention collective",
+      category: "outil",
+      action: "select_no_enterprise",
+      name: `{"path":"${PATH}","context":"${AGREEMENT_SEARCH_TOOL}"}`,
     });
   });
 
@@ -123,7 +132,7 @@ describe("<PageContribution />", () => {
 
     render(
       <AgreementSearchForm
-        trackingActionName={TrackingAgreementSearchAction.AGREEMENT_SEARCH}
+        trackingActionName={AGREEMENT_SEARCH_TOOL}
         onAgreementSelect={onAgreementSelect}
         level={2}
         showNoAgreementOption

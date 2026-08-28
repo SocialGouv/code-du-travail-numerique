@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { HomeButton, SectionContainer } from "./Components";
 import { fr } from "@codegouvfr/react-dsfr";
-import { MatomoHomeEvent, useHomeTracking } from "./tracking";
+import { HomeShortcutTarget, useHomeTracking } from "./tracking";
 import { HomeTileItem } from "./queries";
 import { css } from "@styled-system/css";
 import { HomeThemeTile } from "../themes/HomeThemeTile";
@@ -23,9 +23,7 @@ export const Themes = (props: Props) => {
           buttonLink="/themes"
           buttonText="Voir tous les thèmes"
           onButtonClick={() => {
-            emitHomeClickButtonEvent(
-              MatomoHomeEvent.CLICK_VOIR_TOUTES_LES_THEMES
-            );
+            emitHomeClickButtonEvent(HomeShortcutTarget.THEMES);
           }}
         />
       }

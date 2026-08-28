@@ -1,8 +1,8 @@
 // Source de vérité partagée pour le widget de notation de la clarté d'une
 // contribution (#7333). Ce fichier ne doit PAS dépendre de React ni du DOM :
 // il est importé à la fois côté client (composants, slider) et côté serveur
-// (le contrôleur borne la note via RATING_MIN/RATING_MAX et émet l'event Matomo
-// avec le couple RatingMatomo.CATEGORY/ACTION).
+// (le contrôleur borne la note via RATING_MIN/RATING_MAX, le service émet
+// l'event Matomo via le socle commun).
 
 export const RATING_MIN = 1;
 export const RATING_MAX = 5;
@@ -34,18 +34,7 @@ export const RATING_CONFIRMATION_TEXT = "Merci !";
 // courante est portée par `aria-valuetext`).
 export const RATING_SLIDER_LABEL = "Notez la clarté du contenu de cette page";
 
-// Identité Matomo de l'event de notation, appartenant au serveur : le contrôleur
-// l'utilise pour émettre l'event lors du relai serveur->serveur. En enum (et non
-// en `const`) par cohérence avec les autres identifiants d'events du projet.
-// La note est portée par l'ACTION en chaîne (« note_1 » … « note_5 ») et non par
-// la valeur numérique `e_v` : Matomo additionne les `e_v` dans ses rapports,
-// alors qu'on veut compter les occurrences de chaque note par contenu.
-export enum RatingMatomo {
-  CATEGORY = "notation_contribution",
-  ACTION_PREFIX = "note_",
-}
-
-// Action Matomo d'une note : ensemble fermé « note_1 » … « note_5 » (la note est
-// bornée RATING_MIN/RATING_MAX par le contrôleur avant l'appel — pas d'injection).
-export const ratingActionForValue = (value: number): string =>
-  `${RatingMatomo.ACTION_PREFIX}${value}`;
+// L'identité Matomo de l'event (catégorie, action) n'est plus définie ici : elle
+// vient du socle commun `modules/analytics/events` — catégorie déduite du type de
+// page, action `rate_content_<1..5>` produite par `rateContentAction`. Ce fichier
+// ne garde que ce qui décrit le WIDGET.

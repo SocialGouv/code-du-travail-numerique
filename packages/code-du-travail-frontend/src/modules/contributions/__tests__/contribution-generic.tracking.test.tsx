@@ -21,9 +21,18 @@ jest.mock("uuid", () => ({
 
 const pushMock = jest.fn();
 const replaceMock = jest.fn();
+
+// La catégorie et le chemin des events viennent de la route courante : la fiche
+// générique de la contribution. `CONTEXT` est le contexte du parcours de choix
+// de convention, passé par le composant appelant.
+const PAGE = "/contribution/my-contrib";
+const PATH = "contribution/my-contrib";
+const CONTEXT = "contribution/my-contrib";
+const named = (payload: Record<string, unknown>) =>
+  JSON.stringify({ path: PATH, ...payload });
 jest.mock("next/navigation", () => ({
   redirect: jest.fn(),
-  usePathname: jest.fn(),
+  usePathname: jest.fn(() => "/contribution/my-contrib"),
   useSearchParams: jest.fn(() => new URLSearchParams()),
   useRouter: () => ({
     push: pushMock,
@@ -91,35 +100,38 @@ describe("<ContributionGeneric />", () => {
     expect(ui.generic.buttonDisplayInfo.get()).toBeInTheDocument();
     expect(sendEvent).toHaveBeenCalledTimes(3);
     // @ts-ignore
+    // Les trois events partagent désormais la même catégorie — le type de la
+    // page — là où l'ancien schéma les répartissait sur `cc_select_p1`,
+    // `cc_search_type_of_users` et `outil`.
     expect(sendEvent.mock.calls).toEqual([
       [
         {
-          action: "/contribution/my-contrib",
-          category: "cc_select_p1",
-          name: "idcc1388",
+          category: "contribution",
+          action: "select_agreement_p1",
+          name: named({ context: CONTEXT, idcc: 1388 }),
         },
       ],
       [
         {
-          action: "click_p1",
-          category: "cc_search_type_of_users",
-          name: "/contribution/my-contrib",
+          category: "contribution",
+          action: "select_agreement_path_p1",
+          name: named({ context: CONTEXT }),
         },
       ],
       [
         {
-          action: "cc_select_traitée",
-          category: "outil",
-          name: "1388",
+          category: "contribution",
+          action: "select_agreement_supported",
+          name: named({ idcc: 1388 }),
         },
       ],
     ]);
     fireEvent.click(ui.generic.buttonDisplayInfo.get());
     expect(sendEvent).toHaveBeenCalledTimes(4);
     expect(sendEvent).toHaveBeenLastCalledWith({
-      action: "click_afficher_les_informations_CC",
       category: "contribution",
-      name: "/contribution/my-contrib",
+      action: "click_show_agreement_content",
+      name: named({ target: CONTEXT }),
     });
   });
 
@@ -156,32 +168,32 @@ describe("<ContributionGeneric />", () => {
     expect(sendEvent.mock.calls).toEqual([
       [
         {
-          action: "/contribution/my-contrib",
-          category: "cc_select_p1",
-          name: "idcc16",
+          category: "contribution",
+          action: "select_agreement_p1",
+          name: named({ context: CONTEXT, idcc: 16 }),
         },
       ],
       [
         {
-          action: "click_p1",
-          category: "cc_search_type_of_users",
-          name: "/contribution/my-contrib",
+          category: "contribution",
+          action: "select_agreement_path_p1",
+          name: named({ context: CONTEXT }),
         },
       ],
       [
         {
-          action: "cc_select_non_traitée",
-          category: "outil",
-          name: "16",
+          category: "contribution",
+          action: "select_agreement_unsupported",
+          name: named({ idcc: 16 }),
         },
       ],
     ]);
     fireEvent.click(ccUi.buttonDisplayInfo.get());
     expect(sendEvent).toHaveBeenCalledTimes(4);
     expect(sendEvent).toHaveBeenLastCalledWith({
-      action: "click_afficher_les_informations_générales",
       category: "contribution",
-      name: "/contribution/my-contrib",
+      action: "click_show_general_content",
+      name: named({ target: CONTEXT }),
     });
   });
 
@@ -215,47 +227,52 @@ describe("<ContributionGeneric />", () => {
     expect(sendEvent.mock.calls).toEqual([
       [
         {
-          action: "/contribution/my-contrib",
-          category: "enterprise_search",
-          name: '{"query":"carrefour"}',
+          category: "contribution",
+          action: "search_enterprise",
+          name: named({ context: CONTEXT, query: "carrefour" }),
         },
       ],
       [
         {
-          action: "/contribution/my-contrib",
-          category: "enterprise_select",
-          name: '{"label":"CARREFOUR PROXIMITE FRANCE (SHOPI-8 A HUIT)","siren":"345130488"}',
+          category: "contribution",
+          action: "select_enterprise",
+          name: named({
+            context: CONTEXT,
+            label: "CARREFOUR PROXIMITE FRANCE (SHOPI-8 A HUIT)",
+            siren: "345130488",
+          }),
         },
       ],
       [
         {
-          action: "/contribution/my-contrib",
-          category: "cc_select_p2",
-          name: "idcc2216",
+          category: "contribution",
+          action: "select_agreement_p2",
+          name: named({ context: CONTEXT, idcc: 2216 }),
         },
       ],
       [
         {
-          action: "click_p2",
-          category: "cc_search_type_of_users",
-          name: "/contribution/my-contrib",
+          category: "contribution",
+          action: "select_agreement_path_p2",
+          name: named({ context: CONTEXT }),
         },
       ],
       [
         {
-          action: "cc_select_non_traitée",
-          category: "outil",
-          name: "2216",
+          category: "contribution",
+          action: "select_agreement_unsupported",
+          name: named({ idcc: 2216 }),
         },
       ],
       // Le nombre de CC trouvées pour l'entreprise part depuis un `useEffect`,
       // donc après les events émis dans les gestionnaires de clic : il ferme la
-      // séquence. Carrefour Proximité n'a qu'une convention, d'où `name: "1"`.
+      // séquence. Carrefour Proximité n'a qu'une convention, d'où `count: 1`.
       [
         {
-          action: "show_agreements",
-          category: "cc_enterprise_search",
-          name: "1",
+          category: "contribution",
+          action: "show_enterprise_agreements",
+          name: named({ count: 1 }),
+          value: 1,
         },
       ],
     ]);
@@ -289,19 +306,19 @@ describe("<ContributionGeneric />", () => {
     fireEvent.click(ui.generic.radioNoAgreement.get());
     expect(sendEvent).toHaveBeenCalledTimes(1);
     expect(sendEvent).toHaveBeenLastCalledWith({
-      action: "click_p3",
-      category: "cc_search_type_of_users",
-      name: "/contribution/my-contrib",
+      category: "contribution",
+      action: "select_agreement_path_p3",
+      name: named({ context: CONTEXT }),
     });
 
     fireEvent.click(ui.generic.buttonDisplayInfo.get());
     // Afficher le Code du travail sans CC émet l'évènement d'affichage dédié
-    // (en plus du click_p3 déjà émis à la sélection de la dernière option).
+    // (en plus du parcours p3 déjà émis à la sélection de la dernière option).
     expect(sendEvent).toHaveBeenCalledTimes(2);
     expect(sendEvent).toHaveBeenLastCalledWith({
-      action: "click_afficher_les_informations_sans_CC",
       category: "contribution",
-      name: "/contribution/my-contrib",
+      action: "click_show_content_without_agreement",
+      name: named({ target: CONTEXT }),
     });
   });
 
@@ -344,7 +361,7 @@ describe("<ContributionGeneric />", () => {
   });
 
   describe("sélection de CC et erreurs inline", () => {
-    it("émet click_p1 quand on sélectionne une CC traitée", async () => {
+    it("émet le parcours p1 quand on sélectionne une CC traitée", async () => {
       mockAgreementSearch({
         num: 1388,
         shortTitle: "Industrie du pétrole",
@@ -368,9 +385,9 @@ describe("<ContributionGeneric />", () => {
       fireEvent.click(ccUi.searchByName.autocompleteLines.IDCC1388.name.get());
 
       expect(sendEvent).toHaveBeenCalledWith({
-        action: "click_p1",
-        category: "cc_search_type_of_users",
-        name: "/contribution/my-contrib",
+        category: "contribution",
+        action: "select_agreement_path_p1",
+        name: named({ context: CONTEXT }),
       });
     });
 

@@ -46,7 +46,7 @@ export const LetterModel = ({
   intro,
   date,
 }: LetterModelProps) => {
-  const trackCopy = useModeleEvents(slug);
+  const trackCopy = useModeleEvents();
 
   useEffect(() => {
     const onCopy = () => {
@@ -115,7 +115,7 @@ export const LetterModel = ({
                 titleAs={"h3"}
               />
             </div>
-            <CopyButton slug={slug} />
+            <CopyButton />
           </div>
           <RelatedItems relatedItems={relatedItems} />
         </div>

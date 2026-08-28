@@ -44,7 +44,7 @@ export const LetterModelContent = ({
             title={title}
           />
         </div>
-        <CopyButton slug={slug} />
+        <CopyButton />
       </div>
       <div
         className={`${fr.cx("fr-p-2w", "fr-pt-4w", "fr-mb-6w")} ${border}`}
@@ -59,7 +59,7 @@ export const LetterModelContent = ({
         small
       />
       <div className={button}>
-        <CopyButton slug={slug} />
+        <CopyButton />
       </div>
       <div className={fr.cx("fr-mb-6w")}>
         <DownloadTile

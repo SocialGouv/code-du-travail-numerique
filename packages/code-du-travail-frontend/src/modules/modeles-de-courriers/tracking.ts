@@ -1,13 +1,13 @@
-import { sendEvent } from "@socialgouv/matomo-next";
 import { useCallback } from "react";
-import { MatomoBaseEvent, MatomoActionEvent } from "../analytics";
+import { useTracking } from "../analytics/events/useTracking";
 
-export const useModeleEvents = (slug) => {
+// Copie d'un modèle (bouton « Copier le modèle » ou Ctrl/Cmd+C). Le slug du
+// modèle n'a plus besoin d'être passé : il est déjà dans le `path` injecté par
+// `useTracking`, la page étant celle du modèle copié.
+export const useModeleEvents = () => {
+  const { track } = useTracking();
+
   return useCallback(() => {
-    sendEvent({
-      category: MatomoBaseEvent.PAGE_MODELS,
-      action: MatomoActionEvent.TYPE_CTRL_C,
-      name: slug,
-    });
-  }, []);
+    track("copy_letter_template");
+  }, [track]);
 };

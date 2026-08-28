@@ -29,10 +29,16 @@ export type ExtractedEvent = {
   // Chemin du fichier, relatif à la racine du repo, + ligne de l'appel.
   file: string;
   line: number;
-  // Références d'enums utilisées dans l'objet event (ex: "MatomoBaseEvent.OUTIL").
+  // Références d'enums utilisées dans l'objet event (ex: "PageCategory.OUTIL").
   enum_refs: string[];
-  // "sendEvent" pour sendEvent({...}) ; "push:<command>" pour push([cmd, ...]).
+  // "sendEvent" pour sendEvent({...}) ; "push:<command>" pour push([cmd, ...]) ;
+  // "track" / "sendPageEvent" pour le socle normalisé (modules/analytics/events).
   tracking_method: string;
+  // L'event renseigne-t-il la `value` numérique Matomo ? Doublon d'agrégation :
+  // l'information est TOUJOURS aussi dans le payload (Matomo n'enregistre pas
+  // une value de 0), mais savoir où `sum_event_value` est exploitable compte
+  // pour le plan de tracking.
+  has_value: boolean;
 };
 
 // Commande Matomo de configuration (non-event) repérée dans un push([cmd, ...]).

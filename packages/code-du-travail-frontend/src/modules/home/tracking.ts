@@ -1,34 +1,32 @@
-import { sendEvent } from "@socialgouv/matomo-next";
+import { useTracking } from "../analytics/events/useTracking";
 
-enum MatomoHomeCategory {
-  PAGE_HOME = "page_home",
-}
-
-export enum MatomoHomeEvent {
-  CLICK_VOIR_TOUS_LES_OUTILS = "click_voir_tous_les_outils",
-  CLICK_VOIR_TOUS_LES_MODELES = "Click_voir_tous_modeles_de_documents",
-  CLICK_VOIR_TOUTES_LES_FICHES = "click_voir_toutes_les_fiches_pratiques",
-  CLICK_VOIR_TOUTES_LES_CONVENTIONS_COLLECTIVES = "click_voir_toutes_les_conventions_collectives",
-  CLICK_VOIR_TOUTES_LES_THEMES = "click_voir_tous_les_themes",
-  CLICK_VOIR_TOUTES_LES_ACTUALITES = "click_voir_toutes_les_actualites",
-  CLICK_COMPRENDRE_DROIT_DU_TRAVAIL = "click_comprendre_le_droit_du_travail",
-  CLICK_DE_LA_QUESTION_A_LACTION = "click_question_action",
+// Cibles des boutons « voir tout » de la page d'accueil. L'ancien schéma avait
+// une action Matomo par bouton (`click_voir_tous_les_outils`, `Click_voir_tous_
+// modeles_de_documents`…, avec une majuscule aberrante sur l'un d'eux). Ces
+// huit variantes désignent la même interaction — un raccourci de l'accueil vers
+// une rubrique — et deviennent donc un `target` de payload : la cible est une
+// énumération bornée, elle reste lisible dans la sous-table des noms.
+export enum HomeShortcutTarget {
+  OUTILS = "outils",
+  MODELES_DE_COURRIERS = "modeles-de-courriers",
+  CONTRIBUTIONS = "contribution",
+  CONVENTIONS_COLLECTIVES = "convention-collective",
+  THEMES = "themes",
+  ACTUALITES = "actualite",
+  DROIT_DU_TRAVAIL = "droit-du-travail",
 }
 
 export const useHomeTracking = () => {
-  const emitHomeClickButtonEvent = (action: MatomoHomeEvent) => {
-    sendEvent({
-      category: MatomoHomeCategory.PAGE_HOME,
-      action,
-    });
+  const { track } = useTracking();
+
+  const emitHomeClickButtonEvent = (target: HomeShortcutTarget) => {
+    track("click_shortcut", { target });
   };
 
+  // Section « De la question à l'action » : `target` = slug de la ressource
+  // visée.
   const emitQuestionActionEvent = (slug: string) => {
-    sendEvent({
-      category: MatomoHomeCategory.PAGE_HOME,
-      action: MatomoHomeEvent.CLICK_DE_LA_QUESTION_A_LACTION,
-      name: slug,
-    });
+    track("click_guided_question", { target: slug });
   };
 
   return {

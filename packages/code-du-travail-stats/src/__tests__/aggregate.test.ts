@@ -18,6 +18,7 @@ function ev(
     line,
     enum_refs: [],
     tracking_method: "sendEvent",
+    has_value: false,
   };
 }
 

@@ -30,8 +30,7 @@ export const ContributionContent = ({ contribution, titleLevel }: Props) => {
           extra={{
             infographics: contribution.infographics ?? [],
             smicHourly: contribution.smicValue,
-            onTableFullscreen: () =>
-              emitClickTableFullscreen(contribution.slug),
+            onTableFullscreen: () => emitClickTableFullscreen(),
           }}
         />
       )}

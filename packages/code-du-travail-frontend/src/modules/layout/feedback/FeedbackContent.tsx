@@ -2,7 +2,7 @@ import { fr } from "@codegouvfr/react-dsfr";
 import { Button } from "@codegouvfr/react-dsfr/Button";
 import { Checkbox } from "@codegouvfr/react-dsfr/Checkbox";
 import { Input } from "@codegouvfr/react-dsfr/Input";
-import { FeedbackActionChoiceValue } from "./tracking";
+import { FeedbackReason } from "./tracking";
 import { useEffect, useRef, useState } from "react";
 
 const MAX_LENGTH_SUGGESTION = 500;
@@ -14,12 +14,12 @@ type Props = {
 
 export type FeedbackDataSent = {
   suggestion?: string;
-  categories?: FeedbackActionChoiceValue[];
+  categories?: FeedbackReason[];
 };
 
 export const FeedbackContent = (props: Props) => {
   const titleRef = useRef<HTMLInputElement | null>(null);
-  const [categories, setCategories] = useState<FeedbackActionChoiceValue[]>([]);
+  const [categories, setCategories] = useState<FeedbackReason[]>([]);
   const [suggestion, setSuggestion] = useState<string | undefined>(undefined);
   const [hasCheckBoxError, setHasCheckBoxError] = useState<boolean>(false);
   const [hasSuggestionError, setHasSuggestionError] = useState<boolean>(false);
@@ -43,7 +43,7 @@ export const FeedbackContent = (props: Props) => {
   const onChangeCategories = (e: React.ChangeEvent<HTMLInputElement>) => {
     setCategories((prev) => {
       if (e.target.checked) {
-        return [...prev, e.target.value as FeedbackActionChoiceValue];
+        return [...prev, e.target.value as FeedbackReason];
       }
       return prev.filter((category) => category !== e.target.value);
     });
@@ -100,7 +100,7 @@ export const FeedbackContent = (props: Props) => {
                 label: "Les informations ne sont pas claires",
                 nativeInputProps: {
                   name: "unclear",
-                  value: FeedbackActionChoiceValue.unclear,
+                  value: FeedbackReason.UNCLEAR,
                   onChange: onChangeCategories,
                 },
               },
@@ -109,7 +109,7 @@ export const FeedbackContent = (props: Props) => {
                   "Cette page ne correspond pas à ma recherche ou à ma situation.",
                 nativeInputProps: {
                   name: "unrelated",
-                  value: FeedbackActionChoiceValue.unrelated,
+                  value: FeedbackReason.UNRELATED,
                   onChange: onChangeCategories,
                 },
               },
@@ -117,7 +117,7 @@ export const FeedbackContent = (props: Props) => {
                 label: "Je ne suis pas satisfait de cette réglementation.",
                 nativeInputProps: {
                   name: "unsatisfied",
-                  value: FeedbackActionChoiceValue.unsatisfied,
+                  value: FeedbackReason.UNSATISFIED,
                   onChange: onChangeCategories,
                 },
               },
@@ -125,7 +125,7 @@ export const FeedbackContent = (props: Props) => {
                 label: "Les informations me semblent fausses.",
                 nativeInputProps: {
                   name: "wrong",
-                  value: FeedbackActionChoiceValue.wrong,
+                  value: FeedbackReason.WRONG,
                   onChange: onChangeCategories,
                 },
               },

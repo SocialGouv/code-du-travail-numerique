@@ -13,7 +13,7 @@ import { StepAgreement, StepInformations } from "../indemnite-depart/steps";
 import { StepAnciennete, StepIntro, StepResultat } from "./steps";
 import { useIndemniteLicenciementEventEmitter } from "./events/useIndemniteLicenciementEventEmitter";
 import StepSalaires from "../indemnite-depart/steps/Salaires";
-import { EVENT_CATEGORY } from "../indemnite-depart/feedback/tracking";
+import { SIMULATOR_FEEDBACK_CONTEXT } from "../indemnite-depart/feedback/tracking";
 import StepAbsences from "../indemnite-depart/steps/Absences/components";
 import { listingSegment } from "../../layout/breadcrumb";
 import { SOURCES } from "@socialgouv/cdtn-utils";
@@ -91,7 +91,7 @@ export const CalculateurIndemniteLicenciement = ({
       title={title}
       tool={IndemniteDepartType.LICENCIEMENT}
       steps={steps}
-      feedbackPopup={EVENT_CATEGORY.indemniteLicenciement}
+      feedbackPopup={SIMULATOR_FEEDBACK_CONTEXT.indemniteLicenciement}
     />
   );
 };

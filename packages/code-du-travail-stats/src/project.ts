@@ -35,6 +35,16 @@ const GLOB_PATTERNS = [
   `!${path.join(FRONTEND_SRC, "modules/**/*.stories.tsx")}`,
 ];
 
+// Le socle de tracking lui-même : ses `sendEvent` sont la PLOMBERIE qui émet les
+// events des autres modules, pas des events du site. Le scanner y verrait
+// `sendEvent({ category: event.category, ... })` et produirait des lignes
+// `<event.category>/<event.action>` ne correspondant à aucune interaction.
+//
+// Exclu par filtrage explicite plutôt que par un pattern négatif : les patterns
+// sont passés un par un à `addSourceFilesAtPaths`, un `!pattern` isolé n'a donc
+// aucun fichier à retirer.
+const TRACKING_SOCLE_DIR = path.join(FRONTEND_SRC, "modules/analytics/events");
+
 // Enums externes référencés par le tracking (ex: PublicodesSimulator de
 // @socialgouv/modeles-social) — chargés UNIQUEMENT pour résoudre des valeurs,
 // pas scannés pour des events.
@@ -65,7 +75,9 @@ export function loadEventSourceFiles(project: Project): SourceFile[] {
   for (const pattern of GLOB_PATTERNS) {
     project.addSourceFilesAtPaths(pattern);
   }
-  const eventFiles = project.getSourceFiles();
+  const eventFiles = project
+    .getSourceFiles()
+    .filter((sf) => !sf.getFilePath().startsWith(TRACKING_SOCLE_DIR));
   if (eventFiles.length === 0) {
     throw new Error(
       "[extract-events] Aucun fichier trouvé. Vérifier les patterns de glob et FRONTEND_SRC."

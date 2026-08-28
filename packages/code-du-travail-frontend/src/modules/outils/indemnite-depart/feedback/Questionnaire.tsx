@@ -4,8 +4,8 @@ import { Button } from "@codegouvfr/react-dsfr/Button";
 import { SmileyQuestionnaireItem } from "./SmileyQuestionnaireItem";
 import React, { forwardRef, useState, useEffect, useRef } from "react";
 import {
-  EVENT_ACTION,
-  EVENT_CATEGORY,
+  FEEDBACK_QUESTION,
+  SIMULATOR_FEEDBACK_CONTEXT,
   FEEDBACK_RESULT,
   useFeedbackEvents,
 } from "./tracking";
@@ -13,7 +13,7 @@ import { fr } from "@codegouvfr/react-dsfr";
 
 type QuestionnaireProps = {
   onClick: () => void;
-  category: EVENT_CATEGORY;
+  category: SIMULATOR_FEEDBACK_CONTEXT;
 };
 
 export const Questionnaire = forwardRef<HTMLHeadingElement, QuestionnaireProps>(
@@ -59,7 +59,7 @@ export const Questionnaire = forwardRef<HTMLHeadingElement, QuestionnaireProps>(
               setDisplayError(true);
               e.preventDefault();
             } else {
-              trackFeedback(EVENT_ACTION.GLOBAL, status, category);
+              trackFeedback(FEEDBACK_QUESTION.GLOBAL, status, category);
               onClick();
             }
           }}

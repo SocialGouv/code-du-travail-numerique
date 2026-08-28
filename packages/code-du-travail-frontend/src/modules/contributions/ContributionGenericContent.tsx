@@ -43,7 +43,7 @@ export const ContributionGenericContent = forwardRef<
     const { emitContentViewed } = useContributionTracking();
     // N'observe que quand le bloc générique est réellement affiché.
     const titleRef = useContentViewTracking<HTMLHeadingElement>(
-      () => emitContentViewed(contribution.slug),
+      () => emitContentViewed(),
       { enabled: displayGeneric }
     );
 

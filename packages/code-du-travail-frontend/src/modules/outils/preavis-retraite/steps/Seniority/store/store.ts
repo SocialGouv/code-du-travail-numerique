@@ -7,9 +7,9 @@ import {
 import { produce } from "immer";
 import { validateStep } from "./validator";
 import { StoreSliceWrapperPreavisRetraite } from "../../store";
-import { sendEvent } from "@socialgouv/matomo-next";
+import { sendPageEvent } from "src/modules/analytics/events";
 import { ValidationResponse } from "src/modules/outils/common/types";
-import { MatomoBaseEvent, MatomoRetirementEvent } from "src/modules/analytics";
+import { SimulatorTitle } from "src/modules/outils/common/events/simulators";
 
 const initialState: SeniorityStoreData = {
   input: {},
@@ -43,12 +43,15 @@ const createSeniorityStore: StoreSliceWrapperPreavisRetraite<
           state.seniorityData.error = errorState;
         })
       );
-      sendEvent({
-        category: MatomoBaseEvent.OUTIL,
-        action:
+      // Émis depuis un store zustand, hors rendu React : d'où `sendPageEvent`
+      // (non-hook). L'ancienneté déclarée était l'ACTION Matomo
+      // (`anciennete_plus_2_ans` / `_moins_2_ans`) ; elle devient un payload.
+      sendPageEvent("select_seniority", {
+        simulator: SimulatorTitle.PREAVIS_RETRAITE,
+        seniority:
           get().seniorityData.input.moreThanXYears === "oui"
-            ? MatomoRetirementEvent.ANCIENNETE_PLUS_2_ANS
-            : MatomoRetirementEvent.ANCIENNETE_MOINS_2_ANS,
+            ? "plus_2_ans"
+            : "moins_2_ans",
       });
 
       return isValid ? ValidationResponse.Valid : ValidationResponse.NotValid;

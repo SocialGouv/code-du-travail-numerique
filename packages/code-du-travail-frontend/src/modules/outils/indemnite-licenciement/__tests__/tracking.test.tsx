@@ -1,4 +1,5 @@
 import { act, render, waitFor } from "@testing-library/react";
+import { usePathname } from "next/navigation";
 import { UserAction } from "../../common/utils/UserAction";
 import IndemniteLicenciementSimulator from "../IndemniteLicenciementSimulator";
 import { ui } from "../../indemnite-depart/__tests__/ui";
@@ -13,12 +14,30 @@ jest.mock(
   "../../../convention-collective/AgreementSearch/AgreementSearchInput"
 );
 
+const SIMULATOR = "Indemnité de licenciement";
+const PAGE = "/outils/indemnite-licenciement";
+const PATH = "outils/indemnite-licenciement";
+
+const named = (payload: Record<string, unknown>) =>
+  JSON.stringify({ path: PATH, ...payload });
+
+// Le titre du simulateur suffixait l'action dans l'ancien schéma
+// (`view_step_Indemnité de licenciement`), ce qui créait une action Matomo par
+// simulateur, accents et espaces compris. Il est désormais en payload.
+const step = (name: string) => named({ simulator: SIMULATOR, step: name });
+
 describe("Indemnité licenciement - Tracking", () => {
   beforeEach(() => {
+    // `useTracking` lit `usePathname()`, `sendPageEvent` (appelé depuis les
+    // stores zustand) lit `window.location` : les deux doivent désigner la même
+    // page pour que le parcours soit cohérent.
+    (usePathname as jest.Mock).mockReturnValue(PAGE);
+    window.history.pushState({}, "", PAGE);
+
     render(
       <IndemniteLicenciementSimulator
-        title={"Indemnité de licenciement"}
-        displayTitle="Indemnité de licenciement"
+        title={SIMULATOR}
+        displayTitle={SIMULATOR}
         relatedItems={[]}
       />
     );
@@ -35,14 +54,14 @@ describe("Indemnité licenciement - Tracking", () => {
     userAction.click(ui.next.get());
     expect(sendEvent).toHaveBeenCalledWith({
       category: "outil",
-      action: `view_step_Indemnité de licenciement`,
-      name: "info_cc",
+      action: "view_step",
+      name: step("info_cc"),
     });
     userAction.click(ui.next.get());
     expect(sendEvent).toHaveBeenCalledWith({
       category: "outil",
-      action: `view_step_Indemnité de licenciement`,
-      name: "infos",
+      action: "view_step",
+      name: step("infos"),
     });
     await userAction.click(ui.information.inaptitude.non.get());
     await userAction.changeInputList(
@@ -60,8 +79,8 @@ describe("Indemnité licenciement - Tracking", () => {
     userAction.click(ui.next.get());
     expect(sendEvent).toHaveBeenCalledWith({
       category: "outil",
-      action: `view_step_Indemnité de licenciement`,
-      name: "anciennete",
+      action: "view_step",
+      name: step("anciennete"),
     });
     userAction.setInput(ui.seniority.startDate.get(), "01/01/2022");
     userAction.setInput(ui.seniority.notificationDate.get(), "15/12/2022");
@@ -69,54 +88,56 @@ describe("Indemnité licenciement - Tracking", () => {
     userAction.click(ui.next.get());
     expect(sendEvent).toHaveBeenCalledWith({
       category: "outil",
-      action: `view_step_Indemnité de licenciement`,
-      name: "absences",
+      action: "view_step",
+      name: step("absences"),
     });
     userAction.click(ui.absences.arretTravail.non.get());
     userAction.click(ui.absences.hasAbsence.non.get());
     userAction.click(ui.next.get());
     expect(sendEvent).toHaveBeenCalledWith({
       category: "outil",
-      action: `view_step_Indemnité de licenciement`,
-      name: "salaires",
+      action: "view_step",
+      name: step("salaires"),
     });
     userAction.click(ui.salary.hasSameSalary.oui.get());
     userAction.setInput(ui.salary.sameSalaryValue.get(), "3000");
     userAction.click(ui.next.get());
     expect(sendEvent).toHaveBeenCalledWith({
       category: "outil",
-      action: `view_step_Indemnité de licenciement`,
-      name: "results",
+      action: "view_step",
+      name: step("results"),
+    });
+
+    // Retours en arrière : même payload, action distincte.
+    userAction.click(ui.previous.get());
+    expect(sendEvent).toHaveBeenCalledWith({
+      category: "outil",
+      action: "click_previous_step",
+      name: step("salaires"),
     });
     userAction.click(ui.previous.get());
     expect(sendEvent).toHaveBeenCalledWith({
       category: "outil",
-      action: `click_previous_Indemnité de licenciement`,
-      name: "salaires",
+      action: "click_previous_step",
+      name: step("absences"),
     });
     userAction.click(ui.previous.get());
     expect(sendEvent).toHaveBeenCalledWith({
       category: "outil",
-      action: `click_previous_Indemnité de licenciement`,
-      name: "absences",
+      action: "click_previous_step",
+      name: step("anciennete"),
     });
     userAction.click(ui.previous.get());
     expect(sendEvent).toHaveBeenCalledWith({
       category: "outil",
-      action: `click_previous_Indemnité de licenciement`,
-      name: "anciennete",
+      action: "click_previous_step",
+      name: step("infos"),
     });
     userAction.click(ui.previous.get());
     expect(sendEvent).toHaveBeenCalledWith({
       category: "outil",
-      action: `click_previous_Indemnité de licenciement`,
-      name: "infos",
-    });
-    userAction.click(ui.previous.get());
-    expect(sendEvent).toHaveBeenCalledWith({
-      category: "outil",
-      action: `click_previous_Indemnité de licenciement`,
-      name: "info_cc",
+      action: "click_previous_step",
+      name: step("info_cc"),
     });
   });
 
@@ -131,9 +152,9 @@ describe("Indemnité licenciement - Tracking", () => {
       userAction.click(ui.agreement.searchItem.carrefour.get());
     });
     expect(sendEvent).toHaveBeenCalledWith({
-      category: "enterprise_search",
-      action: "Indemnité de licenciement",
-      name: JSON.stringify({ query: "carrefour" }),
+      category: "outil",
+      action: "search_enterprise",
+      name: named({ context: SIMULATOR, query: "carrefour" }),
     });
   });
 
@@ -146,16 +167,19 @@ describe("Indemnité licenciement - Tracking", () => {
       .click(await waitFor(() => ui.agreement.ccChoice.transport.get()))
       .click(ui.next.get());
 
+    // Parcours et sélection partagent désormais la catégorie de la page, là où
+    // l'ancien schéma les séparait en `cc_search_type_of_users` et `cc_select_p1`.
     expect(sendEvent).toHaveBeenCalledWith({
-      category: "cc_search_type_of_users",
-      action: "click_p1",
-      name: "Indemnité de licenciement",
+      category: "outil",
+      action: "select_agreement_path_p1",
+      name: named({ context: SIMULATOR }),
     });
     expect(sendEvent).toHaveBeenCalledWith({
-      category: "cc_select_p1",
-      action: "Indemnité de licenciement",
-      name: "idcc16",
+      category: "outil",
+      action: "select_agreement_p1",
+      name: named({ context: SIMULATOR, idcc: 16 }),
     });
+
     userAction.click(ui.previous.get());
     userAction.click(ui.agreement.unknownAgreement.get());
     userAction.setInput(ui.agreement.agreementCompanyInput.get(), "carrefour");
@@ -168,22 +192,23 @@ describe("Indemnité licenciement - Tracking", () => {
     userAction.click(ui.agreement.ccChoice.commerce.get());
     userAction.click(ui.next.get());
     expect(sendEvent).toHaveBeenCalledWith({
-      category: "cc_search_type_of_users",
-      action: "click_p2",
-      name: "Indemnité de licenciement",
+      category: "outil",
+      action: "select_agreement_path_p2",
+      name: named({ context: SIMULATOR }),
     });
     expect(sendEvent).toHaveBeenCalledWith({
-      category: "cc_select_p2",
-      action: "Indemnité de licenciement",
-      name: "idcc2216",
+      category: "outil",
+      action: "select_agreement_p2",
+      name: named({ context: SIMULATOR, idcc: 2216 }),
     });
+
     userAction.click(ui.previous.get());
     userAction.click(ui.agreement.noAgreement.get());
     userAction.click(ui.next.get());
     expect(sendEvent).toHaveBeenCalledWith({
-      category: "cc_search_type_of_users",
-      action: "click_p3",
-      name: "Indemnité de licenciement",
+      category: "outil",
+      action: "select_agreement_path_p3",
+      name: named({ context: SIMULATOR }),
     });
   });
 
@@ -198,8 +223,8 @@ describe("Indemnité licenciement - Tracking", () => {
     userAction.click(ui.next.get());
     expect(sendEvent).toHaveBeenCalledWith({
       category: "outil",
-      action: "cc_select_traitée",
-      name: "16",
+      action: "select_agreement_supported",
+      name: named({ context: SIMULATOR, idcc: 16 }),
     });
   });
 
@@ -214,8 +239,8 @@ describe("Indemnité licenciement - Tracking", () => {
     userAction.click(ui.next.get());
     expect(sendEvent).toHaveBeenCalledWith({
       category: "outil",
-      action: "cc_select_non_traitée",
-      name: "1261",
+      action: "select_agreement_unsupported",
+      name: named({ context: SIMULATOR, idcc: 1261 }),
     });
   });
 });

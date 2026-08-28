@@ -8,9 +8,9 @@ import { useModeleEvents } from "../tracking";
 import { notifyNpsTrigger } from "../../nps/triggerBus";
 import { NpsTrigger } from "../../nps/constants";
 
-export const CopyButton = ({ slug }: { slug: string }) => {
+export const CopyButton = () => {
   const [isCopied, setCopied] = useState(false);
-  const trackCopy = useModeleEvents(slug);
+  const trackCopy = useModeleEvents();
   const modelCopiedRef = useRef<HTMLParagraphElement>(null);
 
   const copyContent = () => {

@@ -1,44 +1,29 @@
-import { sendEvent } from "@socialgouv/matomo-next";
-import { TrackingAgreementSearchCategory } from "../../../convention-collective/tracking";
-
-export enum TrackingAccordEntrepriseSearchAction {
-  CLICK_ACCORD = "click_accord",
-  CLICK_ALL_ACCORDS = "click_all_accords",
-  SHOW_ACCORDS = "show_accords",
-  LOAD_ACCORDS_FAILED = "load_accords_failed",
-}
+import { useTracking } from "../../../analytics/events/useTracking";
 
 export const useAccordEnterpriseTracking = () => {
+  const { track } = useTracking();
+
   const emitClickAccord = (url: string) => {
-    sendEvent({
-      category: TrackingAgreementSearchCategory.ACCORD_ENTERPRISE_SEARCH,
-      action: TrackingAccordEntrepriseSearchAction.CLICK_ACCORD,
-      name: url,
-    });
+    track("click_enterprise_accord", { target: url });
   };
 
   const emitClickSeeAll = (siret: string) => {
-    sendEvent({
-      category: TrackingAgreementSearchCategory.ACCORD_ENTERPRISE_SEARCH,
-      action: TrackingAccordEntrepriseSearchAction.CLICK_ALL_ACCORDS,
-      name: siret,
-    });
+    track("click_all_enterprise_accords", { siret });
   };
 
+  // Chargement réussi des accords. `count` est le VRAI total du SIRET, pas la
+  // longueur de la liste affichée (plafonnée à ACCORDS_MAX_RESULTS) : la fiche
+  // Carrefour déclare 19 accords et n'en montre que 5.
+  //
+  // Le cas `count: 0` — « aucun accord trouvé » — représentait 76 % des events
+  // de cette action et était intégralement perdu par l'ancien schéma : `name:
+  // "0"` est falsy en PHP, Matomo jetait le nom. L'enveloppe JSON le conserve.
   const emitShowAccords = (count: number) => {
-    sendEvent({
-      category: TrackingAgreementSearchCategory.ACCORD_ENTERPRISE_SEARCH,
-      action: TrackingAccordEntrepriseSearchAction.SHOW_ACCORDS,
-      name: String(count),
-    });
+    track("show_enterprise_accords", { count }, count);
   };
 
   const emitLoadAccordsFailed = (siret: string) => {
-    sendEvent({
-      category: TrackingAgreementSearchCategory.ACCORD_ENTERPRISE_SEARCH,
-      action: TrackingAccordEntrepriseSearchAction.LOAD_ACCORDS_FAILED,
-      name: siret,
-    });
+    track("load_enterprise_accords_failed", { siret });
   };
 
   return {

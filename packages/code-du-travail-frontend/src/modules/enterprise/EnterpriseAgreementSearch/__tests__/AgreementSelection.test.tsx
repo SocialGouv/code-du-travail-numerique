@@ -16,6 +16,8 @@ jest.mock("uuid", () => ({
 jest.mock("next/navigation", () => ({
   redirect: jest.fn(),
   useSearchParams: jest.fn(),
+  // Le tracking déduit sa catégorie et son chemin de la route courante.
+  usePathname: () => "/outils/convention-collective",
 }));
 
 jest.mock("../accords", () => ({
@@ -93,10 +95,12 @@ describe("Trouver sa CC - recherche par nom d'entreprise CC", () => {
       ui.enterpriseAgreementSelection.agreement.IDCC2216.link.get()
     );
     expect(sendEvent).toHaveBeenCalledTimes(1);
+    // `idcc` est désormais le numéro brut : le préfixe « idcc » de l'ancien
+    // schéma n'a plus lieu d'être une fois la donnée nommée par sa clé.
     expect(sendEvent).toHaveBeenLastCalledWith({
-      action: "Trouver sa convention collective",
-      category: "cc_select_p2",
-      name: "idcc2216",
+      category: "outil",
+      action: "select_agreement_p2",
+      name: '{"path":"outils/convention-collective","context":"Trouver sa convention collective","idcc":2216}',
     });
   });
 

@@ -1,83 +1,76 @@
-import { sendEvent } from "@socialgouv/matomo-next";
-import {
-  TrackingAgreementSearchAction,
-  TrackingAgreementSearchCategory,
-} from "../../convention-collective/tracking";
+import { useTracking } from "../../analytics/events/useTracking";
+import { toEventName } from "../../analytics/eventName";
+import { AGREEMENT_SEARCH_TOOL } from "../../convention-collective/tracking";
 import { ApiGeoResult } from "./searchCities";
 
-export enum TrackingEnterpriseAgreementSearchAction {
-  SHOW_AGREEMENTS = "show_agreements",
-}
-
 export const useEnterpriseAgreementSearchTracking = () => {
+  const { track } = useTracking();
+
   const emitEnterpriseAgreementSearchInputEvent = (
-    action: string,
+    context: string,
     query: string,
     apiGeoResult?: ApiGeoResult
   ) => {
-    sendEvent({
-      category: TrackingAgreementSearchCategory.ENTERPRISE_SEARCH,
-      action: action,
-      name: JSON.stringify({ query, apiGeoResult }),
+    track("search_enterprise", {
+      context: toEventName(context),
+      query,
+      // On ne remonte que le nom de la commune et son département, pas l'objet
+      // API brut : le reste (code INSEE, codes postaux, population, score)
+      // alourdirait le nom d'event sans servir à l'analyse.
+      city: apiGeoResult?.nom,
+      department: apiGeoResult?.codeDepartement,
     });
   };
 
   const emitSelectEnterpriseEvent = (
-    action: string,
+    context: string,
     enterprise: {
       label: string;
       siren: string;
     }
   ) => {
-    sendEvent({
-      category: TrackingAgreementSearchCategory.CC_ENTERPRISE_SELECT,
-      action: action,
-      name: JSON.stringify(enterprise),
+    track("select_enterprise", {
+      context: toEventName(context),
+      label: enterprise.label,
+      siren: enterprise.siren,
     });
   };
 
-  // Émis à l'affichage des conventions collectives d'une entreprise, quel que
-  // soit le parcours (simulateurs, contributions, page dédiée, widget) et y
-  // compris quand l'entreprise n'en déclare aucune (`name` vaut alors "0").
-  // Équivalent de `show_accords` côté accords d'entreprise : on n'envoie que le
-  // nombre, ni SIRET ni liste d'IDCC.
+  // Affichage des conventions collectives d'une entreprise, tous parcours
+  // confondus (simulateurs, contributions, page dédiée, widget), Y COMPRIS
+  // quand l'entreprise n'en déclare AUCUNE.
+  //
+  // Ce cas `count: 0` était précisément celui que l'ancien schéma perdait :
+  // `name: "0"` est falsy en PHP, Matomo comptait l'event et jetait le nom. Dans
+  // l'enveloppe JSON, `{"count":0,…}` est une chaîne non vide, donc conservée.
+  // `value` double le compteur pour l'agrégation, mais n'en est jamais le seul
+  // porteur (Matomo ne conserve pas non plus une `value` de 0).
   const emitShowAgreements = (count: number) => {
-    sendEvent({
-      category: TrackingAgreementSearchCategory.CC_ENTERPRISE_SEARCH,
-      action: TrackingEnterpriseAgreementSearchAction.SHOW_AGREEMENTS,
-      name: String(count),
-    });
+    track("show_enterprise_agreements", { count }, count);
   };
 
-  const emitSelectEnterpriseAgreementEvent = (idcc: string, action: string) => {
-    sendEvent({
-      category: TrackingAgreementSearchCategory.CC_SELECT_P2,
-      action: action,
-      name: idcc,
-    });
+  // `idcc` est le NUMÉRO brut de la convention, comme partout ailleurs : le
+  // préfixe « idcc » de l'ancien schéma devient inutile une fois la donnée
+  // nommée par sa clé de payload.
+  const emitSelectEnterpriseAgreementEvent = (
+    idcc: number,
+    context: string
+  ) => {
+    track("select_agreement_p2", { idcc, context: toEventName(context) });
   };
 
   const emitPreviousEvent = () => {
-    sendEvent({
-      category: TrackingAgreementSearchCategory.VIEW_STEP_CC_SEARCH_P2,
-      action: TrackingAgreementSearchAction.BACK_STEP_P2,
-      name: TrackingAgreementSearchAction.AGREEMENT_SEARCH,
+    track("click_previous_step_agreement_p2", {
+      context: AGREEMENT_SEARCH_TOOL,
     });
   };
 
   const emitNoEnterpriseClickEvent = () => {
-    sendEvent({
-      category: TrackingAgreementSearchCategory.CC_SEARCH_TYPE_OF_USERS,
-      action: TrackingAgreementSearchAction.CLICK_NO_COMPANY,
-      name: TrackingAgreementSearchAction.AGREEMENT_SEARCH,
-    });
+    track("click_no_enterprise", { context: AGREEMENT_SEARCH_TOOL });
   };
+
   const emitNoEnterpriseSelectEvent = () => {
-    sendEvent({
-      category: TrackingAgreementSearchCategory.CC_SEARCH_TYPE_OF_USERS,
-      action: TrackingAgreementSearchAction.SELECT_NO_COMPANY,
-      name: TrackingAgreementSearchAction.AGREEMENT_SEARCH,
-    });
+    track("select_no_enterprise", { context: AGREEMENT_SEARCH_TOOL });
   };
 
   return {
