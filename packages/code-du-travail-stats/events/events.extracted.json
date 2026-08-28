@@ -1,8 +1,8 @@
 {
   "scan_root": "packages/code-du-travail-frontend/src",
-  "callsites": 76,
-  "total_events": 113,
-  "unique_events": 104,
+  "callsites": 78,
+  "total_events": 115,
+  "unique_events": 105,
   "unresolved_callsites": 0,
   "events": [
     {
@@ -15,6 +15,28 @@
       "line": 193,
       "enum_refs": [],
       "tracking_method": "push:trackSiteSearch"
+    },
+    {
+      "category": "<event.category>",
+      "action": "<event.action>",
+      "name_pattern": "<event.name>",
+      "resolution": "dynamic",
+      "emit_function": "useTracking",
+      "file": "packages/code-du-travail-frontend/src/modules/analytics/events/useTracking.ts",
+      "line": 46,
+      "enum_refs": [],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "<event.category>",
+      "action": "<event.action>",
+      "name_pattern": "<event.name>",
+      "resolution": "dynamic",
+      "emit_function": "useTracking",
+      "file": "packages/code-du-travail-frontend/src/modules/analytics/events/useTracking.ts",
+      "line": 55,
+      "enum_refs": [],
+      "tracking_method": "sendEvent"
     },
     {
       "category": "<NPS_CATEGORY>",
