@@ -29,7 +29,6 @@ const StepAgreement = () => {
       enterprise={enterprise}
       error={error}
       onAgreementChange={onAgreementChange}
-      trackingActionName={"Préavis de départ à la retraite"}
       onInitAgreementPage={onInitAgreementPage}
       onRouteChange={onRouteChange}
       route={route}

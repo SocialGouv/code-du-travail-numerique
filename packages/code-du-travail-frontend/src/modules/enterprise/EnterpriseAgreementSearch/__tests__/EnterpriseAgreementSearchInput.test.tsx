@@ -18,11 +18,7 @@ describe("<EnterpriseAgreementSearchInput /> - focus sur le titre des résultats
   it("ne déplace pas le focus sur les résultats lors d'une recherche automatique via defaultSearch", async () => {
     await act(async () => {
       render(
-        <EnterpriseAgreementSearchInput
-          defaultSearch="carrefour"
-          trackingActionName="Trouver sa convention collective"
-          level={2}
-        />
+        <EnterpriseAgreementSearchInput defaultSearch="carrefour" level={2} />
       );
     });
 
@@ -31,12 +27,7 @@ describe("<EnterpriseAgreementSearchInput /> - focus sur le titre des résultats
   });
 
   it("déplace le focus sur les résultats lors d'une recherche déclenchée par l'utilisateur", async () => {
-    render(
-      <EnterpriseAgreementSearchInput
-        trackingActionName="Trouver sa convention collective"
-        level={2}
-      />
-    );
+    render(<EnterpriseAgreementSearchInput level={2} />);
 
     const userAction = new UserAction();
     userAction.setInput(ui.enterpriseAgreementSearch.input.get(), "carrefour");

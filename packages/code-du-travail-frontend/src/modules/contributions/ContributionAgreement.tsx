@@ -71,13 +71,6 @@ export function ContributionAgreement({ contribution, genericInfos }: Props) {
     emitDisplayGeneralContent,
   } = useContributionTracking();
 
-  // Chemin réel de la page (arbre classique `{num}-{slug}` et arbre « congés »)
-  // pour les actions Matomo émises par le bloc de sélection.
-  const trackingActionName = buildContributionAgreementPath(genericSlug, {
-    num: parseInt(contribution.idcc, 10),
-    slug: contribution.ccnSlug,
-  });
-
   // Fiche « générique » hybride pour le bloc de sélection : il raisonne sur la
   // fiche générique frère (slug de navigation + classification des CC).
   const genericLikeContribution: Contribution = {
@@ -130,7 +123,6 @@ export function ContributionAgreement({ contribution, genericInfos }: Props) {
           personalizeTitleRef={personalizeTitleRef}
           agreementName={contribution.ccnShortTitle}
           selectedAgreement={selectedAgreement}
-          trackingActionName={trackingActionName}
           currentIdcc={contribution.idcc}
           onSameAgreementSelect={() => {
             // La CC choisie est celle de la page : bascule sur place en état
@@ -157,16 +149,16 @@ export function ContributionAgreement({ contribution, genericInfos }: Props) {
             if (isAgreementSelected) {
               // CC valide : la bascule sur place (même CC) ou la navigation
               // vers l'autre page CC est gérée par le bloc.
-              emitDisplayAgreementContent(trackingActionName);
+              emitDisplayAgreementContent();
               return;
             }
             // Option « sans CC » ou CC non traitée : la réponse Code du
             // travail vit sur la fiche générique — on y navigue avec le hash
             // qui déclenche l'affichage direct du contenu, choix conservé.
             if (selectedAgreement) {
-              emitDisplayGeneralContent(trackingActionName);
+              emitDisplayGeneralContent();
             } else {
-              emitDisplayGenericContent(trackingActionName);
+              emitDisplayGenericContent();
             }
             push(`/contribution/${genericSlug}${GENERIC_CONTENT_HASH}`, {
               scroll: false,

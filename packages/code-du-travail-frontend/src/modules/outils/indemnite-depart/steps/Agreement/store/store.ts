@@ -149,7 +149,6 @@ const createCommonAgreementStore: StoreSlicePublicodes<
             indemniteLicenciement && idcc === agreement?.num
         );
         pushAgreementEvents(
-          type,
           {
             route,
             selected: agreement,

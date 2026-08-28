@@ -22,7 +22,6 @@ export const EnterpriseAgreementSearch = ({ widgetMode = false }: Props) => {
         widgetMode={widgetMode}
         defaultSearch={defaultSearch}
         defaultLocation={defaultLocation}
-        trackingActionName={AGREEMENT_SEARCH_TOOL}
         level={2}
       />
       {!widgetMode && (

@@ -19,7 +19,6 @@ type Props = {
   onDisplayClick: (isAgreementSelected: boolean) => void;
   contribution: Contribution;
   selectedAgreement?: Agreement;
-  trackingActionName: string;
   personalizeTitleRef: React.RefObject<HTMLParagraphElement | null>;
   /**
    * IDCC (4 chiffres, ex. « 0675 ») de la page contribution personnalisée qui
@@ -42,7 +41,6 @@ export function ContributionGenericAgreementSearch({
   onAgreementSelect,
   onDisplayClick,
   selectedAgreement,
-  trackingActionName,
   personalizeTitleRef,
   currentIdcc,
   onSameAgreementSelect,
@@ -74,7 +72,6 @@ export function ContributionGenericAgreementSearch({
         onAgreementSelect={onAgreementSelect}
         onDisplayClick={onDisplayClick}
         selectedAgreement={selectedAgreement}
-        trackingActionName={trackingActionName}
         currentIdcc={currentIdcc}
         onSameAgreementSelect={onSameAgreementSelect}
         defaultRoute={defaultRoute}

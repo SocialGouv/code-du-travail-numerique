@@ -100,7 +100,7 @@ describe("Trouver sa CC - recherche par nom d'entreprise CC", () => {
     expect(sendEvent).toHaveBeenLastCalledWith({
       category: "outil",
       action: "select_agreement_p2",
-      name: '{"path":"outils/convention-collective","context":"Trouver sa convention collective","idcc":2216}',
+      name: '{"path":"outils/convention-collective","idcc":2216}',
     });
   });
 

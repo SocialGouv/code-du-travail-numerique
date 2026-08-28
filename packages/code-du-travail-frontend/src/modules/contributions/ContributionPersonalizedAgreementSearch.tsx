@@ -18,7 +18,6 @@ type Props = {
   onDisplayClick: (isAgreementSelected: boolean) => void;
   contribution: Contribution;
   selectedAgreement?: Agreement;
-  trackingActionName: string;
   personalizeTitleRef: React.RefObject<HTMLParagraphElement | null>;
   /** Libellé de la CC de la page, affiché dans l'encart « convention utilisée ». */
   agreementName?: string;
@@ -53,7 +52,6 @@ export function ContributionPersonalizedAgreementSearch({
   onAgreementSelect,
   onDisplayClick,
   selectedAgreement,
-  trackingActionName,
   personalizeTitleRef,
   agreementName,
   currentIdcc,
@@ -105,7 +103,6 @@ export function ContributionPersonalizedAgreementSearch({
         onAgreementSelect={onAgreementSelect}
         onDisplayClick={onDisplayClick}
         selectedAgreement={selectedAgreement}
-        trackingActionName={trackingActionName}
         currentIdcc={currentIdcc}
         onSameAgreementSelect={onSameAgreementSelect}
         defaultRoute={defaultRoute}

@@ -23,7 +23,6 @@ type Props = {
    * `defaultAgreement` est prioritaire (il pré-coche la route « agreement »).
    */
   defaultRoute?: AgreementRoute;
-  trackingActionName: string;
   level: 2 | 3;
   onBackToPersonalize?: () => void;
   showNoAgreementOption?: boolean;
@@ -53,7 +52,6 @@ export const AgreementSearchForm = ({
   selectedAgreementAlert,
   defaultAgreement,
   defaultRoute,
-  trackingActionName,
   level,
   onBackToPersonalize,
   showNoAgreementOption = false,
@@ -119,7 +117,7 @@ export const AgreementSearchForm = ({
   const onSelectNoAgreementRoute = () => {
     onAgreementSelect();
     updateRoute("no-agreement");
-    emitClickP3(trackingActionName);
+    emitClickP3();
   };
 
   return (
@@ -169,9 +167,9 @@ export const AgreementSearchForm = ({
         <AgreementSearchInput
           onAgreementSelect={(agreement) => {
             if (agreement) {
-              emitSelectEvent(agreement.num, trackingActionName);
+              emitSelectEvent(agreement.num);
             }
-            emitClickP1(trackingActionName);
+            emitClickP1();
             onAgreementSelect(agreement);
           }}
           selectedAgreementAlert={selectedAgreementAlert}
@@ -183,7 +181,7 @@ export const AgreementSearchForm = ({
       {selectedRoute === "enterprise" && (
         <EnterpriseAgreementSearchInput
           onAgreementSelect={(agreement, _enterprise) => {
-            emitClickP2(trackingActionName);
+            emitClickP2();
             onAgreementSelect(agreement);
             onEnterpriseWithoutAgreement?.(
               !agreement &&
@@ -192,7 +190,6 @@ export const AgreementSearchForm = ({
             );
           }}
           selectedAgreementAlert={selectedAgreementAlert}
-          trackingActionName={trackingActionName}
           level={level}
           onBackToPersonalize={onBackToPersonalize}
           requireSearchSignal={enterpriseRequireSearchSignal}

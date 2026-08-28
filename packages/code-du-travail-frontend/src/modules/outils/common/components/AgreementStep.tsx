@@ -22,7 +22,6 @@ type Props = {
   enterprise: CommonAgreementStoreInput["enterprise"];
   agreement: CommonAgreementStoreInput["agreement"];
   onInitAgreementPage: CommonAgreementStoreFn["onInitAgreementPage"];
-  trackingActionName: string;
   simulator: PublicodesSimulator;
   showNotSelectedOption: boolean;
 };
@@ -35,7 +34,6 @@ export const CommonAgreementStep = ({
   enterprise,
   agreement,
   onInitAgreementPage,
-  trackingActionName,
   simulator,
   showNotSelectedOption,
 }: Required<Props>) => {
@@ -118,7 +116,6 @@ export const CommonAgreementStep = ({
               agr &&
               selectedAgreementAlert(agr, simulator, showNotSelectedOption)
             }
-            trackingActionName={trackingActionName}
             enterprise={enterprise}
             agreement={agreement}
             isInSimulator={true}

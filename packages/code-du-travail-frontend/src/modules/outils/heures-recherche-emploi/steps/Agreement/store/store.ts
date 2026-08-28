@@ -156,7 +156,6 @@ const createAgreementStore: StoreSliceWrapperHeuresRechercheEmploi<
       }
       if (isValid && route) {
         pushAgreementEvents(
-          PublicodesSimulator.HEURES_RECHERCHE_EMPLOI,
           {
             route,
             selected: agreement,

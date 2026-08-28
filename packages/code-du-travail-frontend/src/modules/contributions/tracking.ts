@@ -14,39 +14,37 @@ export const useContributionTracking = () => {
     track("select_agreement_unsupported", { idcc });
   };
 
-  // « Afficher les informations » : `target` = la page ATTEINTE, le `path`
-  // injecté portant déjà la page de départ.
-  const emitDisplayAgreementContent = (target: string) => {
-    track("click_show_agreement_content", { target: toEventName(target) });
+  // « Afficher les informations » : les trois variantes disent quel contenu
+  // l'usager obtient selon la convention choisie. La page d'où part le clic est
+  // déjà dans `path` — ces émetteurs n'ont donc pas d'argument.
+  const emitDisplayAgreementContent = () => {
+    track("click_show_agreement_content");
   };
 
-  const emitDisplayGenericContent = (target: string) => {
-    track("click_show_content_without_agreement", {
-      target: toEventName(target),
-    });
+  const emitDisplayGenericContent = () => {
+    track("click_show_content_without_agreement");
   };
 
-  const emitDisplayGeneralContent = (target: string) => {
-    track("click_show_general_content", { target: toEventName(target) });
+  const emitDisplayGeneralContent = () => {
+    track("click_show_general_content");
   };
 
-  // Parcours de choix de convention. `context` identifie l'endroit d'où part le
-  // parcours — une contribution ou un simulateur : le même composant de
-  // recherche de CC est monté dans les deux.
-  const emitClickP1 = (context: string) => {
-    track("select_agreement_path_p1", { context: toEventName(context) });
+  // Parcours de choix de convention. Le même composant de recherche est monté
+  // dans les contributions, dans les simulateurs et sur la page dédiée : c'est
+  // `path` (et la catégorie qui en découle) qui dit lequel, sans que l'appelant
+  // ait à le transmettre.
+  const emitClickP1 = () => {
+    track("select_agreement_path_p1");
   };
 
-  const emitClickP2 = (context: string) => {
-    track("select_agreement_path_p2", { context: toEventName(context) });
+  const emitClickP2 = () => {
+    track("select_agreement_path_p2");
   };
 
-  const emitClickP3 = (context: string) => {
-    track("select_agreement_path_p3", { context: toEventName(context) });
+  const emitClickP3 = () => {
+    track("select_agreement_path_p3");
   };
 
-  // Le slug de la contribution n'a plus besoin d'être passé : ces deux events se
-  // produisent sur la page de la contribution elle-même, donc dans le `path`.
   const emitClickTableFullscreen = () => {
     track("click_table_fullscreen");
   };
@@ -60,7 +58,8 @@ export const useContributionTracking = () => {
 
   // Clic sur une convention listée dans l'accordéon « Votre réponse en fonction
   // de votre convention collective » de la fiche générique. Ce bloc existe
-  // d'abord pour le maillage interne ; l'event mesure son usage réel.
+  // d'abord pour le maillage interne ; l'event mesure son usage réel. `target`
+  // est bien une AUTRE page que la page courante, d'où la clé.
   const emitClickAgreementDeclination = (href: string) => {
     track("click_agreement_declination", { target: toEventName(href) });
   };

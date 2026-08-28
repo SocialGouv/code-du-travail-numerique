@@ -156,7 +156,6 @@ const createAgreementStore: StoreSliceWrapperPreavisDemission<
       }
       if (isValid && route) {
         pushAgreementEvents(
-          PublicodesSimulator.PREAVIS_DEMISSION,
           {
             route,
             selected: agreement,

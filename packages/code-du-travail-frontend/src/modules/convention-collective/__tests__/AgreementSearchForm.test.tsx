@@ -1,6 +1,5 @@
 import { act, render, screen, waitFor } from "@testing-library/react";
 
-import { AGREEMENT_SEARCH_TOOL } from "../tracking";
 import { ui } from "./ui";
 import { ui as enterpriseUi } from "../../enterprise/EnterpriseAgreementSearch/__tests__/ui";
 import { sendEvent } from "@socialgouv/matomo-next";
@@ -36,13 +35,7 @@ describe("<PageContribution />", () => {
   let userAction: UserAction;
 
   it("should track when searching by enterprise name", async () => {
-    render(
-      <AgreementSearchForm
-        trackingActionName={AGREEMENT_SEARCH_TOOL}
-        onAgreementSelect={() => {}}
-        level={2}
-      />
-    );
+    render(<AgreementSearchForm onAgreementSelect={() => {}} level={2} />);
     userAction = new UserAction();
     userAction.click(ui.radio.enterpriseSearchOption.get());
     userAction.setInput(
@@ -58,7 +51,7 @@ describe("<PageContribution />", () => {
       expect(sendEvent).toHaveBeenCalledWith({
         category: "outil",
         action: "search_enterprise",
-        name: `{"path":"${PATH}","context":"${AGREEMENT_SEARCH_TOOL}","query":"carrefour"}`,
+        name: `{"path":"${PATH}","query":"carrefour"}`,
       });
     });
     expect(
@@ -70,13 +63,7 @@ describe("<PageContribution />", () => {
   });
 
   it("should track when searching by enterprise with multiple agreements", async () => {
-    render(
-      <AgreementSearchForm
-        trackingActionName={AGREEMENT_SEARCH_TOOL}
-        onAgreementSelect={() => {}}
-        level={2}
-      />
-    );
+    render(<AgreementSearchForm onAgreementSelect={() => {}} level={2} />);
     userAction = new UserAction();
     userAction.click(ui.radio.enterpriseSearchOption.get());
     userAction.setInput(
@@ -92,7 +79,7 @@ describe("<PageContribution />", () => {
       expect(sendEvent).toHaveBeenCalledWith({
         category: "outil",
         action: "search_enterprise",
-        name: `{"path":"${PATH}","context":"${AGREEMENT_SEARCH_TOOL}","query":"bnp"}`,
+        name: `{"path":"${PATH}","query":"bnp"}`,
       });
     });
     expect(
@@ -107,13 +94,7 @@ describe("<PageContribution />", () => {
   });
 
   it("should track when selecting agreement 3239", () => {
-    render(
-      <AgreementSearchForm
-        trackingActionName={AGREEMENT_SEARCH_TOOL}
-        onAgreementSelect={() => {}}
-        level={2}
-      />
-    );
+    render(<AgreementSearchForm onAgreementSelect={() => {}} level={2} />);
     userAction = new UserAction();
     userAction.click(ui.radio.enterpriseSearchOption.get());
     userAction.click(
@@ -122,7 +103,7 @@ describe("<PageContribution />", () => {
     expect(sendEvent).toHaveBeenCalledWith({
       category: "outil",
       action: "select_no_enterprise",
-      name: `{"path":"${PATH}","context":"${AGREEMENT_SEARCH_TOOL}"}`,
+      name: `{"path":"${PATH}"}`,
     });
   });
 
@@ -132,7 +113,6 @@ describe("<PageContribution />", () => {
 
     render(
       <AgreementSearchForm
-        trackingActionName={AGREEMENT_SEARCH_TOOL}
         onAgreementSelect={onAgreementSelect}
         level={2}
         showNoAgreementOption

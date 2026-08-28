@@ -1,18 +1,17 @@
 import { useTracking } from "../../analytics/events/useTracking";
-import { toEventName } from "../../analytics/eventName";
-import { AGREEMENT_SEARCH_TOOL } from "../../convention-collective/tracking";
 import { ApiGeoResult } from "./searchCities";
 
+// Le parcours entreprise est monté dans les simulateurs, dans les contributions
+// et sur la page dédiée. Aucun de ces émetteurs n'a besoin qu'on lui dise
+// lequel : `useTracking` le déduit de la route, et le met dans `path`.
 export const useEnterpriseAgreementSearchTracking = () => {
   const { track } = useTracking();
 
   const emitEnterpriseAgreementSearchInputEvent = (
-    context: string,
     query: string,
     apiGeoResult?: ApiGeoResult
   ) => {
     track("search_enterprise", {
-      context: toEventName(context),
       query,
       // On ne remonte que le nom de la commune et son département, pas l'objet
       // API brut : le reste (code INSEE, codes postaux, population, score)
@@ -22,15 +21,11 @@ export const useEnterpriseAgreementSearchTracking = () => {
     });
   };
 
-  const emitSelectEnterpriseEvent = (
-    context: string,
-    enterprise: {
-      label: string;
-      siren: string;
-    }
-  ) => {
+  const emitSelectEnterpriseEvent = (enterprise: {
+    label: string;
+    siren: string;
+  }) => {
     track("select_enterprise", {
-      context: toEventName(context),
       label: enterprise.label,
       siren: enterprise.siren,
     });
@@ -49,28 +44,20 @@ export const useEnterpriseAgreementSearchTracking = () => {
     track("show_enterprise_agreements", { count }, count);
   };
 
-  // `idcc` est le NUMÉRO brut de la convention, comme partout ailleurs : le
-  // préfixe « idcc » de l'ancien schéma devient inutile une fois la donnée
-  // nommée par sa clé de payload.
-  const emitSelectEnterpriseAgreementEvent = (
-    idcc: number,
-    context: string
-  ) => {
-    track("select_agreement_p2", { idcc, context: toEventName(context) });
+  const emitSelectEnterpriseAgreementEvent = (idcc: number) => {
+    track("select_agreement_p2", { idcc });
   };
 
   const emitPreviousEvent = () => {
-    track("click_previous_step_agreement_p2", {
-      context: AGREEMENT_SEARCH_TOOL,
-    });
+    track("click_previous_step_agreement_p2");
   };
 
   const emitNoEnterpriseClickEvent = () => {
-    track("click_no_enterprise", { context: AGREEMENT_SEARCH_TOOL });
+    track("click_no_enterprise");
   };
 
   const emitNoEnterpriseSelectEvent = () => {
-    track("select_no_enterprise", { context: AGREEMENT_SEARCH_TOOL });
+    track("select_no_enterprise");
   };
 
   return {

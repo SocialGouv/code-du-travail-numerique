@@ -52,7 +52,7 @@
       "resolution": "literal",
       "emit_function": "emitClickAgreementDeclination",
       "file": "packages/code-du-travail-frontend/src/modules/contributions/tracking.ts",
-      "line": 65,
+      "line": 64,
       "enum_refs": [],
       "tracking_method": "track",
       "has_value": false
@@ -120,11 +120,11 @@
     {
       "category": "<PageCategory>",
       "action": "click_no_enterprise",
-      "name_pattern": "{path, context}",
+      "name_pattern": "{path}",
       "resolution": "literal",
       "emit_function": "emitNoEnterpriseClickEvent",
       "file": "packages/code-du-travail-frontend/src/modules/enterprise/EnterpriseAgreementSearch/tracking.ts",
-      "line": 69,
+      "line": 56,
       "enum_refs": [],
       "tracking_method": "track",
       "has_value": false
@@ -156,11 +156,11 @@
     {
       "category": "<PageCategory>",
       "action": "click_previous_step_agreement_p1",
-      "name_pattern": "{path, context}",
+      "name_pattern": "{path}",
       "resolution": "literal",
       "emit_function": "emitPreviousEvent",
       "file": "packages/code-du-travail-frontend/src/modules/convention-collective/tracking.ts",
-      "line": 40,
+      "line": 38,
       "enum_refs": [],
       "tracking_method": "track",
       "has_value": false
@@ -168,11 +168,11 @@
     {
       "category": "<PageCategory>",
       "action": "click_previous_step_agreement_p2",
-      "name_pattern": "{path, context}",
+      "name_pattern": "{path}",
       "resolution": "literal",
       "emit_function": "emitPreviousEvent",
       "file": "packages/code-du-travail-frontend/src/modules/enterprise/EnterpriseAgreementSearch/tracking.ts",
-      "line": 63,
+      "line": 52,
       "enum_refs": [],
       "tracking_method": "track",
       "has_value": false
@@ -216,11 +216,11 @@
     {
       "category": "<PageCategory>",
       "action": "click_show_agreement_content",
-      "name_pattern": "{path, target}",
+      "name_pattern": "{path}",
       "resolution": "literal",
       "emit_function": "emitDisplayAgreementContent",
       "file": "packages/code-du-travail-frontend/src/modules/contributions/tracking.ts",
-      "line": 20,
+      "line": 21,
       "enum_refs": [],
       "tracking_method": "track",
       "has_value": false
@@ -228,11 +228,11 @@
     {
       "category": "<PageCategory>",
       "action": "click_show_content_without_agreement",
-      "name_pattern": "{path, target}",
+      "name_pattern": "{path}",
       "resolution": "literal",
       "emit_function": "emitDisplayGenericContent",
       "file": "packages/code-du-travail-frontend/src/modules/contributions/tracking.ts",
-      "line": 24,
+      "line": 25,
       "enum_refs": [],
       "tracking_method": "track",
       "has_value": false
@@ -240,11 +240,11 @@
     {
       "category": "<PageCategory>",
       "action": "click_show_general_content",
-      "name_pattern": "{path, target}",
+      "name_pattern": "{path}",
       "resolution": "literal",
       "emit_function": "emitDisplayGeneralContent",
       "file": "packages/code-du-travail-frontend/src/modules/contributions/tracking.ts",
-      "line": 30,
+      "line": 29,
       "enum_refs": [],
       "tracking_method": "track",
       "has_value": false
@@ -256,7 +256,7 @@
       "resolution": "literal",
       "emit_function": "emitClickTableFullscreen",
       "file": "packages/code-du-travail-frontend/src/modules/contributions/tracking.ts",
-      "line": 51,
+      "line": 49,
       "enum_refs": [],
       "tracking_method": "track",
       "has_value": false
@@ -360,7 +360,7 @@
     {
       "category": "<PageCategory>",
       "action": "search_enterprise",
-      "name_pattern": "{path, city, context, department, query}",
+      "name_pattern": "{path, city, department, query}",
       "resolution": "literal",
       "emit_function": "emitEnterpriseAgreementSearchInputEvent",
       "file": "packages/code-du-travail-frontend/src/modules/enterprise/EnterpriseAgreementSearch/tracking.ts",
@@ -420,11 +420,11 @@
     {
       "category": "<PageCategory>",
       "action": "select_agreement_p1",
-      "name_pattern": "{path, context, idcc}",
+      "name_pattern": "{path, idcc}",
       "resolution": "literal",
       "emit_function": "emitSelectEvent",
       "file": "packages/code-du-travail-frontend/src/modules/convention-collective/tracking.ts",
-      "line": 32,
+      "line": 30,
       "enum_refs": [],
       "tracking_method": "track",
       "has_value": false
@@ -432,7 +432,31 @@
     {
       "category": "<PageCategory>",
       "action": "select_agreement_p1",
-      "name_pattern": "{path, context, idcc}",
+      "name_pattern": "{path, idcc}",
+      "resolution": "literal",
+      "emit_function": "emitAgreementSelectEvent",
+      "file": "packages/code-du-travail-frontend/src/modules/outils/common/events/pushAgreementEvents.ts",
+      "line": 54,
+      "enum_refs": [],
+      "tracking_method": "sendPageEvent",
+      "has_value": false
+    },
+    {
+      "category": "<PageCategory>",
+      "action": "select_agreement_p2",
+      "name_pattern": "{path, idcc}",
+      "resolution": "literal",
+      "emit_function": "emitSelectEnterpriseAgreementEvent",
+      "file": "packages/code-du-travail-frontend/src/modules/enterprise/EnterpriseAgreementSearch/tracking.ts",
+      "line": 48,
+      "enum_refs": [],
+      "tracking_method": "track",
+      "has_value": false
+    },
+    {
+      "category": "<PageCategory>",
+      "action": "select_agreement_p2",
+      "name_pattern": "{path, idcc}",
       "resolution": "literal",
       "emit_function": "emitAgreementSelectEvent",
       "file": "packages/code-du-travail-frontend/src/modules/outils/common/events/pushAgreementEvents.ts",
@@ -443,32 +467,8 @@
     },
     {
       "category": "<PageCategory>",
-      "action": "select_agreement_p2",
-      "name_pattern": "{path, context, idcc}",
-      "resolution": "literal",
-      "emit_function": "emitSelectEnterpriseAgreementEvent",
-      "file": "packages/code-du-travail-frontend/src/modules/enterprise/EnterpriseAgreementSearch/tracking.ts",
-      "line": 59,
-      "enum_refs": [],
-      "tracking_method": "track",
-      "has_value": false
-    },
-    {
-      "category": "<PageCategory>",
-      "action": "select_agreement_p2",
-      "name_pattern": "{path, context, idcc}",
-      "resolution": "literal",
-      "emit_function": "emitAgreementSelectEvent",
-      "file": "packages/code-du-travail-frontend/src/modules/outils/common/events/pushAgreementEvents.ts",
-      "line": 63,
-      "enum_refs": [],
-      "tracking_method": "sendPageEvent",
-      "has_value": false
-    },
-    {
-      "category": "<PageCategory>",
       "action": "select_agreement_path_p1",
-      "name_pattern": "{path, context}",
+      "name_pattern": "{path}",
       "resolution": "literal",
       "emit_function": "emitClickP1",
       "file": "packages/code-du-travail-frontend/src/modules/contributions/tracking.ts",
@@ -480,11 +480,11 @@
     {
       "category": "<PageCategory>",
       "action": "select_agreement_path_p1",
-      "name_pattern": "{path, context}",
+      "name_pattern": "{path}",
       "resolution": "literal",
       "emit_function": "emitNavigateAgreementSearchEvent",
       "file": "packages/code-du-travail-frontend/src/modules/convention-collective/tracking.ts",
-      "line": 19,
+      "line": 17,
       "enum_refs": [],
       "tracking_method": "track",
       "has_value": false
@@ -492,11 +492,11 @@
     {
       "category": "<PageCategory>",
       "action": "select_agreement_path_p1",
-      "name_pattern": "{path, context}",
+      "name_pattern": "{path}",
       "resolution": "literal",
       "emit_function": "emitParcoursTypeEvent",
       "file": "packages/code-du-travail-frontend/src/modules/outils/common/events/pushAgreementEvents.ts",
-      "line": 27,
+      "line": 29,
       "enum_refs": [],
       "tracking_method": "sendPageEvent",
       "has_value": false
@@ -504,7 +504,7 @@
     {
       "category": "<PageCategory>",
       "action": "select_agreement_path_p2",
-      "name_pattern": "{path, context}",
+      "name_pattern": "{path}",
       "resolution": "literal",
       "emit_function": "emitClickP2",
       "file": "packages/code-du-travail-frontend/src/modules/contributions/tracking.ts",
@@ -516,11 +516,11 @@
     {
       "category": "<PageCategory>",
       "action": "select_agreement_path_p2",
-      "name_pattern": "{path, context}",
+      "name_pattern": "{path}",
       "resolution": "literal",
       "emit_function": "emitNavigateEnterpriseSearchEvent",
       "file": "packages/code-du-travail-frontend/src/modules/convention-collective/tracking.ts",
-      "line": 24,
+      "line": 22,
       "enum_refs": [],
       "tracking_method": "track",
       "has_value": false
@@ -528,11 +528,11 @@
     {
       "category": "<PageCategory>",
       "action": "select_agreement_path_p2",
-      "name_pattern": "{path, context}",
+      "name_pattern": "{path}",
       "resolution": "literal",
       "emit_function": "emitParcoursTypeEvent",
       "file": "packages/code-du-travail-frontend/src/modules/outils/common/events/pushAgreementEvents.ts",
-      "line": 30,
+      "line": 32,
       "enum_refs": [],
       "tracking_method": "sendPageEvent",
       "has_value": false
@@ -540,7 +540,7 @@
     {
       "category": "<PageCategory>",
       "action": "select_agreement_path_p3",
-      "name_pattern": "{path, context}",
+      "name_pattern": "{path}",
       "resolution": "literal",
       "emit_function": "emitClickP3",
       "file": "packages/code-du-travail-frontend/src/modules/contributions/tracking.ts",
@@ -552,11 +552,11 @@
     {
       "category": "<PageCategory>",
       "action": "select_agreement_path_p3",
-      "name_pattern": "{path, context}",
+      "name_pattern": "{path}",
       "resolution": "literal",
       "emit_function": "emitParcoursTypeEvent",
       "file": "packages/code-du-travail-frontend/src/modules/outils/common/events/pushAgreementEvents.ts",
-      "line": 33,
+      "line": 35,
       "enum_refs": [],
       "tracking_method": "sendPageEvent",
       "has_value": false
@@ -576,11 +576,11 @@
     {
       "category": "<PageCategory>",
       "action": "select_agreement_supported",
-      "name_pattern": "{path, context, idcc}",
+      "name_pattern": "{path, idcc}",
       "resolution": "literal",
       "emit_function": "emitAgreementTreatedEvent",
       "file": "packages/code-du-travail-frontend/src/modules/outils/common/events/pushAgreementEvents.ts",
-      "line": 81,
+      "line": 71,
       "enum_refs": [],
       "tracking_method": "sendPageEvent",
       "has_value": false
@@ -600,11 +600,11 @@
     {
       "category": "<PageCategory>",
       "action": "select_agreement_unsupported",
-      "name_pattern": "{path, context, idcc}",
+      "name_pattern": "{path, idcc}",
       "resolution": "literal",
       "emit_function": "emitAgreementTreatedEvent",
       "file": "packages/code-du-travail-frontend/src/modules/outils/common/events/pushAgreementEvents.ts",
-      "line": 86,
+      "line": 73,
       "enum_refs": [],
       "tracking_method": "sendPageEvent",
       "has_value": false
@@ -624,11 +624,11 @@
     {
       "category": "<PageCategory>",
       "action": "select_enterprise",
-      "name_pattern": "{path, context, label, siren}",
+      "name_pattern": "{path, label, siren}",
       "resolution": "literal",
       "emit_function": "emitSelectEnterpriseEvent",
       "file": "packages/code-du-travail-frontend/src/modules/enterprise/EnterpriseAgreementSearch/tracking.ts",
-      "line": 32,
+      "line": 28,
       "enum_refs": [],
       "tracking_method": "track",
       "has_value": false
@@ -636,11 +636,11 @@
     {
       "category": "<PageCategory>",
       "action": "select_enterprise",
-      "name_pattern": "{path, context, label, siren}",
+      "name_pattern": "{path, label, siren}",
       "resolution": "literal",
       "emit_function": "emitEnterpriseSelectEvent",
       "file": "packages/code-du-travail-frontend/src/modules/outils/common/events/pushAgreementEvents.ts",
-      "line": 42,
+      "line": 41,
       "enum_refs": [],
       "tracking_method": "sendPageEvent",
       "has_value": false
@@ -660,11 +660,11 @@
     {
       "category": "<PageCategory>",
       "action": "select_no_enterprise",
-      "name_pattern": "{path, context}",
+      "name_pattern": "{path}",
       "resolution": "literal",
       "emit_function": "emitNoEnterpriseSelectEvent",
       "file": "packages/code-du-travail-frontend/src/modules/enterprise/EnterpriseAgreementSearch/tracking.ts",
-      "line": 73,
+      "line": 60,
       "enum_refs": [],
       "tracking_method": "track",
       "has_value": false
@@ -672,11 +672,11 @@
     {
       "category": "<PageCategory>",
       "action": "select_no_enterprise",
-      "name_pattern": "{path, context}",
+      "name_pattern": "{path}",
       "resolution": "literal",
       "emit_function": "emitNoEnterpriseSelectEvent",
       "file": "packages/code-du-travail-frontend/src/modules/outils/common/events/pushAgreementEvents.ts",
-      "line": 95,
+      "line": 79,
       "enum_refs": [],
       "tracking_method": "sendPageEvent",
       "has_value": false
@@ -764,7 +764,7 @@
       "resolution": "literal",
       "emit_function": "emitShowAgreements",
       "file": "packages/code-du-travail-frontend/src/modules/enterprise/EnterpriseAgreementSearch/tracking.ts",
-      "line": 49,
+      "line": 44,
       "enum_refs": [],
       "tracking_method": "track",
       "has_value": true
@@ -884,7 +884,7 @@
       "resolution": "literal",
       "emit_function": "emitContentViewed",
       "file": "packages/code-du-travail-frontend/src/modules/contributions/tracking.ts",
-      "line": 58,
+      "line": 56,
       "enum_refs": [],
       "tracking_method": "track",
       "has_value": false
@@ -924,7 +924,7 @@
       "resolution": "literal",
       "emit_function": "emitViewStepEvent",
       "file": "packages/code-du-travail-frontend/src/modules/convention-collective/tracking.ts",
-      "line": 14,
+      "line": 12,
       "enum_refs": [],
       "tracking_method": "track",
       "has_value": false

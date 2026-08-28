@@ -207,7 +207,6 @@ const createAgreementStore: StoreSliceWrapperPreavisLicenciement<
           PublicodesSimulator.PREAVIS_LICENCIEMENT
         ).find(({ idcc }) => idcc === agreement?.num);
         pushAgreementEvents(
-          PublicodesSimulator.PREAVIS_LICENCIEMENT,
           {
             route,
             selected: agreement,

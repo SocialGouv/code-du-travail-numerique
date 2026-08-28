@@ -41,7 +41,7 @@ describe("Trouver sa CC - intro", () => {
     expect(sendEvent).toHaveBeenLastCalledWith({
       category: "outil",
       action: "select_agreement_path_p1",
-      name: `{"path":"${PATH}","context":"Trouver sa convention collective"}`,
+      name: `{"path":"${PATH}"}`,
     });
   });
 
@@ -52,7 +52,7 @@ describe("Trouver sa CC - intro", () => {
     expect(sendEvent).toHaveBeenLastCalledWith({
       category: "outil",
       action: "select_agreement_path_p2",
-      name: `{"path":"${PATH}","context":"Trouver sa convention collective"}`,
+      name: `{"path":"${PATH}"}`,
     });
   });
 });

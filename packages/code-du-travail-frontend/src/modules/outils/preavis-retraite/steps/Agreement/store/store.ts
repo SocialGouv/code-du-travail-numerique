@@ -149,7 +149,6 @@ const createAgreementStore: StoreSliceWrapperPreavisRetraite<
             preavisRetraite && idcc === agreement?.num
         );
         pushAgreementEvents(
-          PublicodesSimulator.PREAVIS_RETRAITE,
           {
             route,
             selected: agreement,

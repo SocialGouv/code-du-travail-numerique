@@ -18,7 +18,7 @@ const SIMULATOR = "Indemnité de licenciement";
 const PAGE = "/outils/indemnite-licenciement";
 const PATH = "outils/indemnite-licenciement";
 
-const named = (payload: Record<string, unknown>) =>
+const named = (payload: Record<string, unknown> = {}) =>
   JSON.stringify({ path: PATH, ...payload });
 
 // Le titre du simulateur suffixait l'action dans l'ancien schéma
@@ -154,7 +154,7 @@ describe("Indemnité licenciement - Tracking", () => {
     expect(sendEvent).toHaveBeenCalledWith({
       category: "outil",
       action: "search_enterprise",
-      name: named({ context: SIMULATOR, query: "carrefour" }),
+      name: named({ query: "carrefour" }),
     });
   });
 
@@ -172,12 +172,12 @@ describe("Indemnité licenciement - Tracking", () => {
     expect(sendEvent).toHaveBeenCalledWith({
       category: "outil",
       action: "select_agreement_path_p1",
-      name: named({ context: SIMULATOR }),
+      name: named(),
     });
     expect(sendEvent).toHaveBeenCalledWith({
       category: "outil",
       action: "select_agreement_p1",
-      name: named({ context: SIMULATOR, idcc: 16 }),
+      name: named({ idcc: 16 }),
     });
 
     userAction.click(ui.previous.get());
@@ -194,12 +194,12 @@ describe("Indemnité licenciement - Tracking", () => {
     expect(sendEvent).toHaveBeenCalledWith({
       category: "outil",
       action: "select_agreement_path_p2",
-      name: named({ context: SIMULATOR }),
+      name: named(),
     });
     expect(sendEvent).toHaveBeenCalledWith({
       category: "outil",
       action: "select_agreement_p2",
-      name: named({ context: SIMULATOR, idcc: 2216 }),
+      name: named({ idcc: 2216 }),
     });
 
     userAction.click(ui.previous.get());
@@ -208,7 +208,7 @@ describe("Indemnité licenciement - Tracking", () => {
     expect(sendEvent).toHaveBeenCalledWith({
       category: "outil",
       action: "select_agreement_path_p3",
-      name: named({ context: SIMULATOR }),
+      name: named(),
     });
   });
 
@@ -224,7 +224,7 @@ describe("Indemnité licenciement - Tracking", () => {
     expect(sendEvent).toHaveBeenCalledWith({
       category: "outil",
       action: "select_agreement_supported",
-      name: named({ context: SIMULATOR, idcc: 16 }),
+      name: named({ idcc: 16 }),
     });
   });
 
@@ -240,7 +240,7 @@ describe("Indemnité licenciement - Tracking", () => {
     expect(sendEvent).toHaveBeenCalledWith({
       category: "outil",
       action: "select_agreement_unsupported",
-      name: named({ context: SIMULATOR, idcc: 1261 }),
+      name: named({ idcc: 1261 }),
     });
   });
 });

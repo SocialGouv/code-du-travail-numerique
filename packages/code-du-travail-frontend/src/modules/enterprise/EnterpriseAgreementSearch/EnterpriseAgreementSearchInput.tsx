@@ -35,7 +35,6 @@ type Props = {
   defaultLocation?: ApiGeoResult;
   enterprise?: Enterprise;
   agreement?: Agreement;
-  trackingActionName: string;
   level: 2 | 3;
   isInSimulator?: boolean;
   canContinueSimulationIfNoAgreement?: boolean;
@@ -50,7 +49,6 @@ export const EnterpriseAgreementSearchInput = ({
   defaultLocation,
   onAgreementSelect,
   selectedAgreementAlert,
-  trackingActionName,
   enterprise,
   agreement,
   level,
@@ -154,11 +152,7 @@ export const EnterpriseAgreementSearchInput = ({
       setSearchState("required");
       return;
     }
-    emitEnterpriseAgreementSearchInputEvent(
-      trackingActionName,
-      search,
-      location
-    );
+    emitEnterpriseAgreementSearchInputEvent(search, location);
     shouldFocusResultsRef.current = focusResults;
     setLoading(true);
     try {
@@ -370,13 +364,12 @@ export const EnterpriseAgreementSearchInput = ({
           onAgreementSelect={(agreement) => {
             setSelectedAgreement(agreement);
             if (selectedEnterprise) {
-              emitSelectEnterpriseEvent(trackingActionName, {
+              emitSelectEnterpriseEvent({
                 label: selectedEnterprise.label,
                 siren: selectedEnterprise.siren,
               });
               emitSelectEnterpriseAgreementEvent(
-                selectedEnterprise.conventions[0].num,
-                trackingActionName
+                selectedEnterprise.conventions[0].num
               );
             } else {
               emitNoEnterpriseSelectEvent();
@@ -563,7 +556,7 @@ export const EnterpriseAgreementSearchInput = ({
                   ? {
                       href: buildEntrepriseUrl(enterprise),
                       onClick: () => {
-                        emitSelectEnterpriseEvent(trackingActionName, {
+                        emitSelectEnterpriseEvent({
                           label: enterprise.label,
                           siren: enterprise.siren,
                         });
@@ -578,13 +571,12 @@ export const EnterpriseAgreementSearchInput = ({
                           return;
                         }
                         if (enterprise.conventions.length === 1) {
-                          emitSelectEnterpriseEvent(trackingActionName, {
+                          emitSelectEnterpriseEvent({
                             label: enterprise.label,
                             siren: enterprise.siren,
                           });
                           emitSelectEnterpriseAgreementEvent(
-                            enterprise.conventions[0].num,
-                            trackingActionName
+                            enterprise.conventions[0].num
                           );
                           onAgreementSelect(
                             enterprise.conventions[0],

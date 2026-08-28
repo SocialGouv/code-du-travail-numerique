@@ -32,7 +32,6 @@ const StepAgreement = () => {
       enterprise={enterprise}
       error={error}
       onAgreementChange={onAgreementChange}
-      trackingActionName={"Préavis de licenciement"}
       onInitAgreementPage={onInitAgreementPage}
       onRouteChange={onRouteChange}
       route={route}

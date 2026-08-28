@@ -23,12 +23,10 @@ const pushMock = jest.fn();
 const replaceMock = jest.fn();
 
 // La catégorie et le chemin des events viennent de la route courante : la fiche
-// générique de la contribution. `CONTEXT` est le contexte du parcours de choix
-// de convention, passé par le composant appelant.
+// générique de la contribution. Aucun émetteur n'a besoin qu'on le lui dise.
 const PAGE = "/contribution/my-contrib";
 const PATH = "contribution/my-contrib";
-const CONTEXT = "contribution/my-contrib";
-const named = (payload: Record<string, unknown>) =>
+const named = (payload: Record<string, unknown> = {}) =>
   JSON.stringify({ path: PATH, ...payload });
 jest.mock("next/navigation", () => ({
   redirect: jest.fn(),
@@ -108,14 +106,14 @@ describe("<ContributionGeneric />", () => {
         {
           category: "contribution",
           action: "select_agreement_p1",
-          name: named({ context: CONTEXT, idcc: 1388 }),
+          name: named({ idcc: 1388 }),
         },
       ],
       [
         {
           category: "contribution",
           action: "select_agreement_path_p1",
-          name: named({ context: CONTEXT }),
+          name: named(),
         },
       ],
       [
@@ -131,7 +129,7 @@ describe("<ContributionGeneric />", () => {
     expect(sendEvent).toHaveBeenLastCalledWith({
       category: "contribution",
       action: "click_show_agreement_content",
-      name: named({ target: CONTEXT }),
+      name: named(),
     });
   });
 
@@ -170,14 +168,14 @@ describe("<ContributionGeneric />", () => {
         {
           category: "contribution",
           action: "select_agreement_p1",
-          name: named({ context: CONTEXT, idcc: 16 }),
+          name: named({ idcc: 16 }),
         },
       ],
       [
         {
           category: "contribution",
           action: "select_agreement_path_p1",
-          name: named({ context: CONTEXT }),
+          name: named(),
         },
       ],
       [
@@ -193,7 +191,7 @@ describe("<ContributionGeneric />", () => {
     expect(sendEvent).toHaveBeenLastCalledWith({
       category: "contribution",
       action: "click_show_general_content",
-      name: named({ target: CONTEXT }),
+      name: named(),
     });
   });
 
@@ -229,7 +227,7 @@ describe("<ContributionGeneric />", () => {
         {
           category: "contribution",
           action: "search_enterprise",
-          name: named({ context: CONTEXT, query: "carrefour" }),
+          name: named({ query: "carrefour" }),
         },
       ],
       [
@@ -237,7 +235,6 @@ describe("<ContributionGeneric />", () => {
           category: "contribution",
           action: "select_enterprise",
           name: named({
-            context: CONTEXT,
             label: "CARREFOUR PROXIMITE FRANCE (SHOPI-8 A HUIT)",
             siren: "345130488",
           }),
@@ -247,14 +244,14 @@ describe("<ContributionGeneric />", () => {
         {
           category: "contribution",
           action: "select_agreement_p2",
-          name: named({ context: CONTEXT, idcc: 2216 }),
+          name: named({ idcc: 2216 }),
         },
       ],
       [
         {
           category: "contribution",
           action: "select_agreement_path_p2",
-          name: named({ context: CONTEXT }),
+          name: named(),
         },
       ],
       [
@@ -308,7 +305,7 @@ describe("<ContributionGeneric />", () => {
     expect(sendEvent).toHaveBeenLastCalledWith({
       category: "contribution",
       action: "select_agreement_path_p3",
-      name: named({ context: CONTEXT }),
+      name: named(),
     });
 
     fireEvent.click(ui.generic.buttonDisplayInfo.get());
@@ -318,7 +315,7 @@ describe("<ContributionGeneric />", () => {
     expect(sendEvent).toHaveBeenLastCalledWith({
       category: "contribution",
       action: "click_show_content_without_agreement",
-      name: named({ target: CONTEXT }),
+      name: named(),
     });
   });
 
@@ -387,7 +384,7 @@ describe("<ContributionGeneric />", () => {
       expect(sendEvent).toHaveBeenCalledWith({
         category: "contribution",
         action: "select_agreement_path_p1",
-        name: named({ context: CONTEXT }),
+        name: named(),
       });
     });
 

@@ -17,12 +17,34 @@ import {
   serializeExtraction,
   OUTPUT_PATH,
 } from "./extract-events";
+import { findPayloadIncoherences } from "./payload-coherence";
 
 const REGEN_HINT =
   "=> Lance `pnpm -F @socialgouv/cdtn-stats events:extract` puis commit le fichier.";
 
 function main(): void {
-  const fresh = serializeExtraction(extractEvents());
+  const extraction = extractEvents();
+  const fresh = serializeExtraction(extraction);
+
+  // Cohérence du vocabulaire : deux émetteurs de la même action doivent envoyer
+  // le même contexte. Vérifié AVANT le drift-check — régénérer le catalogue ne
+  // corrigerait pas une incohérence, ça la figerait.
+  const incoherences = findPayloadIncoherences(extraction.events);
+  if (incoherences.length > 0) {
+    console.error(
+      "[check-events] Payloads INCOHÉRENTS : une même action envoie des contextes différents selon l'émetteur."
+    );
+    for (const { action, shapes, unexpectedKeys } of incoherences) {
+      console.error(
+        `  ${action} — clés divergentes : ${unexpectedKeys.join(", ")}`
+      );
+      shapes.forEach((shape) => console.error(`      ${shape}`));
+    }
+    console.error(
+      "=> Aligne les émetteurs, ou déclare la clé comme optionnelle dans src/payload-coherence.ts en expliquant pourquoi."
+    );
+    process.exit(1);
+  }
 
   if (!fs.existsSync(OUTPUT_PATH)) {
     console.error(

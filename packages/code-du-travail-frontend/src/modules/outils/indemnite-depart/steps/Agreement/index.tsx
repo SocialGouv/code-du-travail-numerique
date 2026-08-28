@@ -37,9 +37,6 @@ const AgreementStep = () => {
       enterprise={enterprise}
       error={error}
       onAgreementChange={onAgreementChange}
-      trackingActionName={
-        indemniteDepartType ?? IndemniteDepartType.LICENCIEMENT
-      }
       onInitAgreementPage={onInitAgreementPage}
       onRouteChange={onRouteChange}
       route={route}

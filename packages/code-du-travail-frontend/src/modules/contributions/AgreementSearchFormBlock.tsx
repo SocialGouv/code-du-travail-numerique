@@ -26,7 +26,6 @@ type Props = {
   onDisplayClick: (isAgreementSelected: boolean) => void;
   contribution: Contribution;
   selectedAgreement?: Agreement;
-  trackingActionName: string;
   /**
    * IDCC (4 chiffres, ex. « 0675 ») de la page contribution personnalisée qui
    * héberge le bloc. Quand la CC sélectionnée correspond, on ne navigue pas
@@ -55,7 +54,6 @@ export function AgreementSearchFormBlock({
   onAgreementSelect,
   onDisplayClick,
   selectedAgreement,
-  trackingActionName,
   currentIdcc,
   onSameAgreementSelect,
   defaultRoute,
@@ -217,7 +215,7 @@ export function AgreementSearchFormBlock({
   const onSkipToGeneric = () => {
     setShowMissingRouteError(false);
     onAgreementSelect();
-    emitClickP3(trackingActionName);
+    emitClickP3();
     onDisplayClick(false);
   };
 
@@ -228,7 +226,6 @@ export function AgreementSearchFormBlock({
         selectedAgreementAlert={selectedAgreementAlert}
         defaultAgreement={selectedAgreement}
         defaultRoute={defaultRoute}
-        trackingActionName={trackingActionName}
         level={3}
         legend={legend}
         // Le lien « La convention collective, c'est quoi ? » est déjà affiché en

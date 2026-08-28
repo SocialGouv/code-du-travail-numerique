@@ -125,19 +125,18 @@ export function ContributionGeneric({
             setDisplayGeneric(true);
             scrollToTitle();
             if (selectedAgreement) {
-              emitDisplayGeneralContent(getTitle());
+              emitDisplayGeneralContent();
             } else {
               // Aucune CC sélectionnée : l'usager affiche le Code du travail
               // (dernière option « Je ne souhaite pas renseigner… » ou entreprise
               // sans convention).
-              emitDisplayGenericContent(getTitle());
+              emitDisplayGenericContent();
             }
           } else {
-            emitDisplayAgreementContent(getTitle());
+            emitDisplayAgreementContent();
           }
         }}
         selectedAgreement={selectedAgreement}
-        trackingActionName={getTitle()}
         defaultRoute={defaultRoute}
       />
 

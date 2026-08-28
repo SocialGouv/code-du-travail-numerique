@@ -108,9 +108,9 @@ l'event se produit, quel que soit l'event (voir l'annexe de `TRACKING_PLAN.md`).
 | Ancien | Nouvelle action | Contexte |
 | --- | --- | --- |
 | `contribution` / `reponse_consultee` | `view_answer` | `path` |
-| `contribution` / `click_afficher_les_informations_CC` | `click_show_agreement_content` | `target` |
-| `contribution` / `click_afficher_les_informations_générales` | `click_show_general_content` | `target` |
-| `contribution` / `click_afficher_les_informations_sans_CC` | `click_show_content_without_agreement` | `target` |
+| `contribution` / `click_afficher_les_informations_CC` | `click_show_agreement_content` | `path` seul |
+| `contribution` / `click_afficher_les_informations_générales` | `click_show_general_content` | `path` seul |
+| `contribution` / `click_afficher_les_informations_sans_CC` | `click_show_content_without_agreement` | `path` seul |
 | `contribution` / `clic_declinaison_cc` | `click_agreement_declination` | `target` |
 
 ### Recherche
@@ -158,18 +158,18 @@ l'event se produit, quel que soit l'event (voir l'annexe de `TRACKING_PLAN.md`).
 
 | Ancien | Nouvelle action | Contexte |
 | --- | --- | --- |
-| `cc_search_type_of_users` / `click_p1` · `p2` · `p3` | `select_agreement_path_p1` · `_p2` · `_p3` | `context` |
-| `cc_select_p1` / `<titre>` | `select_agreement_p1` | `context`, `idcc` |
-| `cc_select_p2` / `<titre>` | `select_agreement_p2` | `context`, `idcc` |
+| `cc_search_type_of_users` / `click_p1` · `p2` · `p3` | `select_agreement_path_p1` · `_p2` · `_p3` | `path` seul |
+| `cc_select_p1` / `<titre>` | `select_agreement_p1` | `idcc` |
+| `cc_select_p2` / `<titre>` | `select_agreement_p2` | `idcc` |
 | `outil` / `cc_select_traitée` | `select_agreement_supported` | `idcc` |
 | `outil` / `cc_select_non_traitée` | `select_agreement_unsupported` | `idcc` |
-| `enterprise_search` / `<titre>` | `search_enterprise` | `context`, `query`, `city`, `department` |
-| `enterprise_select` / `<titre>` | `select_enterprise` | `context`, `label`, `siren` |
+| `enterprise_search` / `<titre>` | `search_enterprise` | `query`, `city`, `department` |
+| `enterprise_select` / `<titre>` | `select_enterprise` | `label`, `siren` |
 | `cc_enterprise_search` / `show_agreements` | `show_enterprise_agreements` | `count` + `value` |
-| `cc_search_type_of_users` / `click_je_n_ai_pas_d_entreprise` | `click_no_enterprise` | `context` |
-| `cc_search_type_of_users` / `select_je_n_ai_pas_d_entreprise` | `select_no_enterprise` | `context` |
-| `view_step_cc_search_p1` / `back_step_cc_search_p1` | `click_previous_step_agreement_p1` | `context` |
-| `view_step_cc_search_p2` / `back_step_cc_search_p2` | `click_previous_step_agreement_p2` | `context` |
+| `cc_search_type_of_users` / `click_je_n_ai_pas_d_entreprise` | `click_no_enterprise` | `path` seul |
+| `cc_search_type_of_users` / `select_je_n_ai_pas_d_entreprise` | `select_no_enterprise` | `path` seul |
+| `view_step_cc_search_p1` / `back_step_cc_search_p1` | `click_previous_step_agreement_p1` | `path` seul |
+| `view_step_cc_search_p2` / `back_step_cc_search_p2` | `click_previous_step_agreement_p2` | `path` seul |
 | `pagecc_searchcc` / `<titre court de la CC>` | `search_legifrance` | `agreement`, `query` |
 | `accord_enterprise_search` / `click_accord` | `click_enterprise_accord` | `target` |
 | `accord_enterprise_search` / `click_all_accords` | `click_all_enterprise_accords` | `siret` |
@@ -177,6 +177,17 @@ l'event se produit, quel que soit l'event (voir l'annexe de `TRACKING_PLAN.md`).
 | `accord_enterprise_search` / `load_accords_failed` | `load_enterprise_accords_failed` | `siret` |
 
 > Le numéro de convention perd son préfixe : `idcc1486` devient `"idcc":1486`.
+>
+> **Le titre du simulateur ne voyage plus sur ces events.** L'ancien schéma le mettait dans
+> l'action (`cc_select_p1` avec pour action « Indemnité de licenciement ») ; il est remplacé
+> par `path`, qui identifie le simulateur de façon plus fiable — c'est la route réelle, pas un
+> titre chargé en base. Pour cibler un simulateur :
+> `eventName=@"path":"outils/indemnite-licenciement"`.
+>
+> Cela corrige au passage une incohérence de l'ancien schéma : certains écrans envoyaient
+> « Heures recherche emploi » ou « Préavis de départ à la retraite » là où les events d'étape
+> envoyaient « Heures d'absence pour rechercher un emploi » et « Préavis de départ ou de mise
+> à la retraite ». Le même simulateur portait deux libellés selon l'event.
 
 ## Attention en comparant avant / après sur les compteurs
 

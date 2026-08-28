@@ -106,7 +106,6 @@ describe("Event show_agreements", () => {
           <EnterpriseAgreementSearchInput
             enterprise={enterprise as any}
             onAgreementSelect={jest.fn()}
-            trackingActionName="Trouver sa convention collective"
             level={2}
           />
         )
@@ -166,7 +165,6 @@ describe("Event show_agreements", () => {
           <EnterpriseAgreementSearchInput
             enterprise={enterpriseWithTwoAgreements}
             onAgreementSelect={jest.fn()}
-            trackingActionName="Trouver sa convention collective"
             level={2}
           />
         ));
@@ -177,7 +175,6 @@ describe("Event show_agreements", () => {
           <EnterpriseAgreementSearchInput
             enterprise={enterpriseWithoutAgreement}
             onAgreementSelect={jest.fn()}
-            trackingActionName="Trouver sa convention collective"
             level={2}
           />
         );
@@ -202,7 +199,6 @@ describe("Event show_agreements", () => {
           <EnterpriseAgreementSearchInput
             enterprise={enterprise as never}
             onAgreementSelect={jest.fn()}
-            trackingActionName="Indemnité de licenciement"
             isInSimulator
             canContinueSimulationIfNoAgreement
             level={3}

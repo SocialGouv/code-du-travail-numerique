@@ -11,7 +11,6 @@ import { PartialAgreementCoverageAlert } from "./PartialAgreementCoverageAlert";
 import { CardTitleStyle } from "../../convention-collective/style";
 import { WhatIsAgreementLink } from "../../convention-collective/WhatIsAgreementLink";
 import { useEnterpriseAgreementSearchTracking } from "./tracking";
-import { AGREEMENT_SEARCH_TOOL } from "../../convention-collective/tracking";
 import { Agreement } from "src/modules/outils/indemnite-depart/types";
 import { AccessibleAlert } from "src/modules/outils/common/components/AccessibleAlert";
 import { AccordsEntreprise } from "./accords";
@@ -108,19 +107,13 @@ export const EnterpriseAgreementSelectionLink = ({
                         target: widgetMode ? "_blank" : "auto",
                         href: `/convention-collective/${agreement.slug}`,
                         onClick: () => {
-                          emitSelectEnterpriseAgreementEvent(
-                            agreement.num,
-                            AGREEMENT_SEARCH_TOOL
-                          );
+                          emitSelectEnterpriseAgreementEvent(agreement.num);
                         },
                       }
                     : {
                         href: "#",
                         onClick: () => {
-                          emitSelectEnterpriseAgreementEvent(
-                            agreement.num,
-                            AGREEMENT_SEARCH_TOOL
-                          );
+                          emitSelectEnterpriseAgreementEvent(agreement.num);
                           onAgreementSelect(agreement);
                         },
                       }

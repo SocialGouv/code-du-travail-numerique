@@ -147,7 +147,6 @@ const createAgreementStore: StoreSliceWrapperIndemnitePrecarite<
           PublicodesSimulator.INDEMNITE_PRECARITE
         ).find(({ idcc }) => idcc === agreement?.num);
         pushAgreementEvents(
-          PublicodesSimulator.INDEMNITE_PRECARITE,
           {
             route,
             selected: agreement,

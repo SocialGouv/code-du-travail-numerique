@@ -38,12 +38,11 @@ const enterprise: Enterprise = {
   },
 };
 
-const SIMULATOR = "Préavis de retraite";
 const SIMULATOR_PATH = "outils/preavis-retraite";
 
 // Émis depuis un store zustand : `sendPageEvent` lit la route sur
 // `window.location`, pas via `usePathname()`.
-const name = (payload: Record<string, unknown>): string =>
+const name = (payload: Record<string, unknown> = {}): string =>
   JSON.stringify({ path: SIMULATOR_PATH, ...payload });
 
 describe("Push agreement events on click next", () => {
@@ -60,13 +59,13 @@ describe("Push agreement events on click next", () => {
     const data: ConventionCollective = { route: "not-selected" };
 
     it("envoie le parcours p3", () => {
-      pushAgreementEvents(SIMULATOR, data, false, false);
+      pushAgreementEvents(data, false, false);
 
       expect(sendEvent).toHaveBeenCalledTimes(1);
       expect(sendEvent).toHaveBeenCalledWith({
         category: "outil",
         action: "select_agreement_path_p3",
-        name: name({ context: SIMULATOR }),
+        name: name(),
       });
     });
   });
@@ -78,33 +77,33 @@ describe("Push agreement events on click next", () => {
     };
 
     it("envoie parcours p1, sélection de CC et support, CC non traitée", () => {
-      pushAgreementEvents(SIMULATOR, data, false, false);
+      pushAgreementEvents(data, false, false);
 
       expect(sendEvent).toHaveBeenCalledTimes(3);
       expect(sendEvent).toHaveBeenNthCalledWith(1, {
         category: "outil",
         action: "select_agreement_path_p1",
-        name: name({ context: SIMULATOR }),
+        name: name(),
       });
       expect(sendEvent).toHaveBeenNthCalledWith(2, {
         category: "outil",
         action: "select_agreement_p1",
-        name: name({ context: SIMULATOR, idcc: agreement.num }),
+        name: name({ idcc: agreement.num }),
       });
       expect(sendEvent).toHaveBeenNthCalledWith(3, {
         category: "outil",
         action: "select_agreement_unsupported",
-        name: name({ context: SIMULATOR, idcc: agreement.num }),
+        name: name({ idcc: agreement.num }),
       });
     });
 
     it("distingue une CC prise en charge", () => {
-      pushAgreementEvents(SIMULATOR, data, true, false);
+      pushAgreementEvents(data, true, false);
 
       expect(sendEvent).toHaveBeenNthCalledWith(3, {
         category: "outil",
         action: "select_agreement_supported",
-        name: name({ context: SIMULATOR, idcc: agreement.num }),
+        name: name({ idcc: agreement.num }),
       });
     });
   });
@@ -117,19 +116,18 @@ describe("Push agreement events on click next", () => {
     };
 
     it("envoie parcours p2, entreprise, sélection de CC et support", () => {
-      pushAgreementEvents(SIMULATOR, data, false, false);
+      pushAgreementEvents(data, false, false);
 
       expect(sendEvent).toHaveBeenCalledTimes(4);
       expect(sendEvent).toHaveBeenNthCalledWith(1, {
         category: "outil",
         action: "select_agreement_path_p2",
-        name: name({ context: SIMULATOR }),
+        name: name(),
       });
       expect(sendEvent).toHaveBeenNthCalledWith(2, {
         category: "outil",
         action: "select_enterprise",
         name: name({
-          context: SIMULATOR,
           label: enterprise.label,
           siren: enterprise.siren,
         }),
@@ -137,12 +135,12 @@ describe("Push agreement events on click next", () => {
       expect(sendEvent).toHaveBeenNthCalledWith(3, {
         category: "outil",
         action: "select_agreement_p2",
-        name: name({ context: SIMULATOR, idcc: agreement.num }),
+        name: name({ idcc: agreement.num }),
       });
       expect(sendEvent).toHaveBeenNthCalledWith(4, {
         category: "outil",
         action: "select_agreement_unsupported",
-        name: name({ context: SIMULATOR, idcc: agreement.num }),
+        name: name({ idcc: agreement.num }),
       });
     });
   });
@@ -155,13 +153,13 @@ describe("Push agreement events on click next", () => {
     };
 
     it("ajoute l'event « je n'ai pas d'entreprise »", () => {
-      pushAgreementEvents(SIMULATOR, data, false, true);
+      pushAgreementEvents(data, false, true);
 
       expect(sendEvent).toHaveBeenCalledTimes(4);
       expect(sendEvent).toHaveBeenNthCalledWith(4, {
         category: "outil",
         action: "select_no_enterprise",
-        name: name({ context: SIMULATOR }),
+        name: name(),
       });
     });
   });
@@ -178,7 +176,6 @@ describe("Push agreement events on click next", () => {
 
     it("émet quand même le parcours (le filtrage 9999 est en amont)", () => {
       pushAgreementEvents(
-        SIMULATOR,
         {
           enterprise: { ...enterprise, conventions: [agreement9999] },
           route: "enterprise",
