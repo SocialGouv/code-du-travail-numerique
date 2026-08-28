@@ -54,15 +54,23 @@ const SALAIRES_VARIABLES: SalaryPeriods[] = [
 }));
 
 /**
- * Salaire de référence produit par le modèle pour cette grille.
+ * Les deux branches de calcul du salaire de référence, pour cette grille.
  *
- * Le document de référence annonce 2594 €, valeur obtenue en excluant la prime
- * annuelle du total des 12 mois. L'implémentation partagée avec l'indemnité de
- * licenciement l'y inclut, et retient donc la moyenne sur 12 mois (2597,67 €)
- * plutôt que celle sur 3 mois (2594 €). Le document prescrivant « SRef = IDL »,
- * c'est le calcul de l'indemnité de licenciement qui fait foi : on l'assume ici
- * explicitement plutôt que de diverger du simulateur existant.
+ * L'art. D1237-2 renvoie au salaire de référence de l'indemnité de licenciement
+ * et retient, des deux moyennes, « celle qui est la plus avantageuse pour le
+ * salarié ». Ici la moyenne sur 12 mois l'emporte sur celle des 3 derniers mois,
+ * parce que l'implémentation partagée avec l'indemnité de licenciement inclut la
+ * prime annuelle dans le total des 12 mois.
+ *
+ * Le document de référence métier annonce 2594 €, c'est-à-dire la branche des
+ * 3 mois — la moins avantageuse. L'écart est assumé plutôt que corrigé : le
+ * document prescrit lui-même « SRef = IDL », et toucher au
+ * `ReferenceSalaryLegal` partagé changerait les montants du simulateur
+ * d'indemnité de licenciement pour tous les usagers.
+ *
+ * Reste à faire trancher par le métier — cf. issue #7131.
  */
+const SREF_DOCUMENT_METIER = 2594;
 const SREF_SALAIRES_VARIABLES = 2597.67;
 
 const computeSeniority = (anneesBrutes: number, absenceEnMois = 0) => {
@@ -136,6 +144,12 @@ describe("Cas de validation métier — départ volontaire à la retraite", () =
       SREF_SALAIRES_VARIABLES,
       2
     );
+    // La règle du « plus avantageux » (art. D1237-2) est ce qui écarte le
+    // modèle de la valeur du document métier : on l'énonce ici, pour qu'une
+    // bascule sur la branche des 3 mois fasse échouer le test.
+    expect(computeSref(SALAIRES_VARIABLES)).toBeGreaterThan(
+      SREF_DOCUMENT_METIER
+    );
 
     const result = calculate({
       anciennete: 22,
@@ -144,6 +158,7 @@ describe("Cas de validation métier — départ volontaire à la retraite", () =
     });
 
     // 1,5 mois de salaire de référence entre 20 et 30 ans d'ancienneté.
+    // Le document métier annonce 3891 €, soit 1,5 × 2594 €.
     expect(result).toResultBeEqual(3896.51, "€");
   });
 });
@@ -170,6 +185,7 @@ describe("Cas de validation métier — mise à la retraite", () => {
       sref: SREF_SALAIRES_VARIABLES,
     });
 
+    // Le document métier annonce 811,25 €, soit 0,25 × 1,25 × 2594 €.
     expect(result).toResultBeEqual(811.77, "€");
   });
 });

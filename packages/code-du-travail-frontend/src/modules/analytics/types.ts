@@ -41,6 +41,17 @@ export enum MatomoRetirementEvent {
   ANCIENNETE_MOINS_2_ANS = "anciennete_moins_2_ans",
 }
 
+/**
+ * Deux simulateurs demandent l'origine du départ à la retraite et envoient donc
+ * les mêmes actions `mise` / `depart`. Sur un même site Matomo, les compteurs
+ * fusionneraient : chaque émetteur se nomme, en reprenant le nom court du
+ * simulateur — celui-là même dont sont dérivées les actions `view_step_*`.
+ */
+export enum MatomoRetirementTool {
+  INDEMNITE_RETRAITE = `${IndemniteDepartType.RETRAITE}`,
+  PREAVIS_RETRAITE = "Préavis de départ ou de mise à la retraite",
+}
+
 export enum MatomoActionEvent {
   PREAVIS_RETRAITE = "view_step_Préavis de départ ou de mise à la retraite",
   HEURES_RECHERCHE_EMPLOI = "view_step_Heures d'absence pour rechercher un emploi",

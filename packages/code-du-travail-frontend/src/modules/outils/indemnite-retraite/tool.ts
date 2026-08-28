@@ -1,6 +1,8 @@
+import { captureException } from "@sentry/nextjs";
 import { ElasticTool } from "@socialgouv/cdtn-types";
 import { DocumentElasticResult } from "src/modules/documents";
 import { fetchTool } from "src/modules/outils";
+import { IndemniteDepartType } from "../indemnite-depart/types";
 import type { ToolItem } from "../../../../app/outils/page";
 
 export const INDEMNITE_RETRAITE_SLUG = "indemnite-retraite";
@@ -17,7 +19,21 @@ export const INDEMNITE_RETRAITE_SLUG = "indemnite-retraite";
  * Dès que le document existera en base, supprimer ce fichier et rebrancher les
  * routes directement sur `fetchTool`, comme les autres simulateurs.
  */
-const TITRE = "Calculer l'indemnité de départ à la retraite";
+
+/**
+ * Titre de page (h1, metas), servi par le `displayTitle` du document.
+ */
+const TITRE_AFFICHE = "Calculer l'indemnité de départ à la retraite";
+
+/**
+ * Nom court du simulateur, servi par le `title` du document. Il n'est pas
+ * cosmétique : `useSimulatorLayoutTracking` en dérive l'action Matomo
+ * `view_step_<title>`, que `MatomoActionEvent.INDEMNITE_RETRAITE` déclare à
+ * partir de `IndemniteDepartType.RETRAITE`. Les deux doivent coïncider, sans
+ * quoi le tunnel se scinde en deux séries inexploitables — le document créé
+ * dans cdtn-admin devra donc porter exactement ce `title`.
+ */
+const TITRE_COURT = IndemniteDepartType.RETRAITE;
 
 const DESCRIPTION =
   "Vous souhaitez calculer le montant de l’indemnité de départ ou mise à la retraite ? Notre simulateur vous apporte une réponse personnalisée.";
@@ -25,10 +41,10 @@ const DESCRIPTION =
 const FALLBACK_TOOL: DocumentElasticResult<ElasticTool> = {
   _id: "",
   description: DESCRIPTION,
-  displayTitle: TITRE,
+  displayTitle: TITRE_AFFICHE,
   metaDescription: DESCRIPTION,
-  metaTitle: TITRE,
-  title: TITRE,
+  metaTitle: TITRE_AFFICHE,
+  title: TITRE_COURT,
 } as DocumentElasticResult<ElasticTool>;
 
 /**
@@ -43,7 +59,11 @@ export const getIndemniteRetraiteTool = async (): Promise<{
   try {
     const tool = await fetchTool(INDEMNITE_RETRAITE_SLUG);
     return { isPublished: true, tool };
-  } catch {
+  } catch (error) {
+    // Le repli couvre l'absence de document, mais le `try` englobe aussi la
+    // requête Elasticsearch : sans cette remontée, une panne dégraderait la
+    // page en silence, là où les autres simulateurs rendent l'incident visible.
+    captureException(error);
     return { isPublished: false, tool: FALLBACK_TOOL };
   }
 };
@@ -57,8 +77,9 @@ const INDEMNITE_RETRAITE_URL = `/outils/${INDEMNITE_RETRAITE_SLUG}`;
  * (`fetchTools`) : tant que le document n'existe pas, la carte du simulateur
  * manque et celui-ci n'est atteignable que par URL directe. On l'ajoute donc
  * ici, en fin de liste, pour pouvoir dérouler le parcours depuis la liste des
- * simulateurs. Le titre court est celui des tuiles voisines (« Indemnité de
- * licenciement », « Préavis de démission »), et non le titre de page.
+ * simulateurs. La tuile affiche le `title` du document, comme ses voisines
+ * (« Indemnité de licenciement », « Préavis de démission »), et non le titre
+ * de page.
  *
  * `order`, `icon` et `action` définitifs seront ceux du document créé dans
  * cdtn-admin ; dès qu'il existera, la liste contiendra déjà l'entrée et ce
@@ -74,7 +95,7 @@ export const withIndemniteRetraiteTile = (tools: ToolItem[]): ToolItem[] =>
           description: DESCRIPTION,
           metaDescription: DESCRIPTION,
           icon: "Indemnity",
-          title: "Indemnité de départ à la retraite",
+          title: TITRE_COURT,
           url: INDEMNITE_RETRAITE_URL,
         },
       ];

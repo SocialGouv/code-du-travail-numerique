@@ -19,7 +19,13 @@ export default function Ineligible() {
   return (
     <>
       <h2>Indemnité de {getRetraiteOriginLabel(originRetraite)}</h2>
-      <p>Aucune indemnité n&apos;est due dans cette situation</p>
+      {/* Le message du moteur commence lui-même par « Aucune indemnité n'est
+          due… » : la phrase d'introduction est tournée autrement pour ne pas
+          servir deux fois la même à l'usager, comme sur le licenciement. */}
+      <p>
+        Il n&apos;y a pas d&apos;indemnité de{" "}
+        {getRetraiteOriginLabel(originRetraite)} dans cette situation
+      </p>
       <Html>{getEligibilityError() ?? ""}</Html>
       {infoWarning && (
         <AccessibleAlert

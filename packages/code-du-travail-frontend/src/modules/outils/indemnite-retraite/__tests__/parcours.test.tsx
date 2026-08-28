@@ -226,7 +226,9 @@ describe("Simulateur d'indemnité de départ ou de mise à la retraite", () => {
       });
 
       expect(
-        screen.getByText("Aucune indemnité n'est due dans cette situation")
+        screen.getByText(
+          "Il n'y a pas d'indemnité de départ à la retraite dans cette situation"
+        )
       ).toBeInTheDocument();
       expect(
         screen.getByText(/inférieure à 10 ans/, { exact: false })
@@ -241,7 +243,9 @@ describe("Simulateur d'indemnité de départ ou de mise à la retraite", () => {
       });
 
       expect(
-        screen.getByText("Aucune indemnité n'est due dans cette situation")
+        screen.getByText(
+          "Il n'y a pas d'indemnité de mise à la retraite dans cette situation"
+        )
       ).toBeInTheDocument();
       expect(
         screen.getByText(/inférieure à 8 mois/, { exact: false })
@@ -259,6 +263,10 @@ describe("Simulateur d'indemnité de départ ou de mise à la retraite", () => {
     });
 
     test("n'affiche ni section Convention collective ni Résultat décrypté", () => {
+      // `runSimulation` tolère l'absence des étapes Absences et Salaires : sans
+      // cet ancrage, les trois assertions négatives passeraient aussi sur un
+      // parcours interrompu avant l'écran de résultat.
+      expect(ui.result.resultat.query()).toBeInTheDocument();
       expect(
         screen.queryByText(/La convention collective n’a pas été renseignée/)
       ).not.toBeInTheDocument();

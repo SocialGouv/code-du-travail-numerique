@@ -3,13 +3,25 @@ import { UserAction } from "../../common/utils/UserAction";
 import IndemniteRetraiteSimulator from "../IndemniteRetraiteSimulator";
 import { ui } from "../../indemnite-depart/__tests__/ui";
 import { sendEvent } from "@socialgouv/matomo-next";
+import {
+  MatomoActionEvent,
+  MatomoRetirementTool,
+} from "../../../analytics/types";
+import { IndemniteDepartType } from "../../indemnite-depart/types";
 
 jest.mock("@socialgouv/matomo-next", () => ({
   sendEvent: jest.fn(),
 }));
 
-const TOOL_TITLE = "Indemnité de départ ou de mise à la retraite";
-const VIEW_STEP = `view_step_${TOOL_TITLE}`;
+/**
+ * L'action Matomo est dérivée du `title` du document Elasticsearch par
+ * `useSimulatorLayoutTracking`, alors que le reste du code la déclare à partir
+ * de `IndemniteDepartType.RETRAITE`. On rend ici les deux bouts explicites :
+ * le simulateur reçoit le titre attendu du document, et l'action est comparée à
+ * l'énumération — un titre qui divergerait scinderait le tunnel en deux séries.
+ */
+const TOOL_TITLE: string = IndemniteDepartType.RETRAITE;
+const VIEW_STEP: string = MatomoActionEvent.INDEMNITE_RETRAITE;
 
 describe("Indemnité de départ à la retraite - Tracking", () => {
   let userAction: UserAction;
@@ -61,6 +73,9 @@ describe("Indemnité de départ à la retraite - Tracking", () => {
     expect(sendEvent).toHaveBeenCalledWith({
       category: "outil",
       action,
+      // Le simulateur de préavis de retraite envoie les mêmes actions : sans ce
+      // nom, les deux tunnels se confondraient dans Matomo.
+      name: MatomoRetirementTool.INDEMNITE_RETRAITE,
     });
   });
 

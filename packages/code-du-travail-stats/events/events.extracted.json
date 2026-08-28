@@ -1101,60 +1101,64 @@
     {
       "category": "outil",
       "action": "depart",
-      "name_pattern": null,
+      "name_pattern": "Indemnité de départ ou de mise à la retraite",
       "resolution": "literal",
       "emit_function": "onNextStep",
       "file": "packages/code-du-travail-frontend/src/modules/outils/indemnite-depart/steps/Informations/store/store.ts",
-      "line": 305,
+      "line": 309,
       "enum_refs": [
         "MatomoBaseEvent.OUTIL",
         "MatomoRetirementEvent.DEPART_RETRAITE",
-        "MatomoRetirementEvent.MISE_RETRAITE"
+        "MatomoRetirementEvent.MISE_RETRAITE",
+        "MatomoRetirementTool.INDEMNITE_RETRAITE"
       ],
       "tracking_method": "sendEvent"
     },
     {
       "category": "outil",
       "action": "depart",
-      "name_pattern": null,
+      "name_pattern": "Préavis de départ ou de mise à la retraite",
       "resolution": "literal",
       "emit_function": "onNextStep",
       "file": "packages/code-du-travail-frontend/src/modules/outils/preavis-retraite/steps/OriginStep/store/store.ts",
-      "line": 44,
+      "line": 48,
       "enum_refs": [
         "MatomoBaseEvent.OUTIL",
         "MatomoRetirementEvent.DEPART_RETRAITE",
-        "MatomoRetirementEvent.MISE_RETRAITE"
+        "MatomoRetirementEvent.MISE_RETRAITE",
+        "MatomoRetirementTool.PREAVIS_RETRAITE"
       ],
       "tracking_method": "sendEvent"
     },
     {
       "category": "outil",
       "action": "mise",
-      "name_pattern": null,
+      "name_pattern": "Indemnité de départ ou de mise à la retraite",
       "resolution": "literal",
       "emit_function": "onNextStep",
       "file": "packages/code-du-travail-frontend/src/modules/outils/indemnite-depart/steps/Informations/store/store.ts",
-      "line": 305,
+      "line": 309,
       "enum_refs": [
         "MatomoBaseEvent.OUTIL",
         "MatomoRetirementEvent.DEPART_RETRAITE",
-        "MatomoRetirementEvent.MISE_RETRAITE"
+        "MatomoRetirementEvent.MISE_RETRAITE",
+        "MatomoRetirementTool.INDEMNITE_RETRAITE"
       ],
       "tracking_method": "sendEvent"
     },
     {
       "category": "outil",
       "action": "mise",
-      "name_pattern": null,
+      "name_pattern": "Préavis de départ ou de mise à la retraite",
       "resolution": "literal",
       "emit_function": "onNextStep",
       "file": "packages/code-du-travail-frontend/src/modules/outils/preavis-retraite/steps/OriginStep/store/store.ts",
-      "line": 44,
+      "line": 48,
       "enum_refs": [
         "MatomoBaseEvent.OUTIL",
         "MatomoRetirementEvent.DEPART_RETRAITE",
-        "MatomoRetirementEvent.MISE_RETRAITE"
+        "MatomoRetirementEvent.MISE_RETRAITE",
+        "MatomoRetirementTool.PREAVIS_RETRAITE"
       ],
       "tracking_method": "sendEvent"
     },

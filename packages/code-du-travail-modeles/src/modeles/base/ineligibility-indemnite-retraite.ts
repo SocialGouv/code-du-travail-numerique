@@ -30,6 +30,16 @@ export class IneligibilityIndemniteRetraite implements IIndemniteDepartIneligibi
     return undefined;
   }
 
+  /**
+   * La mise à la retraite reprend le seuil de 8 mois du licenciement (L1237-7
+   * renvoie à L1234-9), mais **pas** ses aménagements liés à l'inaptitude
+   * professionnelle : la version licenciement lève le seuil dans ce cas et
+   * double l'indemnité (L1226-14). Le parcours retraite ne pose pas la question
+   * de l'inaptitude, donc le drapeau n'atteint jamais le moteur et la valeur par
+   * défaut « non » s'applique. Introduire cette question, ou une étape
+   * convention collective, imposerait de reprendre les deux règles ici et dans
+   * `indemnite-retraite.yaml`.
+   */
   getSeniorityIneligibility(
     args: Record<string, string | undefined>
   ): string | undefined {

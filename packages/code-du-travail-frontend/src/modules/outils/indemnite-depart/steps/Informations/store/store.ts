@@ -22,7 +22,11 @@ import { CommonSituationStoreSlice } from "../../../situationStore";
 import { ValidationResponse } from "src/modules/outils/common/components/SimulatorLayout/types";
 import { OuiNon } from "../../../common";
 import { OriginRetraite } from "../../../types";
-import { MatomoBaseEvent, MatomoRetirementEvent } from "src/modules/analytics";
+import {
+  MatomoBaseEvent,
+  MatomoRetirementEvent,
+  MatomoRetirementTool,
+} from "src/modules/analytics";
 import { sendEvent } from "@socialgouv/matomo-next";
 
 const initialState = (
@@ -308,6 +312,7 @@ const createCommonInformationsStore: StoreSlice<
             state.originRetraite === "mise-retraite"
               ? MatomoRetirementEvent.MISE_RETRAITE
               : MatomoRetirementEvent.DEPART_RETRAITE,
+          name: MatomoRetirementTool.INDEMNITE_RETRAITE,
         });
       }
 

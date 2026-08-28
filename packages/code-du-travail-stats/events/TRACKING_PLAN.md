@@ -115,6 +115,20 @@ Les deux simulateurs de retraite envoient l'origine choisie au clic sur « Suiva
 le préavis à son étape *origine*, l'indemnité à son étape *Informations*.
 [↗ indemnité de retraite](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/outils/indemnite-depart/steps/Informations/store/store.ts "Informations/store.ts")
 
+Les actions `mise` et `depart` étant les mêmes des deux côtés, **c'est le `name`
+qui distingue l'émetteur** — sans lui, les compteurs des deux outils
+fusionneraient sur un même site Matomo. Il reprend le nom court du simulateur,
+celui-là même dont sont dérivées les actions `view_step_*`.
+
+| Type     | Contenu                                                                             | Détail                                                              |
+| -------- | ----------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| category | outil                                                                                |                                                                     |
+| action   | mise · depart                                                                        | Mise à la retraite (employeur) ou départ volontaire (salarié)        |
+| name     | Indemnité de départ ou de mise à la retraite · Préavis de départ ou de mise à la retraite | Simulateur émetteur                                             |
+
+> Les évènements antérieurs au déploiement de ce `name` sont tous issus du
+> préavis de retraite, seul émetteur à l'époque : l'historique reste lisible.
+
 ###### Spécifique « Préavis de retraite »
 
 Deux étapes envoient le choix de l'utilisateur, au clic sur « Suivant ».
@@ -126,7 +140,7 @@ Deux étapes envoient le choix de l'utilisateur, au clic sur « Suivant ».
 | category | outil                                            |                                                              |
 | action   | mise · depart                                    | Étape origine : mise à la retraite (employeur) ou départ volontaire |
 | action   | anciennete_plus_2_ans · anciennete_moins_2_ans   | Étape ancienneté : plus / moins de 2 ans d'ancienneté déclarés |
-| name     | —                                                |                                                              |
+| name     | Préavis de départ ou de mise à la retraite       | Sur les actions `mise` · `depart` uniquement, pour les distinguer de celles de l'indemnité de retraite |
 
 ##### Étape pour renseigner sa convention collective
 
