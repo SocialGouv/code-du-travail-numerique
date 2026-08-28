@@ -218,7 +218,10 @@ describe("AccordsEntreprise", () => {
           <AccordsEntreprise siret="98765432101234" onLoaded={() => {}} />
         );
       });
-      expect(showAccordsEvents().map(({ name }) => name)).toEqual(["2", "0"]);
+      expect(showAccordsEvents().map(({ name }) => name)).toEqual([
+        "2",
+        "aucun",
+      ]);
     });
 
     it("émet emitShowAccords avec le nombre d'accords au chargement", async () => {
@@ -235,7 +238,7 @@ describe("AccordsEntreprise", () => {
       });
     });
 
-    it("émet emitShowAccords avec 0 quand aucun accord n'est trouvé", async () => {
+    it('émet "aucun" — jamais "0", que Matomo jette — quand aucun accord n\'est trouvé', async () => {
       mockFetch({ total: 0, accords: [] });
       await act(async () => {
         render(
@@ -245,7 +248,7 @@ describe("AccordsEntreprise", () => {
       expect(sendEvent).toHaveBeenCalledWith({
         category: TrackingAgreementSearchCategory.ACCORD_ENTERPRISE_SEARCH,
         action: TrackingAccordEntrepriseSearchAction.SHOW_ACCORDS,
-        name: "0",
+        name: "aucun",
       });
     });
 

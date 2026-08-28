@@ -70,7 +70,7 @@
       "resolution": "literal",
       "emit_function": "emitClickAccord",
       "file": "packages/code-du-travail-frontend/src/modules/enterprise/EnterpriseAgreementSearch/accords/tracking.ts",
-      "line": 13,
+      "line": 14,
       "enum_refs": [
         "TrackingAccordEntrepriseSearchAction.CLICK_ACCORD",
         "TrackingAgreementSearchCategory.ACCORD_ENTERPRISE_SEARCH"
@@ -84,7 +84,7 @@
       "resolution": "literal",
       "emit_function": "emitClickSeeAll",
       "file": "packages/code-du-travail-frontend/src/modules/enterprise/EnterpriseAgreementSearch/accords/tracking.ts",
-      "line": 21,
+      "line": 22,
       "enum_refs": [
         "TrackingAccordEntrepriseSearchAction.CLICK_ALL_ACCORDS",
         "TrackingAgreementSearchCategory.ACCORD_ENTERPRISE_SEARCH"
@@ -98,7 +98,7 @@
       "resolution": "literal",
       "emit_function": "emitLoadAccordsFailed",
       "file": "packages/code-du-travail-frontend/src/modules/enterprise/EnterpriseAgreementSearch/accords/tracking.ts",
-      "line": 37,
+      "line": 40,
       "enum_refs": [
         "TrackingAccordEntrepriseSearchAction.LOAD_ACCORDS_FAILED",
         "TrackingAgreementSearchCategory.ACCORD_ENTERPRISE_SEARCH"
@@ -108,11 +108,11 @@
     {
       "category": "accord_enterprise_search",
       "action": "show_accords",
-      "name_pattern": "<String(count)>",
+      "name_pattern": "<toCountEventName(count)>",
       "resolution": "literal",
       "emit_function": "emitShowAccords",
       "file": "packages/code-du-travail-frontend/src/modules/enterprise/EnterpriseAgreementSearch/accords/tracking.ts",
-      "line": 29,
+      "line": 32,
       "enum_refs": [
         "TrackingAccordEntrepriseSearchAction.SHOW_ACCORDS",
         "TrackingAgreementSearchCategory.ACCORD_ENTERPRISE_SEARCH"
@@ -122,11 +122,11 @@
     {
       "category": "cc_enterprise_search",
       "action": "show_agreements",
-      "name_pattern": "<String(count)>",
+      "name_pattern": "<toCountEventName(count)>",
       "resolution": "literal",
       "emit_function": "emitShowAgreements",
       "file": "packages/code-du-travail-frontend/src/modules/enterprise/EnterpriseAgreementSearch/tracking.ts",
-      "line": 45,
+      "line": 47,
       "enum_refs": [
         "TrackingAgreementSearchCategory.CC_ENTERPRISE_SEARCH",
         "TrackingEnterpriseAgreementSearchAction.SHOW_AGREEMENTS"
@@ -140,7 +140,7 @@
       "resolution": "literal",
       "emit_function": "emitNoEnterpriseClickEvent",
       "file": "packages/code-du-travail-frontend/src/modules/enterprise/EnterpriseAgreementSearch/tracking.ts",
-      "line": 69,
+      "line": 71,
       "enum_refs": [
         "TrackingAgreementSearchAction.AGREEMENT_SEARCH",
         "TrackingAgreementSearchAction.CLICK_NO_COMPANY",
@@ -269,7 +269,7 @@
       "resolution": "literal",
       "emit_function": "emitNoEnterpriseSelectEvent",
       "file": "packages/code-du-travail-frontend/src/modules/enterprise/EnterpriseAgreementSearch/tracking.ts",
-      "line": 76,
+      "line": 78,
       "enum_refs": [
         "TrackingAgreementSearchAction.AGREEMENT_SEARCH",
         "TrackingAgreementSearchAction.SELECT_NO_COMPANY",
@@ -402,7 +402,7 @@
       "resolution": "dynamic",
       "emit_function": "emitSelectEnterpriseAgreementEvent",
       "file": "packages/code-du-travail-frontend/src/modules/enterprise/EnterpriseAgreementSearch/tracking.ts",
-      "line": 53,
+      "line": 55,
       "enum_refs": [
         "TrackingAgreementSearchCategory.CC_SELECT_P2"
       ],
@@ -493,7 +493,7 @@
       "resolution": "literal",
       "emit_function": "emitSelectEnterpriseAgreementEvent",
       "file": "packages/code-du-travail-frontend/src/modules/enterprise/EnterpriseAgreementSearch/tracking.ts",
-      "line": 53,
+      "line": 55,
       "enum_refs": [
         "TrackingAgreementSearchCategory.CC_SELECT_P2"
       ],
@@ -647,7 +647,7 @@
       "resolution": "dynamic",
       "emit_function": "emitEnterpriseAgreementSearchInputEvent",
       "file": "packages/code-du-travail-frontend/src/modules/enterprise/EnterpriseAgreementSearch/tracking.ts",
-      "line": 18,
+      "line": 19,
       "enum_refs": [
         "JSON.stringify",
         "TrackingAgreementSearchCategory.ENTERPRISE_SEARCH"
@@ -661,7 +661,7 @@
       "resolution": "dynamic",
       "emit_function": "emitSelectEnterpriseEvent",
       "file": "packages/code-du-travail-frontend/src/modules/enterprise/EnterpriseAgreementSearch/tracking.ts",
-      "line": 32,
+      "line": 33,
       "enum_refs": [
         "JSON.stringify",
         "TrackingAgreementSearchCategory.CC_ENTERPRISE_SELECT"
@@ -1493,7 +1493,7 @@
       "resolution": "literal",
       "emit_function": "emitPreviousEvent",
       "file": "packages/code-du-travail-frontend/src/modules/enterprise/EnterpriseAgreementSearch/tracking.ts",
-      "line": 61,
+      "line": 63,
       "enum_refs": [
         "TrackingAgreementSearchAction.AGREEMENT_SEARCH",
         "TrackingAgreementSearchAction.BACK_STEP_P2",

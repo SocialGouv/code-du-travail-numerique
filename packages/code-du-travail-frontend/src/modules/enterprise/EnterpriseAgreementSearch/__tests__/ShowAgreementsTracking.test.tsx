@@ -111,14 +111,14 @@ describe("Event show_agreements", () => {
       ]);
     });
 
-    it("émet 0 quand l'entreprise n'a déclaré aucune convention collective", async () => {
+    it('émet "aucun" — jamais "0", que Matomo jette — quand l\'entreprise n\'a déclaré aucune convention collective', async () => {
       await renderInput(enterpriseWithoutAgreement);
 
       expect(showAgreementsEvents()).toEqual([
         {
           category: TrackingAgreementSearchCategory.CC_ENTERPRISE_SEARCH,
           action: TrackingEnterpriseAgreementSearchAction.SHOW_AGREEMENTS,
-          name: "0",
+          name: "aucun",
         },
       ]);
     });
@@ -187,7 +187,7 @@ describe("Event show_agreements", () => {
 
       expect(showAgreementsEvents().map(({ name }) => name)).toEqual([
         "2",
-        "0",
+        "aucun",
       ]);
     });
   });
@@ -230,10 +230,10 @@ describe("Event show_agreements", () => {
       expect(showAgreementsEvents().map(({ name }) => name)).toEqual(["1"]);
     });
 
-    it("émet 0 quand l'entreprise n'a déclaré aucune convention collective", async () => {
+    it('émet "aucun" — jamais "0", que Matomo jette — quand l\'entreprise n\'a déclaré aucune convention collective', async () => {
       await renderInSimulator(enterpriseWithoutAgreement);
 
-      expect(showAgreementsEvents().map(({ name }) => name)).toEqual(["0"]);
+      expect(showAgreementsEvents().map(({ name }) => name)).toEqual(["aucun"]);
     });
   });
 
@@ -257,7 +257,7 @@ describe("Event show_agreements", () => {
       ]);
     });
 
-    it("émet 0 quand l'entreprise n'a déclaré aucune convention collective", async () => {
+    it('émet "aucun" — jamais "0", que Matomo jette — quand l\'entreprise n\'a déclaré aucune convention collective', async () => {
       await act(async () => {
         render(
           <EnterpriseAgreementSelectionLink
@@ -271,7 +271,7 @@ describe("Event show_agreements", () => {
         {
           category: TrackingAgreementSearchCategory.CC_ENTERPRISE_SEARCH,
           action: TrackingEnterpriseAgreementSearchAction.SHOW_AGREEMENTS,
-          name: "0",
+          name: "aucun",
         },
       ]);
     });
