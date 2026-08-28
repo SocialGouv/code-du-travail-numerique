@@ -6,13 +6,21 @@ export const CONTRIBUTION_INDEMNITE_RETRAITE =
   "/contribution/a-quelles-indemnites-peut-pretendre-un-salarie-qui-part-a-la-retraite";
 
 /**
- * TODO(#7131) — Ancres à compléter.
+ * TODO(#7131) — Ancres à compléter, en attente du contenu.
  *
- * Le métier demande que la mention fiscale renvoie vers l'onglet
- * « L'indemnité de [départ / mise] à la retraite est-elle soumise à cotisations
- * et imposable ? » de la contribution ci-dessus. Ces onglets n'y existent pas
- * encore : le lien pointe donc pour l'instant vers la page entière. Ajouter le
- * fragment correspondant à chaque origine dès que le contenu sera publié.
+ * Le métier demande que la mention fiscale renvoie directement vers l'onglet
+ * correspondant à l'origine du départ, dans la contribution ci-dessus :
+ *
+ * - mise à la retraite → « L'indemnité de mise à la retraite est-elle soumise
+ *   à cotisations et imposable ? »
+ * - départ volontaire → « L'indemnité de départ à la retraite est-elle soumise
+ *   à cotisations et imposable ? »
+ *
+ * Ces deux onglets n'existent pas encore dans la contribution : le lien pointe
+ * donc pour l'instant vers la page entière, quelle que soit l'origine. Dès que
+ * le contenu sera publié, il n'y aura qu'à renvoyer
+ * `${CONTRIBUTION_INDEMNITE_RETRAITE}#<ancre>` selon `isMiseRetraite` — le
+ * paramètre est déjà passé par les appelants pour cette raison.
  */
 export const getContributionFiscaleUrl = (_isMiseRetraite: boolean): string =>
   CONTRIBUTION_INDEMNITE_RETRAITE;

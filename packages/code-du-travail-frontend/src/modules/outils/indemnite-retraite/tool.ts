@@ -1,6 +1,7 @@
 import { ElasticTool } from "@socialgouv/cdtn-types";
 import { DocumentElasticResult } from "src/modules/documents";
 import { fetchTool } from "src/modules/outils";
+import type { ToolItem } from "../../../../app/outils/page";
 
 export const INDEMNITE_RETRAITE_SLUG = "indemnite-retraite";
 
@@ -16,15 +17,18 @@ export const INDEMNITE_RETRAITE_SLUG = "indemnite-retraite";
  * Dès que le document existera en base, supprimer ce fichier et rebrancher les
  * routes directement sur `fetchTool`, comme les autres simulateurs.
  */
+const TITRE = "Calculer l'indemnité de départ à la retraite";
+
+const DESCRIPTION =
+  "Vous souhaitez calculer le montant de l’indemnité de départ ou mise à la retraite ? Notre simulateur vous apporte une réponse personnalisée.";
+
 const FALLBACK_TOOL: DocumentElasticResult<ElasticTool> = {
   _id: "",
-  description:
-    "Vous souhaitez calculer le montant de l’indemnité de départ ou mise à la retraite ? Notre simulateur vous apporte une réponse personnalisée.",
-  displayTitle: "Calculer l'indemnité de départ à la retraite",
-  metaDescription:
-    "Vous souhaitez calculer le montant de l’indemnité de départ ou mise à la retraite ? Notre simulateur vous apporte une réponse personnalisée.",
-  metaTitle: "Calculer l'indemnité de départ à la retraite",
-  title: "Calculer l'indemnité de départ à la retraite",
+  description: DESCRIPTION,
+  displayTitle: TITRE,
+  metaDescription: DESCRIPTION,
+  metaTitle: TITRE,
+  title: TITRE,
 } as DocumentElasticResult<ElasticTool>;
 
 /**
@@ -43,3 +47,34 @@ export const getIndemniteRetraiteTool = async (): Promise<{
     return { isPublished: false, tool: FALLBACK_TOOL };
   }
 };
+
+const INDEMNITE_RETRAITE_URL = `/outils/${INDEMNITE_RETRAITE_SLUG}`;
+
+/**
+ * TODO(#7131) — Repli temporaire, à supprimer avec le reste du fichier.
+ *
+ * La liste `/outils` est construite uniquement à partir d'Elasticsearch
+ * (`fetchTools`) : tant que le document n'existe pas, la carte du simulateur
+ * manque et celui-ci n'est atteignable que par URL directe. On l'ajoute donc
+ * ici, en fin de liste, pour pouvoir dérouler le parcours depuis la liste des
+ * simulateurs. Le titre court est celui des tuiles voisines (« Indemnité de
+ * licenciement », « Préavis de démission »), et non le titre de page.
+ *
+ * `order`, `icon` et `action` définitifs seront ceux du document créé dans
+ * cdtn-admin ; dès qu'il existera, la liste contiendra déjà l'entrée et ce
+ * repli deviendra inerte avant sa suppression.
+ */
+export const withIndemniteRetraiteTile = (tools: ToolItem[]): ToolItem[] =>
+  tools.some(({ url }) => url === INDEMNITE_RETRAITE_URL)
+    ? tools
+    : [
+        ...tools,
+        {
+          id: INDEMNITE_RETRAITE_SLUG,
+          description: DESCRIPTION,
+          metaDescription: DESCRIPTION,
+          icon: "Indemnity",
+          title: "Indemnité de départ à la retraite",
+          url: INDEMNITE_RETRAITE_URL,
+        },
+      ];
