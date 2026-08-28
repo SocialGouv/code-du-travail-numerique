@@ -17,6 +17,7 @@ import { getIndemnitePrecariteIneligibilityReferences } from "@socialgouv/modele
 import { findContractOption } from "../../agreements";
 import { CONTRACT_FAMILY } from "../../types";
 import { mapToPublicodesSituationForEligibilityIndemnitePrecarite } from "../../../common/publicodes/indemnite-precarite";
+import { useResultTracking } from "../../events/useResultTracking";
 
 const ResultStepComponent = () => {
   const store = useContext(IndemnitePrecariteContext);
@@ -60,6 +61,12 @@ const ResultStepComponent = () => {
       calculateResult();
     }
   }, [calculateResult, hasNoIndemnity]);
+
+  // Déclaré après l'effet de calcul : l'issue lue est celle qui sera rendue.
+  useResultTracking(() => {
+    if (hasNoIndemnity) return "ineligible";
+    return store.getState().resultData.calculationError ? "error" : "eligible";
+  });
 
   if (hasNoIndemnity) {
     return (

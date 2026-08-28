@@ -16,7 +16,7 @@ import { AgreementRoute } from "src/modules/outils/indemnite-depart/types";
 import { ValidationResponse } from "src/modules/outils/common/components/SimulatorLayout/types";
 import { pushAgreementEvents } from "../../../../common/events/pushAgreementEvents";
 import { StoreSliceWrapperIndemnitePrecarite } from "../../store";
-import getSupportedCc from "src/modules/outils/common/utils/getSupportedCc";
+import isCcFullySupported from "src/modules/outils/common/utils/isCcFullySupported";
 
 const initialState: Omit<AgreementStoreData, "publicodes"> = {
   input: {
@@ -171,9 +171,15 @@ const createAgreementStore: StoreSliceWrapperIndemnitePrecarite<
       const { isValid, errorState } = validateStep(input);
       const { route, agreement, enterprise } = input;
       if (isValid && route) {
-        const isTreated = !!getSupportedCc(
-          PublicodesSimulator.INDEMNITE_PRECARITE
-        ).find(({ idcc }) => idcc === agreement?.num);
+        // « Traitée » = la convention dispose d'un modèle publicodes pour ce
+        // simulateur. Se contenter de sa présence dans `supportedCcn` ferait
+        // remonter comme traitées les conventions gérées par d'autres outils.
+        const isTreated =
+          !!agreement?.num &&
+          isCcFullySupported(
+            agreement.num,
+            PublicodesSimulator.INDEMNITE_PRECARITE
+          );
         pushAgreementEvents(
           PublicodesSimulator.INDEMNITE_PRECARITE,
           {
