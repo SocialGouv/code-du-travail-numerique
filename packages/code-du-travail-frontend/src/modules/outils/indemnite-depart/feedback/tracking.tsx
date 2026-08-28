@@ -52,21 +52,39 @@ export const useFeedbackEvents = () => {
     feedback: FEEDBACK_RESULT,
     simulator: SIMULATOR_FEEDBACK_CONTEXT
   ) => {
-    const payload = { simulator, answer: feedback };
     const value = numericAnswer(feedback);
 
+    // Payload écrit en toutes lettres à chaque branche plutôt que hissé dans une
+    // variable : l'extraction lit l'AST et ne verrait sinon qu'un `<payload>`
+    // opaque là où le plan de tracking a besoin des clés qui voyagent.
     switch (question) {
       case FEEDBACK_QUESTION.GLOBAL:
-        track("submit_simulator_feedback_global", payload, value);
+        track(
+          "submit_simulator_feedback_global",
+          { simulator, answer: feedback },
+          value
+        );
         break;
       case FEEDBACK_QUESTION.EASINESS:
-        track("submit_simulator_feedback_easiness", payload, value);
+        track(
+          "submit_simulator_feedback_easiness",
+          { simulator, answer: feedback },
+          value
+        );
         break;
       case FEEDBACK_QUESTION.QUESTION_CLARITY:
-        track("submit_simulator_feedback_question_clarity", payload, value);
+        track(
+          "submit_simulator_feedback_question_clarity",
+          { simulator, answer: feedback },
+          value
+        );
         break;
       case FEEDBACK_QUESTION.RESULT_CLARITY:
-        track("submit_simulator_feedback_result_clarity", payload, value);
+        track(
+          "submit_simulator_feedback_result_clarity",
+          { simulator, answer: feedback },
+          value
+        );
         break;
     }
   };

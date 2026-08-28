@@ -9,6 +9,7 @@ import { Node, SyntaxKind } from "ts-morph";
 import type { SourceFile } from "ts-morph";
 import * as path from "node:path";
 import type {
+  EventResolution,
   ExtractedEvent,
   MatomoConfigCall,
   Resolved,
@@ -95,7 +96,12 @@ export function scanSourceFiles(
     line: number,
     enumRefs: string[],
     trackingMethod: string,
-    hasValue = false
+    hasValue = false,
+    // Résolution imposée. Utile au socle normalisé : sa catégorie est TOUJOURS
+    // dérivée de la route, donc toujours "dynamic" ; la retenir écraserait
+    // l'information utile — l'action, elle, est littérale. Le repère 📌/🔀 du
+    // plan de tracking porte alors sur ce qui identifie l'event.
+    resolutionOverride?: EventResolution
   ): void {
     callsiteKeys.add(`${relFile}:${line}`);
     for (const cat of cats) {
@@ -104,7 +110,7 @@ export function scanSourceFiles(
           category: cat.value,
           action: act.value,
           name_pattern: namePattern,
-          resolution: worstKind([cat.kind, act.kind]),
+          resolution: resolutionOverride ?? worstKind([cat.kind, act.kind]),
           emit_function: emitFunction,
           file: relFile,
           line,
@@ -154,7 +160,11 @@ export function scanSourceFiles(
             ? getEnumRefs(args[1] as never)
             : [],
           exprText,
-          args.length > 2
+          args.length > 2,
+          // La catégorie est dérivée de la route par construction : c'est
+          // l'action qui identifie l'event, et c'est donc sa résolution qui
+          // compte.
+          worstKind(acts.map((a) => a.kind))
         );
         return;
       }

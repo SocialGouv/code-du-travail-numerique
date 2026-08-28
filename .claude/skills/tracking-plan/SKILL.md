@@ -32,17 +32,20 @@ Un algorithme ne peut produire ce document : il faut comprendre le domaine. C'es
   - Catalogue (entrée) : `packages/code-du-travail-stats/events/events.extracted.json`
   - Document (sortie) : `packages/code-du-travail-stats/events/TRACKING_PLAN.md`
 - **Frontend** : `packages/code-du-travail-frontend/src/modules`
-- **Fichiers d'ancrage à lire** (émetteurs et enums de référence) :
-  - `analytics/types.ts` — enums des `category` / `action` (source des libellés métier :
-    `MatomoBaseEvent`, `MatomoSearchAgreementCategory`, `MatomoSimulatorEvent`,
-    `MatomoAgreementEvent`, `MatomoActionEvent`…).
-  - `outils/common/components/SimulatorLayout/tracking.ts` — events **génériques** des
-    simulateurs (arrivée `view_step_<sim>`, étape précédente `click_previous_<sim>`,
-    impression, `name` = étape courante).
-  - `outils/common/events/pushAgreementEvents.ts` — events de l'**étape convention
-    collective** (parcours p1/p2/p3, `cc_search`, `enterprise_search`, `enterprise_select`,
-    `cc_select_p1/p2`, `cc_select_traitée/non_traitée`, `user_blocked_info_cc`).
-  - `convention-collective/tracking.ts`, `enterprise/EnterpriseAgreementSearch/tracking.ts`.
+- **Fichiers d'ancrage à lire** (le socle d'abord, puis les émetteurs) :
+  - `analytics/events/categories.ts` — `PageCategory` : la liste FERMÉE des types de page,
+    seules valeurs possibles de `category`.
+  - `analytics/events/actions.ts` — `EventAction` : la liste FERMÉE des actions. C'est la
+    table des matières du plan de tracking : toute action documentée en vient.
+  - `analytics/events/payload.ts` — pourquoi le `name` est toujours une enveloppe JSON.
+  - `outils/common/components/SimulatorLayout/tracking.ts` — events génériques des
+    simulateurs (`view_step`, `click_previous_step`, `print_result`).
+  - `outils/common/events/pushAgreementEvents.ts` + `convention-collective/tracking.ts` +
+    `enterprise/EnterpriseAgreementSearch/**` — parcours convention collective (p1/p2/p3).
+  - `api/modules/nps/service.ts` et `api/modules/contribution-rating/service.ts` — les deux
+    events relayés **côté serveur** : ils n'apparaissent pas (ou seulement sous forme
+    générique) dans le catalogue, qui ne voit que les appels client. À documenter depuis
+    ces fichiers.
   - Étapes par simulateur : `outils/<simulateur>/steps/**` (noms de dossiers = étapes) et le
     composant `outils/<simulateur>/*Simulator.tsx`.
 
@@ -65,12 +68,18 @@ autorité : **tout event mentionné dans le document doit exister dans ce catalo
 inventer une `category`/`action`/`name` absente du catalogue.
 
 Structure d'un event (cf. `events.schema.ts`) :
-- `category`, `action`, `name_pattern` (`null` ou placeholder `<…>` si calculé au runtime),
-- `resolution` : `"literal"` | `"enum-param"` (valeur fixe → 📌) | `"dynamic"` (valeur
-  variable → 🔀),
-- `file`, `line` (pour le lien source), `tracking_method` (`sendEvent` ou `push:<cmd>`).
+- `category` — vaut `<PageCategory>` pour tout event du socle normalisé : la catégorie est
+  déduite de la route au runtime, donc **non résoluble statiquement, par construction**. Les
+  valeurs réelles possibles sont l'enum `PageCategory`.
+- `action` — l'identité de l'event, littérale, tirée de l'union `EventAction`.
+- `name_pattern` — la **forme du payload** (`{path, simulator, step}`), pas ses valeurs.
+- `has_value` — l'event renseigne-t-il la `value` numérique Matomo.
+- `resolution` : `"literal"` (📌) | `"enum-param"` (📌) | `"dynamic"` (🔀). Pour le socle,
+  elle porte sur l'**action**, la catégorie étant dérivée par construction.
+- `file`, `line` (pour le lien source), `tracking_method` (`track`, `sendPageEvent`,
+  `sendEvent` ou `push:<cmd>`).
 - Racine : `total_events`, `unique_events`, `matomo_config_calls` (commandes de config, pas
-  des events → annexe), `unresolved` (à signaler si non vide).
+  des events → **ne pas documenter**), `unresolved` (à signaler si non vide).
 
 ### 2. Comprendre le domaine (lecture du frontend)
 
@@ -78,9 +87,9 @@ Lis les fichiers d'ancrage listés en Configuration pour reconstituer, **avec le
 valeurs du code** :
 
 - **La liste des simulateurs** et **leurs étapes** : pour chaque dossier `outils/<simulateur>`
-  qui a un `*Simulator.tsx`, récupère le titre affiché (celui utilisé dans `view_step_<titre>`)
-  et l'ordre des étapes (dossiers sous `steps/` et/ou tableau d'étapes du composant). Recoupe
-  avec les actions `view_step_*` du catalogue.
+  qui a un `*Simulator.tsx`, récupère le titre affiché (celui qui voyage dans la clé
+  `simulator` du payload) et l'ordre des étapes (dossiers sous `steps/` et/ou tableau
+  d'étapes du composant, valeurs de la clé `step`).
 - **Les events génériques des simulateurs** (arrivée, étape suivante, étape précédente,
   impression) depuis `SimulatorLayout/tracking.ts`.
 - **L'étape convention collective** (parcours p1/p2/p3 et sous-events) depuis
@@ -90,9 +99,9 @@ Lance ces lectures en parallèle avec des agents `Explore` si utile (performance
 
 ### 3. Rédiger `events/TRACKING_PLAN.md`
 
-Écris le fichier en suivant **exactement** la structure ci-dessous (« Sortie attendue »), en
-remplaçant les placeholders par les vraies données. Le ton est **métier**, en français,
-pédagogique. Le document doit être **explicatif** : pour **chaque** event, donne une explication
+Écris le fichier en suivant la structure décrite plus bas (« Sortie attendue »). Le ton est
+**métier**, en français, pédagogique.
+Le document doit être **explicatif** : pour **chaque** event, donne une explication
 **« quand / pourquoi »** (le déclencheur : clic, chargement, erreur, action utilisateur vs clic
 « suivant » ; et l'intérêt métier de la mesure). Dans les tableaux par feature, réserve une
 colonne **« Quand / pourquoi »**. Ne te contente jamais de lister l'event sans l'expliquer.
@@ -118,150 +127,38 @@ Contraintes de rendu (le fichier finit sur le wiki GitHub) :
 
 ## Sortie attendue (structure canonique)
 
-Reproduis fidèlement cette structure. Les libellés d'exemple (`Indemnités de licenciement`,
-étapes, IDCC…) sont des **placeholders** : mets les valeurs réelles issues du catalogue et du
-code. Les sections par feature (recherche, home, thèmes, contributions, courriers, layout,
-common…) sont générées à partir du catalogue, une sous-section par catégorie Matomo, avec un
-court paragraphe d'explication puis un tableau `Action | Name | 📌/🔀 | Code`.
+Le document déjà écrit dans `events/TRACKING_PLAN.md` **est** la structure de référence :
+relis-le avant de rédiger, et garde son plan. En résumé :
 
-~~~markdown
-<!-- Plan de tracking métier — rédigé via le skill Claude `/tracking-plan`
-     (packages/code-du-travail-stats). Ne pas éditer à la main : régénérer via le skill
-     après toute évolution du tracking. Source : events/events.extracted.json + code frontend. -->
+1. Un chapeau : nombre d'events uniques / totaux / points d'appel, tirés du catalogue.
+2. Une section **« Comment lire un event »** qui pose le contrat une fois pour toutes —
+   `category` = type de page, `action` = ce qu'a fait l'usager, `name` = contexte JSON,
+   `value` = métrique chiffrée — avec un exemple concret, ce que ça permet dans Matomo, et
+   les deux raisons pour lesquelles le contexte est en JSON (troncature à 500 lignes ;
+   valeurs « vides » ignorées, dont le texte `0`).
+3. Une section par domaine (Outils, Conventions collectives, Recherche, Fiches pratiques,
+   NPS, Accueil, Modèles de courriers, Avis & contact, Partage & contenus liés), chacune
+   avec un paragraphe de contexte puis un tableau
+   `Action | Contexte (📌/🔀) | Quand / pourquoi | Code`.
+4. Une annexe listant les valeurs possibles de `PageCategory`.
 
-## Liste des events de tracking:
+Règles de rédaction :
 
-#### tracking générique (automatique sur chaque page)
-
-Lors d'une visite sur une page du site, par défaut Matomo envoie un évènement de visite, qui
-contient des informations (le nom de la page et son url).
-
-Exemple d'information envoyé suite à une visite sur la page des thèmes :
-
-| Type        | Donnée                             | Info                                     |
-| ----------- | ---------------------------------- | ---------------------------------------- |
-| action_name | Thèmes - Code du travail numérique | Titre de la page                         |
-| url         | https://code.travail.gouv.fr/themes | Lien vers la page                       |
-| urlref      | /                                  | Origine de l'utilisateur (ici l'accueil) |
-
-### Outils
-
-#### Simulateurs
-
-Voici la liste des simulateurs disponibles (avec leurs étapes) :
-
-| Titre                       | Étapes                                                            |
-| --------------------------- | ---------------------------------------------------------------- |
-| <Nom du simulateur>         | <étape_1>, <étape_2>, …                                          |
-
-##### Évènements génériques sur les simulateurs
-
-Pour chaque simulateur, on envoie des évènements génériques.
-
-###### Arrivée sur l'outil
-
-| Type     | Contenu                     | Détail                                                    |
-| -------- | --------------------------- | --------------------------------------------------------- |
-| category | outil                       |                                                           |
-| action   | view_step_`Nom du simulateur` | `Nom du simulateur` = titre du simulateur               |
-| name     | start                       |                                                           |
-
-###### Étape suivante
-
-| Type     | Contenu                     | Détail                                             |
-| -------- | --------------------------- | -------------------------------------------------- |
-| category | outil                       |                                                    |
-| action   | view_step_`Nom du simulateur` | `Nom du simulateur` = titre du simulateur        |
-| name     | Nom de l'étape              | L'étape sur laquelle l'utilisateur est arrivé      |
-
-###### Étape précédente
-
-| Type     | Contenu                         | Détail                                          |
-| -------- | ------------------------------- | ----------------------------------------------- |
-| category | outil                           |                                                 |
-| action   | click_previous_`Nom du simulateur` | `Nom du simulateur` = titre du simulateur    |
-| name     | Nom de l'étape                  | L'étape sur laquelle l'utilisateur est revenu   |
-
-###### Étape pour renseigner sa convention collective
-
-Cette étape n'est pas présente sur tous les simulateurs. Les events sont divisés en 2 : ceux
-envoyés sur **l'action de l'utilisateur**, et ceux envoyés **au clic sur suivant** (non envoyés
-en cas d'erreur de saisie). Trois parcours :
-
- * **p1** : je connais ma convention collective (je la saisis)
- * **p2** : je ne la connais pas (je recherche mon entreprise)
- * **p3** : je ne souhaite pas la renseigner (je passe l'étape)
-
-1. Choix du parcours (**envoyé au clic sur suivant**)
-
-| Type     | Contenu                              | Détail                              |
-| -------- | ------------------------------------ | ----------------------------------- |
-| category | cc_search_type_of_users              |                                     |
-| action   | click_p1 ou click_p2 ou click_p3     | Selon le parcours (p1, p2, p3)      |
-| name     | `Nom du simulateur`                  | Titre du simulateur                 |
-
-2. Recherche (**envoyé sur action de l'utilisateur**, debounce 300 ms)
-
-| Type     | Contenu               | Détail                                               |
-| -------- | --------------------- | ---------------------------------------------------- |
-| category | cc_search             | Recherche d'une convention collective (parcours p1)  |
-| action   | `Nom du simulateur`   | Titre du simulateur                                  |
-| name     | {"query":"boulan"}    | JSON du contenu de la requête utilisateur            |
-
-| Type     | Contenu                          | Détail                                    |
-| -------- | -------------------------------- | ----------------------------------------- |
-| category | enterprise_search                | Recherche d'une entreprise (parcours p2)  |
-| action   | `Nom du simulateur`              | Titre du simulateur                       |
-| name     | {"address":"69007","query":"odon"} | JSON du contenu de la requête           |
-
-3. Choix de l'entreprise, parcours p2 (**envoyé au clic sur suivant**)
-
-| Type     | Contenu             | Détail                                    |
-| -------- | ------------------- | ----------------------------------------- |
-| category | enterprise_select   |                                           |
-| action   | `Nom du simulateur` | Titre du simulateur                       |
-| name     | {"label":"…","siren":"…"} | Entreprise sélectionnée             |
-
-4. Choix de la convention collective (**envoyé au clic sur suivant**)
-
-| Type     | Contenu                        | Détail                                    |
-| -------- | ------------------------------ | ----------------------------------------- |
-| category | cc_select_p1 ou cc_select_p2   | Selon le parcours choisi                  |
-| action   | `Nom du simulateur`            | Titre du simulateur                       |
-| name     | idcc1234                       | IDCC choisi, préfixé `idcc`               |
-
-5. Support de la convention collective (**envoyé au clic sur suivant**)
-
-| Type     | Contenu                                     | Détail                                       |
-| -------- | ------------------------------------------- | -------------------------------------------- |
-| category | outil                                       |                                              |
-| action   | cc_select_traitée ou cc_select_non_traitée  | La CC est traitée par nos services ou non    |
-| name     | 1234                                        | IDCC de la convention collective             |
-
-6. CC bloquantes (simulateurs où la CC est obligatoire)
-
-| Type     | Contenu                                      | Détail                             |
-| -------- | -------------------------------------------- | ---------------------------------- |
-| category | outil                                        |                                    |
-| action   | view_step_`Nom du simulateur`                | Simulateur concerné                |
-| name     | user_blocked_info_cc                         |                                    |
-
-### <Autre feature (ex: Recherche, Accueil, Thèmes, Contributions, Modèles de courriers…)>
-
-<Un paragraphe expliquant le contexte de ces events.>
-
-| Catégorie | Action | Name (📌/🔀) | Quand / pourquoi | Code |
-| --------- | ------ | ------------ | ---------------- | ---- |
-| <category> | `<action>` | 📌 `<name ou —>` | <déclencheur + intérêt métier, 1 phrase> | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/<file>#L<line>) |
-
-> Signale à part, en note, les events **définis dans le code mais non branchés** en production
-> (fonction jamais appelée par un composant) : ils sont dans le catalogue mais n'ont pas de
-> déclencheur utilisateur réel aujourd'hui.
-~~~
+- **Pas de titre H1** en tête (la page wiki fournit le titre). Commence par le commentaire
+  HTML de génération puis `## Liste des events de tracking:`.
+- Le ton est **métier**, en français, pédagogique. Pour **chaque** event : quand il part, et
+  pourquoi on le mesure. Jamais un event listé sans explication.
+- Les valeurs contenant `<…>` **doivent** être en code-span (`` `<url>` ``), sinon GitHub les
+  masque comme des balises HTML. Échappe les `|` dans les cellules (`\|`).
+- Regroupe les familles : `rate_content_1..5` et `submit_nps_0..10` tiennent chacune sur
+  **une** ligne, pas cinq ou onze.
+- Signale à part, en note, les events **définis mais non branchés** en production (aucun
+  composant ne les appelle), et les events **relayés côté serveur** (notation, NPS) qui
+  n'apparaissent pas tels quels dans le catalogue.
 
 > Ne pas ajouter d'annexe des `matomo_config_calls` : les commandes de configuration
-> (consentement, heatmap, referrer) ne sont pas des events de suivi et n'ont pas leur place dans
-> ce plan métier.
+> (consentement, heatmap, referrer) ne sont pas des events de suivi et n'ont pas leur place
+> dans ce plan métier.
 
 ## Règles de mapping (catalogue → tableaux)
 
@@ -270,10 +167,15 @@ en cas d'erreur de saisie). Trois parcours :
 - **`name_pattern` = `null`** → afficher `—`. Les `<…>` → toujours en code-span.
 - **Liens `Code`** : `https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/<file>#L<line>`
   (branche fixe `dev`, URL absolue → valide dans le repo ET le wiki).
-- **Enums d'`action`/`category`** : utilise `analytics/types.ts` pour donner le **libellé
-  métier** (ex. `cc_select_traitée` = « CC traitée par nos services »).
-- **`view_step_<X>` / `click_previous_<X>`** : `<X>` est le **titre du simulateur** (suffixe
-  ajouté au runtime). Les regrouper dans la partie « Simulateurs », pas en doublon par feature.
+- **`category` = `<PageCategory>`** → ne l'affiche PAS event par event : c'est le type de la
+  page, identique pour tous. Explique-la une fois dans « Comment lire un event » et liste ses
+  valeurs en annexe. Ne mentionne la catégorie dans une section que lorsqu'elle est
+  invariante et informative (ex. « les simulateurs sont toujours en `outil` »).
+- **Clés de payload** : donne leur SENS métier, pas seulement leur nom. `simulator` = titre du
+  simulateur, `step` = étape du tunnel, `context` = d'où part le parcours convention,
+  `target` = la page atteinte, `idcc` = numéro de convention, `count` = nombre trouvé.
+- **`has_value: true`** → note « + `value` » dans la colonne contexte, et rappelle que la
+  donnée est **aussi** dans le payload (Matomo n'enregistre pas une `value` de 0).
 - **`matomo_config_calls`** → **ne pas documenter** (ce ne sont pas des events de suivi).
 
 ## Bonnes pratiques
@@ -283,13 +185,17 @@ en cas d'erreur de saisie). Trois parcours :
   Product Owner, assure-toi qu'aucun event n'est oublié.
 - **Une explication par event** : « quand / pourquoi ». Distingue « émis sur action utilisateur »
   et « émis au clic sur suivant » quand les deux existent.
-- **Collapse des expansions enum-param** : quand un même motif est décliné par simulateur (ex.
-  `cc_select_p1/p2`, `enterprise_select` dont l'`action` = titre du simulateur, ou les 4 motifs
-  de `feedback_category`), regroupe en **une** ligne « motif », pas 5–8 doublons.
-- **Zéro invention** : chaque event du document existe dans `events.extracted.json`. En cas de
-  doute, relis le catalogue, ne devine pas.
+- **Collapse des familles** : `rate_content_1..5`, `submit_nps_0..10`, les motifs d'avis →
+  **une** ligne chacun, pas cinq ou onze doublons.
+- **Zéro invention** : chaque event du document existe dans `events.extracted.json`, à la
+  seule exception des deux events relayés côté serveur (notation, NPS), qui viennent de
+  `api/modules/**/service.ts` et doivent être signalés comme tels. En cas de doute, relis le
+  catalogue, ne devine pas.
 - **Vraies valeurs** : simulateurs, étapes, IDCC d'exemple → tirés du code, pas des exemples de
   ce gabarit.
+- **Vérification d'exhaustivité mécanique** : après rédaction, contrôle que chaque action
+  littérale du catalogue apparaît bien dans le document (une simple recherche de chaîne
+  suffit) plutôt que de s'en remettre à la relecture.
 - **Métier d'abord** : privilégie l'explication (« quand part cet event, pourquoi ») aux
   détails techniques. Les tableaux portent les valeurs exactes.
 - **Déterminisme des liens** : toujours pointer sur `dev` (jamais un SHA).

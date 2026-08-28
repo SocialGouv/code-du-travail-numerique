@@ -117,7 +117,10 @@ describe("scanSourceFiles — socle normalisé (track / sendPageEvent)", () => {
       category: "<PageCategory>",
       action: "click_share",
       name_pattern: "{path, network}",
-      resolution: "dynamic",
+      // La catégorie est dérivée de la route par construction : on ne laisse pas
+      // ce "dynamic" structurel écraser la résolution de l'action, qui est la
+      // seule information utile au repère 📌/🔀 du plan de tracking.
+      resolution: "literal",
       emit_function: "emit",
       tracking_method: "track",
       has_value: false,
