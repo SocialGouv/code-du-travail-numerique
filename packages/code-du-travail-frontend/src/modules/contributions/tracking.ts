@@ -1,6 +1,6 @@
 import { sendEvent } from "@socialgouv/matomo-next";
 import { MatomoAgreementEvent } from "../analytics";
-import { toEventName } from "../analytics/eventName";
+import { toPageEventName } from "../analytics/eventName";
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
 
 export enum TrackingContributionCategory {
@@ -117,7 +117,7 @@ export const useContributionTracking = () => {
     sendEvent({
       category: TrackingContributionCategory.CONTRIBUTION,
       action: TrackingContributionAction.CLICK_AGREEMENT_DECLINATION,
-      name: toEventName(href),
+      name: toPageEventName(href),
     });
   };
 

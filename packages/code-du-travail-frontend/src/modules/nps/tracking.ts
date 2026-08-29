@@ -7,14 +7,14 @@
 
 import { sendEvent } from "@socialgouv/matomo-next";
 import { NPS_CATEGORY, NpsTrigger } from "./constants";
-import { toEventName } from "../analytics/eventName";
+import { toPageEventName } from "../analytics/eventName";
 
 export const useNpsEvents = () => {
   const trackDisplayed = (trigger: NpsTrigger, pagePath: string) => {
     sendEvent({
       category: NPS_CATEGORY,
       action: `display_${trigger}`,
-      name: toEventName(pagePath),
+      name: toPageEventName(pagePath),
     });
   };
 
@@ -22,7 +22,7 @@ export const useNpsEvents = () => {
     sendEvent({
       category: NPS_CATEGORY,
       action: `refusal_${trigger}`,
-      name: toEventName(pagePath),
+      name: toPageEventName(pagePath),
     });
   };
 
@@ -32,7 +32,7 @@ export const useNpsEvents = () => {
     sendEvent({
       category: NPS_CATEGORY,
       action: `optout_${trigger}`,
-      name: toEventName(pagePath),
+      name: toPageEventName(pagePath),
     });
   };
 

@@ -1,4 +1,4 @@
-import { toCountEventName, toEventName } from "../eventName";
+import { toCountEventName, toEventName, toPageEventName } from "../eventName";
 
 describe("toEventName", () => {
   it("retire le slash initial d'un chemin", () => {
@@ -40,5 +40,21 @@ describe("toCountEventName", () => {
     expect(toCountEventName(1)).toEqual("1");
     expect(toCountEventName(19)).toEqual("19");
     expect(toCountEventName(164)).toEqual("164");
+  });
+});
+
+describe("toPageEventName", () => {
+  // La racine est le seul chemin dont `toEventName` fait une chaîne vide, que
+  // Matomo jette au même titre que "0".
+  it("étiquette la page d'accueil au lieu d'envoyer une chaîne vide", () => {
+    expect(toPageEventName("/")).toEqual("accueil");
+    expect(toPageEventName("")).toEqual("accueil");
+  });
+
+  it("laisse les autres chemins inchangés", () => {
+    expect(toPageEventName("/contribution/mon-slug")).toEqual(
+      "contribution/mon-slug"
+    );
+    expect(toPageEventName("themes/mon-slug")).toEqual("themes/mon-slug");
   });
 });

@@ -12,14 +12,14 @@
       "resolution": "dynamic",
       "emit_function": "useSearchTracking",
       "file": "packages/code-du-travail-frontend/src/modules/recherche/tracking.ts",
-      "line": 193,
+      "line": 201,
       "enum_refs": [],
       "tracking_method": "push:trackSiteSearch"
     },
     {
       "category": "<NPS_CATEGORY>",
       "action": "display_<trigger>",
-      "name_pattern": "<toEventName(pagePath)>",
+      "name_pattern": "<toPageEventName(pagePath)>",
       "resolution": "dynamic",
       "emit_function": "trackDisplayed",
       "file": "packages/code-du-travail-frontend/src/modules/nps/tracking.ts",
@@ -30,7 +30,7 @@
     {
       "category": "<NPS_CATEGORY>",
       "action": "optout_<trigger>",
-      "name_pattern": "<toEventName(pagePath)>",
+      "name_pattern": "<toPageEventName(pagePath)>",
       "resolution": "dynamic",
       "emit_function": "trackOptOut",
       "file": "packages/code-du-travail-frontend/src/modules/nps/tracking.ts",
@@ -41,7 +41,7 @@
     {
       "category": "<NPS_CATEGORY>",
       "action": "refusal_<trigger>",
-      "name_pattern": "<toEventName(pagePath)>",
+      "name_pattern": "<toPageEventName(pagePath)>",
       "resolution": "dynamic",
       "emit_function": "trackRefusal",
       "file": "packages/code-du-travail-frontend/src/modules/nps/tracking.ts",
@@ -572,7 +572,7 @@
     {
       "category": "contribution",
       "action": "clic_declinaison_cc",
-      "name_pattern": "<toEventName(href)>",
+      "name_pattern": "<toPageEventName(href)>",
       "resolution": "literal",
       "emit_function": "emitClickAgreementDeclination",
       "file": "packages/code-du-travail-frontend/src/modules/contributions/tracking.ts",
@@ -962,7 +962,7 @@
       "resolution": "dynamic",
       "emit_function": "useSearchTracking",
       "file": "packages/code-du-travail-frontend/src/modules/recherche/tracking.ts",
-      "line": 104,
+      "line": 108,
       "enum_refs": [
         "MatomoSearchCategory.NEXT_RESULT_PAGE"
       ],
@@ -1353,7 +1353,7 @@
       "resolution": "literal",
       "emit_function": "useSearchTracking",
       "file": "packages/code-du-travail-frontend/src/modules/recherche/tracking.ts",
-      "line": 158,
+      "line": 166,
       "enum_refs": [
         "MatomoSearchAction.CLICK_SEE_ALL_RESULTS",
         "MatomoSearchCategory.SEARCH"
@@ -1367,7 +1367,7 @@
       "resolution": "literal",
       "emit_function": "useSearchTracking",
       "file": "packages/code-du-travail-frontend/src/modules/recherche/tracking.ts",
-      "line": 64,
+      "line": 68,
       "enum_refs": [
         "MatomoSearchAction.FULL_SEARCH",
         "MatomoSearchCategory.SEARCH"
@@ -1381,7 +1381,7 @@
       "resolution": "literal",
       "emit_function": "useSearchTracking",
       "file": "packages/code-du-travail-frontend/src/modules/recherche/tracking.ts",
-      "line": 94,
+      "line": 98,
       "enum_refs": [
         "MatomoSearchAction.FULL_SEARCH",
         "MatomoSearchCategory.SEARCH"
@@ -1395,7 +1395,7 @@
       "resolution": "literal",
       "emit_function": "useSearchTracking",
       "file": "packages/code-du-travail-frontend/src/modules/recherche/tracking.ts",
-      "line": 143,
+      "line": 151,
       "enum_refs": [
         "MatomoSearchAction.PRESEARCH",
         "MatomoSearchCategory.SEARCH"
@@ -1409,7 +1409,7 @@
       "resolution": "literal",
       "emit_function": "useSearchTracking",
       "file": "packages/code-du-travail-frontend/src/modules/recherche/tracking.ts",
-      "line": 181,
+      "line": 189,
       "enum_refs": [
         "MatomoSearchAction.SELECT_PRESEARCH_RESULT",
         "MatomoSearchCategory.SEARCH"
@@ -1423,7 +1423,7 @@
       "resolution": "dynamic",
       "emit_function": "useSearchTracking",
       "file": "packages/code-du-travail-frontend/src/modules/recherche/tracking.ts",
-      "line": 112,
+      "line": 116,
       "enum_refs": [
         "MatomoSearchCategory.SELECTED_SUGGESTION"
       ],
@@ -1450,7 +1450,7 @@
       "resolution": "dynamic",
       "emit_function": "useSearchTracking",
       "file": "packages/code-du-travail-frontend/src/modules/recherche/tracking.ts",
-      "line": 45,
+      "line": 49,
       "enum_refs": [
         "JSON.stringify",
         "MatomoSearchCategory.SELECT_RESULT"
@@ -1508,7 +1508,7 @@
       "resolution": "literal",
       "emit_function": "useSearchTracking",
       "file": "packages/code-du-travail-frontend/src/modules/recherche/tracking.ts",
-      "line": 122,
+      "line": 126,
       "enum_refs": [
         "MatomoBaseEvent.WIDGET_SEARCH",
         "MatomoWidgetEvent.CLICK_LOGO"
@@ -1518,11 +1518,11 @@
     {
       "category": "widget_search",
       "action": "submit_search",
-      "name_pattern": "<query>",
+      "name_pattern": "<query || EMPTY_QUERY_EVENT_NAME>",
       "resolution": "literal",
       "emit_function": "useSearchTracking",
       "file": "packages/code-du-travail-frontend/src/modules/recherche/tracking.ts",
-      "line": 129,
+      "line": 137,
       "enum_refs": [
         "MatomoBaseEvent.WIDGET_SEARCH",
         "MatomoWidgetEvent.SUBMIT_SEARCH"

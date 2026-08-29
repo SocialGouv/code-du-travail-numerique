@@ -14,6 +14,41 @@ Ce document décrit les évènements Matomo **écrits explicitement dans le code
 **103** events uniques · **112** au total · **32** catégories Matomo. Couverture vérifiée
 exhaustivement face au catalogue extrait du code.
 
+#### Règle transverse : un nom d'event n'est jamais « falsy »
+
+Matomo **jette** le nom d'un event quand celui-ci est une chaîne falsy — la chaîne vide,
+mais aussi `"0"` (`empty("0")` vaut `true` en PHP). L'event reste compté dans le total de
+son action, mais il atterrit **sans nom** : la ligne correspondante n'existe simplement pas
+dans le rapport « Noms d'événements ». Silencieux, et invisible tant qu'on ne compare pas le
+total d'une action à la somme de ses lignes nommées.
+
+Constaté en production avant correction (site 4, 15-28 août 2026) :
+
+| Action                | Events reçus | Avec un nom | **Perdus** |
+| --------------------- | -----------: | ----------: | ---------: |
+| `show_accords`        |       13 091 |       3 078 | **10 013** |
+| `show_agreements`     |       15 841 |      13 415 |  **2 426** |
+| `display_exit_intent` |       78 171 |      76 805 |  **1 366** |
+| `refusal_exit_intent` |       40 636 |      39 809 |    **827** |
+| `submit_search`       |          407 |         110 |    **297** |
+
+Sur les 500 noms d'events distincts du site, `"1"`, `"2"`, `"16"`, `"3248"` existaient —
+`"0"` pas une seule fois.
+
+Deux helpers (`src/modules/analytics/eventName.ts`) garantissent désormais un nom non vide,
+en n'altérant **que** le cas falsy pour ne pas rompre la continuité des rapports :
+
+- `toCountEventName(count)` — un comptage nul devient `aucun`, le reste reste un chiffre ;
+- `toPageEventName(path)` — la page d'accueil (`/`, réduite à `""`) devient `accueil`.
+
+S'y ajoutent deux cas nommés sur place : la requête de recherche vide du widget devient
+`(vide)`, et le relais serveur du score NPS étiquette l'accueil en `e_n` **sans** toucher au
+slug qui construit l'URL canonique (celle de l'accueil reste `${SITE_URL}/`).
+
+**Conséquence pour la lecture** : les lignes sans nom antérieures au correctif sont les
+zéros et les accueils historiques ; les lignes `aucun`, `accueil` et `(vide)` prennent le
+relais ensuite.
+
 #### tracking générique (automatique sur chaque page)
 
 Lors d'une visite sur une page du site, Matomo envoie par défaut un évènement de visite qui
@@ -395,32 +430,15 @@ entreprise/accords.
 | ----------------------- | ------------------------------- | --------------------------------- | ---------------- |
 | enterprise_search       | `Nom du contexte`               | 🔀 `{"query":…,"apiGeoResult":…}` | Soumission du formulaire de recherche d'entreprise. |
 | enterprise_select       | `Nom du contexte`               | 🔀 `{"label":…,"siren":…}`        | Sélection d'une entreprise (ou auto-sélection si convention unique). |
-| cc_enterprise_search    | show_agreements                 | 📌 `<count>`                      | Affichage des conventions collectives d'une entreprise ; `name` = nombre trouvé, ou **`aucun`** quand l'entreprise n'en déclare aucune (cf. « Le cas du zéro » ci-dessous). Émis une seule fois par entreprise, sur tous les parcours (simulateurs, contributions, page dédiée, widget). Mesure la distribution 0 / 1 / N CC par entreprise et le taux d'échec de la recherche par SIRET, que les events au clic ci-dessus ne captent pas (ils ignorent les abandons). |
+| cc_enterprise_search    | show_agreements                 | 📌 `<count>`                      | Affichage des conventions collectives d'une entreprise ; `name` = nombre trouvé, ou **`aucun`** quand l'entreprise n'en déclare aucune (cf. « Règle transverse : un nom d'event n'est jamais falsy » en tête de document). Émis une seule fois par entreprise, sur tous les parcours (simulateurs, contributions, page dédiée, widget). Mesure la distribution 0 / 1 / N CC par entreprise et le taux d'échec de la recherche par SIRET, que les events au clic ci-dessus ne captent pas (ils ignorent les abandons). |
 | cc_select_p2            | `Nom du contexte`               | 🔀 `idcc<num>`                    | Validation de la CC rattachée à l'entreprise. |
 | view_step_cc_search_p2  | back_step_cc_search_p2          | 📌 Trouver sa convention collective | Clic « Précédent » à l'étape recherche par entreprise. |
 | cc_search_type_of_users | click_je_n_ai_pas_d_entreprise  | 📌 Trouver sa convention collective | Carte « assistants maternels / particuliers employeurs » en mode lien → fiche CC 3239 (clic sortant). |
 | cc_search_type_of_users | select_je_n_ai_pas_d_entreprise | 📌 Trouver sa convention collective | Même option en mode simulateur (sélection intégrée au parcours). |
 | accord_enterprise_search | click_accord                   | 📌 `<url>`                        | Clic sur une carte d'accord d'entreprise (Légifrance). |
 | accord_enterprise_search | click_all_accords              | 📌 `<siret>`                      | « Voir tous les accords sur Légifrance ». |
-| accord_enterprise_search | show_accords                   | 📌 `<count>`                      | Chargement réussi des accords ; `name` = nombre trouvé, ou **`aucun`** quand il n'y en a pas (cf. « Le cas du zéro » ci-dessous). Le nombre est le **total** renvoyé par l'API pour le SIRET, pas le nombre de cartes affichées (plafonné à 5). |
+| accord_enterprise_search | show_accords                   | 📌 `<count>`                      | Chargement réussi des accords ; `name` = nombre trouvé, ou **`aucun`** quand il n'y en a pas (cf. « Règle transverse : un nom d'event n'est jamais falsy » en tête de document). Le nombre est le **total** renvoyé par l'API pour le SIRET, pas le nombre de cartes affichées (plafonné à 5). |
 | accord_enterprise_search | load_accords_failed            | 📌 `<siret>`                      | Échec de l'appel API des accords (incident). |
-
-**Le cas du zéro**
-
-Ces deux events transportent un comptage dans le `name`. Ils n'envoient jamais la
-chaîne `"0"` nue : Matomo la traite comme vide (`empty("0")` vaut `true` en PHP) et
-**jette le nom de l'event**. L'event est bien compté dans le total de l'action, mais
-il atterrit sans nom — et le seau « aucun résultat » devient invisible.
-
-Constaté en production avant correction (site 4, 15-28 août 2026) : sur 13 091
-`show_accords` reçus, 3 078 seulement portaient un nom ; idem pour 13 415 des 15 841
-`show_agreements`. Sur les 500 noms d'events distincts du site, `"1"`, `"2"`, `"16"`,
-`"3248"` existaient — `"0"` pas une seule fois.
-
-Le zéro est donc étiqueté `aucun` (cf. `toCountEventName`, `src/modules/analytics/eventName.ts`).
-Les valeurs non nulles restent des chiffres, pour ne pas rompre la continuité des
-rapports existants. **Conséquence pour la lecture** : les lignes sans nom antérieures
-au correctif sont les zéros historiques, et la ligne `aucun` prend le relais ensuite.
 
 **Recherche Légifrance sur une page de CC**
 [↗ source](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/convention-collective/LegiFranceSearch.tsx#L24 "convention-collective/LegiFranceSearch.tsx")
