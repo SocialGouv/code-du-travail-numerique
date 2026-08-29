@@ -22,32 +22,9 @@ son action, mais il atterrit **sans nom** : la ligne correspondante n'existe sim
 dans le rapport « Noms d'événements ». Silencieux, et invisible tant qu'on ne compare pas le
 total d'une action à la somme de ses lignes nommées.
 
-Constaté en production avant correction (site 4, 15-28 août 2026) :
-
-| Action                | Events reçus | Avec un nom | **Perdus** |
-| --------------------- | -----------: | ----------: | ---------: |
-| `show_accords`        |       13 091 |       3 078 | **10 013** |
-| `show_agreements`     |       15 841 |      13 415 |  **2 426** |
-| `display_exit_intent` |       78 171 |      76 805 |  **1 366** |
-| `refusal_exit_intent` |       40 636 |      39 809 |    **827** |
-| `submit_search`       |          407 |         110 |    **297** |
-
-Sur les 500 noms d'events distincts du site, `"1"`, `"2"`, `"16"`, `"3248"` existaient —
-`"0"` pas une seule fois.
-
-Deux helpers (`src/modules/analytics/eventName.ts`) garantissent désormais un nom non vide,
-en n'altérant **que** le cas falsy pour ne pas rompre la continuité des rapports :
-
-- `toCountEventName(count)` — un comptage nul devient `aucun`, le reste reste un chiffre ;
-- `toPageEventName(path)` — la page d'accueil (`/`, réduite à `""`) devient `accueil`.
-
-S'y ajoutent deux cas nommés sur place : la requête de recherche vide du widget devient
-`(vide)`, et le relais serveur du score NPS étiquette l'accueil en `e_n` **sans** toucher au
-slug qui construit l'URL canonique (celle de l'accueil reste `${SITE_URL}/`).
-
-**Conséquence pour la lecture** : les lignes sans nom antérieures au correctif sont les
-zéros et les accueils historiques ; les lignes `aucun`, `accueil` et `(vide)` prennent le
-relais ensuite.
+Les events concernés étiquettent donc leur cas falsy : un comptage nul devient `aucun`, la
+page d'accueil `accueil`, une requête de recherche vide `(vide)`. Les autres valeurs restent
+inchangées.
 
 #### tracking générique (automatique sur chaque page)
 
