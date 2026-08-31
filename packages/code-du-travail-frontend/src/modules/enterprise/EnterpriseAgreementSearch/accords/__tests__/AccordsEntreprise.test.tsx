@@ -154,6 +154,76 @@ describe("AccordsEntreprise", () => {
       (sendEvent as jest.Mock).mockClear();
     });
 
+    // `sendEvent` porte aussi click_accord et click_all_accords : on isole le
+    // seul event de comptage pour pouvoir compter les envois.
+    const showAccordsEvents = () =>
+      (sendEvent as jest.Mock).mock.calls
+        .map(([event]) => event)
+        .filter(
+          (event) =>
+            event.action === TrackingAccordEntrepriseSearchAction.SHOW_ACCORDS
+        );
+
+    // Cas réel signalé : la fiche Carrefour affiche « 19 accords d'entreprise
+    // trouvés » alors que l'API n'en renvoie que 5 (ACCORDS_MAX_RESULTS). Le
+    // compteur suivi doit être `total`, la même valeur que celle affichée par le
+    // parent — jamais la longueur de la liste.
+    it("émet le total renvoyé par l'API, pas le nombre d'accords affichés", async () => {
+      mockFetch({ total: 19, accords: accordsData.accords });
+      const onLoaded = jest.fn();
+      await act(async () => {
+        render(
+          <AccordsEntreprise siret="45132133500023" onLoaded={onLoaded} />
+        );
+      });
+      expect(onLoaded).toHaveBeenCalledWith(19);
+      expect(showAccordsEvents()).toEqual([
+        {
+          category: TrackingAgreementSearchCategory.ACCORD_ENTERPRISE_SEARCH,
+          action: TrackingAccordEntrepriseSearchAction.SHOW_ACCORDS,
+          name: "19",
+        },
+      ]);
+    });
+
+    // Sans cette garde, un compteur gonflé par des envois multiples ferait
+    // douter des chiffres remontés dans Matomo.
+    it("n'émet qu'un seul event quand le composant se re-rend avec le même siret", async () => {
+      mockFetch(accordsData);
+      let rerender: (ui: React.ReactElement) => void;
+      await act(async () => {
+        ({ rerender } = render(
+          <AccordsEntreprise siret="12345678901234" onLoaded={() => {}} />
+        ));
+      });
+      await act(async () => {
+        rerender(
+          <AccordsEntreprise siret="12345678901234" onLoaded={() => {}} />
+        );
+      });
+      expect(showAccordsEvents()).toHaveLength(1);
+    });
+
+    it("émet un nouvel event, avec le nouveau total, quand le siret change", async () => {
+      mockFetch(accordsData);
+      let rerender: (ui: React.ReactElement) => void;
+      await act(async () => {
+        ({ rerender } = render(
+          <AccordsEntreprise siret="12345678901234" onLoaded={() => {}} />
+        ));
+      });
+      mockFetch({ total: 0, accords: [] });
+      await act(async () => {
+        rerender(
+          <AccordsEntreprise siret="98765432101234" onLoaded={() => {}} />
+        );
+      });
+      expect(showAccordsEvents().map(({ name }) => name)).toEqual([
+        "2",
+        "aucun",
+      ]);
+    });
+
     it("émet emitShowAccords avec le nombre d'accords au chargement", async () => {
       mockFetch(accordsData);
       await act(async () => {
@@ -168,7 +238,7 @@ describe("AccordsEntreprise", () => {
       });
     });
 
-    it("émet emitShowAccords avec 0 quand aucun accord n'est trouvé", async () => {
+    it('émet "aucun" — jamais "0", que Matomo jette — quand aucun accord n\'est trouvé', async () => {
       mockFetch({ total: 0, accords: [] });
       await act(async () => {
         render(
@@ -178,7 +248,7 @@ describe("AccordsEntreprise", () => {
       expect(sendEvent).toHaveBeenCalledWith({
         category: TrackingAgreementSearchCategory.ACCORD_ENTERPRISE_SEARCH,
         action: TrackingAccordEntrepriseSearchAction.SHOW_ACCORDS,
-        name: "0",
+        name: "aucun",
       });
     });
 

@@ -111,14 +111,14 @@ describe("Event show_agreements", () => {
       ]);
     });
 
-    it("émet 0 quand l'entreprise n'a déclaré aucune convention collective", async () => {
+    it('émet "aucun" — jamais "0", que Matomo jette — quand l\'entreprise n\'a déclaré aucune convention collective', async () => {
       await renderInput(enterpriseWithoutAgreement);
 
       expect(showAgreementsEvents()).toEqual([
         {
           category: TrackingAgreementSearchCategory.CC_ENTERPRISE_SEARCH,
           action: TrackingEnterpriseAgreementSearchAction.SHOW_AGREEMENTS,
-          name: "0",
+          name: "aucun",
         },
       ]);
     });
@@ -187,8 +187,53 @@ describe("Event show_agreements", () => {
 
       expect(showAgreementsEvents().map(({ name }) => name)).toEqual([
         "2",
-        "0",
+        "aucun",
       ]);
+    });
+  });
+
+  // Le parcours simulateur passe `isInSimulator` et
+  // `canContinueSimulationIfNoAgreement` (cf. CommonAgreementStep) : ces props
+  // changent le rendu — avec moins de deux conventions, le composant
+  // court-circuite le formulaire de sélection. Le comptage doit partir malgré
+  // ce court-circuit.
+  describe("<EnterpriseAgreementSearchInput isInSimulator /> (simulateurs)", () => {
+    const renderInSimulator = async (enterprise: unknown) =>
+      act(async () =>
+        render(
+          <EnterpriseAgreementSearchInput
+            enterprise={enterprise as any}
+            onAgreementSelect={jest.fn()}
+            trackingActionName="Simulateur - Indemnité de licenciement"
+            isInSimulator
+            canContinueSimulationIfNoAgreement
+            level={3}
+          />
+        )
+      );
+
+    it("émet le nombre de conventions collectives affichées", async () => {
+      await renderInSimulator(enterpriseWithTwoAgreements);
+
+      expect(showAgreementsEvents()).toEqual([
+        {
+          category: TrackingAgreementSearchCategory.CC_ENTERPRISE_SEARCH,
+          action: TrackingEnterpriseAgreementSearchAction.SHOW_AGREEMENTS,
+          name: "2",
+        },
+      ]);
+    });
+
+    it("émet 1 pour une convention unique, malgré le court-circuit du formulaire", async () => {
+      await renderInSimulator(enterpriseWithOneAgreement);
+
+      expect(showAgreementsEvents().map(({ name }) => name)).toEqual(["1"]);
+    });
+
+    it('émet "aucun" — jamais "0", que Matomo jette — quand l\'entreprise n\'a déclaré aucune convention collective', async () => {
+      await renderInSimulator(enterpriseWithoutAgreement);
+
+      expect(showAgreementsEvents().map(({ name }) => name)).toEqual(["aucun"]);
     });
   });
 
@@ -212,7 +257,7 @@ describe("Event show_agreements", () => {
       ]);
     });
 
-    it("émet 0 quand l'entreprise n'a déclaré aucune convention collective", async () => {
+    it('émet "aucun" — jamais "0", que Matomo jette — quand l\'entreprise n\'a déclaré aucune convention collective', async () => {
       await act(async () => {
         render(
           <EnterpriseAgreementSelectionLink
@@ -226,7 +271,7 @@ describe("Event show_agreements", () => {
         {
           category: TrackingAgreementSearchCategory.CC_ENTERPRISE_SEARCH,
           action: TrackingEnterpriseAgreementSearchAction.SHOW_AGREEMENTS,
-          name: "0",
+          name: "aucun",
         },
       ]);
     });
