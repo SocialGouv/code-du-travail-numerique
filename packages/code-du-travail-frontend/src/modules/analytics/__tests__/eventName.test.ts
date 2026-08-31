@@ -47,8 +47,8 @@ describe("toPageEventName", () => {
   // La racine est le seul chemin dont `toEventName` fait une chaîne vide, que
   // Matomo jette au même titre que "0".
   it("étiquette la page d'accueil au lieu d'envoyer une chaîne vide", () => {
-    expect(toPageEventName("/")).toEqual("accueil");
-    expect(toPageEventName("")).toEqual("accueil");
+    expect(toPageEventName("/")).toEqual("index");
+    expect(toPageEventName("")).toEqual("index");
   });
 
   it("laisse les autres chemins inchangés", () => {

@@ -33,9 +33,9 @@ describe("useNpsEvents", () => {
     result.current.trackRefusal(NpsTrigger.MAIN, "/");
     result.current.trackOptOut(NpsTrigger.MAIN, "/");
     expect(mockSendEvent.mock.calls.map(([event]) => event.name)).toEqual([
-      "accueil",
-      "accueil",
-      "accueil",
+      "index",
+      "index",
+      "index",
     ]);
   });
 

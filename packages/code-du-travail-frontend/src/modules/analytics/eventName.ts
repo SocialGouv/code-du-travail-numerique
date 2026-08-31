@@ -42,7 +42,7 @@ export const toCountEventName = (count: number): string =>
 
 // Chemin de page : la racine "/" donne une chaîne vide une fois le slash retiré
 // (c'est la page d'accueil), et perdrait donc son nom.
-export const HOME_EVENT_NAME = "accueil";
+export const HOME_EVENT_NAME = "index";
 
 export const toPageEventName = (path: string): string =>
   toEventName(path) || HOME_EVENT_NAME;

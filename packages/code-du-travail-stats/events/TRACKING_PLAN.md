@@ -23,7 +23,7 @@ dans le rapport « Noms d'événements ». Silencieux, et invisible tant qu'on n
 total d'une action à la somme de ses lignes nommées.
 
 Les events concernés étiquettent donc leur cas falsy : un comptage nul devient `aucun`, la
-page d'accueil `accueil`, une requête de recherche vide `(vide)`. Les autres valeurs restent
+page d'accueil `index`, une requête de recherche vide `(vide)`. Les autres valeurs restent
 inchangées.
 
 #### tracking générique (automatique sur chaque page)
