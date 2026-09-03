@@ -36,6 +36,11 @@ describe("SimulateurIndemnitePrecarite - IDCC 1517", () => {
     runJourney();
 
     expect(ui.result.amount.get()).toHaveTextContent("300,00");
+    expect(
+      screen.getByTestId("warning-body-cc-sans-dispositions")
+    ).toHaveTextContent(
+      "Votre convention de branche ne contient pas de dispositions relatives à l'indemnité de précarité."
+    );
     expectReference("Article L1243-4 du code du travail");
     expectReference("Article L1243-8 du code du travail");
     expectReference("Article L1243-9 du code du travail");

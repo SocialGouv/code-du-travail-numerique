@@ -36,6 +36,13 @@ describe("SimulateurIndemnitePrecarite - IDCC 1486", () => {
     runJourney();
 
     expect(ui.result.amount.get()).toHaveTextContent("300,00");
+    // Un CDD générique reste régi par le Code du travail, même sous une CC
+    // qui prévoit des dispositions pour d'autres types de CDD.
+    expect(
+      screen.getByTestId("warning-body-cc-sans-dispositions")
+    ).toHaveTextContent(
+      "Votre convention de branche ne contient pas de dispositions relatives à l'indemnité de précarité."
+    );
     expectReference("Article L1243-4 du code du travail");
     expectReference("Article L1243-8 du code du travail");
     expectReference("Article L1243-9 du code du travail");
@@ -46,6 +53,9 @@ describe("SimulateurIndemnitePrecarite - IDCC 1486", () => {
     runJourney({ contractOptionId: "1486-usage-enqueteurs-vacataires" });
 
     expect(ui.result.amount.get()).toHaveTextContent("120,00");
+    expect(
+      screen.getByTestId("warning-body-cc-1486-enqueteurs")
+    ).toHaveTextContent("indemnité de précarité égale à 4 %");
     expectReference(
       "Article 53 de l'accord du 16 décembre 1991 relatif aux enquêteurs"
     );
@@ -59,6 +69,11 @@ describe("SimulateurIndemnitePrecarite - IDCC 1486", () => {
     runJourney({ contractOptionId: "1486-usage-intervention-evenementiel" });
 
     expect(ui.result.amount.get()).toHaveTextContent("180,00");
+    expect(
+      screen.getByTestId("warning-body-cc-avec-dispositions")
+    ).toHaveTextContent(
+      "La réponse donnée se base sur les dispositions de votre convention de branche."
+    );
     expectReference(
       "Chapitre III de l'accord du 5 juillet 2001 relatif au statut des salariés du secteur d'activité d'organisation des foires, salons et congrès"
     );

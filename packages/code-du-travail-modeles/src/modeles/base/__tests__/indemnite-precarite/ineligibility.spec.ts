@@ -86,20 +86,6 @@ describe("Inéligibilité à l'indemnité de précarité (CDD)", () => {
         "contrat salarié . issue du contrat": "'embauche cdi autre entreprise'",
       },
     },
-    {
-      cas: "rupture pour inaptitude",
-      situation: {
-        "contrat salarié . fin à la date prévue": "'non'",
-        "contrat salarié . issue du contrat": "'inaptitude'",
-      },
-    },
-    {
-      cas: "rupture d'un commun accord",
-      situation: {
-        "contrat salarié . fin à la date prévue": "'non'",
-        "contrat salarié . issue du contrat": "'commun accord'",
-      },
-    },
   ])("Pas d'indemnité : $cas", ({ situation }) => {
     const result = engine.calculate({ ...situationCdd, ...situation });
     expect(result).toIneligibilityBeEqual(
@@ -116,15 +102,42 @@ describe("Inéligibilité à l'indemnité de précarité (CDD)", () => {
     expect(result).toResultBeEqual(300, "€");
   });
 
-  test("Toute rupture anticipée disqualifie, quelle qu'en soit l'issue", () => {
+  test.each([
+    {
+      cas: "rupture pour inaptitude prononcée par le médecin du travail",
+      issue: "'inaptitude'",
+    },
+    {
+      cas: "rupture d'un commun accord entre l'employeur et le salarié",
+      issue: "'commun accord'",
+    },
+  ])("Indemnité due malgré la rupture anticipée : $cas", ({ issue }) => {
     const result = engine.calculate({
       ...situationCdd,
       "contrat salarié . fin à la date prévue": "'non'",
-      "contrat salarié . issue du contrat": "'autre'",
+      "contrat salarié . issue du contrat": issue,
     });
-    expect(result).toIneligibilityBeEqual(
-      INDEMNITE_PRECARITE_INELIGIBILITY_MESSAGE
-    );
+    expect(result).toResultBeEqual(300, "€");
+  });
+
+  test("Seuls quatre cadres de rupture anticipée disqualifient", () => {
+    const cadresDisqualifiants = [
+      "'période d'essai'",
+      "'force majeure'",
+      "'faute grave'",
+      "'embauche cdi autre entreprise'",
+    ];
+
+    cadresDisqualifiants.forEach((issue) => {
+      const result = engine.calculate({
+        ...situationCdd,
+        "contrat salarié . fin à la date prévue": "'non'",
+        "contrat salarié . issue du contrat": issue,
+      });
+      expect(result).toIneligibilityBeEqual(
+        INDEMNITE_PRECARITE_INELIGIBILITY_MESSAGE
+      );
+    });
   });
 });
 
@@ -151,13 +164,6 @@ describe("Inéligibilité à l'indemnité de fin de mission (CTT)", () => {
         "contrat salarié . issue du contrat": "'période d'essai'",
       },
     },
-    {
-      cas: "rupture pour inaptitude",
-      situation: {
-        "contrat salarié . fin à la date prévue": "'non'",
-        "contrat salarié . issue du contrat": "'inaptitude'",
-      },
-    },
   ])("Pas d'indemnité de fin de mission : $cas", ({ situation }) => {
     const result = engine.calculate({ ...situationCtt, ...situation });
     expect(result).toIneligibilityBeEqual(
@@ -170,6 +176,15 @@ describe("Inéligibilité à l'indemnité de fin de mission (CTT)", () => {
       ...situationCtt,
       "contrat salarié . fin à la date prévue": "'oui'",
       "contrat salarié . issue du contrat": "'autre'",
+    });
+    expect(result).toResultBeEqual(300, "€");
+  });
+
+  test("Une rupture pour inaptitude ouvre droit à l'indemnité de fin de mission", () => {
+    const result = engine.calculate({
+      ...situationCtt,
+      "contrat salarié . fin à la date prévue": "'non'",
+      "contrat salarié . issue du contrat": "'inaptitude'",
     });
     expect(result).toResultBeEqual(300, "€");
   });

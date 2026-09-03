@@ -40,8 +40,10 @@ const ISSUE_AUTRE: IssueOption = {
 
 /**
  * Les listes de rupture anticipée sont exhaustives : elles couvrent tous les
- * cadres de rupture prévus, et aucun n'ouvre droit à l'indemnité. Elles ne
- * proposent donc volontairement pas d'option « Autre ».
+ * cadres de rupture prévus, et ne proposent donc volontairement pas d'option
+ * « Autre ». La plupart privent le salarié de l'indemnité, mais la rupture
+ * d'un commun accord et la rupture pour inaptitude y ouvrent droit : le modèle
+ * publicodes reste l'unique source de vérité sur l'éligibilité.
  */
 const ISSUES_RUPTURE_ANTICIPEE_CDD: IssueOption[] = [
   ISSUE_PERIODE_ESSAI,

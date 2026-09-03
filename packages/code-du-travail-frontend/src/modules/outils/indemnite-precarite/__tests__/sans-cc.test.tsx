@@ -256,6 +256,9 @@ describe("SimulateurIndemnitePrecarite - Sans Convention Collective", () => {
       expect(screen.getByTestId("warning-title")).toHaveTextContent(
         "Attention, il peut exister un autre montant applicable à votre situation."
       );
+      expect(screen.getByTestId("warning-body-sans-cc")).toHaveTextContent(
+        "celui fixé à 10 % par le Code du travail"
+      );
     });
 
     it.each([
@@ -265,8 +268,6 @@ describe("SimulateurIndemnitePrecarite - Sans Convention Collective", () => {
       ["non" as const, ISSUE_CONTRAT.FORCE_MAJEURE],
       ["non" as const, ISSUE_CONTRAT.FAUTE_GRAVE],
       ["non" as const, ISSUE_CONTRAT.EMBAUCHE_CDI_AUTRE_ENTREPRISE],
-      ["non" as const, ISSUE_CONTRAT.INAPTITUDE],
-      ["non" as const, ISSUE_CONTRAT.COMMUN_ACCORD],
     ])(
       "n'accorde pas d'indemnité (CDD, fin à la date prévue = %s, issue = %s)",
       (finALaDatePrevue, issueContrat) => {
@@ -280,11 +281,35 @@ describe("SimulateurIndemnitePrecarite - Sans Convention Collective", () => {
       }
     );
 
+    it.each([[ISSUE_CONTRAT.INAPTITUDE], [ISSUE_CONTRAT.COMMUN_ACCORD]])(
+      "accorde l'indemnité malgré la rupture anticipée (CDD, issue = %s)",
+      (issueContrat) => {
+        fillContractSteps({ finALaDatePrevue: "non", issueContrat });
+        fillRemunerationTotal(3000);
+
+        expect(ui.result.amount.get()).toHaveTextContent("300,00");
+        expect(screen.getByText("Indemnité de précarité")).toBeInTheDocument();
+      }
+    );
+
+    it("accorde l'indemnité de fin de mission au CTT rompu pour inaptitude", () => {
+      fillContractSteps({
+        contractOptionId: "contrat-travail-temporaire",
+        finALaDatePrevue: "non",
+        issueContrat: ISSUE_CONTRAT.INAPTITUDE,
+      });
+      fillRemunerationTotal(2000);
+
+      expect(ui.result.amount.get()).toHaveTextContent("200,00");
+      expect(
+        screen.getByText("Indemnité de fin de mission")
+      ).toBeInTheDocument();
+    });
+
     it.each([
       ["oui" as const, ISSUE_CONTRAT.EMBAUCHE_CDI],
       ["oui" as const, ISSUE_CONTRAT.REFUS_SOUPLESSE],
       ["non" as const, ISSUE_CONTRAT.PERIODE_ESSAI],
-      ["non" as const, ISSUE_CONTRAT.INAPTITUDE],
     ])(
       "n'accorde pas d'indemnité de fin de mission (CTT, fin à la date prévue = %s, issue = %s)",
       (finALaDatePrevue, issueContrat) => {

@@ -3,8 +3,10 @@ import { INDEMNITE_PRECARITE_INELIGIBILITY_MESSAGE } from "../../ineligibility-i
 
 /**
  * Les conventions collectives ajoutent des types de CDD et des taux, mais
- * jamais de critère d'exclusion propre (issue #7436). Ce test garantit que
- * les exclusions légales s'appliquent identiquement aux CDD conventionnels.
+ * jamais de critère d'exclusion propre (issue #7436). Ces tests garantissent
+ * que les exclusions légales — et les cadres de rupture qui ouvrent malgré
+ * tout droit à l'indemnité — s'appliquent identiquement aux CDD
+ * conventionnels.
  */
 const CDD_CONVENTIONNELS: { idcc: string; typeCdd: string }[] = [
   { idcc: "1090", typeCdd: "usage convoyeurs" },
@@ -58,6 +60,25 @@ describe("Exclusions conventionnelles de l'indemnité de précarité", () => {
       expect(result).toIneligibilityBeEqual(
         INDEMNITE_PRECARITE_INELIGIBILITY_MESSAGE
       );
+    }
+  );
+
+  test.each(CDD_CONVENTIONNELS)(
+    "IDCC $idcc / $typeCdd : indemnité due en cas de rupture anticipée pour inaptitude",
+    ({ idcc, typeCdd }) => {
+      const engine = new IndemnitePrecaritePublicodes(
+        modelsIndemnitePrecarite,
+        idcc
+      );
+      const result = engine.calculate({
+        "contrat salarié . convention collective": `'IDCC${idcc.padStart(4, "0")}'`,
+        "contrat salarié . salaire de référence": "3000",
+        "contrat salarié . type de contrat": "'CDD'",
+        "contrat salarié . type de cdd": `'${typeCdd}'`,
+        "contrat salarié . fin à la date prévue": "'non'",
+        "contrat salarié . issue du contrat": "'inaptitude'",
+      });
+      expect(result.type).toEqual("result");
     }
   );
 });

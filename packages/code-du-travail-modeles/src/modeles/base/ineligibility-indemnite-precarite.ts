@@ -24,6 +24,18 @@ const ISSUES_INELIGIBLES_A_TERME = [
   "'refus souplesse'",
 ];
 
+/**
+ * Cadres de rupture anticipée qui privent le salarié de l'indemnité. La rupture
+ * d'un commun accord et la rupture pour inaptitude constatée par le médecin du
+ * travail ouvrent, elles, droit à l'indemnité.
+ */
+const ISSUES_INELIGIBLES_RUPTURE_ANTICIPEE = [
+  "'période d'essai'",
+  "'force majeure'",
+  "'faute grave'",
+  "'embauche cdi autre entreprise'",
+];
+
 const REFERENCE_CDD: References = {
   article: "Article L1243-10 du code du travail",
   url: "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006901221",
@@ -70,10 +82,11 @@ export class IneligibilityLegalIndemnitePrecarite implements IIneligibility {
       return message;
     }
 
-    // Les cadres de rupture anticipée proposés à l'usager sont exhaustifs et
-    // aucun n'ouvre droit à l'indemnité : une rupture anticipée disqualifie
-    // toujours, quelle qu'en soit l'issue.
-    if (finALaDatePrevue === "'non'" && issue) {
+    if (
+      finALaDatePrevue === "'non'" &&
+      issue &&
+      ISSUES_INELIGIBLES_RUPTURE_ANTICIPEE.includes(issue)
+    ) {
       return message;
     }
 

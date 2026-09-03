@@ -99,17 +99,28 @@ const ISSUES_DISQUALIFIANTES_A_TERME: IssueContrat[] = [
 ];
 
 /**
- * Une situation disqualifiante envoie directement à l'écran de résultat. Toute
- * rupture anticipée en fait partie : ses cadres sont tous exclusifs.
+ * Miroir de la liste du modèle : la rupture d'un commun accord et la rupture
+ * pour inaptitude ouvrent droit à l'indemnité, les autres cadres de rupture
+ * anticipée en privent le salarié.
  */
+const ISSUES_DISQUALIFIANTES_RUPTURE: IssueContrat[] = [
+  ISSUE_CONTRAT.PERIODE_ESSAI,
+  ISSUE_CONTRAT.FORCE_MAJEURE,
+  ISSUE_CONTRAT.FAUTE_GRAVE,
+  ISSUE_CONTRAT.EMBAUCHE_CDI_AUTRE_ENTREPRISE,
+];
+
+/** Une situation disqualifiante envoie directement à l'écran de résultat. */
 export const isDisqualifying = ({
   contractOptionId,
   finALaDatePrevue = "oui",
   issueContrat = ISSUE_CONTRAT.AUTRE,
-}: JourneyOptions): boolean =>
-  contractOptionId === "autres" ||
-  finALaDatePrevue === "non" ||
-  ISSUES_DISQUALIFIANTES_A_TERME.includes(issueContrat);
+}: JourneyOptions): boolean => {
+  if (contractOptionId === "autres") return true;
+  return finALaDatePrevue === "non"
+    ? ISSUES_DISQUALIFIANTES_RUPTURE.includes(issueContrat)
+    : ISSUES_DISQUALIFIANTES_A_TERME.includes(issueContrat);
+};
 
 /** Parcours nominal complet, de l'introduction au résultat. */
 export const runJourney = (

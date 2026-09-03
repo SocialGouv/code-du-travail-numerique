@@ -15,9 +15,35 @@ import { AccessibleAlert } from "src/modules/outils/common/components/Accessible
 import ReferenceJuridiques from "src/modules/outils/preavis-licenciement/steps/Result/components/ReferenceJuridiques";
 import { getIndemnitePrecariteIneligibilityReferences } from "@socialgouv/modeles-social";
 import { findContractOption } from "../../agreements";
-import { CONTRACT_FAMILY } from "../../types";
+import { CONTRACT_FAMILY, ContractOption, TYPE_CDD } from "../../types";
+import type { WarningVariant } from "./components/Warning";
+import type { ChosenResult } from "@socialgouv/modeles-social";
+import type { Agreement } from "src/modules/outils/indemnite-depart/types";
 import { mapToPublicodesSituationForEligibilityIndemnitePrecarite } from "../../../common/publicodes/indemnite-precarite";
 import { useResultTracking } from "../../events/useResultTracking";
+
+/**
+ * Rédaction du bloc d'avertissement à afficher. Elle dépend du taux
+ * réellement appliqué (`chosenResult`) et non du simple numéro de convention
+ * collective : une CC listée mais parcourue avec un CDD générique relève bien
+ * des dispositions du Code du travail.
+ */
+export const getWarningVariant = ({
+  agreement,
+  chosenResult,
+  contractOption,
+}: {
+  agreement?: Agreement;
+  chosenResult?: ChosenResult;
+  contractOption?: ContractOption;
+}): WarningVariant => {
+  if (!agreement) return "sans-cc";
+  if (chosenResult !== "AGREEMENT") return "cc-sans-dispositions";
+  if (contractOption?.typeCdd === TYPE_CDD.USAGE_ENQUETEURS_VACATAIRES) {
+    return "cc-1486-enqueteurs";
+  }
+  return "cc-avec-dispositions";
+};
 
 const ResultStepComponent = () => {
   const store = useContext(IndemnitePrecariteContext);
@@ -33,6 +59,7 @@ const ResultStepComponent = () => {
     contractOptionId,
     finALaDatePrevue,
     ineligibility,
+    chosenResult,
   } = useIndemnitePrecariteStore(store, (state) => ({
     result: state.resultData.result,
     calculationError: state.resultData.calculationError,
@@ -47,6 +74,7 @@ const ResultStepComponent = () => {
     ineligibility:
       state.typeContratData.ineligibility ??
       state.termeContratData.ineligibility,
+    chosenResult: state.resultData.chosenResult,
   }));
 
   const contractOption = findContractOption(contractOptionId, agreement);
@@ -105,7 +133,14 @@ const ResultStepComponent = () => {
         family={family}
       />
 
-      <Warning />
+      <Warning
+        variant={getWarningVariant({
+          agreement,
+          chosenResult,
+          contractOption,
+        })}
+        family={family}
+      />
 
       <h3 className={fr.cx("fr-h4", "fr-mt-4w")}>Détail du calcul</h3>
       <Situation

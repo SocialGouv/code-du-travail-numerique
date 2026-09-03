@@ -130,7 +130,7 @@ test.describe("Outil - Indemnité de Precarite", () => {
     ).toBeVisible();
   });
 
-  test("Un intérimaire rompu pour inaptitude n'a pas d'indemnité de fin de mission", async ({
+  test("Un intérimaire rompu pour inaptitude a droit à l'indemnité de fin de mission", async ({
     page,
   }) => {
     await page.goto("/outils/indemnite-precarite");
@@ -167,16 +167,32 @@ test.describe("Outil - Indemnité de Precarite", () => {
       .click();
     await page.getByRole("button", { name: "Suivant" }).click();
 
+    // Rémunération : la rupture pour inaptitude ouvre droit à l'indemnité, le
+    // parcours continue donc jusqu'au calcul.
+    await page
+      .locator("fieldset")
+      .filter({
+        hasText:
+          "Comment souhaitez-vous indiquer la rémunération perçue pendant le contrat de travail",
+      })
+      .getByText(
+        "Montant total de la rémunération brute perçue depuis le début du contrat de travail"
+      )
+      .click();
+    await page.locator("#input-salaireTotal").fill("2000");
+    await page.getByRole("button", { name: "Suivant" }).click();
+
+    await expect(
+      page.getByRole("heading", { name: "Indemnité de fin de mission" })
+    ).toBeVisible();
+    await expect(page.getByText("200,00 €")).toBeVisible();
     await expect(
       page.getByText(
         "Il n'y a pas d'indemnité de fin de mission dans cette situation"
       )
-    ).toBeVisible();
+    ).toHaveCount(0);
     await expect(
       page.getByText("Article L1251-33 du code du travail")
     ).toBeVisible();
-    await expect(
-      page.getByText("Article L1243-10 du code du travail")
-    ).toHaveCount(0);
   });
 });
