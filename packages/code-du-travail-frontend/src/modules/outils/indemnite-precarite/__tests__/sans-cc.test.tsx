@@ -256,8 +256,12 @@ describe("SimulateurIndemnitePrecarite - Sans Convention Collective", () => {
       expect(screen.getByTestId("warning-title")).toHaveTextContent(
         "Attention, il peut exister un autre montant applicable à votre situation."
       );
-      expect(screen.getByTestId("warning-body-sans-cc")).toHaveTextContent(
+      const warning = screen.getByTestId("warning-body-sans-cc");
+      expect(warning).toHaveTextContent(
         "celui fixé à 10 % par le Code du travail"
+      );
+      expect(warning).toHaveTextContent(
+        "le contrat de travail peut prévoir un taux plus favorable pour le salarié"
       );
     });
 

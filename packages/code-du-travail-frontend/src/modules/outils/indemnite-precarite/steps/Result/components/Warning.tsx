@@ -57,6 +57,14 @@ const OrdreCodeDuTravail = () => (
   </>
 );
 
+/** Clôture commune, hors cas des enquêteurs de la CC 1486. */
+const NoteContratTravail = () => (
+  <p>
+    À noter&nbsp;: le contrat de travail peut prévoir un taux plus favorable
+    pour le salarié. Dans ce cas, c&apos;est ce taux qui s&apos;applique.
+  </p>
+);
+
 const OrdreConventionDeBranche = () => (
   <>
     <p>Le taux applicable est, dans l&apos;ordre suivant&nbsp;:</p>
@@ -89,6 +97,7 @@ const WarningBody: React.FC<Props> = ({ variant, family }) => {
             être inférieur à 6&nbsp;%, mais peut être supérieur à 10&nbsp;%.
           </p>
           <OrdreCodeDuTravail />
+          <NoteContratTravail />
         </div>
       );
     case "cc-avec-dispositions":
@@ -105,24 +114,30 @@ const WarningBody: React.FC<Props> = ({ variant, family }) => {
             10&nbsp;%.
           </p>
           <OrdreConventionDeBranche />
+          <NoteContratTravail />
         </div>
       );
+    // Le contrat d'usage est exclu de l'indemnité légale : le montant affiché
+    // ne repose que sur la convention collective. Ni liste d'ordre
+    // d'application, ni note de clôture générique, la dernière phrase couvrant
+    // déjà l'accord d'entreprise et le contrat de travail.
     case "cc-1486-enqueteurs":
       return (
         <div data-testid="warning-body-cc-1486-enqueteurs">
           <p>
-            La réponse donnée est celle prévue par votre convention collective.
-            Pour les enquêteurs, elle prévoit le versement d&apos;une indemnité
-            de précarité égale à 4&nbsp;%.
+            Le Code du travail ne prévoit pas d&apos;indemnité de précarité dans
+            votre situation.
           </p>
           <p>
-            Important&nbsp;: une convention de branche ou un accord
-            d&apos;entreprise ne peuvent pas prévoir un taux inférieur à
-            6&nbsp;%. Toutefois, cette règle ne s&apos;applique pas aux contrats
-            d&apos;usage, pour lesquels la loi ne prévoit pas le versement
-            d&apos;une indemnité de précarité.
+            Toutefois, votre convention collective prévoit, pour les enquêteurs,
+            une indemnité de précarité égale à 4&nbsp;% de la rémunération
+            totale brute versée pendant le contrat.
           </p>
-          <OrdreConventionDeBranche />
+          <p>
+            Un accord d&apos;entreprise ou le contrat de travail peuvent prévoir
+            un taux plus favorable pour les enquêteurs. Dans ce cas, c&apos;est
+            le taux le plus favorable au salarié qui s&apos;appliquera.
+          </p>
         </div>
       );
     default:
@@ -135,6 +150,7 @@ const WarningBody: React.FC<Props> = ({ variant, family }) => {
             être supérieur à 10&nbsp;%.
           </p>
           <OrdreSansCc />
+          <NoteContratTravail />
         </div>
       );
   }
@@ -149,10 +165,6 @@ const Warning: React.FC<Props> = ({ variant, family }) => (
       Attention, il peut exister un autre montant applicable à votre situation.
     </h4>
     <WarningBody variant={variant} family={family} />
-    <p>
-      À noter&nbsp;: le contrat de travail peut prévoir un taux plus favorable
-      pour le salarié. Dans ce cas, c&apos;est ce taux qui s&apos;applique.
-    </p>
   </div>
 );
 
