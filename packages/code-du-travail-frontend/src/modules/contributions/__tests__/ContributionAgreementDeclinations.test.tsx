@@ -61,6 +61,28 @@ describe("<ContributionAgreementDeclinations />", () => {
     expect(getAllByRole("link")).toHaveLength(2);
   });
 
+  // #7458 : sur une contribution sans réponse générique, l'accordéon suit
+  // directement le h1 de la page — il doit alors porter un h2.
+  it("titre l'accordéon en h3 par défaut et en h2 sur demande", () => {
+    const { getByRole, unmount } = render(
+      <ContributionAgreementDeclinations items={items} />
+    );
+    expect(
+      getByRole("heading", { level: 3, name: AGREEMENT_DECLINATIONS_LABEL })
+    ).toBeInTheDocument();
+    unmount();
+
+    const { getByRole: getByRoleAsH2 } = render(
+      <ContributionAgreementDeclinations items={items} titleAs="h2" />
+    );
+    expect(
+      getByRoleAsH2("heading", {
+        level: 2,
+        name: AGREEMENT_DECLINATIONS_LABEL,
+      })
+    ).toBeInTheDocument();
+  });
+
   it("émet un event Matomo au clic sur une déclinaison", () => {
     const { getByText } = render(
       <ContributionAgreementDeclinations items={items} />
