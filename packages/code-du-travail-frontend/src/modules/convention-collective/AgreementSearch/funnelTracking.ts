@@ -12,6 +12,17 @@
 //
 // Volontairement sans dépendance à Matomo : c'est un contrat d'appel, la
 // traduction en events vit dans `src/modules/contributions/tracking.ts`.
+//
+// ⚠️ Hypothèse à tenir si le parcours contribution évolue : `AgreementSearchForm`
+// ne passe aujourd'hui à `EnterpriseAgreementSearchInput` ni `defaultSearch` ni
+// `enterprise`. Deux callbacks en dépendent silencieusement —
+// `onEnterpriseSearchSubmit`, qui exclut les recherches automatiques déclenchées
+// par `defaultSearch`, et `onEnterpriseSelect` / `onEnterpriseWithoutAgreement`,
+// branchés sur le clic d'une carte de résultat, seul point d'entrée tant
+// qu'aucune entreprise n'est pré-alimentée. Pré-remplir l'un ou l'autre (lien
+// direct SIRET, retour « Précédent ») rendrait ces events muets ou faux sans
+// qu'aucun test n'échoue : il faudrait alors les rebrancher sur les effets
+// miroir, comme l'est déjà `show_agreements`.
 export type AgreementSearchFunnelTracking = {
   // --- Parcours 1 : « je sais quelle est ma convention collective » ---------
   /** Première frappe donnant lieu à une requête dans l'autocomplete CC. */

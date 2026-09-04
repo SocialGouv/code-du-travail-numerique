@@ -368,7 +368,22 @@ contribution, aucun event `cc_search_funnel` ne part.
 
 `click_p1` / `click_p2` / `click_p3` restent **inchangés** (ils partent à la sélection
 effective d'une CC) ; `select_p1` / `select_p2` / `select_p3` ci-dessous partent, eux, au clic
-sur la radio. Les deux séries coexistent pour ne pas rompre les courbes existantes.
+sur la radio. Les deux séries coexistent pour ne pas rompre les courbes existantes — elles
+vivent dans **deux catégories distinctes**, `cc_search_type_of_users` et `cc_search_funnel` :
+une requête qui filtrerait sur la seule `action` les additionnerait à tort.
+
+**Deux réserves de lecture**, à garder en tête avant de comparer des contributions entre
+elles :
+
+- `view_bloc_cc` n'a pas tout à fait la même nature selon la façade. Sur la fiche générique le
+  bloc est affiché à chaque page vue ; sur une fiche CC il ne l'est qu'à l'ouverture explicite
+  du bloc (arrivée externe ou « Réinitialiser »). Le funnel se lit donc **par `name`**, chaque
+  page ayant son propre dénominateur — pas en agrégeant les deux familles de pages.
+- Sur les contributions **sans réponse Code du travail** (`generic-no-cdt`), le bouton
+  « Afficher les informations » n'est rendu qu'une fois une CC valide retenue :
+  `click_afficher_les_informations` et les trois `blocked_*` ne peuvent structurellement pas
+  y partir tant qu'aucune CC n'est choisie. Ces pages apparaîtront donc sans marche terminale,
+  ce qui ne traduit aucun décrochage.
 [↗ source](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/contributions/tracking.ts#L196 "contributions/tracking.ts")
 
 | Catégorie | Action | Name (📌) | Quand / pourquoi |
