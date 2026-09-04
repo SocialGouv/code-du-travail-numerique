@@ -24,6 +24,7 @@ import { ApiGeoResult } from "./searchCities";
 import { AccessibleAlert } from "src/modules/outils/common/components/AccessibleAlert";
 import { focusableTitle } from "src/modules/common/focusableTitle";
 import { WhatIsAgreementLink } from "../../convention-collective/WhatIsAgreementLink";
+import { AgreementSearchFunnelTracking } from "../../convention-collective/AgreementSearch/funnelTracking";
 
 type Props = {
   widgetMode?: boolean;
@@ -42,6 +43,12 @@ type Props = {
   onBackToPersonalize?: () => void;
   requireSearchSignal?: number;
   showWhatIsAgreementLink?: boolean;
+  /**
+   * Callbacks du funnel de choix de CC, fournis uniquement par les
+   * contributions. Absents → aucun event supplémentaire (simulateurs, page
+   * « Trouver sa convention collective », widgets).
+   */
+  funnelTracking?: AgreementSearchFunnelTracking;
 };
 
 export const EnterpriseAgreementSearchInput = ({
@@ -59,6 +66,7 @@ export const EnterpriseAgreementSearchInput = ({
   onBackToPersonalize,
   requireSearchSignal,
   showWhatIsAgreementLink = false,
+  funnelTracking,
 }: Props) => {
   const [selectedAgreement, setSelectedAgreement] = useState<
     Agreement | undefined
@@ -97,6 +105,9 @@ export const EnterpriseAgreementSearchInput = ({
   // par l'effet miroir de la prop `enterprise`, sans quoi l'event partirait
   // plusieurs fois pour une même entreprise.
   const trackedAgreementsSiretRef = useRef<string | undefined>(undefined);
+  // « Début de recherche » : une seule fois par montage, sinon l'event partirait
+  // à chaque frappe et ne mesurerait plus l'entrée dans l'étape.
+  const hasEmittedSearchStartRef = useRef(false);
   const TitleTag = `h${level}` as "h2" | "h3";
 
   const getStateMessage = () => {
@@ -150,6 +161,11 @@ export const EnterpriseAgreementSearchInput = ({
     );
   };
   const onSubmit = async (focusResults = true) => {
+    // `focusResults === false` = recherche automatique (retour « Précédent »,
+    // lien direct) : ce n'est pas une soumission de l'usager, on ne la compte
+    // pas dans le funnel. Les soumissions à champ vide, elles, comptent : c'est
+    // une tentative bloquée qu'on veut voir.
+    if (focusResults) funnelTracking?.onEnterpriseSearchSubmit?.();
     if (!search) {
       setSearchState("required");
       return;
@@ -167,14 +183,15 @@ export const EnterpriseAgreementSearchInput = ({
         codesPostaux: location?.codesPostaux,
       });
       setSearchState(!result.length ? "errorSearch" : "fullSearch");
-      setSearchState(
-        search.length > 0 && !result.length ? "notFoundSearch" : "noSearch"
-      );
+      const isNotFound = search.length > 0 && !result.length;
+      setSearchState(isNotFound ? "notFoundSearch" : "noSearch");
+      if (isNotFound) funnelTracking?.onEnterpriseSearchNoResult?.();
       setEnterprises(result);
     } catch (e) {
       setSearchState("errorSearch");
       setEnterprises(undefined);
       setError(e);
+      funnelTracking?.onEnterpriseSearchError?.();
     } finally {
       setLoading(false);
     }
@@ -310,6 +327,7 @@ export const EnterpriseAgreementSearchInput = ({
               iconId="fr-icon-arrow-go-back-fill"
               priority="secondary"
               onClick={() => {
+                funnelTracking?.onModifyAgreement?.();
                 setSelectedAgreement(undefined);
                 scrollToTop();
                 if (
@@ -357,6 +375,7 @@ export const EnterpriseAgreementSearchInput = ({
           level={level}
           showWhatIsAgreementLink={showWhatIsAgreementLink}
           goBack={() => {
+            funnelTracking?.onModifyEnterprise?.();
             setSelectedEnterprise(undefined);
             setSelectedAgreement(undefined);
             scrollToTop();
@@ -369,6 +388,7 @@ export const EnterpriseAgreementSearchInput = ({
           }}
           onAgreementSelect={(agreement) => {
             setSelectedAgreement(agreement);
+            funnelTracking?.onEnterpriseAgreementSelect?.();
             if (selectedEnterprise) {
               emitSelectEnterpriseEvent(trackingActionName, {
                 label: selectedEnterprise.label,
@@ -443,6 +463,10 @@ export const EnterpriseAgreementSearchInput = ({
             ref: searchInputRef,
             value: search,
             onChange: (event) => {
+              if (event.target.value && !hasEmittedSearchStartRef.current) {
+                hasEmittedSearchStartRef.current = true;
+                funnelTracking?.onEnterpriseSearchStart?.();
+              }
               setSearch(event.target.value);
             },
             // @ts-ignore
@@ -470,7 +494,10 @@ export const EnterpriseAgreementSearchInput = ({
           )}
         >
           <LocationSearchInput
-            onLocationChange={setLocation}
+            onLocationChange={(newLocation) => {
+              if (newLocation) funnelTracking?.onLocationSelect?.();
+              setLocation(newLocation);
+            }}
             defaultValue={location}
           />
         </div>
@@ -572,6 +599,7 @@ export const EnterpriseAgreementSearchInput = ({
                   : {
                       onClick: (ev) => {
                         ev.preventDefault();
+                        funnelTracking?.onEnterpriseSelect?.();
                         setSelectedEnterprise(enterprise);
                         if (!enterprise) {
                           emitNoEnterpriseSelectEvent();
@@ -594,6 +622,7 @@ export const EnterpriseAgreementSearchInput = ({
                           !enterprise.conventions ||
                           enterprise.conventions.length === 0
                         ) {
+                          funnelTracking?.onEnterpriseWithoutAgreement?.();
                           onAgreementSelect(undefined, enterprise);
                         }
                       },
@@ -658,6 +687,7 @@ export const EnterpriseAgreementSearchInput = ({
                       url: "/3239-particuliers-employeurs-et-emploi-a-domicile",
                     };
                     setSelectedAgreement(assMatAgreement);
+                    funnelTracking?.onHouseholdEmployerSelect?.();
                     emitNoEnterpriseSelectEvent();
                     onAgreementSelect(assMatAgreement);
                     // Focus the "Vous avez sélectionné la convention collective" title after action

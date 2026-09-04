@@ -6,6 +6,7 @@ import { ui as ccUi } from "../../convention-collective/__tests__/ui";
 import { byRole, byText } from "testing-library-selector";
 import { ContributionGeneric } from "../ContributionGeneric";
 import { Contribution } from "../type";
+import { TrackingContributionCategory } from "../tracking";
 
 beforeEach(() => {
   localStorage.clear();
@@ -36,6 +37,17 @@ jest.mock("../../convention-collective/search", () => ({
 }));
 
 jest.mock("../../enterprise/queries");
+
+// Le funnel de choix de convention collective (catégorie `cc_search_funnel`)
+// s'intercale dans la séquence d'events depuis l'issue #7463 ; il a sa propre
+// suite (cc-funnel.tracking.test.tsx). Ces tests-ci veillent sur la continuité
+// des events historiques : on les isole pour que les deux séries évoluent
+// indépendamment.
+const legacyEvents = () =>
+  (sendEvent as jest.Mock).mock.calls.filter(
+    ([event]) =>
+      event.category !== TrackingContributionCategory.CC_SEARCH_FUNNEL
+  );
 
 describe("<ContributionGeneric />", () => {
   beforeEach(() => {
@@ -89,9 +101,7 @@ describe("<ContributionGeneric />", () => {
     );
     fireEvent.click(ccUi.searchByName.autocompleteLines.IDCC1388.name.get());
     expect(ui.generic.buttonDisplayInfo.get()).toBeInTheDocument();
-    expect(sendEvent).toHaveBeenCalledTimes(3);
-    // @ts-ignore
-    expect(sendEvent.mock.calls).toEqual([
+    expect(legacyEvents()).toEqual([
       [
         {
           action: "/contribution/my-contrib",
@@ -115,7 +125,7 @@ describe("<ContributionGeneric />", () => {
       ],
     ]);
     fireEvent.click(ui.generic.buttonDisplayInfo.get());
-    expect(sendEvent).toHaveBeenCalledTimes(4);
+    expect(legacyEvents()).toHaveLength(4);
     expect(sendEvent).toHaveBeenLastCalledWith({
       action: "click_afficher_les_informations_CC",
       category: "contribution",
@@ -151,9 +161,7 @@ describe("<ContributionGeneric />", () => {
       byText(/Transports routiers et activités auxiliaires du transport/).get()
     );
     expect(ccUi.buttonDisplayInfo.query()).toBeInTheDocument();
-    expect(sendEvent).toHaveBeenCalledTimes(3);
-    // @ts-ignore
-    expect(sendEvent.mock.calls).toEqual([
+    expect(legacyEvents()).toEqual([
       [
         {
           action: "/contribution/my-contrib",
@@ -177,7 +185,7 @@ describe("<ContributionGeneric />", () => {
       ],
     ]);
     fireEvent.click(ccUi.buttonDisplayInfo.get());
-    expect(sendEvent).toHaveBeenCalledTimes(4);
+    expect(legacyEvents()).toHaveLength(4);
     expect(sendEvent).toHaveBeenLastCalledWith({
       action: "click_afficher_les_informations_générales",
       category: "contribution",
@@ -210,9 +218,7 @@ describe("<ContributionGeneric />", () => {
       byText(/Vous avez sélectionné la convention collective/).query()
     ).toBeInTheDocument();
 
-    expect(sendEvent).toHaveBeenCalledTimes(6);
-    // @ts-ignore
-    expect(sendEvent.mock.calls).toEqual([
+    expect(legacyEvents()).toEqual([
       [
         {
           action: "/contribution/my-contrib",
@@ -273,7 +279,7 @@ describe("<ContributionGeneric />", () => {
     expect(ui.generic.buttonDisplayInfo.get()).toBeInTheDocument();
     fireEvent.click(ui.generic.buttonDisplayInfo.get());
     expect(ui.generic.missingRouteError.query()).toBeInTheDocument();
-    expect(sendEvent).toHaveBeenCalledTimes(0);
+    expect(legacyEvents()).toHaveLength(0);
   });
 
   it("voir les infos générales via l'option « Je ne souhaite pas renseigner ma convention collective »", () => {
@@ -287,7 +293,7 @@ describe("<ContributionGeneric />", () => {
     );
 
     fireEvent.click(ui.generic.radioNoAgreement.get());
-    expect(sendEvent).toHaveBeenCalledTimes(1);
+    expect(legacyEvents()).toHaveLength(1);
     expect(sendEvent).toHaveBeenLastCalledWith({
       action: "click_p3",
       category: "cc_search_type_of_users",
@@ -297,7 +303,7 @@ describe("<ContributionGeneric />", () => {
     fireEvent.click(ui.generic.buttonDisplayInfo.get());
     // Afficher le Code du travail sans CC émet l'évènement d'affichage dédié
     // (en plus du click_p3 déjà émis à la sélection de la dernière option).
-    expect(sendEvent).toHaveBeenCalledTimes(2);
+    expect(legacyEvents()).toHaveLength(2);
     expect(sendEvent).toHaveBeenLastCalledWith({
       action: "click_afficher_les_informations_sans_CC",
       category: "contribution",

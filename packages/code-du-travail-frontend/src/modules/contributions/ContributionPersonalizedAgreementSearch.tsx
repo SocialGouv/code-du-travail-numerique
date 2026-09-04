@@ -12,6 +12,7 @@ import BlueCard from "../common/BlueCard";
 import { focusableTitle } from "../common/focusableTitle";
 import { WhatIsAgreementLink } from "../convention-collective/WhatIsAgreementLink";
 import { AgreementSearchFormBlock } from "./AgreementSearchFormBlock";
+import { useCcFunnelTracking } from "./tracking";
 
 type Props = {
   onAgreementSelect: (agreement?: Agreement) => void;
@@ -60,6 +61,7 @@ export function ContributionPersonalizedAgreementSearch({
   onSameAgreementSelect,
   defaultRoute,
 }: Props) {
+  const { emitClickWhatIsAgreement } = useCcFunnelTracking();
   return (
     <BlueCard>
       <p
@@ -92,7 +94,9 @@ export function ContributionPersonalizedAgreementSearch({
         </p>
       </div>
 
-      <WhatIsAgreementLink />
+      <WhatIsAgreementLink
+        onClick={() => emitClickWhatIsAgreement(trackingActionName)}
+      />
 
       <hr className={fr.cx("fr-mt-2w")} />
 

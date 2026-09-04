@@ -13,6 +13,7 @@ import BlueCard from "../common/BlueCard";
 import { focusableTitle } from "../common/focusableTitle";
 import { WhatIsAgreementLink } from "../convention-collective/WhatIsAgreementLink";
 import { AgreementSearchFormBlock } from "./AgreementSearchFormBlock";
+import { useCcFunnelTracking } from "./tracking";
 
 type Props = {
   onAgreementSelect: (agreement?: Agreement) => void;
@@ -48,6 +49,7 @@ export function ContributionGenericAgreementSearch({
   onSameAgreementSelect,
   defaultRoute,
 }: Props) {
+  const { emitClickWhatIsAgreement } = useCcFunnelTracking();
   return (
     <BlueCard>
       <div className={fr.cx("fr-grid-row")}>
@@ -68,7 +70,9 @@ export function ContributionGenericAgreementSearch({
           Personnalisez la réponse avec votre convention collective
         </p>
       </div>
-      <WhatIsAgreementLink />
+      <WhatIsAgreementLink
+        onClick={() => emitClickWhatIsAgreement(trackingActionName)}
+      />
       <AgreementSearchFormBlock
         contribution={contribution}
         onAgreementSelect={onAgreementSelect}
