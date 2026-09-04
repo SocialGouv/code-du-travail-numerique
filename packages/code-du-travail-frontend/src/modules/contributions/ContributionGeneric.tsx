@@ -89,14 +89,26 @@ export function ContributionGeneric({
   // « Réinitialiser » (page CC) efface la CC avant de renvoyer ici, et les
   // hash #retour / #cdt expriment une demande explicite de la fiche générique
   // (retour au formulaire / réponse Code du travail) : on ne redirige pas.
-  useEffect(() => {
-    if (window.location.hash === "#retour") return;
-    if (window.location.hash === GENERIC_CONTENT_HASH) return;
-
+  //
+  // La décision est prise pendant le rendu (et non dans l'effet) parce que le
+  // bloc de choix de CC en a besoin AVANT d'émettre `view_bloc_cc` : React vide
+  // les effets des enfants avant ceux du parent, un effet ici arriverait trop
+  // tard et le dénominateur du funnel compterait ces visites redirigées, qui
+  // ne verront jamais le bloc (cf. #7472). Côté serveur `window` n'existe pas :
+  // la valeur y est `undefined`, elle n'influence aucun balisage — seulement le
+  // tracking — donc pas de divergence d'hydratation.
+  const [redirectPath] = useState<string | undefined>(() => {
+    if (typeof window === "undefined") return undefined;
+    if (window.location.hash === "#retour") return undefined;
+    if (window.location.hash === GENERIC_CONTENT_HASH) return undefined;
     const storedAgreement = getAgreementFromLocalStorage();
-    if (storedAgreement && isAgreementValid(contribution, storedAgreement)) {
-      router.replace(buildContributionAgreementPath(slug, storedAgreement));
-    }
+    if (!storedAgreement || !isAgreementValid(contribution, storedAgreement))
+      return undefined;
+    return buildContributionAgreementPath(slug, storedAgreement);
+  });
+
+  useEffect(() => {
+    if (redirectPath) router.replace(redirectPath);
     // Détection à effectuer une seule fois, au montage.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -139,6 +151,7 @@ export function ContributionGeneric({
         selectedAgreement={selectedAgreement}
         trackingActionName={getTitle()}
         defaultRoute={defaultRoute}
+        isRedirecting={!!redirectPath}
       />
 
       {/* Contribution sans réponse Code du travail : le bloc de contenu

@@ -11,7 +11,7 @@ Ce document décrit les évènements Matomo **écrits explicitement dans le code
 (`code.travail.gouv.fr`). Il est destiné au métier : pour **chaque** évènement, il explique
 **quand** il part et **pourquoi** on le mesure, puis en donne le contenu exact.
 
-**103** events uniques · **112** au total · **32** catégories Matomo. Couverture vérifiée
+**128** events uniques · **140** au total · **33** catégories Matomo. Couverture vérifiée
 exhaustivement face au catalogue extrait du code.
 
 #### Règle transverse : un nom d'event n'est jamais « falsy »
@@ -168,10 +168,15 @@ sur « suivant »** (non envoyés en cas d'erreur de saisie). Trois parcours :
  * **p2** : je ne la connais pas (je recherche mon entreprise) → route `enterprise`
  * **p3** : je ne souhaite pas la renseigner (je passe l'étape) → route `not-selected`
 
-> ⚠️ En parcours **p1**, la recherche par mots-clés de la convention **n'émet aucun event** (le
-> tracking de saisie n'est pas branché sur cette étape). Le seul event portant une requête JSON
-> `{"query":…}` est `enterprise_search` du parcours p2. Le debounce de 300 ms ne concerne que
-> l'appel API, pas les events.
+> ⚠️ **Sur les simulateurs**, la recherche par mots-clés du parcours **p1** **n'émet aucun
+> event** (le tracking de saisie n'est pas branché sur cette étape). Le seul event portant une
+> requête JSON `{"query":…}` est `enterprise_search` du parcours p2. Le debounce de 300 ms ne
+> concerne que l'appel API, pas les events.
+> Sur les **contributions**, le bloc de choix de CC est instrumenté beaucoup plus finement —
+> début de saisie, recherches infructueuses, retours arrière — par la catégorie
+> `cc_search_funnel` décrite dans « Funnel de choix de convention collective » plus bas. Les
+> composants de recherche étant partagés, cette instrumentation passe par des callbacks
+> optionnels : elle ne s'applique **qu'aux contributions**.
 
 **Émis sur l'action de l'utilisateur** (parcours p2 uniquement)
 [↗ source](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/enterprise/EnterpriseAgreementSearch/tracking.ts#L14 "EnterpriseAgreementSearch/tracking.ts:14")
@@ -344,6 +349,69 @@ réponse** (le contenu a réellement été vu, pas seulement la page chargée).
 | contribution | clic_declinaison_cc                       | `contribution/<num>-<slug>`   | Clic sur une convention collective listée dans l'accordéon « Votre réponse en fonction de votre convention collective », affiché sur la fiche générique sous « Références ». Ce bloc existe d'abord pour le **maillage interne / SEO** (les liens sont dans le HTML servi, sans interaction) ; l'event mesure son usage réel par les usagers. `name` = chemin de la page CC atteinte. |
 | contribution | reponse_consultee                         | `contribution/<slug>`         | Réponse **réellement consultée** : le titre du bloc réponse (h2) est entré dans le haut de l'écran **et** y est resté ~10 s en continu, onglet actif ; émis **une seule fois** par page. Indicateur clé de la consultation du contenu, notamment sur les arrivées directes via une convention collective. |
 | cc_search_type_of_users | click_p1 · click_p2 · click_p3 | `<withVariant(path,variant)>` | Parcours de choix de CC : par nom (p1), par entreprise (p2), sans CC (p3). |
+
+---
+
+### Funnel de choix de convention collective (contributions)
+
+La catégorie **`cc_search_funnel`** couvre le bloc de choix de CC bout en bout, de son
+affichage au clic final. Elle est **isolée volontairement** : un rapport Matomo = un funnel,
+sans mélanger ces étapes avec `cc_search_type_of_users` (partagée avec les simulateurs) ni
+avec `contribution`. Le `name` porte toujours le **chemin de la page** (`contribution/<slug>`
+sur la fiche générique, `contribution/<num>-<slug>` sur une fiche CC) : c'est ce qui manquait
+aux events historiques pour attribuer chaque étape à une contribution précise.
+
+**Périmètre** : les deux façades contribution (fiche générique et fiche CC personnalisée).
+Les composants de recherche étant partagés avec les simulateurs, la page « Trouver sa
+convention collective » et les widgets, ils reçoivent des **callbacks optionnels** : hors
+contribution, aucun event `cc_search_funnel` ne part.
+
+`click_p1` / `click_p2` / `click_p3` restent **inchangés** (ils partent à la sélection
+effective d'une CC) ; `select_p1` / `select_p2` / `select_p3` ci-dessous partent, eux, au clic
+sur la radio. Les deux séries coexistent pour ne pas rompre les courbes existantes — elles
+vivent dans **deux catégories distinctes**, `cc_search_type_of_users` et `cc_search_funnel` :
+une requête qui filtrerait sur la seule `action` les additionnerait à tort.
+
+**Deux réserves de lecture**, à garder en tête avant de comparer des contributions entre
+elles :
+
+- `view_bloc_cc` n'a pas tout à fait la même nature selon la façade. Sur la fiche générique le
+  bloc est affiché à chaque page vue ; sur une fiche CC il ne l'est qu'à l'ouverture explicite
+  du bloc (arrivée externe ou « Réinitialiser »). Le funnel se lit donc **par `name`**, chaque
+  page ayant son propre dénominateur — pas en agrégeant les deux familles de pages.
+- Sur les contributions **sans réponse Code du travail** (`generic-no-cdt`), le bouton
+  « Afficher les informations » n'est rendu qu'une fois une CC valide retenue :
+  `click_afficher_les_informations` et les trois `blocked_*` ne peuvent structurellement pas
+  y partir tant qu'aucune CC n'est choisie. Ces pages apparaîtront donc sans marche terminale,
+  ce qui ne traduit aucun décrochage.
+[↗ source](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/contributions/tracking.ts#L196 "contributions/tracking.ts")
+
+| Catégorie | Action | Name (📌) | Quand / pourquoi |
+| --------- | ------ | --------- | ---------------- |
+| cc_search_funnel | view_bloc_cc | `<toPageEventName(path)>` | Affichage du bloc de choix de CC, une fois par page. **Dénominateur du funnel** : toutes les étapes suivantes se lisent en pourcentage de cet event. Exclut les visites que la fiche générique s'apprête à rediriger vers la CC mémorisée : le bloc y est monté mais jamais vu, les compter gonflerait le dénominateur d'une cohorte à 0 % de conversion. |
+| cc_search_funnel | click_c_est_quoi_une_cc | `<toPageEventName(path)>` | Clic sur « La convention collective, c'est quoi ? » en tête de la façade. Mesure la part d'usagers qui partent se documenter plutôt que de renseigner leur CC. |
+| cc_search_funnel | select_p1 | `<toPageEventName(path)>` | Clic sur la radio « Je sais quelle est ma convention collective ». Première marche du funnel, bien avant la sélection effective mesurée par `click_p1`. |
+| cc_search_funnel | select_p2 | `<toPageEventName(path)>` | Clic sur la radio « Je cherche mon entreprise ». Idem, pendant amont de `click_p2`. |
+| cc_search_funnel | select_p3 | `<toPageEventName(path)>` | Clic sur la radio « Je ne souhaite pas renseigner ma convention collective ». |
+| cc_search_funnel | start_recherche_cc | `<toPageEventName(path)>` | Première recherche dans l'autocomplétion des conventions (parcours p1). Sépare « a coché p1 » de « a réellement cherché ». **Une seule fois par page** : la garde vit dans le bloc, pas dans le champ de recherche, que le formulaire démonte et remonte à chaque bascule de radio. |
+| cc_search_funnel | no_result_cc | `<toPageEventName(path)>` | Recherche de plus de deux caractères ne remontant **aucune** convention. Décrochage le plus probable du parcours p1. **Une seule fois par page** : l'autocomplétion cherche à chaque frappe, compter chaque échec placerait cette marche hors d'échelle. Se lit donc « l'usager a rencontré au moins une recherche infructueuse », comme `no_result_entreprise`. |
+| cc_search_funnel | start_recherche_entreprise | `<toPageEventName(path)>` | Première frappe dans le champ « nom de l'entreprise » (parcours p2). **Une seule fois par page**, même garde que `start_recherche_cc`. |
+| cc_search_funnel | submit_recherche_entreprise | `<toPageEventName(path)>` | Chaque soumission du formulaire de recherche d'entreprise, y compris à champ vide (tentative bloquée). Les recherches automatiques (retour « Précédent », lien direct) en sont exclues. |
+| cc_search_funnel | select_localisation | `<toPageEventName(path)>` | Une ville ou un code postal est renseigné pour affiner la recherche. Mesure l'usage réel de ce champ facultatif. |
+| cc_search_funnel | no_result_entreprise | `<toPageEventName(path)>` | Recherche d'entreprise sans aucun résultat, **une seule fois par page**. Le volume de tentatives se lit sur `submit_recherche_entreprise`, qui reste compté à chaque soumission. |
+| cc_search_funnel | error_recherche_entreprise | `<toPageEventName(path)>` | Incident de l'API entreprises : distingue un décrochage **technique** d'un décrochage d'usage. |
+| cc_search_funnel | select_entreprise | `<toPageEventName(path)>` | Clic sur une carte entreprise dans la liste de résultats. |
+| cc_search_funnel | entreprise_sans_cc | `<toPageEventName(path)>` | L'entreprise retenue ne déclare **aucune** convention collective : impasse du parcours p2 indépendante de l'usager. |
+| cc_search_funnel | select_cc_entreprise | `<toPageEventName(path)>` | Choix d'une convention parmi celles déclarées par l'entreprise (cas « N conventions »). |
+| cc_search_funnel | select_particulier_employeur | `<toPageEventName(path)>` | Clic sur la carte « assistants maternels, employés de maison », raccourci hors recherche d'entreprise. |
+| cc_search_funnel | click_modifier_entreprise | `<toPageEventName(path)>` | Bouton « Modifier » de l'entreprise sélectionnée : **retour arrière**, l'usager n'a pas reconnu son entreprise. |
+| cc_search_funnel | click_modifier_cc | `<toPageEventName(path)>` | Bouton « Modifier » de l'écran « Vous avez sélectionné la convention collective » : retour arrière après coup. |
+| cc_search_funnel | click_afficher_les_informations | `<toPageEventName(path)>` | **Toute** tentative de clic sur le bouton principal, aboutie ou non. Les `click_afficher_les_informations_*` de la catégorie `contribution` ne partent qu'en cas de succès : comparés à celui-ci, ils donnent enfin le taux de tentatives bloquées. |
+| cc_search_funnel | blocked_sans_option | `<toPageEventName(path)>` | Bouton cliqué sans aucune option cochée → message d'erreur sous les radios. |
+| cc_search_funnel | blocked_sans_cc_p1 | `<toPageEventName(path)>` | Bouton cliqué en parcours p1 sans convention choisie. |
+| cc_search_funnel | blocked_sans_cc_p2 | `<toPageEventName(path)>` | Bouton cliqué en parcours p2 sans convention choisie. |
+| cc_search_funnel | cc_non_traitee_retenue | `<toPageEventName(path)>` | L'usager a retenu une CC pour laquelle **cette contribution** n'a pas de réponse, **une fois par CC** (un aller-retour A → B → A ne recompte pas A). Mesure la fréquence de cette impasse éditoriale, tous parcours confondus. On compte la CC retenue et non l'affichage d'un encart : les trois écrans qui affichent une alerte le font sous des conditions différentes, s'y brancher mêlerait deux sémantiques dans une seule courbe. |
+| cc_search_funnel | click_lien_cc_externe | `<toPageEventName(path)>` | Clic sur le lien « ici » de l'alerte « Nous n'avons pas de réponse pour cette convention collective », qui renvoie vers le texte de la convention (Légifrance). Mesure si la porte de sortie proposée est réellement empruntée. |
 
 ---
 
