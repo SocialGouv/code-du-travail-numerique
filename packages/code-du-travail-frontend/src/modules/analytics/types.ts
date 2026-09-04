@@ -52,3 +52,26 @@ export enum MatomoActionEvent {
   CLICK_PREVIOUS = "click_previous",
   TYPE_CTRL_C = "type_CTRL_C",
 }
+
+/**
+ * Simulateur brut/net (`/outils/simulateur-embauche`).
+ *
+ * La page la plus consultée du site n'émettait aucun event tant qu'elle se
+ * contentait d'héberger l'iframe URSSAF : on ne savait donc rien de ce que les
+ * usagers y faisaient, ni de son taux de sortie de 98 %. Ces actions couvrent
+ * les indicateurs demandés — part des usagers qui saisissent une valeur, taux
+ * d'engagement sur les messages contextuels, clics « Pour approfondir », sorties
+ * vers l'URSSAF et taux d'erreur de l'API.
+ *
+ * Rappel (cf. `eventName.ts`) : Matomo **jette** un `name` falsy. Aucun des noms
+ * associés à ces actions ne peut être vide par construction.
+ */
+export enum MatomoBrutNetEvent {
+  SAISIE_CHAMP = "brut_net_saisie_champ",
+  REMPLIR_AUTOMATIQUEMENT = "brut_net_remplir_automatiquement",
+  AFFICHAGE_MESSAGE_CONTEXTUEL = "brut_net_affichage_message_contextuel",
+  CLIC_MESSAGE_CONTEXTUEL = "brut_net_clic_message_contextuel",
+  CLIC_POUR_APPROFONDIR = "brut_net_clic_pour_approfondir",
+  CLIC_SIMULATEUR_URSSAF = "brut_net_clic_simulateur_urssaf",
+  ERREUR_API = "brut_net_erreur_api",
+}

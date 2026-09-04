@@ -1,8 +1,8 @@
 {
   "scan_root": "packages/code-du-travail-frontend/src",
-  "callsites": 76,
-  "total_events": 113,
-  "unique_events": 104,
+  "callsites": 83,
+  "total_events": 120,
+  "unique_events": 111,
   "unresolved_callsites": 0,
   "events": [
     {
@@ -1010,6 +1010,104 @@
         "MatomoBaseEvent.OUTIL",
         "MatomoRetirementEvent.ANCIENNETE_MOINS_2_ANS",
         "MatomoRetirementEvent.ANCIENNETE_PLUS_2_ANS"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "outil",
+      "action": "brut_net_affichage_message_contextuel",
+      "name_pattern": "<CONTEXTUAL_MESSAGES[key].eventName>",
+      "resolution": "literal",
+      "emit_function": "useHiringSimulatorTracking",
+      "file": "packages/code-du-travail-frontend/src/modules/outils/simulateur-embauche/tracking.ts",
+      "line": 47,
+      "enum_refs": [
+        "MatomoBaseEvent.OUTIL",
+        "MatomoBrutNetEvent.AFFICHAGE_MESSAGE_CONTEXTUEL"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "outil",
+      "action": "brut_net_clic_message_contextuel",
+      "name_pattern": "<CONTEXTUAL_MESSAGES[key].eventName>",
+      "resolution": "literal",
+      "emit_function": "useHiringSimulatorTracking",
+      "file": "packages/code-du-travail-frontend/src/modules/outils/simulateur-embauche/tracking.ts",
+      "line": 59,
+      "enum_refs": [
+        "MatomoBaseEvent.OUTIL",
+        "MatomoBrutNetEvent.CLIC_MESSAGE_CONTEXTUEL"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "outil",
+      "action": "brut_net_clic_pour_approfondir",
+      "name_pattern": "<slug>",
+      "resolution": "literal",
+      "emit_function": "useHiringSimulatorTracking",
+      "file": "packages/code-du-travail-frontend/src/modules/outils/simulateur-embauche/tracking.ts",
+      "line": 69,
+      "enum_refs": [
+        "MatomoBaseEvent.OUTIL",
+        "MatomoBrutNetEvent.CLIC_POUR_APPROFONDIR"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "outil",
+      "action": "brut_net_clic_simulateur_urssaf",
+      "name_pattern": "<period>",
+      "resolution": "literal",
+      "emit_function": "useHiringSimulatorTracking",
+      "file": "packages/code-du-travail-frontend/src/modules/outils/simulateur-embauche/tracking.ts",
+      "line": 77,
+      "enum_refs": [
+        "MatomoBaseEvent.OUTIL",
+        "MatomoBrutNetEvent.CLIC_SIMULATEUR_URSSAF"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "outil",
+      "action": "brut_net_erreur_api",
+      "name_pattern": "<reason || NETWORK_ERROR_EVENT_NAME>",
+      "resolution": "literal",
+      "emit_function": "useHiringSimulatorTracking",
+      "file": "packages/code-du-travail-frontend/src/modules/outils/simulateur-embauche/tracking.ts",
+      "line": 91,
+      "enum_refs": [
+        "MatomoBaseEvent.OUTIL",
+        "MatomoBrutNetEvent.ERREUR_API"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "outil",
+      "action": "brut_net_remplir_automatiquement",
+      "name_pattern": "<name>",
+      "resolution": "literal",
+      "emit_function": "useHiringSimulatorTracking",
+      "file": "packages/code-du-travail-frontend/src/modules/outils/simulateur-embauche/tracking.ts",
+      "line": 33,
+      "enum_refs": [
+        "MatomoBaseEvent.OUTIL",
+        "MatomoBrutNetEvent.REMPLIR_AUTOMATIQUEMENT"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "outil",
+      "action": "brut_net_saisie_champ",
+      "name_pattern": "<FIELD_DESCRIPTORS[field].eventName>",
+      "resolution": "literal",
+      "emit_function": "useHiringSimulatorTracking",
+      "file": "packages/code-du-travail-frontend/src/modules/outils/simulateur-embauche/tracking.ts",
+      "line": 25,
+      "enum_refs": [
+        "MatomoBaseEvent.OUTIL",
+        "MatomoBrutNetEvent.SAISIE_CHAMP"
       ],
       "tracking_method": "sendEvent"
     },
