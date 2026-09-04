@@ -1,0 +1,60 @@
+import { fr } from "@codegouvfr/react-dsfr";
+import React from "react";
+import { References } from "@socialgouv/modeles-social";
+import ReferenceJuridiques from "src/modules/outils/preavis-licenciement/steps/Result/components/ReferenceJuridiques";
+import { ContractFamily, indemniteLabel } from "../../../types";
+
+/**
+ * Contrats pour lesquels le code du travail ne prévoit aucune indemnité de
+ * précarité. La liste n'est affichée qu'aux usagers ayant répondu « Autres »
+ * à l'étape « Type de contrat » (issue #7142).
+ */
+const CONTRATS_EXCLUS = [
+  "CDD saisonnier",
+  "CDD d'usage",
+  "Contrat unique d'insertion (CUI) - Parcours emploi compétences (PEC)",
+  "Contrat d'accompagnement dans l'emploi (CAE)",
+  "Contrat de professionnalisation ou contrat d'apprentissage",
+  "Contrat pour lequel l'employeur s'est engagé à assurer un complément de formation professionnelle au salarié",
+  "Contrat conclu avec un jeune pendant ses vacances scolaires ou universitaires",
+  "CDD dans le cadre d'un congé de mobilité",
+];
+
+type Props = {
+  /** Message renvoyé par le modèle publicodes. */
+  message?: string;
+  family: ContractFamily;
+  /** Références juridiques du régime applicable, renvoyées par le modèle. */
+  references: References[];
+  /** Affiche la liste des contrats exclus par le code du travail. */
+  showExcludedContracts?: boolean;
+};
+
+const NoIndemnityMessage: React.FC<Props> = ({
+  message,
+  family,
+  references,
+  showExcludedContracts,
+}) => (
+  <div data-testid="no-indemnity-message">
+    <h3 className={fr.cx("fr-mt-3w", "fr-h3")}>{indemniteLabel(family)}</h3>
+    {message && <p className={fr.cx("fr-mb-3w", "fr-pr-md-2v")}>{message}</p>}
+
+    {showExcludedContracts && (
+      <div data-testid="excluded-contracts">
+        <p className={fr.cx("fr-mb-1w")}>
+          L’indemnité de précarité n’est pas due en cas de&nbsp;:
+        </p>
+        <ul>
+          {CONTRATS_EXCLUS.map((contrat) => (
+            <li key={contrat}>{contrat}</li>
+          ))}
+        </ul>
+      </div>
+    )}
+
+    <ReferenceJuridiques references={references} />
+  </div>
+);
+
+export default NoIndemnityMessage;

@@ -3,7 +3,8 @@ import { produce } from "immer";
 import { PublicodesSimulator } from "@socialgouv/modeles-social";
 import { AgreementStoreData, AgreementStoreSlice } from "./types";
 import { validateStep } from "./validator";
-import { InformationsStoreSlice } from "../../Informations/store";
+import { TypeContratStoreSlice } from "../../TypeContrat/store";
+import { TermeContratStoreSlice } from "../../TermeContrat/store";
 import { captureException } from "@sentry/nextjs";
 import {
   getAgreementFromLocalStorage,
@@ -15,7 +16,7 @@ import { AgreementRoute } from "src/modules/outils/indemnite-depart/types";
 import { ValidationResponse } from "src/modules/outils/common/components/SimulatorLayout/types";
 import { pushAgreementEvents } from "../../../../common/events/pushAgreementEvents";
 import { StoreSliceWrapperIndemnitePrecarite } from "../../store";
-import getSupportedCc from "src/modules/outils/common/utils/getSupportedCc";
+import isCcFullySupported from "src/modules/outils/common/utils/isCcFullySupported";
 
 const initialState: Omit<AgreementStoreData, "publicodes"> = {
   input: {
@@ -27,9 +28,34 @@ const initialState: Omit<AgreementStoreData, "publicodes"> = {
   isStepValid: true,
 };
 
+type DownstreamSlices = TypeContratStoreSlice & TermeContratStoreSlice;
+
+/**
+ * Les options de l'étape « Type de contrat » dépendent de la convention
+ * collective : changer de CC doit repartir d'une saisie vierge.
+ */
+const resetDownstreamSteps = (
+  set: StoreApi<AgreementStoreSlice & DownstreamSlices>["setState"]
+) => {
+  set(
+    produce((state: DownstreamSlices) => {
+      state.typeContratData.input.contractOptionId = undefined;
+      state.typeContratData.error = {};
+      state.typeContratData.hasBeenSubmit = false;
+      state.typeContratData.isStepValid = true;
+      state.termeContratData.input.finALaDatePrevue = undefined;
+      state.termeContratData.input.issueContrat = undefined;
+      state.termeContratData.error = {};
+      state.termeContratData.hasBeenSubmit = false;
+      state.termeContratData.isStepValid = true;
+      state.termeContratData.ineligibility = undefined;
+    })
+  );
+};
+
 const createAgreementStore: StoreSliceWrapperIndemnitePrecarite<
   AgreementStoreSlice,
-  InformationsStoreSlice
+  DownstreamSlices
 > = (set, get) => ({
   agreementData: {
     ...initialState,
@@ -96,10 +122,12 @@ const createAgreementStore: StoreSliceWrapperIndemnitePrecarite<
           state.agreementData.input.hasNoEnterpriseSelected = false;
         })
       );
+      resetDownstreamSteps(set);
       applyGenericValidation(get, set, "route", value);
     },
     onAgreementChange: (agreement, enterprise) => {
       try {
+        resetDownstreamSteps(set);
         applyGenericValidation(get, set, "agreement", agreement);
         applyGenericValidation(get, set, "enterprise", enterprise);
         if (agreement) {
@@ -143,9 +171,15 @@ const createAgreementStore: StoreSliceWrapperIndemnitePrecarite<
       const { isValid, errorState } = validateStep(input);
       const { route, agreement, enterprise } = input;
       if (isValid && route) {
-        const isTreated = !!getSupportedCc(
-          PublicodesSimulator.INDEMNITE_PRECARITE
-        ).find(({ idcc }) => idcc === agreement?.num);
+        // « Traitée » = la convention dispose d'un modèle publicodes pour ce
+        // simulateur. Se contenter de sa présence dans `supportedCcn` ferait
+        // remonter comme traitées les conventions gérées par d'autres outils.
+        const isTreated =
+          !!agreement?.num &&
+          isCcFullySupported(
+            agreement.num,
+            PublicodesSimulator.INDEMNITE_PRECARITE
+          );
         pushAgreementEvents(
           PublicodesSimulator.INDEMNITE_PRECARITE,
           {

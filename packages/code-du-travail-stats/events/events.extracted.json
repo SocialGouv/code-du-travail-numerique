@@ -1,7 +1,7 @@
 {
   "scan_root": "packages/code-du-travail-frontend/src",
-  "callsites": 76,
-  "total_events": 113,
+  "callsites": 79,
+  "total_events": 116,
   "unique_events": 104,
   "unresolved_callsites": 0,
   "events": [
@@ -1140,6 +1140,51 @@
         "MatomoActionEvent.CLICK_PREVIOUS",
         "MatomoActionEvent.VIEW_STEP",
         "MatomoBaseEvent.OUTIL"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "outil",
+      "action": "view_step_<title>",
+      "name_pattern": "results_eligible",
+      "resolution": "dynamic",
+      "emit_function": "emitResultEvent",
+      "file": "packages/code-du-travail-frontend/src/modules/outils/indemnite-precarite/events/useResultTracking.ts",
+      "line": 30,
+      "enum_refs": [
+        "MatomoActionEvent.VIEW_STEP",
+        "MatomoBaseEvent.OUTIL",
+        "MatomoSimulatorEvent.STEP_RESULT_ELIGIBLE"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "outil",
+      "action": "view_step_<title>",
+      "name_pattern": "results_ineligible",
+      "resolution": "dynamic",
+      "emit_function": "emitResultEvent",
+      "file": "packages/code-du-travail-frontend/src/modules/outils/indemnite-precarite/events/useResultTracking.ts",
+      "line": 37,
+      "enum_refs": [
+        "MatomoActionEvent.VIEW_STEP",
+        "MatomoBaseEvent.OUTIL",
+        "MatomoSimulatorEvent.STEP_RESULT_INELIGIBLE"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "outil",
+      "action": "view_step_<title>",
+      "name_pattern": "results_error",
+      "resolution": "dynamic",
+      "emit_function": "emitResultEvent",
+      "file": "packages/code-du-travail-frontend/src/modules/outils/indemnite-precarite/events/useResultTracking.ts",
+      "line": 44,
+      "enum_refs": [
+        "MatomoActionEvent.VIEW_STEP",
+        "MatomoBaseEvent.OUTIL",
+        "MatomoSimulatorEvent.STEP_RESULT_ERROR"
       ],
       "tracking_method": "sendEvent"
     },

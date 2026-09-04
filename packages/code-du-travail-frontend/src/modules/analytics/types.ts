@@ -23,7 +23,12 @@ export enum MatomoSearchAgreementCategory {
 
 export enum MatomoSimulatorEvent {
   CLICK_PRINT = "click_print",
+  // Issue de l'écran de résultat. Les trois valeurs sont exhaustives et
+  // mutuellement exclusives : un passage sur l'écran en émet exactement une,
+  // ce qui rend le taux de conversion calculable sans ambiguïté.
+  STEP_RESULT_ELIGIBLE = "results_eligible",
   STEP_RESULT_INELIGIBLE = "results_ineligible",
+  STEP_RESULT_ERROR = "results_error",
   CLICK_NO_COMPANY = "click_je_n_ai_pas_d_entreprise",
   SELECT_NO_COMPANY = "select_je_n_ai_pas_d_entreprise",
 }

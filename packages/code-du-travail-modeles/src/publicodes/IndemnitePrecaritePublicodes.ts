@@ -8,10 +8,7 @@ import { ResultBuilder } from "./common/ResultBuilder";
 import { CalculateOutput, PublicodesCalculateResult } from "./common/type";
 
 import { mapIneligibility } from "./common/mapper";
-import {
-  IneligibilityIndemnitePrecariteFactory,
-  SupportedCc,
-} from "../modeles";
+import { IneligibilityLegalIndemnitePrecarite } from "../modeles/base";
 import { IIneligibility } from "../modeles/common/types/ineligibility";
 
 export class IndemnitePrecaritePublicodes extends PublicodesBase<PublicodesCalculateResult> {
@@ -24,9 +21,9 @@ export class IndemnitePrecaritePublicodes extends PublicodesBase<PublicodesCalcu
       { ...(idcc && rules[idcc] ? rules[idcc] : {}), ...rules.base },
       PublicodesDefaultRules[PublicodesSimulator.INDEMNITE_PRECARITE]
     );
-    this.ineligibility = new IneligibilityIndemnitePrecariteFactory().create(
-      idcc ? (idcc as SupportedCc) : SupportedCc.default
-    );
+    // Les critères d'exclusion sont identiques pour toutes les conventions
+    // collectives (issue #7436) : pas de stratégie par CC.
+    this.ineligibility = new IneligibilityLegalIndemnitePrecarite();
     this.explanationInstance = new ExplanationBuilder(idcc);
     this.builder = new ResultBuilder(this.explanationInstance);
   }

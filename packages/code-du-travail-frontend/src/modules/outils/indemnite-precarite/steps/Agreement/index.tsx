@@ -38,6 +38,7 @@ const StepAgreement = () => {
       route={route}
       simulator={PublicodesSimulator.INDEMNITE_PRECARITE}
       showNotSelectedOption={true}
+      notSelectedWarningDescription="Vous pouvez passer cette étape et poursuivre la simulation qui vous fournira un résultat basé sur le Code du travail. Nous vous recommandons de renseigner votre convention collective qui peut prévoir un résultat différent que celui défini par le Code du travail."
     />
   );
 };
