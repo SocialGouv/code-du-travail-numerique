@@ -177,6 +177,20 @@
     },
     {
       "category": "cc_search_funnel",
+      "action": "cc_non_traitee_retenue",
+      "name_pattern": "<toPageEventName(path)>",
+      "resolution": "literal",
+      "emit_function": "emitUntreatedAgreementRetained",
+      "file": "packages/code-du-travail-frontend/src/modules/contributions/tracking.ts",
+      "line": 372,
+      "enum_refs": [
+        "TrackingCcFunnelAction.UNTREATED_AGREEMENT_RETAINED",
+        "TrackingContributionCategory.CC_SEARCH_FUNNEL"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "cc_search_funnel",
       "action": "click_afficher_les_informations",
       "name_pattern": "<toPageEventName(path)>",
       "resolution": "literal",
@@ -395,20 +409,6 @@
       "line": 316,
       "enum_refs": [
         "TrackingCcFunnelAction.SELECT_HOUSEHOLD_EMPLOYER",
-        "TrackingContributionCategory.CC_SEARCH_FUNNEL"
-      ],
-      "tracking_method": "sendEvent"
-    },
-    {
-      "category": "cc_search_funnel",
-      "action": "show_alerte_cc_non_traitee",
-      "name_pattern": "<toPageEventName(path)>",
-      "resolution": "literal",
-      "emit_function": "emitShowUntreatedAgreementAlert",
-      "file": "packages/code-du-travail-frontend/src/modules/contributions/tracking.ts",
-      "line": 372,
-      "enum_refs": [
-        "TrackingCcFunnelAction.SHOW_UNTREATED_AGREEMENT_ALERT",
         "TrackingContributionCategory.CC_SEARCH_FUNNEL"
       ],
       "tracking_method": "sendEvent"

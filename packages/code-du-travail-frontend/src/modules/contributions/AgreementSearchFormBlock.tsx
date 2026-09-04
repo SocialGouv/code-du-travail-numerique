@@ -1,5 +1,12 @@
 "use client";
-import React, { ReactNode, useEffect, useMemo, useRef, useState } from "react";
+import React, {
+  ReactNode,
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
 import { Button } from "@codegouvfr/react-dsfr/Button";
 import { fr } from "@codegouvfr/react-dsfr";
 import { useRouter } from "next/navigation";
@@ -46,6 +53,13 @@ type Props = {
   onBackToPersonalizeFocus: () => void;
   /** Légende (label) du groupe de radios. Défaut géré par AgreementSearchForm. */
   legend?: ReactNode;
+  /**
+   * La page hôte s'apprête à rediriger (fiche générique avec une CC mémorisée
+   * et traitée) : le bloc est monté, mais l'usager ne le verra jamais. On
+   * n'émet alors pas `view_bloc_cc`, sans quoi le dénominateur du funnel
+   * compterait une cohorte structurellement à 0 % de conversion.
+   */
+  isRedirecting?: boolean;
 };
 
 const MISSING_ROUTE_ERROR =
@@ -62,6 +76,7 @@ export function AgreementSearchFormBlock({
   defaultRoute,
   onBackToPersonalizeFocus,
   legend,
+  isRedirecting,
 }: Props) {
   const router = useRouter();
   const { slug, isNoCDT } = contribution;
@@ -80,35 +95,64 @@ export function AgreementSearchFormBlock({
 
   const { emitClickP3 } = useContributionTracking();
   const funnel = useCcFunnelTracking();
-  // Dernière CC pour laquelle l'alerte « pas de réponse » a été comptée : le
-  // bloc se re-rend à chaque frappe, sans quoi l'event partirait en boucle.
-  const trackedAlertAgreementRef = useRef<string | undefined>(undefined);
+  // CC déjà comptées comme « non traitée retenue » : un aller-retour A → B → A
+  // ne doit pas recompter A, et le bloc se re-rend à chaque frappe.
+  const trackedUntreatedAgreementsRef = useRef(new Set<string>());
+
+  // Marches du funnel à compter une fois par affichage de la page. La garde ne
+  // peut pas vivre dans les composants de recherche : `AgreementSearchForm` les
+  // démonte et remonte à chaque bascule de radio, si bien qu'un usager hésitant
+  // (p1 → p2 → p1) émettrait deux fois l'entrée dans l'étape pour un seul
+  // `view_bloc_cc`. Le bloc, lui, est monté une fois par page.
+  const emittedOnceRef = useRef(new Set<string>());
+  const once = useCallback((key: string, emit: () => void) => {
+    if (emittedOnceRef.current.has(key)) return;
+    emittedOnceRef.current.add(key);
+    emit();
+  }, []);
 
   useEffect(() => {
     setIsValid(isAgreementValid(contribution, selectedAgreement));
   }, [selectedAgreement]);
 
-  // Dénominateur exact du funnel : le bloc de choix de CC a été affiché.
+  // Dénominateur du funnel : le bloc de choix de CC a été affiché à un usager
+  // qui reste sur la page (cf. `isRedirecting`).
   useEffect(() => {
+    if (isRedirecting) return;
     funnel.emitViewBlocCc(trackingActionName);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  // Objet de callbacks passé aux composants de recherche : mémoïsé pour ne pas
-  // les re-rendre à chaque frappe (les émetteurs, eux, ont une référence
-  // stable — cf. `useCcFunnelTracking`).
+  // Objet de callbacks passé aux composants de recherche. Mémoïsé pour lui
+  // donner une identité stable entre deux rendus : aucune des deux feuilles
+  // n'est aujourd'hui enveloppée dans `React.memo`, la mémoïsation n'évite donc
+  // encore aucun rendu — elle évite qu'en mémoïser une plus tard ne soit un
+  // coup d'épée dans l'eau. Les émetteurs, eux, ont une référence stable
+  // (cf. `useCcFunnelTracking`).
   const funnelTracking = useMemo<AgreementSearchFunnelTracking>(
     () => ({
       onAgreementSearchStart: () =>
-        funnel.emitStartAgreementSearch(trackingActionName),
+        once("start_cc", () =>
+          funnel.emitStartAgreementSearch(trackingActionName)
+        ),
+      // `onSearch` de l'autocomplete part à CHAQUE frappe : sans cette garde,
+      // une requête infructueuse de douze caractères émettrait dix events, hors
+      // d'échelle face aux autres marches. On compte « l'usager a rencontré au
+      // moins une recherche infructueuse », comme côté entreprise.
       onAgreementSearchNoResult: () =>
-        funnel.emitNoResultAgreement(trackingActionName),
+        once("no_result_cc", () =>
+          funnel.emitNoResultAgreement(trackingActionName)
+        ),
       onEnterpriseSearchStart: () =>
-        funnel.emitStartEnterpriseSearch(trackingActionName),
+        once("start_entreprise", () =>
+          funnel.emitStartEnterpriseSearch(trackingActionName)
+        ),
       onEnterpriseSearchSubmit: () =>
         funnel.emitSubmitEnterpriseSearch(trackingActionName),
       onEnterpriseSearchNoResult: () =>
-        funnel.emitNoResultEnterprise(trackingActionName),
+        once("no_result_entreprise", () =>
+          funnel.emitNoResultEnterprise(trackingActionName)
+        ),
       onEnterpriseSearchError: () =>
         funnel.emitErrorEnterpriseSearch(trackingActionName),
       onLocationSelect: () => funnel.emitSelectLocation(trackingActionName),
@@ -124,7 +168,7 @@ export function AgreementSearchFormBlock({
       onModifyAgreement: () =>
         funnel.emitClickModifyAgreement(trackingActionName),
     }),
-    [funnel, trackingActionName]
+    [funnel, once, trackingActionName]
   );
 
   const onClickExternalAgreementLink = () =>
@@ -181,17 +225,24 @@ export function AgreementSearchFormBlock({
       return <>Vous pouvez consulter les informations générales ci-dessous.</>;
   };
 
-  // « L'usager a vu qu'on n'a pas de réponse pour sa convention » : une fois par
-  // CC retenue, quel que soit le parcours qui l'a amenée. Le message est bien
-  // celui rendu par les composants de recherche à partir de
-  // `selectedAgreementAlert` — d'où la condition identique.
+  // « L'usager a retenu une CC pour laquelle cette contribution n'a pas de
+  // réponse » : une fois par CC, quel que soit le parcours qui l'a amenée.
+  //
+  // On mesure la CC retenue, et non l'affichage d'un encart : les trois écrans
+  // qui rendent une alerte le font sous des conditions DIFFÉRENTES — celle-ci
+  // (`!isAgreementSupported`, propre à la contribution) dans les deux
+  // composants de recherche, mais `!agreement.contributions` (portée globale)
+  // dans `EnterpriseAgreementSelectionForm`, seul écran affiché quand
+  // l'entreprise déclare au moins deux conventions. Se brancher sur les rendus
+  // mêlerait donc deux sémantiques dans une seule courbe ; une condition unique
+  // et parcours-indépendante est lisible.
   useEffect(() => {
     if (!selectedAgreement) return;
     if (!selectedAgreementAlert(selectedAgreement)) return;
     const idcc = String(selectedAgreement.num);
-    if (trackedAlertAgreementRef.current === idcc) return;
-    trackedAlertAgreementRef.current = idcc;
-    funnel.emitShowUntreatedAgreementAlert(trackingActionName);
+    if (trackedUntreatedAgreementsRef.current.has(idcc)) return;
+    trackedUntreatedAgreementsRef.current.add(idcc);
+    funnel.emitUntreatedAgreementRetained(trackingActionName);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedAgreement]);
 

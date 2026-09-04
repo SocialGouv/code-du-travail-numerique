@@ -15,6 +15,9 @@ import { searchEnterprises as enterpriseFixtures } from "../../enterprise/__mock
 import { AgreementSearchInput } from "../../convention-collective/AgreementSearch/AgreementSearchInput";
 import { EnterpriseAgreementSearchInput } from "../../enterprise/EnterpriseAgreementSearch/EnterpriseAgreementSearchInput";
 import { ContributionGenericAgreementSearch } from "../ContributionGenericAgreementSearch";
+import { ContributionGeneric } from "../ContributionGeneric";
+import { AgreementSearchFormBlock } from "../AgreementSearchFormBlock";
+import { STORAGE_KEY_AGREEMENT } from "../../utils/useLocalStorage";
 import {
   TrackingCcFunnelAction,
   TrackingContributionCategory,
@@ -168,6 +171,8 @@ const searchEnterprise = async (query: string) => {
 };
 
 beforeEach(() => {
+  window.localStorage.clear();
+  window.location.hash = "";
   (sendEvent as jest.Mock).mockReset();
   mockSearchEnterprises.mockReset();
   mockSearchEnterprises.mockImplementation(enterpriseFixtures);
@@ -505,8 +510,8 @@ describe("Funnel de choix de convention collective (contributions)", () => {
     });
   });
 
-  describe("alerte « pas de réponse pour cette convention »", () => {
-    it("émet show_alerte_cc_non_traitee une seule fois pour une CC non traitée", async () => {
+  describe("convention collective non traitée", () => {
+    it("émet cc_non_traitee_retenue une seule fois pour une CC non traitée", async () => {
       mockAgreementSearch({
         num: 16,
         shortTitle: "Transports routiers et activités auxiliaires du transport",
@@ -528,11 +533,11 @@ describe("Funnel de choix de convention collective (contributions)", () => {
 
       expect(ccUi.warning.nonTreatedAgreement.query()).toBeInTheDocument();
       expectSingleFunnelEvent(
-        TrackingCcFunnelAction.SHOW_UNTREATED_AGREEMENT_ALERT
+        TrackingCcFunnelAction.UNTREATED_AGREEMENT_RETAINED
       );
     });
 
-    it("n'émet pas show_alerte_cc_non_traitee pour une CC traitée", async () => {
+    it("n'émet pas cc_non_traitee_retenue pour une CC traitée", async () => {
       mockAgreementSearch({
         num: 1388,
         shortTitle: "Industrie du pétrole",
@@ -555,7 +560,7 @@ describe("Funnel de choix de convention collective (contributions)", () => {
       // Témoin : la CC a bien été retenue (le bloc n'affiche pas l'alerte).
       expect(ccUi.warning.title.query()).not.toBeInTheDocument();
       expect(
-        eventsFor(TrackingCcFunnelAction.SHOW_UNTREATED_AGREEMENT_ALERT)
+        eventsFor(TrackingCcFunnelAction.UNTREATED_AGREEMENT_RETAINED)
       ).toHaveLength(0);
     });
 
@@ -597,6 +602,122 @@ describe("Funnel de choix de convention collective (contributions)", () => {
         TrackingCcFunnelAction.CLICK_EXTERNAL_AGREEMENT_LINK
       );
     });
+  });
+});
+
+// Régressions relevées en revue (#7472) : trois marches du funnel comptaient une
+// population ou un volume qui ne correspondaient pas à ce qu'elles prétendent
+// mesurer.
+describe("Comparabilité des marches du funnel", () => {
+  const agreement1388 = {
+    num: 1388,
+    id: "1388",
+    shortTitle: "Industrie du pétrole",
+    slug: "1388-industrie-du-petrole",
+    title: "Industrie du pétrole",
+    contributions: true,
+  };
+
+  it("ne compte pas view_bloc_cc quand la fiche générique redirige vers la CC mémorisée", () => {
+    // Usager de retour : CC mémorisée et traitée par la contribution → la page
+    // redirige au montage, le bloc n'est jamais vu. Le compter gonflerait le
+    // dénominateur d'une cohorte structurellement à 0 % de conversion.
+    window.localStorage.setItem(
+      STORAGE_KEY_AGREEMENT,
+      JSON.stringify(agreement1388)
+    );
+
+    render(
+      <ContributionGeneric
+        contribution={contribution}
+        agreementDeclinations={[]}
+      />
+    );
+
+    expect(eventsFor(TrackingCcFunnelAction.VIEW_BLOC_CC)).toHaveLength(0);
+  });
+
+  it("compte view_bloc_cc sur la même page quand aucune redirection n'a lieu", () => {
+    // Témoin de la garde ci-dessus : sans CC mémorisée, la page reste affichée
+    // et l'event part bien.
+    render(
+      <ContributionGeneric
+        contribution={contribution}
+        agreementDeclinations={[]}
+      />
+    );
+
+    expect(eventsFor(TrackingCcFunnelAction.VIEW_BLOC_CC)).toHaveLength(1);
+  });
+
+  it("n'émet no_result_cc qu'une fois, quelle que soit la longueur de la requête", async () => {
+    (searchAgreement as jest.Mock).mockResolvedValue([]);
+    render(<Harness />);
+
+    new UserAction().click(ccUi.radio.agreementSearchOption.get());
+    await userEvent.click(ccUi.searchByName.input.get());
+    await userEvent.type(ccUi.searchByName.input.get(), "zzzzzzzzzzzz");
+
+    // Témoin : l'autocomplete cherche à chaque frappe, donc bien plus d'une
+    // fois au-delà du seuil de deux caractères.
+    await waitFor(() =>
+      expect((searchAgreement as jest.Mock).mock.calls.length).toBeGreaterThan(
+        5
+      )
+    );
+    expect(eventsFor(TrackingCcFunnelAction.NO_RESULT_AGREEMENT)).toHaveLength(
+      1
+    );
+  });
+
+  it("n'émet start_recherche_cc qu'une fois malgré un aller-retour p1 → p2 → p1", async () => {
+    mockAgreementSearch(agreement1388);
+    render(<Harness />);
+    const userAction = new UserAction();
+
+    userAction.click(ccUi.radio.agreementSearchOption.get());
+    await userEvent.click(ccUi.searchByName.input.get());
+    await userEvent.type(ccUi.searchByName.input.get(), "1388");
+
+    // Bascule vers le parcours 2 : `AgreementSearchForm` démonte la recherche de
+    // CC. La garde de montage du composant ne suffirait donc pas.
+    userAction.click(ccUi.radio.enterpriseSearchOption.get());
+    userAction.click(ccUi.radio.agreementSearchOption.get());
+    await userEvent.click(ccUi.searchByName.input.get());
+    await userEvent.type(ccUi.searchByName.input.get(), "1388");
+
+    // Témoin : la seconde saisie a bien eu lieu.
+    expect(ccUi.searchByName.input.get()).toHaveValue("1388");
+    expect(
+      eventsFor(TrackingCcFunnelAction.START_AGREEMENT_SEARCH)
+    ).toHaveLength(1);
+  });
+
+  it("ne recompte pas une CC non traitée déjà retenue après un aller-retour A → B → A", () => {
+    // La CC retenue est pilotée directement en prop : c'est la garde de
+    // déduplication du bloc qu'on éprouve, pas l'autocomplétion.
+    const untreatedA = { ...agreement1388, num: 16, id: "0016" } as Agreement;
+    const untreatedB = { ...agreement1388, num: 29, id: "0029" } as Agreement;
+    const block = (agreement: Agreement) => (
+      <AgreementSearchFormBlock
+        contribution={contribution}
+        onAgreementSelect={() => {}}
+        onDisplayClick={() => {}}
+        selectedAgreement={agreement}
+        trackingActionName={TRACKING_ACTION_NAME}
+        onBackToPersonalizeFocus={() => {}}
+      />
+    );
+
+    const { rerender } = render(block(untreatedA));
+    rerender(block(untreatedB));
+    rerender(block(untreatedA));
+
+    // Trois passages, deux CC distinctes, toutes deux non traitées par cette
+    // contribution (`ccSupported: ["1388"]`) : deux events, pas trois.
+    expect(
+      eventsFor(TrackingCcFunnelAction.UNTREATED_AGREEMENT_RETAINED)
+    ).toHaveLength(2);
   });
 });
 

@@ -61,7 +61,7 @@ export enum TrackingCcFunnelAction {
   BLOCKED_WITHOUT_ROUTE = "blocked_sans_option",
   BLOCKED_WITHOUT_AGREEMENT_P1 = "blocked_sans_cc_p1",
   BLOCKED_WITHOUT_AGREEMENT_P2 = "blocked_sans_cc_p2",
-  SHOW_UNTREATED_AGREEMENT_ALERT = "show_alerte_cc_non_traitee",
+  UNTREATED_AGREEMENT_RETAINED = "cc_non_traitee_retenue",
   CLICK_EXTERNAL_AGREEMENT_LINK = "click_lien_cc_externe",
 }
 
@@ -368,10 +368,10 @@ const emitBlockedWithoutAgreementP2 = (path: string) => {
   });
 };
 
-const emitShowUntreatedAgreementAlert = (path: string) => {
+const emitUntreatedAgreementRetained = (path: string) => {
   sendEvent({
     category: TrackingContributionCategory.CC_SEARCH_FUNNEL,
-    action: TrackingCcFunnelAction.SHOW_UNTREATED_AGREEMENT_ALERT,
+    action: TrackingCcFunnelAction.UNTREATED_AGREEMENT_RETAINED,
     name: toPageEventName(path),
   });
 };
@@ -412,7 +412,7 @@ const ccFunnelTracking = {
   emitBlockedWithoutRoute,
   emitBlockedWithoutAgreementP1,
   emitBlockedWithoutAgreementP2,
-  emitShowUntreatedAgreementAlert,
+  emitUntreatedAgreementRetained,
   emitClickExternalAgreementLink,
 } as const;
 
