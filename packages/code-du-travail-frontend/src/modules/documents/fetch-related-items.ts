@@ -12,6 +12,39 @@ type RelatedItemSettings = {
   _id: string;
 };
 
+const getDenseKnnItems = async (settings: RelatedItemSettings) => {
+  // get embeddings for the given id
+
+  const doc = await elasticsearchClient.get<RelatedItem & { slug: string }>({
+    index: elasticDocumentsIndex,
+    id: settings._id,
+  });
+  const slug = doc._source?.slug;
+  const embeddings = (doc._source as Record<string, any>)["embeddings"];
+  // return [doc["_source"]["slug"], doc["_source"]["embeddings"]];
+
+  const k = 10;
+  // run knn query using dense vectors
+  const { hits } = await elasticsearchClient.search<
+    RelatedItem & { slug: string }
+  >(
+    // # query={"terms": {"metadata.source": sources}},
+    {
+      index: elasticDocumentsIndex,
+      knn: {
+        field: "embeddings",
+        query_vector: embeddings,
+        num_candidates: k * 10,
+        k: k,
+      },
+      size: k,
+      from: 1,
+    }
+  );
+
+  return hits.hits.map(({ _source }) => _source).filter(nonNullable);
+};
+
 const getSearchBasedItems = async (settings: RelatedItemSettings) => {
   const relatedItemBody = getRelatedItemsBody([settings]);
   const { hits } = await elasticsearchClient.search<
@@ -27,6 +60,30 @@ const getSearchBasedItems = async (settings: RelatedItemSettings) => {
 
 const isArticleSource = (source) =>
   ![SOURCES.EXTERNALS, SOURCES.LETTERS, SOURCES.TOOLS].includes(source);
+
+/*
+def get_embeddings(doc_id):
+    doc = es_connection.get(index=index_name, id=doc_id)
+    return [doc['_source']['slug'], doc['_source']['embeddings']]            
+    
+def search_similar(doc_id, k=5):
+    [slug, embeddings] = get_embeddings(doc_id)
+    print(slug)
+    res = es_connection.search(
+            # query={"terms": {"metadata.source": sources}},           
+            index=index_name,
+            knn={
+                "field": "embeddings",
+                "query_vector": embeddings,
+                "num_candidates": k * 10,
+                "k": k,
+            },
+            source=['title', 'slug'],
+            size=k+1,
+        )
+    #ignore first as it's the actual doc
+    return res['hits']['hits'][1:]
+  */
 
 const getRelatedItemsBody = (
   settings: RelatedItemSettings[],
@@ -89,7 +146,8 @@ export const fetchRelatedItems = async (
   settings: RelatedItemSettings,
   excludedSlug: string
 ): Promise<{ items: RelatedItem[]; title: string }[]> => {
-  const searchBasedItems = await getSearchBasedItems(settings);
+  // const searchBasedItems = await getSearchBasedItems(settings);
+  const searchBasedItems = await getDenseKnnItems(settings);
 
   const filteredItems: (RelatedItem & { slug: string })[] = Array.from(
     searchBasedItems
