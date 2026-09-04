@@ -1,4 +1,5 @@
 import { NPS_CATEGORY } from "../../../modules/nps/constants";
+import { HOME_EVENT_NAME } from "../../../modules/analytics/eventName";
 import { PIWIK_SITE_ID, PIWIK_URL, SITE_URL } from "../../../config";
 import { MATOMO_TIMEOUT_MS } from "../constants";
 
@@ -39,7 +40,11 @@ export const sendNpsEvent = async ({
     // Catégorie en dur : cette API ne relaie QUE la soumission d'une note NPS.
     e_c: NPS_CATEGORY,
     e_a: `score_${score}`,
-    e_n: slug,
+    // Sur la page d'accueil le slug est vide : Matomo jetterait le nom de
+    // l'event (cf. toPageEventName). On étiquette donc l'accueil ici, sans
+    // toucher au slug qui sert à construire l'URL canonique juste au-dessus —
+    // celle de l'accueil est bien `${SITE_URL}/`, pas `${SITE_URL}/accueil`.
+    e_n: slug || HOME_EVENT_NAME,
     url,
   });
 

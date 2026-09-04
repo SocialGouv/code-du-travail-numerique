@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.242.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.241.1...v4.242.0) (2026-09-04)
+
+
+### Features
+
+* **indemnite-precarite:** refonte parcours pour éliminer les culs-de sac ([#7285](https://github.com/SocialGouv/code-du-travail-numerique/issues/7285)) ([cc06cc6](https://github.com/SocialGouv/code-du-travail-numerique/commit/cc06cc67e15768e068ba30dad1c6f285d5fcd994))
+
+
+
+
+
+## [4.241.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.241.0...v4.241.1) (2026-09-01)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
+
+
+
+
 # [4.241.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.240.0...v4.241.0) (2026-08-20)
 
 **Note:** Version bump only for package @socialgouv/modeles-social

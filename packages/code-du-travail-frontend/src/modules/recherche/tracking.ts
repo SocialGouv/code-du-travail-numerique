@@ -24,6 +24,10 @@ export enum MatomoWidgetEvent {
   SUBMIT_SEARCH = "submit_search",
 }
 
+// Étiquette d'une requête de recherche vide, pour ne jamais envoyer un `name`
+// falsy que Matomo jetterait.
+export const EMPTY_QUERY_EVENT_NAME = "(vide)";
+
 export const useSearchTracking = () => {
   const lastFullsearchKeyRef = useRef<string | null>(null);
 
@@ -125,11 +129,15 @@ export const useSearchTracking = () => {
     });
   }, []);
 
+  // Le widget laisse soumettre le formulaire à vide, et c'est le cas le plus
+  // fréquent (297 des 407 soumissions sur 14 jours en août 2026). On étiquette
+  // donc la requête vide : envoyée telle quelle, Matomo jette le nom de l'event
+  // et la soumission à vide devient invisible (cf. toPageEventName).
   const emitWidgetSubmitSearchEvent = useCallback((query: string) => {
     sendEvent({
       category: MatomoBaseEvent.WIDGET_SEARCH,
       action: MatomoWidgetEvent.SUBMIT_SEARCH,
-      name: query,
+      name: query || EMPTY_QUERY_EVENT_NAME,
     });
   }, []);
 

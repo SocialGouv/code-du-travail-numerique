@@ -1,48 +1,95 @@
-import type { IIndemnitePrecariteIneligibility } from "../common/types/ineligibility";
+import type { IIneligibility } from "../common/types/ineligibility";
+import type { References } from "../common/utils/references";
 
-export class IneligibilityLegalIndemnitePrecarite implements IIndemnitePrecariteIneligibility {
-  getCDDIneligibility(
-    args: Record<string, string | undefined>
-  ): string | undefined {
-    if (args["contrat salarié . finContratPeriodeDessai"] === "oui") {
-      return "Lorsque le CDD a été rompu pendant la période d’essai, le salarié en CDD n’a pas le droit à une prime de précarité.";
-    } else if (args["contrat salarié . propositionCDIFindeContrat"] === "oui") {
-      return "Le salarié en CDD qui est immédiatement embauché dans l’entreprise en CDI, sans interruption, sur un même poste ou sur un poste différent, n’a pas le droit à une prime de précarité.";
-    } else if (args["contrat salarié . refusCDIFindeContrat"] === "oui") {
-      return "Le salarié en CDD qui refuse un CDI pour occuper le même emploi ou un emploi similaire dans l’entreprise avec une rémunération au moins équivalente, n’a pas le droit à une prime de précarité.";
-    } else if (args["contrat salarié . interruptionFauteGrave"] === "oui") {
-      return "Lorsque le CDD est rompu de manière anticipée à l’initiative du salarié, pour faute grave, pour faute lourde ou en cas de force majeure, le salarié en CDD n’a pas le droit à une prime de précarité.";
-    } else if (args["contrat salarié . refusRenouvellementAuto"] === "oui") {
-      return "Le salarié en CDD qui refuse le renouvellement de son CDD alors que son contrat prévoyait dès l’origine son renouvellement et ses modalités de renouvellement n’a pas le droit à une prime de précarité.";
-    }
-  }
+export const INDEMNITE_PRECARITE_INELIGIBILITY_MESSAGE =
+  "Il n'y a pas d'indemnité de précarité dans cette situation";
 
-  getCTTIneligibility(
-    args: Record<string, string | undefined>
-  ): string | undefined {
-    if (args["contrat salarié . cttFormation"] === "oui") {
-      return "Ce type de contrat ne permet pas au salarié d’avoir droit à une prime de précarité.";
-    } else if (args["contrat salarié . ruptureContratFauteGrave"] === "oui") {
-      return "Lorsque le contrat de travail temporaire (contrat d'intérim) est rompu de manière anticipée à l’initiative du salarié, pour faute grave du salarié ou en cas de force majeure, le salarié n’a pas le droit à une prime de précarité.";
-    } else if (args["contrat salarié . propositionCDIFinContrat"] === "oui") {
-      return "Le salarié en contrat de travail temporaire (contrat d'intérim) qui est immédiatement embauché en CDI au sein de l’entreprise dans laquelle il effectuait sa mission n’a pas le droit à une prime de précarité.";
-    } else if (args["contrat salarié . refusSouplesse"] === "oui") {
-      return "Le salarié en contrat d'intérim qui refuse la mise en œuvre de la souplesse prévue dans son contrat n’a pas le droit à une prime de précarité.";
-    }
-  }
+/**
+ * Pour un salarié intérimaire, il ne s'agit pas d'une indemnité de précarité
+ * mais d'une indemnité de fin de mission (article L1251-32).
+ */
+export const INDEMNITE_FIN_MISSION_INELIGIBILITY_MESSAGE =
+  "Il n'y a pas d'indemnité de fin de mission dans cette situation";
 
+const TYPE_CONTRAT_CTT = "'CTT'";
+
+/**
+ * Issues du contrat qui privent le salarié de l'indemnité lorsque le contrat est
+ * allé à son terme. Les critères sont identiques quel que soit le type de
+ * contrat et la convention collective (cf. issues #7142 et #7436).
+ */
+const ISSUES_INELIGIBLES_A_TERME = [
+  "'embauche cdi'",
+  "'refus cdi équivalent'",
+  "'refus souplesse'",
+];
+
+/**
+ * Cadres de rupture anticipée qui privent le salarié de l'indemnité. La rupture
+ * d'un commun accord et la rupture pour inaptitude constatée par le médecin du
+ * travail ouvrent, elles, droit à l'indemnité.
+ */
+const ISSUES_INELIGIBLES_RUPTURE_ANTICIPEE = [
+  "'période d'essai'",
+  "'force majeure'",
+  "'faute grave'",
+  "'embauche cdi autre entreprise'",
+];
+
+const REFERENCE_CDD: References = {
+  article: "Article L1243-10 du code du travail",
+  url: "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006901221",
+};
+
+const REFERENCE_CTT: References = {
+  article: "Article L1251-33 du code du travail",
+  url: "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000019869550",
+};
+
+const isCtt = (args: Record<string, string | undefined>): boolean =>
+  args["contrat salarié . type de contrat"] === TYPE_CONTRAT_CTT;
+
+/**
+ * Références juridiques à afficher sur l'écran de résultat lorsque la situation
+ * n'ouvre pas droit à l'indemnité. Le modèle reste la source de vérité des
+ * articles, y compris quand le calcul publicodes n'est jamais exécuté.
+ */
+export const getIndemnitePrecariteIneligibilityReferences = (
+  args: Record<string, string | undefined>
+): References[] => [isCtt(args) ? REFERENCE_CTT : REFERENCE_CDD];
+
+export class IneligibilityLegalIndemnitePrecarite implements IIneligibility {
   getIneligibility(
     args: Record<string, string | undefined>
   ): string | undefined {
-    if (
-      args["contrat salarié . contractType"] === "'CDD'" &&
-      args["contrat salarié . type de cdd"] === "'Autres'"
-    ) {
-      return this.getCDDIneligibility(args);
-    } else if (args["contrat salarié . contractType"] === "'CTT'") {
-      return this.getCTTIneligibility(args);
-    } else {
-      return "Ce type de contrat ne permet pas au salarié d’avoir droit à une prime de précarité.";
+    const typeContrat = args["contrat salarié . type de contrat"];
+    const finALaDatePrevue = args["contrat salarié . fin à la date prévue"];
+    const issue = args["contrat salarié . issue du contrat"];
+
+    const message = isCtt(args)
+      ? INDEMNITE_FIN_MISSION_INELIGIBILITY_MESSAGE
+      : INDEMNITE_PRECARITE_INELIGIBILITY_MESSAGE;
+
+    if (typeContrat === "'Exclu'") {
+      return message;
     }
+
+    if (
+      finALaDatePrevue === "'oui'" &&
+      issue &&
+      ISSUES_INELIGIBLES_A_TERME.includes(issue)
+    ) {
+      return message;
+    }
+
+    if (
+      finALaDatePrevue === "'non'" &&
+      issue &&
+      ISSUES_INELIGIBLES_RUPTURE_ANTICIPEE.includes(issue)
+    ) {
+      return message;
+    }
+
+    return undefined;
   }
 }

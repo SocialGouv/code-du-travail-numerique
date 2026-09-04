@@ -35,6 +35,19 @@ describe("sendNpsEvent", () => {
     );
   });
 
+  // Une note donnée depuis la page d'accueil arrive avec un slug vide : envoyé
+  // tel quel, Matomo jette le nom de l'event. L'URL canonique, elle, doit
+  // rester celle de l'accueil — surtout pas `/accueil`, qui n'existe pas.
+  it("étiquette la page d'accueil sans dénaturer l'URL canonique", async () => {
+    await sendNpsEvent({ slug: "", score: 9 });
+
+    const [url] = mockFetch.mock.calls[0] as unknown as [string];
+    const params = new URLSearchParams(url.split("?")[1]);
+    expect(params.get("e_n")).toBe("index");
+    expect(params.get("url")).toMatch(/\/$/);
+    expect(params.get("url")).not.toContain("/accueil");
+  });
+
   it("sans userAgent : pas de header User-Agent", async () => {
     await sendNpsEvent({ slug: "a", score: 0 });
     const [, init] = mockFetch.mock.calls[0] as unknown as [

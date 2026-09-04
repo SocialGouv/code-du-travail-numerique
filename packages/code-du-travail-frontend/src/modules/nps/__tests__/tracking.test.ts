@@ -24,6 +24,21 @@ describe("useNpsEvents", () => {
     });
   });
 
+  // Sur la page d'accueil, le chemin se réduit à "" une fois le slash retiré —
+  // un nom falsy que Matomo jette. Le widget NPS est présent sur toutes les
+  // pages, l'accueil compris.
+  it("étiquette la page d'accueil au lieu d'envoyer un nom vide", () => {
+    const { result } = renderHook(() => useNpsEvents());
+    result.current.trackDisplayed(NpsTrigger.MAIN, "/");
+    result.current.trackRefusal(NpsTrigger.MAIN, "/");
+    result.current.trackOptOut(NpsTrigger.MAIN, "/");
+    expect(mockSendEvent.mock.calls.map(([event]) => event.name)).toEqual([
+      "index",
+      "index",
+      "index",
+    ]);
+  });
+
   it("trackRefusal → sendEvent standard (category=refusal)", () => {
     const { result } = renderHook(() => useNpsEvents());
     result.current.trackRefusal(

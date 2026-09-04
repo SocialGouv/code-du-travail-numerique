@@ -1,15 +1,23 @@
-import { Formula, Notification, References } from "@socialgouv/modeles-social";
+import {
+  ChosenResult,
+  Formula,
+  Notification,
+  References,
+} from "@socialgouv/modeles-social";
 
 export type ResultStoreData = {
   result?: number;
   calculationError?: string;
-  isAgreementSupported?: boolean;
   resultNotifications?: Notification[];
   resultReferences?: References[];
   resultFormula?: Formula;
   totalSalary?: number;
-  indemnityName?: string;
-  calculationSummary?: Record<string, any>;
+  /**
+   * Origine du taux réellement appliqué. `AGREEMENT` signale que le montant
+   * vient des dispositions de la convention de branche, et non du Code du
+   * travail : l'écran de résultat en tire la variante du bloc d'avertissement.
+   */
+  chosenResult?: ChosenResult;
 };
 
 export type ResultStoreFn = {

@@ -1,7 +1,7 @@
 {
   "scan_root": "packages/code-du-travail-frontend/src",
-  "callsites": 78,
-  "total_events": 116,
+  "callsites": 81,
+  "total_events": 119,
   "unique_events": 105,
   "unresolved_callsites": 0,
   "events": [
@@ -12,14 +12,14 @@
       "resolution": "dynamic",
       "emit_function": "useSearchTracking",
       "file": "packages/code-du-travail-frontend/src/modules/recherche/tracking.ts",
-      "line": 193,
+      "line": 201,
       "enum_refs": [],
       "tracking_method": "push:trackSiteSearch"
     },
     {
       "category": "<NPS_CATEGORY>",
       "action": "display_<trigger>",
-      "name_pattern": "<toEventName(pagePath)>",
+      "name_pattern": "<toPageEventName(pagePath)>",
       "resolution": "dynamic",
       "emit_function": "trackDisplayed",
       "file": "packages/code-du-travail-frontend/src/modules/nps/tracking.ts",
@@ -30,7 +30,7 @@
     {
       "category": "<NPS_CATEGORY>",
       "action": "optout_<trigger>",
-      "name_pattern": "<toEventName(pagePath)>",
+      "name_pattern": "<toPageEventName(pagePath)>",
       "resolution": "dynamic",
       "emit_function": "trackOptOut",
       "file": "packages/code-du-travail-frontend/src/modules/nps/tracking.ts",
@@ -41,7 +41,7 @@
     {
       "category": "<NPS_CATEGORY>",
       "action": "refusal_<trigger>",
-      "name_pattern": "<toEventName(pagePath)>",
+      "name_pattern": "<toPageEventName(pagePath)>",
       "resolution": "dynamic",
       "emit_function": "trackRefusal",
       "file": "packages/code-du-travail-frontend/src/modules/nps/tracking.ts",
@@ -70,7 +70,7 @@
       "resolution": "literal",
       "emit_function": "emitClickAccord",
       "file": "packages/code-du-travail-frontend/src/modules/enterprise/EnterpriseAgreementSearch/accords/tracking.ts",
-      "line": 13,
+      "line": 14,
       "enum_refs": [
         "TrackingAccordEntrepriseSearchAction.CLICK_ACCORD",
         "TrackingAgreementSearchCategory.ACCORD_ENTERPRISE_SEARCH"
@@ -84,7 +84,7 @@
       "resolution": "literal",
       "emit_function": "emitClickSeeAll",
       "file": "packages/code-du-travail-frontend/src/modules/enterprise/EnterpriseAgreementSearch/accords/tracking.ts",
-      "line": 21,
+      "line": 22,
       "enum_refs": [
         "TrackingAccordEntrepriseSearchAction.CLICK_ALL_ACCORDS",
         "TrackingAgreementSearchCategory.ACCORD_ENTERPRISE_SEARCH"
@@ -98,7 +98,7 @@
       "resolution": "literal",
       "emit_function": "emitLoadAccordsFailed",
       "file": "packages/code-du-travail-frontend/src/modules/enterprise/EnterpriseAgreementSearch/accords/tracking.ts",
-      "line": 37,
+      "line": 40,
       "enum_refs": [
         "TrackingAccordEntrepriseSearchAction.LOAD_ACCORDS_FAILED",
         "TrackingAgreementSearchCategory.ACCORD_ENTERPRISE_SEARCH"
@@ -108,11 +108,11 @@
     {
       "category": "accord_enterprise_search",
       "action": "show_accords",
-      "name_pattern": "<String(count)>",
+      "name_pattern": "<toCountEventName(count)>",
       "resolution": "literal",
       "emit_function": "emitShowAccords",
       "file": "packages/code-du-travail-frontend/src/modules/enterprise/EnterpriseAgreementSearch/accords/tracking.ts",
-      "line": 29,
+      "line": 32,
       "enum_refs": [
         "TrackingAccordEntrepriseSearchAction.SHOW_ACCORDS",
         "TrackingAgreementSearchCategory.ACCORD_ENTERPRISE_SEARCH"
@@ -122,11 +122,11 @@
     {
       "category": "cc_enterprise_search",
       "action": "show_agreements",
-      "name_pattern": "<String(count)>",
+      "name_pattern": "<toCountEventName(count)>",
       "resolution": "literal",
       "emit_function": "emitShowAgreements",
       "file": "packages/code-du-travail-frontend/src/modules/enterprise/EnterpriseAgreementSearch/tracking.ts",
-      "line": 45,
+      "line": 47,
       "enum_refs": [
         "TrackingAgreementSearchCategory.CC_ENTERPRISE_SEARCH",
         "TrackingEnterpriseAgreementSearchAction.SHOW_AGREEMENTS"
@@ -140,7 +140,7 @@
       "resolution": "literal",
       "emit_function": "emitNoEnterpriseClickEvent",
       "file": "packages/code-du-travail-frontend/src/modules/enterprise/EnterpriseAgreementSearch/tracking.ts",
-      "line": 69,
+      "line": 71,
       "enum_refs": [
         "TrackingAgreementSearchAction.AGREEMENT_SEARCH",
         "TrackingAgreementSearchAction.CLICK_NO_COMPANY",
@@ -269,7 +269,7 @@
       "resolution": "literal",
       "emit_function": "emitNoEnterpriseSelectEvent",
       "file": "packages/code-du-travail-frontend/src/modules/enterprise/EnterpriseAgreementSearch/tracking.ts",
-      "line": 76,
+      "line": 78,
       "enum_refs": [
         "TrackingAgreementSearchAction.AGREEMENT_SEARCH",
         "TrackingAgreementSearchAction.SELECT_NO_COMPANY",
@@ -402,7 +402,7 @@
       "resolution": "dynamic",
       "emit_function": "emitSelectEnterpriseAgreementEvent",
       "file": "packages/code-du-travail-frontend/src/modules/enterprise/EnterpriseAgreementSearch/tracking.ts",
-      "line": 53,
+      "line": 55,
       "enum_refs": [
         "TrackingAgreementSearchCategory.CC_SELECT_P2"
       ],
@@ -493,7 +493,7 @@
       "resolution": "literal",
       "emit_function": "emitSelectEnterpriseAgreementEvent",
       "file": "packages/code-du-travail-frontend/src/modules/enterprise/EnterpriseAgreementSearch/tracking.ts",
-      "line": 53,
+      "line": 55,
       "enum_refs": [
         "TrackingAgreementSearchCategory.CC_SELECT_P2"
       ],
@@ -572,7 +572,7 @@
     {
       "category": "contribution",
       "action": "clic_declinaison_cc",
-      "name_pattern": "<toEventName(href)>",
+      "name_pattern": "<toPageEventName(href)>",
       "resolution": "literal",
       "emit_function": "emitClickAgreementDeclination",
       "file": "packages/code-du-travail-frontend/src/modules/contributions/tracking.ts",
@@ -647,7 +647,7 @@
       "resolution": "dynamic",
       "emit_function": "emitEnterpriseAgreementSearchInputEvent",
       "file": "packages/code-du-travail-frontend/src/modules/enterprise/EnterpriseAgreementSearch/tracking.ts",
-      "line": 18,
+      "line": 19,
       "enum_refs": [
         "JSON.stringify",
         "TrackingAgreementSearchCategory.ENTERPRISE_SEARCH"
@@ -661,7 +661,7 @@
       "resolution": "dynamic",
       "emit_function": "emitSelectEnterpriseEvent",
       "file": "packages/code-du-travail-frontend/src/modules/enterprise/EnterpriseAgreementSearch/tracking.ts",
-      "line": 32,
+      "line": 33,
       "enum_refs": [
         "JSON.stringify",
         "TrackingAgreementSearchCategory.CC_ENTERPRISE_SELECT"
@@ -962,7 +962,7 @@
       "resolution": "dynamic",
       "emit_function": "useSearchTracking",
       "file": "packages/code-du-travail-frontend/src/modules/recherche/tracking.ts",
-      "line": 104,
+      "line": 108,
       "enum_refs": [
         "MatomoSearchCategory.NEXT_RESULT_PAGE"
       ],
@@ -1174,6 +1174,51 @@
         "MatomoActionEvent.CLICK_PREVIOUS",
         "MatomoActionEvent.VIEW_STEP",
         "MatomoBaseEvent.OUTIL"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "outil",
+      "action": "view_step_<title>",
+      "name_pattern": "results_eligible",
+      "resolution": "dynamic",
+      "emit_function": "emitResultEvent",
+      "file": "packages/code-du-travail-frontend/src/modules/outils/indemnite-precarite/events/useResultTracking.ts",
+      "line": 30,
+      "enum_refs": [
+        "MatomoActionEvent.VIEW_STEP",
+        "MatomoBaseEvent.OUTIL",
+        "MatomoSimulatorEvent.STEP_RESULT_ELIGIBLE"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "outil",
+      "action": "view_step_<title>",
+      "name_pattern": "results_ineligible",
+      "resolution": "dynamic",
+      "emit_function": "emitResultEvent",
+      "file": "packages/code-du-travail-frontend/src/modules/outils/indemnite-precarite/events/useResultTracking.ts",
+      "line": 37,
+      "enum_refs": [
+        "MatomoActionEvent.VIEW_STEP",
+        "MatomoBaseEvent.OUTIL",
+        "MatomoSimulatorEvent.STEP_RESULT_INELIGIBLE"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "outil",
+      "action": "view_step_<title>",
+      "name_pattern": "results_error",
+      "resolution": "dynamic",
+      "emit_function": "emitResultEvent",
+      "file": "packages/code-du-travail-frontend/src/modules/outils/indemnite-precarite/events/useResultTracking.ts",
+      "line": 44,
+      "enum_refs": [
+        "MatomoActionEvent.VIEW_STEP",
+        "MatomoBaseEvent.OUTIL",
+        "MatomoSimulatorEvent.STEP_RESULT_ERROR"
       ],
       "tracking_method": "sendEvent"
     },
@@ -1402,7 +1447,7 @@
       "resolution": "literal",
       "emit_function": "useSearchTracking",
       "file": "packages/code-du-travail-frontend/src/modules/recherche/tracking.ts",
-      "line": 158,
+      "line": 166,
       "enum_refs": [
         "MatomoSearchAction.CLICK_SEE_ALL_RESULTS",
         "MatomoSearchCategory.SEARCH"
@@ -1416,7 +1461,7 @@
       "resolution": "literal",
       "emit_function": "useSearchTracking",
       "file": "packages/code-du-travail-frontend/src/modules/recherche/tracking.ts",
-      "line": 64,
+      "line": 68,
       "enum_refs": [
         "MatomoSearchAction.FULL_SEARCH",
         "MatomoSearchCategory.SEARCH"
@@ -1430,7 +1475,7 @@
       "resolution": "literal",
       "emit_function": "useSearchTracking",
       "file": "packages/code-du-travail-frontend/src/modules/recherche/tracking.ts",
-      "line": 94,
+      "line": 98,
       "enum_refs": [
         "MatomoSearchAction.FULL_SEARCH",
         "MatomoSearchCategory.SEARCH"
@@ -1444,7 +1489,7 @@
       "resolution": "literal",
       "emit_function": "useSearchTracking",
       "file": "packages/code-du-travail-frontend/src/modules/recherche/tracking.ts",
-      "line": 143,
+      "line": 151,
       "enum_refs": [
         "MatomoSearchAction.PRESEARCH",
         "MatomoSearchCategory.SEARCH"
@@ -1458,7 +1503,7 @@
       "resolution": "literal",
       "emit_function": "useSearchTracking",
       "file": "packages/code-du-travail-frontend/src/modules/recherche/tracking.ts",
-      "line": 181,
+      "line": 189,
       "enum_refs": [
         "MatomoSearchAction.SELECT_PRESEARCH_RESULT",
         "MatomoSearchCategory.SEARCH"
@@ -1472,7 +1517,7 @@
       "resolution": "dynamic",
       "emit_function": "useSearchTracking",
       "file": "packages/code-du-travail-frontend/src/modules/recherche/tracking.ts",
-      "line": 112,
+      "line": 116,
       "enum_refs": [
         "MatomoSearchCategory.SELECTED_SUGGESTION"
       ],
@@ -1499,7 +1544,7 @@
       "resolution": "dynamic",
       "emit_function": "useSearchTracking",
       "file": "packages/code-du-travail-frontend/src/modules/recherche/tracking.ts",
-      "line": 45,
+      "line": 49,
       "enum_refs": [
         "JSON.stringify",
         "MatomoSearchCategory.SELECT_RESULT"
@@ -1542,7 +1587,7 @@
       "resolution": "literal",
       "emit_function": "emitPreviousEvent",
       "file": "packages/code-du-travail-frontend/src/modules/enterprise/EnterpriseAgreementSearch/tracking.ts",
-      "line": 61,
+      "line": 63,
       "enum_refs": [
         "TrackingAgreementSearchAction.AGREEMENT_SEARCH",
         "TrackingAgreementSearchAction.BACK_STEP_P2",
@@ -1557,7 +1602,7 @@
       "resolution": "literal",
       "emit_function": "useSearchTracking",
       "file": "packages/code-du-travail-frontend/src/modules/recherche/tracking.ts",
-      "line": 122,
+      "line": 126,
       "enum_refs": [
         "MatomoBaseEvent.WIDGET_SEARCH",
         "MatomoWidgetEvent.CLICK_LOGO"
@@ -1567,11 +1612,11 @@
     {
       "category": "widget_search",
       "action": "submit_search",
-      "name_pattern": "<query>",
+      "name_pattern": "<query || EMPTY_QUERY_EVENT_NAME>",
       "resolution": "literal",
       "emit_function": "useSearchTracking",
       "file": "packages/code-du-travail-frontend/src/modules/recherche/tracking.ts",
-      "line": 129,
+      "line": 137,
       "enum_refs": [
         "MatomoBaseEvent.WIDGET_SEARCH",
         "MatomoWidgetEvent.SUBMIT_SEARCH"

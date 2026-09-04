@@ -27,6 +27,18 @@ type Props = {
   showNotSelectedOption: boolean;
 };
 
+type CommonAgreementStepProps = Required<Props> & {
+  /**
+   * Texte de l'alerte affichée quand l'usager passe l'étape. Certains
+   * simulateurs, comme l'indemnité de précarité, ne peuvent pas promettre un
+   * résultat conventionnel plus favorable que le code du travail.
+   */
+  notSelectedWarningDescription?: string;
+};
+
+const DEFAULT_NOT_SELECTED_WARNING =
+  "Vous pouvez passer cette étape et poursuivre la simulation qui vous fournira un résultat basé sur le code du travail. Nous vous recommandons de renseigner votre convention collective qui peut prévoir un résultat plus favorable que celui défini par le code du travail.";
+
 export const CommonAgreementStep = ({
   error,
   onRouteChange,
@@ -38,7 +50,8 @@ export const CommonAgreementStep = ({
   trackingActionName,
   simulator,
   showNotSelectedOption,
-}: Required<Props>) => {
+  notSelectedWarningDescription = DEFAULT_NOT_SELECTED_WARNING,
+}: CommonAgreementStepProps) => {
   React.useEffect(() => {
     onInitAgreementPage();
   }, [onInitAgreementPage]);
@@ -81,7 +94,7 @@ export const CommonAgreementStep = ({
         <AccessibleAlert
           severity="warning"
           title="Attention"
-          description="Vous pouvez passer cette étape et poursuivre la simulation qui vous fournira un résultat basé sur le code du travail. Nous vous recommandons de renseigner votre convention collective qui peut prévoir un résultat plus favorable que celui défini par le code du travail."
+          description={notSelectedWarningDescription}
         />
       )}
 

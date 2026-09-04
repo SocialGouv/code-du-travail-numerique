@@ -1,6 +1,6 @@
 import { CalculateurIndemnitePrecarite } from "../../IndemnitePrecariteSimulator";
-import { ui } from "../ui";
-import { fireEvent, render, screen } from "@testing-library/react";
+import { runJourney, ui } from "../ui";
+import { render, screen } from "@testing-library/react";
 
 jest.spyOn(Storage.prototype, "setItem");
 Storage.prototype.getItem = jest.fn(
@@ -16,104 +16,29 @@ Storage.prototype.getItem = jest.fn(
         `
 );
 
-describe("SimulateurIndemnitePrecarite", () => {
+const expectReference = (reference: string) => {
+  expect(
+    screen.queryAllByText(new RegExp(escapeRegExp(reference)))[0]
+  ).toBeInTheDocument();
+};
+
+const escapeRegExp = (value: string) =>
+  value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
+describe("SimulateurIndemnitePrecarite - IDCC 1597", () => {
   beforeEach(() => {
     render(
       <CalculateurIndemnitePrecarite title="Test Indemnité de Précarité" />
     );
-    fireEvent.click(ui.introduction.startButton.get());
-
-    fireEvent.click(ui.next.get());
   });
 
-  describe("contractType = CDD", () => {
-    beforeEach(() => {
-      fireEvent.click(ui.contractType.cdd.get());
-      fireEvent.click(ui.next.get());
-    });
+  it("affiche l'indemnité légale pour un CDD de remplacement", () => {
+    runJourney();
 
-    describe("criteria.cddType = Autres", () => {
-      beforeEach(() => {
-        fireEvent.change(ui.cddType.get(), {
-          target: { value: "Autres" },
-        });
-        fireEvent.click(ui.next.get());
-      });
-
-      describe("finContratPeriodeDessai = Non", () => {
-        beforeEach(() => {
-          fireEvent.click(ui.cddQuestions.finContratPeriodeDessai.non.get());
-          fireEvent.click(ui.next.get());
-        });
-
-        describe("propositionCDIFindeContrat = Non", () => {
-          beforeEach(() => {
-            fireEvent.click(
-              ui.cddQuestions.propositionCDIFindeContrat.non.get()
-            );
-            fireEvent.click(ui.next.get());
-          });
-
-          describe("refusCDIFindeContrat = Non", () => {
-            beforeEach(() => {
-              fireEvent.click(ui.cddQuestions.refusCDIFindeContrat.non.get());
-              fireEvent.click(ui.next.get());
-            });
-
-            describe("interruptionFauteGrave = Non", () => {
-              beforeEach(() => {
-                fireEvent.click(
-                  ui.cddQuestions.interruptionFauteGrave.non.get()
-                );
-                fireEvent.click(ui.next.get());
-              });
-
-              describe("refusRenouvellementAuto = Non", () => {
-                beforeEach(() => {
-                  fireEvent.click(
-                    ui.cddQuestions.refusRenouvellementAuto.non.get()
-                  );
-                  fireEvent.click(ui.next.get());
-                });
-
-                describe("typeRemuneration = amount", () => {
-                  beforeEach(() => {
-                    fireEvent.click(
-                      ui.remuneration.typeRemuneration.total.get()
-                    );
-                    fireEvent.click(ui.next.get());
-                  });
-
-                  describe("currency = 3000", () => {
-                    beforeEach(() => {
-                      fireEvent.change(ui.remuneration.salaireTotal.get(), {
-                        target: { value: "3000" },
-                      });
-                      fireEvent.click(ui.next.get());
-                    });
-
-                    it("should display expected answer", () => {
-                      expect(
-                        screen.queryAllByText(/300/g)[0]
-                      ).toBeInTheDocument();
-                      expect(
-                        screen.queryAllByText(
-                          /Article L1243-8 du code du travail/
-                        )[0]
-                      ).toBeInTheDocument();
-                      expect(
-                        screen.queryAllByText(
-                          /Article L1243-9 du code du travail/
-                        )[0]
-                      ).toBeInTheDocument();
-                    });
-                  });
-                });
-              });
-            });
-          });
-        });
-      });
-    });
+    expect(ui.result.amount.get()).toHaveTextContent("300,00");
+    expectReference("Article L1243-4 du code du travail");
+    expectReference("Article L1243-8 du code du travail");
+    expectReference("Article L1243-9 du code du travail");
+    expectReference("Article L1243-10 du code du travail");
   });
 });

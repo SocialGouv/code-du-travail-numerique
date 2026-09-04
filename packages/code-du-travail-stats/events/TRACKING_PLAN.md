@@ -14,6 +14,18 @@ Ce document décrit les évènements Matomo **écrits explicitement dans le code
 **103** events uniques · **112** au total · **32** catégories Matomo. Couverture vérifiée
 exhaustivement face au catalogue extrait du code.
 
+#### Règle transverse : un nom d'event n'est jamais « falsy »
+
+Matomo **jette** le nom d'un event quand celui-ci est une chaîne falsy — la chaîne vide,
+mais aussi `"0"` (`empty("0")` vaut `true` en PHP). L'event reste compté dans le total de
+son action, mais il atterrit **sans nom** : la ligne correspondante n'existe simplement pas
+dans le rapport « Noms d'événements ». Silencieux, et invisible tant qu'on ne compare pas le
+total d'une action à la somme de ses lignes nommées.
+
+Les events concernés étiquettent donc leur cas falsy : un comptage nul devient `aucun`, la
+page d'accueil `index`, une requête de recherche vide `(vide)`. Les autres valeurs restent
+inchangées.
+
 #### tracking générique (automatique sur chaque page)
 
 Lors d'une visite sur une page du site, Matomo envoie par défaut un évènement de visite qui
@@ -43,7 +55,7 @@ dans l'ordre. Le **titre** est celui utilisé dans l'action `view_step_<titre>` 
 | Indemnité de licenciement                      | start, info_cc, infos, anciennete, absences, salaires, results |
 | Indemnité de rupture conventionnelle           | start, info_cc, infos, anciennete, absences, salaires, results |
 | Indemnité de départ ou de mise à la retraite   | start, infos, anciennete, absences, salaires, results        |
-| Indemnités de précarité                        | start, info_cc, info_generales, remuneration, indemnite     |
+| Indemnités de précarité                        | start, info_cc, type_contrat, terme_contrat, remuneration, indemnite |
 | Préavis de démission                           | start, info_cc, infos, results                              |
 | Préavis de licenciement                        | start, status, info_cc, infos, results                      |
 | Préavis de départ ou de mise à la retraite     | intro, origine, ccn, infos, anciennete, result              |
@@ -98,7 +110,7 @@ du navigateur. Mesure l'intention de conserver le résultat.
 
 Émis au calcul de l'étape « résultat » quand la simulation conclut à la **non-éligibilité**
 (ancienneté / informations / absences non satisfaites). Mesure le taux de simulations
-« non éligible ». Concerne les trois simulateurs d'indemnité.
+« non éligible ». Concerne les trois simulateurs d'indemnité de départ.
 [↗ licenciement](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/outils/indemnite-licenciement/events/useIndemniteLicenciementEventEmitter.tsx#L13 "useIndemniteLicenciementEventEmitter.tsx:13") ·
 [↗ rupture conventionnelle](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/outils/indemnite-rupture-conventionnelle/events/useRuptureCoEventEmitter.tsx#L13 "useRuptureCoEventEmitter.tsx:13") ·
 [↗ départ à la retraite](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/outils/indemnite-retraite/events/useIndemniteRetraiteEventEmitter.tsx#L13 "useIndemniteRetraiteEventEmitter.tsx:13")
@@ -128,6 +140,32 @@ celui-là même dont sont dérivées les actions `view_step_*`.
 
 > Les évènements antérieurs au déploiement de ce `name` sont tous issus du
 > préavis de retraite, seul émetteur à l'époque : l'historique reste lisible.
+
+###### Issue du résultat (« Indemnités de précarité »)
+
+Émis à chaque affichage de l'écran de résultat, juste avant le `view_step` de l'étape
+`indemnite`. Les trois valeurs sont **exhaustives et exclusives** : toute arrivée sur l'écran
+en émet exactement une. C'est ce qui permet de distinguer, dans le taux de conversion, les
+simulations abouties des culs-de-sac (contrat exclu, rupture anticipée, embauche en CDI…),
+que le seul `view_step … indemnite` confondait.
+[↗ source](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/outils/indemnite-precarite/events/useResultTracking.ts#L27 "useResultTracking.ts:27")
+
+| Type     | Contenu                                                | Détail                                                       |
+| -------- | ------------------------------------------------------ | ------------------------------------------------------------ |
+| category | outil                                                  |                                                              |
+| action   | view_step_`Nom du simulateur`                          | Même action que le reste de l'entonnoir                      |
+| name     | results_eligible                                       | Un montant d'indemnité est présenté                          |
+| name     | results_ineligible                                     | La situation saisie n'ouvre pas droit à l'indemnité          |
+| name     | results_error                                          | Le moteur de calcul est en échec                             |
+
+> **Taux de conversion** : `results_eligible + results_ineligible + results_error` (ou
+> `view_step … indemnite`) rapporté à `view_step … info_cc`, qui marque le clic sur
+> « Commencer ». `start` est émis au **chargement de la page**, avant toute action : il mesure
+> l'audience de l'outil, pas les simulations démarrées.
+> **Taux de personnalisation** : `cc_select_p1 + cc_select_p2` rapporté à
+> `click_p1 + click_p2 + click_p3` (voir l'étape convention collective ci-dessous).
+> Dans les deux cas, retenir la métrique **visites uniques** : un retour en arrière suivi d'un
+> « Suivant » ré-émet les events de l'étape.
 
 ###### Spécifique « Préavis de retraite »
 
@@ -417,14 +455,14 @@ entreprise/accords.
 | ----------------------- | ------------------------------- | --------------------------------- | ---------------- |
 | enterprise_search       | `Nom du contexte`               | 🔀 `{"query":…,"apiGeoResult":…}` | Soumission du formulaire de recherche d'entreprise. |
 | enterprise_select       | `Nom du contexte`               | 🔀 `{"label":…,"siren":…}`        | Sélection d'une entreprise (ou auto-sélection si convention unique). |
-| cc_enterprise_search    | show_agreements                 | 📌 `<count>`                      | Affichage des conventions collectives d'une entreprise ; `name` = nombre trouvé, **`"0"` compris** quand l'entreprise n'en déclare aucune. Émis une seule fois par entreprise, sur tous les parcours (simulateurs, contributions, page dédiée, widget). Mesure la distribution 0 / 1 / N CC par entreprise et le taux d'échec de la recherche par SIRET, que les events au clic ci-dessus ne captent pas (ils ignorent les abandons). |
+| cc_enterprise_search    | show_agreements                 | 📌 `<count>`                      | Affichage des conventions collectives d'une entreprise ; `name` = nombre trouvé, ou **`aucun`** quand l'entreprise n'en déclare aucune (cf. « Règle transverse : un nom d'event n'est jamais falsy » en tête de document). Émis une seule fois par entreprise, sur tous les parcours (simulateurs, contributions, page dédiée, widget). Mesure la distribution 0 / 1 / N CC par entreprise et le taux d'échec de la recherche par SIRET, que les events au clic ci-dessus ne captent pas (ils ignorent les abandons). |
 | cc_select_p2            | `Nom du contexte`               | 🔀 `idcc<num>`                    | Validation de la CC rattachée à l'entreprise. |
 | view_step_cc_search_p2  | back_step_cc_search_p2          | 📌 Trouver sa convention collective | Clic « Précédent » à l'étape recherche par entreprise. |
 | cc_search_type_of_users | click_je_n_ai_pas_d_entreprise  | 📌 Trouver sa convention collective | Carte « assistants maternels / particuliers employeurs » en mode lien → fiche CC 3239 (clic sortant). |
 | cc_search_type_of_users | select_je_n_ai_pas_d_entreprise | 📌 Trouver sa convention collective | Même option en mode simulateur (sélection intégrée au parcours). |
 | accord_enterprise_search | click_accord                   | 📌 `<url>`                        | Clic sur une carte d'accord d'entreprise (Légifrance). |
 | accord_enterprise_search | click_all_accords              | 📌 `<siret>`                      | « Voir tous les accords sur Légifrance ». |
-| accord_enterprise_search | show_accords                   | 📌 `<count>`                      | Chargement réussi des accords ; `name` = nombre trouvé. |
+| accord_enterprise_search | show_accords                   | 📌 `<count>`                      | Chargement réussi des accords ; `name` = nombre trouvé, ou **`aucun`** quand il n'y en a pas (cf. « Règle transverse : un nom d'event n'est jamais falsy » en tête de document). Le nombre est le **total** renvoyé par l'API pour le SIRET, pas le nombre de cartes affichées (plafonné à 5). |
 | accord_enterprise_search | load_accords_failed            | 📌 `<siret>`                      | Échec de l'appel API des accords (incident). |
 
 **Recherche Légifrance sur une page de CC**

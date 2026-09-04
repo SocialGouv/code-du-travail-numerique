@@ -7,4 +7,9 @@ export { default as indemnitePrecariteModeles } from "./modeles/modeles-indemnit
 export { default as preavisLicenciementModeles } from "./modeles/modeles-preavis-licenciement.json";
 export { default as heuresRechercheEmploiModeles } from "./modeles/modeles-heures-recherche-emploi.json";
 export { default as indemniteRetraiteModeles } from "./modeles/modeles-indemnite-retraite.json";
+export {
+  getIndemnitePrecariteIneligibilityReferences,
+  INDEMNITE_FIN_MISSION_INELIGIBILITY_MESSAGE,
+  INDEMNITE_PRECARITE_INELIGIBILITY_MESSAGE,
+} from "./modeles/base/ineligibility-indemnite-precarite";
 export * from "./publicodes";
