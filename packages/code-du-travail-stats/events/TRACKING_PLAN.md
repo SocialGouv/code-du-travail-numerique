@@ -63,8 +63,9 @@ dans l'ordre. Le **titre** est celui utilisé dans l'action `view_step_<titre>` 
 
 > Les étapes `infos` / `salaires` (indemnités de départ) et `infos` (préavis de licenciement)
 > peuvent être **masquées** selon les réponses ; l'event n'est alors pas envoyé.
-> Les outils `Procédure de licenciement` et `Simulateur d'embauche` (iframe URSSAF) n'émettent
-> **pas** de `view_step`.
+> Les outils `Procédure de licenciement` et `Simulateur brut/net` n'émettent **pas** de
+> `view_step` : ils ne reposent pas sur `SimulatorLayout` et n'ont pas de parcours en étapes.
+> Le simulateur brut/net a en revanche son propre jeu d'events, décrit plus bas.
 
 ##### Évènements génériques sur les simulateurs
 
@@ -247,6 +248,38 @@ Les catégories `…_rupture_co` sont la variante du simulateur de rupture conve
 | feedback_simulateurs · feedback_simulateurs_rupture_co | Clarté_questions | 📌 note 1 à 5 | Questionnaire détaillé, si la question « informations et instructions » est notée. |
 | feedback_simulateurs · feedback_simulateurs_rupture_co | Clarté_résultat | 📌 note 1 à 5 | Questionnaire détaillé, si la question « explications du résultat » est notée. |
 | feedback_suggestion · feedback_suggestion_rupture_co | `<texte libre>` | 🔀 `<url sans query>` | Envoi du questionnaire détaillé, si le commentaire libre est renseigné. Verbatim qualitatif. |
+
+---
+
+#### Simulateur brut/net (`/outils/simulateur-embauche`)
+
+C'est la page la plus consultée du site. Tant qu'elle se contentait d'héberger l'iframe de
+l'URSSAF, elle n'émettait **aucun** event : on ne savait donc rien de ce que les usagers y
+faisaient, ni de ce qui expliquait son taux de sortie de 98 %. Depuis son passage en interface
+native (calculs faits par l'API publicodes de l'URSSAF, appelée depuis le navigateur), elle est
+instrumentée.
+
+Les events répondent à cinq questions métier : quelle part des usagers saisit réellement une
+valeur, quelle proportion voit puis clique les passerelles vers nos contenus, quel est le taux
+de clic sur le bloc « Pour approfondir », combien d'usagers repartent vers le simulateur de
+l'URSSAF, et à quelle fréquence l'API tombe.
+
+Tous ces events portent la catégorie `outil`.
+[↗ source](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/outils/simulateur-embauche/tracking.ts#L14 "simulateur-embauche/tracking.ts")
+
+| Catégorie | Action | Name (📌/🔀) | Quand / pourquoi |
+| --------- | ------ | ------------ | ---------------- |
+| outil | `brut_net_saisie_champ` | 📌 `cout_total_employeur` \| `salaire_brut` \| `salaire_net` \| `salaire_net_apres_impot` | À la **première** frappe dans un champ, une seule fois par champ et par visite de la page. Compter chaque frappe donnerait un volume ininterprétable : l'indicateur voulu est la part des usagers qui saisissent une valeur, et lequel des quatre champs sert de point d'entrée. |
+| outil | `brut_net_remplir_automatiquement` | 📌 `salaire_median` \| `smic` | Clic sur un des deux boutons de remplissage rapide. Mesure l'usage de ces raccourcis, et sert de repère de comparaison face à la saisie manuelle. |
+| outil | `brut_net_affichage_message_contextuel` | 📌 `salaire_minimum` \| `primes_conventionnelles` | À la **première** apparition de chaque type de message sous le champ « Salaire net » (un message par visite et par type). C'est le **dénominateur** du taux d'engagement sur les passerelles vers nos contenus. |
+| outil | `brut_net_clic_message_contextuel` | 📌 `salaire_minimum` \| `primes_conventionnelles` | Clic sur le lien du message contextuel. C'est le **numérateur** du même taux : rapporté à l'event d'affichage, il dit si ces passerelles font effectivement sortir de la page. |
+| outil | `brut_net_clic_pour_approfondir` | 📌 slug de la carte (`infographie/quel-est-le-salaire-minimum`, `contribution/quel-est-le-salaire-minimum`, `convention-collective`) | Clic sur une des trois cartes du bloc « Pour approfondir ». Taux de clic par contenu proposé. |
+| outil | `brut_net_clic_simulateur_urssaf` | 📌 `mois` \| `annee` | Clic sur le lien « Une simulation plus détaillée ? ». Mesure les sorties volontaires vers l'URSSAF, et si elles viennent plutôt du mode mensuel ou annuel. |
+| outil | `brut_net_erreur_api` | 🔀 statut HTTP (`429`, `500`…) ou `reseau` | L'appel à l'API URSSAF a échoué et l'alerte d'erreur s'affiche. Suit la fiabilité d'une dépendance tierce sans SLA, et en particulier la fréquence des `429` (quota de 5 requêtes/seconde par IP). Une requête simplement annulée par une frappe plus récente n'émet **rien**. |
+
+> `brut_net_erreur_api` retombe explicitement sur `reseau` quand l'échec n'a pas de statut HTTP :
+> un `name` vide serait purement et simplement jeté par Matomo (cf. la règle transverse en tête
+> de document).
 
 ---
 
