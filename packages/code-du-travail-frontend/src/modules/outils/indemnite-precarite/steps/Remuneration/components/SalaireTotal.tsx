@@ -18,7 +18,7 @@ export const SalaireTotal: React.FC<Props> = ({ value, onChange, error }) => {
   return (
     <div className={fr.cx("fr-mb-3w")}>
       <Input
-        label="Quelle est la rémunération totale brute perçue en € durant le contrat de travail ?"
+        label="Totalité de la rémunération brute perçue en euros"
         nativeInputProps={
           {
             id: "input-salaireTotal",
@@ -27,6 +27,8 @@ export const SalaireTotal: React.FC<Props> = ({ value, onChange, error }) => {
             step: "1000",
             value: value || "",
             onChange: handleChange,
+            onWheel: (e: React.WheelEvent<HTMLInputElement>) =>
+              e.currentTarget.blur(),
             "data-testid": "salaireTotal",
           } as any
         }
@@ -37,8 +39,8 @@ export const SalaireTotal: React.FC<Props> = ({ value, onChange, error }) => {
         }}
       />
       <p className={fr.cx("fr-text--light", "fr-mt-1w", "fr-text--sm")}>
-        Majorations, indemnités, primes et accessoires compris sauf les
-        remboursements de frais et l&apos;indemnité compensatrice de congés
+        Majorations de salaire, indemnités, primes et accessoires compris sauf
+        les remboursements de frais et l&apos;indemnité compensatrice de congés
         payés.
       </p>
     </div>

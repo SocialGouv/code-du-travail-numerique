@@ -12,6 +12,14 @@ export const AGREEMENT_DECLINATIONS_LABEL =
 type Props = {
   items: AgreementDeclination[];
   className?: string;
+  /**
+   * Niveau du titre de l'accordéon. Par défaut `h3` : le bloc est alors rendu
+   * sous la réponse Code du travail, qui porte le `h2` de la page. Sur une
+   * contribution sans réponse générique (`isNoCDT`) ce `h2` n'existe pas et la
+   * liste suit directement le `h1` : elle doit passer en `h2` pour ne pas
+   * casser la hiérarchie des titres (#7458).
+   */
+  titleAs?: "h2" | "h3";
 };
 
 /**
@@ -23,6 +31,7 @@ type Props = {
 export const ContributionAgreementDeclinations = ({
   items,
   className,
+  titleAs = "h3",
 }: Props) => {
   const { emitClickAgreementDeclination } = useContributionTracking();
 
@@ -33,7 +42,7 @@ export const ContributionAgreementDeclinations = ({
   return (
     <Accordion
       label={AGREEMENT_DECLINATIONS_LABEL}
-      titleAs="h3"
+      titleAs={titleAs}
       className={className}
     >
       <ListWithArrow

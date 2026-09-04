@@ -4,32 +4,35 @@ import * as Sentry from "@sentry/nextjs";
 import { StoreSliceWrapperIndemnitePrecarite } from "../../store";
 import { ResultStoreData, ResultStoreSlice } from "./types";
 import { AgreementStoreSlice } from "../../Agreement/store";
-import { InformationsStoreSlice } from "../../Informations/store";
+import { TypeContratStoreSlice } from "../../TypeContrat/store";
+import { TermeContratStoreSlice } from "../../TermeContrat/store";
 import { RemunerationStoreSlice } from "../../Remuneration/store";
 import {
   References,
   Notification,
-  supportedCcn,
   PublicodesIndemnitePrecariteResult,
   Formula,
+  ChosenResult,
 } from "@socialgouv/modeles-social";
-import {
-  mapToPublicodesSituationForCalculationIndemnitePrecarite,
-  mapAgreementSpecificParametersToPublicodes,
-} from "../../../../common/publicodes/indemnite-precarite";
+import { mapToPublicodesSituationForCalculationIndemnitePrecarite } from "../../../../common/publicodes/indemnite-precarite";
+import { findContractOption } from "../../../agreements";
+import { CONTRACT_FAMILY } from "../../../types";
 
 const initialState: ResultStoreData = {
   result: undefined,
   calculationError: undefined,
-  isAgreementSupported: false,
   resultNotifications: undefined,
   resultReferences: undefined,
   resultFormula: undefined,
+  chosenResult: undefined,
 };
 
 const createResultStore: StoreSliceWrapperIndemnitePrecarite<
   ResultStoreSlice,
-  AgreementStoreSlice & InformationsStoreSlice & RemunerationStoreSlice
+  AgreementStoreSlice &
+    TypeContratStoreSlice &
+    TermeContratStoreSlice &
+    RemunerationStoreSlice
 > = (set, get) => ({
   resultData: {
     ...initialState,
@@ -39,10 +42,6 @@ const createResultStore: StoreSliceWrapperIndemnitePrecarite<
       const state = get();
       const agreement = state.agreementData.input.agreement;
       const publicodes = state.agreementData.publicodes;
-
-      const isAgreementSupported = !!supportedCcn.find(
-        ({ idcc }) => idcc === agreement?.num
-      );
 
       if (!publicodes) {
         console.warn("Publicodes is not defined");
@@ -54,6 +53,7 @@ const createResultStore: StoreSliceWrapperIndemnitePrecarite<
       let resultNotifications: Notification[] | undefined;
       let resultReferences: References[] | undefined;
       let resultFormula: Formula | undefined;
+      let chosenResult: ChosenResult | undefined;
 
       const remunerationInput = state.remunerationData.input;
       let totalSalary = 0;
@@ -72,21 +72,21 @@ const createResultStore: StoreSliceWrapperIndemnitePrecarite<
         }, 0);
       }
 
-      const conventionSpecificParams =
-        mapAgreementSpecificParametersToPublicodes(
-          state.informationsData.input,
-          agreement?.num
-        );
-
-      const additionalFields = {
-        "contrat salarié . type de cdd": `'${state.informationsData.input.criteria?.cddType ?? "Autres"}'`,
-        ...conventionSpecificParams,
-      };
+      const contractOption = findContractOption(
+        state.typeContratData.input.contractOptionId,
+        agreement
+      );
+      const termeInput = state.termeContratData.input;
 
       const situation =
         mapToPublicodesSituationForCalculationIndemnitePrecarite(
           totalSalary,
-          additionalFields,
+          {
+            family: contractOption?.family ?? CONTRACT_FAMILY.CDD,
+            typeCdd: contractOption?.typeCdd ?? "Autres",
+            finALaDatePrevue: termeInput.finALaDatePrevue,
+            issueContrat: termeInput.issueContrat,
+          },
           agreement?.num
         );
 
@@ -101,6 +101,7 @@ const createResultStore: StoreSliceWrapperIndemnitePrecarite<
         resultNotifications = publicodesCalculation.notifications;
         resultReferences = publicodesCalculation.references;
         resultFormula = publicodesCalculation.formula;
+        chosenResult = publicodesCalculation.detail?.chosenResult;
       } catch (e) {
         errorPublicodes = true;
         console.error("Error in publicodes calculation:", e);
@@ -121,10 +122,10 @@ const createResultStore: StoreSliceWrapperIndemnitePrecarite<
 
           state.resultData.result = amount;
           state.resultData.totalSalary = totalSalary;
-          state.resultData.isAgreementSupported = isAgreementSupported;
           state.resultData.resultNotifications = resultNotifications;
           state.resultData.resultReferences = resultReferences;
           state.resultData.resultFormula = resultFormula;
+          state.resultData.chosenResult = chosenResult;
           state.resultData.calculationError = errorPublicodes
             ? "Erreur de calcul publicodes"
             : undefined;

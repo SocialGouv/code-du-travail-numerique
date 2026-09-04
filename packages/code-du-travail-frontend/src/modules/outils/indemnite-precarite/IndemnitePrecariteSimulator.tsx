@@ -17,7 +17,8 @@ import {
 import {
   StepIntroduction,
   StepAgreement,
-  StepInfosGenerales,
+  StepTypeContrat,
+  StepTermeContrat,
   StepRemuneration,
   StepResultat,
 } from "./steps";
@@ -37,9 +38,14 @@ const steps: Step<IndemnitePrecariteStepName>[] = [
     Component: StepAgreement,
   },
   {
-    label: "Informations générales",
-    name: IndemnitePrecariteStepName.InfosGenerales,
-    Component: StepInfosGenerales,
+    label: "Type de contrat",
+    name: IndemnitePrecariteStepName.TypeContrat,
+    Component: StepTypeContrat,
+  },
+  {
+    label: "Terme du contrat",
+    name: IndemnitePrecariteStepName.TermeContrat,
+    Component: StepTermeContrat,
   },
   {
     label: "Rémunération",
@@ -105,15 +111,19 @@ const IndemnitePrecariteSimulatorContent = ({
   const {
     onNextStepAgreement,
     isStepAgreementValid,
-    onNextStepInfos,
-    isStepInfosValid,
+    onNextStepTypeContrat,
+    isStepTypeContratValid,
+    onNextStepTermeContrat,
+    isStepTermeContratValid,
     onNextStepRemuneration,
     isStepRemunerationValid,
   } = useIndemnitePrecariteStore(store, (state) => ({
     onNextStepAgreement: state.agreementFunction.onNextStep,
     isStepAgreementValid: state.agreementData.isStepValid,
-    onNextStepInfos: state.informationsFunction.onNextStep,
-    isStepInfosValid: state.informationsData.isStepValid,
+    onNextStepTypeContrat: state.typeContratFunction.onNextStep,
+    isStepTypeContratValid: state.typeContratData.isStepValid,
+    onNextStepTermeContrat: state.termeContratFunction.onNextStep,
+    isStepTermeContratValid: state.termeContratData.isStepValid,
     onNextStepRemuneration: state.remunerationFunction.onNextStep,
     isStepRemunerationValid: state.remunerationData.isStepValid,
   }));
@@ -130,9 +140,14 @@ const IndemnitePrecariteSimulatorContent = ({
           onNextStep: onNextStepAgreement,
         },
         {
-          stepName: IndemnitePrecariteStepName.InfosGenerales,
-          isStepValid: isStepInfosValid,
-          onNextStep: onNextStepInfos,
+          stepName: IndemnitePrecariteStepName.TypeContrat,
+          isStepValid: isStepTypeContratValid,
+          onNextStep: onNextStepTypeContrat,
+        },
+        {
+          stepName: IndemnitePrecariteStepName.TermeContrat,
+          isStepValid: isStepTermeContratValid,
+          onNextStep: onNextStepTermeContrat,
         },
         {
           stepName: IndemnitePrecariteStepName.Remuneration,

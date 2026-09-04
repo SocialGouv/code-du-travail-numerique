@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.242.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.241.1...v4.242.0) (2026-09-04)
+
+
+### Bug Fixes
+
+* **contributions:** hiérarchie de titres cassée sans réponse Code du travail ([#7468](https://github.com/SocialGouv/code-du-travail-numerique/issues/7468)) ([b0ecac5](https://github.com/SocialGouv/code-du-travail-numerique/commit/b0ecac517ac796480cde1a365e28e0a0abaecfaa))
+
+
+### Features
+
+* **indemnite-precarite:** refonte parcours pour éliminer les culs-de sac ([#7285](https://github.com/SocialGouv/code-du-travail-numerique/issues/7285)) ([cc06cc6](https://github.com/SocialGouv/code-du-travail-numerique/commit/cc06cc67e15768e068ba30dad1c6f285d5fcd994))
+
+
+
+
+
 ## [4.241.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.241.0...v4.241.1) (2026-09-01)
 
 

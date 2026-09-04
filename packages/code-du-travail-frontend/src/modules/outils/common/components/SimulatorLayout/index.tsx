@@ -7,6 +7,7 @@ import { PublicodesSimulator } from "@socialgouv/modeles-social";
 import { scrollToTop } from "../../utils";
 import { css } from "@styled-system/css";
 import { AccessibleAlert } from "../AccessibleAlert";
+import { SimulatorTitleContext } from "./SimulatorTitleContext";
 
 type Props<T extends string> = {
   title: string;
@@ -140,95 +141,99 @@ export const SimulatorLayout = ({
   );
 
   return (
-    <div>
-      <div className={hideOnPrint}>
-        <div className={fr.cx("fr-stepper", "fr-mb-3w")}>
-          <h2
-            tabIndex={-1}
-            ref={stepperRef}
-            data-testid="stepper"
-            className={fr.cx("fr-stepper__title")}
-          >
-            {stepName}
-            <span className={fr.cx("fr-stepper__state")}>
-              Étape {currentNumStep} sur {nbTotalSteps}
-            </span>
-          </h2>
-          <div
-            className={fr.cx("fr-stepper__steps")}
-            data-fr-current-step={currentNumStep}
-            data-fr-steps={nbTotalSteps}
-          ></div>
-          {nextStepTitle !== undefined && (
-            <p className={fr.cx("fr-stepper__details")}>
-              <span className={fr.cx("fr-text--bold")}>
-                Étape suivante&nbsp;:
-              </span>{" "}
-              {nextStepTitle}
-            </p>
+    <SimulatorTitleContext.Provider value={title}>
+      <div>
+        <div className={hideOnPrint}>
+          <div className={fr.cx("fr-stepper", "fr-mb-3w")}>
+            <h2
+              tabIndex={-1}
+              ref={stepperRef}
+              data-testid="stepper"
+              className={fr.cx("fr-stepper__title")}
+            >
+              {stepName}
+              <span className={fr.cx("fr-stepper__state")}>
+                Étape {currentNumStep} sur {nbTotalSteps}
+              </span>
+            </h2>
+            <div
+              className={fr.cx("fr-stepper__steps")}
+              data-fr-current-step={currentNumStep}
+              data-fr-steps={nbTotalSteps}
+            ></div>
+            {nextStepTitle !== undefined && (
+              <p className={fr.cx("fr-stepper__details")}>
+                <span className={fr.cx("fr-text--bold")}>
+                  Étape suivante&nbsp;:
+                </span>{" "}
+                {nextStepTitle}
+              </p>
+            )}
+          </div>
+        </div>
+
+        <div className={printOnlyDate}>Simulé le {simulationDate}</div>
+
+        <div>
+          <Step />
+        </div>
+
+        <div
+          className={fr.cx("fr-mt-3w", "fr-grid-row", "fr-grid-row--middle")}
+        >
+          {currentNumStep > 1 && (
+            <Button
+              onClick={onPrevStep}
+              priority="secondary"
+              iconId="ri-arrow-left-line"
+              iconPosition="left"
+              className={fr.cx("fr-mr-2w", "fr-mb-3w")}
+              data-testid="previous-button"
+            >
+              Précédent
+            </Button>
+          )}
+          {currentNumStep < nbTotalSteps && (
+            <Button
+              onClick={onNextStep}
+              priority="primary"
+              iconId="ri-arrow-right-line"
+              iconPosition="right"
+              disabled={validator?.isStepValid === false}
+              nativeButtonProps={{
+                "aria-disabled": validator?.isStepValid === false,
+              }}
+              className={fr.cx("fr-mr-2w", "fr-mb-3w")}
+              data-testid="next-button"
+            >
+              {currentNumStep === 1 ? "Commencer" : "Suivant"}
+            </Button>
+          )}
+          {currentNumStep === nbTotalSteps && (
+            <Button
+              onClick={onPrint}
+              priority="secondary"
+              iconId="ri-printer-fill"
+              iconPosition="right"
+              className={fr.cx("fr-mr-2w", "fr-mb-3w")}
+              data-testid="print-button"
+            >
+              Imprimer le résultat
+            </Button>
           )}
         </div>
+        <div className={fr.cx("fr-grid-row")}>
+          {printError && (
+            <AccessibleAlert
+              title="Une erreur est survenue"
+              description="L'impression ne semble pas disponible sur votre appareil."
+              severity="error"
+            />
+          )}
+        </div>
+        {footerComponent}
       </div>
-
-      <div className={printOnlyDate}>Simulé le {simulationDate}</div>
-
-      <div>
-        <Step />
-      </div>
-
-      <div className={fr.cx("fr-mt-3w", "fr-grid-row", "fr-grid-row--middle")}>
-        {currentNumStep > 1 && (
-          <Button
-            onClick={onPrevStep}
-            priority="secondary"
-            iconId="ri-arrow-left-line"
-            iconPosition="left"
-            className={fr.cx("fr-mr-2w", "fr-mb-3w")}
-            data-testid="previous-button"
-          >
-            Précédent
-          </Button>
-        )}
-        {currentNumStep < nbTotalSteps && (
-          <Button
-            onClick={onNextStep}
-            priority="primary"
-            iconId="ri-arrow-right-line"
-            iconPosition="right"
-            disabled={validator?.isStepValid === false}
-            nativeButtonProps={{
-              "aria-disabled": validator?.isStepValid === false,
-            }}
-            className={fr.cx("fr-mr-2w", "fr-mb-3w")}
-            data-testid="next-button"
-          >
-            {currentNumStep === 1 ? "Commencer" : "Suivant"}
-          </Button>
-        )}
-        {currentNumStep === nbTotalSteps && (
-          <Button
-            onClick={onPrint}
-            priority="secondary"
-            iconId="ri-printer-fill"
-            iconPosition="right"
-            className={fr.cx("fr-mr-2w", "fr-mb-3w")}
-            data-testid="print-button"
-          >
-            Imprimer le résultat
-          </Button>
-        )}
-      </div>
-      <div className={fr.cx("fr-grid-row")}>
-        {printError && (
-          <AccessibleAlert
-            title="Une erreur est survenue"
-            description="L'impression ne semble pas disponible sur votre appareil."
-            severity="error"
-          />
-        )}
-      </div>
-      {footerComponent}
-    </div>
+    </SimulatorTitleContext.Provider>
   );
 };
 

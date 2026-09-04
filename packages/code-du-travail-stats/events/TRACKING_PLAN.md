@@ -11,7 +11,7 @@ Ce document décrit les évènements Matomo **écrits explicitement dans le code
 (`code.travail.gouv.fr`). Il est destiné au métier : pour **chaque** évènement, il explique
 **quand** il part et **pourquoi** on le mesure, puis en donne le contenu exact.
 
-**128** events uniques · **137** au total · **33** catégories Matomo. Couverture vérifiée
+**128** events uniques · **140** au total · **33** catégories Matomo. Couverture vérifiée
 exhaustivement face au catalogue extrait du code.
 
 #### Règle transverse : un nom d'event n'est jamais « falsy »
@@ -54,7 +54,7 @@ dans l'ordre. Le **titre** est celui utilisé dans l'action `view_step_<titre>` 
 | ---------------------------------------------- | ----------------------------------------------------------- |
 | Indemnité de licenciement                      | start, info_cc, infos, anciennete, absences, salaires, results |
 | Indemnité de rupture conventionnelle           | start, info_cc, infos, anciennete, absences, salaires, results |
-| Indemnités de précarité                        | start, info_cc, info_generales, remuneration, indemnite     |
+| Indemnités de précarité                        | start, info_cc, type_contrat, terme_contrat, remuneration, indemnite |
 | Préavis de démission                           | start, info_cc, infos, results                              |
 | Préavis de licenciement                        | start, status, info_cc, infos, results                      |
 | Préavis de départ ou de mise à la retraite     | intro, origine, ccn, infos, anciennete, result              |
@@ -109,7 +109,7 @@ du navigateur. Mesure l'intention de conserver le résultat.
 
 Émis au calcul de l'étape « résultat » quand la simulation conclut à la **non-éligibilité**
 (ancienneté / informations / absences non satisfaites). Mesure le taux de simulations
-« non éligible ». Concerne les deux simulateurs d'indemnité.
+« non éligible ». Concerne les deux simulateurs d'indemnité de départ.
 [↗ licenciement](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/outils/indemnite-licenciement/events/useIndemniteLicenciementEventEmitter.tsx#L13 "useIndemniteLicenciementEventEmitter.tsx:13") ·
 [↗ rupture conventionnelle](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/outils/indemnite-rupture-conventionnelle/events/useRuptureCoEventEmitter.tsx#L13 "useRuptureCoEventEmitter.tsx:13")
 
@@ -118,6 +118,32 @@ du navigateur. Mesure l'intention de conserver le résultat.
 | category | outil                                                                               |                               |
 | action   | view_step_Indemnité de licenciement · view_step_Indemnité de rupture conventionnelle | Simulateur concerné          |
 | name     | results_ineligible                                                                  | L'utilisateur est inéligible  |
+
+###### Issue du résultat (« Indemnités de précarité »)
+
+Émis à chaque affichage de l'écran de résultat, juste avant le `view_step` de l'étape
+`indemnite`. Les trois valeurs sont **exhaustives et exclusives** : toute arrivée sur l'écran
+en émet exactement une. C'est ce qui permet de distinguer, dans le taux de conversion, les
+simulations abouties des culs-de-sac (contrat exclu, rupture anticipée, embauche en CDI…),
+que le seul `view_step … indemnite` confondait.
+[↗ source](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/outils/indemnite-precarite/events/useResultTracking.ts#L27 "useResultTracking.ts:27")
+
+| Type     | Contenu                                                | Détail                                                       |
+| -------- | ------------------------------------------------------ | ------------------------------------------------------------ |
+| category | outil                                                  |                                                              |
+| action   | view_step_`Nom du simulateur`                          | Même action que le reste de l'entonnoir                      |
+| name     | results_eligible                                       | Un montant d'indemnité est présenté                          |
+| name     | results_ineligible                                     | La situation saisie n'ouvre pas droit à l'indemnité          |
+| name     | results_error                                          | Le moteur de calcul est en échec                             |
+
+> **Taux de conversion** : `results_eligible + results_ineligible + results_error` (ou
+> `view_step … indemnite`) rapporté à `view_step … info_cc`, qui marque le clic sur
+> « Commencer ». `start` est émis au **chargement de la page**, avant toute action : il mesure
+> l'audience de l'outil, pas les simulations démarrées.
+> **Taux de personnalisation** : `cc_select_p1 + cc_select_p2` rapporté à
+> `click_p1 + click_p2 + click_p3` (voir l'étape convention collective ci-dessous).
+> Dans les deux cas, retenir la métrique **visites uniques** : un retour en arrière suivi d'un
+> « Suivant » ré-émet les events de l'étape.
 
 ###### Spécifique « Préavis de retraite »
 

@@ -145,10 +145,14 @@ export function ContributionGeneric({
           générique n'est pas rendu, la liste des déclinaisons par CC est donc
           affichée directement sous le formulaire de sélection. Elle ferme alors
           la page : `fr-mb-6w` reprend la marge basse que porte habituellement
-          le bloc générique, sans quoi l'accordéon colle au pied de page. */}
+          le bloc générique, sans quoi l'accordéon colle au pied de page.
+          Le `h2` de la réponse Code du travail étant absent, l'accordéon suit
+          directement le `h1` : son titre passe en `h2` pour que la hiérarchie
+          des titres reste valide (#7458). */}
       {isNoCDT && (
         <ContributionAgreementDeclinations
           items={agreementDeclinations}
+          titleAs="h2"
           className={fr.cx("fr-mt-6w", "fr-mb-6w")}
         />
       )}

@@ -1,6 +1,6 @@
 import { CalculateurIndemnitePrecarite } from "../../IndemnitePrecariteSimulator";
-import { ui } from "../ui";
-import { fireEvent, render, screen } from "@testing-library/react";
+import { runJourney, ui } from "../ui";
+import { render, screen } from "@testing-library/react";
 
 jest.spyOn(Storage.prototype, "setItem");
 Storage.prototype.getItem = jest.fn(
@@ -16,209 +16,68 @@ Storage.prototype.getItem = jest.fn(
         `
 );
 
-describe("SimulateurIndemnitePrecarite", () => {
+const expectReference = (reference: string) => {
+  expect(
+    screen.queryAllByText(new RegExp(escapeRegExp(reference)))[0]
+  ).toBeInTheDocument();
+};
+
+const escapeRegExp = (value: string) =>
+  value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
+describe("SimulateurIndemnitePrecarite - IDCC 2098", () => {
   beforeEach(() => {
     render(
       <CalculateurIndemnitePrecarite title="Test Indemnité de Précarité" />
     );
-    fireEvent.click(ui.introduction.startButton.get());
-
-    fireEvent.click(ui.next.get());
   });
 
-  describe("contractType = CDD", () => {
-    beforeEach(() => {
-      fireEvent.click(ui.contractType.cdd.get());
-      fireEvent.click(ui.next.get());
-    });
+  it("affiche l'indemnité légale pour un CDD de remplacement", () => {
+    runJourney();
 
-    describe("criteria.cddType = CDD d'optimisation linéaire", () => {
-      beforeEach(() => {
-        fireEvent.change(ui.cddType.get(), {
-          target: { value: "CDD d'optimisation linéaire" },
-        });
-        fireEvent.click(ui.next.get());
-      });
+    expect(ui.result.amount.get()).toHaveTextContent("300,00");
+    expectReference("Article L1243-4 du code du travail");
+    expectReference("Article L1243-8 du code du travail");
+    expectReference("Article L1243-9 du code du travail");
+    expectReference("Article L1243-10 du code du travail");
+  });
 
-      describe("typeRemuneration = amount", () => {
-        beforeEach(() => {
-          fireEvent.click(ui.remuneration.typeRemuneration.total.get());
-          fireEvent.click(ui.next.get());
-        });
+  it("affiche l'indemnité conventionnelle — cas conventionnel : CDD d'usage / CDD d'intervention pour le secteur évènementiel", () => {
+    runJourney({ contractOptionId: "2098-usage-intervention-evenementiel" });
 
-        describe("currency = 3000", () => {
-          beforeEach(() => {
-            fireEvent.change(ui.remuneration.salaireTotal.get(), {
-              target: { value: "3000" },
-            });
-            fireEvent.click(ui.next.get());
-          });
+    expect(ui.result.amount.get()).toHaveTextContent("300,00");
+    expectReference(
+      "Article 4.1 de l'accord du 20 septembre 2002 relatif aux dispositions spécifiques à l'accueil événementiel"
+    );
+    expectReference("Article L1243-4 du code du travail");
+    expectReference("Article L1243-8 du code du travail");
+    expectReference("Article L1243-9 du code du travail");
+    expectReference("Article L1243-10 du code du travail");
+  });
 
-          it("should display expected answer", () => {
-            expect(screen.queryAllByText(/300/g)[0]).toBeInTheDocument();
-            expect(
-              screen.queryAllByText(
-                /Article 9 de l'accord du 10 mai 2010 relatif à l'activité d'optimisation de linéaires/
-              )[0]
-            ).toBeInTheDocument();
-          });
-        });
-      });
-    });
+  it("affiche l'indemnité conventionnelle — cas conventionnel : CDD d'optimisation linéaire", () => {
+    runJourney({ contractOptionId: "2098-optimisation-lineaire" });
 
-    describe("criteria.cddType = CDD d'animation commerciale", () => {
-      beforeEach(() => {
-        fireEvent.change(ui.cddType.get(), {
-          target: { value: "CDD d'animation commerciale" },
-        });
-        fireEvent.click(ui.next.get());
-      });
+    expect(ui.result.amount.get()).toHaveTextContent("300,00");
+    expectReference(
+      "Article 9 de l'accord du 10 mai 2010 relatif à l'activité d'optimisation de linéaires"
+    );
+    expectReference("Article L1243-4 du code du travail");
+    expectReference("Article L1243-8 du code du travail");
+    expectReference("Article L1243-9 du code du travail");
+    expectReference("Article L1243-10 du code du travail");
+  });
 
-      describe("typeRemuneration = amount", () => {
-        beforeEach(() => {
-          fireEvent.click(ui.remuneration.typeRemuneration.total.get());
-          fireEvent.click(ui.next.get());
-        });
+  it("affiche l'indemnité conventionnelle — cas conventionnel : CDD d'animation commerciale", () => {
+    runJourney({ contractOptionId: "2098-animation-commerciale" });
 
-        describe("currency = 3000", () => {
-          beforeEach(() => {
-            fireEvent.change(ui.remuneration.salaireTotal.get(), {
-              target: { value: "3000" },
-            });
-            fireEvent.click(ui.next.get());
-          });
-
-          it("should display expected answer", () => {
-            expect(screen.queryAllByText(/300/g)[0]).toBeInTheDocument();
-            expect(
-              screen.queryAllByText(
-                /Article 9 de l'accord du 13 février 2006 Activités de l'animation commerciale/
-              )[0]
-            ).toBeInTheDocument();
-          });
-        });
-      });
-    });
-
-    describe("criteria.cddType = Contrat d'intervention dans le secteur de l'accueil événementiel", () => {
-      beforeEach(() => {
-        fireEvent.change(ui.cddType.get(), {
-          target: {
-            value:
-              "Contrat d'intervention dans le secteur de l'accueil événementiel",
-          },
-        });
-        fireEvent.click(ui.next.get());
-      });
-
-      describe("typeRemuneration = amount", () => {
-        beforeEach(() => {
-          fireEvent.click(ui.remuneration.typeRemuneration.total.get());
-          fireEvent.click(ui.next.get());
-        });
-
-        describe("currency = 3000", () => {
-          beforeEach(() => {
-            fireEvent.change(ui.remuneration.salaireTotal.get(), {
-              target: { value: "3000" },
-            });
-            fireEvent.click(ui.next.get());
-          });
-
-          it("should display expected answer", () => {
-            expect(screen.queryAllByText(/300/g)[0]).toBeInTheDocument();
-            expect(
-              screen.queryAllByText(
-                /Article 4.1 de l'accord du 20 septembre 2002 \(1\) relatif aux dispositions spécifiques à l'accueil événementiel/
-              )[0]
-            ).toBeInTheDocument();
-          });
-        });
-      });
-    });
-
-    describe("criteria.cddType = Autres", () => {
-      beforeEach(() => {
-        fireEvent.change(ui.cddType.get(), {
-          target: { value: "Autres" },
-        });
-        fireEvent.click(ui.next.get());
-      });
-
-      describe("finContratPeriodeDessai = Non", () => {
-        beforeEach(() => {
-          fireEvent.click(ui.cddQuestions.finContratPeriodeDessai.non.get());
-          fireEvent.click(ui.next.get());
-        });
-
-        describe("propositionCDIFindeContrat = Non", () => {
-          beforeEach(() => {
-            fireEvent.click(
-              ui.cddQuestions.propositionCDIFindeContrat.non.get()
-            );
-            fireEvent.click(ui.next.get());
-          });
-
-          describe("refusCDIFindeContrat = Non", () => {
-            beforeEach(() => {
-              fireEvent.click(ui.cddQuestions.refusCDIFindeContrat.non.get());
-              fireEvent.click(ui.next.get());
-            });
-
-            describe("interruptionFauteGrave = Non", () => {
-              beforeEach(() => {
-                fireEvent.click(
-                  ui.cddQuestions.interruptionFauteGrave.non.get()
-                );
-                fireEvent.click(ui.next.get());
-              });
-
-              describe("refusRenouvellementAuto = Non", () => {
-                beforeEach(() => {
-                  fireEvent.click(
-                    ui.cddQuestions.refusRenouvellementAuto.non.get()
-                  );
-                  fireEvent.click(ui.next.get());
-                });
-
-                describe("typeRemuneration = amount", () => {
-                  beforeEach(() => {
-                    fireEvent.click(
-                      ui.remuneration.typeRemuneration.total.get()
-                    );
-                    fireEvent.click(ui.next.get());
-                  });
-
-                  describe("currency = 3000", () => {
-                    beforeEach(() => {
-                      fireEvent.change(ui.remuneration.salaireTotal.get(), {
-                        target: { value: "3000" },
-                      });
-                      fireEvent.click(ui.next.get());
-                    });
-
-                    it("should display expected answer", () => {
-                      expect(
-                        screen.queryAllByText(/300/g)[0]
-                      ).toBeInTheDocument();
-                      expect(
-                        screen.queryAllByText(
-                          /Article L1243-8 du code du travail/
-                        )[0]
-                      ).toBeInTheDocument();
-                      expect(
-                        screen.queryAllByText(
-                          /Article L1243-9 du code du travail/
-                        )[0]
-                      ).toBeInTheDocument();
-                    });
-                  });
-                });
-              });
-            });
-          });
-        });
-      });
-    });
+    expect(ui.result.amount.get()).toHaveTextContent("300,00");
+    expectReference(
+      "Article 9 de l'avenant du 13 février 2006 relatif à l'animation commerciale"
+    );
+    expectReference("Article L1243-4 du code du travail");
+    expectReference("Article L1243-8 du code du travail");
+    expectReference("Article L1243-9 du code du travail");
+    expectReference("Article L1243-10 du code du travail");
   });
 });

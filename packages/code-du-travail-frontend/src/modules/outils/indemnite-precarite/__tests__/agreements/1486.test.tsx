@@ -1,6 +1,6 @@
 import { CalculateurIndemnitePrecarite } from "../../IndemnitePrecariteSimulator";
-import { ui } from "../ui";
-import { fireEvent, render, screen } from "@testing-library/react";
+import { runJourney, ui } from "../ui";
+import { render, screen } from "@testing-library/react";
 
 jest.spyOn(Storage.prototype, "setItem");
 Storage.prototype.getItem = jest.fn(
@@ -16,184 +16,83 @@ Storage.prototype.getItem = jest.fn(
         `
 );
 
-describe("SimulateurIndemnitePrecarite", () => {
+const expectReference = (reference: string) => {
+  expect(
+    screen.queryAllByText(new RegExp(escapeRegExp(reference)))[0]
+  ).toBeInTheDocument();
+};
+
+const escapeRegExp = (value: string) =>
+  value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
+describe("SimulateurIndemnitePrecarite - IDCC 1486", () => {
   beforeEach(() => {
     render(
       <CalculateurIndemnitePrecarite title="Test Indemnité de Précarité" />
     );
-    fireEvent.click(ui.introduction.startButton.get());
-
-    fireEvent.click(ui.next.get());
   });
 
-  describe("contractType = CDD", () => {
-    beforeEach(() => {
-      fireEvent.click(ui.contractType.cdd.get());
-      fireEvent.click(ui.next.get());
-    });
+  it("affiche l'indemnité légale pour un CDD de remplacement", () => {
+    runJourney();
 
-    describe("criteria.cddType = Enquêteurs vacataires", () => {
-      beforeEach(() => {
-        fireEvent.change(ui.cddType.get(), {
-          target: { value: "Enquêteurs vacataires" },
-        });
-        fireEvent.click(ui.next.get());
-      });
+    expect(ui.result.amount.get()).toHaveTextContent("300,00");
+    // Un CDD générique reste régi par le Code du travail, même sous une CC
+    // qui prévoit des dispositions pour d'autres types de CDD.
+    expect(
+      screen.getByTestId("warning-body-cc-sans-dispositions")
+    ).toHaveTextContent(
+      "Votre convention de branche ne contient pas de dispositions relatives à l'indemnité de précarité."
+    );
+    expectReference("Article L1243-4 du code du travail");
+    expectReference("Article L1243-8 du code du travail");
+    expectReference("Article L1243-9 du code du travail");
+    expectReference("Article L1243-10 du code du travail");
+  });
 
-      describe("typeRemuneration = amount", () => {
-        beforeEach(() => {
-          fireEvent.click(ui.remuneration.typeRemuneration.total.get());
-          fireEvent.click(ui.next.get());
-        });
+  it("affiche l'indemnité conventionnelle — cas conventionnel : CDD d'usage pour les enquêteurs vacataires", () => {
+    runJourney({ contractOptionId: "1486-usage-enqueteurs-vacataires" });
 
-        describe("currency = 3000", () => {
-          beforeEach(() => {
-            fireEvent.change(ui.remuneration.salaireTotal.get(), {
-              target: { value: "3000" },
-            });
-            fireEvent.click(ui.next.get());
-          });
+    expect(ui.result.amount.get()).toHaveTextContent("120,00");
+    const warning = screen.getByTestId("warning-body-cc-1486-enqueteurs");
+    expect(warning).toHaveTextContent(
+      "Le Code du travail ne prévoit pas d'indemnité de précarité dans votre situation."
+    );
+    expect(warning).toHaveTextContent(
+      "une indemnité de précarité égale à 4 % de la rémunération totale brute versée pendant le contrat"
+    );
+    expect(warning).toHaveTextContent(
+      "c'est le taux le plus favorable au salarié qui s'appliquera"
+    );
+    // Le contrat d'usage n'a pas de plancher légal à rappeler : ni ordre
+    // d'application, ni note de clôture générique.
+    expect(warning).not.toHaveTextContent("Le taux applicable est");
+    expect(warning).not.toHaveTextContent("À noter");
+    expectReference(
+      "Article 53 de l'accord du 16 décembre 1991 relatif aux enquêteurs"
+    );
+    expectReference("Article L1243-4 du code du travail");
+    expectReference("Article L1243-8 du code du travail");
+    expectReference("Article L1243-9 du code du travail");
+    expectReference("Article L1243-10 du code du travail");
+  });
 
-          it("should display expected answer", () => {
-            expect(screen.queryAllByText(/120/g)[0]).toBeInTheDocument();
+  it("affiche l'indemnité conventionnelle — cas conventionnel : CDD d'usage / CDD d'intervention pour le secteur évènementiel", () => {
+    runJourney({ contractOptionId: "1486-usage-intervention-evenementiel" });
 
-            expect(
-              screen.queryAllByText(
-                /Article 53 de l'annexe relative aux enquêteurs - Accord du 16 décembre 1991/
-              )[0]
-            ).toBeInTheDocument();
-          });
-        });
-      });
-    });
-
-    describe("criteria.cddType = Contrat d'intervention dans le secteur d'activité d'organisation des foires, salons et congrès", () => {
-      beforeEach(() => {
-        fireEvent.change(ui.cddType.get(), {
-          target: {
-            value:
-              "Contrat d'intervention dans le secteur d'activité d'organisation des foires, salons et congrès",
-          },
-        });
-        fireEvent.click(ui.next.get());
-      });
-
-      describe("criteria.hasCdiProposal = non", () => {
-        beforeEach(() => {
-          fireEvent.click(screen.getByTestId("hasCdiProposal-Non"));
-          fireEvent.click(ui.next.get());
-        });
-
-        describe("typeRemuneration = amount", () => {
-          beforeEach(() => {
-            fireEvent.click(ui.remuneration.typeRemuneration.total.get());
-            fireEvent.click(ui.next.get());
-          });
-
-          describe("currency = 3000", () => {
-            beforeEach(() => {
-              fireEvent.change(ui.remuneration.salaireTotal.get(), {
-                target: { value: "3000" },
-              });
-              fireEvent.click(ui.next.get());
-            });
-
-            it("should display expected answer", () => {
-              expect(screen.queryAllByText(/180/g)[0]).toBeInTheDocument();
-
-              expect(
-                screen.queryAllByText(
-                  /Chapitre III : Contrat d'intervention à durée déterminée de l'accord du 5 juillet 2001 relatif au statut des salariés du secteur d'activité d'organisation des foires, salons et congrès/
-                )[0]
-              ).toBeInTheDocument();
-            });
-          });
-        });
-      });
-    });
-
-    describe("criteria.cddType = Autres", () => {
-      beforeEach(() => {
-        fireEvent.change(ui.cddType.get(), {
-          target: { value: "Autres" },
-        });
-        fireEvent.click(ui.next.get());
-      });
-
-      describe("finContratPeriodeDessai = Non", () => {
-        beforeEach(() => {
-          fireEvent.click(ui.cddQuestions.finContratPeriodeDessai.non.get());
-          fireEvent.click(ui.next.get());
-        });
-
-        describe("propositionCDIFindeContrat = Non", () => {
-          beforeEach(() => {
-            fireEvent.click(
-              ui.cddQuestions.propositionCDIFindeContrat.non.get()
-            );
-            fireEvent.click(ui.next.get());
-          });
-
-          describe("refusCDIFindeContrat = Non", () => {
-            beforeEach(() => {
-              fireEvent.click(ui.cddQuestions.refusCDIFindeContrat.non.get());
-              fireEvent.click(ui.next.get());
-            });
-
-            describe("interruptionFauteGrave = Non", () => {
-              beforeEach(() => {
-                fireEvent.click(
-                  ui.cddQuestions.interruptionFauteGrave.non.get()
-                );
-                fireEvent.click(ui.next.get());
-              });
-
-              describe("refusRenouvellementAuto = Non", () => {
-                beforeEach(() => {
-                  fireEvent.click(
-                    ui.cddQuestions.refusRenouvellementAuto.non.get()
-                  );
-                  fireEvent.click(ui.next.get());
-                });
-
-                describe("typeRemuneration = amount", () => {
-                  beforeEach(() => {
-                    fireEvent.click(
-                      ui.remuneration.typeRemuneration.total.get()
-                    );
-                    fireEvent.click(ui.next.get());
-                  });
-
-                  describe("currency = 3000", () => {
-                    beforeEach(() => {
-                      fireEvent.change(ui.remuneration.salaireTotal.get(), {
-                        target: { value: "3000" },
-                      });
-                      fireEvent.click(ui.next.get());
-                    });
-
-                    it("should display expected answer", () => {
-                      expect(
-                        screen.queryAllByText(/300/g)[0]
-                      ).toBeInTheDocument();
-                      expect(
-                        screen.queryAllByText(
-                          /Article L1243-8 du code du travail/
-                        )[0]
-                      ).toBeInTheDocument();
-                      expect(
-                        screen.queryAllByText(
-                          /Article L1243-9 du code du travail/
-                        )[0]
-                      ).toBeInTheDocument();
-                    });
-                  });
-                });
-              });
-            });
-          });
-        });
-      });
-    });
+    expect(ui.result.amount.get()).toHaveTextContent("180,00");
+    const warning = screen.getByTestId("warning-body-cc-avec-dispositions");
+    expect(warning).toHaveTextContent(
+      "La réponse donnée se base sur les dispositions de votre convention de branche."
+    );
+    expect(warning).toHaveTextContent(
+      "le contrat de travail peut prévoir un taux plus favorable pour le salarié"
+    );
+    expectReference(
+      "Chapitre III de l'accord du 5 juillet 2001 relatif au statut des salariés du secteur d'activité d'organisation des foires, salons et congrès"
+    );
+    expectReference("Article L1243-4 du code du travail");
+    expectReference("Article L1243-8 du code du travail");
+    expectReference("Article L1243-9 du code du travail");
+    expectReference("Article L1243-10 du code du travail");
   });
 });

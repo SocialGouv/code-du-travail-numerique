@@ -290,8 +290,10 @@ describe("<ContributionLayout />", () => {
         />
       );
 
+      // Sans réponse Code du travail, aucun h2 ne précède l'accordéon : son
+      // titre est donc un h2, sous le h1 de la page (#7458).
       const accordionTitle = rendering.getByRole("heading", {
-        level: 3,
+        level: 2,
         name: ui.agreementDeclinationsLabel,
       });
       expect(accordionTitle).toBeInTheDocument();
@@ -303,6 +305,34 @@ describe("<ContributionLayout />", () => {
       expect(accordionTitle.closest("section")?.className).toContain(
         "fr-mb-6w"
       );
+    });
+
+    // #7458 : la hiérarchie doit rester continue (h1 → h2 → h3) dans les deux
+    // cas. Le formulaire « Personnalisez la réponse » ne porte qu'un
+    // `role="heading"`, il ne compte pas pour la validation HTML.
+    it("n'ouvre aucun niveau de titre sans son parent, avec ou sans réponse Code du travail", () => {
+      const levelsOf = (container: HTMLElement) =>
+        Array.from(container.querySelectorAll("h1, h2, h3, h4, h5, h6")).map(
+          (heading) => Number(heading.tagName[1])
+        );
+
+      for (const isNoCDT of [false, true]) {
+        const { container, unmount } = render(
+          <ContributionLayout
+            contribution={{ ...contribution, isNoCDT }}
+            agreementDeclinations={agreementDeclinations}
+          />
+        );
+
+        const levels = levelsOf(container);
+        expect(levels[0]).toBe(1);
+        levels.forEach((level, index) => {
+          if (index === 0) return;
+          expect(level).toBeLessThanOrEqual(levels[index - 1] + 1);
+        });
+
+        unmount();
+      }
     });
 
     it("n'affiche pas l'accordéon sur une page convention collective", () => {

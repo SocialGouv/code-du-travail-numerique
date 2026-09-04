@@ -4,15 +4,6 @@ export interface IIneligibility {
   ) => string | undefined;
 }
 
-export interface IIndemnitePrecariteIneligibility extends IIneligibility {
-  getCDDIneligibility: (
-    args: Record<string, string | undefined>
-  ) => string | undefined;
-  getCTTIneligibility: (
-    args: Record<string, string | undefined>
-  ) => string | undefined;
-}
-
 export interface IIndemniteDepartIneligibility extends IIneligibility {
   getContractIneligibility: (
     args: Record<string, string | undefined>
