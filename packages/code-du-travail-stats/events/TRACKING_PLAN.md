@@ -54,6 +54,7 @@ dans l'ordre. Le **titre** est celui utilisé dans l'action `view_step_<titre>` 
 | ---------------------------------------------- | ----------------------------------------------------------- |
 | Indemnité de licenciement                      | start, info_cc, infos, anciennete, absences, salaires, results |
 | Indemnité de rupture conventionnelle           | start, info_cc, infos, anciennete, absences, salaires, results |
+| Indemnité de départ ou de mise à la retraite   | start, infos, anciennete, absences, salaires, results        |
 | Indemnités de précarité                        | start, info_cc, type_contrat, terme_contrat, remuneration, indemnite |
 | Préavis de démission                           | start, info_cc, infos, results                              |
 | Préavis de licenciement                        | start, status, info_cc, infos, results                      |
@@ -109,15 +110,36 @@ du navigateur. Mesure l'intention de conserver le résultat.
 
 Émis au calcul de l'étape « résultat » quand la simulation conclut à la **non-éligibilité**
 (ancienneté / informations / absences non satisfaites). Mesure le taux de simulations
-« non éligible ». Concerne les deux simulateurs d'indemnité de départ.
+« non éligible ». Concerne les trois simulateurs d'indemnité de départ.
 [↗ licenciement](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/outils/indemnite-licenciement/events/useIndemniteLicenciementEventEmitter.tsx#L13 "useIndemniteLicenciementEventEmitter.tsx:13") ·
-[↗ rupture conventionnelle](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/outils/indemnite-rupture-conventionnelle/events/useRuptureCoEventEmitter.tsx#L13 "useRuptureCoEventEmitter.tsx:13")
+[↗ rupture conventionnelle](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/outils/indemnite-rupture-conventionnelle/events/useRuptureCoEventEmitter.tsx#L13 "useRuptureCoEventEmitter.tsx:13") ·
+[↗ départ à la retraite](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/outils/indemnite-retraite/events/useIndemniteRetraiteEventEmitter.tsx#L13 "useIndemniteRetraiteEventEmitter.tsx:13")
 
 | Type     | Contenu                                                                              | Détail                        |
 | -------- | ----------------------------------------------------------------------------------- | ----------------------------- |
 | category | outil                                                                               |                               |
-| action   | view_step_Indemnité de licenciement · view_step_Indemnité de rupture conventionnelle | Simulateur concerné          |
+| action   | view_step_Indemnité de licenciement · view_step_Indemnité de rupture conventionnelle · view_step_Indemnité de départ ou de mise à la retraite | Simulateur concerné |
 | name     | results_ineligible                                                                  | L'utilisateur est inéligible  |
+
+###### Spécifique « Origine du départ à la retraite »
+
+Les deux simulateurs de retraite envoient l'origine choisie au clic sur « Suivant » :
+le préavis à son étape *origine*, l'indemnité à son étape *Informations*.
+[↗ indemnité de retraite](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/outils/indemnite-depart/steps/Informations/store/store.ts "Informations/store.ts")
+
+Les actions `mise` et `depart` étant les mêmes des deux côtés, **c'est le `name`
+qui distingue l'émetteur** — sans lui, les compteurs des deux outils
+fusionneraient sur un même site Matomo. Il reprend le nom court du simulateur,
+celui-là même dont sont dérivées les actions `view_step_*`.
+
+| Type     | Contenu                                                                             | Détail                                                              |
+| -------- | ----------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| category | outil                                                                                |                                                                     |
+| action   | mise · depart                                                                        | Mise à la retraite (employeur) ou départ volontaire (salarié)        |
+| name     | Indemnité de départ ou de mise à la retraite · Préavis de départ ou de mise à la retraite | Simulateur émetteur                                             |
+
+> Les évènements antérieurs au déploiement de ce `name` sont tous issus du
+> préavis de retraite, seul émetteur à l'époque : l'historique reste lisible.
 
 ###### Issue du résultat (« Indemnités de précarité »)
 
@@ -156,7 +178,7 @@ Deux étapes envoient le choix de l'utilisateur, au clic sur « Suivant ».
 | category | outil                                            |                                                              |
 | action   | mise · depart                                    | Étape origine : mise à la retraite (employeur) ou départ volontaire |
 | action   | anciennete_plus_2_ans · anciennete_moins_2_ans   | Étape ancienneté : plus / moins de 2 ans d'ancienneté déclarés |
-| name     | —                                                |                                                              |
+| name     | Préavis de départ ou de mise à la retraite       | Sur les actions `mise` · `depart` uniquement, pour les distinguer de celles de l'indemnité de retraite |
 
 ##### Étape pour renseigner sa convention collective
 

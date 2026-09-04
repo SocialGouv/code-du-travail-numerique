@@ -21,6 +21,7 @@ import type {
   IndemnitePrecaritePublicodes,
   PreavisDemissionPublicodes,
   PreavisLicenciementPublicodes,
+  IndemniteRetraitePublicodes,
   PreavisRetraitePublicodes,
   RuptureConventionnellePublicodes,
 } from ".";
@@ -146,6 +147,7 @@ export enum PublicodesSimulator {
   PREAVIS_DEMISSION = "PREAVIS_DEMISSION",
   HEURES_RECHERCHE_EMPLOI = "HEURES_RECHERCHE_EMPLOI",
   INDEMNITE_PRECARITE = "INDEMNITE_PRECARITE",
+  INDEMNITE_RETRAITE = "INDEMNITE_RETRAITE",
 }
 
 export const PublicodesDefaultRules = {
@@ -162,6 +164,8 @@ export const PublicodesDefaultRules = {
   [PublicodesSimulator.PREAVIS_DEMISSION]:
     "contrat salarié . préavis de démission . résultat légal",
   [PublicodesSimulator.INDEMNITE_PRECARITE]: "contrat salarié . résultat légal",
+  [PublicodesSimulator.INDEMNITE_RETRAITE]:
+    "contrat salarié . indemnité de retraite . résultat légal",
 };
 
 export enum PublicodesConvertedUnit {
@@ -220,7 +224,9 @@ export type PublicodesInstance<T extends PublicodesSimulator> =
               ? HeuresRechercheEmploiPublicodes
               : T extends PublicodesSimulator.INDEMNITE_PRECARITE
                 ? IndemnitePrecaritePublicodes
-                : never;
+                : T extends PublicodesSimulator.INDEMNITE_RETRAITE
+                  ? IndemniteRetraitePublicodes
+                  : never;
 
 export interface IndemniteDepartInstance {
   ineligibility: IIneligibility;

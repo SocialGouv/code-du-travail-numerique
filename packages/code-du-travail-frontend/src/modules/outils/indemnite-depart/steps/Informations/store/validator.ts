@@ -8,7 +8,7 @@ import { isDate, isPositiveNumber } from "../../../../common/utils/validators";
 
 export const validateStep = (state: CommonInformationsStoreInput) => {
   const informations = state.publicodesInformations;
-  let errorInformations: Record<string, string> = {};
+  const errorInformations: Record<string, string> = {};
   informations.forEach((info) => {
     const error = isValidField(info.info, info.question.rule.cdtn?.type);
     if (error !== undefined) {
@@ -27,9 +27,15 @@ export const validateStep = (state: CommonInformationsStoreInput) => {
     errorLicenciementInaptitude = "Vous devez répondre à cette question";
   }
 
-  let errorState: CommonInformationsStoreError = {
+  let errorOriginRetraite;
+  if (state.showOriginRetraite && !state.originRetraite) {
+    errorOriginRetraite = "Vous devez répondre à cette question";
+  }
+
+  const errorState: CommonInformationsStoreError = {
     errorInformations,
     errorLicenciementInaptitude,
+    errorOriginRetraite,
     errorPublicodes: state.informationError
       ? "Une erreur liée au moteur de calcul nous empêche de continuer la simulation. Veuillez vérifier les informations saisies ou rafraîchir la page si le problème persiste."
       : undefined,
@@ -38,6 +44,7 @@ export const validateStep = (state: CommonInformationsStoreInput) => {
   const isValid = deepEqualObject(errorState, {
     errorInformations: {},
     errorLicenciementInaptitude: undefined,
+    errorOriginRetraite: undefined,
     errorPublicodes: undefined,
   });
   return { isValid, errorState };

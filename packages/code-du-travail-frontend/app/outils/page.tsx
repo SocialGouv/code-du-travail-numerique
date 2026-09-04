@@ -4,6 +4,7 @@ import { SITE_URL } from "../../src/config";
 import { ToolsList } from "../../src/modules/outils/page-principale/ToolsList";
 import { notFound } from "next/navigation";
 import { fetchExternalTools, fetchTools } from "../../src/modules/outils";
+import { withIndemniteRetraiteTile } from "../../src/modules/outils/indemnite-retraite/tool";
 import { ElasticTool } from "@socialgouv/cdtn-types";
 
 export const metadata = generateDefaultMetadata({
@@ -58,10 +59,15 @@ const getTools = async (): Promise<{
   }
 
   return {
-    tools: tools.map((tool) => ({
-      ...tool,
-      url: `/outils/${tool.slug}`,
-    })),
+    // TODO(#7131) : retirer `withIndemniteRetraiteTile` avec le repli de
+    // `src/modules/outils/indemnite-retraite/tool.ts`, une fois le document
+    // Elasticsearch du simulateur créé côté cdtn-admin.
+    tools: withIndemniteRetraiteTile(
+      tools.map((tool) => ({
+        ...tool,
+        url: `/outils/${tool.slug}`,
+      }))
+    ),
     externalTools,
   };
 };

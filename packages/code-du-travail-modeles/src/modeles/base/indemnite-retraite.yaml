@@ -1,0 +1,252 @@
+# Indemnité de départ ou de mise à la retraite (Code du travail uniquement).
+#
+# Ce modèle est volontairement autonome : il n'est PAS mergé avec
+# `indemnite-licenciement.yaml`. Sans quoi la règle
+# `contrat salarié . indemnité de licenciement . résultat légal`, qui n'a pas
+# d'`applicable si`, évaluerait toujours à une valeur non nulle et ses articles
+# L1234-x remonteraient dans `getReferences()` ; sa formule `cdtn` serait par
+# ailleurs captée par `getFormuleLegal()` qui filtre sur « résultat légal » à
+# travers tous les espaces de noms.
+#
+# En revanche, les règles d'ENTRÉE gardent l'espace de noms
+# `contrat salarié . indemnité de licenciement . *` : les mappers partagés
+# (publicodes/IndemniteDepart/utils/mapper.ts) et les stores du front écrivent
+# ces noms en dur.
+
+# ────────────────────────────── Entrées ──────────────────────────────
+
+contrat salarié . indemnité de licenciement:
+  valeur: oui
+
+contrat salarié . indemnité de licenciement . date d'entrée:
+  valeur: 01/01/2024 # valeur par défaut pour éviter les erreurs liées aux missing-args
+
+contrat salarié . indemnité de licenciement . date de notification:
+  valeur: 01/01/2024 # valeur par défaut pour éviter les erreurs liées aux missing-args
+
+contrat salarié . indemnité de licenciement . date de sortie:
+  valeur: non
+
+contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle: non
+
+contrat salarié . indemnité de licenciement . arrêt de travail: non
+
+contrat salarié . indemnité de licenciement . avec congé maladie non professionnelle:
+  valeur: non
+
+contrat salarié . indemnité de licenciement . salaire de référence:
+  titre: Salaire de référence
+  unité: €
+
+contrat salarié . indemnité de licenciement . ancienneté en année:
+  titre: Ancienneté calculée pour le calcul de l'indemnité de départ ou de mise à la retraite
+  unité: an
+
+contrat salarié . indemnité de licenciement . ancienneté requise en année:
+  titre: Ancienneté calculée pour le droit à l'indemnité de départ ou de mise à la retraite
+  unité: an
+
+# Évaluée par IndemniteDepartPublicodes.hasNoLegalIndemnity() avant tout calcul :
+# la règle doit exister, sinon l'appel lève une exception.
+contrat salarié . indemnité de licenciement . résultat légal doit être ignoré:
+  valeur: non
+
+# ─────────────────────── Origine de la rupture ───────────────────────
+
+contrat salarié . indemnité de retraite:
+  valeur: oui
+
+# Renseignée par l'étape « Informations » via le situationStore du front.
+contrat salarié . indemnité de retraite . mise à la retraite:
+  titre: Origine du départ à la retraite
+  valeur: non
+
+# ──────────── Mise à la retraite : calcul identique au licenciement ────────────
+
+contrat salarié . indemnité de retraite . jusqu'à dix ans ou moins:
+  valeur:
+    le minimum de:
+      - contrat salarié . indemnité de licenciement . ancienneté en année
+      - 10 an
+
+contrat salarié . indemnité de retraite . au dela de dix ans:
+  somme:
+    - contrat salarié . indemnité de licenciement . ancienneté en année
+    - (- 10 an)
+  plancher: 0 an
+
+contrat salarié . indemnité de retraite . facteur dix ans ou moins:
+  valeur:
+    produit:
+      assiette: jusqu'à dix ans ou moins * contrat salarié . indemnité de licenciement . salaire de référence
+      facteur: 1 / 4
+  unité: €
+
+contrat salarié . indemnité de retraite . facteur plus de dix ans:
+  valeur:
+    produit:
+      assiette: au dela de dix ans * contrat salarié . indemnité de licenciement . salaire de référence
+      facteur: 1 / 3
+  unité: €
+
+contrat salarié . indemnité de retraite . montant mise à la retraite:
+  somme:
+    - facteur dix ans ou moins
+    - facteur plus de dix ans
+  unité: €
+
+# ─────── Départ volontaire : barème de l'article D1237-1 du Code du travail ───────
+
+contrat salarié . indemnité de retraite . nombre de mois départ volontaire:
+  variations:
+    - si: contrat salarié . indemnité de licenciement . ancienneté en année >= 30 an
+      alors: 2
+    - si: contrat salarié . indemnité de licenciement . ancienneté en année >= 20 an
+      alors: 3 / 2
+    - si: contrat salarié . indemnité de licenciement . ancienneté en année >= 15 an
+      alors: 1
+    - si: contrat salarié . indemnité de licenciement . ancienneté en année >= 10 an
+      alors: 1 / 2
+    - sinon: 0
+
+contrat salarié . indemnité de retraite . montant départ volontaire:
+  valeur:
+    produit:
+      assiette: contrat salarié . indemnité de licenciement . salaire de référence
+      facteur: nombre de mois départ volontaire
+  unité: €
+
+# ────────────────────────────── Résultat ──────────────────────────────
+
+contrat salarié . indemnité de retraite . résultat légal:
+  variations:
+    - si: mise à la retraite = oui
+      alors: montant mise à la retraite
+    - sinon: montant départ volontaire
+  unité: €
+  arrondi: 2 décimales
+
+# Règles porteuses des références réglementaires.
+#
+# Elles ne sont conditionnées QUE par l'origine du départ, jamais par
+# l'ancienneté ni par le salaire : `getReferences()` est appelé sur l'écran de
+# résultat AVANT `calculate()` (Resultat/store/store.ts), donc sur l'état du
+# moteur issu de l'étape précédente. Une règle conditionnée par l'ancienneté
+# serait alors nulle et ses références disparaîtraient silencieusement.
+
+contrat salarié . indemnité de retraite . sources mise à la retraite:
+  applicable si: mise à la retraite = oui
+  valeur: résultat légal
+  unité: €
+  références:
+    Article L1237-4: https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006901178
+    Article L1237-5: https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006901179
+    Article L1237-7: https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006901181
+    Article D1237-2: https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000018537482
+    Article L1226-7: https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000023272293
+    Article L1225-54: https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000018764621
+    Article L1225-65: https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038219280
+
+contrat salarié . indemnité de retraite . sources départ volontaire:
+  applicable si: mise à la retraite = non
+  valeur: résultat légal
+  unité: €
+  références:
+    Article L1237-4: https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006901178
+    Article L1237-9: https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006901183
+    Article D1237-1: https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000018537484
+    Article D1237-2: https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000018537482
+    Article L1226-7: https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000023272293
+    Article L1225-54: https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000018764621
+    Article L1225-65: https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038219280
+
+# Règles porteuses de la formule affichée.
+#
+# `getFormuleLegal()` filtre sur les règles dont le nom contient « résultat
+# légal » et qui portent un bloc `cdtn.formule`. Contrairement aux règles de
+# références ci-dessus, elles sont lues APRÈS `calculate()` : les conditionner
+# sur l'ancienneté est donc sans risque.
+
+contrat salarié . indemnité de retraite . résultat légal mise à la retraite dix ans ou moins:
+  applicable si:
+    toutes ces conditions:
+      - mise à la retraite = oui
+      - contrat salarié . indemnité de licenciement . ancienneté en année <= 10 an
+  valeur: résultat légal
+  unité: €
+  cdtn:
+    formule:
+      explanations:
+        - "A : Ancienneté totale": contrat salarié . indemnité de licenciement . ancienneté en année
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence
+      formula: 1/4 * Sref * A
+
+contrat salarié . indemnité de retraite . résultat légal mise à la retraite au dela de dix ans:
+  applicable si:
+    toutes ces conditions:
+      - mise à la retraite = oui
+      - contrat salarié . indemnité de licenciement . ancienneté en année > 10 an
+  valeur: résultat légal
+  unité: €
+  cdtn:
+    formule:
+      explanations:
+        - "A1 : Ancienneté de 10 ans ou moins": contrat salarié . indemnité de retraite . jusqu'à dix ans ou moins
+        - "A2 : Ancienneté au-delà de 10 ans": contrat salarié . indemnité de retraite . au dela de dix ans
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence
+      formula: (1/4 * Sref * A1) + (1/3 * Sref * A2)
+
+contrat salarié . indemnité de retraite . résultat légal départ volontaire dix ans:
+  applicable si:
+    toutes ces conditions:
+      - mise à la retraite = non
+      - contrat salarié . indemnité de licenciement . ancienneté en année >= 10 an
+      - contrat salarié . indemnité de licenciement . ancienneté en année < 15 an
+  valeur: résultat légal
+  unité: €
+  cdtn:
+    formule:
+      explanations:
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence
+      formula: 1/2 * Sref
+
+contrat salarié . indemnité de retraite . résultat légal départ volontaire quinze ans:
+  applicable si:
+    toutes ces conditions:
+      - mise à la retraite = non
+      - contrat salarié . indemnité de licenciement . ancienneté en année >= 15 an
+      - contrat salarié . indemnité de licenciement . ancienneté en année < 20 an
+  valeur: résultat légal
+  unité: €
+  cdtn:
+    formule:
+      explanations:
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence
+      formula: 1 * Sref
+
+contrat salarié . indemnité de retraite . résultat légal départ volontaire vingt ans:
+  applicable si:
+    toutes ces conditions:
+      - mise à la retraite = non
+      - contrat salarié . indemnité de licenciement . ancienneté en année >= 20 an
+      - contrat salarié . indemnité de licenciement . ancienneté en année < 30 an
+  valeur: résultat légal
+  unité: €
+  cdtn:
+    formule:
+      explanations:
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence
+      formula: 3/2 * Sref
+
+contrat salarié . indemnité de retraite . résultat légal départ volontaire trente ans:
+  applicable si:
+    toutes ces conditions:
+      - mise à la retraite = non
+      - contrat salarié . indemnité de licenciement . ancienneté en année >= 30 an
+  valeur: résultat légal
+  unité: €
+  cdtn:
+    formule:
+      explanations:
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence
+      formula: 2 * Sref
