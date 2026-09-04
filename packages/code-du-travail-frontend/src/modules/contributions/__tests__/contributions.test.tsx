@@ -366,6 +366,154 @@ describe("<ContributionLayout />", () => {
       ).toBeInTheDocument();
     });
   });
+  describe("rubrique « Explorez nos thématiques »", () => {
+    const exploreThemes = [
+      {
+        slug: "demission",
+        title: "Démission",
+        href: "/themes/depart-de-lentreprise#demission",
+        iconName: "Depart",
+        documentCount: 17,
+      },
+      {
+        slug: "retraite",
+        title: "Retraite",
+        href: "/themes/depart-de-lentreprise#retraite",
+        iconName: "Depart",
+        documentCount: 4,
+      },
+    ];
+    const relatedItems = [
+      {
+        title: "Modèles et simulateurs liés",
+        items: [
+          { title: "Un modèle", url: "/modeles-de-courriers/x", source: "tools" },
+        ],
+      },
+      {
+        title: "Articles liés",
+        items: [{ title: "Un lien", url: "/lien", source: "contributions" }],
+      },
+    ];
+    const agreementContribution = {
+      ...contribution,
+      idcc: "0029",
+      isGeneric: false,
+      ccnSlug: "cc-slug",
+      ccnShortTitle: "Nom de la CC",
+      references: [{ title: "Article 1", url: "https://exemple.test" }],
+      relatedItems,
+    };
+
+    beforeEach(() => {
+      window.localStorage.clear();
+    });
+
+    it("s'intercale entre la réponse et l'accordéon « Références » (fiche générique)", () => {
+      rendering = render(
+        <ContributionLayout
+          contribution={{
+            ...contribution,
+            references: [{ title: "Article 1", url: "https://exemple.test" }],
+            relatedItems,
+          }}
+          exploreThemes={exploreThemes}
+        />
+      );
+
+      const exploreTitle = rendering.getByRole("heading", {
+        level: 3,
+        name: "Explorez nos thématiques",
+      });
+      const referencesTitle = rendering.getByRole("heading", {
+        level: 3,
+        name: "Références",
+      });
+      expect(
+        exploreTitle.compareDocumentPosition(referencesTitle) &
+          Node.DOCUMENT_POSITION_FOLLOWING
+      ).toBeTruthy();
+      expect(
+        rendering.getByRole("link", { name: "Démission" })
+      ).toHaveAttribute("href", "/themes/depart-de-lentreprise#demission");
+    });
+
+    it("remplace « Articles liés » sans toucher aux modèles et simulateurs", () => {
+      rendering = render(
+        <ContributionLayout
+          contribution={{ ...contribution, relatedItems }}
+          exploreThemes={exploreThemes}
+        />
+      );
+
+      expect(rendering.queryByText(/Articles liés/)).not.toBeInTheDocument();
+      expect(
+        rendering.getByText(/Modèles et simulateurs liés/)
+      ).toBeInTheDocument();
+    });
+
+    it("laisse les « Articles liés » en place pour une contribution non mappée", () => {
+      rendering = render(
+        <ContributionLayout
+          contribution={{ ...contribution, relatedItems }}
+        />
+      );
+
+      expect(
+        rendering.queryByRole("heading", { name: "Explorez nos thématiques" })
+      ).not.toBeInTheDocument();
+      expect(rendering.getByText(/Articles liés/)).toBeInTheDocument();
+    });
+
+    it("s'affiche aussi sur une page conventionnelle, avant « Références »", () => {
+      rendering = render(
+        <ContributionLayout
+          contribution={agreementContribution}
+          exploreThemes={exploreThemes}
+        />
+      );
+
+      const exploreTitle = rendering.getByRole("heading", {
+        level: 3,
+        name: "Explorez nos thématiques",
+      });
+      const referencesTitle = rendering.getByRole("heading", {
+        level: 3,
+        name: "Références",
+      });
+      expect(
+        exploreTitle.compareDocumentPosition(referencesTitle) &
+          Node.DOCUMENT_POSITION_FOLLOWING
+      ).toBeTruthy();
+      expect(rendering.queryByText(/Articles liés/)).not.toBeInTheDocument();
+      expect(
+        rendering.getByText(/Modèles et simulateurs liés/)
+      ).toBeInTheDocument();
+      // La rubrique reste en h3 : l'invariant « un seul h2, la réponse » tient.
+      expect(rendering.getAllByRole("heading", { level: 2 })).toHaveLength(1);
+    });
+
+    it("émet l'event Matomo au clic sur une carte", () => {
+      rendering = render(
+        <ContributionLayout
+          contribution={agreementContribution}
+          exploreThemes={exploreThemes}
+        />
+      );
+
+      fireEvent.click(rendering.getByRole("link", { name: "Retraite" }));
+
+      expect(sendEvent).toHaveBeenCalledWith({
+        category: "contribution",
+        action: "clic_explorez_thematique",
+        name: JSON.stringify({
+          slug: "contribution/slug",
+          theme: "retraite",
+          position: 2,
+        }),
+      });
+    });
+  });
   describe("base", () => {
     beforeEach(async () => {
       window.localStorage.clear();

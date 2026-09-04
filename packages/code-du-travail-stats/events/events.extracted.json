@@ -1,8 +1,8 @@
 {
   "scan_root": "packages/code-du-travail-frontend/src",
-  "callsites": 76,
-  "total_events": 113,
-  "unique_events": 104,
+  "callsites": 77,
+  "total_events": 114,
+  "unique_events": 105,
   "unresolved_callsites": 0,
   "events": [
     {
@@ -155,7 +155,7 @@
       "resolution": "literal",
       "emit_function": "emitClickP1",
       "file": "packages/code-du-travail-frontend/src/modules/contributions/tracking.ts",
-      "line": 69,
+      "line": 70,
       "enum_refs": [
         "TrackingAgreementSearchAction.CLICK_P1",
         "TrackingContributionCategory.CC_SEARCH_TYPE_OF_USERS"
@@ -198,7 +198,7 @@
       "resolution": "literal",
       "emit_function": "emitClickP2",
       "file": "packages/code-du-travail-frontend/src/modules/contributions/tracking.ts",
-      "line": 77,
+      "line": 78,
       "enum_refs": [
         "TrackingAgreementSearchAction.CLICK_P2",
         "TrackingContributionCategory.CC_SEARCH_TYPE_OF_USERS"
@@ -241,7 +241,7 @@
       "resolution": "literal",
       "emit_function": "emitClickP3",
       "file": "packages/code-du-travail-frontend/src/modules/contributions/tracking.ts",
-      "line": 85,
+      "line": 86,
       "enum_refs": [
         "TrackingAgreementSearchAction.CLICK_P3",
         "TrackingContributionCategory.CC_SEARCH_TYPE_OF_USERS"
@@ -561,7 +561,7 @@
       "resolution": "literal",
       "emit_function": "emitClickTableFullscreen",
       "file": "packages/code-du-travail-frontend/src/modules/contributions/tracking.ts",
-      "line": 93,
+      "line": 94,
       "enum_refs": [
         "SOURCES.CONTRIBUTIONS",
         "TrackingContributionAction.BTN_TABLE_FULLSCREEN",
@@ -576,9 +576,25 @@
       "resolution": "literal",
       "emit_function": "emitClickAgreementDeclination",
       "file": "packages/code-du-travail-frontend/src/modules/contributions/tracking.ts",
-      "line": 117,
+      "line": 118,
       "enum_refs": [
         "TrackingContributionAction.CLICK_AGREEMENT_DECLINATION",
+        "TrackingContributionCategory.CONTRIBUTION"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "contribution",
+      "action": "clic_explorez_thematique",
+      "name_pattern": "<JSON.stringify({ slug: `${getRouteBySource(SOURCES.CONTRIBUTIONS)}/${contributio>",
+      "resolution": "literal",
+      "emit_function": "emitClickExploreTheme",
+      "file": "packages/code-du-travail-frontend/src/modules/contributions/tracking.ts",
+      "line": 137,
+      "enum_refs": [
+        "JSON.stringify",
+        "SOURCES.CONTRIBUTIONS",
+        "TrackingContributionAction.CLICK_EXPLORE_THEME",
         "TrackingContributionCategory.CONTRIBUTION"
       ],
       "tracking_method": "sendEvent"
@@ -590,7 +606,7 @@
       "resolution": "literal",
       "emit_function": "emitDisplayAgreementContent",
       "file": "packages/code-du-travail-frontend/src/modules/contributions/tracking.ts",
-      "line": 45,
+      "line": 46,
       "enum_refs": [
         "TrackingAgreementSearchAction.CLICK_DISPLAY_AGREEMENT_CONTENT",
         "TrackingContributionCategory.CONTRIBUTION"
@@ -604,7 +620,7 @@
       "resolution": "literal",
       "emit_function": "emitDisplayGeneralContent",
       "file": "packages/code-du-travail-frontend/src/modules/contributions/tracking.ts",
-      "line": 61,
+      "line": 62,
       "enum_refs": [
         "TrackingAgreementSearchAction.CLICK_DISPLAY_GENERAL_CONTENT",
         "TrackingContributionCategory.CONTRIBUTION"
@@ -618,7 +634,7 @@
       "resolution": "literal",
       "emit_function": "emitDisplayGenericContent",
       "file": "packages/code-du-travail-frontend/src/modules/contributions/tracking.ts",
-      "line": 53,
+      "line": 54,
       "enum_refs": [
         "TrackingAgreementSearchAction.CLICK_DISPLAY_GENERIC_CONTENT",
         "TrackingContributionCategory.CONTRIBUTION"
@@ -632,7 +648,7 @@
       "resolution": "literal",
       "emit_function": "emitContentViewed",
       "file": "packages/code-du-travail-frontend/src/modules/contributions/tracking.ts",
-      "line": 105,
+      "line": 106,
       "enum_refs": [
         "SOURCES.CONTRIBUTIONS",
         "TrackingContributionAction.CONTENT_VIEWED",
@@ -1020,7 +1036,7 @@
       "resolution": "literal",
       "emit_function": "emitAgreementUntreatedEvent",
       "file": "packages/code-du-travail-frontend/src/modules/contributions/tracking.ts",
-      "line": 37,
+      "line": 38,
       "enum_refs": [
         "MatomoAgreementEvent.CC_UNTREATED",
         "TrackingContributionCategory.TOOL"
@@ -1048,7 +1064,7 @@
       "resolution": "literal",
       "emit_function": "emitAgreementTreatedEvent",
       "file": "packages/code-du-travail-frontend/src/modules/contributions/tracking.ts",
-      "line": 29,
+      "line": 30,
       "enum_refs": [
         "MatomoAgreementEvent.CC_TREATED",
         "TrackingContributionCategory.TOOL"

@@ -18,15 +18,19 @@ import {
 } from "../utils/useLocalStorage";
 import { ContributionGenericAgreementSearch } from "./ContributionGenericAgreementSearch";
 import { AgreementRoute } from "src/modules/outils/indemnite-depart/types";
+import type { ExploreTheme } from "./explore-themes/type";
 
 type Props = {
   contribution: Contribution;
   agreementDeclinations: AgreementDeclination[];
+  // Sous-thèmes mis en avant (#7455). Vide : la rubrique est masquée.
+  exploreThemes?: ExploreTheme[];
 };
 
 export function ContributionGeneric({
   contribution,
   agreementDeclinations,
+  exploreThemes = [],
 }: Props) {
   const router = useRouter();
   const [hash, setHash] = useState("");
@@ -160,6 +164,7 @@ export function ContributionGeneric({
           relatedItems={relatedItems}
           displayGeneric={displayGeneric}
           agreementDeclinations={agreementDeclinations}
+          exploreThemes={exploreThemes}
           alertText={
             selectedAgreement &&
             !isAgreementSupported(contribution, selectedAgreement) && (

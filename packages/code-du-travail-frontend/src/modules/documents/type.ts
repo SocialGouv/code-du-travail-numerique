@@ -19,6 +19,14 @@ export const sources = [
 
 export type Source = (typeof sources)[number];
 
+// Titres des deux groupes de contenus liés. Ils vivent ici, et non dans
+// `fetch-related-items.ts`, pour rester importables depuis un composant client
+// sans embarquer le client Elasticsearch : les fiches contribution filtrent les
+// « Articles liés » quand la rubrique « Explorez nos thématiques » prend leur
+// place (#7455).
+export const RELATED_TOOLS_TITLE = "Modèles et simulateurs liés";
+export const RELATED_ARTICLES_TITLE = "Articles liés";
+
 export type RelatedItem = Pick<DocumentElastic, "title"> & {
   source: Source;
   url: string;

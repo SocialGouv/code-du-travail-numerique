@@ -9,11 +9,13 @@ import Link from "../common/Link";
 import Accordion from "@codegouvfr/react-dsfr/Accordion";
 import { ListWithArrow } from "../common/ListWithArrow";
 import { RelatedItems } from "../common/RelatedItems";
-import { RelatedItem } from "../documents";
+import { RELATED_ARTICLES_TITLE, RelatedItem } from "../documents/type";
 import { ContributionAgreementDeclinations } from "./ContributionAgreementDeclinations";
 import { AgreementDeclination, Contribution } from "./type";
 import { ContributionRating } from "./rating";
 import { focusableTitle } from "../common/focusableTitle";
+import { ExploreThemes } from "./explore-themes/ExploreThemes";
+import type { ExploreTheme } from "./explore-themes/type";
 
 type Props = {
   contribution: Contribution;
@@ -24,6 +26,7 @@ type Props = {
   }[];
   displayGeneric: boolean;
   agreementDeclinations: AgreementDeclination[];
+  exploreThemes?: ExploreTheme[];
 };
 
 export const ContributionGenericContent = forwardRef<
@@ -34,9 +37,11 @@ export const ContributionGenericContent = forwardRef<
     {
       contribution,
       alertText,
-      relatedItems,
+      // Défaut défensif : le rendu tolérait déjà l'absence de contenus liés.
+      relatedItems = [],
       displayGeneric,
       agreementDeclinations,
+      exploreThemes = [],
     },
     ref
   ) => {
@@ -46,6 +51,15 @@ export const ContributionGenericContent = forwardRef<
       () => emitContentViewed(contribution.slug),
       { enabled: displayGeneric }
     );
+
+    // #7455 : la rubrique « Explorez nos thématiques » remplace les articles
+    // liés. Retrait conditionnel : une contribution non mappée garde ses
+    // articles liés plutôt que de se retrouver sans aucune suggestion (et sert
+    // de témoin au test). « Modèles et simulateurs liés » n'est jamais touché.
+    const sidebarRelatedItems =
+      exploreThemes.length > 0
+        ? relatedItems.filter(({ title }) => title !== RELATED_ARTICLES_TITLE)
+        : relatedItems;
 
     return (
       <>
@@ -78,6 +92,11 @@ export const ContributionGenericContent = forwardRef<
             </h2>
             {alertText}
             <ContributionContent contribution={contribution} titleLevel={2} />
+            <ExploreThemes
+              themes={exploreThemes}
+              contributionSlug={contribution.slug}
+              className={fr.cx("fr-mt-6w")}
+            />
             {contribution.references.length > 0 && (
               <Accordion
                 label="Références"
@@ -126,7 +145,7 @@ export const ContributionGenericContent = forwardRef<
               contributionSlug={contribution.slug}
               level={3}
             />
-            <RelatedItems relatedItems={relatedItems} level={3} />
+            <RelatedItems relatedItems={sidebarRelatedItems} level={3} />
           </div>
         </div>
       </>
