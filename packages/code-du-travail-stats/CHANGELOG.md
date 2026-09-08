@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.243.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.242.0...v4.243.0) (2026-09-08)
+
+
+### Features
+
+* **matomo:** funnel complet sur le choix de la convention collective des contributions ([#7463](https://github.com/SocialGouv/code-du-travail-numerique/issues/7463)) ([#7469](https://github.com/SocialGouv/code-du-travail-numerique/issues/7469)) ([df32c1c](https://github.com/SocialGouv/code-du-travail-numerique/commit/df32c1c4c2fea14be3f0175acb79618935359c25))
+
+
+
+
+
 # [4.242.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.241.1...v4.242.0) (2026-09-04)
 
 
