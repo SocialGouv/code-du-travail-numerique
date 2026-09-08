@@ -46,6 +46,12 @@ export const NpsModalView = ({
           <span>Donnez votre avis&nbsp;!</span>
         </span>
       }
+      // Le titre DSFR est un <h1> par défaut : les crawlers SEO le voient comme
+      // le h1 de la page (la modale est dans le DOM même fermée). On le rend en
+      // <div role="heading" aria-level={1}> : même sémantique pour les lecteurs
+      // d'écran, mais plus de balise h1 dans le markup.
+      titleAs="div"
+      titleProps={{ role: "heading", "aria-level": 1 }}
       size="large"
       // Footer DSFR (nœud DOM séparé du contenu). Deux actions :
       //  - « Ne pas répondre » (secondaire, à gauche) : refus explicite, géré par
