@@ -7,6 +7,7 @@ import { Autocomplete } from "../../common/Autocomplete";
 import { searchAgreement } from "../search";
 import { Agreement } from "src/modules/outils/indemnite-depart/types";
 import { AccessibleAlert } from "src/modules/outils/common/components/AccessibleAlert";
+import { AgreementSearchFunnelTracking } from "./funnelTracking";
 
 type Props = {
   onSearch?: (query: string, value?: Agreement[]) => void;
@@ -17,8 +18,13 @@ type Props = {
   ) => NonNullable<ReactNode> | undefined;
   defaultAgreement?: Agreement;
   level: 2 | 3;
-  emitSearchQueryEvent?: (query: string) => void;
   requireSearchSignal?: number;
+  /**
+   * Callbacks du funnel de choix de CC, fournis uniquement par les
+   * contributions. Absents → aucun event supplémentaire (simulateurs, page
+   * « Trouver sa convention collective », widgets).
+   */
+  funnelTracking?: AgreementSearchFunnelTracking;
 };
 
 export const AgreementSearchInput = ({
@@ -28,8 +34,8 @@ export const AgreementSearchInput = ({
   selectedAgreementAlert,
   defaultAgreement,
   level,
-  emitSearchQueryEvent,
   requireSearchSignal,
+  funnelTracking,
 }: Props) => {
   const [selectedAgreement, setSelectedAgreement] = useState(defaultAgreement);
   const [searchState, setSearchState] = useState<
@@ -42,6 +48,9 @@ export const AgreementSearchInput = ({
   >("noSearch");
   const [error, setError] = useState("");
   const containerRef = useRef<HTMLDivElement>(null);
+  // « Début de recherche » : une seule fois par montage, sinon l'event partirait
+  // à chaque frappe et ne mesurerait plus l'entrée dans l'étape.
+  const hasEmittedSearchStartRef = useRef(false);
   const getStateMessage = () => {
     switch (searchState) {
       case "lowSearch":
@@ -133,8 +142,9 @@ export const AgreementSearchInput = ({
             }
             search={searchAgreement}
             onSearch={(query, agreements) => {
-              if (query) {
-                emitSearchQueryEvent?.(query);
+              if (query && !hasEmittedSearchStartRef.current) {
+                hasEmittedSearchStartRef.current = true;
+                funnelTracking?.onAgreementSearchStart?.();
               }
               if (onSearch) onSearch(query, agreements);
               if (!query) {
@@ -143,6 +153,7 @@ export const AgreementSearchInput = ({
                 setSearchState("lowSearch");
               } else if (!agreements.length && query.length > 2) {
                 setSearchState("notFoundSearch");
+                funnelTracking?.onAgreementSearchNoResult?.();
               } else {
                 setSearchState("fullSearch");
               }
