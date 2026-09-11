@@ -13,6 +13,7 @@ import BlueCard from "../common/BlueCard";
 import { focusableTitle } from "../common/focusableTitle";
 import { WhatIsAgreementLink } from "../convention-collective/WhatIsAgreementLink";
 import { AgreementSearchFormBlock } from "./AgreementSearchFormBlock";
+import { useCcFunnelTracking } from "./tracking";
 
 type Props = {
   onAgreementSelect: (agreement?: Agreement) => void;
@@ -31,6 +32,12 @@ type Props = {
   onSameAgreementSelect?: () => void;
   /** Route pré-cochée à l'arrivée (retour depuis une page CC via #cdt). */
   defaultRoute?: AgreementRoute;
+  /**
+   * La page s'apprête à rediriger vers la fiche CC mémorisée : le bloc est
+   * monté mais l'usager ne le verra pas. Sert à ne pas compter cette visite
+   * dans le dénominateur du funnel (cf. AgreementSearchFormBlock).
+   */
+  isRedirecting?: boolean;
 };
 
 // Façade « parcours interne » (fiche générique) : présentation « Personnalisez
@@ -47,7 +54,9 @@ export function ContributionGenericAgreementSearch({
   currentIdcc,
   onSameAgreementSelect,
   defaultRoute,
+  isRedirecting,
 }: Props) {
+  const { emitClickWhatIsAgreement } = useCcFunnelTracking();
   return (
     <BlueCard>
       <div className={fr.cx("fr-grid-row")}>
@@ -68,7 +77,9 @@ export function ContributionGenericAgreementSearch({
           Personnalisez la réponse avec votre convention collective
         </p>
       </div>
-      <WhatIsAgreementLink />
+      <WhatIsAgreementLink
+        onClick={() => emitClickWhatIsAgreement(trackingActionName)}
+      />
       <AgreementSearchFormBlock
         contribution={contribution}
         onAgreementSelect={onAgreementSelect}
@@ -78,6 +89,7 @@ export function ContributionGenericAgreementSearch({
         currentIdcc={currentIdcc}
         onSameAgreementSelect={onSameAgreementSelect}
         defaultRoute={defaultRoute}
+        isRedirecting={isRedirecting}
         onBackToPersonalizeFocus={() => {
           document.getElementById("personalize-response-title")?.focus();
         }}

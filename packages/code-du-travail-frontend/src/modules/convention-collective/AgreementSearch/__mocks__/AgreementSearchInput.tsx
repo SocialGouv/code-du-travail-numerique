@@ -11,7 +11,6 @@ type Props = {
   ) => React.ReactNode | undefined;
   defaultAgreement?: Agreement;
   level: 2 | 3;
-  emitSearchQueryEvent?: (query: string) => void;
   mockSearchAgreement?: (query: string) => Agreement[];
 };
 
@@ -81,7 +80,6 @@ export const AgreementSearchInput = ({
   selectedAgreementAlert,
   defaultAgreement,
   level,
-  emitSearchQueryEvent,
   mockSearchAgreement = searchAgreement,
 }: Props) => {
   const [selectedAgreement, setSelectedAgreement] = useState<
@@ -157,8 +155,6 @@ export const AgreementSearchInput = ({
         if (onSearch) onSearch(query, []);
         return;
       }
-
-      emitSearchQueryEvent?.(query);
 
       const results = mockSearchAgreement(query);
       setSearchResults(results);

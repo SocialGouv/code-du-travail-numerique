@@ -15,6 +15,7 @@ import { ui as ccUi } from "../../convention-collective/__tests__/ui";
 import { Contribution } from "../type";
 import { searchAgreement } from "../../convention-collective";
 import { sendEvent } from "@socialgouv/matomo-next";
+import { TrackingCcFunnelAction } from "../tracking";
 
 const contribution = {
   source: "contributions",
@@ -662,8 +663,12 @@ describe("<ContributionLayout />", () => {
         rendering.container.querySelector("#cdt")?.className
       ).not.toContain("fr-hidden");
       expect(ui.cdtAnswerTitle.get()).toBeInTheDocument();
-      // Pré-cochage automatique : aucun événement Matomo (pas une action usager).
-      expect(sendEvent).not.toHaveBeenCalled();
+      // Pré-cochage automatique : aucun événement Matomo lié à une action de
+      // l'usager. Seul `view_bloc_cc` part, à l'affichage du bloc — c'est le
+      // dénominateur du funnel, indépendant de tout choix (cf. #7463).
+      expect(
+        (sendEvent as jest.Mock).mock.calls.map(([event]) => event.action)
+      ).toEqual([TrackingCcFunnelAction.VIEW_BLOC_CC]);
       expect(replaceMock).not.toHaveBeenCalled();
     });
 

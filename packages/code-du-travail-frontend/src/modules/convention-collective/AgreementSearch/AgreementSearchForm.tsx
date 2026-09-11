@@ -10,6 +10,7 @@ import {
   AgreementRoute,
 } from "src/modules/outils/indemnite-depart/types";
 import { useAgreementSearchTracking } from "../tracking";
+import { AgreementSearchFunnelTracking } from "./funnelTracking";
 
 type Props = {
   onAgreementSelect: (agreement?: Agreement) => void;
@@ -29,6 +30,13 @@ type Props = {
   showNoAgreementOption?: boolean;
   noAgreementContent?: ReactNode;
   onRouteChange?: (route: AgreementRoute | undefined) => void;
+  /**
+   * Route choisie par une action de l'usager (clic sur une radio), à
+   * l'exclusion des pré-cochages `defaultRoute` / `defaultAgreement` qui, eux,
+   * passent par `onRouteChange`. C'est le seul point de branchement sûr pour du
+   * tracking : `onRouteChange` produirait des events fantômes au montage.
+   */
+  onRouteSelect?: (route: AgreementRoute) => void;
   onEnterpriseWithoutAgreement?: (hasNoAgreement: boolean) => void;
   error?: string;
   enterpriseRequireSearchSignal?: number;
@@ -36,6 +44,11 @@ type Props = {
   showWhatIsAgreementLink?: boolean;
   /** Légende (label) du groupe de radios. Défaut : question générique. */
   legend?: ReactNode;
+  /**
+   * Callbacks du funnel de choix de CC, redistribués aux deux composants de
+   * recherche. Fournis uniquement par les contributions.
+   */
+  funnelTracking?: AgreementSearchFunnelTracking;
 };
 
 const DEFAULT_LEGEND =
@@ -59,12 +72,14 @@ export const AgreementSearchForm = ({
   showNoAgreementOption = false,
   noAgreementContent,
   onRouteChange,
+  onRouteSelect,
   onEnterpriseWithoutAgreement,
   error,
   enterpriseRequireSearchSignal,
   agreementRequireSearchSignal,
   showWhatIsAgreementLink = false,
   legend = DEFAULT_LEGEND,
+  funnelTracking,
 }: Props) => {
   const [selectedRoute, setSelectedRoute] = useState<
     AgreementRoute | undefined
@@ -111,14 +126,19 @@ export const AgreementSearchForm = ({
     onRouteChange?.(route);
   };
 
-  const onSelectAgreementRoute = () => updateRoute("agreement");
+  const onSelectAgreementRoute = () => {
+    updateRoute("agreement");
+    onRouteSelect?.("agreement");
+  };
   const onSelectEnterpriseRoute = () => {
     onAgreementSelect();
     updateRoute("enterprise");
+    onRouteSelect?.("enterprise");
   };
   const onSelectNoAgreementRoute = () => {
     onAgreementSelect();
     updateRoute("no-agreement");
+    onRouteSelect?.("no-agreement");
     emitClickP3(trackingActionName);
   };
 
@@ -178,6 +198,7 @@ export const AgreementSearchForm = ({
           defaultAgreement={defaultAgreement}
           level={level}
           requireSearchSignal={agreementRequireSearchSignal}
+          funnelTracking={funnelTracking}
         />
       )}
       {selectedRoute === "enterprise" && (
@@ -197,6 +218,7 @@ export const AgreementSearchForm = ({
           onBackToPersonalize={onBackToPersonalize}
           requireSearchSignal={enterpriseRequireSearchSignal}
           showWhatIsAgreementLink={showWhatIsAgreementLink}
+          funnelTracking={funnelTracking}
         />
       )}
       {selectedRoute === "no-agreement" && noAgreementContent}
