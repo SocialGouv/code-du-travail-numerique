@@ -275,4 +275,19 @@ test.describe("Outil - Salaire brut/net", () => {
     const { violations } = await scanPage(page, "simulateur brut/net");
     expect(violations).toEqual([]);
   });
+
+  test("ne présente aucune violation d'accessibilité en état d'erreur", async ({
+    page,
+  }) => {
+    // L'état d'erreur ajoute un titre dans le DOM : scanner le seul état nominal
+    // laissait passer un saut de niveau depuis le `h1` de la page.
+    await stubUrssaf(page, { message: "boom" }, 500);
+    await page.goto(PAGE_URL);
+
+    await amountField(page, /^Salaire brut/).fill("2875");
+    await expect(page.getByTestId("brut-net-erreur")).toBeVisible();
+
+    const { violations } = await scanPage(page, "simulateur brut/net — erreur");
+    expect(violations).toEqual([]);
+  });
 });

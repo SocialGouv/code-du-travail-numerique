@@ -242,16 +242,31 @@ export const readUrssafPayload = (
 };
 
 /**
- * Le SMIC renvoyé par l'API est un brut mensuel. Cette expression sert au
- * préchargement serveur, qui n'a pas besoin des sept expressions du simulateur.
+ * Payload du préchargement serveur : le SMIC brut **et** son net, en un appel.
+ *
+ * L'astuce tient dans la situation : le salaire brut y est semé avec le *nom de
+ * la règle* du SMIC plutôt qu'avec un nombre. L'API évalue cette référence dans
+ * la situation, donc le net demandé en sortie est celui du SMIC. Mesuré :
+ * 1 867,02 €/mois brut et 1 455,99 €/mois net.
+ *
+ * Ça vaut mieux qu'un aller-retour en deux temps — lire le brut, puis le
+ * renvoyer pour en déduire le net : le quota de l'URSSAF est de 5 requêtes par
+ * seconde et par IP, et ce préchargement part du serveur, où toutes les requêtes
+ * partagent la même IP. À cache froid, deux appels par rendu au lieu d'un
+ * suffisent à faire tomber le préchargement en 429 — et avec lui le bouton
+ * « SMIC » et les messages contextuels.
  */
-export const buildSmicBrutPayload = (): UrssafPayload => ({
+export const buildSmicPayload = (): UrssafPayload => ({
   situation: {
+    [RULES.salaireBrut]: RULES.smic,
     [RULES.contrat]: quoteEnum("CDI"),
     [RULES.dirigeant]: "non",
     [RULES.methodeImpot]: quoteEnum("taux neutre"),
   },
-  expressions: [{ valeur: RULES.smic, unité: "€/mois" }],
+  expressions: [
+    { valeur: RULES.smic, unité: "€/mois" },
+    { valeur: RULES.salaireNet, unité: "€/mois" },
+  ],
 });
 
 export { EXPRESSION_ORDER };

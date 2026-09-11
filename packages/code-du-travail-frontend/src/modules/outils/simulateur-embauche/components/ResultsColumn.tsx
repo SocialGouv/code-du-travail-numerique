@@ -56,6 +56,9 @@ export const ResultsColumn = ({
         className={["fr-mb-3w"]}
         severity="error"
         title="Service temporairement indisponible"
+        // `h2` et non le `h3` par défaut : l'alerte est le premier titre après
+        // le `h1` de la page, un `h3` y sauterait un niveau (axe `heading-order`).
+        titleAs="h2"
         data-testid="brut-net-erreur"
         description={
           <>

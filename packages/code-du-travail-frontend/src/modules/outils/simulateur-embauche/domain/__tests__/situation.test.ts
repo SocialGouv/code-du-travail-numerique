@@ -1,6 +1,6 @@
 import { SALARY_FIELDS } from "../constants";
 import {
-  buildSmicBrutPayload,
+  buildSmicPayload,
   buildUrssafPayload,
   readUnit,
   readUrssafPayload,
@@ -153,13 +153,24 @@ describe("buildUrssafPayload", () => {
   });
 });
 
-describe("buildSmicBrutPayload", () => {
-  it("ne demande que le SMIC, avec la même situation verrouillée", () => {
-    const { situation, expressions } = buildSmicBrutPayload();
+describe("buildSmicPayload", () => {
+  it("sème le brut avec la règle du SMIC, pour obtenir brut et net en un appel", () => {
+    // Semer le *nom de la règle* plutôt qu'un nombre fait évaluer le net dans la
+    // situation du SMIC : un seul aller-retour au lieu de deux, sur une API
+    // limitée à 5 requêtes par seconde et par IP.
+    const { situation, expressions } = buildSmicPayload();
+
+    expect(situation["salarié . contrat . salaire brut"]).toBe(
+      "salarié . temps de travail . SMIC"
+    );
     expect(situation["dirigeant"]).toBe("non");
     expect(situation["impôt . méthode de calcul"]).toBe("'taux neutre'");
     expect(expressions).toEqual([
       { valeur: "salarié . temps de travail . SMIC", unité: "€/mois" },
+      {
+        valeur: "salarié . rémunération . net . à payer avant impôt",
+        unité: "€/mois",
+      },
     ]);
   });
 });
