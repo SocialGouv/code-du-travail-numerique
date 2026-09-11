@@ -10,8 +10,10 @@ import type {
 export const EVALUATE_ENDPOINT = "/api/v1/evaluate";
 
 /**
- * Délai de repli quand l'API répond 429 sans `retry-after` exploitable. Mesuré :
- * elle renvoie un `retry-after` fractionnaire (~0,003 s) et récupère aussitôt.
+ * Délai de repli quand l'API répond 429 sans `retry-after` exploitable — cas qui
+ * ne s'est pas produit à la mesure : chaque 429 portait un `retry-after`
+ * fractionnaire, entre 0,7 et 0,8 s, avec `x-ratelimit-limit: 5` et une fenêtre
+ * d'une seconde. C'est cette valeur annoncée qui est attendue, pas celle-ci.
  */
 const DEFAULT_RETRY_AFTER_MS = 200;
 /** Plafond de sécurité : on ne fait pas attendre l'usager plus que ça. */
