@@ -156,6 +156,21 @@ export const cardList = css({
   listStyle: "none!",
   margin: 0,
   padding: 0,
+  /*
+   * Le média de la première carte est une infographie, posée sur le même bleu
+   * pâle que la colonne des résultats, comme dans la maquette.
+   *
+   * `contain` et non le `cover` du DSFR : l'infographie porte du texte, le
+   * rogner la rendrait illisible. Le cadre est presque carré — la carte n'a pas
+   * de description, cf. `DEEP_DIVE_CARDS` — donc le `contain` ne laisse qu'un
+   * filet de fond, comme dans la maquette.
+   */
+  // La maquette coupe la carte en deux parts égales ; le DSFR donne 40 % au
+  // média. À 50 %, l'illustration retrouve la largeur du Figma.
+  "& .fr-card__header": {
+    flex: "0 0 50%!",
+    maxWidth: "50%!",
+  },
   "& .fr-card__img": {
     backgroundColor: "var(--background-alt-blue-france)",
   },

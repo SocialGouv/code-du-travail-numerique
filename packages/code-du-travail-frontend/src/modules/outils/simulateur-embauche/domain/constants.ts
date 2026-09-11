@@ -140,12 +140,13 @@ export type DeepDiveCard = {
   /** Slug utilisé comme nom d'event Matomo. */
   slug: string;
   title: string;
-  description: string;
+  /** Absente sur la carte illustrée, comme dans la maquette. */
+  description?: string;
   linkText: string;
   href: string;
   /**
    * Illustration de la carte, quand la maquette en prévoit une. Décorative :
-   * son `alt` est vide, la carte porte déjà son titre et sa description.
+   * son `alt` est vide, la carte porte déjà son titre.
    */
   imageUrl?: string;
 };
@@ -157,14 +158,19 @@ export type DeepDiveCard = {
  * le fichier de l'infographie est piloté par `toUrl(svgFilename)`, sans chemin
  * déductible statiquement, et une image cassée sur la page la plus consultée du
  * site coûterait plus cher que la duplication du fichier.
+ *
+ * Elle n'a pas de description, toujours comme dans la maquette, et ce n'est pas
+ * qu'une affaire de texte : la colonne média d'une carte horizontale s'étire sur
+ * toute la hauteur de la carte. Avec une description la carte monte à 364 px, le
+ * cadre devient deux fois plus haut que large et l'illustration s'y perd au
+ * milieu du fond. Sans description, le cadre retrouve le carré de la maquette et
+ * l'illustration le remplit. Le titre et le lien disent déjà où l'on va.
  */
 export const DEEP_DIVE_CARDS: DeepDiveCard[] = [
   {
     slug: "infographie/quel-est-le-salaire-minimum",
     imageUrl: "/static/assets/img/simulateur-brut-net-salaire-minimum.png",
     title: "Quel est le salaire minimum ?",
-    description:
-      "Salaire de base, avantages en nature, primes, pourboires : ce qui compte, et ce qui ne compte pas, dans le calcul du SMIC.",
     linkText: "Voir l'infographie",
     href: "/infographie/quel-est-le-salaire-minimum",
   },
