@@ -9,7 +9,8 @@ export type ExploreTheme = {
   // 200 mais rend une page vide (elle liste les enfants du thème, or un
   // sous-thème feuille n'en a pas).
   href: string;
-  // Icône du thème RACINE : les sous-thèmes n'en portent pas.
+  // Icône du sous-thème, ou celle du thème racine à défaut : `icon` n'est pas
+  // garanti sur un niveau 2.
   iconName?: string;
   // Nombre de contenus rattachés au sous-thème (`refs.length`).
   documentCount: number;

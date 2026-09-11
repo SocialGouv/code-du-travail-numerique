@@ -46,7 +46,10 @@ describe("<ExploreThemes />", () => {
     );
 
     expect(
-      rendering.getByRole("heading", { level: 3, name: "Explorez nos thématiques" })
+      rendering.getByRole("heading", {
+        level: 3,
+        name: "Explorez nos thématiques",
+      })
     ).toBeInTheDocument();
 
     const titles = rendering.getAllByRole("heading", { level: 4 });
@@ -133,8 +136,8 @@ describe("<ExploreThemes />", () => {
     );
     const tiles = rendering.container.querySelectorAll(".fr-tile");
     expect(tiles).toHaveLength(2);
-    expect(
-      within(tiles[0] as HTMLElement).getByRole("link")
-    ).toHaveTextContent("Démission");
+    expect(within(tiles[0] as HTMLElement).getByRole("link")).toHaveTextContent(
+      "Démission"
+    );
   });
 });

@@ -29,7 +29,8 @@ describe("Sous-thèmes mis en avant sur une contribution", () => {
         title: "Démission",
         // L'ancre est celle que pose `ListLayout` sur la page du thème racine.
         href: "/themes/depart-de-lentreprise#demission",
-        // Seuls les thèmes racines portent une icône.
+        // `demission` ne porte pas d'icône dans l'index : repli sur celle du
+        // thème racine.
         iconName: "Depart",
         documentCount: 17,
       },

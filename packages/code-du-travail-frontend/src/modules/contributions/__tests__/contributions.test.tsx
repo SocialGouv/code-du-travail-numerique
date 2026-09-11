@@ -418,7 +418,11 @@ describe("<ContributionLayout />", () => {
       {
         title: "Modèles et simulateurs liés",
         items: [
-          { title: "Un modèle", url: "/modeles-de-courriers/x", source: "tools" },
+          {
+            title: "Un modèle",
+            url: "/modeles-de-courriers/x",
+            source: "tools",
+          },
         ],
       },
       {
@@ -485,9 +489,7 @@ describe("<ContributionLayout />", () => {
 
     it("laisse les « Articles liés » en place pour une contribution non mappée", () => {
       rendering = render(
-        <ContributionLayout
-          contribution={{ ...contribution, relatedItems }}
-        />
+        <ContributionLayout contribution={{ ...contribution, relatedItems }} />
       );
 
       expect(

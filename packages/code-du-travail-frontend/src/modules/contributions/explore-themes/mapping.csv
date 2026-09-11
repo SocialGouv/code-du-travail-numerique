@@ -1,0 +1,33 @@
+# Mapping éditorial de la rubrique « Explorez nos thématiques » (#7455).
+#
+# Une ligne par contribution, trois colonnes séparées par « ; » :
+#
+#   contribution ; sous_theme_1 ; sous_theme_2
+#
+# - contribution : le slug de la page, c'est-à-dire le segment qui suit
+#   /contribution/. Une URL complète ou un chemin collé depuis le navigateur
+#   fait aussi l'affaire, y compris une page déclinée par convention
+#   collective : seul le slug de la fiche générique est retenu, il vaut pour
+#   toutes ses déclinaisons.
+# - sous_theme_1 et sous_theme_2 : les slugs des deux sous-thèmes, dans l'ordre
+#   d'affichage des cartes. Le slug d'un sous-thème est ce qui suit le « # »
+#   dans son lien — /themes/conges#conges-payes donne conges-payes. Là aussi
+#   le lien complet est accepté.
+#
+# Seuls les sous-thèmes de NIVEAU 2 conviennent : la carte pointe vers la
+# section du thème racine, un niveau 3 n'y aurait pas d'ancre.
+#
+# Les lignes vides et les lignes commençant par « # » sont ignorées. Une
+# contribution absente de ce fichier n'affiche pas la rubrique et garde ses
+# « Articles liés » : c'est le témoin du test.
+#
+# Après toute modification : pnpm explore-themes:mapping
+#
+# Les quatre lignes ci-dessous sont des exemples vérifiés, prêts à décommenter
+# pour voir la rubrique en local. Le mapping livré est volontairement vide,
+# le métier n'ayant pas encore arrêté sa liste.
+contribution;sous_theme_1;sous_theme_2
+#les-conges-pour-evenements-familiaux;conges-lies-a-la-vie-familiale-mariage-deces-naissance;conges-payes
+#le-preavis-de-demission-doit-il-etre-execute-en-totalite-y-compris-si-le-salarie-a-retrouve-un-emploi;demission;preavis-de-licenciement-et-de-demission
+#heures-supplementaires;heures-supplementaires;duree-du-travail
+#dans-le-cadre-dun-cdd-quel-est-le-montant-de-lindemnite-de-fin-de-contrat;cdd;salaire

@@ -35,10 +35,7 @@ export function ExploreThemes({ themes, contributionSlug, className }: Props) {
       <h3 className={fr.cx("fr-h5")}>Explorez nos thématiques</h3>
       <div className={fr.cx("fr-grid-row", "fr-grid-row--gutters")}>
         {themes.map((theme, index) => (
-          <div
-            key={theme.slug}
-            className={fr.cx("fr-col-12", "fr-col-md-6")}
-          >
+          <div key={theme.slug} className={fr.cx("fr-col-12", "fr-col-md-6")}>
             <Tile
               orientation="horizontal"
               small
@@ -49,11 +46,17 @@ export function ExploreThemes({ themes, contributionSlug, className }: Props) {
                 theme.iconName ? <ThemeIcon name={theme.iconName} /> : undefined
               }
               title={theme.title}
-              desc={theme.description ?? documentCountLabel(theme.documentCount)}
+              desc={
+                theme.description ?? documentCountLabel(theme.documentCount)
+              }
               linkProps={{
                 href: theme.href,
                 onClick: () =>
-                  emitClickExploreTheme(contributionSlug, theme.slug, index + 1),
+                  emitClickExploreTheme(
+                    contributionSlug,
+                    theme.slug,
+                    index + 1
+                  ),
               }}
               classes={{ desc: tileDesc }}
             />

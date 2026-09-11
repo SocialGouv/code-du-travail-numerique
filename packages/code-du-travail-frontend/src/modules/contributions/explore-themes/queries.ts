@@ -21,17 +21,14 @@ export const fetchContributionExploreThemes = async (
   // Contribution non mappée : aucun aller-retour Elasticsearch.
   if (!slugs) return [];
 
-  // Deux requêtes parallèles : les sous-thèmes ne portent pas d'icône, elle
-  // vient du thème racine — inutile de chaîner « résoudre le parent puis lire
-  // son icône », les racines tiennent en une requête (≤ 100 documents).
+  // Deux requêtes parallèles : `icon` n'est pas garanti sur un sous-thème, le
+  // thème racine sert de repli — inutile de chaîner « lire le sous-thème puis
+  // son parent », les racines tiennent en une requête (≤ 100 documents).
   const [subThemes, rootThemes] = await Promise.all([
-    fetchThemesBySlugs([...slugs], [
-      "slug",
-      "title",
-      "refs",
-      "breadcrumbs",
-      "parentSlug",
-    ]),
+    fetchThemesBySlugs(
+      [...slugs],
+      ["slug", "title", "refs", "breadcrumbs", "parentSlug", "icon"]
+    ),
     fetchRootThemes(["slug", "icon"]),
   ]);
 
@@ -68,7 +65,10 @@ export const fetchContributionExploreThemes = async (
         // `slugify(titre)` : la même fonction que celle qui pose les `id` de
         // section dans `ListLayout`, seule à matcher le DOM de la page thème.
         href: `/themes/${rootSlug}#${slugify(theme.title)}`,
-        iconName: iconByRootSlug.get(rootSlug),
+        // L'icône du sous-thème d'abord : elle est plus parlante que celle du
+        // thème racine, qui reste le repli tant que le back-office n'en pose
+        // pas sur les niveaux 2.
+        iconName: theme.icon ?? iconByRootSlug.get(rootSlug),
         documentCount,
       };
     })

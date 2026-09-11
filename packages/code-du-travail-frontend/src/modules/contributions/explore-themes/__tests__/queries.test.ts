@@ -74,6 +74,28 @@ describe("fetchContributionExploreThemes", () => {
     expect(theme.iconName).toBe("Depart");
   });
 
+  it("préfère l'icône du sous-thème à celle du thème racine", async () => {
+    mockMapping["ma-contribution"] = ["demission"];
+    (fetchThemesBySlugs as jest.Mock).mockResolvedValue([
+      { ...themeDoc("demission", "Démission"), icon: "Resignation" },
+    ]);
+
+    const [theme] = await fetchContributionExploreThemes("ma-contribution");
+
+    expect(theme.iconName).toBe("Resignation");
+  });
+
+  it("retombe sur l'icône du thème racine quand le sous-thème n'en porte pas", async () => {
+    mockMapping["ma-contribution"] = ["demission"];
+    (fetchThemesBySlugs as jest.Mock).mockResolvedValue([
+      themeDoc("demission", "Démission"),
+    ]);
+
+    const [theme] = await fetchContributionExploreThemes("ma-contribution");
+
+    expect(theme.iconName).toBe("Depart");
+  });
+
   it("n'interroge pas Elasticsearch pour une contribution non mappée", async () => {
     expect(await fetchContributionExploreThemes("ma-contribution")).toEqual([]);
     expect(fetchThemesBySlugs).not.toHaveBeenCalled();
