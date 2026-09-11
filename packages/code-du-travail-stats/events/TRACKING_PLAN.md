@@ -121,26 +121,6 @@ du navigateur. Mesure l'intention de conserver le résultat.
 | action   | view_step_Indemnité de licenciement · view_step_Indemnité de rupture conventionnelle · view_step_Indemnité de départ ou de mise à la retraite | Simulateur concerné |
 | name     | results_ineligible                                                                  | L'utilisateur est inéligible  |
 
-###### Spécifique « Origine du départ à la retraite »
-
-Les deux simulateurs de retraite envoient l'origine choisie au clic sur « Suivant » :
-le préavis à son étape *origine*, l'indemnité à son étape *Informations*.
-[↗ indemnité de retraite](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/outils/indemnite-depart/steps/Informations/store/store.ts "Informations/store.ts")
-
-Les actions `mise` et `depart` étant les mêmes des deux côtés, **c'est le `name`
-qui distingue l'émetteur** — sans lui, les compteurs des deux outils
-fusionneraient sur un même site Matomo. Il reprend le nom court du simulateur,
-celui-là même dont sont dérivées les actions `view_step_*`.
-
-| Type     | Contenu                                                                             | Détail                                                              |
-| -------- | ----------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| category | outil                                                                                |                                                                     |
-| action   | mise · depart                                                                        | Mise à la retraite (employeur) ou départ volontaire (salarié)        |
-| name     | Indemnité de départ ou de mise à la retraite · Préavis de départ ou de mise à la retraite | Simulateur émetteur                                             |
-
-> Les évènements antérieurs au déploiement de ce `name` sont tous issus du
-> préavis de retraite, seul émetteur à l'époque : l'historique reste lisible.
-
 ###### Issue du résultat (« Indemnités de précarité »)
 
 Émis à chaque affichage de l'écran de résultat, juste avant le `view_step` de l'étape
@@ -178,7 +158,7 @@ Deux étapes envoient le choix de l'utilisateur, au clic sur « Suivant ».
 | category | outil                                            |                                                              |
 | action   | mise · depart                                    | Étape origine : mise à la retraite (employeur) ou départ volontaire |
 | action   | anciennete_plus_2_ans · anciennete_moins_2_ans   | Étape ancienneté : plus / moins de 2 ans d'ancienneté déclarés |
-| name     | Préavis de départ ou de mise à la retraite       | Sur les actions `mise` · `depart` uniquement, pour les distinguer de celles de l'indemnité de retraite |
+| name     | —                                                |                                                              |
 
 ##### Étape pour renseigner sa convention collective
 

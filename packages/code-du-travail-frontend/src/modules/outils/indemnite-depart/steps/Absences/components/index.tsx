@@ -70,11 +70,11 @@ const StepAbsences = () => {
       getMotifExampleMessage(
         informationData,
         true,
-        // RG8 : la phrase de conclusion mentionne l'indemnité de rupture
-        // conventionnelle, hors sujet pour un départ à la retraite.
-        type === IndemniteDepartType.RETRAITE
+        // RG8 : la phrase de conclusion doit nommer l'indemnité de départ ou de
+        // mise à la retraite, et non celle de rupture conventionnelle.
+        type === IndemniteDepartType.RETRAITE ? originRetraite : undefined
       ),
-    [informationData, type]
+    [informationData, type, originRetraite]
   );
 
   useEffect(() => {

@@ -62,7 +62,7 @@ const getTools = async (): Promise<{
     // TODO(#7131) : retirer `withIndemniteRetraiteTile` avec le repli de
     // `src/modules/outils/indemnite-retraite/tool.ts`, une fois le document
     // Elasticsearch du simulateur créé côté cdtn-admin.
-    tools: withIndemniteRetraiteTile(
+    tools: await withIndemniteRetraiteTile(
       tools.map((tool) => ({
         ...tool,
         url: `/outils/${tool.slug}`,

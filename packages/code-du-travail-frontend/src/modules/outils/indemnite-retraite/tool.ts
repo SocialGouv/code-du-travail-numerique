@@ -1,6 +1,6 @@
-import { captureException } from "@sentry/nextjs";
 import { ElasticTool } from "@socialgouv/cdtn-types";
-import { DocumentElasticResult } from "src/modules/documents";
+import { SOURCES } from "@socialgouv/cdtn-utils";
+import { DocumentElasticResult, fetchDocument } from "src/modules/documents";
 import { fetchTool } from "src/modules/outils";
 import { IndemniteDepartType } from "../indemnite-depart/types";
 import type { ToolItem } from "../../../../app/outils/page";
@@ -48,6 +48,33 @@ const FALLBACK_TOOL: DocumentElasticResult<ElasticTool> = {
 } as DocumentElasticResult<ElasticTool>;
 
 /**
+ * Le document `outils` de ce slug existe-t-il en base, quel que soit son état
+ * de publication ?
+ *
+ * `fetchTool` filtre sur `isPublished` et `fetchTools` y ajoute `displayTool` :
+ * un brouillon, ou un simulateur volontairement dépublié, leur est aussi
+ * invisible qu'un document absent. Sans cette distinction, les deux replis
+ * continueraient de servir un contenu figé dans le code, que la rédaction ne
+ * pourrait plus ni corriger ni retirer. Ils ne valent donc que pour un document
+ * qui n'existe pas du tout ; dès qu'il existe, la page se comporte comme les
+ * autres simulateurs, 404 comprise.
+ *
+ * Une panne Elasticsearch fait lever cette sonde, et l'incident reste visible
+ * au lieu d'être masqué par le repli.
+ */
+const hasIndemniteRetraiteDocument = async (): Promise<boolean> =>
+  (await fetchDocument<ElasticTool, "slug">(["slug"], {
+    query: {
+      bool: {
+        filter: [
+          { term: { source: SOURCES.TOOLS } },
+          { term: { slug: INDEMNITE_RETRAITE_SLUG } },
+        ],
+      },
+    },
+  })) !== undefined;
+
+/**
  * Renvoie le document `outils` du simulateur, ou son repli tant qu'il n'existe
  * pas en base. `isPublished` distingue les deux cas : les appels dépendant d'un
  * `_id` réel (contenus liés) doivent être ignorés quand il vaut `false`.
@@ -60,10 +87,9 @@ export const getIndemniteRetraiteTool = async (): Promise<{
     const tool = await fetchTool(INDEMNITE_RETRAITE_SLUG);
     return { isPublished: true, tool };
   } catch (error) {
-    // Le repli couvre l'absence de document, mais le `try` englobe aussi la
-    // requête Elasticsearch : sans cette remontée, une panne dégraderait la
-    // page en silence, là où les autres simulateurs rendent l'incident visible.
-    captureException(error);
+    if (await hasIndemniteRetraiteDocument()) {
+      throw error;
+    }
     return { isPublished: false, tool: FALLBACK_TOOL };
   }
 };
@@ -85,17 +111,22 @@ const INDEMNITE_RETRAITE_URL = `/outils/${INDEMNITE_RETRAITE_SLUG}`;
  * cdtn-admin ; dès qu'il existera, la liste contiendra déjà l'entrée et ce
  * repli deviendra inerte avant sa suppression.
  */
-export const withIndemniteRetraiteTile = (tools: ToolItem[]): ToolItem[] =>
-  tools.some(({ url }) => url === INDEMNITE_RETRAITE_URL)
-    ? tools
-    : [
-        ...tools,
-        {
-          id: INDEMNITE_RETRAITE_SLUG,
-          description: DESCRIPTION,
-          metaDescription: DESCRIPTION,
-          icon: "Indemnity",
-          title: TITRE_COURT,
-          url: INDEMNITE_RETRAITE_URL,
-        },
-      ];
+export const withIndemniteRetraiteTile = async (
+  tools: ToolItem[]
+): Promise<ToolItem[]> => {
+  if (tools.some(({ url }) => url === INDEMNITE_RETRAITE_URL)) return tools;
+  // Document présent mais en brouillon ou masqué (`displayTool: false`) : c'est
+  // une décision de la rédaction, la tuile ne doit pas la contourner.
+  if (await hasIndemniteRetraiteDocument()) return tools;
+  return [
+    ...tools,
+    {
+      id: INDEMNITE_RETRAITE_SLUG,
+      description: DESCRIPTION,
+      metaDescription: DESCRIPTION,
+      icon: "Indemnity",
+      title: TITRE_COURT,
+      url: INDEMNITE_RETRAITE_URL,
+    },
+  ];
+};

@@ -3,10 +3,7 @@ import { UserAction } from "../../common/utils/UserAction";
 import IndemniteRetraiteSimulator from "../IndemniteRetraiteSimulator";
 import { ui } from "../../indemnite-depart/__tests__/ui";
 import { sendEvent } from "@socialgouv/matomo-next";
-import {
-  MatomoActionEvent,
-  MatomoRetirementTool,
-} from "../../../analytics/types";
+import { MatomoActionEvent } from "../../../analytics/types";
 import { IndemniteDepartType } from "../../indemnite-depart/types";
 
 jest.mock("@socialgouv/matomo-next", () => ({
@@ -56,11 +53,14 @@ describe("Indemnité de départ à la retraite - Tracking", () => {
     });
   });
 
+  // Le métier ne souhaite pas suivre le parcours à ce niveau de détail : aucun
+  // évènement ne doit partir au choix de l'origine, seulement le `view_step` de
+  // l'étape suivante.
   test.each`
-    origine     | action
-    ${"depart"} | ${"depart"}
-    ${"mise"}   | ${"mise"}
-  `("émet l'origine « $origine » du départ", ({ origine, action }) => {
+    origine
+    ${"depart"}
+    ${"mise"}
+  `("n'émet rien au choix de l'origine « $origine »", ({ origine }) => {
     userAction
       .click(ui.introduction.startButton.get())
       .click(
@@ -70,13 +70,9 @@ describe("Indemnité de départ à la retraite - Tracking", () => {
       )
       .click(ui.next.get());
 
-    expect(sendEvent).toHaveBeenCalledWith({
-      category: "outil",
-      action,
-      // Le simulateur de préavis de retraite envoie les mêmes actions : sans ce
-      // nom, les deux tunnels se confondraient dans Matomo.
-      name: MatomoRetirementTool.INDEMNITE_RETRAITE,
-    });
+    expect(sendEvent).not.toHaveBeenCalledWith(
+      expect.objectContaining({ action: origine })
+    );
   });
 
   test("émet l'évènement d'inéligibilité sur l'écran de résultat", () => {

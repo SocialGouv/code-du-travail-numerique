@@ -18,11 +18,13 @@
 contrat salarié . indemnité de licenciement:
   valeur: oui
 
+# Saisies à l'étape « Ancienneté ». Pas de valeur par défaut : les entrées
+# manquantes remontent par les `missingVariables` de publicodes, que le front
+# traite déjà, là où une date figée ferait calculer une ancienneté fausse au
+# lieu de signaler la saisie absente.
 contrat salarié . indemnité de licenciement . date d'entrée:
-  valeur: 01/01/2024 # valeur par défaut pour éviter les erreurs liées aux missing-args
 
 contrat salarié . indemnité de licenciement . date de notification:
-  valeur: 01/01/2024 # valeur par défaut pour éviter les erreurs liées aux missing-args
 
 contrat salarié . indemnité de licenciement . date de sortie:
   valeur: non

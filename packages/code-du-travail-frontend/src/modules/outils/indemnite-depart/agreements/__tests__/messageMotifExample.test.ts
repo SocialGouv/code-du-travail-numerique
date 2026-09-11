@@ -44,4 +44,17 @@ describe("getMessageMotifExample", () => {
   test("getMessageMotifExample with isRuptureConventionnelle=true and undefined informations", () => {
     expect(getMotifExampleMessage(undefined, true)).toBe(defaultRuptureMessage);
   });
+
+  test.each`
+    originRetraite       | expected
+    ${"depart-retraite"} | ${"<b>Pour le calcul de l'indemnité de départ à la retraite, ces absences n'ont pas d'impact sur le calcul de l'ancienneté.</b>"}
+    ${"mise-retraite"}   | ${"<b>Pour le calcul de l'indemnité de mise à la retraite, ces absences n'ont pas d'impact sur le calcul de l'ancienneté.</b>"}
+  `(
+    "getMessageMotifExample nomme l'indemnité de retraite quand originRetraite vaut $originRetraite",
+    ({ originRetraite, expected }) => {
+      expect(getMotifExampleMessage(undefined, true, originRetraite)).toContain(
+        expected
+      );
+    }
+  );
 });
