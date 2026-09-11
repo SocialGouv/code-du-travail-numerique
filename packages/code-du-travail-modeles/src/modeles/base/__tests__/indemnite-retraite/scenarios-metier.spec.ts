@@ -54,27 +54,31 @@ const SALAIRES_VARIABLES: SalaryPeriods[] = [
 }));
 
 /**
- * Les deux branches de calcul du salaire de référence, pour cette grille.
+ * L'écart avec le document métier tient à UN SEUL point : la prime annuelle
+ * compte-t-elle dans le total des 12 derniers mois ?
  *
- * L'art. D1237-2 renvoie au salaire de référence de l'indemnité de licenciement,
- * qui retient des deux moyennes « celle qui est la plus avantageuse pour le
- * salarié » :
+ * L'art. D1237-2 renvoie au salaire de référence de l'indemnité de licenciement
+ * (art. R1234-4), qui retient des deux moyennes « la plus avantageuse pour le
+ * salarié ». Les deux calculs appliquent bien cette règle et tombent d'accord
+ * sur la branche des 3 mois ; ils divergent sur celle des 12 mois :
  *
- *   - 3 derniers mois : (8157 − 500) / 3 + 500 / 12 = 2594,00 €
- *   - 12 derniers mois : 31 172 / 12                = 2597,67 €
+ *                          | 3 derniers mois | 12 derniers mois | retenu
+ *   document métier        |     2594,00     |     2556,00      | 2594,00
+ *   ReferenceSalaryLegal   |     2594,00     |     2597,67      | 2597,67
  *
- * Les deux branches sont conformes à la règle et la prime annuelle n'explique
- * PAS l'écart : elle apporte 500 / 12 = 41,67 € à chacune, exactement. Hors
- * prime, la moyenne sur 12 mois vaut 2556,00 € et celle des 3 derniers mois
- * 2552,33 € : c'est ce seul écart de 3,67 €, propre à la grille de salaires,
- * qui départage les deux branches ici.
+ * Le document additionne les seuls salaires (30 672 / 12 = 2556) et laisse la
+ * prime de côté ; le modèle l'inclut (31 172 / 12 = 2597,67), puisque la saisie
+ * du front porte le salaire prime comprise — le champ s'intitule « Dont primes »
+ * — et que `ReferenceSalaryLegal` ne la retranche que dans la branche des
+ * 3 mois. D'où l'encodage d'octobre ci-dessus : 2508 + 500.
  *
- * Le document de référence métier annonce 2594 €, c'est-à-dire la branche des
- * 3 mois. Il ne semble donc pas avoir appliqué la règle du plus avantageux,
- * plutôt que compter la période ou la prime autrement. L'écart est assumé et
- * non corrigé : le document prescrit lui-même « SRef = IDL », et toucher au
- * `ReferenceSalaryLegal` partagé changerait les montants du simulateur
- * d'indemnité de licenciement pour tous les usagers.
+ * Le modèle paraît le mieux fondé : R1234-4 ne prévoit le prorata de la prime
+ * annuelle que pour la branche des 3 mois (« Dans ce cas… »), tandis que la
+ * moyenne des 12 mois porte sur tout ce qui a été perçu sur la période, prime
+ * comprise. L'écart est donc assumé et non corrigé : le document prescrit
+ * lui-même « SRef = IDL », et toucher au `ReferenceSalaryLegal` partagé
+ * changerait les montants du simulateur d'indemnité de licenciement pour tous
+ * les usagers.
  *
  * Reste à faire confirmer par le métier — cf. issue #7131.
  */
@@ -193,7 +197,7 @@ describe("Cas de validation métier — mise à la retraite", () => {
       sref: SREF_SALAIRES_VARIABLES,
     });
 
-    // Le document métier annonce 811,25 €, soit 0,25 × 1,25 × 2594 €.
+    // Le document métier annonce 810,62 €, soit 0,25 × 1,25 × 2594 €.
     expect(result).toResultBeEqual(811.77, "€");
   });
 });
