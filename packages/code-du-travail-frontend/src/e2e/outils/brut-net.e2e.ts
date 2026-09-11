@@ -20,8 +20,8 @@ const FIXTURE = {
     { nodeValue: 2253.9028125, unit: euros("mois") },
     { nodeValue: 2128.9861458, unit: euros("mois") },
     { nodeValue: 5.3, unit: { numerators: ["%"], denominators: [] } },
-    { nodeValue: 1867.0166666, unit: euros("mois") },
     { nodeValue: 2253.9028125, unit: euros("mois") },
+    { nodeValue: 2875, unit: euros("mois") },
   ],
 };
 
@@ -30,8 +30,10 @@ const FIXTURE = {
  * stube, et non une route interne.
  *
  * Le préchargement du SMIC, lui, se fait côté serveur pendant le SSR et échappe
- * à `page.route`. C'est précisément pourquoi chaque évaluation client renvoie
- * elle aussi le SMIC net : le message contextuel reste pilotable depuis ce stub.
+ * à `page.route` : le seuil des messages contextuels est donc celui du **vrai**
+ * SMIC net du jour (~1 456 €/mois, seuil à ~1 602 €). Les deux fixtures de
+ * message ci-dessous sont choisies loin de ce seuil pour rester valables à
+ * travers une revalorisation.
  */
 const stubUrssaf = (page: Page, body: unknown = FIXTURE, status = 200) =>
   page.route(EVALUATE_URL, (route) =>
@@ -105,8 +107,8 @@ test.describe("Outil - Salaire brut/net", () => {
         { nodeValue: 27046.8337, unit: euros("an") },
         { nodeValue: 25547.8338, unit: euros("an") },
         { nodeValue: 5.3, unit: { numerators: ["%"], denominators: [] } },
-        { nodeValue: 1867.0166666, unit: euros("mois") },
         { nodeValue: 2253.9028125, unit: euros("mois") },
+        { nodeValue: 2875, unit: euros("mois") },
       ],
     });
     await page.goto(PAGE_URL);
@@ -126,6 +128,17 @@ test.describe("Outil - Salaire brut/net", () => {
       )
       .toBe("45609,57");
     await expect(page.getByText("€ par an").first()).toBeVisible();
+
+    // Le simulateur URSSAF ne sait lire qu'un montant mensuel : lui passer les
+    // 34 500 €/an affichés l'ouvrirait sur un brut douze fois trop élevé.
+    const href = await page
+      .getByTestId("brut-net-lien-urssaf")
+      .getAttribute("href");
+    expect(
+      new URL(href as string).searchParams.get(
+        "salarié . contrat . salaire brut"
+      )
+    ).toBe("2875€/mois");
   });
 
   test("affiche le message « salaire minimum » près du SMIC", async ({
@@ -138,8 +151,8 @@ test.describe("Outil - Salaire brut/net", () => {
         { nodeValue: 1470.31, unit: euros("mois") },
         { nodeValue: 1470.31, unit: euros("mois") },
         { nodeValue: 0, unit: { numerators: ["%"], denominators: [] } },
-        { nodeValue: 1455.99, unit: euros("mois") },
         { nodeValue: 1470.31, unit: euros("mois") },
+        { nodeValue: 1875, unit: euros("mois") },
       ],
     });
     await page.goto(PAGE_URL);
@@ -212,9 +225,15 @@ test.describe("Outil - Salaire brut/net", () => {
     await stubUrssaf(page, { message: "boom" }, 500);
     await page.goto(PAGE_URL);
 
-    await amountField(page, /^Salaire brut/).fill("2875");
+    const brut = amountField(page, /^Salaire brut/);
+    await brut.fill("2875");
 
     await expect(page.getByTestId("brut-net-erreur")).toBeVisible();
+    // L'alerte se pose au-dessus des champs : ils restent montés, avec le focus
+    // et la saisie en cours. Les démonter couperait la frappe.
+    await expect(brut).toBeFocused();
+    await expect(brut).toHaveValue("2875");
+    await expect(page.getByRole("textbox")).toHaveCount(4);
     // Le reste de la page reste rendu et interactif.
     await expect(page.getByTestId("brut-net-informations")).toBeVisible();
     await expect(page.getByTestId("brut-net-lien-urssaf")).toBeVisible();

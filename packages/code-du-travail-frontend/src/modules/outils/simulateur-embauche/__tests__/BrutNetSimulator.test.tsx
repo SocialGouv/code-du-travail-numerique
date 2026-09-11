@@ -25,8 +25,17 @@ const RESULTS: SalaryResults = {
   salaireNet: 2253.9,
   salaireNetApresImpot: 2128.99,
   tauxImposition: 5.3,
-  smicNetMensuel: 1455.99,
   salaireNetMensuel: 2253.9,
+  salaireBrutMensuel: 2875,
+};
+
+/** La même simulation demandée en période annuelle : seuls les quatre montants affichés changent d'unité. */
+const ANNUAL_RESULTS: SalaryResults = {
+  ...RESULTS,
+  coutTotalEmployeur: 45609.57,
+  salaireBrut: 34500,
+  salaireNet: 27046.83,
+  salaireNetApresImpot: 25547.83,
 };
 
 const SMIC: SmicReference = { brutMensuel: 1867.02, netMensuel: 1455.99 };
@@ -231,6 +240,28 @@ describe("BrutNetSimulator", () => {
     );
   });
 
+  it("garde les quatre champs montés et le focus pendant une erreur", async () => {
+    // L'erreur survient typiquement en pleine frappe : démonter les champs pour
+    // mettre l'alerte à leur place effacerait la saisie et volerait le curseur.
+    evaluateSalaryMock.mockRejectedValue(
+      new UrssafEvaluationError("trop de requêtes", "429")
+    );
+    renderSimulator();
+
+    const input = field(/Salaire brut/);
+    await user().type(input, "2875");
+    await flush();
+
+    await waitFor(() => {
+      expect(screen.getByTestId("brut-net-erreur")).toBeInTheDocument();
+    });
+    // Le même nœud DOM, jamais remplacé : ni focus perdu, ni texte effacé.
+    expect(field(/Salaire brut/)).toBe(input);
+    expect(input).toHaveFocus();
+    expect(input).toHaveValue("2875");
+    expect(screen.getAllByRole("textbox")).toHaveLength(4);
+  });
+
   it("relance le dernier calcul depuis le bouton Réessayer", async () => {
     evaluateSalaryMock.mockRejectedValueOnce(
       new UrssafEvaluationError("boom", "500")
@@ -320,6 +351,28 @@ describe("message contextuel", () => {
     });
     expect(
       screen.queryByTestId("brut-net-message-salaire-minimum")
+    ).not.toBeInTheDocument();
+  });
+
+  it("n'affiche aucun message sans SMIC net préchargé", async () => {
+    // Le SMIC net ne vient que du serveur : sans lui, on préfère le silence à
+    // une comparaison faite sur le SMIC brut, qui déclencherait « salaire
+    // minimum » jusqu'à ~2 054 € net.
+    renderSimulator(null);
+
+    await user().type(field(/Salaire brut/), "2875");
+    await flush();
+
+    await waitFor(() => {
+      expect(
+        digits(field(/Coût total employeur/).getAttribute("value") ?? "")
+      ).toBe("3800,80");
+    });
+    expect(
+      screen.queryByTestId("brut-net-message-salaire-minimum")
+    ).not.toBeInTheDocument();
+    expect(
+      screen.queryByTestId("brut-net-message-primes-conventionnelles")
     ).not.toBeInTheDocument();
   });
 
@@ -510,6 +563,29 @@ describe("lien vers le simulateur URSSAF", () => {
         "2875€/mois"
       );
       expect(url.searchParams.get("unité")).toBe("€/mois");
+    });
+  });
+
+  it("préremplit en €/mois même quand la page affiche des montants annuels", async () => {
+    // Le simulateur URSSAF ne lit qu'un montant mensuel : passer le brut annuel
+    // tel quel l'ouvrirait sur un salaire douze fois trop élevé.
+    evaluateSalaryMock.mockResolvedValue(ANNUAL_RESULTS);
+    renderSimulator();
+
+    await user().click(screen.getByRole("radio", { name: "Montant annuel" }));
+    await user().type(field(/Salaire brut/), "34500");
+    await flush();
+
+    await waitFor(() => {
+      const url = new URL(
+        screen
+          .getByTestId("brut-net-lien-urssaf")
+          .getAttribute("href") as string
+      );
+      expect(url.searchParams.get("salarié . contrat . salaire brut")).toBe(
+        "2875€/mois"
+      );
+      expect(url.searchParams.get("unité")).toBe("€/an");
     });
   });
 

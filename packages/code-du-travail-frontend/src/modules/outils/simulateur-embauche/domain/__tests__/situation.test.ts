@@ -36,8 +36,8 @@ const nominalResponse = (
       unit: euros(denominator),
     },
     { nodeValue: 5.3, unit: percent },
-    { nodeValue: 1867.0166666, unit: euros("mois") },
     { nodeValue: 2253.9028125, unit: euros("mois") },
+    { nodeValue: 2875, unit: euros("mois") },
   ].map((entry, index) => overrides[index] ?? entry),
 });
 
@@ -116,17 +116,17 @@ describe("buildUrssafPayload", () => {
   "impôt . taux d'imposition",
   {
     "unité": "€/mois",
-    "valeur": "salarié . temps de travail . SMIC",
+    "valeur": "salarié . rémunération . net . à payer avant impôt",
   },
   {
     "unité": "€/mois",
-    "valeur": "salarié . rémunération . net . à payer avant impôt",
+    "valeur": "salarié . contrat . salaire brut",
   },
 ]
 `);
   });
 
-  it("demande les montants en €/an en période annuelle, SMIC et net canonique exceptés", () => {
+  it("demande les montants en €/an en période annuelle, net et brut canoniques exceptés", () => {
     const { expressions } = buildUrssafPayload({ ...base, period: "annee" });
     expect(expressions.slice(0, 4)).toEqual([
       { valeur: "salarié . coût total employeur", unité: "€/an" },
@@ -142,11 +142,12 @@ describe("buildUrssafPayload", () => {
     ]);
     // Le seuil de proximité au SMIC ne doit pas dépendre de la période.
     expect(expressions[5]).toEqual({
-      valeur: "salarié . temps de travail . SMIC",
+      valeur: "salarié . rémunération . net . à payer avant impôt",
       unité: "€/mois",
     });
+    // Le lien URSSAF ne sait préremplir qu'en €/mois, période affichée ou non.
     expect(expressions[6]).toEqual({
-      valeur: "salarié . rémunération . net . à payer avant impôt",
+      valeur: "salarié . contrat . salaire brut",
       unité: "€/mois",
     });
   });
@@ -193,20 +194,22 @@ describe("readUrssafPayload", () => {
       salaireNet: 2253.9,
       salaireNetApresImpot: 2128.99,
       tauxImposition: 5.3,
-      smicNetMensuel: 1867.02,
       salaireNetMensuel: 2253.9,
+      salaireBrutMensuel: 2875,
     });
   });
 
-  it("lit la réponse annuelle sans toucher au SMIC ni au net canonique", () => {
+  it("lit la réponse annuelle sans toucher aux montants canoniques mensuels", () => {
     const { results, issues } = readUrssafPayload(
       nominalResponse("an"),
       "annee"
     );
     expect(issues).toEqual([]);
     expect(results.coutTotalEmployeur).toBe(45609.57);
-    expect(results.smicNetMensuel).toBe(1867.02);
+    expect(results.salaireBrut).toBe(34500);
+    // Les deux dernières expressions restent mensuelles, période annuelle ou non.
     expect(results.salaireNetMensuel).toBe(2253.9);
+    expect(results.salaireBrutMensuel).toBe(2875);
   });
 
   it("neutralise l'entrée porteuse d'une erreur, et elle seule", () => {

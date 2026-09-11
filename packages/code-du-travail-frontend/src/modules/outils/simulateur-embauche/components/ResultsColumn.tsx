@@ -45,8 +45,15 @@ export const ResultsColumn = ({
     // `disabled` — désactiver un champ volerait le focus et couperait la frappe.
     aria-busy={status === "loading"}
   >
-    {status === "error" ? (
+    {/*
+      L'alerte se pose **au-dessus** des champs, jamais à leur place : une erreur
+      survient typiquement en pleine frappe, et démonter les `<input>` volerait
+      le focus et effacerait la saisie à l'écran. Les quatre champs restent
+      montés avec leurs dernières valeurs, le DOM ne bouge pas.
+    */}
+    {status === "error" && (
       <AccessibleAlert
+        className={["fr-mb-3w"]}
         severity="error"
         title="Service temporairement indisponible"
         data-testid="brut-net-erreur"
@@ -62,44 +69,42 @@ export const ResultsColumn = ({
           </>
         }
       />
-    ) : (
-      <>
-        {SALARY_FIELDS.map((field) => (
-          <AmountField
-            key={field}
-            field={field}
-            period={period}
-            value={displayValue(field)}
-            onChange={(value) => onFieldChange(field, value)}
-            onBlur={onFieldBlur}
-            message={
-              field === "salaireNet" && messageKey ? (
-                <ContextualMessage
-                  messageKey={messageKey}
-                  onClick={onMessageClick}
-                />
-              ) : undefined
-            }
-            messageClassName={
-              field === "salaireNet" ? contextualMessage : undefined
-            }
-          />
-        ))}
-
-        <p
-          className={`${fr.cx("fr-text--sm", "fr-mb-0", "fr-mt-3v")} ${inlineNote}`}
-        >
-          <span
-            className={fr.cx("fr-icon-information-fill", "fr-icon--sm")}
-            aria-hidden="true"
-          />
-          <span>
-            {results?.tauxImposition == null
-              ? "Pour une personne célibataire, sans enfant."
-              : `Taux de référence pour une personne célibataire sans enfant : ${formatPercentage(results.tauxImposition)}.`}
-          </span>
-        </p>
-      </>
     )}
+
+    {SALARY_FIELDS.map((field) => (
+      <AmountField
+        key={field}
+        field={field}
+        period={period}
+        value={displayValue(field)}
+        onChange={(value) => onFieldChange(field, value)}
+        onBlur={onFieldBlur}
+        message={
+          field === "salaireNet" && messageKey ? (
+            <ContextualMessage
+              messageKey={messageKey}
+              onClick={onMessageClick}
+            />
+          ) : undefined
+        }
+        messageClassName={
+          field === "salaireNet" ? contextualMessage : undefined
+        }
+      />
+    ))}
+
+    <p
+      className={`${fr.cx("fr-text--sm", "fr-mb-0", "fr-mt-3v")} ${inlineNote}`}
+    >
+      <span
+        className={fr.cx("fr-icon-information-fill", "fr-icon--sm")}
+        aria-hidden="true"
+      />
+      <span>
+        {results?.tauxImposition == null
+          ? "Pour une personne célibataire, sans enfant."
+          : `Taux de référence pour une personne célibataire sans enfant : ${formatPercentage(results.tauxImposition)}.`}
+      </span>
+    </p>
   </div>
 );

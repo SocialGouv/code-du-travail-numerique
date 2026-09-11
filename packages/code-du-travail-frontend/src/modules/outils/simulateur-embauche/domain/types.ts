@@ -23,9 +23,9 @@ export type ContractType =
  * Résultat d'une évaluation.
  *
  * Les quatre montants sont exprimés dans l'unité correspondant à la période
- * demandée ; `salaireNetMensuel` et `smicNetMensuel` sont eux toujours en
- * €/mois, pour que le seuil de proximité au SMIC ne dépende pas de la période
- * d'affichage.
+ * demandée ; `salaireNetMensuel` et `salaireBrutMensuel` sont eux toujours en
+ * €/mois, pour que ni le seuil de proximité au SMIC ni le préremplissage du
+ * lien URSSAF ne dépendent de la période d'affichage.
  */
 export type SalaryResults = {
   coutTotalEmployeur: number | null;
@@ -35,8 +35,8 @@ export type SalaryResults = {
   tauxImposition: number | null;
   /** Net avant impôt en €/mois, quelle que soit la période affichée. */
   salaireNetMensuel: number | null;
-  /** Net avant impôt du SMIC, en €/mois. */
-  smicNetMensuel: number | null;
+  /** Brut en €/mois, quelle que soit la période affichée. */
+  salaireBrutMensuel: number | null;
 };
 
 /** Le point de départ d'un calcul : un champ et son montant, toujours en €/mois. */
@@ -53,6 +53,11 @@ export type EvaluateInput = SalarySeed & {
 /**
  * SMIC préchargé côté serveur pour alimenter le bouton « SMIC » dès le premier
  * rendu. `null` si le préchargement a échoué : la page doit rester utilisable.
+ *
+ * C'est aussi l'**unique** source du SMIC *net* : l'API n'expose que le SMIC
+ * brut (`salarié . temps de travail . SMIC`), le net s'en déduit par une seconde
+ * évaluation — impossible dans le même appel que celui du simulateur, dont la
+ * situation porte déjà le salaire de l'usager.
  */
 export type SmicReference = {
   brutMensuel: number;

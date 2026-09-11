@@ -66,9 +66,12 @@ const readFirstMonthlyAmount = (
  * 24 h par Next : la pression sur le quota de l'URSSAF est nulle, contrairement
  * à ce que ferait un appel par visiteur sur la page la plus consultée du site.
  *
- * Ne lève jamais : le SMIC est un confort, pas une dépendance. En cas d'échec la
- * page se rend sans le bouton « SMIC », et le message contextuel reste correct
- * car chaque évaluation client renvoie elle aussi le SMIC net.
+ * Ne lève jamais : le simulateur fonctionne sans. En cas d'échec la page se rend
+ * sans le bouton « SMIC » et sans message contextuel — c'est ici l'**unique**
+ * source du SMIC *net*, l'évaluation du simulateur ne pouvant pas le produire :
+ * sa situation porte déjà le salaire de l'usager, et l'API n'expose que le SMIC
+ * *brut*. Comparer le net de l'usager à ce brut déclencherait « salaire
+ * minimum » jusqu'à ~2 054 € net au lieu de ~1 602 €.
  */
 export const fetchSmicReference = async (): Promise<SmicReference | null> => {
   try {

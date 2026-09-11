@@ -51,12 +51,14 @@ export const BrutNetSimulator = ({ smicReference }: Props) => {
   } = useSalarySimulation({ onApiError: emitApiError });
 
   /**
-   * Le SMIC net vient en priorité de la dernière évaluation : le message reste
-   * ainsi correct même si le préchargement serveur a échoué, puisque chaque
-   * réponse le renvoie de toute façon.
+   * Le SMIC **net** ne peut venir que du préchargement serveur : l'API n'expose
+   * que le SMIC brut, et son net demande une seconde évaluation dans une
+   * situation dédiée. Comparer le net de l'usager au brut du SMIC déclencherait
+   * « salaire minimum » jusqu'à ~2 054 € net au lieu de ~1 602 €.
+   *
+   * Sans préchargement, pas de message plutôt qu'un message faux.
    */
-  const smicNetMensuel =
-    results?.smicNetMensuel ?? smicReference?.netMensuel ?? null;
+  const smicNetMensuel = smicReference?.netMensuel ?? null;
 
   const messageKey = useMemo(
     () =>
@@ -148,7 +150,7 @@ export const BrutNetSimulator = ({ smicReference }: Props) => {
         <UrssafSimulatorLink
           period={period}
           contract={contract}
-          salaireBrutMensuel={results?.salaireBrut ?? null}
+          salaireBrutMensuel={results?.salaireBrutMensuel ?? null}
           onClick={emitUrssafSimulatorClicked}
         />
       </div>

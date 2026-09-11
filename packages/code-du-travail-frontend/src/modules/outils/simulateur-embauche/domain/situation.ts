@@ -16,8 +16,9 @@ import type {
  * donc un contrat interne verrouillé par snapshot dans les tests.
  *
  * Les deux dernières expressions sont toujours demandées en €/mois, quelle que
- * soit la période affichée : ce sont elles qui servent au seuil de proximité au
- * SMIC, qui ne doit pas dépendre de la période.
+ * soit la période affichée : le net mensuel sert au seuil de proximité au SMIC,
+ * qui ne doit pas dépendre de la période, et le brut mensuel au préremplissage
+ * du lien URSSAF, dont le format impose `€/mois`.
  */
 const EXPRESSION_ORDER = [
   "coutTotalEmployeur",
@@ -25,8 +26,8 @@ const EXPRESSION_ORDER = [
   "salaireNet",
   "salaireNetApresImpot",
   "tauxImposition",
-  "smicNetMensuel",
   "salaireNetMensuel",
+  "salaireBrutMensuel",
 ] as const;
 
 type ExpressionKey = (typeof EXPRESSION_ORDER)[number];
@@ -38,7 +39,7 @@ const EMPTY_RESULTS: SalaryResults = {
   salaireNetApresImpot: null,
   tauxImposition: null,
   salaireNetMensuel: null,
-  smicNetMensuel: null,
+  salaireBrutMensuel: null,
 };
 
 /**
@@ -86,8 +87,8 @@ export const buildUrssafPayload = ({
       { valeur: RULES.salaireNet, unité: displayUnit },
       { valeur: RULES.salaireNetApresImpot, unité: displayUnit },
       RULES.tauxImposition,
-      { valeur: RULES.smic, unité: "€/mois" },
       { valeur: RULES.salaireNet, unité: "€/mois" },
+      { valeur: RULES.salaireBrut, unité: "€/mois" },
     ],
   };
 };
@@ -214,8 +215,8 @@ export const readUrssafPayload = (
     salaireNet: displayUnit,
     salaireNetApresImpot: displayUnit,
     tauxImposition: "%",
-    smicNetMensuel: "€/mois",
     salaireNetMensuel: "€/mois",
+    salaireBrutMensuel: "€/mois",
   };
 
   const read = (key: ExpressionKey) =>
@@ -233,8 +234,8 @@ export const readUrssafPayload = (
       salaireNet: read("salaireNet"),
       salaireNetApresImpot: read("salaireNetApresImpot"),
       tauxImposition: read("tauxImposition"),
-      smicNetMensuel: read("smicNetMensuel"),
       salaireNetMensuel: read("salaireNetMensuel"),
+      salaireBrutMensuel: read("salaireBrutMensuel"),
     },
     issues,
   };

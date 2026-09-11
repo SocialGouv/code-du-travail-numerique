@@ -16,8 +16,8 @@ const NOMINAL_BODY = {
     { nodeValue: 2253.9028125, unit: euros("mois") },
     { nodeValue: 2128.9861458, unit: euros("mois") },
     { nodeValue: 5.3, unit: percent },
-    { nodeValue: 1867.0166666, unit: euros("mois") },
     { nodeValue: 2253.9028125, unit: euros("mois") },
+    { nodeValue: 2875, unit: euros("mois") },
   ],
 };
 
@@ -62,8 +62,8 @@ describe("evaluateSalary", () => {
       salaireNet: 2253.9,
       salaireNetApresImpot: 2128.99,
       tauxImposition: 5.3,
-      smicNetMensuel: 1867.02,
       salaireNetMensuel: 2253.9,
+      salaireBrutMensuel: 2875,
     });
 
     const [url, init] = fetchMock.mock.calls[0];
