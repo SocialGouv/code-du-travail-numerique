@@ -81,6 +81,30 @@ const stubUrssafSlow = (page: Page, delayMs: number) =>
 const amountField = (page: Page, accessibleName: RegExp) =>
   page.getByRole("textbox", { name: accessibleName });
 
+/*
+ * Pas de `getByTestId` dans ce fichier : le build de production supprime les
+ * `data-testid` (next.config.mjs, `reactRemoveProperties`) et l'e2e tourne
+ * contre la review app, pas contre un build local. On cible donc les rôles et
+ * les noms accessibles — ce que l'usager et le lecteur d'écran voient.
+ */
+const contextualMessage = (page: Page, key: "minimum" | "primes") =>
+  page.getByRole("link", {
+    name:
+      key === "minimum"
+        ? "Vérifiez votre salaire minimum"
+        : "Vérifiez les primes prévues par votre convention collective",
+    exact: true,
+  });
+
+const urssafLink = (page: Page) =>
+  page.getByRole("link", { name: /Une simulation plus détaillée/ });
+
+const errorAlert = (page: Page) =>
+  page.getByRole("heading", { name: "Service temporairement indisponible" });
+
+const informationsAlert = (page: Page) =>
+  page.getByRole("heading", { name: "Informations", exact: true });
+
 const digits = (value: string) => value.replace(/[\s  ]/g, "");
 
 test.describe("Outil - Salaire brut/net", () => {
@@ -124,12 +148,8 @@ test.describe("Outil - Salaire brut/net", () => {
 
     // Net (2 253,90 €) largement au-dessus du SMIC net majoré de 10 % : c'est
     // le message « primes », et lui seul.
-    await expect(
-      page.getByTestId("brut-net-message-primes-conventionnelles")
-    ).toBeVisible();
-    await expect(
-      page.getByTestId("brut-net-message-salaire-minimum")
-    ).toHaveCount(0);
+    await expect(contextualMessage(page, "primes")).toBeVisible();
+    await expect(contextualMessage(page, "minimum")).toHaveCount(0);
   });
 
   test("bascule les montants en annuel", async ({ page }) => {
@@ -154,9 +174,7 @@ test.describe("Outil - Salaire brut/net", () => {
 
     // Le simulateur URSSAF ne sait lire qu'un montant mensuel : lui passer les
     // 34 500 €/an affichés l'ouvrirait sur un brut douze fois trop élevé.
-    const href = await page
-      .getByTestId("brut-net-lien-urssaf")
-      .getAttribute("href");
+    const href = await urssafLink(page).getAttribute("href");
     expect(
       new URL(href as string).searchParams.get(
         "salarié . contrat . salaire brut"
@@ -189,9 +207,7 @@ test.describe("Outil - Salaire brut/net", () => {
     expect(
       digits(await amountField(page, /Coût total employeur/).inputValue())
     ).toBe("3800,80");
-    await expect(
-      page.getByTestId("brut-net-message-primes-conventionnelles")
-    ).toBeVisible();
+    await expect(contextualMessage(page, "primes")).toBeVisible();
   });
 
   test("n'affiche jamais un montant mensuel sous le libellé annuel", async ({
@@ -266,16 +282,14 @@ test.describe("Outil - Salaire brut/net", () => {
 
     await amountField(page, /^Salaire brut/).fill("1875");
 
-    const message = page.getByTestId("brut-net-message-salaire-minimum");
+    const message = contextualMessage(page, "minimum");
     await expect(message).toBeVisible();
     await expect(message).toHaveAttribute(
       "href",
       "/contribution/quel-est-le-salaire-minimum"
     );
     // Exclusivité mutuelle des deux messages.
-    await expect(
-      page.getByTestId("brut-net-message-primes-conventionnelles")
-    ).toHaveCount(0);
+    await expect(contextualMessage(page, "primes")).toHaveCount(0);
   });
 
   test("propose un lien prérempli vers le simulateur URSSAF", async ({
@@ -291,7 +305,7 @@ test.describe("Outil - Salaire brut/net", () => {
       )
       .toBe("3800,80");
 
-    const link = page.getByTestId("brut-net-lien-urssaf");
+    const link = urssafLink(page);
     await expect(link).toHaveAttribute("target", "_blank");
     await expect(link).toHaveAttribute("rel", "noopener noreferrer");
 
@@ -335,15 +349,15 @@ test.describe("Outil - Salaire brut/net", () => {
     const brut = amountField(page, /^Salaire brut/);
     await brut.fill("2875");
 
-    await expect(page.getByTestId("brut-net-erreur")).toBeVisible();
+    await expect(errorAlert(page)).toBeVisible();
     // L'alerte se pose au-dessus des champs : ils restent montés, avec le focus
     // et la saisie en cours. Les démonter couperait la frappe.
     await expect(brut).toBeFocused();
     await expect(brut).toHaveValue("2875");
     await expect(page.getByRole("textbox")).toHaveCount(4);
     // Le reste de la page reste rendu et interactif.
-    await expect(page.getByTestId("brut-net-informations")).toBeVisible();
-    await expect(page.getByTestId("brut-net-lien-urssaf")).toBeVisible();
+    await expect(informationsAlert(page)).toBeVisible();
+    await expect(urssafLink(page)).toBeVisible();
     await expect(
       page.getByRole("heading", { name: "Pour approfondir" })
     ).toBeVisible();
@@ -392,7 +406,7 @@ test.describe("Outil - Salaire brut/net", () => {
     await page.goto(PAGE_URL);
 
     await amountField(page, /^Salaire brut/).fill("2875");
-    await expect(page.getByTestId("brut-net-erreur")).toBeVisible();
+    await expect(errorAlert(page)).toBeVisible();
 
     const { violations } = await scanPage(page, "simulateur brut/net — erreur");
     expect(violations).toEqual([]);
