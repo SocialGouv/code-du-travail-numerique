@@ -143,17 +143,25 @@ export type DeepDiveCard = {
   description: string;
   linkText: string;
   href: string;
+  /**
+   * Illustration de la carte, quand la maquette en prévoit une. Décorative :
+   * son `alt` est vide, la carte porte déjà son titre et sa description.
+   */
+  imageUrl?: string;
 };
 
 /**
- * La maquette place un visuel sur la première carte. L'illustration de
- * l'infographie est un fichier piloté par le CMS (`toUrl(svgFilename)`), sans
- * chemin déductible statiquement : on préfère trois cartes homogènes sans média
- * à une image cassée sur la page la plus consultée du site.
+ * Seule la première carte porte un visuel, comme dans la maquette.
+ *
+ * L'illustration est servie depuis nos propres statiques plutôt que par le CMS :
+ * le fichier de l'infographie est piloté par `toUrl(svgFilename)`, sans chemin
+ * déductible statiquement, et une image cassée sur la page la plus consultée du
+ * site coûterait plus cher que la duplication du fichier.
  */
 export const DEEP_DIVE_CARDS: DeepDiveCard[] = [
   {
     slug: "infographie/quel-est-le-salaire-minimum",
+    imageUrl: "/static/assets/img/simulateur-brut-net-salaire-minimum.png",
     title: "Quel est le salaire minimum ?",
     description:
       "Salaire de base, avantages en nature, primes, pourboires : ce qui compte, et ce qui ne compte pas, dans le calcul du SMIC.",

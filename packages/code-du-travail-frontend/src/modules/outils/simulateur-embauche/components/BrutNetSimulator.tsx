@@ -146,7 +146,8 @@ export const BrutNetSimulator = ({ smicReference }: Props) => {
         {announcement}
       </p>
 
-      <div className={fr.cx("fr-mt-4w")}>
+      {/* 48 px, comme entre tous les autres blocs de la page dans la maquette. */}
+      <div className={fr.cx("fr-mt-6w")}>
         <UrssafSimulatorLink
           period={period}
           contract={contract}
