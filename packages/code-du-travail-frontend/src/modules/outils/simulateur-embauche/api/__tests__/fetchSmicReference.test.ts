@@ -27,6 +27,15 @@ const rateLimited = (retryAfter = "0.8") =>
     json: async () => ({}),
   }) as Response;
 
+/** 429 sans en-tête `retry-after` : c'est nous qui devons choisir le délai. */
+const rateLimitedWithoutHeader = () =>
+  ({
+    ok: false,
+    status: 429,
+    headers: new Headers(),
+    json: async () => ({}),
+  }) as Response;
+
 const serverError = () =>
   ({
     ok: false,
@@ -94,6 +103,59 @@ describe("fetchSmicReference", () => {
     await expect(settle(fetchSmicReference())).resolves.toBeNull();
     expect(fetchMock).toHaveBeenCalledTimes(3);
     expect(Sentry.captureException).toHaveBeenCalledTimes(1);
+  });
+
+  it("attend le délai par défaut quand le 429 n'annonce pas de retry-after", async () => {
+    // `Number(null)` et `Number("")` valent 0, pas NaN : sans garde explicite,
+    // les trois tentatives partiraient sans la moindre attente, c'est-à-dire
+    // en rafale depuis l'IP serveur — le contraire de ce que le retry vise.
+    fetchMock
+      .mockResolvedValueOnce(rateLimitedWithoutHeader())
+      .mockResolvedValueOnce(ok(SMIC_BODY));
+
+    const promise = fetchSmicReference();
+
+    await jest.advanceTimersByTimeAsync(100);
+    expect(fetchMock).toHaveBeenCalledTimes(1);
+
+    await jest.advanceTimersByTimeAsync(800);
+    expect(fetchMock).toHaveBeenCalledTimes(2);
+
+    await expect(settle(promise)).resolves.toEqual({
+      brutMensuel: 1867.02,
+      netMensuel: 1455.99,
+    });
+  });
+
+  it("rend la page sans SMIC plutôt que d'attendre une URSSAF qui ne répond pas", async () => {
+    // Connexion acceptée, réponse jamais envoyée : rien ne rejette, donc le
+    // `catch` ne suffit pas. Sans borne, le rendu attendrait le timeout
+    // d'undici, de l'ordre de la minute, en immobilisant un worker.
+    fetchMock.mockReturnValue(new Promise<Response>(() => undefined));
+
+    let settled = false;
+    const promise = fetchSmicReference().then((value) => {
+      settled = true;
+      return value;
+    });
+
+    await jest.advanceTimersByTimeAsync(2_500);
+    expect(settled).toBe(false);
+
+    await jest.advanceTimersByTimeAsync(1_000);
+    await expect(promise).resolves.toBeNull();
+  });
+
+  it("ne passe pas de signal à fetch, pour rester dans le Data Cache de Next", async () => {
+    // Le cache 24 h est ce qui ramène la pression sur le quota URSSAF à presque
+    // rien : la borne de temps porte sur l'attente du rendu, pas sur la requête.
+    fetchMock.mockResolvedValueOnce(ok(SMIC_BODY));
+
+    await settle(fetchSmicReference());
+
+    const init = fetchMock.mock.calls[0][1];
+    expect(init.signal).toBeUndefined();
+    expect(init.next).toEqual({ revalidate: 86_400 });
   });
 
   it("ne réessaie pas sur une erreur qui n'est pas un 429", async () => {

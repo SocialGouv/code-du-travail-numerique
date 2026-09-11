@@ -18,15 +18,58 @@ const MAX_ATTEMPTS = 3;
 /** Repli si l'API ne dit pas quand revenir. Mesuré : elle annonce 0,7 à 0,8 s. */
 const DEFAULT_RETRY_AFTER_MS = 800;
 const MAX_RETRY_AFTER_MS = 3_000;
+/**
+ * Budget total que le rendu de la page accorde au préchargement, retries
+ * compris. Au-delà, la page se rend sans le SMIC.
+ *
+ * C'est une dépendance serveur nouvelle : avant ce diff la page ne touchait
+ * l'URSSAF que depuis le navigateur, via l'iframe, donc une lenteur chez eux ne
+ * pouvait pas dégrader notre TTFB. Les défauts d'undici se comptent en minutes,
+ * pas en secondes — sans borne, une URSSAF qui accepte la connexion sans
+ * répondre immobiliserait un worker de rendu sur la page la plus consultée du
+ * site.
+ */
+const TOTAL_BUDGET_MS = 3_000;
 
 const wait = (ms: number) =>
   new Promise<void>((resolve) => setTimeout(resolve, ms));
 
 const readRetryAfterMs = (response: Response): number => {
-  const seconds = Number(response.headers.get("retry-after"));
+  // `Number(null)` et `Number("")` valent 0, pas NaN : sans cette distinction,
+  // un 429 sans `retry-after` ferait attendre 0 ms et rejouerait les trois
+  // tentatives en rafale — exactement ce que le retry cherche à éviter.
+  const raw = response.headers.get("retry-after");
+  const seconds = raw === null || raw.trim() === "" ? Number.NaN : Number(raw);
+
   return Number.isFinite(seconds) && seconds >= 0
     ? Math.min(seconds * 1000, MAX_RETRY_AFTER_MS)
     : DEFAULT_RETRY_AFTER_MS;
+};
+
+/**
+ * Borne l'attente sans toucher au `fetch` lui-même.
+ *
+ * Un `AbortSignal` passé à `fetch` ferait sortir la requête du Data Cache de
+ * Next, et ce cache est précisément ce qui ramène la pression sur le quota de
+ * l'URSSAF à presque rien. On laisse donc la requête vivre sa vie : si elle
+ * finit par répondre, elle remplit le cache pour les rendus suivants. Ce qui est
+ * borné, c'est le temps que le rendu de la page accepte de l'attendre.
+ */
+const withDeadline = async <T>(promise: Promise<T>, ms: number): Promise<T> => {
+  let timer: ReturnType<typeof setTimeout> | undefined;
+  try {
+    return await Promise.race([
+      promise,
+      new Promise<never>((_, reject) => {
+        timer = setTimeout(
+          () => reject(new Error(`délai de ${ms} ms dépassé`)),
+          ms
+        );
+      }),
+    ]);
+  } finally {
+    clearTimeout(timer);
+  }
 };
 
 /**
@@ -105,7 +148,10 @@ const readMonthlyAmount = (
  */
 export const fetchSmicReference = async (): Promise<SmicReference | null> => {
   try {
-    const { evaluate } = await post(buildSmicPayload());
+    const { evaluate } = await withDeadline(
+      post(buildSmicPayload()),
+      TOTAL_BUDGET_MS
+    );
 
     return {
       brutMensuel: readMonthlyAmount(evaluate?.[0], "SMIC brut"),

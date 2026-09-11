@@ -107,6 +107,129 @@ describe("BrutNetSimulator", () => {
     );
   });
 
+  it("garde la saisie si l'usager sort du champ avant le premier résultat", async () => {
+    // Taper un montant puis faire Tab tout de suite est un geste courant, et il
+    // arrive avant la fin du debounce : reprendre la valeur formatée de
+    // `results`, encore vide, effacerait la saisie à l'écran.
+    let resolveCall: (value: SalaryResults) => void = () => undefined;
+    evaluateSalaryMock.mockImplementationOnce(
+      () => new Promise<SalaryResults>((resolve) => (resolveCall = resolve))
+    );
+    renderSimulator();
+
+    await user().type(field(/Salaire brut/), "3000");
+    // Le debounce est passé, la requête est partie, la réponse se fait attendre.
+    await flush();
+    await user().tab();
+
+    expect(field(/Salaire brut/)).toHaveValue("3000");
+
+    // La saisie reste affichée, et les trois autres champs se remplissent quand
+    // la réponse arrive.
+    await act(async () => {
+      resolveCall({ ...RESULTS, salaireBrut: 3000 });
+      await jest.advanceTimersByTimeAsync(400);
+    });
+    expect(field(/Salaire brut/)).toHaveValue("3000");
+    expect(
+      digits(field(/Coût total employeur/).getAttribute("value") ?? "")
+    ).toBe("3800,80");
+  });
+
+  it("ne perd pas la saisie quand l'appel échoue après une sortie de champ", async () => {
+    evaluateSalaryMock.mockRejectedValue(
+      new UrssafEvaluationError("boom", "500")
+    );
+    renderSimulator();
+
+    await user().type(field(/Salaire brut/), "3000");
+    await user().tab();
+    await flush();
+
+    await waitFor(() => {
+      expect(screen.getByTestId("brut-net-erreur")).toBeInTheDocument();
+    });
+    // L'alerte affirme que la page est intacte : la saisie doit l'être aussi.
+    expect(field(/Salaire brut/)).toHaveValue("3000");
+  });
+
+  it("ne vide pas les autres champs quand l'usager tape le séparateur décimal", async () => {
+    // « 1 867, » n'est pas parsable, mais c'est la façon normale d'écrire un
+    // salaire en français. Tout effacer à la virgule ferait clignoter les trois
+    // autres montants et le message contextuel à chaque décimale.
+    renderSimulator();
+
+    await user().type(field(/Salaire brut/), "1867");
+    await flush();
+    await waitFor(() => {
+      expect(
+        digits(field(/Coût total employeur/).getAttribute("value") ?? "")
+      ).toBe("3800,80");
+    });
+    evaluateSalaryMock.mockClear();
+
+    await user().type(field(/Salaire brut/), ",");
+
+    expect(field(/Salaire brut/)).toHaveValue("1867,");
+    expect(
+      digits(field(/Coût total employeur/).getAttribute("value") ?? "")
+    ).toBe("3800,80");
+    expect(
+      screen.getByTestId("brut-net-message-primes-conventionnelles")
+    ).toBeInTheDocument();
+    // Saisie incomplète : on suspend l'appel, on n'en lance pas un faux.
+    await flush();
+    expect(evaluateSalaryMock).not.toHaveBeenCalled();
+  });
+
+  it("vide tout quand le champ est réellement effacé", async () => {
+    renderSimulator();
+
+    await user().type(field(/Salaire brut/), "1867");
+    await flush();
+    await waitFor(() => {
+      expect(
+        digits(field(/Coût total employeur/).getAttribute("value") ?? "")
+      ).toBe("3800,80");
+    });
+
+    await user().clear(field(/Salaire brut/));
+    await flush();
+
+    expect(field(/Coût total employeur/)).toHaveValue("");
+    expect(
+      screen.queryByTestId("brut-net-message-primes-conventionnelles")
+    ).not.toBeInTheDocument();
+  });
+
+  it("efface les montants au changement de période, le temps du recalcul", async () => {
+    // Le suffixe bascule au clic, la réponse arrive un debounce plus tard :
+    // garder les montants afficherait un mensuel sous un libellé annuel.
+    renderSimulator();
+
+    await user().type(field(/Salaire brut/), "2875");
+    await flush();
+    await waitFor(() => {
+      expect(
+        digits(field(/Coût total employeur/).getAttribute("value") ?? "")
+      ).toBe("3800,80");
+    });
+
+    evaluateSalaryMock.mockResolvedValue(ANNUAL_RESULTS);
+    await user().click(screen.getByRole("radio", { name: "Montant annuel" }));
+
+    // Aucun montant sous le nouveau libellé tant que l'API n'a pas répondu.
+    expect(field(/Coût total employeur/)).toHaveValue("");
+    expect(screen.getByRole("status")).toHaveTextContent("");
+
+    await flush();
+    await waitFor(() => {
+      expect(
+        digits(field(/Coût total employeur/).getAttribute("value") ?? "")
+      ).toBe("45609,57");
+    });
+  });
+
   it("n'appelle l'API qu'une fois pour une frappe rapide", async () => {
     renderSimulator();
 

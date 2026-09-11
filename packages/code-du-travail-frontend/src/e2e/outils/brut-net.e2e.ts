@@ -25,6 +25,19 @@ const FIXTURE = {
   ],
 };
 
+/** La même simulation demandée en période annuelle, pour 34 500 €/an brut. */
+const ANNUAL_FIXTURE = {
+  evaluate: [
+    { nodeValue: 45609.57, unit: euros("an") },
+    { nodeValue: 34500, unit: euros("an") },
+    { nodeValue: 27046.8337, unit: euros("an") },
+    { nodeValue: 25547.8338, unit: euros("an") },
+    { nodeValue: 5.3, unit: { numerators: ["%"], denominators: [] } },
+    { nodeValue: 2253.9028125, unit: euros("mois") },
+    { nodeValue: 2875, unit: euros("mois") },
+  ],
+};
+
 /**
  * L'appel part directement du navigateur : c'est donc le domaine URSSAF qu'on
  * stube, et non une route interne.
@@ -43,6 +56,26 @@ const stubUrssaf = (page: Page, body: unknown = FIXTURE, status = 200) =>
       body: JSON.stringify(body),
     })
   );
+
+/**
+ * Stub qui répond dans l'unité demandée, après un délai.
+ *
+ * Le délai est le sujet du test, pas un artifice : c'est pendant qu'il court que
+ * l'écran peut mentir, en montrant des montants qui ne correspondent plus à ce
+ * que le libellé annonce ou en effaçant une saisie en attente de réponse.
+ */
+const stubUrssafSlow = (page: Page, delayMs: number) =>
+  page.route(EVALUATE_URL, async (route) => {
+    const payload = JSON.parse(route.request().postData() ?? "{}");
+    const annual = payload.expressions?.[0]?.unité === "€/an";
+
+    await new Promise((resolve) => setTimeout(resolve, delayMs));
+    await route.fulfill({
+      status: 200,
+      contentType: "application/json",
+      body: JSON.stringify(annual ? ANNUAL_FIXTURE : FIXTURE),
+    });
+  });
 
 /** Le nom accessible d'un champ DSFR concatène son label et son `hintText`. */
 const amountField = (page: Page, accessibleName: RegExp) =>
@@ -100,17 +133,7 @@ test.describe("Outil - Salaire brut/net", () => {
   });
 
   test("bascule les montants en annuel", async ({ page }) => {
-    await stubUrssaf(page, {
-      evaluate: [
-        { nodeValue: 45609.57, unit: euros("an") },
-        { nodeValue: 34500, unit: euros("an") },
-        { nodeValue: 27046.8337, unit: euros("an") },
-        { nodeValue: 25547.8338, unit: euros("an") },
-        { nodeValue: 5.3, unit: { numerators: ["%"], denominators: [] } },
-        { nodeValue: 2253.9028125, unit: euros("mois") },
-        { nodeValue: 2875, unit: euros("mois") },
-      ],
-    });
+    await stubUrssaf(page, ANNUAL_FIXTURE);
     await page.goto(PAGE_URL);
 
     // Le DSFR masque l'`<input type="radio">` derrière son label : c'est le
@@ -139,6 +162,90 @@ test.describe("Outil - Salaire brut/net", () => {
         "salarié . contrat . salaire brut"
       )
     ).toBe("2875€/mois");
+  });
+
+  test("garde les montants à l'écran quand l'usager tape la virgule décimale", async ({
+    page,
+  }) => {
+    // « 1 867, » n'est pas un montant parsable, mais c'est l'état normal du
+    // champ au moment où l'on écrit un salaire en français. Tout effacer à cet
+    // instant ferait clignoter les trois autres montants et le message
+    // contextuel à chaque décimale tapée.
+    await stubUrssaf(page);
+    await page.goto(PAGE_URL);
+
+    const brut = amountField(page, /^Salaire brut/);
+    await brut.fill("1867");
+    await expect
+      .poll(async () =>
+        digits(await amountField(page, /Coût total employeur/).inputValue())
+      )
+      .toBe("3800,80");
+
+    await brut.press("End");
+    await brut.press(",");
+
+    await expect(brut).toHaveValue("1867,");
+    expect(
+      digits(await amountField(page, /Coût total employeur/).inputValue())
+    ).toBe("3800,80");
+    await expect(
+      page.getByTestId("brut-net-message-primes-conventionnelles")
+    ).toBeVisible();
+  });
+
+  test("n'affiche jamais un montant mensuel sous le libellé annuel", async ({
+    page,
+  }) => {
+    // Le suffixe et le `hintText` basculent au clic ; la réponse annuelle
+    // n'arrive qu'un debounce et un aller-retour plus tard. Entre les deux,
+    // aucun montant ne doit rester affiché sous la nouvelle unité.
+    await stubUrssafSlow(page, 2_000);
+    await page.goto(PAGE_URL);
+
+    await amountField(page, /^Salaire brut/).fill("2875");
+    await expect
+      .poll(async () =>
+        digits(await amountField(page, /Coût total employeur/).inputValue())
+      )
+      .toBe("3800,80");
+
+    await page.getByText("Montant annuel", { exact: true }).click();
+
+    await expect(page.getByText("€ par an").first()).toBeVisible();
+    for (const label of [
+      /Coût total employeur/,
+      /^Salaire brut/,
+      /Salaire net avant impôt/,
+      /Salaire net après impôt/,
+    ]) {
+      expect(await amountField(page, label).inputValue()).toBe("");
+    }
+
+    await expect
+      .poll(
+        async () =>
+          digits(await amountField(page, /Coût total employeur/).inputValue()),
+        { timeout: 10_000 }
+      )
+      .toBe("45609,57");
+  });
+
+  test("garde la saisie quand l'usager quitte le champ avant la réponse", async ({
+    page,
+  }) => {
+    // Taper un montant puis faire Tab aussitôt arrive avant la fin du debounce :
+    // reprendre la valeur formatée des résultats, encore vides, viderait le
+    // champ sous les yeux de l'usager.
+    await stubUrssafSlow(page, 3_000);
+    await page.goto(PAGE_URL);
+
+    const brut = amountField(page, /^Salaire brut/);
+    await brut.fill("3000");
+    await brut.press("Tab");
+
+    await expect(brut).not.toBeFocused();
+    await expect(brut).toHaveValue("3000");
   });
 
   test("affiche le message « salaire minimum » près du SMIC", async ({

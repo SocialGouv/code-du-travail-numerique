@@ -117,12 +117,21 @@ export const useSalarySimulation = ({ onApiError }: Args = {}) => {
     (field: SalaryField, raw: string) => {
       setDraft({ field, raw });
 
-      const parsed = parseFrenchAmount(raw);
-      if (parsed === null || parsed <= 0) {
-        // Saisie vide ou inexploitable : on ne garde pas des résultats qui ne
+      if (raw.trim() === "") {
+        // Champ réellement vidé : on ne garde pas des résultats qui ne
         // correspondent plus à rien à l'écran, et surtout aucun message
         // contextuel tant qu'aucun net n'est calculé.
         clear();
+        return;
+      }
+
+      const parsed = parseFrenchAmount(raw);
+      if (parsed === null || parsed <= 0) {
+        // Saisie encore incomplète, pas vide : « 1 867, » au moment où l'usager
+        // frappe la virgule est la façon normale d'écrire un salaire en
+        // français. Tout effacer ferait disparaître les trois autres montants et
+        // le message contextuel à chaque décimale tapée. On suspend seulement
+        // l'appel, sans rien retirer de l'écran.
         return;
       }
 
@@ -131,8 +140,24 @@ export const useSalarySimulation = ({ onApiError }: Args = {}) => {
     [clear, period]
   );
 
-  /** Le champ quitté reprend sa valeur formatée. */
-  const commitField = useCallback(() => setDraft(null), []);
+  /**
+   * Le champ quitté reprend sa valeur formatée — mais seulement s'il y a une
+   * valeur à reprendre.
+   *
+   * Taper un montant puis sortir du champ aussitôt, par Tab ou par un clic
+   * ailleurs, est un geste courant. Il arrive avant la fin du debounce et de
+   * l'aller-retour réseau : à ce moment `results` est encore vide, et lâcher le
+   * brouillon viderait à l'écran le montant que l'usager vient de saisir. Si en
+   * plus l'appel échoue, la saisie serait perdue pour de bon, sous une alerte
+   * qui affirme que la page est intacte.
+   */
+  const commitField = useCallback(
+    () =>
+      setDraft((current) =>
+        current && results?.[current.field] == null ? current : null
+      ),
+    [results]
+  );
 
   /**
    * « Remplir automatiquement ». Le brouillon est abandonné pour que la valeur
@@ -144,9 +169,14 @@ export const useSalarySimulation = ({ onApiError }: Args = {}) => {
   }, []);
 
   const setPeriod = useCallback((next: Period) => {
-    // Le texte en cours de frappe est exprimé dans l'ancienne unité : le garder
-    // afficherait un montant mensuel sous un suffixe annuel.
+    // Le suffixe « € par an » et le `hintText` basculent au clic, la réponse de
+    // l'API n'arrive qu'un debounce et un aller-retour plus tard. Tout ce qui
+    // porte l'ancienne unité doit donc partir tout de suite : le texte en cours
+    // de frappe, mais aussi les quatre montants déjà affichés. Les garder
+    // montrerait — et ferait annoncer par la région live, qui a `period` en
+    // dépendance — des montants mensuels sous un libellé annuel.
     setDraft(null);
+    setResults(null);
     setPeriodState(next);
   }, []);
 
