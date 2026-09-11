@@ -56,19 +56,27 @@ const SALAIRES_VARIABLES: SalaryPeriods[] = [
 /**
  * Les deux branches de calcul du salaire de référence, pour cette grille.
  *
- * L'art. D1237-2 renvoie au salaire de référence de l'indemnité de licenciement
- * et retient, des deux moyennes, « celle qui est la plus avantageuse pour le
- * salarié ». Ici la moyenne sur 12 mois l'emporte sur celle des 3 derniers mois,
- * parce que l'implémentation partagée avec l'indemnité de licenciement inclut la
- * prime annuelle dans le total des 12 mois.
+ * L'art. D1237-2 renvoie au salaire de référence de l'indemnité de licenciement,
+ * qui retient des deux moyennes « celle qui est la plus avantageuse pour le
+ * salarié » :
+ *
+ *   - 3 derniers mois : (8157 − 500) / 3 + 500 / 12 = 2594,00 €
+ *   - 12 derniers mois : 31 172 / 12                = 2597,67 €
+ *
+ * Les deux branches sont conformes à la règle et la prime annuelle n'explique
+ * PAS l'écart : elle apporte 500 / 12 = 41,67 € à chacune, exactement. Hors
+ * prime, la moyenne sur 12 mois vaut 2556,00 € et celle des 3 derniers mois
+ * 2552,33 € : c'est ce seul écart de 3,67 €, propre à la grille de salaires,
+ * qui départage les deux branches ici.
  *
  * Le document de référence métier annonce 2594 €, c'est-à-dire la branche des
- * 3 mois — la moins avantageuse. L'écart est assumé plutôt que corrigé : le
- * document prescrit lui-même « SRef = IDL », et toucher au
+ * 3 mois. Il ne semble donc pas avoir appliqué la règle du plus avantageux,
+ * plutôt que compter la période ou la prime autrement. L'écart est assumé et
+ * non corrigé : le document prescrit lui-même « SRef = IDL », et toucher au
  * `ReferenceSalaryLegal` partagé changerait les montants du simulateur
  * d'indemnité de licenciement pour tous les usagers.
  *
- * Reste à faire trancher par le métier — cf. issue #7131.
+ * Reste à faire confirmer par le métier — cf. issue #7131.
  */
 const SREF_DOCUMENT_METIER = 2594;
 const SREF_SALAIRES_VARIABLES = 2597.67;
