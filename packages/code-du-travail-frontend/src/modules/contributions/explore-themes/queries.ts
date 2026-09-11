@@ -48,23 +48,34 @@ export const fetchContributionExploreThemes = async (
       const documentCount = theme.refs?.length ?? 0;
       if (documentCount === 0) return undefined;
 
+      // Le fil d'Ariane est trié racine → parent le plus proche, et ne contient
+      // que les ancêtres. Deux maillons différents servent ici : le DERNIER
+      // porte la section vers laquelle pointer, le PREMIER porte l'icône.
+      const breadcrumbSlugs = (theme.breadcrumbs ?? []).map(({ slug: value }) =>
+        toThemeSlug(value)
+      );
       // `parentSlug` n'est pas systématiquement indexé : le fil d'Ariane est la
       // source principale, `parentSlug` un simple repli.
-      const rootSlug = theme.breadcrumbs?.[0]?.slug
-        ? toThemeSlug(theme.breadcrumbs[0].slug)
-        : theme.parentSlug
-          ? toThemeSlug(theme.parentSlug)
-          : undefined;
-      // Sans thème racine (thème de premier niveau), aucune page ne porte
-      // l'ancre du sous-thème : la carte n'aurait nulle part où pointer.
-      if (!rootSlug) return undefined;
+      const fallbackSlug = theme.parentSlug
+        ? toThemeSlug(theme.parentSlug)
+        : undefined;
+      // La page d'un thème ne liste que ses enfants IMMÉDIATS : la section du
+      // sous-thème n'existe que sur la page de son parent direct, pas sur celle
+      // de la racine dès qu'on descend d'un niveau de plus.
+      const parentSlug =
+        breadcrumbSlugs[breadcrumbSlugs.length - 1] ?? fallbackSlug;
+      const rootSlug = breadcrumbSlugs[0] ?? fallbackSlug;
+      // Sans parent (thème de premier niveau), aucune page ne porte l'ancre du
+      // sous-thème : la carte n'aurait nulle part où pointer.
+      if (!parentSlug || !rootSlug) return undefined;
 
       return {
         slug: theme.slug,
         title: theme.title,
-        // `slugify(titre)` : la même fonction que celle qui pose les `id` de
-        // section dans `ListLayout`, seule à matcher le DOM de la page thème.
-        href: `/themes/${rootSlug}#${slugify(theme.title)}`,
+        // `slugify(titre)` : `app/themes/[slug]/page.tsx` passe le titre du
+        // sous-thème en `label` de fil d'Ariane, et `ListLayout` pose
+        // `id = slugify(label)`. C'est donc bien le titre qui matche le DOM.
+        href: `/themes/${parentSlug}#${slugify(theme.title)}`,
         // L'icône du sous-thème d'abord : elle est plus parlante que celle du
         // thème racine, qui reste le repli tant que le back-office n'en pose
         // pas sur les niveaux 2.

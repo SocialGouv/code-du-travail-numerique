@@ -29,8 +29,7 @@
     "type-check:watch": "pnpm run type-check -- --watch",
     "format": "prettier --write \"**/*.{js,ts,tsx,jsx,json,md}\"",
     "format:check": "prettier --check \"**/*.{js,ts,tsx,jsx,json,md}\"",
-    "clean:redirects": "pnpm tsup && node dist/clean-redirects.js",
-    "explore-themes:mapping": "pnpm tsup && node dist/generate-explore-themes-mapping.js"
+    "clean:redirects": "pnpm tsup && node dist/clean-redirects.js"
   },
   "dependencies": {
     "@codegouvfr/react-dsfr": "^1.32.2",

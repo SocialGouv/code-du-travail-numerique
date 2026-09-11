@@ -74,6 +74,32 @@ describe("fetchContributionExploreThemes", () => {
     expect(theme.iconName).toBe("Depart");
   });
 
+  it("ancre la carte sur le parent DIRECT, pas sur la racine", async () => {
+    // Un niveau 3 : la page de la racine ne liste que ses enfants immédiats,
+    // l'ancre du niveau 3 n'y existe pas — le lien y serait mort.
+    mockMapping["ma-contribution"] = ["licenciement-economique"];
+    (fetchThemesBySlugs as jest.Mock).mockResolvedValue([
+      {
+        ...themeDoc("licenciement-economique", "Licenciement économique"),
+        breadcrumbs: [
+          {
+            label: "Départ de l’entreprise",
+            position: 8,
+            slug: "/themes/depart",
+          },
+          { label: "Licenciement", position: 2, slug: "/themes/licenciement" },
+        ],
+      },
+    ]);
+
+    const [theme] = await fetchContributionExploreThemes("ma-contribution");
+
+    expect(theme.href).toBe("/themes/licenciement#licenciement-economique");
+    // L'icône, elle, reste celle de la racine : un niveau intermédiaire n'en
+    // porte pas davantage qu'une feuille.
+    expect(theme.iconName).toBe("Depart");
+  });
+
   it("préfère l'icône du sous-thème à celle du thème racine", async () => {
     mockMapping["ma-contribution"] = ["demission"];
     (fetchThemesBySlugs as jest.Mock).mockResolvedValue([

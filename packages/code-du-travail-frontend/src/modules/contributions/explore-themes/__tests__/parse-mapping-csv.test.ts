@@ -1,9 +1,8 @@
 import {
   parseMappingCsv,
-  renderMapping,
   toContributionSlug,
   toSubThemeSlug,
-} from "../generate-explore-themes-mapping";
+} from "../parse-mapping-csv";
 
 const HEADER = "contribution;sous_theme_1;sous_theme_2";
 const csv = (...lines: string[]) => [HEADER, ...lines].join("\n");
@@ -96,7 +95,7 @@ describe("parseMappingCsv", () => {
 
   it("refuse une ligne qui n'a pas trois colonnes", () => {
     expect(() => parseMappingCsv(csv("mon-slug;demission"))).toThrow(
-      /1 colonne\(s\)|2 colonne\(s\)/
+      /2 colonne\(s\)/
     );
   });
 
@@ -132,33 +131,5 @@ describe("parseMappingCsv", () => {
 
     expect(message).toMatch(/ligne 2/);
     expect(message).toMatch(/ligne 3/);
-  });
-});
-
-describe("renderMapping", () => {
-  it("écrit un objet vide quand rien n'est mappé", () => {
-    expect(renderMapping({})).toContain("> = {};");
-  });
-
-  it("écrit une entrée par contribution, dans l'ordre du CSV", () => {
-    const rendered = renderMapping(
-      parseMappingCsv(
-        csv("mon-slug;demission;retraite", "autre-slug;conges-payes;salaire")
-      )
-    );
-
-    expect(rendered).toContain('"mon-slug": ["demission", "retraite"],');
-    expect(rendered).toContain('"autre-slug": ["conges-payes", "salaire"],');
-    expect(rendered.indexOf("mon-slug")).toBeLessThan(
-      rendered.indexOf("autre-slug")
-    );
-  });
-
-  it("ne met pas de guillemets sur une clé qui n'en a pas besoin", () => {
-    // Prettier les retirerait, et `format:check` échouerait sur le fichier
-    // généré.
-    expect(renderMapping({ salaire: ["demission", "retraite"] })).toContain(
-      "  salaire: ["
-    );
   });
 });

@@ -1,5 +1,8 @@
 # Mapping éditorial de la rubrique « Explorez nos thématiques » (#7455).
 #
+# Ce fichier est la source : il est lu au démarrage du serveur, il n'y a rien
+# à régénérer après l'avoir modifié.
+#
 # Une ligne par contribution, trois colonnes séparées par « ; » :
 #
 #   contribution ; sous_theme_1 ; sous_theme_2
@@ -14,14 +17,9 @@
 #   dans son lien — /themes/conges#conges-payes donne conges-payes. Là aussi
 #   le lien complet est accepté.
 #
-# Seuls les sous-thèmes de NIVEAU 2 conviennent : la carte pointe vers la
-# section du thème racine, un niveau 3 n'y aurait pas d'ancre.
-#
 # Les lignes vides et les lignes commençant par « # » sont ignorées. Une
 # contribution absente de ce fichier n'affiche pas la rubrique et garde ses
 # « Articles liés » : c'est le témoin du test.
-#
-# Après toute modification : pnpm explore-themes:mapping
 #
 # Les quatre lignes ci-dessous sont des exemples vérifiés, prêts à décommenter
 # pour voir la rubrique en local. Le mapping livré est volontairement vide,

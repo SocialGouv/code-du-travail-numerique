@@ -1,20 +1,40 @@
+import * as fs from "fs";
+import * as path from "path";
+import { ExploreThemesMapping, parseMappingCsv } from "./parse-mapping-csv";
+
 // Mapping éditorial de la rubrique « Explorez nos thématiques » (#7455).
 //
-// La liste elle-même vit dans `mapping.csv`, tenu par le métier en attendant
-// une gestion en back-office, et `mapping.generated.ts` en est la traduction
-// TypeScript — régénérée par `pnpm explore-themes:mapping`.
+// La liste est tenue par le métier dans un CSV, en attendant une gestion en
+// back-office. Toute contribution absente du fichier masque la rubrique et
+// conserve alors ses « Articles liés », ce qui en fait le témoin du test.
 //
-// Toute contribution absente du mapping masque la rubrique et conserve alors
-// ses « Articles liés », ce qui en fait le témoin du test.
-//
-// Contraintes vérifiées à la génération et par `__tests__/mapping.test.ts` :
-// - clé sans préfixe IDCC (`1486-`), en kebab-case ;
-// - exactement deux sous-thèmes distincts, en kebab-case ;
-// - sous-thèmes de NIVEAU 2 uniquement : le lien pointe vers la section du
-//   thème racine, un niveau 3 n'y aurait pas d'ancre.
-import { CONTRIBUTION_SUB_THEMES } from "./mapping.generated";
+// Le fichier vit sous `public/` parce que c'est le seul répertoire dont
+// l'image de production garantit la présence (cf. Dockerfile) : `src/` n'y est
+// copié que par effet de bord de `pnpm deploy`. Il est lu au démarrage du
+// serveur, jamais à chaque rendu.
+const MAPPING_FILE = path.join(
+  process.cwd(),
+  "public",
+  "static",
+  "assets",
+  "explore-themes-mapping.csv"
+);
 
-export { CONTRIBUTION_SUB_THEMES };
+const readMapping = (): ExploreThemesMapping => {
+  try {
+    return parseMappingCsv(fs.readFileSync(MAPPING_FILE, "utf8"));
+  } catch (error) {
+    // Une coquille dans un fichier éditorial ne doit pas empêcher le site de
+    // démarrer : la rubrique disparaît, les contributions gardent leurs
+    // « Articles liés », et l'erreur part dans les logs du serveur.
+    console.error(
+      `[explore-themes] ${MAPPING_FILE} ignoré : ${(error as Error).message}`
+    );
+    return {};
+  }
+};
+
+export const CONTRIBUTION_SUB_THEMES: ExploreThemesMapping = readMapping();
 
 export const getContributionSubThemeSlugs = (
   genericSlug: string
