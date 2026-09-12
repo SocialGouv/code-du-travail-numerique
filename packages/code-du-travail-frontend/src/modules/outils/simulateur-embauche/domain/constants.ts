@@ -181,7 +181,7 @@ export const DEEP_DIVE_CARDS: DeepDiveCard[] = [
     slug: "contribution/quel-est-le-salaire-minimum",
     title: "Salaire minimum : quel montant ?",
     description:
-      "Le salaire est fixé librement, mais il doit respecter les montants minimums légaux et conventionnels.",
+      "Le salaire est fixé librement, dans la limite des minimums légaux et conventionnels.",
     linkText: "Voir la réponse personnalisée",
     href: "/contribution/quel-est-le-salaire-minimum",
   },
@@ -189,7 +189,7 @@ export const DEEP_DIVE_CARDS: DeepDiveCard[] = [
     slug: "convention-collective",
     title: "Votre convention collective",
     description:
-      "La convention collective peut prévoir des montants plus favorables que le Code du travail.",
+      "La convention collective peut prévoir des montants plus favorables.",
     linkText: "Trouver sa convention collective",
     href: "/convention-collective",
   },

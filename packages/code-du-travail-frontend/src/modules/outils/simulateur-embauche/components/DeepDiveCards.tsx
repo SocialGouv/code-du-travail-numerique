@@ -44,12 +44,13 @@ export const DeepDiveCards = ({ onCardClick }: Props) => (
         } as const;
 
         return (
-          // Deux par ligne entre 768 et 992 px, trois au-delà : à trois dès
-          // 768 px, chaque carte tombe sous 240 px, le texte s'étire sur dix
-          // lignes et l'illustration se réduit à un timbre.
+          // Deux par ligne jusqu'à 1248 px, trois au-delà. À trois plus tôt,
+          // chaque carte descend sous 320 px : les descriptions passent à
+          // quatre lignes, la rangée s'allonge, et comme l'illustration ne
+          // grandit qu'avec la largeur, elle se retrouve noyée dans le fond.
           <li
             key={card.slug}
-            className={fr.cx("fr-col-12", "fr-col-md-6", "fr-col-lg-4")}
+            className={fr.cx("fr-col-12", "fr-col-md-6", "fr-col-xl-4")}
           >
             {/*
               Deux appels plutôt qu'une prop optionnelle : le type du DSFR est

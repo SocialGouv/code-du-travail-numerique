@@ -172,12 +172,18 @@ export const cardList = css({
   "& .fr-card__content": {
     paddingBottom: "1.5rem!",
   },
-  // La flèche du lien élargi est posée en bas à droite du contenu ; sans cette
-  // réserve, le libellé passe dessous dès que la colonne de texte est étroite,
-  // ce qui arrive en mobile. Le `!` est nécessaire, le DSFR pose déjà une marge
-  // intérieure sur ce sélecteur.
+  /*
+   * La flèche du lien élargi est posée en bas à droite du contenu. Sans réserve,
+   * le libellé passe dessous ; avec trop de réserve, il passe à la ligne et
+   * allonge la carte, ce qui creuse la bande de fond sous l'illustration.
+   *
+   * 2 rem laisse la flèche tranquille sans faire revenir « Voir l'infographie »
+   * à la ligne. Le `!` est nécessaire, le DSFR pose déjà une marge intérieure
+   * sur ce sélecteur.
+   */
   "& .fr-card__footer": {
-    paddingRight: "2.5rem!",
+    paddingRight: "2rem!",
+    textWrap: "nowrap",
   },
   /*
    * La carte reste horizontale à toutes les largeurs, image à gauche et texte à
@@ -188,46 +194,45 @@ export const cardList = css({
     flexDirection: "row!",
   },
   /*
-   * La maquette coupe la carte en deux parts égales ; le DSFR donne 40 % au
-   * média. À 50 %, l'illustration retrouve la largeur du Figma.
+   * Le média occupe toute la hauteur de la carte et en déduit sa largeur.
    *
-   * `align-self: flex-start` pour que la colonne du média s'arrête à la hauteur
-   * du dessin au lieu de s'étirer sur celle de la carte. Étirée, elle produisait
-   * une colonne bleue démesurée dès que les cartes se resserrent : à 768 px de
-   * fenêtre, un dessin de 116 × 120 dans un aplat de 116 × 332.
+   * C'est l'inverse du réglage habituel, et c'est voulu : une largeur fixe fait
+   * dépendre la hauteur du dessin de la largeur de la carte, alors que la
+   * hauteur de la carte, elle, dépend du texte. Les deux ne coïncidaient qu'à
+   * une taille d'écran ; partout ailleurs il restait du fond au-dessus ou en
+   * dessous. En partant de la hauteur, le cadre suit la carte et l'illustration
+   * garde son rapport.
+   *
+   * Le plafond à 50 % est la part que la maquette donne au média : au-delà, le
+   * dessin mangerait le texte sur les cartes très hautes.
    */
   "& .fr-card__header": {
     flex: "0 0 50%!",
     maxWidth: "50%!",
-    alignSelf: "flex-start",
+    alignSelf: "stretch",
   },
   /*
-   * Le média de la première carte est une infographie, posée sur le même bleu
-   * pâle que la colonne des résultats, comme dans la maquette.
-   *
-   * `contain` et non le `cover` du DSFR : l'infographie porte du texte, le
-   * rogner la rendrait illisible.
+   * Le cadre porte le bleu pâle de la colonne des résultats, comme dans la
+   * maquette, et prend toute la hauteur de la carte.
    */
   "& .fr-card__img": {
+    height: "100%",
     backgroundColor: "var(--background-alt-blue-france)",
   },
   /*
-   * L'illustration est rendue à son propre rapport, sur toute la largeur du
-   * cadre, et rien de plus.
+   * Le DSFR impose à l'image un rapport 16/9 et la recadre en `cover`. Sur une
+   * infographie presque carrée ça la mutile. On rend le rapport à `auto` : elle
+   * prend la largeur du cadre et en déduit sa hauteur, donc elle reste entière
+   * et proportionnelle à toutes les tailles d'écran.
    *
-   * Le DSFR impose au média un rapport 16/9 puis rattrape la déformation avec
-   * `object-fit: cover`. Sur une infographie presque carrée, ça la rogne : en
-   * desktop les bulles latérales étaient coupées, en mobile le dessin se
-   * réduisait à un timbre au milieu d'une bande. En rendant les deux
-   * contraintes à `auto`, l'image occupe la largeur disponible et déduit sa
-   * hauteur — entière aux deux tailles d'écran.
-   *
-   * C'est aussi pourquoi les textes de `DEEP_DIVE_CARDS` sont courts : en
-   * desktop le cadre s'étire sur la hauteur de la plus haute des trois cartes,
-   * et tout ce qui dépasse du dessin devient du fond.
+   * Quand le texte dépasse cette hauteur, la carte s'allonge et il reste une
+   * bande de bleu sous le dessin. C'est pour la réduire au minimum que les
+   * textes de `DEEP_DIVE_CARDS` tiennent en deux lignes et que le libellé du
+   * lien ne doit pas passer à la ligne.
    */
   "& .fr-card__img img": {
     aspectRatio: "auto!",
     height: "auto!",
+    width: "100%!",
   },
 });
