@@ -83,7 +83,8 @@ const SALAIRES_VARIABLES: SalaryPeriods[] = [
  * Reste à faire confirmer par le métier — cf. issue #7131.
  */
 const SREF_DOCUMENT_METIER = 2594;
-const SREF_SALAIRES_VARIABLES = 2597.67;
+/** 2597,67 € une fois arrondi à l'affichage. */
+const SREF_SALAIRES_VARIABLES_ARRONDI = 2597.67;
 
 const computeSeniority = (anneesBrutes: number, absenceEnMois = 0) => {
   const seniority = new SeniorityFactory().create(SupportedCc.default);
@@ -152,10 +153,8 @@ describe("Cas de validation métier — départ volontaire à la retraite", () =
   );
 
   test("22 ans d'ancienneté avec des salaires variables et une prime annuelle", () => {
-    expect(computeSref(SALAIRES_VARIABLES)).toBeCloseTo(
-      SREF_SALAIRES_VARIABLES,
-      2
-    );
+    const sref = computeSref(SALAIRES_VARIABLES);
+    expect(sref).toBeCloseTo(SREF_SALAIRES_VARIABLES_ARRONDI, 2);
     // La règle du « plus avantageux » (art. D1237-2) est ce qui écarte le
     // modèle de la valeur du document métier : on l'énonce ici, pour qu'une
     // bascule sur la branche des 3 mois fasse échouer le test.
@@ -163,15 +162,14 @@ describe("Cas de validation métier — départ volontaire à la retraite", () =
       SREF_DOCUMENT_METIER
     );
 
-    const result = calculate({
-      anciennete: 22,
-      miseALaRetraite: false,
-      sref: SREF_SALAIRES_VARIABLES,
-    });
+    // On injecte le salaire de référence NON arrondi, celui que le front passe
+    // au moteur : partir de 2597,67 donnerait 3896,51 €, un centime de plus que
+    // ce que le simulateur affiche réellement.
+    const result = calculate({ anciennete: 22, miseALaRetraite: false, sref });
 
     // 1,5 mois de salaire de référence entre 20 et 30 ans d'ancienneté.
     // Le document métier annonce 3891 €, soit 1,5 × 2594 €.
-    expect(result).toResultBeEqual(3896.51, "€");
+    expect(result).toResultBeEqual(3896.5, "€");
   });
 });
 
@@ -194,7 +192,7 @@ describe("Cas de validation métier — mise à la retraite", () => {
     const result = calculate({
       anciennete: 1.25,
       miseALaRetraite: true,
-      sref: SREF_SALAIRES_VARIABLES,
+      sref: computeSref(SALAIRES_VARIABLES),
     });
 
     // Le document métier annonce 810,62 €, soit 0,25 × 1,25 × 2594 €.
