@@ -26,11 +26,13 @@ export class IndemniteDepartPublicodes extends PublicodesBase<PublicodesIndemnit
     rules: any,
     legalInstance: Legal,
     explanationInstance: ExplanationBuilder,
-    agreementInstance?: AgreementIndemniteCompute
+    agreementInstance?: AgreementIndemniteCompute,
+    defaultTargetRule?: string
   ) {
     super(
       rules,
-      PublicodesDefaultRules[PublicodesSimulator.INDEMNITE_LICENCIEMENT]
+      defaultTargetRule ??
+        PublicodesDefaultRules[PublicodesSimulator.INDEMNITE_LICENCIEMENT]
     );
     this.builder = new ResultBuilder(explanationInstance);
     this.legalInstance = legalInstance;

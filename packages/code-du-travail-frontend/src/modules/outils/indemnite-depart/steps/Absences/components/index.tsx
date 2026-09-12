@@ -14,6 +14,7 @@ import {
 import AbsencePeriods from "./AbsencePeriods";
 import { IndemniteDepartType } from "../../../types";
 import { AncienneteDisplay } from "../../Anciennete";
+import { getRuptureLabel } from "../../../utils/question";
 
 const StepAbsences = () => {
   const store = useContext(IndemniteDepartContext);
@@ -35,7 +36,9 @@ const StepAbsences = () => {
     ancienneteEstimee,
     informationData,
     errorPublicodes,
+    originRetraite,
   } = useIndemniteDepartStore(store, (state) => ({
+    originRetraite: state.informationsData.input.originRetraite,
     init: state.absenceFunction.init,
     onChangeAbsencePeriods: state.absenceFunction.onChangeAbsencePeriods,
     motifs: state.absenceData.input.motifs,
@@ -63,8 +66,15 @@ const StepAbsences = () => {
   );
 
   const messageMotifExample = useMemo(
-    () => getMotifExampleMessage(informationData, true),
-    [informationData]
+    () =>
+      getMotifExampleMessage(
+        informationData,
+        true,
+        // RG8 : la phrase de conclusion doit nommer l'indemnité de départ ou de
+        // mise à la retraite, et non celle de rupture conventionnelle.
+        type === IndemniteDepartType.RETRAITE ? originRetraite : undefined
+      ),
+    [informationData, type, originRetraite]
   );
 
   useEffect(() => {
@@ -88,7 +98,7 @@ const StepAbsences = () => {
             },
           ]}
           name="licenciementArretTravail"
-          label={`Le salarié est-il en arrêt de travail au moment ${type === IndemniteDepartType.RUPTURE_CONVENTIONNELLE ? "de la rupture conventionnelle" : "du licenciement"}&nbsp;?`}
+          label={`Le salarié est-il en arrêt de travail au moment ${getRuptureLabel(type, originRetraite)}&nbsp;?`}
           selectedOption={arretTravail}
           onChangeSelectedOption={onChangeArretTravail}
           error={errorArretTravail}

@@ -43,6 +43,15 @@ export const ui = {
     },
   },
   information: {
+    originRetraite: {
+      question: byText("Qui est à l'origine du départ en retraite ?"),
+      depart: byTestId(
+        "originRetraite-Le salarié décide lui-même de partir à la retraite"
+      ),
+      mise: byTestId(
+        "originRetraite-L'employeur décide de mettre le salarié à la retraite"
+      ),
+    },
     inaptitude: {
       question: byText(
         "Le licenciement fait-il suite à une inaptitude professionnelle (suite à un accident du travail ou une maladie professionnelle reconnue) ?"

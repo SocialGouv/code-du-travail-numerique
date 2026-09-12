@@ -1,12 +1,12 @@
 import React, { useContext } from "react";
 import {
   createIndemniteDepartStore,
+  getPublicodesSimulator,
   IndemniteDepartContext,
   IndemniteDepartProvider,
   useIndemniteDepartStore,
 } from "./store";
 import { IndemniteDepartType } from "./types";
-import { PublicodesSimulator } from "@socialgouv/modeles-social";
 import { Step } from "../common/components/SimulatorLayout/types";
 import { SimulatorLayout } from "../common/components/SimulatorLayout";
 import { Feedback } from "./feedback";
@@ -75,11 +75,7 @@ const IndemniteDepartSimulator = ({
 
   return (
     <SimulatorLayout
-      simulator={
-        tool === IndemniteDepartType.RUPTURE_CONVENTIONNELLE
-          ? PublicodesSimulator.RUPTURE_CONVENTIONNELLE
-          : PublicodesSimulator.INDEMNITE_LICENCIEMENT
-      }
+      simulator={getPublicodesSimulator(tool)}
       title={title}
       steps={steps}
       onStepChange={[

@@ -8,8 +8,9 @@ import AbsenceTable from "./AbsenceTable";
 import {
   generateResultSalaireTempsPlein,
   generateResultSameSalary,
+  getRuptureLabel,
 } from "../../../utils/question";
-import { IndemniteDepartType } from "../../../types";
+import { IndemniteDepartType, OriginRetraite } from "../../../types";
 import { fr } from "@codegouvfr/react-dsfr";
 import { css } from "@styled-system/css";
 import { formatToEuro } from "src/modules/outils/common/utils/formatCurrency";
@@ -37,6 +38,7 @@ type Props = {
   isStepSalaryHidden: boolean;
   disableParentalNotice?: boolean;
   type: IndemniteDepartType;
+  originRetraite?: OriginRetraite;
 };
 
 export default function FilledElements(props: Props) {
@@ -62,11 +64,13 @@ export default function FilledElements(props: Props) {
             })}
           </ul>
         </li>
-        <li>
-          <strong>Convention collective</strong>&nbsp;:&nbsp;
-          {props.agreementName ??
-            "La convention collective n’a pas été renseignée"}
-        </li>
+        {props.type !== IndemniteDepartType.RETRAITE && (
+          <li>
+            <strong>Convention collective</strong>&nbsp;:&nbsp;
+            {props.agreementName ??
+              "La convention collective n’a pas été renseignée"}
+          </li>
+        )}
         {props.agreementInformations &&
           props.agreementInformations.length > 0 && (
             <li>
@@ -94,7 +98,9 @@ export default function FilledElements(props: Props) {
             </li>
             {props.dateNotification && (
               <li>
-                Date de notification du licenciement&nbsp;:&nbsp;
+                Date de notification{" "}
+                {getRuptureLabel(props.type, props.originRetraite)}
+                &nbsp;:&nbsp;
                 {props.dateNotification}
               </li>
             )}
@@ -130,7 +136,8 @@ export default function FilledElements(props: Props) {
                 {generateResultSameSalary(
                   props.type,
                   props.isArretTravail ? "oui" : "non",
-                  props.salaryPeriods
+                  props.salaryPeriods,
+                  props.originRetraite
                 )}
                 &nbsp;:&nbsp;
                 {props.hasSameSalary ? "Oui" : "Non"}
@@ -151,7 +158,8 @@ export default function FilledElements(props: Props) {
                   {generateResultSalaireTempsPlein(
                     props.type,
                     props.isArretTravail ? "oui" : "non",
-                    props.salaryPeriods
+                    props.salaryPeriods,
+                    props.originRetraite
                   )}
                   &nbsp;:&nbsp;
                   <div className={fr.cx("fr-mt-2w", "fr-table")}>

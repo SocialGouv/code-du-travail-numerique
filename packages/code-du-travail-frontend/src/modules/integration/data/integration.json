@@ -49,6 +49,18 @@
     "url": "/widgets/indemnite-rupture-conventionnelle",
     "id": "indemnite-rupture-conventionnelle"
   },
+  "indemnite-retraite": {
+    "metaTitle": "Intégrer l’outil de calcul de l'indemnité de départ à la retraite du Code du travail numérique",
+    "metaDescription": "Intégrer l’outil d'indemnité de départ à la retraite du Code du travail numérique sur votre site grâce à un module (widget).",
+    "title": "Intégrer l’outil de calcul de l'indemnité de départ à la retraite du Code du travail numérique",
+    "description": [
+      "Vous pouvez intégrer l’outil de calcul de l'indemnité de départ à la retraite du Code du travail numérique sur votre site grâce à un module (widget). Ce module permettra à l’utilisateur d’estimer le montant de l’indemnité due au salarié, que celui-ci demande à partir à la retraite ou que l’employeur décide de le mettre à la retraite."
+    ],
+    "shortTitle": "Indemnité de départ à la retraite",
+    "shortDescription": "Estimez le montant de l’indemnité de départ ou de mise à la retraite",
+    "url": "/widgets/indemnite-retraite",
+    "id": "indemnite-retraite"
+  },
   "preavis-demission": {
     "metaTitle": "Intégrer l’outil de calcul du préavis de démission du Code du travail numérique",
     "metaDescription": "Intégrer l’outil de calcul du préavis de démission du Code du travail numérique sur votre site grâce à un module (widget).",

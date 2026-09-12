@@ -36,6 +36,17 @@ test.describe("Pages integration", () => {
     ).toBeVisible();
   });
 
+  test("should display iframe indemnité de départ à la retraite", async ({
+    page,
+  }) => {
+    await page.goto("/integration/indemnite-retraite");
+
+    const iframe = page.frameLocator("iframe");
+    await expect(
+      iframe.getByText("Calculer l'indemnité de départ à la retraite")
+    ).toBeVisible();
+  });
+
   test("should display iframe préavis de démission", async ({ page }) => {
     await page.goto("/integration/preavis-demission");
 

@@ -109,6 +109,19 @@ const createRootSlice = (
   ...createCommonSituationStore(set, get, { type: toolName }),
 });
 
+export const getPublicodesSimulator = (
+  type: IndemniteDepartType
+): PublicodesSimulator => {
+  switch (type) {
+    case IndemniteDepartType.RUPTURE_CONVENTIONNELLE:
+      return PublicodesSimulator.RUPTURE_CONVENTIONNELLE;
+    case IndemniteDepartType.RETRAITE:
+      return PublicodesSimulator.INDEMNITE_RETRAITE;
+    default:
+      return PublicodesSimulator.INDEMNITE_LICENCIEMENT;
+  }
+};
+
 const createStore = (type: IndemniteDepartType) =>
   create(
     (
@@ -117,10 +130,7 @@ const createStore = (type: IndemniteDepartType) =>
     ) =>
       createRootSlice(set, get, {
         toolName: type,
-        simulatorName:
-          type === IndemniteDepartType.RUPTURE_CONVENTIONNELLE
-            ? PublicodesSimulator.RUPTURE_CONVENTIONNELLE
-            : PublicodesSimulator.INDEMNITE_LICENCIEMENT,
+        simulatorName: getPublicodesSimulator(type),
       })
   );
 

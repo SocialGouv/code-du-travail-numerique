@@ -14,9 +14,17 @@ const InformationsStep = () => {
     showLicenciementInaptitude,
     onChangeLicenciementInaptitude,
     errorLicenciementInaptitude,
+    showOriginRetraite,
+    originRetraite,
+    onChangeOriginRetraite,
+    errorOriginRetraite,
   } = useIndemniteDepartStore(store, (state) => ({
     showLicenciementInaptitude:
       state.informationsData.input.showLicenciementInaptitude,
+    showOriginRetraite: state.informationsData.input.showOriginRetraite,
+    originRetraite: state.informationsData.input.originRetraite,
+    onChangeOriginRetraite: state.informationsFunction.onChangeOriginRetraite,
+    errorOriginRetraite: state.informationsData.error.errorOriginRetraite,
     licenciementInaptitude: state.informationsData.input.licenciementInaptitude,
     onChangeLicenciementInaptitude:
       state.informationsFunction.onChangeLicenciementInaptitude,
@@ -29,6 +37,27 @@ const InformationsStep = () => {
 
   return (
     <>
+      {showOriginRetraite && (
+        <RadioQuestion
+          questions={[
+            {
+              label: "Le salarié décide lui-même de partir à la retraite",
+              value: "depart-retraite",
+              id: "depart-retraite",
+            },
+            {
+              label: "L'employeur décide de mettre le salarié à la retraite",
+              value: "mise-retraite",
+              id: "mise-retraite",
+            },
+          ]}
+          name="originRetraite"
+          label="Qui est à l'origine du départ en retraite&nbsp;?"
+          selectedOption={originRetraite}
+          onChangeSelectedOption={onChangeOriginRetraite}
+          error={errorOriginRetraite}
+        />
+      )}
       {showLicenciementInaptitude && (
         <RadioQuestion
           questions={[
