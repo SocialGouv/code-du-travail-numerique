@@ -21,6 +21,14 @@ export const IS_PROD =
 export const ENV = (process.env.NEXT_PUBLIC_CDTN_ENV ??
   "development") as EnvironmentType;
 export const ENTERPRISE_API_URL = "https://recherche-entreprises.api.gouv.fr";
+// Simulateur brut/net : l'API publicodes de l'URSSAF est appelée directement
+// depuis le navigateur. Son quota (5 req/s) est compté par IP : passer par un
+// proxy serveur ferait partager ces 5 req/s entre tous les visiteurs de la page
+// la plus consultée du site, alors qu'en direct chaque usager a son propre
+// budget. Corollaire : `mon-entreprise.urssaf.fr` doit figurer en `connect-src`
+// dans la CSP de `proxy.ts`.
+export const URSSAF_API_URL = "https://mon-entreprise.urssaf.fr";
+export const URSSAF_SIMULATOR_URL = "https://mon-entreprise.urssaf.fr";
 export const API_GEO_URL = "https://geo.api.gouv.fr";
 export const DEBOUNCE_TIME_MS = 300;
 export const API_GEO_MAX_SEARCH_RESULTS = 10;

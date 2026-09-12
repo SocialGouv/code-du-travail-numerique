@@ -1,0 +1,196 @@
+import type {
+  ContextualMessageKey,
+  ContractType,
+  Period,
+  SalaryField,
+} from "./types";
+
+/**
+ * Marge de proximité au SMIC — point de réglage unique pour le métier.
+ * Un salaire net inférieur ou égal à `SMIC net × (1 + marge)` déclenche le
+ * message « salaire minimum » plutôt que le message « primes conventionnelles ».
+ */
+export const SMIC_PROXIMITY_MARGIN = 0.1;
+
+/**
+ * Suggestions portées par la règle `salarié . contrat . salaire brut` elle-même
+ * (`suggestions: { "salaire médian": "2700 €/mois" }`).
+ */
+export const MEDIAN_SALARY_MONTHLY = 2700;
+
+/** Noms de règles publicodes. Ce sont des chaînes non versionnées : cf. B-contrat. */
+export const RULES = {
+  coutTotalEmployeur: "salarié . coût total employeur",
+  salaireBrut: "salarié . contrat . salaire brut",
+  salaireNet: "salarié . rémunération . net . à payer avant impôt",
+  salaireNetApresImpot: "salarié . rémunération . net . payé après impôt",
+  tauxImposition: "impôt . taux d'imposition",
+  smic: "salarié . temps de travail . SMIC",
+  contrat: "salarié . contrat",
+  dirigeant: "dirigeant",
+  methodeImpot: "impôt . méthode de calcul",
+} as const;
+
+/** Ordre d'affichage des champs — c'est aussi l'ordre de la maquette. */
+export const SALARY_FIELDS: readonly SalaryField[] = [
+  "coutTotalEmployeur",
+  "salaireBrut",
+  "salaireNet",
+  "salaireNetApresImpot",
+];
+
+type FieldDescriptor = {
+  /** Nom de la règle publicodes à poser dans la situation pour inverser sur ce champ. */
+  rule: string;
+  label: string;
+  hint: string;
+  /** Nom d'event Matomo (snake_case). */
+  eventName: string;
+};
+
+export const FIELD_DESCRIPTORS: Record<SalaryField, FieldDescriptor> = {
+  coutTotalEmployeur: {
+    rule: RULES.coutTotalEmployeur,
+    label: "Coût total employeur",
+    hint: "Dépensé par l'entreprise",
+    eventName: "cout_total_employeur",
+  },
+  salaireBrut: {
+    rule: RULES.salaireBrut,
+    label: "Salaire brut",
+    hint: "Brut de référence (sans les primes, indemnités ni majoration)",
+    eventName: "salaire_brut",
+  },
+  salaireNet: {
+    rule: RULES.salaireNet,
+    label: "Salaire net",
+    hint: "Salaire net avant impôt",
+    eventName: "salaire_net",
+  },
+  salaireNetApresImpot: {
+    rule: RULES.salaireNetApresImpot,
+    label: "Salaire net après impôt",
+    hint: "Le salaire net payé",
+    eventName: "salaire_net_apres_impot",
+  },
+};
+
+export const CONTRACT_OPTIONS: { value: ContractType; label: string }[] = [
+  { value: "CDI", label: "CDI" },
+  { value: "CDD", label: "CDD" },
+  { value: "apprentissage", label: "Apprentissage" },
+  { value: "professionnalisation", label: "Professionnalisation" },
+  { value: "stage", label: "Stage" },
+];
+
+export const PERIOD_OPTIONS: { value: Period; label: string }[] = [
+  { value: "mois", label: "Montant mensuel" },
+  { value: "annee", label: "Montant annuel" },
+];
+
+/** Unité publicodes demandée en sortie pour une période d'affichage donnée. */
+export const PERIOD_UNIT: Record<Period, "€/mois" | "€/an"> = {
+  mois: "€/mois",
+  annee: "€/an",
+};
+
+/** Suffixe visuel du champ. Purement décoratif : il est `aria-hidden`. */
+export const PERIOD_SUFFIX: Record<Period, string> = {
+  mois: "€ par mois",
+  annee: "€ par an",
+};
+
+/** Version lisible de l'unité, intégrée au `hintText` donc au nom accessible. */
+export const PERIOD_ACCESSIBLE_UNIT: Record<Period, string> = {
+  mois: "en euros par mois",
+  annee: "en euros par an",
+};
+
+type ContextualMessage = {
+  label: string;
+  linkText: string;
+  href: string;
+  /** Nom d'event Matomo (snake_case). */
+  eventName: string;
+};
+
+/**
+ * Wordings, `href` et noms Matomo des deux messages contextuels. Un seul endroit
+ * à modifier quand le métier tranche les wordings.
+ */
+export const CONTEXTUAL_MESSAGES: Record<
+  ContextualMessageKey,
+  ContextualMessage
+> = {
+  "salaire-minimum": {
+    label: "Vérifiez votre salaire minimum",
+    linkText: "Vérifiez votre salaire minimum",
+    href: "/contribution/quel-est-le-salaire-minimum",
+    eventName: "salaire_minimum",
+  },
+  "primes-conventionnelles": {
+    label: "Vérifiez vos primes",
+    linkText: "Vérifiez les primes prévues par votre convention collective",
+    href: "/contribution/quelles-sont-les-primes-prevues-par-la-convention-collective",
+    eventName: "primes_conventionnelles",
+  },
+};
+
+export type DeepDiveCard = {
+  /** Slug utilisé comme nom d'event Matomo. */
+  slug: string;
+  title: string;
+  /** Absente sur la carte illustrée, comme dans la maquette. */
+  description?: string;
+  linkText: string;
+  href: string;
+  /**
+   * Illustration de la carte, quand la maquette en prévoit une. Décorative :
+   * son `alt` est vide, la carte porte déjà son titre.
+   */
+  imageUrl?: string;
+};
+
+/**
+ * Seule la première carte porte un visuel, comme dans la maquette.
+ *
+ * L'illustration est servie depuis nos propres statiques plutôt que par le CMS :
+ * le fichier de l'infographie est piloté par `toUrl(svgFilename)`, sans chemin
+ * déductible statiquement, et une image cassée sur la page la plus consultée du
+ * site coûterait plus cher que la duplication du fichier.
+ *
+ * Elle n'a pas de description, toujours comme dans la maquette, et ce n'est pas
+ * qu'une affaire de texte : la colonne média d'une carte horizontale s'étire sur
+ * toute la hauteur de la carte, et l'illustration la remplit. Plus les cartes
+ * sont hautes, plus ce cadre s'allonge et plus l'infographie, presque carrée, se
+ * fait rogner sur les côtés.
+ *
+ * Les trois cartes s'alignant sur la plus haute, les deux descriptions et le
+ * libellé de lien ci-dessous sont taillés pour tenir en deux lignes : c'est ce
+ * qui garde le cadre proche du carré de la maquette.
+ */
+export const DEEP_DIVE_CARDS: DeepDiveCard[] = [
+  {
+    slug: "infographie/quel-est-le-salaire-minimum",
+    imageUrl: "/static/assets/img/simulateur-brut-net-salaire-minimum.png",
+    title: "Quel est le salaire minimum ?",
+    linkText: "Voir l'infographie",
+    href: "/infographie/quel-est-le-salaire-minimum",
+  },
+  {
+    slug: "contribution/quel-est-le-salaire-minimum",
+    title: "Salaire minimum : quel montant ?",
+    description:
+      "Le salaire est fixé librement, dans la limite des minimums légaux et conventionnels.",
+    linkText: "Voir la réponse personnalisée",
+    href: "/contribution/quel-est-le-salaire-minimum",
+  },
+  {
+    slug: "convention-collective",
+    title: "Votre convention collective",
+    description:
+      "La convention collective peut prévoir des montants plus favorables.",
+    linkText: "Trouver sa convention collective",
+    href: "/convention-collective",
+  },
+];

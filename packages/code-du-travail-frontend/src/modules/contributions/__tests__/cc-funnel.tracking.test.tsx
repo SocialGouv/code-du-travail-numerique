@@ -510,6 +510,16 @@ describe("Funnel de choix de convention collective (contributions)", () => {
     });
   });
 
+  // Ces trois tests sont les seuls du fichier à dépendre du rendu de la liste
+  // d'autocomplétion. Le résultat de la recherche arrive dans la continuation
+  // d'une promesse : les `setState` correspondants tombent donc hors de tout
+  // `act`, et `waitFor` ne les purge pas. Avec `userEvent.type`, ils n'étaient
+  // appliqués que si la promesse se résolvait avant la fermeture d'une des
+  // fenêtres `act` internes à la frappe — sous charge, la dernière recherche se
+  // résolvait après, la liste restait vide et le `waitFor` expirait (CI rouge
+  // par intermittence). La saisie passe donc par un `act` explicite, comme le
+  // fait déjà `searchEnterprise` plus haut pour la recherche d'entreprise. Les
+  // tests qui comptent une recherche par frappe, eux, gardent `userEvent.type`.
   describe("convention collective non traitée", () => {
     it("émet cc_non_traitee_retenue une seule fois pour une CC non traitée", async () => {
       mockAgreementSearch({
@@ -519,9 +529,11 @@ describe("Funnel de choix de convention collective (contributions)", () => {
       });
       render(<Harness />);
 
-      new UserAction().click(ccUi.radio.agreementSearchOption.get());
-      await userEvent.click(ccUi.searchByName.input.get());
-      await userEvent.type(ccUi.searchByName.input.get(), "16");
+      const userAction = new UserAction();
+      userAction.click(ccUi.radio.agreementSearchOption.get());
+      await act(async () => {
+        userAction.setInput(ccUi.searchByName.input.get(), "16");
+      });
       await waitFor(() =>
         expect(
           ccUi.searchByName.autocompleteLines.IDCC16.name.query()
@@ -545,9 +557,11 @@ describe("Funnel de choix de convention collective (contributions)", () => {
       });
       render(<Harness />);
 
-      new UserAction().click(ccUi.radio.agreementSearchOption.get());
-      await userEvent.click(ccUi.searchByName.input.get());
-      await userEvent.type(ccUi.searchByName.input.get(), "1388");
+      const userAction = new UserAction();
+      userAction.click(ccUi.radio.agreementSearchOption.get());
+      await act(async () => {
+        userAction.setInput(ccUi.searchByName.input.get(), "1388");
+      });
       await waitFor(() =>
         expect(
           ccUi.searchByName.autocompleteLines.IDCC1388.name.query()
@@ -583,9 +597,11 @@ describe("Funnel de choix de convention collective (contributions)", () => {
         />
       );
 
-      new UserAction().click(ccUi.radio.agreementSearchOption.get());
-      await userEvent.click(ccUi.searchByName.input.get());
-      await userEvent.type(ccUi.searchByName.input.get(), "1388");
+      const userAction = new UserAction();
+      userAction.click(ccUi.radio.agreementSearchOption.get());
+      await act(async () => {
+        userAction.setInput(ccUi.searchByName.input.get(), "1388");
+      });
       await waitFor(() =>
         expect(
           ccUi.searchByName.autocompleteLines.IDCC1388.name.query()
