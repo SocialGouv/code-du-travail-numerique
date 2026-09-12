@@ -108,6 +108,31 @@ export const EnterpriseAgreementSearchInput = ({
   // « Début de recherche » : une seule fois par montage, sinon l'event partirait
   // à chaque frappe et ne mesurerait plus l'entrée dans l'étape.
   const hasEmittedSearchStartRef = useRef(false);
+  // Le retour au titre « Personnalisez la réponse » est différé (le titre n'est
+  // remonté qu'après le rendu suivant) et vise un id global. Sans nettoyage, le
+  // timer survit au démontage et va voler le focus à ce que la page affiche
+  // ensuite — en test, à l'écran monté par le cas suivant.
+  const backToPersonalizeTimeoutRef = useRef<ReturnType<
+    typeof setTimeout
+  > | null>(null);
+  const focusBackToPersonalize = () => {
+    if (!onBackToPersonalize) return;
+    if (backToPersonalizeTimeoutRef.current) {
+      clearTimeout(backToPersonalizeTimeoutRef.current);
+    }
+    backToPersonalizeTimeoutRef.current = setTimeout(() => {
+      backToPersonalizeTimeoutRef.current = null;
+      onBackToPersonalize();
+    }, 100);
+  };
+  useEffect(
+    () => () => {
+      if (backToPersonalizeTimeoutRef.current) {
+        clearTimeout(backToPersonalizeTimeoutRef.current);
+      }
+    },
+    []
+  );
   const TitleTag = `h${level}` as "h2" | "h3";
 
   const getStateMessage = () => {
@@ -337,11 +362,7 @@ export const EnterpriseAgreementSearchInput = ({
                   setSelectedEnterprise(undefined);
                 }
                 // Focus the "Personnalisez la réponse" title via callback
-                if (onBackToPersonalize) {
-                  setTimeout(() => {
-                    onBackToPersonalize();
-                  }, 100);
-                }
+                focusBackToPersonalize();
               }}
               nativeButtonProps={{
                 "aria-describedby": `selected-convention`,
@@ -380,11 +401,7 @@ export const EnterpriseAgreementSearchInput = ({
             setSelectedAgreement(undefined);
             scrollToTop();
             // Focus the "Personnalisez la réponse" title via callback
-            if (onBackToPersonalize) {
-              setTimeout(() => {
-                onBackToPersonalize();
-              }, 100);
-            }
+            focusBackToPersonalize();
           }}
           onAgreementSelect={(agreement) => {
             setSelectedAgreement(agreement);
