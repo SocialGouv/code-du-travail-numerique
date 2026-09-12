@@ -9,8 +9,12 @@ import { css } from "@styled-system/css";
  * même `name` : les radios se répondraient entre elles et les lecteurs d'écran
  * annonceraient deux fois les mêmes libellés.
  *
- * Contrepartie assumée : en desktop l'ordre de tabulation devient
- * période → résultats → contrat.
+ * En desktop la période coiffe les deux colonnes au lieu de se loger en tête de
+ * celle de droite. C'est ce qui met l'ordre de tabulation d'accord avec l'ordre
+ * de lecture aux deux tailles d'écran : période, puis résultats à gauche, puis
+ * paramètres à droite. Logée à droite, elle était atteinte au clavier avant des
+ * montants que l'œil lit pourtant en premier, et le focus repartait de la droite
+ * vers la gauche.
  */
 export const simulatorGrid = css({
   display: "grid",
@@ -18,7 +22,7 @@ export const simulatorGrid = css({
   gridTemplateColumns: "1fr",
   rowGap: 0,
   md: {
-    gridTemplateAreas: `"resultats periode" "resultats parametres"`,
+    gridTemplateAreas: `"periode periode" "resultats parametres"`,
     gridTemplateColumns: "1fr 1fr",
     gridTemplateRows: "auto 1fr",
     columnGap: "1.5rem",
@@ -33,26 +37,23 @@ export const simulatorGrid = css({
  */
 export const periodArea = css({
   gridArea: "periode",
-  // Mobile : la période coiffe la colonne résultats et partage son fond.
+  // La période coiffe le simulateur et partage le fond de la colonne résultats,
+  // aux deux tailles d'écran : elle vaut pour les quatre montants.
   backgroundColor: "var(--background-alt-blue-france)",
   padding: "1rem",
-  // 24 px avant le groupe suivant : la liste déroulante en desktop, le premier
-  // montant en mobile.
+  // 24 px avant le groupe suivant : les montants en desktop comme en mobile.
   paddingBottom: "1.5rem",
-  md: {
-    // Desktop : elle bascule en tête de la colonne paramètres.
-    backgroundColor: "var(--background-contrast-grey)",
-  },
 });
 
+/**
+ * La période étant juste au-dessus et sur le même fond, pas de marge haute ici :
+ * les 24 px de son `paddingBottom` font la séparation.
+ */
 export const resultsArea = css({
   gridArea: "resultats",
   backgroundColor: "var(--background-alt-blue-france)",
   paddingX: "1rem",
   paddingBottom: "1rem",
-  md: {
-    paddingTop: "1rem",
-  },
 });
 
 export const parametersArea = css({
@@ -60,9 +61,10 @@ export const parametersArea = css({
   backgroundColor: "var(--background-contrast-grey)",
   padding: "1rem",
   marginTop: "1rem",
+  // Desktop : la colonne démarre à la même hauteur que celle des résultats,
+  // sous la bande de période, donc plus de décalage à rattraper.
   md: {
     marginTop: 0,
-    paddingTop: 0,
   },
 });
 

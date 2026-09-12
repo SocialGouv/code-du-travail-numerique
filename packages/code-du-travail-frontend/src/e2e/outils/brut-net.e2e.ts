@@ -366,6 +366,30 @@ test.describe("Outil - Salaire brut/net", () => {
     await expect(page.getByRole("button", { name: "Réessayer" })).toBeVisible();
   });
 
+  test("met l'ordre clavier d'accord avec l'ordre de lecture en desktop", async ({
+    page,
+  }) => {
+    // La période coiffe les deux colonnes : on doit la rencontrer au clavier
+    // juste avant les montants, et la voir juste au-dessus d'eux.
+    await stubUrssaf(page);
+    await page.goto(PAGE_URL);
+
+    const coutTotal = amountField(page, /Coût total employeur/);
+    await coutTotal.focus();
+    await page.keyboard.press("Shift+Tab");
+    await expect(
+      page.getByRole("radio", { name: "Montant mensuel" })
+    ).toBeFocused();
+
+    const periode = await page
+      .getByRole("group", { name: "Période de calcul" })
+      .boundingBox();
+    const montant = await coutTotal.boundingBox();
+    expect((periode?.y ?? 0) + (periode?.height ?? 0)).toBeLessThanOrEqual(
+      (montant?.y ?? 0) + 1
+    );
+  });
+
   test("place la période au-dessus des montants en mobile", async ({
     page,
   }) => {

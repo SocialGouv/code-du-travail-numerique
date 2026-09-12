@@ -423,6 +423,28 @@ describe("BrutNetSimulator", () => {
     expect(screen.getByRole("status")).toHaveTextContent("par mois");
   });
 
+  it("annonce l'échec par la région live, pas par l'alerte elle-même", async () => {
+    // Une région montée en même temps que son contenu n'est pas annoncée de
+    // façon fiable, et en `assertive` elle couperait la frappe en cours.
+    evaluateSalaryMock.mockRejectedValue(
+      new UrssafEvaluationError("boom", "500")
+    );
+    renderSimulator();
+
+    await user().type(field(/Salaire brut/), "2875");
+    await flush();
+
+    await waitFor(() => {
+      expect(screen.getByRole("status")).toHaveTextContent(
+        /Le calcul n'a pas pu être effectué/
+      );
+    });
+    expect(screen.getByTestId("brut-net-erreur")).toHaveAttribute(
+      "aria-live",
+      "off"
+    );
+  });
+
   it("n'applique jamais disabled ni readOnly aux quatre champs", async () => {
     // Désactiver un champ pendant le chargement volerait le focus.
     renderSimulator();

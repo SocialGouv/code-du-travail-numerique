@@ -102,8 +102,16 @@ export const BrutNetSimulator = ({ smicReference }: Props) => {
    * Elle est délibérément séparée du conteneur des champs : poser `aria-live`
    * sur celui-ci ferait annoncer chaque changement, y compris celui du champ où
    * l'usager est en train de taper. On n'annonce donc qu'un résultat stabilisé.
+   *
+   * C'est aussi elle qui porte l'échec du calcul, plutôt que l'alerte
+   * elle-même : cette région-ci préexiste dans le DOM, donc son changement est
+   * entendu de façon fiable, et elle est polie, donc elle attend son tour au
+   * lieu de couper la parole à quelqu'un qui tape un montant.
    */
   const announcement = useMemo(() => {
+    if (status === "error") {
+      return "Le calcul n'a pas pu être effectué. Vous pouvez réessayer, ou poursuivre sur le simulateur de l'URSSAF.";
+    }
     if (status !== "success" || !results) {
       return "";
     }

@@ -55,6 +55,10 @@ export const ResultsColumn = ({
       <AccessibleAlert
         className={["fr-mb-3w"]}
         severity="error"
+        // L'annonce passe par la région live du simulateur, qui préexiste dans
+        // le DOM et reste polie : elle est entendue de façon fiable et ne coupe
+        // pas la parole à quelqu'un qui est en train de taper un montant.
+        live={false}
         title="Service temporairement indisponible"
         // `h2` et non le `h3` par défaut : l'alerte est le premier titre après
         // le `h1` de la page, un `h3` y sauterait un niveau (axe `heading-order`).
