@@ -9,12 +9,16 @@ import { css } from "@styled-system/css";
  * même `name` : les radios se répondraient entre elles et les lecteurs d'écran
  * annonceraient deux fois les mêmes libellés.
  *
- * En desktop la période coiffe les deux colonnes au lieu de se loger en tête de
- * celle de droite. C'est ce qui met l'ordre de tabulation d'accord avec l'ordre
- * de lecture aux deux tailles d'écran : période, puis résultats à gauche, puis
- * paramètres à droite. Logée à droite, elle était atteinte au clavier avant des
- * montants que l'œil lit pourtant en premier, et le focus repartait de la droite
- * vers la gauche.
+ * En desktop la période est en tête de la colonne de **gauche**, au-dessus des
+ * montants, et non en tête de celle de droite comme dans la maquette. C'est ce
+ * qui met l'ordre de tabulation d'accord avec l'ordre de lecture : période,
+ * montants, puis paramètres. Logée à droite, elle était atteinte au clavier
+ * avant des montants que l'œil lit pourtant en premier, et le focus repartait de
+ * la droite vers la gauche.
+ *
+ * Elle partage le fond de la colonne des résultats, dont elle devient le
+ * chapeau : les deux ne forment qu'un bloc bleu, et la colonne grise des
+ * paramètres garde toute sa hauteur en face.
  */
 export const simulatorGrid = css({
   display: "grid",
@@ -22,7 +26,7 @@ export const simulatorGrid = css({
   gridTemplateColumns: "1fr",
   rowGap: 0,
   md: {
-    gridTemplateAreas: `"periode periode" "resultats parametres"`,
+    gridTemplateAreas: `"periode parametres" "resultats parametres"`,
     gridTemplateColumns: "1fr 1fr",
     gridTemplateRows: "auto 1fr",
     columnGap: "1.5rem",
@@ -183,11 +187,19 @@ export const cardList = css({
   "& .fr-card": {
     flexDirection: "row!",
   },
-  // La maquette coupe la carte en deux parts égales ; le DSFR donne 40 % au
-  // média. À 50 %, l'illustration retrouve la largeur du Figma.
+  /*
+   * La maquette coupe la carte en deux parts égales ; le DSFR donne 40 % au
+   * média. À 50 %, l'illustration retrouve la largeur du Figma.
+   *
+   * `align-self: flex-start` pour que la colonne du média s'arrête à la hauteur
+   * du dessin au lieu de s'étirer sur celle de la carte. Étirée, elle produisait
+   * une colonne bleue démesurée dès que les cartes se resserrent : à 768 px de
+   * fenêtre, un dessin de 116 × 120 dans un aplat de 116 × 332.
+   */
   "& .fr-card__header": {
     flex: "0 0 50%!",
     maxWidth: "50%!",
+    alignSelf: "flex-start",
   },
   /*
    * Le média de la première carte est une infographie, posée sur le même bleu
