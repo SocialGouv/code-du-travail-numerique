@@ -105,10 +105,20 @@ const errorAlert = (page: Page) =>
 const informationsAlert = (page: Page) =>
   page.getByRole("heading", { name: "Informations", exact: true });
 
-/** Le bloc de cartes, repéré par la liste qui contient la première d'entre elles. */
+/**
+ * Le bloc de cartes, repéré par la liste qui contient le titre de la première
+ * d'entre elles. Repérer la liste par un lien ne suffit pas : le bloc « articles
+ * liés » de la page, alimenté par le CMS, pointe vers la même infographie, et
+ * les deux listes répondaient alors au même sélecteur. Les titres de cartes sont
+ * des `h2` ; les articles liés, eux, n'ont que des liens sous un intertitre
+ * placé hors de leur liste.
+ */
 const deepDiveList = (page: Page) =>
   page.getByRole("list").filter({
-    has: page.getByRole("link", { name: /Quel est le salaire minimum/ }),
+    has: page.getByRole("heading", {
+      name: "Quel est le salaire minimum ?",
+      level: 2,
+    }),
   });
 
 const digits = (value: string) => value.replace(/[\s  ]/g, "");
@@ -332,7 +342,8 @@ test.describe("Outil - Salaire brut/net", () => {
     await page.goto(PAGE_URL);
 
     // La maquette ne met pas de titre au-dessus du bloc : on cible la liste par
-    // sa première carte plutôt que par un intertitre qui n'existe pas.
+    // le titre de sa première carte plutôt que par un intertitre qui n'existe
+    // pas.
     const hrefs = await deepDiveList(page)
       .getByRole("link")
       .evaluateAll((links) => links.map((link) => link.getAttribute("href")));
