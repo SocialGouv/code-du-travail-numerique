@@ -3,6 +3,7 @@ import { FIELD_DESCRIPTORS, PERIOD_UNIT, RULES } from "./constants";
 import type {
   EvaluateInput,
   KnownUnit,
+  ReadIssue,
   ReadResult,
   SalaryResults,
   UrssafEvaluation,
@@ -149,40 +150,32 @@ const readEntry = (
   entry: UrssafEvaluation | undefined,
   key: ExpressionKey,
   expected: KnownUnit,
-  issues: string[]
+  issues: ReadIssue[]
 ): number | null => {
-  if (!entry) {
-    issues.push(`URSSAF : expression « ${key} » absente de la réponse`);
+  const report = (kind: ReadIssue["kind"], detail?: string) => {
+    issues.push({ kind, expression: key, detail });
     return null;
+  };
+
+  if (!entry) {
+    return report("expression-absente");
   }
   if (entry.error) {
-    issues.push(
-      `URSSAF : erreur d'évaluation sur « ${key} » — ${entry.error.message ?? "sans message"}`
-    );
-    return null;
+    return report("erreur-evaluation", entry.error.message ?? "sans message");
   }
   if (
     typeof entry.nodeValue !== "number" ||
     !Number.isFinite(entry.nodeValue)
   ) {
-    issues.push(
-      `URSSAF : valeur non numérique sur « ${key} » (${JSON.stringify(entry.nodeValue)})`
-    );
-    return null;
+    return report("valeur-non-numerique", JSON.stringify(entry.nodeValue));
   }
 
   const unit = readUnit(entry.unit);
   if (unit === null) {
-    issues.push(
-      `URSSAF : unité inconnue sur « ${key} » — ${describeUnit(entry.unit)}`
-    );
-    return null;
+    return report("unite-inconnue", describeUnit(entry.unit));
   }
   if (unit !== expected) {
-    issues.push(
-      `URSSAF : unité inattendue sur « ${key} » — ${unit} au lieu de ${expected}`
-    );
-    return null;
+    return report("unite-inattendue", `${unit} au lieu de ${expected}`);
   }
 
   return roundToCents(entry.nodeValue);
@@ -198,13 +191,13 @@ export const readUrssafPayload = (
   response: UrssafResponse | null | undefined,
   period: EvaluateInput["period"]
 ): ReadResult => {
-  const issues: string[] = [];
+  const issues: ReadIssue[] = [];
   const entries = response?.evaluate;
 
   if (!Array.isArray(entries)) {
     return {
       results: EMPTY_RESULTS,
-      issues: ["URSSAF : réponse sans tableau `evaluate`"],
+      issues: [{ kind: "reponse-malformee", expression: "evaluate" }],
     };
   }
 

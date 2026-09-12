@@ -22,6 +22,8 @@ type Draft = { field: SalaryField; raw: string };
 
 type Args = {
   onApiError?: (reason: string) => void;
+  /** Appelé sur chaque évaluation aboutie, avec le champ d'où elle est partie. */
+  onSuccess?: (field: SalaryField) => void;
 };
 
 const isAbortError = (error: unknown): boolean =>
@@ -41,7 +43,7 @@ const isAbortError = (error: unknown): boolean =>
  * `results` pour les trois autres. C'est ce qui empêche la boucle de rétroaction
  * où le serveur reformate ce que l'usager est en train de taper.
  */
-export const useSalarySimulation = ({ onApiError }: Args = {}) => {
+export const useSalarySimulation = ({ onApiError, onSuccess }: Args = {}) => {
   const [period, setPeriodState] = useState<Period>("mois");
   const [contract, setContractState] = useState<ContractType>("CDI");
   const [seed, setSeed] = useState<SalarySeed | null>(null);
@@ -82,6 +84,7 @@ export const useSalarySimulation = ({ onApiError }: Args = {}) => {
           }
           setResults(next);
           setStatus("success");
+          onSuccess?.(seedField);
         })
         .catch((error: unknown) => {
           // Une requête annulée l'a été parce qu'une frappe plus récente l'a
@@ -101,7 +104,15 @@ export const useSalarySimulation = ({ onApiError }: Args = {}) => {
       abortRef.current?.abort();
       abortRef.current = null;
     };
-  }, [seedField, seedAmount, period, contract, retryToken, onApiError]);
+  }, [
+    seedField,
+    seedAmount,
+    period,
+    contract,
+    retryToken,
+    onApiError,
+    onSuccess,
+  ]);
 
   /** Coupe tout calcul en cours et repart d'une page vierge. */
   const clear = useCallback(() => {

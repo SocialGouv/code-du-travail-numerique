@@ -29,10 +29,13 @@ export const BrutNetSimulator = ({ smicReference }: Props) => {
   const {
     emitApiError,
     emitAutofill,
+    emitCalculationSucceeded,
     emitContextualMessageClicked,
     emitContextualMessageShown,
+    emitContractChanged,
     emitDeepDiveClicked,
     emitFieldEdited,
+    emitPeriodChanged,
     emitUrssafSimulatorClicked,
   } = useHiringSimulatorTracking();
 
@@ -48,7 +51,26 @@ export const BrutNetSimulator = ({ smicReference }: Props) => {
     setPeriod,
     setContract,
     retry,
-  } = useSalarySimulation({ onApiError: emitApiError });
+  } = useSalarySimulation({
+    onApiError: emitApiError,
+    onSuccess: emitCalculationSucceeded,
+  });
+
+  const handlePeriodChange = useCallback(
+    (next: Parameters<typeof setPeriod>[0]) => {
+      emitPeriodChanged(next);
+      setPeriod(next);
+    },
+    [emitPeriodChanged, setPeriod]
+  );
+
+  const handleContractChange = useCallback(
+    (next: Parameters<typeof setContract>[0]) => {
+      emitContractChanged(next);
+      setContract(next);
+    },
+    [emitContractChanged, setContract]
+  );
 
   /**
    * Le SMIC **net** ne peut venir que du préchargement serveur : l'API n'expose
@@ -125,7 +147,7 @@ export const BrutNetSimulator = ({ smicReference }: Props) => {
   return (
     <>
       <div className={simulatorGrid}>
-        <PeriodRadio period={period} onChange={setPeriod} />
+        <PeriodRadio period={period} onChange={handlePeriodChange} />
         <ResultsColumn
           period={period}
           results={results}
@@ -139,7 +161,7 @@ export const BrutNetSimulator = ({ smicReference }: Props) => {
         />
         <ParametersColumn
           contract={contract}
-          onContractChange={setContract}
+          onContractChange={handleContractChange}
           smicReference={smicReference}
           onFill={handleFill}
         />

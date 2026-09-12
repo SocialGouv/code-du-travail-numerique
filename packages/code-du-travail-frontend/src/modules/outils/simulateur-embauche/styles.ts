@@ -168,6 +168,21 @@ export const cardList = css({
   "& .fr-card__content": {
     paddingBottom: "1.5rem!",
   },
+  // La flèche du lien élargi est posée en bas à droite du contenu ; sans cette
+  // réserve, le libellé passe dessous dès que la colonne de texte est étroite,
+  // ce qui arrive en mobile. Le `!` est nécessaire, le DSFR pose déjà une marge
+  // intérieure sur ce sélecteur.
+  "& .fr-card__footer": {
+    paddingRight: "2.5rem!",
+  },
+  /*
+   * La carte reste horizontale à toutes les largeurs, image à gauche et texte à
+   * droite, comme la maquette la dessine en mobile comme en desktop. Le DSFR,
+   * lui, la fait basculer en colonne sous 48 em.
+   */
+  "& .fr-card": {
+    flexDirection: "row!",
+  },
   // La maquette coupe la carte en deux parts égales ; le DSFR donne 40 % au
   // média. À 50 %, l'illustration retrouve la largeur du Figma.
   "& .fr-card__header": {
@@ -185,11 +200,22 @@ export const cardList = css({
     backgroundColor: "var(--background-alt-blue-france)",
   },
   /*
-   * L'illustration remplit son cadre, comme dans la maquette : on laisse le
-   * `cover` du DSFR faire son travail.
+   * L'illustration est rendue à son propre rapport, sur toute la largeur du
+   * cadre, et rien de plus.
    *
-   * Ça ne tient que parce que le cadre reste proche du carré de l'infographie.
-   * C'est la raison d'être des textes courts de `DEEP_DIVE_CARDS` : une carte
-   * plus haute allongerait le cadre et ferait rogner le dessin sur les côtés.
+   * Le DSFR impose au média un rapport 16/9 puis rattrape la déformation avec
+   * `object-fit: cover`. Sur une infographie presque carrée, ça la rogne : en
+   * desktop les bulles latérales étaient coupées, en mobile le dessin se
+   * réduisait à un timbre au milieu d'une bande. En rendant les deux
+   * contraintes à `auto`, l'image occupe la largeur disponible et déduit sa
+   * hauteur — entière aux deux tailles d'écran.
+   *
+   * C'est aussi pourquoi les textes de `DEEP_DIVE_CARDS` sont courts : en
+   * desktop le cadre s'étire sur la hauteur de la plus haute des trois cartes,
+   * et tout ce qui dépasse du dessin devient du fond.
    */
+  "& .fr-card__img img": {
+    aspectRatio: "auto!",
+    height: "auto!",
+  },
 });

@@ -646,6 +646,72 @@ describe("tracking Matomo", () => {
     ]);
   });
 
+  it("compte les changements de période et de contrat", async () => {
+    // Sans ces deux-là, impossible de dire si les réglages de la colonne de
+    // droite servent ou s'ils occupent de la place pour rien.
+    renderSimulator();
+
+    await user().click(screen.getByRole("radio", { name: "Montant annuel" }));
+    await user().selectOptions(
+      screen.getByRole("combobox", { name: /Type de contrat/ }),
+      "apprentissage"
+    );
+
+    expect(eventsOf("brut_net_changement_periode")).toEqual([
+      {
+        category: "outil",
+        action: "brut_net_changement_periode",
+        name: "annee",
+      },
+    ]);
+    expect(eventsOf("brut_net_changement_contrat")).toEqual([
+      {
+        category: "outil",
+        action: "brut_net_changement_contrat",
+        name: "apprentissage",
+      },
+    ]);
+  });
+
+  it("compte un calcul abouti une seule fois, avec le champ de départ", async () => {
+    // C'est le dénominateur du parcours : rapporté aux saisies, il dit combien
+    // d'usagers obtiennent vraiment un résultat.
+    renderSimulator();
+
+    await user().type(field(/Salaire brut/), "2875");
+    await flush();
+    await waitFor(() =>
+      expect(eventsOf("brut_net_calcul_reussi")).toHaveLength(1)
+    );
+
+    // Un second calcul dans la même visite ne le recompte pas.
+    await user().type(field(/Salaire brut/), "0");
+    await flush();
+
+    expect(eventsOf("brut_net_calcul_reussi")).toEqual([
+      {
+        category: "outil",
+        action: "brut_net_calcul_reussi",
+        name: "salaire_brut",
+      },
+    ]);
+  });
+
+  it("n'annonce pas de calcul abouti quand l'appel échoue", async () => {
+    evaluateSalaryMock.mockRejectedValue(
+      new UrssafEvaluationError("boom", "500")
+    );
+    renderSimulator();
+
+    await user().type(field(/Salaire brut/), "2875");
+    await flush();
+
+    await waitFor(() =>
+      expect(eventsOf("brut_net_erreur_api")).toHaveLength(1)
+    );
+    expect(eventsOf("brut_net_calcul_reussi")).toEqual([]);
+  });
+
   it("compte la sortie vers le simulateur URSSAF avec la période", async () => {
     renderSimulator();
 

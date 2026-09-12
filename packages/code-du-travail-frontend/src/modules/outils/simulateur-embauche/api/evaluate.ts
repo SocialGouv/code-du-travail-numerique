@@ -3,6 +3,7 @@ import { URSSAF_API_URL } from "../../../../config";
 import { buildUrssafPayload, readUrssafPayload } from "../domain/situation";
 import type {
   EvaluateInput,
+  ReadIssue,
   SalaryResults,
   UrssafResponse,
 } from "../domain/types";
@@ -68,6 +69,67 @@ const wait = (ms: number, signal?: AbortSignal): Promise<void> =>
     signal?.addEventListener("abort", onAbort, { once: true });
   });
 
+/**
+ * Échecs qu'on ne remonte pas à Sentry.
+ *
+ * Ce sont les deux seuls dont la fréquence dépend de l'usager et non de nous :
+ * une coupure réseau de son côté, et le 429 du quota de l'URSSAF, qui est de
+ * 5 requêtes par seconde et par IP. Sur une page à 8 000 visites par jour, les
+ * remonter noierait Sentry sous des milliers d'entrées sans action possible, et
+ * surtout enterrerait celles qui demandent une action. Leur volume est déjà
+ * suivi, au bon endroit : l'event Matomo `brut_net_erreur_api`.
+ */
+const NOT_WORTH_REPORTING = new Set(["reseau", "429"]);
+
+/**
+ * Remonte un échec d'appel, en le rangeant sous une entrée stable.
+ *
+ * `fingerprint` sur le seul motif : sans lui, chaque message — qui contient le
+ * statut — crée une entrée distincte, et une panne de l'URSSAF se présente comme
+ * mille problèmes différents au lieu d'un seul, très fréquent.
+ */
+const reportFailure = (error: UrssafEvaluationError, input: EvaluateInput) => {
+  if (NOT_WORTH_REPORTING.has(error.reason)) {
+    return;
+  }
+  Sentry.captureException(error, {
+    level: "error",
+    tags: {
+      simulateur: "brut-net",
+      anomalie: "appel-urssaf",
+      motif: error.reason,
+    },
+    fingerprint: ["simulateur-brut-net", "appel-urssaf", error.reason],
+    extra: { input },
+  });
+};
+
+/**
+ * Remonte une rupture du contrat publicodes — règle renommée, unité changée,
+ * expression disparue.
+ *
+ * C'est l'alerte qui compte vraiment : elle signifie que l'URSSAF a modifié son
+ * modèle et que nos montants sont faux ou vides, pour tout le monde, jusqu'à ce
+ * qu'on réagisse. D'où le niveau `fatal` et une empreinte bâtie sur la seule
+ * nature des anomalies : les valeurs reçues partent dans `extra`, pas dans le
+ * regroupement, sinon chaque requête ouvrirait sa propre entrée.
+ */
+const reportBrokenContract = (issues: ReadIssue[], input: EvaluateInput) => {
+  const signature = [
+    ...new Set(issues.map((i) => `${i.expression}:${i.kind}`)),
+  ].sort();
+
+  Sentry.captureMessage(
+    `Simulateur brut/net : contrat URSSAF rompu (${signature.join(", ")})`,
+    {
+      level: "fatal",
+      tags: { simulateur: "brut-net", anomalie: "contrat-urssaf" },
+      fingerprint: ["simulateur-brut-net", "contrat-urssaf", ...signature],
+      extra: { input, issues },
+    }
+  );
+};
+
 const postEvaluate = (
   payload: unknown,
   signal?: AbortSignal
@@ -118,12 +180,7 @@ export const evaluateSalary = async (
     const { results, issues } = readUrssafPayload(body, input.period);
 
     if (issues.length > 0) {
-      // Un contrat publicodes rompu (règle renommée, unité changée) doit être
-      // visible : c'est un changement chez l'URSSAF, pas une panne passagère.
-      Sentry.captureMessage(
-        `Simulateur brut/net : réponse URSSAF inattendue — ${issues.join(" | ")}`,
-        { level: "warning", extra: { input, issues } }
-      );
+      reportBrokenContract(issues, input);
     }
 
     return results;
@@ -140,7 +197,7 @@ export const evaluateSalary = async (
             "reseau"
           );
 
-    Sentry.captureException(wrapped, { extra: { input } });
+    reportFailure(wrapped, input);
     throw wrapped;
   }
 };

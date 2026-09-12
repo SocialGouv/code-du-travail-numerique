@@ -97,8 +97,18 @@ describe("evaluateSalary", () => {
     expect(results.coutTotalEmployeur).toBeNull();
     expect(results.salaireBrut).toBe(2875);
     expect(Sentry.captureMessage).toHaveBeenCalledWith(
-      expect.stringContaining("réponse URSSAF inattendue"),
-      expect.objectContaining({ level: "warning" })
+      expect.stringContaining("contrat URSSAF rompu"),
+      expect.objectContaining({
+        level: "fatal",
+        // L'empreinte ne porte que la nature de l'anomalie : le message renvoyé
+        // par l'URSSAF n'y entre pas, sinon chaque requête ouvrirait sa propre
+        // entrée Sentry.
+        fingerprint: [
+          "simulateur-brut-net",
+          "contrat-urssaf",
+          "coutTotalEmployeur:erreur-evaluation",
+        ],
+      })
     );
   });
 
@@ -137,8 +147,8 @@ describe("evaluateSalary", () => {
 
     expect(results.coutTotalEmployeur).toBeNull();
     expect(Sentry.captureMessage).toHaveBeenCalledWith(
-      expect.stringContaining("unité inconnue"),
-      expect.anything()
+      expect.stringContaining("coutTotalEmployeur:unite-inconnue"),
+      expect.objectContaining({ level: "fatal" })
     );
   });
 
@@ -162,10 +172,12 @@ describe("evaluateSalary", () => {
       reason: "429",
     });
     expect(fetchMock).toHaveBeenCalledTimes(2);
-    expect(Sentry.captureException).toHaveBeenCalledTimes(1);
+    // Un 429 est le quota de l'URSSAF, pas un incident : il est compté dans
+    // Matomo, pas remonté à Sentry, sinon il noierait tout le reste.
+    expect(Sentry.captureException).not.toHaveBeenCalled();
   });
 
-  it("remonte le statut HTTP en cas d'erreur serveur", async () => {
+  it("remonte le statut HTTP en cas d'erreur serveur, sous une entrée stable", async () => {
     fetchMock.mockResolvedValueOnce(
       jsonResponse({}, { ok: false, status: 500 })
     );
@@ -173,6 +185,13 @@ describe("evaluateSalary", () => {
     await expect(evaluateSalary(INPUT)).rejects.toMatchObject({
       reason: "500",
     });
+    expect(Sentry.captureException).toHaveBeenCalledWith(
+      expect.any(Error),
+      expect.objectContaining({
+        level: "error",
+        fingerprint: ["simulateur-brut-net", "appel-urssaf", "500"],
+      })
+    );
   });
 
   it("qualifie une panne réseau de « reseau »", async () => {
@@ -182,7 +201,8 @@ describe("evaluateSalary", () => {
 
     expect(error).toBeInstanceOf(UrssafEvaluationError);
     expect(error.reason).toBe("reseau");
-    expect(Sentry.captureException).toHaveBeenCalledTimes(1);
+    // La coupure est chez l'usager : suivie dans Matomo, pas dans Sentry.
+    expect(Sentry.captureException).not.toHaveBeenCalled();
   });
 
   it("laisse passer un AbortError sans le traiter comme une erreur", async () => {

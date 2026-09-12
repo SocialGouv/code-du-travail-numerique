@@ -88,11 +88,35 @@ export type UrssafResponse = {
 };
 
 /**
+ * Nature d'une anomalie de contrat, **sans les valeurs rencontrées**.
+ *
+ * C'est ce qui permet de regrouper : une anomalie décrite par une phrase qui
+ * contient le montant ou l'unité reçus créerait une entrée Sentry différente à
+ * chaque requête, et le vrai signal — « l'URSSAF a changé quelque chose » — se
+ * noierait dans le bruit.
+ */
+export type ReadIssueKind =
+  | "expression-absente"
+  | "erreur-evaluation"
+  | "valeur-non-numerique"
+  | "unite-inconnue"
+  | "unite-inattendue"
+  | "reponse-malformee";
+
+export type ReadIssue = {
+  kind: ReadIssueKind;
+  /** Expression concernée, telle que nommée dans `EXPRESSION_ORDER`. */
+  expression: string;
+  /** Ce qui a été reçu. Utile au diagnostic, jamais à l'empreinte. */
+  detail?: string;
+};
+
+/**
  * Ce que la lecture d'une réponse produit : les résultats exploitables, et la
  * liste des anomalies de contrat rencontrées. La lecture reste pure — c'est
  * l'appelant (couche API) qui décide de remonter ces anomalies à Sentry.
  */
 export type ReadResult = {
   results: SalaryResults;
-  issues: string[];
+  issues: ReadIssue[];
 };

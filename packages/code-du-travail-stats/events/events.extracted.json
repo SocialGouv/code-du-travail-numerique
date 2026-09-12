@@ -1,8 +1,8 @@
 {
   "scan_root": "packages/code-du-travail-frontend/src",
-  "callsites": 110,
-  "total_events": 147,
-  "unique_events": 135,
+  "callsites": 113,
+  "total_events": 150,
+  "unique_events": 138,
   "unresolved_callsites": 0,
   "events": [
     {
@@ -1356,10 +1356,52 @@
       "resolution": "literal",
       "emit_function": "useHiringSimulatorTracking",
       "file": "packages/code-du-travail-frontend/src/modules/outils/simulateur-embauche/tracking.ts",
-      "line": 47,
+      "line": 86,
       "enum_refs": [
         "MatomoBaseEvent.OUTIL",
         "MatomoBrutNetEvent.AFFICHAGE_MESSAGE_CONTEXTUEL"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "outil",
+      "action": "brut_net_calcul_reussi",
+      "name_pattern": "<FIELD_DESCRIPTORS[field].eventName>",
+      "resolution": "literal",
+      "emit_function": "useHiringSimulatorTracking",
+      "file": "packages/code-du-travail-frontend/src/modules/outils/simulateur-embauche/tracking.ts",
+      "line": 72,
+      "enum_refs": [
+        "MatomoBaseEvent.OUTIL",
+        "MatomoBrutNetEvent.CALCUL_REUSSI"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "outil",
+      "action": "brut_net_changement_contrat",
+      "name_pattern": "<contract>",
+      "resolution": "literal",
+      "emit_function": "useHiringSimulatorTracking",
+      "file": "packages/code-du-travail-frontend/src/modules/outils/simulateur-embauche/tracking.ts",
+      "line": 54,
+      "enum_refs": [
+        "MatomoBaseEvent.OUTIL",
+        "MatomoBrutNetEvent.CHANGEMENT_CONTRAT"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "outil",
+      "action": "brut_net_changement_periode",
+      "name_pattern": "<period>",
+      "resolution": "literal",
+      "emit_function": "useHiringSimulatorTracking",
+      "file": "packages/code-du-travail-frontend/src/modules/outils/simulateur-embauche/tracking.ts",
+      "line": 46,
+      "enum_refs": [
+        "MatomoBaseEvent.OUTIL",
+        "MatomoBrutNetEvent.CHANGEMENT_PERIODE"
       ],
       "tracking_method": "sendEvent"
     },
@@ -1370,7 +1412,7 @@
       "resolution": "literal",
       "emit_function": "useHiringSimulatorTracking",
       "file": "packages/code-du-travail-frontend/src/modules/outils/simulateur-embauche/tracking.ts",
-      "line": 59,
+      "line": 98,
       "enum_refs": [
         "MatomoBaseEvent.OUTIL",
         "MatomoBrutNetEvent.CLIC_MESSAGE_CONTEXTUEL"
@@ -1384,7 +1426,7 @@
       "resolution": "literal",
       "emit_function": "useHiringSimulatorTracking",
       "file": "packages/code-du-travail-frontend/src/modules/outils/simulateur-embauche/tracking.ts",
-      "line": 69,
+      "line": 108,
       "enum_refs": [
         "MatomoBaseEvent.OUTIL",
         "MatomoBrutNetEvent.CLIC_POUR_APPROFONDIR"
@@ -1398,7 +1440,7 @@
       "resolution": "literal",
       "emit_function": "useHiringSimulatorTracking",
       "file": "packages/code-du-travail-frontend/src/modules/outils/simulateur-embauche/tracking.ts",
-      "line": 77,
+      "line": 116,
       "enum_refs": [
         "MatomoBaseEvent.OUTIL",
         "MatomoBrutNetEvent.CLIC_SIMULATEUR_URSSAF"
@@ -1412,7 +1454,7 @@
       "resolution": "literal",
       "emit_function": "useHiringSimulatorTracking",
       "file": "packages/code-du-travail-frontend/src/modules/outils/simulateur-embauche/tracking.ts",
-      "line": 91,
+      "line": 130,
       "enum_refs": [
         "MatomoBaseEvent.OUTIL",
         "MatomoBrutNetEvent.ERREUR_API"
@@ -1426,7 +1468,7 @@
       "resolution": "literal",
       "emit_function": "useHiringSimulatorTracking",
       "file": "packages/code-du-travail-frontend/src/modules/outils/simulateur-embauche/tracking.ts",
-      "line": 33,
+      "line": 38,
       "enum_refs": [
         "MatomoBaseEvent.OUTIL",
         "MatomoBrutNetEvent.REMPLIR_AUTOMATIQUEMENT"
@@ -1440,7 +1482,7 @@
       "resolution": "literal",
       "emit_function": "useHiringSimulatorTracking",
       "file": "packages/code-du-travail-frontend/src/modules/outils/simulateur-embauche/tracking.ts",
-      "line": 25,
+      "line": 30,
       "enum_refs": [
         "MatomoBaseEvent.OUTIL",
         "MatomoBrutNetEvent.SAISIE_CHAMP"

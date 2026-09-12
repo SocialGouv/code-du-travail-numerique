@@ -290,10 +290,15 @@ faisaient, ni de ce qui expliquait son taux de sortie de 98 %. Depuis son passag
 native (calculs faits par l'API publicodes de l'URSSAF, appelée depuis le navigateur), elle est
 instrumentée.
 
-Les events répondent à cinq questions métier : quelle part des usagers saisit réellement une
-valeur, quelle proportion voit puis clique les passerelles vers nos contenus, quel est le taux
-de clic sur le bloc « Pour approfondir », combien d'usagers repartent vers le simulateur de
-l'URSSAF, et à quelle fréquence l'API tombe.
+Les events répondent à sept questions métier : quelle part des usagers saisit réellement une
+valeur, combien en obtiennent un résultat, si les deux réglages de la colonne de droite
+servent, quelle proportion voit puis clique les passerelles vers nos contenus, quel est le
+taux de clic sur le bloc de contenus à approfondir, combien d'usagers repartent vers le
+simulateur de l'URSSAF, et à quelle fréquence l'API tombe.
+
+Le couple à regarder en premier est `brut_net_saisie_champ` et `brut_net_calcul_reussi` : le
+rapport entre les deux dit combien d'usagers décrochent entre le moment où ils tapent un
+montant et celui où un résultat s'affiche.
 
 Tous ces events portent la catégorie `outil`.
 [↗ source](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/outils/simulateur-embauche/tracking.ts#L14 "simulateur-embauche/tracking.ts")
@@ -302,9 +307,12 @@ Tous ces events portent la catégorie `outil`.
 | --------- | ------ | ------------ | ---------------- |
 | outil | `brut_net_saisie_champ` | 📌 `cout_total_employeur` \| `salaire_brut` \| `salaire_net` \| `salaire_net_apres_impot` | À la **première** frappe dans un champ, une seule fois par champ et par visite de la page. Compter chaque frappe donnerait un volume ininterprétable : l'indicateur voulu est la part des usagers qui saisissent une valeur, et lequel des quatre champs sert de point d'entrée. |
 | outil | `brut_net_remplir_automatiquement` | 📌 `salaire_median` \| `smic` | Clic sur un des deux boutons de remplissage rapide. Mesure l'usage de ces raccourcis, et sert de repère de comparaison face à la saisie manuelle. |
+| outil | `brut_net_calcul_reussi` | 📌 `cout_total_employeur` \| `salaire_brut` \| `salaire_net` \| `salaire_net_apres_impot` | À la **première** évaluation aboutie de la visite, avec le champ d'où elle est partie. C'est le **dénominateur du parcours** : rapporté à `brut_net_saisie_champ`, il donne la part des usagers qui obtiennent effectivement un résultat, et par quel champ ils y arrivent. Un calcul en échec n'émet **rien**. |
+| outil | `brut_net_changement_periode` | 📌 `mois` \| `annee` | Clic sur un des deux boutons radio « Période de calcul ». Dit si le passage en montants annuels est utilisé, ou si l'affichage mensuel suffit à presque tout le monde. |
+| outil | `brut_net_changement_contrat` | 📌 `CDI` \| `CDD` \| `apprentissage` \| `professionnalisation` \| `stage` | Changement dans la liste « Type de contrat ». Dit si ce réglage sert, et pour quels contrats — donc s'il mérite sa place, et si d'autres types manquent. |
 | outil | `brut_net_affichage_message_contextuel` | 📌 `salaire_minimum` \| `primes_conventionnelles` | À la **première** apparition de chaque type de message sous le champ « Salaire net » (un message par visite et par type). C'est le **dénominateur** du taux d'engagement sur les passerelles vers nos contenus. |
 | outil | `brut_net_clic_message_contextuel` | 📌 `salaire_minimum` \| `primes_conventionnelles` | Clic sur le lien du message contextuel. C'est le **numérateur** du même taux : rapporté à l'event d'affichage, il dit si ces passerelles font effectivement sortir de la page. |
-| outil | `brut_net_clic_pour_approfondir` | 📌 slug de la carte (`infographie/quel-est-le-salaire-minimum`, `contribution/quel-est-le-salaire-minimum`, `convention-collective`) | Clic sur une des trois cartes du bloc « Pour approfondir ». Taux de clic par contenu proposé. |
+| outil | `brut_net_clic_pour_approfondir` | 📌 slug de la carte (`infographie/quel-est-le-salaire-minimum`, `contribution/quel-est-le-salaire-minimum`, `convention-collective`) | Clic sur une des trois cartes de contenus proposées en bas de page. Taux de clic par contenu. |
 | outil | `brut_net_clic_simulateur_urssaf` | 📌 `mois` \| `annee` | Clic sur le lien « Une simulation plus détaillée ? ». Mesure les sorties volontaires vers l'URSSAF, et si elles viennent plutôt du mode mensuel ou annuel. |
 | outil | `brut_net_erreur_api` | 🔀 statut HTTP (`429`, `500`…) ou `reseau` | L'appel à l'API URSSAF a échoué et l'alerte d'erreur s'affiche. Suit la fiabilité d'une dépendance tierce sans SLA, et en particulier la fréquence des `429` (quota de 5 requêtes/seconde par IP). Une requête simplement annulée par une frappe plus récente n'émet **rien**. |
 

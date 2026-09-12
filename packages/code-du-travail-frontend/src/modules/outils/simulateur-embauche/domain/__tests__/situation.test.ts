@@ -235,8 +235,13 @@ describe("readUrssafPayload", () => {
     );
     expect(results.coutTotalEmployeur).toBeNull();
     expect(results.salaireBrut).toBe(2875);
-    expect(issues).toHaveLength(1);
-    expect(issues[0]).toContain("coutTotalEmployeur");
+    expect(issues).toEqual([
+      {
+        kind: "erreur-evaluation",
+        expression: "coutTotalEmployeur",
+        detail: 'La référence "salarié . nawak" est introuvable.',
+      },
+    ]);
   });
 
   it("ne se laisse pas troubler par missingVariables", () => {
@@ -268,7 +273,10 @@ describe("readUrssafPayload", () => {
       "mois"
     );
     expect(results.salaireNet).toBeNull();
-    expect(issues[0]).toContain("unité inconnue");
+    expect(issues[0]).toMatchObject({
+      kind: "unite-inconnue",
+      expression: "salaireNet",
+    });
   });
 
   it("neutralise une entrée dont l'unité n'est pas celle demandée", () => {
@@ -279,19 +287,23 @@ describe("readUrssafPayload", () => {
       "mois"
     );
     expect(results.salaireBrut).toBeNull();
-    expect(issues[0]).toContain("unité inattendue");
+    expect(issues[0]).toMatchObject({
+      kind: "unite-inattendue",
+      expression: "salaireBrut",
+      detail: "€/an au lieu de €/mois",
+    });
   });
 
   it.each([
-    [{ nodeValue: null, unit: euros("mois") }, "valeur non numérique"],
-    [{ nodeValue: "2875", unit: euros("mois") }, "valeur non numérique"],
+    [{ nodeValue: null, unit: euros("mois") }, "valeur-non-numerique"],
+    [{ nodeValue: "2875", unit: euros("mois") }, "valeur-non-numerique"],
   ])("neutralise une valeur non numérique (%p)", (entry, expectedIssue) => {
     const { results, issues } = readUrssafPayload(
       nominalResponse("mois", { 1: entry as UrssafEvaluation }),
       "mois"
     );
     expect(results.salaireBrut).toBeNull();
-    expect(issues[0]).toContain(expectedIssue);
+    expect(issues[0].kind).toBe(expectedIssue);
   });
 
   it("signale une expression absente sans planter", () => {
@@ -305,7 +317,9 @@ describe("readUrssafPayload", () => {
     (response) => {
       const { results, issues } = readUrssafPayload(response, "mois");
       expect(results.salaireBrut).toBeNull();
-      expect(issues).toEqual(["URSSAF : réponse sans tableau `evaluate`"]);
+      expect(issues).toEqual([
+        { kind: "reponse-malformee", expression: "evaluate" },
+      ]);
     }
   );
 });

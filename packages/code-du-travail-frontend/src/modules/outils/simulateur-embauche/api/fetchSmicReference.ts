@@ -158,7 +158,20 @@ export const fetchSmicReference = async (): Promise<SmicReference | null> => {
       netMensuel: readMonthlyAmount(evaluate?.[1], "SMIC net"),
     };
   } catch (error) {
+    /*
+     * Remonté systématiquement, contrairement aux échecs côté navigateur : cet
+     * appel-ci part du serveur, il est mis en cache 24 h et il réessaie déjà sur
+     * 429. Un échec qui arrive jusqu'ici est donc rare et signifie quelque chose
+     * — et il coûte le bouton « SMIC » et les messages contextuels à tout le
+     * monde jusqu'à la prochaine revalidation.
+     *
+     * Empreinte fixe pour que ces échecs forment une seule entrée, quel que soit
+     * le message : ce qui doit sauter aux yeux, c'est la fréquence.
+     */
     Sentry.captureException(error, {
+      level: "error",
+      tags: { simulateur: "brut-net", anomalie: "prechargement-smic" },
+      fingerprint: ["simulateur-brut-net", "prechargement-smic"],
       extra: { rule: RULES.smic, context: "préchargement SMIC serveur" },
     });
     return null;
