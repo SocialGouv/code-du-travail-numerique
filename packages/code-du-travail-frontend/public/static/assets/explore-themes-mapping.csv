@@ -1,7 +1,10 @@
 # Mapping éditorial de la rubrique « Explorez nos thématiques » (#7455).
 #
-# Ce fichier est la source : il est lu au démarrage du serveur, il n'y a rien
-# à régénérer après l'avoir modifié.
+# CE FICHIER EST DESTINÉ À ÊTRE REMPLACÉ PAR LE MÉTIER.
+# Les lignes de données qu'il porte aujourd'hui sont des exemples de
+# démonstration, choisis côté devs pour donner à voir la rubrique. Le métier
+# remplace le bloc de données par sa propre liste, et rien d'autre : ni code à
+# modifier, ni commande à lancer. Le fichier est relu au démarrage du serveur.
 #
 # Une ligne par contribution, trois colonnes séparées par « ; » :
 #
@@ -20,12 +23,8 @@
 # Les lignes vides et les lignes commençant par « # » sont ignorées. Une
 # contribution absente de ce fichier n'affiche pas la rubrique et garde ses
 # « Articles liés » : c'est le témoin du test.
-#
-# Les quatre lignes ci-dessous sont des exemples vérifiés, prêts à décommenter
-# pour voir la rubrique en local. Le mapping livré est volontairement vide,
-# le métier n'ayant pas encore arrêté sa liste.
 contribution;sous_theme_1;sous_theme_2
-#les-conges-pour-evenements-familiaux;conges-lies-a-la-vie-familiale-mariage-deces-naissance;conges-payes
-#le-preavis-de-demission-doit-il-etre-execute-en-totalite-y-compris-si-le-salarie-a-retrouve-un-emploi;demission;preavis-de-licenciement-et-de-demission
-#heures-supplementaires;heures-supplementaires;duree-du-travail
-#dans-le-cadre-dun-cdd-quel-est-le-montant-de-lindemnite-de-fin-de-contrat;cdd;salaire
+les-conges-pour-evenements-familiaux;conges-lies-a-la-vie-familiale-mariage-deces-naissance;conges-payes
+le-preavis-de-demission-doit-il-etre-execute-en-totalite-y-compris-si-le-salarie-a-retrouve-un-emploi;demission;preavis-de-licenciement-et-de-demission
+heures-supplementaires;heures-supplementaires;duree-du-travail
+dans-le-cadre-dun-cdd-quel-est-le-montant-de-lindemnite-de-fin-de-contrat;cdd;salaire
