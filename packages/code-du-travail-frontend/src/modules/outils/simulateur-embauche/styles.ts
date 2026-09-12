@@ -183,14 +183,18 @@ export const cardList = css({
     backgroundColor: "var(--background-alt-blue-france)",
   },
   /*
-   * Calée en haut, pas centrée : l'illustration se termine par la baguette de la
-   * balance, qui touche le coin haut-droit de son propre cadre. La coller en
-   * haut fait retrouver ce contact avec le coin du média, comme dans la
-   * maquette, et renvoie le fond restant sous le dessin.
+   * L'illustration est rendue à sa taille naturelle, mise à la largeur du cadre
+   * et rien de plus.
+   *
+   * Le DSFR impose au média un rapport 16/9 et une hauteur de 100 % du cadre,
+   * puis rattrape la déformation avec `object-fit`. Sur une infographie presque
+   * carrée, ça revient à la recadrer : la baguette de la balance sortait du
+   * cadre. On rend donc ces deux contraintes à `auto` et l'image reprend son
+   * propre rapport, posée en haut du cadre comme dans la maquette.
    */
   "& .fr-card__img img": {
+    aspectRatio: "auto!",
+    height: "auto!",
     objectFit: "contain!",
-    // `!` nécessaire : le DSFR pose `object-position: 50% 50%` sur ce sélecteur.
-    objectPosition: "center top!",
   },
 });
