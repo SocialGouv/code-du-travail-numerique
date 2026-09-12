@@ -144,7 +144,7 @@ export const autofillButtons = css({
 });
 
 /**
- * Liste des cartes « Pour approfondir ».
+ * Liste des cartes de contenus à approfondir.
  *
  * Le média de la première carte est une infographie, pas une photo : le `cover`
  * du DSFR la recadre et n'en montre qu'un coin. La maquette la donne entière,

@@ -353,7 +353,7 @@ describe("BrutNetSimulator", () => {
     expect(screen.getByTestId("brut-net-informations")).toBeInTheDocument();
     expect(screen.getByTestId("brut-net-lien-urssaf")).toBeInTheDocument();
     expect(
-      screen.getByRole("heading", { name: "Pour approfondir" })
+      screen.getByRole("link", { name: /Quel est le salaire minimum/ })
     ).toBeInTheDocument();
     expect(
       screen.getByRole("button", { name: "Réessayer" })

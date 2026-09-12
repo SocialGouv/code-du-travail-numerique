@@ -105,6 +105,12 @@ const errorAlert = (page: Page) =>
 const informationsAlert = (page: Page) =>
   page.getByRole("heading", { name: "Informations", exact: true });
 
+/** Le bloc de cartes, repéré par la liste qui contient la première d'entre elles. */
+const deepDiveList = (page: Page) =>
+  page.getByRole("list").filter({
+    has: page.getByRole("link", { name: /Quel est le salaire minimum/ }),
+  });
+
 const digits = (value: string) => value.replace(/[\s  ]/g, "");
 
 test.describe("Outil - Salaire brut/net", () => {
@@ -321,15 +327,13 @@ test.describe("Outil - Salaire brut/net", () => {
     expect(url.searchParams.get("unité")).toBe("€/mois");
   });
 
-  test("pointe vers les trois contenus « Pour approfondir »", async ({
-    page,
-  }) => {
+  test("pointe vers les trois contenus à approfondir", async ({ page }) => {
     await stubUrssaf(page);
     await page.goto(PAGE_URL);
 
-    const hrefs = await page
-      .getByRole("heading", { name: "Pour approfondir" })
-      .locator("xpath=following-sibling::ul[1]")
+    // La maquette ne met pas de titre au-dessus du bloc : on cible la liste par
+    // sa première carte plutôt que par un intertitre qui n'existe pas.
+    const hrefs = await deepDiveList(page)
       .getByRole("link")
       .evaluateAll((links) => links.map((link) => link.getAttribute("href")));
 
@@ -358,9 +362,7 @@ test.describe("Outil - Salaire brut/net", () => {
     // Le reste de la page reste rendu et interactif.
     await expect(informationsAlert(page)).toBeVisible();
     await expect(urssafLink(page)).toBeVisible();
-    await expect(
-      page.getByRole("heading", { name: "Pour approfondir" })
-    ).toBeVisible();
+    await expect(deepDiveList(page)).toBeVisible();
     await expect(page.getByRole("button", { name: "Réessayer" })).toBeVisible();
   });
 

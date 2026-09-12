@@ -12,10 +12,14 @@ type Props = {
 /**
  * Client — non pour son état, qu'il n'a pas, mais pour garder le tracking du
  * clic à côté du lien qu'il mesure.
+ *
+ * Pas de titre au-dessus des cartes : la maquette n'en met pas. Les titres de
+ * cartes passent donc en `h2`, sinon ils sauteraient un niveau depuis le `h1`
+ * de la page. Une `<ul>` nue plutôt qu'une `<section>`, qui sans nom accessible
+ * ne serait de toute façon pas un repère de navigation.
  */
 export const DeepDiveCards = ({ onCardClick }: Props) => (
-  <section className={fr.cx("fr-mt-6w")}>
-    <h2 className={fr.cx("fr-h4")}>Pour approfondir</h2>
+  <div className={fr.cx("fr-mt-6w")}>
     <ul
       className={`${fr.cx("fr-grid-row", "fr-grid-row--gutters")} ${cardList}`}
     >
@@ -25,7 +29,7 @@ export const DeepDiveCards = ({ onCardClick }: Props) => (
           horizontal: true,
           enlargeLink: true,
           size: "small",
-          titleAs: "h3",
+          titleAs: "h2",
           title: card.title,
           desc: card.description,
           footer: (
@@ -56,5 +60,5 @@ export const DeepDiveCards = ({ onCardClick }: Props) => (
         );
       })}
     </ul>
-  </section>
+  </div>
 );
