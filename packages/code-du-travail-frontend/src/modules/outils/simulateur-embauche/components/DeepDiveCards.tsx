@@ -46,13 +46,30 @@ export const DeepDiveCards = ({ onCardClick }: Props) => (
         return (
           <li key={card.slug} className={fr.cx("fr-col-12", "fr-col-md-4")}>
             {/*
-              Deux appels plutôt qu'un `imageUrl` optionnel : le type du DSFR
-              est une union, `imageUrl` et `imageAlt` y vont toujours ensemble.
-              L'alt est vide parce que l'illustration ne dit rien que le titre
-              et la description ne disent déjà.
+              Deux appels plutôt qu'une prop optionnelle : le type du DSFR est
+              une union, l'image y va toujours avec son alternative.
+
+              `imageComponent` plutôt qu'`imageUrl` pour maîtriser la balise :
+              le bloc est sous la ligne de flottaison, donc chargement différé,
+              et les dimensions sont déclarées pour que le navigateur réserve la
+              place avant d'avoir le fichier. L'alternative est vide : le dessin
+              ne dit rien que le titre et le lien ne disent déjà.
             */}
             {card.imageUrl ? (
-              <Card {...common} imageUrl={card.imageUrl} imageAlt="" />
+              <Card
+                {...common}
+                imageComponent={
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    src={card.imageUrl}
+                    alt=""
+                    width={403}
+                    height={414}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                }
+              />
             ) : (
               <Card {...common} />
             )}

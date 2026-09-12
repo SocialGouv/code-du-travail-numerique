@@ -161,10 +161,13 @@ export type DeepDiveCard = {
  *
  * Elle n'a pas de description, toujours comme dans la maquette, et ce n'est pas
  * qu'une affaire de texte : la colonne média d'une carte horizontale s'étire sur
- * toute la hauteur de la carte. Avec une description la carte monte à 364 px, le
- * cadre devient deux fois plus haut que large et l'illustration s'y perd au
- * milieu du fond. Sans description, le cadre retrouve le carré de la maquette et
- * l'illustration le remplit. Le titre et le lien disent déjà où l'on va.
+ * toute la hauteur de la carte, et l'illustration la remplit. Plus les cartes
+ * sont hautes, plus ce cadre s'allonge et plus l'infographie, presque carrée, se
+ * fait rogner sur les côtés.
+ *
+ * Les trois cartes s'alignant sur la plus haute, les deux descriptions et le
+ * libellé de lien ci-dessous sont taillés pour tenir en deux lignes : c'est ce
+ * qui garde le cadre proche du carré de la maquette.
  */
 export const DEEP_DIVE_CARDS: DeepDiveCard[] = [
   {
@@ -178,7 +181,7 @@ export const DEEP_DIVE_CARDS: DeepDiveCard[] = [
     slug: "contribution/quel-est-le-salaire-minimum",
     title: "Salaire minimum : quel montant ?",
     description:
-      "Si l'employeur et le salarié s'accordent librement sur le montant du salaire, ce montant doit absolument respecter les montants minimums légaux et conventionnels.",
+      "Le salaire est fixé librement, mais il doit respecter les montants minimums légaux et conventionnels.",
     linkText: "Voir la réponse personnalisée",
     href: "/contribution/quel-est-le-salaire-minimum",
   },
@@ -186,8 +189,8 @@ export const DEEP_DIVE_CARDS: DeepDiveCard[] = [
     slug: "convention-collective",
     title: "Votre convention collective",
     description:
-      "La convention collective et les accords d'entreprise viennent compléter le Code du travail et peuvent prévoir des montants plus favorables.",
-    linkText: "Trouver sa convention collective et ses accords d'entreprise",
+      "La convention collective peut prévoir des montants plus favorables que le Code du travail.",
+    linkText: "Trouver sa convention collective",
     href: "/convention-collective",
   },
 ];

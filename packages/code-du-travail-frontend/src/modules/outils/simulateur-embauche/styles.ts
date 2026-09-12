@@ -183,18 +183,11 @@ export const cardList = css({
     backgroundColor: "var(--background-alt-blue-france)",
   },
   /*
-   * L'illustration est rendue à sa taille naturelle, mise à la largeur du cadre
-   * et rien de plus.
+   * L'illustration remplit son cadre, comme dans la maquette : on laisse le
+   * `cover` du DSFR faire son travail.
    *
-   * Le DSFR impose au média un rapport 16/9 et une hauteur de 100 % du cadre,
-   * puis rattrape la déformation avec `object-fit`. Sur une infographie presque
-   * carrée, ça revient à la recadrer : la baguette de la balance sortait du
-   * cadre. On rend donc ces deux contraintes à `auto` et l'image reprend son
-   * propre rapport, posée en haut du cadre comme dans la maquette.
+   * Ça ne tient que parce que le cadre reste proche du carré de l'infographie.
+   * C'est la raison d'être des textes courts de `DEEP_DIVE_CARDS` : une carte
+   * plus haute allongerait le cadre et ferait rogner le dessin sur les côtés.
    */
-  "& .fr-card__img img": {
-    aspectRatio: "auto!",
-    height: "auto!",
-    objectFit: "contain!",
-  },
 });
