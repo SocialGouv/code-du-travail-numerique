@@ -115,9 +115,13 @@ const reportFailure = (error: UrssafEvaluationError, input: EvaluateInput) => {
  * regroupement, sinon chaque requête ouvrirait sa propre entrée.
  */
 const reportBrokenContract = (issues: ReadIssue[], input: EvaluateInput) => {
+  // Tri par comparaison brute, et non par `localeCompare` : ce qu'on trie est
+  // une empreinte, pas du texte affiché. Elle doit sortir identique quels que
+  // soient la locale et le navigateur de l'usager, sinon la même anomalie se
+  // rangerait sous deux entrées Sentry différentes.
   const signature = [
     ...new Set(issues.map((i) => `${i.expression}:${i.kind}`)),
-  ].sort();
+  ].sort((a, b) => (a < b ? -1 : a > b ? 1 : 0));
 
   Sentry.captureMessage(
     `Simulateur brut/net : contrat URSSAF rompu (${signature.join(", ")})`,
