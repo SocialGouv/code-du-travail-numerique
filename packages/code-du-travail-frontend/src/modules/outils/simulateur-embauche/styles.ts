@@ -182,7 +182,15 @@ export const cardList = css({
   "& .fr-card__img": {
     backgroundColor: "var(--background-alt-blue-france)",
   },
+  /*
+   * Calée en haut, pas centrée : l'illustration se termine par la baguette de la
+   * balance, qui touche le coin haut-droit de son propre cadre. La coller en
+   * haut fait retrouver ce contact avec le coin du média, comme dans la
+   * maquette, et renvoie le fond restant sous le dessin.
+   */
   "& .fr-card__img img": {
     objectFit: "contain!",
+    // `!` nécessaire : le DSFR pose `object-position: 50% 50%` sur ce sélecteur.
+    objectPosition: "center top!",
   },
 });

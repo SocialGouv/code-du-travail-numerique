@@ -99,8 +99,12 @@ export const ResultsColumn = ({
     <p
       className={`${fr.cx("fr-text--sm", "fr-mb-0", "fr-mt-3v")} ${inlineNote}`}
     >
+      {/*
+        `info-fill` et non `information-fill` : la maquette utilise le carré
+        arrondi, l'autre est un rond. Les deux existent dans le DSFR.
+      */}
       <span
-        className={fr.cx("fr-icon-information-fill", "fr-icon--sm")}
+        className={fr.cx("fr-icon-info-fill", "fr-icon--sm")}
         aria-hidden="true"
       />
       <span>
