@@ -9,7 +9,7 @@ import React, {
 } from "react";
 import { ContainerWithNav } from "../ContainerWithNav";
 import { Section } from "./component/Section";
-import { slugify, SourceKeys } from "@socialgouv/cdtn-utils";
+import { slugify, SOURCES, SourceKeys } from "@socialgouv/cdtn-utils";
 import { cleanHash } from "../../utils";
 import { fr } from "@codegouvfr/react-dsfr";
 import { Breadcrumb } from "@socialgouv/cdtn-types";
@@ -28,12 +28,23 @@ export type Data = {
   documents: Item[];
 }[];
 
+/**
+ * Entrée de la section « Contenus populaires ». L'appariement se fait sur le
+ * couple (source, slug) : une liste peut mêler plusieurs sources (contributions
+ * et fiches infos sur « Fiches pratiques ») sans collision entre deux documents
+ * de même slug.
+ */
+export type PopularDocument = {
+  source: string;
+  slug: string;
+};
+
 type Props = {
   title: string;
   description: string;
   source: SourceKeys;
   data: Data;
-  popularSlugs: string[];
+  popularDocuments: PopularDocument[];
   breadcrumbSegments?: BreadcrumbSegment[];
 };
 
@@ -44,9 +55,12 @@ export const ListLayout = ({
   description,
   source,
   data: initialData,
-  popularSlugs,
+  popularDocuments,
   breadcrumbSegments = [],
 }: Props) => {
+  // Le tag de type n'existe que sur « Fiches pratiques » (#7464) : les autres
+  // listings ne portent qu'une source, le tag n'y apporterait rien.
+  const showTypeBadge = source === SOURCES.CONTRIBUTIONS;
   const [expandedSections, setExpandedSections] = useState<Set<string>>(
     new Set()
   );
@@ -66,10 +80,14 @@ export const ListLayout = ({
       allItems.push(...theme.documents);
     });
 
-    return popularSlugs
-      .map((slug) => allItems.find((item) => item.slug === slug))
+    return popularDocuments
+      .map(({ source: popularSource, slug }) =>
+        allItems.find(
+          (item) => item.source === popularSource && item.slug === slug
+        )
+      )
       .filter((item): item is Item => item !== undefined);
-  }, [initialData]);
+  }, [initialData, popularDocuments]);
 
   const toggleSection = useCallback((sectionId: string) => {
     setExpandedSections((prev) => {
@@ -156,7 +174,7 @@ export const ListLayout = ({
       });
     }
     return sections;
-  }, [documents]);
+  }, [documents, popularItems.length]);
 
   return (
     <ContainerWithNav
@@ -178,6 +196,7 @@ export const ListLayout = ({
           firstHiddenItemRef={handleFirstHiddenItemRef}
           buttonRef={handleButtonRef}
           icon="/static/assets/img/star.svg"
+          showTypeBadge={showTypeBadge}
         />
       )}
 
@@ -196,6 +215,7 @@ export const ListLayout = ({
             onToggle={toggleSection}
             firstHiddenItemRef={handleFirstHiddenItemRef}
             buttonRef={handleButtonRef}
+            showTypeBadge={showTypeBadge}
             className={
               popularItems.length == 0 && index == 0
                 ? undefined

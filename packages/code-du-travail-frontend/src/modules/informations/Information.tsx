@@ -13,7 +13,8 @@ import DisplayContent from "../common/DisplayContent";
 import { References } from "../common";
 import { ContentMeta } from "../common/ContentMeta";
 import { ArticleJsonLd } from "../seo/jsonld";
-import { fromDocumentBreadcrumbs } from "../layout/breadcrumb";
+import { listingSegment } from "../layout/breadcrumb";
+import { SOURCES } from "@socialgouv/cdtn-utils";
 
 type Props = {
   date: string;
@@ -36,10 +37,15 @@ export const Information = ({
   relatedItems,
   references,
 }: Props) => {
+  // Une fiche infos est une fiche pratique (#7464) : le fil d'Ariane remonte
+  // vers la rubrique qui les regroupe, comme celui des contributions, et non
+  // plus vers la chaîne de thèmes, portée par les tags de ContentMeta.
+  const breadcrumbSegments = [listingSegment(SOURCES.CONTRIBUTIONS)];
+
   return (
     <ContainerInformation
       currentPage={title}
-      breadcrumbSegments={fromDocumentBreadcrumbs(breadcrumbs)}
+      breadcrumbSegments={breadcrumbSegments}
       relatedItems={relatedItems}
       title={title}
       description={description}
