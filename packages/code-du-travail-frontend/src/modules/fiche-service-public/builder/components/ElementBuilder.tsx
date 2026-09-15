@@ -23,6 +23,7 @@ import SectionWithTitle from "./SectionWithTitle";
 import TitreFlottant from "./TitreFlottant";
 import Exemple from "./Exemple";
 import Video from "./Video";
+import { ContributionPromo } from "../../contributions/ContributionPromo";
 
 export const ElementBuilder = ({
   data,
@@ -100,6 +101,13 @@ export const ElementBuilder = ({
       return <SectionWithTitle data={data} headingLevel={headingLevel} />;
     case "Video":
       return <Video data={data} />;
+    case "CdtnContributionPromo":
+      return (
+        <ContributionPromo
+          contributionSlug={data.attributes.contributionSlug}
+          headingLevel={headingLevel}
+        />
+      );
     case "Texte":
       if (data.children.find((child) => isFicheSPDataChapitre(child))) {
         return (

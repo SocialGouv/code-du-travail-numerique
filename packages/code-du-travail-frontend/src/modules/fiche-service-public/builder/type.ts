@@ -51,7 +51,8 @@ export type FicheSPData =
   | FicheSPDataTableau
   | FicheSPDataTableauChildren
   | FicheSPDataTitreFlottant
-  | FicheSPDataVideo;
+  | FicheSPDataVideo
+  | FicheSPDataContributionPromo;
 
 export type FicheSPDataBlocCas = {
   type: "element";
@@ -198,4 +199,15 @@ export const isFicheSPDataChapitre = (child: FicheSPData) => {
     (child as FicheSPDataElement).name !== undefined &&
     (child as FicheSPDataChapitre).name === "Chapitre"
   );
+};
+
+/**
+ * Nœud synthétique (absent du JSON service-public) injecté par le CDTN pour
+ * mettre en avant une contribution. Cf. contributions/injectContributionPromos.
+ */
+export type FicheSPDataContributionPromo = {
+  type: "element";
+  attributes: { contributionSlug: string };
+  children: [];
+  name: "CdtnContributionPromo";
 };
