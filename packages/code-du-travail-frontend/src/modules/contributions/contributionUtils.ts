@@ -52,3 +52,28 @@ export const isAgreementValid = (
   const isUnextended = isAgreementUnextended(contribution, agreement);
   return !isUnextended && isSupported;
 };
+
+// Paramètre de query string portant l'entreprise saisie dans le bloc « Une
+// réponse plus précise… » d'une fiche service-public. À l'arrivée sur la fiche
+// générique, le parcours « Je cherche mon entreprise » est pré-coché, le champ
+// prérempli et la recherche lancée (cf. ContributionGeneric).
+export const ENTERPRISE_SEARCH_PARAM = "entreprise";
+
+export const buildContributionEnterprisePath = (
+  slug: string,
+  enterprise?: string
+) => {
+  const base = `/contribution/${slug}`;
+  const query = enterprise?.trim();
+  if (!query) return base;
+  return `${base}?${new URLSearchParams({ [ENTERPRISE_SEARCH_PARAM]: query })}`;
+};
+
+/** Entreprise passée en query string, ou `undefined`. Côté client uniquement. */
+export const getEnterpriseSearchFromLocation = (): string | undefined => {
+  if (typeof window === "undefined") return undefined;
+  const value = new URLSearchParams(window.location.search)
+    .get(ENTERPRISE_SEARCH_PARAM)
+    ?.trim();
+  return value || undefined;
+};

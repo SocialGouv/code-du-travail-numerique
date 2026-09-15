@@ -5,6 +5,7 @@ import { useContributionTracking } from "./tracking";
 import {
   buildContributionAgreementPath,
   GENERIC_CONTENT_HASH,
+  getEnterpriseSearchFromLocation,
   isAgreementSupported,
   isAgreementValid,
 } from "./contributionUtils";
@@ -36,6 +37,8 @@ export function ContributionGeneric({
 
   const [displayGeneric, setDisplayGeneric] = useState(false);
   const [defaultRoute, setDefaultRoute] = useState<AgreementRoute>();
+  const [defaultEnterpriseSearch, setDefaultEnterpriseSearch] =
+    useState<string>();
 
   const [selectedAgreement, setSelectedAgreement] =
     useLocalStorageForAgreementOnPageLoad();
@@ -72,6 +75,18 @@ export function ContributionGeneric({
       setDefaultRoute("no-agreement");
     }
     scrollToTitle();
+  }, []);
+
+  // Arrivée depuis une fiche service-public (bloc « Une réponse plus précise,
+  // saisissez votre entreprise ! ») : l'entreprise saisie est en query string.
+  // On pré-coche le parcours entreprise et on lance la recherche. Une CC
+  // mémorisée garde la priorité (redirection vers la page CC, ou pré-cochage
+  // « je saisis ma CC » par le formulaire) : le paramètre est alors ignoré.
+  useEffect(() => {
+    const enterprise = getEnterpriseSearchFromLocation();
+    if (!enterprise) return;
+    setDefaultRoute("enterprise");
+    setDefaultEnterpriseSearch(enterprise);
   }, []);
 
   useEffect(() => {
@@ -151,6 +166,7 @@ export function ContributionGeneric({
         selectedAgreement={selectedAgreement}
         trackingActionName={getTitle()}
         defaultRoute={defaultRoute}
+        defaultEnterpriseSearch={defaultEnterpriseSearch}
         isRedirecting={!!redirectPath}
       />
 

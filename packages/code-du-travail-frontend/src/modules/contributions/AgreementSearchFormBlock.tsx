@@ -45,6 +45,8 @@ type Props = {
   onSameAgreementSelect?: () => void;
   /** Route pré-cochée à l'arrivée (retour depuis une page CC via #cdt). */
   defaultRoute?: AgreementRoute;
+  /** Entreprise préremplie dans le parcours « entreprise » (recherche lancée). */
+  defaultEnterpriseSearch?: string;
   /**
    * Remet le focus sur le titre de la façade (« Personnalisez… » côté générique,
    * « Vérifiez votre convention collective » côté personnalisé) lorsque le
@@ -74,6 +76,7 @@ export function AgreementSearchFormBlock({
   currentIdcc,
   onSameAgreementSelect,
   defaultRoute,
+  defaultEnterpriseSearch,
   onBackToPersonalizeFocus,
   legend,
   isRedirecting,
@@ -349,6 +352,7 @@ export function AgreementSearchFormBlock({
         selectedAgreementAlert={selectedAgreementAlert}
         defaultAgreement={selectedAgreement}
         defaultRoute={defaultRoute}
+        defaultEnterpriseSearch={defaultEnterpriseSearch}
         trackingActionName={trackingActionName}
         level={3}
         legend={legend}
