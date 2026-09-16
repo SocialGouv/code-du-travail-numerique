@@ -40,13 +40,13 @@ export class Seniority3248 extends SeniorityDefault<SupportedCc.IDCC3248> {
   mapSituation(
     args: Record<string, string | undefined>
   ): SeniorityProps<SupportedCc.IDCC3248> {
-    return this.map(args);
+    return this.map(args, super.mapSituation(args));
   }
 
   mapRequiredSituation(
     args: Record<string, string | undefined>
   ): SeniorityRequiredProps<SupportedCc.IDCC3248> {
-    return this.map(args);
+    return this.map(args, super.mapRequiredSituation(args));
   }
 
   getMotifs(): Motif[] {
@@ -170,8 +170,13 @@ export class Seniority3248 extends SeniorityDefault<SupportedCc.IDCC3248> {
     };
   }
 
+  /**
+   * `base` est la situation du parent correspondante (calcul ou droit) : elles
+   * ne bornent pas l'arrêt de travail à la même date.
+   */
   private map(
-    args: Record<string, string | undefined>
+    args: Record<string, string | undefined>,
+    base: SeniorityProps<SupportedCc.default>
   ): SeniorityRequiredProps<SupportedCc.IDCC3248> {
     const categoriePro = args[
       "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle"
@@ -196,7 +201,7 @@ export class Seniority3248 extends SeniorityDefault<SupportedCc.IDCC3248> {
           ]
         : undefined;
     return {
-      ...super.mapRequiredSituation(args),
+      ...base,
       categoriePro,
       dateBecomeDayContract: dateBeginDayContract,
       hasBeenDayContract: hasBeenDayContract === "'Oui'",

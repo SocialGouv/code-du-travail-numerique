@@ -112,6 +112,7 @@ const StepAbsences = () => {
             error={errorDateArretTravail}
             id="dateArretTravail"
             dataTestId={"date-arret-travail"}
+            subLabel="La période d'arrêt est retirée de l'ancienneté. Ne pas la déclarer une seconde fois dans les absences ci-dessous."
           />
         )}
       </div>

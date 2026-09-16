@@ -40,16 +40,33 @@ export class IndemniteDepartPublicodes extends PublicodesBase<PublicodesIndemnit
     this.explanationInstance = explanationInstance;
   }
 
+  /**
+   * Ancienneté légale affichée en temps réel aux étapes « Ancienneté » et
+   * « Absences ».
+   *
+   * Passe par `mapSituation` pour appliquer les mêmes règles que `calculate()`,
+   * dont le retrait de l'arrêt de travail en cours (`SeniorityDefault`).
+   */
   public estimatedSeniority(
     dateEntree: string,
     dateSortie: string,
-    absencePeriods: Absence[] = []
+    absencePeriods: Absence[] = [],
+    dateArretTravail?: string
   ) {
-    return this.legalInstance.seniority.computeSeniority({
-      dateEntree,
-      dateSortie,
-      absencePeriods,
-    });
+    const { seniority } = this.legalInstance;
+    return seniority.computeSeniority(
+      seniority.mapSituation({
+        absencePeriods: JSON.stringify(absencePeriods),
+        "contrat salarié . indemnité de licenciement . arrêt de travail":
+          dateArretTravail ? "oui" : "non",
+        "contrat salarié . indemnité de licenciement . date d'arrêt de travail":
+          dateArretTravail,
+        "contrat salarié . indemnité de licenciement . date d'entrée":
+          dateEntree,
+        "contrat salarié . indemnité de licenciement . date de sortie":
+          dateSortie,
+      })
+    );
   }
 
   public calculate(

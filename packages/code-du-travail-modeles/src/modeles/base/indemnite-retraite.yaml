@@ -33,6 +33,12 @@ contrat salarié . indemnité de licenciement . inaptitude suite à un accident 
 
 contrat salarié . indemnité de licenciement . arrêt de travail: non
 
+# Saisie à l'étape « Absences » quand le salarié est en arrêt de travail. Elle
+# n'entre dans aucune formule : `SeniorityDefault` la lit pour retirer de
+# l'ancienneté la période d'arrêt, comme une absence pour maladie non
+# professionnelle.
+contrat salarié . indemnité de licenciement . date d'arrêt de travail:
+
 contrat salarié . indemnité de licenciement . avec congé maladie non professionnelle:
   valeur: non
 

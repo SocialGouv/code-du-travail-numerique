@@ -66,9 +66,11 @@ const createAncienneteStore: StoreSlice<
     onChangeArretTravail: (value) => {
       applyGenericValidation(get, set, "arretTravail", value);
       applyGenericValidation(get, set, "dateArretTravail", undefined);
+      get().ancienneteFunction.updateAncienneteEstimee();
     },
     onChangeDateArretTravail: (value) => {
       applyGenericValidation(get, set, "dateArretTravail", value);
+      get().ancienneteFunction.updateAncienneteEstimee();
     },
     onChangeAbsencePeriods: (value) => {
       const absence = cleanAbsence(value, get());
@@ -119,7 +121,8 @@ const createAncienneteStore: StoreSlice<
 
           const { dateEntree, dateNotification, dateSortie } =
             get().ancienneteData.input;
-          const { arretTravail, absencePeriods } = get().absenceData.input;
+          const { arretTravail, dateArretTravail, absencePeriods } =
+            get().absenceData.input;
           const situation = {
             ...get().situationData.situation,
             ...infos,
@@ -131,6 +134,8 @@ const createAncienneteStore: StoreSlice<
               dateSortie,
             "contrat salarié . indemnité de licenciement . arrêt de travail":
               arretTravail,
+            "contrat salarié . indemnité de licenciement . date d'arrêt de travail":
+              arretTravail === "oui" ? dateArretTravail : undefined,
             "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
               get().informationsData.input.licenciementInaptitude,
             absencePeriods:

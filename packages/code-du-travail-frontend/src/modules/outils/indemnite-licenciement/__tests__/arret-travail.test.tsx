@@ -103,7 +103,10 @@ describe("Arrêt de travail", () => {
       userAction.click(ui.next.get());
       userAction.click(ui.information.inaptitude.non.get());
       userAction.click(ui.next.get());
-      userAction.setInput(ui.seniority.startDate.get(), "01/01/2022");
+      // L'arrêt de travail est retiré de l'ancienneté : le salarié doit avoir
+      // travaillé au moins 8 mois avant l'arrêt pour rester éligible et
+      // atteindre l'étape Salaires.
+      userAction.setInput(ui.seniority.startDate.get(), "01/10/2021");
       userAction.setInput(ui.seniority.notificationDate.get(), "01/09/2022");
       userAction.setInput(ui.seniority.endDate.get(), "01/12/2022");
       userAction.click(ui.next.get());
@@ -111,8 +114,36 @@ describe("Arrêt de travail", () => {
       userAction.setInput(ui.absences.dateArretTravail.get(), "01/07/2022");
       userAction.click(ui.absences.hasAbsence.non.get());
       userAction.click(ui.next.get());
+      expect(ui.activeStep.query()).toHaveTextContent("Salaires");
       userAction.click(ui.salary.hasSameSalary.non.get());
-      expect(ui.salary.salaries.queryAll()).toHaveLength(6);
+      expect(ui.salary.salaries.queryAll()).toHaveLength(9);
+    });
+
+    test("un arrêt de travail qui ramène l'ancienneté sous 8 mois rend inéligible", async () => {
+      userAction.click(ui.introduction.startButton.get());
+      userAction.click(ui.next.get());
+      userAction.click(ui.agreement.noAgreement.get());
+      userAction.click(ui.next.get());
+      userAction.click(ui.information.inaptitude.non.get());
+      userAction.click(ui.next.get());
+      userAction.setInput(ui.seniority.startDate.get(), "01/01/2022");
+      userAction.setInput(ui.seniority.notificationDate.get(), "01/09/2022");
+      userAction.setInput(ui.seniority.endDate.get(), "01/12/2022");
+      userAction.click(ui.next.get());
+      expect(ui.absences.ancienneteEstimee.get()).toHaveTextContent(
+        "Ancienneté estimée : 11 mois"
+      );
+      userAction.click(ui.absences.arretTravail.oui.get());
+      userAction.setInput(ui.absences.dateArretTravail.get(), "01/07/2022");
+      expect(ui.absences.ancienneteEstimee.get()).toHaveTextContent(
+        "Ancienneté estimée : 6 mois"
+      );
+      userAction.click(ui.absences.hasAbsence.non.get());
+      userAction.click(ui.next.get());
+      expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
+      expect(
+        screen.getByText(/inférieure à 8 mois/, { exact: false })
+      ).toBeInTheDocument();
     });
   });
 });

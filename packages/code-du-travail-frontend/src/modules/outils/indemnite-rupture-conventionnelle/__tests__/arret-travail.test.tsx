@@ -45,7 +45,8 @@ describe("Rupture co avec un arrêt de travail", () => {
       .click(ui.next.get());
 
     expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
-    expect(ui.result.resultat.get()).toHaveTextContent("625,00 €");
+    // 10 mois de contrat, moins 3 mois d'arrêt de travail : 1/4 × 3000 × 7/12.
+    expect(ui.result.resultat.get()).toHaveTextContent("437,50 €");
   });
 
   test(`Rupture conventionnelle sans arrêt de travail`, () => {

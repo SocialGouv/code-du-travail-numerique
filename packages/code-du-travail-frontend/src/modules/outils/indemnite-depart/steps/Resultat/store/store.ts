@@ -141,6 +141,10 @@ const createResultStore: StoreSlicePublicodes<
           absencePeriods && absencePeriods.length
             ? JSON.stringify(absencePeriods)
             : undefined,
+        "contrat salarié . indemnité de licenciement . date d'arrêt de travail":
+          get().absenceData.input.arretTravail === "oui"
+            ? get().absenceData.input.dateArretTravail
+            : undefined,
         ...get().situationData.situation,
       };
 

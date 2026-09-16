@@ -14,6 +14,7 @@ import Engine from "publicodes";
  * - packages/code-du-travail-frontend/src/modules/outils/common/publicodes/indemnite-licenciement.ts
  * - packages/code-du-travail-frontend/src/modules/outils/indemnite-depart/steps/Anciennete/store/store.ts
  * - packages/code-du-travail-frontend/src/modules/outils/indemnite-depart/steps/Absences/store/store.ts
+ * - packages/code-du-travail-frontend/src/modules/outils/indemnite-depart/steps/Resultat/store/store.ts
  */
 const FRONT_SITUATION_KEYS = [
   "contrat salarié . indemnité de licenciement . date d'entrée",
@@ -21,6 +22,7 @@ const FRONT_SITUATION_KEYS = [
   "contrat salarié . indemnité de licenciement . date de sortie",
   "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle",
   "contrat salarié . indemnité de licenciement . arrêt de travail",
+  "contrat salarié . indemnité de licenciement . date d'arrêt de travail",
   "contrat salarié . indemnité de licenciement . salaire de référence",
   "contrat salarié . indemnité de licenciement . ancienneté en année",
   "contrat salarié . indemnité de licenciement . ancienneté requise en année",

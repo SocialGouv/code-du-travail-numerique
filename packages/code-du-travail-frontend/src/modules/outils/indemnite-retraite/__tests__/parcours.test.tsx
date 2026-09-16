@@ -235,6 +235,45 @@ describe("Simulateur d'indemnité de départ ou de mise à la retraite", () => {
       ).toBeInTheDocument();
     });
 
+    test("départ volontaire : l'arrêt de travail en cours est retiré de l'ancienneté", () => {
+      render(<CalculateurIndemniteRetraite title={""} />);
+
+      userAction
+        .click(ui.introduction.startButton.get())
+        .click(ui.information.originRetraite.depart.get())
+        .click(ui.next.get());
+
+      // 11 ans et 2 mois de contrat.
+      userAction
+        .setInput(ui.seniority.startDate.get(), "01/01/2015")
+        .setInput(ui.seniority.notificationDate.get(), "01/01/2026")
+        .setInput(ui.seniority.endDate.get(), "01/03/2026")
+        .click(ui.next.get());
+      expect(ui.activeStep.query()).toHaveTextContent("Absences");
+      expect(ui.absences.ancienneteEstimee.get()).toHaveTextContent(
+        "Ancienneté estimée : 11 ans et 2 mois"
+      );
+
+      // L'arrêt de travail retire 2 ans et 2 mois : 9 ans, sous le seuil.
+      userAction
+        .click(ui.absences.arretTravail.oui.get())
+        .setInput(ui.absences.dateArretTravail.get(), "01/01/2024");
+      expect(ui.absences.ancienneteEstimee.get()).toHaveTextContent(
+        "Ancienneté estimée : 9 ans"
+      );
+
+      userAction.click(ui.absences.hasAbsence.non.get()).click(ui.next.get());
+
+      expect(
+        screen.getByText(
+          "Il n'y a pas d'indemnité de départ à la retraite dans cette situation"
+        )
+      ).toBeInTheDocument();
+      expect(
+        screen.getByText(/inférieure à 10 ans/, { exact: false })
+      ).toBeInTheDocument();
+    });
+
     test("mise à la retraite avec moins de 8 mois d'ancienneté", () => {
       render(<CalculateurIndemniteRetraite title={""} />);
       runSimulation(userAction, {

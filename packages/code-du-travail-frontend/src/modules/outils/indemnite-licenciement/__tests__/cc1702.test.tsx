@@ -149,7 +149,8 @@ describe("Indemnité licenciement - CC 1702", () => {
     ).not.toBeInTheDocument();
     userAction.click(ui.next.get());
     expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
-    expect(ui.result.resultat.get()).toHaveTextContent("2 760,42 €");
+    // 4 ans et 5 mois de contrat, moins 5 mois d'arrêt de travail : 1/4 × 2500 × 4.
+    expect(ui.result.resultat.get()).toHaveTextContent("2 500,00 €");
   });
 
   test(`Licenciement économique`, () => {
