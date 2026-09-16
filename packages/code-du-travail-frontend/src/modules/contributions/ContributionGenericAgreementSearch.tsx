@@ -32,6 +32,8 @@ type Props = {
   onSameAgreementSelect?: () => void;
   /** Route pré-cochée à l'arrivée (retour depuis une page CC via #cdt). */
   defaultRoute?: AgreementRoute;
+  /** Entreprise préremplie dans le parcours « entreprise » (recherche lancée). */
+  defaultEnterpriseSearch?: string;
   /**
    * La page s'apprête à rediriger vers la fiche CC mémorisée : le bloc est
    * monté mais l'usager ne le verra pas. Sert à ne pas compter cette visite
@@ -54,6 +56,7 @@ export function ContributionGenericAgreementSearch({
   currentIdcc,
   onSameAgreementSelect,
   defaultRoute,
+  defaultEnterpriseSearch,
   isRedirecting,
 }: Props) {
   const { emitClickWhatIsAgreement } = useCcFunnelTracking();
@@ -89,6 +92,7 @@ export function ContributionGenericAgreementSearch({
         currentIdcc={currentIdcc}
         onSameAgreementSelect={onSameAgreementSelect}
         defaultRoute={defaultRoute}
+        defaultEnterpriseSearch={defaultEnterpriseSearch}
         isRedirecting={isRedirecting}
         onBackToPersonalizeFocus={() => {
           document.getElementById("personalize-response-title")?.focus();

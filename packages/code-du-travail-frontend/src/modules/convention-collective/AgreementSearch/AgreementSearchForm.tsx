@@ -24,6 +24,11 @@ type Props = {
    * `defaultAgreement` est prioritaire (il pré-coche la route « agreement »).
    */
   defaultRoute?: AgreementRoute;
+  /**
+   * Valeur initiale du champ entreprise (parcours « entreprise ») : la
+   * recherche est lancée automatiquement (cf. EnterpriseAgreementSearchInput).
+   */
+  defaultEnterpriseSearch?: string;
   trackingActionName: string;
   level: 2 | 3;
   onBackToPersonalize?: () => void;
@@ -66,6 +71,7 @@ export const AgreementSearchForm = ({
   selectedAgreementAlert,
   defaultAgreement,
   defaultRoute,
+  defaultEnterpriseSearch,
   trackingActionName,
   level,
   onBackToPersonalize,
@@ -213,6 +219,10 @@ export const AgreementSearchForm = ({
             );
           }}
           selectedAgreementAlert={selectedAgreementAlert}
+          defaultSearch={defaultEnterpriseSearch}
+          // Seule source aujourd'hui : arrivée depuis une fiche service-public
+          // avec une entreprise pré-saisie ; on amène l'usager aux résultats.
+          focusResultsOnDefaultSearch
           trackingActionName={trackingActionName}
           level={level}
           onBackToPersonalize={onBackToPersonalize}

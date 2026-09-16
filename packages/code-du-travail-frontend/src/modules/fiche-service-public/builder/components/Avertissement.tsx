@@ -23,7 +23,9 @@ export const Avertissement = ({
   const Heading = `h${headingLevel + 2}` as keyof JSX.IntrinsicElements;
   return (
     <div className={fr.cx("fr-alert", "fr-alert--warning", "fr-mb-2w")}>
-      {title && <Heading>{getText(title)}</Heading>}
+      {title && (
+        <Heading className={fr.cx("fr-alert__title")}>{getText(title)}</Heading>
+      )}
       {formatedDate && (
         <p className={fr.cx("fr-text--xs", "fr-pb-2w")}>{formatedDate}</p>
       )}

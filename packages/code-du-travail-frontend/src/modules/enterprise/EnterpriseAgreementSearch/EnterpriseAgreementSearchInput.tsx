@@ -33,6 +33,13 @@ type Props = {
     agreement?: Agreement
   ) => NonNullable<ReactNode> | undefined;
   defaultSearch?: string;
+  /**
+   * Avec `defaultSearch` : déplacer le focus (et défiler) sur le titre des
+   * résultats une fois la recherche automatique terminée. Par défaut le focus
+   * n'est pas déplacé (retour « Précédent », lien direct : ne pas interrompre
+   * une saisie en cours).
+   */
+  focusResultsOnDefaultSearch?: boolean;
   defaultLocation?: ApiGeoResult;
   enterprise?: Enterprise;
   agreement?: Agreement;
@@ -54,6 +61,7 @@ type Props = {
 export const EnterpriseAgreementSearchInput = ({
   widgetMode = false,
   defaultSearch,
+  focusResultsOnDefaultSearch = false,
   defaultLocation,
   onAgreementSelect,
   selectedAgreementAlert,
@@ -98,6 +106,10 @@ export const EnterpriseAgreementSearchInput = ({
   // Le focus n'est déplacé sur les résultats que pour une recherche
   // initiée par l'utilisateur (jamais pour la recherche automatique)
   const shouldFocusResultsRef = useRef(false);
+  // Défilement vers les résultats (ou focus sur le champ si aucun résultat) :
+  // uniquement pour la recherche automatique demandée avec
+  // `focusResultsOnDefaultSearch` (arrivée depuis une fiche service-public).
+  const shouldScrollToResultsRef = useRef(false);
   const selectedConventionTitleRef = useRef<HTMLParagraphElement>(null);
   const searchInputRef = useRef<HTMLInputElement>(null);
   // Dernier SIRET pour lequel `show_agreements` a été émis : le composant se
@@ -160,12 +172,15 @@ export const EnterpriseAgreementSearchInput = ({
       (base64String ? "&cp=" + base64String : "")
     );
   };
-  const onSubmit = async (focusResults = true) => {
-    // `focusResults === false` = recherche automatique (retour « Précédent »,
-    // lien direct) : ce n'est pas une soumission de l'usager, on ne la compte
-    // pas dans le funnel. Les soumissions à champ vide, elles, comptent : c'est
-    // une tentative bloquée qu'on veut voir.
-    if (focusResults) funnelTracking?.onEnterpriseSearchSubmit?.();
+  const onSubmit = async (
+    focusResults = true,
+    isUserSubmission = focusResults
+  ) => {
+    // `isUserSubmission === false` = recherche automatique (retour « Précédent »,
+    // lien direct, entreprise pré-saisie) : on ne la compte pas dans le funnel.
+    // Les soumissions à champ vide, elles, comptent : c'est une tentative
+    // bloquée qu'on veut voir.
+    if (isUserSubmission) funnelTracking?.onEnterpriseSearchSubmit?.();
     if (!search) {
       setSearchState("required");
       return;
@@ -209,9 +224,12 @@ export const EnterpriseAgreementSearchInput = ({
 
   useEffect(() => {
     if (defaultSearch) {
-      // Recherche automatique (retour via « Précédent » ou lien direct) :
-      // ne pas déplacer le focus pour ne pas interrompre une saisie en cours
-      onSubmit(false);
+      // Recherche automatique : jamais comptée comme soumission de l'usager.
+      // Le focus n'est déplacé que sur demande (`focusResultsOnDefaultSearch`),
+      // sinon on n'interrompt pas une saisie en cours (retour via
+      // « Précédent » ou lien direct).
+      shouldScrollToResultsRef.current = focusResultsOnDefaultSearch;
+      onSubmit(focusResultsOnDefaultSearch, false);
     }
   }, [defaultSearch]);
   useEffect(() => {
@@ -234,9 +252,26 @@ export const EnterpriseAgreementSearchInput = ({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedEnterprise]);
   useEffect(() => {
+    // Au montage `enterprises` est indéfini : une recherche automatique vient
+    // éventuellement d'être lancée, on attend son résultat.
+    if (enterprises === undefined) return;
     if (shouldFocusResultsRef.current) {
       shouldFocusResultsRef.current = false;
-      resultRef.current?.focus();
+      const shouldScroll = shouldScrollToResultsRef.current;
+      shouldScrollToResultsRef.current = false;
+      if (resultRef.current) {
+        resultRef.current.focus();
+        if (shouldScroll) {
+          resultRef.current.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }
+      } else if (shouldScroll) {
+        // Aucun résultat : on amène l'usager sur le champ, dont le message
+        // d'erreur est décrit par aria-describedby.
+        searchInputRef.current?.focus();
+      }
     }
   }, [enterprises]);
 

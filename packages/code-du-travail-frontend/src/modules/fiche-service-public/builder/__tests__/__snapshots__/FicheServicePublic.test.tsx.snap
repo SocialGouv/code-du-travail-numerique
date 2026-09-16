@@ -5,7 +5,9 @@ exports[`<FicheServicePublic /> should render 1`] = `
   <div
     class="fr-alert fr-alert--warning fr-mb-2w"
   >
-    <h2>
+    <h2
+      class="fr-alert__title"
+    >
       Abandon de poste et démission
     </h2>
     <p
@@ -292,7 +294,9 @@ exports[`<FicheServicePublic /> should render 1`] = `
               <div
                 class="fr-alert fr-alert--warning fr-mb-2w"
               >
-                <h4>
+                <h4
+                  class="fr-alert__title"
+                >
                   Attention
                 </h4>
                 <p>
@@ -1237,7 +1241,9 @@ exports[`<FicheServicePublic /> should render 1`] = `
               <div
                 class="fr-alert fr-alert--warning fr-mb-2w"
               >
-                <h4>
+                <h4
+                  class="fr-alert__title"
+                >
                   Attention
                 </h4>
                 <p>
@@ -1950,7 +1956,9 @@ exports[`<FicheServicePublic /> should render 1`] = `
               <div
                 class="fr-alert fr-alert--warning fr-mb-2w"
               >
-                <h4>
+                <h4
+                  class="fr-alert__title"
+                >
                   Attention
                 </h4>
                 <p>

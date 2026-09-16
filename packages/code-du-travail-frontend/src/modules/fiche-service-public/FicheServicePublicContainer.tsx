@@ -11,6 +11,7 @@ import { ReferenceList } from "../common/ReferencesList";
 import { FicheSPData } from "./builder/type";
 import { AccordionWithAnchor } from "../common/AccordionWithAnchor";
 import { fromDocumentBreadcrumbs } from "../layout/breadcrumb";
+import { injectContributionPromos } from "./contributions/injectContributionPromos";
 
 type Props = {
   relatedItems: { items: RelatedItem[]; title: string }[];
@@ -23,6 +24,7 @@ type Props = {
   | "url"
   | "breadcrumbs"
   | "referencedTexts"
+  | "slug"
 >;
 
 export function FicheServicePublicContainer({
@@ -34,6 +36,7 @@ export function FicheServicePublicContainer({
   raw,
   breadcrumbs,
   referencedTexts,
+  slug,
 }: Props) {
   return (
     <ContainerRichWithBreadcrumbs
@@ -57,7 +60,9 @@ export function FicheServicePublicContainer({
       />
 
       <div className={fr.cx("fr-mb-5w")}>
-        <FicheServicePublic data={raw.children} />
+        <FicheServicePublic
+          data={injectContributionPromos(raw.children, slug)}
+        />
 
         {referencedTexts?.length > 0 && (
           <AccordionWithAnchor
