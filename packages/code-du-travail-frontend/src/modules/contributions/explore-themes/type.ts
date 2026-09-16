@@ -12,9 +12,10 @@ export type ExploreTheme = {
   // Icône du sous-thème, ou celle du thème racine à défaut : `icon` n'est pas
   // garanti sur un niveau 2.
   iconName?: string;
-  // Nombre de contenus rattachés au sous-thème (`refs.length`).
+  // Nombre de contenus rattachés au sous-thème (`refs.length`) : le repli de
+  // la carte quand le sous-thème n'a pas de description.
   documentCount: number;
-  // Réservé à la future description éditoriale (~100 caractères) ; à défaut la
-  // carte affiche « N fiches à consulter ».
+  // Description éditoriale du sous-thème (~100 caractères), affichée sous le
+  // titre de la carte ; à défaut la carte affiche « N fiches à consulter ».
   description?: string;
 };

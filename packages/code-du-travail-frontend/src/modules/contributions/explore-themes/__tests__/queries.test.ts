@@ -146,6 +146,34 @@ describe("fetchContributionExploreThemes", () => {
     expect(await fetchContributionExploreThemes("ma-contribution")).toEqual([]);
   });
 
+  it("porte la description éditoriale du sous-thème", async () => {
+    mockMapping["ma-contribution"] = mapped("preavis", "demission");
+    (fetchThemesBySlugs as jest.Mock).mockResolvedValue([
+      {
+        ...themeDoc("demission", "Démission"),
+        description: " Lettre de démission, préavis, rétractation. ",
+      },
+    ]);
+
+    const [theme] = await fetchContributionExploreThemes("ma-contribution");
+
+    expect(theme.description).toBe(
+      "Lettre de démission, préavis, rétractation."
+    );
+  });
+
+  it("laisse la description vide quand l'index n'en porte pas : la carte retombe sur le décompte", async () => {
+    mockMapping["ma-contribution"] = mapped("preavis", "demission");
+    (fetchThemesBySlugs as jest.Mock).mockResolvedValue([
+      { ...themeDoc("demission", "Démission"), description: "   " },
+    ]);
+
+    const [theme] = await fetchContributionExploreThemes("ma-contribution");
+
+    expect(theme.description).toBeUndefined();
+    expect(theme.documentCount).toBe(1);
+  });
+
   it("retombe sur parentSlug quand le fil d'Ariane n'est pas indexé", async () => {
     mockMapping["ma-contribution"] = mapped("preavis", "demission");
     (fetchThemesBySlugs as jest.Mock).mockResolvedValue([

@@ -21,6 +21,8 @@ const demission = {
   // racine.
   iconName: "Depart",
   documentCount: 17,
+  // Pas de description dans la fixture : la carte affichera le décompte.
+  description: undefined,
 };
 
 describe("Sous-thèmes mis en avant sur une contribution", () => {

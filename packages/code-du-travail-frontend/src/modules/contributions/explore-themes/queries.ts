@@ -17,6 +17,7 @@ const THEME_FIELDS = [
   "breadcrumbs",
   "parentSlug",
   "icon",
+  "description",
 ] as const;
 
 type ThemeHit = Pick<ThemeElasticDocument, (typeof THEME_FIELDS)[number]>;
@@ -107,5 +108,9 @@ const toExploreTheme = (
     // pas sur les niveaux 2.
     iconName: theme.icon ?? iconByRootSlug.get(rootSlug),
     documentCount,
+    // La description éditoriale du sous-thème, telle que le back-office la
+    // saisit. Une cellule vide ou faite d'espaces vaut absence : la carte
+    // retombe alors sur le décompte de contenus.
+    description: theme.description?.trim() || undefined,
   };
 };
