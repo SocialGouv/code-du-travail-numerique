@@ -1,5 +1,6 @@
 import { fetchContributionExploreThemes } from "../queries";
 import { fetchRootThemes, fetchThemesBySlugs } from "../../../themes/queries";
+import { ContributionThemes } from "../parse-mapping-csv";
 
 // Les fixtures Elasticsearch ne contiennent qu'un seul sous-thème : l'ordre —
 // qui doit venir du mapping et jamais des hits — se vérifie ici, en rendant
@@ -9,11 +10,10 @@ jest.mock("../../../themes/queries", () => ({
   fetchRootThemes: jest.fn(),
 }));
 
-const mockMapping: Record<string, readonly string[]> = {};
+const mockMapping: Record<string, ContributionThemes> = {};
 
 jest.mock("../mapping", () => ({
-  getContributionSubThemeSlugs: (genericSlug: string) =>
-    mockMapping[genericSlug],
+  getContributionThemes: (genericSlug: string) => mockMapping[genericSlug],
 }));
 
 const themeDoc = (slug: string, title: string) => ({
@@ -25,6 +25,11 @@ const themeDoc = (slug: string, title: string) => ({
   ],
 });
 
+const mapped = (theme: string, ...subThemes: string[]): ContributionThemes => ({
+  theme,
+  subThemes,
+});
+
 describe("fetchContributionExploreThemes", () => {
   beforeEach(() => {
     jest.clearAllMocks();
@@ -34,8 +39,35 @@ describe("fetchContributionExploreThemes", () => {
     ]);
   });
 
+  it("affiche les deux sous-thèmes quand ils sont disponibles, sans le thème", async () => {
+    mockMapping["ma-contribution"] = mapped("preavis", "demission", "retraite");
+    (fetchThemesBySlugs as jest.Mock).mockResolvedValue([
+      themeDoc("retraite", "Retraite"),
+      themeDoc("preavis", "Préavis"),
+      themeDoc("demission", "Démission"),
+    ]);
+
+    const themes = await fetchContributionExploreThemes("ma-contribution");
+
+    expect(themes.map(({ slug }) => slug)).toEqual(["demission", "retraite"]);
+  });
+
+  it("demande le thème et les sous-thèmes en une seule requête", async () => {
+    mockMapping["ma-contribution"] = mapped("preavis", "demission", "retraite");
+    (fetchThemesBySlugs as jest.Mock).mockResolvedValue([]);
+
+    await fetchContributionExploreThemes("ma-contribution");
+
+    expect(fetchThemesBySlugs).toHaveBeenCalledTimes(1);
+    expect((fetchThemesBySlugs as jest.Mock).mock.calls[0][0]).toEqual([
+      "preavis",
+      "demission",
+      "retraite",
+    ]);
+  });
+
   it("suit l'ordre du mapping, pas celui des hits Elasticsearch", async () => {
-    mockMapping["ma-contribution"] = ["demission", "retraite"];
+    mockMapping["ma-contribution"] = mapped("preavis", "demission", "retraite");
     (fetchThemesBySlugs as jest.Mock).mockResolvedValue([
       themeDoc("retraite", "Retraite"),
       themeDoc("demission", "Démission"),
@@ -46,10 +78,48 @@ describe("fetchContributionExploreThemes", () => {
     expect(themes.map(({ slug }) => slug)).toEqual(["demission", "retraite"]);
   });
 
-  it("écarte un sous-thème sans contenu : sa section n'existe pas", async () => {
-    mockMapping["ma-contribution"] = ["demission", "retraite"];
+  it("met le thème en première carte quand un seul sous-thème est mappé", async () => {
+    mockMapping["ma-contribution"] = mapped("preavis", "retraite");
     (fetchThemesBySlugs as jest.Mock).mockResolvedValue([
+      themeDoc("retraite", "Retraite"),
+      themeDoc("preavis", "Préavis"),
+    ]);
+
+    const themes = await fetchContributionExploreThemes("ma-contribution");
+
+    expect(themes.map(({ slug }) => slug)).toEqual(["preavis", "retraite"]);
+  });
+
+  it("met le thème en première carte quand un sous-thème est sans contenu", async () => {
+    mockMapping["ma-contribution"] = mapped("preavis", "demission", "retraite");
+    (fetchThemesBySlugs as jest.Mock).mockResolvedValue([
+      // `groupByThemes` ne crée pas de section pour lui : l'ancre n'existerait
+      // pas.
       { ...themeDoc("demission", "Démission"), refs: [] },
+      themeDoc("retraite", "Retraite"),
+      themeDoc("preavis", "Préavis"),
+    ]);
+
+    const themes = await fetchContributionExploreThemes("ma-contribution");
+
+    expect(themes.map(({ slug }) => slug)).toEqual(["preavis", "retraite"]);
+  });
+
+  it("met le thème en première carte quand un sous-thème est introuvable", async () => {
+    mockMapping["ma-contribution"] = mapped("preavis", "demission", "retraite");
+    (fetchThemesBySlugs as jest.Mock).mockResolvedValue([
+      themeDoc("retraite", "Retraite"),
+      themeDoc("preavis", "Préavis"),
+    ]);
+
+    const themes = await fetchContributionExploreThemes("ma-contribution");
+
+    expect(themes.map(({ slug }) => slug)).toEqual(["preavis", "retraite"]);
+  });
+
+  it("garde le sous-thème seul quand le thème de repli est lui-même indisponible", async () => {
+    mockMapping["ma-contribution"] = mapped("preavis", "retraite");
+    (fetchThemesBySlugs as jest.Mock).mockResolvedValue([
       themeDoc("retraite", "Retraite"),
     ]);
 
@@ -58,8 +128,26 @@ describe("fetchContributionExploreThemes", () => {
     expect(themes.map(({ slug }) => slug)).toEqual(["retraite"]);
   });
 
+  it("garde le thème seul quand aucun sous-thème n'est disponible", async () => {
+    mockMapping["ma-contribution"] = mapped("preavis", "demission", "retraite");
+    (fetchThemesBySlugs as jest.Mock).mockResolvedValue([
+      themeDoc("preavis", "Préavis"),
+    ]);
+
+    const themes = await fetchContributionExploreThemes("ma-contribution");
+
+    expect(themes.map(({ slug }) => slug)).toEqual(["preavis"]);
+  });
+
+  it("masque la rubrique quand rien ne se résout", async () => {
+    mockMapping["ma-contribution"] = mapped("preavis", "demission", "retraite");
+    (fetchThemesBySlugs as jest.Mock).mockResolvedValue([]);
+
+    expect(await fetchContributionExploreThemes("ma-contribution")).toEqual([]);
+  });
+
   it("retombe sur parentSlug quand le fil d'Ariane n'est pas indexé", async () => {
-    mockMapping["ma-contribution"] = ["demission"];
+    mockMapping["ma-contribution"] = mapped("preavis", "demission");
     (fetchThemesBySlugs as jest.Mock).mockResolvedValue([
       {
         ...themeDoc("demission", "Démission"),
@@ -77,7 +165,10 @@ describe("fetchContributionExploreThemes", () => {
   it("ancre la carte sur le parent DIRECT, pas sur la racine", async () => {
     // Un niveau 3 : la page de la racine ne liste que ses enfants immédiats,
     // l'ancre du niveau 3 n'y existe pas — le lien y serait mort.
-    mockMapping["ma-contribution"] = ["licenciement-economique"];
+    mockMapping["ma-contribution"] = mapped(
+      "preavis",
+      "licenciement-economique"
+    );
     (fetchThemesBySlugs as jest.Mock).mockResolvedValue([
       {
         ...themeDoc("licenciement-economique", "Licenciement économique"),
@@ -101,7 +192,7 @@ describe("fetchContributionExploreThemes", () => {
   });
 
   it("préfère l'icône du sous-thème à celle du thème racine", async () => {
-    mockMapping["ma-contribution"] = ["demission"];
+    mockMapping["ma-contribution"] = mapped("preavis", "demission");
     (fetchThemesBySlugs as jest.Mock).mockResolvedValue([
       { ...themeDoc("demission", "Démission"), icon: "Resignation" },
     ]);
@@ -112,7 +203,7 @@ describe("fetchContributionExploreThemes", () => {
   });
 
   it("retombe sur l'icône du thème racine quand le sous-thème n'en porte pas", async () => {
-    mockMapping["ma-contribution"] = ["demission"];
+    mockMapping["ma-contribution"] = mapped("preavis", "demission");
     (fetchThemesBySlugs as jest.Mock).mockResolvedValue([
       themeDoc("demission", "Démission"),
     ]);

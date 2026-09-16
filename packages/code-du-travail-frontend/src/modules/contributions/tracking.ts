@@ -165,8 +165,10 @@ export const useContributionTracking = () => {
 
   // Clic sur une carte de la rubrique « Explorez nos thématiques » (#7455).
   // `name` reprend la forme `{slug, theme}` de `emitClickThemeTag`, enrichie de
-  // la position de la carte (1 = premier sous-thème, 2 = second) : c'est ce qui
-  // permet de savoir laquelle des deux mises en avant a fonctionné. `slug` est
+  // la position de la carte (1 = première, 2 = seconde) : c'est ce qui permet
+  // de savoir laquelle des deux mises en avant a fonctionné. Quand un
+  // sous-thème complémentaire manque, la première carte est le sous-thème de
+  // rattachement de la contribution. `slug` est
   // celui de la page (`contribution/1486-mon-slug` en CC, `contribution/mon-slug`
   // sur la générique), la même granularité que `emitContentViewed` — les deux
   // events se joignent dans Matomo.

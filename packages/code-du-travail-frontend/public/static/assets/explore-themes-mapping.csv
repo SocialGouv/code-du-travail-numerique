@@ -1,30 +1,78 @@
 # Mapping éditorial de la rubrique « Explorez nos thématiques » (#7455).
 #
-# CE FICHIER EST DESTINÉ À ÊTRE REMPLACÉ PAR LE MÉTIER.
-# Les lignes de données qu'il porte aujourd'hui sont des exemples de
-# démonstration, choisis côté devs pour donner à voir la rubrique. Le métier
+# CE FICHIER EST TENU PAR LE MÉTIER. Les devs n'y touchent pas : le métier
 # remplace le bloc de données par sa propre liste, et rien d'autre : ni code à
 # modifier, ni commande à lancer. Le fichier est relu au démarrage du serveur.
 #
-# Une ligne par contribution, trois colonnes séparées par « ; » :
+# Une ligne par contribution, quatre colonnes séparées par « ; » :
 #
-#   contribution ; sous_theme_1 ; sous_theme_2
+#   contribution ; theme ; sous_theme_1 ; sous_theme_2
 #
 # - contribution : le slug de la page, c'est-à-dire le segment qui suit
 #   /contribution/. Une URL complète ou un chemin collé depuis le navigateur
 #   fait aussi l'affaire, y compris une page déclinée par convention
 #   collective : seul le slug de la fiche générique est retenu, il vaut pour
 #   toutes ses déclinaisons.
-# - sous_theme_1 et sous_theme_2 : les slugs des deux sous-thèmes, dans l'ordre
-#   d'affichage des cartes. Le slug d'un sous-thème est ce qui suit le « # »
+# - theme : le slug du sous-thème de rattachement de la contribution (celui
+#   affiché dans ses tags). Il ne sert que de repli : il prend la première
+#   carte quand l'un des deux sous-thèmes complémentaires manque.
+# - sous_theme_1 et sous_theme_2 : les slugs des deux sous-thèmes
+#   complémentaires, dans l'ordre d'affichage des cartes. L'un des deux peut
+#   rester vide, pas les deux. Le slug d'un sous-thème est ce qui suit le « # »
 #   dans son lien — /themes/conges#conges-payes donne conges-payes. Là aussi
 #   le lien complet est accepté.
+#
+# Affichage : sous_theme_1 et sous_theme_2 quand les deux existent ; sinon
+# theme suivi de celui des deux qui existe. Un sous-thème vide, dépublié ou
+# sans contenu compte comme absent.
 #
 # Les lignes vides et les lignes commençant par « # » sont ignorées. Une
 # contribution absente de ce fichier n'affiche pas la rubrique et garde ses
 # « Articles liés » : c'est le témoin du test.
-contribution;sous_theme_1;sous_theme_2
-les-conges-pour-evenements-familiaux;conges-lies-a-la-vie-familiale-mariage-deces-naissance;conges-payes
-le-preavis-de-demission-doit-il-etre-execute-en-totalite-y-compris-si-le-salarie-a-retrouve-un-emploi;demission;preavis-de-licenciement-et-de-demission
-heures-supplementaires;heures-supplementaires;duree-du-travail
-dans-le-cadre-dun-cdd-quel-est-le-montant-de-lindemnite-de-fin-de-contrat;cdd;salaire
+contribution;theme;sous_theme_1;sous_theme_2
+la-periode-dessai-peut-elle-etre-renouvelee;periode-dessai;principales-caracteristiques;cdi
+quelles-sont-les-primes-prevues-par-la-convention-collective;primes;salaire;remboursements-de-frais-et-avantages
+quelles-sont-les-consequences-du-non-respect-du-preavis-par-le-salarie-ou-lemployeur;preavis-de-licenciement-et-de-demission;licenciement-pour-motif-personnel-ou-disciplinaire;demission
+embauche-en-contrat-dextra-cdd-dusage;cdd;interim;rupture-et-fin-dun-cdd-ctt
+dans-le-cadre-dun-cdd-quel-est-le-montant-de-lindemnite-de-fin-de-contrat;rupture-et-fin-dun-cdd-ctt;cdd;documents-de-fin-de-contrat-et-droit-des-salaries
+lentreprise-peut-elle-embaucher-dans-le-cadre-dun-cdi-de-chantier-ou-doperation;cdi;cdd;interim
+quelles-sont-les-consequences-du-deces-de-lemployeur-sur-le-contrat-de-travail;emploi-direct-par-lemployeur-particulier;rupture-et-fin-dun-cdd-ctt;assistant-e-maternel-e
+heures-supplementaires;heures-supplementaires;;temps-partiel
+quelle-est-la-duree-de-preavis-en-cas-de-licenciement;preavis-de-licenciement-et-de-demission;mise-a-la-retraite;demission
+quelle-peut-etre-la-duree-maximale-dun-cdd;cdd;arret-de-travail-droits-et-obligations;principales-caracteristiques
+quest-ce-quune-rupture-conventionnelle;rupture-conventionnelle;emploi-direct-par-lemployeur-particulier;rupture-conventionnelle-collective-et-depart-volontaire
+quelles-sont-les-conditions-de-cumul-demplois;duree-du-travail;principales-caracteristiques;repos
+si-un-poste-se-libere-ou-est-cree-dans-lentreprise-lemployeur-doit-il-en-informer-les-salaries-ou-le-leur-proposer-en-priorite;modification-du-contrat-de-travail;cdd;methodes-de-recrutement
+combien-de-fois-le-contrat-de-travail-peut-il-etre-renouvele;cdd;contrat-dapprentissage;interim
+en-cas-de-maladie-le-salarie-a-t-il-droit-a-une-garantie-demploi;arret-de-travail-droits-et-obligations;licenciement-pour-inaptitude;arret-maladie-indemnisation
+en-cas-de-perte-de-marche-par-lemployeur-quelles-sont-les-conditions-dun-transfert-des-contrats-de-travail;modification-du-contrat-de-travail;emploi-direct-par-lemployeur-particulier;actions-de-formation
+quelle-est-la-duree-du-conge-de-maternite;maternite;conge-lie-a-la-maladie-ou-handicap-de-lenfant;paternite
+quelles-sont-les-conditions-dattribution-de-la-prime-pour-travaux-dangereux-et-de-la-prime-pour-travaux-insalubres;primes;environnement-specifique-de-travail;equipements-de-travail-et-de-protection
+a-quelles-indemnites-peut-pretendre-un-salarie-qui-part-a-la-retraite;depart-volontaire-a-la-retraite;indemnite-de-licenciement;mise-a-la-retraite
+quelle-est-la-duree-maximale-de-la-periode-dessai-sans-et-avec-renouvellement;periode-dessai;cdd;cdi
+si-le-salarie-est-malade-pendant-ses-conges-quelles-en-sont-les-consequences;arret-de-travail-droits-et-obligations;conges-payes;maternite
+arret-maladie-pendant-le-preavis-quelles-consequences;preavis-de-licenciement-et-de-demission;arret-maladie-indemnisation;maladie-accident-du-travail-et-maladie-professionnelle
+en-cas-darret-maladie-du-salarie-lemployeur-doit-il-assurer-le-maintien-de-salaire;arret-maladie-indemnisation;preavis-de-licenciement-et-de-demission;maladie-accident-du-travail-et-maladie-professionnelle
+le-preavis-de-demission-doit-il-etre-execute-en-totalite-y-compris-si-le-salarie-a-retrouve-un-emploi;preavis-de-licenciement-et-de-demission;demission;conges-payes
+faut-il-respecter-un-delai-de-carence-entre-deux-contrats-de-mission-interim;rupture-et-fin-dun-cdd-ctt;interim;cdd
+arret-maladie-pendant-la-periode-dessai-quelles-sont-les-regles;periode-dessai;arret-de-travail-droits-et-obligations;maladie-accident-du-travail-et-maladie-professionnelle
+quelle-est-la-duree-de-preavis-en-cas-de-mise-a-la-retraite;mise-a-la-retraite;preavis-de-licenciement-et-de-demission;depart-volontaire-a-la-retraite
+quelles-informations-doivent-figurer-dans-le-contrat-de-travail-ou-la-lettre-dengagement;principales-caracteristiques;cdi;cdd
+le-preavis-de-licenciement-doit-il-etre-execute-en-totalite-y-compris-si-le-salarie-a-retrouve-un-emploi;preavis-de-licenciement-et-de-demission;demission;conges-payes
+le-salarie-peut-il-sabsenter-pour-rechercher-un-emploi-pendant-son-preavis;preavis-de-licenciement-et-de-demission;heures-pour-recherche-demploi;demission
+comment-determiner-lanciennete-du-salarie;primes;indemnite-de-licenciement;depart-volontaire-a-la-retraite
+dans-le-cadre-dun-contrat-de-mission-interim-quel-est-le-montant-de-lindemnite-de-fin-de-contrat;rupture-et-fin-dun-cdd-ctt;interim;documents-de-fin-de-contrat-et-droit-des-salaries
+quel-est-le-salaire-minimum;salaire;primes;bulletin-de-salaire
+quelles-sont-les-conditions-dindemnisation-pendant-le-conge-de-maternite;maternite;conges-lies-a-la-vie-familiale-mariage-deces-naissance;conge-parental
+quelle-est-la-duree-de-preavis-en-cas-de-depart-a-la-retraite;depart-volontaire-a-la-retraite;mise-a-la-retraite;documents-de-fin-de-contrat-et-droit-des-salaries
+quand-le-salarie-a-t-il-droit-a-une-prime-danciennete-quel-est-son-montant;primes;salaire;mise-a-la-retraite
+travail-du-dimanche-quelle-contrepartie;dimanches;repos;jours-feries-et-ponts
+quelle-est-la-duree-du-preavis-en-cas-de-demission;preavis-de-licenciement-et-de-demission;demission;mise-a-la-retraite
+faut-il-respecter-un-delai-de-carence-entre-deux-cdd-si-oui-quelle-est-sa-duree;rupture-et-fin-dun-cdd-ctt;cdd;interim
+jours-feries-et-ponts-dans-le-secteur-prive;jours-feries-et-ponts;primes;repos
+les-conges-pour-evenements-familiaux;conges-lies-a-la-vie-familiale-mariage-deces-naissance;conge-lie-a-la-maladie-ou-handicap-de-lenfant;adoption
+est-il-obligatoire-davoir-un-contrat-de-travail-ecrit-et-signe;principales-caracteristiques;cdi;temps-partiel
+quelle-est-la-duree-maximale-du-contrat-de-mission-interim;interim;cdd;periode-dessai
+conges-supplementaires-pour-anciennete;conges-payes;primes;mise-a-la-retraite
+quelles-sont-les-conditions-de-la-clause-de-non-concurrence;clause-de-non-concurrence;rupture-et-fin-dun-cdd-ctt;
+quel-est-le-salaire-minimum-dun-alternant-en-2026;salaire;contrat-dapprentissage;contrat-de-professionnalisation

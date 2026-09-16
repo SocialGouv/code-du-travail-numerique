@@ -8,9 +8,17 @@ const KEBAB_CASE = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 // convention collective ; la clé du mapping est celle de la fiche générique.
 const IDCC_PREFIX = /^\d+-/;
 const SEPARATOR = ";";
-const HEADER = ["contribution", "sous_theme_1", "sous_theme_2"];
+const HEADER = ["contribution", "theme", "sous_theme_1", "sous_theme_2"];
 
-export type ExploreThemesMapping = Record<string, readonly [string, string]>;
+export type ContributionThemes = {
+  // Sous-thème de rattachement de la contribution : la carte de repli quand
+  // l'un des deux sous-thèmes complémentaires manque.
+  theme: string;
+  // Un ou deux sous-thèmes complémentaires, dans l'ordre d'affichage.
+  subThemes: readonly string[];
+};
+
+export type ExploreThemesMapping = Record<string, ContributionThemes>;
 
 /**
  * Slug générique d'une contribution, quoi que le métier ait collé : slug nu,
@@ -50,10 +58,10 @@ const toPathSegments = (value: string): string[] =>
  */
 export const parseMappingCsv = (content: string): ExploreThemesMapping => {
   const errors: string[] = [];
-  const mapping: Record<string, readonly [string, string]> = {};
+  const mapping: ExploreThemesMapping = {};
   // Excel exporte volontiers un BOM, des fins de ligne Windows et des cellules
   // entre guillemets.
-  const lines = content.replace(/^\uFEFF/, "").split(/\r?\n/);
+  const lines = content.replace(/^﻿/, "").split(/\r?\n/);
   let headerSeen = false;
 
   lines.forEach((rawLine, index) => {
@@ -78,7 +86,9 @@ export const parseMappingCsv = (content: string): ExploreThemesMapping => {
       return;
     }
 
-    if (cells.length !== HEADER.length) {
+    // Excel omet le dernier « ; » quand la dernière cellule est vide : on
+    // tolère une colonne manquante, jamais une de trop.
+    if (cells.length < HEADER.length - 1 || cells.length > HEADER.length) {
       errors.push(
         `ligne ${lineNumber} : ${cells.length} colonne(s) au lieu de ${HEADER.length} — séparateur « ${SEPARATOR} » attendu`
       );
@@ -86,10 +96,13 @@ export const parseMappingCsv = (content: string): ExploreThemesMapping => {
     }
 
     const contributionSlug = toContributionSlug(cells[0]);
-    const subThemeSlugs = [
-      toSubThemeSlug(cells[1]),
-      toSubThemeSlug(cells[2]),
-    ] as [string, string];
+    const theme = toSubThemeSlug(cells[1]);
+    // Les deux sous-thèmes complémentaires sont facultatifs : une cellule vide
+    // laisse la place au thème de rattachement.
+    const subThemes = cells
+      .slice(2)
+      .filter((cell) => cell !== "")
+      .map(toSubThemeSlug);
 
     if (!KEBAB_CASE.test(contributionSlug)) {
       errors.push(
@@ -103,23 +116,39 @@ export const parseMappingCsv = (content: string): ExploreThemesMapping => {
       );
       return;
     }
+    if (!KEBAB_CASE.test(theme)) {
+      errors.push(
+        `ligne ${lineNumber} : thème illisible — « ${theme || cells[1]} »`
+      );
+      return;
+    }
+    if (subThemes.length === 0) {
+      errors.push(
+        `ligne ${lineNumber} : aucun sous-thème — il en faut au moins un en plus du thème « ${theme} »`
+      );
+      return;
+    }
 
-    const invalid = subThemeSlugs.filter((slug) => !KEBAB_CASE.test(slug));
+    const invalid = subThemes.filter((slug) => !KEBAB_CASE.test(slug));
     if (invalid.length > 0) {
       errors.push(
         `ligne ${lineNumber} : sous-thème illisible — ${invalid.map((slug) => `« ${slug} »`).join(", ")}`
       );
       return;
     }
-    // Deux fois le même sous-thème afficherait deux cartes identiques.
-    if (subThemeSlugs[0] === subThemeSlugs[1]) {
+    // Deux fois le même slug, entre sous-thèmes ou avec le thème de
+    // rattachement, afficherait deux cartes identiques.
+    const duplicate = [theme, ...subThemes].find(
+      (slug, position, all) => all.indexOf(slug) !== position
+    );
+    if (duplicate) {
       errors.push(
-        `ligne ${lineNumber} : les deux sous-thèmes sont identiques (« ${subThemeSlugs[0]} »)`
+        `ligne ${lineNumber} : le sous-thème « ${duplicate} » apparaît deux fois`
       );
       return;
     }
 
-    mapping[contributionSlug] = subThemeSlugs;
+    mapping[contributionSlug] = { theme, subThemes };
   });
 
   if (!headerSeen) {

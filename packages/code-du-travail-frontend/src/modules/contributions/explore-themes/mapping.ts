@@ -1,6 +1,10 @@
 import * as fs from "fs";
 import * as path from "path";
-import { ExploreThemesMapping, parseMappingCsv } from "./parse-mapping-csv";
+import {
+  ContributionThemes,
+  ExploreThemesMapping,
+  parseMappingCsv,
+} from "./parse-mapping-csv";
 
 // Mapping éditorial de la rubrique « Explorez nos thématiques » (#7455).
 //
@@ -34,13 +38,13 @@ const readMapping = (): ExploreThemesMapping => {
   }
 };
 
-export const CONTRIBUTION_SUB_THEMES: ExploreThemesMapping = readMapping();
+export const CONTRIBUTION_THEMES: ExploreThemesMapping = readMapping();
 
-export const getContributionSubThemeSlugs = (
+export const getContributionThemes = (
   genericSlug: string
-): readonly [string, string] | undefined =>
+): ContributionThemes | undefined =>
   // `hasOwnProperty` : le slug vient de l'URL, un `toString` ou un
   // `constructor` renverrait sinon une fonction héritée d'`Object.prototype`.
-  Object.prototype.hasOwnProperty.call(CONTRIBUTION_SUB_THEMES, genericSlug)
-    ? CONTRIBUTION_SUB_THEMES[genericSlug]
+  Object.prototype.hasOwnProperty.call(CONTRIBUTION_THEMES, genericSlug)
+    ? CONTRIBUTION_THEMES[genericSlug]
     : undefined;
