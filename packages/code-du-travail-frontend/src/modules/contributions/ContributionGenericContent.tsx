@@ -95,6 +95,7 @@ export const ContributionGenericContent = forwardRef<
             <ExploreThemes
               themes={exploreThemes}
               contributionSlug={contribution.slug}
+              trackViewEnabled={displayGeneric}
               className={fr.cx("fr-mt-6w")}
             />
             {contribution.references.length > 0 && (

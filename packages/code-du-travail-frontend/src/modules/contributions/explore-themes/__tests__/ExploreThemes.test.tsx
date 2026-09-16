@@ -1,5 +1,5 @@
 import React from "react";
-import { fireEvent, render, within } from "@testing-library/react";
+import { act, fireEvent, render, within } from "@testing-library/react";
 import { sendEvent } from "@socialgouv/matomo-next";
 
 import { ExploreThemes } from "../ExploreThemes";
@@ -124,6 +124,105 @@ describe("<ExploreThemes />", () => {
         theme: "retraite",
         position: 2,
       }),
+    });
+  });
+
+  describe("event « rubrique affichée »", () => {
+    // jsdom n'implémente pas IntersectionObserver : on le remplace par un mock
+    // qui capture le callback pour piloter l'intersection à la main.
+    type IOEntry = {
+      isIntersecting: boolean;
+      boundingClientRect: { top: number };
+    };
+    let ioCallback: ((entries: IOEntry[]) => void) | undefined;
+    let ioOptions: IntersectionObserverInit | undefined;
+    let observe: jest.Mock;
+
+    const intersect = (isIntersecting: boolean) => {
+      act(() => {
+        ioCallback?.([{ isIntersecting, boundingClientRect: { top: 400 } }]);
+      });
+    };
+
+    beforeEach(() => {
+      ioCallback = undefined;
+      observe = jest.fn();
+      (
+        global as unknown as { IntersectionObserver: unknown }
+      ).IntersectionObserver = jest.fn(
+        (cb: (entries: IOEntry[]) => void, opts?: IntersectionObserverInit) => {
+          ioCallback = cb;
+          ioOptions = opts;
+          return {
+            observe,
+            disconnect: jest.fn(),
+            unobserve: jest.fn(),
+            takeRecords: jest.fn(),
+          };
+        }
+      );
+      Object.defineProperty(document, "visibilityState", {
+        configurable: true,
+        get: () => "visible",
+      });
+    });
+
+    afterEach(() => {
+      delete (global as unknown as { IntersectionObserver?: unknown })
+        .IntersectionObserver;
+    });
+
+    it("émet l'event une seule fois dès que la rubrique entre dans l'écran", () => {
+      render(
+        <ExploreThemes
+          themes={[demission, retraite]}
+          contributionSlug="1486-mon-slug"
+        />
+      );
+      expect(observe).toHaveBeenCalledTimes(1);
+      expect(sendEvent).not.toHaveBeenCalled();
+
+      intersect(true);
+      intersect(false);
+      intersect(true);
+
+      expect(sendEvent).toHaveBeenCalledTimes(1);
+      expect(sendEvent).toHaveBeenCalledWith({
+        category: "contribution",
+        action: "explorez_thematique_affichee",
+        name: "contribution/1486-mon-slug",
+      });
+    });
+
+    it("observe tout le viewport, sans bande haute", () => {
+      render(
+        <ExploreThemes themes={[demission]} contributionSlug="mon-slug" />
+      );
+      expect(ioOptions?.rootMargin).toBe("0px 0px -0% 0px");
+    });
+
+    it("n'émet rien tant que la rubrique n'est pas entrée dans l'écran", () => {
+      render(
+        <ExploreThemes themes={[demission]} contributionSlug="mon-slug" />
+      );
+      intersect(false);
+      expect(sendEvent).not.toHaveBeenCalled();
+    });
+
+    it("n'observe pas quand le bloc qui la contient est masqué", () => {
+      render(
+        <ExploreThemes
+          themes={[demission]}
+          contributionSlug="mon-slug"
+          trackViewEnabled={false}
+        />
+      );
+      expect(observe).not.toHaveBeenCalled();
+    });
+
+    it("n'observe rien quand la rubrique n'est pas rendue", () => {
+      render(<ExploreThemes themes={[]} contributionSlug="mon-slug" />);
+      expect(observe).not.toHaveBeenCalled();
     });
   });
 

@@ -28,6 +28,7 @@ export enum TrackingContributionAction {
   CONTENT_VIEWED = "reponse_consultee",
   CLICK_AGREEMENT_DECLINATION = "clic_declinaison_cc",
   CLICK_EXPLORE_THEME = "clic_explorez_thematique",
+  EXPLORE_THEMES_VIEWED = "explorez_thematique_affichee",
 }
 
 // Funnel « choix de la convention collective » d'une contribution, de
@@ -188,6 +189,19 @@ export const useContributionTracking = () => {
     });
   };
 
+  // Émis une fois par page dès que la rubrique « Explorez nos thématiques »
+  // entre dans l'écran (#7455), sans temps de présence : c'est le dénominateur
+  // de `clic_explorez_thematique`. Rapporté aux pages vues, il dit quelle part
+  // des visites descend jusqu'aux cartes, qu'elles soient visibles d'emblée ou
+  // après défilement. Même `name` que `reponse_consultee` pour se joindre.
+  const emitExploreThemesViewed = (contributionSlug: string) => {
+    sendEvent({
+      category: TrackingContributionCategory.CONTRIBUTION,
+      action: TrackingContributionAction.EXPLORE_THEMES_VIEWED,
+      name: `${getRouteBySource(SOURCES.CONTRIBUTIONS)}/${contributionSlug}`,
+    });
+  };
+
   return {
     emitAgreementTreatedEvent,
     emitAgreementUntreatedEvent,
@@ -201,6 +215,7 @@ export const useContributionTracking = () => {
     emitContentViewed,
     emitClickAgreementDeclination,
     emitClickExploreTheme,
+    emitExploreThemesViewed,
   };
 };
 
