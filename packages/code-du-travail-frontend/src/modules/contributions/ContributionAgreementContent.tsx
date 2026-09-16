@@ -40,7 +40,10 @@ export function ContributionAgreementContent({
             pour éviter l'effet « gros titre » quand le nom de la CC est long
             (#7439). Le niveau sémantique h2 reste inchangé. */}
         <h2 ref={titleRef} className={fr.cx("fr-h6")}>
-          Réponse pour la convention : {contribution.ccnShortTitle}
+          Réponse pour la convention :{" "}
+          <Link href={`/convention-collective/${contribution.ccnSlug}`}>
+            {contribution.ccnShortTitle}
+          </Link>
         </h2>
         <ContributionContent contribution={contribution} titleLevel={2} />
         {contribution.references.length > 0 && (
@@ -76,20 +79,6 @@ export function ContributionAgreementContent({
         )}
       </div>
       <div className={fr.cx("fr-col-12", "fr-col-md-4", "fr-p-md-3w")}>
-        <p className={`${fr.cx("fr-mb-6w")} ${p}`}>
-          <span
-            className={`${fr.cx("ri-arrow-right-line")} ${css({
-              color: "var(--artwork-minor-blue-cumulus)",
-            })}`}
-          />
-          <span>
-            Consultez les questions-réponses fréquentes pour la convention
-            collective{" "}
-            <Link href={`/convention-collective/${contribution.ccnSlug}`}>
-              {contribution.ccnShortTitle}
-            </Link>
-          </span>
-        </p>
         <ContributionRating contributionSlug={contribution.slug} level={3} />
         {relatedItems && <RelatedItems relatedItems={relatedItems} level={3} />}
       </div>
