@@ -27,6 +27,8 @@ export enum TrackingContributionAction {
   BTN_TABLE_FULLSCREEN = "btn_table_fullscreen",
   CONTENT_VIEWED = "reponse_consultee",
   CLICK_AGREEMENT_DECLINATION = "clic_declinaison_cc",
+  CLICK_EXPLORE_THEME = "clic_explorez_thematique",
+  EXPLORE_THEMES_VIEWED = "explorez_thematique_affichee",
 }
 
 // Funnel « choix de la convention collective » d'une contribution, de
@@ -162,6 +164,44 @@ export const useContributionTracking = () => {
     });
   };
 
+  // Clic sur une carte de la rubrique « Explorez nos thématiques » (#7455).
+  // `name` reprend la forme `{slug, theme}` de `emitClickThemeTag`, enrichie de
+  // la position de la carte (1 = première, 2 = seconde) : c'est ce qui permet
+  // de savoir laquelle des deux mises en avant a fonctionné. Quand un
+  // sous-thème complémentaire manque, la première carte est le sous-thème de
+  // rattachement de la contribution. `slug` est
+  // celui de la page (`contribution/1486-mon-slug` en CC, `contribution/mon-slug`
+  // sur la générique), la même granularité que `emitContentViewed` — les deux
+  // events se joignent dans Matomo.
+  const emitClickExploreTheme = (
+    contributionSlug: string,
+    subThemeSlug: string,
+    position: number
+  ) => {
+    sendEvent({
+      category: TrackingContributionCategory.CONTRIBUTION,
+      action: TrackingContributionAction.CLICK_EXPLORE_THEME,
+      name: JSON.stringify({
+        slug: `${getRouteBySource(SOURCES.CONTRIBUTIONS)}/${contributionSlug}`,
+        theme: subThemeSlug,
+        position,
+      }),
+    });
+  };
+
+  // Émis une fois par page dès que la rubrique « Explorez nos thématiques »
+  // entre dans l'écran (#7455), sans temps de présence : c'est le dénominateur
+  // de `clic_explorez_thematique`. Rapporté aux pages vues, il dit quelle part
+  // des visites descend jusqu'aux cartes, qu'elles soient visibles d'emblée ou
+  // après défilement. Même `name` que `reponse_consultee` pour se joindre.
+  const emitExploreThemesViewed = (contributionSlug: string) => {
+    sendEvent({
+      category: TrackingContributionCategory.CONTRIBUTION,
+      action: TrackingContributionAction.EXPLORE_THEMES_VIEWED,
+      name: `${getRouteBySource(SOURCES.CONTRIBUTIONS)}/${contributionSlug}`,
+    });
+  };
+
   return {
     emitAgreementTreatedEvent,
     emitAgreementUntreatedEvent,
@@ -174,6 +214,8 @@ export const useContributionTracking = () => {
     emitClickTableFullscreen,
     emitContentViewed,
     emitClickAgreementDeclination,
+    emitClickExploreTheme,
+    emitExploreThemesViewed,
   };
 };
 

@@ -13,6 +13,7 @@ import { removeCCNumberFromSlug } from "../utils/removeCCNumberFromSlug";
 // Import de type uniquement : queries.ts embarque le client Elasticsearch
 // (serveur), il ne doit pas entrer dans le bundle client.
 import type { GenericContributionInfos } from "./queries";
+import type { ExploreTheme } from "./explore-themes/type";
 
 type Props = {
   contribution: Contribution;
@@ -20,12 +21,17 @@ type Props = {
   // Déclinaisons par convention collective, résolues côté serveur. Vide sur une
   // page CC : seule la fiche générique affiche la liste.
   agreementDeclinations?: AgreementDeclination[];
+  // Sous-thèmes mis en avant (#7455), résolus côté serveur depuis le mapping
+  // éditorial. Vide tant que la contribution n'y figure pas : la rubrique est
+  // alors masquée et les « Articles liés » conservés.
+  exploreThemes?: ExploreTheme[];
 };
 
 export function ContributionLayout({
   contribution,
   genericInfos,
   agreementDeclinations = [],
+  exploreThemes = [],
 }: Props) {
   const { date, title, isGeneric, isFicheSP } = contribution;
 
@@ -84,11 +90,13 @@ export function ContributionLayout({
         <ContributionGeneric
           contribution={contribution}
           agreementDeclinations={agreementDeclinations}
+          exploreThemes={exploreThemes}
         />
       ) : (
         <ContributionAgreement
           contribution={contribution}
           genericInfos={genericInfos}
+          exploreThemes={exploreThemes}
         />
       )}
     </>

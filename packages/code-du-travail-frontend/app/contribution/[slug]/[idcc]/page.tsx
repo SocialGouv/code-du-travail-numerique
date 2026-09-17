@@ -5,6 +5,7 @@ import { generateDefaultMetadata } from "../../../../src/modules/common/metas";
 import {
   ContributionLayout,
   fetchContributionBySlug,
+  fetchContributionExploreThemes,
   fetchGenericContributionInfos,
 } from "../../../../src/modules/contributions";
 
@@ -22,10 +23,12 @@ export async function generateMetadata(props) {
 async function ContributionByAgreement(props) {
   const params = await props.params;
   // Infos du document générique frère (cf. page /contribution/[slug]) : ici le
-  // slug générique est directement le segment de route.
-  const [contribution, genericInfos] = await Promise.all([
+  // slug générique est directement le segment de route — il sert aussi de clé
+  // au mapping des sous-thèmes mis en avant (#7455).
+  const [contribution, genericInfos, exploreThemes] = await Promise.all([
     fetchContribution(params.slug, params.idcc),
     fetchGenericContributionInfos(params.slug),
+    fetchContributionExploreThemes(params.slug),
   ]);
 
   if (/^\d+$/.test(params.idcc) && contribution.ccnSlug) {
@@ -37,6 +40,7 @@ async function ContributionByAgreement(props) {
       <ContributionLayout
         contribution={contribution}
         genericInfos={genericInfos}
+        exploreThemes={exploreThemes}
       />
     </DsfrLayout>
   );
