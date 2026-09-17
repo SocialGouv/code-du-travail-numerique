@@ -7,6 +7,7 @@ import { summarize } from "../../../utils";
 import Button from "@codegouvfr/react-dsfr/Button";
 import Image from "next/image";
 import { routeBySource } from "@socialgouv/cdtn-utils";
+import { TypeBadge } from "./TypeBadge";
 
 const INITIAL_ITEMS_DISPLAY_COUNT = 6;
 
@@ -28,6 +29,13 @@ type SectionProps = {
   buttonRef: (sectionId: string, el: HTMLButtonElement | null) => void;
   icon?: string;
   className?: string;
+  /**
+   * Affiche sur chaque carte le tag « Selon ma convention collective » /
+   * « Fiche infos » selon la source du document. Réservé à la rubrique
+   * « Fiches pratiques » : les autres pages de listing (modèles, infographies,
+   * thèmes) partagent ce composant sans tag.
+   */
+  showTypeBadge?: boolean;
 };
 
 export const Section = forwardRef<HTMLHeadingElement, SectionProps>(
@@ -42,6 +50,7 @@ export const Section = forwardRef<HTMLHeadingElement, SectionProps>(
       firstHiddenItemRef,
       buttonRef,
       icon,
+      showTypeBadge = false,
     },
     ref
   ) => {
@@ -81,7 +90,7 @@ export const Section = forwardRef<HTMLHeadingElement, SectionProps>(
         >
           {displayedItems.map((item, index) => (
             <li
-              key={item.slug}
+              key={`${item.source}-${item.slug}`}
               ref={(el) => {
                 if (hasMoreThanN && index === INITIAL_ITEMS_DISPLAY_COUNT) {
                   firstHiddenItemRef(sectionId, el);
@@ -120,8 +129,11 @@ export const Section = forwardRef<HTMLHeadingElement, SectionProps>(
                 title={item.title}
                 titleAs="h3"
                 enlargeLink
+                start={
+                  showTypeBadge ? <TypeBadge source={item.source} /> : undefined
+                }
                 classes={{
-                  start: fr.cx("fr-hidden"),
+                  start: showTypeBadge ? fr.cx("fr-mb-2w") : fr.cx("fr-hidden"),
                 }}
               />
             </li>

@@ -167,8 +167,15 @@ exports[`<ListLayout /> affiche la liste des contenus 1`] = `
                         Tout savoir sur la période d'essai
                       </p>
                       <div
-                        class="fr-card__start fr-hidden"
-                      />
+                        class="fr-card__start fr-mb-2w"
+                      >
+                        <p
+                          class="fr-badge fr-badge--success fr-badge--sm fr-badge--no-icon pos_relative z_2 white-space_normal ov-wrap_anywhere"
+                          id="fr-badge-_r_3_"
+                        >
+                          Selon ma convention collective
+                        </p>
+                      </div>
                       <div
                         class="fr-card__end"
                       />
@@ -198,7 +205,7 @@ exports[`<ListLayout /> affiche la liste des contenus 1`] = `
               >
                 <div
                   class="fr-card fr-enlarge-link fr-card--horizontal"
-                  id="fr-card-_r_3_"
+                  id="fr-card-_r_4_"
                 >
                   <div
                     class="fr-card__body"
@@ -222,8 +229,15 @@ exports[`<ListLayout /> affiche la liste des contenus 1`] = `
                         Tout savoir sur les congés payés
                       </p>
                       <div
-                        class="fr-card__start fr-hidden"
-                      />
+                        class="fr-card__start fr-mb-2w"
+                      >
+                        <p
+                          class="fr-badge fr-badge--success fr-badge--sm fr-badge--no-icon pos_relative z_2 white-space_normal ov-wrap_anywhere"
+                          id="fr-badge-_r_5_"
+                        >
+                          Selon ma convention collective
+                        </p>
+                      </div>
                       <div
                         class="fr-card__end"
                       />
@@ -236,7 +250,7 @@ exports[`<ListLayout /> affiche la liste des contenus 1`] = `
               >
                 <div
                   class="fr-card fr-enlarge-link fr-card--horizontal"
-                  id="fr-card-_r_4_"
+                  id="fr-card-_r_6_"
                 >
                   <div
                     class="fr-card__body"
@@ -260,8 +274,15 @@ exports[`<ListLayout /> affiche la liste des contenus 1`] = `
                         Informations sur les jours fériés
                       </p>
                       <div
-                        class="fr-card__start fr-hidden"
-                      />
+                        class="fr-card__start fr-mb-2w"
+                      >
+                        <p
+                          class="fr-badge fr-badge--success fr-badge--sm fr-badge--no-icon pos_relative z_2 white-space_normal ov-wrap_anywhere"
+                          id="fr-badge-_r_7_"
+                        >
+                          Selon ma convention collective
+                        </p>
+                      </div>
                       <div
                         class="fr-card__end"
                       />
@@ -291,7 +312,7 @@ exports[`<ListLayout /> affiche la liste des contenus 1`] = `
               >
                 <div
                   class="fr-card fr-enlarge-link fr-card--horizontal"
-                  id="fr-card-_r_5_"
+                  id="fr-card-_r_8_"
                 >
                   <div
                     class="fr-card__body"
@@ -315,8 +336,15 @@ exports[`<ListLayout /> affiche la liste des contenus 1`] = `
                         Tout savoir sur la période d'essai
                       </p>
                       <div
-                        class="fr-card__start fr-hidden"
-                      />
+                        class="fr-card__start fr-mb-2w"
+                      >
+                        <p
+                          class="fr-badge fr-badge--success fr-badge--sm fr-badge--no-icon pos_relative z_2 white-space_normal ov-wrap_anywhere"
+                          id="fr-badge-_r_9_"
+                        >
+                          Selon ma convention collective
+                        </p>
+                      </div>
                       <div
                         class="fr-card__end"
                       />

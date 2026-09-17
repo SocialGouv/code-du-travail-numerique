@@ -32,7 +32,7 @@ test.describe("Contributions", () => {
     await expectTitleAndMetaDescriptionEqual(
       page,
       "Fiches pratiques - Code du travail numérique",
-      "Obtenez une réponse personnalisée selon votre convention collective"
+      "Obtenez une réponse personnalisée selon votre convention collective ou des informations précises sur le droit du travail"
     );
 
     await expect(page.getByRole("heading", { level: 1 }).first()).toHaveText(
@@ -40,7 +40,7 @@ test.describe("Contributions", () => {
     );
     await expect(
       page.getByText(
-        "Obtenez une réponse personnalisée selon votre convention collective"
+        "Obtenez une réponse personnalisée selon votre convention collective ou des informations précises sur le droit du travail"
       )
     ).toBeVisible();
 
@@ -49,6 +49,23 @@ test.describe("Contributions", () => {
     await expect(h2s.nth(0)).toContainText("Sommaire");
     await expect(h2s.nth(1)).toContainText("Contenus populaires");
     await expect(h2s.nth(2)).toContainText("Embauche");
+
+    // Fiches infos et contributions sont listées ensemble, chaque carte
+    // portant son tag de type (#7464).
+    const contributionBadges = page.getByText("Selon ma convention collective");
+    const ficheInfosBadges = page.getByText("Fiche infos");
+    expect(await contributionBadges.count()).toBeGreaterThanOrEqual(6);
+    expect(await ficheInfosBadges.count()).toBeGreaterThanOrEqual(1);
+    // `has` s'évalue relativement à chaque `listitem` : un `.first()` dedans
+    // matcherait toutes les cartes, d'où le `.first()` sur le résultat.
+    const ficheInfosCard = page
+      .getByRole("listitem")
+      .filter({ has: page.getByText("Fiche infos") })
+      .first();
+    await expect(ficheInfosCard.getByRole("link")).toHaveAttribute(
+      "href",
+      /^\/information\//
+    );
 
     const h3s = page.getByRole("heading", { level: 3 });
     expect(await h3s.count()).toBeGreaterThanOrEqual(1);

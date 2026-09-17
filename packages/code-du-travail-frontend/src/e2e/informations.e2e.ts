@@ -21,6 +21,14 @@ test.describe("Pages informations", () => {
     await expect(page.getByRole("heading", { level: 1 })).toContainText(
       "essentiel de la nouvelle convention collective"
     );
+
+    // Une fiche infos est une fiche pratique : le fil d'Ariane remonte vers la
+    // rubrique qui les regroupe (#7464).
+    await expect(
+      page
+        .getByRole("navigation", { name: /vous êtes ici/i })
+        .getByRole("link", { name: "Fiches pratiques" })
+    ).toHaveAttribute("href", "/contribution");
     await expect(page.locator("body")).toContainText(
       "Le 1er janvier 2024, la nouvelle convention collective nationale de la métallurgie remplace les 76 conventions collectives territoriales et les conventions collectives nationales."
     );

@@ -75,3 +75,38 @@ export const fetchSubThemes = async <K extends keyof ThemeElasticDocument>(
     .map((t) => t._source)
     .filter((item) => item !== undefined);
 };
+
+export type ThemeRefs = {
+  slug: string;
+  refs: Pick<DocumentRef, "slug" | "source">[];
+};
+
+type ThemeRefsSource = Pick<ThemeRefs, "slug"> &
+  Partial<Pick<ThemeRefs, "refs">>;
+
+/**
+ * Tous les thèmes publiés avec l'ordre éditorial de leurs contenus : les
+ * `refs` sont exportées triées par la position du contenu dans le thème
+ * (cdtn-admin). Seuls le slug et la source de chaque ref sont chargés, c'est
+ * ce qu'il faut pour trier une liste de documents (`sortByThemeOrder`).
+ */
+export const fetchThemesRefs = async (): Promise<ThemeRefs[]> => {
+  const response = await elasticsearchClient.search<ThemeRefsSource>({
+    query: {
+      bool: {
+        filter: [
+          { term: { source: SOURCES.THEMES } },
+          { term: { isPublished: true } },
+        ],
+      },
+    },
+    size: 1000,
+    _source: ["slug", "refs.slug", "refs.source"],
+    index: elasticDocumentsIndex,
+  });
+  // Un thème sans contenu n'a pas de clé `refs` dans la source filtrée.
+  return response.hits.hits
+    .map((t) => t._source)
+    .filter((item) => item !== undefined)
+    .map(({ slug, refs = [] }) => ({ slug, refs }));
+};

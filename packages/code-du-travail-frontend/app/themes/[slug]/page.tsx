@@ -29,7 +29,7 @@ async function Theme(props) {
         description={metaDescription}
         source={SOURCES.THEMES}
         data={subThemes}
-        popularSlugs={[]}
+        popularDocuments={[]}
         breadcrumbSegments={[
           // Libellé écrit en dur : `labelBySource[SOURCES.THEMES]` vaut
           // « Themes », sans accent.

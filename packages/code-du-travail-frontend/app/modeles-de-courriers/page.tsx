@@ -21,14 +21,14 @@ async function Index() {
         description="Téléchargez et personnalisez les modèles de documents et de lettres pour vos démarches en lien avec le droit du travail"
         source={SOURCES.LETTERS}
         data={modeles}
-        popularSlugs={[
+        popularDocuments={[
           "lettre-de-demission",
           "attestation-de-travail",
           "rupture-du-contrat-en-periode-dessai-par-le-salarie",
           "demande-de-rendez-vous-en-vue-dune-rupture-conventionnelle",
           "promesse-dembauche",
           "rupture-dun-contrat-de-travail-a-duree-determinee-dun-commun-accord",
-        ]}
+        ].map((slug) => ({ source: SOURCES.LETTERS, slug }))}
       />
     </DsfrLayout>
   );
