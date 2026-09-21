@@ -51,10 +51,10 @@ dans l'ordre. Le **titre** est celui utilisé dans l'action `view_step_<titre>` 
 `tool.title` chargé en base ; libellés canoniques ci-dessous).
 
 | Titre                                          | Étapes (`name`)                                              |
-| ---------------------------------------------- | ----------------------------------------------------------- |
+|------------------------------------------------| ----------------------------------------------------------- |
 | Indemnité de licenciement                      | start, info_cc, infos, anciennete, absences, salaires, results |
 | Indemnité de rupture conventionnelle           | start, info_cc, infos, anciennete, absences, salaires, results |
-| Indemnité de départ ou de mise à la retraite   | start, infos, anciennete, absences, salaires, results        |
+| Indemnité de départ ou mise à la retraite      | start, infos, anciennete, absences, salaires, results        |
 | Indemnités de précarité                        | start, info_cc, type_contrat, terme_contrat, remuneration, indemnite |
 | Préavis de démission                           | start, info_cc, infos, results                              |
 | Préavis de licenciement                        | start, status, info_cc, infos, results                      |
@@ -118,7 +118,7 @@ du navigateur. Mesure l'intention de conserver le résultat.
 | Type     | Contenu                                                                              | Détail                        |
 | -------- | ----------------------------------------------------------------------------------- | ----------------------------- |
 | category | outil                                                                               |                               |
-| action   | view_step_Indemnité de licenciement · view_step_Indemnité de rupture conventionnelle · view_step_Indemnité de départ ou de mise à la retraite | Simulateur concerné |
+| action   | view_step_Indemnité de licenciement · view_step_Indemnité de rupture conventionnelle · view_step_Indemnité de départ ou mise à la retraite | Simulateur concerné |
 | name     | results_ineligible                                                                  | L'utilisateur est inéligible  |
 
 ###### Issue du résultat (« Indemnités de précarité »)

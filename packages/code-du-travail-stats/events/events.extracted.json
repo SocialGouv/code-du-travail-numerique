@@ -1541,7 +1541,7 @@
     },
     {
       "category": "outil",
-      "action": "view_step_Indemnité de départ ou de mise à la retraite",
+      "action": "view_step_Indemnité de départ ou mise à la retraite",
       "name_pattern": "results_ineligible",
       "resolution": "literal",
       "emit_function": "useIndemniteRetraiteEventEmitter",

@@ -6,7 +6,7 @@ export enum IndemniteDepartType {
   RUPTURE_CONVENTIONNELLE = "Indemnité de rupture conventionnelle",
   // La valeur sert aussi de nom d'action Matomo (`view_step_<valeur>`) : elle
   // doit couvrir les deux origines possibles du départ à la retraite.
-  RETRAITE = "Indemnité de départ ou de mise à la retraite",
+  RETRAITE = "Indemnité de départ ou mise à la retraite",
 }
 
 /**
