@@ -6,6 +6,7 @@ import {
   ContributionLayout,
   fetchAgreementDeclinations,
   fetchContributionBySlug,
+  fetchContributionExploreThemes,
   fetchGenericContributionInfos,
 } from "../../../src/modules/contributions";
 import { removeCCNumberFromSlug } from "../../../src/modules/utils/removeCCNumberFromSlug";
@@ -24,23 +25,34 @@ export async function generateMetadata(props) {
 async function Contribution(props) {
   const params = await props.params;
   const contribution = await getContribution(params.slug);
-  // Page personnalisée à une CC : les infos du document générique frère
-  // alimentent le bloc de sélection de CC (réinitialisation à l'arrivée
-  // externe), le document conventionnel ne portant pas ccSupported/ccUnextended.
-  const genericInfos = !contribution.isGeneric
-    ? await fetchGenericContributionInfos(removeCCNumberFromSlug(params.slug))
-    : undefined;
-  // Maillage interne (#7355) : seule la fiche générique liste ses déclinaisons
-  // par convention collective ; les pages CC renvoient déjà vers la générique.
-  const agreementDeclinations = contribution.isGeneric
-    ? await fetchAgreementDeclinations(contribution)
-    : [];
+  // Le mapping éditorial des sous-thèmes (#7455) est indexé sur le slug
+  // générique : la page CC `1486-mon-slug` partage l'entrée de `mon-slug`.
+  const genericSlug = contribution.isGeneric
+    ? params.slug
+    : removeCCNumberFromSlug(params.slug);
+  // Fetchs indépendants une fois la contribution connue.
+  const [genericInfos, agreementDeclinations, exploreThemes] =
+    await Promise.all([
+      // Page personnalisée à une CC : les infos du document générique frère
+      // alimentent le bloc de sélection de CC (réinitialisation à l'arrivée
+      // externe), le document conventionnel ne portant pas
+      // ccSupported/ccUnextended.
+      contribution.isGeneric
+        ? undefined
+        : fetchGenericContributionInfos(genericSlug),
+      // Maillage interne (#7355) : seule la fiche générique liste ses
+      // déclinaisons par convention collective ; les pages CC renvoient déjà
+      // vers la générique.
+      contribution.isGeneric ? fetchAgreementDeclinations(contribution) : [],
+      fetchContributionExploreThemes(genericSlug),
+    ]);
   return (
     <DsfrLayout>
       <ContributionLayout
         contribution={contribution}
         genericInfos={genericInfos}
         agreementDeclinations={agreementDeclinations}
+        exploreThemes={exploreThemes}
       />
     </DsfrLayout>
   );

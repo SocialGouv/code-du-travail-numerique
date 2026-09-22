@@ -29,6 +29,37 @@ export const fetchRootThemes = async <K extends keyof ThemeElasticDocument>(
     .filter((item) => item !== undefined);
 };
 
+/**
+ * Thèmes désignés par leur slug, en un seul aller-retour. L'ordre des hits
+ * Elasticsearch ne suit PAS l'ordre du tableau `slugs` : c'est à l'appelant de
+ * réordonner s'il tient à l'ordre demandé.
+ */
+export const fetchThemesBySlugs = async <K extends keyof ThemeElasticDocument>(
+  slugs: string[],
+  fields: K[]
+): Promise<Pick<ThemeElasticDocument, K>[]> => {
+  if (slugs.length === 0) return [];
+  const response = await elasticsearchClient.search<
+    Pick<ThemeElasticDocument, K>
+  >({
+    query: {
+      bool: {
+        filter: [
+          { terms: { slug: slugs } },
+          { term: { source: SOURCES.THEMES } },
+          { term: { isPublished: true } },
+        ],
+      },
+    },
+    size: slugs.length,
+    _source: fields,
+    index: elasticDocumentsIndex,
+  });
+  return response.hits.hits
+    .map((t) => t._source)
+    .filter((item) => item !== undefined);
+};
+
 export const fetchTheme = async <K extends keyof ThemeElasticDocument>(
   slug: string,
   fields: K[]
