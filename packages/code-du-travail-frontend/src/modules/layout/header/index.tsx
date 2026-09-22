@@ -74,6 +74,12 @@ export const Header = () => {
               },
             },
             {
+              text: "Indemnité de départ ou mise à la retraite",
+              linkProps: {
+                href: "/outils/indemnite-retraite",
+              },
+            },
+            {
               text: "Indemnité de précarité",
               linkProps: {
                 href: "/outils/indemnite-precarite",
@@ -83,12 +89,6 @@ export const Header = () => {
               text: "Salaire brut/net",
               linkProps: {
                 href: "/outils/simulateur-embauche",
-              },
-            },
-            {
-              text: "Préavis de démission",
-              linkProps: {
-                href: "/outils/preavis-demission",
               },
             },
           ],
