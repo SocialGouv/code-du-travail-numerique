@@ -150,7 +150,7 @@ export const EnterpriseAgreementSelectionLink = ({
       {enterprise.hasEstablishmentWithoutConvention &&
         enterprise.conventions.length > 0 && <PartialAgreementCoverageAlert />}
       <p className={fr.cx("fr-h4", "fr-mt-2w", "fr-mb-0")}>
-        Accord{accordCount > 1 ? "s" : ""} d&apos;entreprise
+        Accord{accordCount > 1 ? "s " : " "}d&apos;entreprise
         {enterprise.etablissements > 1 && (
           <span
             className={fr.cx(
