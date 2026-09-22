@@ -16,6 +16,7 @@ import { ContributionRating } from "./rating";
 import { focusableTitle } from "../common/focusableTitle";
 import { ExploreThemes } from "./explore-themes/ExploreThemes";
 import type { ExploreTheme } from "./explore-themes/type";
+import { CcBlockSlot } from "./ccPosition";
 
 type Props = {
   contribution: Contribution;
@@ -91,7 +92,16 @@ export const ContributionGenericContent = forwardRef<
               Réponse d&apos;après le Code du Travail
             </h2>
             {alertText}
-            <ContributionContent contribution={contribution} titleLevel={2} />
+            {/* Emplacements du bloc CC dans le contenu (A/B test #7481) :
+                les slots ne rendent le bloc que si la variante le place là. */}
+            <ContributionContent
+              contribution={contribution}
+              titleLevel={2}
+              beforeFirstAccordionGroup={<CcBlockSlot position="after-intro" />}
+              accordionItemFooter={(accordionId) => (
+                <CcBlockSlot position="in-accordion" instanceId={accordionId} />
+              )}
+            />
             <ExploreThemes
               themes={exploreThemes}
               contributionSlug={contribution.slug}

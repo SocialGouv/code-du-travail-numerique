@@ -38,7 +38,18 @@ type Props = {
    * dans le dénominateur du funnel (cf. AgreementSearchFormBlock).
    */
   isRedirecting?: boolean;
+  /** cf. AgreementSearchFormBlock : option « sans CC », garde partagée, ids. */
+  showNoAgreementOption?: boolean;
+  pageOnce?: (key: string, emit: () => void) => void;
+  instanceId?: string;
+  /**
+   * Marge et rappel visuel quand le bloc est inséré dans le contenu (variantes
+   * C et D de #7481) plutôt qu'en tête de page.
+   */
+  className?: string;
 };
+
+const TITLE_ID = "personalize-response-title";
 
 // Façade « parcours interne » (fiche générique) : présentation « Personnalisez
 // la réponse… ». Toute la mécanique du formulaire vit dans
@@ -55,10 +66,15 @@ export function ContributionGenericAgreementSearch({
   onSameAgreementSelect,
   defaultRoute,
   isRedirecting,
+  showNoAgreementOption,
+  pageOnce,
+  instanceId,
+  className,
 }: Props) {
   const { emitClickWhatIsAgreement } = useCcFunnelTracking();
+  const titleId = instanceId ? `${TITLE_ID}-${instanceId}` : TITLE_ID;
   return (
-    <BlueCard>
+    <BlueCard className={className}>
       <div className={fr.cx("fr-grid-row")}>
         <Image
           priority
@@ -68,7 +84,7 @@ export function ContributionGenericAgreementSearch({
         />
         <p
           ref={personalizeTitleRef}
-          id="personalize-response-title"
+          id={titleId}
           className={`${fr.cx("fr-h3", "fr-mt-1w")} ${focusableTitle}`}
           role="heading"
           aria-level={2}
@@ -90,8 +106,11 @@ export function ContributionGenericAgreementSearch({
         onSameAgreementSelect={onSameAgreementSelect}
         defaultRoute={defaultRoute}
         isRedirecting={isRedirecting}
+        showNoAgreementOption={showNoAgreementOption}
+        pageOnce={pageOnce}
+        instanceId={instanceId}
         onBackToPersonalizeFocus={() => {
-          document.getElementById("personalize-response-title")?.focus();
+          document.getElementById(titleId)?.focus();
         }}
       />
     </BlueCard>

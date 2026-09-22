@@ -25,6 +25,12 @@ type Props = {
    * « Trouver sa convention collective », widgets).
    */
   funnelTracking?: AgreementSearchFunnelTracking;
+  /**
+   * Suffixe des `id` du DOM quand plusieurs instances du formulaire coexistent
+   * sur une page (bloc CC répété dans chaque accordéon, A/B test #7481).
+   * Absent : ids historiques, sur lesquels s'appuient les tests e2e.
+   */
+  instanceId?: string;
 };
 
 export const AgreementSearchInput = ({
@@ -36,6 +42,7 @@ export const AgreementSearchInput = ({
   level,
   requireSearchSignal,
   funnelTracking,
+  instanceId,
 }: Props) => {
   const [selectedAgreement, setSelectedAgreement] = useState(defaultAgreement);
   const [searchState, setSearchState] = useState<
@@ -109,7 +116,11 @@ export const AgreementSearchInput = ({
       <div className={fr.cx("fr-mt-2w")} ref={containerRef}>
         <div className={fr.cx("fr-col-12")}>
           <Autocomplete<Agreement>
-            id="agreement-search-autocomplete"
+            id={
+              instanceId
+                ? `agreement-search-autocomplete-${instanceId}`
+                : "agreement-search-autocomplete"
+            }
             defaultValue={selectedAgreement}
             dataTestId="AgreementSearchAutocomplete"
             hintText="Ex : transport routier ou 1486"

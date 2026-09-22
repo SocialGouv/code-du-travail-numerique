@@ -393,6 +393,12 @@ sur la radio. Les deux séries coexistent pour ne pas rompre les courbes existan
 vivent dans **deux catégories distinctes**, `cc_search_type_of_users` et `cc_search_funnel` :
 une requête qui filtrerait sur la seule `action` les additionnerait à tort.
 
+**A/B test #7481** (fiche « Congés pour évènements familiaux » uniquement) : quatre variantes
+d'emplacement du bloc (A témoin en tête, B en tête avec réponse visible, C sous l'introduction,
+D dans chaque accordéon). Les events du funnel sont inchangés ; `select_p3` / `click_p3` ne
+peuvent pas partir en B, C, D (option retirée), et `bloc_cc_visible` mesure l'exposition
+réelle. La variante se lit via le segment du plugin Matomo AbTesting.
+
 **Deux réserves de lecture**, à garder en tête avant de comparer des contributions entre
 elles :
 
@@ -410,6 +416,7 @@ elles :
 | Catégorie | Action | Name (📌) | Quand / pourquoi |
 | --------- | ------ | --------- | ---------------- |
 | cc_search_funnel | view_bloc_cc | `<toPageEventName(path)>` | Affichage du bloc de choix de CC, une fois par page. **Dénominateur du funnel** : toutes les étapes suivantes se lisent en pourcentage de cet event. Exclut les visites que la fiche générique s'apprête à rediriger vers la CC mémorisée : le bloc y est monté mais jamais vu, les compter gonflerait le dénominateur d'une cohorte à 0 % de conversion. |
+| cc_search_funnel | bloc_cc_visible | `<toPageEventName(path)>` | **Exposition réelle** au bloc : première entrée d'une instance du bloc dans l'écran, **une seule fois par page**. Complète `view_bloc_cc` (émis au montage) depuis l'A/B test sur l'emplacement du bloc (#7481) : en variante C le bloc est sous l'introduction, en variante D dans chaque accordéon fermé, si bien que « monté » ne signifie plus « vu ». Rapporté à `view_bloc_cc`, il donne la part des visites qui ont réellement eu le bloc sous les yeux ; les taux d'interaction et de personnalisation se lisent aussi sur ce dénominateur. La lecture par variante passe par le segment du plugin Matomo AbTesting (expérience `contribution_cc_position`), pas par le `name`. |
 | cc_search_funnel | click_c_est_quoi_une_cc | `<toPageEventName(path)>` | Clic sur « La convention collective, c'est quoi ? » en tête de la façade. Mesure la part d'usagers qui partent se documenter plutôt que de renseigner leur CC. |
 | cc_search_funnel | select_p1 | `<toPageEventName(path)>` | Clic sur la radio « Je sais quelle est ma convention collective ». Première marche du funnel, bien avant la sélection effective mesurée par `click_p1`. |
 | cc_search_funnel | select_p2 | `<toPageEventName(path)>` | Clic sur la radio « Je cherche mon entreprise ». Idem, pendant amont de `click_p2`. |

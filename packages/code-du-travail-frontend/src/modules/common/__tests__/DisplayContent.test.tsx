@@ -1002,4 +1002,76 @@ describe("DisplayContent", () => {
       expect(asFragment().firstChild).toMatchSnapshot();
     });
   });
+  describe("Points d'injection (A/B test #7481)", () => {
+    const CONTENT = `
+      <p>Introduction</p>
+      <details><summary>Premier</summary><div><p>Contenu premier</p></div></details>
+      <details><summary>Second</summary><div>
+        <p>Contenu second</p>
+        <details><summary>Imbriqué</summary><div><p>Contenu imbriqué</p></div></details>
+      </div></details>
+    `;
+
+    it("insère beforeFirstAccordionGroup entre l'introduction et le premier groupe", () => {
+      const { getByText, getByRole } = render(
+        <DisplayContent
+          content={CONTENT}
+          titleLevel={2}
+          extra={{ beforeFirstAccordionGroup: <p>Injecté</p> }}
+        />
+      );
+
+      const intro = getByText("Introduction");
+      const injected = getByText("Injecté");
+      const first = getByRole("button", { name: "Premier" });
+      expect(
+        intro.compareDocumentPosition(injected) &
+          Node.DOCUMENT_POSITION_FOLLOWING
+      ).toBeTruthy();
+      expect(
+        injected.compareDocumentPosition(first) &
+          Node.DOCUMENT_POSITION_FOLLOWING
+      ).toBeTruthy();
+    });
+
+    it("sans accordéon, place beforeFirstAccordionGroup après le contenu", () => {
+      const { getByText } = render(
+        <DisplayContent
+          content="<p>Seulement du texte</p>"
+          titleLevel={2}
+          extra={{ beforeFirstAccordionGroup: <p>Injecté</p> }}
+        />
+      );
+
+      const text = getByText("Seulement du texte");
+      const injected = getByText("Injecté");
+      expect(
+        text.compareDocumentPosition(injected) &
+          Node.DOCUMENT_POSITION_FOLLOWING
+      ).toBeTruthy();
+    });
+
+    it("ajoute accordionItemFooter en pied de chaque accordéon de premier niveau seulement", () => {
+      const footer = jest.fn((id: string) => <p>Pied {id}</p>);
+      const { getByText, queryByText } = render(
+        <DisplayContent
+          content={CONTENT}
+          titleLevel={2}
+          extra={{ accordionItemFooter: footer }}
+        />
+      );
+
+      expect(footer.mock.calls.map(([id]) => id)).toEqual([
+        "premier",
+        "second",
+      ]);
+      const secondContent = getByText("Contenu second");
+      const secondFooter = getByText("Pied second");
+      expect(
+        secondContent.compareDocumentPosition(secondFooter) &
+          Node.DOCUMENT_POSITION_FOLLOWING
+      ).toBeTruthy();
+      expect(queryByText("Pied imbrique")).not.toBeInTheDocument();
+    });
+  });
 });

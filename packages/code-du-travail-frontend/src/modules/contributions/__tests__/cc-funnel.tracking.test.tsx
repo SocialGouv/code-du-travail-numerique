@@ -31,6 +31,8 @@ import { UserAction } from "src/modules/outils/common/utils/UserAction";
 
 jest.mock("@socialgouv/matomo-next", () => ({
   sendEvent: jest.fn(),
+  // Hors expérience (#7481) : aucune variante affectée, comportement témoin.
+  useABTestVariant: jest.fn(() => null),
 }));
 
 jest.mock("uuid", () => ({
@@ -773,5 +775,66 @@ describe("Non-régression : aucun event de funnel hors contributions", () => {
     // Témoin : le parcours a bien avancé (les events historiques, eux, partent).
     expect((sendEvent as jest.Mock).mock.calls.length).toBeGreaterThan(0);
     expect(funnelEvents()).toHaveLength(0);
+  });
+});
+
+// jsdom n'implémente pas IntersectionObserver : mock minimal qui capture le
+// callback pour simuler l'entrée du bloc dans le viewport.
+describe("Exposition réelle au bloc (bloc_cc_visible)", () => {
+  type IOEntry = { isIntersecting: boolean };
+  let ioCallback: ((entries: IOEntry[]) => void) | undefined;
+  let disconnect: jest.Mock;
+
+  beforeEach(() => {
+    ioCallback = undefined;
+    disconnect = jest.fn();
+    (
+      global as unknown as { IntersectionObserver: unknown }
+    ).IntersectionObserver = jest.fn((cb: (entries: IOEntry[]) => void) => {
+      ioCallback = cb;
+      return {
+        observe: jest.fn(),
+        disconnect,
+        unobserve: jest.fn(),
+        takeRecords: jest.fn(),
+      };
+    });
+  });
+
+  afterEach(() => {
+    delete (global as unknown as { IntersectionObserver?: unknown })
+      .IntersectionObserver;
+  });
+
+  const enterViewport = () =>
+    act(() => {
+      ioCallback?.([{ isIntersecting: true }]);
+    });
+
+  it("n'émet rien au montage : le bloc peut être hors écran", () => {
+    render(<Harness />);
+
+    expect(eventsFor(TrackingCcFunnelAction.BLOC_CC_VISIBLE)).toHaveLength(0);
+    expect(eventsFor(TrackingCcFunnelAction.VIEW_BLOC_CC)).toHaveLength(1);
+  });
+
+  it("émet bloc_cc_visible à la première entrée dans le viewport, une seule fois", () => {
+    render(<Harness />);
+
+    enterViewport();
+    enterViewport();
+
+    expectSingleFunnelEvent(TrackingCcFunnelAction.BLOC_CC_VISIBLE);
+    expect(disconnect).toHaveBeenCalled();
+  });
+
+  it("ignore une intersection négative", () => {
+    render(<Harness />);
+
+    act(() => {
+      ioCallback?.([{ isIntersecting: false }]);
+    });
+
+    expect(eventsFor(TrackingCcFunnelAction.BLOC_CC_VISIBLE)).toHaveLength(0);
   });
 });

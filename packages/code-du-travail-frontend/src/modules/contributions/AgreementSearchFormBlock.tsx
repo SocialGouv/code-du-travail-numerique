@@ -60,6 +60,21 @@ type Props = {
    * compterait une cohorte structurellement à 0 % de conversion.
    */
   isRedirecting?: boolean;
+  /**
+   * Option « Je ne souhaite pas renseigner ma convention collective ».
+   * Défaut : proposée sauf sur les contributions sans réponse Code du travail.
+   * Les variantes B, C et D de l'A/B test #7481 la retirent : la réponse
+   * générale y est déjà affichée.
+   */
+  showNoAgreementOption?: boolean;
+  /**
+   * Garde « une fois par page » partagée entre plusieurs instances du bloc
+   * (bloc répété dans chaque accordéon, variante D). Sans elle, chaque
+   * instance tient sa propre garde, ce qui suffit quand le bloc est unique.
+   */
+  pageOnce?: (key: string, emit: () => void) => void;
+  /** Suffixe des `id` du DOM quand le bloc est répété sur une page. */
+  instanceId?: string;
 };
 
 const MISSING_ROUTE_ERROR =
@@ -77,9 +92,13 @@ export function AgreementSearchFormBlock({
   onBackToPersonalizeFocus,
   legend,
   isRedirecting,
+  showNoAgreementOption,
+  pageOnce,
+  instanceId,
 }: Props) {
   const router = useRouter();
   const { slug, isNoCDT } = contribution;
+  const rootRef = useRef<HTMLDivElement>(null);
   const [isValid, setIsValid] = useState(false);
   const [selectedRoute, setSelectedRoute] = useState<
     AgreementRoute | undefined
@@ -105,11 +124,12 @@ export function AgreementSearchFormBlock({
   // (p1 → p2 → p1) émettrait deux fois l'entrée dans l'étape pour un seul
   // `view_bloc_cc`. Le bloc, lui, est monté une fois par page.
   const emittedOnceRef = useRef(new Set<string>());
-  const once = useCallback((key: string, emit: () => void) => {
+  const localOnce = useCallback((key: string, emit: () => void) => {
     if (emittedOnceRef.current.has(key)) return;
     emittedOnceRef.current.add(key);
     emit();
   }, []);
+  const once = pageOnce ?? localOnce;
 
   useEffect(() => {
     setIsValid(isAgreementValid(contribution, selectedAgreement));
@@ -119,7 +139,30 @@ export function AgreementSearchFormBlock({
   // qui reste sur la page (cf. `isRedirecting`).
   useEffect(() => {
     if (isRedirecting) return;
-    funnel.emitViewBlocCc(trackingActionName);
+    once("view_bloc_cc", () => funnel.emitViewBlocCc(trackingActionName));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  // Exposition réelle : première entrée du bloc dans le viewport, une fois par
+  // page quel que soit le nombre d'instances. Distinct de `view_bloc_cc`
+  // (montage) depuis que le bloc peut être placé bas dans la page ou dans un
+  // accordéon fermé (#7481).
+  useEffect(() => {
+    const node = rootRef.current;
+    if (isRedirecting || !node || typeof IntersectionObserver === "undefined")
+      return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting) return;
+        once("bloc_cc_visible", () =>
+          funnel.emitBlocCcVisible(trackingActionName)
+        );
+        observer.disconnect();
+      },
+      { threshold: 0 }
+    );
+    observer.observe(node);
+    return () => observer.disconnect();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -242,7 +285,9 @@ export function AgreementSearchFormBlock({
     const idcc = String(selectedAgreement.num);
     if (trackedUntreatedAgreementsRef.current.has(idcc)) return;
     trackedUntreatedAgreementsRef.current.add(idcc);
-    funnel.emitUntreatedAgreementRetained(trackingActionName);
+    once(`cc_non_traitee_retenue_${idcc}`, () =>
+      funnel.emitUntreatedAgreementRetained(trackingActionName)
+    );
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedAgreement]);
 
@@ -343,7 +388,7 @@ export function AgreementSearchFormBlock({
   };
 
   return (
-    <div>
+    <div ref={rootRef}>
       <AgreementSearchForm
         onAgreementSelect={onAgreementSelect}
         selectedAgreementAlert={selectedAgreementAlert}
@@ -357,7 +402,7 @@ export function AgreementSearchFormBlock({
         // pas dans le flux « recherche entreprise ».
         showWhatIsAgreementLink={false}
         onBackToPersonalize={onBackToPersonalizeFocus}
-        showNoAgreementOption={!isNoCDT}
+        showNoAgreementOption={showNoAgreementOption ?? !isNoCDT}
         noAgreementContent={noAgreementBanner}
         onRouteChange={(route) => {
           setSelectedRoute(route);
@@ -377,6 +422,7 @@ export function AgreementSearchFormBlock({
         error={showMissingRouteError ? MISSING_ROUTE_ERROR : undefined}
         enterpriseRequireSearchSignal={enterpriseRequireSearchSignal}
         agreementRequireSearchSignal={agreementRequireSearchSignal}
+        instanceId={instanceId}
       />
       {isButtonDisplayed && (
         <Button
