@@ -28,6 +28,7 @@ async function Fiche(props) {
     description,
     raw,
     referencedTexts,
+    slug,
     title,
     url,
   } = await getFiche(params.slug);
@@ -44,6 +45,7 @@ async function Fiche(props) {
         raw={raw}
         breadcrumbs={breadcrumbs}
         referencedTexts={referencedTexts}
+        slug={slug}
       />
     </DsfrLayout>
   );

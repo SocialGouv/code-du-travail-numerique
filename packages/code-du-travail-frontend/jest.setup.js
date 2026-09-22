@@ -10,7 +10,13 @@ const useRouter = mockRouter.useRouter;
 
 if (typeof window !== "undefined") {
   window.scrollTo = jest.fn();
-  global.setImmediate = jest.useRealTimers;
+  // jsdom n'expose pas `setImmediate`, mais le scheduler de React l'utilise
+  // dès qu'il existe pour planifier ses rendus hors `act` (résolution d'une
+  // promesse, timer…). Il lui faut donc une implémentation qui exécute bien le
+  // callback, sans quoi ces rendus sont perdus et les tests deviennent
+  // dépendants du timing (flaky en CI).
+  global.setImmediate = (callback, ...args) => setTimeout(callback, 0, ...args);
+  global.clearImmediate = (id) => clearTimeout(id);
   global.TextEncoder = require("util").TextEncoder;
   global.TextDecoder = require("util").TextDecoder;
 
