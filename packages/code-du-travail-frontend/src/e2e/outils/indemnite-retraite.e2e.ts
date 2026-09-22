@@ -13,7 +13,7 @@ test.describe("Outil - Indemnité de départ à la retraite", () => {
   }) => {
     await page.goto("/outils/indemnite-retraite");
     await expect(page.getByRole("heading", { level: 1 }).first()).toHaveText(
-      "Calculer l'indemnité de départ à la retraite"
+      "Calculer l'indemnité de départ ou mise à la retraite"
     );
     await page.getByRole("button", { name: "Commencer" }).click();
 

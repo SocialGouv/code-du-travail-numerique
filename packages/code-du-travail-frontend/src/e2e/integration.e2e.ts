@@ -43,7 +43,7 @@ test.describe("Pages integration", () => {
 
     const iframe = page.frameLocator("iframe");
     await expect(
-      iframe.getByText("Calculer l'indemnité de départ à la retraite")
+      iframe.getByText("Calculer l'indemnité de départ ou mise à la retraite")
     ).toBeVisible();
   });
 
