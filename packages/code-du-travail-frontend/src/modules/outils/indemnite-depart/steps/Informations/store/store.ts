@@ -21,16 +21,21 @@ import { CommonAgreementStoreSlice } from "../../Agreement/store";
 import { CommonSituationStoreSlice } from "../../../situationStore";
 import { ValidationResponse } from "src/modules/outils/common/components/SimulatorLayout/types";
 import { OuiNon } from "../../../common";
+import { OriginRetraite } from "../../../types";
 
 const initialState = (
   type: IndemniteDepartType
 ): CommonInformationsStoreData => ({
   input: {
     showLicenciementInaptitude: type === IndemniteDepartType.LICENCIEMENT,
+    showOriginRetraite: type === IndemniteDepartType.RETRAITE,
     publicodesInformations: [],
     isStepHidden: type === IndemniteDepartType.RUPTURE_CONVENTIONNELLE,
     isStepSalaryHidden: false,
-    hasNoMissingQuestions: false,
+    // Sans étape « Convention collective », `generatePublicodesQuestions` n'est
+    // jamais appelé : il n'y a aucune question publicodes à poser et
+    // `onNextStep` doit pouvoir valider l'étape dès le départ.
+    hasNoMissingQuestions: type === IndemniteDepartType.RETRAITE,
     informationError: false,
   },
   error: {
@@ -52,6 +57,16 @@ const createCommonInformationsStore: StoreSlice<
     onChangeLicenciementInaptitude: (value: OuiNon) => {
       applyGenericValidation(get, set, "licenciementInaptitude", value);
       get().informationsFunction.generatePublicodesQuestions();
+    },
+    onChangeOriginRetraite: (value: OriginRetraite) => {
+      applyGenericValidation(get, set, "originRetraite", value);
+      // La situation partagée est réinjectée dans chaque appel à
+      // `publicodes.calculate` (étapes Ancienneté, Absences et Résultat) :
+      // c'est par là que l'origine atteint le moteur de calcul.
+      get().situationFunction.setSituation(
+        "contrat salarié . indemnité de retraite . mise à la retraite",
+        value === "mise-retraite" ? "oui" : "non"
+      );
     },
     generatePublicodesQuestions: (): boolean => {
       const publicodes = get().agreementData.publicodes;
@@ -105,6 +120,8 @@ const createCommonInformationsStore: StoreSlice<
             state.informationsData.input = {
               ...initialState(type).input,
               licenciementInaptitude: licenciementInaptitude,
+              // la réinitialisation ne doit pas effacer l'origine du départ
+              originRetraite: state.informationsData.input.originRetraite,
               // aucune question publicodes à poser : il ne manque plus rien
               hasNoMissingQuestions: true,
             };

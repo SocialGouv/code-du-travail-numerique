@@ -1,11 +1,63 @@
 import { SalaryPeriods } from "@socialgouv/modeles-social";
 import { OuiNon } from "../common";
-import { IndemniteDepartType, Agreement } from "../types";
+import { IndemniteDepartType, Agreement, OriginRetraite } from "../types";
+
+/**
+ * Libellé de l'évènement de rupture qui sert de point de référence aux
+ * questions sur les salaires et sur l'arrêt de travail.
+ */
+export const getRuptureEventLabel = (
+  type: IndemniteDepartType,
+  originRetraite?: OriginRetraite
+): string => {
+  switch (type) {
+    case IndemniteDepartType.RETRAITE:
+      return originRetraite === "mise-retraite"
+        ? "la notification de la mise à la retraite"
+        : "la notification du départ à la retraite";
+    case IndemniteDepartType.LICENCIEMENT:
+      return "la notification du licenciement";
+    default:
+      return "la fin du contrat";
+  }
+};
+
+/**
+ * Nom nu de l'évènement de retraite, pour les tournures qui portent déjà leur
+ * préposition (« préavis de… », « Indemnité de… »).
+ */
+export const getRetraiteOriginLabel = (
+  originRetraite?: OriginRetraite
+): string =>
+  originRetraite === "mise-retraite"
+    ? "mise à la retraite"
+    : "départ à la retraite";
+
+/**
+ * Variante nominale du libellé, pour les phrases qui ne parlent pas de
+ * notification (« au moment de… »).
+ */
+export const getRuptureLabel = (
+  type: IndemniteDepartType,
+  originRetraite?: OriginRetraite
+): string => {
+  switch (type) {
+    case IndemniteDepartType.RETRAITE:
+      return originRetraite === "mise-retraite"
+        ? "de la mise à la retraite"
+        : "du départ à la retraite";
+    case IndemniteDepartType.RUPTURE_CONVENTIONNELLE:
+      return "de la rupture conventionnelle";
+    default:
+      return "du licenciement";
+  }
+};
 
 export const generateSameSalaryQuestion = (
   type: IndemniteDepartType,
   arretTravail: OuiNon | undefined,
-  salaryPeriods: SalaryPeriods[]
+  salaryPeriods: SalaryPeriods[],
+  originRetraite?: OriginRetraite
 ): string => {
   return `Le salaire mensuel brut a-t-il été le même ${
     salaryPeriods.length === 1
@@ -14,9 +66,7 @@ export const generateSameSalaryQuestion = (
   } précédant ${
     arretTravail === "oui"
       ? `l'arrêt de travail`
-      : type === IndemniteDepartType.LICENCIEMENT
-        ? "la notification du licenciement"
-        : "la fin du contrat"
+      : getRuptureEventLabel(type, originRetraite)
   }&nbsp;?`;
 };
 
@@ -42,7 +92,8 @@ export const generateSameSalaryQuestionSubLabel = (
 export const generateSalaireTempsPleinQuestion = (
   type: IndemniteDepartType,
   arretTravail: OuiNon | undefined,
-  salaryPeriods: SalaryPeriods[]
+  salaryPeriods: SalaryPeriods[],
+  originRetraite?: OriginRetraite
 ): string => {
   return `${
     salaryPeriods.length === 1
@@ -55,16 +106,15 @@ export const generateSalaireTempsPleinQuestion = (
   } précédant ${
     arretTravail === "oui"
       ? "l'arrêt de travail"
-      : type === IndemniteDepartType.LICENCIEMENT
-        ? "la notification du licenciement"
-        : "la fin du contrat"
+      : getRuptureEventLabel(type, originRetraite)
   }`;
 };
 
 export const generateResultSameSalary = (
   type: IndemniteDepartType,
   arretTravail: OuiNon | undefined,
-  salaryPeriods: SalaryPeriods[]
+  salaryPeriods: SalaryPeriods[],
+  originRetraite?: OriginRetraite
 ): string => {
   return `Salaire mensuel brut identique${
     salaryPeriods.length === 1
@@ -73,16 +123,15 @@ export const generateResultSameSalary = (
   }précédant ${
     arretTravail === "oui"
       ? `l'arrêt de travail`
-      : type === IndemniteDepartType.LICENCIEMENT
-        ? "la notification du licenciement"
-        : "la fin du contrat"
+      : getRuptureEventLabel(type, originRetraite)
   }`;
 };
 
 export const generateResultSalaireTempsPlein = (
   type: IndemniteDepartType,
   arretTravail: OuiNon | undefined,
-  salaryPeriods: SalaryPeriods[]
+  salaryPeriods: SalaryPeriods[],
+  originRetraite?: OriginRetraite
 ): string => {
   return `${
     salaryPeriods.length === 1
@@ -91,9 +140,7 @@ export const generateResultSalaireTempsPlein = (
   } précédant ${
     arretTravail === "oui"
       ? "l'arrêt de travail"
-      : type === IndemniteDepartType.LICENCIEMENT
-        ? "la notification du licenciement"
-        : "la fin du contrat"
+      : getRuptureEventLabel(type, originRetraite)
   }`;
 };
 

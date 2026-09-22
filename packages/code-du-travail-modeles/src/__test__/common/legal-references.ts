@@ -65,3 +65,50 @@ export const IndemniteLicenciementInaptitudeReferences = [
     url: "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006900981",
   },
 ];
+
+const IndemniteRetraiteCommonReferences = [
+  {
+    article: "Article L1237-4",
+    url: "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006901178",
+  },
+  {
+    article: "Article D1237-2",
+    url: "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000018537482",
+  },
+  {
+    article: "Article L1226-7",
+    url: "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000023272293",
+  },
+  {
+    article: "Article L1225-54",
+    url: "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000018764621",
+  },
+  {
+    article: "Article L1225-65",
+    url: "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038219280",
+  },
+];
+
+export const IndemniteMiseRetraiteReferences = [
+  {
+    article: "Article L1237-5",
+    url: "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006901179",
+  },
+  {
+    article: "Article L1237-7",
+    url: "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006901181",
+  },
+  ...IndemniteRetraiteCommonReferences,
+];
+
+export const IndemniteDepartVolontaireRetraiteReferences = [
+  {
+    article: "Article L1237-9",
+    url: "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006901183",
+  },
+  {
+    article: "Article D1237-1",
+    url: "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000018537484",
+  },
+  ...IndemniteRetraiteCommonReferences,
+];

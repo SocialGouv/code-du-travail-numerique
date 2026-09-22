@@ -1,4 +1,5 @@
 export { default as IndemniteLicenciementPublicodes } from "./IndemniteLicenciementPublicodes";
+export { default as IndemniteRetraitePublicodes } from "./IndemniteRetraitePublicodes";
 export { default as PreavisRetraitePublicodes } from "./PreavisRetraitePublicodes";
 export * from "./Publicodes";
 export { default as RuptureConventionnellePublicodes } from "./RuptureConventionnellePublicodes";

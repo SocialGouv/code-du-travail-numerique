@@ -31,7 +31,9 @@ export const ContainerSimulator = ({
         <div className={`${fr.cx("fr-mb-3w")} ${line}`} />
         {children}
       </div>
-      <div className={`${fr.cx("fr-m-0")} ${line}`} />
+      <div
+        className={`${fr.cx("fr-m-0", relatedItems.length === 0 ? "fr-mb-12v" : "fr-m-0")} ${line}`}
+      />
       {relatedItems.length > 0 && (
         <div
           className={fr.cx("fr-grid-row", "fr-col-12", "fr-mt-12v", "fr-mb-2v")}

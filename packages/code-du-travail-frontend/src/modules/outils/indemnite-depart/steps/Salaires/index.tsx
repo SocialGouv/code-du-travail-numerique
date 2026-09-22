@@ -34,7 +34,9 @@ const StepSalaires = ({ type }: Props) => {
     arretTravail,
     isAgreementSupported,
     errorPrimeSalaryPeriods,
+    originRetraite,
   } = useIndemniteDepartStore(store, (state) => ({
+    originRetraite: state.informationsData.input.originRetraite,
     salaryPeriods: state.salairesData.input.salaryPeriods,
     onSalariesChange: state.salairesFunction.onSalariesChange,
     errorSalaryPeriods: state.salairesData.error.errorSalaryPeriods,
@@ -72,7 +74,12 @@ const StepSalaires = ({ type }: Props) => {
           },
         ]}
         name="hasSameSalary"
-        label={generateSameSalaryQuestion(type, arretTravail, salaryPeriods)}
+        label={generateSameSalaryQuestion(
+          type,
+          arretTravail,
+          salaryPeriods,
+          originRetraite
+        )}
         subLabel={generateSameSalaryQuestionSubLabel(
           type,
           arretTravail,
@@ -101,7 +108,8 @@ const StepSalaires = ({ type }: Props) => {
           title={generateSalaireTempsPleinQuestion(
             type,
             arretTravail,
-            salaryPeriods
+            salaryPeriods,
+            originRetraite
           )}
           onSalariesChange={onSalariesChange}
           salaryPeriods={salaryPeriods}

@@ -31,6 +31,10 @@ const getSupportedCc = (
     case PublicodesSimulator.HEURES_RECHERCHE_EMPLOI:
       key = "heuresRechercheEmploi";
       break;
+    case PublicodesSimulator.INDEMNITE_RETRAITE:
+      // V1 fondée sur le seul Code du travail : aucune convention collective
+      // n'est traitée, et `ccn-supported.json` n'a pas de colonne dédiée.
+      return [];
     default:
       throw new Error(
         `Unsupported simulator: ${simulator}. Supported simulators are: ${Object.values(

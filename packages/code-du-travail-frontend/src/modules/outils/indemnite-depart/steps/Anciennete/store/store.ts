@@ -64,12 +64,14 @@ const createAncienneteStore: StoreSlice<
     updateAncienneteEstimee: () => {
       const publicodes = get().agreementData.publicodes;
       const { dateEntree, dateSortie } = get().ancienneteData.input;
-      const absences = get().absenceData.input.absencePeriods;
+      const { absencePeriods, arretTravail, dateArretTravail } =
+        get().absenceData.input;
       if (dateEntree && dateSortie) {
         const result = publicodes.estimatedSeniority(
           dateEntree,
           dateSortie,
-          absences
+          absencePeriods,
+          arretTravail === "oui" ? dateArretTravail : undefined
         );
         set(
           produce((state: AncienneteStoreSlice) => {

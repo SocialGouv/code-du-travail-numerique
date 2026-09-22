@@ -16,6 +16,9 @@ import {
   removeNonPublicodeFields,
 } from "./utils";
 
+export const LEGAL_DEFAULT_TARGET_RULE =
+  "contrat salarié . indemnité de licenciement . résultat légal";
+
 export class Legal {
   public readonly ineligibility: IIneligibility;
 
@@ -23,10 +26,16 @@ export class Legal {
 
   public readonly salary: IReferenceSalary<SupportedCc>;
 
-  constructor(ineligibility: IIneligibility) {
+  private readonly targetRule: string;
+
+  constructor(
+    ineligibility: IIneligibility,
+    targetRule: string = LEGAL_DEFAULT_TARGET_RULE
+  ) {
     this.ineligibility = ineligibility;
     this.seniority = new SeniorityFactory().create(SupportedCc.default);
     this.salary = new ReferenceSalaryFactory().create(SupportedCc.default);
+    this.targetRule = targetRule;
   }
 
   calculate(
@@ -50,10 +59,7 @@ export class Legal {
     }
     legalArgs = mapLegalSalaryArgs(legalArgs, this.salary);
     const situation = removeNonPublicodeFields(legalArgs);
-    const result = publicodes.setSituation(
-      situation,
-      "contrat salarié . indemnité de licenciement . résultat légal"
-    );
+    const result = publicodes.setSituation(situation, this.targetRule);
     if (result.missingArgs.length > 0) {
       return {
         missingArgs: result.missingArgs,
