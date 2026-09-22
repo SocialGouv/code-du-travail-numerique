@@ -1,4 +1,4 @@
-import { render } from "@testing-library/react";
+import { render, screen, within } from "@testing-library/react";
 import { ListLayout } from "../ListLayout";
 import { SOURCES } from "@socialgouv/cdtn-utils";
 
@@ -58,7 +58,9 @@ describe("<ListLayout />", () => {
         title={""}
         description={""}
         data={contribs}
-        popularSlugs={["periode-essai"]}
+        popularDocuments={[
+          { source: SOURCES.CONTRIBUTIONS, slug: "periode-essai" },
+        ]}
       />
     );
     const headingsH2 = getAllByRole("heading", { level: 2 });
@@ -74,5 +76,87 @@ describe("<ListLayout />", () => {
     expect(documents[2]).toHaveTextContent("Jours fériés");
     expect(documents[3]).toHaveTextContent("Période d'essai");
     expect(container).toMatchSnapshot();
+  });
+
+  describe("fiches pratiques (#7464)", () => {
+    // Une contribution et une fiche infos de même slug, dans une même section.
+    const mixed = [
+      {
+        theme: { label: "Congés et repos", position: 0, slug: "conges" },
+        documents: [
+          {
+            title: "Les congés payés",
+            slug: "conges-payes",
+            description: "",
+            source: "contributions",
+          },
+          {
+            title: "Tout sur les congés payés",
+            slug: "conges-payes",
+            description: "",
+            source: "information",
+          },
+        ],
+      },
+    ];
+
+    it("apparie les contenus populaires sur le couple (source, slug)", () => {
+      render(
+        <ListLayout
+          source={SOURCES.CONTRIBUTIONS}
+          title=""
+          description=""
+          data={mixed}
+          popularDocuments={[
+            { source: SOURCES.EDITORIAL_CONTENT, slug: "conges-payes" },
+          ]}
+        />
+      );
+
+      const popular = screen
+        .getByRole("heading", { level: 2, name: "Contenus populaires" })
+        .closest("section") as HTMLElement;
+      const links = within(popular).getAllByRole("link");
+      expect(links).toHaveLength(1);
+      expect(links[0]).toHaveTextContent("Tout sur les congés payés");
+      expect(links[0]).toHaveAttribute("href", "/information/conges-payes");
+    });
+
+    it("tague chaque carte, contenus populaires inclus", () => {
+      render(
+        <ListLayout
+          source={SOURCES.CONTRIBUTIONS}
+          title=""
+          description=""
+          data={mixed}
+          popularDocuments={[
+            { source: SOURCES.CONTRIBUTIONS, slug: "conges-payes" },
+          ]}
+        />
+      );
+
+      // 1 carte populaire (contribution) + 2 cartes dans la section du thème.
+      expect(
+        screen.getAllByText("Selon ma convention collective")
+      ).toHaveLength(2);
+      expect(screen.getAllByText("Fiche infos")).toHaveLength(1);
+    });
+
+    it("ne tague pas les cartes des autres rubriques", () => {
+      render(
+        <ListLayout
+          source={SOURCES.LETTERS}
+          title=""
+          description=""
+          data={mixed}
+          popularDocuments={[]}
+        />
+      );
+
+      expect(
+        screen.queryByText("Selon ma convention collective")
+      ).not.toBeInTheDocument();
+      expect(screen.queryByText("Fiche infos")).not.toBeInTheDocument();
+    });
   });
 });

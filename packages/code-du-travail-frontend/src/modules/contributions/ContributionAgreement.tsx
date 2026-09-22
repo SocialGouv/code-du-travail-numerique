@@ -26,6 +26,7 @@ import { Agreement } from "src/modules/outils/indemnite-depart/types";
 // Import de type uniquement : queries.ts embarque le client Elasticsearch
 // (serveur), il ne doit pas entrer dans le bundle client.
 import type { GenericContributionInfos } from "./queries";
+import type { ExploreTheme } from "./explore-themes/type";
 
 // Ré-export de compatibilité : la constante vit désormais dans
 // contributionUtils pour éviter un cycle d'import avec externalArrival.
@@ -37,6 +38,8 @@ type Props = {
   // ccSupported/ccUnextended). Absent (échec du fetch) : la réinitialisation
   // est désactivée et la page garde son comportement historique.
   genericInfos?: GenericContributionInfos;
+  // Sous-thèmes mis en avant (#7455). Vide : la rubrique est masquée.
+  exploreThemes?: ExploreTheme[];
 };
 
 // Deux présentations du bloc de personnalisation sur une page CC :
@@ -46,7 +49,11 @@ type Props = {
 //   ne bascule pas sur place : il renvoie vers la fiche générique.
 type Mode = "selection" | "selected";
 
-export function ContributionAgreement({ contribution, genericInfos }: Props) {
+export function ContributionAgreement({
+  contribution,
+  genericInfos,
+  exploreThemes = [],
+}: Props) {
   const { slug, relatedItems } = contribution;
   const { push } = useRouter();
   const agreementTitleRef = useRef<HTMLParagraphElement>(null);
@@ -209,6 +216,7 @@ export function ContributionAgreement({ contribution, genericInfos }: Props) {
       <ContributionAgreementContent
         contribution={contribution}
         relatedItems={relatedItems}
+        exploreThemes={exploreThemes}
       />
     </>
   );

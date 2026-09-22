@@ -2,7 +2,13 @@ import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
 import { elasticDocumentsIndex, elasticsearchClient } from "../../api/utils";
 
 import { nonNullable } from "@socialgouv/modeles-social";
-import { LinkedContent, RelatedItem, sources } from "./type";
+import {
+  LinkedContent,
+  RELATED_ARTICLES_TITLE,
+  RELATED_TOOLS_TITLE,
+  RelatedItem,
+  sources,
+} from "./type";
 import {
   MAX_RELATED_ITEMS_ARTICLES,
   MAX_RELATED_ITEMS_MODELS_AND_TOOLS,
@@ -80,8 +86,8 @@ export const formatRelatedItems = (
     .slice(0, MAX_RELATED_ITEMS_ARTICLES);
 
   return [
-    { items: relatedOtherItems, title: "Modèles et simulateurs liés" },
-    { items: relatedArticleItems, title: "Articles liés" },
+    { items: relatedOtherItems, title: RELATED_TOOLS_TITLE },
+    { items: relatedArticleItems, title: RELATED_ARTICLES_TITLE },
   ];
 };
 

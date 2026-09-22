@@ -72,6 +72,7 @@ jest.mock("./src/config.ts", () => ({
   SUGGEST_MAX_RESULTS: 5,
   MAX_RELATED_ITEMS_MODELS_AND_TOOLS: 2,
   MAX_RELATED_ITEMS_ARTICLES: 4,
+  WIDGETS_PATH: /\/widgets\/.*/,
 }));
 
 // uuid@13 ships ESM; jest runs in CJS mode here and may choke on node_modules ESM.

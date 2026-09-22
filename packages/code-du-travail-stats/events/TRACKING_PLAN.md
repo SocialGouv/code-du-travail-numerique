@@ -40,6 +40,22 @@ Exemple d'information envoyée suite à une visite sur la page des thèmes :
 | url         | https://code.travail.gouv.fr/themes | Lien vers la page                             |
 | urlref      | /                                   | Origine de l'utilisateur (ici la page d'accueil) |
 
+#### Télémétrie serveur : chatbots IA (hors events, plugin Matomo « BotTracking »)
+
+Les **chatbots IA** qui vont lire une page pour répondre à un usager (`ChatGPT-User`,
+`Claude-User`, `Perplexity-User`, `MistralAI-User`, `Gemini-Deep-Research`, `Google-NotebookLM`)
+**n'exécutent pas le JavaScript** : le tracker Matomo ne les voit jamais. Le **serveur** (proxy
+Next, sur chaque page HTML) reconnaît leur User-Agent et envoie à Matomo un hit dédié
+(`recMode=1`) qui ne crée **ni visite ni session** et n'alimente que les rapports
+**Assistants IA → AI Chatbot Overview** (quel chatbot a lu quelle page, combien de fois). Ce n'est
+donc pas un event : il n'apparaît pas dans le catalogue extrait du code et ne compte dans aucune
+statistique de visite. Le hit ne contient que l'**URL de la page sans query string**, le
+**User-Agent** du chatbot et la source `cdtn-nextjs-proxy` ; aucune IP, aucun identifiant, aucun
+cookie. L'API, les widgets embarqués et les fichiers statiques sont exclus. Les **crawlers
+d'entraînement** (`GPTBot`, `ClaudeBot`, `PerplexityBot`…) ne sont pas concernés : Matomo ne les
+reconnaît pas dans ce plugin.
+[↗ source](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/analytics/ai-chatbot-tracking/trackAiChatbotRequest.ts "ai-chatbot-tracking/trackAiChatbotRequest.ts")
+
 ---
 
 ### Outils
@@ -336,8 +352,9 @@ Clics sur les boutons « voir tout » et les questions guidées de la page d'acc
 
 Encart de personnalisation par convention collective en tête d'une contribution,
 l'agrandissement des tableaux du contenu, la liste des **déclinaisons par convention
-collective** de la fiche générique, et un indicateur de **consultation effective de la
-réponse** (le contenu a réellement été vu, pas seulement la page chargée).
+collective** de la fiche générique, la rubrique éditoriale **« Explorez nos thématiques »**
+(deux sous-thèmes mis en avant sous la réponse, avec son affichage effectif), et un indicateur de **consultation effective
+de la réponse** (le contenu a réellement été vu, pas seulement la page chargée).
 [↗ source](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/contributions/tracking.ts#L24 "contributions/tracking.ts")
 
 | Catégorie    | Action                                    | Name (📌)                     | Quand / pourquoi |
@@ -349,6 +366,8 @@ réponse** (le contenu a réellement été vu, pas seulement la page chargée).
 | contribution | click_afficher_les_informations_sans_CC   | `<withVariant(path,variant)>` | « Afficher sans sélectionner de CC » → contenu générique (émis avec `click_p3`). |
 | contribution | btn_table_fullscreen                      | `contribution/<slug>`         | Clic sur « Voir le tableau en plein écran » pour agrandir un tableau du contenu (bouton affiché sur mobile) ; `name` = slug de la contribution. |
 | contribution | clic_declinaison_cc                       | `contribution/<num>-<slug>`   | Clic sur une convention collective listée dans l'accordéon « Votre réponse en fonction de votre convention collective », affiché sur la fiche générique sous « Références ». Ce bloc existe d'abord pour le **maillage interne / SEO** (les liens sont dans le HTML servi, sans interaction) ; l'event mesure son usage réel par les usagers. `name` = chemin de la page CC atteinte. |
+| contribution | clic_explorez_thematique                  | `{"slug":"contribution/<slug>","theme":"<slug du sous-thème>","position":<1 ou 2>}` | Clic sur une des deux cartes de la rubrique « Explorez nos thématiques », affichée sous le corps de la réponse et avant l'accordéon « Références ». Cette rubrique remplace les « Articles liés » (taux de clic plafonné à 6 %) par deux sous-thèmes choisis par le métier ; elle n'apparaît que sur les contributions retenues pour le test. `position` (1 = première carte, 2 = seconde) dit **laquelle des deux mises en avant** a fonctionné ; quand l'un des deux sous-thèmes complémentaires manque, la première carte est le sous-thème de rattachement de la contribution, et `slug` identifie la page de départ — ce que l'ancien event `selectRelated`, sans `name`, ne permettait pas. Se joint à `reponse_consultee`, qui porte le même `slug`. |
+| contribution | explorez_thematique_affichee              | `contribution/<slug>`         | Rubrique « Explorez nos thématiques » **entrée dans l'écran** (un pixel dans le viewport, onglet actif, sans temps de présence) ; émis **une seule fois** par page, que les cartes soient visibles d'emblée ou après défilement. C'est le **dénominateur** de `clic_explorez_thematique` : rapporté aux pages vues, il donne la part des visites qui descendent jusqu'aux cartes ; rapporté aux clics, le taux de clic réel de la rubrique. Même `name` que `reponse_consultee`. |
 | contribution | reponse_consultee                         | `contribution/<slug>`         | Réponse **réellement consultée** : le titre du bloc réponse (h2) est entré dans le haut de l'écran **et** y est resté ~10 s en continu, onglet actif ; émis **une seule fois** par page. Indicateur clé de la consultation du contenu, notamment sur les arrivées directes via une convention collective. |
 | cc_search_type_of_users | click_p1 · click_p2 · click_p3 | `<withVariant(path,variant)>` | Parcours de choix de CC : par nom (p1), par entreprise (p2), sans CC (p3). |
 
@@ -560,5 +579,5 @@ Les 4 motifs possibles de `feedback_category` (un event par case cochée) :
 | Catégorie      | Action                | Name (🔀)                       | Quand / pourquoi | Code |
 | -------------- | --------------------- | ------------------------------- | ---------------- | ---- |
 | clic_share     | `<url de la page>`    | `<réseau>` (facebook, twitter, linkedin, email, whatsapp, copier) | Clic sur un bouton du bloc « Partager la page ». Quels contenus, via quels canaux. | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/common/tracking.ts#L30 "common/tracking.ts:30") |
-| selectRelated  | `{"selection":"<url>"}` | —                             | Clic sur un lien de la rubrique « contenus liés » en bas de page. | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/common/tracking.ts#L23 "common/tracking.ts:23") |
+| selectRelated  | `{"selection":"<url>"}` | —                             | Clic sur un lien de la rubrique « contenus liés » en bas de page. Depuis #7455, le groupe « Articles liés » disparaît des contributions retenues pour le test des sous-thèmes (remplacé par `clic_explorez_thematique`) ; « Modèles et simulateurs liés » et les autres types de contenu ne changent pas. | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/common/tracking.ts#L23 "common/tracking.ts:23") |
 | `<source>` (ex. `contribution`, `information`, …) | clic_tag_theme | `{"slug":"<slug page>","theme":"<slug thème>"}` (ex. `{"slug":"mon-slug","theme":"themes/conges-et-repos"}`) | Clic sur un des tags de thème (thème racine ou sous-thème) affichés sous le titre des contributions, fiches service-public, fiches ministère du travail, fiches infos, infographies et modèles de courrier. **Catégorie = source de la page** ; `name` = JSON `{slug de la page, thème cliqué}` en slugs, jamais l'URL complète. Mesure l'usage de ce point d'entrée vers la navigation par thème. | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/common/tracking.ts#L43 "common/tracking.ts:43") |
