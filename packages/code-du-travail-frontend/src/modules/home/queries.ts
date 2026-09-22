@@ -50,7 +50,7 @@ export const fetchHomeData = async (): Promise<HomePageProps> => {
       cdtnIds: [
         "d7ad36850a", // simulateur-embauche
         "d8a3605790", // indemnité-licenciement
-        "1eea193273", // preavis-demission
+        "af4bc7be81", // indemnité-retraite
         "db8ffe3574", // convention-collective
       ],
     }
