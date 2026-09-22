@@ -40,6 +40,22 @@ Exemple d'information envoyée suite à une visite sur la page des thèmes :
 | url         | https://code.travail.gouv.fr/themes | Lien vers la page                             |
 | urlref      | /                                   | Origine de l'utilisateur (ici la page d'accueil) |
 
+#### Télémétrie serveur : chatbots IA (hors events, plugin Matomo « BotTracking »)
+
+Les **chatbots IA** qui vont lire une page pour répondre à un usager (`ChatGPT-User`,
+`Claude-User`, `Perplexity-User`, `MistralAI-User`, `Gemini-Deep-Research`, `Google-NotebookLM`)
+**n'exécutent pas le JavaScript** : le tracker Matomo ne les voit jamais. Le **serveur** (proxy
+Next, sur chaque page HTML) reconnaît leur User-Agent et envoie à Matomo un hit dédié
+(`recMode=1`) qui ne crée **ni visite ni session** et n'alimente que les rapports
+**Assistants IA → AI Chatbot Overview** (quel chatbot a lu quelle page, combien de fois). Ce n'est
+donc pas un event : il n'apparaît pas dans le catalogue extrait du code et ne compte dans aucune
+statistique de visite. Le hit ne contient que l'**URL de la page sans query string**, le
+**User-Agent** du chatbot et la source `cdtn-nextjs-proxy` ; aucune IP, aucun identifiant, aucun
+cookie. L'API, les widgets embarqués et les fichiers statiques sont exclus. Les **crawlers
+d'entraînement** (`GPTBot`, `ClaudeBot`, `PerplexityBot`…) ne sont pas concernés : Matomo ne les
+reconnaît pas dans ce plugin.
+[↗ source](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/analytics/ai-chatbot-tracking/trackAiChatbotRequest.ts "ai-chatbot-tracking/trackAiChatbotRequest.ts")
+
 ---
 
 ### Outils

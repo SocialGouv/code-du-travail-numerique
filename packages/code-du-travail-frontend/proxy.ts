@@ -1,7 +1,8 @@
-import { NextRequest, NextResponse } from "next/server";
+import { NextFetchEvent, NextRequest, NextResponse } from "next/server";
 import { BUCKET_URL } from "./src/config";
+import { trackAiChatbotRequest } from "./src/modules/analytics/ai-chatbot-tracking";
 
-export function proxy(request: NextRequest) {
+export function proxy(request: NextRequest, event: NextFetchEvent) {
   // Handle CORS for API routes
   if (request.nextUrl.pathname.startsWith("/api")) {
     const response = NextResponse.next();
@@ -57,6 +58,11 @@ export function proxy(request: NextRequest) {
 
     return response;
   }
+
+  // Télémétrie Matomo (plugin BotTracking) pour les chatbots IA (ChatGPT-User,
+  // Claude-User…) qui lisent nos pages sans exécuter le tracker JS. Non
+  // bloquant : la réponse part sans attendre Matomo.
+  trackAiChatbotRequest(request, event);
 
   const nonce = Buffer.from(crypto.randomUUID()).toString("base64");
   const ContentSecurityPolicy = `
