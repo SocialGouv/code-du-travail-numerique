@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.244.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.243.0...v4.244.0) (2026-09-23)
+
+
+### Features
+
+* **contributions:** rubrique « Explorez nos thématiques » à la place des articles liés ([#7479](https://github.com/SocialGouv/code-du-travail-numerique/issues/7479)) ([b767f1e](https://github.com/SocialGouv/code-du-travail-numerique/commit/b767f1e9e2c9b8b94dea48e2bb06d993b86543d5))
+* **outils:** simulateur d'indemnité de départ à la retraite ([#7502](https://github.com/SocialGouv/code-du-travail-numerique/issues/7502)) ([79619fd](https://github.com/SocialGouv/code-du-travail-numerique/commit/79619fda14ebab95b0c7f31d77c5edea30e9fecc))
+* **tracking:** ajout du tracking des chatbots AI ([#7501](https://github.com/SocialGouv/code-du-travail-numerique/issues/7501)) ([1c35ad9](https://github.com/SocialGouv/code-du-travail-numerique/commit/1c35ad9d6e6ea08501bc7b7fab4291f3047c7195))
+
+
+
+
+
 # [4.243.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.242.0...v4.243.0) (2026-09-08)
 
 

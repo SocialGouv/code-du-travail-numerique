@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.244.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.243.0...v4.244.0) (2026-09-23)
+
+
+### Features
+
+* **outils:** simulateur d'indemnité de départ à la retraite ([#7502](https://github.com/SocialGouv/code-du-travail-numerique/issues/7502)) ([79619fd](https://github.com/SocialGouv/code-du-travail-numerique/commit/79619fda14ebab95b0c7f31d77c5edea30e9fecc))
+
+
+
+
+
 # [4.243.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.242.0...v4.243.0) (2026-09-08)
 
 **Note:** Version bump only for package @socialgouv/modeles-social
