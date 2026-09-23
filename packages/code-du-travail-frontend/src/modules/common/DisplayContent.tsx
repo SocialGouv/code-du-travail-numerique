@@ -65,13 +65,9 @@ const mapToAccordion = (
   params: Options
 ) => {
   const props = titleLevel <= 6 ? { titleLevel } : {};
-  const { usedIds, accordionItemFooter, injection } = params;
-  // Le premier groupe d'accordéons de premier niveau marque la fin de
-  // l'introduction : c'est là que s'insère `beforeFirstAccordionGroup`.
-  const isFirstTopLevelGroup = isParent && injection && !injection.done;
-  if (isFirstTopLevelGroup) injection.done = true;
+  const { usedIds, accordionItemFooter } = params;
 
-  const accordion = (
+  return (
     <div className={fr.cx("fr-my-3w")}>
       <AccordionWithAnchor
         {...props}
@@ -95,15 +91,6 @@ const mapToAccordion = (
         titleAs={`h${titleLevel}`}
       />
     </div>
-  );
-
-  return isFirstTopLevelGroup ? (
-    <>
-      {params.beforeFirstAccordionGroup}
-      {accordion}
-    </>
-  ) : (
-    accordion
   );
 };
 
@@ -302,16 +289,10 @@ type Options = {
   // Registre partagé des ids d'accordéon déjà attribués, pour garantir
   // des ids uniques et déterministes (cf. makeUniqueAccordionId).
   usedIds: Map<string, number>;
-  // Nœud inséré juste avant le premier groupe d'accordéons de premier niveau,
-  // c'est-à-dire entre l'introduction et le reste du contenu. Sans accordéon
-  // dans le contenu, il est ajouté à la fin (cf. `injection`).
-  beforeFirstAccordionGroup?: ReactNode;
   // Nœud ajouté en pied de chaque accordéon de premier niveau ; reçoit l'id
-  // de l'accordéon pour que l'appelant distingue les instances.
+  // de l'accordéon pour que l'appelant distingue les instances (A/B test
+  // #7481, variante D).
   accordionItemFooter?: (accordionId: string) => ReactNode;
-  // État partagé du parsing : `beforeFirstAccordionGroup` a-t-il trouvé sa
-  // place ? Même mécanique que `challengerState`.
-  injection?: { done: boolean };
 };
 const options = (params: Options): HTMLReactParserOptions => {
   const { titleLevel } = params;
@@ -617,8 +598,7 @@ type Props = {
     disableLink?: boolean;
     smicHourly?: number;
     onTableFullscreen?: () => void;
-    // cf. Options.beforeFirstAccordionGroup / Options.accordionItemFooter.
-    beforeFirstAccordionGroup?: ReactNode;
+    // cf. Options.accordionItemFooter.
     accordionItemFooter?: (accordionId: string) => ReactNode;
   };
 };
@@ -631,7 +611,6 @@ const DisplayContent = ({
 }: Props): string | JSX.Element | JSX.Element[] => {
   try {
     const challengerState = { substituted: false };
-    const injection = { done: false };
     const parsed = parse(
       xssWrapper(content),
       options({
@@ -644,21 +623,9 @@ const DisplayContent = ({
         challengerState,
         onTableFullscreen: extra?.onTableFullscreen,
         usedIds: new Map(),
-        beforeFirstAccordionGroup: extra?.beforeFirstAccordionGroup,
         accordionItemFooter: extra?.accordionItemFooter,
-        injection,
       })
     );
-    // Contenu sans accordéon : le nœud « après l'introduction » n'a pas trouvé
-    // de repère, on le place après tout le contenu plutôt que de le perdre.
-    if (extra?.beforeFirstAccordionGroup && !injection.done) {
-      return (
-        <>
-          {parsed}
-          {extra.beforeFirstAccordionGroup}
-        </>
-      );
-    }
     /*
     // On garde ce code car on va vouloir afficher l'astérisque plus tard
     if (challengerState.substituted) {

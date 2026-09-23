@@ -47,6 +47,12 @@ type Props = {
    * C et D de #7481) plutôt qu'en tête de page.
    */
   className?: string;
+  /**
+   * Titre réduit (`fr-h5` au lieu de `fr-h3`) quand le bloc est logé dans une
+   * colonne étroite, en pied d'accordéon (variante D de #7481) : le titre
+   * tient alors sur une ligne. Le niveau sémantique (heading 2) ne change pas.
+   */
+  compactTitle?: boolean;
 };
 
 const TITLE_ID = "personalize-response-title";
@@ -70,6 +76,7 @@ export function ContributionGenericAgreementSearch({
   pageOnce,
   instanceId,
   className,
+  compactTitle = false,
 }: Props) {
   const { emitClickWhatIsAgreement } = useCcFunnelTracking();
   const titleId = instanceId ? `${TITLE_ID}-${instanceId}` : TITLE_ID;
@@ -85,7 +92,7 @@ export function ContributionGenericAgreementSearch({
         <p
           ref={personalizeTitleRef}
           id={titleId}
-          className={`${fr.cx("fr-h3", "fr-mt-1w")} ${focusableTitle}`}
+          className={`${fr.cx(compactTitle ? "fr-h5" : "fr-h3", "fr-mt-1w")} ${focusableTitle}`}
           role="heading"
           aria-level={2}
           tabIndex={-1}

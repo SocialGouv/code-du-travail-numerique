@@ -153,8 +153,8 @@ describe("A/B test « emplacement du bloc CC » (#7481)", () => {
     });
   });
 
-  describe("variante C : bloc entre l'introduction et les accordéons", () => {
-    it("place le bloc après l'introduction, avant le premier accordéon", () => {
+  describe("variante C : introduction puis bloc en tête, pleine largeur", () => {
+    it("enchaîne introduction, bloc, puis titre de la réponse et accordéons", () => {
       setVariant(ContributionCcPositionVariations.C);
       renderPage();
 
@@ -164,16 +164,35 @@ describe("A/B test « emplacement du bloc CC » (#7481)", () => {
 
       const title = blockTitles()[0];
       const intro = screen.getByText("Introduction de la fiche.");
+      const answerTitle = ui.cdtAnswerTitle.get();
       const accordion = screen.getByRole("button", { name: "Décès" });
-      expect(
-        intro.compareDocumentPosition(title) & Node.DOCUMENT_POSITION_FOLLOWING
-      ).toBeTruthy();
-      expect(
-        title.compareDocumentPosition(accordion) &
-          Node.DOCUMENT_POSITION_FOLLOWING
-      ).toBeTruthy();
-      // Et dans la zone de réponse, pas en tête de page.
-      expect(cdtBlock().contains(title)).toBe(true);
+      const follows = (a: Element, b: Element) =>
+        !!(a.compareDocumentPosition(b) & Node.DOCUMENT_POSITION_FOLLOWING);
+      expect(follows(intro, title)).toBe(true);
+      expect(follows(title, answerTitle)).toBe(true);
+      expect(follows(answerTitle, accordion)).toBe(true);
+
+      // Pleine largeur : le titre garde sa taille habituelle.
+      expect(title).toHaveClass("fr-h3");
+      // Introduction et bloc sont hors de la grille de réponse (pleine
+      // largeur) ; l'introduction n'est pas répétée dans la grille.
+      expect(cdtBlock().contains(intro)).toBe(false);
+      expect(cdtBlock().contains(title)).toBe(false);
+      expect(screen.getAllByText("Introduction de la fiche.")).toHaveLength(1);
+      expect(cdtBlock().contains(accordion)).toBe(true);
+    });
+
+    it("sans accordéon dans le contenu, garde tout le contenu dans la grille", () => {
+      setVariant(ContributionCcPositionVariations.C);
+      renderPage({
+        ...buildContribution(),
+        content: "<p>Seulement du texte.</p>",
+      });
+
+      const text = screen.getByText("Seulement du texte.");
+      expect(cdtBlock().contains(text)).toBe(true);
+      expect(screen.getByTestId("contribution-intro")).toBeEmptyDOMElement();
+      expect(blockTitles()).toHaveLength(1);
     });
   });
 
@@ -200,6 +219,16 @@ describe("A/B test « emplacement du bloc CC » (#7481)", () => {
         deathAnswer.compareDocumentPosition(titles[0]) &
           Node.DOCUMENT_POSITION_FOLLOWING
       ).toBeTruthy();
+    });
+
+    it("réduit le titre du bloc pour qu'il tienne dans l'accordéon", () => {
+      setVariant(ContributionCcPositionVariations.D);
+      renderPage();
+
+      blockTitles().forEach((title) => {
+        expect(title).toHaveClass("fr-h5");
+        expect(title).not.toHaveClass("fr-h3");
+      });
     });
 
     it("distingue les instances par leurs identifiants", () => {

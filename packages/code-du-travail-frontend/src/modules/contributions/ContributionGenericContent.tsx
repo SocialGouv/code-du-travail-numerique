@@ -92,12 +92,11 @@ export const ContributionGenericContent = forwardRef<
               Réponse d&apos;après le Code du Travail
             </h2>
             {alertText}
-            {/* Emplacements du bloc CC dans le contenu (A/B test #7481) :
-                les slots ne rendent le bloc que si la variante le place là. */}
+            {/* Variante D de l'A/B test #7481 : le slot ne rend le bloc CC en
+                pied d'accordéon que si la variante l'y place. */}
             <ContributionContent
               contribution={contribution}
               titleLevel={2}
-              beforeFirstAccordionGroup={<CcBlockSlot position="after-intro" />}
               accordionItemFooter={(accordionId) => (
                 <CcBlockSlot position="in-accordion" instanceId={accordionId} />
               )}

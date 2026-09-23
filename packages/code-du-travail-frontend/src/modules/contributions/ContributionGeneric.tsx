@@ -10,6 +10,7 @@ import {
 } from "./contributionUtils";
 import { useRouter } from "next/navigation";
 import { ContributionGenericContent } from "./ContributionGenericContent";
+import { ContributionGenericContentIntroFirst } from "./ContributionGenericContentIntroFirst";
 import { ContributionAgreementDeclinations } from "./ContributionAgreementDeclinations";
 import { AgreementDeclination, Contribution } from "./type";
 import {
@@ -56,6 +57,11 @@ export function ContributionGeneric({
   // pas : le bloc reste en tête quelle que soit la variante.
   const position = isNoCDT ? "top" : variant.position;
   const isBlockInContent = position !== "top";
+  // Variante C : introduction puis bloc CC en tête de page, pleine largeur.
+  const GenericContent =
+    position === "after-intro"
+      ? ContributionGenericContentIntroFirst
+      : ContributionGenericContent;
 
   // Garde « une fois par page » partagée par toutes les instances du bloc :
   // en variante D, chaque accordéon héberge la sienne, mais `view_bloc_cc`,
@@ -201,6 +207,12 @@ export function ContributionGeneric({
       <InContentCcBlock
         key={instanceId ?? "after-intro"}
         instanceId={instanceId ?? "intro"}
+        // En D le bloc est serré dans un accordéon ; en C il occupe la place
+        // du bloc témoin, avec les marges de celui-ci.
+        className={
+          instanceId === undefined ? undefined : fr.cx("fr-mt-3w", "fr-mb-3w")
+        }
+        compactTitle={instanceId !== undefined}
         // Variante C : instance unique, elle reçoit le titre ciblé par #retour.
         personalizeTitleRef={
           instanceId === undefined ? personalizeTitleRef : undefined
@@ -242,7 +254,7 @@ export function ContributionGeneric({
       {!isNoCDT &&
         (variant.contentByDefault ||
           !isAgreementValid(contribution, selectedAgreement)) && (
-          <ContributionGenericContent
+          <GenericContent
             ref={genericTitleRef}
             contribution={contribution}
             relatedItems={relatedItems}
@@ -270,6 +282,8 @@ export function ContributionGeneric({
 
 type InContentCcBlockProps = {
   instanceId: string;
+  className?: string;
+  compactTitle?: boolean;
   personalizeTitleRef?: React.RefObject<HTMLParagraphElement | null>;
   contribution: Contribution;
   onAgreementSelect: (agreement?: Agreement) => void;
@@ -285,6 +299,8 @@ type InContentCcBlockProps = {
 // local, alerte « CC non traitée », events) via `onAgreementSelect`.
 function InContentCcBlock({
   instanceId,
+  className,
+  compactTitle,
   personalizeTitleRef,
   contribution,
   onAgreementSelect,
@@ -310,7 +326,8 @@ function InContentCcBlock({
       showNoAgreementOption={false}
       pageOnce={pageOnce}
       instanceId={instanceId}
-      className={fr.cx("fr-mt-3w", "fr-mb-3w")}
+      className={className}
+      compactTitle={compactTitle}
     />
   );
 }

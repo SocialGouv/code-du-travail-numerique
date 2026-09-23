@@ -162,6 +162,21 @@ const ui = {
   locationOptionParis: byText("Paris (75)"),
 };
 
+/**
+ * Saisit une recherche de CC en un seul changement de valeur, puis laisse la
+ * recherche asynchrone se résoudre DANS `act` : ses mises à jour d'état sont
+ * ainsi rendues avant l'assertion suivante. Frappe par frappe (`userEvent.type`),
+ * le rendu des résultats dépendait du hasard des `act` intermédiaires, et les
+ * tests qui enchaînent une sélection de suggestion échouaient par intermittence.
+ * Les tests qui mesurent la saisie progressive gardent `userEvent.type`.
+ */
+const searchAgreementByName = async (query: string) => {
+  await act(async () => {
+    new UserAction().setInput(ccUi.searchByName.input.get(), query);
+    await new Promise((resolve) => setTimeout(resolve, 0));
+  });
+};
+
 /** Ouvre le parcours 2 et lance une recherche d'entreprise aboutie. */
 const searchEnterprise = async (query: string) => {
   const userAction = new UserAction();
@@ -522,8 +537,7 @@ describe("Funnel de choix de convention collective (contributions)", () => {
       render(<Harness />);
 
       new UserAction().click(ccUi.radio.agreementSearchOption.get());
-      await userEvent.click(ccUi.searchByName.input.get());
-      await userEvent.type(ccUi.searchByName.input.get(), "16");
+      await searchAgreementByName("16");
       await waitFor(() =>
         expect(
           ccUi.searchByName.autocompleteLines.IDCC16.name.query()
@@ -548,8 +562,7 @@ describe("Funnel de choix de convention collective (contributions)", () => {
       render(<Harness />);
 
       new UserAction().click(ccUi.radio.agreementSearchOption.get());
-      await userEvent.click(ccUi.searchByName.input.get());
-      await userEvent.type(ccUi.searchByName.input.get(), "1388");
+      await searchAgreementByName("1388");
       await waitFor(() =>
         expect(
           ccUi.searchByName.autocompleteLines.IDCC1388.name.query()
@@ -586,8 +599,7 @@ describe("Funnel de choix de convention collective (contributions)", () => {
       );
 
       new UserAction().click(ccUi.radio.agreementSearchOption.get());
-      await userEvent.click(ccUi.searchByName.input.get());
-      await userEvent.type(ccUi.searchByName.input.get(), "1388");
+      await searchAgreementByName("1388");
       await waitFor(() =>
         expect(
           ccUi.searchByName.autocompleteLines.IDCC1388.name.query()

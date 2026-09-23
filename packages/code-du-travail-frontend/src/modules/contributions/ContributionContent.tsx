@@ -9,16 +9,13 @@ import { useContributionTracking } from "./tracking";
 type Props = {
   contribution: Contribution;
   titleLevel: numberLevel;
-  /** Inséré entre l'introduction et le premier groupe d'accordéons. */
-  beforeFirstAccordionGroup?: ReactNode;
-  /** Ajouté en pied de chaque accordéon de premier niveau. */
+  /** Ajouté en pied de chaque accordéon de premier niveau (#7481, D). */
   accordionItemFooter?: (accordionId: string) => ReactNode;
 };
 
 export const ContributionContent = ({
   contribution,
   titleLevel,
-  beforeFirstAccordionGroup,
   accordionItemFooter,
 }: Props) => {
   const { emitClickTableFullscreen } = useContributionTracking();
@@ -41,7 +38,6 @@ export const ContributionContent = ({
             smicHourly: contribution.smicValue,
             onTableFullscreen: () =>
               emitClickTableFullscreen(contribution.slug),
-            beforeFirstAccordionGroup,
             accordionItemFooter,
           }}
         />
