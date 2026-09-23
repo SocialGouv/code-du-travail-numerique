@@ -6,12 +6,18 @@ import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
 import { fetchNews, format, News, NewsContainer } from "src/modules/actualite";
 import { Metadata } from "next";
 import { NewsArticleJsonLd } from "src/modules/seo/jsonld";
+import { NEWS_RSS_FEED } from "src/modules/actualite/rss";
+import { toIsoDateTimeParis } from "src/modules/utils/date";
 
 export async function generateMetadata(
   props: PageProps<"/actualite/[slug]">
 ): Promise<Metadata> {
   const params = await props.params;
-  const news = await fetchNews(params.slug, ["title", "metaDescription"]);
+  const news = await fetchNews(params.slug, [
+    "title",
+    "metaDescription",
+    "date",
+  ]);
 
   if (!news) {
     return notFound();
@@ -21,6 +27,9 @@ export async function generateMetadata(
     title: news?.title,
     description: news?.metaDescription,
     path: `/${getRouteBySource(SOURCES.NEWS)}/${params.slug}`,
+    feed: NEWS_RSS_FEED,
+    // og:type article + article:published_time (même ISO que le JSON-LD).
+    article: { publishedTime: toIsoDateTimeParis(news.date) },
   });
 }
 

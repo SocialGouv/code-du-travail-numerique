@@ -11,6 +11,7 @@ type Props = ContainerRichProps & {
   currentPage: string;
   breadcrumbSegments?: BreadcrumbSegment[];
   showShare?: boolean;
+  shareRssFeed?: React.ComponentProps<typeof Share>["rssFeed"];
 };
 
 export const ContainerRichWithBreadcrumbs = ({
@@ -23,6 +24,7 @@ export const ContainerRichWithBreadcrumbs = ({
   showFeedback = true,
   showWhatsNewLink = false,
   showShare = false,
+  shareRssFeed,
 }: Props) => {
   return (
     <div>
@@ -56,7 +58,13 @@ export const ContainerRichWithBreadcrumbs = ({
         >
           {showWhatsNewLink && <WhatsNewLink />}
           <RelatedItems relatedItems={relatedItems} />
-          {showShare && <Share title={title} metaDescription={description} />}
+          {showShare && (
+            <Share
+              title={title}
+              metaDescription={description}
+              rssFeed={shareRssFeed}
+            />
+          )}
         </div>
       </div>
     </div>
