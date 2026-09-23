@@ -56,6 +56,11 @@ type Props = {
    * « Trouver sa convention collective », widgets).
    */
   funnelTracking?: AgreementSearchFunnelTracking;
+  /**
+   * Suffixe des `id` du DOM quand plusieurs instances du formulaire coexistent
+   * sur une page (bloc CC répété dans chaque accordéon, A/B test #7481).
+   */
+  instanceId?: string;
 };
 
 export const EnterpriseAgreementSearchInput = ({
@@ -75,7 +80,11 @@ export const EnterpriseAgreementSearchInput = ({
   requireSearchSignal,
   showWhatIsAgreementLink = false,
   funnelTracking,
+  instanceId,
 }: Props) => {
+  const selectedConventionId = instanceId
+    ? `selected-convention-${instanceId}`
+    : "selected-convention";
   const [selectedAgreement, setSelectedAgreement] = useState<
     Agreement | undefined
   >(agreement);
@@ -371,7 +380,7 @@ export const EnterpriseAgreementSearchInput = ({
               <div className={fr.cx("fr-card__content", "fr-py-1w")}>
                 <p
                   className={fr.cx("fr-card__title")}
-                  id={"selected-convention"}
+                  id={selectedConventionId}
                 >
                   {`${selectedAgreement.shortTitle} IDCC ${selectedAgreement.id}`}
                 </p>
@@ -400,7 +409,7 @@ export const EnterpriseAgreementSearchInput = ({
                 }
               }}
               nativeButtonProps={{
-                "aria-describedby": `selected-convention`,
+                "aria-describedby": selectedConventionId,
               }}
             >
               Modifier

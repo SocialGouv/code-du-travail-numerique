@@ -16,6 +16,7 @@ import { ContributionRating } from "./rating";
 import { focusableTitle } from "../common/focusableTitle";
 import { ExploreThemes } from "./explore-themes/ExploreThemes";
 import type { ExploreTheme } from "./explore-themes/type";
+import { CcBlockSlot } from "./ccPosition";
 
 type Props = {
   contribution: Contribution;
@@ -91,7 +92,15 @@ export const ContributionGenericContent = forwardRef<
               Réponse d&apos;après le Code du Travail
             </h2>
             {alertText}
-            <ContributionContent contribution={contribution} titleLevel={2} />
+            {/* Variante D de l'A/B test #7481 : le slot ne rend le bloc CC en
+                pied d'accordéon que si la variante l'y place. */}
+            <ContributionContent
+              contribution={contribution}
+              titleLevel={2}
+              accordionItemFooter={(accordionId) => (
+                <CcBlockSlot position="in-accordion" instanceId={accordionId} />
+              )}
+            />
             <ExploreThemes
               themes={exploreThemes}
               contributionSlug={contribution.slug}

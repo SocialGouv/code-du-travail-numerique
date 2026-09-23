@@ -14,6 +14,8 @@ beforeEach(() => {
 
 jest.mock("@socialgouv/matomo-next", () => ({
   sendEvent: jest.fn(),
+  // Hors expérience (#7481) : aucune variante affectée, comportement témoin.
+  useABTestVariant: jest.fn(() => null),
 }));
 
 jest.mock("uuid", () => ({

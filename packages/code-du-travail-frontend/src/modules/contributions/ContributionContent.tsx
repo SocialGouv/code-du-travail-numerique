@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { ReactNode } from "react";
 
 import { Contribution } from "./type";
 import DisplayContent, { numberLevel } from "../common/DisplayContent";
@@ -9,9 +9,15 @@ import { useContributionTracking } from "./tracking";
 type Props = {
   contribution: Contribution;
   titleLevel: numberLevel;
+  /** Ajouté en pied de chaque accordéon de premier niveau (#7481, D). */
+  accordionItemFooter?: (accordionId: string) => ReactNode;
 };
 
-export const ContributionContent = ({ contribution, titleLevel }: Props) => {
+export const ContributionContent = ({
+  contribution,
+  titleLevel,
+  accordionItemFooter,
+}: Props) => {
   const { emitClickTableFullscreen } = useContributionTracking();
   return (
     <section>
@@ -32,6 +38,7 @@ export const ContributionContent = ({ contribution, titleLevel }: Props) => {
             smicHourly: contribution.smicValue,
             onTableFullscreen: () =>
               emitClickTableFullscreen(contribution.slug),
+            accordionItemFooter,
           }}
         />
       )}

@@ -1002,4 +1002,37 @@ describe("DisplayContent", () => {
       expect(asFragment().firstChild).toMatchSnapshot();
     });
   });
+  describe("Pied d'accordéon (A/B test #7481, variante D)", () => {
+    const CONTENT = `
+      <p>Introduction</p>
+      <details><summary>Premier</summary><div><p>Contenu premier</p></div></details>
+      <details><summary>Second</summary><div>
+        <p>Contenu second</p>
+        <details><summary>Imbriqué</summary><div><p>Contenu imbriqué</p></div></details>
+      </div></details>
+    `;
+
+    it("ajoute accordionItemFooter en pied de chaque accordéon de premier niveau seulement", () => {
+      const footer = jest.fn((id: string) => <p>Pied {id}</p>);
+      const { getByText, queryByText } = render(
+        <DisplayContent
+          content={CONTENT}
+          titleLevel={2}
+          extra={{ accordionItemFooter: footer }}
+        />
+      );
+
+      expect(footer.mock.calls.map(([id]) => id)).toEqual([
+        "premier",
+        "second",
+      ]);
+      const secondContent = getByText("Contenu second");
+      const secondFooter = getByText("Pied second");
+      expect(
+        secondContent.compareDocumentPosition(secondFooter) &
+          Node.DOCUMENT_POSITION_FOLLOWING
+      ).toBeTruthy();
+      expect(queryByText("Pied imbrique")).not.toBeInTheDocument();
+    });
+  });
 });

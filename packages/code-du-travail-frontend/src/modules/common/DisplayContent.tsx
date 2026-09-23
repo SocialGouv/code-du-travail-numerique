@@ -4,7 +4,7 @@ import parse, {
   Element,
   HTMLReactParserOptions,
 } from "html-react-parser";
-import React, { ElementType, JSX } from "react";
+import React, { ElementType, JSX, ReactNode } from "react";
 import { AccordionWithAnchor } from "./AccordionWithAnchor";
 import { TableFullscreenWrapper } from "./TableFullscreenWrapper";
 
@@ -62,19 +62,32 @@ const mapToAccordion = (
   titleLevel: numberLevel,
   isParent: boolean,
   items: any[],
-  usedIds: Map<string, number>
+  params: Options
 ) => {
   const props = titleLevel <= 6 ? { titleLevel } : {};
+  const { usedIds, accordionItemFooter } = params;
 
   return (
     <div className={fr.cx("fr-my-3w")}>
       <AccordionWithAnchor
         {...props}
         data-testid="contrib-accordion"
-        items={items.map((item) => ({
-          ...item,
-          ...{ id: makeUniqueAccordionId(item.title, usedIds) },
-        }))}
+        items={items.map((item) => {
+          const id = makeUniqueAccordionId(item.title, usedIds);
+          const footer = isParent ? accordionItemFooter?.(id) : undefined;
+          return {
+            ...item,
+            id,
+            content: footer ? (
+              <>
+                {item.content}
+                {footer}
+              </>
+            ) : (
+              item.content
+            ),
+          };
+        })}
         titleAs={`h${titleLevel}`}
       />
     </div>
@@ -276,6 +289,10 @@ type Options = {
   // Registre partagé des ids d'accordéon déjà attribués, pour garantir
   // des ids uniques et déterministes (cf. makeUniqueAccordionId).
   usedIds: Map<string, number>;
+  // Nœud ajouté en pied de chaque accordéon de premier niveau ; reçoit l'id
+  // de l'accordéon pour que l'appelant distingue les instances (A/B test
+  // #7481, variante D).
+  accordionItemFooter?: (accordionId: string) => ReactNode;
 };
 const options = (params: Options): HTMLReactParserOptions => {
   const { titleLevel } = params;
@@ -397,7 +414,7 @@ const options = (params: Options): HTMLReactParserOptions => {
               accordionTitleLevel,
               !hasDetailsParent(domNode),
               items,
-              params.usedIds
+              params
             )
           ) : (
             <></>
@@ -581,6 +598,8 @@ type Props = {
     disableLink?: boolean;
     smicHourly?: number;
     onTableFullscreen?: () => void;
+    // cf. Options.accordionItemFooter.
+    accordionItemFooter?: (accordionId: string) => ReactNode;
   };
 };
 
@@ -604,6 +623,7 @@ const DisplayContent = ({
         challengerState,
         onTableFullscreen: extra?.onTableFullscreen,
         usedIds: new Map(),
+        accordionItemFooter: extra?.accordionItemFooter,
       })
     );
     /*

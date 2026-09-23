@@ -54,6 +54,8 @@ type Props = {
    * recherche. Fournis uniquement par les contributions.
    */
   funnelTracking?: AgreementSearchFunnelTracking;
+  /** Suffixe des `id` du DOM quand le formulaire est répété sur une page. */
+  instanceId?: string;
 };
 
 const DEFAULT_LEGEND =
@@ -86,6 +88,7 @@ export const AgreementSearchForm = ({
   showWhatIsAgreementLink = false,
   legend = DEFAULT_LEGEND,
   funnelTracking,
+  instanceId,
 }: Props) => {
   const [selectedRoute, setSelectedRoute] = useState<
     AgreementRoute | undefined
@@ -98,10 +101,11 @@ export const AgreementSearchForm = ({
   // la dépendance ; on n'écrase jamais un choix déjà fait par l'usager.
   // L'effet defaultAgreement ci-dessous garde la priorité.
   useEffect(() => {
-    if (defaultRoute && !selectedRoute && !defaultAgreement) {
-      setSelectedRoute(defaultRoute);
-      onRouteChange?.(defaultRoute);
-    }
+    if (!defaultRoute || selectedRoute || defaultAgreement) return;
+    // Pas de radio « sans CC » : rien à pré-cocher.
+    if (defaultRoute === "no-agreement" && !showNoAgreementOption) return;
+    setSelectedRoute(defaultRoute);
+    onRouteChange?.(defaultRoute);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [defaultRoute]);
 
@@ -111,6 +115,18 @@ export const AgreementSearchForm = ({
       onRouteChange?.("agreement");
     }
   }, [defaultAgreement]);
+
+  // L'option « sans CC » peut disparaître après coup (variante d'A/B test
+  // connue après le montage, cf. #7481) alors qu'un pré-cochage `defaultRoute`
+  // l'avait retenue : on décoche, sinon le formulaire garderait une route
+  // sans radio correspondante.
+  useEffect(() => {
+    if (!showNoAgreementOption && selectedRoute === "no-agreement") {
+      setSelectedRoute(undefined);
+      onRouteChange?.(undefined);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [showNoAgreementOption]);
 
   useEffect(() => {
     if (!error) return;
@@ -205,6 +221,7 @@ export const AgreementSearchForm = ({
           level={level}
           requireSearchSignal={agreementRequireSearchSignal}
           funnelTracking={funnelTracking}
+          instanceId={instanceId}
         />
       )}
       {selectedRoute === "enterprise" && (
@@ -229,6 +246,7 @@ export const AgreementSearchForm = ({
           requireSearchSignal={enterpriseRequireSearchSignal}
           showWhatIsAgreementLink={showWhatIsAgreementLink}
           funnelTracking={funnelTracking}
+          instanceId={instanceId}
         />
       )}
       {selectedRoute === "no-agreement" && noAgreementContent}

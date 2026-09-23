@@ -29,6 +29,26 @@ export const buildContributionAgreementPath = (
     ? `/contribution/${slug}/${agreement.slug || agreement.num}`
     : `/contribution/${agreement.num}-${slug}`;
 
+// Premier accordéon de premier niveau du contenu éditorial : les accordéons
+// imbriqués n'apparaissent qu'à l'intérieur d'un `<details>`, la première
+// occurrence dans la chaîne est donc toujours de premier niveau.
+const FIRST_ACCORDION = /<details[\s>]/i;
+
+/**
+ * Sépare le contenu éditorial en « introduction » (tout ce qui précède le
+ * premier accordéon) et « suite » (à partir du premier accordéon). Variante C
+ * de l'A/B test #7481 : l'introduction et le bloc CC passent en tête de page.
+ * Sans accordéon, rien n'est extrait : tout le contenu reste dans la suite.
+ */
+export const splitContentAtFirstAccordion = (content: string) => {
+  const match = FIRST_ACCORDION.exec(content);
+  if (!match) return { intro: "", rest: content };
+  return {
+    intro: content.slice(0, match.index),
+    rest: content.slice(match.index),
+  };
+};
+
 export const isAgreementSupported = (
   contribution: Contribution,
   agreement: Agreement

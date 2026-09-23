@@ -31,6 +31,8 @@ import { UserAction } from "src/modules/outils/common/utils/UserAction";
 
 jest.mock("@socialgouv/matomo-next", () => ({
   sendEvent: jest.fn(),
+  // Hors expérience (#7481) : aucune variante affectée, comportement témoin.
+  useABTestVariant: jest.fn(() => null),
 }));
 
 jest.mock("uuid", () => ({
@@ -158,6 +160,21 @@ const ui = {
     name: /Commerce de détail et de gros à prédominance alimentaire IDCC 2216/,
   }),
   locationOptionParis: byText("Paris (75)"),
+};
+
+/**
+ * Saisit une recherche de CC en un seul changement de valeur, puis laisse la
+ * recherche asynchrone se résoudre DANS `act` : ses mises à jour d'état sont
+ * ainsi rendues avant l'assertion suivante. Frappe par frappe (`userEvent.type`),
+ * le rendu des résultats dépendait du hasard des `act` intermédiaires, et les
+ * tests qui enchaînent une sélection de suggestion échouaient par intermittence.
+ * Les tests qui mesurent la saisie progressive gardent `userEvent.type`.
+ */
+const searchAgreementByName = async (query: string) => {
+  await act(async () => {
+    new UserAction().setInput(ccUi.searchByName.input.get(), query);
+    await new Promise((resolve) => setTimeout(resolve, 0));
+  });
 };
 
 /** Ouvre le parcours 2 et lance une recherche d'entreprise aboutie. */
@@ -520,8 +537,7 @@ describe("Funnel de choix de convention collective (contributions)", () => {
       render(<Harness />);
 
       new UserAction().click(ccUi.radio.agreementSearchOption.get());
-      await userEvent.click(ccUi.searchByName.input.get());
-      await userEvent.type(ccUi.searchByName.input.get(), "16");
+      await searchAgreementByName("16");
       await waitFor(() =>
         expect(
           ccUi.searchByName.autocompleteLines.IDCC16.name.query()
@@ -546,8 +562,7 @@ describe("Funnel de choix de convention collective (contributions)", () => {
       render(<Harness />);
 
       new UserAction().click(ccUi.radio.agreementSearchOption.get());
-      await userEvent.click(ccUi.searchByName.input.get());
-      await userEvent.type(ccUi.searchByName.input.get(), "1388");
+      await searchAgreementByName("1388");
       await waitFor(() =>
         expect(
           ccUi.searchByName.autocompleteLines.IDCC1388.name.query()
@@ -584,8 +599,7 @@ describe("Funnel de choix de convention collective (contributions)", () => {
       );
 
       new UserAction().click(ccUi.radio.agreementSearchOption.get());
-      await userEvent.click(ccUi.searchByName.input.get());
-      await userEvent.type(ccUi.searchByName.input.get(), "1388");
+      await searchAgreementByName("1388");
       await waitFor(() =>
         expect(
           ccUi.searchByName.autocompleteLines.IDCC1388.name.query()
@@ -773,5 +787,66 @@ describe("Non-régression : aucun event de funnel hors contributions", () => {
     // Témoin : le parcours a bien avancé (les events historiques, eux, partent).
     expect((sendEvent as jest.Mock).mock.calls.length).toBeGreaterThan(0);
     expect(funnelEvents()).toHaveLength(0);
+  });
+});
+
+// jsdom n'implémente pas IntersectionObserver : mock minimal qui capture le
+// callback pour simuler l'entrée du bloc dans le viewport.
+describe("Exposition réelle au bloc (bloc_cc_visible)", () => {
+  type IOEntry = { isIntersecting: boolean };
+  let ioCallback: ((entries: IOEntry[]) => void) | undefined;
+  let disconnect: jest.Mock;
+
+  beforeEach(() => {
+    ioCallback = undefined;
+    disconnect = jest.fn();
+    (
+      global as unknown as { IntersectionObserver: unknown }
+    ).IntersectionObserver = jest.fn((cb: (entries: IOEntry[]) => void) => {
+      ioCallback = cb;
+      return {
+        observe: jest.fn(),
+        disconnect,
+        unobserve: jest.fn(),
+        takeRecords: jest.fn(),
+      };
+    });
+  });
+
+  afterEach(() => {
+    delete (global as unknown as { IntersectionObserver?: unknown })
+      .IntersectionObserver;
+  });
+
+  const enterViewport = () =>
+    act(() => {
+      ioCallback?.([{ isIntersecting: true }]);
+    });
+
+  it("n'émet rien au montage : le bloc peut être hors écran", () => {
+    render(<Harness />);
+
+    expect(eventsFor(TrackingCcFunnelAction.BLOC_CC_VISIBLE)).toHaveLength(0);
+    expect(eventsFor(TrackingCcFunnelAction.VIEW_BLOC_CC)).toHaveLength(1);
+  });
+
+  it("émet bloc_cc_visible à la première entrée dans le viewport, une seule fois", () => {
+    render(<Harness />);
+
+    enterViewport();
+    enterViewport();
+
+    expectSingleFunnelEvent(TrackingCcFunnelAction.BLOC_CC_VISIBLE);
+    expect(disconnect).toHaveBeenCalled();
+  });
+
+  it("ignore une intersection négative", () => {
+    render(<Harness />);
+
+    act(() => {
+      ioCallback?.([{ isIntersecting: false }]);
+    });
+
+    expect(eventsFor(TrackingCcFunnelAction.BLOC_CC_VISIBLE)).toHaveLength(0);
   });
 });

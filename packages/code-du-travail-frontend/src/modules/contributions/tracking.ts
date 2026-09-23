@@ -42,6 +42,7 @@ export enum TrackingContributionAction {
 // radio. Les deux séries coexistent pour ne pas casser les courbes existantes.
 export enum TrackingCcFunnelAction {
   VIEW_BLOC_CC = "view_bloc_cc",
+  BLOC_CC_VISIBLE = "bloc_cc_visible",
   CLICK_WHAT_IS_AGREEMENT = "click_c_est_quoi_une_cc",
   SELECT_P1 = "select_p1",
   SELECT_P2 = "select_p2",
@@ -386,6 +387,18 @@ const emitClickDisplayInformation = (path: string) => {
   });
 };
 
+// Exposition réelle au bloc : première entrée d'une instance du bloc dans le
+// viewport, une fois par page. Complète `view_bloc_cc` (montage) : quand le
+// bloc est placé bas dans la page ou dans un accordéon fermé (A/B test #7481),
+// « monté » ne veut plus dire « vu ».
+const emitBlocCcVisible = (path: string) => {
+  sendEvent({
+    category: TrackingContributionCategory.CC_SEARCH_FUNNEL,
+    action: TrackingCcFunnelAction.BLOC_CC_VISIBLE,
+    name: toPageEventName(path),
+  });
+};
+
 const emitBlockedWithoutRoute = (path: string) => {
   sendEvent({
     category: TrackingContributionCategory.CC_SEARCH_FUNNEL,
@@ -433,6 +446,7 @@ const emitClickExternalAgreementLink = (path: string) => {
 // sept composants qui n'ont que faire de ces vingt-quatre émetteurs.
 const ccFunnelTracking = {
   emitViewBlocCc,
+  emitBlocCcVisible,
   emitClickWhatIsAgreement,
   emitSelectP1,
   emitSelectP2,
