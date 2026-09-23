@@ -4,9 +4,8 @@ import Link from "src/modules/common/Link";
 
 // Thèmes proposés à l'écran « Précisez votre question ». Seul `secteur-prive`
 // relève des services de renseignement en droit du travail (SRDT) et mène au
-// numéro de téléphone ; les autres sont hors périmètre et mènent à un message de
-// redirection. Le mapping est piloté par la donnée pour rester extensible quand
-// d'autres canaux seront ajoutés.
+// choix du moyen de contact ; les autres sont hors périmètre et mènent à un
+// message de redirection. Le mapping est piloté par la donnée.
 export type ThemeKey =
   | "secteur-prive"
   | "indemnisation-arret"
@@ -52,8 +51,9 @@ export const SRDT_PHONE = {
   tarification: ["Service gratuit", "+ prix appel"],
 } as const;
 
-// Limites de compétence rappelées sous le numéro (écran résultat téléphone).
-// Contenu repris de la maquette Figma (absent du wording de l'issue #7370).
+// Limites de compétence rappelées sous le numéro (écran téléphone) et sous le
+// lien de prise de rendez-vous (écran rendez-vous, cf. SrdtCaveats). Contenu
+// repris de la maquette Figma (absent du wording de l'issue #7370).
 export const SRDT_PHONE_CAVEATS = [
   "les demandes d'intervention en entreprise",
   "la constitution des dossiers prud'homaux",

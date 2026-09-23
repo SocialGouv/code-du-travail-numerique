@@ -562,8 +562,11 @@ Bandeau « Cette page vous a-t-elle été utile ? » et parcours de contact du f
 | feedback_category | `<motif de feedback>`   | 📌 `<baseUrl>`       | À l'envoi, un event par motif coché (4 motifs prédéfinis, parcours négatif). |
 | feedback_suggestion | `<suggestion>`        | 🔀 `<baseUrl>`       | À l'envoi, si un texte libre est saisi (parcours positif ou négatif). Verbatim (500 car. max). |
 | contact           | click_contact_sr_modale | 📌 `<currentPathName>` | Clic sur « Contacter nos services en région » dans le bloc footer, qui mène à la page du questionnaire de pré-qualification SRDT (`/besoin-plus-informations`). `name` = page d'origine. Le libellé de l'action est historique : le parcours était une modale, il est désormais sur une page. |
-| contact           | select_theme_contact_sr | 📌 `<theme>`          | Clic sur « Suivant » à l'écran « Précisez votre question » ; `name` = thème choisi (secteur-prive, secteur-public, cotisations-salaire, indemnisation-arret, autorisation-travail-etranger). Mesure la répartition des demandes et le hors-périmètre. |
-| contact           | click_phone_number      | 📌 —                 | Clic sur le numéro 0 806 000 126 affiché à l'écran résultat pour le thème « droit du travail secteur privé ». |
+| contact           | select_theme_contact_sr | 📌 `<theme>`          | Clic sur « Suivant » à l'écran 1 « Précisez votre question » ; `name` = thème choisi (secteur-prive, secteur-public, cotisations-salaire, indemnisation-arret, autorisation-travail-etranger). Mesure la répartition des demandes et le hors-périmètre. |
+| contact           | select_canal_contact_sr | 📌 `<channel>`        | Clic sur « Suivant » à l'écran 2 « Choisir votre moyen de contact » (thème secteur privé uniquement) ; `name` = canal choisi (`telephone` ou `rdv`). Mesure la répartition téléphone / rendez-vous sur place. |
+| contact           | select_departement_contact_sr | 📌 `<departement>` | Sur action de l'utilisateur : sélection d'un département à l'écran 3 « Prendre rendez-vous » (canal `rdv`) ; `name` = code du département (la liste ne propose que les départements des régions où le rendez-vous est ouvert). Mesure la demande par territoire. |
+| contact           | click_rdv_contact_sr    | 📌 `<departement>`    | Clic sur le lien « Prendre rendez-vous » (nouvel onglet vers la page de prise de rendez-vous de la région) ; `name` = code du département. Mesure la conversion vers la prise de rendez-vous. |
+| contact           | click_phone_number      | 📌 —                 | Clic sur le numéro 0 806 000 126 affiché à l'écran 3 « Par téléphone » (canal `telephone`). |
 
 Les 4 motifs possibles de `feedback_category` (un event par case cochée) :
 
