@@ -62,9 +62,9 @@ describe("jsonld builders", () => {
     expect(jsonld.publisher).toEqual({
       "@id": JSON_LD_ENTITY_IDS.organization,
     });
-    // Date FR convertie en ISO 8601.
-    expect(jsonld.datePublished).toBe("2024-05-29");
-    expect(jsonld.dateModified).toBe("2024-05-29");
+    // Date FR convertie en ISO 8601, minuit heure de Paris avec fuseau.
+    expect(jsonld.datePublished).toBe("2024-05-29T00:00:00+02:00");
+    expect(jsonld.dateModified).toBe("2024-05-29T00:00:00+02:00");
     // Thème / sous-thème (titres complets).
     expect(jsonld.articleSection).toBe("Rupture du contrat");
     expect(jsonld.keywords).toEqual(["Rupture du contrat", "Licenciement"]);
@@ -94,14 +94,48 @@ describe("jsonld builders", () => {
     expect(jsonld.dateModified).toBeUndefined();
   });
 
-  it("buildNewsArticleJsonLd()", () => {
+  it("buildNewsArticleJsonLd() convertit la date admin JJ/MM/AAAA en ISO 8601 (minuit Paris)", () => {
     const jsonld = buildNewsArticleJsonLd({
       headline: "Titre actualite",
       url: "/actualite/mon-article",
-      datePublished: "2024-01-01",
+      datePublished: "18/09/2026",
       description: "Description de l'actualite",
     });
     expect(jsonld["@type"]).toBe("NewsArticle");
+    expect(jsonld.datePublished).toBe("2026-09-18T00:00:00+02:00");
+    expect(jsonld.dateModified).toBe("2026-09-18T00:00:00+02:00");
     expect(jsonld).toMatchSnapshot();
   });
+
+  it.each`
+    input           | expected
+    ${"15/01/2026"} | ${"2026-01-15T00:00:00+01:00"}
+    ${"1/9/26"}     | ${"2026-09-01T00:00:00+02:00"}
+  `(
+    "buildNewsArticleJsonLd() tolère la saisie admin $input",
+    ({ input, expected }) => {
+      const jsonld = buildNewsArticleJsonLd({
+        headline: "Titre",
+        url: "/actualite/slug",
+        datePublished: input,
+      });
+      expect(jsonld.datePublished).toBe(expected);
+      expect(jsonld.dateModified).toBe(expected);
+    }
+  );
+
+  it.each([undefined, "", "pas une date"])(
+    "buildNewsArticleJsonLd() omet les dates quand elles sont invalides (%p)",
+    (input) => {
+      const jsonld = buildNewsArticleJsonLd({
+        headline: "Titre",
+        url: "/actualite/slug",
+        datePublished: input,
+      });
+      expect(jsonld["@type"]).toBe("NewsArticle");
+      expect(jsonld).not.toHaveProperty("datePublished");
+      expect(jsonld).not.toHaveProperty("dateModified");
+      expect(jsonld.headline).toBe("Titre");
+    }
+  );
 });
