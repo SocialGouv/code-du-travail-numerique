@@ -49,8 +49,8 @@ export const searchWithQuery = async (
   const documents: SearchResult[] = parsed.results.slice(0, size);
 
   // check prequalified requests : to be removed soon
-  const prequalifiedResults = withPQ ? await getPrequalifiedResults(query) : [];
-  // const prequalifiedResults = [];
+  // const prequalifiedResults = withPQ ? await getPrequalifiedResults(query) : [];
+  const prequalifiedResults = [];
 
   const mappedPrequa: SearchResult[] = prequalifiedResults.map(
     esDocToSearchResult(SEARCH_ALGO.PREQUA)
