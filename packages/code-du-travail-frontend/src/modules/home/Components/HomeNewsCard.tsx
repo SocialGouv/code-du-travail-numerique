@@ -1,7 +1,7 @@
 import { fr } from "@codegouvfr/react-dsfr";
 import DisplayContent from "../../common/DisplayContent";
 import { HomeNewsCardItem } from "../queries";
-import { formatDateAsFrenchText } from "../../utils";
+import { PublishedDate } from "../../common/PublishedDate";
 import { css } from "@styled-system/css";
 import Link from "../../common/Link";
 
@@ -29,9 +29,10 @@ export const HomeNewsCard = ({
           </span>
         </div>
         <div className={fr.cx("fr-card__end")}>
-          <p className={fr.cx("fr-m-0", "fr-card__detail")}>
-            {formatDateAsFrenchText(date)}
-          </p>
+          <PublishedDate
+            date={date}
+            className={fr.cx("fr-m-0", "fr-card__detail")}
+          />
         </div>
       </div>
     </div>

@@ -15,9 +15,16 @@ type Props = {
   // Niveau de titre (aria-level) du bloc « Partager la page ». 2 par défaut ;
   // 3 quand il est imbriqué sous un titre de section (fiches contribution).
   level?: 2 | 3;
+  // Flux RSS à proposer en plus des boutons de partage (pages actualités).
+  rssFeed?: { href: string; title: string };
 };
 
-export const Share = ({ title, metaDescription, level = 2 }: Props) => {
+export const Share = ({
+  title,
+  metaDescription,
+  level = 2,
+  rssFeed,
+}: Props) => {
   const [isUrlCopied, setUrlCopied] = useState(false);
   const { emitClickShare } = useCommonTracking();
   const linkCopiedRef = useRef<HTMLParagraphElement>(null);
@@ -159,6 +166,27 @@ export const Share = ({ title, metaDescription, level = 2 }: Props) => {
             </Button>
           )}
         </li>
+        {rssFeed && (
+          <li>
+            <Link
+              className={`${fr.cx(
+                "fr-btn",
+                "fr-btn--tertiary",
+                "fr-icon-rss-line",
+                "fr-btn--icon-left"
+              )} ${blueCumulus}`}
+              title={`S'abonner au flux RSS : ${rssFeed.title}`}
+              href={rssFeed.href}
+              // Route XML, pas une page : rien à précharger.
+              prefetch={false}
+              onClick={() => {
+                emitClickShare("rss");
+              }}
+            >
+              Flux RSS des actualités
+            </Link>
+          </li>
+        )}
       </ul>
     </div>
   );

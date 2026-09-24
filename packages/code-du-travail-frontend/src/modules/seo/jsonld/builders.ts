@@ -1,4 +1,5 @@
 import { SITE_URL } from "../../../config";
+import { toIsoDateTimeParis } from "../../utils/date";
 
 export const JSON_LD_IDS = {
   organization: "jsonld-government-organization",
@@ -89,20 +90,6 @@ export type ContentThemeItem = {
   slug: string;
 };
 
-// Convertit une date FR `JJ/MM/AAAA` (format d'affichage du site) en ISO 8601
-// `AAAA-MM-JJ` attendu par schema.org. Tolère aussi une date déjà ISO. Renvoie
-// undefined si le format n'est pas reconnu → jamais de date invalide émise.
-function toIsoDate(date?: string): string | undefined {
-  const value = date?.trim();
-  if (!value) return undefined;
-  const frMatch = /^(\d{2})\/(\d{2})\/(\d{4})$/.exec(value);
-  if (frMatch) {
-    const [, day, month, year] = frMatch;
-    return `${year}-${month}-${day}`;
-  }
-  return /^\d{4}-\d{2}-\d{2}/.test(value) ? value : undefined;
-}
-
 // Article schema.org représentant une page de contenu éditorial. Rattaché au
 // site (`isPartOf`) et à son éditeur/auteur (le Code du travail numérique), daté
 // (`datePublished`/`dateModified`), et décrit par son thème / sous-thème via
@@ -122,7 +109,8 @@ export function buildContentThemeJsonLd({
 }): Record<string, unknown> {
   const absoluteUrl = toAbsoluteUrl(url);
   const rootTheme = themes[0];
-  const isoDate = toIsoDate(datePublished);
+  // ISO 8601 avec heure (minuit Paris) et fuseau, cf. toIsoDateTimeParis.
+  const isoDate = toIsoDateTimeParis(datePublished);
 
   return {
     "@context": "https://schema.org",
@@ -179,6 +167,11 @@ export function buildLegislationJsonLd({
   };
 }
 
+// NewsArticle schema.org d'une actualité. La date stockée (`JJ/MM/AAAA` saisie
+// dans l'admin) est convertie en ISO 8601 avec heure et fuseau (minuit Paris),
+// format attendu par Google Actualités. Sans date de modification en base,
+// `dateModified` reprend `datePublished`. Date absente ou invalide → les deux
+// champs sont omis plutôt qu'émis avec une valeur invalide.
 export function buildNewsArticleJsonLd({
   headline,
   url,
@@ -187,10 +180,11 @@ export function buildNewsArticleJsonLd({
 }: {
   headline: string;
   url: string;
-  datePublished: string;
+  datePublished?: string;
   description?: string;
 }): Record<string, unknown> {
   const absoluteUrl = toAbsoluteUrl(url);
+  const isoDate = toIsoDateTimeParis(datePublished);
 
   return {
     "@context": "https://schema.org",
@@ -198,8 +192,7 @@ export function buildNewsArticleJsonLd({
     headline,
     url: absoluteUrl,
     mainEntityOfPage: absoluteUrl,
-    datePublished,
-    dateModified: datePublished,
+    ...(isoDate ? { datePublished: isoDate, dateModified: isoDate } : {}),
     ...(description ? { description } : {}),
     author: {
       "@type": "Organization",
