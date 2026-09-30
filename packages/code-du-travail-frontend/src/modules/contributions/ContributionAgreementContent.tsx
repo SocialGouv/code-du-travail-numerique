@@ -12,6 +12,8 @@ import { RelatedItems } from "../common/RelatedItems";
 import { RELATED_ARTICLES_TITLE, RelatedItem } from "../documents/type";
 import { Contribution } from "./type";
 import { ContributionRating } from "./rating";
+import { AnswerScopeDisclaimer } from "./AnswerScopeDisclaimer";
+import { getAnswerScopePilot } from "./answerScopePilot";
 import { css } from "@styled-system/css";
 import { ExploreThemes } from "./explore-themes/ExploreThemes";
 import type { ExploreTheme } from "./explore-themes/type";
@@ -32,6 +34,7 @@ export function ContributionAgreementContent({
   exploreThemes = [],
 }: Props) {
   const { emitContentViewed } = useContributionTracking();
+  const answerScopePilot = getAnswerScopePilot(contribution);
   const titleRef = useContentViewTracking<HTMLHeadingElement>(() =>
     emitContentViewed(contribution.slug)
   );
@@ -59,6 +62,9 @@ export function ContributionAgreementContent({
             {contribution.ccnShortTitle}
           </Link>
         </h2>
+        {answerScopePilot && (
+          <AnswerScopeDisclaimer {...answerScopePilot.disclaimer} />
+        )}
         <ContributionContent contribution={contribution} titleLevel={2} />
         <ExploreThemes
           themes={exploreThemes}

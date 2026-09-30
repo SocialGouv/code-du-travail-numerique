@@ -6,10 +6,19 @@ import { AgreementDeclination, Contribution } from "./type";
 import { ContentMeta } from "../common/ContentMeta";
 import { ContributionGeneric } from "./ContributionGeneric";
 import { ContributionAgreement } from "./ContributionAgreement";
-import { ArticleJsonLd } from "../seo/jsonld";
+import {
+  ArticleJsonLd,
+  contentToFaqAnswerHtml,
+  LegislationJsonLd,
+} from "../seo/jsonld";
+import {
+  answerScopeDisclaimerHtml,
+  getAnswerScopePilot,
+} from "./answerScopePilot";
 import { Breadcrumbs, listingSegment } from "../layout/breadcrumb";
 import { SOURCES } from "@socialgouv/cdtn-utils";
 import { removeCCNumberFromSlug } from "../utils/removeCCNumberFromSlug";
+import { SITE_URL } from "../../config";
 // Import de type uniquement : queries.ts embarque le client Elasticsearch
 // (serveur), il ne doit pas entrer dans le bundle client.
 import type { GenericContributionInfos } from "./queries";
@@ -34,6 +43,7 @@ export function ContributionLayout({
   exploreThemes = [],
 }: Props) {
   const { date, title, isGeneric, isFicheSP } = contribution;
+  const answerScopePilot = getAnswerScopePilot(contribution);
 
   const genericSlug = !isGeneric
     ? removeCCNumberFromSlug(contribution.slug)
@@ -85,7 +95,31 @@ export function ContributionLayout({
         title={title}
         datePublished={date}
         breadcrumbs={contribution.breadcrumbs}
+        {...(answerScopePilot && {
+          disambiguatingDescription: answerScopePilot.disambiguatingDescription,
+          // Texte du H1 (titre + rappel de CC), repris mot pour mot.
+          faq: {
+            question: isGeneric
+              ? title
+              : `${title} ${contribution.ccnShortTitle}`,
+            // Disclaimer en première phrase, suivi du contenu de la page (HTML
+            // Tiptap réécrit dans le sous-ensemble accepté par Google).
+            answer:
+              answerScopeDisclaimerHtml(answerScopePilot.disclaimer) +
+              contentToFaqAnswerHtml(contribution.content, {
+                smicHourly: contribution.smicValue,
+              }),
+          },
+        })}
       />
+      {answerScopePilot?.idcc && contribution.ccnShortTitle && (
+        <LegislationJsonLd
+          name={contribution.ccnShortTitle}
+          url={`/convention-collective/${contribution.ccnSlug}`}
+          identifier={`IDCC ${answerScopePilot.idcc}`}
+          isBasedOn={`${SITE_URL}/contribution/${genericSlug}`}
+        />
+      )}
       {isGeneric ? (
         <ContributionGeneric
           contribution={contribution}
