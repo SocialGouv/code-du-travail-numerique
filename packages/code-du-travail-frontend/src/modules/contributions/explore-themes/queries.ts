@@ -23,6 +23,42 @@ const THEME_FIELDS = [
 type ThemeHit = Pick<ThemeElasticDocument, (typeof THEME_FIELDS)[number]>;
 
 /**
+ * Résout des sous-thèmes en cartes, dans l'ordre des slugs demandés. Un slug
+ * introuvable, sans contenu ou sans parent vers lequel pointer est écarté.
+ */
+export const fetchExploreThemesBySlugs = async (
+  slugs: string[]
+): Promise<Map<string, ExploreTheme>> => {
+  if (slugs.length === 0) return new Map();
+
+  // Deux requêtes parallèles : `icon` n'est pas garanti sur un sous-thème, le
+  // thème racine sert de repli — inutile de chaîner « lire le sous-thème puis
+  // son parent », les racines tiennent en une requête (≤ 100 documents).
+  const [themes, rootThemes] = await Promise.all([
+    fetchThemesBySlugs(slugs, [...THEME_FIELDS]),
+    fetchRootThemes(["slug", "icon"]),
+  ]);
+
+  const bySlug = new Map(themes.map((theme) => [theme.slug, theme]));
+  const iconByRootSlug = new Map(
+    rootThemes.map((theme) => [theme.slug, theme.icon])
+  );
+
+  // L'ordre vient des slugs demandés, jamais des hits Elasticsearch.
+  return new Map(
+    slugs
+      .map((slug): [string, ExploreTheme | undefined] => {
+        const theme = bySlug.get(slug);
+        return [
+          slug,
+          theme ? toExploreTheme(theme, iconByRootSlug) : undefined,
+        ];
+      })
+      .filter((entry): entry is [string, ExploreTheme] => !!entry[1])
+  );
+};
+
+/**
  * Les sous-thèmes mis en avant sur une contribution (#7455), résolus côté
  * serveur. Les deux sous-thèmes complémentaires du mapping quand ils sont tous
  * deux disponibles ; sinon le sous-thème de rattachement de la contribution
@@ -37,24 +73,13 @@ export const fetchContributionExploreThemes = async (
   // Contribution non mappée : aucun aller-retour Elasticsearch.
   if (!mapped) return [];
 
-  // Deux requêtes parallèles : `icon` n'est pas garanti sur un sous-thème, le
-  // thème racine sert de repli — inutile de chaîner « lire le sous-thème puis
-  // son parent », les racines tiennent en une requête (≤ 100 documents).
   // Le thème de rattachement part dans la même requête que les sous-thèmes :
   // on ne sait qu'après coup s'il servira.
-  const [themes, rootThemes] = await Promise.all([
-    fetchThemesBySlugs([mapped.theme, ...mapped.subThemes], [...THEME_FIELDS]),
-    fetchRootThemes(["slug", "icon"]),
+  const resolved = await fetchExploreThemesBySlugs([
+    mapped.theme,
+    ...mapped.subThemes,
   ]);
-
-  const bySlug = new Map(themes.map((theme) => [theme.slug, theme]));
-  const iconByRootSlug = new Map(
-    rootThemes.map((theme) => [theme.slug, theme.icon])
-  );
-  const resolve = (slug: string): ExploreTheme | undefined => {
-    const theme = bySlug.get(slug);
-    return theme ? toExploreTheme(theme, iconByRootSlug) : undefined;
-  };
+  const resolve = (slug: string) => resolved.get(slug);
 
   // L'ordre ss1 → ss2 vient du mapping, jamais des hits Elasticsearch.
   const subThemes = mapped.subThemes.map(resolve).filter(nonNullable);
