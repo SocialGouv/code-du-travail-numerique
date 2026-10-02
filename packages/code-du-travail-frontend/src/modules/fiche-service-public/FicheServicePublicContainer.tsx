@@ -12,10 +12,36 @@ import { FicheSPData } from "./builder/type";
 import { AccordionWithAnchor } from "../common/AccordionWithAnchor";
 import { fromDocumentBreadcrumbs } from "../layout/breadcrumb";
 import { injectContributionPromos } from "./contributions/injectContributionPromos";
+import { Tile } from "@codegouvfr/react-dsfr/Tile";
+import { css } from "@styled-system/css";
+import { ThemeTile } from "../contributions/explore-themes/ExploreThemes";
+import { getRecommendedItemKey, RecommendedItem } from "./types";
+
+const RecommendedItemTile = ({ item }: { item: RecommendedItem }) => {
+  switch (item.type) {
+    case "theme":
+      return <ThemeTile theme={item.theme} titleAs="h3" />;
+    case "document":
+      return (
+        <Tile
+          orientation="horizontal"
+          small
+          noIcon
+          enlargeLinkOrButton
+          titleAs="h3"
+          title={item.title}
+          desc={item.desc}
+          linkProps={{ href: item.url }}
+          classes={{ desc: tileDesc }}
+        />
+      );
+  }
+};
 
 type Props = {
   relatedItems: { items: RelatedItem[]; title: string }[];
   raw: { children: FicheSPData[] };
+  recommendedLinks?: RecommendedItem[];
 } & Pick<
   ElasticFicheServicePublic,
   | "title"
@@ -30,19 +56,19 @@ type Props = {
 export function FicheServicePublicContainer({
   metaDescription,
   date,
-  relatedItems,
   url,
   title,
   raw,
   breadcrumbs,
   referencedTexts,
   slug,
+  recommendedLinks = [],
 }: Props) {
   return (
     <ContainerRichWithBreadcrumbs
       currentPage={title}
       breadcrumbSegments={fromDocumentBreadcrumbs(breadcrumbs)}
-      relatedItems={relatedItems}
+      relatedItems={[]}
       title={title}
       description={metaDescription}
     >
@@ -75,7 +101,35 @@ export function FicheServicePublicContainer({
             titleAs={"h2"}
           />
         )}
+
+        {recommendedLinks.length > 0 && (
+          <div className={`${fr.cx("fr-mt-5w")} ${hideOnPrint}`}>
+            <h2 className={fr.cx("fr-h5")}>Liens recommandés</h2>
+            <div className={fr.cx("fr-grid-row", "fr-grid-row--gutters")}>
+              {recommendedLinks.map((item) => (
+                <div
+                  key={getRecommendedItemKey(item)}
+                  className={fr.cx("fr-col-12", "fr-col-md-6")}
+                >
+                  <RecommendedItemTile item={item} />
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </ContainerRichWithBreadcrumbs>
   );
 }
+
+// Mêmes réglages que les cartes « Explorez nos thématiques » des contributions.
+const tileDesc = css({
+  fontSize: "1rem",
+  lineHeight: "1.5625rem",
+});
+
+const hideOnPrint = css({
+  "@media print": {
+    display: "none",
+  },
+});
