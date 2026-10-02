@@ -1963,37 +1963,37 @@
       "command": "forgetCookieConsentGiven",
       "args": [],
       "file": "packages/code-du-travail-frontend/src/modules/utils/consent.ts",
-      "line": 119
+      "line": 120
     },
     {
       "command": "forgetUserOptOut",
       "args": [],
       "file": "packages/code-du-travail-frontend/src/modules/utils/consent.ts",
-      "line": 115
+      "line": 116
     },
     {
       "command": "HeatmapSessionRecording::disable",
       "args": [],
       "file": "packages/code-du-travail-frontend/src/modules/utils/consent.ts",
-      "line": 100
+      "line": 101
     },
     {
       "command": "HeatmapSessionRecording::enable",
       "args": [],
       "file": "packages/code-du-travail-frontend/src/modules/utils/consent.ts",
-      "line": 98
+      "line": 99
     },
     {
       "command": "optUserOut",
       "args": [],
       "file": "packages/code-du-travail-frontend/src/modules/utils/consent.ts",
-      "line": 118
+      "line": 119
     },
     {
       "command": "rememberCookieConsentGiven",
       "args": [],
       "file": "packages/code-du-travail-frontend/src/modules/utils/consent.ts",
-      "line": 116
+      "line": 117
     },
     {
       "command": "setCookieSameSite",
