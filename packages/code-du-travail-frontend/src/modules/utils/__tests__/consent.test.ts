@@ -188,6 +188,25 @@ describe("consent / Matomo", () => {
       expect(paqCommands()).not.toContain("forgetUserOptOut");
     });
 
+    it("sans localStorage, ne supprime pas l'opt-out à chaque page", () => {
+      localStorage.removeItem(CONSENT_VERSION_KEY);
+      setCookie("mtm_consent_removed");
+      const setItem = jest
+        .spyOn(Storage.prototype, "setItem")
+        .mockImplementation(() => {
+          throw new Error("localStorage indisponible");
+        });
+      const warn = jest.spyOn(console, "warn").mockImplementation(() => {});
+
+      initConsent();
+
+      expect(isMatomoOptedOut()).toBe(true);
+      expect(paqCommands()).not.toContain("forgetUserOptOut");
+
+      setItem.mockRestore();
+      warn.mockRestore();
+    });
+
     it("un choix fait après la réinitialisation est valide", () => {
       storeLegacyConsent(ACCEPTED);
       initConsent();

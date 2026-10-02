@@ -14,10 +14,22 @@ export type ConsentType = {
 export const CONSENT_STORAGE_KEY = "cdtn-cookie-consent";
 export const CONSENT_GIVEN_KEY = "cdtn-cookie-consent-given";
 export const CONSENT_DATE_KEY = "cdtn-cookie-consent-date";
+// Consent version the browser was last reset with (see resetOutdatedConsent)
 export const CONSENT_VERSION_KEY = "cdtn-cookie-consent-version";
 
-// Bump to ask every visitor again and reset Matomo cookies (see
-// resetOutdatedConsent). 2: cookieless Matomo after a refusal, SEA campaign 2026.
+// Consent version: NOT the app version, releases never change it.
+// Bump it ("2" -> "3") only to ask every visitor again, e.g. a new purpose or
+// tool in the banner, a change in what a consent covers, or a bug to reset.
+// On the next visit, each browser then forgets its choice (the banner is shown
+// again, refusals included) and every Matomo cookie, opt-out included.
+// When bumping, also update the same value in src/e2e/global-setup.ts,
+// otherwise the banner shows up in every e2e test.
+//
+// History:
+// - "2": cookieless Matomo after a refusal, and reset of the opt-out cookie
+//   that the banner used to set by mistake; SEA campaign 2026.
+//   https://github.com/SocialGouv/code-du-travail-numerique/issues/7513
+//   https://github.com/SocialGouv/code-du-travail-numerique/pull/7545
 export const CONSENT_VERSION = "2";
 
 const isCurrentConsentVersion = (): boolean =>
@@ -136,11 +148,15 @@ const deleteMatomoCookies = (includeOptOut = false): void => {
 const resetOutdatedConsent = (): void => {
   if (isCurrentConsentVersion()) return;
 
+  // Without a working localStorage the version is never saved: resetting on
+  // every page would wipe an explicit opt-out each time.
+  safeSetItem(CONSENT_VERSION_KEY, CONSENT_VERSION);
+  if (!isCurrentConsentVersion()) return;
+
   clearStoredConsent();
   deleteMatomoCookies(true);
   window._paq = window._paq || [];
   window._paq.push(["forgetUserOptOut"]);
-  safeSetItem(CONSENT_VERSION_KEY, CONSENT_VERSION);
 };
 
 // Save consent to local storage
