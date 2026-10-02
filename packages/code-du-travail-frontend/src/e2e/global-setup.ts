@@ -75,6 +75,12 @@ export default async function globalSetup(config: FullConfig) {
             name: "cdtn-cookie-consent-date",
             value: Date.now().toString(),
           },
+          // Doit suivre CONSENT_VERSION (utils/consent.ts), sinon le bandeau
+          // cookies réapparaît dans tous les tests
+          {
+            name: "cdtn-cookie-consent-version",
+            value: "2",
+          },
         ],
       },
     ],
