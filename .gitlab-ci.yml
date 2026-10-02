@@ -20,18 +20,20 @@ include:
   - project: socialgouv/commun/studio-tech-commun/sdpsn-devops-ci-utils
     ref: main
     file: ci-common/image-build.yml
-  - project: socialgouv/commun/studio-tech-commun/sdpsn-devops-ci-utils
-    ref: main
-    file: ci-common/publish-chart.yml
+  - component: $CI_SERVER_FQDN/socialgouv/produits-dnum/studio-tech/devops/components/gitops-cd-component/trigger_app@0.3.1
+    inputs:
+      job_name: deploy-dev
+      stage: deploy
+      gitops_project: socialgouv/produits-dnum/citoyens/cdtn/cdtn-gitops
+      deploy_action: dev
+      image_target_object: ".code-du-travail-numerique.image.tag"
 
 variables:
-  CHART_DIR: charts/code-du-travail-numerique
-  CHART_VERSION: "0.0.0-sha.${CI_COMMIT_SHORT_SHA}"
   # Build-args NEXT_PUBLIC_* (publics, bakés dans l'image). Valeurs dev par défaut, surchargeables
   # en variables CI/CD. NEXT_PUBLIC_SITE_URL : à fixer au host réel après création de l'env Atlas.
-  NEXT_PUBLIC_ES_INDEX_PREFIX: "cdtn-dev"
-  NEXT_PUBLIC_SITE_URL: ""
-  NEXT_PUBLIC_BUCKET_URL: ""
+  NEXT_PUBLIC_ES_INDEX_PREFIX: "cdtn"
+  NEXT_PUBLIC_SITE_URL: "https://code-du-travail-numerique.env-01m2jrqx2bm61pzggw4v5hdfs1.dev.atlas-prod.public-cloud.social.gouv.fr"
+  NEXT_PUBLIC_BUCKET_URL: "https://cdtn-dev-public.s3.gra.io.cloud.ovh.net"
   NEXT_PUBLIC_BUCKET_FOLDER: "preview"
   NEXT_PUBLIC_BUCKET_SITEMAP_FOLDER: "sitemap"
   NEXT_PUBLIC_PIWIK_SITE_ID: "3"
@@ -40,7 +42,6 @@ variables:
 
 stages:
   - build
-  - publish
   - deploy
 
 workflow:
@@ -76,27 +77,11 @@ build:
       NEXT_PUBLIC_SENTRY_ENV=$NEXT_PUBLIC_SENTRY_ENV
   rules: *build-rules
 
-publish-chart:
-  extends: .publish-chart
-  needs: ["build"]
-  rules: *build-rules
-
 # ---------------------------------------------------------------------------
 # DEPLOY : déclenche cdtn-gitops (CI_JOB_TOKEN + allowlist inbound). Bump de la
 # dépendance `code-du-travail-numerique` du wrapper apps/cdtn-dev sur la branche par défaut.
 # ---------------------------------------------------------------------------
 deploy-dev:
-  stage: deploy
-  needs: ["publish-chart"]
-  rules:
-    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
-  variables:
-    DEPLOY_ACTION: deploy
-    DEPLOY_ENV: cdtn-dev
-    CHART_NAME: code-du-travail-numerique
-  trigger:
-    project: socialgouv/produits-dnum/citoyens/cdtn/cdtn-gitops
-    branch: main
-    strategy: depend
+  needs: ["build"]
   environment:
     name: dev

@@ -1,7 +1,0 @@
-apiVersion: v2
-name: code-du-travail-numerique
-description: code.travail.gouv.fr — site public CDTN (Next.js). Chart applicatif plateforme-agnostique.
-type: application
-# version + appVersion sont posées par la CI au publish (0.0.0-sha.<sha> / sha-<sha>).
-version: 0.1.0
-appVersion: "0.1.0"
