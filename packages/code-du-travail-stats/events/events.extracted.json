@@ -1963,43 +1963,37 @@
       "command": "disableCookies",
       "args": [],
       "file": "packages/code-du-travail-frontend/src/modules/utils/consent.ts",
-      "line": 195
+      "line": 190
     },
     {
       "command": "forgetCookieConsentGiven",
       "args": [],
       "file": "packages/code-du-travail-frontend/src/modules/utils/consent.ts",
-      "line": 194
+      "line": 189
     },
     {
       "command": "forgetUserOptOut",
       "args": [],
       "file": "packages/code-du-travail-frontend/src/modules/utils/consent.ts",
-      "line": 119
-    },
-    {
-      "command": "forgetUserOptOut",
-      "args": [],
-      "file": "packages/code-du-travail-frontend/src/modules/utils/consent.ts",
-      "line": 150
+      "line": 120
     },
     {
       "command": "HeatmapSessionRecording::disable",
       "args": [],
       "file": "packages/code-du-travail-frontend/src/modules/utils/consent.ts",
-      "line": 174
+      "line": 168
     },
     {
       "command": "HeatmapSessionRecording::enable",
       "args": [],
       "file": "packages/code-du-travail-frontend/src/modules/utils/consent.ts",
-      "line": 172
+      "line": 166
     },
     {
       "command": "rememberCookieConsentGiven",
       "args": [],
       "file": "packages/code-du-travail-frontend/src/modules/utils/consent.ts",
-      "line": 189
+      "line": 184
     },
     {
       "command": "setCookieSameSite",

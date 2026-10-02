@@ -83,14 +83,29 @@ describe("consent / Matomo", () => {
   });
 
   describe("acceptation", () => {
-    it("lève un opt-out antérieur et autorise les cookies", () => {
+    it("autorise les cookies", () => {
       saveConsent(ACCEPTED);
 
       const commands = paqCommands();
-      expect(commands).toContain("forgetUserOptOut");
       expect(commands).toContain("rememberCookieConsentGiven");
       expect(commands).not.toContain("disableCookies");
+      expect(commands).not.toContain("forgetUserOptOut");
       expect(hasMatomoCookieConsent()).toBe(true);
+    });
+
+    it("ne lève pas l'opt-out explicite et ne dépose aucun cookie", () => {
+      setCookie("mtm_consent_removed");
+      setCookie("_pk_id.1.abcd");
+
+      saveConsent(ACCEPTED);
+
+      const commands = paqCommands();
+      expect(commands).not.toContain("forgetUserOptOut");
+      expect(commands).not.toContain("rememberCookieConsentGiven");
+      expect(commands).toContain("disableCookies");
+      expect(hasMatomoCookieConsent()).toBe(false);
+      expect(cookieNames()).not.toContain("_pk_id.1.abcd");
+      expect(cookieNames()).toContain("mtm_consent_removed");
     });
 
     it("ne lève pas l'opt-out explicite au rechargement", () => {

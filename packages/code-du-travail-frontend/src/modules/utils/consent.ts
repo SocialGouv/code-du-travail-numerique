@@ -76,16 +76,17 @@ const getAppliedConsent = (): ConsentType =>
     ? getStoredConsent()
     : { ...DEFAULT_CONSENT, matomo: false };
 
-// Matomo cookies (_pk_*, mtm_*) are only allowed after an explicit acceptance.
-// Without it, Matomo still tracks page views and events, without any cookie.
+// Matomo cookies (_pk_*, mtm_*) are only allowed after an explicit acceptance,
+// and never after an explicit opt-out. Without them, Matomo still tracks page
+// views and events, without any cookie.
 export const hasMatomoCookieConsent = (): boolean => {
   if (typeof window === "undefined") return false;
-  return getAppliedConsent().matomo;
+  return getAppliedConsent().matomo && !isMatomoOptedOut();
 };
 
 // Cookie set by Matomo on an explicit opt-out ("ne jamais être suivi" in the
-// privacy policy). As long as it exists, Matomo sends nothing: it is only
-// lifted by an explicit acceptance or by migrateLegacyRefusal.
+// privacy policy). As long as it exists, Matomo sends nothing. The cookie
+// banner only governs cookies and never lifts it (except migrateLegacyRefusal).
 const MATOMO_OPT_OUT_COOKIE = "mtm_consent_removed";
 const MATOMO_COOKIE_PREFIXES = ["_pk_", "mtm_", "matomo_"];
 
@@ -142,13 +143,6 @@ export const saveConsent = (consent: ConsentType): void => {
   safeSetItem(CONSENT_STORAGE_KEY, JSON.stringify(consent));
   safeSetItem(CONSENT_GIVEN_KEY, "true");
   safeSetItem(CONSENT_DATE_KEY, Date.now().toString());
-
-  // Only an explicit acceptance lifts a previous Matomo opt-out: re-applying
-  // consent on page load or navigation must not undo "ne jamais être suivi".
-  if (consent.matomo) {
-    window._paq = window._paq || [];
-    window._paq.push(["forgetUserOptOut"]);
-  }
   applyConsent(consent);
 
   window.dispatchEvent(new Event("cdtn:consent-updated"));
@@ -185,7 +179,8 @@ const applyMatomoConsent = (isConsented: boolean): void => {
   try {
     window._paq = window._paq || [];
 
-    if (isConsented) {
+    // An explicit opt-out wins over the cookie banner: no cookie at all
+    if (isConsented && !isMatomoOptedOut()) {
       window._paq.push(["rememberCookieConsentGiven"]);
     } else {
       // Refusal: tracking stays active, without any cookie. matomo.js applies
