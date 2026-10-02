@@ -441,8 +441,9 @@ elles :
 Widget affiché en bas de chaque contribution : l'usager note la **clarté du contenu** de la
 page à l'aide d'un curseur de 1 (« Trop compliqué ») à 5 (« Très clair »), puis clique sur
 « Valider ». L'event part **au clic sur « Valider »** (une seule fois par affichage du widget ;
-aucune persistance côté client, recharger la page ré-affiche le widget). Il n'est émis que si
-l'usager a accepté Matomo (opt-out).
+aucune persistance côté client, recharger la page ré-affiche le widget). Il est émis même si
+l'usager a refusé les cookies (le relai ne dépose aucun cookie), sauf opt-out explicite
+(« ne jamais être suivi » dans la politique de confidentialité).
 
 Particularité technique : pour **contourner les bloqueurs de publicité** (qui filtrent
 `matomo.php` côté navigateur), le client fait un POST same-origin vers `/api/contribution-rating`

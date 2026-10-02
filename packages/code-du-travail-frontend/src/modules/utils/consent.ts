@@ -14,6 +14,26 @@ export type ConsentType = {
 export const CONSENT_STORAGE_KEY = "cdtn-cookie-consent";
 export const CONSENT_GIVEN_KEY = "cdtn-cookie-consent-given";
 export const CONSENT_DATE_KEY = "cdtn-cookie-consent-date";
+// Consent version the browser was last reset with (see resetOutdatedConsent)
+export const CONSENT_VERSION_KEY = "cdtn-cookie-consent-version";
+
+// Consent version: NOT the app version, releases never change it.
+// Bump it ("2" -> "3") only to ask every visitor again, e.g. a new purpose or
+// tool in the banner, a change in what a consent covers, or a bug to reset.
+// On the next visit, each browser then forgets its choice (the banner is shown
+// again, refusals included) and every Matomo cookie, opt-out included.
+// When bumping, also update the same value in src/e2e/global-setup.ts,
+// otherwise the banner shows up in every e2e test.
+//
+// History:
+// - "2": cookieless Matomo after a refusal, and reset of the opt-out cookie
+//   that the banner used to set by mistake; SEA campaign 2026.
+//   https://github.com/SocialGouv/code-du-travail-numerique/issues/7513
+//   https://github.com/SocialGouv/code-du-travail-numerique/pull/7545
+export const CONSENT_VERSION = "2";
+
+const isCurrentConsentVersion = (): boolean =>
+  safeGetItem(CONSENT_VERSION_KEY) === CONSENT_VERSION;
 
 // Consent is valid for 13 months (CNIL recommendation)
 export const CONSENT_VALIDITY_MS = 13 * 30 * 24 * 60 * 60 * 1000;
@@ -39,6 +59,7 @@ export const isConsentExpired = (): boolean => {
 
 export const hasValidConsent = (): boolean => {
   if (typeof window === "undefined") return false;
+  if (!isCurrentConsentVersion()) return false;
   const hasConsented = safeGetItem(CONSENT_GIVEN_KEY) === "true";
   if (!hasConsented) return false;
 
@@ -69,10 +90,80 @@ export const getStoredConsent = (): ConsentType => {
   return storedConsent ? JSON.parse(storedConsent) : DEFAULT_CONSENT;
 };
 
+// Consent actually applied to tracking tools. Until the user has made a valid
+// choice, Matomo measures without cookies (DEFAULT_CONSENT.matomo only drives
+// the initial state of the toggle in the modal).
+const getAppliedConsent = (): ConsentType =>
+  hasValidConsent()
+    ? getStoredConsent()
+    : { ...DEFAULT_CONSENT, matomo: false };
+
+// Matomo cookies (_pk_*, mtm_*) are only allowed after an explicit acceptance,
+// and never after an explicit opt-out. Without them, Matomo still tracks page
+// views and events, without any cookie.
+export const hasMatomoCookieConsent = (): boolean => {
+  if (typeof window === "undefined") return false;
+  return getAppliedConsent().matomo && !isMatomoOptedOut();
+};
+
+// Cookie set by Matomo on an explicit opt-out ("ne jamais être suivi" in the
+// privacy policy). As long as it exists, Matomo sends nothing. The cookie
+// banner only governs cookies and never lifts it (except resetOutdatedConsent).
+const MATOMO_OPT_OUT_COOKIE = "mtm_consent_removed";
+const MATOMO_COOKIE_PREFIXES = ["_pk_", "mtm_", "matomo_"];
+
+const getCookieNames = (): string[] =>
+  document.cookie
+    .split(";")
+    .map((cookie) => cookie.split("=")[0].trim())
+    .filter(Boolean);
+
+export const isMatomoOptedOut = (): boolean => {
+  if (typeof document === "undefined") return false;
+  return getCookieNames().includes(MATOMO_OPT_OUT_COOKIE);
+};
+
+// Remove Matomo cookies left by a previous acceptance. The opt-out cookie is
+// kept, unless the whole consent is reset.
+const deleteMatomoCookies = (includeOptOut = false): void => {
+  const expired = "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+
+  getCookieNames()
+    .filter(
+      (name) =>
+        (includeOptOut || name !== MATOMO_OPT_OUT_COOKIE) &&
+        MATOMO_COOKIE_PREFIXES.some((prefix) => name.startsWith(prefix))
+    )
+    .forEach((name) => {
+      document.cookie = name + expired;
+      document.cookie = `${name}${expired}; domain=.${window.location.hostname}`;
+    });
+};
+
+// Once per consent version, every visitor starts again from a clean state:
+// the previous choice is forgotten (the banner is shown again) and every
+// Matomo cookie is removed, opt-out included. Before version 2, a refusal in
+// the banner set the same opt-out cookie as "ne jamais être suivi", and the
+// two could not be told apart.
+const resetOutdatedConsent = (): void => {
+  if (isCurrentConsentVersion()) return;
+
+  // Without a working localStorage the version is never saved: resetting on
+  // every page would wipe an explicit opt-out each time.
+  safeSetItem(CONSENT_VERSION_KEY, CONSENT_VERSION);
+  if (!isCurrentConsentVersion()) return;
+
+  clearStoredConsent();
+  deleteMatomoCookies(true);
+  window._paq = window._paq || [];
+  window._paq.push(["forgetUserOptOut"]);
+};
+
 // Save consent to local storage
 export const saveConsent = (consent: ConsentType): void => {
   if (typeof window === "undefined") return;
 
+  resetOutdatedConsent();
   safeSetItem(CONSENT_STORAGE_KEY, JSON.stringify(consent));
   safeSetItem(CONSENT_GIVEN_KEY, "true");
   safeSetItem(CONSENT_DATE_KEY, Date.now().toString());
@@ -112,12 +203,16 @@ const applyMatomoConsent = (isConsented: boolean): void => {
   try {
     window._paq = window._paq || [];
 
-    if (isConsented) {
-      window._paq.push(["forgetUserOptOut"]);
+    // An explicit opt-out wins over the cookie banner: no cookie at all
+    if (isConsented && !isMatomoOptedOut()) {
       window._paq.push(["rememberCookieConsentGiven"]);
     } else {
-      window._paq.push(["optUserOut"]);
+      // Refusal: tracking stays active, without any cookie. matomo.js applies
+      // disableCookies before queued trackPageView once loaded, and
+      // immediately when already loaded.
       window._paq.push(["forgetCookieConsentGiven"]);
+      window._paq.push(["disableCookies"]);
+      deleteMatomoCookies();
     }
   } catch (e) {
     console.error("Error applying Matomo consent:", e);
@@ -190,9 +285,8 @@ const applySeaConsent = (isConsented: boolean): void => {
 export const initConsent = (): void => {
   if (typeof window === "undefined") return;
 
-  const consent = getStoredConsent();
-
-  applyConsent(consent);
+  resetOutdatedConsent();
+  applyConsent(getAppliedConsent());
 
   // Set up listener for route changes in single-page applications
   setupRouteChangeListener();
@@ -212,8 +306,7 @@ const setupRouteChangeListener = (): void => {
       const previousPath = currentPath;
       currentPath = window.location.pathname;
       // Reapply consent based on the new path
-      const consent = getStoredConsent();
-      applyConsent(consent);
+      applyConsent(getAppliedConsent());
     }
   };
   // Listen for popstate events (back/forward navigation)
