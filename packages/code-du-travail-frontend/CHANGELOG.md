@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.245.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.244.0...v4.245.0) (2026-10-02)
+
+
+### Features
+
+* **sea:** tracking de la campagne SEA 2026 sur toutes les pages ([#7543](https://github.com/SocialGouv/code-du-travail-numerique/issues/7543)) ([9c8ec6b](https://github.com/SocialGouv/code-du-travail-numerique/commit/9c8ec6b1b0a871b86dc4a427df77cd7cd3de6332))
+
+
+
+
+
 # [4.244.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.243.0...v4.244.0) (2026-09-23)
 
 
