@@ -20,6 +20,7 @@ import {
 import { ContributionGenericAgreementSearch } from "./ContributionGenericAgreementSearch";
 import { AgreementRoute } from "src/modules/outils/indemnite-depart/types";
 import type { ExploreTheme } from "./explore-themes/type";
+import { getAnswerScopePilot } from "./answerScopePilot";
 
 type Props = {
   contribution: Contribution;
@@ -38,6 +39,10 @@ export function ContributionGeneric({
   const personalizeTitleRef = useRef<HTMLParagraphElement>(null);
   const getTitle = () => `/contribution/${slug}`;
   const { slug, isNoCDT, relatedItems } = contribution;
+  // Page pilote (#7493) : la réponse Code du travail est visible d'emblée, sans
+  // attendre le choix « je ne souhaite pas renseigner ma CC », pour être
+  // lisible des robots et des moteurs de réponse IA.
+  const isAnswerScopePilot = !!getAnswerScopePilot(contribution);
 
   const [displayGeneric, setDisplayGeneric] = useState(false);
   const [defaultRoute, setDefaultRoute] = useState<AgreementRoute>();
@@ -195,7 +200,7 @@ export function ContributionGeneric({
           ref={genericTitleRef}
           contribution={contribution}
           relatedItems={relatedItems}
-          displayGeneric={displayGeneric}
+          displayGeneric={displayGeneric || isAnswerScopePilot}
           agreementDeclinations={agreementDeclinations}
           exploreThemes={exploreThemes}
           alertText={
