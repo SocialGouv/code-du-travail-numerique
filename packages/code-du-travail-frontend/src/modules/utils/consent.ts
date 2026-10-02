@@ -68,6 +68,54 @@ export const getStoredConsent = (): ConsentType => {
   return storedConsent ? JSON.parse(storedConsent) : DEFAULT_CONSENT;
 };
 
+// Consent actually applied to tracking tools. Until the user has made a valid
+// choice, Matomo measures without cookies (DEFAULT_CONSENT.matomo only drives
+// the initial state of the toggle in the modal).
+const getAppliedConsent = (): ConsentType =>
+  hasValidConsent()
+    ? getStoredConsent()
+    : { ...DEFAULT_CONSENT, matomo: false };
+
+// Matomo cookies (_pk_*, mtm_*) are only allowed after an explicit acceptance.
+// Without it, Matomo still tracks page views and events, without any cookie.
+export const hasMatomoCookieConsent = (): boolean => {
+  if (typeof window === "undefined") return false;
+  return getAppliedConsent().matomo;
+};
+
+// Cookie set by Matomo on an explicit opt-out ("ne jamais être suivi" in the
+// privacy policy, or a refusal recorded before cookieless tracking). It is
+// never removed here: as long as it exists, Matomo sends nothing.
+const MATOMO_OPT_OUT_COOKIE = "mtm_consent_removed";
+const MATOMO_COOKIE_PREFIXES = ["_pk_", "mtm_", "matomo_"];
+
+const getCookieNames = (): string[] =>
+  document.cookie
+    .split(";")
+    .map((cookie) => cookie.split("=")[0].trim())
+    .filter(Boolean);
+
+export const isMatomoOptedOut = (): boolean => {
+  if (typeof document === "undefined") return false;
+  return getCookieNames().includes(MATOMO_OPT_OUT_COOKIE);
+};
+
+// Remove Matomo cookies left by a previous acceptance
+const deleteMatomoCookies = (): void => {
+  const expired = "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+
+  getCookieNames()
+    .filter(
+      (name) =>
+        name !== MATOMO_OPT_OUT_COOKIE &&
+        MATOMO_COOKIE_PREFIXES.some((prefix) => name.startsWith(prefix))
+    )
+    .forEach((name) => {
+      document.cookie = name + expired;
+      document.cookie = `${name}${expired}; domain=.${window.location.hostname}`;
+    });
+};
+
 // Save consent to local storage
 export const saveConsent = (consent: ConsentType): void => {
   if (typeof window === "undefined") return;
@@ -75,6 +123,13 @@ export const saveConsent = (consent: ConsentType): void => {
   safeSetItem(CONSENT_STORAGE_KEY, JSON.stringify(consent));
   safeSetItem(CONSENT_GIVEN_KEY, "true");
   safeSetItem(CONSENT_DATE_KEY, Date.now().toString());
+
+  // Only an explicit acceptance lifts a previous Matomo opt-out: re-applying
+  // consent on page load or navigation must not undo "ne jamais être suivi".
+  if (consent.matomo) {
+    window._paq = window._paq || [];
+    window._paq.push(["forgetUserOptOut"]);
+  }
   applyConsent(consent);
 
   window.dispatchEvent(new Event("cdtn:consent-updated"));
@@ -112,11 +167,14 @@ const applyMatomoConsent = (isConsented: boolean): void => {
     window._paq = window._paq || [];
 
     if (isConsented) {
-      window._paq.push(["forgetUserOptOut"]);
       window._paq.push(["rememberCookieConsentGiven"]);
     } else {
-      window._paq.push(["optUserOut"]);
+      // Refusal: tracking stays active, without any cookie. matomo.js applies
+      // disableCookies before queued trackPageView once loaded, and
+      // immediately when already loaded.
       window._paq.push(["forgetCookieConsentGiven"]);
+      window._paq.push(["disableCookies"]);
+      deleteMatomoCookies();
     }
   } catch (e) {
     console.error("Error applying Matomo consent:", e);
@@ -242,9 +300,7 @@ const applySeaConsent = (isConsented: boolean): void => {
 export const initConsent = (): void => {
   if (typeof window === "undefined") return;
 
-  const consent = getStoredConsent();
-
-  applyConsent(consent);
+  applyConsent(getAppliedConsent());
 
   // Set up listener for route changes in single-page applications
   setupRouteChangeListener();
@@ -264,8 +320,7 @@ const setupRouteChangeListener = (): void => {
       const previousPath = currentPath;
       currentPath = window.location.pathname;
       // Reapply consent based on the new path
-      const consent = getStoredConsent();
-      applyConsent(consent);
+      applyConsent(getAppliedConsent());
     }
   };
   // Listen for popstate events (back/forward navigation)

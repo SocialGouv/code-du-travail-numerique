@@ -1342,7 +1342,7 @@
       "resolution": "dynamic",
       "emit_function": "trackContributionRating",
       "file": "packages/code-du-travail-frontend/src/modules/contributions/rating/tracking.ts",
-      "line": 72,
+      "line": 73,
       "enum_refs": [
         "RatingMatomo.ACTION_PREFIX",
         "RatingMatomo.CATEGORY",
@@ -1960,40 +1960,40 @@
   "unresolved": [],
   "matomo_config_calls": [
     {
+      "command": "disableCookies",
+      "args": [],
+      "file": "packages/code-du-travail-frontend/src/modules/utils/consent.ts",
+      "line": 176
+    },
+    {
       "command": "forgetCookieConsentGiven",
       "args": [],
       "file": "packages/code-du-travail-frontend/src/modules/utils/consent.ts",
-      "line": 119
+      "line": 175
     },
     {
       "command": "forgetUserOptOut",
       "args": [],
       "file": "packages/code-du-travail-frontend/src/modules/utils/consent.ts",
-      "line": 115
+      "line": 131
     },
     {
       "command": "HeatmapSessionRecording::disable",
       "args": [],
       "file": "packages/code-du-travail-frontend/src/modules/utils/consent.ts",
-      "line": 100
+      "line": 155
     },
     {
       "command": "HeatmapSessionRecording::enable",
       "args": [],
       "file": "packages/code-du-travail-frontend/src/modules/utils/consent.ts",
-      "line": 98
-    },
-    {
-      "command": "optUserOut",
-      "args": [],
-      "file": "packages/code-du-travail-frontend/src/modules/utils/consent.ts",
-      "line": 118
+      "line": 153
     },
     {
       "command": "rememberCookieConsentGiven",
       "args": [],
       "file": "packages/code-du-travail-frontend/src/modules/utils/consent.ts",
-      "line": 116
+      "line": 170
     },
     {
       "command": "setCookieSameSite",
@@ -2001,7 +2001,7 @@
         "None"
       ],
       "file": "packages/code-du-travail-frontend/src/modules/config/MatomoAnalytics.tsx",
-      "line": 50
+      "line": 54
     },
     {
       "command": "setReferrerUrl",
@@ -2009,7 +2009,7 @@
         "<referrerUrl>"
       ],
       "file": "packages/code-du-travail-frontend/src/modules/config/MatomoAnalytics.tsx",
-      "line": 46
+      "line": 50
     }
   ]
 }
