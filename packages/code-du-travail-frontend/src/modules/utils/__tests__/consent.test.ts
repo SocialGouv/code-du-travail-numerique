@@ -116,6 +116,55 @@ describe("consent / Matomo", () => {
     });
   });
 
+  describe("migration des refus antérieurs (optUserOut)", () => {
+    const storeConsent = (consent: ConsentType) => {
+      localStorage.setItem("cdtn-cookie-consent", JSON.stringify(consent));
+      localStorage.setItem("cdtn-cookie-consent-given", "true");
+      localStorage.setItem("cdtn-cookie-consent-date", Date.now().toString());
+    };
+
+    it("lève une seule fois l'opt-out posé par un ancien refus du bandeau", () => {
+      storeConsent(REFUSED);
+      setCookie("mtm_consent_removed");
+
+      initConsent();
+      expect(paqCommands()).toContain("forgetUserOptOut");
+      expect(paqCommands()).toContain("disableCookies");
+
+      window._paq = [];
+      initConsent();
+      expect(paqCommands()).not.toContain("forgetUserOptOut");
+    });
+
+    it("conserve un opt-out explicite posé après la migration", () => {
+      storeConsent(REFUSED);
+      initConsent();
+
+      setCookie("mtm_consent_removed");
+      window._paq = [];
+      initConsent();
+
+      expect(paqCommands()).not.toContain("forgetUserOptOut");
+    });
+
+    it("conserve l'opt-out explicite d'un usager qui avait accepté", () => {
+      storeConsent(ACCEPTED);
+      setCookie("mtm_consent_removed");
+
+      initConsent();
+
+      expect(paqCommands()).not.toContain("forgetUserOptOut");
+    });
+
+    it("conserve l'opt-out explicite d'un usager sans choix dans le bandeau", () => {
+      setCookie("mtm_consent_removed");
+
+      initConsent();
+
+      expect(paqCommands()).not.toContain("forgetUserOptOut");
+    });
+  });
+
   describe("isMatomoOptedOut", () => {
     it("détecte le cookie d'opt-out Matomo", () => {
       expect(isMatomoOptedOut()).toBe(false);

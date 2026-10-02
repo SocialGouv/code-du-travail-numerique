@@ -84,8 +84,8 @@ export const hasMatomoCookieConsent = (): boolean => {
 };
 
 // Cookie set by Matomo on an explicit opt-out ("ne jamais être suivi" in the
-// privacy policy, or a refusal recorded before cookieless tracking). It is
-// never removed here: as long as it exists, Matomo sends nothing.
+// privacy policy). As long as it exists, Matomo sends nothing: it is only
+// lifted by an explicit acceptance or by migrateLegacyRefusal.
 const MATOMO_OPT_OUT_COOKIE = "mtm_consent_removed";
 const MATOMO_COOKIE_PREFIXES = ["_pk_", "mtm_", "matomo_"];
 
@@ -98,6 +98,25 @@ const getCookieNames = (): string[] =>
 export const isMatomoOptedOut = (): boolean => {
   if (typeof document === "undefined") return false;
   return getCookieNames().includes(MATOMO_OPT_OUT_COOKIE);
+};
+
+export const LEGACY_REFUSAL_MIGRATION_KEY =
+  "cdtn-matomo-legacy-refusal-migrated";
+
+// One-shot migration: before cookieless tracking, a refusal in the banner
+// called optUserOut, which sets the same cookie as the explicit opt-out.
+// Lift it once for visitors whose stored choice is a refusal. Since then, the
+// banner no longer sets this cookie: a new one can only come from the
+// privacy policy and is kept.
+const migrateLegacyRefusal = (): void => {
+  if (safeGetItem(LEGACY_REFUSAL_MIGRATION_KEY)) return;
+  safeSetItem(LEGACY_REFUSAL_MIGRATION_KEY, "true");
+
+  const hasRefusedInBanner = hasValidConsent() && !getStoredConsent().matomo;
+  if (!hasRefusedInBanner || !isMatomoOptedOut()) return;
+
+  window._paq = window._paq || [];
+  window._paq.push(["forgetUserOptOut"]);
 };
 
 // Remove Matomo cookies left by a previous acceptance
@@ -300,6 +319,7 @@ const applySeaConsent = (isConsented: boolean): void => {
 export const initConsent = (): void => {
   if (typeof window === "undefined") return;
 
+  migrateLegacyRefusal();
   applyConsent(getAppliedConsent());
 
   // Set up listener for route changes in single-page applications
