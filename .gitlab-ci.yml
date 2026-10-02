@@ -27,6 +27,20 @@ include:
       gitops_project: socialgouv/produits-dnum/citoyens/cdtn/cdtn-gitops
       deploy_action: dev
       image_target_object: ".code-du-travail-numerique.image.tag"
+  - component: $CI_SERVER_FQDN/socialgouv/produits-dnum/studio-tech/devops/components/gitops-cd-component/trigger_app@0.3.1
+    inputs:
+      job_name: deploy-test
+      stage: deploy
+      gitops_project: socialgouv/produits-dnum/citoyens/cdtn/cdtn-gitops
+      deploy_action: test
+      image_target_object: ".code-du-travail-numerique.image.tag"
+  - component: $CI_SERVER_FQDN/socialgouv/produits-dnum/studio-tech/devops/components/gitops-cd-component/trigger_app@0.3.1
+    inputs:
+      job_name: deploy-preprod
+      stage: deploy
+      gitops_project: socialgouv/produits-dnum/citoyens/cdtn/cdtn-gitops
+      deploy_action: preprod
+      image_target_object: ".code-du-travail-numerique.image.tag"
 
 variables:
   # Build-args NEXT_PUBLIC_* (publics, bakés dans l'image). Valeurs dev par défaut, surchargeables
@@ -85,3 +99,13 @@ deploy-dev:
   needs: ["build"]
   environment:
     name: dev
+
+deploy-test:
+  needs: ["build"]
+  environment:
+    name: test
+
+deploy-preprod:
+  needs: ["build"]
+  environment:
+    name: preprod
