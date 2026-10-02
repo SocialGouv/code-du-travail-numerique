@@ -10,15 +10,15 @@ export const ReglesEntreprise = () => (
     <div className={fr.cx("fr-container")}>
       <Breadcrumbs
         currentPageLabel={
-          "Code du travail, convention, accord: quelles règles s'appliquent dans votre entreprise ?"
+          "Code du travail, convention collective, accord d'entreprise : comprendre le rôle de ces textes"
         }
         className={fr.cx("fr-mb-2w", "fr-mt-2w")}
       />
     </div>
     <Container>
       <h1>
-        Code du travail, convention, accord&nbsp;: quelles règles
-        s&apos;appliquent dans votre entreprise&nbsp;?
+        Code du travail, convention collective, accord d&apos;entreprise&nbsp;:
+        comprendre le rôle de ces textes
       </h1>
       <p className={fr.cx("fr-mt-6w")}>
         Le Code du travail fixe le cadre légal général. Néanmoins, pour
