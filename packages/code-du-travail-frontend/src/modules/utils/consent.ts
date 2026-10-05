@@ -27,10 +27,11 @@ export const CONSENT_VERSION_KEY = "cdtn-cookie-consent-version";
 //
 // History:
 // - "2": cookieless Matomo after a refusal, and reset of the opt-out cookie
+// - "3": test development in branch
 //   that the banner used to set by mistake; SEA campaign 2026.
 //   https://github.com/SocialGouv/code-du-travail-numerique/issues/7513
 //   https://github.com/SocialGouv/code-du-travail-numerique/pull/7545
-export const CONSENT_VERSION = "2";
+export const CONSENT_VERSION = "3";
 
 const isCurrentConsentVersion = (): boolean =>
   safeGetItem(CONSENT_VERSION_KEY) === CONSENT_VERSION;

@@ -79,7 +79,7 @@ export default async function globalSetup(config: FullConfig) {
           // cookies réapparaît dans tous les tests
           {
             name: "cdtn-cookie-consent-version",
-            value: "2",
+            value: "3",
           },
         ],
       },
