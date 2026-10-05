@@ -5,7 +5,8 @@ import { ContainerRichWithBreadcrumbs } from "../layout/ContainerRichWithBreadcr
 import { listingSegment } from "../layout/breadcrumb";
 import { SOURCES } from "@socialgouv/cdtn-utils";
 import DisplayContent from "../common/DisplayContent";
-import { formatDateAsFrenchText } from "../utils";
+import { PublishedDate } from "../common/PublishedDate";
+import { NEWS_RSS_FEED } from "./rss";
 
 type Props = {
   news: News;
@@ -20,9 +21,10 @@ export const NewsContainer = ({ news }: Props) => (
     description={news.meta_description}
     showFeedback={false}
     showShare
+    shareRssFeed={NEWS_RSS_FEED}
   >
     <h1 className={fr.cx("fr-mb-6w")}>{news.title}</h1>
-    <p className={fr.cx("fr-text--lg")}>{formatDateAsFrenchText(news.date)}</p>
+    <PublishedDate date={news.date} className={fr.cx("fr-text--lg")} />
     <DisplayContent content={news.content} titleLevel={2} />
   </ContainerRichWithBreadcrumbs>
 );

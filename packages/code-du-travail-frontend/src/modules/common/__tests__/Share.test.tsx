@@ -45,4 +45,32 @@ describe("<Share />", () => {
       });
     }
   );
+
+  it("n'affiche pas de bouton RSS sans flux", () => {
+    const { queryByText } = render(
+      <Share title="HELLO" metaDescription="Ceci est ma page" />
+    );
+    expect(queryByText("Flux RSS des actualités")).toBeNull();
+  });
+
+  it("affiche un bouton RSS quand un flux est fourni et le tracke au clic", () => {
+    jest.resetAllMocks();
+    const { getByText } = render(
+      <Share
+        title="HELLO"
+        metaDescription="Ceci est ma page"
+        rssFeed={{ href: "/actualite/rss.xml", title: "Actualités" }}
+      />
+    );
+    const link = getByText("Flux RSS des actualités");
+    expect(link).toHaveAttribute("href", "/actualite/rss.xml");
+    expect(link).toHaveAttribute("title", "S'abonner au flux RSS : Actualités");
+    expect(link.className).toContain("fr-icon-rss-line");
+    link.click();
+    expect(sendEvent).toHaveBeenCalledWith({
+      category: "clic_share",
+      action: "http://api.url/my-page",
+      name: "rss",
+    });
+  });
 });

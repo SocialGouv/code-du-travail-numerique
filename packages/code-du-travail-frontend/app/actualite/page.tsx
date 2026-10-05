@@ -1,12 +1,14 @@
 import { DsfrLayout } from "src/modules/layout";
 import { generateDefaultMetadata } from "src/modules/common/metas";
 import { fetchNewsList, NewsList } from "src/modules/actualite";
+import { NEWS_RSS_FEED } from "src/modules/actualite/rss";
 import { Metadata } from "next";
 
 export const metadata: Metadata = generateDefaultMetadata({
   title: "Actualités",
   description: "Découvrez toutes les actualités liés au code du travail.",
   path: "/actualite",
+  feed: NEWS_RSS_FEED,
 });
 
 async function Index({

@@ -15,7 +15,8 @@ type SocialNetwork =
   | "linkedin"
   | "email"
   | "whatsapp"
-  | "copier";
+  | "copier"
+  | "rss";
 
 export const useCommonTracking = () => {
   const pathname = usePathname() ?? "";
