@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.246.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.245.0...v4.246.0) (2026-10-05)
+
+
+### Bug Fixes
+
+* **contenu:** harmonisation du titre de la page sur le rôle des textes avec le libellé du menu ([#7547](https://github.com/SocialGouv/code-du-travail-numerique/issues/7547)) ([2671207](https://github.com/SocialGouv/code-du-travail-numerique/commit/26712074f56d32d8538b46ddacefdbf6168e5477))
+
+
+### Features
+
+* **actualite:** amélioration du SEO sur les actualités ([#7506](https://github.com/SocialGouv/code-du-travail-numerique/issues/7506)) ([7c31c89](https://github.com/SocialGouv/code-du-travail-numerique/commit/7c31c89cc7da7dd5b69f2fd483facf3e01ad10bc))
+* **matomo:** mesure d'audience sans cookie après refus des cookies ([#7545](https://github.com/SocialGouv/code-du-travail-numerique/issues/7545)) ([642281f](https://github.com/SocialGouv/code-du-travail-numerique/commit/642281f4f336012e04a1061e18ba95319effb5ee))
+
+
+
+
+
 # [4.245.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.244.0...v4.245.0) (2026-10-02)
 
 
