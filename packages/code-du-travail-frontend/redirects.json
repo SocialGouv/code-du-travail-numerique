@@ -648,5 +648,10 @@
     "source": "/fiche-ministere-travail/chaleur-et-canicule-au-travail-les-precautions-a-prendre",
     "permanent": true,
     "destination": "/information/fortes-chaleurs-canicule-quelles-mesures-lemployeur-doit-il-mettre-en-place"
+  },
+  {
+    "source": "/convention-collective/3225(-[a-z0-9-]+)?",
+    "destination": "/convention-collective/3230-presse-information-specialisee-employes-techniciens-agents-de-maitrise",
+    "permanent": true
   }
 ]
