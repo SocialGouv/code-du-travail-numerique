@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.247.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.246.0...v4.247.0) (2026-10-06)
+
+
+### Features
+
+* **convention-collective:** redirection de la CC 3225 vers la 3230 ([#7549](https://github.com/SocialGouv/code-du-travail-numerique/issues/7549)) ([8696ef7](https://github.com/SocialGouv/code-du-travail-numerique/commit/8696ef73a6fe5286cefffd344bec62776a322790))
+
+
+
+
+
 # [4.246.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.245.0...v4.246.0) (2026-10-05)
 
 
