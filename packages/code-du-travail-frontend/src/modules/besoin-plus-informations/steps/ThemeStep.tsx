@@ -29,7 +29,11 @@ type Props = {
 // par le parcours.
 export const ThemeStep = ({ selectedTheme, onSelectTheme, error }: Props) => (
   <>
-    <ContactStepper current={1} title="Précisez votre question" />
+    <ContactStepper
+      current={1}
+      title="Précisez votre question"
+      nextStepTitle="Choisir votre moyen de contact"
+    />
     {error?.kind === "off-scope" ? (
       <AccessibleAlert
         severity="error"
