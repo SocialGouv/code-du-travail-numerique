@@ -2,6 +2,7 @@ import { sendEvent } from "@socialgouv/matomo-next";
 import { MatomoAgreementEvent } from "../analytics";
 import { toPageEventName } from "../analytics/eventName";
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
+import { isAnswerScopePilotPath } from "./answerScopePilot";
 
 export enum TrackingContributionCategory {
   TOOL = "outil",
@@ -12,6 +13,10 @@ export enum TrackingContributionCategory {
   // avec `cc_search_type_of_users` (partagé avec les simulateurs et la page
   // « Trouver sa convention collective ») ni avec `contribution`.
   CC_SEARCH_FUNNEL = "cc_search_funnel",
+  // Même funnel, émis uniquement sur les pages pilotes du test « citation
+  // correcte de nos contributions » (#7493) : leur contenu est visible d'emblée,
+  // ce qui fausserait les taux du funnel historique.
+  CC_SEARCH_FUNNEL_TEST = "cc_search_funnel_test",
 }
 
 export enum TrackingAgreementSearchAction {
@@ -233,10 +238,16 @@ export const useContributionTracking = () => {
 // générique, chemin de la fiche CC côté personnalisé), via `toPageEventName`
 // qui garantit un nom non falsy — c'est ce qui manquait aux events existants
 // pour attribuer chaque étape du funnel à une contribution.
+//
+// La catégorie est un ternaire écrit en ligne (et non un helper) pour rester
+// résolvable par l'extracteur : les pages pilotes (#7493) émettent sous
+// `cc_search_funnel_test`, les autres sous `cc_search_funnel`.
 
 const emitViewBlocCc = (path: string) => {
   sendEvent({
-    category: TrackingContributionCategory.CC_SEARCH_FUNNEL,
+    category: isAnswerScopePilotPath(path)
+      ? TrackingContributionCategory.CC_SEARCH_FUNNEL_TEST
+      : TrackingContributionCategory.CC_SEARCH_FUNNEL,
     action: TrackingCcFunnelAction.VIEW_BLOC_CC,
     name: toPageEventName(path),
   });
@@ -244,7 +255,9 @@ const emitViewBlocCc = (path: string) => {
 
 const emitClickWhatIsAgreement = (path: string) => {
   sendEvent({
-    category: TrackingContributionCategory.CC_SEARCH_FUNNEL,
+    category: isAnswerScopePilotPath(path)
+      ? TrackingContributionCategory.CC_SEARCH_FUNNEL_TEST
+      : TrackingContributionCategory.CC_SEARCH_FUNNEL,
     action: TrackingCcFunnelAction.CLICK_WHAT_IS_AGREEMENT,
     name: toPageEventName(path),
   });
@@ -252,7 +265,9 @@ const emitClickWhatIsAgreement = (path: string) => {
 
 const emitSelectP1 = (path: string) => {
   sendEvent({
-    category: TrackingContributionCategory.CC_SEARCH_FUNNEL,
+    category: isAnswerScopePilotPath(path)
+      ? TrackingContributionCategory.CC_SEARCH_FUNNEL_TEST
+      : TrackingContributionCategory.CC_SEARCH_FUNNEL,
     action: TrackingCcFunnelAction.SELECT_P1,
     name: toPageEventName(path),
   });
@@ -260,7 +275,9 @@ const emitSelectP1 = (path: string) => {
 
 const emitSelectP2 = (path: string) => {
   sendEvent({
-    category: TrackingContributionCategory.CC_SEARCH_FUNNEL,
+    category: isAnswerScopePilotPath(path)
+      ? TrackingContributionCategory.CC_SEARCH_FUNNEL_TEST
+      : TrackingContributionCategory.CC_SEARCH_FUNNEL,
     action: TrackingCcFunnelAction.SELECT_P2,
     name: toPageEventName(path),
   });
@@ -268,7 +285,9 @@ const emitSelectP2 = (path: string) => {
 
 const emitSelectP3 = (path: string) => {
   sendEvent({
-    category: TrackingContributionCategory.CC_SEARCH_FUNNEL,
+    category: isAnswerScopePilotPath(path)
+      ? TrackingContributionCategory.CC_SEARCH_FUNNEL_TEST
+      : TrackingContributionCategory.CC_SEARCH_FUNNEL,
     action: TrackingCcFunnelAction.SELECT_P3,
     name: toPageEventName(path),
   });
@@ -276,7 +295,9 @@ const emitSelectP3 = (path: string) => {
 
 const emitStartAgreementSearch = (path: string) => {
   sendEvent({
-    category: TrackingContributionCategory.CC_SEARCH_FUNNEL,
+    category: isAnswerScopePilotPath(path)
+      ? TrackingContributionCategory.CC_SEARCH_FUNNEL_TEST
+      : TrackingContributionCategory.CC_SEARCH_FUNNEL,
     action: TrackingCcFunnelAction.START_AGREEMENT_SEARCH,
     name: toPageEventName(path),
   });
@@ -284,7 +305,9 @@ const emitStartAgreementSearch = (path: string) => {
 
 const emitNoResultAgreement = (path: string) => {
   sendEvent({
-    category: TrackingContributionCategory.CC_SEARCH_FUNNEL,
+    category: isAnswerScopePilotPath(path)
+      ? TrackingContributionCategory.CC_SEARCH_FUNNEL_TEST
+      : TrackingContributionCategory.CC_SEARCH_FUNNEL,
     action: TrackingCcFunnelAction.NO_RESULT_AGREEMENT,
     name: toPageEventName(path),
   });
@@ -292,7 +315,9 @@ const emitNoResultAgreement = (path: string) => {
 
 const emitStartEnterpriseSearch = (path: string) => {
   sendEvent({
-    category: TrackingContributionCategory.CC_SEARCH_FUNNEL,
+    category: isAnswerScopePilotPath(path)
+      ? TrackingContributionCategory.CC_SEARCH_FUNNEL_TEST
+      : TrackingContributionCategory.CC_SEARCH_FUNNEL,
     action: TrackingCcFunnelAction.START_ENTERPRISE_SEARCH,
     name: toPageEventName(path),
   });
@@ -300,7 +325,9 @@ const emitStartEnterpriseSearch = (path: string) => {
 
 const emitSubmitEnterpriseSearch = (path: string) => {
   sendEvent({
-    category: TrackingContributionCategory.CC_SEARCH_FUNNEL,
+    category: isAnswerScopePilotPath(path)
+      ? TrackingContributionCategory.CC_SEARCH_FUNNEL_TEST
+      : TrackingContributionCategory.CC_SEARCH_FUNNEL,
     action: TrackingCcFunnelAction.SUBMIT_ENTERPRISE_SEARCH,
     name: toPageEventName(path),
   });
@@ -308,7 +335,9 @@ const emitSubmitEnterpriseSearch = (path: string) => {
 
 const emitSelectLocation = (path: string) => {
   sendEvent({
-    category: TrackingContributionCategory.CC_SEARCH_FUNNEL,
+    category: isAnswerScopePilotPath(path)
+      ? TrackingContributionCategory.CC_SEARCH_FUNNEL_TEST
+      : TrackingContributionCategory.CC_SEARCH_FUNNEL,
     action: TrackingCcFunnelAction.SELECT_LOCATION,
     name: toPageEventName(path),
   });
@@ -316,7 +345,9 @@ const emitSelectLocation = (path: string) => {
 
 const emitNoResultEnterprise = (path: string) => {
   sendEvent({
-    category: TrackingContributionCategory.CC_SEARCH_FUNNEL,
+    category: isAnswerScopePilotPath(path)
+      ? TrackingContributionCategory.CC_SEARCH_FUNNEL_TEST
+      : TrackingContributionCategory.CC_SEARCH_FUNNEL,
     action: TrackingCcFunnelAction.NO_RESULT_ENTERPRISE,
     name: toPageEventName(path),
   });
@@ -324,7 +355,9 @@ const emitNoResultEnterprise = (path: string) => {
 
 const emitErrorEnterpriseSearch = (path: string) => {
   sendEvent({
-    category: TrackingContributionCategory.CC_SEARCH_FUNNEL,
+    category: isAnswerScopePilotPath(path)
+      ? TrackingContributionCategory.CC_SEARCH_FUNNEL_TEST
+      : TrackingContributionCategory.CC_SEARCH_FUNNEL,
     action: TrackingCcFunnelAction.ERROR_ENTERPRISE_SEARCH,
     name: toPageEventName(path),
   });
@@ -332,7 +365,9 @@ const emitErrorEnterpriseSearch = (path: string) => {
 
 const emitSelectEnterprise = (path: string) => {
   sendEvent({
-    category: TrackingContributionCategory.CC_SEARCH_FUNNEL,
+    category: isAnswerScopePilotPath(path)
+      ? TrackingContributionCategory.CC_SEARCH_FUNNEL_TEST
+      : TrackingContributionCategory.CC_SEARCH_FUNNEL,
     action: TrackingCcFunnelAction.SELECT_ENTERPRISE,
     name: toPageEventName(path),
   });
@@ -340,7 +375,9 @@ const emitSelectEnterprise = (path: string) => {
 
 const emitEnterpriseWithoutAgreement = (path: string) => {
   sendEvent({
-    category: TrackingContributionCategory.CC_SEARCH_FUNNEL,
+    category: isAnswerScopePilotPath(path)
+      ? TrackingContributionCategory.CC_SEARCH_FUNNEL_TEST
+      : TrackingContributionCategory.CC_SEARCH_FUNNEL,
     action: TrackingCcFunnelAction.ENTERPRISE_WITHOUT_AGREEMENT,
     name: toPageEventName(path),
   });
@@ -348,7 +385,9 @@ const emitEnterpriseWithoutAgreement = (path: string) => {
 
 const emitSelectEnterpriseAgreement = (path: string) => {
   sendEvent({
-    category: TrackingContributionCategory.CC_SEARCH_FUNNEL,
+    category: isAnswerScopePilotPath(path)
+      ? TrackingContributionCategory.CC_SEARCH_FUNNEL_TEST
+      : TrackingContributionCategory.CC_SEARCH_FUNNEL,
     action: TrackingCcFunnelAction.SELECT_ENTERPRISE_AGREEMENT,
     name: toPageEventName(path),
   });
@@ -356,7 +395,9 @@ const emitSelectEnterpriseAgreement = (path: string) => {
 
 const emitSelectHouseholdEmployer = (path: string) => {
   sendEvent({
-    category: TrackingContributionCategory.CC_SEARCH_FUNNEL,
+    category: isAnswerScopePilotPath(path)
+      ? TrackingContributionCategory.CC_SEARCH_FUNNEL_TEST
+      : TrackingContributionCategory.CC_SEARCH_FUNNEL,
     action: TrackingCcFunnelAction.SELECT_HOUSEHOLD_EMPLOYER,
     name: toPageEventName(path),
   });
@@ -364,7 +405,9 @@ const emitSelectHouseholdEmployer = (path: string) => {
 
 const emitClickModifyEnterprise = (path: string) => {
   sendEvent({
-    category: TrackingContributionCategory.CC_SEARCH_FUNNEL,
+    category: isAnswerScopePilotPath(path)
+      ? TrackingContributionCategory.CC_SEARCH_FUNNEL_TEST
+      : TrackingContributionCategory.CC_SEARCH_FUNNEL,
     action: TrackingCcFunnelAction.CLICK_MODIFY_ENTERPRISE,
     name: toPageEventName(path),
   });
@@ -372,7 +415,9 @@ const emitClickModifyEnterprise = (path: string) => {
 
 const emitClickModifyAgreement = (path: string) => {
   sendEvent({
-    category: TrackingContributionCategory.CC_SEARCH_FUNNEL,
+    category: isAnswerScopePilotPath(path)
+      ? TrackingContributionCategory.CC_SEARCH_FUNNEL_TEST
+      : TrackingContributionCategory.CC_SEARCH_FUNNEL,
     action: TrackingCcFunnelAction.CLICK_MODIFY_AGREEMENT,
     name: toPageEventName(path),
   });
@@ -380,7 +425,9 @@ const emitClickModifyAgreement = (path: string) => {
 
 const emitClickDisplayInformation = (path: string) => {
   sendEvent({
-    category: TrackingContributionCategory.CC_SEARCH_FUNNEL,
+    category: isAnswerScopePilotPath(path)
+      ? TrackingContributionCategory.CC_SEARCH_FUNNEL_TEST
+      : TrackingContributionCategory.CC_SEARCH_FUNNEL,
     action: TrackingCcFunnelAction.CLICK_DISPLAY_INFORMATION,
     name: toPageEventName(path),
   });
@@ -388,7 +435,9 @@ const emitClickDisplayInformation = (path: string) => {
 
 const emitBlockedWithoutRoute = (path: string) => {
   sendEvent({
-    category: TrackingContributionCategory.CC_SEARCH_FUNNEL,
+    category: isAnswerScopePilotPath(path)
+      ? TrackingContributionCategory.CC_SEARCH_FUNNEL_TEST
+      : TrackingContributionCategory.CC_SEARCH_FUNNEL,
     action: TrackingCcFunnelAction.BLOCKED_WITHOUT_ROUTE,
     name: toPageEventName(path),
   });
@@ -396,7 +445,9 @@ const emitBlockedWithoutRoute = (path: string) => {
 
 const emitBlockedWithoutAgreementP1 = (path: string) => {
   sendEvent({
-    category: TrackingContributionCategory.CC_SEARCH_FUNNEL,
+    category: isAnswerScopePilotPath(path)
+      ? TrackingContributionCategory.CC_SEARCH_FUNNEL_TEST
+      : TrackingContributionCategory.CC_SEARCH_FUNNEL,
     action: TrackingCcFunnelAction.BLOCKED_WITHOUT_AGREEMENT_P1,
     name: toPageEventName(path),
   });
@@ -404,7 +455,9 @@ const emitBlockedWithoutAgreementP1 = (path: string) => {
 
 const emitBlockedWithoutAgreementP2 = (path: string) => {
   sendEvent({
-    category: TrackingContributionCategory.CC_SEARCH_FUNNEL,
+    category: isAnswerScopePilotPath(path)
+      ? TrackingContributionCategory.CC_SEARCH_FUNNEL_TEST
+      : TrackingContributionCategory.CC_SEARCH_FUNNEL,
     action: TrackingCcFunnelAction.BLOCKED_WITHOUT_AGREEMENT_P2,
     name: toPageEventName(path),
   });
@@ -412,7 +465,9 @@ const emitBlockedWithoutAgreementP2 = (path: string) => {
 
 const emitUntreatedAgreementRetained = (path: string) => {
   sendEvent({
-    category: TrackingContributionCategory.CC_SEARCH_FUNNEL,
+    category: isAnswerScopePilotPath(path)
+      ? TrackingContributionCategory.CC_SEARCH_FUNNEL_TEST
+      : TrackingContributionCategory.CC_SEARCH_FUNNEL,
     action: TrackingCcFunnelAction.UNTREATED_AGREEMENT_RETAINED,
     name: toPageEventName(path),
   });
@@ -420,7 +475,9 @@ const emitUntreatedAgreementRetained = (path: string) => {
 
 const emitClickExternalAgreementLink = (path: string) => {
   sendEvent({
-    category: TrackingContributionCategory.CC_SEARCH_FUNNEL,
+    category: isAnswerScopePilotPath(path)
+      ? TrackingContributionCategory.CC_SEARCH_FUNNEL_TEST
+      : TrackingContributionCategory.CC_SEARCH_FUNNEL,
     action: TrackingCcFunnelAction.CLICK_EXTERNAL_AGREEMENT_LINK,
     name: toPageEventName(path),
   });
