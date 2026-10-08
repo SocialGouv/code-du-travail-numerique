@@ -15,6 +15,7 @@ import { injectContributionPromos } from "./contributions/injectContributionProm
 import { Tile } from "@codegouvfr/react-dsfr/Tile";
 import { css } from "@styled-system/css";
 import { ThemeTile } from "../contributions/explore-themes/ExploreThemes";
+import { ThemeIcon } from "../common/ThemeIcon";
 import { getRecommendedItemKey, RecommendedItem } from "./types";
 
 const RecommendedItemTile = ({ item }: { item: RecommendedItem }) => {
@@ -29,6 +30,9 @@ const RecommendedItemTile = ({ item }: { item: RecommendedItem }) => {
           noIcon
           enlargeLinkOrButton
           titleAs="h3"
+          pictogram={
+            item.iconName ? <ThemeIcon name={item.iconName} /> : undefined
+          }
           title={item.title}
           desc={item.desc}
           linkProps={{ href: item.url }}
