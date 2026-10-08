@@ -40,6 +40,15 @@ type LinkedDocument = {
   source: string;
   slug: string;
   title: string;
+  breadcrumbs?: ElasticFicheServicePublic["breadcrumbs"];
+};
+
+// Sous-thème de rattachement : dernier maillon du fil d'Ariane.
+const getBreadcrumbsThemeSlug = (
+  breadcrumbs: ElasticFicheServicePublic["breadcrumbs"] = []
+): string | undefined => {
+  const last = breadcrumbs[breadcrumbs.length - 1];
+  return last ? getThemeSlugFromBreadcrumb(last.slug) : undefined;
 };
 
 // Les liens sont figés à l'export : on relit les documents pour écarter ceux
@@ -51,7 +60,7 @@ const fetchPublishedDocumentsByIds = async (
 
   const response = await elasticsearchClient.search<LinkedDocument>({
     index: elasticDocumentsIndex,
-    _source: ["cdtnId", "source", "slug", "title"],
+    _source: ["cdtnId", "source", "slug", "title", "breadcrumbs"],
     query: {
       bool: {
         filter: [
@@ -71,7 +80,10 @@ const fetchPublishedDocumentsByIds = async (
   );
 };
 
-const toDocumentItem = (doc: LinkedDocument | undefined): RecommendedItem[] => {
+const toDocumentItem = (
+  doc: LinkedDocument | undefined,
+  themes: Map<string, ExploreTheme>
+): RecommendedItem[] => {
   if (!doc) return [];
   const route = getRouteBySource(doc.source as keyof typeof routeBySource);
   // Source inconnue : pas de page vers laquelle pointer.
@@ -82,6 +94,8 @@ const toDocumentItem = (doc: LinkedDocument | undefined): RecommendedItem[] => {
       url: `/${route}/${doc.slug}`,
       title: doc.title,
       desc: getLabelBySource(doc.source as keyof typeof labelBySource),
+      iconName: themes.get(getBreadcrumbsThemeSlug(doc.breadcrumbs) ?? "")
+        ?.iconName,
     },
   ];
 };
@@ -97,33 +111,37 @@ export const fetchFicheSPRecommendedLinks = async (
   breadcrumbs: ElasticFicheServicePublic["breadcrumbs"],
   links: RecommendedLink[] = []
 ): Promise<RecommendedItem[]> => {
-  const currentTheme = breadcrumbs[breadcrumbs.length - 1];
+  const currentThemeSlug = getBreadcrumbsThemeSlug(breadcrumbs);
   const sortedLinks = [...links].sort((a, b) => a.rank - b.rank);
 
-  const themeSlugs = [
-    ...(currentTheme ? [getThemeSlugFromBreadcrumb(currentTheme.slug)] : []),
-    ...sortedLinks.map(getThemeSlug).filter((slug) => slug !== undefined),
-  ];
+  // Les documents d'abord : leur fil d'Ariane donne les sous-thèmes dont il
+  // faut l'icône, résolus avec les autres thèmes en une seule requête.
   const documentIds = sortedLinks
     .map(getDocumentId)
     .filter((id) => id !== undefined);
-  const [themes, documents] = await Promise.all([
-    fetchExploreThemesBySlugs([...new Set(themeSlugs)]),
-    fetchPublishedDocumentsByIds([...new Set(documentIds)]),
+  const documents = await fetchPublishedDocumentsByIds([
+    ...new Set(documentIds),
   ]);
+
+  const themeSlugs = [
+    currentThemeSlug,
+    ...sortedLinks.map(getThemeSlug),
+    ...[...documents.values()].map((doc) =>
+      getBreadcrumbsThemeSlug(doc.breadcrumbs)
+    ),
+  ].filter((slug) => slug !== undefined);
+  const themes = await fetchExploreThemesBySlugs([...new Set(themeSlugs)]);
   const toThemeItem = (theme: ExploreTheme | undefined) =>
     theme ? [{ type: "theme" as const, theme }] : [];
 
   const items: RecommendedItem[] = [
-    ...(currentTheme
-      ? toThemeItem(themes.get(getThemeSlugFromBreadcrumb(currentTheme.slug)))
-      : []),
+    ...(currentThemeSlug ? toThemeItem(themes.get(currentThemeSlug)) : []),
     ...sortedLinks.flatMap((link) => {
       switch (link.type) {
         case "l2":
           return toThemeItem(themes.get(link.l2));
         case "document":
-          return toDocumentItem(documents.get(link.cdtnId));
+          return toDocumentItem(documents.get(link.cdtnId), themes);
       }
     }),
   ];

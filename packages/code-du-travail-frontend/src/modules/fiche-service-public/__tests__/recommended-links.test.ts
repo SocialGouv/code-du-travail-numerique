@@ -159,4 +159,45 @@ describe("fetchFicheSPRecommendedLinks", () => {
       "/contribution/a",
     ]);
   });
+
+  it("affiche sur un document l'icône de son sous-thème de rattachement", async () => {
+    (elasticsearchClient.search as jest.Mock).mockResolvedValue({
+      hits: {
+        hits: [
+          {
+            _source: {
+              cdtnId: "a",
+              source: "contributions",
+              slug: "a",
+              title: "a",
+              breadcrumbs: [
+                { label: "Congés", position: 1, slug: "/themes/parent#conges" },
+              ],
+            },
+          },
+        ],
+      },
+    });
+    (fetchExploreThemesBySlugs as jest.Mock).mockImplementation(
+      async (slugs: string[]) =>
+        new Map(
+          slugs.map((slug) => [
+            slug,
+            { ...exploreTheme(slug), iconName: `icon-${slug}` },
+          ])
+        )
+    );
+
+    const [, item] = await fetchFicheSPRecommendedLinks(breadcrumbs, [
+      documentLink("a", 1),
+    ]);
+
+    // Le sous-thème du document part dans la même requête que les autres.
+    expect(fetchExploreThemesBySlugs).toHaveBeenCalledTimes(1);
+    expect(fetchExploreThemesBySlugs).toHaveBeenCalledWith([
+      "preavis",
+      "conges",
+    ]);
+    expect(item).toMatchObject({ type: "document", iconName: "icon-conges" });
+  });
 });
