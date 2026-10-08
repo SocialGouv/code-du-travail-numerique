@@ -20,21 +20,21 @@ include:
   - project: socialgouv/commun/studio-tech-commun/sdpsn-devops-ci-utils
     ref: main
     file: ci-common/image-build.yml
-  - component: $CI_SERVER_FQDN/socialgouv/produits-dnum/studio-tech/devops/components/gitops-cd-component/trigger_app@0.3.1
+  - component: $CI_SERVER_FQDN/socialgouv/commun/studio-tech-commun/components/gitops-cd-component/trigger_app@0.3.1
     inputs:
       job_name: deploy-dev
       stage: deploy
       gitops_project: socialgouv/produits-dnum/citoyens/cdtn/cdtn-gitops
       deploy_action: dev
       image_target_object: ".code-du-travail-numerique.image.tag"
-  - component: $CI_SERVER_FQDN/socialgouv/produits-dnum/studio-tech/devops/components/gitops-cd-component/trigger_app@0.3.1
+  - component: $CI_SERVER_FQDN/socialgouv/commun/studio-tech-commun/components/gitops-cd-component/trigger_app@0.3.1
     inputs:
       job_name: deploy-test
       stage: deploy
       gitops_project: socialgouv/produits-dnum/citoyens/cdtn/cdtn-gitops
       deploy_action: test
       image_target_object: ".code-du-travail-numerique.image.tag"
-  - component: $CI_SERVER_FQDN/socialgouv/produits-dnum/studio-tech/devops/components/gitops-cd-component/trigger_app@0.3.1
+  - component: $CI_SERVER_FQDN/socialgouv/commun/studio-tech-commun/components/gitops-cd-component/trigger_app@0.3.1
     inputs:
       job_name: deploy-preprod
       stage: deploy
