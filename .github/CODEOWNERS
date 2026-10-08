@@ -1,5 +1,0 @@
-# Protect workflow files
-.github/workflows/*.yml @socialgouv/sre
-.github/CODEOWNERS @socialgouv/sre
-.kontinuous/  @socialgouv/sre
-Dockerfile  @socialgouv/sre
