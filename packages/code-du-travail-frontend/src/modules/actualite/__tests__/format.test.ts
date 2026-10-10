@@ -79,6 +79,13 @@ describe("format (actualité)", () => {
     );
   });
 
+  it("calcule la date de modification à partir de updatedAt", () => {
+    expect(
+      format({ ...base, updatedAt: "2026-10-10T13:07:55Z" }).modifiedTime
+    ).toBe("2026-10-10T13:07:55.000Z");
+    expect(format(base).modifiedTime).toBe("2026-01-01T00:00:00+01:00");
+  });
+
   it("renvoie [] quand references est absent", () => {
     expect(format(base).references).toEqual([]);
     expect(format(base).image).toBeUndefined();
