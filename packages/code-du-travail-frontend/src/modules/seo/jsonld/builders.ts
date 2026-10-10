@@ -177,11 +177,13 @@ export function buildNewsArticleJsonLd({
   url,
   datePublished,
   description,
+  image,
 }: {
   headline: string;
   url: string;
   datePublished?: string;
   description?: string;
+  image?: { url: string; width?: number; height?: number };
 }): Record<string, unknown> {
   const absoluteUrl = toAbsoluteUrl(url);
   const isoDate = toIsoDateTimeParis(datePublished);
@@ -194,6 +196,21 @@ export function buildNewsArticleJsonLd({
     mainEntityOfPage: absoluteUrl,
     ...(isoDate ? { datePublished: isoDate, dateModified: isoDate } : {}),
     ...(description ? { description } : {}),
+    // Image de l'actualité, en URL absolue. Largeur et hauteur ne sont émises
+    // que si les deux sont connues.
+    ...(image
+      ? {
+          image: [
+            {
+              "@type": "ImageObject",
+              url: toAbsoluteUrl(image.url),
+              ...(image.width && image.height
+                ? { width: image.width, height: image.height }
+                : {}),
+            },
+          ],
+        }
+      : {}),
     // Même entité que `publisher` et que l'Article des autres contenus : Google
     // recommande un auteur identifié (nom + url), portés par l'entité
     // GovernmentOrganization émise sur toutes les pages.

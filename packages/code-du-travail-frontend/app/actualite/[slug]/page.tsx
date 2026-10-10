@@ -8,6 +8,7 @@ import { Metadata } from "next";
 import { NewsArticleJsonLd } from "src/modules/seo/jsonld";
 import { NEWS_RSS_FEED } from "src/modules/actualite/rss";
 import { toIsoDateTimeParis } from "src/modules/utils/date";
+import { toUrl } from "src/modules/utils/url";
 
 export async function generateMetadata(
   props: PageProps<"/actualite/[slug]">
@@ -15,8 +16,9 @@ export async function generateMetadata(
   const params = await props.params;
   const news = await fetchNews(params.slug, [
     "title",
-    "metaDescription",
+    "meta_description",
     "date",
+    "image",
   ]);
 
   if (!news) {
@@ -25,11 +27,20 @@ export async function generateMetadata(
 
   return generateDefaultMetadata({
     title: news?.title,
-    description: news?.metaDescription,
+    description: news.meta_description,
+    robots: "index, follow, max-image-preview:large",
     path: `/${getRouteBySource(SOURCES.NEWS)}/${params.slug}`,
     feed: NEWS_RSS_FEED,
     // og:type article + article:published_time (même ISO que le JSON-LD).
     article: { publishedTime: toIsoDateTimeParis(news.date) },
+    ...(news.image && {
+      image: {
+        url: toUrl(news.image.filename),
+        alt: news.image.alt,
+        width: news.image.width,
+        height: news.image.height,
+      },
+    }),
   });
 }
 
@@ -48,6 +59,13 @@ async function NewsPage(props: PageProps<"/actualite/[slug]">) {
         url={`/actualite/${params.slug}`}
         datePublished={news.date}
         description={news.meta_description}
+        image={
+          news.image && {
+            url: news.image.url,
+            width: news.image.width,
+            height: news.image.height,
+          }
+        }
       />
       <NewsContainer news={news} />
     </DsfrLayout>
@@ -62,6 +80,9 @@ const getNews = async (slug: string): Promise<News> => {
     "date",
     "content",
     "linkedContent",
+    "image",
+    "links",
+    "references",
   ]);
 
   if (!news) {

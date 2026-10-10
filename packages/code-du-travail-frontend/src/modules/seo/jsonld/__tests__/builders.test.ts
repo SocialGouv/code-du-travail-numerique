@@ -112,6 +112,33 @@ describe("jsonld builders", () => {
     expect(jsonld).toMatchSnapshot();
   });
 
+  it("buildNewsArticleJsonLd() ajoute l'image avec ses dimensions quand elle est fournie", () => {
+    const jsonld = buildNewsArticleJsonLd({
+      headline: "Titre",
+      url: "/actualite/slug",
+      image: { url: "/images/actu.webp", width: 1600, height: 900 },
+    });
+    expect(jsonld.image).toEqual([
+      {
+        "@type": "ImageObject",
+        url: "http://api.url/images/actu.webp",
+        width: 1600,
+        height: 900,
+      },
+    ]);
+  });
+
+  it("buildNewsArticleJsonLd() omet largeur et hauteur quand elles sont inconnues", () => {
+    const jsonld = buildNewsArticleJsonLd({
+      headline: "Titre",
+      url: "/actualite/slug",
+      image: { url: "/images/actu.webp" },
+    });
+    expect(jsonld.image).toEqual([
+      { "@type": "ImageObject", url: "http://api.url/images/actu.webp" },
+    ]);
+  });
+
   it.each`
     input           | expected
     ${"15/01/2026"} | ${"2026-01-15T00:00:00+01:00"}
