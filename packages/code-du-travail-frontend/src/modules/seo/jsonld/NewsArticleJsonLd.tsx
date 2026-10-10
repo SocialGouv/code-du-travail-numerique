@@ -9,6 +9,7 @@ export function NewsArticleJsonLd(props: {
   url: string;
   datePublished?: string;
   description?: string;
+  image?: { url: string; width?: number; height?: number };
 }) {
   return (
     <JsonLd id={JSON_LD_IDS.newsArticle} data={buildNewsArticleJsonLd(props)} />
