@@ -48,7 +48,10 @@ export const NewsImage = ({ image }: Props) => (
       fetchPriority="high"
     />
     <figcaption className={fr.cx("fr-content-media__caption")}>
-      <Caption image={image} />
+      {/* La légende DSFR est en colonne flex : un seul enfant garde le crédit sur une ligne. */}
+      <span>
+        <Caption image={image} />
+      </span>
     </figcaption>
   </figure>
 );
