@@ -169,21 +169,27 @@ export function buildLegislationJsonLd({
 
 // NewsArticle schema.org d'une actualité. La date stockée (`JJ/MM/AAAA` saisie
 // dans l'admin) est convertie en ISO 8601 avec heure et fuseau (minuit Paris),
-// format attendu par Google Actualités. Sans date de modification en base,
-// `dateModified` reprend `datePublished`. Date absente ou invalide → les deux
-// champs sont omis plutôt qu'émis avec une valeur invalide.
+// format attendu par Google Actualités. `dateModified` est la date de dernière
+// modification (ISO 8601) quand elle est fournie, sinon `datePublished`. Date
+// de publication absente ou invalide → les deux champs sont omis plutôt
+// qu'émis avec une valeur invalide. `citation` liste les URL des articles de
+// loi cités par l'actualité.
 export function buildNewsArticleJsonLd({
   headline,
   url,
   datePublished,
+  dateModified,
   description,
   image,
+  citations,
 }: {
   headline: string;
   url: string;
   datePublished?: string;
+  dateModified?: string;
   description?: string;
   image?: { url: string; width?: number; height?: number };
+  citations?: string[];
 }): Record<string, unknown> {
   const absoluteUrl = toAbsoluteUrl(url);
   const isoDate = toIsoDateTimeParis(datePublished);
@@ -194,7 +200,9 @@ export function buildNewsArticleJsonLd({
     headline,
     url: absoluteUrl,
     mainEntityOfPage: absoluteUrl,
-    ...(isoDate ? { datePublished: isoDate, dateModified: isoDate } : {}),
+    ...(isoDate
+      ? { datePublished: isoDate, dateModified: dateModified ?? isoDate }
+      : {}),
     ...(description ? { description } : {}),
     // Image de l'actualité, en URL absolue. Largeur et hauteur ne sont émises
     // que si les deux sont connues.
@@ -217,5 +225,7 @@ export function buildNewsArticleJsonLd({
     author: { "@id": JSON_LD_ENTITY_IDS.organization },
     publisher: { "@id": JSON_LD_ENTITY_IDS.organization },
     inLanguage: "fr-FR",
+    isAccessibleForFree: true,
+    ...(citations?.length ? { citation: citations } : {}),
   };
 }

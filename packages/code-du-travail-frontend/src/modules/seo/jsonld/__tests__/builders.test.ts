@@ -112,6 +112,39 @@ describe("jsonld builders", () => {
     expect(jsonld).toMatchSnapshot();
   });
 
+  it("buildNewsArticleJsonLd() émet la date de modification fournie", () => {
+    const jsonld = buildNewsArticleJsonLd({
+      headline: "Titre",
+      url: "/actualite/slug",
+      datePublished: "01/10/2026",
+      dateModified: "2026-10-10T13:07:55.000Z",
+    });
+    expect(jsonld.datePublished).toBe("2026-10-01T00:00:00+02:00");
+    expect(jsonld.dateModified).toBe("2026-10-10T13:07:55.000Z");
+  });
+
+  it("buildNewsArticleJsonLd() indique un contenu gratuit et cite les articles de loi", () => {
+    const citations = [
+      "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006901112",
+    ];
+    const jsonld = buildNewsArticleJsonLd({
+      headline: "Titre",
+      url: "/actualite/slug",
+      citations,
+    });
+    expect(jsonld.isAccessibleForFree).toBe(true);
+    expect(jsonld.citation).toEqual(citations);
+  });
+
+  it("buildNewsArticleJsonLd() n'émet pas de citation sans article de loi", () => {
+    const jsonld = buildNewsArticleJsonLd({
+      headline: "Titre",
+      url: "/actualite/slug",
+      citations: [],
+    });
+    expect(jsonld).not.toHaveProperty("citation");
+  });
+
   it("buildNewsArticleJsonLd() ajoute l'image avec ses dimensions quand elle est fournie", () => {
     const jsonld = buildNewsArticleJsonLd({
       headline: "Titre",

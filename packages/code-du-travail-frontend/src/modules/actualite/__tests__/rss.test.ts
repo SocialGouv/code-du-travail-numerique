@@ -58,6 +58,35 @@ describe("buildNewsRssFeed()", () => {
     expect(xml).toContain("<dc:creator>Code du travail numérique</dc:creator>");
   });
 
+  it("ajoute l'image de l'actualité en enclosure et media:content", () => {
+    const xml = buildNewsRssFeed([
+      {
+        ...items[0],
+        image: {
+          filename: "actu.webp",
+          alt: "Une image",
+          license: "free",
+          width: 1600,
+          height: 900,
+          sizeOctet: 10318,
+        },
+      },
+    ]);
+    expect(xml).toContain('xmlns:media="http://search.yahoo.com/mrss/"');
+    expect(xml).toMatch(
+      /<enclosure url="[^"]+\/actu\.webp" length="10318" type="image\/webp"\/>/
+    );
+    expect(xml).toMatch(
+      /<media:content url="[^"]+\/actu\.webp" medium="image" type="image\/webp" width="1600" height="900"\/>/
+    );
+  });
+
+  it("n'ajoute ni enclosure ni media:content sans image", () => {
+    const xml = buildNewsRssFeed([items[0]]);
+    expect(xml).not.toContain("<enclosure");
+    expect(xml).not.toContain("<media:content");
+  });
+
   it("n'inclut pas le contenu de l'actualité", () => {
     const xml = buildNewsRssFeed(items);
     expect(xml).not.toContain("content:encoded");

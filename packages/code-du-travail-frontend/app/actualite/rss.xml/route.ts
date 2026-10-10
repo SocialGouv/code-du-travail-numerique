@@ -34,7 +34,7 @@ export async function GET() {
 
   try {
     const { items } = await fetchNewsList(
-      ["title", "meta_description", "date", "slug"],
+      ["title", "meta_description", "date", "slug", "image"],
       { page: 1, pageSize: NEWS_RSS_ITEMS_COUNT }
     );
     // Un résultat vide n'est ni servi ni mis en cache : jamais de flux sans

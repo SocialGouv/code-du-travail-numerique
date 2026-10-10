@@ -69,9 +69,27 @@ describe("generateDefaultMetadata", () => {
       siteName: "Code du travail numérique",
       title: "title",
       type: "article",
+      url: "/actualite/slug",
       publishedTime: "2026-09-18T00:00:00+02:00",
       modifiedTime: "2026-09-18T00:00:00+02:00",
     });
+  });
+
+  it("indique og:url uniquement pour une page article", () => {
+    const article = generateDefaultMetadata({
+      title: "title",
+      description: "description",
+      path: "/actualite/x",
+      article: {},
+    });
+    const page = generateDefaultMetadata({
+      title: "title",
+      description: "description",
+      path: "/actualite/x",
+    });
+
+    expect(article.openGraph).toHaveProperty("url", "/actualite/x");
+    expect(page.openGraph).not.toHaveProperty("url");
   });
 
   it("omet les dates Open Graph d'un article sans date valide", () => {
