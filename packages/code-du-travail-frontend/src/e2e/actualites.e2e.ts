@@ -42,6 +42,13 @@ test.describe("Actualités", () => {
     await expect(
       page.locator('meta[property="article:modified_time"]')
     ).toHaveAttribute("content", NEWS_ISO_DATE_TIME);
+    const canonical = await page
+      .locator('link[rel="canonical"]')
+      .getAttribute("href");
+    await expect(page.locator('meta[property="og:url"]')).toHaveAttribute(
+      "content",
+      canonical as string
+    );
 
     // Déclaration du flux RSS.
     await expect(

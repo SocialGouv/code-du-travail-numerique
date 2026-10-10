@@ -1,16 +1,17 @@
 import { elasticDocumentsIndex, elasticsearchClient } from "../../api/utils";
-import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
+import { getRouteBySource, SourceKeys, SOURCES } from "@socialgouv/cdtn-utils";
 import {
   DocumentElasticResult,
   fetchDocument,
   RelatedItem,
   Source,
 } from "../documents";
-import { NewsElasticDocument } from "@socialgouv/cdtn-types";
 import { LinkedContent } from "@socialgouv/cdtn-types/build/elastic/related-items";
-import { News } from "./type";
+import { toUrl } from "../utils/url";
+import { getNewsModifiedTime } from "./dates";
+import { News, NewsDocument } from "./type";
 
-export const fetchNewsList = async <K extends keyof NewsElasticDocument>(
+export const fetchNewsList = async <K extends keyof NewsDocument>(
   fields: K[],
   filters?: {
     cdtnIds?: string[];
@@ -18,7 +19,7 @@ export const fetchNewsList = async <K extends keyof NewsElasticDocument>(
     pageSize?: number;
   }
 ): Promise<{
-  items: Pick<NewsElasticDocument, K>[];
+  items: Pick<NewsDocument, K>[];
   total: number;
   totalPages: number;
   page: number;
@@ -37,9 +38,7 @@ export const fetchNewsList = async <K extends keyof NewsElasticDocument>(
     baseFilters.push({ terms: { cdtnId: filters.cdtnIds } });
   }
 
-  const response = await elasticsearchClient.search<
-    Pick<NewsElasticDocument, K>
-  >({
+  const response = await elasticsearchClient.search<Pick<NewsDocument, K>>({
     query: {
       bool: {
         filter: baseFilters,
@@ -71,13 +70,13 @@ export const fetchNewsList = async <K extends keyof NewsElasticDocument>(
   };
 };
 
-export const fetchNews = async <K extends keyof NewsElasticDocument>(
+export const fetchNews = async <K extends keyof NewsDocument>(
   slug: string,
   fields: K[]
-): Promise<DocumentElasticResult<Pick<NewsElasticDocument, K>> | undefined> => {
+): Promise<DocumentElasticResult<Pick<NewsDocument, K>> | undefined> => {
   return await fetchDocument<
-    NewsElasticDocument,
-    keyof DocumentElasticResult<NewsElasticDocument>
+    NewsDocument,
+    keyof DocumentElasticResult<NewsDocument>
   >(fields, {
     query: {
       bool: {
@@ -98,17 +97,25 @@ export const format = ({
   title,
   meta_title,
   date,
+  updatedAt,
   content,
   meta_description,
   linkedContent,
+  image,
+  links,
+  references,
 }: Pick<
-  NewsElasticDocument,
+  NewsDocument,
   | "title"
   | "meta_title"
   | "date"
+  | "updatedAt"
   | "content"
   | "meta_description"
   | "linkedContent"
+  | "image"
+  | "links"
+  | "references"
 >): News => {
   const buildItems = (arr: LinkedContent[]): RelatedItem[] =>
     arr.map((item) => ({
@@ -135,14 +142,32 @@ export const format = ({
     },
   ];
 
-  const relatedItems = categories
-    .map(({ title, filter }) => {
-      const filtered = linkedContent.filter(filter);
-      return filtered.length
-        ? { title, items: buildItems(filtered) }
-        : undefined;
-    })
-    .filter((x): x is { title: string; items: RelatedItem[] } => Boolean(x));
+  const relatedItems = links?.length
+    ? [
+        {
+          title: "Pour aller plus loin",
+          items: links.map(
+            (l): RelatedItem =>
+              l.type === "external"
+                ? { title: l.title, url: l.url, source: SOURCES.EXTERNALS }
+                : {
+                    title: l.title,
+                    source: l.source as Source,
+                    url: `/${getRouteBySource(l.source as SourceKeys)}/${l.slug}`,
+                  }
+          ),
+        },
+      ]
+    : categories
+        .map(({ title, filter }) => {
+          const filtered = linkedContent.filter(filter);
+          return filtered.length
+            ? { title, items: buildItems(filtered) }
+            : undefined;
+        })
+        .filter((x): x is { title: string; items: RelatedItem[] } =>
+          Boolean(x)
+        );
 
   return {
     title,
@@ -151,5 +176,8 @@ export const format = ({
     content,
     meta_description,
     relatedItems,
+    image: image ? { ...image, url: toUrl(image.filename) } : undefined,
+    references: references ?? [],
+    modifiedTime: getNewsModifiedTime(date, updatedAt),
   };
 };

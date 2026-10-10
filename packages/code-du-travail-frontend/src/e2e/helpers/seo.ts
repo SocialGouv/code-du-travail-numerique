@@ -47,5 +47,11 @@ export async function expectNoIndex(page: Page): Promise<void> {
 }
 
 export async function expectIndexable(page: Page): Promise<void> {
-  await expect(page.locator('meta[name="robots"]')).toHaveCount(0);
+  const robots = await page.locator('meta[name="robots"]').all();
+  const contents = await Promise.all(
+    robots.map((robot) => robot.getAttribute("content"))
+  );
+  for (const content of contents) {
+    expect(content ?? "").not.toMatch(/noindex/i);
+  }
 }

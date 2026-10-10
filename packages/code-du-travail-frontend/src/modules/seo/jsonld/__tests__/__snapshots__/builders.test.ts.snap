@@ -107,6 +107,7 @@ exports[`jsonld builders buildNewsArticleJsonLd() convertit la date admin JJ/MM/
   "description": "Description de l'actualite",
   "headline": "Titre actualite",
   "inLanguage": "fr-FR",
+  "isAccessibleForFree": true,
   "mainEntityOfPage": "http://api.url/actualite/mon-article",
   "publisher": {
     "@id": "http://api.url/#government-organization",

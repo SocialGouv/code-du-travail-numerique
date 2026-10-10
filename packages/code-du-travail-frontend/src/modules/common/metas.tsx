@@ -9,9 +9,13 @@ type Props = {
   robots?: string;
   // Flux RSS déclaré dans le <head> (<link rel="alternate" type="application/rss+xml">).
   feed?: { href: string; title: string };
-  // Page de type « article » (Open Graph) : og:type = article et, si la date
-  // ISO 8601 est fournie, article:published_time / article:modified_time.
+  // Page de type « article » (Open Graph) : og:type = article, og:url = URL
+  // canonique et, si la date ISO 8601 est fournie, article:published_time /
+  // article:modified_time.
   article?: { publishedTime?: string; modifiedTime?: string };
+  // Image de partage (Open Graph et Twitter). Sans image, c'est l'image par
+  // défaut du site qui est utilisée.
+  image?: { url: string; alt: string; width?: number; height?: number };
 };
 
 export function generateDefaultMetadata({
@@ -22,6 +26,7 @@ export function generateDefaultMetadata({
   robots,
   feed,
   article,
+  image,
 }: Props): Metadata {
   return {
     title: title,
@@ -38,11 +43,24 @@ export function generateDefaultMetadata({
       siteName: "Code du travail numérique",
       title: title,
       description: description,
-      images: `/static/assets/img/social-preview.png`,
+      images: image
+        ? [
+            {
+              url: image.url,
+              alt: image.alt,
+              ...(image.width && image.height
+                ? { width: image.width, height: image.height }
+                : {}),
+            },
+          ]
+        : `/static/assets/img/social-preview.png`,
       locale: "fr_FR",
       ...(article
         ? {
             type: "article",
+            ...((overrideCanonical ?? path) && {
+              url: overrideCanonical ?? path,
+            }),
             ...(article.publishedTime && {
               publishedTime: article.publishedTime,
               modifiedTime: article.modifiedTime ?? article.publishedTime,
@@ -50,6 +68,9 @@ export function generateDefaultMetadata({
           }
         : { type: "website" }),
     },
+    ...(image && {
+      twitter: { card: "summary_large_image", images: [image.url] },
+    }),
     ...(robots && {
       robots,
     }),
