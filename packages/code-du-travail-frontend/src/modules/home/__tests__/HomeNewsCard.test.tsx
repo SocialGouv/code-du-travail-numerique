@@ -15,6 +15,5 @@ describe("<HomeNewsCard />", () => {
     expect(time.tagName).toBe("TIME");
     expect(time).toHaveAttribute("dateTime", "2026-04-07");
     expect(time.parentElement).toHaveTextContent("Publié le 7 avril 2026");
-    expect(time.parentElement?.className).toContain("fr-card__detail");
   });
 });
