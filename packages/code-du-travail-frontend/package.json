@@ -53,7 +53,7 @@
     "fuzzball": "^2.2.6",
     "html-react-parser": "^6.1.2",
     "immer": "^11.1.8",
-    "katex": "^0.17.0",
+    "katex": "^0.18.2",
     "lodash.deburr": "^4.1.0",
     "memoizee": "^0.4.17",
     "next": "~16.2.7",
