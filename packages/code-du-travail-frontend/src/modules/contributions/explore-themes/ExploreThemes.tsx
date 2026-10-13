@@ -54,34 +54,43 @@ export function ExploreThemes({
       <div className={fr.cx("fr-grid-row", "fr-grid-row--gutters")}>
         {themes.map((theme, index) => (
           <div key={theme.slug} className={fr.cx("fr-col-12", "fr-col-md-6")}>
-            <Tile
-              orientation="horizontal"
-              small
-              noIcon
-              enlargeLinkOrButton
-              titleAs="h4"
-              pictogram={
-                theme.iconName ? <ThemeIcon name={theme.iconName} /> : undefined
+            <ThemeTile
+              theme={theme}
+              onClick={() =>
+                emitClickExploreTheme(contributionSlug, theme.slug, index + 1)
               }
-              title={theme.title}
-              desc={
-                theme.description ?? documentCountLabel(theme.documentCount)
-              }
-              linkProps={{
-                href: theme.href,
-                onClick: () =>
-                  emitClickExploreTheme(
-                    contributionSlug,
-                    theme.slug,
-                    index + 1
-                  ),
-              }}
-              classes={{ desc: tileDesc }}
             />
           </div>
         ))}
       </div>
     </div>
+  );
+}
+
+type ThemeTileProps = {
+  theme: ExploreTheme;
+  titleAs?: "h3" | "h4";
+  onClick?: () => void;
+};
+
+// Carte d'un sous-thème, partagée avec les liens recommandés des fiches
+// service-public.
+export function ThemeTile({ theme, titleAs = "h4", onClick }: ThemeTileProps) {
+  return (
+    <Tile
+      orientation="horizontal"
+      small
+      noIcon
+      enlargeLinkOrButton
+      titleAs={titleAs}
+      pictogram={
+        theme.iconName ? <ThemeIcon name={theme.iconName} /> : undefined
+      }
+      title={theme.title}
+      desc={theme.description ?? documentCountLabel(theme.documentCount)}
+      linkProps={{ href: theme.href, onClick }}
+      classes={{ desc: tileDesc }}
+    />
   );
 }
 
