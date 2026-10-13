@@ -1,8 +1,8 @@
 {
   "scan_root": "packages/code-du-travail-frontend/src",
-  "callsites": 106,
-  "total_events": 143,
-  "unique_events": 131,
+  "callsites": 109,
+  "total_events": 146,
+  "unique_events": 134,
   "unresolved_callsites": 0,
   "events": [
     {
@@ -855,7 +855,7 @@
       "resolution": "literal",
       "emit_function": "emitModalIsOpened",
       "file": "packages/code-du-travail-frontend/src/modules/besoin-plus-informations/tracking.ts",
-      "line": 29,
+      "line": 32,
       "enum_refs": [
         "MatomoNeedMoreInfoEventSecondary.CONTACT",
         "MatomoNeedMoreInfoEventTertiary.CLICK_CONTACT_MODAL"
@@ -869,10 +869,52 @@
       "resolution": "literal",
       "emit_function": "emitTrackNumber",
       "file": "packages/code-du-travail-frontend/src/modules/besoin-plus-informations/tracking.ts",
-      "line": 20,
+      "line": 23,
       "enum_refs": [
         "MatomoNeedMoreInfoEventSecondary.CONTACT",
         "MatomoNeedMoreInfoEventTertiary.CLICK_PHONE_NUMBER"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "contact",
+      "action": "click_rdv_contact_sr",
+      "name_pattern": "<departement>",
+      "resolution": "literal",
+      "emit_function": "emitClickRdv",
+      "file": "packages/code-du-travail-frontend/src/modules/besoin-plus-informations/tracking.ts",
+      "line": 67,
+      "enum_refs": [
+        "MatomoNeedMoreInfoEventSecondary.CONTACT",
+        "MatomoNeedMoreInfoEventTertiary.CLICK_RDV"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "contact",
+      "action": "select_canal_contact_sr",
+      "name_pattern": "<channel>",
+      "resolution": "literal",
+      "emit_function": "emitSelectChannel",
+      "file": "packages/code-du-travail-frontend/src/modules/besoin-plus-informations/tracking.ts",
+      "line": 49,
+      "enum_refs": [
+        "MatomoNeedMoreInfoEventSecondary.CONTACT",
+        "MatomoNeedMoreInfoEventTertiary.SELECT_CHANNEL"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "contact",
+      "action": "select_departement_contact_sr",
+      "name_pattern": "<departement>",
+      "resolution": "literal",
+      "emit_function": "emitSelectDepartement",
+      "file": "packages/code-du-travail-frontend/src/modules/besoin-plus-informations/tracking.ts",
+      "line": 58,
+      "enum_refs": [
+        "MatomoNeedMoreInfoEventSecondary.CONTACT",
+        "MatomoNeedMoreInfoEventTertiary.SELECT_DEPARTEMENT"
       ],
       "tracking_method": "sendEvent"
     },
@@ -883,7 +925,7 @@
       "resolution": "literal",
       "emit_function": "emitSelectTheme",
       "file": "packages/code-du-travail-frontend/src/modules/besoin-plus-informations/tracking.ts",
-      "line": 37,
+      "line": 40,
       "enum_refs": [
         "MatomoNeedMoreInfoEventSecondary.CONTACT",
         "MatomoNeedMoreInfoEventTertiary.SELECT_THEME"
