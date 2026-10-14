@@ -62,6 +62,12 @@ type Props = {
    * compterait une cohorte structurellement à 0 % de conversion.
    */
   isRedirecting?: boolean;
+  /**
+   * Propose l'option « Je ne souhaite pas renseigner ma convention collective ».
+   * Désactivée sur les pages pilotes du test #7493, où la réponse Code du
+   * travail est déjà affichée d'emblée. Défaut : proposée.
+   */
+  allowNoAgreementOption?: boolean;
 };
 
 const MISSING_ROUTE_ERROR =
@@ -80,6 +86,7 @@ export function AgreementSearchFormBlock({
   onBackToPersonalizeFocus,
   legend,
   isRedirecting,
+  allowNoAgreementOption = true,
 }: Props) {
   const router = useRouter();
   const { slug, isNoCDT } = contribution;
@@ -361,7 +368,7 @@ export function AgreementSearchFormBlock({
         // pas dans le flux « recherche entreprise ».
         showWhatIsAgreementLink={false}
         onBackToPersonalize={onBackToPersonalizeFocus}
-        showNoAgreementOption={!isNoCDT}
+        showNoAgreementOption={allowNoAgreementOption && !isNoCDT}
         noAgreementContent={noAgreementBanner}
         onRouteChange={(route) => {
           setSelectedRoute(route);

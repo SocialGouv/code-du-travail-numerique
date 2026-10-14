@@ -40,6 +40,8 @@ type Props = {
    * dans le dénominateur du funnel (cf. AgreementSearchFormBlock).
    */
   isRedirecting?: boolean;
+  /** Cf. AgreementSearchFormBlock : propose l'option « sans convention collective ». */
+  allowNoAgreementOption?: boolean;
 };
 
 // Façade « parcours interne » (fiche générique) : présentation « Personnalisez
@@ -58,6 +60,7 @@ export function ContributionGenericAgreementSearch({
   defaultRoute,
   defaultEnterpriseSearch,
   isRedirecting,
+  allowNoAgreementOption,
 }: Props) {
   const { emitClickWhatIsAgreement } = useCcFunnelTracking();
   return (
@@ -94,6 +97,7 @@ export function ContributionGenericAgreementSearch({
         defaultRoute={defaultRoute}
         defaultEnterpriseSearch={defaultEnterpriseSearch}
         isRedirecting={isRedirecting}
+        allowNoAgreementOption={allowNoAgreementOption}
         onBackToPersonalizeFocus={() => {
           document.getElementById("personalize-response-title")?.focus();
         }}
