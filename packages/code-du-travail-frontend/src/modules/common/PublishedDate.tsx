@@ -11,6 +11,7 @@ type Props = {
 // (attribut dateTime ISO 8601) pour les moteurs et les technologies
 // d'assistance. Le libellé reste hors de <time>. Rien n'est affiché si la date
 // est absente ou invalide : ni « Publié le » orphelin, ni « Invalid Date ».
+// Espaces insécables dans la date : elle ne se coupe jamais sur deux lignes.
 export const PublishedDate = ({ date, className }: Props) => {
   const isoDate = toIsoDate(date);
   const text = formatDateAsFrenchText(date);
@@ -18,7 +19,7 @@ export const PublishedDate = ({ date, className }: Props) => {
 
   return (
     <p className={className}>
-      Publié le <time dateTime={isoDate}>{text}</time>
+      Publié le <time dateTime={isoDate}>{text.replaceAll(" ", "\u00a0")}</time>
     </p>
   );
 };
