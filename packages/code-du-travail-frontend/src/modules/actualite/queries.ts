@@ -1,16 +1,22 @@
 import { elasticDocumentsIndex, elasticsearchClient } from "../../api/utils";
-import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
+import { getRouteBySource, SourceKeys, SOURCES } from "@socialgouv/cdtn-utils";
 import {
   DocumentElasticResult,
   fetchDocument,
   RelatedItem,
   Source,
 } from "../documents";
-import { NewsElasticDocument } from "@socialgouv/cdtn-types";
 import { LinkedContent } from "@socialgouv/cdtn-types/build/elastic/related-items";
-import { News } from "./type";
+import { toUrl } from "../utils/url";
+import { getNewsModifiedTime } from "./dates";
+import {
+  News,
+  NewsDocument,
+  NewsFurtherReadingLink,
+  NewsSummary,
+} from "./type";
 
-export const fetchNewsList = async <K extends keyof NewsElasticDocument>(
+export const fetchNewsList = async <K extends keyof NewsDocument>(
   fields: K[],
   filters?: {
     cdtnIds?: string[];
@@ -18,7 +24,7 @@ export const fetchNewsList = async <K extends keyof NewsElasticDocument>(
     pageSize?: number;
   }
 ): Promise<{
-  items: Pick<NewsElasticDocument, K>[];
+  items: Pick<NewsDocument, K>[];
   total: number;
   totalPages: number;
   page: number;
@@ -37,9 +43,7 @@ export const fetchNewsList = async <K extends keyof NewsElasticDocument>(
     baseFilters.push({ terms: { cdtnId: filters.cdtnIds } });
   }
 
-  const response = await elasticsearchClient.search<
-    Pick<NewsElasticDocument, K>
-  >({
+  const response = await elasticsearchClient.search<Pick<NewsDocument, K>>({
     query: {
       bool: {
         filter: baseFilters,
@@ -71,13 +75,13 @@ export const fetchNewsList = async <K extends keyof NewsElasticDocument>(
   };
 };
 
-export const fetchNews = async <K extends keyof NewsElasticDocument>(
+export const fetchNews = async <K extends keyof NewsDocument>(
   slug: string,
   fields: K[]
-): Promise<DocumentElasticResult<Pick<NewsElasticDocument, K>> | undefined> => {
+): Promise<DocumentElasticResult<Pick<NewsDocument, K>> | undefined> => {
   return await fetchDocument<
-    NewsElasticDocument,
-    keyof DocumentElasticResult<NewsElasticDocument>
+    NewsDocument,
+    keyof DocumentElasticResult<NewsDocument>
   >(fields, {
     query: {
       bool: {
@@ -94,21 +98,40 @@ export const fetchNews = async <K extends keyof NewsElasticDocument>(
   });
 };
 
+export const formatSummary = ({
+  image,
+  ...news
+}: Pick<
+  NewsDocument,
+  "title" | "content" | "date" | "slug" | "image"
+>): NewsSummary => ({
+  ...news,
+  image: image ? { ...image, url: toUrl(image.filename) } : undefined,
+});
+
 export const format = ({
   title,
   meta_title,
   date,
+  updatedAt,
   content,
   meta_description,
   linkedContent,
+  image,
+  links,
+  references,
 }: Pick<
-  NewsElasticDocument,
+  NewsDocument,
   | "title"
   | "meta_title"
   | "date"
+  | "updatedAt"
   | "content"
   | "meta_description"
   | "linkedContent"
+  | "image"
+  | "links"
+  | "references"
 >): News => {
   const buildItems = (arr: LinkedContent[]): RelatedItem[] =>
     arr.map((item) => ({
@@ -151,5 +174,19 @@ export const format = ({
     content,
     meta_description,
     relatedItems,
+    links: (links ?? []).map(
+      (link): NewsFurtherReadingLink => ({
+        title: link.title,
+        url:
+          link.type === "external"
+            ? link.url
+            : `/${getRouteBySource(link.source as SourceKeys)}/${link.slug}`,
+        external: link.type === "external",
+        ...(link.intro ? { intro: link.intro } : {}),
+      })
+    ),
+    image: image ? { ...image, url: toUrl(image.filename) } : undefined,
+    references: references ?? [],
+    modifiedTime: getNewsModifiedTime(date, updatedAt),
   };
 };
