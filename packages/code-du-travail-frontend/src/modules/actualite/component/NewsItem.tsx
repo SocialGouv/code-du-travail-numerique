@@ -37,15 +37,17 @@ export const NewsItem = ({
       </div>
       <div className={fr.cx("fr-col-md-10", "fr-col-12")}>
         <h2 className={fr.cx("fr-mb-0")}>{title}</h2>
-      </div>
-      <div className={fr.cx("fr-col-md-10", "fr-col-offset-md-2", "fr-col-12")}>
+        {/* Dans la colonne du titre : l'écart titre / image est celui de la
+            maquette (24 px), sans la gouttière de la grille. */}
         {image && (
           <NewsImage
             image={image}
             lazy={!imagePriority}
-            className={fr.cx("fr-content-media", "fr-mt-3w", "fr-mb-3w")}
+            className={fr.cx("fr-content-media", "fr-mt-3w", "fr-mb-0")}
           />
         )}
+      </div>
+      <div className={fr.cx("fr-col-md-10", "fr-col-offset-md-2", "fr-col-12")}>
         <DisplayContent content={content} titleLevel={3} />
 
         <Button
