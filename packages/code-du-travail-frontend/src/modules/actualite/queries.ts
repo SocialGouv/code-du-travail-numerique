@@ -9,7 +9,7 @@ import {
 import { LinkedContent } from "@socialgouv/cdtn-types/build/elastic/related-items";
 import { toUrl } from "../utils/url";
 import { getNewsModifiedTime } from "./dates";
-import { News, NewsDocument } from "./type";
+import { News, NewsDocument, NewsFurtherReadingLink } from "./type";
 
 export const fetchNewsList = async <K extends keyof NewsDocument>(
   fields: K[],
@@ -142,32 +142,14 @@ export const format = ({
     },
   ];
 
-  const relatedItems = links?.length
-    ? [
-        {
-          title: "Pour aller plus loin",
-          items: links.map(
-            (l): RelatedItem =>
-              l.type === "external"
-                ? { title: l.title, url: l.url, source: SOURCES.EXTERNALS }
-                : {
-                    title: l.title,
-                    source: l.source as Source,
-                    url: `/${getRouteBySource(l.source as SourceKeys)}/${l.slug}`,
-                  }
-          ),
-        },
-      ]
-    : categories
-        .map(({ title, filter }) => {
-          const filtered = linkedContent.filter(filter);
-          return filtered.length
-            ? { title, items: buildItems(filtered) }
-            : undefined;
-        })
-        .filter((x): x is { title: string; items: RelatedItem[] } =>
-          Boolean(x)
-        );
+  const relatedItems = categories
+    .map(({ title, filter }) => {
+      const filtered = linkedContent.filter(filter);
+      return filtered.length
+        ? { title, items: buildItems(filtered) }
+        : undefined;
+    })
+    .filter((x): x is { title: string; items: RelatedItem[] } => Boolean(x));
 
   return {
     title,
@@ -176,6 +158,17 @@ export const format = ({
     content,
     meta_description,
     relatedItems,
+    links: (links ?? []).map(
+      (link): NewsFurtherReadingLink => ({
+        title: link.title,
+        url:
+          link.type === "external"
+            ? link.url
+            : `/${getRouteBySource(link.source as SourceKeys)}/${link.slug}`,
+        external: link.type === "external",
+        ...(link.intro ? { intro: link.intro } : {}),
+      })
+    ),
     image: image ? { ...image, url: toUrl(image.filename) } : undefined,
     references: references ?? [],
     modifiedTime: getNewsModifiedTime(date, updatedAt),
