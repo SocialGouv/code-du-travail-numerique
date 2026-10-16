@@ -62,4 +62,6 @@ export type News = Pick<
 export type NewsSummary = Pick<
   NewsElasticDocument,
   "title" | "content" | "date" | "slug"
->;
+> & {
+  image?: NewsImage & { url: string };
+};

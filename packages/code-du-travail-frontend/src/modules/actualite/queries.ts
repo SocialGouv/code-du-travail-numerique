@@ -9,7 +9,12 @@ import {
 import { LinkedContent } from "@socialgouv/cdtn-types/build/elastic/related-items";
 import { toUrl } from "../utils/url";
 import { getNewsModifiedTime } from "./dates";
-import { News, NewsDocument, NewsFurtherReadingLink } from "./type";
+import {
+  News,
+  NewsDocument,
+  NewsFurtherReadingLink,
+  NewsSummary,
+} from "./type";
 
 export const fetchNewsList = async <K extends keyof NewsDocument>(
   fields: K[],
@@ -92,6 +97,17 @@ export const fetchNews = async <K extends keyof NewsDocument>(
     index: elasticDocumentsIndex,
   });
 };
+
+export const formatSummary = ({
+  image,
+  ...news
+}: Pick<
+  NewsDocument,
+  "title" | "content" | "date" | "slug" | "image"
+>): NewsSummary => ({
+  ...news,
+  image: image ? { ...image, url: toUrl(image.filename) } : undefined,
+});
 
 export const format = ({
   title,

@@ -1,7 +1,7 @@
 import { SOURCES } from "@socialgouv/cdtn-utils";
 import { LinkedContent } from "@socialgouv/cdtn-types/build/elastic/related-items";
 import { BUCKET_FOLDER, BUCKET_URL } from "../../../config";
-import { format } from "../queries";
+import { format, formatSummary } from "../queries";
 
 jest.mock("../../../api/utils", () => ({
   elasticDocumentsIndex: "index",
@@ -114,5 +114,27 @@ describe("format (actualité)", () => {
   it("renvoie [] quand references est absent", () => {
     expect(format(base).references).toEqual([]);
     expect(format(base).image).toBeUndefined();
+  });
+});
+
+describe("formatSummary (liste des actualités)", () => {
+  const summary = {
+    title: "Titre",
+    content: "<p>contenu</p>",
+    date: "01/01/2026",
+    slug: "titre",
+  };
+
+  it("calcule l'url de l'image", () => {
+    expect(
+      formatSummary({
+        ...summary,
+        image: { filename: "actu.webp", alt: "alt", license: "free" },
+      }).image?.url
+    ).toBe(`${BUCKET_URL}/${BUCKET_FOLDER}/default/actu.webp`);
+  });
+
+  it("laisse l'image vide quand l'actualité n'en a pas", () => {
+    expect(formatSummary(summary)).toEqual({ ...summary, image: undefined });
   });
 });
