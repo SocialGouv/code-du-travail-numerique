@@ -8,6 +8,7 @@ import DisplayContent from "../common/DisplayContent";
 import { PublishedDate } from "../common/PublishedDate";
 import { NEWS_RSS_FEED } from "./rss";
 import { NewsImage } from "./component/NewsImage";
+import { NewsFurtherReading } from "./component/NewsFurtherReading";
 import { References } from "../common/References";
 
 type Props = {
@@ -29,12 +30,9 @@ export const NewsContainer = ({ news }: Props) => (
     <PublishedDate date={news.date} className={fr.cx("fr-text--lg")} />
     {news.image && <NewsImage image={news.image} />}
     <DisplayContent content={news.content} titleLevel={2} />
+    <NewsFurtherReading links={news.links} />
     {news.references.length > 0 && (
-      <References
-        label="Références juridiques"
-        links={news.references}
-        titleAs="h2"
-      />
+      <References label="Références" links={news.references} titleAs="h2" />
     )}
   </ContainerRichWithBreadcrumbs>
 );

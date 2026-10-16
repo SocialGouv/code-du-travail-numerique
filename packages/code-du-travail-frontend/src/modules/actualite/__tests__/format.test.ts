@@ -18,19 +18,58 @@ const base = {
 };
 
 describe("format (actualité)", () => {
-  it("construit un seul groupe 'Pour aller plus loin' avec des liens mixtes", () => {
+  it("regroupe linkedContent dans la colonne de droite comme sur dev", () => {
     const result = format({
       ...base,
       linkedContent: [
-        {
-          source: SOURCES.TOOLS,
-          slug: "ignored",
-          title: "Ignoré",
-          description: "",
-        },
+        { source: SOURCES.TOOLS, slug: "simulateur", title: "Simu" },
+        { source: SOURCES.LETTERS, slug: "modele", title: "Modèle" },
+        { source: SOURCES.SHEET_SP, slug: "fiche", title: "Fiche" },
       ] as unknown as LinkedContent[],
       links: [
         { type: "external", title: "Externe", url: "https://example.com" },
+      ],
+    });
+    expect(result.relatedItems).toEqual([
+      {
+        title: "Simulateurs",
+        items: [
+          { title: "Simu", source: SOURCES.TOOLS, url: "/outils/simulateur" },
+        ],
+      },
+      {
+        title: "Modèles de courriers",
+        items: [
+          {
+            title: "Modèle",
+            source: SOURCES.LETTERS,
+            url: "/modeles-de-courriers/modele",
+          },
+        ],
+      },
+      {
+        title: "Contenus liés",
+        items: [
+          {
+            title: "Fiche",
+            source: SOURCES.SHEET_SP,
+            url: "/fiche-service-public/fiche",
+          },
+        ],
+      },
+    ]);
+  });
+
+  it("expose les liens « Pour aller plus loin » à part, avec leur url", () => {
+    const result = format({
+      ...base,
+      links: [
+        {
+          type: "external",
+          title: "Externe",
+          url: "https://example.com",
+          intro: "Le site officiel",
+        },
         {
           type: "cdtn",
           source: SOURCES.TOOLS,
@@ -39,34 +78,20 @@ describe("format (actualité)", () => {
         },
       ],
     });
-    expect(result.relatedItems).toHaveLength(1);
-    expect(result.relatedItems[0].title).toBe("Pour aller plus loin");
-    expect(result.relatedItems[0].items).toEqual([
+    expect(result.relatedItems).toEqual([]);
+    expect(result.links).toEqual([
       {
         title: "Externe",
         url: "https://example.com",
-        source: SOURCES.EXTERNALS,
+        intro: "Le site officiel",
+        external: true,
       },
-      {
-        title: "Simu",
-        source: SOURCES.TOOLS,
-        url: "/outils/simulateur",
-      },
+      { title: "Simu", url: "/outils/simulateur", external: false },
     ]);
   });
 
-  it("garde le regroupement linkedContent sans links", () => {
-    const result = format({
-      ...base,
-      linkedContent: [
-        { source: SOURCES.TOOLS, slug: "simulateur", title: "Simu" },
-        { source: SOURCES.LETTERS, slug: "modele", title: "Modèle" },
-      ] as unknown as LinkedContent[],
-    });
-    expect(result.relatedItems.map((r) => r.title)).toEqual([
-      "Simulateurs",
-      "Modèles de courriers",
-    ]);
+  it("renvoie [] quand links est absent", () => {
+    expect(format(base).links).toEqual([]);
   });
 
   it("calcule l'url de l'image", () => {
