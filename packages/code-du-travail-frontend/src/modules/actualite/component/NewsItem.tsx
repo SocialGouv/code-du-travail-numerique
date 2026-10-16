@@ -35,7 +35,8 @@ export const NewsItem = ({
           className={fr.cx("fr-text--lg", "fr-mb-1v")}
         />
       </div>
-      <div className={fr.cx("fr-col-md-10", "fr-col-12")}>
+      {/* 8 colonnes sur 12 (792 px max) : longueur de ligne lisible. */}
+      <div className={fr.cx("fr-col-md-8", "fr-col-12")}>
         <h2 className={fr.cx("fr-mb-0")}>{title}</h2>
         {/* Dans la colonne du titre : l'écart titre / image est celui de la
             maquette (24 px), sans la gouttière de la grille. */}
@@ -47,11 +48,11 @@ export const NewsItem = ({
           />
         )}
       </div>
-      <div className={fr.cx("fr-col-md-10", "fr-col-offset-md-2", "fr-col-12")}>
+      <div className={fr.cx("fr-col-md-8", "fr-col-offset-md-2", "fr-col-12")}>
         <DisplayContent content={content} titleLevel={3} />
 
         <Button
-          title={`Lire l'actualité ${title}`}
+          title={`Lire la suite de l'actualité ${title}`}
           priority="secondary"
           iconId={"fr-icon-arrow-right-line"}
           iconPosition="right"
@@ -59,7 +60,7 @@ export const NewsItem = ({
             href: `/actualite/${slug}`,
           }}
         >
-          Lire l&apos;actualité
+          Lire la suite
         </Button>
       </div>
     </div>

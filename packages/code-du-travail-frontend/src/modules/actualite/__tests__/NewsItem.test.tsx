@@ -15,7 +15,7 @@ describe("<NewsItem />", () => {
     expect(time.tagName).toBe("TIME");
     expect(time).toHaveAttribute("dateTime", "2026-04-07");
     expect(time.parentElement).toHaveTextContent("Publié le 7 avril 2026");
-    expect(getByRole("link", { name: /Lire l'actualité/ })).toHaveAttribute(
+    expect(getByRole("link", { name: /Lire la suite/ })).toHaveAttribute(
       "href",
       "/actualite/mon-actualite"
     );
