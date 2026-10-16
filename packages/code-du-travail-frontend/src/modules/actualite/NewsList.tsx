@@ -62,8 +62,8 @@ export function NewsList({ news, totalPages, currentPage }: Props) {
 const rssLink = css({
   display: "inline-flex",
   alignItems: "center",
-  color: "var(--text-title-grey)",
-  backgroundImage: "none",
+  color: "var(--text-title-grey)!",
+  backgroundImage: "none!",
   _hover: { textDecoration: "underline" },
 });
 
