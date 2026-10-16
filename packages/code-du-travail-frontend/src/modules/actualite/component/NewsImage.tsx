@@ -4,6 +4,9 @@ import type { NewsImage as NewsImageType } from "../type";
 
 type Props = {
   image: NewsImageType & { url: string };
+  // Dans la liste, l'image n'est pas l'élément principal de la page.
+  lazy?: boolean;
+  className?: string;
 };
 
 const URL_PATTERN = /^https?:\/\//;
@@ -17,7 +20,7 @@ const Author = ({ author }: { author: string }) =>
     <>{author}</>
   );
 
-const Caption = ({ image }: Props) => {
+const Caption = ({ image }: Pick<Props, "image">) => {
   if (image.license === "source") {
     return (
       <>Source : {image.author ? <Author author={image.author} /> : null}</>
@@ -36,8 +39,8 @@ const Caption = ({ image }: Props) => {
   );
 };
 
-export const NewsImage = ({ image }: Props) => (
-  <figure className={fr.cx("fr-content-media", "fr-mb-6w")}>
+export const NewsImage = ({ image, lazy = false, className }: Props) => (
+  <figure className={className ?? fr.cx("fr-content-media", "fr-mb-6w")}>
     {/* eslint-disable-next-line @next/next/no-img-element */}
     <img
       className={fr.cx("fr-responsive-img")}
@@ -45,7 +48,7 @@ export const NewsImage = ({ image }: Props) => (
       alt={image.alt}
       width={image.width}
       height={image.height}
-      fetchPriority="high"
+      {...(lazy ? { loading: "lazy" } : { fetchPriority: "high" })}
     />
     <figcaption className={fr.cx("fr-content-media__caption")}>
       {/* La légende DSFR est en colonne flex : un seul enfant garde le crédit sur une ligne. */}

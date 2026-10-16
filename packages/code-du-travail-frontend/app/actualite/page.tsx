@@ -1,6 +1,6 @@
 import { DsfrLayout } from "src/modules/layout";
 import { generateDefaultMetadata } from "src/modules/common/metas";
-import { fetchNewsList, NewsList } from "src/modules/actualite";
+import { fetchNewsList, formatSummary, NewsList } from "src/modules/actualite";
 import { NEWS_RSS_FEED } from "src/modules/actualite/rss";
 import { Metadata } from "next";
 
@@ -31,13 +31,17 @@ async function Index({ searchParams }: Props) {
   const pageNumber = await getPageNumber(searchParams);
 
   const { items, totalPages } = await fetchNewsList(
-    ["title", "content", "date", "slug"],
+    ["title", "content", "date", "slug", "image"],
     { page: pageNumber }
   );
 
   return (
     <DsfrLayout>
-      <NewsList news={items} currentPage={pageNumber} totalPages={totalPages} />
+      <NewsList
+        news={items.map(formatSummary)}
+        currentPage={pageNumber}
+        totalPages={totalPages}
+      />
     </DsfrLayout>
   );
 }
