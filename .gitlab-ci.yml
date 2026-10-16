@@ -20,25 +20,28 @@ include:
   - project: socialgouv/commun/studio-tech-commun/sdpsn-devops-ci-utils
     ref: main
     file: ci-common/image-build.yml
-  - component: $CI_SERVER_FQDN/socialgouv/commun/studio-tech-commun/components/gitops-cd-component/trigger_app@0.3.1
+  - component: $CI_SERVER_FQDN/socialgouv/commun/studio-tech-commun/components/gitops-cd-component/trigger_app@0.5.0
     inputs:
       job_name: deploy-dev
       stage: deploy
       gitops_project: socialgouv/produits-dnum/citoyens/cdtn/cdtn-gitops
+      app_name: cdtn
       deploy_action: dev
       image_target_object: ".code-du-travail-numerique.image.tag"
-  - component: $CI_SERVER_FQDN/socialgouv/commun/studio-tech-commun/components/gitops-cd-component/trigger_app@0.3.1
+  - component: $CI_SERVER_FQDN/socialgouv/commun/studio-tech-commun/components/gitops-cd-component/trigger_app@0.5.0
     inputs:
       job_name: deploy-test
       stage: deploy
       gitops_project: socialgouv/produits-dnum/citoyens/cdtn/cdtn-gitops
+      app_name: cdtn
       deploy_action: test
       image_target_object: ".code-du-travail-numerique.image.tag"
-  - component: $CI_SERVER_FQDN/socialgouv/commun/studio-tech-commun/components/gitops-cd-component/trigger_app@0.3.1
+  - component: $CI_SERVER_FQDN/socialgouv/commun/studio-tech-commun/components/gitops-cd-component/trigger_app@0.5.0
     inputs:
       job_name: deploy-preprod
       stage: deploy
       gitops_project: socialgouv/produits-dnum/citoyens/cdtn/cdtn-gitops
+      app_name: cdtn
       deploy_action: preprod
       image_target_object: ".code-du-travail-numerique.image.tag"
 
@@ -96,16 +99,16 @@ build:
 # dépendance `code-du-travail-numerique` du wrapper apps/cdtn-dev sur la branche par défaut.
 # ---------------------------------------------------------------------------
 deploy-dev:
-  needs: ["build"]
+  needs: ["build", "prepare-deploy-dev"]
   environment:
     name: dev
 
 deploy-test:
-  needs: ["build"]
+  needs: ["build", "prepare-deploy-test"]
   environment:
     name: test
 
 deploy-preprod:
-  needs: ["build"]
+  needs: ["build", "prepare-deploy-preprod"]
   environment:
     name: preprod
