@@ -6,3 +6,4 @@ export * from "./BreadcrumbListJsonLd";
 export * from "./ArticleJsonLd";
 export * from "./LegislationJsonLd";
 export * from "./NewsArticleJsonLd";
+export * from "./faqAnswer";
