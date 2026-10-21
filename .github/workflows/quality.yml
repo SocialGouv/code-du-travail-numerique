@@ -1,0 +1,206 @@
+name: Code quality
+
+on:
+  push:
+    branches:
+      - master
+      - dev
+  pull_request:
+
+concurrency:
+  cancel-in-progress: true
+  group: quality-${{ github.ref }}
+
+jobs:
+  build:
+    name: Build
+    environment: build-preproduction
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          run_install: false
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+          cache: pnpm
+      - name: Install dependencies
+        run: |
+          pnpm install --frozen-lockfile
+      - name: Build code
+        run: |
+          pnpm build
+        env:
+          NEXT_PUBLIC_ES_INDEX_PREFIX: ${{ secrets.NEXT_PUBLIC_ES_INDEX_PREFIX }}
+          ELASTICSEARCH_TOKEN_API: ${{ secrets.ELASTICSEARCH_TOKEN_API }}
+          ELASTICSEARCH_USER: ${{ secrets.ELASTICSEARCH_USER }}
+          ELASTICSEARCH_PASSWORD: ${{ secrets.ELASTICSEARCH_PASSWORD }}
+          ELASTICSEARCH_URL: ${{ secrets.ELASTICSEARCH_URL }}
+          OAUTH_CLIENT_ID: ${{ secrets.OAUTH_CLIENT_ID }}
+          OAUTH_CLIENT_SECRET: ${{ secrets.OAUTH_CLIENT_SECRET }}
+
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        repositories:
+          [
+            "@cdt/frontend",
+            "@socialgouv/modeles-social",
+            "@socialgouv/cdtn-utils",
+            "@socialgouv/cdtn-stats",
+          ]
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          run_install: false
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+          cache: pnpm
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Build workspace packages
+        run: pnpm --filter @socialgouv/cdtn-utils --filter @socialgouv/modeles-social build
+      - name: Lint ${{ matrix.repositories }}
+        run: |
+          pnpm --filter ${{ matrix.repositories }} lint --quiet
+
+  format:
+    name: Code formatter checker
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        repositories:
+          [
+            "@cdt/frontend",
+            "@socialgouv/modeles-social",
+            "@socialgouv/cdtn-utils",
+            "@socialgouv/cdtn-stats",
+          ]
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          run_install: false
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+          cache: pnpm
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Code formatter checker for ${{ matrix.repositories }}
+        run: |
+          pnpm --filter ${{ matrix.repositories }} format:check
+
+  type-check:
+    name: Check typescript types
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        repositories:
+          [
+            "@cdt/frontend",
+            "@socialgouv/modeles-social",
+            "@socialgouv/cdtn-utils",
+            "@socialgouv/cdtn-stats",
+          ]
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          run_install: false
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+          cache: pnpm
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Build workspace packages
+        run: pnpm --filter @socialgouv/cdtn-utils --filter @socialgouv/modeles-social build
+      - name: Type-check ${{ matrix.repositories }}
+        run: |
+          pnpm --filter ${{ matrix.repositories }} type-check
+
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        repositories: ["@cdt/frontend", "@socialgouv/modeles-social"]
+    steps:
+      - name: Configure sysctl limits
+        run: |
+          sudo swapoff -a
+          sudo sysctl -w vm.swappiness=1
+          sudo sysctl -w fs.file-max=262144
+          sudo sysctl -w vm.max_map_count=262144
+      - name: Start Elasticsearch
+        run: |
+          docker rm -f es >/dev/null 2>&1 || true
+          docker pull docker.elastic.co/elasticsearch/elasticsearch:8.13.4
+          docker run -d --name es \
+            -p 9200:9200 \
+            -e "discovery.type=single-node" \
+            -e "xpack.security.enabled=false" \
+            -e "ES_JAVA_OPTS=-Xms512m -Xmx512m" \
+            --ulimit nofile=65535:65535 \
+            docker.elastic.co/elasticsearch/elasticsearch:8.13.4
+      - name: Wait for Elasticsearch
+        run: |
+          for i in {1..60}; do
+            status=$(curl -fsSL "http://localhost:9200/_cat/health?h=status" 2>/dev/null || true)
+            if echo "$status" | grep -Eq '^(green|yellow)$'; then
+              echo "Elasticsearch is ready (status=$status)"
+              exit 0
+            fi
+            sleep 2
+          done
+          echo "Elasticsearch did not become ready in time" >&2
+          curl -s "http://localhost:9200/_cat/health?v" || true
+          docker logs es || true
+          exit 1
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          run_install: false
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+          cache: pnpm
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Build workspace packages
+        run: pnpm --filter @socialgouv/cdtn-utils --filter @socialgouv/modeles-social build
+      - name: Test ${{ matrix.repositories }}
+        run: |
+          pnpm --filter ${{ matrix.repositories }} test
+        env:
+          ELASTICSEARCH_URL: http://localhost:9200
+      - name: Stop Elasticsearch
+        if: always()
+        run: |
+          docker logs es || true
+          docker rm -f es || true

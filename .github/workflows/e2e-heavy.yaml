@@ -1,0 +1,50 @@
+name: Tests e2e (heavy + light)
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 21 * * *" # each day at 21:00
+
+concurrency:
+  cancel-in-progress: true
+  group: ${{ github.workflow }}-${{ github.event_name }}-${{ github.event.ref }}
+
+jobs:
+  e2e:
+    name: End-to-end testing
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: master
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          run_install: false
+      - name: Install dependencies
+        run: |
+          pnpm install --frozen-lockfile
+      - name: Install Playwright binary
+        run: |
+          pnpm --filter @cdt/frontend test:e2e:install
+      - name: Run test e2e
+        run: |
+          TEST_BASEURL=https://code-du-travail-numerique-preprod.ovh.fabrique.social.gouv.fr pnpm test:e2e -- --project=chromium --project=widgets
+      - name: Upload Playwright report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: packages/code-du-travail-frontend/playwright-report/
+          retention-days: 7
+      - name: Send message to mattermost when done
+        uses: mattermost/action-mattermost-notify@master
+        if: failure()
+        with:
+          MATTERMOST_WEBHOOK_URL: ${{ secrets.MATTERMOST_WEBHOOK_URL }}
+          TEXT: |-
+            Tests e2e (heavy + light): **${{ job.status }}** ([logs](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})) ⚠️
