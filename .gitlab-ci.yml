@@ -116,10 +116,11 @@ workflow:
     PACKAGES: --filter @cdt/frontend --filter @socialgouv/modeles-social --filter @socialgouv/cdtn-utils --filter @socialgouv/cdtn-stats
   script:
     - pnpm --filter @socialgouv/cdtn-utils --filter @socialgouv/modeles-social build
-    - pnpm --no-bail $PACKAGES run $CHECK $CHECK_ARGS
+    - pnpm --no-bail --workspace-concurrency=1 $PACKAGES run $CHECK $CHECK_ARGS
 
 quality-build:
   extends: .node
+  tags: [socialgouv-linux-medium-amd64]
   script:
     - pnpm build
 
@@ -156,7 +157,7 @@ quality-test:
   script:
     - pnpm --filter @socialgouv/cdtn-utils --filter @socialgouv/modeles-social build
     - for i in $(seq 1 60); do curl -fsS "$ELASTICSEARCH_URL/_cat/health?h=status" | grep -Eq '^(green|yellow)$' && break; sleep 2; done
-    - pnpm --no-bail $PACKAGES run $CHECK
+    - pnpm --no-bail --workspace-concurrency=1 $PACKAGES run $CHECK --maxWorkers=2
 
 stats-events:
   extends: .node
