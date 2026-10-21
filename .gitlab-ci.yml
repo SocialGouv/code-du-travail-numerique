@@ -89,7 +89,7 @@ workflow:
 
 .node:
   stage: test
-  image: node:24.10.0-bookworm
+  image: ${CI_DEPENDENCY_PROXY_GROUP_IMAGE_PREFIX}/node:24.10.0-bookworm
   tags: [socialgouv-linux-small-amd64]
   interruptible: true
   needs: []
@@ -142,7 +142,7 @@ quality-type-check:
 quality-test:
   extends: .node-workspace
   services:
-    - name: elasticsearch:8.13.4
+    - name: ${CI_DEPENDENCY_PROXY_GROUP_IMAGE_PREFIX}/elasticsearch:8.13.4
       alias: elasticsearch
       variables:
         ES_SETTING_DISCOVERY_TYPE: single-node
