@@ -71,9 +71,9 @@ variables:
   E2E_BASE_URL: "https://code-du-travail-numerique.env-01m3ynefh062yjfa3m1pgqkhe3.dev.atlas-prod.public-cloud.social.gouv.fr"
 
 stages:
-  - test
   - build
   - deploy
+  - test
 
 workflow:
   auto_cancel:
