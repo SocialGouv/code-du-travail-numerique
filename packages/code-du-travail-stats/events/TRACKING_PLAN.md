@@ -382,6 +382,18 @@ avec `contribution`. Le `name` porte toujours le **chemin de la page** (`contrib
 sur la fiche générique, `contribution/<num>-<slug>` sur une fiche CC) : c'est ce qui manquait
 aux events historiques pour attribuer chaque étape à une contribution précise.
 
+**Test « citation correcte de nos contributions » (#7493) : catégorie `cc_search_funnel_test`.**
+Sur les quatre pages pilotes du test (les deux fiches génériques « salaire minimum d'un
+alternant » et « congés pour événements familiaux », et leurs fiches CC 1518 et 3239), la
+réponse Code du travail est visible d'emblée, sans passer par le choix de CC : les taux du
+funnel n'y sont plus comparables aux autres pages. Les **mêmes 24 events** y partent donc,
+avec les mêmes `action` et `name`, mais sous la catégorie **`cc_search_funnel_test`** au lieu
+de `cc_search_funnel`. Le funnel historique n'est ainsi pas pollué, et les pilotes se lisent à
+part dans Matomo. Les autres events de ces pages (`reponse_consultee`,
+`explorez_thematique_affichee`…) gardent leur catégorie d'origine : on les isole par `name`.
+À la fin du test, retirer les pages pilotes (`answerScopePilot.ts`) remet tout dans
+`cc_search_funnel`.
+
 **Périmètre** : les deux façades contribution (fiche générique et fiche CC personnalisée).
 Les composants de recherche étant partagés avec les simulateurs, la page « Trouver sa
 convention collective » et les widgets, ils reçoivent des **callbacks optionnels** : hors

@@ -13,6 +13,8 @@ import { RELATED_ARTICLES_TITLE, RelatedItem } from "../documents/type";
 import { ContributionAgreementDeclinations } from "./ContributionAgreementDeclinations";
 import { AgreementDeclination, Contribution } from "./type";
 import { ContributionRating } from "./rating";
+import { AnswerScopeDisclaimer } from "./AnswerScopeDisclaimer";
+import { getAnswerScopePilot } from "./answerScopePilot";
 import { focusableTitle } from "../common/focusableTitle";
 import { ExploreThemes } from "./explore-themes/ExploreThemes";
 import type { ExploreTheme } from "./explore-themes/type";
@@ -46,6 +48,7 @@ export const ContributionGenericContent = forwardRef<
     ref
   ) => {
     const { emitContentViewed } = useContributionTracking();
+    const answerScopePilot = getAnswerScopePilot(contribution);
     // N'observe que quand le bloc générique est réellement affiché.
     const titleRef = useContentViewTracking<HTMLHeadingElement>(
       () => emitContentViewed(contribution.slug),
@@ -91,6 +94,9 @@ export const ContributionGenericContent = forwardRef<
               Réponse d&apos;après le Code du Travail
             </h2>
             {alertText}
+            {answerScopePilot && (
+              <AnswerScopeDisclaimer {...answerScopePilot.disclaimer} />
+            )}
             <ContributionContent contribution={contribution} titleLevel={2} />
             <ExploreThemes
               themes={exploreThemes}
