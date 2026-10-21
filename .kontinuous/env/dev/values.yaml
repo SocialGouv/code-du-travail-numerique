@@ -1,0 +1,4 @@
+app:
+  env:
+    - name: "NEXT_PUBLIC_BRANCH_NAME_SLUG"
+      value: "{{.Values.global.branchSlug32}}"

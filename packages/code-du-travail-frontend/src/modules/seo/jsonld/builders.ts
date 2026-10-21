@@ -101,11 +101,15 @@ export function buildContentThemeJsonLd({
   url,
   datePublished,
   themes,
+  disambiguatingDescription,
 }: {
   name: string;
   url: string;
   datePublished?: string;
   themes: ContentThemeItem[];
+  // Précise la portée du contenu (ex. : réponse Code du travail vs convention
+  // collective) pour les moteurs de réponse IA.
+  disambiguatingDescription?: string;
 }): Record<string, unknown> {
   const absoluteUrl = toAbsoluteUrl(url);
   const rootTheme = themes[0];
@@ -124,12 +128,51 @@ export function buildContentThemeJsonLd({
     publisher: { "@id": JSON_LD_ENTITY_IDS.organization },
     ...(isoDate ? { datePublished: isoDate, dateModified: isoDate } : {}),
     ...(rootTheme ? { articleSection: rootTheme.label } : {}),
+    ...(disambiguatingDescription ? { disambiguatingDescription } : {}),
     about: themes.map((theme) => ({
       "@type": "Thing",
       name: theme.label,
       url: toAbsoluteUrl(theme.slug),
     })),
     keywords: themes.map((theme) => theme.label),
+  };
+}
+
+// FAQPage mono-question : le H1 de la page est déjà une question, on s'en sert
+// comme unique `Question`. `question` doit reprendre le H1 mot pour mot et
+// `answer` le texte visible dans la page (conformité Google).
+export function buildFaqPageJsonLd({
+  question,
+  answer,
+  url,
+}: {
+  question: string;
+  answer: string;
+  url: string;
+}): Record<string, unknown> {
+  const absoluteUrl = toAbsoluteUrl(url);
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    url: absoluteUrl,
+    inLanguage: "fr-FR",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: question,
+        acceptedAnswer: { "@type": "Answer", text: answer },
+      },
+    ],
+  };
+}
+
+// Regroupe plusieurs nœuds dans un seul bloc `@graph` (un seul `@context`).
+export function buildGraphJsonLd(
+  nodes: Record<string, unknown>[]
+): Record<string, unknown> {
+  return {
+    "@context": "https://schema.org",
+    "@graph": nodes.map(({ "@context": _context, ...node }) => node),
   };
 }
 
