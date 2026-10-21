@@ -160,6 +160,7 @@ quality-test:
     - pnpm --filter @socialgouv/cdtn-utils --filter @socialgouv/modeles-social build
     - for i in $(seq 1 60); do curl -fsS "$ELASTICSEARCH_URL/_cat/health?h=status" | grep -Eq '^(green|yellow)$' && break; sleep 2; done
     - curl -fsS "$ELASTICSEARCH_URL/_cat/health?v"
+    - unset $(env | grep -o '^NEXT_PUBLIC_[A-Z0-9_]*')
     - pnpm --no-bail --workspace-concurrency=1 $PACKAGES run $CHECK --maxWorkers=2
 
 stats-events:
