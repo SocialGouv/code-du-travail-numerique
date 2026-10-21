@@ -24,6 +24,10 @@ include:
     inputs:
       job_name: deploy-dev
       stage: deploy
+      rules:
+        - if: $SCHEDULED_JOB
+          when: never
+        - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
       gitops_project: socialgouv/produits-dnum/citoyens/cdtn/cdtn-gitops
       app_name: cdtn
       deploy_action: dev
@@ -32,6 +36,10 @@ include:
     inputs:
       job_name: deploy-test
       stage: deploy
+      rules:
+        - if: $SCHEDULED_JOB
+          when: never
+        - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
       gitops_project: socialgouv/produits-dnum/citoyens/cdtn/cdtn-gitops
       app_name: cdtn
       deploy_action: test
@@ -40,6 +48,10 @@ include:
     inputs:
       job_name: deploy-preprod
       stage: deploy
+      rules:
+        - if: $SCHEDULED_JOB
+          when: never
+        - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
       gitops_project: socialgouv/produits-dnum/citoyens/cdtn/cdtn-gitops
       app_name: cdtn
       deploy_action: preprod
@@ -56,8 +68,10 @@ variables:
   NEXT_PUBLIC_PIWIK_SITE_ID: "3"
   NEXT_PUBLIC_PIWIK_URL: "https://matomo.fabrique.social.gouv.fr"
   NEXT_PUBLIC_SENTRY_ENV: "dev"
+  E2E_BASE_URL: "https://code-du-travail-numerique.env-01m3ynefh062yjfa3m1pgqkhe3.dev.atlas-prod.public-cloud.social.gouv.fr"
 
 stages:
+  - test
   - build
   - deploy
 
@@ -68,8 +82,132 @@ workflow:
     - if: $CI_COMMIT_BRANCH
 
 .build-rules: &build-rules
+  - if: $SCHEDULED_JOB
+    when: never
   - if: $CI_COMMIT_BRANCH =~ /^(feat|fix|chore|migration)\//
   - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+
+.node:
+  stage: test
+  image: node:24.10.0-bookworm
+  tags: [socialgouv-linux-small-amd64]
+  interruptible: true
+  needs: []
+  variables:
+    HTTP_PROXY: http://proxyweb.intranet.social.gouv.fr:8002
+    HTTPS_PROXY: http://proxyweb.intranet.social.gouv.fr:8002
+    NO_PROXY: pic.sg.social.gouv.fr,localhost,127.0.0.1
+    http_proxy: http://proxyweb.intranet.social.gouv.fr:8002
+    https_proxy: http://proxyweb.intranet.social.gouv.fr:8002
+    no_proxy: pic.sg.social.gouv.fr,localhost,127.0.0.1
+  cache:
+    key:
+      files: [pnpm-lock.yaml]
+    paths: [.pnpm-store]
+  before_script:
+    - npm install -g pnpm@11.9.0
+    - pnpm config set store-dir .pnpm-store
+    - pnpm install --frozen-lockfile
+  rules: *build-rules
+
+.node-workspace:
+  extends: .node
+  variables:
+    PACKAGES: --filter @cdt/frontend --filter @socialgouv/modeles-social --filter @socialgouv/cdtn-utils --filter @socialgouv/cdtn-stats
+  script:
+    - pnpm --filter @socialgouv/cdtn-utils --filter @socialgouv/modeles-social build
+    - pnpm --no-bail $PACKAGES run $CHECK $CHECK_ARGS
+
+quality-build:
+  extends: .node
+  script:
+    - pnpm build
+
+quality-lint:
+  extends: .node-workspace
+  variables:
+    CHECK: lint
+    CHECK_ARGS: --quiet
+
+quality-format:
+  extends: .node-workspace
+  variables:
+    CHECK: format:check
+
+quality-type-check:
+  extends: .node-workspace
+  variables:
+    CHECK: type-check
+
+quality-test:
+  extends: .node-workspace
+  services:
+    - name: elasticsearch:8.13.4
+      alias: elasticsearch
+      variables:
+        ES_SETTING_DISCOVERY_TYPE: single-node
+        ES_SETTING_XPACK_SECURITY_ENABLED: "false"
+        ES_SETTING_NODE_STORE_ALLOW__MMAP: "false"
+        ES_JAVA_OPTS: -Xms512m -Xmx512m
+  variables:
+    PACKAGES: --filter @cdt/frontend --filter @socialgouv/modeles-social
+    CHECK: test
+    ELASTICSEARCH_URL: http://localhost:9200
+  script:
+    - pnpm --filter @socialgouv/cdtn-utils --filter @socialgouv/modeles-social build
+    - for i in $(seq 1 60); do curl -fsS "$ELASTICSEARCH_URL/_cat/health?h=status" | grep -Eq '^(green|yellow)$' && break; sleep 2; done
+    - pnpm --no-bail $PACKAGES run $CHECK
+
+stats-events:
+  extends: .node
+  script:
+    - pnpm -F @socialgouv/cdtn-stats events:check
+    - pnpm -F @socialgouv/cdtn-stats test
+  rules:
+    - if: $SCHEDULED_JOB
+      when: never
+    - if: $CI_COMMIT_BRANCH =~ /^(feat|fix|chore|migration)\// || $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+      changes: ["packages/code-du-travail-stats/**/*", ".gitlab-ci.yml"]
+
+.e2e:
+  extends: .node
+  variables:
+    TEST_BASEURL: $E2E_BASE_URL
+  artifacts:
+    when: always
+    expire_in: 7 days
+    paths: [packages/code-du-travail-frontend/playwright-report/]
+
+e2e-heavy:
+  extends: .e2e
+  script:
+    - pnpm --filter @cdt/frontend exec playwright install --with-deps chromium
+    - pnpm test:e2e -- --project=chromium --project=widgets
+  rules:
+    - if: $SCHEDULED_JOB == "e2e-heavy"
+
+e2e-html:
+  extends: .e2e
+  script:
+    - pnpm --filter @cdt/frontend exec playwright install --with-deps chromium
+    - pnpm test:e2e -- --project=html-validation
+  rules:
+    - if: $SCHEDULED_JOB == "e2e-html"
+
+lighthouse:
+  extends: .node
+  variables:
+    LHCI_BASE_URL: $E2E_BASE_URL
+  before_script: []
+  script:
+    - apt-get update && apt-get install -y --no-install-recommends chromium
+    - CHROME_PATH=/usr/bin/chromium npx --yes @lhci/cli@0.15.1 autorun --upload.target=filesystem --upload.outputDir=lhci-report --collect.settings.chromeFlags="--no-sandbox --headless=new"
+  artifacts:
+    when: always
+    expire_in: 7 days
+    paths: [lhci-report/]
+  rules:
+    - if: $SCHEDULED_JOB == "lighthouse"
 
 # ---------------------------------------------------------------------------
 # BUILD : 1 image via le backend DinD mutualisé (ci-common). cdtn = produit -> DinD.
