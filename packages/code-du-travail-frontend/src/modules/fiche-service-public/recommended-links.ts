@@ -7,33 +7,11 @@ import {
 import { elasticDocumentsIndex, elasticsearchClient } from "../../api/utils";
 import { fetchExploreThemesBySlugs } from "../contributions/explore-themes/queries";
 import { ExploreTheme } from "../contributions/explore-themes/type";
+import { themeSlugOf } from "../themes/sortByThemeOrder";
 import { ElasticFicheServicePublic, RecommendedLink } from "./queries";
 import { getRecommendedItemKey, RecommendedItem } from "./types";
 
 const MAX_LINKS = 4;
-
-// `/themes/<parent>#<sous-theme>` : le sous-thème est l'ancre, ou le dernier
-// segment pour un thème de premier niveau.
-const getThemeSlugFromBreadcrumb = (slug: string): string =>
-  slug.split("#")[1] ?? slug.replace(/^\/?themes\//, "");
-
-const getThemeSlug = (link: RecommendedLink): string | undefined => {
-  switch (link.type) {
-    case "l2":
-      return link.l2;
-    case "document":
-      return undefined;
-  }
-};
-
-const getDocumentId = (link: RecommendedLink): string | undefined => {
-  switch (link.type) {
-    case "document":
-      return link.cdtnId;
-    case "l2":
-      return undefined;
-  }
-};
 
 type LinkedDocument = {
   cdtnId: string;
@@ -48,7 +26,7 @@ const getBreadcrumbsThemeSlug = (
   breadcrumbs: ElasticFicheServicePublic["breadcrumbs"] = []
 ): string | undefined => {
   const last = breadcrumbs[breadcrumbs.length - 1];
-  return last ? getThemeSlugFromBreadcrumb(last.slug) : undefined;
+  return last ? themeSlugOf(last) : undefined;
 };
 
 // Les liens sont figés à l'export : on relit les documents pour écarter ceux
@@ -116,16 +94,16 @@ export const fetchFicheSPRecommendedLinks = async (
 
   // Les documents d'abord : leur fil d'Ariane donne les sous-thèmes dont il
   // faut l'icône, résolus avec les autres thèmes en une seule requête.
-  const documentIds = sortedLinks
-    .map(getDocumentId)
-    .filter((id) => id !== undefined);
+  const documentIds = sortedLinks.flatMap((link) =>
+    link.type === "document" ? [link.cdtnId] : []
+  );
   const documents = await fetchPublishedDocumentsByIds([
     ...new Set(documentIds),
   ]);
 
   const themeSlugs = [
     currentThemeSlug,
-    ...sortedLinks.map(getThemeSlug),
+    ...sortedLinks.flatMap((link) => (link.type === "l2" ? [link.l2] : [])),
     ...[...documents.values()].map((doc) =>
       getBreadcrumbsThemeSlug(doc.breadcrumbs)
     ),
@@ -146,13 +124,13 @@ export const fetchFicheSPRecommendedLinks = async (
     }),
   ];
 
+  const seen = new Set<string>();
   return items
-    .filter(
-      (item, index) =>
-        items.findIndex(
-          (other) =>
-            getRecommendedItemKey(other) === getRecommendedItemKey(item)
-        ) === index
-    )
+    .filter((item) => {
+      const key = getRecommendedItemKey(item);
+      if (seen.has(key)) return false;
+      seen.add(key);
+      return true;
+    })
     .slice(0, MAX_LINKS);
 };

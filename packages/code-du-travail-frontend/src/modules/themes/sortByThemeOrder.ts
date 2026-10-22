@@ -17,7 +17,7 @@ const UNRANKED = Number.MAX_SAFE_INTEGER;
  * Slug du thème désigné par un breadcrumb, tel que construit par cdtn-admin :
  * `/themes/parent#enfant` → `enfant`, `/themes/parent` → `parent`.
  */
-const themeSlugOf = ({ slug }: Breadcrumb): string => {
+export const themeSlugOf = ({ slug }: Breadcrumb): string => {
   const [path, hash] = slug.split("#");
   return hash ?? path.slice(path.lastIndexOf("/") + 1);
 };

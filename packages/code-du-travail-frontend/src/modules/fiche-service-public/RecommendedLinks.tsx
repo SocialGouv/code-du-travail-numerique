@@ -2,11 +2,12 @@
 
 import React from "react";
 import { fr } from "@codegouvfr/react-dsfr";
-import { Tile } from "@codegouvfr/react-dsfr/Tile";
 import { css } from "@styled-system/css";
-import { ThemeTile } from "../contributions/explore-themes/ExploreThemes";
+import {
+  ContentTile,
+  ThemeTile,
+} from "../contributions/explore-themes/ExploreThemes";
 import { useContentViewTracking } from "../contributions/useContentViewTracking";
-import { ThemeIcon } from "../common/ThemeIcon";
 import { useFicheSPTracking } from "./tracking";
 import { getRecommendedItemKey, RecommendedItem } from "./types";
 
@@ -28,19 +29,13 @@ const RecommendedItemTile = ({
       return <ThemeTile theme={item.theme} titleAs="h3" onClick={onClick} />;
     case "document":
       return (
-        <Tile
-          orientation="horizontal"
-          small
-          noIcon
-          enlargeLinkOrButton
-          titleAs="h3"
-          pictogram={
-            item.iconName ? <ThemeIcon name={item.iconName} /> : undefined
-          }
+        <ContentTile
           title={item.title}
           desc={item.desc}
-          linkProps={{ href: item.url, onClick }}
-          classes={{ desc: tileDesc }}
+          href={item.url}
+          iconName={item.iconName}
+          titleAs="h3"
+          onClick={onClick}
         />
       );
   }
@@ -79,12 +74,6 @@ export function RecommendedLinks({ items, ficheSlug }: Props) {
     </div>
   );
 }
-
-// Mêmes réglages que les cartes « Explorez nos thématiques » des contributions.
-const tileDesc = css({
-  fontSize: "1rem",
-  lineHeight: "1.5625rem",
-});
 
 const hideOnPrint = css({
   "@media print": {

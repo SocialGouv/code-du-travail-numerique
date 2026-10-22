@@ -67,15 +67,25 @@ export function ExploreThemes({
   );
 }
 
-type ThemeTileProps = {
-  theme: ExploreTheme;
+type ContentTileProps = {
+  title: string;
+  desc: string;
+  href: string;
+  iconName?: string;
   titleAs?: "h3" | "h4";
   onClick?: () => void;
 };
 
-// Carte d'un sous-thème, partagée avec les liens recommandés des fiches
-// service-public.
-export function ThemeTile({ theme, titleAs = "h4", onClick }: ThemeTileProps) {
+// Carte de ces rubriques, partagée avec les liens recommandés des fiches
+// service-public (sous-thèmes comme contenus).
+export function ContentTile({
+  title,
+  desc,
+  href,
+  iconName,
+  titleAs = "h4",
+  onClick,
+}: ContentTileProps) {
   return (
     <Tile
       orientation="horizontal"
@@ -83,13 +93,27 @@ export function ThemeTile({ theme, titleAs = "h4", onClick }: ThemeTileProps) {
       noIcon
       enlargeLinkOrButton
       titleAs={titleAs}
-      pictogram={
-        theme.iconName ? <ThemeIcon name={theme.iconName} /> : undefined
-      }
+      pictogram={iconName ? <ThemeIcon name={iconName} /> : undefined}
+      title={title}
+      desc={desc}
+      linkProps={{ href, onClick }}
+      classes={{ desc: tileDesc }}
+    />
+  );
+}
+
+type ThemeTileProps = Pick<ContentTileProps, "titleAs" | "onClick"> & {
+  theme: ExploreTheme;
+};
+
+export function ThemeTile({ theme, ...props }: ThemeTileProps) {
+  return (
+    <ContentTile
       title={theme.title}
       desc={theme.description ?? documentCountLabel(theme.documentCount)}
-      linkProps={{ href: theme.href, onClick }}
-      classes={{ desc: tileDesc }}
+      href={theme.href}
+      iconName={theme.iconName}
+      {...props}
     />
   );
 }
