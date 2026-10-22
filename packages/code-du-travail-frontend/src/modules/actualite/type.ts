@@ -18,6 +18,7 @@ type NewsExternalLink = {
   intro?: string;
 };
 
+// « Contenus liés » d'une actualité.
 export type NewsLink =
   | {
       type: "cdtn";
@@ -32,14 +33,6 @@ export type NewsReference =
   | { type: "legi"; title: string; url: string; intro?: string }
   | NewsExternalLink;
 
-// Lien « Pour aller plus loin » dont l'URL est déjà calculée.
-export type NewsFurtherReadingLink = {
-  title: string;
-  url: string;
-  intro?: string;
-  external: boolean;
-};
-
 // A remplacer par `@socialgouv/cdtn-types` dès la publication des types de l'admin.
 export type NewsDocument = NewsElasticDocument & {
   updatedAt?: string;
@@ -53,7 +46,6 @@ export type News = Pick<
   "title" | "meta_title" | "content" | "meta_description" | "date"
 > & {
   relatedItems: { items: RelatedItem[]; title: string }[];
-  links: NewsFurtherReadingLink[];
   image?: NewsImage & { url: string };
   references: NewsReference[];
   modifiedTime?: string;

@@ -18,16 +18,34 @@ const base = {
 };
 
 describe("format (actualité)", () => {
-  it("regroupe linkedContent dans la colonne de droite comme sur dev", () => {
+  it("regroupe les contenus liés de l'admin dans la colonne de droite, dans l'ordre saisi", () => {
     const result = format({
       ...base,
-      linkedContent: [
-        { source: SOURCES.TOOLS, slug: "simulateur", title: "Simu" },
-        { source: SOURCES.LETTERS, slug: "modele", title: "Modèle" },
-        { source: SOURCES.SHEET_SP, slug: "fiche", title: "Fiche" },
-      ] as unknown as LinkedContent[],
       links: [
-        { type: "external", title: "Externe", url: "https://example.com" },
+        {
+          type: "external",
+          title: "Externe",
+          url: "https://example.com",
+          intro: "Le site officiel",
+        },
+        {
+          type: "cdtn",
+          source: SOURCES.TOOLS,
+          slug: "simulateur",
+          title: "Simu",
+        },
+        {
+          type: "cdtn",
+          source: SOURCES.SHEET_SP,
+          slug: "fiche",
+          title: "Fiche",
+        },
+        {
+          type: "cdtn",
+          source: SOURCES.LETTERS,
+          slug: "modele",
+          title: "Modèle",
+        },
       ],
     });
     expect(result.relatedItems).toEqual([
@@ -51,6 +69,13 @@ describe("format (actualité)", () => {
         title: "Contenus liés",
         items: [
           {
+            title: "Externe",
+            source: SOURCES.EXTERNALS,
+            url: "https://example.com",
+            intro: "Le site officiel",
+            external: true,
+          },
+          {
             title: "Fiche",
             source: SOURCES.SHEET_SP,
             url: "/fiche-service-public/fiche",
@@ -60,38 +85,43 @@ describe("format (actualité)", () => {
     ]);
   });
 
-  it("expose les liens « Pour aller plus loin » à part, avec leur url", () => {
+  it("prend linkedContent quand l'export n'a pas encore de liens", () => {
     const result = format({
       ...base,
-      links: [
-        {
-          type: "external",
-          title: "Externe",
-          url: "https://example.com",
-          intro: "Le site officiel",
-        },
-        {
-          type: "cdtn",
-          source: SOURCES.TOOLS,
-          slug: "simulateur",
-          title: "Simu",
-        },
-      ],
+      linkedContent: [
+        { source: SOURCES.TOOLS, slug: "simulateur", title: "Simu" },
+        { source: SOURCES.SHEET_SP, slug: "fiche", title: "Fiche" },
+      ] as unknown as LinkedContent[],
     });
-    expect(result.relatedItems).toEqual([]);
-    expect(result.links).toEqual([
+    expect(result.relatedItems).toEqual([
       {
-        title: "Externe",
-        url: "https://example.com",
-        intro: "Le site officiel",
-        external: true,
+        title: "Simulateurs",
+        items: [
+          { title: "Simu", source: SOURCES.TOOLS, url: "/outils/simulateur" },
+        ],
       },
-      { title: "Simu", url: "/outils/simulateur", external: false },
+      {
+        title: "Contenus liés",
+        items: [
+          {
+            title: "Fiche",
+            source: SOURCES.SHEET_SP,
+            url: "/fiche-service-public/fiche",
+          },
+        ],
+      },
     ]);
   });
 
-  it("renvoie [] quand links est absent", () => {
-    expect(format(base).links).toEqual([]);
+  it("ignore linkedContent dès que l'export fournit les liens", () => {
+    const result = format({
+      ...base,
+      linkedContent: [
+        { source: SOURCES.SHEET_SP, slug: "fiche", title: "Fiche" },
+      ] as unknown as LinkedContent[],
+      links: [],
+    });
+    expect(result.relatedItems).toEqual([]);
   });
 
   it("calcule l'url de l'image", () => {

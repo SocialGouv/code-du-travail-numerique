@@ -9,12 +9,7 @@ import {
 import { LinkedContent } from "@socialgouv/cdtn-types/build/elastic/related-items";
 import { toUrl } from "../utils/url";
 import { getNewsModifiedTime } from "./dates";
-import {
-  News,
-  NewsDocument,
-  NewsFurtherReadingLink,
-  NewsSummary,
-} from "./type";
+import { News, NewsDocument, NewsLink, NewsSummary } from "./type";
 
 export const fetchNewsList = async <K extends keyof NewsDocument>(
   fields: K[],
@@ -133,16 +128,33 @@ export const format = ({
   | "links"
   | "references"
 >): News => {
-  const buildItems = (arr: LinkedContent[]): RelatedItem[] =>
-    arr.map((item) => ({
-      title: item.title,
-      source: item.source as Source,
-      url: `/${getRouteBySource(item.source)}/${item.slug}`,
-    }));
+  const toRelatedItem = (link: NewsLink): RelatedItem =>
+    link.type === "external"
+      ? {
+          title: link.title,
+          source: SOURCES.EXTERNALS,
+          url: link.url,
+          external: true,
+          ...(link.intro ? { intro: link.intro } : {}),
+        }
+      : {
+          title: link.title,
+          source: link.source as Source,
+          url: `/${getRouteBySource(link.source as SourceKeys)}/${link.slug}`,
+          ...(link.intro ? { intro: link.intro } : {}),
+        };
+
+  // Les « Contenus liés » de l'admin (`links` : contenus CDTN et liens
+  // externes, dans l'ordre saisi). Un export antérieur n'a que `linkedContent`.
+  const items = links
+    ? links.map(toRelatedItem)
+    : linkedContent.map((item: LinkedContent) =>
+        toRelatedItem({ type: "cdtn", ...item })
+      );
 
   const categories: Array<{
     title: string;
-    filter: (i: LinkedContent) => boolean;
+    filter: (i: RelatedItem) => boolean;
   }> = [
     {
       title: "Simulateurs",
@@ -160,10 +172,8 @@ export const format = ({
 
   const relatedItems = categories
     .map(({ title, filter }) => {
-      const filtered = linkedContent.filter(filter);
-      return filtered.length
-        ? { title, items: buildItems(filtered) }
-        : undefined;
+      const filtered = items.filter(filter);
+      return filtered.length ? { title, items: filtered } : undefined;
     })
     .filter((x): x is { title: string; items: RelatedItem[] } => Boolean(x));
 
@@ -174,17 +184,6 @@ export const format = ({
     content,
     meta_description,
     relatedItems,
-    links: (links ?? []).map(
-      (link): NewsFurtherReadingLink => ({
-        title: link.title,
-        url:
-          link.type === "external"
-            ? link.url
-            : `/${getRouteBySource(link.source as SourceKeys)}/${link.slug}`,
-        external: link.type === "external",
-        ...(link.intro ? { intro: link.intro } : {}),
-      })
-    ),
     image: image ? { ...image, url: toUrl(image.filename) } : undefined,
     references: references ?? [],
     modifiedTime: getNewsModifiedTime(date, updatedAt),

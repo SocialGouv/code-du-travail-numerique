@@ -30,6 +30,11 @@ export const RELATED_ARTICLES_TITLE = "Articles liés";
 export type RelatedItem = Pick<DocumentElastic, "title"> & {
   source: Source;
   url: string;
+  // Texte affiché avant le lien (« intro : lien »), saisi dans l'admin des
+  // actualités.
+  intro?: string;
+  // Lien hors du site, ouvert dans un nouvel onglet.
+  external?: boolean;
 };
 
 export type LinkedContent = Pick<DocumentElastic, "title"> & {
