@@ -75,6 +75,17 @@ describe("generateDefaultMetadata", () => {
     });
   });
 
+  it("indique la rubrique de l'article (article:section)", () => {
+    const metadata = generateDefaultMetadata({
+      title: "title",
+      description: "description",
+      path: "/actualite/slug",
+      article: { section: "Actualités" },
+    });
+
+    expect(metadata.openGraph).toHaveProperty("section", "Actualités");
+  });
+
   it("indique og:url uniquement pour une page article", () => {
     const article = generateDefaultMetadata({
       title: "title",

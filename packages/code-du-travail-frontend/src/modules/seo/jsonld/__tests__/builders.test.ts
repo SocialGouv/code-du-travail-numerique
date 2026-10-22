@@ -104,11 +104,16 @@ describe("jsonld builders", () => {
     expect(jsonld["@type"]).toBe("NewsArticle");
     expect(jsonld.datePublished).toBe("2026-09-18T00:00:00+02:00");
     expect(jsonld.dateModified).toBe("2026-09-18T00:00:00+02:00");
-    // Auteur et éditeur = l'entité organisation du site (nom + url), comme Article.
-    expect(jsonld.author).toEqual({ "@id": JSON_LD_ENTITY_IDS.organization });
-    expect(jsonld.publisher).toEqual({
+    // Auteur et éditeur = l'entité organisation du site, nom et url en ligne.
+    expect(jsonld.author).toMatchObject({
+      "@type": "GovernmentOrganization",
       "@id": JSON_LD_ENTITY_IDS.organization,
+      name: "Code du travail numérique",
     });
+    expect(jsonld.author).not.toHaveProperty("@context");
+    expect(jsonld.publisher).toEqual(jsonld.author);
+    expect(jsonld.isPartOf).toEqual({ "@id": JSON_LD_ENTITY_IDS.website });
+    expect(jsonld.articleSection).toBe("Actualités");
     expect(jsonld).toMatchSnapshot();
   });
 

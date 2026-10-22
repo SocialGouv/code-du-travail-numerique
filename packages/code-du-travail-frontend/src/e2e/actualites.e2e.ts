@@ -42,6 +42,13 @@ test.describe("Actualités", () => {
     await expect(
       page.locator('meta[property="article:modified_time"]')
     ).toHaveAttribute("content", NEWS_ISO_DATE_TIME);
+    await expect(
+      page.locator('meta[property="article:section"]')
+    ).toHaveAttribute("content", "Actualités");
+    await expect(page.locator('meta[name="robots"]').first()).toHaveAttribute(
+      "content",
+      /max-snippet:-1, max-image-preview:large/
+    );
     const canonical = await page
       .locator('link[rel="canonical"]')
       .getAttribute("href");

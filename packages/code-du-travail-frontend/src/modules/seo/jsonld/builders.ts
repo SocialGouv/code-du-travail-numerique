@@ -23,14 +23,18 @@ function toAbsoluteUrl(href: string): string {
   return `${base}${path}`;
 }
 
+const buildOrganization = (): Record<string, unknown> => ({
+  "@type": "GovernmentOrganization",
+  "@id": JSON_LD_ENTITY_IDS.organization,
+  name: "Code du travail numérique",
+  url: SITE_URL,
+  logo: toAbsoluteUrl("/static/assets/img/logo.svg"),
+});
+
 export function buildGovernmentOrganizationJsonLd(): Record<string, unknown> {
   return {
     "@context": "https://schema.org",
-    "@type": "GovernmentOrganization",
-    "@id": JSON_LD_ENTITY_IDS.organization,
-    name: "Code du travail numérique",
-    url: SITE_URL,
-    logo: toAbsoluteUrl("/static/assets/img/logo.svg"),
+    ...buildOrganization(),
   };
 }
 
@@ -217,6 +221,8 @@ export function buildLegislationJsonLd({
 // de publication absente ou invalide → les deux champs sont omis plutôt
 // qu'émis avec une valeur invalide. `citation` liste les URL des articles de
 // loi cités par l'actualité.
+export const NEWS_ARTICLE_SECTION = "Actualités";
+
 export function buildNewsArticleJsonLd({
   headline,
   url,
@@ -236,6 +242,7 @@ export function buildNewsArticleJsonLd({
 }): Record<string, unknown> {
   const absoluteUrl = toAbsoluteUrl(url);
   const isoDate = toIsoDateTimeParis(datePublished);
+  const organization = buildOrganization();
 
   return {
     "@context": "https://schema.org",
@@ -262,11 +269,13 @@ export function buildNewsArticleJsonLd({
           ],
         }
       : {}),
-    // Même entité que `publisher` et que l'Article des autres contenus : Google
-    // recommande un auteur identifié (nom + url), portés par l'entité
-    // GovernmentOrganization émise sur toutes les pages.
-    author: { "@id": JSON_LD_ENTITY_IDS.organization },
-    publisher: { "@id": JSON_LD_ENTITY_IDS.organization },
+    // Entité GovernmentOrganization émise sur toutes les pages (même @id),
+    // recopiée en ligne : Google Actualités lit le nom et l'url de l'auteur
+    // directement dans le NewsArticle.
+    author: organization,
+    publisher: organization,
+    isPartOf: { "@id": JSON_LD_ENTITY_IDS.website },
+    articleSection: NEWS_ARTICLE_SECTION,
     inLanguage: "fr-FR",
     isAccessibleForFree: true,
     ...(citations?.length ? { citation: citations } : {}),

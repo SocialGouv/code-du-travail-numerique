@@ -6,6 +6,7 @@ import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
 import { fetchNews, format, News, NewsContainer } from "src/modules/actualite";
 import { Metadata } from "next";
 import { NewsArticleJsonLd } from "src/modules/seo/jsonld";
+import { NEWS_ARTICLE_SECTION } from "src/modules/seo/jsonld/builders";
 import { NEWS_RSS_FEED } from "src/modules/actualite/rss";
 import { getNewsModifiedTime } from "src/modules/actualite/dates";
 import { toIsoDateTimeParis } from "src/modules/utils/date";
@@ -32,7 +33,10 @@ export async function generateMetadata(
     // Méta titre saisi dans l'admin, sinon le titre de l'actualité.
     title: news.meta_title?.trim() || news.title,
     description: news.meta_description,
-    robots: "index, follow, max-image-preview:large",
+    // Extraits, images et vidéos sans limite de taille dans Google (Discover,
+    // Actualités).
+    robots:
+      "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
     path: `/${getRouteBySource(SOURCES.NEWS)}/${params.slug}`,
     feed: NEWS_RSS_FEED,
     // og:type article + article:published_time / article:modified_time (mêmes
@@ -40,6 +44,7 @@ export async function generateMetadata(
     article: {
       publishedTime: toIsoDateTimeParis(news.date),
       modifiedTime: getNewsModifiedTime(news.date, news.updatedAt),
+      section: NEWS_ARTICLE_SECTION,
     },
     ...(news.image && {
       image: {
