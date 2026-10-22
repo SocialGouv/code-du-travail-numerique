@@ -1,8 +1,8 @@
 {
   "scan_root": "packages/code-du-travail-frontend/src",
-  "callsites": 106,
-  "total_events": 143,
-  "unique_events": 131,
+  "callsites": 108,
+  "total_events": 145,
+  "unique_events": 133,
   "unresolved_callsites": 0,
   "events": [
     {
@@ -1320,6 +1320,35 @@
       "file": "packages/code-du-travail-frontend/src/modules/outils/indemnite-depart/feedback/tracking.tsx",
       "line": 50,
       "enum_refs": [],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "fiche-service-public",
+      "action": "clic_lien_recommande",
+      "name_pattern": "<JSON.stringify({ slug: toFicheEventName(ficheSlug), cible: toEventName(href), po>",
+      "resolution": "literal",
+      "emit_function": "emitClickRecommendedLink",
+      "file": "packages/code-du-travail-frontend/src/modules/fiche-service-public/tracking.ts",
+      "line": 31,
+      "enum_refs": [
+        "JSON.stringify",
+        "TrackingFicheSPAction.CLICK_RECOMMENDED_LINK",
+        "TrackingFicheSPCategory.FICHE_SP"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "fiche-service-public",
+      "action": "liens_recommandes_affiches",
+      "name_pattern": "<toFicheEventName(ficheSlug)>",
+      "resolution": "literal",
+      "emit_function": "emitRecommendedLinksViewed",
+      "file": "packages/code-du-travail-frontend/src/modules/fiche-service-public/tracking.ts",
+      "line": 45,
+      "enum_refs": [
+        "TrackingFicheSPAction.RECOMMENDED_LINKS_VIEWED",
+        "TrackingFicheSPCategory.FICHE_SP"
+      ],
       "tracking_method": "sendEvent"
     },
     {

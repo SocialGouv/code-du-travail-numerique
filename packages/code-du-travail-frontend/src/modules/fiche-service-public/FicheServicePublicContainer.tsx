@@ -12,35 +12,8 @@ import { FicheSPData } from "./builder/type";
 import { AccordionWithAnchor } from "../common/AccordionWithAnchor";
 import { fromDocumentBreadcrumbs } from "../layout/breadcrumb";
 import { injectContributionPromos } from "./contributions/injectContributionPromos";
-import { Tile } from "@codegouvfr/react-dsfr/Tile";
-import { css } from "@styled-system/css";
-import { ThemeTile } from "../contributions/explore-themes/ExploreThemes";
-import { ThemeIcon } from "../common/ThemeIcon";
-import { getRecommendedItemKey, RecommendedItem } from "./types";
-
-const RecommendedItemTile = ({ item }: { item: RecommendedItem }) => {
-  switch (item.type) {
-    case "theme":
-      return <ThemeTile theme={item.theme} titleAs="h3" />;
-    case "document":
-      return (
-        <Tile
-          orientation="horizontal"
-          small
-          noIcon
-          enlargeLinkOrButton
-          titleAs="h3"
-          pictogram={
-            item.iconName ? <ThemeIcon name={item.iconName} /> : undefined
-          }
-          title={item.title}
-          desc={item.desc}
-          linkProps={{ href: item.url }}
-          classes={{ desc: tileDesc }}
-        />
-      );
-  }
-};
+import { RecommendedLinks } from "./RecommendedLinks";
+import { RecommendedItem } from "./types";
 
 type Props = {
   relatedItems: { items: RelatedItem[]; title: string }[];
@@ -106,34 +79,8 @@ export function FicheServicePublicContainer({
           />
         )}
 
-        {recommendedLinks.length > 0 && (
-          <div className={`${fr.cx("fr-mt-5w")} ${hideOnPrint}`}>
-            <h2 className={fr.cx("fr-h5")}>Liens recommandés</h2>
-            <div className={fr.cx("fr-grid-row", "fr-grid-row--gutters")}>
-              {recommendedLinks.map((item) => (
-                <div
-                  key={getRecommendedItemKey(item)}
-                  className={fr.cx("fr-col-12", "fr-col-md-6")}
-                >
-                  <RecommendedItemTile item={item} />
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
+        <RecommendedLinks items={recommendedLinks} ficheSlug={slug} />
       </div>
     </ContainerRichWithBreadcrumbs>
   );
 }
-
-// Mêmes réglages que les cartes « Explorez nos thématiques » des contributions.
-const tileDesc = css({
-  fontSize: "1rem",
-  lineHeight: "1.5625rem",
-});
-
-const hideOnPrint = css({
-  "@media print": {
-    display: "none",
-  },
-});
