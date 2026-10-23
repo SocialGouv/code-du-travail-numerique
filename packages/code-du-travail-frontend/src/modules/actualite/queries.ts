@@ -8,7 +8,7 @@ import {
 } from "../documents";
 import { LinkedContent } from "@socialgouv/cdtn-types/build/elastic/related-items";
 import { toUrl } from "../utils/url";
-import { getNewsModifiedTime } from "./dates";
+import { getNewsModifiedTime, getNewsPublishedTime } from "./dates";
 import { News, NewsDocument, NewsLink, NewsSummary } from "./type";
 
 export const fetchNewsList = async <K extends keyof NewsDocument>(
@@ -46,7 +46,12 @@ export const fetchNewsList = async <K extends keyof NewsDocument>(
     },
     from,
     size: pageSize,
-    sort: [{ date: { order: "desc" } }],
+    // Même jour : la plus récemment publiée d'abord (sans `publishedAt`, en
+    // dernier).
+    sort: [
+      { date: { order: "desc" } },
+      { publishedAt: { order: "desc", unmapped_type: "date" } },
+    ],
     _source: fields,
     index: elasticDocumentsIndex,
   });
@@ -109,6 +114,7 @@ export const format = ({
   meta_title,
   date,
   updatedAt,
+  publishedAt,
   content,
   meta_description,
   linkedContent,
@@ -121,6 +127,7 @@ export const format = ({
   | "meta_title"
   | "date"
   | "updatedAt"
+  | "publishedAt"
   | "content"
   | "meta_description"
   | "linkedContent"
@@ -186,6 +193,7 @@ export const format = ({
     relatedItems,
     image: image ? { ...image, url: toUrl(image.filename) } : undefined,
     references: references ?? [],
-    modifiedTime: getNewsModifiedTime(date, updatedAt),
+    publishedTime: getNewsPublishedTime(date, publishedAt),
+    modifiedTime: getNewsModifiedTime(date, updatedAt, publishedAt),
   };
 };

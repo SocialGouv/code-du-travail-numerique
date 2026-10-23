@@ -214,9 +214,11 @@ export function buildLegislationJsonLd({
   };
 }
 
-// NewsArticle schema.org d'une actualité. La date stockée (`JJ/MM/AAAA` saisie
-// dans l'admin) est convertie en ISO 8601 avec heure et fuseau (minuit Paris),
-// format attendu par Google Actualités. `dateModified` est la date de dernière
+// NewsArticle schema.org d'une actualité. `datePublished` est l'instant de
+// publication (`publishedTime`, ISO 8601) quand il est connu ; sinon la date
+// stockée (`JJ/MM/AAAA` saisie dans l'admin) est convertie en ISO 8601 avec
+// heure et fuseau (minuit Paris), format attendu par Google Actualités.
+// `dateModified` est la date de dernière
 // modification (ISO 8601) quand elle est fournie, sinon `datePublished`. Date
 // de publication absente ou invalide → les deux champs sont omis plutôt
 // qu'émis avec une valeur invalide. `citation` liste les URL des articles de
@@ -227,6 +229,7 @@ export function buildNewsArticleJsonLd({
   headline,
   url,
   datePublished,
+  publishedTime,
   dateModified,
   description,
   image,
@@ -235,13 +238,14 @@ export function buildNewsArticleJsonLd({
   headline: string;
   url: string;
   datePublished?: string;
+  publishedTime?: string;
   dateModified?: string;
   description?: string;
   image?: { url: string; width?: number; height?: number };
   citations?: string[];
 }): Record<string, unknown> {
   const absoluteUrl = toAbsoluteUrl(url);
-  const isoDate = toIsoDateTimeParis(datePublished);
+  const isoDate = publishedTime ?? toIsoDateTimeParis(datePublished);
   const organization = buildOrganization();
 
   return {

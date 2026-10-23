@@ -12,8 +12,15 @@ export const NEWS_RSS_ITEMS_COUNT = 20;
 
 export type NewsRssItem = Pick<
   NewsDocument,
-  "title" | "meta_description" | "date" | "slug" | "image"
+  "title" | "meta_description" | "date" | "slug" | "image" | "publishedAt"
 >;
+
+// pubDate RFC 822 : instant de publication quand il est connu (en GMT, que RSS
+// 2.0 accepte), sinon la date affichée à minuit heure de Paris.
+const toPubDate = (item: NewsRssItem): string | undefined =>
+  item.publishedAt && !isNaN(Date.parse(item.publishedAt))
+    ? new Date(item.publishedAt).toUTCString()
+    : toRfc822DateParis(item.date);
 
 const escapeXml = (value: string): string =>
   value
@@ -55,7 +62,7 @@ const buildImage = (image: NonNullable<NewsRssItem["image"]>): string[] => {
 
 const buildItem = (item: NewsRssItem): string => {
   const url = absoluteUrl(`/actualite/${item.slug}`);
-  const pubDate = toRfc822DateParis(item.date);
+  const pubDate = toPubDate(item);
   const description = item.meta_description?.trim();
 
   return [
@@ -79,11 +86,11 @@ const buildItem = (item: NewsRssItem): string => {
 // date décroissante (tri Elasticsearch) ; ceux sans date valide sont rejetés
 // en fin de flux.
 export const buildNewsRssFeed = (items: NewsRssItem[]): string => {
-  const dated = items.filter((item) => toRfc822DateParis(item.date));
-  const undated = items.filter((item) => !toRfc822DateParis(item.date));
+  const dated = items.filter((item) => toPubDate(item));
+  const undated = items.filter((item) => !toPubDate(item));
   const ordered = [...dated, ...undated];
 
-  const lastBuildDate = dated[0] ? toRfc822DateParis(dated[0].date) : undefined;
+  const lastBuildDate = dated[0] ? toPubDate(dated[0]) : undefined;
   const feedUrl = absoluteUrl(NEWS_RSS_FEED.href);
   const listUrl = absoluteUrl("/actualite");
   const title = NEWS_RSS_FEED.title;
