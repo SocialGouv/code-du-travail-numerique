@@ -88,12 +88,13 @@ test.describe("Actualités", () => {
 
     // Chaque actualité listée porte sa date dans une balise <time> ISO,
     // précédée de « Publié le ». On ne présume pas de l'actualité en tête de
-    // liste : elle dépend des données de l'environnement.
+    // liste : elle dépend des données de l'environnement. La date est écrite
+    // avec des espaces insécables, que `\s` couvre.
     const firstTime = page.locator("main time").first();
     await expect(firstTime).toHaveAttribute("datetime", /^\d{4}-\d{2}-\d{2}$/);
-    await expect(firstTime).toHaveText(/^\d{1,2}(er)? [a-zéû]+ \d{4}$/);
+    await expect(firstTime).toHaveText(/^\d{1,2}(er)?\s[a-zéû]+\s\d{4}$/);
     await expect(firstTime.locator("xpath=..")).toHaveText(
-      /^Publié le \d{1,2}(er)? [a-zéû]+ \d{4}$/
+      /^Publié le \d{1,2}(er)?\s[a-zéû]+\s\d{4}$/
     );
   });
 
