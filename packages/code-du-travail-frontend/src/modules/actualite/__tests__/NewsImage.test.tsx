@@ -5,6 +5,7 @@ const baseImage = {
   filename: "image.png",
   url: "https://cdn.example.fr/image.png",
   alt: "Une description de l'image",
+  sizeOctet: 10318,
   width: 800,
   height: 450,
 };

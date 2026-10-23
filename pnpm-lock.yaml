@@ -42,8 +42,8 @@ importers:
         specifier: ^2.74.0
         version: 2.74.0
       '@socialgouv/cdtn-types':
-        specifier: ^2.74.0
-        version: 2.74.0
+        specifier: ^2.78.0
+        version: 2.78.0
       '@socialgouv/cdtn-utils':
         specifier: link:../code-du-travail-utils
         version: link:../code-du-travail-utils
@@ -2777,8 +2777,8 @@ packages:
   '@socialgouv/cdtn-elasticsearch@2.74.0':
     resolution: {integrity: sha512-iJVwAw8Dj9udRV+Q/ANg+aCt2eU0NnnXx2U0UvAXE5Ct4lrNIhVr2LHFJ9WyrN9JSnTIA1p7sXC/6WNMTPluBw==}
 
-  '@socialgouv/cdtn-types@2.74.0':
-    resolution: {integrity: sha512-PpKryPdkudz6o1x67wY0IXZGGMFQqN02UUrOSBkZxymTq3IgW0riVjrH+n8I3DXUo+22zF2xQVaYcg89FIh99Q==}
+  '@socialgouv/cdtn-types@2.78.0':
+    resolution: {integrity: sha512-CfqK71tej2kCfyUkz/OgzhYDxiE7b3GcPJ3T9zdIi5H9iF2wDOA9fJAvtjGWtp2UXwn3aHQwGEsWo3diP+Wwyg==}
 
   '@socialgouv/dila-api-client@1.2.4':
     resolution: {integrity: sha512-mG7uXvwAHjPNme2X/3uYBCEffNQlOJiFT7/oscoHv5qWZ/QRyiBKjFeAQsHiEJfAnyyt8PFuruZWqWIvmMCIMQ==}
@@ -10498,7 +10498,7 @@ snapshots:
 
   '@socialgouv/cdtn-elasticsearch@2.74.0': {}
 
-  '@socialgouv/cdtn-types@2.74.0': {}
+  '@socialgouv/cdtn-types@2.78.0': {}
 
   '@socialgouv/dila-api-client@1.2.4(encoding@0.1.13)(supports-color@5.5.0)':
     dependencies:
