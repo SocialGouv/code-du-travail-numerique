@@ -6,7 +6,7 @@ type CookieConfig = {
 
 export const COOKIE_CONFIG: CookieConfig = {
   heatmap: true,
-  ads: false,
+  ads: true,
 };
 
 export const shouldShowCookieBanner = (pathname: string): boolean => {

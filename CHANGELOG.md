@@ -3,6 +3,61 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.248.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.247.0...v4.248.0) (2026-10-19)
+
+
+### Bug Fixes
+
+* **actualités:** correction d'une type sur l'affichage de la date sur l'accueil ([e8c389c](https://github.com/SocialGouv/code-du-travail-numerique/commit/e8c389cf76661f843091c931b91d7355bc295299))
+
+
+### Features
+
+* **contribution:** test d'amélioration du SEO sur les contributions ([#7511](https://github.com/SocialGouv/code-du-travail-numerique/issues/7511)) ([1a5deee](https://github.com/SocialGouv/code-du-travail-numerique/commit/1a5deee8353918b39a04974431da460d335db81d))
+
+
+
+
+
+# [4.247.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.246.0...v4.247.0) (2026-10-06)
+
+
+### Features
+
+* **convention-collective:** redirection de la CC 3225 vers la 3230 ([#7549](https://github.com/SocialGouv/code-du-travail-numerique/issues/7549)) ([8696ef7](https://github.com/SocialGouv/code-du-travail-numerique/commit/8696ef73a6fe5286cefffd344bec62776a322790))
+
+
+
+
+
+# [4.246.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.245.0...v4.246.0) (2026-10-05)
+
+
+### Bug Fixes
+
+* **contenu:** harmonisation du titre de la page sur le rôle des textes avec le libellé du menu ([#7547](https://github.com/SocialGouv/code-du-travail-numerique/issues/7547)) ([2671207](https://github.com/SocialGouv/code-du-travail-numerique/commit/26712074f56d32d8538b46ddacefdbf6168e5477))
+
+
+### Features
+
+* **actualite:** amélioration du SEO sur les actualités ([#7506](https://github.com/SocialGouv/code-du-travail-numerique/issues/7506)) ([7c31c89](https://github.com/SocialGouv/code-du-travail-numerique/commit/7c31c89cc7da7dd5b69f2fd483facf3e01ad10bc))
+* **matomo:** mesure d'audience sans cookie après refus des cookies ([#7545](https://github.com/SocialGouv/code-du-travail-numerique/issues/7545)) ([642281f](https://github.com/SocialGouv/code-du-travail-numerique/commit/642281f4f336012e04a1061e18ba95319effb5ee))
+
+
+
+
+
+# [4.245.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.244.0...v4.245.0) (2026-10-02)
+
+
+### Features
+
+* **sea:** tracking de la campagne SEA 2026 sur toutes les pages ([#7543](https://github.com/SocialGouv/code-du-travail-numerique/issues/7543)) ([9c8ec6b](https://github.com/SocialGouv/code-du-travail-numerique/commit/9c8ec6b1b0a871b86dc4a427df77cd7cd3de6332))
+
+
+
+
+
 # [4.244.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.243.0...v4.244.0) (2026-09-23)
 
 

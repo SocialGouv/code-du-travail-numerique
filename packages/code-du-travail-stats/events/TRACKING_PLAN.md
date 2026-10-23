@@ -382,6 +382,18 @@ avec `contribution`. Le `name` porte toujours le **chemin de la page** (`contrib
 sur la fiche générique, `contribution/<num>-<slug>` sur une fiche CC) : c'est ce qui manquait
 aux events historiques pour attribuer chaque étape à une contribution précise.
 
+**Test « citation correcte de nos contributions » (#7493) : catégorie `cc_search_funnel_test`.**
+Sur les quatre pages pilotes du test (les deux fiches génériques « salaire minimum d'un
+alternant » et « congés pour événements familiaux », et leurs fiches CC 1518 et 3239), la
+réponse Code du travail est visible d'emblée, sans passer par le choix de CC : les taux du
+funnel n'y sont plus comparables aux autres pages. Les **mêmes 24 events** y partent donc,
+avec les mêmes `action` et `name`, mais sous la catégorie **`cc_search_funnel_test`** au lieu
+de `cc_search_funnel`. Le funnel historique n'est ainsi pas pollué, et les pilotes se lisent à
+part dans Matomo. Les autres events de ces pages (`reponse_consultee`,
+`explorez_thematique_affichee`…) gardent leur catégorie d'origine : on les isole par `name`.
+À la fin du test, retirer les pages pilotes (`answerScopePilot.ts`) remet tout dans
+`cc_search_funnel`.
+
 **Périmètre** : les deux façades contribution (fiche générique et fiche CC personnalisée).
 Les composants de recherche étant partagés avec les simulateurs, la page « Trouver sa
 convention collective » et les widgets, ils reçoivent des **callbacks optionnels** : hors
@@ -441,8 +453,9 @@ elles :
 Widget affiché en bas de chaque contribution : l'usager note la **clarté du contenu** de la
 page à l'aide d'un curseur de 1 (« Trop compliqué ») à 5 (« Très clair »), puis clique sur
 « Valider ». L'event part **au clic sur « Valider »** (une seule fois par affichage du widget ;
-aucune persistance côté client, recharger la page ré-affiche le widget). Il n'est émis que si
-l'usager a accepté Matomo (opt-out).
+aucune persistance côté client, recharger la page ré-affiche le widget). Il est émis même si
+l'usager a refusé les cookies (le relai ne dépose aucun cookie), sauf opt-out explicite
+(« ne jamais être suivi » dans la politique de confidentialité).
 
 Particularité technique : pour **contourner les bloqueurs de publicité** (qui filtrent
 `matomo.php` côté navigateur), le client fait un POST same-origin vers `/api/contribution-rating`

@@ -1,20 +1,16 @@
 import { trackContributionRating, RATING_TRACKING_ENDPOINT } from "../tracking";
-import { getStoredConsent } from "../../../utils/consent";
+import { isMatomoOptedOut } from "../../../utils/consent";
 
 jest.mock("../../../utils/consent", () => ({
-  getStoredConsent: jest.fn(),
+  isMatomoOptedOut: jest.fn(),
 }));
 
-const mockGetStoredConsent = getStoredConsent as jest.MockedFunction<
-  typeof getStoredConsent
+const mockIsMatomoOptedOut = isMatomoOptedOut as jest.MockedFunction<
+  typeof isMatomoOptedOut
 >;
 
-const consent = (matomo: boolean) =>
-  mockGetStoredConsent.mockReturnValue({
-    matomo,
-    sea: false,
-    matomoHeatmap: false,
-  });
+const optedOut = (value: boolean) =>
+  mockIsMatomoOptedOut.mockReturnValue(value);
 
 describe("rating/tracking", () => {
   beforeEach(() => {
@@ -23,7 +19,7 @@ describe("rating/tracking", () => {
   });
 
   it("POST « juste la note » sur la route API first-party", async () => {
-    consent(true);
+    optedOut(false);
 
     await trackContributionRating({
       contributionSlug: "conges-payes-1234",
@@ -47,8 +43,8 @@ describe("rating/tracking", () => {
     });
   });
 
-  it("n'émet rien si le consentement Matomo est refusé", async () => {
-    consent(false);
+  it("n'émet rien en cas d'opt-out Matomo explicite", async () => {
+    optedOut(true);
 
     await trackContributionRating({
       contributionSlug: "conges-payes-1234",
@@ -59,7 +55,7 @@ describe("rating/tracking", () => {
   });
 
   it("avale les erreurs réseau sans lever", async () => {
-    consent(true);
+    optedOut(false);
     (global.fetch as jest.Mock).mockRejectedValue(new Error("network"));
 
     await expect(

@@ -3,7 +3,7 @@
 import { usePathname, useSearchParams } from "next/navigation";
 import { Suspense, useEffect } from "react";
 import { PIWIK_SITE_ID, PIWIK_URL, WIDGETS_PATH } from "../../config";
-import { getStoredConsent } from "../utils/consent";
+import { getStoredConsent, hasMatomoCookieConsent } from "../utils/consent";
 import { push, trackAppRouter } from "@socialgouv/matomo-next";
 import { AB_TESTS } from "./abTests";
 
@@ -29,6 +29,10 @@ function MatomoComponent({ heatmapEnabled }: MatomoComponentProps) {
       // Les query params sont conservés sur les routes de recherche (/recherche)
       // pour préserver le trackSiteSearch.
       cleanUrl: true,
+      // Sans acceptation, mesure sans cookie : disableCookies est poussé dans
+      // _paq avant le premier trackPageView. Lu uniquement à l'initialisation
+      // du tracker ; un changement de choix ensuite passe par applyConsent.
+      disableCookies: !hasMatomoCookieConsent(),
       enableHeatmapSessionRecording: heatmapEnabled && consent.matomoHeatmap,
       enableHeartBeatTimer: heatmapEnabled && consent.matomo,
 

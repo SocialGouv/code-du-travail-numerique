@@ -1,4 +1,5 @@
 import { SITE_URL } from "../../../config";
+import { toIsoDateTimeParis } from "../../utils/date";
 
 export const JSON_LD_IDS = {
   organization: "jsonld-government-organization",
@@ -89,20 +90,6 @@ export type ContentThemeItem = {
   slug: string;
 };
 
-// Convertit une date FR `JJ/MM/AAAA` (format d'affichage du site) en ISO 8601
-// `AAAA-MM-JJ` attendu par schema.org. Tolère aussi une date déjà ISO. Renvoie
-// undefined si le format n'est pas reconnu → jamais de date invalide émise.
-function toIsoDate(date?: string): string | undefined {
-  const value = date?.trim();
-  if (!value) return undefined;
-  const frMatch = /^(\d{2})\/(\d{2})\/(\d{4})$/.exec(value);
-  if (frMatch) {
-    const [, day, month, year] = frMatch;
-    return `${year}-${month}-${day}`;
-  }
-  return /^\d{4}-\d{2}-\d{2}/.test(value) ? value : undefined;
-}
-
 // Article schema.org représentant une page de contenu éditorial. Rattaché au
 // site (`isPartOf`) et à son éditeur/auteur (le Code du travail numérique), daté
 // (`datePublished`/`dateModified`), et décrit par son thème / sous-thème via
@@ -114,15 +101,20 @@ export function buildContentThemeJsonLd({
   url,
   datePublished,
   themes,
+  disambiguatingDescription,
 }: {
   name: string;
   url: string;
   datePublished?: string;
   themes: ContentThemeItem[];
+  // Précise la portée du contenu (ex. : réponse Code du travail vs convention
+  // collective) pour les moteurs de réponse IA.
+  disambiguatingDescription?: string;
 }): Record<string, unknown> {
   const absoluteUrl = toAbsoluteUrl(url);
   const rootTheme = themes[0];
-  const isoDate = toIsoDate(datePublished);
+  // ISO 8601 avec heure (minuit Paris) et fuseau, cf. toIsoDateTimeParis.
+  const isoDate = toIsoDateTimeParis(datePublished);
 
   return {
     "@context": "https://schema.org",
@@ -136,12 +128,51 @@ export function buildContentThemeJsonLd({
     publisher: { "@id": JSON_LD_ENTITY_IDS.organization },
     ...(isoDate ? { datePublished: isoDate, dateModified: isoDate } : {}),
     ...(rootTheme ? { articleSection: rootTheme.label } : {}),
+    ...(disambiguatingDescription ? { disambiguatingDescription } : {}),
     about: themes.map((theme) => ({
       "@type": "Thing",
       name: theme.label,
       url: toAbsoluteUrl(theme.slug),
     })),
     keywords: themes.map((theme) => theme.label),
+  };
+}
+
+// FAQPage mono-question : le H1 de la page est déjà une question, on s'en sert
+// comme unique `Question`. `question` doit reprendre le H1 mot pour mot et
+// `answer` le texte visible dans la page (conformité Google).
+export function buildFaqPageJsonLd({
+  question,
+  answer,
+  url,
+}: {
+  question: string;
+  answer: string;
+  url: string;
+}): Record<string, unknown> {
+  const absoluteUrl = toAbsoluteUrl(url);
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    url: absoluteUrl,
+    inLanguage: "fr-FR",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: question,
+        acceptedAnswer: { "@type": "Answer", text: answer },
+      },
+    ],
+  };
+}
+
+// Regroupe plusieurs nœuds dans un seul bloc `@graph` (un seul `@context`).
+export function buildGraphJsonLd(
+  nodes: Record<string, unknown>[]
+): Record<string, unknown> {
+  return {
+    "@context": "https://schema.org",
+    "@graph": nodes.map(({ "@context": _context, ...node }) => node),
   };
 }
 
@@ -179,6 +210,11 @@ export function buildLegislationJsonLd({
   };
 }
 
+// NewsArticle schema.org d'une actualité. La date stockée (`JJ/MM/AAAA` saisie
+// dans l'admin) est convertie en ISO 8601 avec heure et fuseau (minuit Paris),
+// format attendu par Google Actualités. Sans date de modification en base,
+// `dateModified` reprend `datePublished`. Date absente ou invalide → les deux
+// champs sont omis plutôt qu'émis avec une valeur invalide.
 export function buildNewsArticleJsonLd({
   headline,
   url,
@@ -187,10 +223,11 @@ export function buildNewsArticleJsonLd({
 }: {
   headline: string;
   url: string;
-  datePublished: string;
+  datePublished?: string;
   description?: string;
 }): Record<string, unknown> {
   const absoluteUrl = toAbsoluteUrl(url);
+  const isoDate = toIsoDateTimeParis(datePublished);
 
   return {
     "@context": "https://schema.org",
@@ -198,16 +235,13 @@ export function buildNewsArticleJsonLd({
     headline,
     url: absoluteUrl,
     mainEntityOfPage: absoluteUrl,
-    datePublished,
-    dateModified: datePublished,
+    ...(isoDate ? { datePublished: isoDate, dateModified: isoDate } : {}),
     ...(description ? { description } : {}),
-    author: {
-      "@type": "Organization",
-      name: "Code du travail numérique",
-    },
-    publisher: {
-      "@id": JSON_LD_ENTITY_IDS.organization,
-    },
+    // Même entité que `publisher` et que l'Article des autres contenus : Google
+    // recommande un auteur identifié (nom + url), portés par l'entité
+    // GovernmentOrganization émise sur toutes les pages.
+    author: { "@id": JSON_LD_ENTITY_IDS.organization },
+    publisher: { "@id": JSON_LD_ENTITY_IDS.organization },
     inLanguage: "fr-FR",
   };
 }

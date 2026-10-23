@@ -7,7 +7,7 @@
 // fetch serveur->serveur invisible des adblockers.
 
 import { SOURCES, SourceKeys } from "@socialgouv/cdtn-utils";
-import { getStoredConsent } from "../../utils/consent";
+import { isMatomoOptedOut } from "../../utils/consent";
 import { RatingMatomo } from "./constants";
 
 export const RATING_TRACKING_ENDPOINT = "/api/contribution-rating";
@@ -55,11 +55,12 @@ export const trackContributionRating = async ({
   contributionSlug,
   value,
 }: RatingTrackingPayload): Promise<void> => {
-  // Cohérence avec le tracking existant (opt-out) : on n'émet rien si l'usager
-  // a refusé Matomo. On sort aussi côté serveur (pas de `window`) — le `||`
-  // court-circuite avant getStoredConsent (qui lit le stockage client, absent en
-  // SSR). L'UX (confirmation) reste, elle, active.
-  if (typeof window === "undefined" || !getStoredConsent().matomo) return;
+  // Cohérence avec le tracking Matomo : le relai ne dépose aucun cookie, la
+  // note est donc envoyée même si l'usager a refusé les cookies, sauf opt-out
+  // explicite (« ne jamais être suivi »). On sort aussi côté serveur (pas de
+  // `window`) — le `||` court-circuite avant isMatomoOptedOut (qui lit les
+  // cookies, absents en SSR). L'UX (confirmation) reste, elle, active.
+  if (typeof window === "undefined" || isMatomoOptedOut()) return;
 
   try {
     // category (enum) et action (template sur l'enum ACTION_PREFIX) → résolus

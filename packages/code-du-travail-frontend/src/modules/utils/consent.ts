@@ -1,5 +1,6 @@
 // Consent management service for tracking tools
 
+import { isAdsEnabled } from "../analytics/config";
 import { safeGetItem, safeRemoveItem, safeSetItem } from "./storage";
 
 // Consent types
@@ -13,6 +14,27 @@ export type ConsentType = {
 export const CONSENT_STORAGE_KEY = "cdtn-cookie-consent";
 export const CONSENT_GIVEN_KEY = "cdtn-cookie-consent-given";
 export const CONSENT_DATE_KEY = "cdtn-cookie-consent-date";
+// Consent version the browser was last reset with (see resetOutdatedConsent)
+export const CONSENT_VERSION_KEY = "cdtn-cookie-consent-version";
+
+// Consent version: NOT the app version, releases never change it.
+// Bump it ("2" -> "3") only to ask every visitor again, e.g. a new purpose or
+// tool in the banner, a change in what a consent covers, or a bug to reset.
+// On the next visit, each browser then forgets its choice (the banner is shown
+// again, refusals included) and every Matomo cookie, opt-out included.
+// When bumping, also update the same value in src/e2e/global-setup.ts,
+// otherwise the banner shows up in every e2e test.
+//
+// History:
+// - "2": cookieless Matomo after a refusal, and reset of the opt-out cookie
+// - "3": test development in branch
+//   that the banner used to set by mistake; SEA campaign 2026.
+//   https://github.com/SocialGouv/code-du-travail-numerique/issues/7513
+//   https://github.com/SocialGouv/code-du-travail-numerique/pull/7545
+export const CONSENT_VERSION = "3";
+
+const isCurrentConsentVersion = (): boolean =>
+  safeGetItem(CONSENT_VERSION_KEY) === CONSENT_VERSION;
 
 // Consent is valid for 13 months (CNIL recommendation)
 export const CONSENT_VALIDITY_MS = 13 * 30 * 24 * 60 * 60 * 1000;
@@ -38,6 +60,7 @@ export const isConsentExpired = (): boolean => {
 
 export const hasValidConsent = (): boolean => {
   if (typeof window === "undefined") return false;
+  if (!isCurrentConsentVersion()) return false;
   const hasConsented = safeGetItem(CONSENT_GIVEN_KEY) === "true";
   if (!hasConsented) return false;
 
@@ -68,10 +91,80 @@ export const getStoredConsent = (): ConsentType => {
   return storedConsent ? JSON.parse(storedConsent) : DEFAULT_CONSENT;
 };
 
+// Consent actually applied to tracking tools. Until the user has made a valid
+// choice, Matomo measures without cookies (DEFAULT_CONSENT.matomo only drives
+// the initial state of the toggle in the modal).
+const getAppliedConsent = (): ConsentType =>
+  hasValidConsent()
+    ? getStoredConsent()
+    : { ...DEFAULT_CONSENT, matomo: false };
+
+// Matomo cookies (_pk_*, mtm_*) are only allowed after an explicit acceptance,
+// and never after an explicit opt-out. Without them, Matomo still tracks page
+// views and events, without any cookie.
+export const hasMatomoCookieConsent = (): boolean => {
+  if (typeof window === "undefined") return false;
+  return getAppliedConsent().matomo && !isMatomoOptedOut();
+};
+
+// Cookie set by Matomo on an explicit opt-out ("ne jamais être suivi" in the
+// privacy policy). As long as it exists, Matomo sends nothing. The cookie
+// banner only governs cookies and never lifts it (except resetOutdatedConsent).
+const MATOMO_OPT_OUT_COOKIE = "mtm_consent_removed";
+const MATOMO_COOKIE_PREFIXES = ["_pk_", "mtm_", "matomo_"];
+
+const getCookieNames = (): string[] =>
+  document.cookie
+    .split(";")
+    .map((cookie) => cookie.split("=")[0].trim())
+    .filter(Boolean);
+
+export const isMatomoOptedOut = (): boolean => {
+  if (typeof document === "undefined") return false;
+  return getCookieNames().includes(MATOMO_OPT_OUT_COOKIE);
+};
+
+// Remove Matomo cookies left by a previous acceptance. The opt-out cookie is
+// kept, unless the whole consent is reset.
+const deleteMatomoCookies = (includeOptOut = false): void => {
+  const expired = "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+
+  getCookieNames()
+    .filter(
+      (name) =>
+        (includeOptOut || name !== MATOMO_OPT_OUT_COOKIE) &&
+        MATOMO_COOKIE_PREFIXES.some((prefix) => name.startsWith(prefix))
+    )
+    .forEach((name) => {
+      document.cookie = name + expired;
+      document.cookie = `${name}${expired}; domain=.${window.location.hostname}`;
+    });
+};
+
+// Once per consent version, every visitor starts again from a clean state:
+// the previous choice is forgotten (the banner is shown again) and every
+// Matomo cookie is removed, opt-out included. Before version 2, a refusal in
+// the banner set the same opt-out cookie as "ne jamais être suivi", and the
+// two could not be told apart.
+const resetOutdatedConsent = (): void => {
+  if (isCurrentConsentVersion()) return;
+
+  // Without a working localStorage the version is never saved: resetting on
+  // every page would wipe an explicit opt-out each time.
+  safeSetItem(CONSENT_VERSION_KEY, CONSENT_VERSION);
+  if (!isCurrentConsentVersion()) return;
+
+  clearStoredConsent();
+  deleteMatomoCookies(true);
+  window._paq = window._paq || [];
+  window._paq.push(["forgetUserOptOut"]);
+};
+
 // Save consent to local storage
 export const saveConsent = (consent: ConsentType): void => {
   if (typeof window === "undefined") return;
 
+  resetOutdatedConsent();
   safeSetItem(CONSENT_STORAGE_KEY, JSON.stringify(consent));
   safeSetItem(CONSENT_GIVEN_KEY, "true");
   safeSetItem(CONSENT_DATE_KEY, Date.now().toString());
@@ -111,86 +204,37 @@ const applyMatomoConsent = (isConsented: boolean): void => {
   try {
     window._paq = window._paq || [];
 
-    if (isConsented) {
-      window._paq.push(["forgetUserOptOut"]);
+    // An explicit opt-out wins over the cookie banner: no cookie at all
+    if (isConsented && !isMatomoOptedOut()) {
       window._paq.push(["rememberCookieConsentGiven"]);
     } else {
-      window._paq.push(["optUserOut"]);
+      // Refusal: tracking stays active, without any cookie. matomo.js applies
+      // disableCookies before queued trackPageView once loaded, and
+      // immediately when already loaded.
       window._paq.push(["forgetCookieConsentGiven"]);
+      window._paq.push(["disableCookies"]);
+      deleteMatomoCookies();
     }
   } catch (e) {
     console.error("Error applying Matomo consent:", e);
   }
 };
 
-// List of paths where SEA tracking is allowed
-const SEA_ALLOWED_PATHS = [
-  "/",
-  "/contribution/a-quelles-indemnites-peut-pretendre-un-salarie-qui-part-a-la-retraite",
-  "/contribution/en-cas-darret-maladie-du-salarie-lemployeur-doit-il-assurer-le-maintien-de-salaire",
-  "/contribution/est-il-obligatoire-davoir-un-contrat-de-travail-ecrit-et-signe",
-  "/contribution/faut-il-respecter-un-delai-de-carence-entre-deux-cdd-si-oui-quelle-est-sa-duree",
-  "/contribution/jours-feries-et-ponts-dans-le-secteur-prive",
-  "/contribution/les-conges-pour-evenements-familiaux",
-  "/contribution/quand-le-salarie-a-t-il-droit-a-une-prime-danciennete-quel-est-son-montant",
-  "/contribution/quelle-est-la-duree-de-preavis-en-cas-de-depart-a-la-retraite",
-  "/contribution/quelle-est-la-duree-du-conge-de-maternite",
-  "/contribution/quelle-est-la-duree-maximale-de-la-periode-dessai-sans-et-avec-renouvellement",
-  "/information/acquisition-de-conges-payes-pendant-un-arret-maladie-les-nouvelles-regles",
-  "/information/la-prime-de-partage-de-la-valeur-infographie",
-  "/information/licenciement-pour-inaptitude-medicale",
-  "/information/licenciement-pour-motif-disciplinaire",
-  "/information/licenciement-pour-motif-non-disciplinaire",
-  "/information/metallurgie-lessentiel-de-la-nouvelle-convention-collective",
-  "/information/quelles-sont-les-consequences-dun-abandon-de-poste-sur-le-contrat-de-travail",
-  "/information/rupture-conventionnelle-individuelle-la-procedure-en-details",
-  "/information/suivi-medical-et-accompagnement-de-certains-salaries",
-  "/modeles-de-courriers/attestation-de-travail",
-  "/modeles-de-courriers/contrat-de-travail-a-duree-determinee-cdd",
-  "/modeles-de-courriers/contrat-de-travail-a-duree-indeterminee",
-  "/modeles-de-courriers/convocation-a-un-entretien-prealable-au-licenciement-pour-motif-personnel",
-  "/modeles-de-courriers/demande-de-maintien-de-salaire-en-cas-darret-maladie",
-  "/modeles-de-courriers/lettre-de-demission",
-  "/modeles-de-courriers/promesse-dembauche",
-  "/modeles-de-courriers/recu-pour-solde-de-tout-compte",
-  "/modeles-de-courriers/rupture-de-periode-dessai-par-lemployeur",
-  "/modeles-de-courriers/rupture-du-contrat-en-periode-dessai-par-le-salarie",
-  "/modeles-de-courriers/rupture-dun-contrat-de-travail-a-duree-determinee-dun-commun-accord",
-  "/modeles-de-courriers/signalement-de-faits-pouvant-relever-du-harcelement-moral-ou-sexuel",
-  "/outils/convention-collective",
-  "/outils/indemnite-licenciement",
-  "/outils/indemnite-precarite",
-  "/outils/indemnite-rupture-conventionnelle",
-  "/outils/preavis-demission",
-  "/outils/simulateur-embauche",
-];
-
-// Check if current path is allowed for SEA tracking
-const normalizePath = (path: string): string => {
-  // Remove trailing slashes, query parameters and anchors
-  return path.replace(/\/+$/, "").split(/[?#]/)[0];
-};
-const isPathAllowedForSEA = (): boolean => {
-  if (typeof window === "undefined") return false;
-  const currentPath = normalizePath(window.location.pathname);
-  const isAllowed = SEA_ALLOWED_PATHS.some(
-    (path) => normalizePath(path) === currentPath
-  );
-
-  return isAllowed;
-};
+// Campagne SEA 2026 (DicomTravail) : balise Floodlight « ToutesPages », posée
+// sur tout le site hors widgets (cf. isAdsEnabled)
+const SEA_TAG_ID = "DC-3048978";
+const SEA_CONVERSION_SEND_TO = `${SEA_TAG_ID}/cdtn/2026-0+unique`;
 
 // Apply SEA consent (Google Tag Manager)
 const applySeaConsent = (isConsented: boolean): void => {
   if (typeof window === "undefined") return;
 
   try {
-    // Check if current path is allowed for SEA tracking
-    const isAllowed = isPathAllowedForSEA();
+    const isAllowed = isAdsEnabled(window.location.pathname);
 
     if (isConsented && isAllowed) {
       // Remove the opt-out cookie if it exists
-      const disableStr = "ga-disable-DC-3048978";
+      const disableStr = `ga-disable-${SEA_TAG_ID}`;
       document.cookie =
         disableStr + "=false; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/";
       window[disableStr] = false;
@@ -200,7 +244,7 @@ const applySeaConsent = (isConsented: boolean): void => {
         const script = document.createElement("script");
         script.id = "gtm-script";
         script.async = true;
-        script.src = "https://www.googletagmanager.com/gtag/js?id=DC-3048978";
+        script.src = `https://www.googletagmanager.com/gtag/js?id=${SEA_TAG_ID}`;
         document.head.appendChild(script);
 
         // Initialize gtag
@@ -209,12 +253,12 @@ const applySeaConsent = (isConsented: boolean): void => {
           window.dataLayer.push(arguments);
         };
         window.gtag("js", new Date());
-        window.gtag("config", "DC-3048978");
+        window.gtag("config", SEA_TAG_ID);
 
         // Add conversion tracking
         window.gtag("event", "conversion", {
           allow_custom_scripts: true,
-          send_to: "DC-3048978/cdtn/arr_cdtn+unique",
+          send_to: SEA_CONVERSION_SEND_TO,
         });
       }
     } else {
@@ -228,7 +272,7 @@ const applySeaConsent = (isConsented: boolean): void => {
       window.dataLayer = [];
 
       // Set opt-out cookie for Google Analytics
-      const disableStr = "ga-disable-DC-3048978";
+      const disableStr = `ga-disable-${SEA_TAG_ID}`;
       document.cookie =
         disableStr + "=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/";
       window[disableStr] = true;
@@ -242,9 +286,8 @@ const applySeaConsent = (isConsented: boolean): void => {
 export const initConsent = (): void => {
   if (typeof window === "undefined") return;
 
-  const consent = getStoredConsent();
-
-  applyConsent(consent);
+  resetOutdatedConsent();
+  applyConsent(getAppliedConsent());
 
   // Set up listener for route changes in single-page applications
   setupRouteChangeListener();
@@ -264,8 +307,7 @@ const setupRouteChangeListener = (): void => {
       const previousPath = currentPath;
       currentPath = window.location.pathname;
       // Reapply consent based on the new path
-      const consent = getStoredConsent();
-      applyConsent(consent);
+      applyConsent(getAppliedConsent());
     }
   };
   // Listen for popstate events (back/forward navigation)

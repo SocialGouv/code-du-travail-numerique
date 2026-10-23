@@ -2,7 +2,7 @@ import { NewsSummary } from "../type";
 import { fr } from "@codegouvfr/react-dsfr";
 import Button from "@codegouvfr/react-dsfr/Button";
 import DisplayContent from "../../common/DisplayContent";
-import { formatDateAsFrenchText } from "../../utils";
+import { PublishedDate } from "../../common/PublishedDate";
 
 type Props = NewsSummary;
 
@@ -19,9 +19,10 @@ export const NewsItem = ({ date, title, content, slug }: Props) => {
           "fr-grid-row--top"
         )}
       >
-        <p className={fr.cx("fr-text--lg", "fr-mb-1v")}>
-          {formatDateAsFrenchText(date)}
-        </p>
+        <PublishedDate
+          date={date}
+          className={fr.cx("fr-text--lg", "fr-mb-1v")}
+        />
       </div>
       <div className={fr.cx("fr-col-md-10", "fr-col-12")}>
         <h2 className={fr.cx("fr-mb-0")}>{title}</h2>
