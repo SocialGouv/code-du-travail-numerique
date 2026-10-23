@@ -45,6 +45,26 @@ describe("jsonld builders", () => {
     expect(jsonld).toMatchSnapshot();
   });
 
+  it("buildLegislationJsonLd() émet la date en ISO 8601 (minuit Paris)", () => {
+    const base = { name: "Article", url: "/code-du-travail/l123" };
+
+    // Article du Code du travail (date affichée) et convention collective
+    // (`date_publi` ISO UTC).
+    expect(
+      buildLegislationJsonLd({ ...base, datePublished: "27/06/2008" })
+        .datePublished
+    ).toBe("2008-06-27T00:00:00+02:00");
+    expect(
+      buildLegislationJsonLd({
+        ...base,
+        datePublished: "1981-04-01T00:00:00.000Z",
+      }).datePublished
+    ).toBe("1981-04-01T00:00:00+02:00");
+    expect(
+      buildLegislationJsonLd({ ...base, datePublished: "1214524800000" })
+    ).not.toHaveProperty("datePublished");
+  });
+
   it("buildContentThemeJsonLd() construit un Article daté, rattaché au site et thématisé", () => {
     const jsonld = buildContentThemeJsonLd({
       name: "Le préavis de licenciement",

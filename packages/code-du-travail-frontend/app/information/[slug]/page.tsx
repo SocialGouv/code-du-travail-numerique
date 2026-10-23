@@ -1,7 +1,10 @@
 import { notFound } from "next/navigation";
 import { DsfrLayout } from "src/modules/layout";
 
-import { generateDefaultMetadata } from "src/modules/common/metas";
+import {
+  generateDefaultMetadata,
+  getContentArticle,
+} from "src/modules/common/metas";
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
 import {
   fetchInformation,
@@ -15,6 +18,8 @@ export async function generateMetadata(props) {
   const information = await fetchInformation(params.slug, [
     "title",
     "metaDescription",
+    "date",
+    "breadcrumbs",
   ]);
 
   if (!information) {
@@ -25,6 +30,7 @@ export async function generateMetadata(props) {
     title: information?.title,
     description: information?.metaDescription,
     path: `/${getRouteBySource(SOURCES.EDITORIAL_CONTENT)}/${params.slug}`,
+    article: getContentArticle(information.date, information.breadcrumbs),
   });
 }
 

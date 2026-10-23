@@ -1,4 +1,5 @@
 import { Metadata } from "next/types";
+import { toIsoDateTimeParis } from "../utils/date";
 
 type Props = {
   title: string;
@@ -22,6 +23,16 @@ type Props = {
   // défaut du site qui est utilisée.
   image?: { url: string; alt: string; width?: number; height?: number };
 };
+
+// Open Graph « article » d'un contenu qui émet un JSON-LD `Article`
+// (ArticleJsonLd) : même date (minuit Paris) et même rubrique (thème racine).
+export const getContentArticle = (
+  date?: string,
+  breadcrumbs?: { label: string }[]
+): NonNullable<Props["article"]> => ({
+  publishedTime: toIsoDateTimeParis(date),
+  section: breadcrumbs?.[0]?.label,
+});
 
 export function generateDefaultMetadata({
   title,

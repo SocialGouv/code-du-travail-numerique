@@ -85,6 +85,10 @@ test.describe("Actualités", () => {
     await expect(
       page.getByRole("link", { name: /Flux RSS des actualités/ })
     ).toHaveCount(0);
+    // Lien « Flux RSS » sous le titre de la liste.
+    await expect(
+      page.getByRole("link", { name: "Flux RSS", exact: true })
+    ).toHaveAttribute("href", "/actualite/rss.xml");
 
     // Chaque actualité listée porte sa date dans une balise <time> ISO,
     // précédée de « Publié le ». On ne présume pas de l'actualité en tête de
@@ -98,17 +102,28 @@ test.describe("Actualités", () => {
     );
   });
 
-  test("les pages non-actualité gardent og:type website et pas de bouton RSS", async ({
+  test("les contenus éditoriaux sont des articles Open Graph sans bouton RSS", async ({
     page,
   }) => {
     await page.goto("/information/exemples-de-contrats-de-travail-cdi-et-cdd");
     await expect(page.locator('meta[property="og:type"]')).toHaveAttribute(
       "content",
-      "website"
+      "article"
     );
+    await expect(
+      page.locator('meta[property="article:published_time"]')
+    ).toHaveAttribute("content", /^\d{4}-\d{2}-\d{2}T00:00:00\+0[12]:00$/);
     await expect(
       page.getByRole("link", { name: /Flux RSS des actualités/ })
     ).toHaveCount(0);
+  });
+
+  test("les pages hors contenu gardent og:type website", async ({ page }) => {
+    await page.goto("/");
+    await expect(page.locator('meta[property="og:type"]')).toHaveAttribute(
+      "content",
+      "website"
+    );
   });
 
   test("le flux RSS est servi en RSS 2.0", async ({ request }) => {

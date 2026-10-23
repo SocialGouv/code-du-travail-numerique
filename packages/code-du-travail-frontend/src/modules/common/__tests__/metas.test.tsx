@@ -1,4 +1,25 @@
-import { generateDefaultMetadata } from "../metas";
+import { generateDefaultMetadata, getContentArticle } from "../metas";
+
+describe("getContentArticle", () => {
+  it("reprend la date (minuit Paris) et le thème racine du contenu", () => {
+    expect(
+      getContentArticle("29/01/2024", [
+        { label: "Embauche et contrat de travail" },
+        { label: "Période d'essai" },
+      ])
+    ).toEqual({
+      publishedTime: "2024-01-29T00:00:00+01:00",
+      section: "Embauche et contrat de travail",
+    });
+  });
+
+  it("omet date et rubrique inconnues", () => {
+    expect(getContentArticle(undefined, [])).toEqual({
+      publishedTime: undefined,
+      section: undefined,
+    });
+  });
+});
 
 describe("generateDefaultMetadata", () => {
   it("returns metadata", () => {

@@ -30,21 +30,23 @@ async function Fiche(props) {
   const relatedItems = await fetchRelatedItems({ _id }, params.slug);
 
   const fixedHtml = replaceArticlesRefs("https://legifrance.gouv.fr", html);
+  // `dateDebut` est un timestamp : la date affichée sert aussi au JSON-LD.
+  const date = format(new Date(dateDebut), "dd/MM/yyyy", {
+    locale: frLocale,
+  });
   return (
     <DsfrLayout>
       <LegislationJsonLd
         name={title}
         url={`/code-du-travail/${params.slug}`}
         identifier={params.slug}
-        datePublished={dateDebut}
+        datePublished={date}
         isBasedOn={url}
       />
       <ArticleCodeDuTravail
         title={title}
         relatedItems={relatedItems}
-        date={format(new Date(dateDebut), "dd/MM/yyyy", {
-          locale: frLocale,
-        })}
+        date={date}
         html={fixedHtml}
         url={url}
         notaHtml={notaHtml}
