@@ -28,7 +28,8 @@ const buildOrganization = (): Record<string, unknown> => ({
   "@id": JSON_LD_ENTITY_IDS.organization,
   name: "Code du travail numérique",
   url: SITE_URL,
-  logo: toAbsoluteUrl("/static/assets/img/logo.svg"),
+  // PNG carré 512 × 512 : Google demande un logo d'au moins 112 × 112 px.
+  logo: toAbsoluteUrl("/static/assets/img/logo-carre.png"),
 });
 
 export function buildGovernmentOrganizationJsonLd(): Record<string, unknown> {
@@ -180,6 +181,8 @@ export function buildGraphJsonLd(
   };
 }
 
+// `datePublished` (JJ/MM/AAAA ou AAAA-MM-JJ…) est émise en ISO 8601 à minuit
+// Paris, comme pour `Article` et `NewsArticle`, et omise si elle est invalide.
 export function buildLegislationJsonLd({
   name,
   url,
@@ -193,6 +196,8 @@ export function buildLegislationJsonLd({
   datePublished?: string;
   isBasedOn?: string;
 }): Record<string, unknown> {
+  const isoDate = toIsoDateTimeParis(datePublished);
+
   return {
     "@context": "https://schema.org",
     "@type": "Legislation",
@@ -204,7 +209,7 @@ export function buildLegislationJsonLd({
           identifier,
         }
       : {}),
-    ...(datePublished ? { datePublished } : {}),
+    ...(isoDate ? { datePublished: isoDate } : {}),
     ...(isBasedOn ? { isBasedOn } : {}),
     publisher: {
       "@id": JSON_LD_ENTITY_IDS.organization,

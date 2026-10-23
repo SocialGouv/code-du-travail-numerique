@@ -1,6 +1,9 @@
 import React from "react";
 import { DsfrLayout } from "../../../src/modules/layout";
-import { generateDefaultMetadata } from "../../../src/modules/common/metas";
+import {
+  generateDefaultMetadata,
+  getContentArticle,
+} from "../../../src/modules/common/metas";
 import {
   fetchModel,
   getTitle,
@@ -11,16 +14,22 @@ import { fetchRelatedItems } from "../../../src/modules/documents";
 
 export async function generateMetadata(props) {
   const params = await props.params;
-  const { title, type, metaDescription, meta_title } = await getModel(
-    params.slug,
-    ["title", "meta_title", "type", "metaDescription"]
-  );
+  const { title, type, metaDescription, meta_title, date, breadcrumbs } =
+    await getModel(params.slug, [
+      "title",
+      "meta_title",
+      "type",
+      "metaDescription",
+      "date",
+      "breadcrumbs",
+    ]);
   const category = `Modèle ${type !== "fichier" ? `de ${type}` : "à télécharger"}`;
 
   return generateDefaultMetadata({
     title: `${category} : ${meta_title ?? title}`,
     description: metaDescription,
     path: `/modeles-de-courriers/${params.slug}`,
+    article: getContentArticle(date, breadcrumbs),
   });
 }
 

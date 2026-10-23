@@ -5,8 +5,8 @@ const toIsoInstant = (value?: string): string | undefined =>
     ? new Date(value).toISOString()
     : undefined;
 
-// Date de publication d'une actualité (ISO 8601) : l'instant de sa dernière
-// publication (`publishedAt`, renseigné par l'admin à chaque publication) ou, à
+// Date de publication d'une actualité (ISO 8601) : l'instant de sa première
+// publication (`publishedAt`, renseigné par l'admin et conservé ensuite) ou, à
 // défaut (actualité publiée avant), la date affichée (`dd/MM/yyyy`) à minuit
 // heure de Paris. Même instant que le sitemap généré par l'admin.
 export const getNewsPublishedTime = (

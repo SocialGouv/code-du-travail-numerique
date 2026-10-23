@@ -2,20 +2,26 @@ import React from "react";
 import { notFound } from "next/navigation";
 import { DsfrLayout } from "../../../src/modules/layout";
 import { fetchFicheSP } from "../../../src/modules/fiche-service-public/queries";
-import { generateDefaultMetadata } from "../../../src/modules/common/metas";
+import {
+  generateDefaultMetadata,
+  getContentArticle,
+} from "../../../src/modules/common/metas";
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
 import { FicheServicePublicContainer } from "../../../src/modules/fiche-service-public/FicheServicePublicContainer";
 import { fetchFicheSPRecommendedLinks } from "../../../src/modules/fiche-service-public/recommended-links";
 
 export async function generateMetadata(props) {
   const params = await props.params;
-  const { title, description, url } = await getFiche(params.slug);
+  const { title, description, url, date, breadcrumbs } = await getFiche(
+    params.slug
+  );
 
   return generateDefaultMetadata({
     title: title,
     description: description,
     path: `/${getRouteBySource(SOURCES.SHEET_SP)}/${params.slug}`,
     overrideCanonical: url,
+    article: getContentArticle(date, breadcrumbs),
   });
 }
 
