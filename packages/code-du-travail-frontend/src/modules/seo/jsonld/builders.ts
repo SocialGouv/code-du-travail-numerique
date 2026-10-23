@@ -218,11 +218,10 @@ export function buildLegislationJsonLd({
 // publication (`publishedTime`, ISO 8601) quand il est connu ; sinon la date
 // stockée (`JJ/MM/AAAA` saisie dans l'admin) est convertie en ISO 8601 avec
 // heure et fuseau (minuit Paris), format attendu par Google Actualités.
-// `dateModified` est la date de dernière
-// modification (ISO 8601) quand elle est fournie, sinon `datePublished`. Date
-// de publication absente ou invalide → les deux champs sont omis plutôt
-// qu'émis avec une valeur invalide. `citation` liste les URL des articles de
-// loi cités par l'actualité.
+// `dateModified` est la date de dernière modification (ISO 8601) quand elle
+// est fournie, sinon `datePublished`. Date de publication absente ou invalide
+// → les deux champs sont omis plutôt qu'émis avec une valeur invalide.
+// `citation` liste les URL des articles de loi cités par l'actualité.
 export const NEWS_ARTICLE_SECTION = "Actualités";
 
 export function buildNewsArticleJsonLd({
