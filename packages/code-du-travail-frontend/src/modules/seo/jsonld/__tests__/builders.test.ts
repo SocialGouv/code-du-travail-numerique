@@ -104,12 +104,77 @@ describe("jsonld builders", () => {
     expect(jsonld["@type"]).toBe("NewsArticle");
     expect(jsonld.datePublished).toBe("2026-09-18T00:00:00+02:00");
     expect(jsonld.dateModified).toBe("2026-09-18T00:00:00+02:00");
-    // Auteur et éditeur = l'entité organisation du site (nom + url), comme Article.
-    expect(jsonld.author).toEqual({ "@id": JSON_LD_ENTITY_IDS.organization });
-    expect(jsonld.publisher).toEqual({
+    // Auteur et éditeur = l'entité organisation du site, nom et url en ligne.
+    expect(jsonld.author).toMatchObject({
+      "@type": "GovernmentOrganization",
       "@id": JSON_LD_ENTITY_IDS.organization,
+      name: "Code du travail numérique",
     });
+    expect(jsonld.author).not.toHaveProperty("@context");
+    expect(jsonld.publisher).toEqual(jsonld.author);
+    expect(jsonld.isPartOf).toEqual({ "@id": JSON_LD_ENTITY_IDS.website });
+    expect(jsonld.articleSection).toBe("Actualités");
     expect(jsonld).toMatchSnapshot();
+  });
+
+  it("buildNewsArticleJsonLd() émet la date de modification fournie", () => {
+    const jsonld = buildNewsArticleJsonLd({
+      headline: "Titre",
+      url: "/actualite/slug",
+      datePublished: "01/10/2026",
+      dateModified: "2026-10-10T13:07:55.000Z",
+    });
+    expect(jsonld.datePublished).toBe("2026-10-01T00:00:00+02:00");
+    expect(jsonld.dateModified).toBe("2026-10-10T13:07:55.000Z");
+  });
+
+  it("buildNewsArticleJsonLd() indique un contenu gratuit et cite les articles de loi", () => {
+    const citations = [
+      "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006901112",
+    ];
+    const jsonld = buildNewsArticleJsonLd({
+      headline: "Titre",
+      url: "/actualite/slug",
+      citations,
+    });
+    expect(jsonld.isAccessibleForFree).toBe(true);
+    expect(jsonld.citation).toEqual(citations);
+  });
+
+  it("buildNewsArticleJsonLd() n'émet pas de citation sans article de loi", () => {
+    const jsonld = buildNewsArticleJsonLd({
+      headline: "Titre",
+      url: "/actualite/slug",
+      citations: [],
+    });
+    expect(jsonld).not.toHaveProperty("citation");
+  });
+
+  it("buildNewsArticleJsonLd() ajoute l'image avec ses dimensions quand elle est fournie", () => {
+    const jsonld = buildNewsArticleJsonLd({
+      headline: "Titre",
+      url: "/actualite/slug",
+      image: { url: "/images/actu.webp", width: 1600, height: 900 },
+    });
+    expect(jsonld.image).toEqual([
+      {
+        "@type": "ImageObject",
+        url: "http://api.url/images/actu.webp",
+        width: 1600,
+        height: 900,
+      },
+    ]);
+  });
+
+  it("buildNewsArticleJsonLd() omet largeur et hauteur quand elles sont inconnues", () => {
+    const jsonld = buildNewsArticleJsonLd({
+      headline: "Titre",
+      url: "/actualite/slug",
+      image: { url: "/images/actu.webp" },
+    });
+    expect(jsonld.image).toEqual([
+      { "@type": "ImageObject", url: "http://api.url/images/actu.webp" },
+    ]);
   });
 
   it.each`

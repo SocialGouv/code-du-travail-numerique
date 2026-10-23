@@ -1,16 +1,17 @@
 import { elasticDocumentsIndex, elasticsearchClient } from "../../api/utils";
-import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
+import { getRouteBySource, SourceKeys, SOURCES } from "@socialgouv/cdtn-utils";
 import {
   DocumentElasticResult,
   fetchDocument,
   RelatedItem,
   Source,
 } from "../documents";
-import { NewsElasticDocument } from "@socialgouv/cdtn-types";
 import { LinkedContent } from "@socialgouv/cdtn-types/build/elastic/related-items";
-import { News } from "./type";
+import { toUrl } from "../utils/url";
+import { getNewsModifiedTime } from "./dates";
+import { News, NewsDocument, NewsLink, NewsSummary } from "./type";
 
-export const fetchNewsList = async <K extends keyof NewsElasticDocument>(
+export const fetchNewsList = async <K extends keyof NewsDocument>(
   fields: K[],
   filters?: {
     cdtnIds?: string[];
@@ -18,7 +19,7 @@ export const fetchNewsList = async <K extends keyof NewsElasticDocument>(
     pageSize?: number;
   }
 ): Promise<{
-  items: Pick<NewsElasticDocument, K>[];
+  items: Pick<NewsDocument, K>[];
   total: number;
   totalPages: number;
   page: number;
@@ -37,9 +38,7 @@ export const fetchNewsList = async <K extends keyof NewsElasticDocument>(
     baseFilters.push({ terms: { cdtnId: filters.cdtnIds } });
   }
 
-  const response = await elasticsearchClient.search<
-    Pick<NewsElasticDocument, K>
-  >({
+  const response = await elasticsearchClient.search<Pick<NewsDocument, K>>({
     query: {
       bool: {
         filter: baseFilters,
@@ -71,13 +70,13 @@ export const fetchNewsList = async <K extends keyof NewsElasticDocument>(
   };
 };
 
-export const fetchNews = async <K extends keyof NewsElasticDocument>(
+export const fetchNews = async <K extends keyof NewsDocument>(
   slug: string,
   fields: K[]
-): Promise<DocumentElasticResult<Pick<NewsElasticDocument, K>> | undefined> => {
+): Promise<DocumentElasticResult<Pick<NewsDocument, K>> | undefined> => {
   return await fetchDocument<
-    NewsElasticDocument,
-    keyof DocumentElasticResult<NewsElasticDocument>
+    NewsDocument,
+    keyof DocumentElasticResult<NewsDocument>
   >(fields, {
     query: {
       bool: {
@@ -94,32 +93,68 @@ export const fetchNews = async <K extends keyof NewsElasticDocument>(
   });
 };
 
+export const formatSummary = ({
+  image,
+  ...news
+}: Pick<
+  NewsDocument,
+  "title" | "content" | "date" | "slug" | "image"
+>): NewsSummary => ({
+  ...news,
+  image: image ? { ...image, url: toUrl(image.filename) } : undefined,
+});
+
 export const format = ({
   title,
   meta_title,
   date,
+  updatedAt,
   content,
   meta_description,
   linkedContent,
+  image,
+  links,
+  references,
 }: Pick<
-  NewsElasticDocument,
+  NewsDocument,
   | "title"
   | "meta_title"
   | "date"
+  | "updatedAt"
   | "content"
   | "meta_description"
   | "linkedContent"
+  | "image"
+  | "links"
+  | "references"
 >): News => {
-  const buildItems = (arr: LinkedContent[]): RelatedItem[] =>
-    arr.map((item) => ({
-      title: item.title,
-      source: item.source as Source,
-      url: `/${getRouteBySource(item.source)}/${item.slug}`,
-    }));
+  const toRelatedItem = (link: NewsLink): RelatedItem =>
+    link.type === "external"
+      ? {
+          title: link.title,
+          source: SOURCES.EXTERNALS,
+          url: link.url,
+          external: true,
+          ...(link.intro ? { intro: link.intro } : {}),
+        }
+      : {
+          title: link.title,
+          source: link.source as Source,
+          url: `/${getRouteBySource(link.source as SourceKeys)}/${link.slug}`,
+          ...(link.intro ? { intro: link.intro } : {}),
+        };
+
+  // Les « Contenus liés » de l'admin (`links` : contenus CDTN et liens
+  // externes, dans l'ordre saisi). Un export antérieur n'a que `linkedContent`.
+  const items = links
+    ? links.map(toRelatedItem)
+    : linkedContent.map((item: LinkedContent) =>
+        toRelatedItem({ type: "cdtn", ...item })
+      );
 
   const categories: Array<{
     title: string;
-    filter: (i: LinkedContent) => boolean;
+    filter: (i: RelatedItem) => boolean;
   }> = [
     {
       title: "Simulateurs",
@@ -137,10 +172,8 @@ export const format = ({
 
   const relatedItems = categories
     .map(({ title, filter }) => {
-      const filtered = linkedContent.filter(filter);
-      return filtered.length
-        ? { title, items: buildItems(filtered) }
-        : undefined;
+      const filtered = items.filter(filter);
+      return filtered.length ? { title, items: filtered } : undefined;
     })
     .filter((x): x is { title: string; items: RelatedItem[] } => Boolean(x));
 
@@ -151,5 +184,8 @@ export const format = ({
     content,
     meta_description,
     relatedItems,
+    image: image ? { ...image, url: toUrl(image.filename) } : undefined,
+    references: references ?? [],
+    modifiedTime: getNewsModifiedTime(date, updatedAt),
   };
 };

@@ -38,7 +38,7 @@ describe("GET /actualite/rss.xml", () => {
     );
     expect(await response.text()).toContain("/actualite/premiere");
     expect(mockedFetchNewsList).toHaveBeenCalledWith(
-      ["title", "meta_description", "date", "slug"],
+      ["title", "meta_description", "date", "slug", "image"],
       { page: 1, pageSize: 20 }
     );
 

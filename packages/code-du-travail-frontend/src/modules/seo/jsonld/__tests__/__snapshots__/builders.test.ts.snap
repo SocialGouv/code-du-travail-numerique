@@ -99,17 +99,30 @@ exports[`jsonld builders buildNewsArticleJsonLd() convertit la date admin JJ/MM/
 {
   "@context": "https://schema.org",
   "@type": "NewsArticle",
+  "articleSection": "Actualités",
   "author": {
     "@id": "http://api.url/#government-organization",
+    "@type": "GovernmentOrganization",
+    "logo": "http://api.url/static/assets/img/logo.svg",
+    "name": "Code du travail numérique",
+    "url": "http://api.url",
   },
   "dateModified": "2026-09-18T00:00:00+02:00",
   "datePublished": "2026-09-18T00:00:00+02:00",
   "description": "Description de l'actualite",
   "headline": "Titre actualite",
   "inLanguage": "fr-FR",
+  "isAccessibleForFree": true,
+  "isPartOf": {
+    "@id": "http://api.url/#website",
+  },
   "mainEntityOfPage": "http://api.url/actualite/mon-article",
   "publisher": {
     "@id": "http://api.url/#government-organization",
+    "@type": "GovernmentOrganization",
+    "logo": "http://api.url/static/assets/img/logo.svg",
+    "name": "Code du travail numérique",
+    "url": "http://api.url",
   },
   "url": "http://api.url/actualite/mon-article",
 }

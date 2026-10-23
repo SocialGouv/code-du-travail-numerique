@@ -15,7 +15,7 @@ describe("<NewsItem />", () => {
     expect(time.tagName).toBe("TIME");
     expect(time).toHaveAttribute("dateTime", "2026-04-07");
     expect(time.parentElement).toHaveTextContent("Publié le 7 avril 2026");
-    expect(getByRole("link", { name: /Lire l'actualité/ })).toHaveAttribute(
+    expect(getByRole("link", { name: /Lire la suite/ })).toHaveAttribute(
       "href",
       "/actualite/mon-actualite"
     );
@@ -32,5 +32,64 @@ describe("<NewsItem />", () => {
     );
     expect(queryByText(/Publié le/)).toBeNull();
     expect(container.querySelector("time")).toBeNull();
+  });
+
+  it("affiche l'image entre le titre et le contenu", () => {
+    const { getByRole, getByAltText } = render(
+      <NewsItem
+        title="Mon actualité"
+        content="<p>Contenu</p>"
+        date="07/04/2026"
+        slug="mon-actualite"
+        image={{
+          filename: "actu.webp",
+          url: "https://cdn/actu.webp",
+          alt: "Une salariée à son bureau",
+          license: "free",
+        }}
+      />
+    );
+    const image = getByAltText("Une salariée à son bureau");
+    expect(image).toHaveAttribute("src", "https://cdn/actu.webp");
+    expect(image).toHaveAttribute("loading", "lazy");
+    const heading = getByRole("heading", { name: "Mon actualité" });
+    expect(
+      heading.compareDocumentPosition(image) & Node.DOCUMENT_POSITION_FOLLOWING
+    ).toBeTruthy();
+    expect(
+      image.compareDocumentPosition(getByRole("link")) &
+        Node.DOCUMENT_POSITION_FOLLOWING
+    ).toBeTruthy();
+  });
+
+  it("ne charge pas en différé l'image prioritaire", () => {
+    const { getByAltText } = render(
+      <NewsItem
+        title="Mon actualité"
+        content="<p>Contenu</p>"
+        date="07/04/2026"
+        slug="mon-actualite"
+        imagePriority
+        image={{
+          filename: "actu.webp",
+          url: "https://cdn/actu.webp",
+          alt: "Image",
+          license: "free",
+        }}
+      />
+    );
+    expect(getByAltText("Image")).not.toHaveAttribute("loading");
+  });
+
+  it("n'affiche pas d'image quand l'actualité n'en a pas", () => {
+    const { queryByRole } = render(
+      <NewsItem
+        title="Mon actualité"
+        content="<p>Contenu</p>"
+        date="07/04/2026"
+        slug="mon-actualite"
+      />
+    );
+    expect(queryByRole("img")).toBeNull();
   });
 });

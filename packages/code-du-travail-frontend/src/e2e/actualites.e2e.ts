@@ -42,6 +42,20 @@ test.describe("Actualités", () => {
     await expect(
       page.locator('meta[property="article:modified_time"]')
     ).toHaveAttribute("content", NEWS_ISO_DATE_TIME);
+    await expect(
+      page.locator('meta[property="article:section"]')
+    ).toHaveAttribute("content", "Actualités");
+    await expect(page.locator('meta[name="robots"]').first()).toHaveAttribute(
+      "content",
+      /max-snippet:-1, max-image-preview:large/
+    );
+    const canonical = await page
+      .locator('link[rel="canonical"]')
+      .getAttribute("href");
+    await expect(page.locator('meta[property="og:url"]')).toHaveAttribute(
+      "content",
+      canonical as string
+    );
 
     // Déclaration du flux RSS.
     await expect(
@@ -74,12 +88,13 @@ test.describe("Actualités", () => {
 
     // Chaque actualité listée porte sa date dans une balise <time> ISO,
     // précédée de « Publié le ». On ne présume pas de l'actualité en tête de
-    // liste : elle dépend des données de l'environnement.
+    // liste : elle dépend des données de l'environnement. La date est écrite
+    // avec des espaces insécables, que `\s` couvre.
     const firstTime = page.locator("main time").first();
     await expect(firstTime).toHaveAttribute("datetime", /^\d{4}-\d{2}-\d{2}$/);
-    await expect(firstTime).toHaveText(/^\d{1,2}(er)? [a-zéû]+ \d{4}$/);
+    await expect(firstTime).toHaveText(/^\d{1,2}(er)?\s[a-zéû]+\s\d{4}$/);
     await expect(firstTime.locator("xpath=..")).toHaveText(
-      /^Publié le \d{1,2}(er)? [a-zéû]+ \d{4}$/
+      /^Publié le \d{1,2}(er)?\s[a-zéû]+\s\d{4}$/
     );
   });
 
