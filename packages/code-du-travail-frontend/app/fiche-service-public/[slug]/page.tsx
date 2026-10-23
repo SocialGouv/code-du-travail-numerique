@@ -2,7 +2,6 @@ import React from "react";
 import { notFound } from "next/navigation";
 import { DsfrLayout } from "../../../src/modules/layout";
 import { fetchFicheSP } from "../../../src/modules/fiche-service-public/queries";
-import { fetchRelatedItems } from "../../../src/modules/documents";
 import { generateDefaultMetadata } from "../../../src/modules/common/metas";
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
 import { FicheServicePublicContainer } from "../../../src/modules/fiche-service-public/FicheServicePublicContainer";
@@ -23,7 +22,6 @@ export async function generateMetadata(props) {
 async function Fiche(props) {
   const params = await props.params;
   const {
-    _id,
     breadcrumbs,
     date,
     description,
@@ -34,16 +32,15 @@ async function Fiche(props) {
     url,
     links,
   } = await getFiche(params.slug);
-  const [relatedItems, recommendedLinks] = await Promise.all([
-    fetchRelatedItems({ _id }, params.slug),
-    fetchFicheSPRecommendedLinks(breadcrumbs, links),
-  ]);
+  const recommendedLinks = await fetchFicheSPRecommendedLinks(
+    breadcrumbs,
+    links
+  );
 
   return (
     <DsfrLayout>
       <FicheServicePublicContainer
         title={title}
-        relatedItems={relatedItems}
         date={date}
         url={url}
         metaDescription={description}

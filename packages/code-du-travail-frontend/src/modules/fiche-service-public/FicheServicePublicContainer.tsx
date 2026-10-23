@@ -1,6 +1,5 @@
 import React from "react";
 import { fr } from "@codegouvfr/react-dsfr";
-import { RelatedItem } from "../documents";
 import { ElasticFicheServicePublic } from "./queries";
 import { ContainerRichWithBreadcrumbs } from "../layout/ContainerRichWithBreadcrumbs";
 import { ContentMeta } from "../common/ContentMeta";
@@ -16,7 +15,6 @@ import { RecommendedLinks } from "./RecommendedLinks";
 import { RecommendedItem } from "./types";
 
 type Props = {
-  relatedItems: { items: RelatedItem[]; title: string }[];
   raw: { children: FicheSPData[] };
   recommendedLinks?: RecommendedItem[];
 } & Pick<
