@@ -2,10 +2,10 @@ import React from "react";
 import { notFound } from "next/navigation";
 import { DsfrLayout } from "../../../src/modules/layout";
 import { fetchFicheSP } from "../../../src/modules/fiche-service-public/queries";
-import { fetchRelatedItems } from "../../../src/modules/documents";
 import { generateDefaultMetadata } from "../../../src/modules/common/metas";
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
 import { FicheServicePublicContainer } from "../../../src/modules/fiche-service-public/FicheServicePublicContainer";
+import { fetchFicheSPRecommendedLinks } from "../../../src/modules/fiche-service-public/recommended-links";
 
 export async function generateMetadata(props) {
   const params = await props.params;
@@ -22,7 +22,6 @@ export async function generateMetadata(props) {
 async function Fiche(props) {
   const params = await props.params;
   const {
-    _id,
     breadcrumbs,
     date,
     description,
@@ -31,14 +30,17 @@ async function Fiche(props) {
     slug,
     title,
     url,
+    links,
   } = await getFiche(params.slug);
-  const relatedItems = await fetchRelatedItems({ _id }, params.slug);
+  const recommendedLinks = await fetchFicheSPRecommendedLinks(
+    breadcrumbs,
+    links
+  );
 
   return (
     <DsfrLayout>
       <FicheServicePublicContainer
         title={title}
-        relatedItems={relatedItems}
         date={date}
         url={url}
         metaDescription={description}
@@ -46,6 +48,7 @@ async function Fiche(props) {
         breadcrumbs={breadcrumbs}
         referencedTexts={referencedTexts}
         slug={slug}
+        recommendedLinks={recommendedLinks}
       />
     </DsfrLayout>
   );

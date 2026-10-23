@@ -560,6 +560,20 @@ entreprise/accords.
 | ------------------------ | ----------- | --------- | ---------------- | ---- |
 | page_modeles_de_documents | type_CTRL_C | `<slug>` | Copie d'un modèle (bouton « Copier le modèle » ou raccourci Ctrl/Cmd+C). Mesure les courriers les plus copiés. | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/modeles-de-courriers/tracking.ts#L7 "modeles-de-courriers/tracking.ts:7") |
 
+### Fiches service-public
+
+La rubrique **« Liens recommandés »** (#7539) remplace les « contenus liés » en bas des fiches
+service-public : jusqu'à quatre cartes, le sous-thème de rattachement de la fiche d'abord, puis
+les sous-thèmes et contenus du site recommandés pour la fiche. La catégorie reprend celle de
+`clic_tag_theme` sur ces pages (`fiche-service-public`), pour lire tous les events d'une fiche
+ensemble. Comme `selectRelated` ne part plus sur ces pages, l'usage de la rubrique se mesure
+avec les deux events ci-dessous.
+
+| Catégorie            | Action                     | Name (📌) | Quand / pourquoi | Code |
+| -------------------- | -------------------------- | --------- | ---------------- | ---- |
+| fiche-service-public | clic_lien_recommande       | `{"slug":"fiche-service-public/<slug>","cible":"<chemin du contenu>","position":<1 à 4>}` | Clic sur une carte de la rubrique « Liens recommandés ». `cible` = chemin du contenu atteint, sans slash initial (`themes/<thème>#<sous-thème>` pour un sous-thème, `contribution/<slug>`, `information/<slug>`… pour un contenu) ; `position` = rang de la carte (1 = la première, le sous-thème de rattachement de la fiche quand il existe). Dit quels liens fonctionnent, et à quelle place. | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/fiche-service-public/tracking.ts#L26 "fiche-service-public/tracking.ts:26") |
+| fiche-service-public | liens_recommandes_affiches | `fiche-service-public/<slug>` | Rubrique « Liens recommandés » **entrée dans l'écran** (un pixel dans le viewport, onglet actif, sans temps de présence) ; émis **une seule fois** par page. C'est le **dénominateur** de `clic_lien_recommande` : rapporté aux pages vues, la part des visites qui descendent jusqu'aux cartes ; rapporté aux clics, le taux de clic réel de la rubrique. | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/fiche-service-public/tracking.ts#L44 "fiche-service-public/tracking.ts:44") |
+
 ---
 
 ### Avis & contact (bas de page)
@@ -592,5 +606,5 @@ Les 4 motifs possibles de `feedback_category` (un event par case cochée) :
 | Catégorie      | Action                | Name (🔀)                       | Quand / pourquoi | Code |
 | -------------- | --------------------- | ------------------------------- | ---------------- | ---- |
 | clic_share     | `<url de la page>`    | `<réseau>` (facebook, twitter, linkedin, email, whatsapp, copier) | Clic sur un bouton du bloc « Partager la page ». Quels contenus, via quels canaux. | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/common/tracking.ts#L30 "common/tracking.ts:30") |
-| selectRelated  | `{"selection":"<url>"}` | —                             | Clic sur un lien de la rubrique « contenus liés » en bas de page. Depuis #7455, le groupe « Articles liés » disparaît des contributions retenues pour le test des sous-thèmes (remplacé par `clic_explorez_thematique`) ; « Modèles et simulateurs liés » et les autres types de contenu ne changent pas. | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/common/tracking.ts#L23 "common/tracking.ts:23") |
+| selectRelated  | `{"selection":"<url>"}` | —                             | Clic sur un lien de la rubrique « contenus liés » en bas de page. Depuis #7455, le groupe « Articles liés » disparaît des contributions retenues pour le test des sous-thèmes (remplacé par `clic_explorez_thematique`) ; « Modèles et simulateurs liés » et les autres types de contenu ne changent pas. Depuis #7539, la rubrique disparaît des fiches service-public (remplacée par `clic_lien_recommande`). | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/common/tracking.ts#L23 "common/tracking.ts:23") |
 | `<source>` (ex. `contribution`, `information`, …) | clic_tag_theme | `{"slug":"<slug page>","theme":"<slug thème>"}` (ex. `{"slug":"mon-slug","theme":"themes/conges-et-repos"}`) | Clic sur un des tags de thème (thème racine ou sous-thème) affichés sous le titre des contributions, fiches service-public, fiches ministère du travail, fiches infos, infographies et modèles de courrier. **Catégorie = source de la page** ; `name` = JSON `{slug de la page, thème cliqué}` en slugs, jamais l'URL complète. Mesure l'usage de ce point d'entrée vers la navigation par thème. | [↗](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/common/tracking.ts#L43 "common/tracking.ts:43") |
