@@ -17,6 +17,7 @@ import { getAnswerScopePilot } from "./answerScopePilot";
 import { css } from "@styled-system/css";
 import { ExploreThemes } from "./explore-themes/ExploreThemes";
 import type { ExploreTheme } from "./explore-themes/type";
+import DisplayContent from "../common/DisplayContent";
 
 type Props = {
   contribution: Contribution;
@@ -64,6 +65,15 @@ export function ContributionAgreementContent({
         </h2>
         {answerScopePilot && (
           <AnswerScopeDisclaimer {...answerScopePilot.disclaimer} />
+        )}
+        {contribution.introduction && (
+          <>
+            <DisplayContent
+              content={contribution.introduction}
+              titleLevel={3}
+              visualOffset={-1}
+            />
+          </>
         )}
         <ContributionContent contribution={contribution} titleLevel={2} />
         <ExploreThemes
