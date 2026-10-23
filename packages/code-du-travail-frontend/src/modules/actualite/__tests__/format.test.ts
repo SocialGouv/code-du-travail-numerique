@@ -127,7 +127,12 @@ describe("format (actualité)", () => {
   it("calcule l'url de l'image", () => {
     const result = format({
       ...base,
-      image: { filename: "actu.webp", alt: "alt", license: "free" },
+      image: {
+        filename: "actu.webp",
+        alt: "alt",
+        license: "free",
+        sizeOctet: 10318,
+      },
     });
     expect(result.image?.url).toBe(
       `${BUCKET_URL}/${BUCKET_FOLDER}/default/actu.webp`
@@ -169,7 +174,12 @@ describe("formatSummary (liste des actualités)", () => {
     expect(
       formatSummary({
         ...summary,
-        image: { filename: "actu.webp", alt: "alt", license: "free" },
+        image: {
+          filename: "actu.webp",
+          alt: "alt",
+          license: "free",
+          sizeOctet: 10318,
+        },
       }).image?.url
     ).toBe(`${BUCKET_URL}/${BUCKET_FOLDER}/default/actu.webp`);
   });

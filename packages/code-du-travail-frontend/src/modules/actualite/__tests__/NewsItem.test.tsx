@@ -46,6 +46,7 @@ describe("<NewsItem />", () => {
           url: "https://cdn/actu.webp",
           alt: "Une salariée à son bureau",
           license: "free",
+          sizeOctet: 10318,
         }}
       />
     );
@@ -75,6 +76,7 @@ describe("<NewsItem />", () => {
           url: "https://cdn/actu.webp",
           alt: "Image",
           license: "free",
+          sizeOctet: 10318,
         }}
       />
     );

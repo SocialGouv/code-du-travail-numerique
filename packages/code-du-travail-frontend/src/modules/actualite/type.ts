@@ -1,48 +1,22 @@
-import { NewsElasticDocument } from "@socialgouv/cdtn-types";
+import {
+  NewsElasticDocument,
+  NewsElasticLink,
+  NewsTemplateImage,
+  NewsTemplateReference,
+} from "@socialgouv/cdtn-types";
 import { RelatedItem } from "../documents";
 
-export type NewsImage = {
-  filename: string;
-  alt: string;
-  author?: string;
-  license: "free" | "source";
-  width?: number;
-  height?: number;
-  sizeOctet?: number;
-};
-
-type NewsExternalLink = {
-  type: "external";
-  title: string;
-  url: string;
-  intro?: string;
-};
+export type NewsImage = NewsTemplateImage;
 
 // « Contenus liés » d'une actualité.
-export type NewsLink =
-  | {
-      type: "cdtn";
-      source: string;
-      slug: string;
-      title: string;
-      intro?: string;
-    }
-  | NewsExternalLink;
+export type NewsLink = NewsElasticLink;
 
-export type NewsReference =
-  | { type: "legi"; title: string; url: string; intro?: string }
-  | NewsExternalLink;
+export type NewsReference = NewsTemplateReference;
 
-// A remplacer par `@socialgouv/cdtn-types` dès la publication des types de l'admin.
-export type NewsDocument = NewsElasticDocument & {
-  updatedAt?: string;
-  // Instant de la dernière publication (ISO 8601), absent des actualités
-  // publiées avant son ajout dans l'admin.
-  publishedAt?: string;
-  image?: NewsImage;
-  links?: NewsLink[];
-  references?: NewsReference[];
-};
+// Un export antérieur aux liens et références de l'admin n'a ni `links` ni
+// `references` (seulement `linkedContent`).
+export type NewsDocument = Omit<NewsElasticDocument, "links" | "references"> &
+  Partial<Pick<NewsElasticDocument, "links" | "references">>;
 
 export type News = Pick<
   NewsDocument,

@@ -40,7 +40,7 @@
     "@opentelemetry/instrumentation-net": "^0.62.0",
     "@sentry/nextjs": "~10.55.0",
     "@socialgouv/cdtn-elasticsearch": "^2.74.0",
-    "@socialgouv/cdtn-types": "^2.74.0",
+    "@socialgouv/cdtn-types": "^2.78.0",
     "@socialgouv/cdtn-utils": "link:../code-du-travail-utils",
     "@socialgouv/dila-api-client": "1.2.4",
     "@socialgouv/matomo-next": "^1.14.2",
