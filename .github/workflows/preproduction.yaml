@@ -86,7 +86,8 @@ jobs:
     secrets: inherit
   e2e:
     name: End-to-end testing
-    runs-on: ubuntu-latest
+    # Playwright n'installe pas Chromium sur ubuntu-latest (26.04)
+    runs-on: ubuntu-24.04
     needs: [kontinuous]
     steps:
       - name: Checkout repository
