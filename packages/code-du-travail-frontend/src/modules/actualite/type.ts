@@ -36,6 +36,9 @@ export type NewsReference =
 // A remplacer par `@socialgouv/cdtn-types` dès la publication des types de l'admin.
 export type NewsDocument = NewsElasticDocument & {
   updatedAt?: string;
+  // Instant de la dernière publication (ISO 8601), absent des actualités
+  // publiées avant son ajout dans l'admin.
+  publishedAt?: string;
   image?: NewsImage;
   links?: NewsLink[];
   references?: NewsReference[];
@@ -48,6 +51,7 @@ export type News = Pick<
   relatedItems: { items: RelatedItem[]; title: string }[];
   image?: NewsImage & { url: string };
   references: NewsReference[];
+  publishedTime?: string;
   modifiedTime?: string;
 };
 

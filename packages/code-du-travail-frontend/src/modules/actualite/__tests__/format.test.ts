@@ -141,6 +141,16 @@ describe("format (actualité)", () => {
     expect(format(base).modifiedTime).toBe("2026-01-01T00:00:00+01:00");
   });
 
+  it("date la publication à l'instant de publication quand il est connu", () => {
+    const published = format({
+      ...base,
+      publishedAt: "2026-01-01T09:15:00Z",
+    });
+    expect(published.publishedTime).toBe("2026-01-01T09:15:00.000Z");
+    expect(published.modifiedTime).toBe("2026-01-01T09:15:00.000Z");
+    expect(format(base).publishedTime).toBe("2026-01-01T00:00:00+01:00");
+  });
+
   it("renvoie [] quand references est absent", () => {
     expect(format(base).references).toEqual([]);
     expect(format(base).image).toBeUndefined();

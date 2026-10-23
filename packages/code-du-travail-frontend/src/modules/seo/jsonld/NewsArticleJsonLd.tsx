@@ -8,6 +8,7 @@ export function NewsArticleJsonLd(props: {
   headline: string;
   url: string;
   datePublished?: string;
+  publishedTime?: string;
   dateModified?: string;
   description?: string;
   image?: { url: string; width?: number; height?: number };

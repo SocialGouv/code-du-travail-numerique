@@ -8,8 +8,10 @@ import { Metadata } from "next";
 import { NewsArticleJsonLd } from "src/modules/seo/jsonld";
 import { NEWS_ARTICLE_SECTION } from "src/modules/seo/jsonld/builders";
 import { NEWS_RSS_FEED } from "src/modules/actualite/rss";
-import { getNewsModifiedTime } from "src/modules/actualite/dates";
-import { toIsoDateTimeParis } from "src/modules/utils/date";
+import {
+  getNewsModifiedTime,
+  getNewsPublishedTime,
+} from "src/modules/actualite/dates";
 import { toUrl } from "src/modules/utils/url";
 
 export async function generateMetadata(
@@ -22,6 +24,7 @@ export async function generateMetadata(
     "meta_description",
     "date",
     "updatedAt",
+    "publishedAt",
     "image",
   ]);
 
@@ -42,8 +45,12 @@ export async function generateMetadata(
     // og:type article + article:published_time / article:modified_time (mêmes
     // ISO que le JSON-LD).
     article: {
-      publishedTime: toIsoDateTimeParis(news.date),
-      modifiedTime: getNewsModifiedTime(news.date, news.updatedAt),
+      publishedTime: getNewsPublishedTime(news.date, news.publishedAt),
+      modifiedTime: getNewsModifiedTime(
+        news.date,
+        news.updatedAt,
+        news.publishedAt
+      ),
       section: NEWS_ARTICLE_SECTION,
     },
     ...(news.image && {
@@ -71,6 +78,7 @@ async function NewsPage(props: PageProps<"/actualite/[slug]">) {
         headline={news.title}
         url={`/actualite/${params.slug}`}
         datePublished={news.date}
+        publishedTime={news.publishedTime}
         dateModified={news.modifiedTime}
         description={news.meta_description}
         image={
@@ -94,6 +102,7 @@ const getNews = async (slug: string): Promise<News> => {
     "meta_description",
     "date",
     "updatedAt",
+    "publishedAt",
     "content",
     "linkedContent",
     "image",

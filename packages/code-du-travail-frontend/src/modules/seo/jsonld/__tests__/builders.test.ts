@@ -128,6 +128,17 @@ describe("jsonld builders", () => {
     expect(jsonld.dateModified).toBe("2026-10-10T13:07:55.000Z");
   });
 
+  it("buildNewsArticleJsonLd() émet l'instant de publication quand il est connu", () => {
+    const jsonld = buildNewsArticleJsonLd({
+      headline: "Titre",
+      url: "/actualite/slug",
+      datePublished: "01/10/2026",
+      publishedTime: "2026-10-01T07:45:00.000Z",
+    });
+    expect(jsonld.datePublished).toBe("2026-10-01T07:45:00.000Z");
+    expect(jsonld.dateModified).toBe("2026-10-01T07:45:00.000Z");
+  });
+
   it("buildNewsArticleJsonLd() indique un contenu gratuit et cite les articles de loi", () => {
     const citations = [
       "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006901112",

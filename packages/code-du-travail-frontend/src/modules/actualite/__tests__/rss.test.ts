@@ -130,6 +130,18 @@ describe("buildNewsRssFeed()", () => {
     );
   });
 
+  it("date pubDate et lastBuildDate à l'instant de publication quand il est connu", () => {
+    const xml = buildNewsRssFeed([
+      { ...items[0], publishedAt: "2026-09-18T07:45:00.000Z" },
+      items[1],
+    ]);
+    expect(xml).toContain("<pubDate>Fri, 18 Sep 2026 07:45:00 GMT</pubDate>");
+    expect(xml).toContain(
+      "<lastBuildDate>Fri, 18 Sep 2026 07:45:00 GMT</lastBuildDate>"
+    );
+    expect(xml).toContain("<pubDate>Tue, 07 Apr 2026 00:00:00 +0200</pubDate>");
+  });
+
   it("reste valide sans aucune actualité", () => {
     const xml = buildNewsRssFeed([]);
     expect(xml).toContain("<channel>");

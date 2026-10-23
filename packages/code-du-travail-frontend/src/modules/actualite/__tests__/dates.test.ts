@@ -1,5 +1,5 @@
 import { toIsoDateTimeParis } from "../../utils/date";
-import { getNewsModifiedTime } from "../dates";
+import { getNewsModifiedTime, getNewsPublishedTime } from "../dates";
 
 describe("getNewsModifiedTime", () => {
   it("renvoie la date de modification quand elle est plus récente", () => {
@@ -22,5 +22,32 @@ describe("getNewsModifiedTime", () => {
 
   it("renvoie undefined sans date valide", () => {
     expect(getNewsModifiedTime(undefined, "invalide")).toBeUndefined();
+  });
+});
+
+describe("getNewsPublishedTime", () => {
+  it("renvoie l'instant de publication quand il est connu", () => {
+    expect(getNewsPublishedTime("01/10/2026", "2026-10-01T07:45:00Z")).toBe(
+      "2026-10-01T07:45:00.000Z"
+    );
+  });
+
+  it("renvoie la date affichée à minuit Paris sans instant valide", () => {
+    expect(getNewsPublishedTime("01/10/2026", undefined)).toBe(
+      "2026-10-01T00:00:00+02:00"
+    );
+    expect(getNewsPublishedTime("01/10/2026", "invalide")).toBe(
+      "2026-10-01T00:00:00+02:00"
+    );
+  });
+
+  it("compare la date de modification à l'instant de publication", () => {
+    expect(
+      getNewsModifiedTime(
+        "01/10/2026",
+        "2026-10-01T06:00:00Z",
+        "2026-10-01T07:45:00Z"
+      )
+    ).toBe("2026-10-01T07:45:00.000Z");
   });
 });
