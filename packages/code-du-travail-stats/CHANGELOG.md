@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.249.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.248.0...v4.249.0) (2026-10-26)
+
+
+### Features
+
+* **fiche-service-public:** liens recommandés vers nos contenus et events Matomo ([#7544](https://github.com/SocialGouv/code-du-travail-numerique/issues/7544)) ([0478e79](https://github.com/SocialGouv/code-du-travail-numerique/commit/0478e791c062e690a02c5045a762293efb47e32d))
+
+
+
+
+
 # [4.248.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.247.0...v4.248.0) (2026-10-19)
 
 

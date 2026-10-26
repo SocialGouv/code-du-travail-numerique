@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.249.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.248.0...v4.249.0) (2026-10-26)
+
+
+### Features
+
+* **actualites:** heure de publication dans le JSON-LD, l'Open Graph et le flux RSS ([#7569](https://github.com/SocialGouv/code-du-travail-numerique/issues/7569)) ([9787ad0](https://github.com/SocialGouv/code-du-travail-numerique/commit/9787ad0544a5ab005ea613f80ee56ef1cd4c1ed7))
+* **actualites:** image, « Pour aller plus loin », « Références » et SEO de l'image ([#7553](https://github.com/SocialGouv/code-du-travail-numerique/issues/7553)) ([9cd170e](https://github.com/SocialGouv/code-du-travail-numerique/commit/9cd170edea2cbdabfac0cb1681a6b2ae26aa7e04))
+* **fiche-service-public:** liens recommandés vers nos contenus et events Matomo ([#7544](https://github.com/SocialGouv/code-du-travail-numerique/issues/7544)) ([0478e79](https://github.com/SocialGouv/code-du-travail-numerique/commit/0478e791c062e690a02c5045a762293efb47e32d))
+* **seo:** dates ISO du JSON-LD Legislation, Open Graph article des contenus et logo PNG ([#7548](https://github.com/SocialGouv/code-du-travail-numerique/issues/7548)) ([#7572](https://github.com/SocialGouv/code-du-travail-numerique/issues/7572)) ([5c474be](https://github.com/SocialGouv/code-du-travail-numerique/commit/5c474be8d5b00753004b3967520a4dbe679889e6))
+
+
+
+
+
 # [4.248.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.247.0...v4.248.0) (2026-10-19)
 
 
