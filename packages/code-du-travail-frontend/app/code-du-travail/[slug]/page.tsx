@@ -36,7 +36,7 @@ async function Fiche(props) {
         name={title}
         url={`/code-du-travail/${params.slug}`}
         identifier={params.slug}
-        datePublished={dateDebut}
+        datePublished={new Date(dateDebut).toISOString()}
         isBasedOn={url}
       />
       <ArticleCodeDuTravail

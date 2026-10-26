@@ -1,7 +1,10 @@
 import { notFound } from "next/navigation";
 import { DsfrLayout } from "src/modules/layout";
 
-import { generateDefaultMetadata } from "src/modules/common/metas";
+import {
+  generateDefaultMetadata,
+  getContentArticle,
+} from "src/modules/common/metas";
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
 import {
   fetchInfographic,
@@ -18,6 +21,8 @@ export async function generateMetadata(
   const information = await fetchInfographic(params.slug, [
     "title",
     "metaDescription",
+    "date",
+    "breadcrumbs",
   ]);
 
   if (!information) {
@@ -28,6 +33,7 @@ export async function generateMetadata(
     title: information?.title,
     description: information?.metaDescription,
     path: `/${getRouteBySource(SOURCES.INFOGRAPHICS)}/${params.slug}`,
+    article: getContentArticle(information.date, information.breadcrumbs),
   });
 }
 

@@ -9,6 +9,7 @@ export type Props = {
   links: {
     title: string;
     url: string;
+    intro?: string;
   }[];
   titleAs?: `h${2 | 3 | 4 | 5 | 6}`;
 };
@@ -17,12 +18,19 @@ export const References = ({ label, links, titleAs }: Props) => {
   return (
     <Accordion label={label} className={fr.cx("fr-mt-6w")} titleAs={titleAs}>
       <ListWithArrow
-        items={links.map(({ title, url }) => {
+        items={links.map(({ title, url, intro }) => {
           if (!url) return <></>;
-          return (
+          const link = (
             <Link key={title} href={url} target="_blank">
               {title}
             </Link>
+          );
+          return intro ? (
+            <React.Fragment key={title}>
+              {intro}&nbsp;: {link}
+            </React.Fragment>
+          ) : (
+            link
           );
         })}
       />

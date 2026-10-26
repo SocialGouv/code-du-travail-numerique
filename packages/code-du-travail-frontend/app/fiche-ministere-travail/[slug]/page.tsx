@@ -1,19 +1,25 @@
 import React from "react";
 import { DsfrLayout } from "../../../src/modules/layout";
 import { notFound } from "next/navigation";
-import { generateDefaultMetadata } from "../../../src/modules/common/metas";
+import {
+  generateDefaultMetadata,
+  getContentArticle,
+} from "../../../src/modules/common/metas";
 import { fetchFicheMT } from "../../../src/modules/fiche-ministere-travail/queries";
 import { FicheMinistereTravail } from "../../../src/modules/fiche-ministere-travail/ficheMinistereTravail";
 import { fetchRelatedItems } from "../../../src/modules/documents";
 
 export async function generateMetadata(props) {
   const params = await props.params;
-  const { title, description, url } = await getFiche(params.slug);
+  const { title, description, url, date, breadcrumbs } = await getFiche(
+    params.slug
+  );
 
   return generateDefaultMetadata({
     title: title,
     description: description,
     overrideCanonical: url,
+    article: getContentArticle(date, breadcrumbs),
   });
 }
 

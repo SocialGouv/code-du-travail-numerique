@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.248.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.247.0...v4.248.0) (2026-10-19)
+
+
+### Features
+
+* **contribution:** test d'amélioration du SEO sur les contributions ([#7511](https://github.com/SocialGouv/code-du-travail-numerique/issues/7511)) ([1a5deee](https://github.com/SocialGouv/code-du-travail-numerique/commit/1a5deee8353918b39a04974431da460d335db81d))
+
+
+
+
+
 # [4.247.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.246.0...v4.247.0) (2026-10-06)
 
 **Note:** Version bump only for package @socialgouv/cdtn-stats
