@@ -96,6 +96,7 @@ RUN --mount=type=cache,id=next-cache,target=/tmp/.next-cache \
   if [ -f /run/secrets/OAUTH_CLIENT_ID ]; then export OAUTH_CLIENT_ID="$(cat /run/secrets/OAUTH_CLIENT_ID)"; fi; \
   if [ -f /run/secrets/OAUTH_CLIENT_SECRET ]; then export OAUTH_CLIENT_SECRET="$(cat /run/secrets/OAUTH_CLIENT_SECRET)"; fi; \
   pnpm --filter @cdt/frontend run build && \
+  node packages/code-du-travail-frontend/scripts/copy-sentry-runtime-deps.mjs && \
   rm -rf /tmp/.next-cache/* && \
   cp -a packages/code-du-travail-frontend/.next/cache/. /tmp/.next-cache/ 2>/dev/null || true \
   '
