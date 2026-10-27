@@ -24,21 +24,21 @@
     "directory": "packages/code-du-travail-modeles"
   },
   "devDependencies": {
-    "@eslint/js": "^9.39.2",
+    "@eslint/js": "^10.0.1",
     "@swc/cli": "^0.8.1",
-    "@swc/core": "^1.15.40",
+    "@swc/core": "^1.16.20",
     "@swc/jest": "^0.2.39",
     "@types/fs-extra": "^11.0.4",
     "@types/jest": "^30.0.0",
-    "@types/react": "~19.2.16",
-    "eslint": "^9.39.2",
-    "globals": "^17.3.0",
-    "jest": "^30.4.2",
-    "lint-staged": "^16.2.7",
-    "nodemon": "^3.1.11",
-    "prettier": "^3.8.1",
+    "@types/react": "~19.3.0",
+    "eslint": "^10.13.0",
+    "globals": "^17.13.0",
+    "jest": "^30.5.2",
+    "lint-staged": "^17.6.0",
+    "nodemon": "^3.1.14",
+    "prettier": "^3.9.10",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.54.0"
+    "typescript-eslint": "^8.72.0"
   },
   "scripts": {
     "precommit": "lint-staged",
@@ -58,10 +58,10 @@
     "format:check": "prettier --check \"./src/**/*.{js,ts,yaml,yml,json}\""
   },
   "dependencies": {
-    "date-fns": "^4.1.0",
-    "fs-extra": "^11.3.3",
+    "date-fns": "^4.4.0",
+    "fs-extra": "^11.4.1",
     "publicodes": "1.0.0-beta.60",
-    "yaml": "^2.8.2"
+    "yaml": "^2.9.1"
   },
   "lint-staged": {
     "*.{ts,js}": [

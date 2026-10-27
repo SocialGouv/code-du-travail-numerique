@@ -56,7 +56,7 @@
       "resolution": "dynamic",
       "emit_function": "emitClickThemeTag",
       "file": "packages/code-du-travail-frontend/src/modules/common/tracking.ts",
-      "line": 43,
+      "line": 37,
       "enum_refs": [
         "CommonCategory.CLICK_THEME_TAG",
         "JSON.stringify"
@@ -1226,7 +1226,7 @@
       "resolution": "dynamic",
       "emit_function": "emitClickShare",
       "file": "packages/code-du-travail-frontend/src/modules/common/tracking.ts",
-      "line": 33,
+      "line": 27,
       "enum_refs": [
         "CommonCategory.CLICK_SHARE"
       ],
@@ -2276,7 +2276,7 @@
       "resolution": "dynamic",
       "emit_function": "emitSelectRelated",
       "file": "packages/code-du-travail-frontend/src/modules/common/tracking.ts",
-      "line": 26,
+      "line": 20,
       "enum_refs": [
         "CommonCategory.SELECTED_RELATED",
         "JSON.stringify"

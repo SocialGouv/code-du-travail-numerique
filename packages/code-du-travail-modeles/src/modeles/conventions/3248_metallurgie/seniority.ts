@@ -226,7 +226,7 @@ export class Seniority3248 extends SeniorityDefault<SupportedCc.IDCC3248> {
       dateBecomeDayContract
     );
     const periods: YearDetail[] = [{ begin: dStartMajoration, end: dSortie }];
-    let totalAbsenceAfterDayContract = 0;
+    let totalAbsenceAfterDayContract: number;
     if (isEqual(dStartMajoration, dEntree)) {
       totalAbsenceAfterDayContract = absences.reduce((total, item) => {
         if (item.durationInMonth) {

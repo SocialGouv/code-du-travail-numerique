@@ -10,13 +10,7 @@ enum CommonCategory {
 }
 
 type SocialNetwork =
-  | "facebook"
-  | "twitter"
-  | "linkedin"
-  | "email"
-  | "whatsapp"
-  | "copier"
-  | "rss";
+  "facebook" | "twitter" | "linkedin" | "email" | "whatsapp" | "copier" | "rss";
 
 export const useCommonTracking = () => {
   const pathname = usePathname() ?? "";

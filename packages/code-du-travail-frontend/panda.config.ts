@@ -2,6 +2,7 @@ import { defineConfig } from "@pandacss/dev";
 
 export default defineConfig({
   preflight: true,
+  presets: ["@pandacss/preset-base"],
   include: ["./src/**/*.{js,jsx,ts,tsx}", "./app/**/*.{js,jsx,ts,tsx}"],
   exclude: [],
   theme: {
