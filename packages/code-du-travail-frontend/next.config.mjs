@@ -4,39 +4,35 @@ const MappingReplacement = await import("./redirects.json", {
   with: { type: "json" },
 });
 
+// Options de build Sentry (2e et dernier argument de `withSentryConfig`).
+// https://docs.sentry.io/platforms/javascript/guides/nextjs/configuration/build/
 const sentryConfig = {
-  // Sentry webpack plugin options
   org: process.env.NEXT_PUBLIC_SENTRY_ORG,
   project: process.env.NEXT_PUBLIC_SENTRY_PROJECT,
-  url: process.env.NEXT_PUBLIC_SENTRY_URL,
+  sentryUrl: process.env.NEXT_PUBLIC_SENTRY_URL,
   authToken: process.env.SENTRY_AUTH_TOKEN,
 
-  // Source maps configuration
-  sourcemaps: {
-    assets: ".next/**/*.{js,map}",
-    ignore: ["node_modules/**/*"],
-    rewrite: true,
-    stripPrefix: ["webpack://_N_E/", "webpack://", "app://"],
-    urlPrefix: "app:///_next",
-  },
-
-  // Debug and release configuration
   silent: false,
   debug: true,
-  release:
-    process.env.NEXT_PUBLIC_SENTRY_RELEASE ||
-    process.env.NEXT_PUBLIC_GITHUB_SHA ||
-    "dev",
-  dist: process.env.NEXT_PUBLIC_GITHUB_SHA || "dev",
-  setCommits: {
-    auto: true,
-    ignoreMissing: true,
+
+  // Sans nom fourni, le SDK tente de le déduire (variables CI, git), ce qui
+  // échoue dans l'image Docker : aucune release n'est alors créée.
+  release: {
+    name: process.env.NEXT_PUBLIC_SENTRY_RELEASE || undefined,
+    deploy: {
+      env: process.env.NEXT_PUBLIC_SENTRY_ENV || "development",
+    },
   },
-  deploy: {
-    env: process.env.NEXT_PUBLIC_SENTRY_ENV || "development",
-    dist: process.env.NEXT_PUBLIC_GITHUB_SHA || "dev",
+
+  // Source maps : chemins par défaut du SDK (compatibles Turbopack), élargis
+  // aux chunks client de Next.js.
+  widenClientFileUpload: true,
+
+  webpack: {
+    treeshake: {
+      removeDebugLogging: true,
+    },
   },
-  injectBuildInformation: true,
 
   // Instrumentation des dépendances serveur au build (Sentry v11) : désactivée.
   // Elle externalise `@sentry/server-runtime-injection` sous un alias symlinké
@@ -44,28 +40,6 @@ const sentryConfig = {
   // l'image et le conteneur d'init (crash au démarrage). Aucune des librairies
   // instrumentées (pg, redis, express…) n'est utilisée ici.
   buildTimeInstrumentation: false,
-};
-
-const sentrySdkConfig = {
-  tunnelRoute: false,
-  widenClientFileUpload: true,
-  hideSourceMaps: false,
-  disableLogger: true,
-
-  // Enable component names and release injection
-  includeNames: true,
-  release: {
-    inject: true,
-    name:
-      process.env.NEXT_PUBLIC_SENTRY_RELEASE ||
-      process.env.NEXT_PUBLIC_GITHUB_SHA ||
-      "dev",
-  },
-
-  // Server instrumentation options
-  autoInstrumentServerFunctions: true,
-  autoInstrumentMiddleware: true,
-  automaticVercelMonitors: true,
 };
 
 const nextConfig = {
@@ -185,4 +159,4 @@ const moduleExports = {
   },
 };
 
-export default withSentryConfig(moduleExports, sentryConfig, sentrySdkConfig);
+export default withSentryConfig(moduleExports, sentryConfig);
