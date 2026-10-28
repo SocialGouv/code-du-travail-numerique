@@ -18,7 +18,8 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
-    "strictPropertyInitialization": false
+    "strictPropertyInitialization": false,
+    "types": ["jest"]
   },
   "exclude": ["node_modules", "bin", "lib"]
 }

@@ -108,8 +108,8 @@ const createResultStore: StoreSlicePublicodes<
       const absencePeriods = get().absenceData.input.absencePeriods;
       const legalReferences = publicodes.getReferences();
       let publicodesSituation:
-        | PublicodesResult<PublicodesIndemniteLicenciementResult>
-        | undefined = undefined;
+        PublicodesResult<PublicodesIndemniteLicenciementResult> | undefined =
+        undefined;
 
       let agreementReferences: References[];
       let formula: Formula;

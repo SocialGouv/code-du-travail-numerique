@@ -1,4 +1,4 @@
-import { withSentryConfig } from "@sentry/nextjs";
+import { withSentryConfig } from "@sentry/nextjs/config";
 
 const MappingReplacement = await import("./redirects.json", {
   with: { type: "json" },
@@ -37,6 +37,13 @@ const sentryConfig = {
     dist: process.env.NEXT_PUBLIC_GITHUB_SHA || "dev",
   },
   injectBuildInformation: true,
+
+  // Instrumentation des dépendances serveur au build (Sentry v11) : désactivée.
+  // Elle externalise `@sentry/server-runtime-injection` sous un alias symlinké
+  // dans `.next/node_modules`, qui ne survit pas à la copie de `.next` dans
+  // l'image et le conteneur d'init (crash au démarrage). Aucune des librairies
+  // instrumentées (pg, redis, express…) n'est utilisée ici.
+  buildTimeInstrumentation: false,
 };
 
 const sentrySdkConfig = {

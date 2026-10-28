@@ -15,10 +15,7 @@ export type CC16ReferenceSalaryProps = {
 };
 
 export type CategoryPro16 =
-  | "'Employés'"
-  | "'Ingénieurs et cadres'"
-  | "'Ouvriers'"
-  | "'TAM'";
+  "'Employés'" | "'Ingénieurs et cadres'" | "'Ouvriers'" | "'TAM'";
 
 export class ReferenceSalary16 implements IReferenceSalary<SupportedCc.IDCC0016> {
   mapSituation(

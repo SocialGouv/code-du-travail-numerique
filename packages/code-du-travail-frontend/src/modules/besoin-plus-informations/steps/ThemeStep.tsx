@@ -15,8 +15,7 @@ import {
 // Les deux façons d'échouer à la validation de l'écran : aucun thème choisi, ou
 // un thème qui ne relève pas des SRDT. Dans les deux cas le parcours reste ici.
 export type ThemeStepError =
-  | { kind: "missing-theme" }
-  | { kind: "off-scope"; theme: OffScopeThemeKey };
+  { kind: "missing-theme" } | { kind: "off-scope"; theme: OffScopeThemeKey };
 
 type Props = {
   selectedTheme: ThemeKey | undefined;
