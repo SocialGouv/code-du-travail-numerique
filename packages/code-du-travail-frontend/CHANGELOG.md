@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.250.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.249.0...v4.250.0) (2026-10-29)
+
+### Bug Fixes
+
+* **sentry:** initialise le SDK serveur et applique réellement la config de build ([#7578](https://github.com/SocialGouv/code-du-travail-numerique/issues/7578)) ([fa19684](https://github.com/SocialGouv/code-du-travail-numerique/commit/fa196840a961829df7c80d48c383132247919120))
+
+### Features
+
+* **contribution:** ajout d'une introduction pour les conventions collectives ([#7567](https://github.com/SocialGouv/code-du-travail-numerique/issues/7567)) ([a1bd19f](https://github.com/SocialGouv/code-du-travail-numerique/commit/a1bd19fc23bc624e2f69e72702fd642fea546ac2))
+
+
 # [4.249.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.248.0...v4.249.0) (2026-10-26)
 
 
