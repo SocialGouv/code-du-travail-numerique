@@ -28,10 +28,7 @@ export type StoreSlicePublicodes<T extends object, E extends object = T> = (
 ) => T;
 
 export type AgreementRoute =
-  | "not-selected"
-  | "agreement"
-  | "enterprise"
-  | "no-agreement";
+  "not-selected" | "agreement" | "enterprise" | "no-agreement";
 
 export const STORAGE_KEY_AGREEMENT = "convention";
 

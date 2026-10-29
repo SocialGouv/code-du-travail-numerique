@@ -22,8 +22,7 @@ export const isExternalArrival = (): boolean => {
     // conserve le comportement historique (pas de réinitialisation).
     if (typeof performance?.getEntriesByType !== "function") return false;
     const nav = performance.getEntriesByType("navigation")[0] as
-      | PerformanceNavigationTiming
-      | undefined;
+      PerformanceNavigationTiming | undefined;
     if (!nav) return false;
     // Retour via l'historique : l'usager revient sur une page déjà consultée
     // (le referrer d'origine est préservé, il ne signifie plus rien).

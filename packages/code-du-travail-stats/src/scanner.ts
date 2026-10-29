@@ -127,7 +127,7 @@ export function scanSourceFiles(
         const method = `push:${cmdValue}`;
         let cats: Resolved[];
         let acts: Resolved[];
-        let namePattern: string | null = null;
+        let namePattern: string | null;
 
         if (cmdValue === "trackEvent") {
           cats = elements[1]

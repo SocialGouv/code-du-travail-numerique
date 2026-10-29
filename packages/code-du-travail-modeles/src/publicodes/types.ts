@@ -56,10 +56,7 @@ export interface Rule extends PubliRule {
 }
 
 export type NotificationAffichage =
-  | "conventionnel"
-  | "default"
-  | "légal et conventionnel"
-  | "légal";
+  "conventionnel" | "default" | "légal et conventionnel" | "légal";
 
 export interface NotificationRuleNode<
   Name extends string = string,
@@ -129,9 +126,7 @@ export type ExplanationMainResult =
   | "SAME_AMOUNT";
 
 export type PublicodesOutput<TResult> =
-  | PublicodesIneligibility
-  | PublicodesMissingArgs
-  | PublicodesResult<TResult>;
+  PublicodesIneligibility | PublicodesMissingArgs | PublicodesResult<TResult>;
 
 export type PublicodesData<TResult> = {
   situation: SituationElement[];

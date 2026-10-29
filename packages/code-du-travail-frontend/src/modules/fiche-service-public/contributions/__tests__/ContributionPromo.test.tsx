@@ -69,7 +69,7 @@ describe("<ContributionPromo />", () => {
 
     expect(pushMock).not.toHaveBeenCalled();
     const message = screen.getByText(REQUIRED_ENTERPRISE_ERROR);
-    expect(message).toHaveClass("fr-error-text");
+    expect(message).toHaveClass("fr-message", "fr-message--error");
     // Le message est relié au champ (annoncé à la prise de focus) et le champ
     // est marqué invalide ; le focus est ramené sur le champ.
     expect(input).toHaveAttribute("aria-invalid", "true");

@@ -36,28 +36,28 @@ describe("Découpage par année d'ancienneté", () => {
     ${date2021}        | ${date2020}       | ${[]}
     ${date2020}        | ${exitIn2020}     | ${[{ begin: date2020, end: exitIn2020 }]}
     ${date2020} | ${exitIn2021} | ${[
-  { begin: date2020, end: date2021LessOneDay },
-  {
-    begin: date2021,
-    end: exitIn2021,
-  },
-]}
+      { begin: date2020, end: date2021LessOneDay },
+      {
+        begin: date2021,
+        end: exitIn2021,
+      },
+    ]}
     ${date2020} | ${exitIn2022} | ${[
-  { begin: date2020, end: date2021LessOneDay },
-  {
-    begin: date2021,
-    end: date2022LessOneDay,
-  },
-  { begin: date2022, end: exitIn2022 },
-]}
+      { begin: date2020, end: date2021LessOneDay },
+      {
+        begin: date2021,
+        end: date2022LessOneDay,
+      },
+      { begin: date2022, end: exitIn2022 },
+    ]}
     ${date2020} | ${exitIn2022} | ${[
-  { begin: date2020, end: date2021LessOneDay },
-  {
-    begin: date2021,
-    end: date2022LessOneDay,
-  },
-  { begin: date2022, end: exitIn2022 },
-]}
+      { begin: date2020, end: date2021LessOneDay },
+      {
+        begin: date2021,
+        end: date2022LessOneDay,
+      },
+      { begin: date2022, end: exitIn2022 },
+    ]}
     ${case1.entryData} | ${case1.exitDate} | ${case1.expectedSplit}
   `(
     "Avec $entryDate et $exitDate on attend le découpage par année suivant $expectedSplit",
@@ -82,21 +82,21 @@ describe("Découpage par année d'ancienneté calendaire (janv -> déc)", () => 
     ${date2020} | ${exitIn2020} | ${[{ begin: begin2020, end: end2020 }]}
     ${date2020} | ${exitIn2021} | ${[{ begin: begin2020, end: end2020 }, { begin: begin2021, end: end2021 }]}
     ${date2020} | ${exitIn2022} | ${[
-  { begin: begin2020, end: end2020 },
-  {
-    begin: begin2021,
-    end: end2021,
-  },
-  { begin: begin2022, end: end2022 },
-]}
+      { begin: begin2020, end: end2020 },
+      {
+        begin: begin2021,
+        end: end2021,
+      },
+      { begin: begin2022, end: end2022 },
+    ]}
     ${date2020} | ${exitIn2022} | ${[
-  { begin: begin2020, end: end2020 },
-  {
-    begin: begin2021,
-    end: end2021,
-  },
-  { begin: begin2022, end: end2022 },
-]}
+      { begin: begin2020, end: end2020 },
+      {
+        begin: begin2021,
+        end: end2021,
+      },
+      { begin: begin2022, end: end2022 },
+    ]}
   `(
     "Avec $entryDate et $exitDate on attend le découpage par année suivant $expectedSplit",
     ({ entryDate, exitDate, expectedSplit }) => {

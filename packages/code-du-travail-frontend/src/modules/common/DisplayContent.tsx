@@ -408,8 +408,7 @@ const options = (params: Options): HTMLReactParserOptions => {
           let tableContent = getFirstElementChild(domNode);
           while (tableContent && tableContent.name === "colgroup") {
             tableContent = getNextFirstElement(tableContent) as
-              | Element
-              | undefined;
+              Element | undefined;
           }
           if (tableContent?.name === "tbody") {
             return mapTbody(tableContent, params);

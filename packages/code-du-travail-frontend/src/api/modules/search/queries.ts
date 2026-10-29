@@ -156,7 +156,7 @@ export function getRelatedArticlesBody(query: string, size = 5) {
   };
 }
 
-export function getSearchBody(query, size, sources) {
+export function getSearchBody(query: string, size: number, sources: string[]) {
   return {
     _source: [
       "title",
@@ -210,7 +210,8 @@ export function getSearchBody(query, size, sources) {
               ],
             },
           },
-        ].concat(sourcesFilter(sources) as any),
+          sourcesFilter(sources),
+        ],
         should: [
           {
             match_phrase: {

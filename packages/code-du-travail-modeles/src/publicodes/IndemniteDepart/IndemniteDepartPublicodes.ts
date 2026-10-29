@@ -83,8 +83,8 @@ export class IndemniteDepartPublicodes extends PublicodesBase<PublicodesIndemnit
 
     const noLegalIndemnity = this.hasNoLegalIndemnity();
     let legalResult:
-      | IndemniteDepartOutput<PublicodesIndemniteLicenciementResult>
-      | undefined = undefined;
+      IndemniteDepartOutput<PublicodesIndemniteLicenciementResult> | undefined =
+      undefined;
     if (!noLegalIndemnity) {
       legalResult = this.legalInstance.calculate(
         args,

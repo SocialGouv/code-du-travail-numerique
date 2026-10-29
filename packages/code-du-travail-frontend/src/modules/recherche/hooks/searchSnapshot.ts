@@ -3,8 +3,7 @@ import type { SearchResultResponse } from "src/api/modules/search/type";
 export type SearchSnapshotOrigin = "home" | "modal";
 
 export type SearchSnapshotFocusTarget =
-  | { kind: "see-all" }
-  | { kind: "result"; cdtnId: string };
+  { kind: "see-all" } | { kind: "result"; cdtnId: string };
 
 export type SearchSnapshot = {
   origin: SearchSnapshotOrigin;

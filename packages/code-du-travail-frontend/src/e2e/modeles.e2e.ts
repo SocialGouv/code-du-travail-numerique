@@ -20,13 +20,17 @@ test.describe("Modèles de documents", () => {
 
     const nav = page.locator("#fr-header-main-navigation");
 
-    await nav.getByRole("button", { name: "Modèles de documents" }).click();
-
     const allModelsLink = nav.getByRole("link", {
       name: "Voir tous les modèles par thème",
     });
 
-    await expect(allModelsLink).toBeVisible();
+    // L'ouverture du mega-menu dépend du JS DSFR : sur un environnement
+    // lent, le clic peut partir avant l'hydratation et le menu ne s'ouvre
+    // pas. On (re)clique jusqu'à ce que le lien soit visible.
+    await expect(async () => {
+      await nav.getByRole("button", { name: "Modèles de documents" }).click();
+      await expect(allModelsLink).toBeVisible();
+    }).toPass({ timeout: 15_000 });
 
     await Promise.all([
       page.waitForURL("**/modeles-de-courriers"),

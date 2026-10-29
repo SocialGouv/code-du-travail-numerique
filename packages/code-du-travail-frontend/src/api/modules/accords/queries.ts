@@ -16,7 +16,7 @@ export const getAccordsBySiret = (siret: string) => {
         filter: [{ term: { siret } }],
       },
     },
-    sort: [{ dateDepot: { order: "desc" } }],
+    sort: [{ dateDepot: { order: "desc" as const } }],
     size: ACCORDS_MAX_RESULTS,
     track_total_hits: true,
   };
