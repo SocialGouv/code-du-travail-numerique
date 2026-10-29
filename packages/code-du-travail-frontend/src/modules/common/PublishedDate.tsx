@@ -13,6 +13,7 @@ type Props = {
 // est absente ou invalide : ni « Publié le » orphelin, ni « Invalid Date ».
 // Le <span> évite que le texte et <time> deviennent des éléments flex séparés
 // (ex. `fr-card__detail` est en display:flex) et que l'espace soit supprimé.
+// Espaces insécables dans la date : elle ne se coupe jamais sur deux lignes.
 export const PublishedDate = ({ date, className }: Props) => {
   const isoDate = toIsoDate(date);
   const text = formatDateAsFrenchText(date);
@@ -21,7 +22,8 @@ export const PublishedDate = ({ date, className }: Props) => {
   return (
     <p className={className}>
       <span>
-        Publié le <time dateTime={isoDate}>{text}</time>
+        Publié le{" "}
+        <time dateTime={isoDate}>{text.replaceAll(" ", "\u00a0")}</time>
       </span>
     </p>
   );

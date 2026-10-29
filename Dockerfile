@@ -1,5 +1,6 @@
 # syntax=docker/dockerfile:1.7
-ARG NODE_VERSION=24-alpine
+# Version épinglée, alignée sur .node-version (correctifs de sécurité Node.js)
+ARG NODE_VERSION=24.22.1-alpine
 
 # Builder stage: install dependencies and build
 FROM node:$NODE_VERSION AS builder

@@ -2,27 +2,32 @@ import React from "react";
 import { notFound } from "next/navigation";
 import { DsfrLayout } from "../../../src/modules/layout";
 import { fetchFicheSP } from "../../../src/modules/fiche-service-public/queries";
-import { fetchRelatedItems } from "../../../src/modules/documents";
-import { generateDefaultMetadata } from "../../../src/modules/common/metas";
+import {
+  generateDefaultMetadata,
+  getContentArticle,
+} from "../../../src/modules/common/metas";
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
 import { FicheServicePublicContainer } from "../../../src/modules/fiche-service-public/FicheServicePublicContainer";
+import { fetchFicheSPRecommendedLinks } from "../../../src/modules/fiche-service-public/recommended-links";
 
 export async function generateMetadata(props) {
   const params = await props.params;
-  const { title, description, url } = await getFiche(params.slug);
+  const { title, description, url, date, breadcrumbs } = await getFiche(
+    params.slug
+  );
 
   return generateDefaultMetadata({
     title: title,
     description: description,
     path: `/${getRouteBySource(SOURCES.SHEET_SP)}/${params.slug}`,
     overrideCanonical: url,
+    article: getContentArticle(date, breadcrumbs),
   });
 }
 
 async function Fiche(props) {
   const params = await props.params;
   const {
-    _id,
     breadcrumbs,
     date,
     description,
@@ -31,14 +36,17 @@ async function Fiche(props) {
     slug,
     title,
     url,
+    links,
   } = await getFiche(params.slug);
-  const relatedItems = await fetchRelatedItems({ _id }, params.slug);
+  const recommendedLinks = await fetchFicheSPRecommendedLinks(
+    breadcrumbs,
+    links
+  );
 
   return (
     <DsfrLayout>
       <FicheServicePublicContainer
         title={title}
-        relatedItems={relatedItems}
         date={date}
         url={url}
         metaDescription={description}
@@ -46,6 +54,7 @@ async function Fiche(props) {
         breadcrumbs={breadcrumbs}
         referencedTexts={referencedTexts}
         slug={slug}
+        recommendedLinks={recommendedLinks}
       />
     </DsfrLayout>
   );

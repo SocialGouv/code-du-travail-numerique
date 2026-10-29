@@ -13,6 +13,8 @@ describe("<PublishedDate />", () => {
     expect(time).toHaveAttribute("dateTime", "2026-09-18");
     // Le libellé reste hors de <time>.
     expect(time).not.toHaveTextContent("Publié le");
+    // Espaces insécables : la date ne se coupe pas en fin de ligne.
+    expect(time.textContent).toBe("18\u00a0septembre\u00a02026");
   });
 
   it("tolère une date saisie sans zéros ni siècle", () => {

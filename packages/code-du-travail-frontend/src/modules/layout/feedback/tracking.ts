@@ -15,10 +15,10 @@ enum FeedbackActionEvent {
 }
 
 export enum FeedbackActionChoiceValue {
-  "unclear" = "Les informations ne sont pas claires.",
-  "unrelated" = "Cette page ne correspond pas à ma recherche ou à ma situation.",
-  "unsatisfied" = "Je ne suis pas satisfait de cette réglementation.",
-  "wrong" = "Les informations me semblent fausses.",
+  unclear = "Les informations ne sont pas claires.",
+  unrelated = "Cette page ne correspond pas à ma recherche ou à ma situation.",
+  unsatisfied = "Je ne suis pas satisfait de cette réglementation.",
+  wrong = "Les informations me semblent fausses.",
 }
 
 export const useFeedbackEvents = () => {

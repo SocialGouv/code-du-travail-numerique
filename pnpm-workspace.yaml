@@ -13,6 +13,7 @@ allowBuilds:
 
 minimumReleaseAgeExclude:
   - '@socialgouv/matomo-next'
+  - '@socialgouv/cdtn-types'
 
 onlyBuiltDependencies:
   - "@parcel/watcher"

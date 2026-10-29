@@ -1,5 +1,4 @@
 import Debug from "debug";
-import fetch from "node-fetch";
 import { ClientCredentials } from "simple-oauth2";
 import { API_HOST, CONFIG, TOKEN_HOST } from "./constants";
 

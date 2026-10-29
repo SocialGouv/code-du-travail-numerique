@@ -1,7 +1,10 @@
 import React from "react";
 import { DsfrLayout } from "../../../src/modules/layout";
 import { notFound } from "next/navigation";
-import { generateDefaultMetadata } from "../../../src/modules/common/metas";
+import {
+  generateDefaultMetadata,
+  getContentArticle,
+} from "../../../src/modules/common/metas";
 import {
   ContributionLayout,
   fetchAgreementDeclinations,
@@ -13,12 +16,13 @@ import { removeCCNumberFromSlug } from "../../../src/modules/utils/removeCCNumbe
 
 export async function generateMetadata(props) {
   const params = await props.params;
-  const { metas } = await getContribution(params.slug);
+  const { metas, date, breadcrumbs } = await getContribution(params.slug);
 
   return generateDefaultMetadata({
     title: metas.title,
     description: metas.description,
     path: `/contribution/${params.slug}`,
+    article: getContentArticle(date, breadcrumbs),
   });
 }
 

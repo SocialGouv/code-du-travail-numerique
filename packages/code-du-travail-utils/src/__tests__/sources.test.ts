@@ -12,7 +12,7 @@ describe("sources utilities", () => {
     expect(getLabelBySource(SOURCES.CCN)).toBe("Conventions collectives");
     expect(getLabelBySource(SOURCES.CDT)).toBe("Code du travail");
     expect(getLabelBySource(SOURCES.GLOSSARY)).toBe("Glossaire");
-    expect(getLabelBySource(SOURCES.TOOLS)).toBe("Outils");
+    expect(getLabelBySource(SOURCES.TOOLS)).toBe("Simulateurs");
     expect(getLabelBySource(SOURCES.INFOGRAPHICS)).toBe("Infographies");
   });
 
@@ -21,7 +21,7 @@ describe("sources utilities", () => {
     expect(getRouteBySource(SOURCES.CDT)).toBe("code-du-travail");
     expect(getRouteBySource(SOURCES.GLOSSARY)).toBe("glossaire");
     expect(getRouteBySource(SOURCES.TOOLS)).toBe("outils");
-    expect(getRouteBySource(SOURCES.INFOGRAPHICS)).toBe("infographies");
+    expect(getRouteBySource(SOURCES.INFOGRAPHICS)).toBe("infographie");
   });
 
   it("getSourceByRoute retourne une source existante pour chaque route connue", () => {
