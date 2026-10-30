@@ -7,6 +7,7 @@ import { AccordionWithAnchor } from "../common/AccordionWithAnchor";
 import { fr } from "@codegouvfr/react-dsfr";
 import Link from "../common/Link";
 import { removeCCNumberFromSlug } from "../utils/removeCCNumberFromSlug";
+import { hasAgreementSubpath } from "../contributions/contributionUtils";
 
 type Props = {
   answers: ElasticAgreement["answers"];
@@ -40,8 +41,7 @@ export function FrequentQuestions({ answers, agreementSlug }: Props) {
               {group.answers.map((item) => {
                 const genericSlug = removeCCNumberFromSlug(item.slug);
                 const href =
-                  genericSlug === "les-conges-pour-evenements-familiaux" &&
-                  agreementSlug
+                  hasAgreementSubpath(genericSlug) && agreementSlug
                     ? `/contribution/${genericSlug}/${agreementSlug}`
                     : `/${getRouteBySource(SOURCES.CONTRIBUTIONS)}/${item.slug}`;
                 return (
