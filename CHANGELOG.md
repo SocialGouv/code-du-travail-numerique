@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.250.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.250.0...v4.250.1) (2026-10-30)
+
+### Bug Fixes
+
+* **ci:** réinitialise le working tree entre deux tentatives de publish npm ([#7579](https://github.com/SocialGouv/code-du-travail-numerique/issues/7579)) ([8011053](https://github.com/SocialGouv/code-du-travail-numerique/commit/8011053d49a7eb06774130e6f1eea5ad7702a90b))
+
+
 # [4.250.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.249.0...v4.250.0) (2026-10-29)
 
 ### Bug Fixes
