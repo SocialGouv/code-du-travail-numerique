@@ -18,6 +18,7 @@ import {
 import { Breadcrumbs, listingSegment } from "../layout/breadcrumb";
 import { SOURCES } from "@socialgouv/cdtn-utils";
 import { removeCCNumberFromSlug } from "../utils/removeCCNumberFromSlug";
+import { hasAgreementSubpath } from "./contributionUtils";
 import { SITE_URL } from "../../config";
 // Import de type uniquement : queries.ts embarque le client Elasticsearch
 // (serveur), il ne doit pas entrer dans le bundle client.
@@ -48,8 +49,7 @@ export function ContributionLayout({
   const genericSlug = !isGeneric
     ? removeCCNumberFromSlug(contribution.slug)
     : undefined;
-  const hasNewBreadcrumb =
-    !isGeneric && genericSlug === "les-conges-pour-evenements-familiaux";
+  const hasNewBreadcrumb = !isGeneric && hasAgreementSubpath(genericSlug);
 
   const currentPageLabel = hasNewBreadcrumb
     ? `${contribution.ccnShortTitle} (IDCC ${contribution.idcc})`
