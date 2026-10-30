@@ -31,7 +31,7 @@
   },
   {
     "destination": "/information/covid-19-le-regime-post-crise-sanitaire-a-compter-du-14-mars-2022",
-    "permanent": true,
+    "statusCode": 301,
     "source": "/information/covid-19-reagir-en-cas-de-contamination-dans-lentreprise-protocole-national"
   },
   {
@@ -422,7 +422,7 @@
   {
     "source": "/convention-collective/batiment-etam-ile-de-france-hors-seine-et-marne",
     "destination": "/convention-collective/2609-batiment-etam",
-    "permanent": true
+    "statusCode": 301
   },
   {
     "source": "/convention-collective/bijouterie-joaillerie-orfevrerie-horlogerie-bjoh",
