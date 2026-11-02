@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.251.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.250.1...v4.251.0) (2026-11-02)
+
+### Features
+
+* **actualite:** affiche la date de publication (publishedAt) dans l'interface ([5787f76](https://github.com/SocialGouv/code-du-travail-numerique/commit/5787f7648b5038be61eed2a92d3f874084b7ce53))
+
+
 ## [4.250.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.250.0...v4.250.1) (2026-10-30)
 
 **Note:** Version bump only for package @cdt/frontend
