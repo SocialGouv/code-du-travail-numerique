@@ -31,7 +31,7 @@ async function Index({ searchParams }: Props) {
   const pageNumber = await getPageNumber(searchParams);
 
   const { items, totalPages } = await fetchNewsList(
-    ["title", "content", "date", "slug", "image"],
+    ["title", "content", "date", "publishedAt", "slug", "image"],
     { page: pageNumber }
   );
 

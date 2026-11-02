@@ -185,6 +185,17 @@ describe("formatSummary (liste des actualités)", () => {
   });
 
   it("laisse l'image vide quand l'actualité n'en a pas", () => {
-    expect(formatSummary(summary)).toEqual({ ...summary, image: undefined });
+    expect(formatSummary(summary)).toEqual({
+      ...summary,
+      displayDate: "01/01/2026",
+      image: undefined,
+    });
+  });
+
+  it("affiche le jour de publication (Paris) plutôt que `date`", () => {
+    expect(
+      formatSummary({ ...summary, publishedAt: "2026-03-05T23:30:00.000Z" })
+        .displayDate
+    ).toBe("06/03/2026");
   });
 });

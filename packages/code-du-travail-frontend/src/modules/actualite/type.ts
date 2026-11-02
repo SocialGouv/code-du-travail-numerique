@@ -25,6 +25,8 @@ export type News = Pick<
   relatedItems: { items: RelatedItem[]; title: string }[];
   image?: NewsImage & { url: string };
   references: NewsReference[];
+  // Date affichée (`dd/MM/yyyy`), issue de `publishedAt`.
+  displayDate?: string;
   publishedTime?: string;
   modifiedTime?: string;
 };
@@ -34,4 +36,5 @@ export type NewsSummary = Pick<
   "title" | "content" | "date" | "slug"
 > & {
   image?: NewsImage & { url: string };
+  displayDate?: string;
 };

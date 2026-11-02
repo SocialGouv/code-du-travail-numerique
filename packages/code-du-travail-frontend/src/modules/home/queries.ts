@@ -6,6 +6,7 @@ import { fetchModels } from "../modeles-de-courriers";
 import { fetchContributions } from "../contributions";
 import { fetchAgreementsByCdtnIds } from "../convention-collective";
 import { fetchNewsList } from "../actualite";
+import { getNewsDisplayDate } from "../actualite/dates";
 
 export type HomeCardItem = {
   description: string;
@@ -76,7 +77,7 @@ export const fetchHomeData = async (): Promise<HomePageProps> => {
   }));
 
   const news = await fetchNewsList(
-    ["source", "date", "slug", "title", "content"],
+    ["source", "date", "publishedAt", "slug", "title", "content"],
     {
       pageSize: 2,
       page: 1,
@@ -85,7 +86,7 @@ export const fetchHomeData = async (): Promise<HomePageProps> => {
   const parsedNews = news.items.map((item) => ({
     description: item.content,
     link: `/${getRouteBySource(item.source)}/${item.slug}`,
-    date: item.date,
+    date: getNewsDisplayDate(item.date, item.publishedAt) ?? item.date,
     title: item.title,
   }));
   const contributions = await fetchContributions(

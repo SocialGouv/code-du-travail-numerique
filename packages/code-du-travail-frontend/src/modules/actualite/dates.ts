@@ -28,3 +28,22 @@ export const getNewsModifiedTime = (
   if (!updated) return published;
   return Date.parse(updated) > Date.parse(published) ? updated : published;
 };
+
+// Date affichée dans l'interface (`dd/MM/yyyy`) : le jour de première
+// publication (`publishedAt`, jour calendaire à Paris) ou, à défaut
+// (actualité publiée avant), la date saisie dans l'admin.
+export const getNewsDisplayDate = (
+  date?: string,
+  publishedAt?: string
+): string | undefined => {
+  const instant = toIsoInstant(publishedAt);
+  if (!instant) return date;
+  const parts = new Intl.DateTimeFormat("fr-FR", {
+    timeZone: "Europe/Paris",
+    day: "2-digit",
+    month: "2-digit",
+    year: "numeric",
+  }).formatToParts(new Date(instant));
+  const get = (type: string) => parts.find((p) => p.type === type)?.value;
+  return `${get("day")}/${get("month")}/${get("year")}`;
+};
