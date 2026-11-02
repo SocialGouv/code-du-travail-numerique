@@ -12,6 +12,7 @@ type Props = NewsSummary & {
 
 export const NewsItem = ({
   date,
+  displayDate,
   title,
   content,
   slug,
@@ -31,7 +32,7 @@ export const NewsItem = ({
         )}
       >
         <PublishedDate
-          date={date}
+          date={displayDate ?? date}
           className={fr.cx("fr-text--lg", "fr-mb-1v")}
         />
       </div>

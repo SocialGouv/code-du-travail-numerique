@@ -7,7 +7,7 @@
   "keywords": [],
   "main": "src/index.js",
   "scripts": {
-    "dev": "react-dsfr update-icons && panda codegenv && next dev",
+    "dev": "react-dsfr update-icons && panda codegen && next dev",
     "lint": "pnpm codegen && eslint .",
     "precommit": "lint-staged --concurrent 1",
     "start": "next start",
