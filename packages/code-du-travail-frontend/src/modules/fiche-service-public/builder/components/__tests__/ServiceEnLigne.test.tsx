@@ -1,7 +1,10 @@
 import { render, screen } from "@testing-library/react";
 import React from "react";
 
-import ServiceEnLigne from "../ServiceEnLigne";
+import ServiceEnLigne, {
+  INDEMNITE_RETRAITE_CONTRIBUTION_URL,
+  INDEMNITE_RETRAITE_SIMULATOR_PATH,
+} from "../ServiceEnLigne";
 import serviceEnLigneDataMock from "./mocks/serviceEnLigneData.json";
 import serviceEnLigneSansUrlDataMock from "./mocks/serviceEnLigneSansUrlData.json";
 import { FicheSPDataServiceEnLigne } from "../../type";
@@ -29,5 +32,55 @@ describe("<ServiceEnLigne />", () => {
       "Modèle de lettre de prise d'acte de la rupture du contrat de travail"
     );
     expect(title.tagName).toEqual("P");
+  });
+
+  it("should redirect the retirement contribution loop to the simulator", () => {
+    const data = {
+      type: "element",
+      name: "ServiceEnLigne",
+      attributes: {
+        ID: "R67712",
+        URL: INDEMNITE_RETRAITE_CONTRIBUTION_URL,
+        type: "Simulateur",
+      },
+      children: [
+        {
+          type: "element",
+          name: "Titre",
+          children: [{ type: "text", text: "Connaître le montant" }],
+        },
+      ],
+    } as unknown as FicheSPDataServiceEnLigne;
+    render(<ServiceEnLigne data={data} />);
+
+    const link = screen.getByText("Connaître le montant");
+    expect(link).toHaveAttribute("href", INDEMNITE_RETRAITE_SIMULATOR_PATH);
+    expect(link).not.toHaveAttribute("target");
+    expect(link).not.toHaveAttribute("rel");
+  });
+
+  it("should keep other contribution urls untouched", () => {
+    const data = {
+      type: "element",
+      name: "ServiceEnLigne",
+      attributes: {
+        ID: "R1",
+        URL: "https://code.travail.gouv.fr/contribution/29-a-quelles-indemnites-peut-pretendre-un-salarie-qui-part-a-la-retraite",
+        type: "Simulateur",
+      },
+      children: [
+        {
+          type: "element",
+          name: "Titre",
+          children: [{ type: "text", text: "Autre" }],
+        },
+      ],
+    } as unknown as FicheSPDataServiceEnLigne;
+    render(<ServiceEnLigne data={data} />);
+
+    expect(screen.getByText("Autre")).toHaveAttribute(
+      "href",
+      "https://code.travail.gouv.fr/contribution/29-a-quelles-indemnites-peut-pretendre-un-salarie-qui-part-a-la-retraite"
+    );
   });
 });
