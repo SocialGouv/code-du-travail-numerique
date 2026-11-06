@@ -8,6 +8,7 @@ import Button from "@codegouvfr/react-dsfr/Button";
 import Image from "next/image";
 import { routeBySource } from "@socialgouv/cdtn-utils";
 import { TypeBadge } from "./TypeBadge";
+import { SourceBadge } from "../../../recherche/SourceBadge";
 
 const INITIAL_ITEMS_DISPLAY_COUNT = 6;
 
@@ -30,12 +31,13 @@ type SectionProps = {
   icon?: string;
   className?: string;
   /**
-   * Affiche sur chaque carte le tag « Selon ma convention collective » /
-   * « Fiche infos » selon la source du document. Réservé à la rubrique
-   * « Fiches pratiques » : les autres pages de listing (modèles, infographies,
-   * thèmes) partagent ce composant sans tag.
+   * Tag affiché sur chaque carte selon la source du document :
+   * - `type` : « Selon ma convention collective » / « Fiche infos », réservé à
+   *   la rubrique « Fiches pratiques » (#7464) ;
+   * - `source` : le tag du moteur de recherche, pour l'entrée par thème (#7559).
+   * Sans valeur (modèles, infographies), les cartes n'ont pas de tag.
    */
-  showTypeBadge?: boolean;
+  badge?: "type" | "source";
 };
 
 export const Section = forwardRef<HTMLHeadingElement, SectionProps>(
@@ -50,7 +52,7 @@ export const Section = forwardRef<HTMLHeadingElement, SectionProps>(
       firstHiddenItemRef,
       buttonRef,
       icon,
-      showTypeBadge = false,
+      badge,
     },
     ref
   ) => {
@@ -130,10 +132,16 @@ export const Section = forwardRef<HTMLHeadingElement, SectionProps>(
                 titleAs="h3"
                 enlargeLink
                 start={
-                  showTypeBadge ? <TypeBadge source={item.source} /> : undefined
+                  badge === "type" ? (
+                    <TypeBadge source={item.source} />
+                  ) : badge === "source" ? (
+                    <SourceBadge
+                      source={item.source as keyof typeof routeBySource}
+                    />
+                  ) : undefined
                 }
                 classes={{
-                  start: showTypeBadge ? fr.cx("fr-mb-2w") : fr.cx("fr-hidden"),
+                  start: badge ? fr.cx("fr-mb-2w") : fr.cx("fr-hidden"),
                 }}
               />
             </li>

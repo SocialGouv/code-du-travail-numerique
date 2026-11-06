@@ -4,9 +4,8 @@ import { fr } from "@codegouvfr/react-dsfr";
 import { Card } from "@codegouvfr/react-dsfr/Card";
 import { css } from "@styled-system/css";
 import DisplayContent from "../common/DisplayContent";
-import { badgeColorClasses, getSourceLabel } from "./utils";
 import { routeBySource } from "@socialgouv/cdtn-utils";
-import { useABTestVariant } from "@socialgouv/matomo-next";
+import { SourceBadge } from "./SourceBadge";
 
 type SearchCardProps = {
   id?: string;
@@ -25,19 +24,9 @@ export const SearchCard: React.FC<SearchCardProps> = ({
   link,
   onClick,
 }) => {
-  const variant = useABTestVariant("LabelCardSearch");
-
   return (
     <Card
-      start={
-        source ? (
-          <p
-            className={`${fr.cx("fr-tag", "fr-tag--sm", "fr-text--xs", "fr-text--bold")} ${badgeColorClasses[source]}`}
-          >
-            {getSourceLabel(source, variant)}
-          </p>
-        ) : null
-      }
+      start={source ? <SourceBadge source={source} /> : null}
       border
       horizontal
       title={title}
