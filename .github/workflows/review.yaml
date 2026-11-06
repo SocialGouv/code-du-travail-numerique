@@ -33,7 +33,16 @@ jobs:
               github.ref_name == 'develop' ||
               github.ref_name == 'preprod' ||
               github.ref_name == 'main' ||
-              github.ref_name == 'master'
+              github.ref_name == 'master' ||
+              github.ref_name == 'persist' ||
+              startsWith(github.ref_name, 'persist/') ||
+              contains(github.ref_name, '/persist') ||
+              contains(github.ref_name, '/persist/') ||
+              startsWith(github.ref_name, 'persist-') ||
+              endsWith(github.ref_name, '-persist') ||
+              contains(github.ref_name, '-persist-') ||
+              contains(github.ref_name, '/persist-') ||
+              contains(github.ref_name, '-persist/')
             }},priority=840
             type=sha,prefix=sha-,format=long,priority=890
             type=ref,event=branch,priority=600
