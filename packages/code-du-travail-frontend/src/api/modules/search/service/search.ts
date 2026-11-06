@@ -32,6 +32,7 @@ export const searchWithQuery = async (
     SOURCES.EDITORIAL_CONTENT,
     SOURCES.CCN,
     SOURCES.INFOGRAPHICS,
+    SOURCES.NEWS,
   ];
 
   const esReq = getRelatedThemesBody(query);

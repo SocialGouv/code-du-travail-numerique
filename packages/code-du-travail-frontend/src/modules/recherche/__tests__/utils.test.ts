@@ -1,4 +1,4 @@
-import { generateSearchLink } from "../utils";
+import { generateSearchLink, getSourceLabel } from "../utils";
 import { SOURCES } from "@socialgouv/cdtn-utils";
 
 describe("generateSearchLink", () => {
@@ -39,5 +39,17 @@ describe("generateSearchLink", () => {
     const result = generateSearchLink(source, slug, undefined, parentSlug);
 
     expect(result).toBe("/themes/formation#entretien-professionnel-cep");
+  });
+
+  it("should link news to the news page", () => {
+    const result = generateSearchLink(SOURCES.NEWS, "mon-actualite");
+
+    expect(result).toBe("/actualite/mon-actualite");
+  });
+});
+
+describe("getSourceLabel", () => {
+  it("should label news as ACTUALITÉ", () => {
+    expect(getSourceLabel(SOURCES.NEWS, null)).toBe("ACTUALITÉ");
   });
 });

@@ -1,4 +1,4 @@
-import { getRouteBySource } from "@socialgouv/cdtn-utils";
+import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
 import { SearchAlgo, SearchResult } from "./service";
 
 // Remove Duplicates
@@ -29,6 +29,10 @@ export const esDocToSearchResult =
   ({ _score, _source }): SearchResult => ({
     _score: _score ?? null,
     ..._source,
+    // Les actualités n'ont pas de description : leur résumé est la meta description.
+    ...(_source.source === SOURCES.NEWS && !_source.description
+      ? { description: _source.metaDescription }
+      : {}),
     title: _source.displayTitle ?? _source.shortTitle ?? _source.title,
     algo,
   });

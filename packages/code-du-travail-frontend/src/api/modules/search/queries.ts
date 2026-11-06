@@ -172,6 +172,7 @@ export function getSearchBody(query: string, size: number, sources: string[]) {
       "sectionDisplayMode",
       "shortTitle",
       "displayTitle",
+      "metaDescription",
     ],
     query: {
       bool: {
