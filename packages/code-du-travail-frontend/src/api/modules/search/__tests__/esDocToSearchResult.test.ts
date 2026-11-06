@@ -31,5 +31,6 @@ describe("esDocToSearchResult", () => {
     });
 
     expect(result.description).toBeUndefined();
+    expect("metaDescription" in result).toBe(false);
   });
 });

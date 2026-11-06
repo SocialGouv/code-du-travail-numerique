@@ -26,13 +26,17 @@ export function extractHits(response) {
 
 export const esDocToSearchResult =
   (algo: SearchAlgo) =>
-  ({ _score, _source }): SearchResult => ({
-    _score: _score ?? null,
-    ..._source,
-    // Les actualités n'ont pas de description : leur résumé est la meta description.
-    ...(_source.source === SOURCES.NEWS && !_source.description
-      ? { description: _source.metaDescription }
-      : {}),
-    title: _source.displayTitle ?? _source.shortTitle ?? _source.title,
-    algo,
-  });
+  ({ _score, _source }): SearchResult => {
+    // `metaDescription` ne sert qu'à décrire les actualités, qui n'ont pas
+    // de description : on ne l'expose pas dans le résultat.
+    const { metaDescription, ...source } = _source;
+    return {
+      _score: _score ?? null,
+      ...source,
+      ...(source.source === SOURCES.NEWS && !source.description
+        ? { description: metaDescription }
+        : {}),
+      title: source.displayTitle ?? source.shortTitle ?? source.title,
+      algo,
+    };
+  };
