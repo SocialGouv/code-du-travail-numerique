@@ -5,7 +5,7 @@ const noop = () => {};
 
 const renderSection = (
   items: React.ComponentProps<typeof Section>["items"],
-  showTypeBadge?: boolean
+  badge?: React.ComponentProps<typeof Section>["badge"]
 ) =>
   render(
     <Section
@@ -16,7 +16,7 @@ const renderSection = (
       onToggle={noop}
       firstHiddenItemRef={noop}
       buttonRef={noop}
-      showTypeBadge={showTypeBadge}
+      badge={badge}
     />
   );
 
@@ -58,7 +58,7 @@ describe("<Section />", () => {
 
   describe("tag de type (#7464)", () => {
     it("distingue les contributions des fiches infos, sur le lien attendu", () => {
-      renderSection([contribution, ficheInfos], true);
+      renderSection([contribution, ficheInfos], "type");
 
       const cards = screen.getAllByRole("listitem");
       expect(cards).toHaveLength(2);
@@ -89,7 +89,7 @@ describe("<Section />", () => {
     });
 
     it("n'est ni un lien ni un bouton et reste hors du nom accessible du lien", () => {
-      renderSection([contribution], true);
+      renderSection([contribution], "type");
 
       expect(screen.getAllByRole("link")).toHaveLength(1);
       expect(screen.queryByRole("button")).not.toBeInTheDocument();
@@ -99,24 +99,51 @@ describe("<Section />", () => {
     });
 
     it("n'apparaît pas sur les autres listings", () => {
-      renderSection(
-        [
-          contribution,
-          ficheInfos,
-          {
-            title: "Un modèle",
-            description: "",
-            slug: "un-modele",
-            source: "modeles_de_courriers",
-          },
-        ],
-        false
-      );
+      renderSection([
+        contribution,
+        ficheInfos,
+        {
+          title: "Un modèle",
+          description: "",
+          slug: "un-modele",
+          source: "modeles_de_courriers",
+        },
+      ]);
 
       expect(
         screen.queryByText("Selon ma convention collective")
       ).not.toBeInTheDocument();
       expect(screen.queryByText("Fiche infos")).not.toBeInTheDocument();
+      expect(screen.getAllByRole("link")).toHaveLength(3);
+    });
+  });
+
+  describe("tag du moteur de recherche (#7559)", () => {
+    it("reprend le libellé de la recherche selon la source", () => {
+      renderSection(
+        [
+          contribution,
+          ficheInfos,
+          {
+            title: "Un outil",
+            description: "",
+            slug: "un-outil",
+            source: "outils",
+          },
+        ],
+        "source"
+      );
+
+      const cards = screen.getAllByRole("listitem");
+      expect(within(cards[0]).getByText("RÉPONSE SUR-MESURE")).toHaveClass(
+        "fr-tag",
+        "fr-tag--sm"
+      );
+      expect(within(cards[1]).getByText("FICHE GÉNÉRIQUE")).toBeInTheDocument();
+      expect(within(cards[2]).getByText("SIMULATEURS")).toBeInTheDocument();
+      expect(
+        screen.queryByText("Selon ma convention collective")
+      ).not.toBeInTheDocument();
       expect(screen.getAllByRole("link")).toHaveLength(3);
     });
   });
