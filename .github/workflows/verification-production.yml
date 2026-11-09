@@ -30,7 +30,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          curl -sSfL https://code.travail.gouv.fr/robots.txt | grep -q "User-agent: *"
+          curl -sSfL https://code.travail.gouv.fr/robots.txt | grep -qi "User-agent: \*"
       - run: |
           curl -sSfL https://code.travail.gouv.fr/robots.txt | grep -q "Disallow: /assets/"
       - run: |
