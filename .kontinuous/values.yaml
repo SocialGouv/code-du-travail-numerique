@@ -15,22 +15,16 @@ app:
     timeoutSeconds: 10         # Temps maximum pour que l'endpoint réponde
   containerSecurityContext:
     readOnlyRootFilesystem: true
+  # Configuration d'exécution (image partagée entre les environnements) :
+  # www-configmap (URL, Matomo, buckets, index ES...) et secret sentry
+  # (SENTRY_DSN, SENTRY_AUTH_TOKEN).
   envFrom:
     - configMapRef:
         name: www-configmap
     - secretRef:
         name: www-secret
-  env:
-    - name: SENTRY_AUTH_TOKEN
-      valueFrom:
-        secretKeyRef:
-          name: sentry
-          key: SENTRY_AUTH_TOKEN
-    - name: NEXT_PUBLIC_SENTRY_DSN
-      valueFrom:
-        secretKeyRef:
-          name: sentry
-          key: SENTRY_DSN
+    - secretRef:
+        name: sentry
   resources:
     limits:
       cpu: 400m

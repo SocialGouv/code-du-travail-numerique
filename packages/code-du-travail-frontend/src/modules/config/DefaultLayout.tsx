@@ -25,6 +25,8 @@ type Props = {
   children: React.ReactNode;
   nonce: string | undefined;
   defaultColorScheme: DefaultColorScheme;
+  // Scripts à placer en tête du <head>, avant tout bundle (ex. config runtime)
+  headScripts?: React.ReactNode;
 };
 
 // Create the getHtmlAttributes function
@@ -36,6 +38,7 @@ export default function DefaultLayout({
   children,
   nonce,
   defaultColorScheme,
+  headScripts,
 }: Props) {
   const lang = "fr";
   const pathname = usePathname() || "";
@@ -47,6 +50,7 @@ export default function DefaultLayout({
     <html {...getHtmlAttributes({ lang })}>
       <NonceProvider nonce={nonce}>
         <head>
+          {headScripts}
           <StartDsfrLight />
           <DsfrHead
             Link={Link}
