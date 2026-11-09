@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.252.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.251.0...v4.252.0) (2026-11-09)
+
+### Bug Fixes
+
+* **seo:** redirection 301 en un seul saut pour les congés pour événements familiaux ([#7580](https://github.com/SocialGouv/code-du-travail-numerique/issues/7580)) ([34841ac](https://github.com/SocialGouv/code-du-travail-numerique/commit/34841acdd6997b21f2d4b1d9718306f8e2ff2142))
+* **seo:** restreint le format d'URL /contribution/<slug>/<cc> aux congés pour événements familiaux ([#7582](https://github.com/SocialGouv/code-du-travail-numerique/issues/7582)) ([337e427](https://github.com/SocialGouv/code-du-travail-numerique/commit/337e42793bab538cb0b59a1a14a43e2b5a288eb3))
+* **service-public:** redirige le bouton circulaire de l'indemnité de départ à la retraite vers le simulateur ([#7561](https://github.com/SocialGouv/code-du-travail-numerique/issues/7561)) ([#7585](https://github.com/SocialGouv/code-du-travail-numerique/issues/7585)) ([fe1267c](https://github.com/SocialGouv/code-du-travail-numerique/commit/fe1267ce9965c39073c2dfc966f285253dbff80b))
+
+### Features
+
+* **themes:** tag de type de document sur les cartes de l'entrée par thème ([#7559](https://github.com/SocialGouv/code-du-travail-numerique/issues/7559)) ([#7589](https://github.com/SocialGouv/code-du-travail-numerique/issues/7589)) ([85cc935](https://github.com/SocialGouv/code-du-travail-numerique/commit/85cc9351cbf10bc76944ad82b017748c530b3d68))
+
+
 # [4.251.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.250.1...v4.251.0) (2026-11-02)
 
 ### Features
