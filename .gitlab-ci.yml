@@ -68,7 +68,7 @@ variables:
   NEXT_PUBLIC_PIWIK_SITE_ID: "3"
   NEXT_PUBLIC_PIWIK_URL: "https://matomo.fabrique.social.gouv.fr"
   NEXT_PUBLIC_SENTRY_ENV: "dev"
-  E2E_BASE_URL: "https://code-du-travail-numerique.env-01m3ynefh062yjfa3m1pgqkhe3.dev.atlas-prod.public-cloud.social.gouv.fr"
+  E2E_BASE_URL: "https://code-du-travail-numerique.env-01m2jrqx2bm61pzggw4v5hdfs1.dev.atlas-prod.public-cloud.social.gouv.fr"
 
 stages:
   - build
@@ -178,6 +178,7 @@ stats-events:
   extends: .node
   variables:
     TEST_BASEURL: $E2E_BASE_URL
+    NODE_USE_ENV_PROXY: "1"
   artifacts:
     when: always
     expire_in: 7 days
