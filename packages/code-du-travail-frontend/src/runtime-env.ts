@@ -57,7 +57,8 @@
 //   les `headers()` de `next.config` ne peuvent pas varier selon l'environnement.
 //
 // Les seules valeurs propres à l'image (et non à l'environnement) restent
-// fixées au build : `NEXT_PUBLIC_COMMIT` et `SENTRY_RELEASE`.
+// fixées au build : `NEXT_PUBLIC_COMMIT` (et la release Sentry qui en dérive,
+// cf. next.config.mjs).
 
 export const CLIENT_ENV_KEYS = [
   "SITE_URL",
