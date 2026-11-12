@@ -159,4 +159,40 @@ describe("<ListLayout />", () => {
       expect(screen.queryByText("Fiche infos")).not.toBeInTheDocument();
     });
   });
+
+  it("reprend le tag du moteur de recherche sur l'entrée par thème (#7559)", () => {
+    render(
+      <ListLayout
+        source={SOURCES.THEMES}
+        title=""
+        description=""
+        data={[
+          {
+            theme: { label: "Congés et repos", position: 0, slug: "conges" },
+            documents: [
+              {
+                title: "Les congés payés",
+                slug: "conges-payes",
+                description: "",
+                source: "contributions",
+              },
+              {
+                title: "Congés payés : la fiche",
+                slug: "conges-payes",
+                description: "",
+                source: "fiches_service_public",
+              },
+            ],
+          },
+        ]}
+        popularDocuments={[]}
+      />
+    );
+
+    expect(screen.getByText("RÉPONSE SUR-MESURE")).toBeInTheDocument();
+    expect(screen.getByText("FICHE GÉNÉRIQUE")).toBeInTheDocument();
+    expect(
+      screen.queryByText("Selon ma convention collective")
+    ).not.toBeInTheDocument();
+  });
 });

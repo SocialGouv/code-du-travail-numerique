@@ -7,9 +7,9 @@ const MappingReplacement = await import("./redirects.json", {
 // Options de build Sentry (2e et dernier argument de `withSentryConfig`).
 // https://docs.sentry.io/platforms/javascript/guides/nextjs/configuration/build/
 const sentryConfig = {
-  org: process.env.NEXT_PUBLIC_SENTRY_ORG,
-  project: process.env.NEXT_PUBLIC_SENTRY_PROJECT,
-  sentryUrl: process.env.NEXT_PUBLIC_SENTRY_URL,
+  org: "incubateur",
+  project: "fabnum-code-du-travail-numerique",
+  sentryUrl: "https://sentry2.fabrique.social.gouv.fr",
   authToken: process.env.SENTRY_AUTH_TOKEN,
 
   silent: false,
@@ -17,11 +17,10 @@ const sentryConfig = {
 
   // Sans nom fourni, le SDK tente de le déduire (variables CI, git), ce qui
   // échoue dans l'image Docker : aucune release n'est alors créée.
+  // L'image étant partagée entre environnements, aucun deploy (lié à un
+  // environnement) n'est déclaré ici ; l'environnement est fixé à l'exécution.
   release: {
-    name: process.env.NEXT_PUBLIC_SENTRY_RELEASE || undefined,
-    deploy: {
-      env: process.env.NEXT_PUBLIC_SENTRY_ENV || "development",
-    },
+    name: process.env.SENTRY_RELEASE || undefined,
   },
 
   // Source maps : chemins par défaut du SDK (compatibles Turbopack), élargis
@@ -90,23 +89,14 @@ const nextConfig = {
 const moduleExports = {
   ...nextConfig,
   async headers() {
+    // `X-Robots-Tag` est posé à l'exécution dans `proxy.ts` : les headers de ce
+    // fichier sont figés au build.
     const headers = [
       {
         key: "X-Content-Type-Options",
         value: "nosniff",
       },
     ];
-    if (process.env.NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT) {
-      headers.push({
-        key: "X-Robots-Tag",
-        value: "all",
-      });
-    } else {
-      headers.push({
-        key: "X-Robots-Tag",
-        value: "noindex, nofollow, nosnippet",
-      });
-    }
     return [
       // `widget-loader.js` is meant to be embedded on third-party websites.
       // When used with Subresource Integrity (SRI), browsers fetch it with CORS.

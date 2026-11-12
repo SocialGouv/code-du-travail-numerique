@@ -12,6 +12,7 @@ import {
   ExportContributionFullLinkedContent,
 } from "@socialgouv/cdtn-types";
 import { RelatedItem } from "../documents";
+import { ContributionElasticDocumentExtra } from "./queries";
 
 type ExportContributionInfo = {
   breadcrumbs: Breadcrumb[];
@@ -53,7 +54,7 @@ export type AgreementDeclination = {
   href: string;
 };
 
-export type Contribution = ContributionElasticDocument & {
+export type Contribution = ContributionElasticDocumentExtra & {
   isGeneric: boolean;
   isNoCDT: boolean;
   isFicheSP: boolean;

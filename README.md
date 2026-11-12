@@ -45,7 +45,7 @@ cp packages/code-du-travail-frontend/.env.sample packages/code-du-travail-fronte
 pnpm dev:frontend
 
 # Pour lancer l'application en se basant sur un container docker en local
-NEXT_PUBLIC_ES_INDEX_PREFIX=cdtn ELASTICSEARCH_URL=http://localhost:9200 pnpm --filter @cdt/frontend dev
+ES_INDEX_PREFIX=cdtn ELASTICSEARCH_URL=http://localhost:9200 pnpm --filter @cdt/frontend dev
 ```
 
 ### code-du-travail-modeles

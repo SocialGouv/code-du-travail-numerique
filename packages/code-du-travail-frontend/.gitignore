@@ -1,6 +1,4 @@
 .next
-robots.txt
-widget.js
 node_modules
 .swc
 playwright-report

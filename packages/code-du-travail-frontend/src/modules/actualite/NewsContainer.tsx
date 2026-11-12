@@ -26,7 +26,10 @@ export const NewsContainer = ({ news }: Props) => (
     shareRssFeed={NEWS_RSS_FEED}
   >
     <h1 className={fr.cx("fr-mb-6w")}>{news.title}</h1>
-    <PublishedDate date={news.date} className={fr.cx("fr-text--lg")} />
+    <PublishedDate
+      date={news.displayDate ?? news.date}
+      className={fr.cx("fr-text--lg")}
+    />
     {news.image && <NewsImage image={news.image} />}
     <DisplayContent content={news.content} titleLevel={2} />
     {news.references.length > 0 && (

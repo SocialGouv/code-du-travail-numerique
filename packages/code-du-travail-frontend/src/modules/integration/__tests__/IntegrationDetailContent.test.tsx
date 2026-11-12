@@ -2,6 +2,7 @@ import { render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 import { IntegrationDetailContent } from "../IntegrationDetailContent";
+import { generateWidgetScript } from "../widgetTemplate";
 
 describe("IntegrationDetailContent", () => {
   it("updates the widget preview link when changing the select", async () => {
@@ -65,10 +66,8 @@ describe("IntegrationDetailContent", () => {
     document.body.innerHTML =
       '<a href="http://localhost:3000/widgets/search">Search widget</a>';
 
-    jest.isolateModules(() => {
-      // eslint-disable-next-line @typescript-eslint/no-require-imports
-      require("../../../../public/widget.js");
-    });
+    // Le script est généré à l'exécution (cf. app/widget.js/route.ts)
+    new Function(generateWidgetScript("http://localhost:3000"))();
 
     const iframe = document.querySelector("iframe");
     expect(iframe).toBeInTheDocument();

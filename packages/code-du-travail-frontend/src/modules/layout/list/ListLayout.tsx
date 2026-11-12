@@ -58,9 +58,15 @@ export const ListLayout = ({
   popularDocuments,
   breadcrumbSegments = [],
 }: Props) => {
-  // Le tag de type n'existe que sur « Fiches pratiques » (#7464) : les autres
-  // listings ne portent qu'une source, le tag n'y apporterait rien.
-  const showTypeBadge = source === SOURCES.CONTRIBUTIONS;
+  // « Fiches pratiques » porte son propre tag de type (#7464) ; l'entrée par
+  // thème mêle toutes les sources et reprend le tag du moteur de recherche
+  // (#7559). Les autres listings ne portent qu'une source, sans tag.
+  const badge =
+    source === SOURCES.CONTRIBUTIONS
+      ? "type"
+      : source === SOURCES.THEMES
+        ? "source"
+        : undefined;
   const [expandedSections, setExpandedSections] = useState<Set<string>>(
     new Set()
   );
@@ -196,7 +202,7 @@ export const ListLayout = ({
           firstHiddenItemRef={handleFirstHiddenItemRef}
           buttonRef={handleButtonRef}
           icon="/static/assets/img/star.svg"
-          showTypeBadge={showTypeBadge}
+          badge={badge}
         />
       )}
 
@@ -215,7 +221,7 @@ export const ListLayout = ({
             onToggle={toggleSection}
             firstHiddenItemRef={handleFirstHiddenItemRef}
             buttonRef={handleButtonRef}
-            showTypeBadge={showTypeBadge}
+            badge={badge}
             className={
               popularItems.length == 0 && index == 0
                 ? undefined

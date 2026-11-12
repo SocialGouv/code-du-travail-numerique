@@ -11,9 +11,11 @@ import {
   fetchContributionExploreThemes,
   fetchGenericContributionInfos,
 } from "../../../../src/modules/contributions";
+import { hasAgreementSubpath } from "../../../../src/modules/contributions/contributionUtils";
 
 export async function generateMetadata(props) {
   const params = await props.params;
+  redirectToLegacyPathIfNeeded(params.slug, params.idcc);
   const contribution = await fetchContribution(params.slug, params.idcc);
 
   return generateDefaultMetadata({
@@ -26,6 +28,7 @@ export async function generateMetadata(props) {
 
 async function ContributionByAgreement(props) {
   const params = await props.params;
+  redirectToLegacyPathIfNeeded(params.slug, params.idcc);
   // Infos du document générique frère (cf. page /contribution/[slug]) : ici le
   // slug générique est directement le segment de route — il sert aussi de clé
   // au mapping des sous-thèmes mis en avant (#7455).
@@ -49,6 +52,17 @@ async function ContributionByAgreement(props) {
     </DsfrLayout>
   );
 }
+
+// Le format `/contribution/<slug>/<cc>` est réservé aux contributions de
+// `CONTRIBUTIONS_WITH_AGREEMENT_SUBPATH` (généralisation suspendue, #7518). Pour
+// les autres, la route servait un doublon indexable de la page historique
+// `/contribution/<idcc>-<slug>` : on y renvoie en un seul saut.
+const redirectToLegacyPathIfNeeded = (slug: string, idccOrCcnSlug: string) => {
+  if (hasAgreementSubpath(slug)) return;
+  const idcc = idccOrCcnSlug.split("-")[0];
+  if (!/^\d+$/.test(idcc)) notFound();
+  permanentRedirect(`/contribution/${idcc}-${slug}`);
+};
 
 const fetchContribution = async (slug: string, idccOrCcnSlug: string) => {
   const idcc = idccOrCcnSlug.split("-")[0];

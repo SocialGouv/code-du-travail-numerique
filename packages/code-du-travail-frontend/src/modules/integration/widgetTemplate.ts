@@ -1,3 +1,6 @@
+// Script d'intégration des widgets. `__HOST__` est remplacé à l'exécution par
+// l'URL du site (cf. `app/widget.js/route.ts`).
+export const WIDGET_TEMPLATE = String.raw`
 function addWidget({ target, id, url }) {
   const iframe = document.createElement("iframe");
   target.parentNode.insertBefore(iframe, target);
@@ -64,3 +67,7 @@ if (document.readyState === "loading") {
 } else {
   loadWidgets();
 }
+`;
+
+export const generateWidgetScript = (host: string): string =>
+  WIDGET_TEMPLATE.replace(/__HOST__/g, host.replace(/\/$/, ""));

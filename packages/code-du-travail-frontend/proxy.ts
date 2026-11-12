@@ -1,6 +1,9 @@
 import { NextFetchEvent, NextRequest, NextResponse } from "next/server";
-import { BUCKET_URL } from "./src/config";
+import { BUCKET_URL, IS_PROD } from "./src/config";
 import { trackAiChatbotRequest } from "./src/modules/analytics/ai-chatbot-tracking";
+
+// Lu à l'exécution : seule la production doit être indexée.
+const ROBOTS_TAG = IS_PROD ? "all" : "noindex, nofollow, nosnippet";
 
 export function proxy(request: NextRequest, event: NextFetchEvent) {
   // Handle CORS for API routes
@@ -42,6 +45,7 @@ export function proxy(request: NextRequest, event: NextFetchEvent) {
 
     // Add security headers for API routes
     response.headers.set("X-Content-Type-Options", "nosniff");
+    response.headers.set("X-Robots-Tag", ROBOTS_TAG);
     // X-Frame-Options supprimé pour autoriser les iframes externes
     response.headers.set("X-XSS-Protection", "1; mode=block");
     response.headers.set("Referrer-Policy", "strict-origin-when-cross-origin");
@@ -107,6 +111,7 @@ export function proxy(request: NextRequest, event: NextFetchEvent) {
     contentSecurityPolicyHeaderValue
   );
   response.headers.set("X-Content-Type-Options", "nosniff");
+  response.headers.set("X-Robots-Tag", ROBOTS_TAG);
   // X-Frame-Options supprimé pour autoriser les iframes externes
   response.headers.set("X-XSS-Protection", "1; mode=block");
   response.headers.set("Referrer-Policy", "strict-origin-when-cross-origin");

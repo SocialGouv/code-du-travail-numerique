@@ -18,6 +18,7 @@ import { getAnswerScopePilot } from "./answerScopePilot";
 import { focusableTitle } from "../common/focusableTitle";
 import { ExploreThemes } from "./explore-themes/ExploreThemes";
 import type { ExploreTheme } from "./explore-themes/type";
+import DisplayContent from "../common/DisplayContent";
 
 type Props = {
   contribution: Contribution;
@@ -96,6 +97,15 @@ export const ContributionGenericContent = forwardRef<
             {alertText}
             {answerScopePilot && (
               <AnswerScopeDisclaimer {...answerScopePilot.disclaimer} />
+            )}
+            {/* Introduction saisie sur la réponse du Code du travail dans
+                l'admin : affichée avant la réponse, comme sur les pages CC. */}
+            {contribution.introduction && (
+              <DisplayContent
+                content={contribution.introduction}
+                titleLevel={3}
+                visualOffset={-1}
+              />
             )}
             <ContributionContent contribution={contribution} titleLevel={2} />
             <ExploreThemes
