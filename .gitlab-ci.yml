@@ -89,7 +89,7 @@ workflow:
 
 .node:
   stage: test
-  image: ${CI_DEPENDENCY_PROXY_GROUP_IMAGE_PREFIX}/node:24.22.1-bookworm
+  image: node:24.22.1-bookworm
   tags: [socialgouv-linux-small-amd64]
   interruptible: true
   needs: []
