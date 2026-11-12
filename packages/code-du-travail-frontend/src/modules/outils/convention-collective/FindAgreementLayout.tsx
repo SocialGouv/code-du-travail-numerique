@@ -8,15 +8,21 @@ import { SOURCES } from "@socialgouv/cdtn-utils";
 type Props = {
   children: ReactNode;
   description: string;
+  seoContent?: ReactNode;
 };
 
-export const FindAgreementLayout = ({ children, description }: Props) => {
+export const FindAgreementLayout = ({
+  children,
+  description,
+  seoContent,
+}: Props) => {
   return (
     <ContainerSimulatorLight
       relatedItems={[]}
       title="Trouver sa convention collective et ses accords d'entreprise"
       description={description}
       breadcrumbSegments={[listingSegment(SOURCES.TOOLS)]}
+      seoContent={seoContent}
     >
       <FindAgreementBlock>{children}</FindAgreementBlock>
     </ContainerSimulatorLight>

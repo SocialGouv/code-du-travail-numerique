@@ -64,12 +64,14 @@ type Props = {
   }[];
   title: string;
   displayTitle: string;
+  seoContent?: React.ReactNode;
 };
 
 const IndemniteRuptureCoSimulator = ({
   relatedItems,
   title,
   displayTitle,
+  seoContent,
 }: Props) => {
   useRuptureCoEventEmitter();
 
@@ -78,6 +80,7 @@ const IndemniteRuptureCoSimulator = ({
       relatedItems={relatedItems}
       title={displayTitle}
       breadcrumbSegments={[listingSegment(SOURCES.TOOLS)]}
+      seoContent={seoContent}
     >
       <CalculateurIndemniteRuptureCo title={title} />
     </ContainerSimulator>

@@ -58,12 +58,14 @@ type Props = {
   }[];
   title: string;
   displayTitle: string;
+  seoContent?: React.ReactNode;
 };
 
 const IndemniteRetraiteSimulator = ({
   relatedItems,
   title,
   displayTitle,
+  seoContent,
 }: Props) => {
   useIndemniteRetraiteEventEmitter();
 
@@ -72,6 +74,7 @@ const IndemniteRetraiteSimulator = ({
       relatedItems={relatedItems}
       title={displayTitle}
       breadcrumbSegments={[listingSegment(SOURCES.TOOLS)]}
+      seoContent={seoContent}
     >
       <CalculateurIndemniteRetraite title={title} />
     </ContainerSimulator>

@@ -12,6 +12,7 @@ type Props = {
   description: string;
   children: React.ReactNode;
   breadcrumbSegments?: BreadcrumbSegment[];
+  seoContent?: React.ReactNode;
 };
 
 export const ContainerSimulatorLight = ({
@@ -19,6 +20,7 @@ export const ContainerSimulatorLight = ({
   relatedItems,
   title,
   breadcrumbSegments = [],
+  seoContent,
 }: Props) => {
   return (
     <div className={`${fr.cx("fr-grid-row")} ${printOnlySpace}`}>
@@ -27,7 +29,10 @@ export const ContainerSimulatorLight = ({
         segments={breadcrumbSegments}
         className={fr.cx("fr-mb-9v")}
       />
-      <div className={fr.cx("fr-col-12")}>{children}</div>
+      <div className={fr.cx("fr-col-12")}>
+        {children}
+        {seoContent}
+      </div>
       <div className={fr.cx("fr-col-12", "fr-col-md-7", "fr-my-12v")}>
         <Feedback />
       </div>

@@ -4,6 +4,7 @@ import { fetchTool } from "../../../src/modules/outils";
 import { notFound } from "next/navigation";
 import { generateDefaultMetadata } from "../../../src/modules/common/metas";
 import PreavisDemissionSimulator from "../../../src/modules/outils/preavis-demission/PreavisDemissionSimulator";
+import { ToolSeoContent } from "../../../src/modules/outils/common/seo-content";
 
 export async function generateMetadata() {
   const { metaTitle, metaDescription } = await getTool();
@@ -27,6 +28,7 @@ async function PreavisDemission() {
         title={tool.title}
         displayTitle={tool.displayTitle}
         relatedItems={relatedItems}
+        seoContent={<ToolSeoContent slug="preavis-demission" />}
       />
     </DsfrLayout>
   );

@@ -8,6 +8,7 @@ export const JSON_LD_IDS = {
   legislation: "jsonld-legislation",
   newsArticle: "jsonld-news-article",
   article: "jsonld-article",
+  toolFaq: "jsonld-tool-faq",
 } as const;
 
 export const JSON_LD_ENTITY_IDS = {

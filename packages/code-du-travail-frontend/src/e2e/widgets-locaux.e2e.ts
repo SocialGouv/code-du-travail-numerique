@@ -61,6 +61,8 @@ test.describe("Widgets - Chargement local", () => {
       await expectNoIndex(page);
       await expectCanonicalUrlEqual(page, widget.canonicalPath);
       await expect(page.getByText(widget.title).first()).toBeVisible();
+      // The SEO text of the tool pages must not be embedded in the widgets.
+      await expect(page.locator("#tool-seo-content-title")).toHaveCount(0);
     });
   }
 

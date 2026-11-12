@@ -62,18 +62,21 @@ type Props = {
   }[];
   title: string;
   displayTitle: string;
+  seoContent?: React.ReactNode;
 };
 
 const PreavisLicenciementSimulator = ({
   relatedItems,
   title,
   displayTitle,
+  seoContent,
 }: Props) => {
   return (
     <ContainerSimulator
       relatedItems={relatedItems}
       title={displayTitle}
       breadcrumbSegments={[listingSegment(SOURCES.TOOLS)]}
+      seoContent={seoContent}
     >
       <CalculateurPreavisLicenciement title={title} />
     </ContainerSimulator>

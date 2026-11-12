@@ -4,6 +4,7 @@ import { fetchTool } from "../../../src/modules/outils";
 import { notFound } from "next/navigation";
 import { generateDefaultMetadata } from "../../../src/modules/common/metas";
 import HiringSimulator from "../../../src/modules/outils/simulateur-embauche/HiringSimulator";
+import { ToolSeoContent } from "../../../src/modules/outils/common/seo-content";
 
 export async function generateMetadata() {
   const { metaTitle, metaDescription } = await getTool();
@@ -27,6 +28,7 @@ async function HiringSimulatorPage() {
         title={tool.displayTitle}
         breadcrumbTitle={tool.title}
         relatedItems={relatedItems}
+        seoContent={<ToolSeoContent slug="simulateur-embauche" />}
         description={tool.description}
       />
     </DsfrLayout>
