@@ -8,7 +8,11 @@ import {
 } from "../documents";
 import { LinkedContent } from "@socialgouv/cdtn-types/build/elastic/related-items";
 import { toUrl } from "../utils/url";
-import { getNewsModifiedTime, getNewsPublishedTime } from "./dates";
+import {
+  getNewsDisplayDate,
+  getNewsModifiedTime,
+  getNewsPublishedTime,
+} from "./dates";
 import { News, NewsDocument, NewsLink, NewsSummary } from "./type";
 
 export const fetchNewsList = async <K extends keyof NewsDocument>(
@@ -100,12 +104,12 @@ export const fetchNews = async <K extends keyof NewsDocument>(
 
 export const formatSummary = ({
   image,
+  publishedAt,
   ...news
-}: Pick<
-  NewsDocument,
-  "title" | "content" | "date" | "slug" | "image"
->): NewsSummary => ({
+}: Pick<NewsDocument, "title" | "content" | "date" | "slug" | "image"> &
+  Partial<Pick<NewsDocument, "publishedAt">>): NewsSummary => ({
   ...news,
+  displayDate: getNewsDisplayDate(news.date, publishedAt),
   image: image ? { ...image, url: toUrl(image.filename) } : undefined,
 });
 
@@ -193,6 +197,7 @@ export const format = ({
     relatedItems,
     image: image ? { ...image, url: toUrl(image.filename) } : undefined,
     references: references ?? [],
+    displayDate: getNewsDisplayDate(date, publishedAt),
     publishedTime: getNewsPublishedTime(date, publishedAt),
     modifiedTime: getNewsModifiedTime(date, updatedAt, publishedAt),
   };

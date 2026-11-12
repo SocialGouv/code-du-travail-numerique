@@ -34,67 +34,27 @@ COPY packages/code-du-travail-modeles ./packages/code-du-travail-modeles/
 RUN pnpm --filter @socialgouv/modeles-social run build
 
 # App build args
+# L'image est partagée entre les environnements : seules les valeurs propres à
+# l'image (commit, release Sentry) sont fixées au build. La configuration par
+# environnement (URL du site, Matomo, buckets, Sentry DSN...) est lue à
+# l'exécution, cf. packages/code-du-travail-frontend/src/runtime-env.ts
 ENV GENERATE_SOURCEMAP=true
 ENV NODE_ENV=production
 ENV NEXT_PUBLIC_APP_ENV=production
 
-ARG NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT
-ENV NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT=$NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT
-ARG NEXT_PUBLIC_IS_PREPRODUCTION_DEPLOYMENT
-ENV NEXT_PUBLIC_IS_PREPRODUCTION_DEPLOYMENT=$NEXT_PUBLIC_IS_PREPRODUCTION_DEPLOYMENT
-ARG NEXT_PUBLIC_ENABLE_AB_TESTING
-ENV NEXT_PUBLIC_ENABLE_AB_TESTING=$NEXT_PUBLIC_ENABLE_AB_TESTING
-ARG NEXT_PUBLIC_BUCKET_FOLDER
-ENV NEXT_PUBLIC_BUCKET_FOLDER=$NEXT_PUBLIC_BUCKET_FOLDER
-ARG NEXT_PUBLIC_BUCKET_SITEMAP_FOLDER
-ENV NEXT_PUBLIC_BUCKET_SITEMAP_FOLDER=$NEXT_PUBLIC_BUCKET_SITEMAP_FOLDER
-ARG NEXT_PUBLIC_BUCKET_URL
-ENV NEXT_PUBLIC_BUCKET_URL=$NEXT_PUBLIC_BUCKET_URL
-ARG NEXT_PUBLIC_PIWIK_SITE_ID
-ENV NEXT_PUBLIC_PIWIK_SITE_ID=$NEXT_PUBLIC_PIWIK_SITE_ID
-ARG NEXT_PUBLIC_PIWIK_URL
-ENV NEXT_PUBLIC_PIWIK_URL=$NEXT_PUBLIC_PIWIK_URL
 ARG NEXT_PUBLIC_COMMIT
 ENV NEXT_PUBLIC_COMMIT=$NEXT_PUBLIC_COMMIT
-ARG NEXT_PUBLIC_SITE_URL
-ENV NEXT_PUBLIC_SITE_URL=$NEXT_PUBLIC_SITE_URL
-ARG NEXT_PUBLIC_SENTRY_ENV
-ENV NEXT_PUBLIC_SENTRY_ENV=$NEXT_PUBLIC_SENTRY_ENV
-ARG NEXT_PUBLIC_SENTRY_URL
-ARG NEXT_PUBLIC_SENTRY_ORG
-ARG NEXT_PUBLIC_SENTRY_PROJECT
-ARG NEXT_PUBLIC_SENTRY_RELEASE
-ARG NEXT_PUBLIC_SENTRY_DSN
-ENV NEXT_PUBLIC_SENTRY_URL=$NEXT_PUBLIC_SENTRY_URL
-ENV NEXT_PUBLIC_SENTRY_ORG=$NEXT_PUBLIC_SENTRY_ORG
-ENV NEXT_PUBLIC_SENTRY_PROJECT=$NEXT_PUBLIC_SENTRY_PROJECT
-ENV NEXT_PUBLIC_SENTRY_DSN=$NEXT_PUBLIC_SENTRY_DSN
-ENV NEXT_PUBLIC_SENTRY_RELEASE=$NEXT_PUBLIC_SENTRY_RELEASE
-ARG NEXT_PUBLIC_ES_INDEX_PREFIX
-ENV NEXT_PUBLIC_ES_INDEX_PREFIX=$NEXT_PUBLIC_ES_INDEX_PREFIX
-ARG NEXT_PUBLIC_BRANCH_NAME_SLUG
-ENV NEXT_PUBLIC_BRANCH_NAME_SLUG=$NEXT_PUBLIC_BRANCH_NAME_SLUG
+ARG SENTRY_RELEASE
+ENV SENTRY_RELEASE=$SENTRY_RELEASE
 
 # Copy frontend source and build with Next.js cache persisted across builds
 COPY packages/code-du-travail-frontend ./packages/code-du-travail-frontend/
 
 RUN --mount=type=cache,id=next-cache,target=/tmp/.next-cache \
   --mount=type=secret,id=SENTRY_AUTH_TOKEN \
-  --mount=type=secret,id=ELASTICSEARCH_TOKEN_API \
-  --mount=type=secret,id=ELASTICSEARCH_USER \
-  --mount=type=secret,id=ELASTICSEARCH_PASSWORD \
-  --mount=type=secret,id=ELASTICSEARCH_URL \
-  --mount=type=secret,id=OAUTH_CLIENT_ID \
-  --mount=type=secret,id=OAUTH_CLIENT_SECRET \
   sh -ce ' \
   cp -a /tmp/.next-cache packages/code-du-travail-frontend/.next/cache 2>/dev/null || true && \
   if [ -f /run/secrets/SENTRY_AUTH_TOKEN ]; then export SENTRY_AUTH_TOKEN="$(cat /run/secrets/SENTRY_AUTH_TOKEN)"; fi; \
-  if [ -f /run/secrets/ELASTICSEARCH_TOKEN_API ]; then export ELASTICSEARCH_TOKEN_API="$(cat /run/secrets/ELASTICSEARCH_TOKEN_API)"; fi; \
-  if [ -f /run/secrets/ELASTICSEARCH_USER ]; then export ELASTICSEARCH_USER="$(cat /run/secrets/ELASTICSEARCH_USER)"; fi; \
-  if [ -f /run/secrets/ELASTICSEARCH_PASSWORD ]; then export ELASTICSEARCH_PASSWORD="$(cat /run/secrets/ELASTICSEARCH_PASSWORD)"; fi; \
-  if [ -f /run/secrets/ELASTICSEARCH_URL ]; then export ELASTICSEARCH_URL="$(cat /run/secrets/ELASTICSEARCH_URL)"; fi; \
-  if [ -f /run/secrets/OAUTH_CLIENT_ID ]; then export OAUTH_CLIENT_ID="$(cat /run/secrets/OAUTH_CLIENT_ID)"; fi; \
-  if [ -f /run/secrets/OAUTH_CLIENT_SECRET ]; then export OAUTH_CLIENT_SECRET="$(cat /run/secrets/OAUTH_CLIENT_SECRET)"; fi; \
   pnpm --filter @cdt/frontend run build && \
   rm -rf /tmp/.next-cache/* && \
   cp -a packages/code-du-travail-frontend/.next/cache/. /tmp/.next-cache/ 2>/dev/null || true \

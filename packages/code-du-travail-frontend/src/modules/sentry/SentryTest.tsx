@@ -2,6 +2,7 @@
 
 import { Button } from "@codegouvfr/react-dsfr/Button";
 import { useCallback, useEffect, useState } from "react";
+import { getRuntimeEnv } from "../../runtime-env";
 
 export const SentryTest = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -53,7 +54,7 @@ export const SentryTest = () => {
   const triggerError = useCallback(() => {
     // Log configuration and start of error test
     console.log("Starting Sentry test with config:", {
-      dsn: process.env.NEXT_PUBLIC_SENTRY_DSN,
+      dsn: getRuntimeEnv("SENTRY_DSN"),
       environment: process.env.NEXT_PUBLIC_EGAPRO_ENV,
     });
 

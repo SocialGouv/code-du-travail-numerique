@@ -54,9 +54,12 @@ export const fetchContributions = async <
     .filter((source) => source !== undefined);
 };
 
+// FIXME: retirer ce type quand l'admin est en prod avec les nouveaux types
+export type ContributionExtra = Contribution & { introduction?: string };
+
 const formatContribution = (
-  contribution: ContributionElasticDocument | undefined
-): Contribution | undefined => {
+  contribution: ContributionElasticDocumentExtra | undefined
+): ContributionExtra | undefined => {
   if (!contribution) {
     return undefined;
   }
@@ -145,12 +148,17 @@ export const fetchAgreementDeclinations = async (
     }));
 };
 
+// FIXME: retirer ce type quand l'admin est en prod avec les nouveaux types
+export type ContributionElasticDocumentExtra = ContributionElasticDocument & {
+  introduction?: string;
+};
+
 export const fetchContributionBySlug = async (
   slug: string
 ): Promise<Contribution | undefined> => {
   const response = await fetchDocument<
-    ContributionElasticDocument,
-    keyof DocumentElasticResult<ContributionElasticDocument>
+    ContributionElasticDocumentExtra,
+    keyof DocumentElasticResult<ContributionElasticDocumentExtra>
   >(
     [
       "metas",
@@ -174,6 +182,7 @@ export const fetchContributionBySlug = async (
       "messageBlockGenericNoCDT",
       "infographics",
       "smicValue",
+      "introduction",
     ],
     {
       index: elasticDocumentsIndex,

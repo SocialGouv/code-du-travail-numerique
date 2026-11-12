@@ -3,6 +3,7 @@ import { Metadata } from "next/types";
 import { SITE_URL } from "../src/config";
 import { headers } from "next/headers";
 import DefaultLayout from "../src/modules/config/DefaultLayout";
+import { RuntimeEnvScript } from "../src/modules/config/RuntimeEnvScript";
 
 export const metadata: Metadata = {
   title: {
@@ -26,7 +27,11 @@ export default async function RootLayout({
   const nonce = headersData.get("x-nonce") ?? undefined;
 
   return (
-    <DefaultLayout nonce={nonce} defaultColorScheme={"light"}>
+    <DefaultLayout
+      nonce={nonce}
+      defaultColorScheme={"light"}
+      headScripts={<RuntimeEnvScript nonce={nonce} />}
+    >
       {children}
     </DefaultLayout>
   );

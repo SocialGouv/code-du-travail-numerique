@@ -97,6 +97,9 @@ jobs:
               exit 1
             fi
             echo "::warning::Tentative de publish npm ${attempt} en échec (probable 409 transparency log Sigstore/Rekor) ; nouvelle tentative dans 20s..."
+            # Un publish en échec laisse les package.json modifiés par lerna :
+            # sans ce reset, la tentative suivante échoue en EUNCOMMIT.
+            git checkout -- .
             sleep 20
           done
       - name: Extract latest changelog section

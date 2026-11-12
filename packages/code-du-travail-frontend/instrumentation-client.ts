@@ -3,14 +3,15 @@
 // https://docs.sentry.io/platforms/javascript/guides/nextjs/
 
 import * as Sentry from "@sentry/nextjs";
+import { getRuntimeEnv } from "./src/runtime-env";
 import { replayIntegration } from "@sentry/nextjs";
 
-const ENVIRONMENT = process.env.NEXT_PUBLIC_SENTRY_ENV || "dev";
+const ENVIRONMENT = getRuntimeEnv("SENTRY_ENV") || "dev";
 const IS_PRODUCTION = ENVIRONMENT === "production";
 
 Sentry.init({
   // Basic configuration
-  dsn: process.env.NEXT_PUBLIC_SENTRY_DSN,
+  dsn: getRuntimeEnv("SENTRY_DSN"),
   environment: ENVIRONMENT,
   dist: process.env.NEXT_PUBLIC_GITHUB_SHA || "dev",
 

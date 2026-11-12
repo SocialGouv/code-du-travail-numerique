@@ -1,24 +1,23 @@
+import { getRuntimeEnv } from "./runtime-env";
+
 const { version } = require("../package.json");
 
 type EnvironmentType = "development" | "preprod" | "production";
 export const BUCKET_URL =
-  process.env.NEXT_PUBLIC_BUCKET_URL ??
+  getRuntimeEnv("BUCKET_URL") ??
   "https://cdtn-dev-public.s3.gra.io.cloud.ovh.net";
-export const BUCKET_FOLDER = process.env.NEXT_PUBLIC_BUCKET_FOLDER ?? "preview";
+export const BUCKET_FOLDER = getRuntimeEnv("BUCKET_FOLDER") ?? "preview";
 export const BUCKET_SITEMAP_FOLDER =
-  process.env.NEXT_PUBLIC_BUCKET_SITEMAP_FOLDER ?? "sitemap";
+  getRuntimeEnv("BUCKET_SITEMAP_FOLDER") ?? "sitemap";
+// Seule valeur propre à l'image (et non à l'environnement) : fixée au build.
 export const COMMIT = process.env.NEXT_PUBLIC_COMMIT ?? "";
-export const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL ?? `http://localhost:3000`;
+export const SITE_URL = getRuntimeEnv("SITE_URL") ?? `http://localhost:3000`;
 export const PACKAGE_VERSION = version;
-export const PIWIK_SITE_ID = process.env.NEXT_PUBLIC_PIWIK_SITE_ID ?? "3";
+export const PIWIK_SITE_ID = getRuntimeEnv("PIWIK_SITE_ID") ?? "3";
 export const PIWIK_URL =
-  process.env.NEXT_PUBLIC_PIWIK_URL ?? "https://matomo.fabrique.social.gouv.fr";
-export const IS_PREPROD =
-  process.env.NEXT_PUBLIC_IS_PREPRODUCTION_DEPLOYMENT ?? false;
-export const IS_PROD =
-  process.env.NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT ?? false;
-export const ENV = (process.env.NEXT_PUBLIC_CDTN_ENV ??
+  getRuntimeEnv("PIWIK_URL") ?? "https://matomo.fabrique.social.gouv.fr";
+export const IS_PROD = getRuntimeEnv("IS_PRODUCTION_DEPLOYMENT") === "true";
+export const ENV = (getRuntimeEnv("CDTN_ENV") ??
   "development") as EnvironmentType;
 export const ENTERPRISE_API_URL = "https://recherche-entreprises.api.gouv.fr";
 export const API_GEO_URL = "https://geo.api.gouv.fr";

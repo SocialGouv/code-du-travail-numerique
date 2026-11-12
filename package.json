@@ -12,7 +12,7 @@
     "dev": "lerna run dev --parallel",
     "type-check": "lerna run type-check --stream",
     "dev:frontend": "lerna run dev --parallel --scope=@cdt/frontend --scope=@socialgouv/modeles-social --stream",
-    "dev:simulate-deployment": "NEXT_PUBLIC_SITE_URL=https://code-du-travail-numerique-preprod.ovh.fabrique.social.gouv.fr pnpm --filter @cdt/frontend build && pnpm --filter @cdt/frontend start",
+    "dev:simulate-deployment": "pnpm --filter @cdt/frontend build && SITE_URL=https://code-du-travail-numerique-preprod.ovh.fabrique.social.gouv.fr pnpm --filter @cdt/frontend start",
     "start": "lerna run start --scope=@cdt/frontend --stream",
     "start:production": "cd packages/code-du-travail-frontend && pnpm run start",
     "test": "pnpm run test:frontend && pnpm run test:modeles && pnpm run test:utils",

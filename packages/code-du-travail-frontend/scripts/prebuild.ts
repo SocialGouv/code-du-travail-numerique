@@ -2,37 +2,6 @@ import path from "path";
 import fs from "fs";
 import crypto from "crypto";
 
-export const filePath = path.join(__dirname, "../public/robots.txt");
-export const generateRobotsTxt = (isOnProduction: boolean, host: string) => {
-  const robotsDev = ["User-agent: *", "Disallow: /"].join("\n");
-  const robotsProd = [
-    "User-agent: *",
-    "Disallow: /assets/",
-    "Disallow: /images/",
-    "Disallow: /recherche",
-    "",
-    `Sitemap: ${host}/sitemap.xml`,
-  ].join("\n");
-
-  const robot = isOnProduction ? robotsProd : robotsDev;
-
-  fs.writeFileSync(filePath, robot);
-};
-
-export const generateWidgetScript = (host: string) => {
-  const widgetInputScriptPath = path.join(__dirname, "widget-template.js");
-  const widgetOutputScriptPath = path.join(__dirname, "../public/widget.js");
-  const normalizedHost = host.replace(/\/$/, "");
-  const data = fs.readFileSync(widgetInputScriptPath, {
-    encoding: "utf8",
-    flag: "r",
-  });
-  if (!data) return;
-  const hostedData = data.replace(/__HOST__/g, normalizedHost);
-
-  fs.writeFileSync(widgetOutputScriptPath, hostedData);
-};
-
 export const generateWidgetIntegrity = () => {
   const widgetLoaderPath = path.join(__dirname, "../public/widget-loader.js");
   const widgetIntegrityOutputPath = path.join(
