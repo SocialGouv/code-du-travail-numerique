@@ -1,7 +1,10 @@
 import React from "react";
 import { DsfrLayout } from "../../../../src/modules/layout";
 import { notFound, permanentRedirect } from "next/navigation";
-import { generateDefaultMetadata } from "../../../../src/modules/common/metas";
+import {
+  generateDefaultMetadata,
+  getContentArticle,
+} from "../../../../src/modules/common/metas";
 import {
   ContributionLayout,
   fetchContributionBySlug,
@@ -17,6 +20,7 @@ export async function generateMetadata(props) {
     title: contribution.metas.title,
     description: contribution.metas.description,
     path: `/contribution/${params.slug}/${params.idcc}`,
+    article: getContentArticle(contribution.date, contribution.breadcrumbs),
   });
 }
 

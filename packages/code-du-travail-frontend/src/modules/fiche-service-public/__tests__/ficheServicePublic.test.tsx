@@ -53,7 +53,7 @@ const ficheSPData = {
 describe("Content fiche SP", () => {
   test("should show all elements", () => {
     const { getByText, getAllByText, getAllByRole, getByRole } = render(
-      <FicheServicePublicContainer relatedItems={[]} {...ficheSPData} />
+      <FicheServicePublicContainer {...ficheSPData} />
     );
 
     expect(getByRole("heading", { level: 1 })).toHaveTextContent(
@@ -78,7 +78,7 @@ describe("Content fiche SP", () => {
 
   test("should show theme tags linking to the root theme and sub theme", () => {
     const { container } = render(
-      <FicheServicePublicContainer relatedItems={[]} {...ficheSPData} />
+      <FicheServicePublicContainer {...ficheSPData} />
     );
 
     const tagsGroup = container.querySelector("ul.fr-tags-group");

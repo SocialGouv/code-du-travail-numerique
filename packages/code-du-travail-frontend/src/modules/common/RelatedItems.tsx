@@ -38,20 +38,25 @@ export const RelatedItems = ({
                 <strong>{title}&nbsp;:</strong>
               </div>
               <ListWithArrow
-                items={items.map(({ source, title, url }) => {
+                items={items.map(({ source, title, url, intro, external }) => {
                   return (
-                    <Link
-                      key={url}
-                      href={url}
-                      onClick={() =>
-                        emitSelectRelated(
-                          // legacy : we do not include the leading '/' in the selection
-                          source != SOURCES.EXTERNALS ? url!.slice(1) : url
-                        )
-                      }
-                    >
-                      {title}
-                    </Link>
+                    <React.Fragment key={url}>
+                      {intro && <>{intro}&nbsp;: </>}
+                      <Link
+                        href={url}
+                        {...(external
+                          ? { target: "_blank", rel: "noopener noreferrer" }
+                          : {})}
+                        onClick={() =>
+                          emitSelectRelated(
+                            // legacy : we do not include the leading '/' in the selection
+                            source != SOURCES.EXTERNALS ? url!.slice(1) : url
+                          )
+                        }
+                      >
+                        {title}
+                      </Link>
+                    </React.Fragment>
                   );
                 })}
               />

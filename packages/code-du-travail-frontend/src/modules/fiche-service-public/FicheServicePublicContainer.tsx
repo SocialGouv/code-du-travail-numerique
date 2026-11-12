@@ -1,6 +1,5 @@
 import React from "react";
 import { fr } from "@codegouvfr/react-dsfr";
-import { RelatedItem } from "../documents";
 import { ElasticFicheServicePublic } from "./queries";
 import { ContainerRichWithBreadcrumbs } from "../layout/ContainerRichWithBreadcrumbs";
 import { ContentMeta } from "../common/ContentMeta";
@@ -12,10 +11,12 @@ import { FicheSPData } from "./builder/type";
 import { AccordionWithAnchor } from "../common/AccordionWithAnchor";
 import { fromDocumentBreadcrumbs } from "../layout/breadcrumb";
 import { injectContributionPromos } from "./contributions/injectContributionPromos";
+import { RecommendedLinks } from "./RecommendedLinks";
+import { RecommendedItem } from "./types";
 
 type Props = {
-  relatedItems: { items: RelatedItem[]; title: string }[];
   raw: { children: FicheSPData[] };
+  recommendedLinks?: RecommendedItem[];
 } & Pick<
   ElasticFicheServicePublic,
   | "title"
@@ -30,19 +31,19 @@ type Props = {
 export function FicheServicePublicContainer({
   metaDescription,
   date,
-  relatedItems,
   url,
   title,
   raw,
   breadcrumbs,
   referencedTexts,
   slug,
+  recommendedLinks = [],
 }: Props) {
   return (
     <ContainerRichWithBreadcrumbs
       currentPage={title}
       breadcrumbSegments={fromDocumentBreadcrumbs(breadcrumbs)}
-      relatedItems={relatedItems}
+      relatedItems={[]}
       title={title}
       description={metaDescription}
     >
@@ -75,6 +76,8 @@ export function FicheServicePublicContainer({
             titleAs={"h2"}
           />
         )}
+
+        <RecommendedLinks items={recommendedLinks} ficheSlug={slug} />
       </div>
     </ContainerRichWithBreadcrumbs>
   );

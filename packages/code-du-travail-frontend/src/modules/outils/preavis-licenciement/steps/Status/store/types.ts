@@ -1,9 +1,7 @@
 import type { ValidationResponse } from "src/modules/outils/common/components/SimulatorLayout/types";
 
 export type Seniority =
-  | "'Moins de 6 mois'"
-  | "'6 mois à moins de 2 ans'"
-  | "'Plus de 2 ans'";
+  "'Moins de 6 mois'" | "'6 mois à moins de 2 ans'" | "'Plus de 2 ans'";
 
 export type StatusStoreInput = {
   seriousMisconduct?: boolean;

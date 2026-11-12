@@ -7,14 +7,37 @@ import {
 } from "@socialgouv/cdtn-types";
 import { FicheSPData } from "./builder/type";
 
+// TODO: importer `ElasticFicheServicePublic` et `RecommendedLink` depuis
+// `@socialgouv/cdtn-types` dès qu'une version publiée les exporte (> 2.74.0).
+export type RecommendedLink =
+  | {
+      type: "document";
+      cdtnId: string;
+      slug: string;
+      source: string;
+      title: string;
+      confidence: string;
+      score: number;
+      rank: number;
+    }
+  | {
+      type: "l2";
+      l2: string;
+      l1: string;
+      title: string;
+      confidence: string;
+      score: number;
+      rank: number;
+    };
+
 export type ElasticFicheServicePublic = DocumentElasticWithSource<
   FicheServicePublicDoc,
   typeof SOURCES.SHEET_SP
->;
+> & { links: RecommendedLink[] };
 
-export type ElasticFicheServicePublicWithData = DocumentElasticWithSource<
-  Omit<FicheServicePublicDoc, "raw">,
-  typeof SOURCES.SHEET_SP
+export type ElasticFicheServicePublicWithData = Omit<
+  ElasticFicheServicePublic,
+  "raw"
 > & { raw: { children: FicheSPData[] } };
 
 const formatFiche = (
@@ -47,6 +70,7 @@ export const fetchFicheSP = async (
         "cdtnId",
         "raw",
         "referencedTexts",
+        "links",
       ],
       {
         query: {

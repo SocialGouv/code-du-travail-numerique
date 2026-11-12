@@ -71,7 +71,7 @@ exports[`jsonld builders buildGovernmentOrganizationJsonLd() 1`] = `
   "@context": "https://schema.org",
   "@id": "http://api.url/#government-organization",
   "@type": "GovernmentOrganization",
-  "logo": "http://api.url/static/assets/img/logo.svg",
+  "logo": "http://api.url/static/assets/img/logo-carre.png",
   "name": "Code du travail numérique",
   "url": "http://api.url",
 }
@@ -81,7 +81,7 @@ exports[`jsonld builders buildLegislationJsonLd() 1`] = `
 {
   "@context": "https://schema.org",
   "@type": "Legislation",
-  "datePublished": "2020-01-01",
+  "datePublished": "2020-01-01T00:00:00+01:00",
   "identifier": "L123",
   "inLanguage": "fr-FR",
   "isBasedOn": "https://www.legifrance.gouv.fr",
@@ -99,17 +99,30 @@ exports[`jsonld builders buildNewsArticleJsonLd() convertit la date admin JJ/MM/
 {
   "@context": "https://schema.org",
   "@type": "NewsArticle",
+  "articleSection": "Actualités",
   "author": {
     "@id": "http://api.url/#government-organization",
+    "@type": "GovernmentOrganization",
+    "logo": "http://api.url/static/assets/img/logo-carre.png",
+    "name": "Code du travail numérique",
+    "url": "http://api.url",
   },
   "dateModified": "2026-09-18T00:00:00+02:00",
   "datePublished": "2026-09-18T00:00:00+02:00",
   "description": "Description de l'actualite",
   "headline": "Titre actualite",
   "inLanguage": "fr-FR",
+  "isAccessibleForFree": true,
+  "isPartOf": {
+    "@id": "http://api.url/#website",
+  },
   "mainEntityOfPage": "http://api.url/actualite/mon-article",
   "publisher": {
     "@id": "http://api.url/#government-organization",
+    "@type": "GovernmentOrganization",
+    "logo": "http://api.url/static/assets/img/logo-carre.png",
+    "name": "Code du travail numérique",
+    "url": "http://api.url",
   },
   "url": "http://api.url/actualite/mon-article",
 }

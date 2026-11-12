@@ -54,34 +54,67 @@ export function ExploreThemes({
       <div className={fr.cx("fr-grid-row", "fr-grid-row--gutters")}>
         {themes.map((theme, index) => (
           <div key={theme.slug} className={fr.cx("fr-col-12", "fr-col-md-6")}>
-            <Tile
-              orientation="horizontal"
-              small
-              noIcon
-              enlargeLinkOrButton
-              titleAs="h4"
-              pictogram={
-                theme.iconName ? <ThemeIcon name={theme.iconName} /> : undefined
+            <ThemeTile
+              theme={theme}
+              onClick={() =>
+                emitClickExploreTheme(contributionSlug, theme.slug, index + 1)
               }
-              title={theme.title}
-              desc={
-                theme.description ?? documentCountLabel(theme.documentCount)
-              }
-              linkProps={{
-                href: theme.href,
-                onClick: () =>
-                  emitClickExploreTheme(
-                    contributionSlug,
-                    theme.slug,
-                    index + 1
-                  ),
-              }}
-              classes={{ desc: tileDesc }}
             />
           </div>
         ))}
       </div>
     </div>
+  );
+}
+
+type ContentTileProps = {
+  title: string;
+  desc: string;
+  href: string;
+  iconName?: string;
+  titleAs?: "h3" | "h4";
+  onClick?: () => void;
+};
+
+// Carte de ces rubriques, partagée avec les liens recommandés des fiches
+// service-public (sous-thèmes comme contenus).
+export function ContentTile({
+  title,
+  desc,
+  href,
+  iconName,
+  titleAs = "h4",
+  onClick,
+}: ContentTileProps) {
+  return (
+    <Tile
+      orientation="horizontal"
+      small
+      noIcon
+      enlargeLinkOrButton
+      titleAs={titleAs}
+      pictogram={iconName ? <ThemeIcon name={iconName} /> : undefined}
+      title={title}
+      desc={desc}
+      linkProps={{ href, onClick }}
+      classes={{ desc: tileDesc }}
+    />
+  );
+}
+
+type ThemeTileProps = Pick<ContentTileProps, "titleAs" | "onClick"> & {
+  theme: ExploreTheme;
+};
+
+export function ThemeTile({ theme, ...props }: ThemeTileProps) {
+  return (
+    <ContentTile
+      title={theme.title}
+      desc={theme.description ?? documentCountLabel(theme.documentCount)}
+      href={theme.href}
+      iconName={theme.iconName}
+      {...props}
+    />
   );
 }
 

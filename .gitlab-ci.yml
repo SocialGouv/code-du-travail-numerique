@@ -20,7 +20,7 @@ include:
   - project: socialgouv/commun/studio-tech-commun/sdpsn-devops-ci-utils
     ref: main
     file: ci-common/image-build.yml
-  - component: $CI_SERVER_FQDN/socialgouv/commun/studio-tech-commun/components/gitops-cd-component/trigger_app@0.5.0
+  - component: $CI_SERVER_FQDN/socialgouv/commun/studio-tech-commun/components/gitops-cd-component/trigger_app@0.6.0
     inputs:
       job_name: deploy-dev
       stage: deploy
@@ -32,7 +32,7 @@ include:
       app_name: cdtn
       deploy_action: dev
       image_target_object: ".code-du-travail-numerique.image.tag"
-  - component: $CI_SERVER_FQDN/socialgouv/commun/studio-tech-commun/components/gitops-cd-component/trigger_app@0.5.0
+  - component: $CI_SERVER_FQDN/socialgouv/commun/studio-tech-commun/components/gitops-cd-component/trigger_app@0.6.0
     inputs:
       job_name: deploy-test
       stage: deploy
@@ -44,7 +44,7 @@ include:
       app_name: cdtn
       deploy_action: test
       image_target_object: ".code-du-travail-numerique.image.tag"
-  - component: $CI_SERVER_FQDN/socialgouv/commun/studio-tech-commun/components/gitops-cd-component/trigger_app@0.5.0
+  - component: $CI_SERVER_FQDN/socialgouv/commun/studio-tech-commun/components/gitops-cd-component/trigger_app@0.6.0
     inputs:
       job_name: deploy-preprod
       stage: deploy

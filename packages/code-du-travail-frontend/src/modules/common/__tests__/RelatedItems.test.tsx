@@ -1,5 +1,5 @@
 import { sendEvent } from "@socialgouv/matomo-next";
-import { render } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import { RelatedItems } from "../RelatedItems";
 import { RelatedItem } from "../../documents";
 
@@ -48,6 +48,41 @@ const items = [
 ];
 
 describe("<RelatedItems />", () => {
+  test("affiche l'introduction et ouvre les liens externes dans un nouvel onglet", () => {
+    render(
+      <RelatedItems
+        relatedItems={[
+          {
+            title: "Contenus liés",
+            items: [
+              {
+                source: "external",
+                title: "Service-public.fr",
+                url: "https://www.service-public.fr",
+                intro: "Le site officiel",
+                external: true,
+              },
+              {
+                source: "outils",
+                title: "Préavis de démission",
+                url: "/outils/preavis-demission",
+              },
+            ],
+          },
+        ]}
+      />
+    );
+
+    const items = screen.getAllByRole("listitem");
+    expect(items[0]).toHaveTextContent("Le site officiel : Service-public.fr");
+    const external = screen.getByRole("link", { name: /Service-public\.fr/ });
+    expect(external).toHaveAttribute("target", "_blank");
+    expect(external).toHaveAttribute("rel", "noopener noreferrer");
+    expect(
+      screen.getByRole("link", { name: "Préavis de démission" })
+    ).not.toHaveAttribute("target");
+  });
+
   test("if no items", () => {
     const { container } = render(<RelatedItems relatedItems={[]} />);
     expect(container).toMatchInlineSnapshot(`<div />`);

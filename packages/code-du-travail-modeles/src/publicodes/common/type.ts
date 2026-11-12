@@ -17,6 +17,4 @@ export type BuilderResult<TResult> = Omit<
 >;
 
 export type CalculateOutput<TResult> =
-  | BuilderResult<TResult>
-  | PublicodesIneligibility
-  | PublicodesMissingArgs;
+  BuilderResult<TResult> | PublicodesIneligibility | PublicodesMissingArgs;
