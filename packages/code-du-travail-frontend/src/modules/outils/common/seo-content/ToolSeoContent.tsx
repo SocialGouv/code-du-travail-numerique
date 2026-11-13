@@ -7,7 +7,6 @@ import { JSON_LD_IDS } from "../../../seo/jsonld/builders";
 import { splitReferences } from "./articles";
 import { getToolSeoContent } from "./content";
 import { buildToolFaqJsonLd } from "./faq";
-import { SeoContentCollapse } from "./SeoContentCollapse";
 import { ToolSeoSlug } from "./types";
 
 const TITLE_ID = "tool-seo-content-title";
@@ -34,39 +33,37 @@ export const ToolSeoContent = ({ slug }: Props) => {
         <h2 id={TITLE_ID} className={`${fr.cx("fr-mb-6v")} ${titleStyle}`}>
           {content.title}
         </h2>
-        <SeoContentCollapse>
-          {content.blocks.map(({ lead, text, items }, index) => (
-            <div key={index}>
-              {lead && (
-                <h2 className={`${fr.cx("fr-h5", "fr-mb-2v")} ${leadStyle}`}>
-                  {lead}
-                </h2>
-              )}
-              {text && (
-                <p className={fr.cx(items ? "fr-mb-2v" : "fr-mb-3w")}>{text}</p>
-              )}
-              {items && (
-                <ul className={fr.cx("fr-mb-3w")}>
-                  {items.map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
-              )}
-            </div>
-          ))}
-          <p className={fr.cx("fr-text--sm", "fr-mb-0")}>
-            Références :{" "}
-            {splitReferences(content.references).map((part, index) =>
-              part.type === "article" ? (
-                <Link key={index} href={part.href}>
-                  {part.value}
-                </Link>
-              ) : (
-                <span key={index}>{part.value}</span>
-              )
+        {content.blocks.map(({ lead, text, items }, index) => (
+          <div key={index}>
+            {lead && (
+              <h2 className={`${fr.cx("fr-h5", "fr-mb-2v")} ${leadStyle}`}>
+                {lead}
+              </h2>
             )}
-          </p>
-        </SeoContentCollapse>
+            {text && (
+              <p className={fr.cx(items ? "fr-mb-2v" : "fr-mb-3w")}>{text}</p>
+            )}
+            {items && (
+              <ul className={fr.cx("fr-mb-3w")}>
+                {items.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            )}
+          </div>
+        ))}
+        <p className={fr.cx("fr-text--sm", "fr-mb-0")}>
+          Références :{" "}
+          {splitReferences(content.references).map((part, index) =>
+            part.type === "article" ? (
+              <Link key={index} href={part.href}>
+                {part.value}
+              </Link>
+            ) : (
+              <span key={index}>{part.value}</span>
+            )
+          )}
+        </p>
       </div>
     </section>
   );

@@ -1,5 +1,5 @@
 import React from "react";
-import { fireEvent, render, screen, within } from "@testing-library/react";
+import { render, screen, within } from "@testing-library/react";
 
 import { JSON_LD_IDS } from "../../../../seo/jsonld/builders";
 import { splitReferences } from "../articles";
@@ -10,17 +10,7 @@ import { ToolSeoSlug } from "../types";
 
 const SLUGS = Object.keys(TOOL_SEO_CONTENT) as ToolSeoSlug[];
 
-const mockViewport = (isMobile: boolean) => {
-  window.matchMedia = jest.fn().mockReturnValue({
-    matches: isMobile,
-    addEventListener: jest.fn(),
-    removeEventListener: jest.fn(),
-  });
-};
-
 describe("ToolSeoContent", () => {
-  beforeEach(() => mockViewport(false));
-
   it("has content for every tool", () => {
     expect(SLUGS.sort()).toEqual(
       [
@@ -99,39 +89,6 @@ describe("splitReferences", () => {
       },
       { type: "text", value: " du Code" },
     ]);
-  });
-});
-
-describe("ToolSeoContent on mobile", () => {
-  it("is fully displayed on desktop, without toggle", () => {
-    mockViewport(false);
-    render(<ToolSeoContent slug="indemnite-rupture-conventionnelle" />);
-
-    expect(screen.getByTestId("tool-seo-content-body")).not.toHaveAttribute(
-      "inert"
-    );
-    expect(
-      screen.queryByRole("button", { name: "Lire la suite" })
-    ).not.toBeInTheDocument();
-  });
-
-  it("collapses the text behind a toggle on mobile", () => {
-    mockViewport(true);
-    render(<ToolSeoContent slug="indemnite-rupture-conventionnelle" />);
-
-    const body = screen.getByTestId("tool-seo-content-body");
-    const toggle = screen.getByRole("button", { name: "Lire la suite" });
-    expect(body).toHaveAttribute("inert");
-    expect(toggle).toHaveAttribute("aria-expanded", "false");
-    expect(toggle).toHaveAttribute("aria-controls", body.id);
-
-    fireEvent.click(toggle);
-
-    expect(body).not.toHaveAttribute("inert");
-    expect(screen.getByRole("button", { name: "Réduire" })).toHaveAttribute(
-      "aria-expanded",
-      "true"
-    );
   });
 });
 
