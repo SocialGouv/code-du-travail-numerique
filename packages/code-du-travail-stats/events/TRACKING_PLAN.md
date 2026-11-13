@@ -451,8 +451,12 @@ elles :
 ### Notation de la clarté d'une contribution
 
 Widget affiché en bas de chaque contribution : l'usager note la **clarté du contenu** de la
-page à l'aide d'un curseur de 1 (« Trop compliqué ») à 5 (« Très clair »), puis clique sur
-« Valider ». L'event part **au clic sur « Valider »** (une seule fois par affichage du widget ;
+page en choisissant de 1 (« Trop compliqué ») à 5 étoiles (« Très clair »), puis clique sur
+« Valider ». Aucune note n'est présélectionnée : « Valider » reste inactif tant qu'aucune étoile
+n'est choisie. Le widget utilisait jusqu'en novembre 2026 un curseur positionné par défaut sur
+« Neutre » (3) ; le passage aux étoiles (#7587) conserve le même event, la même échelle et le
+même sens des notes, mais la note 3 n'est plus une valeur par défaut : comparer les répartitions
+avant / après la mise en production avec prudence. L'event part **au clic sur « Valider »** (une seule fois par affichage du widget ;
 aucune persistance côté client, recharger la page ré-affiche le widget). Il est émis même si
 l'usager a refusé les cookies (le relai ne dépose aucun cookie), sauf opt-out explicite
 (« ne jamais être suivi » dans la politique de confidentialité).
@@ -470,6 +474,12 @@ dans ses rapports, alors que la lecture métier attendue est le **décompte de c
 contenu**. Dans Matomo : rapport Événements → « Noms d'événements » → une ligne par contenu
 (`contribution/<slug>`), puis le détail par action donne la **répartition des notes** (combien
 de `note_1`, de `note_2`, …).
+
+Dans Metabase, la table agrégée `notation_contributions` (cdtn-admin, `analysis/`) compte
+chaque jour, par device, les visites de pages de contribution et les notes reçues : elle sert
+au **taux de réponse** (notes / visites) et à la **note moyenne** du tableau de bord. La note
+étant relayée sans identifiant visiteur, elle ne peut pas être rattachée à la visite qui a vu la
+page : le taux de réponse rapporte un nombre de notes à un nombre de visites.
 
 [↗ source](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/contributions/rating/tracking.ts#L61 "rating/tracking.ts")
 
