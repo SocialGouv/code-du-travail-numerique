@@ -6,6 +6,7 @@ import { generateDefaultMetadata } from "../../../src/modules/common/metas";
 import { ElasticTool } from "@socialgouv/cdtn-types";
 import { AgreementSearchIntro } from "../../../src/modules/convention-collective";
 import { SITE_URL } from "../../../src/config";
+import { ToolSeoContent } from "../../../src/modules/outils/common/seo-content";
 
 export async function generateMetadata() {
   const { title, description } = await getTool();
@@ -22,7 +23,10 @@ async function FindAgreementPage() {
   const tool = await getTool();
   return (
     <DsfrLayout>
-      <FindAgreementLayout description={tool.description}>
+      <FindAgreementLayout
+        description={tool.description}
+        seoContent={<ToolSeoContent slug="convention-collective" />}
+      >
         <AgreementSearchIntro />
       </FindAgreementLayout>
     </DsfrLayout>

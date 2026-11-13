@@ -66,12 +66,14 @@ type Props = {
   }[];
   title: string;
   displayTitle: string;
+  seoContent?: React.ReactNode;
 };
 
 const IndemnitePrecariteSimulator = ({
   relatedItems,
   title,
   displayTitle,
+  seoContent,
 }: Props) => {
   return (
     <ContainerSimulator
@@ -79,16 +81,23 @@ const IndemnitePrecariteSimulator = ({
       title={displayTitle}
       breadcrumbSegments={[listingSegment(SOURCES.TOOLS)]}
     >
-      <CalculateurIndemnitePrecarite title={title} />
+      <CalculateurIndemnitePrecarite title={title} seoContent={seoContent} />
     </ContainerSimulator>
   );
 };
 
-export const CalculateurIndemnitePrecarite = ({ title }: { title: string }) => {
+export const CalculateurIndemnitePrecarite = ({
+  title,
+  seoContent,
+}: Pick<Props, "title" | "seoContent">) => {
   const store = React.useRef(createIndemnitePrecariteStore()).current;
   return (
     <IndemnitePrecariteContext.Provider value={store}>
-      <IndemnitePrecariteSimulatorContent title={title} steps={steps} />
+      <IndemnitePrecariteSimulatorContent
+        title={title}
+        steps={steps}
+        seoContent={seoContent}
+      />
     </IndemnitePrecariteContext.Provider>
   );
 };
@@ -96,8 +105,8 @@ export const CalculateurIndemnitePrecarite = ({ title }: { title: string }) => {
 const IndemnitePrecariteSimulatorContent = ({
   title,
   steps,
-}: {
-  title: string;
+  seoContent,
+}: Pick<Props, "title" | "seoContent"> & {
   steps: Step<IndemnitePrecariteStepName>[];
 }) => {
   const store = useContext(IndemnitePrecariteContext);
@@ -133,6 +142,7 @@ const IndemnitePrecariteSimulatorContent = ({
       simulator={PublicodesSimulator.INDEMNITE_PRECARITE}
       title={title}
       steps={steps}
+      seoContent={seoContent}
       onStepChange={[
         {
           stepName: IndemnitePrecariteStepName.ConventionCollective,

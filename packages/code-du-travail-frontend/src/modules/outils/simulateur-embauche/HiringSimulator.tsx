@@ -1,7 +1,7 @@
 "use client";
 import { Highlight } from "@codegouvfr/react-dsfr/Highlight";
 import { fr } from "@codegouvfr/react-dsfr";
-import { createRef, memo, useEffect, useState } from "react";
+import { createRef, memo, ReactNode, useEffect, useState } from "react";
 import { RelatedItem } from "../../documents";
 import * as Sentry from "@sentry/nextjs";
 import { ContainerSimulatorLight } from "../../layout/ContainerSimulatorLight";
@@ -16,6 +16,7 @@ type Props = {
   title: string;
   breadcrumbTitle: string;
   description: string;
+  seoContent?: ReactNode;
 };
 
 const HiringSimulator = memo(function HiringSimulator({
@@ -23,6 +24,7 @@ const HiringSimulator = memo(function HiringSimulator({
   description,
   title,
   breadcrumbTitle,
+  seoContent,
 }: Props) {
   const simRef = createRef<HTMLDivElement>();
   const [state, setState] = useState({
@@ -88,6 +90,7 @@ const HiringSimulator = memo(function HiringSimulator({
       title={breadcrumbTitle}
       description={description}
       breadcrumbSegments={[listingSegment(SOURCES.TOOLS)]}
+      seoContent={seoContent}
     >
       <h1 id="simulateur-embauche">{title}</h1>
       <Highlight size="lg" className={fr.cx("fr-mb-12v")}>

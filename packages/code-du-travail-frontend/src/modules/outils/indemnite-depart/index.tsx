@@ -32,6 +32,7 @@ const IndemniteDepartSimulator = ({
   feedbackPopup,
   steps,
   tool,
+  seoContent,
 }: SimulateurProps) => {
   const store = useContext(IndemniteDepartContext);
   const {
@@ -107,6 +108,7 @@ const IndemniteDepartSimulator = ({
       ]}
       hiddenStep={getHiddenSteps()}
       footerComponent={feedbackPopup && <Feedback category={feedbackPopup} />}
+      seoContent={seoContent}
     />
   );
 };
@@ -116,6 +118,7 @@ type CalculateurIndemniteProps = {
   tool: IndemniteDepartType;
   steps: Step<IndemniteDepartStepName>[];
   feedbackPopup?: EVENT_CATEGORY;
+  seoContent?: React.ReactNode;
 };
 
 export const CalculateurIndemnite = ({
@@ -123,6 +126,7 @@ export const CalculateurIndemnite = ({
   tool,
   steps,
   feedbackPopup,
+  seoContent,
 }: CalculateurIndemniteProps) => {
   const store = React.useRef(createIndemniteDepartStore(tool)).current;
 
@@ -133,6 +137,7 @@ export const CalculateurIndemnite = ({
         tool={tool}
         steps={steps}
         feedbackPopup={feedbackPopup}
+        seoContent={seoContent}
       />
     </IndemniteDepartProvider>
   );
