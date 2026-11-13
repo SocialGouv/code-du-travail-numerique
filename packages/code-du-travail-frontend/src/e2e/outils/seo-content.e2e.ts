@@ -50,4 +50,14 @@ test.describe("Outils - Texte SEO sous le simulateur", () => {
       await expect(page.locator("script#jsonld-tool-faq")).toHaveCount(1);
     });
   }
+
+  test("n'affiche le texte SEO qu'à la première étape", async ({ page }) => {
+    await page.goto("/outils/indemnite-rupture-conventionnelle");
+    await expect(page.locator("#tool-seo-content-title")).toBeVisible();
+
+    await page.getByRole("button", { name: "Commencer" }).click();
+
+    await expect(page.getByTestId("stepper")).toContainText("Étape 2");
+    await expect(page.locator("#tool-seo-content-title")).toHaveCount(0);
+  });
 });

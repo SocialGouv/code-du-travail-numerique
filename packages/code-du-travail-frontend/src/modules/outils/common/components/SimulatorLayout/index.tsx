@@ -233,7 +233,8 @@ export const SimulatorLayout = ({
             />
           )}
         </div>
-        {seoContent}
+        {/* Editorial SEO text: only on the first step, to keep later steps focused */}
+        {currentNumStep === 1 && seoContent}
         {footerComponent}
       </div>
     </SimulatorTitleContext.Provider>

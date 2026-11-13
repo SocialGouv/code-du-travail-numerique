@@ -73,18 +73,24 @@ const PreavisDemissionSimulator = ({
       relatedItems={relatedItems}
       title={displayTitle}
       breadcrumbSegments={[listingSegment(SOURCES.TOOLS)]}
-      seoContent={seoContent}
     >
-      <CalculateurPreavisDemission title={title} />
+      <CalculateurPreavisDemission title={title} seoContent={seoContent} />
     </ContainerSimulator>
   );
 };
 
-export const CalculateurPreavisDemission = ({ title }: { title: string }) => {
+export const CalculateurPreavisDemission = ({
+  title,
+  seoContent,
+}: Pick<Props, "title" | "seoContent">) => {
   const store = React.useRef(createPreavisDemissionStore()).current;
   return (
     <PreavisDemissionContext.Provider value={store}>
-      <PreavisDemissionSimulatorContent title={title} steps={steps} />
+      <PreavisDemissionSimulatorContent
+        title={title}
+        steps={steps}
+        seoContent={seoContent}
+      />
     </PreavisDemissionContext.Provider>
   );
 };
@@ -92,8 +98,8 @@ export const CalculateurPreavisDemission = ({ title }: { title: string }) => {
 const PreavisDemissionSimulatorContent = ({
   title,
   steps,
-}: {
-  title: string;
+  seoContent,
+}: Pick<Props, "title" | "seoContent"> & {
   steps: Step<PreavisDemissionStepName>[];
 }) => {
   const store = useContext(PreavisDemissionContext);
@@ -126,6 +132,7 @@ const PreavisDemissionSimulatorContent = ({
       simulator={PublicodesSimulator.PREAVIS_DEMISSION}
       title={title}
       steps={steps}
+      seoContent={seoContent}
       onStepChange={[
         {
           stepName: PreavisDemissionStepName.Agreement,

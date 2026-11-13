@@ -76,22 +76,24 @@ const PreavisLicenciementSimulator = ({
       relatedItems={relatedItems}
       title={displayTitle}
       breadcrumbSegments={[listingSegment(SOURCES.TOOLS)]}
-      seoContent={seoContent}
     >
-      <CalculateurPreavisLicenciement title={title} />
+      <CalculateurPreavisLicenciement title={title} seoContent={seoContent} />
     </ContainerSimulator>
   );
 };
 
 export const CalculateurPreavisLicenciement = ({
   title,
-}: {
-  title: string;
-}) => {
+  seoContent,
+}: Pick<Props, "title" | "seoContent">) => {
   const store = React.useRef(createPreavisLicenciementStore()).current;
   return (
     <PreavisLicenciementContext.Provider value={store}>
-      <PreavisLicenciementSimulatorContent title={title} steps={steps} />
+      <PreavisLicenciementSimulatorContent
+        title={title}
+        steps={steps}
+        seoContent={seoContent}
+      />
     </PreavisLicenciementContext.Provider>
   );
 };
@@ -99,8 +101,8 @@ export const CalculateurPreavisLicenciement = ({
 const PreavisLicenciementSimulatorContent = ({
   title,
   steps,
-}: {
-  title: string;
+  seoContent,
+}: Pick<Props, "title" | "seoContent"> & {
   steps: Step<PreavisLicenciementStepName>[];
 }) => {
   const store = useContext(PreavisLicenciementContext);
@@ -137,6 +139,7 @@ const PreavisLicenciementSimulatorContent = ({
       simulator={PublicodesSimulator.PREAVIS_LICENCIEMENT}
       title={title}
       steps={steps}
+      seoContent={seoContent}
       hiddenStep={getHiddenSteps()}
       onStepChange={[
         {

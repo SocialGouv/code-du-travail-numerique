@@ -11,7 +11,6 @@ type Props = {
   title: string;
   children: React.ReactNode;
   breadcrumbSegments?: BreadcrumbSegment[];
-  seoContent?: React.ReactNode;
 };
 
 export const ContainerSimulator = ({
@@ -19,7 +18,6 @@ export const ContainerSimulator = ({
   relatedItems,
   title,
   breadcrumbSegments = [],
-  seoContent,
 }: Props) => {
   return (
     <div className={`${fr.cx("fr-grid-row")} ${printOnlySpace}`}>
@@ -32,7 +30,6 @@ export const ContainerSimulator = ({
         <h1 className={fr.cx("fr-mb-6w")}>{title}</h1>
         <div className={`${fr.cx("fr-mb-3w")} ${line}`} />
         {children}
-        {seoContent}
       </div>
       <div
         className={`${fr.cx("fr-m-0", relatedItems.length === 0 ? "fr-mb-12v" : "fr-m-0")} ${line}`}

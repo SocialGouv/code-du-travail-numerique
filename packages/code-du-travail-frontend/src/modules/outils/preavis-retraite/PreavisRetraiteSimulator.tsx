@@ -83,23 +83,28 @@ const PreavisRetraiteSimulator = ({
       relatedItems={relatedItems}
       title={displayTitle}
       breadcrumbSegments={[listingSegment(SOURCES.TOOLS)]}
-      seoContent={seoContent}
     >
-      <CalculateurPreavisRetraite title={title} />
+      <CalculateurPreavisRetraite title={title} seoContent={seoContent} />
     </ContainerSimulator>
   );
 };
 
-export const CalculateurPreavisRetraite = ({ title }: { title: string }) => {
+export const CalculateurPreavisRetraite = ({
+  title,
+  seoContent,
+}: Pick<Props, "title" | "seoContent">) => {
   const store = React.useRef(createPreavisRetraiteStore()).current;
   return (
     <PreavisRetraiteContext.Provider value={store}>
-      <PreavisRetraite title={title} />
+      <PreavisRetraite title={title} seoContent={seoContent} />
     </PreavisRetraiteContext.Provider>
   );
 };
 
-const PreavisRetraite = ({ title }: Pick<Props, "title">) => {
+const PreavisRetraite = ({
+  title,
+  seoContent,
+}: Pick<Props, "title" | "seoContent">) => {
   const store = useContext(PreavisRetraiteContext);
   const {
     onNextStepOriginDepart,
@@ -128,6 +133,7 @@ const PreavisRetraite = ({ title }: Pick<Props, "title">) => {
       simulator={PublicodesSimulator.PREAVIS_RETRAITE}
       title={title}
       steps={steps}
+      seoContent={seoContent}
       onStepChange={[
         {
           stepName: PreavisRetraiteStepName.Origin,
