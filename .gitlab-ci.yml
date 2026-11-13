@@ -11,9 +11,9 @@
 #
 # ⚠ Secrets de build (ES/OAuth/Sentry) : le Dockerfile les monte en `--mount=type=secret`
 # MAIS chaque usage est gardé par `if [ -f /run/secrets/X ]` ⇒ build OK SANS secret (mounts
-# `type=secret` optionnels par défaut). ci-common ne passe pas de `--secret` → on construit
-# sans. Si `next build` exige des données ES au build (génération statique), revoir alors
-# (rendre les routes dynamiques, ou étendre ci-common pour les build-secrets).
+# `type=secret` optionnels par défaut). Seul SENTRY_AUTH_TOKEN est transmis (BUILD_SECRETS
+# de ci-common, cf. job build) pour l'upload des sourcemaps ; sans la variable CI/CD, le
+# build passe quand même, sans upload.
 # ============================================================================
 
 include:
@@ -58,17 +58,13 @@ include:
       image_target_object: ".code-du-travail-numerique.image.tag"
 
 variables:
-  # Build-args NEXT_PUBLIC_* (publics, bakés dans l'image). Valeurs dev par défaut, surchargeables
-  # en variables CI/CD. NEXT_PUBLIC_SITE_URL : à fixer au host réel après création de l'env Atlas.
-  NEXT_PUBLIC_ES_INDEX_PREFIX: "cdtn"
-  NEXT_PUBLIC_SITE_URL: "https://code-du-travail-numerique.env-01m2jrqx2bm61pzggw4v5hdfs1.dev.atlas-prod.public-cloud.social.gouv.fr"
-  NEXT_PUBLIC_BUCKET_URL: "https://cdtn-dev-public.s3.gra.io.cloud.ovh.net"
-  NEXT_PUBLIC_BUCKET_FOLDER: "preview"
-  NEXT_PUBLIC_BUCKET_SITEMAP_FOLDER: "sitemap"
-  NEXT_PUBLIC_PIWIK_SITE_ID: "3"
-  NEXT_PUBLIC_PIWIK_URL: "https://matomo.fabrique.social.gouv.fr"
-  NEXT_PUBLIC_SENTRY_ENV: "dev"
+  # La configuration par environnement est lue à l'exécution (image unique), plus de
+  # build-args NEXT_PUBLIC_* ici. URL de la dev, cible des e2e et de lighthouse.
   E2E_BASE_URL: "https://code-du-travail-numerique.env-01m2jrqx2bm61pzggw4v5hdfs1.dev.atlas-prod.public-cloud.social.gouv.fr"
+  # Proxy sortant du PIC, défini une fois : repris par les jobs `.node` (env du job) et par
+  # le job `build` (build-args). Noms dédiés : sans effet tant qu'un job ne les reprend pas.
+  PIC_PROXY: "http://proxyweb.intranet.social.gouv.fr:8002"
+  PIC_NO_PROXY: "pic.sg.social.gouv.fr,localhost,127.0.0.1"
 
 stages:
   - build
@@ -94,12 +90,12 @@ workflow:
   interruptible: true
   needs: []
   variables:
-    HTTP_PROXY: http://proxyweb.intranet.social.gouv.fr:8002
-    HTTPS_PROXY: http://proxyweb.intranet.social.gouv.fr:8002
-    NO_PROXY: pic.sg.social.gouv.fr,localhost,127.0.0.1
-    http_proxy: http://proxyweb.intranet.social.gouv.fr:8002
-    https_proxy: http://proxyweb.intranet.social.gouv.fr:8002
-    no_proxy: pic.sg.social.gouv.fr,localhost,127.0.0.1
+    HTTP_PROXY: $PIC_PROXY
+    HTTPS_PROXY: $PIC_PROXY
+    NO_PROXY: $PIC_NO_PROXY
+    http_proxy: $PIC_PROXY
+    https_proxy: $PIC_PROXY
+    no_proxy: $PIC_NO_PROXY
   cache:
     key:
       files: [pnpm-lock.yaml]
@@ -224,18 +220,24 @@ build:
   variables:
     BUILD_IMAGE: "$CI_REGISTRY_IMAGE/app"
     BUILD_TAGS: "sha-$CI_COMMIT_SHA,$CI_COMMIT_REF_SLUG"
+    # NEXT_PUBLIC_COMMIT sert aussi au nom de release Sentry (cdtn@<version>+<sha>, cf. next.config.mjs).
+    # Proxy : passé en build-args et PAS en variables du job. En variables, il écraserait le
+    # NO_PROXY="docker" de .build-dind (le CLI docker passerait par le proxy pour joindre
+    # tcp://docker:2375) et serait aussi transmis au service dind. HTTP(S)_PROXY/NO_PROXY sont
+    # des ARG prédéfinis (hors historique de l'image) ; NODE_USE_ENV_PROXY=1 pour que le fetch
+    # de Node les honore (upload Sentry pendant `next build`).
     BUILD_ARGS: |
-      NEXT_PUBLIC_IS_PREPRODUCTION_DEPLOYMENT=true
-      NEXT_PUBLIC_ENABLE_AB_TESTING=false
-      NEXT_PUBLIC_ES_INDEX_PREFIX=$NEXT_PUBLIC_ES_INDEX_PREFIX
-      NEXT_PUBLIC_SITE_URL=$NEXT_PUBLIC_SITE_URL
-      NEXT_PUBLIC_BUCKET_URL=$NEXT_PUBLIC_BUCKET_URL
-      NEXT_PUBLIC_BUCKET_FOLDER=$NEXT_PUBLIC_BUCKET_FOLDER
-      NEXT_PUBLIC_BUCKET_SITEMAP_FOLDER=$NEXT_PUBLIC_BUCKET_SITEMAP_FOLDER
-      NEXT_PUBLIC_PIWIK_SITE_ID=$NEXT_PUBLIC_PIWIK_SITE_ID
-      NEXT_PUBLIC_PIWIK_URL=$NEXT_PUBLIC_PIWIK_URL
       NEXT_PUBLIC_COMMIT=$CI_COMMIT_SHA
-      NEXT_PUBLIC_SENTRY_ENV=$NEXT_PUBLIC_SENTRY_ENV
+      HTTP_PROXY=$PIC_PROXY
+      HTTPS_PROXY=$PIC_PROXY
+      NO_PROXY=$PIC_NO_PROXY
+      http_proxy=$PIC_PROXY
+      https_proxy=$PIC_PROXY
+      no_proxy=$PIC_NO_PROXY
+      NODE_USE_ENV_PROXY=1
+    # Secret BuildKit (jamais dans un layer) : valeur lue dans la variable CI/CD homonyme
+    # (masquée), montée par le Dockerfile via `--mount=type=secret,id=SENTRY_AUTH_TOKEN`.
+    BUILD_SECRETS: "SENTRY_AUTH_TOKEN"
   rules: *build-rules
 
 # ---------------------------------------------------------------------------

@@ -4,6 +4,18 @@ const MappingReplacement = await import("./redirects.json", {
   with: { type: "json" },
 });
 
+const { version: PACKAGE_VERSION } = (
+  await import("./package.json", { with: { type: "json" } })
+).default;
+
+// Release Sentry au format semver `cdtn@<version>+<sha>` (ex. cdtn@4.252.0+c93e5af8) :
+// la version vient du package.json (bumpé par le commit de release que pointe le tag),
+// le sha distingue les commits entre deux releases. Fixée au build car propre à l'image
+// (image unique promue jusqu'en prod) ; les sourcemaps sont liées par debug IDs.
+const SENTRY_RELEASE = process.env.NEXT_PUBLIC_COMMIT
+  ? `cdtn@${PACKAGE_VERSION}+${process.env.NEXT_PUBLIC_COMMIT.slice(0, 8)}`
+  : undefined;
+
 // Options de build Sentry (2e et dernier argument de `withSentryConfig`).
 // https://docs.sentry.io/platforms/javascript/guides/nextjs/configuration/build/
 const sentryConfig = {
@@ -20,7 +32,7 @@ const sentryConfig = {
   // L'image étant partagée entre environnements, aucun deploy (lié à un
   // environnement) n'est déclaré ici ; l'environnement est fixé à l'exécution.
   release: {
-    name: process.env.SENTRY_RELEASE || undefined,
+    name: SENTRY_RELEASE,
   },
 
   // Source maps : chemins par défaut du SDK (compatibles Turbopack), élargis

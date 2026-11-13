@@ -35,7 +35,7 @@ RUN pnpm --filter @socialgouv/modeles-social run build
 
 # App build args
 # L'image est partagée entre les environnements : seules les valeurs propres à
-# l'image (commit, release Sentry) sont fixées au build. La configuration par
+# l'image (commit, dont dérive la release Sentry) sont fixées au build. La configuration par
 # environnement (URL du site, Matomo, buckets, Sentry DSN...) est lue à
 # l'exécution, cf. packages/code-du-travail-frontend/src/runtime-env.ts
 ENV GENERATE_SOURCEMAP=true
@@ -44,8 +44,7 @@ ENV NEXT_PUBLIC_APP_ENV=production
 
 ARG NEXT_PUBLIC_COMMIT
 ENV NEXT_PUBLIC_COMMIT=$NEXT_PUBLIC_COMMIT
-ARG SENTRY_RELEASE
-ENV SENTRY_RELEASE=$SENTRY_RELEASE
+ARG NODE_USE_ENV_PROXY
 
 # Copy frontend source and build with Next.js cache persisted across builds
 COPY packages/code-du-travail-frontend ./packages/code-du-travail-frontend/
