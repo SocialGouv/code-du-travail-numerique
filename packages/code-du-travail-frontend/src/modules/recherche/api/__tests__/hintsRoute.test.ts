@@ -35,7 +35,7 @@ describe("GET /api/hints", () => {
     jest.useRealTimers();
   });
 
-  it("lists the latest news, cached for 5 minutes", async () => {
+  it("lists the latest news, cached for 1 minute", async () => {
     const { GET } = await loadRoute();
     mockedFetchNewsList.mockResolvedValue({
       items: [news("premiere"), news("seconde")],
@@ -44,7 +44,7 @@ describe("GET /api/hints", () => {
     const response = await GET();
     expect(response.status).toBe(200);
     expect(response.headers.get("cache-control")).toBe(
-      "public, max-age=300, s-maxage=300"
+      "public, max-age=60, s-maxage=60"
     );
     const body = await response.json();
     expect(body.actualites).toEqual([
@@ -65,13 +65,13 @@ describe("GET /api/hints", () => {
       { page: 1, pageSize: 4 }
     );
 
-    // Within 5 minutes: no new Elasticsearch call.
-    jest.advanceTimersByTime(4 * 60 * 1000);
+    // Within 1 minute: no new Elasticsearch call.
+    jest.advanceTimersByTime(50 * 1000);
     await GET();
     expect(mockedFetchNewsList).toHaveBeenCalledTimes(1);
 
     // Once expired: a newly published news item shows up.
-    jest.advanceTimersByTime(2 * 60 * 1000);
+    jest.advanceTimersByTime(20 * 1000);
     mockedFetchNewsList.mockResolvedValue({ items: [news("nouvelle")] });
     const refreshed = await (await GET()).json();
     expect(refreshed.actualites[0].slug).toBe("/actualite/nouvelle");

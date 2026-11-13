@@ -10,7 +10,7 @@ import { HintsData, ModalLink } from "src/modules/recherche/modal/types";
 export const dynamic = "force-dynamic";
 
 const HINTS_NEWS_COUNT = 4;
-const CACHE_TTL_MS = 5 * 60 * 1000;
+const CACHE_TTL_MS = 60 * 1000;
 
 const SUGGESTIONS: ModalLink[] = [
   {
