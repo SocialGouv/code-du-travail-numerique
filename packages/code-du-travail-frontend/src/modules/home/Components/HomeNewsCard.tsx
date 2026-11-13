@@ -24,6 +24,7 @@ export const HomeNewsCard = ({
             <DisplayContent
               content={description}
               titleLevel={4}
+              relativeHeadings
               extra={{ disableLink: true }}
             />
           </span>

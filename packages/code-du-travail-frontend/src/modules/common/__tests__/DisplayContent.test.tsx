@@ -32,6 +32,30 @@ describe("DisplayContent", () => {
       expect(getByText("Ceci est un titre").tagName).toEqual("H4");
       expect(getByText("Ceci est un sous titre").tagName).toEqual("H5");
     });
+    it(`should keep raw headings as is by default`, () => {
+      const { getByText } = render(
+        <DisplayContent
+          content={`<h2>Titre brut</h2><h3>Sous-titre brut</h3>`}
+          titleLevel={3}
+        ></DisplayContent>
+      );
+
+      expect(getByText("Titre brut").tagName).toEqual("H2");
+      expect(getByText("Sous-titre brut").tagName).toEqual("H3");
+    });
+    it(`should re-level raw headings from the given title level when relativeHeadings is set`, () => {
+      const { getByText } = render(
+        <DisplayContent
+          content={`<h2>Titre brut</h2><h3>Sous-titre brut</h3><h6>Trop profond</h6>`}
+          titleLevel={3}
+          relativeHeadings
+        ></DisplayContent>
+      );
+
+      expect(getByText("Titre brut").tagName).toEqual("H3");
+      expect(getByText("Sous-titre brut").tagName).toEqual("H4");
+      expect(getByText("Trop profond").tagName).toEqual("STRONG");
+    });
     it(`should not add headings higher than h6 for titles`, () => {
       const { getByText } = render(
         <DisplayContent
