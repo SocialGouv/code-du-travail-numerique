@@ -57,7 +57,8 @@ test.describe("Outils - Texte SEO sous le simulateur", () => {
 
     await page.getByRole("button", { name: "Commencer" }).click();
 
-    await expect(page.getByTestId("stepper")).toContainText("Étape 2");
+    // No getByTestId: the production build strips `data-testid`.
+    await expect(page.getByText(/Étape 2 sur \d+/)).toBeVisible();
     await expect(page.locator("#tool-seo-content-title")).toHaveCount(0);
   });
 });
