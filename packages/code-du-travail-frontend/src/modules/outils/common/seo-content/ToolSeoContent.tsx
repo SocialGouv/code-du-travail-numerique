@@ -1,5 +1,4 @@
 import { fr } from "@codegouvfr/react-dsfr";
-import { css } from "@styled-system/css";
 
 import Link from "../../../common/Link";
 import { JsonLd } from "../../../seo/jsonld/JsonLd";
@@ -30,7 +29,7 @@ export const ToolSeoContent = ({ slug }: Props) => {
         data={buildToolFaqJsonLd(content, `/outils/${slug}`)}
       />
       <div className={fr.cx("fr-col-12", "fr-col-md-8")}>
-        <h2 id={TITLE_ID} className={`${fr.cx("fr-mb-6v")} ${title}`}>
+        <h2 id={TITLE_ID} className={fr.cx("fr-mb-6v")}>
           {content.title}
         </h2>
         {content.blocks.map(({ lead, text, items }, index) => (
@@ -64,8 +63,3 @@ export const ToolSeoContent = ({ slug }: Props) => {
     </section>
   );
 };
-
-const title = css({
-  // DSFR heading styles override a non-important color.
-  color: "var(--text-title-blue-france)!",
-});
