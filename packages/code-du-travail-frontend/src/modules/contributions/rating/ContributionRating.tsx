@@ -5,11 +5,10 @@ import { fr } from "@codegouvfr/react-dsfr";
 import { Button } from "@codegouvfr/react-dsfr/Button";
 import { css } from "@styled-system/css";
 import { RatingIcon } from "./RatingIcon";
-import { RatingSlider } from "./RatingSlider";
+import { RatingStars } from "./RatingStars";
 import { RatingConfirmation } from "./RatingConfirmation";
 import { trackContributionRating } from "./tracking";
 import {
-  RATING_DEFAULT,
   RATING_WIDGET_HINT,
   RATING_WIDGET_INTRO,
   RATING_WIDGET_TITLE,
@@ -28,7 +27,9 @@ type Status = "idle" | "submitted";
 export const ContributionRating = ({ contributionSlug, level = 2 }: Props) => {
   const headingId = useId();
   const Heading = `h${level}` as ElementType;
-  const [value, setValue] = useState(RATING_DEFAULT);
+  // No preselected score: the "Valider" button stays disabled until a star is
+  // picked.
+  const [value, setValue] = useState<number | null>(null);
   const [status, setStatus] = useState<Status>("idle");
   const messageRef = useRef<HTMLParagraphElement>(null);
   // Garde synchrone : empêche un double-clic rapide d'émettre deux events avant
@@ -42,7 +43,7 @@ export const ContributionRating = ({ contributionSlug, level = 2 }: Props) => {
   };
 
   const onSubmit = () => {
-    if (submittingRef.current || status !== "idle") return;
+    if (submittingRef.current || status !== "idle" || value === null) return;
     submittingRef.current = true;
     setStatus("submitted");
     void trackContributionRating({
@@ -72,15 +73,16 @@ export const ContributionRating = ({ contributionSlug, level = 2 }: Props) => {
       </Heading>
       {/* Texte d'aide affiché juste sous la question. Classe DSFR dédiée
           (0.75rem, gris) : étant une classe, elle l'emporte sur la règle de
-          base `p`. Non relié au curseur via aria-describedby : DSFR écrase
-          l'aria-describedby de l'input (il pointe sur son propre groupe de
-          messages) ; l'instruction est de toute façon portée pour les lecteurs
-          d'écran par le nom accessible explicite du curseur (RATING_SLIDER_LABEL). */}
+          base `p`. */}
       <p className={fr.cx("fr-hint-text", "fr-mb-0")}>{RATING_WIDGET_HINT}</p>
-      <RatingSlider value={value} onChange={onChange} disabled={submitted} />
+      <RatingStars value={value} onChange={onChange} disabled={submitted} />
       {!submitted && (
         <div className={actions}>
-          <Button onClick={onSubmit} priority="secondary">
+          <Button
+            onClick={onSubmit}
+            priority="secondary"
+            disabled={value === null}
+          >
             Valider
           </Button>
         </div>

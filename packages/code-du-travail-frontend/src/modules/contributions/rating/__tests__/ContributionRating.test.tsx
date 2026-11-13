@@ -14,45 +14,58 @@ const props = {
   contributionSlug: "conges-payes-1234",
 };
 
+const star = (name: string) => screen.getByRole("radio", { name });
+
 beforeEach(() => {
   jest.clearAllMocks();
 });
 
 describe("ContributionRating", () => {
-  it("affiche la position par défaut « Neutre » et le bouton Valider actif", () => {
+  it("shows 5 unselected stars and a disabled Valider button", () => {
     render(<ContributionRating {...props} />);
 
-    expect(screen.getByText("Neutre")).toBeInTheDocument();
-    // Le bouton est actif d'emblée : l'usager peut valider la position par
-    // défaut « Neutre » sans avoir à bouger le curseur.
-    expect(screen.getByRole("button", { name: "Valider" })).toBeEnabled();
+    const stars = screen.getAllByRole("radio");
+    expect(stars).toHaveLength(5);
+    stars.forEach((input) => expect(input).not.toBeChecked());
+    expect(
+      screen.getByRole("group", {
+        name: "Notez la clarté du contenu de cette page",
+      })
+    ).toBeInTheDocument();
+    // No default score: the user has to pick a star before submitting.
+    expect(screen.getByRole("button", { name: "Valider" })).toBeDisabled();
     expect(screen.queryByText("Merci !")).not.toBeInTheDocument();
   });
 
-  it("met à jour le libellé visible et aria-valuetext au déplacement", () => {
+  it("gives each star an accessible name with its score and label", () => {
     render(<ContributionRating {...props} />);
-    const slider = screen.getByRole("slider");
 
-    expect(slider).toHaveAttribute("aria-valuetext", "Neutre");
-
-    fireEvent.change(slider, { target: { value: "2" } });
-
-    expect(slider).toHaveAttribute("aria-valuetext", "Compliqué");
-    expect(screen.getByText("Compliqué")).toBeInTheDocument();
+    expect(star("1 étoile sur 5 : Trop compliqué")).toBeInTheDocument();
+    expect(star("5 étoiles sur 5 : Très clair")).toBeInTheDocument();
   });
 
-  it("affiche le texte d'aide sous la question", () => {
+  it("shows the selected star label and enables the Valider button", () => {
+    render(<ContributionRating {...props} />);
+
+    fireEvent.click(star("2 étoiles sur 5 : Compliqué"));
+
+    expect(star("2 étoiles sur 5 : Compliqué")).toBeChecked();
+    expect(screen.getByText("Compliqué")).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "Valider" })).toBeEnabled();
+  });
+
+  it("shows the hint under the question", () => {
     render(<ContributionRating {...props} />);
 
     expect(
-      screen.getByText("Faites bouger le curseur pour noter la page.")
+      screen.getByText("Sélectionnez de 1 à 5 étoiles pour noter la page.")
     ).toBeInTheDocument();
   });
 
-  it("transmet la note au clic sur Valider, affiche « Merci ! » et déplace le focus", async () => {
+  it("sends the score on Valider, shows « Merci ! » and moves focus", async () => {
     render(<ContributionRating {...props} />);
 
-    fireEvent.change(screen.getByRole("slider"), { target: { value: "4" } });
+    fireEvent.click(star("4 étoiles sur 5 : Clair"));
     fireEvent.click(screen.getByRole("button", { name: "Valider" }));
 
     expect(mockTrack).toHaveBeenCalledWith({
@@ -65,29 +78,35 @@ describe("ContributionRating", () => {
     expect(
       screen.queryByRole("button", { name: "Valider" })
     ).not.toBeInTheDocument();
-    // Le focus est posé sur le <p> conteneur (le texte est dans un <span>).
+    // Stars stay visible but can no longer be changed.
+    screen
+      .getAllByRole("radio")
+      .forEach((input) => expect(input).toBeDisabled());
+    // Focus is set on the wrapping <p> (the text lives in a <span>).
     const confirmationParagraph = confirmation.closest("p");
     await waitFor(() => expect(confirmationParagraph).toHaveFocus());
   });
 
-  it("au remontage (rechargement), ré-affiche le widget notable (aucune persistance, RGPD-friendly)", async () => {
+  it("shows a ratable widget again after remount (no persistence, GDPR-friendly)", async () => {
     const { unmount } = render(<ContributionRating {...props} />);
-    fireEvent.change(screen.getByRole("slider"), { target: { value: "4" } });
+    fireEvent.click(star("4 étoiles sur 5 : Clair"));
     fireEvent.click(screen.getByRole("button", { name: "Valider" }));
     await screen.findByText("Merci !");
     expect(mockTrack).toHaveBeenCalledTimes(1);
     unmount();
 
-    // Rechargement simulé : aucune trace côté client (pas de localStorage), le
-    // widget repart de zéro et l'usager peut noter à nouveau.
+    // Simulated reload: nothing is kept client side (no localStorage), the
+    // widget starts over and the user can rate again.
     render(<ContributionRating {...props} />);
 
     expect(screen.queryByText("Merci !")).not.toBeInTheDocument();
-    const validateButton = screen.getByRole("button", { name: "Valider" });
-    expect(validateButton).toBeInTheDocument();
-
-    fireEvent.click(validateButton);
+    fireEvent.click(star("5 étoiles sur 5 : Très clair"));
+    fireEvent.click(screen.getByRole("button", { name: "Valider" }));
     await screen.findByText("Merci !");
     expect(mockTrack).toHaveBeenCalledTimes(2);
+    expect(mockTrack).toHaveBeenLastCalledWith({
+      contributionSlug: "conges-payes-1234",
+      value: 5,
+    });
   });
 });
