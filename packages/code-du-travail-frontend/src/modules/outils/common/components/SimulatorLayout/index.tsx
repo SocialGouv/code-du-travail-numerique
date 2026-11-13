@@ -16,6 +16,7 @@ type Props<T extends string> = {
   hiddenStep?: string[];
   simulator: PublicodesSimulator;
   footerComponent?: React.ReactNode;
+  seoContent?: React.ReactNode;
 };
 
 export const SimulatorLayout = ({
@@ -24,6 +25,7 @@ export const SimulatorLayout = ({
   onStepChange,
   hiddenStep,
   footerComponent,
+  seoContent,
 }: Props<string>) => {
   const { emitPrintEvent, emitNextPreviousEvent } =
     useSimulatorLayoutTracking();
@@ -231,6 +233,7 @@ export const SimulatorLayout = ({
             />
           )}
         </div>
+        {seoContent}
         {footerComponent}
       </div>
     </SimulatorTitleContext.Provider>

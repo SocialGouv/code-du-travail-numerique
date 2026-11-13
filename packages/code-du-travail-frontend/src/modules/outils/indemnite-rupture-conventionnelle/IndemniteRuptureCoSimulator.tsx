@@ -80,21 +80,22 @@ const IndemniteRuptureCoSimulator = ({
       relatedItems={relatedItems}
       title={displayTitle}
       breadcrumbSegments={[listingSegment(SOURCES.TOOLS)]}
-      seoContent={seoContent}
     >
-      <CalculateurIndemniteRuptureCo title={title} />
+      <CalculateurIndemniteRuptureCo title={title} seoContent={seoContent} />
     </ContainerSimulator>
   );
 };
 
 export const CalculateurIndemniteRuptureCo = ({
   title,
-}: Pick<Props, "title">) => {
+  seoContent,
+}: Pick<Props, "title" | "seoContent">) => {
   return (
     <CalculateurIndemnite
       title={title}
       tool={IndemniteDepartType.RUPTURE_CONVENTIONNELLE}
       steps={steps}
+      seoContent={seoContent}
       feedbackPopup={EVENT_CATEGORY.ruptureConventionnelle}
     />
   );

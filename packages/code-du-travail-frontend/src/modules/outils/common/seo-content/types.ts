@@ -9,7 +9,7 @@ export type ToolSeoSlug =
   | "preavis-retraite";
 
 /**
- * A block of the SEO text: an optional bold lead-in, an optional paragraph
+ * A block of the SEO text: an optional sub-heading, an optional paragraph
  * text and an optional bullet list rendered after the paragraph.
  */
 export type ToolSeoBlock = {

@@ -41,9 +41,14 @@ describe("ToolSeoContent", () => {
       name: "Quel est le montant minimum de l'indemnité de rupture conventionnelle ?",
     });
     expect(
-      within(section).getByRole("heading", { level: 2 })
+      within(section).getByRole("heading", {
+        level: 2,
+        name: "Quel est le montant minimum de l'indemnité de rupture conventionnelle ?",
+      })
     ).toBeInTheDocument();
-    expect(within(section).getByText("La règle.").tagName).toBe("STRONG");
+    expect(
+      within(section).getByRole("heading", { level: 2, name: "La règle" })
+    ).toBeInTheDocument();
     expect(within(section).getAllByRole("listitem")).toHaveLength(2);
     expect(
       within(section).getByRole("link", { name: "L1237-11" })

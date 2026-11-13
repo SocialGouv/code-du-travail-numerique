@@ -74,21 +74,22 @@ const IndemniteRetraiteSimulator = ({
       relatedItems={relatedItems}
       title={displayTitle}
       breadcrumbSegments={[listingSegment(SOURCES.TOOLS)]}
-      seoContent={seoContent}
     >
-      <CalculateurIndemniteRetraite title={title} />
+      <CalculateurIndemniteRetraite title={title} seoContent={seoContent} />
     </ContainerSimulator>
   );
 };
 
 export const CalculateurIndemniteRetraite = ({
   title,
-}: Pick<Props, "title">) => {
+  seoContent,
+}: Pick<Props, "title" | "seoContent">) => {
   return (
     <CalculateurIndemnite
       title={title}
       tool={IndemniteDepartType.RETRAITE}
       steps={steps}
+      seoContent={seoContent}
     />
   );
 };

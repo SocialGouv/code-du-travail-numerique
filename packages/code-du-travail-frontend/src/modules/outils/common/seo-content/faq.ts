@@ -18,19 +18,14 @@ export const toFaqAnswerHtml = ({
 }: ToolSeoContentData): string => {
   const body = blocks
     .map(({ lead, text, items }) => {
-      const paragraph =
-        lead || text
-          ? `<p>${[
-              lead ? `<strong>${escapeHtml(lead)}</strong>` : "",
-              text ? escapeHtml(text) : "",
-            ]
-              .filter(Boolean)
-              .join(" ")}</p>`
-          : "";
+      // Sub-headings are not allowed by Google here, so they become bold
+      // paragraphs.
+      const heading = lead ? `<p><strong>${escapeHtml(lead)}</strong></p>` : "";
+      const paragraph = text ? `<p>${escapeHtml(text)}</p>` : "";
       const list = items?.length
         ? `<ul>${items.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul>`
         : "";
-      return paragraph + list;
+      return heading + paragraph + list;
     })
     .join("");
 

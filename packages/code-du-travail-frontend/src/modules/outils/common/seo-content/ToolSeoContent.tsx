@@ -29,18 +29,15 @@ export const ToolSeoContent = ({ slug }: Props) => {
         id={JSON_LD_IDS.toolFaq}
         data={buildToolFaqJsonLd(content, `/outils/${slug}`)}
       />
-      <div className={fr.cx("fr-col-12", "fr-col-md-8", "fr-col-offset-md-2")}>
+      <div className={fr.cx("fr-col-12", "fr-col-md-8")}>
         <h2 id={TITLE_ID} className={`${fr.cx("fr-mb-6v")} ${title}`}>
           {content.title}
         </h2>
         {content.blocks.map(({ lead, text, items }, index) => (
           <div key={index}>
-            {(lead || text) && (
-              <p className={fr.cx(items ? "fr-mb-2v" : "fr-mb-3w")}>
-                {lead && <strong>{lead}</strong>}
-                {lead && text && " "}
-                {text}
-              </p>
+            {lead && <h2 className={fr.cx("fr-h5", "fr-mb-2v")}>{lead}</h2>}
+            {text && (
+              <p className={fr.cx(items ? "fr-mb-2v" : "fr-mb-3w")}>{text}</p>
             )}
             {items && (
               <ul className={fr.cx("fr-mb-3w")}>
