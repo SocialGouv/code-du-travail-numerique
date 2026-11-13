@@ -1,7 +1,16 @@
 import { SOURCES } from "@socialgouv/cdtn-utils";
 import { elasticDocumentsIndex, elasticsearchClient } from "../../../utils";
-import { getRelatedThemesBody, getSearchBody } from "../queries";
-import { esDocToSearchResult, extractHits, removeDuplicate } from "../utils";
+import {
+  getNewsSearchBody,
+  getRelatedThemesBody,
+  getSearchBody,
+} from "../queries";
+import {
+  esDocToSearchResult,
+  extractHits,
+  promoteNews,
+  removeDuplicate,
+} from "../utils";
 import { getPrequalifiedResults } from "./prequalified";
 import { presearch } from "./presearch";
 import { SEARCH_ALGO, SearchResult } from "./types";
@@ -36,14 +45,24 @@ export const searchWithQuery = async (
   ];
 
   const esReq = getRelatedThemesBody(query);
-  const themes = await elasticsearchClient
-    .search<unknown>({
-      index: elasticDocumentsIndex,
-      ...esReq,
-    })
-    .then((r) =>
-      extractHits(r).map(esDocToSearchResult(SEARCH_ALGO.FULL_TEXT))
-    );
+  const [themes, [news]] = await Promise.all([
+    elasticsearchClient
+      .search<unknown>({
+        index: elasticDocumentsIndex,
+        ...esReq,
+      })
+      .then((r) =>
+        extractHits(r).map(esDocToSearchResult(SEARCH_ALGO.FULL_TEXT))
+      ),
+    elasticsearchClient
+      .search<unknown>({
+        index: elasticDocumentsIndex,
+        ...getNewsSearchBody(query),
+      })
+      .then((r) =>
+        extractHits(r).map(esDocToSearchResult(SEARCH_ALGO.FULL_TEXT))
+      ),
+  ]);
 
   const parsed = await presearch(query, themes, true);
 
@@ -89,7 +108,7 @@ export const searchWithQuery = async (
   }
 
   return {
-    documents: removeDuplicate(documents).slice(0, size),
+    documents: promoteNews(removeDuplicate(documents), news).slice(0, size),
     class: parsed.classes[0],
   };
 };

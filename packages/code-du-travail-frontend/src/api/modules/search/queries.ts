@@ -174,7 +174,7 @@ export function getSearchBody(query: string, size: number, sources: string[]) {
       "displayTitle",
       "metaDescription",
     ],
-    query: {
+    query: withNewsFreshness({
       bool: {
         filter: [
           { term: { excludeFromSearch: false } },
@@ -271,6 +271,109 @@ export function getSearchBody(query: string, size: number, sources: string[]) {
             },
           },
         ],
+      },
+    }),
+    size,
+  };
+}
+
+const NEWS_SEARCH_SOURCE_FIELDS = [
+  "title",
+  "source",
+  "slug",
+  "description",
+  "cdtnId",
+  "metaDescription",
+];
+
+/**
+ * Freshness of a news item, from 1 (published in the last week) down to 0.5
+ * two months later, then towards 0. `publishedAt` is the first publication:
+ * `date` changes on every republication.
+ */
+const NEWS_FRESHNESS_DECAY = {
+  gauss: {
+    publishedAt: {
+      origin: "now",
+      offset: "7d",
+      scale: "60d",
+      decay: 0.5,
+    },
+  },
+};
+
+// A news item is only boosted at its freshest: an old one is outdated.
+const NEWS_MIN_WEIGHT = 0.9;
+const NEWS_FRESHNESS_WEIGHT = 0.3;
+
+/**
+ * Multiplies the score of news items by 0.9 (stale) to 1.2 (fresh), other
+ * documents are left untouched.
+ */
+export const withNewsFreshness = (query: object) => ({
+  function_score: {
+    query,
+    functions: [
+      {
+        filter: { term: { source: SOURCES.NEWS } },
+        weight: NEWS_MIN_WEIGHT,
+      },
+      {
+        filter: { term: { source: SOURCES.NEWS } },
+        ...NEWS_FRESHNESS_DECAY,
+        weight: NEWS_FRESHNESS_WEIGHT,
+      },
+    ],
+    score_mode: "sum",
+    boost_mode: "multiply",
+  },
+});
+
+// Minimum BM25 score of the title match: filters out news that only share a
+// generic word with the query ("travail", "salarié", "contrat"...).
+export const NEWS_MIN_SCORE = 4.5;
+
+// Only recent news are promoted to the top results.
+const NEWS_PROMOTION_MAX_AGE = "now-180d/d";
+
+/**
+ * Recent news whose title contains every word of the query, the most relevant
+ * and freshest first. Used to promote a news item in the top results, which
+ * are otherwise filled by presearch and prequalified results.
+ */
+export function getNewsSearchBody(query: string, size = 1) {
+  return {
+    _source: NEWS_SEARCH_SOURCE_FIELDS,
+    min_score: NEWS_MIN_SCORE,
+    query: {
+      bool: {
+        filter: [
+          { term: { source: SOURCES.NEWS } },
+          { term: { excludeFromSearch: false } },
+          { term: { isPublished: true } },
+          { range: { publishedAt: { gte: NEWS_PROMOTION_MAX_AGE } } },
+        ],
+        must: {
+          dis_max: {
+            queries: [
+              { match: { "title.french": { query, operator: "and" } } },
+              {
+                match: {
+                  "title.french_with_synonyms": { query, operator: "and" },
+                },
+              },
+            ],
+          },
+        },
+      },
+    },
+    rescore: {
+      window_size: 10,
+      query: {
+        rescore_query: {
+          function_score: { ...NEWS_FRESHNESS_DECAY, boost_mode: "replace" },
+        },
+        score_mode: "multiply",
       },
     },
     size,
