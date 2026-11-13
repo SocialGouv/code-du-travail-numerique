@@ -267,6 +267,11 @@ type Options = {
   // historique (taille par défaut du tag). Négatif = titres plus profonds mais
   // conservant l'apparence du niveau parent.
   visualOffset?: number;
+  // Re-level raw `<h1>`…`<h6>` tags of the content: the content is authored
+  // with `<h2>` as its top level, which is mapped to `titleLevel` (h3 to
+  // `titleLevel + 1`, …). Needed when the content is rendered below a heading
+  // deeper than `<h1>` (e.g. a news item in a list).
+  relativeHeadings?: boolean;
   infographics: ContributionInfographicFull[];
   disableLink: boolean;
   smicHourly?: number;
@@ -335,6 +340,16 @@ const options = (params: Options): HTMLReactParserOptions => {
             );
           }
           return <span>{enteredText}</span>;
+        }
+        if (params.relativeHeadings && /^h[1-6]$/.test(domNode.name)) {
+          const authoredLevel = Math.max(2, Number(domNode.name[1]));
+          return getHeadingElement(
+            {
+              ...params,
+              titleLevel: (titleLevel + authoredLevel - 2) as numberLevel,
+            },
+            domNode
+          );
         }
         if (domNode.name === "span" && domNode.attribs.class === "title") {
           accordionTitleLevel = titleLevel + 1;
@@ -462,6 +477,7 @@ const options = (params: Options): HTMLReactParserOptions => {
                           options({
                             titleLevel,
                             visualOffset: params.visualOffset,
+                            relativeHeadings: params.relativeHeadings,
                             infographics: params.infographics,
                             disableLink: params.disableLink,
                             smicHourly: params.smicHourly,
@@ -575,6 +591,8 @@ type Props = {
   // cf. Options.visualOffset : conserve la taille visuelle du niveau parent
   // tout en descendant le niveau sémantique des titres du contenu.
   visualOffset?: number;
+  // cf. Options.relativeHeadings
+  relativeHeadings?: boolean;
   extra?: {
     infographics?: ContributionInfographicFull[];
     disableLink?: boolean;
@@ -587,6 +605,7 @@ const DisplayContent = ({
   content,
   titleLevel,
   visualOffset,
+  relativeHeadings,
   extra,
 }: Props): string | JSX.Element | JSX.Element[] => {
   try {
@@ -596,6 +615,7 @@ const DisplayContent = ({
       options({
         titleLevel,
         visualOffset,
+        relativeHeadings,
         infographics: extra?.infographics ?? [],
         disableLink: extra?.disableLink ?? false,
         smicHourly: extra?.smicHourly,
