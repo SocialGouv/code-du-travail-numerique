@@ -5,7 +5,9 @@ import {
 } from "../../api";
 
 const search = async (
-  query: string
+  query: string,
+  sizeParams = 25,
+  withPQ = false
 ): Promise<{
   topDocuments: SearchResult[];
   documents: SearchResult[];
@@ -23,7 +25,7 @@ const search = async (
   }
 
   try {
-    const response = await searchWithQuery(query, 25, true);
+    const response = await searchWithQuery(query, sizeParams, withPQ);
 
     // Vérification que la réponse est valide
     if (
