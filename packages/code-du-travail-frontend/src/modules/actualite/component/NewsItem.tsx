@@ -50,7 +50,7 @@ export const NewsItem = ({
         )}
       </div>
       <div className={fr.cx("fr-col-md-8", "fr-col-offset-md-2", "fr-col-12")}>
-        <DisplayContent content={content} titleLevel={3} />
+        <DisplayContent content={content} titleLevel={3} relativeHeadings />
 
         <Button
           title={`Lire la suite de l'actualité ${title}`}
