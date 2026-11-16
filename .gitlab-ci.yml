@@ -56,6 +56,16 @@ include:
       app_name: cdtn
       deploy_action: preprod
       image_target_object: ".code-du-travail-numerique.image.tag"
+  - component: $CI_SERVER_FQDN/socialgouv/commun/studio-tech-commun/components/gitops-cd-component/trigger_app@0.6.0
+    inputs:
+      job_name: deploy-prod
+      stage: deploy
+      rules:
+        - if: $CI_COMMIT_TAG =~ /^v\d+\.\d+\.\d+$/
+      gitops_project: socialgouv/produits-dnum/citoyens/cdtn/cdtn-gitops
+      app_name: cdtn
+      deploy_action: prod
+      image_target_object: ".code-du-travail-numerique.image.tag"
 
 variables:
   # La configuration par environnement est lue à l'exécution (image unique), plus de
@@ -76,10 +86,12 @@ workflow:
     on_new_commit: interruptible
   rules:
     - if: $CI_COMMIT_BRANCH
+    - if: $CI_COMMIT_TAG =~ /^v\d+\.\d+\.\d+$/
 
 .build-rules: &build-rules
   - if: $SCHEDULED_JOB
     when: never
+  - if: $CI_COMMIT_TAG =~ /^v\d+\.\d+\.\d+$/
   - if: $CI_COMMIT_BRANCH =~ /^(feat|fix|chore|migration)\//
   - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
 
@@ -258,3 +270,11 @@ deploy-preprod:
   needs: ["build", "prepare-deploy-preprod"]
   environment:
     name: preprod
+
+deploy-prod:
+  needs: ["build", "prepare-deploy-prod"]
+  rules:
+    - if: $CI_COMMIT_TAG =~ /^v\d+\.\d+\.\d+$/
+      when: manual
+  environment:
+    name: prod
