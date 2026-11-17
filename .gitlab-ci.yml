@@ -80,6 +80,7 @@ stages:
   - build
   - deploy
   - test
+  - release
 
 workflow:
   auto_cancel:
@@ -278,3 +279,19 @@ deploy-prod:
       when: manual
   environment:
     name: prod
+
+release:
+  stage: release
+  image: node:24.22.1-bookworm
+  tags: [socialgouv-linux-small-amd64]
+  needs: []
+  variables:
+    GIT_DEPTH: "0"
+  script:
+    - node .gitlab/release.mjs
+  rules:
+    - if: $SCHEDULED_JOB
+      when: never
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+      when: manual
+      allow_failure: true
