@@ -1,0 +1,10 @@
+{
+  "branches": ["main"],
+  "tagFormat": "v${version}",
+  "repositoryUrl": "https://pic.sg.social.gouv.fr/socialgouv/produits-dnum/citoyens/cdtn/code-du-travail-numerique.git",
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    ["@semantic-release/gitlab", { "gitlabUrl": "https://pic.sg.social.gouv.fr" }]
+  ]
+}

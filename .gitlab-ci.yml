@@ -80,6 +80,7 @@ stages:
   - build
   - deploy
   - test
+  - release
 
 workflow:
   auto_cancel:
@@ -278,3 +279,32 @@ deploy-prod:
       when: manual
   environment:
     name: prod
+
+release:
+  stage: release
+  image: node:24.22.1-bookworm
+  tags: [socialgouv-linux-small-amd64]
+  needs: []
+  variables:
+    GIT_DEPTH: "0"
+    HTTP_PROXY: $PIC_PROXY
+    HTTPS_PROXY: $PIC_PROXY
+    NO_PROXY: $PIC_NO_PROXY
+    http_proxy: $PIC_PROXY
+    https_proxy: $PIC_PROXY
+    no_proxy: $PIC_NO_PROXY
+  before_script:
+    - git remote set-url origin "https://${CI_SERVER_HOST}/${CI_PROJECT_PATH}.git"
+    - git config credential.helper '!f(){ echo username=gitlab-ci-token; echo "password=${GITLAB_TOKEN}"; };f'
+    - git fetch origin --tags --force --prune
+    - BASE="v$(node -p "require('./lerna.json').version")"
+    - BASE_SHA="$(git log -1 --format=%H -S "${BASE#v}" -- lerna.json)"
+    - if [ -n "$BASE_SHA" ] && ! git rev-parse -q --verify "refs/tags/$BASE" >/dev/null; then git tag "$BASE" "$BASE_SHA" && git push -o ci.skip origin "refs/tags/$BASE"; fi
+  script:
+    - npx --yes -p semantic-release@25.0.9 -p @semantic-release/commit-analyzer@13.0.1 -p @semantic-release/release-notes-generator@14.1.1 -p @semantic-release/gitlab@13.3.3 semantic-release
+  rules:
+    - if: $SCHEDULED_JOB
+      when: never
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+      when: manual
+      allow_failure: true
