@@ -297,6 +297,9 @@ release:
     - git remote set-url origin "https://${CI_SERVER_HOST}/${CI_PROJECT_PATH}.git"
     - git config credential.helper '!f(){ echo username=gitlab-ci-token; echo "password=${GITLAB_TOKEN}"; };f'
     - git fetch origin --tags --force --prune
+    - BASE="v$(node -p "require('./lerna.json').version")"
+    - BASE_SHA="$(git log -1 --format=%H -S "${BASE#v}" -- lerna.json)"
+    - if [ -n "$BASE_SHA" ] && ! git rev-parse -q --verify "refs/tags/$BASE" >/dev/null; then git tag "$BASE" "$BASE_SHA" && git push -o ci.skip origin "refs/tags/$BASE"; fi
   script:
     - npx --yes -p semantic-release@25.0.9 -p @semantic-release/commit-analyzer@13.0.1 -p @semantic-release/release-notes-generator@14.1.1 -p @semantic-release/gitlab@13.3.3 semantic-release
   rules:
