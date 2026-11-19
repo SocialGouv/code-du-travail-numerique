@@ -66,15 +66,8 @@ const StepAbsences = () => {
   );
 
   const messageMotifExample = useMemo(
-    () =>
-      getMotifExampleMessage(
-        informationData,
-        true,
-        // RG8 : la phrase de conclusion doit nommer l'indemnité de départ ou de
-        // mise à la retraite, et non celle de rupture conventionnelle.
-        type === IndemniteDepartType.RETRAITE ? originRetraite : undefined
-      ),
-    [informationData, type, originRetraite]
+    () => getMotifExampleMessage(informationData),
+    [informationData]
   );
 
   useEffect(() => {

@@ -127,9 +127,14 @@ export const SalaireTempsPlein = ({
                     <tr>
                       <th scope="col">Mois</th>
                       <th scope="col">
-                        Salaire mensuel brut primes incluses (en €)
+                        Salaire mensuel brut incluant variable et primes
+                        régulières (en €)
                       </th>
-                      {!noPrime && <th scope="col">Total des primes (en €)</th>}
+                      {!noPrime && (
+                        <th scope="col">
+                          Montant des primes exceptionnelles (en €)
+                        </th>
+                      )}
                     </tr>
                   </thead>
                   <tbody>
