@@ -11,16 +11,16 @@ test.describe("Outils - Texte SEO sous le simulateur brut/net", () => {
     const region = page.getByRole("region", { name: "En savoir plus" });
     const heading = region.getByRole("heading", {
       level: 2,
-      name: "Quelle est la différence entre salaire brut et salaire net ?",
+      name: "Brut ou net : quelle différence ?",
     });
     await expect(heading).toBeVisible();
-    await expect(heading).toHaveAttribute("id", "difference-salaire-brut-net");
+    await expect(heading).toHaveAttribute("id", "difference-brut-net");
 
     await region
       .getByRole("navigation")
-      .getByRole("link", { name: "Comment convertir un salaire brut en net ?" })
+      .getByRole("link", { name: "Comment convertir le brut en net ?" })
       .click();
-    await expect(page).toHaveURL(/#calculer-salaire-net$/);
+    await expect(page).toHaveURL(/#convertir-brut-net$/);
 
     await expect(
       region.locator('a[href^="/code-du-travail/"]').first()
