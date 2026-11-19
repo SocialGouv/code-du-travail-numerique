@@ -29,7 +29,7 @@ test.describe("Outil - Salaire brut/net", () => {
     await page.goto("/outils/simulateur-embauche");
     await expectTitleAndMetaDescriptionEqual(
       page,
-      "Simulateur - Calcul du salaire brut/net - Code du travail numérique",
+      "Simulateur officiel - Calcul du salaire brut en net",
       "Réalisez vos conversions et calculs de salaire (brut en net, net en brut, net après impôt, heures supplémentaires et coût total employeur) avec notre simulateur."
     );
 

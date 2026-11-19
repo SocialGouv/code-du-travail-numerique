@@ -1,8 +1,9 @@
 import { fr } from "@codegouvfr/react-dsfr";
-import Summary from "@codegouvfr/react-dsfr/Summary";
 import { css } from "@styled-system/css";
 
 import Link from "../../../common/Link";
+import { stickySidebarStyles } from "../../../layout/ContainerWithNav";
+import { SummaryNavigation } from "../../../layout/SummaryNavigation";
 import { JsonLd } from "../../../seo/jsonld/JsonLd";
 import { JSON_LD_IDS } from "../../../seo/jsonld/builders";
 import { splitReferences } from "./articles";
@@ -10,15 +11,13 @@ import { getToolSeoContent } from "./content";
 import { buildToolFaqJsonLd } from "./faq";
 import { ToolSeoSlug } from "./types";
 
-const SUMMARY_ID = "tool-seo-content-summary";
-
 type Props = {
   slug: ToolSeoSlug;
 };
 
 // Server-rendered editorial text displayed under a simulator (outside the
 // widgets) so that the tool pages carry indexable content. Each section is an
-// anchored h2 listed in a summary, which lets search engines show
+// anchored h2 listed in the side summary, which lets search engines show
 // "jump to" links to the sections.
 export const ToolSeoContent = ({ slug }: Props) => {
   const { sections, references } = getToolSeoContent(slug);
@@ -26,21 +25,26 @@ export const ToolSeoContent = ({ slug }: Props) => {
   return (
     <section
       aria-label="En savoir plus"
-      className={fr.cx("fr-grid-row", "fr-mt-12v", "fr-mb-6v")}
+      className={fr.cx(
+        "fr-grid-row",
+        "fr-grid-row--gutters",
+        "fr-mt-12v",
+        "fr-mb-6v"
+      )}
     >
       <JsonLd
         id={JSON_LD_IDS.toolFaq}
         data={buildToolFaqJsonLd(sections, `/outils/${slug}`)}
       />
-      <div className={fr.cx("fr-col-12", "fr-col-md-8")}>
-        <Summary
-          id={SUMMARY_ID}
-          className={fr.cx("fr-mb-8v")}
-          links={sections.map(({ id, title }) => ({
-            text: title,
-            linkProps: { href: `#${id}` },
-          }))}
-        />
+      {/* Same sticky side summary as the other content pages. */}
+      <div className={fr.cx("fr-col-12", "fr-col-xl-3")}>
+        <div className={stickySidebarStyles}>
+          <SummaryNavigation
+            sections={sections.map(({ id, title }) => ({ id, label: title }))}
+          />
+        </div>
+      </div>
+      <div className={fr.cx("fr-col-12", "fr-col-xl-9")}>
         {sections.map(({ id, title, text, items }) => (
           <div key={id}>
             <h2

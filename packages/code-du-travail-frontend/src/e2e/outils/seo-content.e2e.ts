@@ -1,12 +1,9 @@
 import { test, expect } from "@playwright/test";
 
 test.describe("Outils - Texte SEO sous le simulateur brut/net", () => {
-  test("affiche le titre officiel et les H2 ancrés", async ({ page }) => {
+  // The meta title is checked in brut-net.e2e.ts.
+  test("affiche le sommaire et les H2 ancrés", async ({ page }) => {
     await page.goto("/outils/simulateur-embauche");
-
-    await expect(page).toHaveTitle(
-      "Simulateur officiel - Calcul du salaire brut en net"
-    );
 
     const region = page.getByRole("region", { name: "En savoir plus" });
     const heading = region.getByRole("heading", {

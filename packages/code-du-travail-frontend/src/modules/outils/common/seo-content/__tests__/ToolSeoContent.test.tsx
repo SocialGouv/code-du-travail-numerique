@@ -30,7 +30,11 @@ describe("ToolSeoContent", () => {
     render(<ToolSeoContent slug="simulateur-embauche" />);
 
     const region = screen.getByRole("region", { name: "En savoir plus" });
-    const headings = within(region).getAllByRole("heading", { level: 2 });
+    // The first h2 is the summary title, as on the other content pages.
+    const [summaryTitle, ...headings] = within(region).getAllByRole("heading", {
+      level: 2,
+    });
+    expect(summaryTitle).toHaveTextContent("Sommaire");
     expect(headings.map((h) => h.textContent)).toEqual(
       sections.map(({ title }) => title)
     );
