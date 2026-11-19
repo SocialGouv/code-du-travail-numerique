@@ -6,11 +6,17 @@ import { generateDefaultMetadata } from "../../../src/modules/common/metas";
 import HiringSimulator from "../../../src/modules/outils/simulateur-embauche/HiringSimulator";
 import { ToolSeoContent } from "../../../src/modules/outils/common/seo-content";
 
+// Overrides the CMS meta title: "officiel" sets the page apart from private
+// converters in search results, and the brand suffix is dropped to keep the
+// query terms visible in the snippet (#7586).
+const META_TITLE = "Simulateur officiel - Calcul du salaire brut en net";
+
 export async function generateMetadata() {
-  const { metaTitle, metaDescription } = await getTool();
+  const { metaDescription } = await getTool();
 
   return generateDefaultMetadata({
-    title: metaTitle,
+    title: META_TITLE,
+    noTitleAdd: true,
     description: metaDescription,
     path: `/outils/simulateur-embauche`,
   });
