@@ -1,4 +1,5 @@
 import { fr } from "@codegouvfr/react-dsfr";
+import Summary from "@codegouvfr/react-dsfr/Summary";
 import { css } from "@styled-system/css";
 
 import Link from "../../../common/Link";
@@ -9,42 +10,50 @@ import { getToolSeoContent } from "./content";
 import { buildToolFaqJsonLd } from "./faq";
 import { ToolSeoSlug } from "./types";
 
-const TITLE_ID = "tool-seo-content-title";
+const SUMMARY_ID = "tool-seo-content-summary";
 
 type Props = {
   slug: ToolSeoSlug;
 };
 
 // Server-rendered editorial text displayed under a simulator (outside the
-// widgets) so that the tool pages carry indexable content.
+// widgets) so that the tool pages carry indexable content. Each section is an
+// anchored h2 listed in a summary, which lets search engines show
+// "jump to" links to the sections.
 export const ToolSeoContent = ({ slug }: Props) => {
-  const content = getToolSeoContent(slug);
+  const { sections, references } = getToolSeoContent(slug);
 
   return (
     <section
-      aria-labelledby={TITLE_ID}
+      aria-label="En savoir plus"
       className={fr.cx("fr-grid-row", "fr-mt-12v", "fr-mb-6v")}
     >
       <JsonLd
         id={JSON_LD_IDS.toolFaq}
-        data={buildToolFaqJsonLd(content, `/outils/${slug}`)}
+        data={buildToolFaqJsonLd(sections, `/outils/${slug}`)}
       />
       <div className={fr.cx("fr-col-12", "fr-col-md-8")}>
-        <h2 id={TITLE_ID} className={`${fr.cx("fr-mb-6v")} ${titleStyle}`}>
-          {content.title}
-        </h2>
-        {content.blocks.map(({ lead, text, items }, index) => (
-          <div key={index}>
-            {lead && (
-              <h2 className={`${fr.cx("fr-h5", "fr-mb-2v")} ${leadStyle}`}>
-                {lead}
-              </h2>
-            )}
+        <Summary
+          id={SUMMARY_ID}
+          className={fr.cx("fr-mb-8v")}
+          links={sections.map(({ id, title }) => ({
+            text: title,
+            linkProps: { href: `#${id}` },
+          }))}
+        />
+        {sections.map(({ id, title, text, items }) => (
+          <div key={id}>
+            <h2
+              id={id}
+              className={`${fr.cx("fr-h3", "fr-mb-3v")} ${headingStyle}`}
+            >
+              {title}
+            </h2>
             {text && (
-              <p className={fr.cx(items ? "fr-mb-2v" : "fr-mb-3w")}>{text}</p>
+              <p className={fr.cx(items ? "fr-mb-2v" : "fr-mb-6v")}>{text}</p>
             )}
             {items && (
-              <ul className={fr.cx("fr-mb-3w")}>
+              <ul className={fr.cx("fr-mb-6v")}>
                 {items.map((item) => (
                   <li key={item}>{item}</li>
                 ))}
@@ -54,7 +63,7 @@ export const ToolSeoContent = ({ slug }: Props) => {
         ))}
         <p className={fr.cx("fr-text--sm", "fr-mb-0")}>
           Références :{" "}
-          {splitReferences(content.references).map((part, index) =>
+          {splitReferences(references).map((part, index) =>
             part.type === "article" ? (
               <Link key={index} href={part.href}>
                 {part.value}
@@ -70,11 +79,9 @@ export const ToolSeoContent = ({ slug }: Props) => {
 };
 
 // DSFR headings are sized for article pages: on mobile they dwarf the
-// simulator, so step them down one level.
-const titleStyle = css({
-  mdDown: { fontSize: "1.375rem!", lineHeight: "1.75rem!" },
-});
-
-const leadStyle = css({
-  mdDown: { fontSize: "1.125rem!", lineHeight: "1.5rem!" },
+// simulator, so step them down. `scroll-margin-top` keeps an anchored heading
+// clear of the viewport edge when reached from the summary.
+const headingStyle = css({
+  scrollMarginTop: "1.5rem",
+  mdDown: { fontSize: "1.25rem!", lineHeight: "1.75rem!" },
 });

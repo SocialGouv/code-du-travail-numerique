@@ -9,65 +9,60 @@ import { ToolSeoContent } from "../ToolSeoContent";
 import { ToolSeoSlug } from "../types";
 
 const SLUGS = Object.keys(TOOL_SEO_CONTENT) as ToolSeoSlug[];
+const { sections } = TOOL_SEO_CONTENT["simulateur-embauche"];
 
 describe("ToolSeoContent", () => {
-  it("has content for every tool", () => {
-    expect(SLUGS.sort()).toEqual(
-      [
-        "convention-collective",
-        "indemnite-precarite",
-        "indemnite-retraite",
-        "indemnite-rupture-conventionnelle",
-        "preavis-demission",
-        "preavis-licenciement",
-        "preavis-retraite",
-        "simulateur-embauche",
-      ].sort()
+  it.each(SLUGS)("has valid content for %s", (slug) => {
+    const { sections, references } = TOOL_SEO_CONTENT[slug];
+    expect(sections.length).toBeGreaterThan(0);
+    const ids = sections.map(({ id }) => id);
+    expect(new Set(ids).size).toBe(ids.length);
+    sections.forEach(({ id, title }) => {
+      expect(id).toMatch(/^[a-z0-9-]+$/);
+      expect(title).toMatch(/\?$/);
+    });
+    expect(splitReferences(references).some((p) => p.type === "article")).toBe(
+      true
     );
-    SLUGS.forEach((slug) => {
-      const { title, blocks, references } = TOOL_SEO_CONTENT[slug];
-      expect(title).not.toBe("");
-      expect(blocks.length).toBeGreaterThan(0);
+  });
+
+  it("renders every section as an anchored h2 listed in the summary", () => {
+    render(<ToolSeoContent slug="simulateur-embauche" />);
+
+    const region = screen.getByRole("region", { name: "En savoir plus" });
+    const headings = within(region).getAllByRole("heading", { level: 2 });
+    expect(headings.map((h) => h.textContent)).toEqual(
+      sections.map(({ title }) => title)
+    );
+    headings.forEach((heading, index) =>
+      expect(heading).toHaveAttribute("id", sections[index].id)
+    );
+
+    const summary = within(region).getByRole("navigation");
+    sections.forEach(({ id, title }) =>
       expect(
-        splitReferences(references).some((p) => p.type === "article")
-      ).toBe(true);
-    });
+        within(summary).getByRole("link", { name: title })
+      ).toHaveAttribute("href", `#${id}`)
+    );
+
+    expect(within(region).getAllByRole("listitem").length).toBeGreaterThan(
+      sections.length
+    );
+    expect(
+      within(region).getByRole("link", { name: "L3243-2" })
+    ).toHaveAttribute("href", "/code-du-travail/l3243-2");
   });
 
-  it("renders an accessible section with heading, lists and article links", () => {
-    render(<ToolSeoContent slug="indemnite-rupture-conventionnelle" />);
-
-    const section = screen.getByRole("region", {
-      name: "Quel est le montant minimum de l'indemnité de rupture conventionnelle ?",
-    });
-    expect(
-      within(section).getByRole("heading", {
-        level: 2,
-        name: "Quel est le montant minimum de l'indemnité de rupture conventionnelle ?",
-      })
-    ).toBeInTheDocument();
-    expect(
-      within(section).getByRole("heading", { level: 2, name: "La règle" })
-    ).toBeInTheDocument();
-    expect(within(section).getAllByRole("listitem")).toHaveLength(2);
-    expect(
-      within(section).getByRole("link", { name: "L1237-11" })
-    ).toHaveAttribute("href", "/code-du-travail/l1237-11");
-    expect(
-      within(section).getByRole("link", { name: "R1234-4" })
-    ).toHaveAttribute("href", "/code-du-travail/r1234-4");
-  });
-
-  it("renders a FAQPage JSON-LD matching the visible heading", () => {
-    render(<ToolSeoContent slug="preavis-demission" />);
+  it("renders a FAQPage JSON-LD with one question per h2", () => {
+    render(<ToolSeoContent slug="simulateur-embauche" />);
 
     const script = document.querySelector(`script#${JSON_LD_IDS.toolFaq}`);
     const data = JSON.parse(script?.innerHTML ?? "{}");
 
     expect(data["@type"]).toBe("FAQPage");
-    expect(data.url).toMatch(/\/outils\/preavis-demission$/);
-    expect(data.mainEntity[0].name).toBe(
-      TOOL_SEO_CONTENT["preavis-demission"].title
+    expect(data.url).toMatch(/\/outils\/simulateur-embauche$/);
+    expect(data.mainEntity.map((q: { name: string }) => q.name)).toEqual(
+      sections.map(({ title }) => title)
     );
   });
 });
@@ -93,15 +88,22 @@ describe("splitReferences", () => {
 });
 
 describe("toFaqAnswerHtml", () => {
-  it.each(SLUGS)("only uses tags allowed by Google for %s", (slug) => {
-    const html = toFaqAnswerHtml(TOOL_SEO_CONTENT[slug]);
-    const tags = Array.from(html.matchAll(/<\/?([a-z0-9]+)/g)).map(
-      ([, tag]) => tag
-    );
+  it.each(sections.map((section) => [section.id, section] as const))(
+    "only uses tags allowed by Google for %s",
+    (_, section) => {
+      const html = toFaqAnswerHtml(section);
+      const tags = Array.from(html.matchAll(/<\/?([a-z0-9]+)/g)).map(
+        ([, tag]) => tag
+      );
 
-    expect(tags.length).toBeGreaterThan(0);
-    tags.forEach((tag) =>
-      expect(["p", "strong", "ul", "li", "a"]).toContain(tag)
+      expect(tags.length).toBeGreaterThan(0);
+      tags.forEach((tag) => expect(["p", "ul", "li"]).toContain(tag));
+    }
+  );
+
+  it("escapes HTML in the visible text", () => {
+    expect(toFaqAnswerHtml({ id: "x", title: "x ?", text: "a < b & c" })).toBe(
+      "<p>a &lt; b &amp; c</p>"
     );
   });
 });

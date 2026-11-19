@@ -144,16 +144,14 @@ export function buildContentThemeJsonLd({
   };
 }
 
-// FAQPage mono-question : le H1 de la page est déjà une question, on s'en sert
-// comme unique `Question`. `question` doit reprendre le H1 mot pour mot et
-// `answer` le texte visible dans la page (conformité Google).
+// FAQPage: each `question` must match a visible heading word for word (an
+// article's H1, or an H2 under a simulator) and `answer` the visible text that
+// follows it (Google guidelines).
 export function buildFaqPageJsonLd({
-  question,
-  answer,
+  entries,
   url,
 }: {
-  question: string;
-  answer: string;
+  entries: { question: string; answer: string }[];
   url: string;
 }): Record<string, unknown> {
   const absoluteUrl = toAbsoluteUrl(url);
@@ -162,13 +160,11 @@ export function buildFaqPageJsonLd({
     "@type": "FAQPage",
     url: absoluteUrl,
     inLanguage: "fr-FR",
-    mainEntity: [
-      {
-        "@type": "Question",
-        name: question,
-        acceptedAnswer: { "@type": "Answer", text: answer },
-      },
-    ],
+    mainEntity: entries.map(({ question, answer }) => ({
+      "@type": "Question",
+      name: question,
+      acceptedAnswer: { "@type": "Answer", text: answer },
+    })),
   };
 }
 

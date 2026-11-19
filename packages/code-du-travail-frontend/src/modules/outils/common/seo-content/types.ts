@@ -1,26 +1,22 @@
-export type ToolSeoSlug =
-  | "simulateur-embauche"
-  | "preavis-demission"
-  | "indemnite-precarite"
-  | "indemnite-rupture-conventionnelle"
-  | "convention-collective"
-  | "indemnite-retraite"
-  | "preavis-licenciement"
-  | "preavis-retraite";
+// Tools that display an editorial SEO text under their simulator. Add a slug
+// here (and its entry in TOOL_SEO_CONTENT) to enable the text on another tool.
+export type ToolSeoSlug = "simulateur-embauche";
 
 /**
- * A block of the SEO text: an optional sub-heading, an optional paragraph
- * text and an optional bullet list rendered after the paragraph.
+ * A section of the SEO text, rendered as an anchored h2 followed by an
+ * optional paragraph and an optional bullet list.
  */
-export type ToolSeoBlock = {
-  lead?: string;
+export type ToolSeoSection = {
+  /** Anchor of the h2, listed in the summary (stable: used in links). */
+  id: string;
+  /** Phrased as a question: it is also a FAQPage question. */
+  title: string;
   text?: string;
   items?: string[];
 };
 
 export type ToolSeoContentData = {
-  title: string;
-  blocks: ToolSeoBlock[];
+  sections: ToolSeoSection[];
   /** Legal references; article numbers are turned into links. */
   references: string;
 };
