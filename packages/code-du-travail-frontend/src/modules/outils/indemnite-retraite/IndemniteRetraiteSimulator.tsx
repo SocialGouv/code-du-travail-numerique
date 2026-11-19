@@ -58,14 +58,12 @@ type Props = {
   }[];
   title: string;
   displayTitle: string;
-  seoContent?: React.ReactNode;
 };
 
 const IndemniteRetraiteSimulator = ({
   relatedItems,
   title,
   displayTitle,
-  seoContent,
 }: Props) => {
   useIndemniteRetraiteEventEmitter();
 
@@ -75,21 +73,19 @@ const IndemniteRetraiteSimulator = ({
       title={displayTitle}
       breadcrumbSegments={[listingSegment(SOURCES.TOOLS)]}
     >
-      <CalculateurIndemniteRetraite title={title} seoContent={seoContent} />
+      <CalculateurIndemniteRetraite title={title} />
     </ContainerSimulator>
   );
 };
 
 export const CalculateurIndemniteRetraite = ({
   title,
-  seoContent,
-}: Pick<Props, "title" | "seoContent">) => {
+}: Pick<Props, "title">) => {
   return (
     <CalculateurIndemnite
       title={title}
       tool={IndemniteDepartType.RETRAITE}
       steps={steps}
-      seoContent={seoContent}
     />
   );
 };

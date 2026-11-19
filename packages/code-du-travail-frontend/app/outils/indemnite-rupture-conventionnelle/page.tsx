@@ -4,7 +4,6 @@ import { fetchTool } from "../../../src/modules/outils";
 import { notFound } from "next/navigation";
 import { generateDefaultMetadata } from "../../../src/modules/common/metas";
 import IndemniteRuptureCoSimulator from "../../../src/modules/outils/indemnite-rupture-conventionnelle/IndemniteRuptureCoSimulator";
-import { ToolSeoContent } from "../../../src/modules/outils/common/seo-content";
 
 export async function generateMetadata() {
   const { metaTitle, metaDescription } = await getTool();
@@ -28,7 +27,6 @@ async function IndemniteRuptureCo() {
         title={tool.title}
         displayTitle={tool.displayTitle}
         relatedItems={relatedItems}
-        seoContent={<ToolSeoContent slug="indemnite-rupture-conventionnelle" />}
       />
     </DsfrLayout>
   );

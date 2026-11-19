@@ -62,14 +62,12 @@ type Props = {
   }[];
   title: string;
   displayTitle: string;
-  seoContent?: React.ReactNode;
 };
 
 const PreavisLicenciementSimulator = ({
   relatedItems,
   title,
   displayTitle,
-  seoContent,
 }: Props) => {
   return (
     <ContainerSimulator
@@ -77,23 +75,20 @@ const PreavisLicenciementSimulator = ({
       title={displayTitle}
       breadcrumbSegments={[listingSegment(SOURCES.TOOLS)]}
     >
-      <CalculateurPreavisLicenciement title={title} seoContent={seoContent} />
+      <CalculateurPreavisLicenciement title={title} />
     </ContainerSimulator>
   );
 };
 
 export const CalculateurPreavisLicenciement = ({
   title,
-  seoContent,
-}: Pick<Props, "title" | "seoContent">) => {
+}: {
+  title: string;
+}) => {
   const store = React.useRef(createPreavisLicenciementStore()).current;
   return (
     <PreavisLicenciementContext.Provider value={store}>
-      <PreavisLicenciementSimulatorContent
-        title={title}
-        steps={steps}
-        seoContent={seoContent}
-      />
+      <PreavisLicenciementSimulatorContent title={title} steps={steps} />
     </PreavisLicenciementContext.Provider>
   );
 };
@@ -101,8 +96,8 @@ export const CalculateurPreavisLicenciement = ({
 const PreavisLicenciementSimulatorContent = ({
   title,
   steps,
-  seoContent,
-}: Pick<Props, "title" | "seoContent"> & {
+}: {
+  title: string;
   steps: Step<PreavisLicenciementStepName>[];
 }) => {
   const store = useContext(PreavisLicenciementContext);
@@ -139,7 +134,6 @@ const PreavisLicenciementSimulatorContent = ({
       simulator={PublicodesSimulator.PREAVIS_LICENCIEMENT}
       title={title}
       steps={steps}
-      seoContent={seoContent}
       hiddenStep={getHiddenSteps()}
       onStepChange={[
         {

@@ -59,14 +59,12 @@ type Props = {
   }[];
   title: string;
   displayTitle: string;
-  seoContent?: React.ReactNode;
 };
 
 const PreavisDemissionSimulator = ({
   relatedItems,
   title,
   displayTitle,
-  seoContent,
 }: Props) => {
   return (
     <ContainerSimulator
@@ -74,23 +72,16 @@ const PreavisDemissionSimulator = ({
       title={displayTitle}
       breadcrumbSegments={[listingSegment(SOURCES.TOOLS)]}
     >
-      <CalculateurPreavisDemission title={title} seoContent={seoContent} />
+      <CalculateurPreavisDemission title={title} />
     </ContainerSimulator>
   );
 };
 
-export const CalculateurPreavisDemission = ({
-  title,
-  seoContent,
-}: Pick<Props, "title" | "seoContent">) => {
+export const CalculateurPreavisDemission = ({ title }: { title: string }) => {
   const store = React.useRef(createPreavisDemissionStore()).current;
   return (
     <PreavisDemissionContext.Provider value={store}>
-      <PreavisDemissionSimulatorContent
-        title={title}
-        steps={steps}
-        seoContent={seoContent}
-      />
+      <PreavisDemissionSimulatorContent title={title} steps={steps} />
     </PreavisDemissionContext.Provider>
   );
 };
@@ -98,8 +89,8 @@ export const CalculateurPreavisDemission = ({
 const PreavisDemissionSimulatorContent = ({
   title,
   steps,
-  seoContent,
-}: Pick<Props, "title" | "seoContent"> & {
+}: {
+  title: string;
   steps: Step<PreavisDemissionStepName>[];
 }) => {
   const store = useContext(PreavisDemissionContext);
@@ -132,7 +123,6 @@ const PreavisDemissionSimulatorContent = ({
       simulator={PublicodesSimulator.PREAVIS_DEMISSION}
       title={title}
       steps={steps}
-      seoContent={seoContent}
       onStepChange={[
         {
           stepName: PreavisDemissionStepName.Agreement,

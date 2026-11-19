@@ -4,7 +4,6 @@ import { fetchTool } from "../../../src/modules/outils";
 import { notFound } from "next/navigation";
 import { generateDefaultMetadata } from "../../../src/modules/common/metas";
 import IndemniteRetraiteSimulator from "../../../src/modules/outils/indemnite-retraite/IndemniteRetraiteSimulator";
-import { ToolSeoContent } from "../../../src/modules/outils/common/seo-content";
 
 export async function generateMetadata() {
   const { metaTitle, metaDescription } = await getTool();
@@ -28,7 +27,6 @@ async function IndemniteRetraite() {
         title={tool.title}
         displayTitle={tool.displayTitle}
         relatedItems={relatedItems}
-        seoContent={<ToolSeoContent slug="indemnite-retraite" />}
       />
     </DsfrLayout>
   );

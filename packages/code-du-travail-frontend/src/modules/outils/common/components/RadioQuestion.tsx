@@ -40,13 +40,11 @@ export function RadioQuestion({
 
   const onChange = (value: string, index: number) => {
     onChangeSelectedOption(value);
-    // Keep focus on the selected radio button if the re-render lost it, but
-    // don't steal it from a field the user already moved to (e.g. a search
-    // input revealed by this choice).
+    // Keep focus on the selected radio button
     setTimeout(() => {
-      const active = document.activeElement;
-      if (active && active !== document.body) return;
-      radioRefs.current[index]?.focus();
+      if (radioRefs.current[index]) {
+        radioRefs.current[index]?.focus();
+      }
     }, 0);
   };
 
