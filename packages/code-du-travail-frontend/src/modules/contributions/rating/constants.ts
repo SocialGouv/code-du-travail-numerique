@@ -74,11 +74,6 @@ export const RATING_REMARK_HINT =
 // the same text is split into the heading and the hint).
 export const RATING_SUGGESTION_LABEL = `${RATING_REMARK_TITLE} ${RATING_REMARK_HINT}`;
 export const RATING_SEND_BUTTON = "Envoyer";
-export const RATING_REASONS_ERROR =
-  "Veuillez sélectionner au moins une option ou faire une suggestion";
-export const RATING_SUGGESTION_WITH_REASONS_ERROR =
-  "Veuillez renseigner au minimum ce champ ou sélectionner une option";
-export const RATING_SUGGESTION_ERROR = "Veuillez renseigner ce champ";
 
 // Matomo identity of the widget events, owned by the server: the controller
 // uses it to emit the events when relaying server -> server. Enums (not

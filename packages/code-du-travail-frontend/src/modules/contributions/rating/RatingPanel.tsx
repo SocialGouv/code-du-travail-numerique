@@ -9,16 +9,13 @@ import { css } from "@styled-system/css";
 import {
   RATING_REASON_LABELS,
   RATING_REASONS,
-  RATING_REASONS_ERROR,
   RATING_REASONS_HINT,
   RATING_REASONS_TITLE,
   RATING_REMARK_HINT,
   RATING_REMARK_TITLE,
   RATING_SEND_BUTTON,
-  RATING_SUGGESTION_ERROR,
   RATING_SUGGESTION_LABEL,
   RATING_SUGGESTION_MAX_LENGTH,
-  RATING_SUGGESTION_WITH_REASONS_ERROR,
   RatingReason,
 } from "./constants";
 
@@ -47,7 +44,7 @@ const CHARACTERS_COUNT_THRESHOLDS = [
 
 // Follow-up panel of the clarity widget, built on the pattern of
 // `layout/feedback/FeedbackContent` (DSFR Checkbox + textarea, 500 characters,
-// polite counter, error states).
+// polite counter). No validation: an empty send just thanks the user.
 export const RatingPanel = ({ variant, headingLevel, onSubmit }: Props) => {
   const Heading = `h${headingLevel}` as ElementType;
   const withReasons = variant === "reasons";
@@ -55,7 +52,6 @@ export const RatingPanel = ({ variant, headingLevel, onSubmit }: Props) => {
   const headingRef = useRef<HTMLHeadingElement>(null);
   const [reasons, setReasons] = useState<RatingReason[]>([]);
   const [suggestion, setSuggestion] = useState("");
-  const [hasError, setHasError] = useState(false);
 
   // Move focus to the panel heading when it opens (or switches variant), as
   // the feedback form does.
@@ -86,11 +82,8 @@ export const RatingPanel = ({ variant, headingLevel, onSubmit }: Props) => {
   const onSend = () => {
     const text = suggestion.trim();
     const selectedReasons = withReasons ? reasons : [];
-    if (!text && selectedReasons.length === 0) {
-      setHasError(true);
-      return;
-    }
-    setHasError(false);
+    // No validation (PO decision): an empty send just thanks the user, the
+    // parent only tracks what was actually filled.
     onSubmit({ reasons: selectedReasons, suggestion: text || undefined });
   };
 
@@ -119,8 +112,6 @@ export const RatingPanel = ({ variant, headingLevel, onSubmit }: Props) => {
               onChange: onChangeReason,
             },
           }))}
-          state={hasError ? "error" : "default"}
-          stateRelatedMessage={hasError ? RATING_REASONS_ERROR : undefined}
         />
       ) : (
         <>
@@ -142,14 +133,6 @@ export const RatingPanel = ({ variant, headingLevel, onSubmit }: Props) => {
           onChange: onChangeSuggestion,
           "aria-describedby": withReasons ? undefined : hintId,
         }}
-        state={hasError ? "error" : "default"}
-        stateRelatedMessage={
-          hasError
-            ? withReasons
-              ? RATING_SUGGESTION_WITH_REASONS_ERROR
-              : RATING_SUGGESTION_ERROR
-            : undefined
-        }
       />
       <p
         className={fr.cx(

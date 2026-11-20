@@ -9,13 +9,10 @@ import {
 import {
   RATING_CONFIRMATION_TEXT,
   RATING_REASON_LABELS,
-  RATING_REASONS_ERROR,
   RATING_REASONS_TITLE,
   RATING_REMARK_BUTTON,
   RATING_REMARK_TITLE,
-  RATING_SUGGESTION_ERROR,
   RATING_SUGGESTION_LABEL,
-  RATING_SUGGESTION_WITH_REASONS_ERROR,
   RATING_WIDGET_TITLE,
   RatingReason,
 } from "../constants";
@@ -163,21 +160,15 @@ describe("ContributionRating", () => {
     ).toBeInTheDocument();
   });
 
-  it("shows DSFR errors and sends nothing when the reasons panel is empty", () => {
+  it("thanks without sending anything when the reasons panel is empty", () => {
     render(<ContributionRating contributionSlug={contributionSlug} />);
     fireEvent.click(star(STAR_2));
 
     fireEvent.click(sendButton());
 
-    expect(screen.getByText(RATING_REASONS_ERROR)).toBeInTheDocument();
-    expect(
-      screen.getByText(RATING_SUGGESTION_WITH_REASONS_ERROR)
-    ).toBeInTheDocument();
     expect(mockTrackReasons).not.toHaveBeenCalled();
     expect(mockTrackSuggestion).not.toHaveBeenCalled();
-    expect(
-      screen.queryByText(RATING_CONFIRMATION_TEXT)
-    ).not.toBeInTheDocument();
+    expect(screen.getByText(RATING_CONFIRMATION_TEXT)).toBeInTheDocument();
   });
 
   it("sends the checked reasons and the trimmed suggestion, then thanks", async () => {
@@ -225,7 +216,7 @@ describe("ContributionRating", () => {
     expect(screen.getByText(RATING_CONFIRMATION_TEXT)).toBeInTheDocument();
   });
 
-  it("opens the suggestion-only remark panel, validates it and hides the button once sent", async () => {
+  it("opens the suggestion-only remark panel, sends it and hides the button once sent", async () => {
     render(<ContributionRating contributionSlug={contributionSlug} />);
 
     fireEvent.click(remarkButton()!);
@@ -240,11 +231,6 @@ describe("ContributionRating", () => {
     expect(remarkButton()).not.toBeInTheDocument();
     const textarea = screen.getByRole("textbox", { name: RATING_REMARK_TITLE });
     expect(textarea).toHaveAccessibleDescription(/Donnez-nous votre avis/);
-
-    // Empty text: error, nothing sent.
-    fireEvent.click(sendButton());
-    expect(screen.getByText(RATING_SUGGESTION_ERROR)).toBeInTheDocument();
-    expect(mockTrackSuggestion).not.toHaveBeenCalled();
 
     fireEvent.change(textarea, { target: { value: "Ajoutez un exemple" } });
     fireEvent.click(sendButton());
