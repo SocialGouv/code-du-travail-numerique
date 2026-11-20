@@ -1,8 +1,8 @@
 {
   "scan_root": "packages/code-du-travail-frontend/src",
-  "callsites": 108,
-  "total_events": 169,
-  "unique_events": 157,
+  "callsites": 111,
+  "total_events": 172,
+  "unique_events": 160,
   "unresolved_callsites": 0,
   "events": [
     {
@@ -1220,6 +1220,61 @@
       "tracking_method": "sendEvent"
     },
     {
+      "category": "clarte_contribution",
+      "action": "note_<value>",
+      "name_pattern": "<contributionSlug>",
+      "resolution": "dynamic",
+      "emit_function": "trackRatingScore",
+      "file": "packages/code-du-travail-frontend/src/modules/contributions/rating/tracking.ts",
+      "line": 83,
+      "enum_refs": [
+        "RatingMatomoAction.NOTE_PREFIX",
+        "RatingMatomoCategory.CLARITY"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "clarte_contribution",
+      "action": "raison_<reasons>",
+      "name_pattern": "<contributionSlug>",
+      "resolution": "dynamic",
+      "emit_function": "trackRatingReasons",
+      "file": "packages/code-du-travail-frontend/src/modules/contributions/rating/tracking.ts",
+      "line": 100,
+      "enum_refs": [
+        "RatingMatomoAction.REASON_PREFIX",
+        "RatingMatomoCategory.CLARITY"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "clarte_contribution",
+      "action": "remarque",
+      "name_pattern": "<contributionSlug>",
+      "resolution": "literal",
+      "emit_function": "trackRatingRemark",
+      "file": "packages/code-du-travail-frontend/src/modules/contributions/rating/tracking.ts",
+      "line": 113,
+      "enum_refs": [
+        "RatingMatomoAction.REMARK",
+        "RatingMatomoCategory.CLARITY"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
+      "category": "clarte_contribution_suggestion",
+      "action": "<text>",
+      "name_pattern": "<contributionSlug>",
+      "resolution": "dynamic",
+      "emit_function": "trackRatingSuggestion",
+      "file": "packages/code-du-travail-frontend/src/modules/contributions/rating/tracking.ts",
+      "line": 128,
+      "enum_refs": [
+        "RatingMatomoCategory.SUGGESTION"
+      ],
+      "tracking_method": "sendEvent"
+    },
+    {
       "category": "clic_share",
       "action": "<currentPageUrl>",
       "name_pattern": "<socialNetwork>",
@@ -1745,21 +1800,6 @@
       "line": 108,
       "enum_refs": [
         "MatomoSearchCategory.NEXT_RESULT_PAGE"
-      ],
-      "tracking_method": "sendEvent"
-    },
-    {
-      "category": "notation_contribution",
-      "action": "note_<value>",
-      "name_pattern": "<contributionSlug>",
-      "resolution": "dynamic",
-      "emit_function": "trackContributionRating",
-      "file": "packages/code-du-travail-frontend/src/modules/contributions/rating/tracking.ts",
-      "line": 73,
-      "enum_refs": [
-        "RatingMatomo.ACTION_PREFIX",
-        "RatingMatomo.CATEGORY",
-        "SOURCES.CONTRIBUTIONS"
       ],
       "tracking_method": "sendEvent"
     },

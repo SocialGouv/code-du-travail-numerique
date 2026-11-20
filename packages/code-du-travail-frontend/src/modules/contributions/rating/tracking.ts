@@ -1,84 +1,134 @@
 "use client";
 
-// Envoi de la note via une route API first-party (`/api/contribution-rating`)
-// qui relaie côté serveur vers Matomo. On n'appelle PAS le `sendEvent` de
-// @socialgouv/matomo-next : il taperait `matomo.php` côté client, ce que les
-// adblockers bloquent. Un POST same-origin passe, puis le serveur effectue le
-// fetch serveur->serveur invisible des adblockers.
+// The widget events go through a first-party API route
+// (`/api/contribution-rating`) that relays them server side to Matomo. We do
+// NOT call @socialgouv/matomo-next's `sendEvent`: it would hit `matomo.php`
+// from the browser, which adblockers block. A same-origin POST goes through,
+// then the server performs the server -> server fetch, invisible to adblockers.
 
-import { SOURCES, SourceKeys } from "@socialgouv/cdtn-utils";
+import { SOURCES } from "@socialgouv/cdtn-utils";
 import { isMatomoOptedOut } from "../../utils/consent";
-import { RatingMatomo } from "./constants";
+import {
+  RatingMatomoAction,
+  RatingMatomoCategory,
+  RatingReason,
+} from "./constants";
 
 export const RATING_TRACKING_ENDPOINT = "/api/contribution-rating";
 
-// Relai first-party exposant une méthode `sendEvent` de même forme que
-// @socialgouv/matomo-next : l'extraction statique des events (`cdtn-stats`) le
-// catalogue donc via sa règle `.sendEvent` existante — SANS règle dédiée —
-// alors qu'il POST en réalité vers notre API interne (contournement adblock).
-// `category`/`action` (enum → résolus statiquement) servent au catalogue ; seuls
-// `source`, `slug` et `value` partent réellement sur le réseau, le serveur étant
-// seul propriétaire de category/action et de l'URL canonique (cf. controller/service).
+// What actually travels on the network, besides `source` and `slug`: one
+// request per user action, discriminated by `type` (cf. the controller schema).
+export type RatingRequest =
+  | { type: "note"; value: number }
+  | { type: "raison"; reasons: RatingReason[] }
+  | { type: "remarque" }
+  | { type: "suggestion"; text: string };
+
+// First-party relay exposing a `sendEvent` method shaped like
+// @socialgouv/matomo-next's: the static event extraction (`cdtn-stats`) thus
+// catalogues it through its existing `.sendEvent` rule — WITHOUT a dedicated
+// rule — while it actually POSTs to our internal API (adblock bypass).
+// `category`/`action` (enums -> statically resolved) only feed the catalogue;
+// only `source`, `slug` (= `name`) and `request` go on the network, the server
+// being the sole owner of category/action and of the canonical URL.
 const firstPartyMatomo = {
   sendEvent: async (event: {
-    category: RatingMatomo;
+    category: RatingMatomoCategory;
     action: string;
     name: string;
-    value: number;
-    source: SourceKeys;
-    slug: string;
+    request: RatingRequest;
   }): Promise<void> => {
     await fetch(RATING_TRACKING_ENDPOINT, {
       method: "POST",
-      // keepalive : laisse la requête se terminer même si le composant est
-      // démonté juste après le clic (navigation immédiate).
+      // keepalive: lets the request complete even if the component unmounts
+      // right after the click (immediate navigation).
       keepalive: true,
       headers: { "Content-Type": "application/json" },
-      // Payload minimal : la source du contenu, son slug et la note. Le serveur
-      // ajoute category/action, mappe la source vers sa route et reconstruit
-      // l'URL canonique (anti-injection : source validée contre l'allowlist).
+      // Minimal payload: content source, slug and the user action. The server
+      // adds category/action, maps the source to its route and rebuilds the
+      // canonical URL (anti-injection: source validated against the allowlist).
       body: JSON.stringify({
-        source: event.source,
-        slug: event.slug,
-        value: event.value,
+        source: SOURCES.CONTRIBUTIONS,
+        slug: event.name,
+        ...event.request,
       }),
     });
   },
 };
 
-export type RatingTrackingPayload = {
-  contributionSlug: string;
-  value: number;
-};
-
-export const trackContributionRating = async ({
-  contributionSlug,
-  value,
-}: RatingTrackingPayload): Promise<void> => {
-  // Cohérence avec le tracking Matomo : le relai ne dépose aucun cookie, la
-  // note est donc envoyée même si l'usager a refusé les cookies, sauf opt-out
-  // explicite (« ne jamais être suivi »). On sort aussi côté serveur (pas de
-  // `window`) — le `||` court-circuite avant isMatomoOptedOut (qui lit les
-  // cookies, absents en SSR). L'UX (confirmation) reste, elle, active.
+// Consistent with Matomo tracking: the relay sets no cookie, so events are sent
+// even if the user declined cookies, except on explicit opt-out ("never be
+// tracked"). We also bail out server side (no `window`) — `||` short-circuits
+// before isMatomoOptedOut (which reads cookies, absent during SSR). The UX
+// (confirmation) stays active either way. Fire-and-forget: a tracking failure
+// must never break the UI.
+const relay = async (send: () => Promise<void>): Promise<void> => {
   if (typeof window === "undefined" || isMatomoOptedOut()) return;
-
   try {
-    // category (enum) et action (template sur l'enum ACTION_PREFIX) → résolus
-    // statiquement par l'extraction en « note_<value> ». L'action porte la note
-    // en chaîne (le serveur la reconstruit via `ratingActionForValue`, seul
-    // propriétaire de l'event réel — ici elle documente le catalogue). Le `name`
-    // documente l'`e_n` réel (le slug ; le serveur le préfixe de la route de la
-    // source, cf. controller/service). La notation vit sur les contributions →
-    // source = SOURCES.CONTRIBUTIONS.
-    await firstPartyMatomo.sendEvent({
-      category: RatingMatomo.CATEGORY,
-      action: `${RatingMatomo.ACTION_PREFIX}${value}`,
-      name: contributionSlug,
-      source: SOURCES.CONTRIBUTIONS,
-      value,
-      slug: contributionSlug,
-    });
+    await send();
   } catch {
-    // Fire-and-forget : un échec de tracking ne doit jamais casser l'UI.
+    // Swallowed on purpose (fire-and-forget).
   }
 };
+
+type SlugPayload = { contributionSlug: string };
+
+// Star click. The action carries the score as a string ("note_<value>"); the
+// server rebuilds it through `ratingActionForValue`.
+export const trackRatingScore = ({
+  contributionSlug,
+  value,
+}: SlugPayload & { value: number }): Promise<void> =>
+  relay(() =>
+    firstPartyMatomo.sendEvent({
+      category: RatingMatomoCategory.CLARITY,
+      action: `${RatingMatomoAction.NOTE_PREFIX}${value}`,
+      name: contributionSlug,
+      request: { type: "note", value },
+    })
+  );
+
+// "Envoyer" in the reasons panel: ONE request carrying every checked reason;
+// the server emits one Matomo event per reason ("raison_<reason>", built by
+// `ratingActionForReason`). `action` only documents the catalogue (it never
+// goes on the network): the extraction resolves it to "raison_<reasons>".
+export const trackRatingReasons = ({
+  contributionSlug,
+  reasons,
+}: SlugPayload & { reasons: RatingReason[] }): Promise<void> =>
+  relay(() =>
+    firstPartyMatomo.sendEvent({
+      category: RatingMatomoCategory.CLARITY,
+      action: `${RatingMatomoAction.REASON_PREFIX}${reasons}`,
+      name: contributionSlug,
+      request: { type: "raison", reasons },
+    })
+  );
+
+// Click on "Une remarque ?".
+export const trackRatingRemark = ({
+  contributionSlug,
+}: SlugPayload): Promise<void> =>
+  relay(() =>
+    firstPartyMatomo.sendEvent({
+      category: RatingMatomoCategory.CLARITY,
+      action: RatingMatomoAction.REMARK,
+      name: contributionSlug,
+      request: { type: "remarque" },
+    })
+  );
+
+// "Envoyer" with a filled free text (either panel). Mirrors the site-wide
+// `feedback_suggestion` pattern: the verbatim travels in the action.
+export const trackRatingSuggestion = ({
+  contributionSlug,
+  text,
+}: SlugPayload & { text: string }): Promise<void> =>
+  relay(() =>
+    firstPartyMatomo.sendEvent({
+      category: RatingMatomoCategory.SUGGESTION,
+      action: text,
+      name: contributionSlug,
+      request: { type: "suggestion", text },
+    })
+  );

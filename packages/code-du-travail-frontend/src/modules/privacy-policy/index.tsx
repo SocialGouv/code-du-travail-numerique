@@ -165,7 +165,7 @@ export const PrivacyPolicy = () => {
           Microsoft Internet Explorer 11, Google Chrome, Mozilla Firefox, Apple
           Safari et Opera).
         </p>
-        <p>
+        <p id="mesure-audience">
           Pour l&apos;outil Matomo, vous pouvez décider de ne jamais être suivi,
           y compris anonymement&nbsp;:
         </p>
