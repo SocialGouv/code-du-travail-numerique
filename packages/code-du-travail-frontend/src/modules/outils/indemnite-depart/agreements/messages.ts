@@ -1,21 +1,11 @@
 import { CatPro3239 } from "@socialgouv/modeles-social";
-import { OriginRetraite } from "../types";
-import { getRetraiteOriginLabel } from "../utils/question";
 
 export const getMotifExampleMessage = (
-  informations?: Record<string, any>,
-  isRuptureConventionnelle = false,
-  originRetraite?: OriginRetraite
+  informations?: Record<string, any>
 ): string => {
   let isAssMat = false;
   let isSalariePartEmployeur = false;
-  // RG8 : la phrase de conclusion nomme l'indemnité que l'utilisateur calcule.
-  const indemnite = originRetraite
-    ? `l'indemnité de ${getRetraiteOriginLabel(originRetraite)}`
-    : isRuptureConventionnelle
-      ? "l'indemnité de rupture conventionnelle"
-      : "l'indemnité de licenciement";
-  const seniorityNotice = `<b>Pour le calcul de ${indemnite}, ces absences n'ont pas d'impact sur le calcul de l'ancienneté.</b>`;
+  const seniorityNotice = `<b>Pour le calcul de l'indemnité, ces absences n'ont pas d'impact sur le calcul de l'ancienneté.</b>`;
   if (informations) {
     const categoryPro3239 =
       informations[
