@@ -226,7 +226,8 @@ contrat salarié . convention collective . métallurgie . indemnité de licencie
   valeur: base * majoration * minoration
   unité: €
   plancher: plancher
-  plafond: plafond
+  # The 18-month cap (art. 75.3.1.2) applies before the age reduction (art. 75.3.3)
+  plafond: plafond * minoration
   arrondi: 2 décimales
   références:
     Article 75.3.1.2: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314538?idConteneur=KALICONT000046993250&origin=list#KALIARTI000046314538
@@ -325,6 +326,15 @@ contrat salarié . convention collective . métallurgie . indemnité de licencie
   cdtn:
     formule:
       formula: ($formule) * 30 %
+
+contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . FGHI . résultat conventionnel . formule plafond:
+  applicable si: base * majoration >= plafond
+  valeur: oui
+  cdtn:
+    formule:
+      explanations:
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+      formula: 18 * Sref
 
 ## Catégories F, G, H et I: Calculs de la minoration
 
@@ -427,15 +437,6 @@ contrat salarié . convention collective . métallurgie . indemnité de licencie
       explanations:
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
       formula: 6 * Sref
-
-contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . FGHI . résultat conventionnel . formule plafond:
-  applicable si: résultat conventionnel >= 18 * contrat salarié . indemnité de licenciement . salaire de référence conventionnel
-  valeur: oui
-  cdtn:
-    formule:
-      explanations:
-        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
-      formula: 18 * Sref
 
 ## Catégories F, G, H et I: Calculs du plafond
 
