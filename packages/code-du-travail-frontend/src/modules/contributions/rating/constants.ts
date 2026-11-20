@@ -32,6 +32,14 @@ export const RATING_WIDGET_TITLE =
   "Le contenu de cette page est-il clair\u00a0?";
 export const RATING_CONFIRMATION_TEXT =
   "Merci d'avoir pris le temps de nous aider.";
+// Shown instead of the thank-you message when the user opted out of Matomo
+// ("ne jamais être suivi"): nothing is sent, and we say so.
+export const RATING_OPTED_OUT_TEXT =
+  "Votre avis n'a pas été envoyé, car vous avez choisi de ne jamais être suivi par notre outil de mesure d'audience.";
+export const RATING_OPTED_OUT_LINK = "Modifier ce choix";
+// Anchor of the Matomo opt-out section of the privacy policy.
+export const RATING_OPTED_OUT_HREF =
+  "/politique-confidentialite#mesure-audience";
 
 // Visually hidden start of a star's accessible name: followed by the visible
 // label, it gives e.g. "1 étoile sur 3 : Pas clair".

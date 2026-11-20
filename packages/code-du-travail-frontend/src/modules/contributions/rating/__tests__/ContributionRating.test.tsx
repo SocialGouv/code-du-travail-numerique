@@ -1,5 +1,6 @@
 import { fireEvent, render, screen, waitFor } from "@testing-library/react";
 import { ContributionRating } from "../ContributionRating";
+import { isMatomoOptedOut } from "../../../utils/consent";
 import {
   trackRatingReasons,
   trackRatingRemark,
@@ -8,6 +9,9 @@ import {
 } from "../tracking";
 import {
   RATING_CONFIRMATION_TEXT,
+  RATING_OPTED_OUT_HREF,
+  RATING_OPTED_OUT_LINK,
+  RATING_OPTED_OUT_TEXT,
   RATING_REASON_LABELS,
   RATING_REASONS_TITLE,
   RATING_REMARK_BUTTON,
@@ -23,6 +27,14 @@ jest.mock("../tracking", () => ({
   trackRatingRemark: jest.fn().mockResolvedValue(undefined),
   trackRatingSuggestion: jest.fn().mockResolvedValue(undefined),
 }));
+
+jest.mock("../../../utils/consent", () => ({
+  isMatomoOptedOut: jest.fn().mockReturnValue(false),
+}));
+
+const mockIsOptedOut = isMatomoOptedOut as jest.MockedFunction<
+  typeof isMatomoOptedOut
+>;
 
 const mockTrackScore = trackRatingScore as jest.MockedFunction<
   typeof trackRatingScore
@@ -52,6 +64,7 @@ const reasonCheckbox = (reason: RatingReason) =>
 
 beforeEach(() => {
   jest.clearAllMocks();
+  mockIsOptedOut.mockReturnValue(false);
 });
 
 describe("ContributionRating", () => {
@@ -286,6 +299,51 @@ describe("ContributionRating", () => {
     expect(mockTrackScore).toHaveBeenLastCalledWith({
       contributionSlug,
       value: 1,
+    });
+  });
+
+  describe("when the user opted out of Matomo", () => {
+    beforeEach(() => {
+      mockIsOptedOut.mockReturnValue(true);
+    });
+
+    it("tells the user nothing was sent after a star click, with a link to change it", async () => {
+      render(<ContributionRating contributionSlug={contributionSlug} />);
+
+      fireEvent.click(star(STAR_1));
+
+      expect(mockTrackScore).not.toHaveBeenCalled();
+      expect(
+        screen.queryByRole("heading", { name: RATING_REASONS_TITLE })
+      ).not.toBeInTheDocument();
+      expect(
+        screen.queryByText(RATING_CONFIRMATION_TEXT)
+      ).not.toBeInTheDocument();
+      const notice = await screen.findByText(RATING_OPTED_OUT_TEXT, {
+        exact: false,
+      });
+      await waitFor(() => expect(notice.closest("p")).toHaveFocus());
+      expect(
+        screen.getByRole("link", { name: RATING_OPTED_OUT_LINK })
+      ).toHaveAttribute("href", RATING_OPTED_OUT_HREF);
+      expect(star(STAR_1)).toHaveAttribute("aria-pressed", "true");
+      expect(star(STAR_1)).toHaveAttribute("aria-disabled", "true");
+      expect(remarkButton()).not.toBeInTheDocument();
+    });
+
+    it("tells the user nothing will be sent instead of opening the remark panel", () => {
+      render(<ContributionRating contributionSlug={contributionSlug} />);
+
+      fireEvent.click(remarkButton()!);
+
+      expect(mockTrackRemark).not.toHaveBeenCalled();
+      expect(
+        screen.queryByRole("heading", { name: RATING_REMARK_TITLE })
+      ).not.toBeInTheDocument();
+      expect(
+        screen.getByText(RATING_OPTED_OUT_TEXT, { exact: false })
+      ).toBeInTheDocument();
+      expect(remarkButton()).not.toBeInTheDocument();
     });
   });
 });

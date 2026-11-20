@@ -6,6 +6,8 @@ import { css } from "@styled-system/css";
 import { RatingIcon } from "./RatingIcon";
 import { RatingStars } from "./RatingStars";
 import { RatingConfirmation } from "./RatingConfirmation";
+import { RatingOptedOutNotice } from "./RatingOptedOutNotice";
+import { isMatomoOptedOut } from "../../utils/consent";
 import { RatingPanel, RatingPanelData } from "./RatingPanel";
 import {
   trackRatingReasons,
@@ -40,6 +42,9 @@ export const ContributionRating = ({ contributionSlug, level = 2 }: Props) => {
   const [panel, setPanel] = useState<Panel>("none");
   const [thanked, setThanked] = useState(false);
   const [remarkSent, setRemarkSent] = useState(false);
+  // Matomo opt-out ("ne jamais être suivi"): nothing can be sent, so instead
+  // of a misleading thank-you the user is told why and where to change it.
+  const [optedOut, setOptedOut] = useState(false);
   const messageRef = useRef<HTMLParagraphElement>(null);
   // Synchronous guard: prevents a fast double click from emitting two score
   // events before the re-render locks the stars (`score` state is async).
@@ -57,10 +62,21 @@ export const ContributionRating = ({ contributionSlug, level = 2 }: Props) => {
     focusConfirmation();
   };
 
+  // Checked at action time: the opt-out cookie may change while the page is
+  // open. Returns true when the action must stop here.
+  const stopIfOptedOut = (): boolean => {
+    if (!isMatomoOptedOut()) return false;
+    setOptedOut(true);
+    setPanel("none");
+    focusConfirmation();
+    return true;
+  };
+
   const onSelectScore = (value: number) => {
     if (scoredRef.current) return;
     scoredRef.current = true;
     setScore(value);
+    if (stopIfOptedOut()) return;
     void trackRatingScore({ contributionSlug, value }); // fire-and-forget
     if (isLowRating(value)) {
       // Replaces an open remark panel: same component position, so the text
@@ -72,6 +88,7 @@ export const ContributionRating = ({ contributionSlug, level = 2 }: Props) => {
   };
 
   const onOpenRemark = () => {
+    if (stopIfOptedOut()) return;
     setPanel("remark");
     void trackRatingRemark({ contributionSlug });
   };
@@ -88,7 +105,7 @@ export const ContributionRating = ({ contributionSlug, level = 2 }: Props) => {
     thank();
   };
 
-  const showRemarkButton = panel === "none" && !remarkSent;
+  const showRemarkButton = panel === "none" && !remarkSent && !optedOut;
 
   return (
     <section
@@ -114,9 +131,14 @@ export const ContributionRating = ({ contributionSlug, level = 2 }: Props) => {
         labelledBy={questionId}
       />
       {/* Persistent live region (present from mount) so that inserting the
-          thank-you message is reliably announced by screen readers. */}
+          thank-you (or opt-out) message is reliably announced by screen
+          readers. */}
       <div aria-live="polite">
-        {thanked && <RatingConfirmation messageRef={messageRef} />}
+        {optedOut ? (
+          <RatingOptedOutNotice messageRef={messageRef} />
+        ) : (
+          thanked && <RatingConfirmation messageRef={messageRef} />
+        )}
       </div>
       {panel !== "none" && (
         <RatingPanel

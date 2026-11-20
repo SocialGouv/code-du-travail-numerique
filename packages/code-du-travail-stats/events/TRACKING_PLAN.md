@@ -474,7 +474,9 @@ recharger la page ré-affiche le widget).
 > `note_3` de `clarte_contribution` (« Très clair » sur 3).
 
 Tous les events sont émis même si l'usager a refusé les cookies (le relai ne dépose aucun
-cookie), sauf opt-out explicite (« ne jamais être suivi » dans la politique de confidentialité).
+cookie), sauf opt-out explicite (« ne jamais être suivi » dans la politique de confidentialité). Dans ce
+cas, aucun event n'est émis et le widget affiche à la place un message expliquant que l'avis
+n'a pas été envoyé, avec un lien vers la politique de confidentialité pour modifier ce choix.
 
 Particularité technique : pour **contourner les bloqueurs de publicité** (qui filtrent
 `matomo.php` côté navigateur), le client fait un POST same-origin vers `/api/contribution-rating`
