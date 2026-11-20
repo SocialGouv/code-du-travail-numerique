@@ -5,33 +5,102 @@ import { z } from "zod";
 import {
   RATING_MAX,
   RATING_MIN,
-  RatingMatomo,
+  RATING_SUGGESTION_MAX_LENGTH,
+  RatingMatomoAction,
+  RatingMatomoCategory,
+  RatingReason,
+  ratingActionForReason,
   ratingActionForValue,
 } from "../../../modules/contributions/rating/constants";
 import { sendRatingEvent } from "./service";
 
-// Slug d'une contribution : minuscules/chiffres séparés par des tirets. Strict
-// car il pilote l'URL canonique construite côté serveur (anti-injection).
+// Contribution slug: lowercase letters/digits separated by dashes. Strict since
+// it drives the canonical URL built server side (anti-injection).
 const SLUG_RE = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 
-// Source du contenu noté : validée contre l'allowlist des sources CDTN connues
-// (les clés de `routeBySource`). Le client choisit ainsi parmi un ensemble fermé
-// de types (~19), jamais une valeur libre — l'URL/le nom d'event canoniques
-// restent donc à l'abri de toute injection.
+// Source of the rated content: validated against the allowlist of known CDTN
+// sources (the keys of `routeBySource`). The client thus picks from a closed set
+// of types (~19), never a free value — the canonical URL / event name stay safe
+// from any injection.
 const isContentSource = (value: unknown): value is SourceKeys =>
   typeof value === "string" && value in routeBySource;
 
-// Corps attendu : la source du contenu noté, son slug et la note. La
-// catégorie/action Matomo appartiennent au serveur : le client n'a pas à les
-// fournir (route API classique, pas un relai d'event arbitraire).
-// `strictObject` : tout champ inattendu est rejeté.
-const ratingBodySchema = z.strictObject({
+// Fields shared by every request: the content source and its slug.
+const contentShape = {
   source: z.custom<SourceKeys>(isContentSource, {
     error: "source inconnue : doit être une source CDTN (clé de routeBySource)",
   }),
   slug: z.string().regex(SLUG_RE),
-  value: z.number().int().min(RATING_MIN).max(RATING_MAX),
-});
+};
+
+// Expected body: one user action, discriminated by `type`. The Matomo
+// category/action belong to the server: the client never provides them (plain
+// API route, not an arbitrary event relay). `strictObject`: any unexpected
+// field is rejected.
+const ratingBodySchema = z.discriminatedUnion("type", [
+  // Star click: integer score bounded RATING_MIN..RATING_MAX.
+  z.strictObject({
+    ...contentShape,
+    type: z.literal("note"),
+    value: z.number().int().min(RATING_MIN).max(RATING_MAX),
+  }),
+  // "Envoyer" in the reasons panel: non-empty set of known reasons, no
+  // duplicates (one Matomo event per reason).
+  z.strictObject({
+    ...contentShape,
+    type: z.literal("raison"),
+    reasons: z
+      .array(z.enum(RatingReason))
+      .min(1)
+      .refine((reasons) => new Set(reasons).size === reasons.length, {
+        error: "raisons en double",
+      }),
+  }),
+  // Click on "Une remarque ?".
+  z.strictObject({
+    ...contentShape,
+    type: z.literal("remarque"),
+  }),
+  // Free text suggestion, trimmed then bounded 1..500 characters.
+  z.strictObject({
+    ...contentShape,
+    type: z.literal("suggestion"),
+    text: z.string().trim().min(1).max(RATING_SUGGESTION_MAX_LENGTH),
+  }),
+]);
+
+type RatingBody = z.infer<typeof ratingBodySchema>;
+
+type MatomoEvent = { category: RatingMatomoCategory; action: string };
+
+// Server-owned Matomo identity of each user action. Every action is a closed
+// set (bounded score, enum reasons, constant), except the suggestion verbatim,
+// which lives in its own category (same pattern as `feedback_suggestion`).
+const toMatomoEvents = (body: RatingBody): MatomoEvent[] => {
+  switch (body.type) {
+    case "note":
+      return [
+        {
+          category: RatingMatomoCategory.CLARITY,
+          action: ratingActionForValue(body.value),
+        },
+      ];
+    case "raison":
+      return body.reasons.map((reason) => ({
+        category: RatingMatomoCategory.CLARITY,
+        action: ratingActionForReason(reason),
+      }));
+    case "remarque":
+      return [
+        {
+          category: RatingMatomoCategory.CLARITY,
+          action: RatingMatomoAction.REMARK,
+        },
+      ];
+    case "suggestion":
+      return [{ category: RatingMatomoCategory.SUGGESTION, action: body.text }];
+  }
+};
 
 const jsonError = (status: number, message: string): NextResponse =>
   NextResponse.json({ message }, { status });
@@ -51,33 +120,32 @@ export class ContributionRatingController {
       if (!parsed.success) {
         return jsonError(400, "Invalid rating payload");
       }
-      const { source, slug, value } = parsed.data;
+      const { source, slug } = parsed.data;
 
-      // Relai best-effort vers Matomo (serveur->serveur, invisible des
-      // adblockers). Un échec (Matomo lent/down) ne doit ni renvoyer 500 au
-      // client fire-and-forget, ni inonder Sentry : on loggue simplement.
-      // On transmet le User-Agent du visiteur pour que Matomo voie un vrai
-      // navigateur (l'UA par défaut de Node serait classé « bot » → event ignoré).
+      // Best-effort relay to Matomo (server -> server, invisible to
+      // adblockers). A failure (slow/down Matomo) must neither return a 500 to
+      // the fire-and-forget client nor flood Sentry: we just log it.
+      // The visitor's User-Agent is forwarded so that Matomo sees a real
+      // browser (Node's default UA would be classified as a bot -> event
+      // ignored).
       const userAgent = this.request.headers.get("user-agent") ?? undefined;
-      try {
-        // La note voyage en chaîne dans l'action (« note_4 ») : Matomo compte
-        // alors les occurrences par note au lieu d'additionner des `e_v`.
-        // Ensemble fermé note_1..note_5 : `value` est validée entière et bornée
-        // RATING_MIN/RATING_MAX par le schéma zod (pas d'injection).
-        await sendRatingEvent({
-          category: RatingMatomo.CATEGORY,
-          action: ratingActionForValue(value),
-          source,
-          slug,
-          userAgent,
-        });
-      } catch (relayError) {
-        console.warn("[contribution-rating] relai Matomo échoué:", relayError);
-      }
+      const results = await Promise.allSettled(
+        toMatomoEvents(parsed.data).map(({ category, action }) =>
+          sendRatingEvent({ category, action, source, slug, userAgent })
+        )
+      );
+      results.forEach((result) => {
+        if (result.status === "rejected") {
+          console.warn(
+            "[contribution-rating] Matomo relay failed:",
+            result.reason
+          );
+        }
+      });
 
       return new NextResponse(null, { status: 204 });
     } catch (error) {
-      // Erreur inattendue (bug interne) : on capture pour investigation.
+      // Unexpected error (internal bug): captured for investigation.
       console.error(error);
       captureException(error);
       return jsonError(500, "Internal server error");

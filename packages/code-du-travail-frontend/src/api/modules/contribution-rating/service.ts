@@ -8,9 +8,9 @@ import { MATOMO_TIMEOUT_MS } from "../constants";
 // `src/api/modules/stats/service.ts` (fetch direct vers PIWIK_URL).
 export type RatingEvent = {
   category: string;
-  // Action portant la note en chaîne (« note_1 » … « note_5 », construite par le
-  // contrôleur via `ratingActionForValue`) : pas de `e_v` numérique, Matomo
-  // compte ainsi les occurrences de chaque note au lieu d'en faire la somme.
+  // Server-built action (cf. controller): "note_1" … "note_3", "raison_<key>",
+  // "remarque", or the suggestion verbatim. No numeric `e_v`: Matomo thus
+  // counts the occurrences of each score instead of summing them.
   action: string;
   // Source CDTN du contenu noté (ex. `SOURCES.CONTRIBUTIONS`). Mappée vers sa
   // route canonique (`contribution`, `fiche-service-public`, …) qui préfixe le
