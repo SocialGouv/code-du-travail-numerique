@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.253.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.253.0...v4.253.1) (2026-11-20)
+
+### Bug Fixes
+
+* **actualites:** re-level raw content headings below news titles ([#7594](https://github.com/SocialGouv/code-du-travail-numerique/issues/7594)) ([#7595](https://github.com/SocialGouv/code-du-travail-numerique/issues/7595)) ([519ef0e](https://github.com/SocialGouv/code-du-travail-numerique/commit/519ef0e2ed585c5838b2df7c377f5edeaaa50f2a))
+* **indemnite-depart:** clarifie les en-têtes du tableau des salaires et le texte d'avertissement sur les absences ([#7598](https://github.com/SocialGouv/code-du-travail-numerique/issues/7598)) ([#7601](https://github.com/SocialGouv/code-du-travail-numerique/issues/7601)) ([ce0b3b0](https://github.com/SocialGouv/code-du-travail-numerique/commit/ce0b3b0d31e795e08262105448d989b365f9ff8e))
+* **sentry:** correction pour l'envoie des trace à Sentry ([1e7d730](https://github.com/SocialGouv/code-du-travail-numerique/commit/1e7d730887ba02d2475f6e3d91f97a83602d8a1c))
+
+### Performance Improvements
+
+* **frontend:** prefetch links on user intent instead of viewport entry ([#7604](https://github.com/SocialGouv/code-du-travail-numerique/issues/7604)) ([0cafaad](https://github.com/SocialGouv/code-du-travail-numerique/commit/0cafaad29bb9b387bb2e3c6045e201c7075296bb))
+
+
 # [4.253.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.252.0...v4.253.0) (2026-11-13)
 
 ### Features
