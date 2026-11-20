@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import Link from "next/link";
+import Link from "../common/Link";
 import { css } from "@styled-system/css";
 import { fr } from "@codegouvfr/react-dsfr";
 import { parse, format } from "date-fns";

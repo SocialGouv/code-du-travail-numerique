@@ -172,6 +172,7 @@ export const EnterpriseAgreementSelectionLink = ({
             "/quelles-regles-s-appliquent-dans-votre-entreprise#accord-entreprise"
           }
           target="_blank"
+          prefetch={false}
         >
           L&apos;accord d&apos;entreprise, c&apos;est quoi&nbsp;?
         </Link>

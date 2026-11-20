@@ -1,7 +1,7 @@
 import { css } from "@styled-system/css";
 import { fr } from "@codegouvfr/react-dsfr";
 import Image from "next/image";
-import Link from "next/link";
+import Link from "../../common/Link";
 
 type Props = {
   title: string;

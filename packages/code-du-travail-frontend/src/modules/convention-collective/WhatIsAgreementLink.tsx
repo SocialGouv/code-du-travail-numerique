@@ -16,6 +16,7 @@ export const WhatIsAgreementLink = ({ onClick }: Props) => (
       className={fr.cx("fr-link", "fr-ml-1w")}
       href="/quelles-regles-s-appliquent-dans-votre-entreprise#convention-collective"
       target="_blank"
+      prefetch={false}
       onClick={onClick}
     >
       {"La convention collective, c'est quoi\u00a0?"}
