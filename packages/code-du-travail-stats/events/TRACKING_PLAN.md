@@ -500,7 +500,9 @@ serveur émet **un event par raison** (une même soumission peut donc compter pl
 Dans Metabase, la table agrégée `notation_contributions` (cdtn-admin, `analysis/`) compte
 chaque jour, par device, les visites de pages de contribution et les notes reçues : elle sert
 au **taux de réponse** (notes / visites) et à la **note moyenne** du tableau de bord. Elle lit
-désormais la catégorie **`clarte_contribution`** (actions `note_*`) ; l'historique à 5 niveaux
+désormais la catégorie **`clarte_contribution`** : notes (`note_*`), raisons (`raison_*`) et
+clics sur « Une remarque ? » (`remarque`), plus le **nombre** de suggestions envoyées
+(`clarte_contribution_suggestion`, le texte n'est jamais stocké) ; l'historique à 5 niveaux
 reste lisible sous `notation_contribution`. La note étant relayée sans identifiant visiteur,
 elle ne peut pas être rattachée à la visite qui a vu la page : le taux de réponse rapporte un
 nombre de notes à un nombre de visites.
