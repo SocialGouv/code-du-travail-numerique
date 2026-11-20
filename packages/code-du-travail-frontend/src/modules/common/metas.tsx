@@ -39,13 +39,15 @@ export function generateDefaultMetadata({
   description,
   overrideCanonical,
   path,
+  noTitleAdd,
   robots,
   feed,
   article,
   image,
 }: Props): Metadata {
   return {
-    title: title,
+    // `absolute` skips the root layout's " - Code du travail numérique" suffix.
+    title: noTitleAdd ? { absolute: title } : title,
     description: description,
     alternates: {
       canonical: overrideCanonical ?? path,
