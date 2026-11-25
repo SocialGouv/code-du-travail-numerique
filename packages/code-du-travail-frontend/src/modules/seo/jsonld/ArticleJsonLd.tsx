@@ -50,7 +50,7 @@ export function ArticleJsonLd({
         faq
           ? buildGraphJsonLd([
               article,
-              buildFaqPageJsonLd({ ...faq, url: pathname }),
+              buildFaqPageJsonLd({ entries: [faq], url: pathname }),
             ])
           : article
       }

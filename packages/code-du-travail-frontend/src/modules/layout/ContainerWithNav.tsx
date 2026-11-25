@@ -53,7 +53,8 @@ export const ContainerWithNav = ({
   );
 };
 
-const stickySidebarStyles = css({
+// Shared with other pages that display a sticky summary next to their content.
+export const stickySidebarStyles = css({
   position: { xl: "sticky" },
   top: { xl: "64px" },
   maxHeight: { xl: "calc(100vh - 64px)" },
