@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.254.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.253.1...v4.254.0) (2026-11-25)
+
+### Bug Fixes
+
+* **breadcrumb:** navigation client-side au lieu de recharger la page ([#7605](https://github.com/SocialGouv/code-du-travail-numerique/issues/7605)) ([b40a4a0](https://github.com/SocialGouv/code-du-travail-numerique/commit/b40a4a09a1e2bf833a4a26c724a73c7e5d36d5ee))
+
+### Features
+
+* **outils:** ajout d'un texte sous le simulateur brut-net (SEO) ([#7593](https://github.com/SocialGouv/code-du-travail-numerique/issues/7593)) ([05cdb0c](https://github.com/SocialGouv/code-du-travail-numerique/commit/05cdb0cda0eb346d0d08ddd7984a17c184ccd35d))
+
+
 ## [4.253.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.253.0...v4.253.1) (2026-11-20)
 
 ### Bug Fixes
