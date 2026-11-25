@@ -1,12 +1,12 @@
 import { fr } from "@codegouvfr/react-dsfr";
 import { css } from "@styled-system/css";
 
-import Link from "../../../common/Link";
+import { References } from "../../../common/References";
 import { stickySidebarStyles } from "../../../layout/ContainerWithNav";
 import { SummaryNavigation } from "../../../layout/SummaryNavigation";
 import { JsonLd } from "../../../seo/jsonld/JsonLd";
 import { JSON_LD_IDS } from "../../../seo/jsonld/builders";
-import { splitReferences } from "./articles";
+import { getArticleHref } from "./articles";
 import { getToolSeoContent } from "./content";
 import { buildToolFaqJsonLd } from "./faq";
 import { ToolSeoSlug } from "./types";
@@ -45,7 +45,7 @@ export const ToolSeoContent = ({ slug }: Props) => {
         </div>
       </div>
       <div className={fr.cx("fr-col-12", "fr-col-xl-9")}>
-        {sections.map(({ id, title, text, items }) => (
+        {sections.map(({ id, title, paragraphs = [], items }) => (
           <div key={id}>
             <h2
               id={id}
@@ -53,9 +53,19 @@ export const ToolSeoContent = ({ slug }: Props) => {
             >
               {title}
             </h2>
-            {text && (
-              <p className={fr.cx(items ? "fr-mb-2v" : "fr-mb-6v")}>{text}</p>
-            )}
+            {paragraphs.map((text, index) => {
+              const isLast = index === paragraphs.length - 1;
+              return (
+                <p
+                  key={index}
+                  className={fr.cx(
+                    !isLast ? "fr-mb-3v" : items ? "fr-mb-2v" : "fr-mb-6v"
+                  )}
+                >
+                  {text}
+                </p>
+              );
+            })}
             {items && (
               <ul className={fr.cx("fr-mb-6v")}>
                 {items.map((item) => (
@@ -65,18 +75,15 @@ export const ToolSeoContent = ({ slug }: Props) => {
             )}
           </div>
         ))}
-        <p className={fr.cx("fr-text--sm", "fr-mb-0")}>
-          Références :{" "}
-          {splitReferences(references).map((part, index) =>
-            part.type === "article" ? (
-              <Link key={index} href={part.href}>
-                {part.value}
-              </Link>
-            ) : (
-              <span key={index}>{part.value}</span>
-            )
-          )}
-        </p>
+        {/* Same accordion as on the contribution pages. */}
+        <References
+          label="Références"
+          titleAs="h3"
+          links={references.map((article) => ({
+            title: `Article ${article}`,
+            url: getArticleHref(article),
+          }))}
+        />
       </div>
     </section>
   );

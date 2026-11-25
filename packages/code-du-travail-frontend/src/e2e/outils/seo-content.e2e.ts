@@ -8,20 +8,23 @@ test.describe("Outils - Texte SEO sous le simulateur brut/net", () => {
     const region = page.getByRole("region", { name: "En savoir plus" });
     const heading = region.getByRole("heading", {
       level: 2,
-      name: "Brut ou net : quelle différence ?",
+      name: "Salaire brut ou salaire net : quelle est la différence ?",
     });
     await expect(heading).toBeVisible();
     await expect(heading).toHaveAttribute("id", "difference-brut-net");
 
     await region
       .getByRole("navigation")
-      .getByRole("link", { name: "Comment convertir le brut en net ?" })
+      .getByRole("link", {
+        name: "Un même salaire brut donne-t-il toujours le même salaire net ?",
+      })
       .click();
-    await expect(page).toHaveURL(/#convertir-brut-net$/);
+    await expect(page).toHaveURL(/#meme-brut-meme-net$/);
 
+    await region.getByRole("button", { name: "Références" }).click();
     await expect(
-      region.locator('a[href^="/code-du-travail/"]').first()
-    ).toBeVisible();
+      region.getByRole("link", { name: "Article R3243-1" })
+    ).toHaveAttribute("href", "/code-du-travail/r3243-1");
     await expect(page.locator("script#jsonld-tool-faq")).toHaveCount(1);
   });
 });

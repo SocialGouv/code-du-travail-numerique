@@ -2,7 +2,7 @@ import React from "react";
 import { render, screen, within } from "@testing-library/react";
 
 import { JSON_LD_IDS } from "../../../../seo/jsonld/builders";
-import { splitReferences } from "../articles";
+import { ARTICLE_REGEX } from "../articles";
 import { TOOL_SEO_CONTENT } from "../content";
 import { toFaqAnswerHtml } from "../faq";
 import { ToolSeoContent } from "../ToolSeoContent";
@@ -21,9 +21,8 @@ describe("ToolSeoContent", () => {
       expect(id).toMatch(/^[a-z0-9-]+$/);
       expect(title).toMatch(/\?$/);
     });
-    expect(splitReferences(references).some((p) => p.type === "article")).toBe(
-      true
-    );
+    expect(references.length).toBeGreaterThan(0);
+    references.forEach((article) => expect(article).toMatch(ARTICLE_REGEX));
   });
 
   it("renders every section as an anchored h2 listed in the summary", () => {
@@ -52,9 +51,23 @@ describe("ToolSeoContent", () => {
     expect(within(region).getAllByRole("listitem").length).toBeGreaterThan(
       sections.length
     );
+  });
+
+  it("lists the references in an accordion, as on the contribution pages", () => {
+    render(<ToolSeoContent slug="simulateur-embauche" />);
+
+    const region = screen.getByRole("region", { name: "En savoir plus" });
+    const toggle = within(region).getByRole("button", { name: "Références" });
+    expect(toggle).toHaveAttribute("aria-expanded", "false");
     expect(
-      within(region).getByRole("link", { name: "L3243-2" })
-    ).toHaveAttribute("href", "/code-du-travail/l3243-2");
+      within(region).getByRole("heading", { level: 3, name: "Références" })
+    ).toBeInTheDocument();
+    expect(
+      within(region).getByRole("link", {
+        name: "Article R3243-1",
+        hidden: true,
+      })
+    ).toHaveAttribute("href", "/code-du-travail/r3243-1");
   });
 
   it("renders a FAQPage JSON-LD with one question per h2", () => {
@@ -68,26 +81,6 @@ describe("ToolSeoContent", () => {
     expect(data.mainEntity.map((q: { name: string }) => q.name)).toEqual(
       sections.map(({ title }) => title)
     );
-  });
-});
-
-describe("splitReferences", () => {
-  it("links each article of a range", () => {
-    expect(splitReferences("articles L1237-11 à L1237-16 du Code")).toEqual([
-      { type: "text", value: "articles " },
-      {
-        type: "article",
-        value: "L1237-11",
-        href: "/code-du-travail/l1237-11",
-      },
-      { type: "text", value: " à " },
-      {
-        type: "article",
-        value: "L1237-16",
-        href: "/code-du-travail/l1237-16",
-      },
-      { type: "text", value: " du Code" },
-    ]);
   });
 });
 
@@ -106,8 +99,8 @@ describe("toFaqAnswerHtml", () => {
   );
 
   it("escapes HTML in the visible text", () => {
-    expect(toFaqAnswerHtml({ id: "x", title: "x ?", text: "a < b & c" })).toBe(
-      "<p>a &lt; b &amp; c</p>"
-    );
+    expect(
+      toFaqAnswerHtml({ id: "x", title: "x ?", paragraphs: ["a < b & c"] })
+    ).toBe("<p>a &lt; b &amp; c</p>");
   });
 });

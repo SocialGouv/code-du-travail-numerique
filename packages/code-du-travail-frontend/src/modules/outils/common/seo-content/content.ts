@@ -9,42 +9,34 @@ export const TOOL_SEO_CONTENT: Record<ToolSeoSlug, ToolSeoContentData> = {
     sections: [
       {
         id: "difference-brut-net",
-        title: "Brut ou net : quelle différence ?",
-        text: "Le salaire brut est le montant fixé dans le contrat de travail. Le salaire net est ce que le salarié reçoit après déduction des cotisations et contributions sociales salariales : assurance vieillesse, retraite complémentaire, CSG et CRDS, et selon les cas prévoyance et mutuelle.",
-      },
-      {
-        id: "convertir-brut-net",
-        title: "Comment convertir le brut en net ?",
-        text: "Les cotisations salariales représentent en général environ 22 % du brut pour un salarié non cadre et environ 25 % pour un cadre. Pour une estimation rapide, multipliez le salaire brut par 0,78 (non cadre) ou par 0,75 (cadre). L'écart vient surtout de la retraite complémentaire et de la prévoyance des cadres. Le taux réel dépend du niveau de salaire, du temps de travail et des garanties prévues dans l'entreprise : le simulateur calcule le montant exact.",
-      },
-      {
-        id: "exemple-brut-net",
-        title: "Combien fait 2 500 € brut en net ?",
-        text: "Un salarié non cadre payé 2 500 € brut par mois reçoit environ 1 950 € net avant impôt. Un cadre payé 2 500 € brut reçoit environ 1 875 € net avant impôt. Pour 2 000 € brut, le net avant impôt est d'environ 1 560 € pour un non cadre et 1 500 € pour un cadre.",
-      },
-      {
-        id: "net-avant-impot-net-social",
-        title: "Net avant impôt, net à payer ou net social ?",
-        text: "Le bulletin de paie distingue :",
+        title: "Salaire brut ou salaire net : quelle est la différence ?",
+        paragraphs: [
+          "Le salaire brut correspond à l'ensemble des sommes versées au salarié avant déduction des cotisations et des contributions salariales (cotisations de sécurité sociale, CSG et CRDS notamment), ainsi que, selon les cas, des cotisations de prévoyance et de mutuelle.",
+          "Le salaire net correspond au montant effectivement perçu par le salarié après déduction des cotisations et des contributions salariales et du prélèvement à la source de l'impôt sur le revenu.",
+          "À noter : le salaire net à payer au salarié se distingue :",
+        ],
         items: [
-          "le net avant impôt, calculé ci-dessus ;",
-          "le net à payer, versé sur le compte, après le prélèvement à la source de l'impôt sur le revenu ;",
-          "le montant net social, qui sert aux demandes de prime d'activité et de RSA.",
+          "du salaire net avant impôt, qui correspond au salaire restant après déduction des cotisations salariales, mais avant le prélèvement à la source ;",
+          "du montant net social, qui correspond au montant de référence à déclarer pour bénéficier de certaines prestations sociales.",
         ],
       },
       {
-        id: "cas-particuliers",
-        title: "Apprentis, temps partiel, heures sup : quel net ?",
-        text: "Les apprentis, les salariés à temps partiel et les heures supplémentaires suivent des règles de cotisations différentes. Le simulateur en tient compte.",
+        id: "meme-brut-meme-net",
+        title: "Un même salaire brut donne-t-il toujours le même salaire net ?",
+        paragraphs: [
+          "Deux salariés d'une même entreprise ayant le même salaire brut peuvent avoir un salaire net différent en fonction, notamment, de leur temps de travail, de leur couverture complémentaire et des cotisations salariales prélevées.",
+        ],
       },
       {
         id: "convention-collective",
-        title: "La convention collective change-t-elle le net ?",
-        text: "Elle fixe les salaires minimaux de chaque classification et peut prévoir des garanties de prévoyance qui changent le net.",
+        title:
+          "La convention collective a-t-elle un impact sur le montant du salaire net ?",
+        paragraphs: [
+          "La convention collective peut prévoir des garanties de prévoyance et de complémentaire santé qui ont une incidence sur le montant des cotisations salariales et donc sur le salaire net.",
+        ],
       },
     ],
-    references:
-      "articles L3243-2 et R3243-1 du Code du travail (bulletin de paie).",
+    references: ["R3243-1", "R3243-2"],
   },
 };
 

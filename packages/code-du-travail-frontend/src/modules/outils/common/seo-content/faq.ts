@@ -10,8 +10,13 @@ const escapeHtml = (value: string): string =>
 
 // Serialises a section's visible text into the HTML subset Google accepts in
 // `acceptedAnswer.text` (p, ul, li, a).
-export const toFaqAnswerHtml = ({ text, items }: ToolSeoSection): string => {
-  const paragraph = text ? `<p>${escapeHtml(text)}</p>` : "";
+export const toFaqAnswerHtml = ({
+  paragraphs,
+  items,
+}: ToolSeoSection): string => {
+  const paragraph = (paragraphs ?? [])
+    .map((text) => `<p>${escapeHtml(text)}</p>`)
+    .join("");
   const list = items?.length
     ? `<ul>${items.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul>`
     : "";

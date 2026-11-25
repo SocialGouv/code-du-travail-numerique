@@ -3,20 +3,23 @@
 export type ToolSeoSlug = "simulateur-embauche";
 
 /**
- * A section of the SEO text, rendered as an anchored h2 followed by an
- * optional paragraph and an optional bullet list.
+ * A section of the SEO text, rendered as an anchored h2 followed by optional
+ * paragraphs and an optional bullet list (introduced by the last paragraph).
  */
 export type ToolSeoSection = {
   /** Anchor of the h2, listed in the summary (stable: used in links). */
   id: string;
   /** Phrased as a question: it is also a FAQPage question. */
   title: string;
-  text?: string;
+  paragraphs?: string[];
   items?: string[];
 };
 
 export type ToolSeoContentData = {
   sections: ToolSeoSection[];
-  /** Legal references; article numbers are turned into links. */
-  references: string;
+  /**
+   * Labour code articles (e.g. "R3243-1") listed in the "Références"
+   * accordion, each linked to its page.
+   */
+  references: string[];
 };
