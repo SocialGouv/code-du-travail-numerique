@@ -199,6 +199,53 @@ describe("jsonld builders", () => {
     ]);
   });
 
+  it("buildNewsArticleJsonLd() crédite l'auteur de l'image", () => {
+    const jsonld = buildNewsArticleJsonLd({
+      headline: "Titre",
+      url: "/actualite/slug",
+      image: { url: "/images/actu.webp", author: "@pvproductions" },
+    });
+    expect(jsonld.image).toEqual([
+      {
+        "@type": "ImageObject",
+        url: "http://api.url/images/actu.webp",
+        creator: { "@type": "Person", name: "@pvproductions" },
+        creditText: "@pvproductions",
+        copyrightNotice: "@pvproductions",
+      },
+    ]);
+  });
+
+  it("buildNewsArticleJsonLd() ajoute l'url du créateur quand l'auteur est un lien", () => {
+    const author = "https://unsplash.com/@someone";
+    const jsonld = buildNewsArticleJsonLd({
+      headline: "Titre",
+      url: "/actualite/slug",
+      image: { url: "/images/actu.webp", author },
+    });
+    const [image] = jsonld.image as Record<string, unknown>[];
+    expect(image.creator).toEqual({
+      "@type": "Person",
+      name: author,
+      url: author,
+    });
+  });
+
+  it.each([undefined, "", "  "])(
+    "buildNewsArticleJsonLd() n'émet pas de crédit sans auteur (%p)",
+    (author) => {
+      const jsonld = buildNewsArticleJsonLd({
+        headline: "Titre",
+        url: "/actualite/slug",
+        image: { url: "/images/actu.webp", author },
+      });
+      const [image] = jsonld.image as Record<string, unknown>[];
+      expect(image).not.toHaveProperty("creator");
+      expect(image).not.toHaveProperty("creditText");
+      expect(image).not.toHaveProperty("copyrightNotice");
+    }
+  );
+
   it("buildNewsArticleJsonLd() omet largeur et hauteur quand elles sont inconnues", () => {
     const jsonld = buildNewsArticleJsonLd({
       headline: "Titre",

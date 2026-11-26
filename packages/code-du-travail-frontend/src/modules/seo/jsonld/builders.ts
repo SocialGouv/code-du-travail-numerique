@@ -226,6 +226,34 @@ export function buildLegislationJsonLd({
 // `citation` liste les URL des articles de loi cités par l'actualité.
 export const NEWS_ARTICLE_SECTION = "Actualités";
 
+export type NewsArticleImage = {
+  url: string;
+  width?: number;
+  height?: number;
+  // Image credit entered in the admin (a name, a handle or a URL).
+  author?: string;
+};
+
+const URL_PATTERN = /^https?:\/\//;
+
+// Image licence metadata (Google "Image metadata"): the credit shown under the
+// image becomes `creator`, `creditText` and `copyrightNotice`. Omitted when the
+// admin gives no author. `license` is not emitted: the admin stores no licence
+// URL for news images.
+const buildImageCredit = (author?: string): Record<string, unknown> => {
+  const name = author?.trim();
+  if (!name) return {};
+  return {
+    creator: {
+      "@type": "Person",
+      name,
+      ...(URL_PATTERN.test(name) ? { url: name } : {}),
+    },
+    creditText: name,
+    copyrightNotice: name,
+  };
+};
+
 export function buildNewsArticleJsonLd({
   headline,
   url,
@@ -242,7 +270,7 @@ export function buildNewsArticleJsonLd({
   publishedTime?: string;
   dateModified?: string;
   description?: string;
-  image?: { url: string; width?: number; height?: number };
+  image?: NewsArticleImage;
   citations?: string[];
 }): Record<string, unknown> {
   const absoluteUrl = toAbsoluteUrl(url);
@@ -270,6 +298,7 @@ export function buildNewsArticleJsonLd({
               ...(image.width && image.height
                 ? { width: image.width, height: image.height }
                 : {}),
+              ...buildImageCredit(image.author),
             },
           ],
         }
