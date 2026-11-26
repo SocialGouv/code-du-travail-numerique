@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.255.0](https://pic.sg.social.gouv.fr/socialgouv/produits-dnum/citoyens/cdtn/code-du-travail-numerique/compare/v4.254.0...v4.255.0) (2026-11-26)
+
+### Features
+
+* **contributions:** masquer l'astérisque des montants challengés marqués... ([5e00de4](https://pic.sg.social.gouv.fr/socialgouv/produits-dnum/citoyens/cdtn/code-du-travail-numerique/commits/5e00de4cda1082daee666fe47b4748a4f21ef9c9))
+
+
 # [4.254.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.253.1...v4.254.0) (2026-11-25)
 
 ### Bug Fixes
