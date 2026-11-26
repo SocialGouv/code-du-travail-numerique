@@ -18,6 +18,9 @@ Sentry.init({
   attachStacktrace: true, // Attach stack traces to all messages
   normalizeDepth: 10, // Increase stack trace depth for better context
   tracesSampleRate: IS_PRODUCTION ? 0.1 : 1.0, // Sample 10% of traces in prod, all in dev
+  // Notre Sentry auto-hébergé (24.11) rejette les spans streamés (défaut du SDK v11) en « invalid_span » :
+  // on revient à l'envoi par transaction complète.
+  traceLifecycle: "static",
   maxBreadcrumbs: 100, // Increase from default 100 to capture more context
 
   // Error tracking configuration

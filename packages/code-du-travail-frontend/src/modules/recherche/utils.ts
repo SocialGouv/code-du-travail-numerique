@@ -3,6 +3,7 @@ import {
   getRouteBySource,
   routeBySource,
   slugify,
+  SOURCES,
 } from "@socialgouv/cdtn-utils";
 import { SearchResult } from "../../api";
 import { css } from "@styled-system/css";
@@ -52,6 +53,10 @@ export const getSourceLabel = (
     return "RÉPONSE SUR-MESURE";
   }
 
+  if (source === SOURCES.NEWS) {
+    return "ACTUALITÉ";
+  }
+
   return String(getLabelBySource(source)).toUpperCase();
 };
 
@@ -85,6 +90,10 @@ export const badgeColorClasses: Partial<
   infographies: css({
     backgroundColor: "var(--background-alt-brown-cafe-creme) !important", // light option illustration color 975 default brown cafe creme
     color: "var(--text-action-high-brown-cafe-creme) !important", // light option illustration color sun default purple glycine
+  }),
+  actualites: css({
+    backgroundColor: "var(--background-alt-blue-cumulus) !important", // light option illustration color 975 default blue cumulus
+    color: "var(--text-action-high-blue-cumulus) !important", // light option illustration color sun default blue cumulus
   }),
   contributions: css({
     backgroundColor: "var(--background-contrast-success) !important", // light decision background background contrast success

@@ -1,4 +1,4 @@
-import Breadcrumb from "@codegouvfr/react-dsfr/Breadcrumb";
+import { DsfrBreadcrumb } from "./DsfrBreadcrumb";
 import { BreadcrumbListJsonLd } from "../../seo/jsonld";
 import type { BreadcrumbSegment } from "./segments";
 
@@ -20,10 +20,11 @@ type Props = {
  *
  * Deux contraintes à ne pas lever :
  *
- * 1. **Pas de directive `"use client"`.** `BreadcrumbListJsonLd` est déjà un
- *    composant client (il lit `usePathname()`), mais le `Breadcrumb` DSFR n'en
- *    est pas un et rend côté serveur dans la plupart des conteneurs. Ajouter la
- *    directive ici les basculerait tous dans le bundle client.
+ * 1. **No `"use client"` directive here.** The client boundaries sit on the
+ *    children: `BreadcrumbListJsonLd` reads `usePathname()`, and
+ *    `DsfrBreadcrumb` must render client-side so its links use the Next `Link`
+ *    registered by `DsfrHead` (server-side they are plain `<a>` and reload the
+ *    page).
  * 2. **Retourner un Fragment, jamais un `<div>`.** Plusieurs conteneurs rendent
  *    le fil d'Ariane en enfant direct d'un `fr-grid-row` (flex) ; un wrapper
  *    casserait leur mise en page. Le `<script>` JSON-LD, lui, n'est pas un
@@ -39,7 +40,7 @@ export const Breadcrumbs = ({
       currentPageLabel={currentPageLabel}
       items={segments}
     />
-    <Breadcrumb
+    <DsfrBreadcrumb
       currentPageLabel={currentPageLabel}
       homeLinkProps={{ href: "/" }}
       segments={segments.map(({ label, href }) => ({
