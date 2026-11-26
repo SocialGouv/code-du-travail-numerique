@@ -32,7 +32,7 @@ events.extracted.json  +  code frontend   →   skill /tracking-plan   →   TRA
 ```
 
 - Ce document n'est **pas** produit par un algo : il est **rédigé par le skill Claude
-  `/tracking-plan`** (`.claude/skills/tracking-plan`). Le skill lit le catalogue
+  `/tracking-plan`** (`.agents/skills/tracking-plan`). Le skill lit le catalogue
   `events.extracted.json` **et** les modules frontend concernés (simulateurs et leurs étapes,
   parcours convention collective p1/p2/p3, recherche entreprise) pour produire une explication
   métier avec les vrais titres/étapes — ce qu'un rendu mécanique ne peut pas faire.

@@ -121,4 +121,8 @@ Détails : [`BEST_PRACTICE.md`](./BEST_PRACTICE.md) et, pour les modèles, [`pac
 | `/sentry-issues` | Analyser les dernières issues Sentry du projet, examiner les stack traces et proposer des corrections dans le code source.                                             | `[nombre d'issues (défaut: 10)] [--assign] [--comment <PR_URL>] [--fix]` |
 | `/tracking-plan` | Rédiger ou actualiser le plan de tracking Matomo métier (`events/TRACKING_PLAN.md`) à partir de `events.extracted.json` et du code. Après toute évolution du tracking. | `[--skip-extract]`                                                       |
 
-Un nouveau skill va dans `.claude/skills/<nom>/SKILL.md` (frontmatter `name`, `description` et, optionnellement, `argument-hint`) et doit être ajouté à ce tableau.
+Pour ajouter un skill :
+
+- le créer dans `.agents/skills/<nom>/SKILL.md` (emplacement générique, lu aussi par les autres agents), avec un frontmatter `name`, `description` et, optionnellement, `argument-hint` ;
+- pour que Claude Code le découvre, ajouter un lien symbolique relatif depuis la racine du dépôt : `ln -s ../../.agents/skills/<nom> .claude/skills/<nom>` ;
+- ajouter une ligne à ce tableau.

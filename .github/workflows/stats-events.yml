@@ -7,7 +7,7 @@ name: Stats events
 #
 # Le plan de tracking métier (events/TRACKING_PLAN.md) n'est PLUS généré par un
 # algo : il est rédigé via le skill Claude `/tracking-plan` (cf.
-# .claude/skills/tracking-plan). Il n'est donc pas drift-checké ici.
+# .agents/skills/tracking-plan). Il n'est donc pas drift-checké ici.
 
 on:
   pull_request:
