@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "../common/Link";
 import { fr } from "@codegouvfr/react-dsfr";
 import Badge from "@codegouvfr/react-dsfr/Badge";
 import { css } from "@styled-system/css";

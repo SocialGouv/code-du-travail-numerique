@@ -87,22 +87,23 @@ describe("Formule indemnité licenciement - 1486", () => {
 
   describe("Formules à partir du 1er mai 2023)", () => {
     test.each`
-      category                    | seniority | expectedFormula     | expectedExplanations
-      ${CatPro1486.ingeCadre}     | ${0}      | ${""}               | ${[]}
-      ${CatPro1486.ingeCadre}     | ${7 / 12} | ${""}               | ${[]}
-      ${CatPro1486.ingeCadre}     | ${8 / 12} | ${"1/4 * Sref * A"} | ${["A : Ancienneté totale (≈ 0.67 an : valeur arrondie)", "Sref : Salaire de référence (1000 €)"]}
-      ${CatPro1486.ingeCadre}     | ${2}      | ${"1/3 * Sref * A"} | ${["A : Ancienneté totale (2 ans)", "Sref : Salaire de référence (1000 €)"]}
-      ${CatPro1486.ingeCadre}     | ${10}     | ${"1/3 * Sref * A"} | ${["A : Ancienneté totale (10 ans)", "Sref : Salaire de référence (1000 €)"]}
-      ${CatPro1486.chargeEnquete} | ${0}      | ${""}               | ${[]}
-      ${CatPro1486.chargeEnquete} | ${1.99}   | ${""}               | ${[]}
-      ${CatPro1486.chargeEnquete} | ${2}      | ${"1/5 * Sref * A"} | ${["A : Ancienneté totale (2 ans)", "Sref : Salaire de référence (1000 €)"]}
-      ${CatPro1486.chargeEnquete} | ${19}     | ${"1/5 * Sref * A"} | ${["A : Ancienneté totale (19 ans)", "Sref : Salaire de référence (1000 €)"]}
-      ${CatPro1486.chargeEnquete} | ${99}     | ${"7 * Sref"}       | ${["Sref : Salaire de référence (1000 €)"]}
-      ${CatPro1486.etam}          | ${0}      | ${""}               | ${[]}
-      ${CatPro1486.etam}          | ${7 / 12} | ${""}               | ${[]}
-      ${CatPro1486.etam}          | ${8 / 12} | ${"1/4 * Sref * A"} | ${["A : Ancienneté totale (≈ 0.67 an : valeur arrondie)", "Sref : Salaire de référence (1000 €)"]}
-      ${CatPro1486.etam}          | ${10}     | ${"1/4 * Sref * A"} | ${["A : Ancienneté totale (10 ans)", "Sref : Salaire de référence (1000 €)"]}
-      ${CatPro1486.etam}          | ${15}     | ${"1/3 * Sref * A"} | ${["A : Ancienneté totale (15 ans)", "Sref : Salaire de référence (1000 €)"]}
+      category                    | seniority | expectedFormula                            | expectedExplanations
+      ${CatPro1486.ingeCadre}     | ${0}      | ${""}                                      | ${[]}
+      ${CatPro1486.ingeCadre}     | ${7 / 12} | ${""}                                      | ${[]}
+      ${CatPro1486.ingeCadre}     | ${8 / 12} | ${"1/4 * Sref * A"}                        | ${["A : Ancienneté totale (≈ 0.67 an : valeur arrondie)", "Sref : Salaire de référence (1000 €)"]}
+      ${CatPro1486.ingeCadre}     | ${2}      | ${"1/3 * Sref * A"}                        | ${["A : Ancienneté totale (2 ans)", "Sref : Salaire de référence (1000 €)"]}
+      ${CatPro1486.ingeCadre}     | ${10}     | ${"1/3 * Sref * A"}                        | ${["A : Ancienneté totale (10 ans)", "Sref : Salaire de référence (1000 €)"]}
+      ${CatPro1486.chargeEnquete} | ${0}      | ${""}                                      | ${[]}
+      ${CatPro1486.chargeEnquete} | ${1.99}   | ${""}                                      | ${[]}
+      ${CatPro1486.chargeEnquete} | ${2}      | ${"1/5 * Sref * A"}                        | ${["A : Ancienneté totale (2 ans)", "Sref : Salaire de référence (1000 €)"]}
+      ${CatPro1486.chargeEnquete} | ${19}     | ${"1/5 * Sref * A"}                        | ${["A : Ancienneté totale (19 ans)", "Sref : Salaire de référence (1000 €)"]}
+      ${CatPro1486.chargeEnquete} | ${99}     | ${"7 * Sref"}                              | ${["Sref : Salaire de référence (1000 €)"]}
+      ${CatPro1486.etam}          | ${0}      | ${""}                                      | ${[]}
+      ${CatPro1486.etam}          | ${7 / 12} | ${""}                                      | ${[]}
+      ${CatPro1486.etam}          | ${8 / 12} | ${"1/4 * Sref * A"}                        | ${["A : Ancienneté totale (≈ 0.67 an : valeur arrondie)", "Sref : Salaire de référence (1000 €)"]}
+      ${CatPro1486.etam}          | ${10}     | ${"1/4 * Sref * A"}                        | ${["A : Ancienneté totale (10 ans)", "Sref : Salaire de référence (1000 €)"]}
+      ${CatPro1486.etam}          | ${11}     | ${"(1/4 * Sref * A1) + (1/3 * Sref * A2)"} | ${["A1 : Ancienneté de 10 ans ou moins (10 ans)", "A2 : Ancienneté au-delà de 10 ans (1 an)", "Sref : Salaire de référence (1000 €)"]}
+      ${CatPro1486.etam}          | ${15}     | ${"(1/4 * Sref * A1) + (1/3 * Sref * A2)"} | ${["A1 : Ancienneté de 10 ans ou moins (10 ans)", "A2 : Ancienneté au-delà de 10 ans (5 ans)", "Sref : Salaire de référence (1000 €)"]}
     `(
       "Formule $expectedFormula avec $seniority ans, catégorie $category",
       ({ category, seniority, expectedFormula, expectedExplanations }) => {

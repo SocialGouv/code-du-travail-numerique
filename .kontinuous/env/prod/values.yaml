@@ -3,6 +3,9 @@ app:
   redirectFrom:
     - www.code.travail.gouv.fr
     - code.travail.fabrique.social.gouv.fr
+  autoscale:
+    minReplicas: 4
+    maxReplicas: 20
   resources:
     limits:
       cpu: 900m

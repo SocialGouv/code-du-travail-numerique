@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.254.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.253.1...v4.254.0) (2026-11-25)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
+
+
+
+
+## [4.253.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.253.0...v4.253.1) (2026-11-20)
+
+### Bug Fixes
+
+* **indemnite-licenciement:** applique le plafond de 18 mois de la CC 3248 avant la réduction liée à l'âge ([#7597](https://github.com/SocialGouv/code-du-travail-numerique/issues/7597)) ([#7600](https://github.com/SocialGouv/code-du-travail-numerique/issues/7600)) ([4561202](https://github.com/SocialGouv/code-du-travail-numerique/commit/4561202e2f75d210c2fb932c1ec13d2a6327ba9e))
+* **indemnite-licenciement:** calcule l'indemnité des ETAM de la CC 1486 par tranches d'ancienneté ([#7599](https://github.com/SocialGouv/code-du-travail-numerique/issues/7599)) ([#7602](https://github.com/SocialGouv/code-du-travail-numerique/issues/7602)) ([404dce2](https://github.com/SocialGouv/code-du-travail-numerique/commit/404dce2dcfe33b08d7857fad98ba8dbdcd4e96c4))
+
+
+# [4.253.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.252.0...v4.253.0) (2026-11-13)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
+
+
+
+
 # [4.252.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.251.0...v4.252.0) (2026-11-09)
 
 **Note:** Version bump only for package @socialgouv/modeles-social

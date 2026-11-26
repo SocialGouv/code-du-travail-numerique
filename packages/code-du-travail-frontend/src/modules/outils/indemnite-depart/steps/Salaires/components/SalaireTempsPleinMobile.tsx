@@ -40,7 +40,7 @@ export const SalaireTempsPleinMobile = ({
           </p>
 
           <Input
-            label="Salaire mensuel brut primes incluses (en €)"
+            label="Salaire mensuel brut incluant variable et primes régulières (en €)"
             nativeInputProps={
               {
                 type: "number",
@@ -76,7 +76,7 @@ export const SalaireTempsPleinMobile = ({
 
           {!noPrime && index < 3 && (
             <Input
-              label="Total des primes (en €)"
+              label="Montant des primes exceptionnelles (en €)"
               className={fr.cx("fr-mt-2w")}
               nativeInputProps={
                 {

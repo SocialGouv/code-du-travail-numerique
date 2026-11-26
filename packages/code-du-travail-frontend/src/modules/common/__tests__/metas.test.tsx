@@ -22,6 +22,17 @@ describe("getContentArticle", () => {
 });
 
 describe("generateDefaultMetadata", () => {
+  it("bypasses the site name suffix when noTitleAdd is set", () => {
+    const metadata = generateDefaultMetadata({
+      title: "Simulateur officiel",
+      description: "description",
+      noTitleAdd: true,
+    });
+
+    expect(metadata.title).toEqual({ absolute: "Simulateur officiel" });
+    expect(metadata.openGraph?.title).toBe("Simulateur officiel");
+  });
+
   it("returns metadata", () => {
     const metadata = generateDefaultMetadata({
       title: "title",

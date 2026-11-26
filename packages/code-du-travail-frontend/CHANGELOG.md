@@ -3,6 +3,37 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.254.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.253.1...v4.254.0) (2026-11-25)
+
+### Bug Fixes
+
+* **breadcrumb:** navigation client-side au lieu de recharger la page ([#7605](https://github.com/SocialGouv/code-du-travail-numerique/issues/7605)) ([b40a4a0](https://github.com/SocialGouv/code-du-travail-numerique/commit/b40a4a09a1e2bf833a4a26c724a73c7e5d36d5ee))
+
+### Features
+
+* **outils:** ajout d'un texte sous le simulateur brut-net (SEO) ([#7593](https://github.com/SocialGouv/code-du-travail-numerique/issues/7593)) ([05cdb0c](https://github.com/SocialGouv/code-du-travail-numerique/commit/05cdb0cda0eb346d0d08ddd7984a17c184ccd35d))
+
+
+## [4.253.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.253.0...v4.253.1) (2026-11-20)
+
+### Bug Fixes
+
+* **actualites:** re-level raw content headings below news titles ([#7594](https://github.com/SocialGouv/code-du-travail-numerique/issues/7594)) ([#7595](https://github.com/SocialGouv/code-du-travail-numerique/issues/7595)) ([519ef0e](https://github.com/SocialGouv/code-du-travail-numerique/commit/519ef0e2ed585c5838b2df7c377f5edeaaa50f2a))
+* **indemnite-depart:** clarifie les en-têtes du tableau des salaires et le texte d'avertissement sur les absences ([#7598](https://github.com/SocialGouv/code-du-travail-numerique/issues/7598)) ([#7601](https://github.com/SocialGouv/code-du-travail-numerique/issues/7601)) ([ce0b3b0](https://github.com/SocialGouv/code-du-travail-numerique/commit/ce0b3b0d31e795e08262105448d989b365f9ff8e))
+* **sentry:** correction pour l'envoie des trace à Sentry ([1e7d730](https://github.com/SocialGouv/code-du-travail-numerique/commit/1e7d730887ba02d2475f6e3d91f97a83602d8a1c))
+
+### Performance Improvements
+
+* **frontend:** prefetch links on user intent instead of viewport entry ([#7604](https://github.com/SocialGouv/code-du-travail-numerique/issues/7604)) ([0cafaad](https://github.com/SocialGouv/code-du-travail-numerique/commit/0cafaad29bb9b387bb2e3c6045e201c7075296bb))
+
+
+# [4.253.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.252.0...v4.253.0) (2026-11-13)
+
+### Features
+
+* **recherche:** ajoute les actualités au moteur de recherche avec un label « ACTUALITÉ » ([#7590](https://github.com/SocialGouv/code-du-travail-numerique/issues/7590)) ([b55a73f](https://github.com/SocialGouv/code-du-travail-numerique/commit/b55a73f3c80be3c577950fa4dc9607a6f3ea5fc3))
+
+
 # [4.252.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.251.0...v4.252.0) (2026-11-09)
 
 ### Bug Fixes
