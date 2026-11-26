@@ -12,6 +12,8 @@
 
 ## Développement
 
+Les instructions pour les agents de code (commandes, conventions, points de vigilance) sont dans [AGENTS.md](./AGENTS.md).
+
 ### Installation
 
 ```sh
