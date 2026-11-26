@@ -276,7 +276,10 @@ type Options = {
   disableLink: boolean;
   smicHourly?: number;
   challengerAsterisk: boolean;
-  challengerState?: { substituted: boolean };
+  // `substituted` : au moins un montant a été remplacé par la valeur de
+  // référence ; `asteriskShown` : au moins un de ces montants affiche
+  // réellement l'astérisque (absent si `data-challenger-hide-asterisk`).
+  challengerState?: { substituted: boolean; asteriskShown: boolean };
   onTableFullscreen?: () => void;
   // Registre partagé des ids d'accordéon déjà attribués, pour garantir
   // des ids uniques et déterministes (cf. makeUniqueAccordionId).
@@ -307,12 +310,20 @@ const options = (params: Options): HTMLReactParserOptions => {
             if (enteredAmount !== undefined && enteredAmount > computedAmount) {
               return <span>{enteredText}</span>;
             }
+            // Option admin « Ne pas afficher l'astérisque » : l'attribut est
+            // présent ("true") uniquement quand l'option est cochée.
+            const showAsterisk =
+              params.challengerAsterisk &&
+              domNode.attribs["data-challenger-hide-asterisk"] !== "true";
             if (params.challengerState) {
               params.challengerState.substituted = true;
+              if (showAsterisk) {
+                params.challengerState.asteriskShown = true;
+              }
             }
             const nextSibling = domNode.next;
             if (
-              params.challengerAsterisk &&
+              showAsterisk &&
               nextSibling &&
               (nextSibling as unknown as { type?: string }).type === "text" &&
               (nextSibling as unknown as { data?: string }).data?.includes(
@@ -335,7 +346,7 @@ const options = (params: Options): HTMLReactParserOptions => {
             return (
               <span className="challenger">
                 {formatChallengerEur(computedAmount)}
-                {params.challengerAsterisk && "*"}
+                {showAsterisk && "*"}
               </span>
             );
           }
@@ -609,7 +620,7 @@ const DisplayContent = ({
   extra,
 }: Props): string | JSX.Element | JSX.Element[] => {
   try {
-    const challengerState = { substituted: false };
+    const challengerState = { substituted: false, asteriskShown: false };
     const parsed = parse(
       xssWrapper(content),
       options({
@@ -626,8 +637,10 @@ const DisplayContent = ({
       })
     );
     /*
-    // On garde ce code car on va vouloir afficher l'astérisque plus tard
-    if (challengerState.substituted) {
+    // On garde ce code car on va vouloir afficher l'astérisque plus tard.
+    // La note ne doit apparaître que si un montant affiche réellement « * »
+    // (les montants marqués data-challenger-hide-asterisk n'en affichent pas).
+    if (challengerState.asteriskShown) {
       return (
         <>
           {parsed}

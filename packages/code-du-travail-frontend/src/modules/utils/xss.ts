@@ -20,6 +20,7 @@ const whiteListAttr = [
   "data-infographic-id",
   "data-challenger-formula",
   "data-challenger-parameter",
+  "data-challenger-hide-asterisk",
 ];
 
 export const xssWrapper = (text: string): string => {
