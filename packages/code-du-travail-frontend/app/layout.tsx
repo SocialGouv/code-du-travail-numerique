@@ -4,6 +4,7 @@ import { SITE_URL } from "../src/config";
 import { headers } from "next/headers";
 import DefaultLayout from "../src/modules/config/DefaultLayout";
 import { RuntimeEnvScript } from "../src/modules/config/RuntimeEnvScript";
+import { isNpsEnabled } from "../src/api/modules/settings";
 
 export const metadata: Metadata = {
   title: {
@@ -25,10 +26,12 @@ export default async function RootLayout({
 }) {
   const headersData = await headers();
   const nonce = headersData.get("x-nonce") ?? undefined;
+  const npsEnabled = await isNpsEnabled();
 
   return (
     <DefaultLayout
       nonce={nonce}
+      npsEnabled={npsEnabled}
       defaultColorScheme={"light"}
       headScripts={<RuntimeEnvScript nonce={nonce} />}
     >
