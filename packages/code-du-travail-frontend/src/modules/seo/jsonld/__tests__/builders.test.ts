@@ -231,6 +231,36 @@ describe("jsonld builders", () => {
     });
   });
 
+  it("buildNewsArticleJsonLd() pointe la licence d'une image libre de droit vers les mentions légales", () => {
+    const jsonld = buildNewsArticleJsonLd({
+      headline: "Titre",
+      url: "/actualite/slug",
+      image: { url: "/images/actu.webp", license: "free" },
+    });
+    expect(jsonld.image).toEqual([
+      {
+        "@type": "ImageObject",
+        url: "http://api.url/images/actu.webp",
+        license: "http://api.url/mentions-legales#credits-images",
+      },
+    ]);
+  });
+
+  it("buildNewsArticleJsonLd() n'émet pas de licence pour une image sourcée", () => {
+    const jsonld = buildNewsArticleJsonLd({
+      headline: "Titre",
+      url: "/actualite/slug",
+      image: {
+        url: "/images/actu.webp",
+        license: "source",
+        author: "@pvproductions",
+      },
+    });
+    const [image] = jsonld.image as Record<string, unknown>[];
+    expect(image).not.toHaveProperty("license");
+    expect(image.creditText).toBe("@pvproductions");
+  });
+
   it.each([undefined, "", "  "])(
     "buildNewsArticleJsonLd() n'émet pas de crédit sans auteur (%p)",
     (author) => {
