@@ -1,5 +1,6 @@
 import { render } from "@testing-library/react";
 import DisplayContent from "../DisplayContent";
+import { xssWrapper } from "../../utils/xss";
 
 let count = 0;
 jest.mock("uuid", () => ({
@@ -1011,6 +1012,68 @@ describe("DisplayContent", () => {
       );
 
       expect(asFragment().firstChild).toMatchSnapshot();
+    });
+
+    describe("data-challenger-hide-asterisk", () => {
+      // formatChallengerEur insère des espaces insécables (U+202F, U+00A0).
+      const normalizeSpaces = (text?: string | null) =>
+        (text ?? "").replace(/[\u00a0\u202f]/g, " ");
+
+      it("should keep the attribute through xssWrapper", () => {
+        expect(
+          xssWrapper(
+            `<span data-challenger-formula="smic_hourly" data-challenger-hide-asterisk="true" class="challenger">12,09 €</span>`
+          )
+        ).toContain(`data-challenger-hide-asterisk="true"`);
+      });
+
+      it("should not put the * after a substituted amount", () => {
+        const { asFragment } = render(
+          <DisplayContent
+            content={`<p><span data-challenger-formula="smic_hourly" data-challenger-hide-asterisk="true" class="challenger">12,09 €</span></p>`}
+            titleLevel={3}
+            extra={{
+              smicHourly: 12.31,
+            }}
+          ></DisplayContent>
+        );
+
+        expect(normalizeSpaces(asFragment().firstChild?.textContent)).toEqual(
+          "12,31 €"
+        );
+      });
+
+      it("should not put the * after brut", () => {
+        const { asFragment } = render(
+          <DisplayContent
+            content={`<p><span data-challenger-formula="smic_hourly" data-challenger-hide-asterisk="true" class="challenger">12,09 €</span> brut</p>`}
+            titleLevel={3}
+            extra={{
+              smicHourly: 12.31,
+            }}
+          ></DisplayContent>
+        );
+
+        expect(normalizeSpaces(asFragment().firstChild?.textContent)).toEqual(
+          "12,31 € brut"
+        );
+      });
+
+      it("should keep the * on substituted amounts without the attribute", () => {
+        const { asFragment } = render(
+          <DisplayContent
+            content={`<p><span data-challenger-formula="smic_hourly" data-challenger-hide-asterisk="true" class="challenger">12,09 €</span> brut, <span data-challenger-formula="smic_hourly" class="challenger">12,09 €</span> brut et <span data-challenger-formula="smic_hourly" class="challenger">12,09 €</span></p>`}
+            titleLevel={3}
+            extra={{
+              smicHourly: 12.31,
+            }}
+          ></DisplayContent>
+        );
+
+        expect(normalizeSpaces(asFragment().firstChild?.textContent)).toEqual(
+          "12,31 € brut, 12,31 € brut* et 12,31 €*"
+        );
+      });
     });
   });
 
