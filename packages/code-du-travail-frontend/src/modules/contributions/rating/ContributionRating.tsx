@@ -93,13 +93,12 @@ export const ContributionRating = ({ contributionSlug, level = 2 }: Props) => {
       // (score changed from 3 to 1 or 2) is hidden until the panel is sent.
       setThanked(false);
       setPanel("reasons");
-    } else {
-      // Score raised to 3: the "what was not clear?" panel no longer applies.
-      // An open remark panel stays. The draft is kept: lowering the score
-      // again reopens the panel with what was already checked and typed.
-      setPanel((current) => (current === "reasons" ? "none" : current));
+    } else if (panel === "none") {
       thank();
     }
+    // Score changed to 3 while a panel is open and not sent yet: nothing
+    // changes on screen, the panel stays open with what was already checked
+    // and typed, and the thank-you waits for "Envoyer".
   };
 
   const onOpenRemark = () => {

@@ -150,24 +150,26 @@ describe("ContributionRating", () => {
     ).not.toBeInTheDocument();
   });
 
-  it("closes the reasons panel and thanks when the score is raised to 3", () => {
+  it("keeps the unsent reasons panel open when the score is raised to 3", () => {
     render(<ContributionRating contributionSlug={contributionSlug} />);
 
     fireEvent.click(star(STAR_1));
     fireEvent.click(star(STAR_2));
     fireEvent.click(star(STAR_3));
 
-    expect(mockTrackScore).toHaveBeenCalledTimes(3);
     expect(mockTrackScore.mock.calls.map(([{ value }]) => value)).toEqual([
       1, 2, 3,
     ]);
+    expect(star(STAR_3)).toHaveAttribute("aria-pressed", "true");
     expect(
-      screen.queryByRole("heading", { name: RATING_REASONS_TITLE })
+      screen.getByRole("heading", { name: RATING_REASONS_TITLE })
+    ).toBeInTheDocument();
+    expect(
+      screen.queryByText(RATING_CONFIRMATION_TEXT)
     ).not.toBeInTheDocument();
-    expect(screen.getByText(RATING_CONFIRMATION_TEXT)).toBeInTheDocument();
   });
 
-  it("keeps the checked reasons and typed text when the score goes 2 -> 3 -> 1", () => {
+  it("keeps the checked reasons and typed text while the score goes 2 -> 3 -> 1", () => {
     render(<ContributionRating contributionSlug={contributionSlug} />);
 
     fireEvent.click(star(STAR_2));
@@ -178,10 +180,6 @@ describe("ContributionRating", () => {
     );
 
     fireEvent.click(star(STAR_3));
-    expect(
-      screen.queryByRole("heading", { name: RATING_REASONS_TITLE })
-    ).not.toBeInTheDocument();
-
     fireEvent.click(star(STAR_1));
 
     expect(reasonCheckbox(RatingReason.DIFFICULT_TEXT)).toBeChecked();
