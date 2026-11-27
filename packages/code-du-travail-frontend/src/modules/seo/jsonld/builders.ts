@@ -1,6 +1,5 @@
 import { SITE_URL } from "../../../config";
 import { toIsoDateTimeParis } from "../../utils/date";
-import { IMAGE_CREDITS_ID } from "../../mentions-legales/constants";
 
 export const JSON_LD_IDS = {
   organization: "jsonld-government-organization",
@@ -233,29 +232,19 @@ export type NewsArticleImage = {
   height?: number;
   // Image credit entered in the admin (a name, a handle or a URL).
   author?: string;
-  // "free": royalty-free image; "source": third-party image, credited.
-  license?: "free" | "source";
 };
 
 const URL_PATTERN = /^https?:\/\//;
 
-// Image licence metadata (Google "Image metadata"). A royalty-free image points
-// `license` to the image credits section of the legal notice. A third-party
-// image stays its author's property: no `license`, but the credit shown under
-// the image becomes `creator`, `creditText` and `copyrightNotice` (omitted when
-// the admin gives no author).
-const buildImageLicense = ({
-  license,
+// Image credit metadata (Google "Image metadata"): the credit shown under the
+// image becomes `creator`, `creditText` and `copyrightNotice` (omitted when the
+// admin gives no author).
+const buildImageCredit = ({
   author,
 }: NewsArticleImage): Record<string, unknown> => {
-  const licenseUrl =
-    license === "free"
-      ? { license: toAbsoluteUrl(`/mentions-legales#${IMAGE_CREDITS_ID}`) }
-      : {};
   const name = author?.trim();
-  if (!name) return licenseUrl;
+  if (!name) return {};
   return {
-    ...licenseUrl,
     creator: {
       "@type": "Person",
       name,
@@ -310,7 +299,7 @@ export function buildNewsArticleJsonLd({
               ...(image.width && image.height
                 ? { width: image.width, height: image.height }
                 : {}),
-              ...buildImageLicense(image),
+              ...buildImageCredit(image),
             },
           ],
         }
