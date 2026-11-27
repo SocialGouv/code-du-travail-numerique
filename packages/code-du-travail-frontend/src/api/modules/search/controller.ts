@@ -35,7 +35,7 @@ export class SearchController {
     const { q: query } = parsedQuery.data;
 
     const [searchResults, glossaryData] = await Promise.all([
-      searchWithQuery(query, DEFAULT_PRESEARCH_RESULTS_NUMBER, true),
+      searchWithQuery(query, DEFAULT_PRESEARCH_RESULTS_NUMBER, false),
       getGlossary().catch(() => undefined),
     ]);
 
@@ -48,5 +48,17 @@ export class SearchController {
     };
 
     return NextResponse.json(parsed, { status: 200 });
+  }
+
+  public async get() {
+    const q = this.searchParams.get("q");
+    const pq = this.searchParams.get("pq");
+    const response = await searchWithQuery(q as string, 5, pq != "false");
+    return NextResponse.json(response, {
+      status: 200,
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
   }
 }
