@@ -86,6 +86,8 @@ async function NewsPage(props: PageProps<"/actualite/[slug]">) {
             url: news.image.url,
             width: news.image.width,
             height: news.image.height,
+            author: news.image.author,
+            license: news.image.license,
           }
         }
         citations={news.references.map((reference) => reference.url)}

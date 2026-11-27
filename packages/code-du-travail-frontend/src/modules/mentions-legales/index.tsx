@@ -1,6 +1,7 @@
 import { fr } from "@codegouvfr/react-dsfr";
 import { Container } from "../layout/Container";
 import Link from "../common/Link";
+import { IMAGE_CREDITS_ID } from "./constants";
 
 export const MentionsLegales = () => (
   <Container>
@@ -51,6 +52,15 @@ export const MentionsLegales = () => (
         </strong>
       </p>
     </div>
+
+    <h2 id={IMAGE_CREDITS_ID}>Crédits des images</h2>
+    <p>
+      Les images des actualités sans mention de source sont libres de droit. Les
+      images accompagnées d&apos;une mention «&nbsp;Source&nbsp;» restent la
+      propriété de leur auteur, crédité sous l&apos;image&nbsp;: elles ne sont
+      pas couvertes par la licence etalab-2.0 et ne peuvent pas être réutilisées
+      sans son accord.
+    </p>
 
     <h2>Traitement des données personnelles</h2>
     <p>
