@@ -27,6 +27,9 @@ export type News = Pick<
   references: NewsReference[];
   // Date affichée (`dd/MM/yyyy`), issue de `publishedAt`.
   displayDate?: string;
+  // Date de mise à jour affichée (`dd/MM/yyyy`), issue de `updatedAt`, si
+  // postérieure au jour de publication.
+  updatedDisplayDate?: string;
   publishedTime?: string;
   modifiedTime?: string;
 };

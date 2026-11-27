@@ -12,6 +12,7 @@ import {
   getNewsDisplayDate,
   getNewsModifiedTime,
   getNewsPublishedTime,
+  getNewsUpdatedDisplayDate,
 } from "./dates";
 import { News, NewsDocument, NewsLink, NewsSummary } from "./type";
 
@@ -198,6 +199,7 @@ export const format = ({
     image: image ? { ...image, url: toUrl(image.filename) } : undefined,
     references: references ?? [],
     displayDate: getNewsDisplayDate(date, publishedAt),
+    updatedDisplayDate: getNewsUpdatedDisplayDate(date, updatedAt, publishedAt),
     publishedTime: getNewsPublishedTime(date, publishedAt),
     modifiedTime: getNewsModifiedTime(date, updatedAt, publishedAt),
   };
