@@ -72,14 +72,6 @@ exports[`<MentionsLegales /> should match snapshot 1`] = `
           </strong>
         </p>
       </div>
-      <h2
-        id="credits-images"
-      >
-        Crédits des images
-      </h2>
-      <p>
-        Les images des actualités sans mention de source sont libres de droit. Les images accompagnées d'une mention « Source » restent la propriété de leur auteur, crédité sous l'image : elles ne sont pas couvertes par la licence etalab-2.0 et ne peuvent pas être réutilisées sans son accord.
-      </p>
       <h2>
         Traitement des données personnelles
       </h2>
