@@ -211,7 +211,8 @@ describe("ContributionRating", () => {
     ).not.toBeInTheDocument();
     const confirmation = await screen.findByText(RATING_CONFIRMATION_TEXT);
     await waitFor(() => expect(confirmation.closest("p")).toHaveFocus());
-    expect(remarkButton()).toBeInTheDocument();
+    // Hidden after any send, the reasons panel included.
+    expect(remarkButton()).not.toBeInTheDocument();
   });
 
   it("accepts reasons only (no suggestion event without text)", () => {

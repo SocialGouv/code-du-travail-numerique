@@ -41,7 +41,7 @@ export const ContributionRating = ({ contributionSlug, level = 2 }: Props) => {
   const [score, setScore] = useState<number | null>(null);
   const [panel, setPanel] = useState<Panel>("none");
   const [thanked, setThanked] = useState(false);
-  const [remarkSent, setRemarkSent] = useState(false);
+  const [panelSent, setPanelSent] = useState(false);
   // Matomo opt-out ("ne jamais être suivi"): nothing can be sent, so instead
   // of a misleading thank-you the user is told why and where to change it.
   const [optedOut, setOptedOut] = useState(false);
@@ -100,12 +100,13 @@ export const ContributionRating = ({ contributionSlug, level = 2 }: Props) => {
     if (suggestion) {
       void trackRatingSuggestion({ contributionSlug, text: suggestion });
     }
-    if (panel === "remark") setRemarkSent(true);
+    // Any send (reasons or remark) hides "Une remarque ?" (#7587 state table).
+    setPanelSent(true);
     setPanel("none");
     thank();
   };
 
-  const showRemarkButton = panel === "none" && !remarkSent && !optedOut;
+  const showRemarkButton = panel === "none" && !panelSent && !optedOut;
 
   return (
     <section
@@ -205,6 +206,10 @@ const remark = css({
   // DSFR only underlines `a[href]` links: underline the button too so it
   // reads as a link, as in the mock-up.
   "& button": {
+    // 44px target height (WCAG 2.5.5), the text stays vertically centred.
+    display: "inline-flex",
+    alignItems: "center",
+    minHeight: "2.75rem",
     textDecoration: "underline",
     textUnderlineOffset: "0.25em",
   },

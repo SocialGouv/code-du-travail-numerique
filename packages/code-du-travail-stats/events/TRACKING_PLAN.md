@@ -461,10 +461,13 @@ recharger la page ré-affiche le widget).
   (« Le texte est difficile à comprendre. », « Je ne sais pas si cela s'applique à ma
   situation. », « Je ne sais pas comment appliquer cela à ma situation. », « Les informations
   me semblent fausses. ») et un champ de suggestion libre (500 caractères max.). « Envoyer »
-  exige au moins une raison ou un texte, puis affiche le message de remerciement.
+  n'impose aucune saisie : il affiche toujours le remerciement, mais n'émet un événement que
+  pour ce qui a été rempli (raisons et/ou suggestion). Un envoi vide n'émet donc rien : le
+  nombre d'envois de l'encart ne peut pas être déduit des événements `raison_*` / suggestion.
 - Note **3** : remerciement direct.
 - Le bouton **« Une remarque ? »** (visible avant toute note et après un remerciement) ouvre un
-  encart de suggestion seule ; il disparaît une fois une suggestion envoyée par ce biais.
+  encart de suggestion seule ; il disparaît dès qu'un encart a été envoyé (raisons ou
+  remarque).
 
 > **Changement d'échelle (#7587).** La catégorie `clarte_contribution` **remplace**
 > `notation_contribution` à partir de la mise en production : l'ancienne échelle à 5 niveaux
