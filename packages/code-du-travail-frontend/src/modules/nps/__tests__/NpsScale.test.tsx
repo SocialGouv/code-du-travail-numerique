@@ -53,4 +53,19 @@ describe("NpsScale", () => {
     await userEvent.keyboard("{ArrowRight}");
     expect(onSelect).toHaveBeenCalledWith(6);
   });
+
+  it("wraps around at both ends like native radios", async () => {
+    const onSelect = jest.fn();
+    const { rerender } = render(
+      <NpsScale value={10} onSelect={onSelect} groupLabelId="q" />
+    );
+    screen.getByRole("radio", { name: /Note 10 sur 10/ }).focus();
+    await userEvent.keyboard("{ArrowRight}");
+    expect(onSelect).toHaveBeenLastCalledWith(0);
+
+    rerender(<NpsScale value={0} onSelect={onSelect} groupLabelId="q" />);
+    screen.getByRole("radio", { name: /Note 0 sur 10/ }).focus();
+    await userEvent.keyboard("{ArrowLeft}");
+    expect(onSelect).toHaveBeenLastCalledWith(10);
+  });
 });

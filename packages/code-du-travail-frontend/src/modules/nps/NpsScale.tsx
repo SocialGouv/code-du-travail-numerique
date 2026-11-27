@@ -29,9 +29,12 @@ export const NpsScale = ({ value, onSelect, groupLabelId }: Props) => {
   const activeIndex = value === null ? 0 : value - NPS_MIN;
 
   const selectAndFocus = (index: number) => {
-    const clamped = Math.max(0, Math.min(NPS_SCALE.length - 1, index));
-    onSelect(NPS_SCALE[clamped]);
-    radiosRef.current[clamped]?.focus();
+    // Wraps around like native radios (WAI-ARIA APG radio group): next from
+    // 10 goes to 0, previous from 0 goes to 10.
+    const length = NPS_SCALE.length;
+    const wrapped = ((index % length) + length) % length;
+    onSelect(NPS_SCALE[wrapped]);
+    radiosRef.current[wrapped]?.focus();
   };
 
   // Navigation clavier d'un radiogroup : les flèches déplacent ET cochent.

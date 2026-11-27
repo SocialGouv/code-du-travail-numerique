@@ -24,6 +24,9 @@ import { GovernmentOrganizationJsonLd, WebSiteJsonLd } from "../seo/jsonld";
 type Props = {
   children: React.ReactNode;
   nonce: string | undefined;
+  // NPS campaign switch, toggled from cdtn-admin (settings page). When off,
+  // neither the exit-intent pop-up nor the mobile hand is rendered.
+  npsEnabled: boolean;
   defaultColorScheme: DefaultColorScheme;
   // Scripts à placer en tête du <head>, avant tout bundle (ex. config runtime)
   headScripts?: React.ReactNode;
@@ -37,6 +40,7 @@ const { getHtmlAttributes } = createGetHtmlAttributes({
 export default function DefaultLayout({
   children,
   nonce,
+  npsEnabled,
   defaultColorScheme,
   headScripts,
 }: Props) {
@@ -85,7 +89,7 @@ export default function DefaultLayout({
                   heatmapEnabled={isHeatmapEnabled()}
                 />
               )}
-              {!isWidgetPage && <NpsWidget />}
+              {npsEnabled && !isWidgetPage && <NpsWidget />}
             </SearchModalProvider>
           </DsfrProvider>
           <MatomoAnalytics heatmapEnabled={heatMapEnabled} />

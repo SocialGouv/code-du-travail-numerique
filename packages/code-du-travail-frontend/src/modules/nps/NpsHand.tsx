@@ -12,13 +12,15 @@ const AUTO_WAVE_DELAY_MS = 20_000;
 // on ne voit QUE la main (pas de texte, pas de dépliage), et elle salue au
 // survol. Câblée sur notre modale NPS (trigger `main`).
 type Props = {
-  onOpen: () => void;
+  // Receives the hand button so focus can be restored to it when the modal
+  // closes (a mouse click does not focus buttons in every browser).
+  onOpen: (opener: HTMLButtonElement) => void;
   // Reflète l'état ouvert/fermé de la modale que la main contrôle (a11y).
   expanded?: boolean;
 };
 
 export const NpsHand = ({ onOpen, expanded = false }: Props) => {
-  // Salut automatique déclenché une seule fois, 30 s après l'apparition de la
+  // Salut automatique déclenché une seule fois, 20 s après l'apparition de la
   // main (ce composant n'est monté que lorsque la main est visible, cf.
   // NpsWidget). La classe reste ensuite posée : l'animation, en une itération,
   // ne rejoue pas d'elle-même.
@@ -33,7 +35,7 @@ export const NpsHand = ({ onOpen, expanded = false }: Props) => {
     <button
       type="button"
       className={handButton}
-      onClick={onOpen}
+      onClick={(event) => onOpen(event.currentTarget)}
       aria-haspopup="dialog"
       aria-expanded={expanded}
       aria-label={"Donnez votre avis"}
