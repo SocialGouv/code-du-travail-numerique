@@ -450,32 +450,79 @@ elles :
 
 ### Notation de la clarté d'une contribution
 
-Widget affiché en bas de chaque contribution : l'usager note la **clarté du contenu** de la
-page à l'aide d'un curseur de 1 (« Trop compliqué ») à 5 (« Très clair »), puis clique sur
-« Valider ». L'event part **au clic sur « Valider »** (une seule fois par affichage du widget ;
-aucune persistance côté client, recharger la page ré-affiche le widget). Il est émis même si
-l'usager a refusé les cookies (le relai ne dépose aucun cookie), sauf opt-out explicite
-(« ne jamais être suivi » dans la politique de confidentialité).
+Widget affiché dans la colonne de droite de chaque contribution (« Aidez-nous à nous améliorer
+— Le contenu de cette page est-il clair ? »). L'usager note la **clarté du contenu** sur
+**3 étoiles** : 1 « Pas clair », 2 « En partie », 3 « Très clair ». **Le clic sur une étoile
+enregistre la note immédiatement** (plus de bouton « Valider »). Les étoiles ne sont **pas
+verrouillées** : cliquer une autre étoile **change la note et la renvoie** (un nouvel event
+`note_*`), recliquer l'étoile déjà choisie n'émet rien. Un même affichage du widget peut donc
+émettre plusieurs notes ; de toute façon rien n'est persisté côté client, et recharger la page
+ré-affiche un widget vierge.
+
+- Note **1 ou 2** : un encart « Qu'est-ce qui n'était pas clair ? » propose 4 raisons à cocher
+  (« Le texte est difficile à comprendre. », « Je ne sais pas si cela s'applique à ma
+  situation. », « Je ne sais pas comment appliquer cela à ma situation. », « Les informations
+  me semblent fausses. ») et un champ de suggestion libre (500 caractères max.). « Envoyer »
+  n'impose aucune saisie : il affiche toujours le remerciement, mais n'émet un événement que
+  pour ce qui a été rempli (raisons et/ou suggestion). Un envoi vide n'émet donc rien : le
+  nombre d'envois de l'encart ne peut pas être déduit des événements `raison_*` / suggestion.
+- Note **3** : remerciement direct.
+- Le bouton **« Une remarque ? »** (visible avant toute note et après un remerciement) ouvre un
+  encart de suggestion seule ; il disparaît dès qu'un encart a été envoyé (raisons ou
+  remarque).
+
+> **Changement d'échelle (#7587).** La catégorie `clarte_contribution` **remplace**
+> `notation_contribution` à partir de la mise en production : l'ancienne échelle à 5 niveaux
+> (curseur puis 5 étoiles, `note_1` … `note_5`) n'est plus émise, mais son **historique est
+> conservé tel quel sous l'ancienne catégorie**. Les deux échelles ne doivent jamais être
+> mélangées : une `note_3` de `notation_contribution` (« Neutre » sur 5) n'a pas le sens d'une
+> `note_3` de `clarte_contribution` (« Très clair » sur 3).
+
+Tous les events sont émis même si l'usager a refusé les cookies (le relai ne dépose aucun
+cookie), sauf opt-out explicite (« ne jamais être suivi » dans la politique de confidentialité). Dans ce
+cas, aucun event n'est émis et le widget affiche à la place un message expliquant que l'avis
+n'a pas été envoyé, avec un lien vers la politique de confidentialité pour modifier ce choix.
 
 Particularité technique : pour **contourner les bloqueurs de publicité** (qui filtrent
 `matomo.php` côté navigateur), le client fait un POST same-origin vers `/api/contribution-rating`
-et c'est le **serveur** qui relaie l'event vers Matomo. La `category`/`action` sont posées côté
-serveur ; le nom d'event (`e_n`) et la clé d'URL canonique sont le **slug** de la contribution
-**préfixé de son type de contenu** (`contribution/<slug>`) — le type désambiguïse deux slugs
-identiques portés par des types différents.
+(une requête par action de l'usager, typée `note` / `raison` / `remarque` / `suggestion`) et
+c'est le **serveur** qui relaie l'event vers Matomo. La `category`/`action` sont posées côté
+serveur à partir d'ensembles fermés (note bornée 1 à 3, raisons validées contre la liste des 4
+clés, texte libre limité à 500 caractères) ; le nom d'event (`e_n`) et la clé d'URL canonique
+sont le **slug** de la contribution **préfixé de son type de contenu** (`contribution/<slug>`) —
+le type désambiguïse deux slugs identiques portés par des types différents.
 
-La **note voyage dans l'action** de l'event, en clair : `note_1` … `note_5`. Elle n'est
+La **note voyage dans l'action** de l'event, en clair : `note_1` … `note_3`. Elle n'est
 volontairement **pas** envoyée en valeur numérique (`e_v`) : Matomo **additionne** les valeurs
 dans ses rapports, alors que la lecture métier attendue est le **décompte de chaque note par
-contenu**. Dans Matomo : rapport Événements → « Noms d'événements » → une ligne par contenu
-(`contribution/<slug>`), puis le détail par action donne la **répartition des notes** (combien
-de `note_1`, de `note_2`, …).
+contenu**. Dans Matomo : rapport Événements → catégorie `clarte_contribution` → « Noms
+d'événements » → une ligne par contenu (`contribution/<slug>`), puis le détail par action donne
+la **répartition des notes** (combien de `note_1`, `note_2`, `note_3`), des **raisons**
+(`raison_*`) et des clics `remarque`. Les raisons cochées partent **en une seule requête** ; le
+serveur émet **un event par raison** (une même soumission peut donc compter plusieurs
+`raison_*`).
 
-[↗ source](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/contributions/rating/tracking.ts#L61 "rating/tracking.ts")
+Dans Metabase, la table agrégée `notation_contributions` (cdtn-admin, `analysis/`) compte
+chaque jour, par device, les visites de pages de contribution et les notes reçues : elle sert
+au **taux de réponse** (notes / visites) et à la **note moyenne** du tableau de bord. Elle lit
+désormais la catégorie **`clarte_contribution`** : notes (`note_*`), raisons (`raison_*`) et
+clics sur « Une remarque ? » (`remarque`), plus le **nombre** de suggestions envoyées
+(`clarte_contribution_suggestion`, le texte n'est jamais stocké) ; l'historique à 5 niveaux
+reste lisible sous `notation_contribution`. La note étant relayée sans identifiant visiteur,
+elle ne peut pas être rattachée à la visite qui a vu la page : le taux de réponse rapporte un
+nombre de notes à un nombre de visites. Comme une note peut être changée
+(chaque changement émet un nouvel event `note_*`), ce nombre de notes compte des **clics de
+note**, pas des votants distincts : un usager qui passe de 3 à 1 compte deux fois.
 
-| Catégorie             | Action (🔀)      | Name (🔀)             | Quand / pourquoi |
-| --------------------- | ---------------- | --------------------- | ---------------- |
-| notation_contribution | `note_<value>`   | `contribution/<slug>` | Au clic sur « Valider » du widget de notation en bas d'une contribution. Le nom d'event préfixe le slug de son type de contenu (`contribution/…`) pour désambiguïser deux slugs identiques de types différents. Mesure la clarté perçue du contenu ; la note **1 à 5** (1 = Trop compliqué … 5 = Très clair) voyage **en chaîne dans l'action** (`note_1` … `note_5`) afin que Matomo compte les occurrences de chaque note au lieu d'en faire la somme. |
+[↗ source](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/contributions/rating/tracking.ts#L78 "rating/tracking.ts")
+
+| Catégorie                      | Action (📌/🔀)     | Name (🔀)             | Quand / pourquoi |
+| ------------------------------ | ------------------ | --------------------- | ---------------- |
+| clarte_contribution            | `note_<value>`     | `contribution/<slug>` | Au clic sur une étoile, à chaque changement de note (recliquer la note déjà choisie n'émet rien). Mesure la clarté perçue du contenu ; la note **1 à 3** (1 = Pas clair, 2 = En partie, 3 = Très clair) voyage **en chaîne dans l'action** (`note_1` … `note_3`) afin que Matomo compte les occurrences de chaque note au lieu d'en faire la somme. |
+| clarte_contribution            | `raison_<key>`     | `contribution/<slug>` | Au clic sur « Envoyer » de l'encart « Qu'est-ce qui n'était pas clair ? » (après une note 1 ou 2), **un event par raison cochée**. Ensemble fermé : `raison_texte_difficile` (texte difficile à comprendre), `raison_applicable_situation` (ne sait pas si cela s'applique à sa situation), `raison_comment_appliquer` (ne sait pas comment l'appliquer), `raison_informations_fausses` (informations qui semblent fausses). Qualifie les notes basses. |
+| clarte_contribution            | 📌 `remarque`      | `contribution/<slug>` | Au clic sur « Une remarque ? » (ouverture de l'encart de suggestion seule). Mesure l'intérêt pour la remarque libre, indépendamment de la note. |
+| clarte_contribution_suggestion | `<texte libre>`    | `contribution/<slug>` | Au clic sur « Envoyer » de l'un ou l'autre encart, si le champ de suggestion est renseigné. Verbatim qualitatif (espaces de début/fin retirés, 500 caractères max.), sur le modèle de `feedback_suggestion`. |
+| notation_contribution          | `note_<value>`     | `contribution/<slug>` | **Historique uniquement — n'est plus émis** depuis la mise en production de `clarte_contribution` (#7587). Note de 1 (« Trop compliqué ») à 5 (« Très clair ») au clic sur « Valider » de l'ancien widget. À ne pas agréger avec `clarte_contribution`. |
 
 ---
 

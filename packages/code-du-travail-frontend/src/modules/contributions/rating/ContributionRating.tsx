@@ -2,58 +2,127 @@
 
 import { ElementType, useId, useRef, useState } from "react";
 import { fr } from "@codegouvfr/react-dsfr";
-import { Button } from "@codegouvfr/react-dsfr/Button";
 import { css } from "@styled-system/css";
 import { RatingIcon } from "./RatingIcon";
-import { RatingSlider } from "./RatingSlider";
+import { RatingStars } from "./RatingStars";
 import { RatingConfirmation } from "./RatingConfirmation";
-import { trackContributionRating } from "./tracking";
+import { RatingOptedOutNotice } from "./RatingOptedOutNotice";
+import { isMatomoOptedOut } from "../../utils/consent";
 import {
-  RATING_DEFAULT,
-  RATING_WIDGET_HINT,
+  EMPTY_RATING_DRAFT,
+  RatingPanel,
+  RatingPanelData,
+  RatingPanelDraft,
+} from "./RatingPanel";
+import {
+  trackRatingReasons,
+  trackRatingRemark,
+  trackRatingScore,
+  trackRatingSuggestion,
+} from "./tracking";
+import {
+  isLowRating,
+  RATING_REMARK_BUTTON,
   RATING_WIDGET_INTRO,
   RATING_WIDGET_TITLE,
 } from "./constants";
 
 type Props = {
   contributionSlug: string;
-  // Niveau de titre du widget. 2 par défaut ; 3 quand il est imbriqué sous un
-  // titre de section (fiches contribution). La taille visuelle vit sur les
-  // <span> enfants, elle est donc indépendante du niveau.
+  // Widget heading level. 2 by default; 3 when nested under a section title
+  // (contribution pages). The visual size lives on the child <span>s, so it
+  // does not depend on the level. Panels use the next level.
   level?: 2 | 3;
 };
 
-type Status = "idle" | "submitted";
+type Panel = "none" | "reasons" | "remark";
 
 export const ContributionRating = ({ contributionSlug, level = 2 }: Props) => {
   const headingId = useId();
+  const questionId = useId();
   const Heading = `h${level}` as ElementType;
-  const [value, setValue] = useState(RATING_DEFAULT);
-  const [status, setStatus] = useState<Status>("idle");
+  const panelHeadingLevel = (level + 1) as 3 | 4;
+
+  const [score, setScore] = useState<number | null>(null);
+  const [panel, setPanel] = useState<Panel>("none");
+  const [thanked, setThanked] = useState(false);
+  const [panelSent, setPanelSent] = useState(false);
+  // Checks and text of the panel, kept here so that they survive the panel
+  // closing (score changed to 3, then back to 1 or 2). Cleared once sent.
+  const [draft, setDraft] = useState<RatingPanelDraft>(EMPTY_RATING_DRAFT);
+  // Matomo opt-out ("ne jamais être suivi"): nothing can be sent, so instead
+  // of a misleading thank-you the user is told why and where to change it.
+  const [optedOut, setOptedOut] = useState(false);
   const messageRef = useRef<HTMLParagraphElement>(null);
-  // Garde synchrone : empêche un double-clic rapide d'émettre deux events avant
-  // que le re-render n'ait masqué le bouton (l'état `status` est asynchrone).
-  // Pas de persistance (localStorage) : recharger la page ou revenir sur le site
-  // ré-affiche le widget notable (respect du RGPD, aucune trace côté client).
-  const submittingRef = useRef(false);
+  // Synchronous copy of the current score: clicking the star already chosen
+  // (or a fast double click, before the re-render) must not emit a second
+  // event (`score` state is async). Another star DOES record the new score:
+  // the stars are never locked, since reloading the page lets the user rate
+  // again anyway (no persistence, GDPR-friendly, no trace client side).
+  const scoreRef = useRef<number | null>(null);
 
-  const onChange = (next: number) => {
-    setValue(next);
-  };
-
-  const onSubmit = () => {
-    if (submittingRef.current || status !== "idle") return;
-    submittingRef.current = true;
-    setStatus("submitted");
-    void trackContributionRating({
-      contributionSlug,
-      value,
-    }); // fire-and-forget
-    // Focus sur le message de confirmation (timing calqué sur CopyButton).
+  // Focus the thank-you message (timing aligned on CopyButton).
+  const focusConfirmation = () => {
     setTimeout(() => messageRef.current?.focus(), 100);
   };
 
-  const submitted = status === "submitted";
+  const thank = () => {
+    setThanked(true);
+    focusConfirmation();
+  };
+
+  // Checked at action time: the opt-out cookie may change while the page is
+  // open. Returns true when the action must stop here.
+  const stopIfOptedOut = (): boolean => {
+    if (!isMatomoOptedOut()) return false;
+    setOptedOut(true);
+    setPanel("none");
+    focusConfirmation();
+    return true;
+  };
+
+  const onSelectScore = (value: number) => {
+    if (scoreRef.current === value) return;
+    scoreRef.current = value;
+    setScore(value);
+    if (stopIfOptedOut()) return;
+    void trackRatingScore({ contributionSlug, value }); // fire-and-forget
+    if (isLowRating(value)) {
+      // Replaces an open remark panel: same component position, so the text
+      // already typed is kept and the reasons are added. A previous thank-you
+      // (score changed from 3 to 1 or 2) is hidden until the panel is sent.
+      setThanked(false);
+      setPanel("reasons");
+    } else {
+      // Score raised to 3: the "what was not clear?" panel no longer applies.
+      // An open remark panel stays. The draft is kept: lowering the score
+      // again reopens the panel with what was already checked and typed.
+      setPanel((current) => (current === "reasons" ? "none" : current));
+      thank();
+    }
+  };
+
+  const onOpenRemark = () => {
+    if (stopIfOptedOut()) return;
+    setPanel("remark");
+    void trackRatingRemark({ contributionSlug });
+  };
+
+  const onSubmitPanel = ({ reasons, suggestion }: RatingPanelData) => {
+    if (reasons.length > 0) {
+      void trackRatingReasons({ contributionSlug, reasons });
+    }
+    if (suggestion) {
+      void trackRatingSuggestion({ contributionSlug, text: suggestion });
+    }
+    // Any send (reasons or remark) hides "Une remarque ?" (#7587 state table).
+    setPanelSent(true);
+    setDraft(EMPTY_RATING_DRAFT);
+    setPanel("none");
+    thank();
+  };
+
+  const showRemarkButton = panel === "none" && !panelSent && !optedOut;
 
   return (
     <section
@@ -61,44 +130,66 @@ export const ContributionRating = ({ contributionSlug, level = 2 }: Props) => {
       aria-labelledby={headingId}
     >
       <RatingIcon className={icon} />
-      {/* La taille de police est portée par les <span> enfants : DSFR définit
-          `h2 { font-size: 1.75rem }` HORS cascade layer, donc une règle Panda
-          (`@layer utilities`) posée sur le <h2> lui-même serait toujours
-          écrasée. DSFR ne cible pas les <span>, eux reçoivent bien notre style.
-          La marge basse passe par `fr-mb-1v` (utilitaire DSFR `!important`). */}
-      <Heading id={headingId} className={fr.cx("fr-mb-1v")}>
+      {/* Font size is carried by the child <span>s: DSFR defines
+          `h2 { font-size: 1.75rem }` OUTSIDE any cascade layer, so a Panda rule
+          (`@layer utilities`) set on the heading itself would always be
+          overridden. DSFR does not target <span>s, they get our style.
+          The bottom margin uses `fr-mb-1v` (DSFR `!important` utility). */}
+      <Heading id={headingId} className={`${fr.cx("fr-mb-1v")} ${heading}`}>
         <span className={titleIntro}>{RATING_WIDGET_INTRO}</span>
-        <span className={titleQuestion}>{RATING_WIDGET_TITLE}</span>
+        <span id={questionId} className={titleQuestion}>
+          {RATING_WIDGET_TITLE}
+        </span>
       </Heading>
-      {/* Texte d'aide affiché juste sous la question. Classe DSFR dédiée
-          (0.75rem, gris) : étant une classe, elle l'emporte sur la règle de
-          base `p`. Non relié au curseur via aria-describedby : DSFR écrase
-          l'aria-describedby de l'input (il pointe sur son propre groupe de
-          messages) ; l'instruction est de toute façon portée pour les lecteurs
-          d'écran par le nom accessible explicite du curseur (RATING_SLIDER_LABEL). */}
-      <p className={fr.cx("fr-hint-text", "fr-mb-0")}>{RATING_WIDGET_HINT}</p>
-      <RatingSlider value={value} onChange={onChange} disabled={submitted} />
-      {!submitted && (
-        <div className={actions}>
-          <Button onClick={onSubmit} priority="secondary">
-            Valider
-          </Button>
+      <RatingStars
+        value={score}
+        onSelect={onSelectScore}
+        labelledBy={questionId}
+      />
+      {/* Persistent live region (present from mount) so that inserting the
+          thank-you (or opt-out) message is reliably announced by screen
+          readers. */}
+      <div aria-live="polite">
+        {optedOut ? (
+          <RatingOptedOutNotice messageRef={messageRef} />
+        ) : (
+          thanked && <RatingConfirmation messageRef={messageRef} />
+        )}
+      </div>
+      {panel !== "none" && (
+        <RatingPanel
+          variant={panel}
+          headingLevel={panelHeadingLevel}
+          draft={draft}
+          onDraftChange={setDraft}
+          onSubmit={onSubmitPanel}
+        />
+      )}
+      {showRemarkButton && (
+        <div className={remark}>
+          {/* A button, not a link: it opens content in place, no navigation. */}
+          <button
+            type="button"
+            className={fr.cx(
+              "fr-link",
+              "fr-icon-arrow-right-line",
+              "fr-link--icon-left"
+            )}
+            onClick={onOpenRemark}
+          >
+            {RATING_REMARK_BUTTON}
+          </button>
         </div>
       )}
-      {/* Région live persistante (présente dès le montage) pour que l'insertion
-          du « Merci ! » soit fiablement annoncée par les lecteurs d'écran. */}
-      <div aria-live="polite">
-        {submitted && <RatingConfirmation messageRef={messageRef} />}
-      </div>
     </section>
   );
 };
 
 const widget = css({
-  // Carré bleu : 16px haut/bas, 8px gauche/droite (maquette).
+  // Blue box: 16px top/bottom, 8px left/right (mock-up).
   padding: "1rem 0.5rem",
   backgroundColor: "var(--background-alt-blue-france)",
-  // Widget interactif : inutile (et disgracieux) à l'impression / en PDF.
+  // Interactive widget: useless (and unsightly) when printed / in PDF.
   "@media print": { display: "none" },
 });
 
@@ -107,8 +198,12 @@ const icon = css({
   margin: "0 auto 1rem",
 });
 
-// 14px/20px (réduit). La taille DOIT vivre sur le <span> (et non le <h2>) :
-// cf. commentaire dans le JSX sur la cascade DSFR.
+const heading = css({
+  textAlign: "center",
+});
+
+// 14px/20px. The size MUST live on the <span> (not the heading): cf. the JSX
+// comment about the DSFR cascade.
 const titleIntro = css({
   display: "block",
   fontSize: "0.875rem",
@@ -123,8 +218,16 @@ const titleQuestion = css({
   fontWeight: "bold",
 });
 
-const actions = css({
-  display: "flex",
-  justifyContent: "center",
-  marginTop: "1.5rem",
+const remark = css({
+  marginTop: "1rem",
+  // DSFR only underlines `a[href]` links: underline the button too so it
+  // reads as a link, as in the mock-up.
+  "& button": {
+    // 44px target height (WCAG 2.5.5), the text stays vertically centred.
+    display: "inline-flex",
+    alignItems: "center",
+    minHeight: "2.75rem",
+    textDecoration: "underline",
+    textUnderlineOffset: "0.25em",
+  },
 });

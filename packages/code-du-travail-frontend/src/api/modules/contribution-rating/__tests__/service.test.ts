@@ -14,8 +14,8 @@ describe("contribution-rating service", () => {
 
   it("appelle matomo.php avec les paramètres de tracking attendus", async () => {
     await sendRatingEvent({
-      category: "notation_contribution",
-      action: "note_4",
+      category: "clarte_contribution",
+      action: "note_2",
       source: "contributions",
       slug: "conges-payes",
     });
@@ -31,10 +31,10 @@ describe("contribution-rating service", () => {
     expect(parsed.searchParams.get("rec")).toBe("1");
     expect(parsed.searchParams.get("apiv")).toBe("1");
     expect(parsed.searchParams.get("send_image")).toBe("0");
-    expect(parsed.searchParams.get("e_c")).toBe("notation_contribution");
-    // La note voyage en chaîne dans l'action : Matomo compte les occurrences
-    // de chaque note (pas de `e_v` numérique, qui serait additionné).
-    expect(parsed.searchParams.get("e_a")).toBe("note_4");
+    expect(parsed.searchParams.get("e_c")).toBe("clarte_contribution");
+    // The score travels as a string in the action: Matomo counts the
+    // occurrences of each score (no numeric `e_v`, which would be summed).
+    expect(parsed.searchParams.get("e_a")).toBe("note_2");
     // Nom d'event = « route/slug » : la route de la source (getRouteBySource)
     // préfixe le slug pour désambiguïser deux slugs identiques de sources
     // différentes ; SOURCES.CONTRIBUTIONS → « contribution ».
@@ -44,8 +44,8 @@ describe("contribution-rating service", () => {
 
   it("construit une URL canonique stable à partir du slug (jamais d'URL client)", async () => {
     await sendRatingEvent({
-      category: "notation_contribution",
-      action: "note_4",
+      category: "clarte_contribution",
+      action: "note_2",
       source: "contributions",
       slug: "conges-payes",
     });
@@ -59,8 +59,8 @@ describe("contribution-rating service", () => {
 
   it("n'émet pas d'action_name (pas de pageview/action fantôme)", async () => {
     await sendRatingEvent({
-      category: "notation_contribution",
-      action: "note_4",
+      category: "clarte_contribution",
+      action: "note_2",
       source: "contributions",
       slug: "conges-payes",
     });
@@ -72,7 +72,7 @@ describe("contribution-rating service", () => {
 
   it("reste anonyme : aucun identifiant visiteur ni IP", async () => {
     await sendRatingEvent({
-      category: "notation_contribution",
+      category: "clarte_contribution",
       action: "note_3",
       source: "contributions",
       slug: "conges-payes",
@@ -87,8 +87,8 @@ describe("contribution-rating service", () => {
 
   it("transmet le User-Agent du visiteur à Matomo", async () => {
     await sendRatingEvent({
-      category: "notation_contribution",
-      action: "note_4",
+      category: "clarte_contribution",
+      action: "note_2",
       source: "contributions",
       slug: "conges-payes",
       userAgent: "UA-navigateur",
@@ -104,8 +104,8 @@ describe("contribution-rating service", () => {
 
   it("sans userAgent : pas de header User-Agent", async () => {
     await sendRatingEvent({
-      category: "notation_contribution",
-      action: "note_4",
+      category: "clarte_contribution",
+      action: "note_2",
       source: "contributions",
       slug: "conges-payes",
     });
@@ -116,7 +116,7 @@ describe("contribution-rating service", () => {
 
   it("borne le relai par un timeout (signal d'abort)", async () => {
     await sendRatingEvent({
-      category: "notation_contribution",
+      category: "clarte_contribution",
       action: "note_3",
       source: "contributions",
       slug: "conges-payes",
@@ -130,7 +130,7 @@ describe("contribution-rating service", () => {
     (global.fetch as jest.Mock).mockResolvedValue({ ok: false, status: 500 });
     await expect(
       sendRatingEvent({
-        category: "notation_contribution",
+        category: "clarte_contribution",
         action: "note_3",
         source: "contributions",
         slug: "conges-payes",

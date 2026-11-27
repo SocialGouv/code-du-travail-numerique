@@ -9,14 +9,16 @@ type Props = {
   messageRef: Ref<HTMLParagraphElement>;
 };
 
-// Confirmation « Merci ! » conforme à la maquette : encart bordé vert, pastille
-// carrée verte avec ✓ blanc (cercle plein) + libellé gris. Le focus est déplacé
-// sur le `<p>` par le parent ; l'annonce vocale est assurée par la région
-// `aria-live` persistante qui entoure ce composant (cf. ContributionRating).
+// Thank-you message from the mock-up: green bordered box, green square cell
+// with a white check (filled circle) + grey label, full widget width. Focus is
+// moved to the `<p>` by the parent; the screen reader announcement comes from
+// the persistent `aria-live` region wrapping this component (cf.
+// ContributionRating).
 export const RatingConfirmation = ({ messageRef }: Props) => (
   <div className={wrap}>
-    {/* `fr-m-0` (utilitaire DSFR `!important`) annule la marge de base du <p> :
-        une marge Panda serait écrasée (DSFR `p {…}` est hors cascade layer). */}
+    {/* `fr-m-0` (DSFR `!important` utility) cancels the base <p> margin: a
+        Panda margin would be overridden (DSFR `p {…}` is outside any cascade
+        layer). */}
     <p ref={messageRef} tabIndex={-1} className={`${fr.cx("fr-m-0")} ${chip}`}>
       <span className={cell} aria-hidden="true">
         <CheckCircleIcon />
@@ -26,8 +28,8 @@ export const RatingConfirmation = ({ messageRef }: Props) => (
   </div>
 );
 
-// Cercle plein + ✓, inliné pour ne pas dépendre de la génération d'icônes DSFR
-// (la variante `…-fill` n'était pas dans le bundle → icône cassée).
+// Filled circle + check, inlined so it does not depend on the DSFR icon
+// generation (the `…-fill` variant was not in the bundle -> broken icon).
 const CheckCircleIcon = () => (
   <svg
     width="40"
@@ -47,13 +49,13 @@ const CheckCircleIcon = () => (
 );
 
 const wrap = css({
-  display: "flex",
-  justifyContent: "center",
   marginTop: "1rem",
 });
 
 const chip = css({
-  display: "inline-flex",
+  display: "flex",
+  width: "100%",
+  textAlign: "left",
   alignItems: "stretch",
   border: "1px solid var(--text-default-success)",
 });
