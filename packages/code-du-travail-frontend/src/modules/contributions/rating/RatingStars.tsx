@@ -7,11 +7,9 @@ import { RATING_LABELS, RATING_VALUES, ratingStarPrefix } from "./constants";
 
 type Props = {
   value: number | null;
+  // Called on every click: the parent ignores the star already chosen and
+  // records any other one (the score can be changed).
   onSelect: (value: number) => void;
-  // Once a score is recorded the stars are locked: still visible and
-  // focusable (aria-disabled, not disabled) so the chosen state stays
-  // announced, but clicks are ignored.
-  locked: boolean;
   // Id of the element naming the group (the widget question).
   labelledBy: string;
 };
@@ -21,9 +19,9 @@ type Props = {
 // keys on a radio group would record a score just by navigating. Each button
 // holds its always-visible label, prefixed by a visually hidden "N étoile(s)
 // sur 3 :" so the accessible name contains the visible text (RGAA 11.2).
-export const RatingStars = ({ value, onSelect, locked, labelledBy }: Props) => {
+export const RatingStars = ({ value, onSelect, labelledBy }: Props) => {
   const [hovered, setHovered] = useState<number | null>(null);
-  const highlighted = (!locked && hovered) || value || 0;
+  const highlighted = hovered || value || 0;
 
   return (
     <div
@@ -38,10 +36,7 @@ export const RatingStars = ({ value, onSelect, locked, labelledBy }: Props) => {
           type="button"
           className={starButton}
           aria-pressed={value === star}
-          aria-disabled={locked || undefined}
-          onClick={() => {
-            if (!locked) onSelect(star);
-          }}
+          onClick={() => onSelect(star)}
           onMouseEnter={() => setHovered(star)}
         >
           <StarIcon value={star} filled={star <= highlighted} />
@@ -110,9 +105,6 @@ const starButton = css({
   "&:focus-visible": {
     outline: "2px solid var(--dsfr-outline, #0a76f6)",
     outlineOffset: "2px",
-  },
-  "&[aria-disabled=true]": {
-    cursor: "default",
   },
 });
 

@@ -453,9 +453,11 @@ elles :
 Widget affiché dans la colonne de droite de chaque contribution (« Aidez-nous à nous améliorer
 — Le contenu de cette page est-il clair ? »). L'usager note la **clarté du contenu** sur
 **3 étoiles** : 1 « Pas clair », 2 « En partie », 3 « Très clair ». **Le clic sur une étoile
-enregistre la note immédiatement** (plus de bouton « Valider ») ; les étoiles sont ensuite
-verrouillées : une seule note par affichage du widget (aucune persistance côté client,
-recharger la page ré-affiche le widget).
+enregistre la note immédiatement** (plus de bouton « Valider »). Les étoiles ne sont **pas
+verrouillées** : cliquer une autre étoile **change la note et la renvoie** (un nouvel event
+`note_*`), recliquer l'étoile déjà choisie n'émet rien. Un même affichage du widget peut donc
+émettre plusieurs notes ; de toute façon rien n'est persisté côté client, et recharger la page
+ré-affiche un widget vierge.
 
 - Note **1 ou 2** : un encart « Qu'est-ce qui n'était pas clair ? » propose 4 raisons à cocher
   (« Le texte est difficile à comprendre. », « Je ne sais pas si cela s'applique à ma
@@ -508,13 +510,15 @@ clics sur « Une remarque ? » (`remarque`), plus le **nombre** de suggestions e
 (`clarte_contribution_suggestion`, le texte n'est jamais stocké) ; l'historique à 5 niveaux
 reste lisible sous `notation_contribution`. La note étant relayée sans identifiant visiteur,
 elle ne peut pas être rattachée à la visite qui a vu la page : le taux de réponse rapporte un
-nombre de notes à un nombre de visites.
+nombre de notes à un nombre de visites. Comme une note peut être changée
+(chaque changement émet un nouvel event `note_*`), ce nombre de notes compte des **clics de
+note**, pas des votants distincts : un usager qui passe de 3 à 1 compte deux fois.
 
 [↗ source](https://github.com/SocialGouv/code-du-travail-numerique/blob/dev/packages/code-du-travail-frontend/src/modules/contributions/rating/tracking.ts#L78 "rating/tracking.ts")
 
 | Catégorie                      | Action (📌/🔀)     | Name (🔀)             | Quand / pourquoi |
 | ------------------------------ | ------------------ | --------------------- | ---------------- |
-| clarte_contribution            | `note_<value>`     | `contribution/<slug>` | Au clic sur une étoile (une seule fois par affichage du widget). Mesure la clarté perçue du contenu ; la note **1 à 3** (1 = Pas clair, 2 = En partie, 3 = Très clair) voyage **en chaîne dans l'action** (`note_1` … `note_3`) afin que Matomo compte les occurrences de chaque note au lieu d'en faire la somme. |
+| clarte_contribution            | `note_<value>`     | `contribution/<slug>` | Au clic sur une étoile, à chaque changement de note (recliquer la note déjà choisie n'émet rien). Mesure la clarté perçue du contenu ; la note **1 à 3** (1 = Pas clair, 2 = En partie, 3 = Très clair) voyage **en chaîne dans l'action** (`note_1` … `note_3`) afin que Matomo compte les occurrences de chaque note au lieu d'en faire la somme. |
 | clarte_contribution            | `raison_<key>`     | `contribution/<slug>` | Au clic sur « Envoyer » de l'encart « Qu'est-ce qui n'était pas clair ? » (après une note 1 ou 2), **un event par raison cochée**. Ensemble fermé : `raison_texte_difficile` (texte difficile à comprendre), `raison_applicable_situation` (ne sait pas si cela s'applique à sa situation), `raison_comment_appliquer` (ne sait pas comment l'appliquer), `raison_informations_fausses` (informations qui semblent fausses). Qualifie les notes basses. |
 | clarte_contribution            | 📌 `remarque`      | `contribution/<slug>` | Au clic sur « Une remarque ? » (ouverture de l'encart de suggestion seule). Mesure l'intérêt pour la remarque libre, indépendamment de la note. |
 | clarte_contribution_suggestion | `<texte libre>`    | `contribution/<slug>` | Au clic sur « Envoyer » de l'un ou l'autre encart, si le champ de suggestion est renseigné. Verbatim qualitatif (espaces de début/fin retirés, 500 caractères max.), sur le modèle de `feedback_suggestion`. |

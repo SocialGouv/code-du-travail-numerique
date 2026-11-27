@@ -94,7 +94,7 @@ describe("ContributionRating", () => {
     ).not.toBeInTheDocument();
   });
 
-  it("records a score of 3 immediately, locks the stars and shows the thank-you message", async () => {
+  it("records a score of 3 immediately and shows the thank-you message", async () => {
     render(<ContributionRating contributionSlug={contributionSlug} />);
 
     fireEvent.click(star(STAR_3));
@@ -102,11 +102,9 @@ describe("ContributionRating", () => {
     expect(mockTrackScore).toHaveBeenCalledTimes(1);
     expect(mockTrackScore).toHaveBeenCalledWith({ contributionSlug, value: 3 });
     expect(star(STAR_3)).toHaveAttribute("aria-pressed", "true");
-    [STAR_1, STAR_2, STAR_3].forEach((name) => {
-      expect(star(name)).toHaveAttribute("aria-disabled", "true");
-      // aria-disabled, not disabled: the chosen state stays reachable.
-      expect(star(name)).toBeEnabled();
-    });
+    [STAR_1, STAR_2, STAR_3].forEach((name) =>
+      expect(star(name)).not.toHaveAttribute("aria-disabled")
+    );
     expect(
       screen.queryByRole("heading", { name: RATING_REASONS_TITLE })
     ).not.toBeInTheDocument();
@@ -118,16 +116,55 @@ describe("ContributionRating", () => {
     expect(remarkButton()).toBeInTheDocument();
   });
 
-  it("never records a second score once locked", () => {
+  it("does not record the same score twice (double click)", () => {
     render(<ContributionRating contributionSlug={contributionSlug} />);
 
     fireEvent.click(star(STAR_3));
     fireEvent.click(star(STAR_3));
-    fireEvent.click(star(STAR_1));
 
     expect(mockTrackScore).toHaveBeenCalledTimes(1);
-    expect(star(STAR_1)).toHaveAttribute("aria-pressed", "false");
     expect(star(STAR_3)).toHaveAttribute("aria-pressed", "true");
+  });
+
+  it("records the new score when the user changes it from 3 to 1", () => {
+    render(<ContributionRating contributionSlug={contributionSlug} />);
+
+    fireEvent.click(star(STAR_3));
+    expect(screen.getByText(RATING_CONFIRMATION_TEXT)).toBeInTheDocument();
+
+    fireEvent.click(star(STAR_1));
+
+    expect(mockTrackScore).toHaveBeenCalledTimes(2);
+    expect(mockTrackScore).toHaveBeenLastCalledWith({
+      contributionSlug,
+      value: 1,
+    });
+    expect(star(STAR_1)).toHaveAttribute("aria-pressed", "true");
+    expect(star(STAR_3)).toHaveAttribute("aria-pressed", "false");
+    // The low score asks what was not clear: the thank-you waits for the send.
+    expect(
+      screen.getByRole("heading", { name: RATING_REASONS_TITLE })
+    ).toBeInTheDocument();
+    expect(
+      screen.queryByText(RATING_CONFIRMATION_TEXT)
+    ).not.toBeInTheDocument();
+  });
+
+  it("closes the reasons panel and thanks when the score is raised to 3", () => {
+    render(<ContributionRating contributionSlug={contributionSlug} />);
+
+    fireEvent.click(star(STAR_1));
+    fireEvent.click(star(STAR_2));
+    fireEvent.click(star(STAR_3));
+
+    expect(mockTrackScore).toHaveBeenCalledTimes(3);
+    expect(mockTrackScore.mock.calls.map(([{ value }]) => value)).toEqual([
+      1, 2, 3,
+    ]);
+    expect(
+      screen.queryByRole("heading", { name: RATING_REASONS_TITLE })
+    ).not.toBeInTheDocument();
+    expect(screen.getByText(RATING_CONFIRMATION_TEXT)).toBeInTheDocument();
   });
 
   it.each([
@@ -328,7 +365,6 @@ describe("ContributionRating", () => {
         screen.getByRole("link", { name: RATING_OPTED_OUT_LINK })
       ).toHaveAttribute("href", RATING_OPTED_OUT_HREF);
       expect(star(STAR_1)).toHaveAttribute("aria-pressed", "true");
-      expect(star(STAR_1)).toHaveAttribute("aria-disabled", "true");
       expect(remarkButton()).not.toBeInTheDocument();
     });
 

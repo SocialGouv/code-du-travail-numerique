@@ -46,11 +46,12 @@ export const ContributionRating = ({ contributionSlug, level = 2 }: Props) => {
   // of a misleading thank-you the user is told why and where to change it.
   const [optedOut, setOptedOut] = useState(false);
   const messageRef = useRef<HTMLParagraphElement>(null);
-  // Synchronous guard: prevents a fast double click from emitting two score
-  // events before the re-render locks the stars (`score` state is async).
-  // No persistence (localStorage): reloading the page or coming back shows a
-  // ratable widget again (GDPR-friendly, no trace client side).
-  const scoredRef = useRef(false);
+  // Synchronous copy of the current score: clicking the star already chosen
+  // (or a fast double click, before the re-render) must not emit a second
+  // event (`score` state is async). Another star DOES record the new score:
+  // the stars are never locked, since reloading the page lets the user rate
+  // again anyway (no persistence, GDPR-friendly, no trace client side).
+  const scoreRef = useRef<number | null>(null);
 
   // Focus the thank-you message (timing aligned on CopyButton).
   const focusConfirmation = () => {
@@ -73,16 +74,21 @@ export const ContributionRating = ({ contributionSlug, level = 2 }: Props) => {
   };
 
   const onSelectScore = (value: number) => {
-    if (scoredRef.current) return;
-    scoredRef.current = true;
+    if (scoreRef.current === value) return;
+    scoreRef.current = value;
     setScore(value);
     if (stopIfOptedOut()) return;
     void trackRatingScore({ contributionSlug, value }); // fire-and-forget
     if (isLowRating(value)) {
       // Replaces an open remark panel: same component position, so the text
-      // already typed is kept and the reasons are added.
+      // already typed is kept and the reasons are added. A previous thank-you
+      // (score changed from 3 to 1 or 2) is hidden until the panel is sent.
+      setThanked(false);
       setPanel("reasons");
     } else {
+      // Score raised to 3: the "what was not clear?" panel no longer applies.
+      // An open remark panel stays.
+      setPanel((current) => (current === "reasons" ? "none" : current));
       thank();
     }
   };
@@ -128,7 +134,6 @@ export const ContributionRating = ({ contributionSlug, level = 2 }: Props) => {
       <RatingStars
         value={score}
         onSelect={onSelectScore}
-        locked={score !== null}
         labelledBy={questionId}
       />
       {/* Persistent live region (present from mount) so that inserting the
