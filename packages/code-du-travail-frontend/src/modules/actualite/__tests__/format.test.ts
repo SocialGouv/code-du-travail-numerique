@@ -156,6 +156,20 @@ describe("format (actualité)", () => {
     expect(format(base).publishedTime).toBe("2026-01-01T00:00:00+01:00");
   });
 
+  it("affiche la date de mise à jour seulement si elle suit le jour de publication", () => {
+    expect(
+      format({ ...base, updatedAt: "2026-01-10T13:07:55Z" }).updatedDisplayDate
+    ).toBe("10/01/2026");
+    expect(
+      format({
+        ...base,
+        publishedAt: "2026-01-01T09:15:00Z",
+        updatedAt: "2026-01-01T17:00:00Z",
+      }).updatedDisplayDate
+    ).toBeUndefined();
+    expect(format(base).updatedDisplayDate).toBeUndefined();
+  });
+
   it("renvoie [] quand references est absent", () => {
     expect(format(base).references).toEqual([]);
     expect(format(base).image).toBeUndefined();

@@ -28,6 +28,7 @@ export const NewsContainer = ({ news }: Props) => (
     <h1 className={fr.cx("fr-mb-6w")}>{news.title}</h1>
     <PublishedDate
       date={news.displayDate ?? news.date}
+      updatedDate={news.updatedDisplayDate}
       className={fr.cx("fr-text--lg")}
     />
     {news.image && <NewsImage image={news.image} />}
