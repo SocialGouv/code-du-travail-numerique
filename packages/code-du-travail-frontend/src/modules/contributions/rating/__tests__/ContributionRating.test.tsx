@@ -167,6 +167,40 @@ describe("ContributionRating", () => {
     expect(screen.getByText(RATING_CONFIRMATION_TEXT)).toBeInTheDocument();
   });
 
+  it("keeps the checked reasons and typed text when the score goes 2 -> 3 -> 1", () => {
+    render(<ContributionRating contributionSlug={contributionSlug} />);
+
+    fireEvent.click(star(STAR_2));
+    fireEvent.click(reasonCheckbox(RatingReason.DIFFICULT_TEXT));
+    fireEvent.change(
+      screen.getByRole("textbox", { name: RATING_SUGGESTION_LABEL }),
+      { target: { value: "Mon texte" } }
+    );
+
+    fireEvent.click(star(STAR_3));
+    expect(
+      screen.queryByRole("heading", { name: RATING_REASONS_TITLE })
+    ).not.toBeInTheDocument();
+
+    fireEvent.click(star(STAR_1));
+
+    expect(reasonCheckbox(RatingReason.DIFFICULT_TEXT)).toBeChecked();
+    expect(reasonCheckbox(RatingReason.WRONG_INFORMATION)).not.toBeChecked();
+    expect(
+      screen.getByRole("textbox", { name: RATING_SUGGESTION_LABEL })
+    ).toHaveValue("Mon texte");
+
+    fireEvent.click(sendButton());
+    expect(mockTrackReasons).toHaveBeenCalledWith({
+      contributionSlug,
+      reasons: [RatingReason.DIFFICULT_TEXT],
+    });
+    expect(mockTrackSuggestion).toHaveBeenCalledWith({
+      contributionSlug,
+      text: "Mon texte",
+    });
+  });
+
   it.each([
     [1, STAR_1],
     [2, STAR_2],

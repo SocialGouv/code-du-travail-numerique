@@ -8,7 +8,12 @@ import { RatingStars } from "./RatingStars";
 import { RatingConfirmation } from "./RatingConfirmation";
 import { RatingOptedOutNotice } from "./RatingOptedOutNotice";
 import { isMatomoOptedOut } from "../../utils/consent";
-import { RatingPanel, RatingPanelData } from "./RatingPanel";
+import {
+  EMPTY_RATING_DRAFT,
+  RatingPanel,
+  RatingPanelData,
+  RatingPanelDraft,
+} from "./RatingPanel";
 import {
   trackRatingReasons,
   trackRatingRemark,
@@ -42,6 +47,9 @@ export const ContributionRating = ({ contributionSlug, level = 2 }: Props) => {
   const [panel, setPanel] = useState<Panel>("none");
   const [thanked, setThanked] = useState(false);
   const [panelSent, setPanelSent] = useState(false);
+  // Checks and text of the panel, kept here so that they survive the panel
+  // closing (score changed to 3, then back to 1 or 2). Cleared once sent.
+  const [draft, setDraft] = useState<RatingPanelDraft>(EMPTY_RATING_DRAFT);
   // Matomo opt-out ("ne jamais être suivi"): nothing can be sent, so instead
   // of a misleading thank-you the user is told why and where to change it.
   const [optedOut, setOptedOut] = useState(false);
@@ -87,7 +95,8 @@ export const ContributionRating = ({ contributionSlug, level = 2 }: Props) => {
       setPanel("reasons");
     } else {
       // Score raised to 3: the "what was not clear?" panel no longer applies.
-      // An open remark panel stays.
+      // An open remark panel stays. The draft is kept: lowering the score
+      // again reopens the panel with what was already checked and typed.
       setPanel((current) => (current === "reasons" ? "none" : current));
       thank();
     }
@@ -108,6 +117,7 @@ export const ContributionRating = ({ contributionSlug, level = 2 }: Props) => {
     }
     // Any send (reasons or remark) hides "Une remarque ?" (#7587 state table).
     setPanelSent(true);
+    setDraft(EMPTY_RATING_DRAFT);
     setPanel("none");
     thank();
   };
@@ -150,6 +160,8 @@ export const ContributionRating = ({ contributionSlug, level = 2 }: Props) => {
         <RatingPanel
           variant={panel}
           headingLevel={panelHeadingLevel}
+          draft={draft}
+          onDraftChange={setDraft}
           onSubmit={onSubmitPanel}
         />
       )}

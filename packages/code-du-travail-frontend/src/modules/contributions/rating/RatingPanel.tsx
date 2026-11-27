@@ -1,6 +1,6 @@
 "use client";
 
-import { ElementType, useEffect, useId, useRef, useState } from "react";
+import { ElementType, useEffect, useId, useRef } from "react";
 import { fr } from "@codegouvfr/react-dsfr";
 import { Button } from "@codegouvfr/react-dsfr/Button";
 import { Checkbox } from "@codegouvfr/react-dsfr/Checkbox";
@@ -25,6 +25,19 @@ export type RatingPanelData = {
   suggestion?: string;
 };
 
+// What the user has checked / typed so far, owned by the parent so that it
+// survives the panel closing: raising the score to 3 closes the reasons panel,
+// lowering it again reopens it with the same checks and text.
+export type RatingPanelDraft = {
+  reasons: RatingReason[];
+  suggestion: string;
+};
+
+export const EMPTY_RATING_DRAFT: RatingPanelDraft = {
+  reasons: [],
+  suggestion: "",
+};
+
 type Props = {
   // "reasons": after a low score, reasons checkboxes + suggestion.
   // "remark": opened from "Une remarque ?", suggestion only.
@@ -33,6 +46,8 @@ type Props = {
   // keeps the text already typed.
   variant: "reasons" | "remark";
   headingLevel: 3 | 4;
+  draft: RatingPanelDraft;
+  onDraftChange: (draft: RatingPanelDraft) => void;
   onSubmit: (data: RatingPanelData) => void;
 };
 
@@ -45,13 +60,18 @@ const CHARACTERS_COUNT_THRESHOLDS = [
 // Follow-up panel of the clarity widget, built on the pattern of
 // `layout/feedback/FeedbackContent` (DSFR Checkbox + textarea, 500 characters,
 // polite counter). No validation: an empty send just thanks the user.
-export const RatingPanel = ({ variant, headingLevel, onSubmit }: Props) => {
+export const RatingPanel = ({
+  variant,
+  headingLevel,
+  draft,
+  onDraftChange,
+  onSubmit,
+}: Props) => {
   const Heading = `h${headingLevel}` as ElementType;
   const withReasons = variant === "reasons";
   const hintId = useId();
   const headingRef = useRef<HTMLHeadingElement>(null);
-  const [reasons, setReasons] = useState<RatingReason[]>([]);
-  const [suggestion, setSuggestion] = useState("");
+  const { reasons, suggestion } = draft;
 
   // Move focus to the panel heading when it opens (or switches variant), as
   // the feedback form does.
@@ -66,17 +86,18 @@ export const RatingPanel = ({ variant, headingLevel, onSubmit }: Props) => {
   ) => {
     const { value } = event.target;
     if (value.length > RATING_SUGGESTION_MAX_LENGTH) return;
-    setSuggestion(value);
+    onDraftChange({ ...draft, suggestion: value });
   };
 
   const onChangeReason = (event: React.ChangeEvent<HTMLInputElement>) => {
     const reason = event.target.value as RatingReason;
     const { checked } = event.target;
-    setReasons((previous) =>
-      checked
-        ? [...previous, reason]
-        : previous.filter((item) => item !== reason)
-    );
+    onDraftChange({
+      ...draft,
+      reasons: checked
+        ? [...reasons, reason]
+        : reasons.filter((item) => item !== reason),
+    });
   };
 
   const onSend = () => {
