@@ -88,7 +88,9 @@ const StarIcon = ({ value, filled }: { value: number; filled: boolean }) => (
 const stars = css({
   display: "flex",
   justifyContent: "center",
-  gap: "0.5rem",
+  // No gap: the spacing lives in the buttons' padding so the hit areas touch.
+  // With a gap, a click between two stars did nothing while the last hovered
+  // star still looked active (hover only resets when leaving the group).
   marginTop: "0.75rem",
 });
 
@@ -100,7 +102,7 @@ const starButton = css({
   gap: "0.25rem",
   minWidth: "5rem",
   minHeight: "2.75rem",
-  padding: "0.25rem",
+  padding: "0.25rem 0.5rem",
   background: "transparent",
   border: "none",
   cursor: "pointer",
