@@ -38,6 +38,12 @@ export const NpsWidget = () => {
   // Modale déjà ouverte : évite qu'un nouveau déclencheur (ex. exit-intent alors
   // que la main a déjà ouvert la modale) ne la ré-ouvre / ré-émette l'affichage.
   const openRef = useRef(false);
+  // Element that had focus when the modal opened (the hand, or the
+  // "Télécharger"/"Copier" button). The modal is opened programmatically, so
+  // DSFR has no visible opener to return focus to: on close it targets
+  // react-dsfr's hidden control button and focus falls back to <body>
+  // (WCAG 2.4.3). We restore it ourselves.
+  const openerRef = useRef<HTMLElement | null>(null);
 
   // La main dépend des cookies : on ne la rend qu'après montage pour éviter
   // tout écart d'hydratation (le serveur ne connaît pas ces valeurs).
@@ -62,16 +68,33 @@ export const NpsWidget = () => {
         markNpsClosed();
       }
       setValue(null);
+      // Runs after DSFR's own (failed) focus move. Skipped when the opener is
+      // gone (the hand is removed after an answer or an opt-out) or when the
+      // user already moved focus elsewhere.
+      const opener = openerRef.current;
+      openerRef.current = null;
+      setTimeout(() => {
+        const active = document.activeElement;
+        if (opener?.isConnected && (!active || active === document.body)) {
+          opener.focus();
+        }
+      }, 0);
     },
   });
 
   // Ouverture « cœur » : prépare l'état, ouvre la modale, émet l'affichage.
   // Les gardes (cookie/session) sont à la charge de l'appelant.
-  const openModal = (trigger: NpsTrigger) => {
+  const openModal = (trigger: NpsTrigger, opener?: HTMLElement) => {
     // Modale déjà ouverte : ne pas ré-ouvrir ni ré-émettre `nps_popin_displayed`
     // (ex. exit-intent qui se redéclenche alors que la modale est visible).
     if (openRef.current) return;
     openRef.current = true;
+    const active = document.activeElement;
+    openerRef.current =
+      opener ??
+      (active instanceof HTMLElement && active !== document.body
+        ? active
+        : null);
     triggerRef.current = trigger;
     submittedRef.current = false;
     optedOutRef.current = false;
@@ -101,12 +124,12 @@ export const NpsWidget = () => {
   // sécurité sur les cookies : la main n'est normalement pas rendue si répondu ou
   // opt-out, mais un onglet resté ouvert peut l'afficher encore alors que le
   // cookie a été posé depuis un autre onglet → on la masque au clic.
-  const openFromHand = () => {
+  const openFromHand = (hand: HTMLButtonElement) => {
     if (hasAnsweredNps() || hasOptedOutNps()) {
       setHandHidden(true);
       return;
     }
-    openModal(NpsTrigger.MAIN);
+    openModal(NpsTrigger.MAIN, hand);
   };
 
   const onSubmit = () => {
